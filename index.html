@@ -116,6 +116,7 @@ h2{font-size:19px;margin:30px 0 10px;text-wrap:balance}
 .sol-step p{margin:0 0 .4em}
 .sol-n{flex:none;width:22px;height:22px;border-radius:50%;background:var(--info-soft);color:var(--info);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
 .sol-lbl{color:var(--info)}
+.sol-sub{margin:.9em 0 .2em;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 .sol-answer p{margin:.15em 0}
 .sol-answer{margin:.8em 0;max-width:76ch;padding:.6rem .85rem;background:var(--good-soft);border-left:4px solid var(--good);border-radius:0 8px 8px 0;font-size:15px}
 .adg-venn-a{fill:#0e7a68;fill-opacity:.32;stroke:#0e7a68;stroke-width:2}
@@ -482,6 +483,7 @@ const STR = {
   incognita: {es:'Incógnita.', en:'Find.'},
   pistas: {es:'Pistas', en:'Hints'},
   guia: {es:'Cómo abordarlo:', en:'How to approach it:'},
+  resolucion: {es:'Resolución', en:'Working'},
   ver_solucion: {es:'Ver solución', en:'Show solution'},
   respuesta: {es:'Respuesta.', en:'Answer.'},
   por_que_funciona: {es:'Por qué funciona.', en:'Why this works.'},
@@ -893,7 +895,15 @@ function exBlock(e, extra, unitId, conceptMap){
   if (!e.reasoning?.length && !e.steps?.length) sol += conceptHint(conceptMap, e.concept_ids);
   if (e.reasoning?.length) sol += '<div class="sol-flow">'+e.reasoning.map(x=>`<div class="sol-part">${md(str(x))}</div>`).join('')+'</div>';
   if (e.steps?.length) sol += '<div class="sol-flow sol-steps">'+e.steps.map((x,i)=>`<div class="sol-step"><span class="sol-n">${i+1}</span><div>${md(str(x))}</div></div>`).join('')+'</div>';
-  if (e.solution && !e.reasoning?.length) sol += `<div class="sol-flow">${md(str(e.solution))}</div>`;
+  /* antes, si habia reasoning (el planteamiento) se ocultaba solution (la resolucion con los numeros):
+     ~2.500 ejemplos resueltos mostraban solo el "que hacer" sin el calculo. Ahora se muestran los dos,
+     salvo que la resolucion ya este contenida en el razonamiento. */
+  if (e.solution){
+    const solTxt = str(e.solution), rsn = (e.reasoning||[]).map(str).join(' ');
+    const norm = x => x.replace(/\s+/g,' ').trim();
+    if (!rsn || !norm(rsn).includes(norm(solTxt).slice(0, 120)))
+      sol += (rsn ? `<p class="sol-sub">${t('resolucion')}</p>` : '') + `<div class="sol-flow">${md(solTxt)}</div>`;
+  }
   if (e.full_solution && !e.steps?.length) sol += renderSolutionSteps(e.full_solution);
   /* la respuesta va al final, como conclusion del desarrollo (antes salia antes de la resolucion) */
   if (e.answer){
