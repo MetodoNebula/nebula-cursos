@@ -106,9 +106,18 @@ h2{font-size:19px;margin:30px 0 10px;text-wrap:balance}
 .callout.info{background:var(--accent-soft)}
 .callout.info strong{color:var(--accent)}
 .concept-hint{line-height:1.5}
-.sol-flow{margin:.7em 0 0;max-width:72ch;display:flex;flex-direction:column;gap:8px}
-.sol-flow p{margin:0;padding:.58rem .75rem;background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--info);border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.62}
-.sol-flow p.final{font-weight:600;background:var(--good-soft);border-color:var(--good);border-left-width:4px}
+.sol-flow{margin:.6em 0 .8em;max-width:76ch;padding:2px 0 2px 16px;border-left:3px solid var(--info);font-size:15px;line-height:1.65}
+.sol-flow p{margin:0 0 .55em}
+.sol-flow p:last-child{margin-bottom:0}
+.sol-part + .sol-part{margin-top:.75em;padding-top:.75em;border-top:1px dashed var(--line)}
+.sol-steps{display:flex;flex-direction:column;gap:.6em}
+.sol-step{display:flex;gap:10px;align-items:flex-start}
+.sol-step > div{flex:1;min-width:0}
+.sol-step p{margin:0 0 .4em}
+.sol-n{flex:none;width:22px;height:22px;border-radius:50%;background:var(--info-soft);color:var(--info);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.sol-lbl{color:var(--info)}
+.sol-answer p{margin:.15em 0}
+.sol-answer{margin:.8em 0;max-width:76ch;padding:.6rem .85rem;background:var(--good-soft);border-left:4px solid var(--good);border-radius:0 8px 8px 0;font-size:15px}
 .adg-venn-a{fill:#0e7a68;fill-opacity:.32;stroke:#0e7a68;stroke-width:2}
 .adg-venn-b{fill:#c17a17;fill-opacity:.32;stroke:#c17a17;stroke-width:2}
 .adg-vlabel{font-size:12.5px;font-weight:700;fill:#20302a;font-family:var(--sans)}
@@ -364,12 +373,29 @@ function restoreDollarEscape(s){
      dos precios de la misma frase se emparejen como si fueran los delimitadores de una formula. */
   return String(s).replace(/\u0006/g, '\\$');
 }
+/* apartados "a ... b ... c ..." sin parentesis (estilo libro, banco de ejercicios GCSE): se convierten en
+   "(a) ... (b) ..." para que se separen como cualquier otro apartado. Solo si aparecen EN SECUENCIA a, b, c...
+   (al menos a y b) y seguidos de una formula, numero o mayuscula, para no confundirlos con el articulo "a".
+   El texto llega con las formulas ya protegidas por marcadores (\u0002n\u0002 o \u0005n\u0005). */
+function labelBareParts(t){
+  const RE = /(^|[\s.;:,])(?:\*\*)?([a-h])(?:\*\*)?(?=\s+\S)/g;
+  const STRICT = /^\s+(?:[\u0002\u0005]|[A-Z0-9(−\-√])/;
+  const found = []; let m;
+  while ((m = RE.exec(t))) found.push({ at: m.index + m[1].length, end: RE.lastIndex, letter: m[2], strict: STRICT.test(t.slice(RE.lastIndex)) });
+  /* la "a" inicial debe ir seguida de formula/numero/mayuscula; las siguientes (b, c...) basta con que sigan el orden */
+  const seq = []; let want = 'a';
+  for (const f of found){ if (f.letter === want && (want !== 'a' || f.strict)){ seq.push(f); want = String.fromCharCode(want.charCodeAt(0) + 1); } }
+  if (seq.length < 2) return t;
+  for (let i = seq.length - 1; i >= 0; i--) t = t.slice(0, seq[i].at) + '(' + seq[i].letter + ')' + t.slice(seq[i].end);
+  return t;
+}
 function splitLetteredParts(s){
   if (s == null) return s;
   s = String(s);
   if (/\n\s*\n/.test(s)) return s;
   const math = [];
   let t = s.replace(/\$\$(?:\\.|[\s\S])+?\$\$|\$(?:\\.|[^$\n])+\$/g, m => { math.push(m); return '\u0005' + (math.length-1) + '\u0005'; });
+  t = labelBareParts(t);
   const MARK_RE = /\(([a-j]|i{1,3}|iv|vi{0,3}|ix|x)\)/g;
   const idxs = [];
   let m;
@@ -802,35 +828,50 @@ function conceptHint(conceptMap, conceptIds){
    para que el alumno pueda seguir el razonamiento en vez de recibir un bloque
    unico de operaciones encadenadas. Protege los tramos de matematicas ($...$)
    para no partir nunca dentro de una formula. --- */
+/* Solucion desarrollada (full_solution). Antes se partia en CADA punto o punto y coma y cada trozo iba en
+   su propio recuadro: una misma solucion parecia un monton de cajas independientes. Ahora:
+   - si el texto ya trae parrafos, listas o tablas, se respeta tal cual (markdown normal);
+   - si llega como un unico bloque, se separa por apartados (a), (b)... y, dentro de cada apartado, se
+     agrupan las frases en parrafos cortos. Todo va en UN solo bloque continuo con una linea guia a la
+     izquierda; los apartados se separan con una linea fina. Nunca se parte dentro de una formula. */
 function splitSolutionSteps(text){
   if (!text) return [];
-  text = protectDollarEscape(text);
+  text = protectDollarEscape(String(text));
   const MATH_RE = /\$\$(?:\\.|[\s\S])+?\$\$|\$(?:\\.|[^$\n])+\$/g;
-  const placeholders = [];
-  const protectedText = text.replace(MATH_RE, m => { placeholders.push(m); return `\u0002${placeholders.length-1}\u0002`; });
-  const ABBR_RE = /\b(e\.g|i\.e|etc|vs|approx|fig|eq|no|cf|dr|sr|sra)\.$/i;
-  const tokens = protectedText.split(/([.;])(\s+)/);
-  const parts = []; let buf = '';
-  for (let i = 0; i < tokens.length; i += 3){
-    buf += (tokens[i] || '');
-    const punct = tokens[i+1];
-    if (punct){
-      buf += punct;
-      if (punct === '.' && ABBR_RE.test(buf.trim())){ buf += (tokens[i+2] || ' '); continue; }
-      parts.push(buf.trim());
-      buf = '';
+  const ph = [];
+  let t = text.replace(MATH_RE, m => { ph.push(m); return `\u0002${ph.length-1}\u0002`; });
+  t = labelBareParts(t);
+  const restore = x => restoreDollarEscape(x.replace(/\u0002(\d+)\u0002/g, (_, n) => ph[+n]));
+  /* apartados: "(a) ...", "**(a)** ...", "a) ..." al inicio o tras espacio */
+  const PART_RE = /(?:^|\s)(?=(?:\*\*)?\(?(?:[a-h]|i{1,3}|iv|v|vi{1,3})\)(?:\*\*)?\s)/g;
+  let parts = t.split(PART_RE).map(x => x.trim()).filter(Boolean);
+  if (parts.length < 2) parts = [t.trim()];
+  const ABBR_RE = /\b(e\.g|i\.e|etc|vs|approx|fig|eq|no|cf|dr|sr|sra|p\.ej)\.$/i;
+  return parts.map(part => {
+    /* frases -> parrafos de hasta ~240 caracteres */
+    const sents = []; let last = 0; const B = /[.?!](?=\s+(?:[A-ZÁÉÍÓÚÑ¿¡0-9(\u0002*]))/g; let m;
+    while ((m = B.exec(part))){
+      const piece = part.slice(last, m.index + 1).trim();
+      if (ABBR_RE.test(piece)) continue;
+      if (piece) sents.push(piece); last = m.index + 1;
     }
-  }
-  if (buf.trim()) parts.push(buf.trim());
-  const restore = s => s.replace(/\u0002(\d+)\u0002/g, (_, n) => placeholders[+n]);
-  return parts.map(restore).filter(Boolean);
+    const tail = part.slice(last).trim(); if (tail) sents.push(tail);
+    const paras = []; let cur = '';
+    for (const x of sents){
+      if (cur && cur.length + x.length > 240){ paras.push(cur); cur = x; }
+      else cur = cur ? cur + ' ' + x : x;
+    }
+    if (cur) paras.push(cur);
+    return paras.map(restore);
+  });
 }
 function renderSolutionSteps(text){
-  const steps = splitSolutionSteps(text);
-  if (steps.length <= 1) return `<p>${mdi(text)}</p>`;
-  return `<div class="sol-flow">` + steps.map((s,i) =>
-    `<p${i===steps.length-1 ? ' class="final"' : ''}>${mdi(s)}</p>`
-  ).join('') + `</div>`;
+  if (!text) return '';
+  /* el texto ya viene maquetado (parrafos, listas, tablas, formulas en bloque): se respeta */
+  if (/\n/.test(text)) return `<div class="sol-flow">${md(text)}</div>`;
+  const parts = splitSolutionSteps(text);
+  return `<div class="sol-flow">` + parts.map(paras =>
+    `<div class="sol-part">${paras.map(x => `<p>${mdi(x).replace(/^(?:<strong>)?(\(?(?:[a-h]|i{1,3}|iv|v|vi{1,3})\))(?:<\/strong>)?(?=\s)/, '<strong class="sol-lbl">$1</strong>')}</p>`).join('')}</div>`).join('') + `</div>`;
 }
 function exBlock(e, extra, unitId, conceptMap){
   let out = `<div class="q">`;
@@ -847,11 +888,15 @@ function exBlock(e, extra, unitId, conceptMap){
   if (e.hints?.length) out += det(t('pistas'), '<ul>'+e.hints.map(x=>`<li>${mdi(x)}</li>`).join('')+'</ul>');
   let sol = '';
   if (!e.reasoning?.length && !e.steps?.length) sol += conceptHint(conceptMap, e.concept_ids);
-  if (e.reasoning?.length) sol += '<div class="sol-flow">'+e.reasoning.map((x,i,a)=>`<p${i===a.length-1?' class="final"':''}>${mdi(x)}</p>`).join('')+'</div>';
-  if (e.steps?.length) sol += '<div class="sol-flow">'+e.steps.map((x,i,a)=>`<p${i===a.length-1?' class="final"':''}><strong>Paso ${i+1}.</strong> ${mdi(str(x))}</p>`).join('')+'</div>';
-  if (e.answer) sol += `<p><strong>${t('respuesta')}</strong> ${mdi(e.answer)}</p>`;
-  if (e.solution && !e.reasoning?.length) sol += md(e.solution);
+  if (e.reasoning?.length) sol += '<div class="sol-flow">'+e.reasoning.map(x=>`<div class="sol-part">${md(str(x))}</div>`).join('')+'</div>';
+  if (e.steps?.length) sol += '<div class="sol-flow sol-steps">'+e.steps.map((x,i)=>`<div class="sol-step"><span class="sol-n">${i+1}</span><div>${md(str(x))}</div></div>`).join('')+'</div>';
+  if (e.solution && !e.reasoning?.length) sol += `<div class="sol-flow">${md(str(e.solution))}</div>`;
   if (e.full_solution && !e.steps?.length) sol += renderSolutionSteps(e.full_solution);
+  /* la respuesta va al final, como conclusion del desarrollo (antes salia antes de la resolucion) */
+  if (e.answer){
+    const ah = md(str(e.answer)), lbl = `<strong>${t('respuesta')}</strong> `;
+    sol += `<div class="sol-answer">${ah.startsWith('<p>') ? '<p>' + lbl + ah.slice(3) : '<p>' + lbl + '</p>' + ah}</div>`;
+  }
   if (e.verification) sol += `<div class="callout info"><strong>Comprobación.</strong> ${mdi(e.verification)}</div>`;
   if (e.interpretation) sol += `<div class="callout info"><strong>${t('por_que_funciona')}</strong> ${mdi(e.interpretation)}</div>`;
   if (e.common_mistake) sol += `<div class="callout warn"><strong>${t('error_tipico')}</strong> ${mdi(e.common_mistake)}</div>`;
