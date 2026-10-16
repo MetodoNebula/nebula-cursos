@@ -481,6 +481,7 @@ const STR = {
   datos: {es:'Datos.', en:'Given.'},
   incognita: {es:'Incógnita.', en:'Find.'},
   pistas: {es:'Pistas', en:'Hints'},
+  guia: {es:'Cómo abordarlo:', en:'How to approach it:'},
   ver_solucion: {es:'Ver solución', en:'Show solution'},
   respuesta: {es:'Respuesta.', en:'Answer.'},
   por_que_funciona: {es:'Por qué funciona.', en:'Why this works.'},
@@ -885,6 +886,8 @@ function exBlock(e, extra, unitId, conceptMap){
     out += '</div>';
   }
   out += assetsHtml(e.assets) || autoDiagram(e, unitId) || autoChart(e, unitId);
+  /* andamiaje de los ejercicios guiados: los pasos a seguir, visibles antes de las pistas */
+  if (e.scaffold) out += `<div class="callout info"><strong>${t('guia')}</strong> ${md(str(e.scaffold))}</div>`;
   if (e.hints?.length) out += det(t('pistas'), '<ul>'+e.hints.map(x=>`<li>${mdi(x)}</li>`).join('')+'</ul>');
   let sol = '';
   if (!e.reasoning?.length && !e.steps?.length) sol += conceptHint(conceptMap, e.concept_ids);
