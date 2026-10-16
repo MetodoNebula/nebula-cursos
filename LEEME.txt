@@ -1,0 +1,44 @@
+NEBULA CURSOS - VISOR LOCAL
+===========================
+
+Contenido: los 7 cursos (GCSE Mates, GCSE Chemistry, GCSE Physics,
+Quimica, Fisica, Matematicas II y Matematicas CCSS), 558 lecciones,
+con 792 figuras (TikZ compiladas a SVG) y formulas LaTeX renderizadas
+con MathJax INCLUIDO en la carpeta: funciona sin internet.
+
+COMO ARRANCARLO
+---------------
+Opcion A (lo mas facil): doble clic en  arrancar.bat
+  - Abre el navegador en http://localhost:8800 y deja una ventana
+    negra abierta (el servidor). Cierra esa ventana para pararlo.
+
+Opcion B (a mano): abre un terminal (cmd) en esta carpeta y ejecuta:
+    python -m http.server 8800
+  (si "python" no funciona, prueba "py -m http.server 8800")
+  Luego abre  http://localhost:8800  en el navegador.
+
+NOTAS
+-----
+- Hace falta servidor (no vale abrir index.html con doble clic):
+  la pagina carga las lecciones via fetch() y el navegador lo
+  bloquea sobre file://.
+- Todo es local: formulas (mathjax-tex-svg.min.js), figuras (SVG
+  dentro de los bundles) y datos. Solo las fuentes tipograficas
+  vienen de Google Fonts; sin internet se usan las del sistema.
+- El puerto 8800 es arbitrario: usa otro si esta ocupado.
+
+WEB PUBLICADA (GITHUB PAGES, CON CONTRASENA)
+--------------------------------------------
+- Direccion: https://metodonebula.github.io/nebula-cursos/
+- En la web NO se suben catalog.json ni bundles/ (estan en .gitignore).
+  Se sube solo la copia cifrada de la carpeta cifrado/ (AES-256), y la
+  pagina pide la contrasena para descifrarla en el navegador.
+- En local (localhost) la pagina sigue usando los JSON en claro, sin
+  contrasena. Para probar el modo cifrado en local:
+  http://localhost:8800/?cifrado
+- Para publicar cambios: doble clic en  publicar.bat
+  (cifra lo que haya cambiado, pide la contrasena, hace commit y push).
+  Hace falta Node.js instalado.
+- Para cambiar la contrasena:  node cifrar.js --nueva-clave
+  y luego publicar.bat. Quien tenga la antigua dejara de poder entrar.
+- La contrasena no se guarda en ningun archivo: no la pierdas.
