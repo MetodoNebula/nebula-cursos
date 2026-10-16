@@ -209,6 +209,10 @@ mjx-container svg [fill="teal"]{fill:var(--accent)!important;stroke:var(--accent
 .adg-rightangle{fill:none;stroke:#0e7a68;stroke-width:1.6}
 mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
 mjx-container svg{max-width:100%}
+.mdquote{margin:14px 0;padding:10px 14px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+.mdquote p{margin:6px 0}
+.mdh{margin:14px 0 6px;font-size:16px}
+.mdquote .mdh{margin-top:4px}
 .footnote{color:var(--muted);font-size:12.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:12px}
 @media (max-width:480px){ h1{font-size:22px} .face{font-size:15.5px;padding:20px} }
 /* Pantalla de contraseña (contenido cifrado en cifrado/) */
@@ -243,6 +247,9 @@ window.MathJax = {
     macros: { pounds: '\\text{£}' }
   },
   svg: { fontCache: 'global' },
+  /* extensiones que MathJax carga bajo demanda (\cancel, \boldsymbol, \ce...): van en mathjax-ext/.
+     Sin esto, una sola de esas macros hace fallar el renderizado de TODA la pestaña. */
+  loader: { paths: { tex: './mathjax-ext' } },
   options: { enableMenu: false }
 };
 </script>
@@ -398,8 +405,10 @@ function md(s){
   s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
   /* resaltado de color en prosa: [[blue:texto]] -> <span class="hl-blue">texto</span>; misma paleta que \color{} en LaTeX */
   s = s.replace(/\[\[(blue|red|green|orange|purple|teal):([^\]]+)\]\]/g, '<span class="hl-$1">$2</span>');
-  const paras = s.split(/\n{2,}/).map(p => {
-    const lines = p.split('\n').filter(l => l.length);
+  /* un parrafo: tabla, lista, titulo (### ...) o texto normal */
+  function para(p){
+    const lines = p.split('\n').filter(l => l.trim().length);
+    if (!lines.length) return '';
     if (lines.length >= 2 && lines.every(l => /^\s*\|.*\|\s*$/.test(l))){
       const t = mdTable(lines);
       if (t) return t;
@@ -408,9 +417,21 @@ function md(s){
       return '<ul>' + lines.map(l => '<li>' + l.replace(/^\s*[-•]\s+/,'') + '</li>').join('') + '</ul>';
     if (lines.length > 1 && lines.every(l => /^\s*\d+[.)]\s+/.test(l)))
       return '<ol>' + lines.map(l => '<li>' + l.replace(/^\s*\d+[.)]\s+/,'') + '</li>').join('') + '</ol>';
-    return '<p>' + p.replace(/\n/g,'<br>') + '</p>';
+    /* titulos markdown (#, ##, ###): antes se veian como "###" literal */
+    if (/^\s*#{1,4}\s+/.test(lines[0])){
+      const head = '<h4 class="mdh">' + lines[0].replace(/^\s*#{1,4}\s+/,'') + '</h4>';
+      return lines.length > 1 ? head + para(lines.slice(1).join('\n')) : head;
+    }
+    return '<p>' + lines.join('<br>') + '</p>';
+  }
+  const paras = s.split(/\n{2,}/).map(p => {
+    /* citas markdown ("> texto"): antes se veia el ">" literal; ahora es un recuadro destacado */
+    const ls = p.split('\n').filter(l => l.trim().length);
+    if (ls.length && ls.every(l => /^\s*&gt;/.test(l)))
+      return '<blockquote class="mdquote">' + para(ls.map(l => l.replace(/^\s*&gt;\s?/,'')).join('\n')) + '</blockquote>';
+    return para(p);
   });
-  s = paras.join('');
+  s = paras.join('').replace(/<\/blockquote><blockquote class="mdquote">/g, '');
   s = s.replace(/\u0001(\d+)\u0001/g, (_,i) => esc(math[+i]).replace(/&amp;/g,'&'));
   s = s.replace(/\u0003(\d+)\u0003/g, (_,i) => latexTables.tables[+i]);
   s = restoreDollarEscape(s);
@@ -430,6 +451,7 @@ const STR = {
   resumen: {es:'Resumen', en:'Summary'},
   formulas: {es:'Fórmulas.', en:'Formulas.'},
   solo_recuerda: {es:'Si solo recuerdas una cosa:', en:'If you remember only one thing:'},
+  comprueba: {es:'Comprueba que lo has entendido:', en:'Check your understanding:'},
   datos: {es:'Datos.', en:'Given.'},
   incognita: {es:'Incógnita.', en:'Find.'},
   pistas: {es:'Pistas', en:'Hints'},
@@ -670,10 +692,13 @@ function viewTeoria(d){
     if (s.key_points?.length) out += `<ul>` + s.key_points.map(x => `<li>${mdi(str(x))}</li>`).join('') + '</ul>';
     if (s.formulas?.length) out += `<p><strong>${t('formulas')}</strong></p>` + s.formulas.map(x => `<div class="formula-row">${mdi(texDisplay(x))}</div>`).join('');
     if (s.what_to_remember_if_nothing_else) out += `<p><strong>${t('solo_recuerda')}</strong> ${mdi(str(s.what_to_remember_if_nothing_else))}</p>`;
+    if (s.exit_check?.question) out += `<div class="q"><div class="stem"><strong>${t('comprueba')}</strong> ${mdi(s.exit_check.question)}</div>` + (s.exit_check.answer ? det(t('ver_respuesta'), md(s.exit_check.answer)) : '') + '</div>';
     out += '</div>';
   }
   return out || `<div class="empty">${t('sin_teoria')}</div>`;
 }
+/* algunos campos llegan como texto suelto en vez de lista: se normalizan para no romper la pestaña */
+function asList(x){ return Array.isArray(x) ? x : (x == null || x === '' ? [] : [x]); }
 function str(x){ if (x==null) return ''; if (typeof x==='string') return x; if (Array.isArray(x)) return x.map(str).join(' · '); if (typeof x==='object') return Object.values(x).map(str).join(' — '); return String(x); }
 
 /* --- Fichas (flashcards) --- */
@@ -2333,18 +2358,20 @@ function viewVocab(d){
   const ks = d.keywords || [];
   if (!ks.length) return `<div class="empty">${t('sin_vocab')}</div>`;
   return `<div class="block kwwrap"><span class="tag">${t('palabras_clave')}</span><table class="kwtable">` +
-    ks.map(k => `<tr><td>${mdi(k.term)}</td><td>${mdi(k.definition)}</td></tr>`).join('') + '</table></div>';
+    ks.map(k => typeof k === 'string' ? `<tr><td>${mdi(k)}</td><td></td></tr>` : `<tr><td>${mdi(k.term)}</td><td>${mdi(k.definition||'')}</td></tr>`).join('') + '</table></div>';
 }
 
 /* --- Repaso --- */
 function viewRepaso(d){
   let out = '';
-  if (d.exam_notes?.length)
+  const examNotes = asList(d.exam_notes), miscs = asList(d.misconceptions);
+  if (examNotes.length)
     out += `<div class="block"><span class="tag">${t('notas_examen')}</span><ul>` +
-      d.exam_notes.map(x => `<li>${mdi(str(x))}</li>`).join('') + '</ul></div>';
-  if (d.misconceptions?.length){
+      examNotes.map(x => `<li>${mdi(str(x))}</li>`).join('') + '</ul></div>';
+  if (miscs.length){
     out += `<h2>${t('conceptos_erroneos')}</h2>`;
-    d.misconceptions.forEach(m => {
+    miscs.forEach(m => {
+      if (typeof m === 'string') m = { incorrect_model: m };
       out += `<div class="block"><p><strong>${t('modelo_erroneo')}</strong> ${mdi(m.incorrect_model)}</p>`;
       if (m.correct_model) out += `<p><strong>${t('modelo_correcto')}</strong> ${mdi(m.correct_model)}</p>`;
       if (m.why_it_appears) out += det(t('por_que_aparece'), md(m.why_it_appears));
@@ -2363,7 +2390,7 @@ function viewRepaso(d){
     });
   }
   if (d.prerequisites?.length)
-    out += `<h2>${t('requisitos_previos')}</h2>` + d.prerequisites.map(p =>
+    out += `<h2>${t('requisitos_previos')}</h2>` + d.prerequisites.map(p => typeof p === 'string' ? `<div class="block"><p><strong>${mdi(p)}</strong></p></div>` :
       `<div class="block"><p><strong>${mdi(p.statement)}</strong></p>${p.why_it_matters ? `<p>${mdi(p.why_it_matters)}</p>`:''}</div>`).join('');
   if (d.diagnostic_items?.length){
     out += `<h2>${t('diagnostico_previo')}</h2>`;
