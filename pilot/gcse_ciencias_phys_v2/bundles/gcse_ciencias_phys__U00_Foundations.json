@@ -1,0 +1,2216 @@
+{
+  "01_Units_prefixes_and_scientific_notation.json": {
+    "id": "U00-L01",
+    "title": "Units, prefixes and scientific notation",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "estimated_length": 35,
+    "estimated_difficulty": 2,
+    "curriculum": "GCSE/IGCSE",
+    "objectives": [
+      {
+        "statement": "State the SI base units for mass, length, time, temperature and electric current",
+        "bloom_level": "remember"
+      },
+      {
+        "statement": "Convert between units using metric prefixes (kilo, centi, milli, micro, nano)",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Express numbers in standard form (scientific notation) and use them in calculations",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Convert derived units such as speed (m/s) and density (kg/m³) between forms",
+        "bloom_level": "apply"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "U00-L01-TB01",
+        "type": "exposition",
+        "title": "The International System of Units (SI)",
+        "scope": "CORE",
+        "body": "Physics is a quantitative science — we measure things and express them as numbers with units. To make sure measurements mean the same thing everywhere, scientists worldwide use the International System of Units, abbreviated SI (from the French 'Système International').\n\nThere are seven SI base units, but for GCSE Physics you need five:\n\n• Mass is measured in kilograms (kg). One kilogram is roughly the mass of a litre of water.\n• Length is measured in metres (m). One metre is about the distance from your nose to your outstretched fingertip.\n• Time is measured in seconds (s). One second is about the time between two heartbeats at rest.\n• Temperature is measured in kelvins (K). In everyday life we use degrees Celsius (°C); to convert, add 273: so 0 °C = 273 K and 100 °C = 373 K.\n• Electric current is measured in amperes (A), often shortened to 'amps'.\n\nEvery other unit you will meet in GCSE Physics is built from these base units. For example, speed is measured in metres per second (m/s), which combines the base units for length and time. Density is kilograms per cubic metre (kg/m³), combining mass and length. Force is measured in newtons (N), where 1 N = 1 kg·m/s². These combined units are called derived units.\n\nAlways write units after every number in physics. A length of '3.5' means nothing; '3.5 m' tells us it is three and a half metres.",
+        "concept_ids": [
+          "si_units",
+          "base_units",
+          "derived_units"
+        ],
+        "objective_ids": [
+          "U00-L01-OBJ01"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L01-TB02",
+        "type": "exposition",
+        "title": "Metric prefixes: scaling units up and down",
+        "scope": "CORE",
+        "body": "The metric system uses prefixes to scale units up or down by powers of ten. This avoids writing very large or very small numbers. Here are the prefixes you must know:\n\nLarger:\n• tera (T) = × 10¹² (1 000 000 000 000)\n• giga (G) = × 10⁹ (1 000 000 000)\n• mega (M) = × 10⁶ (1 000 000)\n• kilo (k) = × 10³ (1 000)\n\nSmaller:\n• centi (c) = × 10⁻² (0.01)\n• milli (m) = × 10⁻³ (0.001)\n• micro (μ) = × 10⁻⁶ (0.000 001)\n• nano (n) = × 10⁻⁹ (0.000 000 001)\n\nTo convert FROM a prefixed unit TO the base unit, multiply by the factor. For example: 5.2 km = 5.2 × 1000 = 5200 m. And 350 mg = 350 × 0.001 = 0.35 g.\n\nTo convert FROM the base unit TO a prefixed unit, divide by the factor. For example: 0.025 m = 0.025 ÷ 0.001 = 25 mm. And 4 500 000 J = 4 500 000 ÷ 1 000 000 = 4.5 MJ.\n\nA useful shortcut: moving from a larger prefix to a smaller one means multiplying (the number gets bigger). Moving from a smaller prefix to a larger one means dividing (the number gets smaller). Example: 2.5 km → m: kilo is bigger than the base, so multiply by 1000 → 2500 m. Then 2500 m → mm: base is bigger than milli, so multiply by 1000 → 2 500 000 mm.\n\nCommon GCSE conversions you should practise until automatic:\n• cm → m: divide by 100 (e.g. 75 cm = 0.75 m)\n• mm → m: divide by 1000 (e.g. 6 mm = 0.006 m)\n• g → kg: divide by 1000 (e.g. 250 g = 0.25 kg)\n• cm³ → m³: divide by 10⁶ (because 1 m = 100 cm, so 1 m³ = 100³ cm³ = 10⁶ cm³)\n• cm² → m²: divide by 10⁴ (because 1 m² = 100² cm² = 10⁴ cm²)",
+        "concept_ids": [
+          "metric_prefixes",
+          "unit_conversion"
+        ],
+        "objective_ids": [
+          "U00-L01-OBJ02"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L01-TB03",
+        "type": "exposition",
+        "title": "Standard form (scientific notation)",
+        "scope": "CORE",
+        "body": "In physics we often deal with very large numbers (the speed of light is 300 000 000 m/s) or very small numbers (the charge on an electron is 0.000 000 000 000 000 000 16 C). Standard form (also called scientific notation) makes these manageable.\n\nA number in standard form looks like this: A × 10ⁿ, where:\n• A is a number between 1 and 10 (1 ≤ A < 10)\n• n is an integer (positive, negative or zero)\n\nExamples:\n• 300 000 000 = 3.0 × 10⁸ (the decimal point moved 8 places left, so n = +8)\n• 0.000 016 = 1.6 × 10⁻⁵ (the decimal point moved 5 places right, so n = −5)\n• 4 500 = 4.5 × 10³\n• 0.072 = 7.2 × 10⁻²\n\nTo convert INTO standard form:\n1. Move the decimal point so you have a number between 1 and 10.\n2. Count how many places you moved it. If you moved left, n is positive; if right, n is negative.\n\nTo convert OUT OF standard form:\n1. If n is positive, move the decimal point n places to the right (adding zeros if needed).\n2. If n is negative, move the decimal point |n| places to the left.\n\nCalculations with standard form:\n• Multiplying: multiply the A parts and add the powers. (3 × 10⁴) × (2 × 10³) = 6 × 10⁷.\n• Dividing: divide the A parts and subtract the powers. (8 × 10⁶) ÷ (4 × 10²) = 2 × 10⁴.\n• Adding/subtracting: make the powers the same first, then add/subtract the A parts.\n\nIf your result has A outside 1–10, adjust: 15 × 10³ = 1.5 × 10⁴.",
+        "concept_ids": [
+          "standard_form",
+          "scientific_notation",
+          "powers_of_ten"
+        ],
+        "objective_ids": [
+          "U00-L01-OBJ03"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L01-TB04",
+        "type": "exposition",
+        "title": "Converting derived units",
+        "scope": "CORE",
+        "body": "Many GCSE problems require you to convert derived units before substituting into a formula. The key principle: convert each base unit separately, then combine.\n\nExample 1 — Speed: A car travels at 72 km/h. What is this in m/s?\n• Convert km to m: 72 km = 72 000 m\n• Convert hours to seconds: 1 h = 3600 s\n• Speed = 72 000 m ÷ 3600 s = 20 m/s\n• Quick rule: to go from km/h to m/s, divide by 3.6. To go from m/s to km/h, multiply by 3.6.\n\nExample 2 — Density: A rock has density 2.7 g/cm³. Convert to kg/m³.\n• Convert g to kg: multiply by 0.001 (÷ 1000)\n• Convert cm³ to m³: multiply by 10⁻⁶ (÷ 1 000 000)\n• Combined: 2.7 × (0.001 / 0.000001) = 2.7 × 1000 = 2700 kg/m³\n• Quick rule: to go from g/cm³ to kg/m³, multiply by 1000.\n\nExample 3 — Area: A solar panel is 1.2 m × 0.8 m = 0.96 m². What is this in cm²?\n• 1 m = 100 cm, so 1 m² = 10 000 cm²\n• 0.96 m² = 0.96 × 10 000 = 9600 cm²\n\nGolden rule: always convert to SI base units (m, kg, s, A, K) before putting numbers into a GCSE formula, unless the question specifically uses other units.",
+        "concept_ids": [
+          "derived_units",
+          "unit_conversion_derived"
+        ],
+        "objective_ids": [
+          "U00-L01-OBJ04"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      }
+    ],
+    "keywords": [
+      {
+        "term": "SI units",
+        "definition": "The International System of Units — the standard set of units used in science worldwide."
+      },
+      {
+        "term": "Base unit",
+        "definition": "One of the fundamental SI units (kg, m, s, K, A) from which all other units are derived."
+      },
+      {
+        "term": "Derived unit",
+        "definition": "A unit built by combining base units, e.g. m/s for speed, N (= kg·m/s²) for force."
+      },
+      {
+        "term": "Prefix",
+        "definition": "A multiplier placed before a unit symbol, e.g. kilo (k) = ×1000, milli (m) = ×0.001."
+      },
+      {
+        "term": "Standard form",
+        "definition": "A way of writing numbers as A × 10ⁿ where 1 ≤ A < 10 and n is an integer."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "U00-L01-WE01",
+        "title": "Converting with prefixes",
+        "statement": "Convert 0.045 km to (a) metres and (b) millimetres.",
+        "steps": [
+          {
+            "step": "Convert km to m: 0.045 km × 1000 = 45 m",
+            "explanation": "1 km = 1000 m, so multiply by 1000"
+          },
+          {
+            "step": "Convert m to mm: 45 m × 1000 = 45 000 mm",
+            "explanation": "1 m = 1000 mm, so multiply by 1000"
+          }
+        ],
+        "full_solution": "0.045 km = 0.045 × 1000 m = 45 m. Then 45 m = 45 × 1000 mm = 45 000 mm."
+      },
+      {
+        "id": "U00-L01-WE02",
+        "title": "Standard form calculation",
+        "statement": "The mass of the Earth is 5.97 × 10²⁴ kg and the mass of the Moon is 7.35 × 10²² kg. How many times heavier is the Earth than the Moon?",
+        "steps": [
+          {
+            "step": "Divide: (5.97 × 10²⁴) ÷ (7.35 × 10²²)",
+            "explanation": "To find how many times heavier, divide the larger mass by the smaller"
+          },
+          {
+            "step": "Divide the number parts: 5.97 ÷ 7.35 = 0.8122...",
+            "explanation": "Divide the A values"
+          },
+          {
+            "step": "Subtract the powers: 10²⁴ ÷ 10²² = 10²",
+            "explanation": "When dividing powers of 10, subtract exponents: 24 − 22 = 2"
+          },
+          {
+            "step": "Combine: 0.8122 × 10² = 81.2 (to 3 s.f.)",
+            "explanation": "Multiply 0.8122 by 100 to get the final answer"
+          }
+        ],
+        "full_solution": "(5.97 × 10²⁴) ÷ (7.35 × 10²²) = (5.97 ÷ 7.35) × 10^(24−22) = 0.8122 × 10² = 81.2. The Earth is about 81 times heavier than the Moon."
+      },
+      {
+        "id": "U00-L01-WE03",
+        "title": "Converting derived units for a density calculation",
+        "statement": "A block of aluminium has mass 540 g and volume 200 cm³. Calculate its density in kg/m³.",
+        "steps": [
+          {
+            "step": "Convert mass: 540 g = 540 ÷ 1000 = 0.54 kg",
+            "explanation": "Divide by 1000 to convert grams to kilograms"
+          },
+          {
+            "step": "Convert volume: 200 cm³ = 200 ÷ 1 000 000 = 2.0 × 10⁻⁴ m³",
+            "explanation": "Divide by 10⁶ to convert cm³ to m³ (since 1 m = 100 cm, 1 m³ = 10⁶ cm³)"
+          },
+          {
+            "step": "density = mass ÷ volume = 0.54 ÷ (2.0 × 10⁻⁴) = 2700 kg/m³",
+            "explanation": "Apply the density formula with SI units"
+          }
+        ],
+        "full_solution": "mass = 540 g = 0.54 kg. volume = 200 cm³ = 2.0 × 10⁻⁴ m³. density = mass/volume = 0.54 / (2.0 × 10⁻⁴) = 2700 kg/m³."
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "U00-L01-EX01",
+        "statement": "Convert the following: (a) 3.2 kg to grams, (b) 450 mm to metres, (c) 6.8 MJ to joules.",
+        "answer": "(a) 3200 g, (b) 0.45 m, (c) 6 800 000 J = 6.8 × 10⁶ J",
+        "full_solution": "(a) 3.2 kg × 1000 = 3200 g. (b) 450 mm ÷ 1000 = 0.45 m. (c) 6.8 MJ × 10⁶ = 6 800 000 J = 6.8 × 10⁶ J.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L01-EX02",
+        "statement": "Express in standard form: (a) 0.000 072, (b) 93 000 000, (c) 0.51.",
+        "answer": "(a) 7.2 × 10⁻⁵, (b) 9.3 × 10⁷, (c) 5.1 × 10⁻¹",
+        "full_solution": "(a) Move decimal 5 places right: 7.2 × 10⁻⁵. (b) Move decimal 7 places left: 9.3 × 10⁷. (c) Move decimal 1 place right: 5.1 × 10⁻¹.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L01-EX03",
+        "statement": "A sprinter runs 100 m in 10.2 s. Calculate her average speed in (a) m/s and (b) km/h.",
+        "answer": "(a) 9.80 m/s (3 s.f.), (b) 35.3 km/h (3 s.f.)",
+        "full_solution": "(a) speed = distance/time = 100/10.2 = 9.804 m/s ≈ 9.80 m/s. (b) 9.804 m/s × 3.6 = 35.29 km/h ≈ 35.3 km/h.",
+        "marks": 4
+      },
+      {
+        "id": "U00-L01-EX04",
+        "statement": "Calculate (3.0 × 10⁵) × (4.0 × 10⁻³). Give your answer in standard form.",
+        "answer": "1.2 × 10³",
+        "full_solution": "Multiply A parts: 3.0 × 4.0 = 12. Add powers: 5 + (−3) = 2. So 12 × 10² = 1.2 × 10³.",
+        "marks": 2
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-U00-01-1",
+        "stem": "Which of the following is the SI base unit for mass?",
+        "options": [
+          {
+            "key": "A",
+            "text": "kilogram (kg)"
+          },
+          {
+            "key": "B",
+            "text": "gram (g)",
+            "why_wrong": "The gram is 1/1000 of the SI base unit; the kilogram is the base unit."
+          },
+          {
+            "key": "C",
+            "text": "newton (N)",
+            "why_wrong": "The newton is the SI unit of force, not mass."
+          },
+          {
+            "key": "D",
+            "text": "pound (lb)",
+            "why_wrong": "The pound is an imperial unit, not an SI unit."
+          }
+        ],
+        "correct": "A",
+        "explanation": "The kilogram (kg) is the SI base unit for mass. Although it contains the prefix 'kilo', it is defined as the base unit."
+      },
+      {
+        "id": "MCQ-U00-01-2",
+        "stem": "What is 0.0056 m expressed in millimetres?",
+        "options": [
+          {
+            "key": "A",
+            "text": "5.6 mm"
+          },
+          {
+            "key": "B",
+            "text": "0.56 mm",
+            "why_wrong": "You divided by 100 instead of multiplying by 1000."
+          },
+          {
+            "key": "C",
+            "text": "56 mm",
+            "why_wrong": "You multiplied by 10 000 instead of 1000."
+          },
+          {
+            "key": "D",
+            "text": "0.0056 mm",
+            "why_wrong": "You didn't convert at all; 1 mm = 0.001 m, so you need to multiply by 1000."
+          }
+        ],
+        "correct": "A",
+        "explanation": "1 m = 1000 mm, so 0.0056 m × 1000 = 5.6 mm."
+      },
+      {
+        "id": "MCQ-U00-01-3",
+        "stem": "Which number is correctly written in standard form?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$3.7 \\times 10^{4}$"
+          },
+          {
+            "key": "B",
+            "text": "$37 \\times 10^{3}$",
+            "why_wrong": "37 is not between 1 and 10, so this is not standard form."
+          },
+          {
+            "key": "C",
+            "text": "$0.37 \\times 10^{5}$",
+            "why_wrong": "0.37 is less than 1, so this is not standard form."
+          },
+          {
+            "key": "D",
+            "text": "$3.7 \\times 100^{2}$",
+            "why_wrong": "Standard form uses powers of 10, not powers of 100."
+          }
+        ],
+        "correct": "A",
+        "explanation": "In standard form A × 10ⁿ, A must be between 1 and 10. Only 3.7 × 10⁴ satisfies this condition."
+      },
+      {
+        "id": "MCQ-U00-01-4",
+        "stem": "A cube has sides of length 2 cm. What is its volume in m³?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$8 \\times 10^{-6}$ m³"
+          },
+          {
+            "key": "B",
+            "text": "$8 \\times 10^{-2}$ m³",
+            "why_wrong": "You only divided by 100 once instead of cubing the conversion factor."
+          },
+          {
+            "key": "C",
+            "text": "0.008 m³",
+            "why_wrong": "You divided by 1000 instead of by 10⁶."
+          },
+          {
+            "key": "D",
+            "text": "$8 \\times 10^{-4}$ m³",
+            "why_wrong": "You divided by 10⁴ (cm² conversion) instead of 10⁶ (cm³ conversion)."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Volume = 2³ = 8 cm³. Since 1 m = 100 cm, 1 m³ = 10⁶ cm³. So 8 cm³ = 8 ÷ 10⁶ = 8 × 10⁻⁶ m³."
+      },
+      {
+        "id": "MCQ-U00-01-5",
+        "stem": "The prefix 'micro' (μ) represents a factor of:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$10^{-6}$"
+          },
+          {
+            "key": "B",
+            "text": "$10^{-3}$",
+            "why_wrong": "10⁻³ is the milli (m) prefix."
+          },
+          {
+            "key": "C",
+            "text": "$10^{-9}$",
+            "why_wrong": "10⁻⁹ is the nano (n) prefix."
+          },
+          {
+            "key": "D",
+            "text": "$10^{-2}$",
+            "why_wrong": "10⁻² is the centi (c) prefix."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Micro (μ) = 10⁻⁶ = 0.000 001. For example, 1 μm = 0.000 001 m."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "What are the five SI base units for GCSE Physics?",
+        "back": "kilogram (kg), metre (m), second (s), kelvin (K), ampere (A)"
+      },
+      {
+        "front": "What does the prefix 'milli' mean?",
+        "back": "× 10⁻³ (one thousandth, 0.001)"
+      },
+      {
+        "front": "How do you convert cm³ to m³?",
+        "back": "Divide by 10⁶ (because 1 m = 100 cm, so 1 m³ = 100³ = 10⁶ cm³)"
+      },
+      {
+        "front": "In standard form, what must A be?",
+        "back": "A number between 1 and 10 (1 ≤ A < 10)"
+      },
+      {
+        "front": "Quick rule: km/h to m/s?",
+        "back": "Divide by 3.6"
+      }
+    ],
+    "misconceptions": [],
+    "common_mistakes": [],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "The SI base units for GCSE Physics are: kg, m, s, K, A.",
+        "Metric prefixes scale units by powers of ten: kilo (10³), centi (10⁻²), milli (10⁻³), micro (10⁻⁶).",
+        "Standard form writes numbers as A × 10ⁿ where 1 ≤ A < 10.",
+        "Always convert to SI base units before substituting into formulas.",
+        "For derived unit conversions, convert each base unit separately then combine."
+      ]
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::units_prefixes_and_scientific_notation",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 1
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "02_Rearranging_equations.json": {
+    "id": "U00-L02",
+    "title": "Rearranging equations",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "estimated_length": 40,
+    "estimated_difficulty": 3,
+    "curriculum": "GCSE/IGCSE",
+    "objectives": [
+      {
+        "statement": "Rearrange a formula to make any variable the subject",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Use the formula triangle method as a quick check for three-variable formulas",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Substitute values into rearranged formulas and solve problems",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Handle squared terms and square roots when rearranging",
+        "bloom_level": "apply"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "U00-L02-TB01",
+        "type": "exposition",
+        "title": "Why rearranging matters in physics",
+        "scope": "CORE",
+        "body": "Almost every physics calculation requires a formula. For example, speed = distance ÷ time, written as:\n\nv = s / t\n\nThis formula tells you the speed if you know distance and time. But what if you know the speed and time, and want to find the distance? You need to rearrange the formula to make distance the subject:\n\ns = v × t\n\nRearranging means rewriting a formula so that a different variable is on its own on one side of the equals sign. The variable on its own is called the 'subject' of the formula.\n\nThe golden rule of rearranging: whatever you do to one side of the equation, you must do to the other side. This keeps the equation balanced — like a see-saw that must stay level.",
+        "concept_ids": [
+          "rearranging",
+          "subject_of_formula"
+        ],
+        "objective_ids": [
+          "U00-L02-OBJ01"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L02-TB02",
+        "type": "exposition",
+        "title": "The inverse-operations method",
+        "scope": "CORE",
+        "body": "Every mathematical operation has an inverse (opposite) that undoes it:\n• Addition ↔ Subtraction\n• Multiplication ↔ Division\n• Squaring ↔ Square rooting\n\nTo rearrange, use inverse operations to 'move' terms across the equals sign.\n\nExample 1: Make s the subject of v = s / t\n• s is divided by t, so multiply both sides by t:\n v × t = s / t × t → v × t = s → s = vt\n\nExample 2: Make t the subject of v = s / t\n• First multiply both sides by t: vt = s\n• Then divide both sides by v: t = s / v\n\nExample 3: Make m the subject of F = ma\n• m is multiplied by a, so divide both sides by a:\n F / a = ma / a → m = F / a\n\nExample 4: Make v the subject of Eₖ = ½mv²\n• Multiply both sides by 2: 2Eₖ = mv²\n• Divide both sides by m: 2Eₖ / m = v²\n• Square root both sides: v = √(2Eₖ / m)\n\nTips:\n• Deal with addition/subtraction first, then multiplication/division, then powers/roots.\n• If the variable you want appears in more than one term, collect those terms first, then factorise.",
+        "concept_ids": [
+          "inverse_operations",
+          "rearranging_method"
+        ],
+        "objective_ids": [
+          "U00-L02-OBJ01"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L02-TB03",
+        "type": "exposition",
+        "title": "The formula triangle shortcut",
+        "scope": "CORE",
+        "body": "For any formula with three variables where one equals the other two multiplied or divided, you can use a formula triangle as a quick visual aid.\n\nTake the formula: speed = distance / time (v = s / t)\n\nDraw a triangle. Put the variable that is alone on one side of the equation at the TOP. Put the other two at the BOTTOM, side by side:\n\n [ s ]\n -------\n [ v | t ]\n\nTo find any variable, cover it with your finger:\n• Cover s (top): you see v × t, so s = v × t\n• Cover v (bottom-left): you see s over t, so v = s / t\n• Cover t (bottom-right): you see s over v, so t = s / v\n\nThis works for many GCSE formulas:\n• V = IR → triangle with V on top, I and R on bottom\n• F = ma → triangle with F on top, m and a on bottom\n• ρ = m/V → triangle with m on top, ρ and V on bottom\n• P = E/t → triangle with E on top, P and t on bottom\n• W = Fd → triangle with W on top, F and d on bottom\n\nImportant: the triangle only works for formulas of the form A = B × C or A = B / C. For more complex formulas (like Eₖ = ½mv²), use the inverse-operations method instead.\n\nThe formula triangle is a useful check, but the inverse-operations method always works. Use whichever you're more confident with in the exam.",
+        "concept_ids": [
+          "formula_triangle"
+        ],
+        "objective_ids": [
+          "U00-L02-OBJ02"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L02-TB04",
+        "type": "exposition",
+        "title": "Handling squares, square roots and fractions",
+        "scope": "CORE",
+        "body": "Some GCSE Physics formulas involve squared terms or fractions. Here's how to handle them.\n\nSquared terms:\n• If the subject is squared, take the square root at the end.\n Example: v² = u² + 2as. Make v the subject → v = √(u² + 2as)\n• If you need to isolate something that is squared, deal with everything else first.\n Example: Eₖ = ½mv². Make v the subject:\n 2Eₖ = mv² → 2Eₖ/m = v² → v = √(2Eₖ/m)\n\nFormulas with fractions:\n• Multiply both sides by the denominator to clear the fraction.\n Example: P = F/A. Make A the subject:\n P × A = F → A = F/P\n\nFormulas with additions/subtractions:\n• Move added/subtracted terms across first.\n Example: v = u + at. Make t the subject:\n v − u = at → t = (v − u)/a\n\nPractice strategy: take every formula on the GCSE equation sheet and practise making each variable the subject. This is one of the most valuable things you can do before the exam.",
+        "concept_ids": [
+          "squared_terms",
+          "rearranging_complex"
+        ],
+        "objective_ids": [
+          "U00-L02-OBJ04"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Subject",
+        "definition": "The variable that is isolated on one side of the equation."
+      },
+      {
+        "term": "Rearrange",
+        "definition": "To rewrite a formula so that a different variable becomes the subject."
+      },
+      {
+        "term": "Inverse operation",
+        "definition": "The operation that undoes another: + ↔ −, × ↔ ÷, x² ↔ √x."
+      },
+      {
+        "term": "Formula triangle",
+        "definition": "A visual tool for rearranging three-variable formulas of the form A = B × C."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "U00-L02-WE01",
+        "title": "Rearranging the weight equation",
+        "statement": "The weight equation is W = mg. A bag weighs 49 N. If g = 9.8 N/kg, find the mass of the bag.",
+        "steps": [
+          {
+            "step": "Write the formula: W = mg",
+            "explanation": "Start with the original formula"
+          },
+          {
+            "step": "Rearrange for m: divide both sides by g → m = W/g",
+            "explanation": "m is multiplied by g, so divide both sides by g to isolate m"
+          },
+          {
+            "step": "Substitute: m = 49 / 9.8 = 5.0 kg",
+            "explanation": "Put the known values in and calculate"
+          }
+        ],
+        "full_solution": "W = mg → m = W/g = 49/9.8 = 5.0 kg."
+      },
+      {
+        "id": "U00-L02-WE02",
+        "title": "Rearranging a squared-term formula",
+        "statement": "The kinetic energy formula is $E_k = \\frac{1}{2}mv^2$. A 1200 kg car has 360 000 J of kinetic energy. Find its speed.",
+        "steps": [
+          {
+            "step": "Write the formula: Eₖ = ½mv²",
+            "explanation": "Start with the formula"
+          },
+          {
+            "step": "Multiply both sides by 2: 2Eₖ = mv²",
+            "explanation": "Remove the ½ by multiplying both sides by 2"
+          },
+          {
+            "step": "Divide both sides by m: v² = 2Eₖ/m",
+            "explanation": "Isolate v² by dividing both sides by m"
+          },
+          {
+            "step": "Square root both sides: v = √(2Eₖ/m)",
+            "explanation": "Take the square root to find v"
+          },
+          {
+            "step": "Substitute: v = √(2 × 360 000 / 1200) = √600 = 24.5 m/s",
+            "explanation": "Put in the values and calculate"
+          }
+        ],
+        "full_solution": "Eₖ = ½mv² → 2Eₖ = mv² → v² = 2Eₖ/m = 2 × 360000/1200 = 600. v = √600 = 24.5 m/s (3 s.f.)."
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "U00-L02-EX01",
+        "statement": "Rearrange V = IR to make (a) I the subject and (b) R the subject.",
+        "answer": "(a) I = V/R, (b) R = V/I",
+        "full_solution": "(a) V = IR → divide both sides by R → I = V/R. (b) V = IR → divide both sides by I → R = V/I.",
+        "marks": 2
+      },
+      {
+        "id": "U00-L02-EX02",
+        "statement": "The equation for gravitational potential energy is $E_p = mgh$. A 2.5 kg object has 147 J of gravitational potential energy. If $g = 9.8$ N/kg, calculate the height $h$.",
+        "answer": "h = 6.0 m",
+        "full_solution": "Ep = mgh → h = Ep/(mg) = 147/(2.5 × 9.8) = 147/24.5 = 6.0 m.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L02-EX03",
+        "statement": "Rearrange $v = u + at$ to make $a$ the subject. Then calculate $a$ when $v = 30$ m/s, $u = 10$ m/s and $t = 4$ s.",
+        "answer": "a = (v − u)/t = (30 − 10)/4 = 5.0 m/s²",
+        "full_solution": "v = u + at → v − u = at → a = (v − u)/t = (30 − 10)/4 = 20/4 = 5.0 m/s².",
+        "marks": 3
+      },
+      {
+        "id": "U00-L02-EX04",
+        "statement": "The wave speed equation is $v = f\\lambda$. A sound wave has speed 340 m/s and wavelength 0.85 m. Calculate the frequency.",
+        "answer": "f = 400 Hz",
+        "full_solution": "v = fλ → f = v/λ = 340/0.85 = 400 Hz.",
+        "marks": 2
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-U00-02-1",
+        "stem": "The formula $P = \\frac{E}{t}$ rearranged to make $E$ the subject is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$E = Pt$"
+          },
+          {
+            "key": "B",
+            "text": "$E = P/t$",
+            "why_wrong": "You divided instead of multiplied. E is P × t, not P ÷ t."
+          },
+          {
+            "key": "C",
+            "text": "$E = t/P$",
+            "why_wrong": "This is the rearrangement for t = E/P inverted, not for E."
+          },
+          {
+            "key": "D",
+            "text": "$E = P + t$",
+            "why_wrong": "Rearranging involves inverse operations (× and ÷), not switching to + and −."
+          }
+        ],
+        "correct": "A",
+        "explanation": "P = E/t. Multiply both sides by t: Pt = E, so E = Pt."
+      },
+      {
+        "id": "MCQ-U00-02-2",
+        "stem": "To make $r$ the subject of $A = \\pi r^2$, the correct rearrangement is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$r = \\sqrt{A/\\pi}$"
+          },
+          {
+            "key": "B",
+            "text": "$r = A/(2\\pi)$",
+            "why_wrong": "This treats r² as 2r; you need to square root, not divide by 2."
+          },
+          {
+            "key": "C",
+            "text": "$r = A/\\pi$",
+            "why_wrong": "You forgot to square root after dividing by π."
+          },
+          {
+            "key": "D",
+            "text": "$r = \\sqrt{A\\pi}$",
+            "why_wrong": "You multiplied by π instead of dividing by it."
+          }
+        ],
+        "correct": "A",
+        "explanation": "A = πr² → r² = A/π → r = √(A/π). Divide by π first, then square root."
+      },
+      {
+        "id": "MCQ-U00-02-3",
+        "stem": "Using the formula triangle for $V = IR$, if you cover $R$, you see:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$V/I$"
+          },
+          {
+            "key": "B",
+            "text": "$V \\times I$",
+            "why_wrong": "V is on top and I is on the bottom-left; covering R gives V ÷ I, not V × I."
+          },
+          {
+            "key": "C",
+            "text": "$I/V$",
+            "why_wrong": "V is on top, so it goes in the numerator, not the denominator."
+          },
+          {
+            "key": "D",
+            "text": "$V - I$",
+            "why_wrong": "The formula triangle uses multiplication and division, not subtraction."
+          }
+        ],
+        "correct": "A",
+        "explanation": "In the triangle, V is on top with I and R on the bottom. Covering R leaves V over I, so R = V/I."
+      },
+      {
+        "id": "MCQ-U00-02-4",
+        "stem": "The formula $v^2 = u^2 + 2as$ rearranged to make $s$ the subject gives:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$s = \\frac{v^2 - u^2}{2a}$"
+          },
+          {
+            "key": "B",
+            "text": "$s = \\frac{v^2 + u^2}{2a}$",
+            "why_wrong": "You need to subtract u², not add it, when moving it across the equals sign."
+          },
+          {
+            "key": "C",
+            "text": "$s = \\frac{v - u}{2a}$",
+            "why_wrong": "You cannot simply remove the squares; v² − u² ≠ v − u."
+          },
+          {
+            "key": "D",
+            "text": "$s = \\sqrt{\\frac{v^2 - u^2}{2a}}$",
+            "why_wrong": "There is no square root needed — s is not squared in the original formula."
+          }
+        ],
+        "correct": "A",
+        "explanation": "v² = u² + 2as → v² − u² = 2as → s = (v² − u²)/(2a)."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "What is the golden rule of rearranging?",
+        "back": "Whatever you do to one side, you must do to the other side."
+      },
+      {
+        "front": "How do you 'undo' a squared term?",
+        "back": "Take the square root of both sides."
+      },
+      {
+        "front": "In a formula triangle, where does the 'top' variable go?",
+        "back": "The variable that is alone on one side of the equation (the numerator in a division formula)."
+      },
+      {
+        "front": "Rearrange v = u + at for t",
+        "back": "t = (v − u)/a"
+      }
+    ],
+    "misconceptions": [],
+    "common_mistakes": [],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "To rearrange, use inverse operations: what you do to one side, you must do to the other.",
+        "Deal with +/− first, then ×/÷, then powers/roots.",
+        "Formula triangles work for A = B × C type formulas — cover the variable you want.",
+        "For squared terms, isolate the squared variable first, then take the square root.",
+        "Always convert to SI units before substituting numbers into a rearranged formula."
+      ]
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::rearranging_equations",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 2
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "03_Reading_and_plotting_graphs.json": {
+    "id": "U00-L03",
+    "title": "Reading and plotting graphs",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "estimated_length": 35,
+    "estimated_difficulty": 2,
+    "curriculum": "GCSE/IGCSE",
+    "objectives": [
+      {
+        "statement": "Choose appropriate scales and label axes with quantities and units",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Plot data points accurately and draw a line of best fit",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Calculate the gradient of a straight-line graph",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Read off intercepts and interpolate/extrapolate values",
+        "bloom_level": "apply"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "U00-L03-TB01",
+        "type": "exposition",
+        "title": "Axes, labels and scales",
+        "scope": "CORE",
+        "body": "Graphs tell stories that tables of numbers cannot. In GCSE Physics, you will both plot your own graphs and interpret graphs given to you. Getting the basics right is essential.\n\nThe horizontal axis is the x-axis (along the bottom). The vertical axis is the y-axis (up the side).\n\nConvention: the independent variable goes on the x-axis (the thing you change or control), and the dependent variable goes on the y-axis (the thing you measure or that responds). For example, if you heat water and measure its temperature every minute, time goes on the x-axis and temperature on the y-axis.\n\nEvery axis must be labelled with:\n• The quantity name (e.g. 'Time', 'Distance', 'Force')\n• The unit in brackets or after a slash (e.g. 'Time / s' or 'Time (s)')\n\nChoosing scales:\n• Use a scale that makes your plotted points fill at least half the graph paper in each direction.\n• Use easy-to-read intervals: 1, 2, 5, 10, 20, 50, 100... (avoid 3, 7, 9 — hard to read between).\n• The scale does not have to start at zero unless the question asks for it, but if it doesn't start at zero, draw a break mark (a zigzag) on the axis to show this.\n• Space your numbers evenly. Each square on the graph paper should represent the same value.",
+        "concept_ids": [
+          "graph_axes",
+          "scales",
+          "independent_dependent"
+        ],
+        "objective_ids": [
+          "U00-L03-OBJ01"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L03-TB02",
+        "type": "exposition",
+        "title": "Plotting points and drawing lines of best fit",
+        "scope": "CORE",
+        "body": "Plotting points:\n• Use a sharp pencil and plot each point with a small, neat cross (×) or dot with a circle.\n• Check each point by reading back from the graph: does the x-value match the table? Does the y-value match?\n• Plots should be at least 6 points for a reliable graph. More is better.\n\nLine of best fit:\nA line of best fit is a single smooth line (straight or curved) that represents the overall trend of your data. It does NOT have to pass through every point.\n\nFor a straight line of best fit:\n• Use a ruler.\n• Position it so that roughly equal numbers of points fall above and below the line.\n• The line should follow the general direction of the points.\n• Ignore any obvious anomalous points (outliers) — circle them and don't let them influence your line.\n\nFor a curved line of best fit:\n• Draw a smooth, flowing curve (not a jagged line connecting point to point).\n• The curve should pass close to most points without sharp bends.\n\nAn anomalous result is a data point that doesn't fit the pattern. It might be due to a measurement error. You should identify it, circle it on your graph, and exclude it from your line of best fit. You might also suggest a reason for it in your write-up.",
+        "concept_ids": [
+          "plotting",
+          "line_of_best_fit",
+          "anomalous_results"
+        ],
+        "objective_ids": [
+          "U00-L03-OBJ02"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L03-TB03",
+        "type": "exposition",
+        "title": "Gradient (slope) of a straight-line graph",
+        "scope": "CORE",
+        "body": "The gradient of a graph tells you the rate of change — how quickly the y-variable changes for each unit change in the x-variable.\n\nTo calculate the gradient of a straight line:\n1. Pick two points on the LINE (not data points — use the line of best fit itself).\n2. Choose points that are far apart for accuracy.\n3. Draw a large right-angled triangle between them.\n4. Read off the change in y (Δy, the vertical side) and the change in x (Δx, the horizontal side).\n5. Calculate: gradient = Δy / Δx = (y₂ − y₁) / (x₂ − x₁)\n\nThe gradient has units: they are the y-axis units divided by the x-axis units. For example, on a distance–time graph with distance in metres and time in seconds, the gradient has units m/s — which is speed! This is very important in GCSE Physics:\n\n• Gradient of a distance–time graph = speed\n• Gradient of a speed–time graph = acceleration\n• Gradient of a force–extension graph = spring constant (k)\n• Gradient of a V–I graph = resistance (but be careful: R = V/I, so the gradient of V vs I is R, but the gradient of I vs V is 1/R)\n\nA positive gradient means y increases as x increases (uphill slope). A negative gradient means y decreases as x increases (downhill slope). A gradient of zero means the graph is flat — y is not changing.",
+        "concept_ids": [
+          "gradient",
+          "rate_of_change"
+        ],
+        "objective_ids": [
+          "U00-L03-OBJ03"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L03-TB04",
+        "type": "exposition",
+        "title": "Intercepts, interpolation and extrapolation",
+        "scope": "CORE",
+        "body": "The y-intercept is the value of y where the line crosses the y-axis (i.e. when x = 0). In physics, this often has a physical meaning. For example, on a cooling curve (temperature vs time), the y-intercept is the starting temperature.\n\nInterpolation means reading a value BETWEEN your data points, using your line of best fit. This is generally reliable because your line is supported by nearby data.\n\nExtrapolation means extending your line BEYOND the range of your data to predict a value. This is less reliable because you are assuming the trend continues unchanged, which may not be true. For example, if you measured how a spring extends up to 5 N and extrapolated to 50 N, the spring would likely have exceeded its elastic limit and the straight-line relationship would no longer hold.\n\nReading values from a graph:\n• To read a y-value for a given x: go to x on the horizontal axis, draw a vertical line up to the graph line, then draw a horizontal line across to the y-axis and read the value.\n• To read an x-value for a given y: go to y on the vertical axis, draw a horizontal line across to the graph line, then draw a vertical line down to the x-axis and read the value.\n• Use a ruler and pencil to draw these construction lines lightly. Show them on exam graphs to earn method marks.",
+        "concept_ids": [
+          "y_intercept",
+          "interpolation",
+          "extrapolation"
+        ],
+        "objective_ids": [
+          "U00-L03-OBJ04"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Independent variable",
+        "definition": "The variable that you deliberately change in an experiment."
+      },
+      {
+        "term": "Dependent variable",
+        "definition": "The variable that you measure, which may change in response to the independent variable."
+      },
+      {
+        "term": "Line of best fit",
+        "definition": "A smooth line drawn through plotted data that shows the overall trend."
+      },
+      {
+        "term": "Gradient",
+        "definition": "The steepness of a line, calculated as Δy/Δx (change in y divided by change in x)."
+      },
+      {
+        "term": "Anomalous result",
+        "definition": "A data point that does not fit the overall pattern; likely caused by an error."
+      },
+      {
+        "term": "Interpolation",
+        "definition": "Reading a value from a graph within the range of the data."
+      },
+      {
+        "term": "Extrapolation",
+        "definition": "Extending a graph beyond the range of the data to predict a value."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "U00-L03-WE01",
+        "title": "Calculating gradient from a distance–time graph",
+        "statement": "A distance–time graph shows a straight line passing through (0, 0) and (20, 80). Calculate the gradient and state what it represents.",
+        "steps": [
+          {
+            "step": "Identify two points on the line: (0, 0) and (20, 80)",
+            "explanation": "Choose points far apart for accuracy"
+          },
+          {
+            "step": "Calculate Δy = 80 − 0 = 80 m",
+            "explanation": "The change in the y-variable (distance)"
+          },
+          {
+            "step": "Calculate Δx = 20 − 0 = 20 s",
+            "explanation": "The change in the x-variable (time)"
+          },
+          {
+            "step": "Gradient = Δy/Δx = 80/20 = 4.0 m/s",
+            "explanation": "Divide the change in y by the change in x"
+          },
+          {
+            "step": "The gradient represents the speed: 4.0 m/s",
+            "explanation": "On a distance–time graph, gradient = speed"
+          }
+        ],
+        "full_solution": "Gradient = (80 − 0)/(20 − 0) = 80/20 = 4.0 m/s. The gradient of a distance–time graph equals the speed, so the object moves at 4.0 m/s."
+      },
+      {
+        "id": "U00-L03-WE02",
+        "title": "Reading off a graph and identifying anomalous results",
+        "statement": "A student measures force and extension for a spring. The data points at (1, 2.1), (2, 4.0), (3, 6.2), (4, 7.8), (5, 10.0), (6, 12.1) are plotted and a straight line of best fit drawn. The point at (4, 7.8) appears below the line. (a) Is it anomalous? (b) What is the gradient of the line?",
+        "steps": [
+          {
+            "step": "(a) The line passes through roughly (0, 0) and (6, 12). At x = 4, the line predicts y ≈ 8.0, but the point is at 7.8 — only 0.2 below. This is within normal scatter, so it is probably NOT anomalous.",
+            "explanation": "An anomalous point would be much further from the line than the general scatter of other points."
+          },
+          {
+            "step": "(b) Use endpoints of the line: (0, 0) and (6, 12)",
+            "explanation": "Pick two well-separated points on the line itself"
+          },
+          {
+            "step": "Gradient = (12 − 0)/(6 − 0) = 12/6 = 2.0 mm/N",
+            "explanation": "Extension (mm) divided by force (N) gives mm/N"
+          }
+        ],
+        "full_solution": "(a) The point (4, 7.8) is only 0.2 below the expected 8.0, within normal experimental scatter — not anomalous. (b) Gradient = (12 − 0)/(6 − 0) = 2.0 mm/N."
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "U00-L03-EX01",
+        "statement": "A speed–time graph shows a straight line from (0, 2) to (10, 22). Calculate the gradient and state what it represents physically.",
+        "answer": "Gradient = 2.0 m/s²; it represents the acceleration.",
+        "full_solution": "Gradient = (22 − 2)/(10 − 0) = 20/10 = 2.0 m/s². On a speed–time graph, the gradient equals acceleration.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L03-EX02",
+        "statement": "Explain why extrapolation from a force–extension graph beyond the data range may give unreliable results.",
+        "answer": "The spring may exceed its elastic limit, after which the extension is no longer proportional to force, so the straight-line relationship breaks down.",
+        "full_solution": "Within the data range, the spring obeys Hooke's law (F = kx), giving a straight-line graph. Beyond this range, the spring may exceed its elastic limit — at this point the spring deforms permanently and the extension is no longer proportional to force, making the straight-line extrapolation invalid.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L03-EX03",
+        "statement": "State three rules for drawing a good straight line of best fit.",
+        "answer": "1) Use a ruler. 2) Have roughly equal numbers of points above and below the line. 3) Ignore anomalous results.",
+        "full_solution": "A good line of best fit should: (1) be drawn with a ruler so it is straight, (2) be positioned so that roughly equal numbers of data points fall above and below the line, and (3) ignore any anomalous results (outliers), which should be circled but not used to influence the line's position.",
+        "marks": 3
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-U00-03-1",
+        "stem": "On a graph, the independent variable is plotted on the:",
+        "options": [
+          {
+            "key": "A",
+            "text": "x-axis (horizontal)"
+          },
+          {
+            "key": "B",
+            "text": "y-axis (vertical)",
+            "why_wrong": "The y-axis is for the dependent variable — the thing that responds."
+          },
+          {
+            "key": "C",
+            "text": "Either axis",
+            "why_wrong": "Convention puts the independent variable on x and dependent on y."
+          },
+          {
+            "key": "D",
+            "text": "The title",
+            "why_wrong": "Variables are plotted on axes, not in the title."
+          }
+        ],
+        "correct": "A",
+        "explanation": "By convention, the independent variable (the one you control) goes on the x-axis and the dependent variable (the one you measure) goes on the y-axis."
+      },
+      {
+        "id": "MCQ-U00-03-2",
+        "stem": "The gradient of a speed–time graph represents:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Acceleration"
+          },
+          {
+            "key": "B",
+            "text": "Speed",
+            "why_wrong": "Speed is the gradient of a distance–time graph, not a speed–time graph."
+          },
+          {
+            "key": "C",
+            "text": "Distance",
+            "why_wrong": "Distance is the area under a speed–time graph."
+          },
+          {
+            "key": "D",
+            "text": "Force",
+            "why_wrong": "Force is not directly represented by the gradient of a speed–time graph."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Acceleration = change in speed / time. The gradient of a speed–time graph = Δv/Δt = acceleration."
+      },
+      {
+        "id": "MCQ-U00-03-3",
+        "stem": "A straight-line graph passes through (2, 5) and (8, 23). What is its gradient?",
+        "options": [
+          {
+            "key": "A",
+            "text": "3.0"
+          },
+          {
+            "key": "B",
+            "text": "4.6",
+            "why_wrong": "You may have divided 23 by 5, which is not how gradient is calculated."
+          },
+          {
+            "key": "C",
+            "text": "18",
+            "why_wrong": "18 is just Δy; you need to divide by Δx."
+          },
+          {
+            "key": "D",
+            "text": "0.33",
+            "why_wrong": "You calculated Δx/Δy instead of Δy/Δx."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Gradient = Δy/Δx = (23 − 5)/(8 − 2) = 18/6 = 3.0."
+      },
+      {
+        "id": "MCQ-U00-03-4",
+        "stem": "Which is more reliable: interpolation or extrapolation?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Interpolation"
+          },
+          {
+            "key": "B",
+            "text": "Extrapolation",
+            "why_wrong": "Extrapolation goes beyond the data range, where the trend may not continue."
+          },
+          {
+            "key": "C",
+            "text": "They are equally reliable",
+            "why_wrong": "Interpolation is supported by nearby data; extrapolation is not."
+          },
+          {
+            "key": "D",
+            "text": "Neither is reliable",
+            "why_wrong": "Interpolation within the data range is generally quite reliable."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Interpolation reads values within the range of your data, where the line of best fit is well supported. Extrapolation extends beyond your data, where the trend might change."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Gradient of a distance–time graph = ?",
+        "back": "Speed"
+      },
+      {
+        "front": "Gradient of a speed–time graph = ?",
+        "back": "Acceleration"
+      },
+      {
+        "front": "How do you calculate gradient?",
+        "back": "Gradient = Δy / Δx = (y₂ − y₁) / (x₂ − x₁). Use two far-apart points on the line."
+      },
+      {
+        "front": "Why is extrapolation unreliable?",
+        "back": "It assumes the trend continues beyond the data range, but the relationship may change (e.g. spring exceeds elastic limit)."
+      }
+    ],
+    "misconceptions": [],
+    "common_mistakes": [],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "Independent variable on x-axis, dependent variable on y-axis. Label with quantity and unit.",
+        "Choose easy-to-read scales (1, 2, 5, 10...) that fill at least half the graph paper.",
+        "A line of best fit shows the overall trend — it need not pass through every point.",
+        "Gradient = Δy/Δx. Use two well-separated points on the line (not data points).",
+        "Interpolation (within data range) is reliable; extrapolation (beyond it) is not."
+      ]
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::reading_and_plotting_graphs",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 3
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "04_Proportionality_and_ratios.json": {
+    "id": "U00-L04",
+    "title": "Proportionality and ratios",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "estimated_length": 30,
+    "estimated_difficulty": 3,
+    "curriculum": "GCSE/IGCSE",
+    "objectives": [
+      {
+        "statement": "Identify direct proportion from data, graphs and equations",
+        "bloom_level": "understand"
+      },
+      {
+        "statement": "Identify inverse proportion from data, graphs and equations",
+        "bloom_level": "understand"
+      },
+      {
+        "statement": "Use proportionality to solve physics problems",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Interpret y = kx and y = k/x graphs",
+        "bloom_level": "analyse"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "U00-L04-TB01",
+        "type": "exposition",
+        "title": "Direct proportion",
+        "scope": "CORE",
+        "body": "Two quantities are directly proportional if, when one doubles, the other also doubles. When one triples, the other triples. When one halves, the other halves. In general, they change by the same factor.\n\nThe mathematical form is: y = kx, where k is a constant called the constant of proportionality. We write y ∝ x (read as 'y is proportional to x').\n\nOn a graph, direct proportion gives a straight line through the origin (0, 0). The gradient of this line equals k.\n\nTest for direct proportion:\n• Calculate y/x for each pair of data values. If they're all the same (within experimental error), the relationship is directly proportional.\n\nGCSE examples of direct proportion:\n• Force and extension (Hooke's law, up to the elastic limit): F = kx. Double the force → double the extension.\n• Weight and mass: W = mg. Double the mass → double the weight.\n• Charge and time (at constant current): Q = It. Double the time → double the charge.\n• Distance and time (at constant speed): s = vt. Double the time → double the distance.",
+        "concept_ids": [
+          "direct_proportion",
+          "constant_of_proportionality"
+        ],
+        "objective_ids": [
+          "U00-L04-OBJ01"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L04-TB02",
+        "type": "exposition",
+        "title": "Inverse proportion",
+        "scope": "CORE",
+        "body": "Two quantities are inversely proportional if, when one doubles, the other halves. When one triples, the other is divided by three. They change by reciprocal factors.\n\nThe mathematical form is: y = k/x, where k is a constant. We write y ∝ 1/x.\n\nOn a graph, inverse proportion gives a curve that approaches but never touches either axis — a hyperbola. If you plot y against 1/x instead, you get a straight line through the origin, confirming inverse proportion.\n\nTest for inverse proportion:\n• Calculate y × x for each pair of data values. If they're all the same (within experimental error), the relationship is inversely proportional.\n\nGCSE examples of inverse proportion:\n• Pressure and volume (Boyle's law, at constant temperature): P = k/V. Double the volume → halve the pressure.\n• Speed and time (for a fixed distance): v = s/t → t = s/v. Double the speed → halve the time.\n• Wavelength and frequency (at constant wave speed): v = fλ → f = v/λ. Double the wavelength → halve the frequency.",
+        "concept_ids": [
+          "inverse_proportion",
+          "hyperbola"
+        ],
+        "objective_ids": [
+          "U00-L04-OBJ02"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L04-TB03",
+        "type": "exposition",
+        "title": "Using proportionality to solve problems",
+        "scope": "CORE",
+        "body": "Many GCSE questions ask: 'what happens to Y when X is doubled/tripled/halved?' Proportionality lets you answer without substituting numbers.\n\nMethod:\n1. Identify the relationship from the formula.\n2. Ask: how does Y depend on X? Is it Y ∝ X, Y ∝ X², Y ∝ 1/X, Y ∝ √X...?\n3. Apply the change to X and see what happens to Y.\n\nExample 1: Kinetic energy Eₖ = ½mv². If speed doubles, what happens to Eₖ?\n• Eₖ ∝ v². If v doubles (×2), then v² quadruples (×4). So Eₖ quadruples.\n\nExample 2: Gravitational PE = mgh. If both mass and height double, what happens to PE?\n• PE ∝ m × h. If m doubles (×2) and h doubles (×2), PE × 2 × 2 = ×4. So PE quadruples.\n\nExample 3: Pressure P = F/A. If force stays the same but area is halved, what happens to P?\n• P ∝ 1/A (at constant F). If A halves (÷2), then P doubles (×2).\n\nExample 4: Period of a pendulum T = 2π√(l/g). If length quadruples, what happens to T?\n• T ∝ √l. If l × 4, then √l × √4 = ×2. So T doubles.\n\nThis skill is tested frequently at GCSE. Practice it with every formula you learn.",
+        "concept_ids": [
+          "proportional_reasoning"
+        ],
+        "objective_ids": [
+          "U00-L04-OBJ03"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Direct proportion",
+        "definition": "When one quantity doubles, the other doubles too. y = kx. Graph: straight line through origin."
+      },
+      {
+        "term": "Inverse proportion",
+        "definition": "When one quantity doubles, the other halves. y = k/x. Graph: hyperbola."
+      },
+      {
+        "term": "Constant of proportionality",
+        "definition": "The fixed value k in y = kx or y = k/x that links the two quantities."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "U00-L04-WE01",
+        "title": "Using direct proportion to predict values",
+        "statement": "A spring extends 4.0 cm when a 2.0 N force is applied. Assuming Hooke's law (F ∝ x), predict the extension for a 5.0 N force.",
+        "steps": [
+          {
+            "step": "Identify the relationship: F = kx → x ∝ F (direct proportion)",
+            "explanation": "Extension is directly proportional to force below the elastic limit"
+          },
+          {
+            "step": "Calculate k: k = F/x = 2.0/4.0 = 0.50 N/cm",
+            "explanation": "Find the constant of proportionality"
+          },
+          {
+            "step": "Use x = F/k = 5.0/0.50 = 10.0 cm",
+            "explanation": "Substitute the new force to find the new extension"
+          }
+        ],
+        "full_solution": "x ∝ F (Hooke's law). k = F/x = 2.0/4.0 = 0.50 N/cm. For F = 5.0 N: x = 5.0/0.50 = 10.0 cm."
+      },
+      {
+        "id": "U00-L04-WE02",
+        "title": "Proportionality reasoning with kinetic energy",
+        "statement": "A car has kinetic energy 50 kJ at 20 m/s. Without calculating mass, find its kinetic energy at 40 m/s.",
+        "steps": [
+          {
+            "step": "Identify: Eₖ = ½mv², so Eₖ ∝ v² (mass is constant)",
+            "explanation": "With constant mass, kinetic energy is proportional to speed squared"
+          },
+          {
+            "step": "Speed doubles: 40/20 = 2, so v² changes by factor 2² = 4",
+            "explanation": "Squaring the factor by which speed changes"
+          },
+          {
+            "step": "New Eₖ = 50 × 4 = 200 kJ",
+            "explanation": "Multiply the original energy by the factor"
+          }
+        ],
+        "full_solution": "Eₖ ∝ v². Speed ratio = 40/20 = 2. Factor change in Eₖ = 2² = 4. New Eₖ = 50 × 4 = 200 kJ."
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "U00-L04-EX01",
+        "statement": "The table shows force and extension data for a spring: (1N, 3cm), (2N, 6cm), (3N, 9.5cm), (4N, 12cm). (a) Is the relationship directly proportional? (b) Calculate the spring constant in N/cm.",
+        "answer": "(a) Nearly — F/x ≈ 0.33 for all pairs (slight scatter). (b) k ≈ 0.33 N/cm (using gradient of line of best fit).",
+        "full_solution": "(a) Calculate F/x for each: 1/3 = 0.333, 2/6 = 0.333, 3/9.5 = 0.316, 4/12 = 0.333. Approximately constant, so yes, directly proportional (the 9.5 value may be slight experimental error). (b) Using the line of best fit through (0,0): k = gradient = average of F/x ≈ 0.33 N/cm.",
+        "marks": 4
+      },
+      {
+        "id": "U00-L04-EX02",
+        "statement": "A gas at 100 kPa occupies 500 cm³. If the gas is compressed at constant temperature to 200 kPa, what is the new volume?",
+        "answer": "250 cm³",
+        "full_solution": "Boyle's law: P₁V₁ = P₂V₂ (pressure and volume are inversely proportional at constant T). 100 × 500 = 200 × V₂ → V₂ = 50000/200 = 250 cm³. Pressure doubled → volume halved.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L04-EX03",
+        "statement": "Gravitational potential energy is given by $E_p = mgh$. If a crane lifts three times the mass to twice the height, by what factor does the gravitational PE increase?",
+        "answer": "Factor of 6",
+        "full_solution": "Ep ∝ m × h. Mass factor = 3, height factor = 2. Combined factor = 3 × 2 = 6. The gravitational PE increases by a factor of 6.",
+        "marks": 2
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-U00-04-1",
+        "stem": "If $y \\propto x$, the graph of $y$ against $x$ is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A straight line through the origin"
+          },
+          {
+            "key": "B",
+            "text": "A straight line not through the origin",
+            "why_wrong": "If y ∝ x, then y = kx, which passes through (0, 0)."
+          },
+          {
+            "key": "C",
+            "text": "A curve",
+            "why_wrong": "y = kx is a linear equation, giving a straight line."
+          },
+          {
+            "key": "D",
+            "text": "A horizontal line",
+            "why_wrong": "A horizontal line means y is constant, not proportional to x."
+          }
+        ],
+        "correct": "A",
+        "explanation": "y ∝ x means y = kx. This is a straight line that passes through the origin (0, 0), with gradient k."
+      },
+      {
+        "id": "MCQ-U00-04-2",
+        "stem": "$E_k = \\frac{1}{2}mv^2$. If speed is tripled, kinetic energy is multiplied by:",
+        "options": [
+          {
+            "key": "A",
+            "text": "9"
+          },
+          {
+            "key": "B",
+            "text": "3",
+            "why_wrong": "Eₖ ∝ v², not v. You need to square the factor."
+          },
+          {
+            "key": "C",
+            "text": "6",
+            "why_wrong": "The factor is 3² = 9, not 3 × 2."
+          },
+          {
+            "key": "D",
+            "text": "27",
+            "why_wrong": "You cubed instead of squared the speed factor."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Eₖ ∝ v². If v × 3, then Eₖ × 3² = × 9."
+      },
+      {
+        "id": "MCQ-U00-04-3",
+        "stem": "Pressure and volume of a gas at constant temperature are:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Inversely proportional"
+          },
+          {
+            "key": "B",
+            "text": "Directly proportional",
+            "why_wrong": "If volume increases, pressure decreases (at constant T) — that's inverse, not direct."
+          },
+          {
+            "key": "C",
+            "text": "Unrelated",
+            "why_wrong": "Boyle's law directly relates P and V at constant temperature."
+          },
+          {
+            "key": "D",
+            "text": "Proportional to the square",
+            "why_wrong": "Boyle's law is PV = constant, not P ∝ V²."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Boyle's law: PV = constant at constant T. If V doubles, P halves — this is inverse proportion (P ∝ 1/V)."
+      },
+      {
+        "id": "MCQ-U00-04-4",
+        "stem": "To confirm inverse proportion from data, you should check that:",
+        "options": [
+          {
+            "key": "A",
+            "text": "The product $x \\times y$ is constant for all data pairs"
+          },
+          {
+            "key": "B",
+            "text": "The ratio $y/x$ is constant for all data pairs",
+            "why_wrong": "A constant y/x ratio indicates direct proportion, not inverse."
+          },
+          {
+            "key": "C",
+            "text": "The graph of y vs x is a straight line",
+            "why_wrong": "Inverse proportion gives a curve (hyperbola), not a straight line on y vs x."
+          },
+          {
+            "key": "D",
+            "text": "The sum $x + y$ is constant for all data pairs",
+            "why_wrong": "A constant sum has nothing to do with proportion."
+          }
+        ],
+        "correct": "A",
+        "explanation": "If y ∝ 1/x, then y = k/x, so xy = k (constant). Check the product xy for each data pair."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "How do you test for direct proportion?",
+        "back": "Calculate y/x for all data pairs — if constant, it's directly proportional. Or: graph is a straight line through origin."
+      },
+      {
+        "front": "How do you test for inverse proportion?",
+        "back": "Calculate x × y for all data pairs — if constant, it's inversely proportional. Or: plot y vs 1/x — should be straight through origin."
+      },
+      {
+        "front": "Eₖ = ½mv². Speed triples. What happens to Eₖ?",
+        "back": "Eₖ ∝ v². Factor = 3² = 9. Eₖ increases by factor 9."
+      },
+      {
+        "front": "What does y ∝ x² look like on a y vs x graph?",
+        "back": "A curve (parabola) passing through the origin. Plotting y vs x² gives a straight line through origin."
+      }
+    ],
+    "misconceptions": [],
+    "common_mistakes": [],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "Direct proportion (y ∝ x): y = kx, straight line through origin, y/x constant.",
+        "Inverse proportion (y ∝ 1/x): y = k/x, hyperbola, x × y constant.",
+        "For 'what happens when X doubles' questions: identify the power of X in the formula and apply it to the factor.",
+        "Eₖ ∝ v² is the most commonly tested proportionality at GCSE — speed doubles, Eₖ quadruples."
+      ]
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::proportionality_and_ratios",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 4
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "05_Estimating_and_checking.json": {
+    "id": "U00-L05",
+    "title": "Estimating and checking",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "estimated_length": 25,
+    "estimated_difficulty": 2,
+    "curriculum": "GCSE/IGCSE",
+    "objectives": [
+      {
+        "statement": "Make order-of-magnitude estimates for physical quantities",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Round numbers to a given number of significant figures",
+        "bloom_level": "apply"
+      },
+      {
+        "statement": "Use estimation to check whether a calculated answer is reasonable",
+        "bloom_level": "evaluate"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "U00-L05-TB01",
+        "type": "exposition",
+        "title": "Orders of magnitude",
+        "scope": "CORE",
+        "body": "An order of magnitude is the power of 10 nearest to a number. It tells you roughly 'how big' something is.\n\nExamples:\n• 500 → nearest power of 10 is 10³ (1000 is closer than 100) → order of magnitude is 3\n• Actually, the convention is: if the number ≥ 3.16 (which is √10), round up to the next power of 10; if < 3.16, round down. So 500 → 10³, but 200 → 10².\n• In practice for GCSE, you just need to know roughly what power of 10 a number is.\n\nWhy orders of magnitude matter:\n• They help you check answers. If you calculate the speed of a car as 500 000 m/s, that's about 10⁶ — but a car speed is about 10¹ m/s. Your answer is wrong by 5 orders of magnitude!\n• They help you compare quantities. The Earth's mass (6 × 10²⁴ kg) is about 10² (100) times the Moon's mass (7 × 10²² kg), since 24 − 22 = 2 orders of magnitude.\n\nCommon orders of magnitude in physics:\n• Diameter of an atom: ~10⁻¹⁰ m\n• Thickness of a hair: ~10⁻⁴ m (0.1 mm)\n• Height of a person: ~10⁰ m (about 2 m)\n• Height of a building: ~10¹ m\n• Speed of sound: ~10² m/s (340 m/s)\n• Speed of light: ~10⁸ m/s\n• Mass of a person: ~10² kg (about 70 kg)",
+        "concept_ids": [
+          "order_of_magnitude"
+        ],
+        "objective_ids": [
+          "U00-L05-OBJ01"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L05-TB02",
+        "type": "exposition",
+        "title": "Significant figures",
+        "scope": "CORE",
+        "body": "Significant figures (s.f.) tell you how precisely a number is stated. They are all the digits that carry meaning, starting from the first non-zero digit.\n\nRules for counting significant figures:\n1. Non-zero digits are always significant: 1234 has 4 s.f.\n2. Zeros between non-zero digits are significant: 1002 has 4 s.f.\n3. Leading zeros (before the first non-zero digit) are NOT significant: 0.0045 has 2 s.f.\n4. Trailing zeros after a decimal point ARE significant: 3.50 has 3 s.f.\n5. Trailing zeros in a whole number are ambiguous: 200 could be 1, 2 or 3 s.f. Use standard form to be clear: 2 × 10² (1 s.f.), 2.0 × 10² (2 s.f.), 2.00 × 10² (3 s.f.).\n\nRounding to significant figures:\n• To round 0.03672 to 2 s.f.: the first two significant figures are 3 and 6. Look at the next digit (7): since 7 ≥ 5, round up → 0.037.\n• To round 4561 to 2 s.f.: the first two significant figures are 4 and 5. Next digit is 6: round up → 4600.\n\nIn GCSE Physics, give your final answer to the same number of significant figures as the data in the question, or to 2–3 s.f. if not specified. Never give more s.f. than the least precise value in your data — this would imply false precision.",
+        "concept_ids": [
+          "significant_figures",
+          "precision"
+        ],
+        "objective_ids": [
+          "U00-L05-OBJ02"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L05-TB03",
+        "type": "exposition",
+        "title": "Estimation strategies",
+        "scope": "CORE",
+        "body": "Estimation means finding a rough answer without precise calculation. In exams, estimation questions test whether you understand the physics well enough to get the right ballpark.\n\nStrategy:\n1. Round each value to 1 significant figure.\n2. Use simple mental arithmetic or rough calculations.\n3. Check: is the answer physically reasonable? Does the order of magnitude make sense?\n\nExample: Estimate the kinetic energy of a sprinter running at 10 m/s. Assume mass ≈ 70 kg.\nEₖ = ½mv² ≈ ½ × 70 × 10² = ½ × 70 × 100 = 3500 J ≈ 4 kJ.\nIs this reasonable? Yes — a few thousand joules for a running human sounds right.\n\nExample: Estimate how long it takes light to reach Earth from the Sun.\nDistance ≈ 1.5 × 10¹¹ m. Speed of light ≈ 3 × 10⁸ m/s.\nTime = distance/speed ≈ (1.5 × 10¹¹)/(3 × 10⁸) = 0.5 × 10³ = 500 s ≈ 8 minutes.\n\nSense-checking your answers:\n• A person's weight: about 500–1000 N (not 50 or 10 000).\n• Room temperature: about 20 °C or 293 K.\n• Walking speed: about 1.5 m/s; running: about 8–10 m/s.\n• A car on a motorway: about 30 m/s (≈ 70 mph).\n• Voltage of a mains supply: 230 V (UK).\n• Power of a kettle: about 2000–3000 W.",
+        "concept_ids": [
+          "estimation",
+          "sense_checking"
+        ],
+        "objective_ids": [
+          "U00-L05-OBJ03"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Order of magnitude",
+        "definition": "The power of 10 closest to a number; a rough indication of its size."
+      },
+      {
+        "term": "Significant figures",
+        "definition": "The digits in a number that carry meaning, starting from the first non-zero digit."
+      },
+      {
+        "term": "Estimation",
+        "definition": "Finding an approximate answer using rounded values and simple arithmetic."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "U00-L05-WE01",
+        "title": "Rounding to significant figures",
+        "statement": "A student calculates density as 2743.6 kg/m³. The data used was given to 2 significant figures. Give the answer to the appropriate number of significant figures.",
+        "steps": [
+          {
+            "step": "The data was given to 2 s.f., so the answer should be 2 s.f.",
+            "explanation": "Never give more s.f. than the least precise data value"
+          },
+          {
+            "step": "First two significant digits of 2743.6 are 2 and 7",
+            "explanation": "Start counting from the first non-zero digit"
+          },
+          {
+            "step": "Next digit is 4 (< 5), so round down: 2700 kg/m³",
+            "explanation": "4 < 5, so the 7 stays as 7"
+          },
+          {
+            "step": "In standard form: 2.7 × 10³ kg/m³",
+            "explanation": "Standard form removes ambiguity about trailing zeros"
+          }
+        ],
+        "full_solution": "2743.6 rounded to 2 s.f. = 2700 kg/m³ = 2.7 × 10³ kg/m³."
+      },
+      {
+        "id": "U00-L05-WE02",
+        "title": "Order-of-magnitude estimation",
+        "statement": "Estimate the number of heartbeats in a human lifetime.",
+        "steps": [
+          {
+            "step": "Estimate heart rate: ~70 beats per minute ≈ 10² bpm",
+            "explanation": "Round to nearest order of magnitude"
+          },
+          {
+            "step": "Minutes per year: 60 × 24 × 365 ≈ 60 × 25 × 400 = 600 000 ≈ 5 × 10⁵",
+            "explanation": "Simplify the calculation with rough numbers"
+          },
+          {
+            "step": "Lifetime: ~80 years ≈ 10² years",
+            "explanation": "Round to order of magnitude"
+          },
+          {
+            "step": "Total = 70 × 500 000 × 80 ≈ 10² × 5 × 10⁵ × 10² = 5 × 10⁹ ≈ 3 × 10⁹",
+            "explanation": "Multiply the estimates together"
+          },
+          {
+            "step": "About 3 billion heartbeats",
+            "explanation": "A reasonable estimate — the actual figure is about 2.5–3 billion"
+          }
+        ],
+        "full_solution": "Heart rate ≈ 70/min. Minutes/year ≈ 5 × 10⁵. Lifetime ≈ 80 years. Total ≈ 70 × 5 × 10⁵ × 80 = 2.8 × 10⁹ ≈ 3 billion heartbeats."
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "U00-L05-EX01",
+        "statement": "Round the following to 3 significant figures: (a) 0.004562, (b) 13 870, (c) 2.0049.",
+        "answer": "(a) 0.00456, (b) 13 900, (c) 2.00",
+        "full_solution": "(a) First 3 s.f. are 4, 5, 6. Next digit is 2 < 5, round down: 0.00456. (b) First 3 s.f. are 1, 3, 8. Next digit is 7 ≥ 5, round up: 13 900. (c) First 3 s.f. are 2, 0, 0. Next digit is 4 < 5, round down: 2.00.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L05-EX02",
+        "statement": "Estimate the weight of a fully loaded double-decker bus. State any assumptions.",
+        "answer": "About 100 000 – 200 000 N",
+        "full_solution": "Assume: empty bus ≈ 10 000 kg, passengers ≈ 70 × 70 kg = 5 000 kg. Total mass ≈ 15 000 kg. Weight = mg ≈ 15 000 × 10 = 150 000 N ≈ 1.5 × 10⁵ N.",
+        "marks": 3
+      },
+      {
+        "id": "U00-L05-EX03",
+        "statement": "A student calculates the resistance of a wire as 0.000384 Ω. Express this to 2 significant figures.",
+        "answer": "3.8 × 10⁻⁴ Ω or 0.00038 Ω",
+        "full_solution": "First 2 s.f. of 0.000384 are 3 and 8. Next digit is 4 < 5, round down. Answer: 0.00038 Ω = 3.8 × 10⁻⁴ Ω.",
+        "marks": 1
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-U00-05-1",
+        "stem": "How many significant figures are in 0.00450?",
+        "options": [
+          {
+            "key": "A",
+            "text": "3"
+          },
+          {
+            "key": "B",
+            "text": "5",
+            "why_wrong": "Leading zeros are not significant; only 4, 5 and the trailing 0 count."
+          },
+          {
+            "key": "C",
+            "text": "2",
+            "why_wrong": "The trailing zero after the 5 IS significant because it follows a decimal point."
+          },
+          {
+            "key": "D",
+            "text": "4",
+            "why_wrong": "The leading zeros before the 4 are not significant."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Leading zeros (0.00) are not significant. The digits 4, 5 and the trailing 0 are all significant — 3 s.f. total."
+      },
+      {
+        "id": "MCQ-U00-05-2",
+        "stem": "The order of magnitude of 8500 is closest to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$10^4$"
+          },
+          {
+            "key": "B",
+            "text": "$10^3$",
+            "why_wrong": "8500 is closer to 10 000 (10⁴) than to 1000 (10³)."
+          },
+          {
+            "key": "C",
+            "text": "$10^2$",
+            "why_wrong": "10² = 100, which is much smaller than 8500."
+          },
+          {
+            "key": "D",
+            "text": "$10^5$",
+            "why_wrong": "10⁵ = 100 000, which is much larger than 8500."
+          }
+        ],
+        "correct": "A",
+        "explanation": "8500 ≈ 10⁴ because 8.5 > 3.16 (√10), so we round up to the next power of 10."
+      },
+      {
+        "id": "MCQ-U00-05-3",
+        "stem": "Which is the best estimate for the speed of a car on a motorway?",
+        "options": [
+          {
+            "key": "A",
+            "text": "30 m/s"
+          },
+          {
+            "key": "B",
+            "text": "3 m/s",
+            "why_wrong": "3 m/s is about walking speed, far too slow for a motorway."
+          },
+          {
+            "key": "C",
+            "text": "300 m/s",
+            "why_wrong": "300 m/s is close to the speed of sound — far too fast for a car."
+          },
+          {
+            "key": "D",
+            "text": "3000 m/s",
+            "why_wrong": "3000 m/s would be about 10 000 km/h — impossible for any road vehicle."
+          }
+        ],
+        "correct": "A",
+        "explanation": "A car on a motorway travels at about 70 mph ≈ 31 m/s ≈ 30 m/s."
+      },
+      {
+        "id": "MCQ-U00-05-4",
+        "stem": "A student measures a length as 12.5 cm and width as 3.0 cm, then calculates area = 37.5 cm². To how many significant figures should the answer be given?",
+        "options": [
+          {
+            "key": "A",
+            "text": "2 s.f."
+          },
+          {
+            "key": "B",
+            "text": "3 s.f.",
+            "why_wrong": "The least precise measurement (3.0 cm) has only 2 s.f."
+          },
+          {
+            "key": "C",
+            "text": "1 s.f.",
+            "why_wrong": "Both measurements have at least 2 s.f., so the answer should have 2."
+          },
+          {
+            "key": "D",
+            "text": "4 s.f.",
+            "why_wrong": "You cannot have more s.f. in the answer than in the least precise input."
+          }
+        ],
+        "correct": "A",
+        "explanation": "The answer should match the fewest s.f. in the data. 12.5 cm has 3 s.f. and 3.0 cm has 2 s.f. So the answer should be 2 s.f.: 38 cm²."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "How many s.f. in 0.0302?",
+        "back": "3 (the digits 3, 0, 2 — leading zeros don't count, but the zero between 3 and 2 does)"
+      },
+      {
+        "front": "Speed of sound?",
+        "back": "~340 m/s (order of magnitude: 10² m/s)"
+      },
+      {
+        "front": "Speed of light?",
+        "back": "3 × 10⁸ m/s"
+      },
+      {
+        "front": "Walking speed?",
+        "back": "~1.5 m/s"
+      }
+    ],
+    "misconceptions": [],
+    "common_mistakes": [],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "An order of magnitude is the nearest power of 10. Use it to sense-check answers.",
+        "Significant figures start from the first non-zero digit. Leading zeros don't count; trailing zeros after a decimal do.",
+        "Give your answer to the same number of s.f. as the least precise data in the question.",
+        "For estimation, round to 1 s.f. and calculate mentally. Then check: is the order of magnitude reasonable?"
+      ]
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::estimating_and_checking",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 5
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "06_Laboratory_skills_and_safety.json": {
+    "id": "U00-L06",
+    "title": "Laboratory skills and safety",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "estimated_length": 30,
+    "estimated_difficulty": 2,
+    "curriculum": "GCSE/IGCSE",
+    "objectives": [
+      {
+        "statement": "Identify common laboratory equipment and state their purposes",
+        "bloom_level": "remember"
+      },
+      {
+        "statement": "Distinguish between accuracy, precision, systematic and random errors",
+        "bloom_level": "understand"
+      },
+      {
+        "statement": "Explain how to improve the reliability and validity of experiments",
+        "bloom_level": "understand"
+      },
+      {
+        "statement": "Identify hazards and describe appropriate safety precautions",
+        "bloom_level": "apply"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "U00-L06-TB01",
+        "type": "exposition",
+        "title": "Common laboratory equipment",
+        "scope": "CORE",
+        "body": "You need to recognise and know how to use the following equipment for GCSE Physics practicals:\n\nMeasuring length:\n• Ruler (30 cm or 1 m): resolution 1 mm. Place the zero mark at the start of the object. Read at eye level to avoid parallax.\n• Micrometer screw gauge: resolution 0.01 mm. Used for small objects like wire diameter. Close gently using the ratchet. Read the main scale and thimble scale, add them together.\n• Vernier calipers: resolution 0.1 mm. For objects like tubes or small blocks.\n\nMeasuring mass:\n• Electronic balance (top-pan balance): resolution 0.1 g or 0.01 g. Zero it before use ('tare').\n\nMeasuring time:\n• Stopwatch: resolution usually 0.01 s. Human reaction time (~0.2 s) is the main source of error.\n• Light gates + data logger: resolution < 0.001 s. Eliminates reaction-time error.\n\nMeasuring temperature:\n• Thermometer: resolution 0.5 °C or 1 °C. Immerse the bulb, wait for the reading to stabilise.\n\nMeasuring volume:\n• Measuring cylinder: resolution depends on size. Read at the bottom of the meniscus at eye level.\n• Displacement can: for irregular objects — place the object in and collect the displaced water.\n\nMeasuring electrical quantities:\n• Ammeter: measures current in amps (A). Connected in SERIES.\n• Voltmeter: measures potential difference in volts (V). Connected in PARALLEL.\n• Multimeter: can measure current, voltage and resistance.\n\nOther:\n• Protractor: measures angles (resolution 1°).\n• Spring balance (newton meter): measures force in newtons (N).",
+        "concept_ids": [
+          "lab_equipment",
+          "measurement_instruments"
+        ],
+        "objective_ids": [
+          "U00-L06-OBJ01"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L06-TB02",
+        "type": "exposition",
+        "title": "Accuracy, precision, and types of error",
+        "scope": "CORE",
+        "body": "These terms have specific meanings in physics — they are NOT interchangeable:\n\nAccuracy: How close a measurement is to the TRUE (accepted) value. A measurement is accurate if it gives the correct answer. To improve accuracy, use better equipment, calibrate instruments, and reduce systematic errors.\n\nPrecision: How close REPEATED measurements are to EACH OTHER. A set of measurements is precise if they are all similar (small spread), even if they are all wrong. Precision is improved by using instruments with finer resolution.\n\nAn analogy: imagine throwing darts at a dartboard.\n• Accurate and precise: all darts clustered around the bullseye.\n• Precise but not accurate: all darts clustered together, but away from the bullseye.\n• Accurate but not precise: darts scattered, but centred on the bullseye (on average).\n• Neither: darts scattered and not centred on the bullseye.\n\nRandom errors: Unpredictable variations in measurements. They cause readings to scatter above and below the true value. Examples: fluctuations in timing due to reaction time, reading a scale slightly differently each time, draughts affecting a balance. Random errors can be REDUCED by taking more readings and calculating a mean.\n\nSystematic errors: Consistent errors that shift ALL readings in the same direction (all too high or all too low). Examples: a zero error (scale not zeroed), a parallax error that always reads high, a thermometer that reads 2 °C too low. Systematic errors are NOT reduced by taking more readings — the mean will still be wrong. They must be identified and corrected (re-zero, recalibrate, fix the equipment).\n\nZero error: A type of systematic error where the instrument doesn't read zero when it should. Always check before use and subtract the zero error from all readings.",
+        "concept_ids": [
+          "accuracy",
+          "precision",
+          "random_error",
+          "systematic_error",
+          "zero_error"
+        ],
+        "objective_ids": [
+          "U00-L06-OBJ02"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L06-TB03",
+        "type": "exposition",
+        "title": "Reliability, repeatability and validity",
+        "scope": "CORE",
+        "body": "Repeatability: Can YOU get similar results when you repeat the experiment? Improved by careful technique, controlling variables, and using precise instruments.\n\nReproducibility: Can OTHER PEOPLE (or different equipment) get similar results? Improved by writing clear methods, using standard equipment, and controlling variables.\n\nReliability: Are the results consistent and trustworthy? Results are reliable if they are both repeatable and reproducible. Improve by: taking at least 3 repeat readings, calculating a mean (excluding anomalous results), using appropriate instruments.\n\nValidity: Does the experiment actually measure/test what it claims to? A valid experiment controls all variables except the one being tested (the independent variable). If you're measuring how temperature affects resistance but your circuit heats up the wire, you're not controlling the independent variable — the experiment is less valid.\n\nControl variables: Quantities that must be kept the same to make a fair test. For example, when investigating how length affects the resistance of a wire, you must keep the material, diameter and temperature of the wire the same.\n\nDependent variable: The one you measure.\nIndependent variable: The one you deliberately change.\nControl variables: Everything else that you keep the same.",
+        "concept_ids": [
+          "reliability",
+          "repeatability",
+          "reproducibility",
+          "validity",
+          "control_variables"
+        ],
+        "objective_ids": [
+          "U00-L06-OBJ03"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      },
+      {
+        "id": "U00-L06-TB04",
+        "type": "exposition",
+        "title": "Hazards, risks and safety precautions",
+        "scope": "CORE",
+        "body": "A hazard is something that could cause harm. A risk is the chance that harm actually occurs and how serious it could be.\n\nCommon physics practical hazards and their precautions:\n\nElectrical:\n• Hazard: electric shock from mains voltage or large currents.\n• Precaution: use low-voltage power supplies (typically 1–12 V), don't touch bare wires, check for damaged insulation, keep water away from circuits.\n• Hazard: overheating wires/components.\n• Precaution: switch off circuits between readings, use appropriate fuse ratings, don't exceed maximum current ratings.\n\nThermal:\n• Hazard: burns from hot water, flames or heated objects.\n• Precaution: use tongs/heatproof gloves, tie back long hair, don't leave Bunsen burners unattended, use a heatproof mat, allow objects to cool before handling.\n\nRadiation:\n• Hazard: exposure to ionising radiation (alpha, beta, gamma sources).\n• Precaution: use sources for minimum time, maximise distance, use tongs, point away from people, store in lead-lined boxes.\n\nMechanical:\n• Hazard: falling masses, stretched springs recoiling.\n• Precaution: use a catch tray or sand tray under falling weights, wear safety goggles when stretching springs, stand away from the path of moving objects.\n\nIn the exam, you'll be asked to identify hazards and suggest precautions. Always name the SPECIFIC hazard (not just 'it's dangerous') and a SPECIFIC precaution that addresses it.",
+        "concept_ids": [
+          "hazard",
+          "risk",
+          "safety_precautions"
+        ],
+        "objective_ids": [
+          "U00-L06-OBJ04"
+        ],
+        "provenance": {
+          "source": "author"
+        },
+        "asset_ids": [],
+        "assets": []
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Accuracy",
+        "definition": "How close a measurement is to the true value."
+      },
+      {
+        "term": "Precision",
+        "definition": "How close repeated measurements are to each other (small spread)."
+      },
+      {
+        "term": "Random error",
+        "definition": "Unpredictable variation causing scatter in measurements; reduced by averaging."
+      },
+      {
+        "term": "Systematic error",
+        "definition": "Consistent error shifting all readings in one direction; NOT reduced by averaging."
+      },
+      {
+        "term": "Zero error",
+        "definition": "A systematic error where an instrument doesn't read zero when it should."
+      },
+      {
+        "term": "Reliability",
+        "definition": "Results are reliable if they are repeatable and reproducible."
+      },
+      {
+        "term": "Validity",
+        "definition": "An experiment is valid if it actually tests what it claims to, with controlled variables."
+      },
+      {
+        "term": "Control variable",
+        "definition": "A variable kept constant during an experiment to make it a fair test."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "U00-L06-WE01",
+        "title": "Identifying error types",
+        "statement": "A student measures the period of a pendulum five times and gets: 1.42 s, 1.38 s, 1.40 s, 1.39 s, 1.41 s. The accepted value is 1.45 s. (a) Are the results precise? (b) Are they accurate? (c) What type of error might explain this?",
+        "steps": [
+          {
+            "step": "(a) The readings range from 1.38 to 1.42 — a spread of only 0.04 s. Yes, they are precise.",
+            "explanation": "Precision = how close repeated readings are to each other. Small spread = precise."
+          },
+          {
+            "step": "(b) The mean = (1.42 + 1.38 + 1.40 + 1.39 + 1.41)/5 = 1.40 s. The accepted value is 1.45 s. The mean is 0.05 s below — not very accurate.",
+            "explanation": "Accuracy = how close to the true value. 1.40 vs 1.45 = consistent underestimate."
+          },
+          {
+            "step": "(c) All readings are consistently below the true value → systematic error. Perhaps the student consistently started the stopwatch late or stopped it early.",
+            "explanation": "A systematic error shifts all readings in the same direction."
+          }
+        ],
+        "full_solution": "(a) Yes — small spread (0.04 s range). (b) No — mean of 1.40 s is 0.05 s below the accepted 1.45 s. (c) Systematic error, likely due to timing technique consistently cutting the measurement short."
+      },
+      {
+        "id": "U00-L06-WE02",
+        "title": "Planning for reliability",
+        "statement": "Describe how to make a spring extension experiment reliable.",
+        "steps": [
+          {
+            "step": "Take at least 3 repeat readings for each force value",
+            "explanation": "Multiple readings allow you to calculate a mean and spot anomalies"
+          },
+          {
+            "step": "Calculate the mean extension for each force, excluding any anomalous results",
+            "explanation": "The mean reduces the effect of random errors"
+          },
+          {
+            "step": "Zero the ruler at the spring's natural length before adding weights",
+            "explanation": "Eliminates zero error (systematic)"
+          },
+          {
+            "step": "Read the ruler at eye level to avoid parallax error",
+            "explanation": "Parallax is a systematic error that occurs when reading a scale at an angle"
+          }
+        ],
+        "full_solution": "To make the experiment reliable: (1) take at least 3 repeat readings at each force, (2) calculate the mean and exclude anomalies, (3) zero the ruler at the natural spring length, (4) read the ruler at eye level to avoid parallax error. Also control variables: use the same spring, add/remove weights gently, allow the spring to settle before reading."
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "U00-L06-EX01",
+        "statement": "Explain the difference between a random error and a systematic error. Give one example of each in a physics experiment.",
+        "answer": "Random: unpredictable variation in measurements (e.g. reaction time with a stopwatch). Systematic: consistent shift in all readings (e.g. zero error on a balance). Random errors are reduced by taking more readings; systematic errors are not.",
+        "full_solution": "A random error causes readings to scatter unpredictably above and below the true value. Example: reaction-time variation when using a manual stopwatch. It is reduced by taking more readings and calculating a mean. A systematic error causes all readings to be shifted in the same direction (all too high or all too low). Example: a balance that reads 0.3 g when empty (zero error). It is NOT reduced by taking more readings — it must be corrected by re-zeroing or recalibrating.",
+        "marks": 4
+      },
+      {
+        "id": "U00-L06-EX02",
+        "statement": "A student is investigating how current affects the brightness of a lamp. State (a) the independent variable, (b) the dependent variable, (c) two control variables.",
+        "answer": "(a) Current, (b) brightness (or light intensity), (c) type/rating of lamp, voltage of power supply (or similar valid pair).",
+        "full_solution": "(a) Independent variable: current (this is what the student changes deliberately). (b) Dependent variable: brightness / light intensity (this is what is measured or observed). (c) Control variables: same lamp (type and rating), same power supply voltage, same connecting wires, ambient light conditions.",
+        "marks": 4
+      },
+      {
+        "id": "U00-L06-EX03",
+        "statement": "A student heats water using an immersion heater. Identify one hazard and state a precaution.",
+        "answer": "Hazard: risk of burns from hot water or steam. Precaution: use a thermometer to check temperature, don't lean over the beaker, use heatproof gloves or tongs to handle hot containers.",
+        "full_solution": "Hazard: scalding from hot water or steam produced during heating. Precaution: do not heat water above 80 °C unless necessary, use insulated handles/tongs, do not lean over the beaker, place on a heatproof mat, and ensure the immersion heater is fully submerged before switching on (to prevent overheating of the heater element).",
+        "marks": 2
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-U00-06-1",
+        "stem": "A set of measurements is precise but not accurate. This means:",
+        "options": [
+          {
+            "key": "A",
+            "text": "The readings are close to each other but not close to the true value"
+          },
+          {
+            "key": "B",
+            "text": "The readings are close to the true value but spread out",
+            "why_wrong": "This describes accurate but not precise."
+          },
+          {
+            "key": "C",
+            "text": "The readings are both close together and close to the true value",
+            "why_wrong": "This describes both precise AND accurate."
+          },
+          {
+            "key": "D",
+            "text": "The readings are spread out and far from the true value",
+            "why_wrong": "This describes neither precise nor accurate."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Precise = close to each other (small spread). Not accurate = not close to the true value. Like darts clustered tightly, but away from the bullseye."
+      },
+      {
+        "id": "MCQ-U00-06-2",
+        "stem": "Which type of error is reduced by taking more readings and calculating a mean?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Random error"
+          },
+          {
+            "key": "B",
+            "text": "Systematic error",
+            "why_wrong": "Systematic errors affect every reading equally, so the mean is still wrong by the same amount."
+          },
+          {
+            "key": "C",
+            "text": "Both random and systematic",
+            "why_wrong": "Only random errors are reduced by averaging; systematic errors persist."
+          },
+          {
+            "key": "D",
+            "text": "Neither",
+            "why_wrong": "Taking more readings and averaging does reduce random errors by smoothing out scatter."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Random errors cause scatter above and below the true value. Averaging smooths this out, giving a mean closer to the true value. Systematic errors shift all readings the same way, so the mean is still shifted."
+      },
+      {
+        "id": "MCQ-U00-06-3",
+        "stem": "An ammeter is connected in:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Series"
+          },
+          {
+            "key": "B",
+            "text": "Parallel",
+            "why_wrong": "Voltmeters are connected in parallel; ammeters must be in series so all the current flows through them."
+          },
+          {
+            "key": "C",
+            "text": "Either series or parallel",
+            "why_wrong": "An ammeter must always be in series to measure the current flowing through a component."
+          },
+          {
+            "key": "D",
+            "text": "Across the power supply only",
+            "why_wrong": "Connecting an ammeter across the supply (in parallel) would short-circuit it."
+          }
+        ],
+        "correct": "A",
+        "explanation": "An ammeter measures the current flowing through a component, so it must be connected in series — the current must flow through the ammeter. A voltmeter is connected in parallel."
+      },
+      {
+        "id": "MCQ-U00-06-4",
+        "stem": "Which is a control variable in an experiment investigating how length affects the resistance of a wire?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The diameter of the wire"
+          },
+          {
+            "key": "B",
+            "text": "The length of the wire",
+            "why_wrong": "Length is the independent variable — the one being changed."
+          },
+          {
+            "key": "C",
+            "text": "The resistance of the wire",
+            "why_wrong": "Resistance is the dependent variable — the one being measured."
+          },
+          {
+            "key": "D",
+            "text": "The voltage reading",
+            "why_wrong": "The voltage reading is part of the measurement, not a variable being controlled."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Control variables are kept the same. When investigating how length affects resistance, you must keep the wire material, diameter, and temperature constant so they don't affect the result."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Accuracy vs Precision?",
+        "back": "Accuracy = close to the TRUE value. Precision = close to EACH OTHER (small spread)."
+      },
+      {
+        "front": "How do you reduce random errors?",
+        "back": "Take more readings and calculate a mean."
+      },
+      {
+        "front": "How do you reduce systematic errors?",
+        "back": "Identify and correct the cause (recalibrate, re-zero, fix parallax)."
+      },
+      {
+        "front": "Ammeter: series or parallel?",
+        "back": "Series. Voltmeter: parallel."
+      },
+      {
+        "front": "What makes an experiment valid?",
+        "back": "It tests what it claims to by controlling all variables except the independent variable."
+      }
+    ],
+    "misconceptions": [],
+    "common_mistakes": [],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "Accuracy = closeness to true value. Precision = closeness of repeats to each other.",
+        "Random errors scatter readings and are reduced by averaging. Systematic errors shift all readings and must be corrected at source.",
+        "Take at least 3 repeats, calculate the mean, exclude anomalies for reliability.",
+        "Control variables must be kept constant for a fair test (validity).",
+        "Ammeter in series; voltmeter in parallel. Always check for zero errors before measuring."
+      ]
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::laboratory_skills_and_safety",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 6
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  }
+}

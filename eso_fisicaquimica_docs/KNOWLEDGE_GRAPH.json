@@ -1,0 +1,236 @@
+{
+  "course": "eso_fisicaquimica",
+  "prefix": "ESOFYQ",
+  "nodes": [
+    {
+      "id": "ESOFYQ::U-ESO-01::01_metodo_cientifico",
+      "title": "Pregunta-hipótesis-evidencia",
+      "unit": "U-ESO-01",
+      "epistemic_type": "MODEL",
+      "mastery_time_min": 50
+    },
+    {
+      "id": "ESOFYQ::U-ESO-01::02_si_conversiones",
+      "title": "El SI y las conversiones de unidades",
+      "unit": "U-ESO-01",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 55
+    },
+    {
+      "id": "ESOFYQ::U-ESO-01::03_incertidumbre",
+      "title": "Incertidumbre y resolución",
+      "unit": "U-ESO-01",
+      "epistemic_type": "APPROXIMATION",
+      "mastery_time_min": 45
+    },
+    {
+      "id": "ESOFYQ::U-ESO-01::04_tablas_graficas",
+      "title": "Tablas y gráficas",
+      "unit": "U-ESO-01",
+      "epistemic_type": "HEURISTIC",
+      "mastery_time_min": 50
+    },
+    {
+      "id": "ESOFYQ::U-ESO-02::01_masa_volumen_densidad",
+      "title": "Masa-volumen-densidad",
+      "unit": "U-ESO-02",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 50
+    },
+    {
+      "id": "ESOFYQ::U-ESO-02::02_modelo_particulas",
+      "title": "Modelo de partículas",
+      "unit": "U-ESO-02",
+      "epistemic_type": "MODEL",
+      "mastery_time_min": 45
+    },
+    {
+      "id": "ESOFYQ::U-ESO-02::03_cambios_estado",
+      "title": "Cambios de estado",
+      "unit": "U-ESO-02",
+      "epistemic_type": "MODEL",
+      "mastery_time_min": 50
+    },
+    {
+      "id": "ESOFYQ::U-ESO-02::04_temperatura_equilibrio",
+      "title": "Temperatura y equilibrio",
+      "unit": "U-ESO-02",
+      "epistemic_type": "LAW",
+      "mastery_time_min": 55
+    },
+    {
+      "id": "ESOFYQ::U-ESO-02::05_curvas_calentamiento",
+      "title": "Curvas de calentamiento",
+      "unit": "U-ESO-02",
+      "epistemic_type": "MODEL",
+      "mastery_time_min": 45
+    },
+    {
+      "id": "ESOFYQ::U-ESO-03::01_sustancia_mezcla",
+      "title": "Sustancia frente a mezcla",
+      "unit": "U-ESO-03",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 40
+    },
+    {
+      "id": "ESOFYQ::U-ESO-03::02_separacion_propiedades",
+      "title": "Separación por propiedades",
+      "unit": "U-ESO-03",
+      "epistemic_type": "HEURISTIC",
+      "mastery_time_min": 50
+    },
+    {
+      "id": "ESOFYQ::U-ESO-03::03_soluto_disolvente",
+      "title": "Soluto y disolvente",
+      "unit": "U-ESO-03",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 45
+    },
+    {
+      "id": "ESOFYQ::U-ESO-03::04_concentracion_basica",
+      "title": "Concentración básica",
+      "unit": "U-ESO-03",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 55
+    },
+    {
+      "id": "ESOFYQ::U-ESO-03::05_diseno_separacion",
+      "title": "Diseño de separación",
+      "unit": "U-ESO-03",
+      "epistemic_type": "HEURISTIC",
+      "mastery_time_min": 50
+    },
+    {
+      "id": "ESOFYQ::U-ESO-04::01_particulas_subatomicas",
+      "title": "Partículas subatómicas",
+      "unit": "U-ESO-04",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 50
+    },
+    {
+      "id": "ESOFYQ::U-ESO-04::02_Z_A_isotopos",
+      "title": "Z, A e isótopos",
+      "unit": "U-ESO-04",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 45
+    },
+    {
+      "id": "ESOFYQ::U-ESO-04::03_iones",
+      "title": "Iones",
+      "unit": "U-ESO-04",
+      "epistemic_type": "DEFINITION",
+      "mastery_time_min": 45
+    },
+    {
+      "id": "ESOFYQ::U-ESO-04::04_modelos_atomicos",
+      "title": "Modelos atómicos",
+      "unit": "U-ESO-04",
+      "epistemic_type": "HISTORICAL",
+      "mastery_time_min": 55
+    },
+    {
+      "id": "ESOFYQ::U-ESO-04::05_familias_periodicas",
+      "title": "Familias periódicas",
+      "unit": "U-ESO-04",
+      "epistemic_type": "MODEL",
+      "mastery_time_min": 50
+    }
+  ],
+  "edges": [
+    {
+      "from": "ESOFYQ::U-ESO-01::02_si_conversiones",
+      "to": "ESOFYQ::U-ESO-01::03_incertidumbre",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-01::02_si_conversiones",
+      "to": "ESOFYQ::U-ESO-01::04_tablas_graficas",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-01::03_incertidumbre",
+      "to": "ESOFYQ::U-ESO-01::04_tablas_graficas",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-01::02_si_conversiones",
+      "to": "ESOFYQ::U-ESO-02::01_masa_volumen_densidad",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-02::02_modelo_particulas",
+      "to": "ESOFYQ::U-ESO-02::03_cambios_estado",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-02::03_cambios_estado",
+      "to": "ESOFYQ::U-ESO-02::04_temperatura_equilibrio",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-02::03_cambios_estado",
+      "to": "ESOFYQ::U-ESO-02::05_curvas_calentamiento",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-02::04_temperatura_equilibrio",
+      "to": "ESOFYQ::U-ESO-02::05_curvas_calentamiento",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-02::01_masa_volumen_densidad",
+      "to": "ESOFYQ::U-ESO-03::01_sustancia_mezcla",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-03::01_sustancia_mezcla",
+      "to": "ESOFYQ::U-ESO-03::02_separacion_propiedades",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-03::01_sustancia_mezcla",
+      "to": "ESOFYQ::U-ESO-03::03_soluto_disolvente",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-03::03_soluto_disolvente",
+      "to": "ESOFYQ::U-ESO-03::04_concentracion_basica",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-01::02_si_conversiones",
+      "to": "ESOFYQ::U-ESO-03::04_concentracion_basica",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-03::02_separacion_propiedades",
+      "to": "ESOFYQ::U-ESO-03::05_diseno_separacion",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-03::04_concentracion_basica",
+      "to": "ESOFYQ::U-ESO-03::05_diseno_separacion",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-04::01_particulas_subatomicas",
+      "to": "ESOFYQ::U-ESO-04::02_Z_A_isotopos",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-04::02_Z_A_isotopos",
+      "to": "ESOFYQ::U-ESO-04::03_iones",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-04::01_particulas_subatomicas",
+      "to": "ESOFYQ::U-ESO-04::04_modelos_atomicos",
+      "type": "prerequisite"
+    },
+    {
+      "from": "ESOFYQ::U-ESO-04::02_Z_A_isotopos",
+      "to": "ESOFYQ::U-ESO-04::05_familias_periodicas",
+      "type": "prerequisite"
+    }
+  ]
+}

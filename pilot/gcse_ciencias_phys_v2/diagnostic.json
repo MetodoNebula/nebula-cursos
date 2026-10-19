@@ -1,0 +1,624 @@
+{
+  "type": "diagnostic",
+  "title": "GCSE Physics Diagnostic Assessment",
+  "description": "Placement test to determine your starting level. Answer each question to the best of your ability — there is no penalty for wrong answers.",
+  "instructions": "This diagnostic covers all units. Your results will suggest which learning route best fits your current knowledge.",
+  "time_limit_minutes": 30,
+  "total_items": 19,
+  "scoring": {
+    "method": "percentage_per_unit",
+    "route_thresholds": {
+      "DESDE_CERO": {
+        "min_percent": 0,
+        "max_percent": 39,
+        "description": "Start from foundations — covers all prerequisite skills before diving into physics topics."
+      },
+      "STANDARD": {
+        "min_percent": 40,
+        "max_percent": 69,
+        "description": "Standard GCSE preparation — covers all core content with worked examples."
+      },
+      "EXCELLENCE": {
+        "min_percent": 70,
+        "max_percent": 89,
+        "description": "Full coverage including advanced and enrichment material for top grades."
+      },
+      "FAST_REVIEW": {
+        "min_percent": 90,
+        "max_percent": 100,
+        "description": "Quick revision — focus on key formulas, common mistakes and exam technique."
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "MCQ-U00-01-1",
+      "stem": "Which of the following is the SI base unit for mass?",
+      "options": [
+        {
+          "key": "A",
+          "text": "kilogram (kg)"
+        },
+        {
+          "key": "B",
+          "text": "gram (g)",
+          "why_wrong": "The gram is 1/1000 of the SI base unit; the kilogram is the base unit."
+        },
+        {
+          "key": "C",
+          "text": "newton (N)",
+          "why_wrong": "The newton is the SI unit of force, not mass."
+        },
+        {
+          "key": "D",
+          "text": "pound (lb)",
+          "why_wrong": "The pound is an imperial unit, not an SI unit."
+        }
+      ],
+      "correct": "A",
+      "explanation": "The kilogram (kg) is the SI base unit for mass. Although it contains the prefix 'kilo', it is defined as the base unit.",
+      "source_lesson": "GCSEPHYS::U00_Foundations::units_prefixes_and_scientific_notation",
+      "source_lesson_title": "Units, prefixes and scientific notation",
+      "unit_id": "U00_Foundations",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-MOTION-01-1",
+      "stem": "An object begins at the $2.0\\,\\mathrm{cm}$ mark and ends at the $9.4\\,\\mathrm{cm}$ mark of a ruler. What is its length?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$7.4\\,\\mathrm{cm}$"
+        },
+        {
+          "key": "B",
+          "text": "$9.4\\,\\mathrm{cm}$",
+          "why_wrong": "this is the final ruler position and assumes a zero start."
+        },
+        {
+          "key": "C",
+          "text": "$11.4\\,\\mathrm{cm}$",
+          "why_wrong": "this adds the two readings instead of subtracting them."
+        },
+        {
+          "key": "D",
+          "text": "$7.2\\,\\mathrm{cm}$",
+          "why_wrong": "this results from subtracting the decimal parts incorrectly."
+        }
+      ],
+      "correct": "A",
+      "explanation": "$9.4-2.0=7.4\\,\\mathrm{cm}$.",
+      "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::measuring_the_physical_world",
+      "source_lesson_title": "Measuring the physical world",
+      "unit_id": "U01_Measurement_and_Motion",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-MOTION-01-2",
+      "stem": "Twenty complete oscillations take $34.0\\,\\mathrm{s}$. What is the period?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$34.0\\,\\mathrm{s}$",
+          "why_wrong": "this is the total time for 20 oscillations."
+        },
+        {
+          "key": "B",
+          "text": "$1.70\\,\\mathrm{s}$"
+        },
+        {
+          "key": "C",
+          "text": "$680\\,\\mathrm{s}$",
+          "why_wrong": "this multiplies total time by the number of oscillations."
+        },
+        {
+          "key": "D",
+          "text": "$0.588\\,\\mathrm{s}$",
+          "why_wrong": "this reverses the division and calculates $20/34.0$ with the wrong meaning."
+        }
+      ],
+      "correct": "B",
+      "explanation": "$34.0/20=1.70\\,\\mathrm{s}$.",
+      "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::measuring_the_physical_world",
+      "source_lesson_title": "Measuring the physical world",
+      "unit_id": "U01_Measurement_and_Motion",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P02-01-1",
+      "stem": "A bag of sugar has a mass of 2.0 kg. Calculate its weight near the Earth's surface, taking $g=9.8\\,\\mathrm{N/kg}$.",
+      "options": [
+        {
+          "key": "A",
+          "text": "$19.6\\,\\mathrm{N}$"
+        },
+        {
+          "key": "B",
+          "text": "$2.0\\,\\mathrm{N}$",
+          "why_wrong": "this restates the mass value with the wrong unit, treating mass and weight as the same quantity."
+        },
+        {
+          "key": "C",
+          "text": "$11.8\\,\\mathrm{N}$",
+          "why_wrong": "this adds $g$ to the mass ($2.0+9.8$) instead of multiplying them."
+        },
+        {
+          "key": "D",
+          "text": "$20\\,\\mathrm{N}$",
+          "why_wrong": "this rounds $g$ up to 10 N/kg instead of using the correct value of 9.8 N/kg."
+        }
+      ],
+      "correct": "A",
+      "explanation": "$W=2.0\\times9.8=19.6\\,\\mathrm{N}$.",
+      "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::mass_weight_and_gravitational_field_strength",
+      "source_lesson_title": "Mass, weight and gravitational field strength",
+      "unit_id": "U02_Mass_Weight_and_Density",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P02-01-2",
+      "stem": "An astronaut has a weight of 686 N while standing on Earth, where $g=9.8\\,\\mathrm{N/kg}$. What is the astronaut's mass?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$686\\,\\mathrm{kg}$",
+          "why_wrong": "this treats the newton reading as if it were already a mass given in kilograms."
+        },
+        {
+          "key": "B",
+          "text": "$70\\,\\mathrm{kg}$"
+        },
+        {
+          "key": "C",
+          "text": "$6722.8\\,\\mathrm{kg}$",
+          "why_wrong": "this multiplies 686 by 9.8 instead of dividing."
+        },
+        {
+          "key": "D",
+          "text": "$68.6\\,\\mathrm{kg}$",
+          "why_wrong": "this uses $g=10\\,\\mathrm{N/kg}$ instead of the more accurate value of 9.8 N/kg."
+        }
+      ],
+      "correct": "B",
+      "explanation": "$m=686\\div9.8=70\\,\\mathrm{kg}$.",
+      "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::mass_weight_and_gravitational_field_strength",
+      "source_lesson_title": "Mass, weight and gravitational field strength",
+      "unit_id": "U02_Mass_Weight_and_Density",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P03-01-1",
+      "stem": "A box is pulled forward with $16\\,\\mathrm{N}$. Friction acts backward with $6\\,\\mathrm{N}$. What is the resultant force on the box?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$22\\,\\mathrm{N}$ forward",
+          "why_wrong": "adds the two forces instead of subtracting the backward force from the forward one."
+        },
+        {
+          "key": "B",
+          "text": "$10\\,\\mathrm{N}$ forward"
+        },
+        {
+          "key": "C",
+          "text": "$10\\,\\mathrm{N}$ backward",
+          "why_wrong": "has the correct size but the wrong direction; the larger force is forward, so the resultant must be forward."
+        },
+        {
+          "key": "D",
+          "text": "$6\\,\\mathrm{N}$ forward",
+          "why_wrong": "reports the friction force rather than the resultant of the two forces."
+        }
+      ],
+      "correct": "B",
+      "explanation": "$16-6=10\\,\\mathrm{N}$ forward, in the direction of the larger force.",
+      "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::resultant_forces_and_motion",
+      "source_lesson_title": "Resultant forces and motion",
+      "unit_id": "U03_Forces_and_Pressure",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P03-01-2",
+      "stem": "A sledge moves at a constant speed in a straight line across level snow. Which statement about the forces on it is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "No forces act on the sledge at all.",
+          "why_wrong": "confuses a zero resultant with a complete absence of forces; friction and the pulling force are both still acting."
+        },
+        {
+          "key": "B",
+          "text": "There must be a forward resultant force to keep the sledge moving.",
+          "why_wrong": "wrongly assumes that constant motion itself needs an ongoing forward resultant force."
+        },
+        {
+          "key": "C",
+          "text": "The forces on the sledge are balanced, so the resultant force is zero."
+        },
+        {
+          "key": "D",
+          "text": "All the forces on the sledge must be equal to each other.",
+          "why_wrong": "is not required: the forces only need to combine to a zero resultant, not be individually equal in size."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Constant speed in a straight line means the resultant force is zero: the forces are balanced, not absent.",
+      "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::resultant_forces_and_motion",
+      "source_lesson_title": "Resultant forces and motion",
+      "unit_id": "U03_Forces_and_Pressure",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P04-01-1",
+      "stem": "A stretched catapult elastic band, about to launch a stone, mainly stores energy in which store?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kinetic",
+          "why_wrong": "the band is not yet moving, so it has no meaningful kinetic energy to speak of."
+        },
+        {
+          "key": "B",
+          "text": "Gravitational potential",
+          "why_wrong": "this store depends on height above a reference level, and the band's height has not changed by being stretched."
+        },
+        {
+          "key": "C",
+          "text": "Elastic (strain)"
+        },
+        {
+          "key": "D",
+          "text": "Chemical",
+          "why_wrong": "no chemical bonds are being rearranged by simply stretching the band; stretching changes its shape, not its chemistry."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Stretching a band stores energy in its elastic (strain) store, because of the deformation of its shape.",
+      "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::energy_stores_transfers_and_conservation",
+      "source_lesson_title": "Energy stores, transfers and conservation",
+      "unit_id": "U04_Energy_Work_and_Power",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P04-01-2",
+      "stem": "A ball bounces repeatedly on a hard floor, reaching a slightly lower height after each bounce. What happens to the energy that is 'missing' from each successive bounce?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is destroyed.",
+          "why_wrong": "energy cannot be destroyed; this ignores conservation of energy entirely."
+        },
+        {
+          "key": "B",
+          "text": "It disappears until the ball eventually creates new energy to keep bouncing.",
+          "why_wrong": "energy cannot be created any more than it can be destroyed; the ball's bounces get lower, not sustained by new energy."
+        },
+        {
+          "key": "C",
+          "text": "It builds up invisibly inside the ball until it suddenly reappears.",
+          "why_wrong": "there is no mechanism or evidence for energy silently accumulating and later reappearing; it is simply transferred away as the ball bounces."
+        },
+        {
+          "key": "D",
+          "text": "It spreads mainly into the internal (thermal) energy of the ball, floor and surrounding air, and into sound."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Each bounce dissipates some energy mainly as internal (thermal) energy and sound, which is why the ball's maximum height falls a little each time, consistent with conservation of energy.",
+      "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::energy_stores_transfers_and_conservation",
+      "source_lesson_title": "Energy stores, transfers and conservation",
+      "unit_id": "U04_Energy_Work_and_Power",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P05-01-1",
+      "stem": "Pollen grains suspended in water are watched under a microscope and seen to jitter and change direction constantly. What is the best explanation for this motion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The pollen grains are themselves water molecules moving randomly.",
+          "why_wrong": "confuses the large, visible pollen grain with the much smaller, invisible water molecules that actually strike it."
+        },
+        {
+          "key": "B",
+          "text": "The pollen grains are pulled by a weak current that changes direction every few seconds.",
+          "why_wrong": "invents an external current with no evidence, when the random collisions explanation already accounts for the motion."
+        },
+        {
+          "key": "C",
+          "text": "The pollen grains repel each other and bounce apart.",
+          "why_wrong": "describes an interaction between pollen grains, not the cause of a single grain's own erratic path."
+        },
+        {
+          "key": "D",
+          "text": "The pollen grains are struck unevenly, from random directions, by huge numbers of invisible, fast-moving water molecules."
+        }
+      ],
+      "correct": "D",
+      "explanation": "This is the standard particle-model explanation of Brownian motion: an unevenly, randomly bombarded large particle is pushed first one way, then another, by invisible fluid particles.",
+      "source_lesson": "GCSEPHYS::U05_Thermal_Physics::particles_temperature_and_evidence",
+      "source_lesson_title": "Particles, temperature and evidence",
+      "unit_id": "U05_Thermal_Physics",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P05-01-2",
+      "stem": "A solid is cooled, but it does not change state. What happens to its particles?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They vibrate less vigorously about the same fixed positions."
+        },
+        {
+          "key": "B",
+          "text": "They stop vibrating completely.",
+          "why_wrong": "goes too far: particles never become perfectly still, even when strongly cooled, as long as the substance remains above absolute zero."
+        },
+        {
+          "key": "C",
+          "text": "They move further apart from their fixed positions.",
+          "why_wrong": "describes melting or expansion, not simply cooling a solid that stays solid."
+        },
+        {
+          "key": "D",
+          "text": "They change from vibrating to sliding past one another.",
+          "why_wrong": "describes becoming a liquid, which has not happened here."
+        }
+      ],
+      "correct": "A",
+      "explanation": "Cooling reduces the average random kinetic energy of the particles, so a solid's particles vibrate less vigorously about the same fixed positions, without changing state.",
+      "source_lesson": "GCSEPHYS::U05_Thermal_Physics::particles_temperature_and_evidence",
+      "source_lesson_title": "Particles, temperature and evidence",
+      "unit_id": "U05_Thermal_Physics",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P06-01-1",
+      "stem": "A cork floats on a water surface as a wave passes underneath it. What happens to the cork over one full wave cycle?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It moves up and down and returns close to where it started."
+        },
+        {
+          "key": "B",
+          "text": "It is carried forward along with the wave to a new position.",
+          "why_wrong": "treats the medium as if it travelled with the wave, rather than only oscillating about a fixed position."
+        },
+        {
+          "key": "C",
+          "text": "It stays completely still, because only light waves carry energy.",
+          "why_wrong": "wrongly assumes a water wave carries no energy to the cork; the cork clearly does move, just not along with the wave."
+        },
+        {
+          "key": "D",
+          "text": "It moves sideways, in the same direction the wave is travelling.",
+          "why_wrong": "describes longitudinal vibration in a case where the course treats this type of wave as transverse."
+        }
+      ],
+      "correct": "A",
+      "explanation": "A wave transfers energy through a medium while each part of the medium only oscillates about a fixed position; it does not travel along with the wave.",
+      "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::wave_quantities_and_types",
+      "source_lesson_title": "Wave quantities and types",
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P06-01-2",
+      "stem": "On a wave diagram, which pair of measurements correctly identifies amplitude and wavelength?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amplitude: vertical distance from a crest to a trough. Wavelength: horizontal distance from one crest to the next.",
+          "why_wrong": "doubles the amplitude by measuring crest-to-trough instead of rest-to-crest."
+        },
+        {
+          "key": "B",
+          "text": "Amplitude: vertical distance from rest to a crest. Wavelength: horizontal distance from one crest to the next."
+        },
+        {
+          "key": "C",
+          "text": "Amplitude: horizontal distance from one crest to the next. Wavelength: vertical distance from rest to a crest.",
+          "why_wrong": "swaps the two definitions, giving amplitude a horizontal measurement and wavelength a vertical one."
+        },
+        {
+          "key": "D",
+          "text": "Amplitude and wavelength are the same measurement, read from the same line on the diagram.",
+          "why_wrong": "is exactly the common confusion this lesson addresses: the two quantities are measured on different axes of the diagram."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Amplitude is a vertical measurement from the rest position to a crest; wavelength is a horizontal measurement for one complete repeat, such as crest to crest.",
+      "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::wave_quantities_and_types",
+      "source_lesson_title": "Wave quantities and types",
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P07-01-1",
+      "stem": "A bar magnet's south pole is held facing the south pole of a second bar magnet. What happens?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They repel, because like poles repel."
+        },
+        {
+          "key": "B",
+          "text": "They attract, because opposite ends of two different magnets always pull together.",
+          "why_wrong": "treats attraction as a general property of 'two magnets' rather than depending on which poles actually face each other."
+        },
+        {
+          "key": "C",
+          "text": "Nothing happens, because both poles are the same type.",
+          "why_wrong": "wrongly assumes matching poles produce no force at all, rather than a repulsive one."
+        },
+        {
+          "key": "D",
+          "text": "They attract, because south poles are weaker than north poles.",
+          "why_wrong": "invents a size difference between pole types that has nothing to do with the like/unlike rule."
+        }
+      ],
+      "correct": "A",
+      "explanation": "S facing S is a like-pole pairing, and like poles repel.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::magnets_and_magnetic_fields",
+      "source_lesson_title": "Magnets and magnetic fields",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P07-01-2",
+      "stem": "Which pair of materials are both magnetic (both would be attracted to a strong magnet)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Copper and aluminium",
+          "why_wrong": "neither copper nor aluminium is a magnetic material; both would show no attraction."
+        },
+        {
+          "key": "B",
+          "text": "Steel and nickel"
+        },
+        {
+          "key": "C",
+          "text": "Gold and plastic",
+          "why_wrong": "neither gold nor plastic is magnetic."
+        },
+        {
+          "key": "D",
+          "text": "Aluminium and steel",
+          "why_wrong": "aluminium is not magnetic, even though steel is; the pair is not both magnetic."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Steel and nickel are both among the small group of magnetic materials (iron, steel, nickel, cobalt).",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::magnets_and_magnetic_fields",
+      "source_lesson_title": "Magnets and magnetic fields",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P08-01-1",
+      "stem": "What does the nucleon number $A$ of a nuclide actually count?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The number of protons only.",
+          "why_wrong": "this is what the proton number $Z$ counts, not $A$."
+        },
+        {
+          "key": "B",
+          "text": "The number of protons plus the number of neutrons."
+        },
+        {
+          "key": "C",
+          "text": "The number of electrons only.",
+          "why_wrong": "electrons are not counted by $A$ at all; in a neutral atom their number equals $Z$, not $A$."
+        },
+        {
+          "key": "D",
+          "text": "The number of neutrons only.",
+          "why_wrong": "this is the neutron number, $N=A-Z$, which is only part of what $A$ counts."
+        }
+      ],
+      "correct": "B",
+      "explanation": "$A$ is defined as protons plus neutrons together; neither alone, and never electrons.",
+      "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::nuclei_isotopes_and_nuclear_processes",
+      "source_lesson_title": "Nuclei, isotopes and nuclear processes",
+      "unit_id": "U08_Nuclear_Physics",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P08-01-2",
+      "stem": "A carbon-14 nuclide has proton number $Z=6$. How many neutrons does it contain?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6",
+          "why_wrong": "repeats the proton number instead of subtracting it from the nucleon number."
+        },
+        {
+          "key": "B",
+          "text": "14",
+          "why_wrong": "repeats the nucleon number $A$ directly, without subtracting $Z$ at all."
+        },
+        {
+          "key": "C",
+          "text": "8"
+        },
+        {
+          "key": "D",
+          "text": "20",
+          "why_wrong": "adds $Z$ and $A$ together ($6+14$) instead of subtracting."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Neutrons $=A-Z=14-6=8$.",
+      "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::nuclei_isotopes_and_nuclear_processes",
+      "source_lesson_title": "Nuclei, isotopes and nuclear processes",
+      "unit_id": "U08_Nuclear_Physics",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P09-01-1",
+      "stem": "Which of the following lists four planets in the correct order of increasing distance from the Sun?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Earth, Mercury, Mars, Jupiter",
+          "why_wrong": "places Earth before Mercury, but Mercury is closer to the Sun than Earth."
+        },
+        {
+          "key": "B",
+          "text": "Mercury, Earth, Mars, Jupiter"
+        },
+        {
+          "key": "C",
+          "text": "Mercury, Mars, Earth, Jupiter",
+          "why_wrong": "swaps Earth and Mars; Earth is closer to the Sun than Mars."
+        },
+        {
+          "key": "D",
+          "text": "Jupiter, Mars, Earth, Mercury",
+          "why_wrong": "lists the four planets in decreasing distance from the Sun, the reverse of what was asked."
+        }
+      ],
+      "correct": "B",
+      "explanation": "The fixed order from the Sun is Mercury, Venus, Earth, Mars, Jupiter...; keeping only these four in that order gives Mercury, Earth, Mars, Jupiter.",
+      "source_lesson": "GCSEPHYS::U09_Space_Physics::the_solar_system_as_an_organised_system",
+      "source_lesson_title": "The Solar System as an organised system",
+      "unit_id": "U09_Space_Physics",
+      "diagnostic_weight": 1
+    },
+    {
+      "id": "MCQ-P09-01-2",
+      "stem": "Why is Pluto classified as a dwarf planet rather than one of the eight planets?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It does not orbit the Sun.",
+          "why_wrong": "is false; Pluto does orbit the Sun directly, so this cannot be the reason for its reclassification."
+        },
+        {
+          "key": "B",
+          "text": "It is not round.",
+          "why_wrong": "is false; Pluto is massive enough for its own gravity to make it round, like the eight planets."
+        },
+        {
+          "key": "C",
+          "text": "It has not cleared its orbital neighbourhood of other similarly sized bodies."
+        },
+        {
+          "key": "D",
+          "text": "It is too far from the Sun to be seen clearly.",
+          "why_wrong": "confuses observational difficulty with the actual classification criterion, which has nothing to do with how easily an object can be observed."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Pluto passes the 'orbits the Sun' and 'round' tests but fails the third: it shares the Kuiper belt with many similarly sized bodies, so it has not cleared its orbital neighbourhood.",
+      "source_lesson": "GCSEPHYS::U09_Space_Physics::the_solar_system_as_an_organised_system",
+      "source_lesson_title": "The Solar System as an organised system",
+      "unit_id": "U09_Space_Physics",
+      "diagnostic_weight": 1
+    }
+  ]
+}

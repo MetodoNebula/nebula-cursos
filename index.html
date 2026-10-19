@@ -64,6 +64,16 @@ h2{font-size:19px;margin:30px 0 10px;text-wrap:balance}
 .row .n{font-family:var(--mono);font-size:13px;color:var(--accent);min-width:26px;font-weight:600}
 .row .t{flex:1;min-width:0;font-weight:600;font-size:15.5px}
 .row .meta{display:flex;gap:10px;align-items:baseline;color:var(--muted);font-size:12.5px;white-space:nowrap}
+.nav-group{margin-top:18px}
+.nav-group:first-child{margin-top:0}
+.nav-group-hdr{display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 0;user-select:none}
+.nav-group-hdr:hover .nav-group-label{color:var(--accent)}
+.nav-group-arrow{font-size:11px;color:var(--muted);transition:transform .2s;width:14px;text-align:center}
+.nav-group-label{font-family:var(--mono);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.nav-group-count{font-size:11px;color:var(--muted);margin-left:auto}
+.nav-group-items{display:flex;flex-direction:column;gap:8px;margin-top:6px;overflow:hidden}
+.nav-group.collapsed .nav-group-items{display:none}
+.nav-group.collapsed .nav-group-arrow{transform:rotate(-90deg)}
 .dots{letter-spacing:2px;font-size:11px;color:var(--amber)}
 .chip{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-weight:600;letter-spacing:.3px}
 .tabs{position:sticky;top:calc(env(safe-area-inset-top,0px) + 45px);z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:var(--bg);border-bottom:1px solid var(--line);-webkit-overflow-scrolling:touch}
@@ -601,12 +611,31 @@ function renderUnit(i,j){
   const p = CAT.projects[i], u = p.units[j];
   setCrumbs([{label:'Inicio', href:''},{label:p.label, href:`c-${i}`},{label:pretty(u.titulo||u.id)}]);
   let out = `<h1>${esc(pretty(u.titulo || u.id))}</h1><p class="sub">${esc(p.label)}</p><div class="list">`;
-  u.lecciones.forEach((l,k) => {
-    out += `<div class="row" tabindex="0" data-go="l-${i}-${j}-${k}">
+
+  const lessonRow = (l,k) => `<div class="row" tabindex="0" data-go="l-${i}-${j}-${k}">
       <span class="n">${String(l.n).padStart(2,'0')}</span>
       <span class="t">${esc(l.titulo)}</span>
       <span class="meta"><span class="dots" title="dificultad">${dots(l.dificultad)}</span><span>${esc(l.duracion||'')}</span></span></div>`;
-  });
+
+  if (u.nav_groups && u.nav_groups.length) {
+    u.nav_groups.forEach(g => {
+      const items = u.lecciones.filter(l => l.n >= g.from && l.n <= g.to);
+      out += `<div class="nav-group">
+        <div class="nav-group-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+          <span class="nav-group-arrow">▼</span>
+          <span class="nav-group-label">${esc(g.label)}</span>
+          <span class="nav-group-count">${items.length}</span>
+        </div><div class="nav-group-items">`;
+      items.forEach(l => {
+        const k = u.lecciones.indexOf(l);
+        out += lessonRow(l, k);
+      });
+      out += `</div></div>`;
+    });
+  } else {
+    u.lecciones.forEach((l,k) => { out += lessonRow(l, k); });
+  }
+
   $main.innerHTML = out + '</div>';
   bindGo();
   typeset();

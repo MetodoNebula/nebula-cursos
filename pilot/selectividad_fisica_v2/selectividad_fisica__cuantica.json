@@ -1189,7 +1189,6 @@
             "MCQ-01-5",
             "TH-01-1",
             "TH-01-10",
-            "TH-01-11",
             "TH-01-2",
             "TH-01-3",
             "TH-01-4",
@@ -1221,7 +1220,6 @@
             "MCQ-01-7",
             "TH-01-1",
             "TH-01-10",
-            "TH-01-11",
             "TH-01-2",
             "TH-01-3",
             "TH-01-4",
@@ -1425,14 +1423,15 @@
           "TH-01-4",
           "TH-01-5",
           "TH-01-8",
-          "TH-01-10",
-          "TH-01-11"
+          "TH-01-10"
         ],
         "standard_blocks": [
           "TH-01-7",
           "TH-01-9"
         ],
-        "advanced_blocks": [],
+        "advanced_blocks": [
+          "TH-01-11"
+        ],
         "worked_examples": [
           "WE-01-1",
           "WE-01-2",
@@ -1613,8 +1612,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "46f25ee4e97e9d0f"
+        "validated_render": true,
+        "canonical_hash": "b50f5dd785996df6"
       }
     }
   },
@@ -2347,7 +2346,7 @@
           "Para (d), repasa de dónde sale la expresión $E_{c,\\max}=hf-W$ y qué palabra acompaña siempre a $W$ en su definición."
         ],
         "answer": "**(a)** El redondeo de $E_c$ a $1{,}66\\cdot10^{-19}$ J antes de usarla en la raíz. El valor sin redondear es $1{,}6565\\cdot10^{-19}$ J. **(b)** Sin redondear, $v = 6{,}0305\\cdot10^{5}$ m/s; con el redondeo, $6{,}0368\\cdot10^{5}$ m/s. **(c)** Con tres: $v = 6{,}03\\cdot10^{5}$ m/s, no $6{,}04\\cdot10^{5}$. **(d)** Debería decir velocidad **máxima**.",
-        "full_solution": "**(a)** Las dos frecuencias están bien: $3\\cdot10^{8}/400\\cdot10^{-9}=7{,}5\\cdot10^{14}$ Hz y $3\\cdot10^{8}/300\\cdot10^{-9}=1\\cdot10^{15}$ Hz, ambas exactas. El producto siguiente es\n\n$$E_c = 6{,}626\\cdot10^{-34}\\cdot 2{,}5\\cdot10^{14}=1{,}6565\\cdot10^{-19}\\ \\mathrm{J}$$\n\ny el desarrollo lo escribe como $1{,}66\\cdot10^{-19}$ J. **Ahí** se pierde precisión, y lo grave no es el redondeo en sí, sino que ese valor redondeado es el que entra en la raíz.\n\n**(b)** Con la energía sin redondear:\n\n$$v=\\sqrt{\\frac{2\\cdot 1{,}6565\\cdot10^{-19}}{9{,}11\\cdot10^{-31}}}=6{,}0305\\cdot10^{5}\\ \\mathrm{m/s}$$\n\nCon la energía redondeada a $1{,}66\\cdot10^{-19}$ J:\n\n$$v=\\sqrt{\\frac{2\\cdot 1{,}66\\cdot10^{-19}}{9{,}11\\cdot10^{-31}}}=6{,}0368\\cdot10^{5}\\ \\mathrm{m/s}$$\n\nLa diferencia es del $0{,}11\\,\\%$: pequeña. Pero basta para que la tercera cifra significativa cambie, y la tercera cifra es justamente la última que el problema permite escribir. El resultado correcto es $6{,}03\\cdot10^{5}$ m/s, no $6{,}04\\cdot10^{5}$.\n\n**(c)** El dato menos preciso real es $m_e=9{,}11\\cdot10^{-31}$ kg (y $300$/$400$ nm), con tres cifras significativas; $c=3\\cdot10^{8}$ m/s es un valor convencional que aquí se toma como $3{,}00\\cdot10^{8}$, porque la velocidad de la luz se conoce con muchísima más precisión. El resultado no puede tener más de tres cifras. Escribir $603\\,684{,}3$ m/s son **siete** cifras significativas: afirma que se conoce la velocidad con una precisión de una décima de metro por segundo, cuando los datos no permiten asegurar ni la cuarta cifra. No es un exceso de celo: es una afirmación falsa sobre la calidad de la medida.\n\nLa regla que hay que llevarse de aquí tiene dos mitades, y la segunda es la que casi nunca se respeta: **se redondea una sola vez, al final**, y el resultado se escribe con tantas cifras significativas como tenga el dato menos preciso.\n\n**(d)** El enunciado pregunta «con qué velocidad saldrán los electrones», en general, pero el desarrollo calcula la velocidad **máxima**, porque parte de $E_{c,\\max}$. Y tiene que partir de ahí, porque $W$ es la energía **mínima** de ligadura: los electrones más profundos necesitan más y escapan más despacio. Lo que se obtiene es el techo, no un valor común a todos. El enunciado correcto diría «¿con qué velocidad **máxima**…?».",
+        "full_solution": "**(a)** Las dos frecuencias están bien: $\\dfrac{3\\cdot10^{8}}{400\\cdot10^{-9}}=7{,}5\\cdot10^{14}$ Hz y $\\dfrac{3\\cdot10^{8}}{300\\cdot10^{-9}}=1\\cdot10^{15}$ Hz, ambas exactas. El producto siguiente es\n\n$$E_c = 6{,}626\\cdot10^{-34}\\cdot 2{,}5\\cdot10^{14}=1{,}6565\\cdot10^{-19}\\ \\mathrm{J}$$\n\ny el desarrollo lo escribe como $1{,}66\\cdot10^{-19}$ J. **Ahí** se pierde precisión, y lo grave no es el redondeo en sí, sino que ese valor redondeado es el que entra en la raíz.\n\n**(b)** Con la energía sin redondear:\n\n$$v=\\sqrt{\\frac{2\\cdot 1{,}6565\\cdot10^{-19}}{9{,}11\\cdot10^{-31}}}=6{,}0305\\cdot10^{5}\\ \\mathrm{m/s}$$\n\nCon la energía redondeada a $1{,}66\\cdot10^{-19}$ J:\n\n$$v=\\sqrt{\\frac{2\\cdot 1{,}66\\cdot10^{-19}}{9{,}11\\cdot10^{-31}}}=6{,}0368\\cdot10^{5}\\ \\mathrm{m/s}$$\n\nLa diferencia es del $0{,}11\\,\\%$: pequeña. Pero basta para que la tercera cifra significativa cambie, y la tercera cifra es justamente la última que el problema permite escribir. El resultado correcto es $6{,}03\\cdot10^{5}$ m/s, no $6{,}04\\cdot10^{5}$.\n\n**(c)** El dato menos preciso real es $m_e=9{,}11\\cdot10^{-31}$ kg (y $300$/$400$ nm), con tres cifras significativas; $c=3\\cdot10^{8}$ m/s es un valor convencional que aquí se toma como $3{,}00\\cdot10^{8}$, porque la velocidad de la luz se conoce con muchísima más precisión. El resultado no puede tener más de tres cifras. Escribir $603\\,684{,}3$ m/s son **siete** cifras significativas: afirma que se conoce la velocidad con una precisión de una décima de metro por segundo, cuando los datos no permiten asegurar ni la cuarta cifra. No es un exceso de celo: es una afirmación falsa sobre la calidad de la medida.\n\nLa regla que hay que llevarse de aquí tiene dos mitades, y la segunda es la que casi nunca se respeta: **se redondea una sola vez, al final**, y el resultado se escribe con tantas cifras significativas como tenga el dato menos preciso.\n\n**(d)** El enunciado pregunta «con qué velocidad saldrán los electrones», en general, pero el desarrollo calcula la velocidad **máxima**, porque parte de $E_{c,\\max}$. Y tiene que partir de ahí, porque $W$ es la energía **mínima** de ligadura: los electrones más profundos necesitan más y escapan más despacio. Lo que se obtiene es el techo, no un valor común a todos. El enunciado correcto diría «¿con qué velocidad **máxima**…?».",
         "common_errors": [
           "Dar por bueno el desarrollo porque el error relativo es pequeño. Lo que se audita aquí es el método, no el tamaño del error.",
           "Confundir cifras significativas con decimales: $6{,}03\\cdot10^{5}$ tiene tres cifras significativas y ningún decimal relevante.",
@@ -3649,8 +3648,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "96ed8db4a7c66b4e"
+        "validated_render": true,
+        "canonical_hash": "e035bc7788ba8972"
       }
     }
   },
@@ -5202,8 +5201,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "b1e747542aa69789"
+        "validated_render": true,
+        "canonical_hash": "b09f62f8d0039cf3"
       }
     }
   },
@@ -5415,23 +5414,6 @@
         "provenance": "SOURCE_DERIVED"
       },
       {
-        "id": "TH-04-2",
-        "type": "derivation",
-        "title": "De Coulomb a los radios, y de los radios a las energías",
-        "scope": "ADVANCED",
-        "body": "**Paso 1. Los radios permitidos.** Se despeja $v$ del postulado y se sustituye en la condición de órbita. De $mvr = nh/2\\pi$ se obtiene $v = nh/(2\\pi m r)$, y sustituyendo en $kZe^2 = m v^2 r$:\n\n$$k\\,Ze^2 = m\\,r\\left(\\frac{nh}{2\\pi m r}\\right)^2 = \\frac{n^2h^2}{4\\pi^2 m r}$$\n\n$$\\Longrightarrow\\qquad r_n = \\left(\\frac{h^2}{4\\pi^2 m k Z e^2}\\right)n^2$$\n\nTodo el paréntesis es una combinación de constantes. Lo único variable es $n^2$: **los radios permitidos crecen como el cuadrado de un número entero**, y entre ellos no hay nada. No es que no sepamos medir los radios intermedios: no existen.\n\n**Paso 2. La energía en una órbita.** La energía total es cinética más potencial. La potencial eléctrica, con el origen en el infinito, es $E_p = -kZe^2/r$. Y la cinética se obtiene **del ingrediente (2), la condición de órbita**, sin ningún cálculo nuevo: si $kZe^2 = mv^2r$, entonces\n\n$$E_c = \\tfrac12 m v^2 = \\frac{1}{2}\\,\\frac{kZe^2}{r}$$\n\nSumando:\n\n$$E = E_c + E_p = \\frac{1}{2}\\frac{kZe^2}{r} - \\frac{kZe^2}{r} = -\\frac{1}{2}\\,\\frac{kZe^2}{r}$$\n\n> Esta estructura —la energía total es la mitad de la potencial, con signo negativo— **ya se vio en el campo gravitatorio**, para un satélite ligado: $E = -GMm/2r$. Es literalmente la misma cuenta con $kZe^2$ en lugar de $GMm$. No hay nada nuevo que aceptar.\n\n**Paso 3. Las energías permitidas.** Sustituyendo el radio del paso 1:\n\n$$E_n = -\\frac{1}{2}\\,\\frac{kZe^2}{\\left(\\dfrac{h^2}{4\\pi^2 m k Z e^2}\\right)n^2} = -\\left(\\frac{2\\pi^2 m k^2 Z^2 e^4}{h^2}\\right)\\frac{1}{n^2}$$\n\nLa cuantización de la energía **no se ha supuesto en ningún momento**: ha salido al sustituir un radio cuantizado en una expresión de la energía que es puramente clásica.\n\n**Paso 4. La frecuencia emitida.** El tercer postulado dice que al caer de un nivel $n_2$ a uno inferior $n_1$ se emite un fotón con $hf = E_{n_2} - E_{n_1}$:\n\n$$h f = \\left(\\frac{2\\pi^2 m k^2 Z^2 e^4}{h^2}\\right)\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)\n\\qquad\\Longrightarrow\\qquad f = \\left(\\frac{2\\pi^2 m k^2 Z^2 e^4}{h^3}\\right)\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)$$\n\n**Paso 5. Balmer queda explicado.** Las rayas visibles del hidrógeno corresponden a los electrones que caen a la **segunda** órbita, es decir $n_1 = 2$. Con $Z = 1$:\n\n$$f = \\underbrace{\\left(\\frac{2\\pi^2 m k^2 e^4}{h^3}\\right)}_{\\textstyle R}\\left(\\frac{1}{2^2}-\\frac{1}{n^2}\\right)$$\n\nEs **exactamente** la fórmula de Balmer, y además dice cuánto vale su $R$. Con los valores actuales de las constantes se obtiene $R = 3{,}29\\cdot10^{15}$ s$^{-1}$, el mismo valor empírico que Balmer había ajustado a cuatro medidas 28 años antes. **En 1913, con las constantes de la época, Bohr obtuvo $R \\approx 3{,}1\\cdot10^{15}$ s$^{-1}$, coincidente dentro de su incertidumbre; el acuerdo en tres cifras es el que se obtiene hoy con constantes modernas.**\n\n> Merece la pena detenerse aquí. En la expresión de $R$ no hay ni un solo parámetro ajustable: masa del electrón, carga del electrón, constante de Coulomb y constante de Planck. Cuatro constantes medidas en experimentos que no tienen nada que ver con espectros, combinadas, dan el número que gobierna las rayas del hidrógeno. **Eso es lo que significa explicar algo.**\n\n> **Una advertencia sobre la $Z$.** En $R$ no puede quedarse una $Z$: si se queda, $R$ cambia de un átomo a otro y entonces no es una constante. La constante de Rydberg es la del **hidrógeno**, con $Z = 1$ fijado. La dependencia en $Z^2$ sigue siendo correcta y útil, pero vive en $E_n$, no en $R$.",
-        "concept_ids": [
-          "C-CU-19",
-          "C-CU-20",
-          "C-CU-23"
-        ],
-        "objective_ids": [
-          "LO-04-1",
-          "LO-04-7"
-        ],
-        "provenance": "SOURCE_DERIVED"
-      },
-      {
         "id": "TH-04-3",
         "type": "formalisation",
         "title": "El tamaño del átomo: el radio de Bohr",
@@ -5562,6 +5544,23 @@
           "LO-04-5"
         ],
         "provenance": "GENERATED_EXPLANATION"
+      },
+      {
+        "id": "TH-04-2",
+        "type": "derivation",
+        "title": "De Coulomb a los radios, y de los radios a las energías",
+        "scope": "ADVANCED",
+        "body": "**— Hasta aquí, lo esencial. Lo que sigue amplía o justifica con más profundidad, y puede dejarse para una segunda lectura. —**\n\n**Paso 1. Los radios permitidos.** Se despeja $v$ del postulado y se sustituye en la condición de órbita. De $mvr = nh/2\\pi$ se obtiene $v = nh/(2\\pi m r)$, y sustituyendo en $kZe^2 = m v^2 r$:\n\n$$k\\,Ze^2 = m\\,r\\left(\\frac{nh}{2\\pi m r}\\right)^2 = \\frac{n^2h^2}{4\\pi^2 m r}$$\n\n$$\\Longrightarrow\\qquad r_n = \\left(\\frac{h^2}{4\\pi^2 m k Z e^2}\\right)n^2$$\n\nTodo el paréntesis es una combinación de constantes. Lo único variable es $n^2$: **los radios permitidos crecen como el cuadrado de un número entero**, y entre ellos no hay nada. No es que no sepamos medir los radios intermedios: no existen.\n\n**Paso 2. La energía en una órbita.** La energía total es cinética más potencial. La potencial eléctrica, con el origen en el infinito, es $E_p = -kZe^2/r$. Y la cinética se obtiene **del ingrediente (2), la condición de órbita**, sin ningún cálculo nuevo: si $kZe^2 = mv^2r$, entonces\n\n$$E_c = \\tfrac12 m v^2 = \\frac{1}{2}\\,\\frac{kZe^2}{r}$$\n\nSumando:\n\n$$E = E_c + E_p = \\frac{1}{2}\\frac{kZe^2}{r} - \\frac{kZe^2}{r} = -\\frac{1}{2}\\,\\frac{kZe^2}{r}$$\n\n> Esta estructura —la energía total es la mitad de la potencial, con signo negativo— **ya se vio en el campo gravitatorio**, para un satélite ligado: $E = -GMm/2r$. Es literalmente la misma cuenta con $kZe^2$ en lugar de $GMm$. No hay nada nuevo que aceptar.\n\n**Paso 3. Las energías permitidas.** Sustituyendo el radio del paso 1:\n\n$$E_n = -\\frac{1}{2}\\,\\frac{kZe^2}{\\left(\\dfrac{h^2}{4\\pi^2 m k Z e^2}\\right)n^2} = -\\left(\\frac{2\\pi^2 m k^2 Z^2 e^4}{h^2}\\right)\\frac{1}{n^2}$$\n\nLa cuantización de la energía **no se ha supuesto en ningún momento**: ha salido al sustituir un radio cuantizado en una expresión de la energía que es puramente clásica.\n\n**Paso 4. La frecuencia emitida.** El tercer postulado dice que al caer de un nivel $n_2$ a uno inferior $n_1$ se emite un fotón con $hf = E_{n_2} - E_{n_1}$:\n\n$$h f = \\left(\\frac{2\\pi^2 m k^2 Z^2 e^4}{h^2}\\right)\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)\n\\qquad\\Longrightarrow\\qquad f = \\left(\\frac{2\\pi^2 m k^2 Z^2 e^4}{h^3}\\right)\\left(\\frac{1}{n_1^2}-\\frac{1}{n_2^2}\\right)$$\n\n**Paso 5. Balmer queda explicado.** Las rayas visibles del hidrógeno corresponden a los electrones que caen a la **segunda** órbita, es decir $n_1 = 2$. Con $Z = 1$:\n\n$$f = \\underbrace{\\left(\\frac{2\\pi^2 m k^2 e^4}{h^3}\\right)}_{\\textstyle R}\\left(\\frac{1}{2^2}-\\frac{1}{n^2}\\right)$$\n\nEs **exactamente** la fórmula de Balmer, y además dice cuánto vale su $R$. Con los valores actuales de las constantes se obtiene $R = 3{,}29\\cdot10^{15}$ s$^{-1}$, el mismo valor empírico que Balmer había ajustado a cuatro medidas 28 años antes. **En 1913, con las constantes de la época, Bohr obtuvo $R \\approx 3{,}1\\cdot10^{15}$ s$^{-1}$, coincidente dentro de su incertidumbre; el acuerdo en tres cifras es el que se obtiene hoy con constantes modernas.**\n\n> Merece la pena detenerse aquí. En la expresión de $R$ no hay ni un solo parámetro ajustable: masa del electrón, carga del electrón, constante de Coulomb y constante de Planck. Cuatro constantes medidas en experimentos que no tienen nada que ver con espectros, combinadas, dan el número que gobierna las rayas del hidrógeno. **Eso es lo que significa explicar algo.**\n\n> **Una advertencia sobre la $Z$.** En $R$ no puede quedarse una $Z$: si se queda, $R$ cambia de un átomo a otro y entonces no es una constante. La constante de Rydberg es la del **hidrógeno**, con $Z = 1$ fijado. La dependencia en $Z^2$ sigue siendo correcta y útil, pero vive en $E_n$, no en $R$.",
+        "concept_ids": [
+          "C-CU-19",
+          "C-CU-20",
+          "C-CU-23"
+        ],
+        "objective_ids": [
+          "LO-04-1",
+          "LO-04-7"
+        ],
+        "provenance": "SOURCE_DERIVED"
       }
     ],
     "keywords": [
@@ -7021,8 +7020,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "0d6c2f61e1563d76"
+        "validated_render": true,
+        "canonical_hash": "732040139a705688"
       }
     }
   },
@@ -8951,8 +8950,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "f8ef476ef380cbe0"
+        "validated_render": true,
+        "canonical_hash": "0c02bb85b1649458"
       }
     }
   },
@@ -9876,8 +9875,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "df53213b132cf603"
+        "validated_render": true,
+        "canonical_hash": "23c0ac6b056afbf4"
       }
     }
   },
@@ -10801,8 +10800,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "53252f12b55f53b3"
+        "validated_render": true,
+        "canonical_hash": "95c6a17042784e45"
       }
     }
   }

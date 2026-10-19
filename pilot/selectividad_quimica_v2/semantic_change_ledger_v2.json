@@ -1,0 +1,68 @@
+{
+  "version": "2.0",
+  "date": "2026-10-19",
+  "course": "selectividad_quimica",
+  "audit_type": "programmatic + editorial",
+  "new_findings": [],
+  "fixes_applied": [
+    {
+      "id": "FIX-V2-001",
+      "severity": "P0",
+      "bundle": "selectividad_quimica__U07_Electroquimica.json",
+      "lesson": "03_Ajuste_por_ion-electrón_en_medio_ácido.json",
+      "field": "guided_exercises[0].full_solution",
+      "action": "ADDED",
+      "description": "Añadido full_solution faltante al ejercicio de ajuste Sn²⁺→Sn⁴⁺"
+    },
+    {
+      "id": "FIX-V2-002",
+      "severity": "P0",
+      "bundle": "selectividad_quimica__U08_Organica.json",
+      "lesson": "10_Isomería_de_posición.json",
+      "field": "guided_exercises[1].full_solution",
+      "action": "ADDED",
+      "description": "Añadido full_solution faltante al ejercicio de clasificación de isómeros"
+    },
+    {
+      "id": "FIX-V2-003",
+      "severity": "P0",
+      "bundle": "selectividad_quimica__U08_Organica.json",
+      "lesson": "11_Isomería_de_función.json",
+      "field": "guided_exercises[0].full_solution",
+      "action": "ADDED",
+      "description": "Añadido full_solution faltante al ejercicio butanal vs butanona"
+    },
+    {
+      "id": "FIX-V2-004",
+      "severity": "P1",
+      "bundle": "selectividad_quimica__U07_Electroquimica.json",
+      "lesson": "L01-L14 (all)",
+      "field": "guided_exercises[*].id",
+      "action": "ADDED",
+      "count": 28,
+      "description": "Añadidos 28 campos id (formato EX-Q07-NN-GN) a ejercicios guiados sin identificador"
+    },
+    {
+      "id": "FIX-V2-005",
+      "severity": "P1",
+      "bundle": "multiple (U00-U08)",
+      "lesson": "30 lessons across 8 units",
+      "field": "guided_exercises[*].hints",
+      "action": "ADDED",
+      "count": 53,
+      "description": "Añadidos 53 hints progresivos (2º hint) a ejercicios guiados con solo 1 hint"
+    }
+  ],
+  "verified_no_change": [
+    {
+      "id": "VERIFY-V2-001",
+      "description": "U08-L14 'producto único' matiz estereoquímico ya presente en pilot v2",
+      "status": "ALREADY_FIXED"
+    },
+    {
+      "id": "VERIFY-V2-002",
+      "description": "LaTeX delimiters (U02-L07, U05-L02, U07-L14, U08-L21): sin problemas detectados",
+      "status": "FALSE_POSITIVE"
+    }
+  ]
+}

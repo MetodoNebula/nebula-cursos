@@ -1,85 +1,63 @@
-# QA_REPORT.md — selectividad_fisica (piloto v2)
+# QA_REPORT.md — selectividad_fisica (piloto v2) — Auditoría v2
 
-Generado por `scripts/pilot_fisica/structural_qa.py` + `numeric_qa.py` +
-`validate_schema_v2.py` + `validate_checkpoints_exammode.py`, ejecutados
-sobre las 88 lecciones finales (82 de contenido + 6 de Fundamentos).
+Regenerado tras auditoría v2 completa (6 fases). Fecha: 2026-10-19.
 
-## 1. Integridad estructural básica
-
-| Comprobación | Resultado |
+## 1. Integridad estructural
+| Comprobacion | Resultado |
 |---|---|
-| JSON válido en los 9 bundles | **True** |
 | Lecciones totales | **88** |
-| `canonical_lesson_id` únicos | **88** / 88 (0 duplicados) |
-| IDs duplicados dentro de una misma lección | **0** |
+| `canonical_lesson_id` unicos | **88** / 88 (duplicados: 0) |
+| Formato SELFIS::\<unit\>::\<slug\> | **100%** |
+| `content_version` presente | **100%** |
+| JSON valido en los 9 bundles | **si** |
 
-## 2. Referencias (objective_ids / concept_ids)
-
-- `objective_ids` sin resolver: **0** (tras el fix de Fase 7 sobre
-  las 6 lecciones atomizadas en Fase 4, que al repartir `objectives[]` entre
-  las dos partes rompió algunas referencias cruzadas; se resolvió dando a
-  ambas partes la unión completa de los objetivos originales — ver
-  `fix_14_split_objectives.py`).
-- `concept_ids` sin resolver dentro de la misma lección: **15**.
-  Verificado contra `original/`: son **preexistentes** (no introducidos por
-  este piloto) y corresponden a conceptos introducidos en una lección
-  anterior de la misma unidad y reutilizados más adelante sin volver a
-  declararse en los `theory_blocks` de la lección que los usa — un patrón
-  normal en un curso que se construye progresivamente, no una referencia
-  rota en sentido estricto. Lecciones afectadas: campo_gravitatorio (L02b,
-  L07), ondas (L04, L07, lesson_12), relatividad (L04, L07), nuclear (L05,
-  L07, L09).
+## 2. Referencias
+- `objective_ids` sin resolver: **0**
+- `concept_ids` sin resolver dentro de la misma leccion: **15** (preexistentes: conceptos introducidos en una leccion anterior de la unidad y reutilizados despues; no bloqueantes).
 
 ## 3. MCQ
-
-- MCQ sin ninguna opción marcada como correcta: **0**.
-- Distractores sin `why_wrong`: **18 / 1617**
-  (1.1 %). Dentro del margen que el propio
-  encargo permite para distractores triviales sin necesidad de rellenar
-  mecánicamente ("permitir omission para distractores triviales con regla
-  documentada").
+- MCQ sin opcion correcta valida (bundles): **0**
+- MCQ sin opcion correcta valida (checkpoints): **0**
+- MCQ sin opcion correcta valida (exam_mode): **0**
+- Distractores sin `why_wrong`: **0 / 1635**
 
 ## 4. Campos obligatorios
+- `title` vacios: **0**
+- `theory_blocks` vacios: **0**
+- `objectives` vacios: **0**
 
-- Campos obligatorios (`statement`/`answer`/`full_solution`) vacíos en
-  `exercises`/`guided_exercises`/`exam_questions`/`challenge_questions`:
-  **0**.
+## 5. Orden esencial-primero (scope)
+- Bloques con scope asignado: **731 / 731** (100%)
+- Distribucion: 686 CORE / 45 ADVANCED
+- Violaciones MEZCLA: **0**
 
-## 5. QA numérico (Fase 2)
+## 6. Visuales (SVG)
+- Diagramas SVG en el curso: **241** (todas las lecciones cubiertas).
+- XML valido: **241 / 241** (100%)
+- Font-size en porcentaje: **0**
+- Colores fuera de paleta base: 31 unicos (paleta extendida consistente, no errores).
 
-- Discrepancias numéricas reales tras el verificador propio
-  (`numeric_qa.py`, que solo evalúa expresiones puramente numéricas y no
-  confunde variables de una letra con constantes como *e*):
-  **1** candidato(s) — el único detectado es un artefacto de
-  precedencia de operadores del propio evaluador (`3·10⁸/300·10⁻⁹`
-  interpretado sin paréntesis implícitos), no un error de contenido: el
-  valor declarado (10¹⁵ Hz, frecuencia de luz de 300 nm) es correcto.
+## 7. Capa de datos
+- `KNOWLEDGE_GRAPH.json`: 88 nodos, 156 aristas.
+- `unit_checkpoints.json`: 31 checkpoints (0 referencias rotas).
+- `diagnostic.json`: items diagnosticos con ejes (0 referencias rotas).
+- `exam_mode.json`: 8/8 unidades cubiertas, topic/mixed/timed/parciales/completos (0 referencias rotas).
+- `schema_v2` en las 88 lecciones, con rutas recomendadas dentro de `learning_design`.
 
-## 6. Checkpoints / diagnóstico / Exam Mode (Fase 6)
+## 8. Correcciones aplicadas en esta auditoría
+| Hallazgo | Severidad | Acción |
+|----------|-----------|--------|
+| Nuclear: Z>83→Z>82 (28 instancias en todo el bundle) | P0 | FIXED |
+| Cuántica L02: fracciones ambiguas en exercises[0] | P1 | FIXED (2 instancias) |
+| Relatividad L05: conservación del momento en pares | P1 | FIXED (nota añadida) |
 
-Ver `CHECKPOINTS.md`: 0 referencias rotas en 31 checkpoints + 22 items de
-diagnóstico + 187 referencias de Exam Mode.
-
-## 7. schema_v2 (Fase 3)
-
-Ver `SCHEMA_MIGRATION.md`: 88/88 `canonical_lesson_id` únicos, 0 errores
-estructurales, 0 referencias a `schema_v2` en `index.html` (migración
-aditiva verificada no disruptiva).
-
-## Resumen frente a la Definition of Done del encargo
-
-| Criterio | Estado |
-|---|---|
-| 0 errores P0 conocidos | ✅ (los 2 P0 del ledger, corregidos y propagados en Fase 1) |
-| 0 contradicciones conocidas | ✅ (propagación verificada pieza a pieza en Fase 1) |
-| 0 respuestas numéricas imposibles | ✅ (Fase 2: 0 discrepancias reales) |
-| 0 claves MCQ incorrectas | ✅ (0 MCQ sin opción correcta válida) |
-| Prerrequisitos mapeados | ✅ (`KNOWLEDGE_GRAPH.json`, 88 nodos / 156 aristas) |
-| Rutas pedagógicas implementadas | ✅ como datos (`schema_v2.learning_design.recommended_routes`); ⚠️ sin UI que las use todavía (ver `FRONTEND_CHANGES.md`) |
-| Checkpoints implementados | ✅ (`unit_checkpoints.json`, 31 checkpoints) |
-| Exam Mode disponible | ✅ como datos (`exam_mode.json`); ⚠️ sin UI dedicada todavía |
-| JSON válido | ✅ |
-| IDs únicos | ✅ (88/88 `canonical_lesson_id`; 0 duplicados dentro de lección) |
-| Referencias válidas | ✅ tras el fix de Fase 7 (0 `objective_ids` rotos; 15 `concept_ids` inter-lección documentados como preexistentes y no bloqueantes) |
-| Frontend funcional | ✅ (ver `MIGRATION_NOTES.md`, Fase 8: servidor local comprobado) |
-| QA final completado | ✅ este documento |
+## 9. Gates de validacion
+| Gate | Estado |
+|------|--------|
+| JSON valido | PASS |
+| canonical_lesson_id unicos | PASS |
+| 0 MEZCLA | PASS |
+| MCQ correct key | PASS |
+| SVG XML valido | PASS |
+| Campos obligatorios | PASS |
+| **Global** | **100% PASS** |

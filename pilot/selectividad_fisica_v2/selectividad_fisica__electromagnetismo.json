@@ -1719,8 +1719,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "798fdc7b9827515d"
+        "validated_render": true,
+        "canonical_hash": "613a9e5e0e8877e1"
       }
     }
   },
@@ -3547,8 +3547,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "ecb104e0d97c1062"
+        "validated_render": true,
+        "canonical_hash": "42f1a9f2ec66658c"
       }
     }
   },
@@ -3848,20 +3848,6 @@
         "provenance": "GENERATED_EXPLANATION"
       },
       {
-        "id": "TH-03-8",
-        "type": "connection",
-        "title": "El dipolo eléctrico y las moléculas polares",
-        "scope": "ENRICHMENT",
-        "body": "Un **dipolo eléctrico** son dos cargas iguales y de signo contrario separadas una distancia $s$; el vector $\\vec s$ va de la carga negativa a la positiva. Se caracteriza por su **momento dipolar**:\n\n$$\\vec\\mu = q\\,\\vec s$$\n\n- **módulo:** el producto de la carga por la distancia que las separa;\n- **dirección:** la de la recta que une las dos cargas;\n- **sentido:** **de la carga negativa a la positiva**.\n\n> **Aviso de notación.** En Física este mismo vector se escribe también $\\vec p = q\\vec s$, para no chocar con $\\mu_0$ (permeabilidad) ni con el momento magnético, que verás más adelante con el mismo símbolo $\\vec\\mu$.\n\n> **Aviso de convenio, y evita una confusión segura entre asignaturas.** El sentido «de $-$ a $+$» es el de la física. En **química** se usa con frecuencia el contrario, de $+$ a $-$, dibujado con una flecha cruzada. No es un error de nadie: son dos convenios distintos para la misma magnitud. Conviene saber cuál se está usando antes de discutir un signo.\n\nLa importancia práctica es química. En una molécula con enlaces entre átomos distintos, la diferente electronegatividad separa las cargas: el átomo más electronegativo adquiere una carga parcial negativa y su pareja una positiva. Cada enlace es un pequeño dipolo.\n\nY aquí reaparece el principio de superposición, gratis y en un contexto nuevo: **los momentos dipolares de los enlaces se suman como vectores.**\n\n- El **CO$_2$** es lineal y simétrico: sus dos enlaces C–O son polares, pero los dos momentos dipolares tienen igual módulo y **sentidos opuestos**, de modo que $\\vec\\mu_1+\\vec\\mu_2=\\vec 0$. La molécula es **apolar** aunque sus enlaces no lo sean.\n- El **H$_2$O** es angular: los dos momentos **no** se cancelan y su suma es un vector no nulo. La molécula es **polar**, y de ahí salen casi todas las propiedades del agua, incluida la constante dieléctrica $\\varepsilon_r\\approx80$ que apareció en la lección 1.\n\nDos moléculas con enlaces polares, una polar y otra no, y la diferencia es puramente vectorial.",
-        "concept_ids": [
-          "C-EM-11"
-        ],
-        "objective_ids": [
-          "LO-03-7"
-        ],
-        "provenance": "SOURCE_DERIVED"
-      },
-      {
         "id": "TH-03-9",
         "type": "self_explanation",
         "title": "Dos preguntas para comprobar que el mapa se lee",
@@ -3877,6 +3863,20 @@
           "LO-03-3"
         ],
         "provenance": "GENERATED_EXPLANATION"
+      },
+      {
+        "id": "TH-03-8",
+        "type": "connection",
+        "title": "El dipolo eléctrico y las moléculas polares",
+        "scope": "ENRICHMENT",
+        "body": "**— Hasta aquí, lo esencial. Lo que sigue amplía o justifica con más profundidad, y puede dejarse para una segunda lectura. —**\n\nUn **dipolo eléctrico** son dos cargas iguales y de signo contrario separadas una distancia $s$; el vector $\\vec s$ va de la carga negativa a la positiva. Se caracteriza por su **momento dipolar**:\n\n$$\\vec\\mu = q\\,\\vec s$$\n\n- **módulo:** el producto de la carga por la distancia que las separa;\n- **dirección:** la de la recta que une las dos cargas;\n- **sentido:** **de la carga negativa a la positiva**.\n\n> **Aviso de notación.** En Física este mismo vector se escribe también $\\vec p = q\\vec s$, para no chocar con $\\mu_0$ (permeabilidad) ni con el momento magnético, que verás más adelante con el mismo símbolo $\\vec\\mu$.\n\n> **Aviso de convenio, y evita una confusión segura entre asignaturas.** El sentido «de $-$ a $+$» es el de la física. En **química** se usa con frecuencia el contrario, de $+$ a $-$, dibujado con una flecha cruzada. No es un error de nadie: son dos convenios distintos para la misma magnitud. Conviene saber cuál se está usando antes de discutir un signo.\n\nLa importancia práctica es química. En una molécula con enlaces entre átomos distintos, la diferente electronegatividad separa las cargas: el átomo más electronegativo adquiere una carga parcial negativa y su pareja una positiva. Cada enlace es un pequeño dipolo.\n\nY aquí reaparece el principio de superposición, gratis y en un contexto nuevo: **los momentos dipolares de los enlaces se suman como vectores.**\n\n- El **CO$_2$** es lineal y simétrico: sus dos enlaces C–O son polares, pero los dos momentos dipolares tienen igual módulo y **sentidos opuestos**, de modo que $\\vec\\mu_1+\\vec\\mu_2=\\vec 0$. La molécula es **apolar** aunque sus enlaces no lo sean.\n- El **H$_2$O** es angular: los dos momentos **no** se cancelan y su suma es un vector no nulo. La molécula es **polar**, y de ahí salen casi todas las propiedades del agua, incluida la constante dieléctrica $\\varepsilon_r\\approx80$ que apareció en la lección 1.\n\nDos moléculas con enlaces polares, una polar y otra no, y la diferencia es puramente vectorial.",
+        "concept_ids": [
+          "C-EM-11"
+        ],
+        "objective_ids": [
+          "LO-03-7"
+        ],
+        "provenance": "SOURCE_DERIVED"
       }
     ],
     "keywords": [
@@ -4852,7 +4852,6 @@
             "TH-03-5",
             "TH-03-6",
             "TH-03-7",
-            "TH-03-8",
             "TH-03-9",
             "WE-03-1",
             "WE-03-2",
@@ -4883,7 +4882,6 @@
             "TH-03-5",
             "TH-03-6",
             "TH-03-7",
-            "TH-03-8",
             "TH-03-9",
             "WE-03-1",
             "WE-03-2",
@@ -4979,7 +4977,7 @@
           "id": "LO-03-7",
           "statement": "[AMPLIACIÓN] Describir el dipolo eléctrico y su momento dipolar $\\vec\\mu = q\\vec s$, con sentido de la carga negativa a la positiva, y aplicarlo a la polaridad de una molécula.",
           "bloom": "comprender",
-          "required_for_mastery": true
+          "required_for_mastery": false
         }
       ],
       "knowledge_model": {
@@ -5116,10 +5114,11 @@
         ],
         "standard_blocks": [
           "TH-03-2",
-          "TH-03-6",
+          "TH-03-6"
+        ],
+        "advanced_blocks": [
           "TH-03-8"
         ],
-        "advanced_blocks": [],
         "worked_examples": [
           "WE-03-1",
           "WE-03-2",
@@ -5349,8 +5348,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "f189fde3a3137785"
+        "validated_render": true,
+        "canonical_hash": "878a6a922c1ab94c"
       }
     }
   },
@@ -7172,8 +7171,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "96c80b3df88f651b"
+        "validated_render": true,
+        "canonical_hash": "2f71839360ed6b89"
       }
     }
   },
@@ -8591,8 +8590,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "07cc23f5ad041239"
+        "validated_render": true,
+        "canonical_hash": "5209479b8a5e0083"
       }
     }
   },
@@ -10456,8 +10455,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "050578b8e2ffe646"
+        "validated_render": true,
+        "canonical_hash": "c2a74ed99109bb40"
       }
     }
   },
@@ -10714,20 +10713,6 @@
         "provenance": "SOURCE_DERIVED"
       },
       {
-        "id": "TH-08-6",
-        "type": "formalisation",
-        "title": "Si entra oblicua: el movimiento helicoidal",
-        "scope": "ADVANCED",
-        "body": "Todo lo anterior supone que la partícula entra **perpendicularmente** al campo. Si entra oblicua, la velocidad se descompone en dos trozos y cada uno hace lo suyo, sin estorbarse:\n\n- **Componente paralela a $\\vec B$** ($v_\\parallel=v\\cos\\alpha$): el producto vectorial con $\\vec B$ es nulo, luego **no siente fuerza**. Movimiento rectilíneo y uniforme a lo largo del campo.\n- **Componente perpendicular a $\\vec B$** ($v_\\perp=v\\operatorname{sen}\\alpha$): es el caso de antes. Movimiento circular uniforme de radio $R=\\dfrac{m\\,v_\\perp}{\\lvert q\\rvert B}$.\n\nLa composición de un avance uniforme y un giro uniforme es una **hélice**: la partícula gira mientras avanza, como una rosca.\n\nDos detalles que conviene notar:\n\n- El **periodo sigue siendo el mismo**, $T=2\\pi m/\\lvert q\\rvert B$, porque tampoco depende de $v_\\perp$.\n- El **paso de la hélice** (lo que avanza en cada vuelta) vale $p=v_\\parallel\\,T$.\n\n> Este apartado es de ampliación. Se puede suprimir sin que ninguna otra parte de la unidad se resienta.",
-        "concept_ids": [
-          "C-EM-25"
-        ],
-        "objective_ids": [
-          "LO-08-5"
-        ],
-        "provenance": "SOURCE_DERIVED"
-      },
-      {
         "id": "TH-08-7",
         "type": "self_explanation",
         "title": "Cuatro preguntas antes de seguir",
@@ -10742,6 +10727,20 @@
           "LO-08-6"
         ],
         "provenance": "GENERATED_EXPLANATION"
+      },
+      {
+        "id": "TH-08-6",
+        "type": "formalisation",
+        "title": "Si entra oblicua: el movimiento helicoidal",
+        "scope": "ADVANCED",
+        "body": "**— Hasta aquí, lo esencial. Lo que sigue amplía o justifica con más profundidad, y puede dejarse para una segunda lectura. —**\n\nTodo lo anterior supone que la partícula entra **perpendicularmente** al campo. Si entra oblicua, la velocidad se descompone en dos trozos y cada uno hace lo suyo, sin estorbarse:\n\n- **Componente paralela a $\\vec B$** ($v_\\parallel=v\\cos\\alpha$): el producto vectorial con $\\vec B$ es nulo, luego **no siente fuerza**. Movimiento rectilíneo y uniforme a lo largo del campo.\n- **Componente perpendicular a $\\vec B$** ($v_\\perp=v\\operatorname{sen}\\alpha$): es el caso de antes. Movimiento circular uniforme de radio $R=\\dfrac{m\\,v_\\perp}{\\lvert q\\rvert B}$.\n\nLa composición de un avance uniforme y un giro uniforme es una **hélice**: la partícula gira mientras avanza, como una rosca.\n\nDos detalles que conviene notar:\n\n- El **periodo sigue siendo el mismo**, $T=2\\pi m/\\lvert q\\rvert B$, porque tampoco depende de $v_\\perp$.\n- El **paso de la hélice** (lo que avanza en cada vuelta) vale $p=v_\\parallel\\,T$.\n\n> Este apartado es de ampliación. Se puede suprimir sin que ninguna otra parte de la unidad se resienta.",
+        "concept_ids": [
+          "C-EM-25"
+        ],
+        "objective_ids": [
+          "LO-08-5"
+        ],
+        "provenance": "SOURCE_DERIVED"
       }
     ],
     "keywords": [
@@ -12065,8 +12064,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "f47e317c3042b275"
+        "validated_render": true,
+        "canonical_hash": "3282331925e34eee"
       }
     }
   },
@@ -13589,8 +13588,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "629a9abc581a30cf"
+        "validated_render": true,
+        "canonical_hash": "4ca66cf01aa6ad30"
       }
     }
   },
@@ -13888,20 +13887,6 @@
         "provenance": "SOURCE_DERIVED"
       },
       {
-        "id": "TH-10-8",
-        "type": "connection",
-        "title": "De dónde sale el magnetismo de la materia",
-        "scope": "ENRICHMENT",
-        "body": "Oersted permite explicar el magnetismo natural sin postular nada nuevo: **si una corriente crea campo, los imanes también están hechos de corrientes.** Un electrón que gira en un átomo equivale a una corriente circular diminuta —de sentido contrario al de su movimiento, por ser su carga negativa—, es decir, a una **espira microscópica** con su propio campo. En átomos con muchos electrones esas contribuciones pueden cancelarse o no, y de ahí salen tres comportamientos distintos.\n\n**Diamagnéticas.** Sus átomos **no tienen campo neto**. Un campo externo **induce** en ellos un campo opuesto, de modo que el campo interior resulta algo más débil que el externo y el material es **débilmente repelido**. (Faraday observó en 1846 que el bismuto era repelido por un imán.)\n\n**Paramagnéticas.** Sus átomos **sí** son imanes diminutos, pero la **agitación térmica** los orienta al azar y el campo resultante es nulo. Un campo externo los orienta **en parte**, y al cesar se desordenan otra vez: la imanación **no es permanente**. Por eso crece con el campo y decrece con la temperatura, que es la **ley de Curie**.\n\n**Ferromagnéticas.** Existen **dominios**: zonas en las que los imanes atómicos ya están alineados **sin necesidad de campo externo**. Un campo externo hace **crecer** los dominios favorablemente orientados a costa de los demás y **gira** su orientación, con lo que el campo interior se refuerza enormemente. Por encima de la **temperatura de Curie** la agitación térmica desordena los dominios y el material pasa a comportarse como paramagnético.\n\nCon el mecanismo entendido, la tabla se lee sola:\n\n| | **Ferromagnéticas** | **Paramagnéticas** | **Diamagnéticas** |\n|---|---|---|---|\n| Permeabilidad | $\\mu_r\\gg1$ | $\\mu_r>1$ | $\\mu_r<1$ |\n| Comportamiento | fuertemente atraídas | débilmente atraídas | **débilmente repelidas** |\n| ¿Imantables? | sí, y **conservan** la imanación | sí, pero **no la conservan** | no |\n| Campo interior | **mayor** que el externo | prácticamente igual | **menor** que el externo |\n| Ejemplos | hierro, acero, cobalto, níquel, aleaciones de neodimio-hierro-boro (imanes de neodimio) | aluminio, platino, paladio | mercurio, plata, cobre, bismuto, agua |\n\n> **Cuidado con las desigualdades.** A veces se escribe $\\mu_r\\ge1$ para las paramagnéticas y $\\mu_r\\le1$ para las diamagnéticas. Con los signos de igualdad incluidos, **el vacío ($\\mu_r=1$) sería a la vez paramagnético y diamagnético**, lo que no tiene sentido. Las desigualdades deben ser **estrictas**.\n\nEste apartado es de ampliación: no se evalúa y puede suprimirse sin que ninguna otra parte de la unidad se resienta.",
-        "concept_ids": [
-          "C-EM-30"
-        ],
-        "objective_ids": [
-          "LO-10-7"
-        ],
-        "provenance": "SOURCE_DERIVED"
-      },
-      {
         "id": "TH-10-9",
         "type": "self_explanation",
         "title": "Cinco preguntas antes de cerrar",
@@ -13917,6 +13902,20 @@
           "LO-10-6"
         ],
         "provenance": "GENERATED_EXPLANATION"
+      },
+      {
+        "id": "TH-10-8",
+        "type": "connection",
+        "title": "De dónde sale el magnetismo de la materia",
+        "scope": "ENRICHMENT",
+        "body": "**— Hasta aquí, lo esencial. Lo que sigue amplía o justifica con más profundidad, y puede dejarse para una segunda lectura. —**\n\nOersted permite explicar el magnetismo natural sin postular nada nuevo: **si una corriente crea campo, los imanes también están hechos de corrientes.** Un electrón que gira en un átomo equivale a una corriente circular diminuta —de sentido contrario al de su movimiento, por ser su carga negativa—, es decir, a una **espira microscópica** con su propio campo. En átomos con muchos electrones esas contribuciones pueden cancelarse o no, y de ahí salen tres comportamientos distintos.\n\n**Diamagnéticas.** Sus átomos **no tienen campo neto**. Un campo externo **induce** en ellos un campo opuesto, de modo que el campo interior resulta algo más débil que el externo y el material es **débilmente repelido**. (Faraday observó en 1846 que el bismuto era repelido por un imán.)\n\n**Paramagnéticas.** Sus átomos **sí** son imanes diminutos, pero la **agitación térmica** los orienta al azar y el campo resultante es nulo. Un campo externo los orienta **en parte**, y al cesar se desordenan otra vez: la imanación **no es permanente**. Por eso crece con el campo y decrece con la temperatura, que es la **ley de Curie**.\n\n**Ferromagnéticas.** Existen **dominios**: zonas en las que los imanes atómicos ya están alineados **sin necesidad de campo externo**. Un campo externo hace **crecer** los dominios favorablemente orientados a costa de los demás y **gira** su orientación, con lo que el campo interior se refuerza enormemente. Por encima de la **temperatura de Curie** la agitación térmica desordena los dominios y el material pasa a comportarse como paramagnético.\n\nCon el mecanismo entendido, la tabla se lee sola:\n\n| | **Ferromagnéticas** | **Paramagnéticas** | **Diamagnéticas** |\n|---|---|---|---|\n| Permeabilidad | $\\mu_r\\gg1$ | $\\mu_r>1$ | $\\mu_r<1$ |\n| Comportamiento | fuertemente atraídas | débilmente atraídas | **débilmente repelidas** |\n| ¿Imantables? | sí, y **conservan** la imanación | sí, pero **no la conservan** | no |\n| Campo interior | **mayor** que el externo | prácticamente igual | **menor** que el externo |\n| Ejemplos | hierro, acero, cobalto, níquel, aleaciones de neodimio-hierro-boro (imanes de neodimio) | aluminio, platino, paladio | mercurio, plata, cobre, bismuto, agua |\n\n> **Cuidado con las desigualdades.** A veces se escribe $\\mu_r\\ge1$ para las paramagnéticas y $\\mu_r\\le1$ para las diamagnéticas. Con los signos de igualdad incluidos, **el vacío ($\\mu_r=1$) sería a la vez paramagnético y diamagnético**, lo que no tiene sentido. Las desigualdades deben ser **estrictas**.\n\nEste apartado es de ampliación: no se evalúa y puede suprimirse sin que ninguna otra parte de la unidad se resienta.",
+        "concept_ids": [
+          "C-EM-30"
+        ],
+        "objective_ids": [
+          "LO-10-7"
+        ],
+        "provenance": "SOURCE_DERIVED"
       }
     ],
     "keywords": [
@@ -14791,7 +14790,6 @@
             "TH-10-5",
             "TH-10-6",
             "TH-10-7",
-            "TH-10-8",
             "TH-10-9",
             "WE-10-1",
             "WE-10-2",
@@ -14820,7 +14818,6 @@
             "TH-10-5",
             "TH-10-6",
             "TH-10-7",
-            "TH-10-8",
             "TH-10-9",
             "WE-10-1",
             "WE-10-2",
@@ -14913,7 +14910,7 @@
           "id": "LO-10-7",
           "statement": "Explicar el ferro-, para- y diamagnetismo a partir de las corrientes atómicas y de los dominios.",
           "bloom": "comprender",
-          "required_for_mastery": true
+          "required_for_mastery": false
         }
       ],
       "knowledge_model": {
@@ -15051,10 +15048,11 @@
         ],
         "standard_blocks": [
           "TH-10-2",
-          "TH-10-6",
+          "TH-10-6"
+        ],
+        "advanced_blocks": [
           "TH-10-8"
         ],
-        "advanced_blocks": [],
         "worked_examples": [
           "WE-10-1",
           "WE-10-2",
@@ -15248,8 +15246,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "6a3bc3374c10d43d"
+        "validated_render": true,
+        "canonical_hash": "1a1844528385e2e1"
       }
     }
   },
@@ -15499,11 +15497,25 @@
         "provenance": "SOURCE_DERIVED"
       },
       {
+        "id": "TH-11-9",
+        "type": "self_explanation",
+        "title": "La pregunta que cierra el bloque",
+        "scope": "CORE",
+        "body": "Antes de pasar a los ejercicios, contéstate esto por escrito, en dos o tres líneas:\n\n**Dos cargas positivas en reposo se repelen. Dos hilos con corrientes del mismo sentido se atraen. Pero una corriente son cargas moviéndose. ¿Cómo pueden ser las dos cosas verdad a la vez?**\n\nPista honesta: fíjate en cuánta carga **neta** tiene un hilo de cobre con corriente. Si lo tocas, ¿te da calambre por estar cargado, o no?\n\nLa respuesta está en el ejercicio de transferencia de esta lección. No la mires hasta haberlo intentado: el valor de esta pregunta está en el rato que pasas sin saber contestarla.",
+        "concept_ids": [
+          "C-EM-32"
+        ],
+        "objective_ids": [
+          "LO-11-6"
+        ],
+        "provenance": "GENERATED_EXPLANATION"
+      },
+      {
         "id": "TH-11-7",
         "type": "formalisation",
         "title": "La espira rectangular: resultante nula, momento no nulo",
         "scope": "ADVANCED",
-        "body": "Coloca ahora una **espira rectangular** recorrida por corriente dentro de un campo uniforme, con el plano de la espira paralelo a $\\vec B$.\n\nMira los dos lados perpendiculares al campo. Por uno la corriente sube y por el otro baja: tienen $\\vec L$ opuestos y el mismo $\\vec B$, así que sufren **fuerzas iguales en módulo y de sentidos contrarios**.\n\nY ahora la pregunta importante: ¿qué le pasa a la espira?\n\n- La **resultante es cero**: la espira no se traslada.\n- Pero las dos fuerzas **no están aplicadas sobre la misma recta**: una empuja por un lado y otra tira por el otro, separadas por la anchura de la espira. El **momento no es cero**.\n\nResultante nula y momento no nulo es la definición de **par de fuerzas**. Un par no traslada: **gira**. La espira gira sobre su eje.\n\n**Y eso es un motor eléctrico.** También es un galvanómetro: como el ángulo que gira la espira depende de la intensidad que circula, el giro sirve para medirla, y de ahí salen los amperímetros y voltímetros de aguja.\n\nLos otros dos lados de la espira, paralelos al campo o con fuerzas dirigidas a lo largo del eje, no contribuyen al giro.\n\n> Es la misma espira que en la lección anterior **creaba** campo. Aquí **responde** a un campo. Guarda esta imagen: en la última lección de la unidad reaparece girada del revés.",
+        "body": "**— Hasta aquí, lo esencial. Lo que sigue amplía o justifica con más profundidad, y puede dejarse para una segunda lectura. —**\n\nColoca ahora una **espira rectangular** recorrida por corriente dentro de un campo uniforme, con el plano de la espira paralelo a $\\vec B$.\n\nMira los dos lados perpendiculares al campo. Por uno la corriente sube y por el otro baja: tienen $\\vec L$ opuestos y el mismo $\\vec B$, así que sufren **fuerzas iguales en módulo y de sentidos contrarios**.\n\nY ahora la pregunta importante: ¿qué le pasa a la espira?\n\n- La **resultante es cero**: la espira no se traslada.\n- Pero las dos fuerzas **no están aplicadas sobre la misma recta**: una empuja por un lado y otra tira por el otro, separadas por la anchura de la espira. El **momento no es cero**.\n\nResultante nula y momento no nulo es la definición de **par de fuerzas**. Un par no traslada: **gira**. La espira gira sobre su eje.\n\n**Y eso es un motor eléctrico.** También es un galvanómetro: como el ángulo que gira la espira depende de la intensidad que circula, el giro sirve para medirla, y de ahí salen los amperímetros y voltímetros de aguja.\n\nLos otros dos lados de la espira, paralelos al campo o con fuerzas dirigidas a lo largo del eje, no contribuyen al giro.\n\n> Es la misma espira que en la lección anterior **creaba** campo. Aquí **responde** a un campo. Guarda esta imagen: en la última lección de la unidad reaparece girada del revés.",
         "concept_ids": [
           "C-EM-33"
         ],
@@ -15534,20 +15546,6 @@
           "LO-11-5"
         ],
         "provenance": "SOURCE_DERIVED"
-      },
-      {
-        "id": "TH-11-9",
-        "type": "self_explanation",
-        "title": "La pregunta que cierra el bloque",
-        "scope": "CORE",
-        "body": "Antes de pasar a los ejercicios, contéstate esto por escrito, en dos o tres líneas:\n\n**Dos cargas positivas en reposo se repelen. Dos hilos con corrientes del mismo sentido se atraen. Pero una corriente son cargas moviéndose. ¿Cómo pueden ser las dos cosas verdad a la vez?**\n\nPista honesta: fíjate en cuánta carga **neta** tiene un hilo de cobre con corriente. Si lo tocas, ¿te da calambre por estar cargado, o no?\n\nLa respuesta está en el ejercicio de transferencia de esta lección. No la mires hasta haberlo intentado: el valor de esta pregunta está en el rato que pasas sin saber contestarla.",
-        "concept_ids": [
-          "C-EM-32"
-        ],
-        "objective_ids": [
-          "LO-11-6"
-        ],
-        "provenance": "GENERATED_EXPLANATION"
       }
     ],
     "keywords": [
@@ -16391,7 +16389,6 @@
             "TH-11-4",
             "TH-11-5",
             "TH-11-6",
-            "TH-11-8",
             "TH-11-9",
             "WE-11-1",
             "WE-11-2",
@@ -16419,7 +16416,6 @@
             "TH-11-4",
             "TH-11-5",
             "TH-11-6",
-            "TH-11-8",
             "TH-11-9",
             "WE-11-1",
             "WE-11-2",
@@ -16619,11 +16615,11 @@
           "TH-11-9"
         ],
         "standard_blocks": [
-          "TH-11-6",
-          "TH-11-8"
+          "TH-11-6"
         ],
         "advanced_blocks": [
-          "TH-11-7"
+          "TH-11-7",
+          "TH-11-8"
         ],
         "worked_examples": [
           "WE-11-1",
@@ -16815,8 +16811,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "330e300dacfea284"
+        "validated_render": true,
+        "canonical_hash": "183ffe3d85889a8d"
       }
     }
   },
@@ -18314,8 +18310,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "8309d424db06be5e"
+        "validated_render": true,
+        "canonical_hash": "25744c6bfe70d2fc"
       }
     }
   },
@@ -20082,8 +20078,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "74ea2688e6f71462"
+        "validated_render": true,
+        "canonical_hash": "e2def3afc0b90f42"
       }
     }
   },
@@ -21213,7 +21209,6 @@
             "TH-14-3",
             "TH-14-4",
             "TH-14-5",
-            "TH-14-6",
             "WE-14-1",
             "WE-14-2",
             "WE-14-3",
@@ -21239,7 +21234,6 @@
             "TH-14-3",
             "TH-14-4",
             "TH-14-5",
-            "TH-14-6",
             "WE-14-1",
             "WE-14-2",
             "WE-14-3",
@@ -21316,7 +21310,7 @@
           "id": "LO-14-5",
           "statement": "Explicar cualitativamente la diferencia entre alternador y dinamo.",
           "bloom": "comprender",
-          "required_for_mastery": true
+          "required_for_mastery": false
         },
         {
           "id": "LO-14-6",
@@ -21435,10 +21429,11 @@
         ],
         "standard_blocks": [
           "TH-14-4",
-          "TH-14-5",
+          "TH-14-5"
+        ],
+        "advanced_blocks": [
           "TH-14-6"
         ],
-        "advanced_blocks": [],
         "worked_examples": [
           "WE-14-1",
           "WE-14-2",
@@ -21629,8 +21624,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "b09f0ae3f000d09e"
+        "validated_render": true,
+        "canonical_hash": "f3f68d09d6783ad8"
       }
     }
   },
@@ -21833,7 +21828,15 @@
         "objective_ids": [
           "LO-05-2"
         ],
-        "provenance": "SOURCE_DERIVED"
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "id": "AS-05-POT",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 242\" width=\"400\" height=\"242\" role=\"img\" id=\"svg-potsum\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"242\" fill=\"none\"/><line x1=\"70\" y1=\"190\" x2=\"240\" y2=\"60\" stroke=\"#5c6b67\" stroke-width=\"1.6\" stroke-dasharray=\"5,4\"/><line x1=\"330\" y1=\"190\" x2=\"240\" y2=\"60\" stroke=\"#5c6b67\" stroke-width=\"1.6\" stroke-dasharray=\"5,4\"/><text x=\"147.0\" y=\"125.0\" fill=\"#5c6b67\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">r<tspan font-size=\"8.2px\" dy=\"2.6\">1</tspan><tspan font-size=\"0.01px\" dy=\"-2.6\">.</tspan></text><text x=\"293.0\" y=\"125.0\" fill=\"#5c6b67\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">r<tspan font-size=\"8.2px\" dy=\"2.6\">2</tspan><tspan font-size=\"0.01px\" dy=\"-2.6\">.</tspan></text><circle cx=\"70\" cy=\"190\" r=\"15\" fill=\"#c17a17\"/><text x=\"70.0\" y=\"195.0\" fill=\"#fff\" font-size=\"14\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">+q<tspan font-size=\"9.5px\" dy=\"3.1\">1</tspan><tspan font-size=\"0.01px\" dy=\"-3.1\">.</tspan></text><circle cx=\"330\" cy=\"190\" r=\"15\" fill=\"#0e7a68\"/><text x=\"330.0\" y=\"195.0\" fill=\"#fff\" font-size=\"14\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">−q<tspan font-size=\"9.5px\" dy=\"3.1\">2</tspan><tspan font-size=\"0.01px\" dy=\"-3.1\">.</tspan></text><circle cx=\"240\" cy=\"60\" r=\"4.5\" fill=\"#8a3d6b\"/><text x=\"250.0\" y=\"56.0\" fill=\"#8a3d6b\" font-size=\"15\" font-weight=\"800\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">P</text><text x=\"200.0\" y=\"226.0\" fill=\"#c17a17\" font-size=\"12.5\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">suma ESCALAR con signo — no vectorial</text></svg>",
+            "caption": "El potencial que varias cargas crean en un punto P es la **suma algebraica** (con signo) de los potenciales de cada una: $V_P=k\\dfrac{q_1}{r_1}+k\\dfrac{(-q_2)}{r_2}$. A diferencia del campo $\\vec E$, que es un vector y hay que sumar por componentes, el potencial es un **escalar**: se suman números con su signo, sin ángulos ni componentes. Esa es la gran ventaja de trabajar con el potencial.",
+            "purpose": "Dejar claro que el potencial se suma como escalar con signo, frente al campo que es vectorial."
+          }
+        ]
       },
       {
         "id": "TH-05-3",
@@ -22890,8 +22893,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "91d259015538f435"
+        "validated_render": true,
+        "canonical_hash": "ff5b482719c99d5a"
       }
     }
   },
@@ -23988,8 +23991,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "40bdd65218359166"
+        "validated_render": true,
+        "canonical_hash": "8b673106bb2941c4"
       }
     }
   }

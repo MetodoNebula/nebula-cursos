@@ -1,0 +1,649 @@
+# selectividad_matematicas__mat_derivadas
+## 01_La_derivada_en_un_punto_tasa_de_variación_y_límite.json :: La derivada en un punto: tasa de variación y límite
+BIG: La derivada de una función en un punto es el límite de su tasa de variación media cuando el incremento $h$ tiende a cero: mide la pendiente de la recta tangente, y existe solo si ese límite (comprobado mediante las derivadas laterales) existe de verdad.
+KEY: TVM$(a,h)=\dfrac{f(a+h)-f(a)}{h}$: pendiente de la secante, para un $h$ concreto.
+KEY: $f'(a)=\lim_{h\to0}\dfrac{f(a+h)-f(a)}{h}$: pendiente de la tangente, el límite de la TVM.
+KEY: Si $f$ es continua en $a$, el cociente de la definición da siempre $0/0$ al sustituir $h=0$ sin más: hay que operar algebraicamente antes.
+KEY: $f'(a)$ existe si y solo si las dos derivadas laterales existen y coinciden; si no, la función no es derivable en $a$.
+## 02_Interpretación_geométrica_y_la_recta_tangente.json :: Interpretación geométrica y la recta tangente
+BIG: La derivada en un punto es la pendiente de la recta tangente ahí; con el punto $(a,f(a))$ y esa pendiente se escribe la tangente (y, invirtiendo y cambiando el signo de la pendiente, la normal) con la fórmula punto-pendiente habitual.
+KEY: Recta tangente: $y-f(a)=f'(a)(x-a)$.
+KEY: Recta normal: $y-f(a)=-\dfrac{1}{f'(a)}(x-a)$, si $f'(a)\neq0$.
+KEY: Si $f'(a)=0$: tangente horizontal, normal vertical $x=a$.
+KEY: Si las derivadas laterales son finitas pero distintas, no hay una única recta tangente (punto anguloso); si $f'(a)=\pm\infty$, la tangente existe y es vertical.
+## 03_Interpretación_física_de_la_derivada.json :: Interpretación física de la derivada
+BIG: La derivada es, físicamente, una razón de cambio instantánea: aplicada a la posición da la velocidad, aplicada a la velocidad da la aceleración, y la misma idea se extiende a cualquier magnitud que dependa de otra (coste, población, caudal...).
+KEY: Velocidad media: TVM de la posición en un intervalo. Velocidad instantánea: $v(t_0)=s'(t_0)$, límite de esa TVM.
+KEY: Aceleración instantánea: $a(t_0)=v'(t_0)$, la derivada de la VELOCIDAD, no de la posición directamente.
+KEY: La interpretación de "razón de cambio instantánea" se generaliza a cualquier magnitud: coste marginal, ritmo de crecimiento, caudal, etc.
+KEY: Las unidades del resultado son siempre unidades de $y$ entre unidades de $x$; comprobarlas ayuda a detectar errores.
+## 04_La_función_derivada_y_las_reglas_de_derivación.json :: La función derivada y las reglas de derivación
+BIG: La función derivada $f'(x)$ se calcula aplicando un catálogo de reglas (potencia, producto, cociente, funciones elementales) que son consecuencia de la definición por límite de la lección 1, pero que evitan repetir ese límite cada vez.
+KEY: $(x^n)'=nx^{n-1}$; $(kf)'=kf'$; $(f\pm g)'=f'\pm g'$.
+KEY: $(fg)'=f'g+fg'$ (nunca $f'g'$); $(f/g)'=\dfrac{f'g-fg'}{g^2}$ (nunca $f'/g'$).
+KEY: $(e^x)'=e^x$, $(a^x)'=a^x\ln a$; $(\ln x)'=1/x$, $(\log_ax)'=\dfrac{1}{x\ln a}$.
+KEY: $(\operatorname{sen}x)'=\cos x$; $(\cos x)'=-\operatorname{sen}x$; $(\operatorname{tg}x)'=1/\cos^2x$.
+## 05_La_regla_de_la_cadena_y_la_derivación_implícita.json :: La regla de la cadena y la derivación implícita
+BIG: La regla de la cadena deriva una composición multiplicando la derivada de la función exterior (con el interior intacto) por la derivada de la función interior; la derivación implícita es esa misma regla aplicada sistemáticamente a cada término con $y$, tratándola como función de $x$.
+KEY: $[f(g(x))]'=f'(g(x))\cdot g'(x)$: derivada de fuera, interior sin tocar, por derivada de dentro.
+KEY: Con varias capas, se encadenan todos los factores, de fuera hacia dentro.
+KEY: En derivación implícita, cada término con $y$ lleva un factor $y'$ adicional, por la regla de la cadena.
+KEY: Para hallar $y'$: derivar toda la ecuación respecto de $x$, agrupar los términos con $y'$ y despejar.
+## 06_Derivabilidad_y_continuidad_qué_implica_qué.json :: Derivabilidad y continuidad: qué implica qué
+BIG: Ser derivable en un punto es una exigencia más fuerte que ser continua: toda función derivable es continua, pero no toda función continua es derivable (puede tener un pico, una tangente vertical o una oscilación), y en funciones a trozos ambas condiciones se comprueban por separado y en ese orden.
+KEY: Teorema: derivable en $a$ ⇒ continua en $a$. El recíproco es falso (contraejemplo $|x|$ en $0$).
+KEY: Tres motivos de no derivabilidad con continuidad: pico, tangente vertical, oscilación.
+KEY: En funciones a trozos: primero continuidad en el punto de unión, después comparar derivadas laterales.
+KEY: Para hallar parámetros, se plantean dos ecuaciones (continuidad y derivabilidad) y se resuelve el sistema.
+## 07_Rolle_y_el_teorema_del_valor_medio.json :: Rolle y el teorema del valor medio
+BIG: Rolle y el teorema del valor medio son teoremas de existencia (como Bolzano, pero sobre la derivada): garantizan un punto con derivada nula (Rolle) o con derivada igual a la TVM (valor medio), sin dar nunca una fórmula directa para hallarlo ni garantizar que sea único.
+KEY: Rolle: continua en $[a,b]$, derivable en $(a,b)$, $f(a)=f(b)$ ⇒ existe $c$ con $f'(c)=0$.
+KEY: Valor medio: continua en $[a,b]$, derivable en $(a,b)$ ⇒ existe $c$ con $f'(c)=\mathrm{TVM}$.
+KEY: Rolle es el caso particular del valor medio cuando $f(a)=f(b)$ (TVM nula).
+KEY: El punto $c$ se halla resolviendo una ecuación; no es necesariamente el punto medio del intervalo, y puede no ser único.
+## 08_La_regla_de_LHpital.json :: La regla de L'Hôpital
+BIG: La regla de L'Hôpital resuelve indeterminaciones $0/0$ y $\infty/\infty$ sustituyendo el cociente original por el cociente de las derivadas del numerador y el denominador (nunca por la regla del cociente); las demás indeterminaciones se transforman primero a una de esas dos formas.
+KEY: $\lim f/g=\lim f'/g'$ si $f/g$ da $0/0$ o $\infty/\infty$ (hipótesis imprescindible).
+KEY: Se puede aplicar repetidamente mientras persista la indeterminación tras cada derivación.
+KEY: $\infty-\infty$: combinar en una fracción. $0\cdot\infty$: reescribir como cociente. $1^\infty$, $0^0$, $\infty^0$: tomar logaritmos.
+KEY: En las indeterminaciones de tipo potencia, el último paso es siempre deshacer el logaritmo: $\ln y\to L\Rightarrow y\to e^L$.
+## 09_Crecimiento_decrecimiento_y_extremos_relativos.json :: Crecimiento, decrecimiento y extremos relativos
+BIG: El signo de $f'$ determina el crecimiento (positivo) o decrecimiento (negativo) de una función; los puntos críticos (donde $f'=0$ o no existe) son candidatos a extremo relativo, y el criterio de la primera derivada (comparar el signo de $f'$ a cada lado) decide si realmente lo son y de qué tipo.
+KEY: $f'(x)>0$ en un intervalo ⇒ $f$ creciente; $f'(x)<0$ ⇒ decreciente.
+KEY: Punto crítico: $f'(x_0)=0$ o $f'(x_0)$ no existe (condición necesaria, no suficiente, de extremo).
+KEY: Criterio de la primera derivada: patrón $-$ a $+$ da mínimo; $+$ a $-$ da máximo; sin cambio, no es extremo.
+KEY: Los extremos también pueden darse donde $f'$ no existe (picos), no solo donde $f'=0$.
+## 10_Concavidad_convexidad_y_puntos_de_inflexión.json :: Concavidad, convexidad y puntos de inflexión
+BIG: La segunda derivada mide la concavidad (convexa si $f''\geq0$, cóncava si $f''\leq0$, según el convenio de este curso); sus cambios de signo marcan los puntos de inflexión, y su signo en un punto crítico (si no es cero) clasifica directamente el extremo como alternativa al criterio de la primera derivada.
+KEY: Convenio de este curso: convexa = cuenco, $f''\geq0$ (como $x^2$); cóncava = colina, $f''\leq0$ (como $-x^2$).
+KEY: Punto de inflexión: $f''(x_0)=0$ Y cambio de signo de $f''$ alrededor (igual que con extremos: condición necesaria, no suficiente).
+KEY: Criterio de la segunda derivada: $f''(x_0)>0$ mínimo; $f''(x_0)<0$ máximo; $f''(x_0)=0$ no decide (usar primera derivada).
+KEY: Comprobar los resultados cruzando ambos criterios (primera y segunda derivada) es una buena práctica.
+## 11_Problemas_de_optimización.json :: Problemas de optimización
+BIG: Un problema de optimización se resuelve traduciendo el enunciado a una función objetivo y una restricción, usando la restricción para reducir la función a una sola variable, y aplicando los criterios de las lecciones 9 y 10 para hallar y clasificar su extremo, sin olvidar comprobar el dominio físico ni traducir la respuesta al contexto.
+KEY: Procedimiento: identificar objetivo y restricción, reducir a una variable, derivar y clasificar, comprobar dominio y dar la respuesta completa.
+KEY: Resolver $f'(x)=0$ solo localiza un candidato: siempre hay que clasificarlo (máximo o mínimo).
+KEY: El dominio físico de la variable (longitudes positivas, cotas del enunciado) puede descartar soluciones matemáticamente válidas.
+KEY: La respuesta final debe traducir el valor de $x$ a todas las magnitudes que pregunta realmente el enunciado.
+# selectividad_matematicas__mat_determinantes
+## 01_El_determinante_de_orden_2_y_de_orden_3_regla_de_Sarrus.json :: El determinante de orden 2 y de orden 3: regla de Sarrus
+BIG: A cada matriz cuadrada se le puede asociar un único número, su determinante, que decide de golpe si sus filas son independientes, si tiene inversa y si el sistema asociado tiene solución única. En orden 2 y 3 ese número se calcula con una fórmula cerrada.
+KEY: **Solo matrices cuadradas** tienen determinante, porque cada producto de la suma necesita un elemento de cada fila y uno de cada columna.
+KEY: **Orden 2:** $|A| = a_{11}a_{22}-a_{12}a_{21}$, el producto de la diagonal principal menos el de la secundaria.
+KEY: **Orden 3 (Sarrus):** seis productos, tres sumando y tres restando. Se organizan copiando las dos primeras filas debajo: diagonales a la derecha suman, a la izquierda restan.
+KEY: **Sarrus no se extiende** al orden 4: harían falta $4!=24$ productos y las diagonales solo dan 8.
+KEY: **$|A|$ es un número real con signo**, no un valor absoluto. Su valor absoluto mide el área (orden 2) o el volumen (orden 3) que abren las filas.
+KEY: **El caso interesante es $|A|=0$**: ahí las filas son dependientes, la matriz pierde la inversa y el sistema deja de tener solución única.
+## 02_Propiedades_de_los_determinantes.json :: Propiedades de los determinantes
+BIG: El determinante reacciona de forma predecible a los cambios en la matriz. Conociendo esas reacciones se puede transformar la matriz hasta dejarla fácil, arrastrando el efecto de cada paso, y se puede decidir que un determinante es nulo sin calcularlo.
+KEY: **$|A^{t}| = |A|$**: filas y columnas juegan el mismo papel, de modo que toda propiedad vale para ambas.
+KEY: **Escalar en una línea:** multiplica el determinante por ese escalar. Consecuencia: $|kA| = k^{n}|A|$ para una matriz de orden $n$.
+KEY: **Permutar dos líneas** cambia el signo. **Sumar a una línea una combinación de las paralelas** no cambia nada: es la herramienta para fabricar ceros.
+KEY: **Tres formas de valer 0:** línea nula, dos líneas iguales o proporcionales, una línea combinación lineal de las paralelas. La última engloba a las demás.
+KEY: **$|A\cdot B| = |A|\,|B|$**, de donde $|A^{-1}| = 1/|A|$ y $|A^{p}| = |A|^{p}$. En cambio $|A+B| \ne |A|+|B|$ en general.
+KEY: **Escalonar no conserva el determinante**, aunque conserve el rango: hay que anotar permutaciones y factores.
+## 03_Menores_adjuntos_y_desarrollo_por_una_línea.json :: Menores, adjuntos y desarrollo por una línea
+BIG: Un determinante de orden $n$ se puede escribir como suma de $n$ determinantes de orden $n-1$, desarrollándolo por los elementos de cualquier línea. Repitiendo el proceso se calcula cualquier orden, y si antes se fabrican ceros en la línea elegida, el cálculo se desploma.
+KEY: **Menor complementario** $\alpha_{ij}$: lo que queda al eliminar la fila $i$ y la columna $j$. **Adjunto** $A_{ij} = (-1)^{i+j}\alpha_{ij}$: el mismo número con el signo de su casilla.
+KEY: El signo del adjunto depende **solo de la posición**, no del valor del elemento. Se lee de un tablero de ajedrez que empieza en $+$ arriba a la izquierda.
+KEY: **Desarrollo por una línea:** $|A| = a_{i1}A_{i1}+\dots+a_{in}A_{in}$, y el valor es el mismo para cualquiera de las $2n$ líneas. Esa redundancia es la comprobación más barata que existe.
+KEY: **Se elige la línea con más ceros**, y si no hay, se fabrican sumando múltiplos de otras líneas, que no altera el determinante.
+KEY: **Matriz triangular:** el determinante es el producto de la diagonal principal. De ahí $|I| = 1$.
+KEY: **Cada elemento con su propio adjunto:** cruzar las líneas da siempre 0, y ese 0 no dice nada del determinante.
+## 04_La_matriz_adjunta_y_la_inversa_por_determinantes.json :: La matriz adjunta y la inversa por determinantes
+BIG: La traspuesta de la matriz de adjuntos cumple $A\cdot[\mathrm{Adj}(A)]^{t} = |A|\,I$. Dividiendo entre $|A|$ se obtiene una fórmula cerrada para la inversa, y de paso el criterio exacto de cuándo existe: $|A| \ne 0$.
+KEY: **$\mathrm{Adj}(A)$** es la matriz de los adjuntos, cada uno en la posición de su elemento.
+KEY: **$A\cdot[\mathrm{Adj}(A)]^{t} = |A|\,I$**: en la diagonal aparecen desarrollos del determinante y fuera de ella, sumas cruzadas nulas.
+KEY: **$A^{-1} = \dfrac{1}{|A|}[\mathrm{Adj}(A)]^{t}$**, con traspuesta. Omitirla da una matriz que no es la inversa.
+KEY: **Criterio:** una matriz cuadrada tiene inversa si y solo si $|A| \ne 0$. Sin grados: un determinante pequeño da una inversa perfectamente definida.
+KEY: **Orden 2:** se intercambia la diagonal, se cambia el signo de los otros dos y se divide entre el determinante.
+KEY: **Ecuaciones matriciales:** $A X = B$ da $X = A^{-1}B$ y $X A = B$ da $X = B A^{-1}$. Los dos resultados son distintos.
+## 05_El_rango_mediante_menores.json :: El rango mediante menores
+BIG: El rango de una matriz es el orden del mayor menor no nulo que se puede extraer de ella. El método de los orlados permite determinarlo calculando muy pocos determinantes, y convierte la discusión con parámetro en resolver una ecuación.
+KEY: **Menor de orden $k$:** determinante formado al cruzar $k$ filas con $k$ columnas, no necesariamente contiguas. En una matriz $m\times n$ el orden máximo es $\min(m,n)$.
+KEY: **Rango:** el orden del mayor menor no nulo. Coincide con el número de líneas linealmente independientes.
+KEY: **Asimetría clave:** para $\mathrm{rg} \ge k$ basta un menor no nulo; para $\mathrm{rg} < k$ hacen falta **todos** nulos.
+KEY: **Orlados:** si un menor de orden $k$ es no nulo y todos sus orlados de orden $k+1$ se anulan, el rango es exactamente $k$. Esto reduce drásticamente el número de determinantes.
+KEY: **Si un orden falla entero, los superiores también:** no hay que seguir mirando hacia arriba.
+KEY: **Con parámetro:** acotar, calcular el menor de orden máximo, resolver «$=0$», y entrar en cada caso crítico a mirar el orden inferior.
+## 06_Determinantes_de_orden_superior_y_estrategia_de_cálculo.json :: Determinantes de orden superior y estrategia de cálculo
+BIG: A partir del orden 4 no hay fórmula directa manejable: un determinante de orden $n$ suma $n!$ productos. La salida es transformar la matriz gratis con las propiedades hasta que una línea quede casi toda de ceros, y entonces desarrollar para bajar de orden.
+KEY: **$n!$ productos:** 6 en orden 3, 24 en orden 4, 120 en orden 5. Sarrus funciona en orden 3 porque sus seis diagonales recogen los $3!=6$ productos con el signo correcto; en orden 4 fallan ambas cosas y no se extiende.
+KEY: **La estrategia, en orden:** ¿vale 0 por dependencia? ¿hay factores comunes? ¿suman lo mismo las líneas? ¿hay una línea con ceros? Si no, se fabrican.
+KEY: **Hacer ceros y bajar de orden** es el procedimiento que siempre funciona: pivote 1, $F_i \to F_i+k\,F_j$ en el resto de la columna, y desarrollo por esa columna.
+KEY: **El truco de la suma de columnas:** si todas las filas suman lo mismo, $C_1 \to C_1+\dots+C_n$ saca un factor **y** fabrica la columna de unos.
+KEY: **Contabilidad:** permutar cambia el signo, extraer un factor obliga a devolverlo, sumar múltiplos de otra línea es gratis.
+KEY: **Triangular es la meta:** el determinante es entonces el producto de la diagonal, y las entradas de encima no intervienen.
+# selectividad_matematicas__mat_distribuciones
+## 01_Variable_aleatoria_discreta_media_varianza_y_desviación.json :: Variable aleatoria discreta: media, varianza y desviación típica
+BIG: Una variable aleatoria discreta resume un experimento aleatorio en números; su media y su varianza describen, respectivamente, su valor típico y su dispersión.
+KEY: **Variable aleatoria discreta:** asigna un número a cada resultado, con una tabla de distribución $(x_i,p_i)$ que suma 1.
+KEY: **Esperanza:** $E(X)=\sum x_ip_i$, un promedio ponderado, no necesariamente un valor posible de X.
+KEY: **Varianza:** $Var(X)=E(X^2)-[E(X)]^2$, nunca negativa.
+KEY: **Desviación típica:** $\sigma(X)=\sqrt{Var(X)}$, en las unidades originales de X.
+## 02_La_distribución_binomial.json :: La distribución binomial
+BIG: La distribución binomial modela el número de éxitos al repetir n veces, de forma independiente, un experimento con dos resultados y probabilidad p constante.
+KEY: **Condiciones:** n fijo, dos resultados, p constante, independencia.
+KEY: **Fórmula:** $P(X=k)=\binom{n}{k}p^kq^{n-k}$, término del binomio de Newton $(q+p)^n$.
+KEY: **Atajos:** $E(X)=np$, $Var(X)=npq$, $\sigma(X)=\sqrt{npq}$, sin sumar la tabla.
+KEY: **Sin reemplazo no es binomial:** la probabilidad cambiaría en cada repetición.
+## 03_La_desigualdad_de_Chebyshev.json :: La desigualdad de Chebyshev
+BIG: La desigualdad de Chebyshev garantiza una probabilidad mínima de estar cerca de la media, para CUALQUIER distribución, usando solo la media y la desviación típica.
+KEY: **Fórmula:** $P(\mu-k\sigma<X<\mu+k\sigma)\geq1-1/k^2$, válida para todo $k>0$, informativa solo si $k>1$.
+KEY: **Válida para cualquier distribución:** no requiere conocer su forma exacta.
+KEY: **Es una cota, no un valor exacto:** el valor real puede ser mayor.
+KEY: **k=2 da 0,75; k=3 da 8/9≈0,889:** valores de referencia habituales.
+## 04_Variables_aleatorias_continuas_y_función_de_densidad.json :: Variables aleatorias continuas y función de densidad
+BIG: Una variable aleatoria continua se describe con una función de densidad; las probabilidades son áreas bajo esa curva, calculadas con integrales.
+KEY: **Función de densidad:** $f(x)\geq0$ en todo el dominio, área total bajo la curva = 1.
+KEY: **Probabilidad:** $P(a<X<b)=\int_a^bf(x)dx$, un área, nunca un valor puntual.
+KEY: **Punto exacto:** $P(X=a)=0$ siempre, en cualquier variable continua.
+KEY: **Media y varianza:** mismas ideas que en lo discreto, cambiando sumas por integrales.
+## 05_La_distribución_normal_y_la_tipificación.json :: La distribución normal y la tipificación
+BIG: La distribución normal modela variables continuas simétricas en forma de campana; se trabaja siempre tipificando a la N(0,1) y usando su tabla.
+KEY: **Normal $N(\mu,\sigma)$:** simétrica, media=mediana=moda=$\mu$.
+KEY: **Tipificación:** $Z=(X-\mu)/\sigma\sim N(0,1)$, paso obligatorio antes de usar la tabla.
+KEY: **Menor que:** directo. **Mayor que:** $1-\Phi(z)$. **Menor que negativo:** $1-\Phi(z)$ por simetría.
+KEY: **Entre dos valores:** se restan las dos áreas acumuladas.
+## 06_Aproximación_de_la_binomial_por_la_normal.json :: Aproximación de la binomial por la normal
+BIG: Cuando n es grande y p no es extremo, una binomial se aproxima por una normal con los mismos $\mu$ y $\sigma$, aplicando siempre la corrección de continuidad antes de tipificar.
+KEY: **Condiciones:** $np\geq5$ Y $n(1-p)\geq5$ (ambas a la vez).
+KEY: **Parámetros:** $\mu=np$, $\sigma=\sqrt{np(1-p)}$ (los mismos que la binomial).
+KEY: **Corrección de continuidad:** cada entero k se reparte en $(k-0{,}5,\,k+0{,}5)$ antes de tipificar.
+KEY: **Tras la corrección:** el cálculo final es el mismo que en la lección anterior (tabla de la N(0,1)).
+## 07_Primeros_intervalos_de_confianza.json :: Primeros intervalos de confianza
+BIG: Un intervalo de confianza acompaña la estimación puntual $\hat{p}$ con un margen de error que depende del nivel de confianza exigido y del tamaño de la muestra.
+KEY: **Proporción muestral:** $\hat{p}=k/n$, estimación puntual de la p poblacional desconocida.
+KEY: **Intervalo de confianza:** $\hat{p}\pm z_{\alpha/2}\sqrt{\hat{p}(1-\hat{p})/n}$.
+KEY: **Valores críticos:** 95% -> z=1,96; 99% -> z=2,575.
+KEY: **Interpretación:** el nivel de confianza describe el método repetido, no una probabilidad sobre el intervalo ya calculado.
+KEY: **Tamaño de muestra:** $n=z^2\hat{p}(1-\hat{p})/E^2$, redondeando hacia arriba.
+# selectividad_matematicas__mat_geometria_metrica
+## 01_Ángulos_entre_rectas_entre_planos_y_entre_recta_y_plano.json :: Ángulos entre rectas, entre planos y entre recta y plano
+BIG: Las tres fórmulas de ángulo en el espacio comparten el mismo ingrediente —el coseno entre dos vectores, con valor absoluto para quedarse siempre con el ángulo agudo— y solo cambian en qué vectores se comparan (directores, normales, o uno de cada) y, en el caso recta-plano, en que el resultado se lee como seno en vez de coseno, por tratarse del ángulo complementario.
+KEY: **Recta-recta:** $\cos\alpha=\dfrac{|\vec u\cdot\vec v|}{|\vec u||\vec v|}$.
+KEY: **Recta-plano:** $\mathrm{sen}\,\alpha=\dfrac{|\vec u\cdot\vec n|}{|\vec u||\vec n|}$ (seno, no coseno).
+KEY: **Plano-plano:** $\cos\alpha=\dfrac{|\vec n_1\cdot\vec n_2|}{|\vec n_1||\vec n_2|}$.
+KEY: El ángulo entre rectas está definido SIEMPRE, se corten, sean paralelas o se crucen.
+KEY: Si el dato viene en implícitas, hallar antes el director/normal con un producto vectorial.
+## 02_Paralelismo_y_perpendicularidad_en_el_espacio.json :: Paralelismo y perpendicularidad en el espacio
+BIG: Las mismas posiciones relativas de la unidad anterior (coincidentes, paralelas, secantes, se cruzan) se pueden reformular con tres operaciones vectoriales —vectorial para paralelismo, escalar para perpendicularidad, mixto para coplanariedad— teniendo cuidado de que, para recta-plano, los papeles de escalar y vectorial están invertidos; y la perpendicularidad, en cualquier caso, es una condición de ángulo aparte, nunca una quinta posición relativa.
+KEY: **Vectorial = $\vec0$** → paralelismo. **Escalar = 0** → perpendicularidad. **Mixto = 0** → coplanariedad.
+KEY: **Recta-plano:** los papeles están invertidos: escalar→paralelo, vectorial→perpendicular (justo al revés que en los otros dos casos).
+KEY: **Perpendicular** no es una posición relativa más: solo coexiste con secantes (o se cruzan).
+KEY: Dos vectores no nulos nunca pueden ser a la vez paralelos y perpendiculares (identidad de Lagrange).
+## 03_Proyección_ortogonal_de_un_punto_y_de_una_recta.json :: Proyección ortogonal de un punto y de una recta
+BIG: Proyectar ortogonalmente un punto sobre una recta o un plano consiste en construir una recta perpendicular por el punto y cortarla con el objeto dado; proyectar una recta entera sobre un plano consiste en construir el plano auxiliar que la contiene y es automáticamente perpendicular al plano dado, y cortarlo con él.
+KEY: **Punto sobre recta:** $t=\dfrac{\overrightarrow{AP}\cdot\vec v}{|\vec v|^2}$, $Q=A+t\vec v$.
+KEY: **Punto sobre plano:** $t=-\dfrac{Ax_0+By_0+Cz_0+D}{A^2+B^2+C^2}$, $Q=(x_0+At,y_0+Bt,z_0+Ct)$.
+KEY: **Recta sobre plano:** plano auxiliar $\pi'$ (por $A$, normal $\vec u\times\vec n$); proyección $=\pi\cap\pi'$.
+KEY: $\pi'$ es perpendicular a $\pi$ SIEMPRE, automáticamente, por ser $\vec u\times\vec n$ perpendicular a $\vec n$ por definición.
+## 04_Puntos_y_rectas_simétricos.json :: Puntos y rectas simétricos
+BIG: El simétrico de un punto respecto de otro punto, una recta o un plano se obtiene siempre con la misma idea: hallar el punto medio $Q$ del segmento $PP'$ (directamente, o mediante una proyección ortogonal) y despejar $P'=2Q-P$; una recta simétrica se obtiene reflejando así dos de sus puntos.
+KEY: **Respecto de un punto:** $P'=2Q-P$.
+KEY: **Respecto de una recta o un plano:** proyectar primero (lección 3) para hallar $Q$, y aplicar después $P'=2Q-P$.
+KEY: **Recta simétrica:** reflejar dos puntos distintos de la recta original y unirlos.
+KEY: La simetría respecto de un PUNTO siempre conserva la dirección de una recta (la convierte en una recta paralela); respecto de una recta o un plano, en general NO.
+## 05_Distancia_de_un_punto_a_una_recta_y_a_un_plano.json :: Distancia de un punto a una recta y a un plano
+BIG: La distancia de un punto a una recta o a un plano se calcula siempre a partir de la proyección ortogonal (lección 3): o bien midiendo directamente el segmento hasta la proyección (método 1), o bien con una fórmula directa que evita hallar la proyección explícitamente (método 2), y ambos métodos dan siempre el mismo resultado.
+KEY: **Punto-recta, método 1:** proyectar y medir, $d=|PQ|$.
+KEY: **Punto-recta, método 2:** $d(P,r)=\dfrac{|\vec v\times\overrightarrow{AP}|}{|\vec v|}$.
+KEY: **Punto-plano:** $d(P,\pi)=\dfrac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}$, con valor absoluto siempre.
+KEY: Ambos métodos de distancia punto-recta coinciden siempre, por la identidad de Lagrange (demostrado en el reto final).
+## 06_Distancia_entre_rectas_que_se_cruzan.json :: Distancia entre rectas que se cruzan
+BIG: Antes de calcular cualquier distancia entre dos rectas, dos planos, o una recta y un plano, hay que clasificar su posición relativa: coincidentes o secantes dan distancia 0 sin cálculo; paralelos se reducen a una distancia punto-recta/plano ya conocida (lección 5); y solo el caso 'rectas que se cruzan' necesita la fórmula nueva del producto mixto.
+KEY: **Rectas que se cruzan:** $d(r,s)=\dfrac{|[\overrightarrow{AB},\vec u,\vec v]|}{|\vec u\times\vec v|}$, válida solo si $\vec u\times\vec v\neq\vec0$.
+KEY: **Rectas, planos, o recta-plano paralelos:** se reducen siempre a una distancia punto-recta o punto-plano (lección 5).
+KEY: **Coincidentes o secantes:** distancia 0, sin ningún cálculo.
+KEY: La distancia de una recta paralela a un plano no depende del punto de la recta que se elija (demostrado en el reto final).
+## 07_Áreas_y_volúmenes_con_herramientas_vectoriales.json :: Áreas y volúmenes con herramientas vectoriales
+BIG: El producto vectorial y el producto mixto, ya usados para distancias en las lecciones 5 y 6, son también la herramienta directa para calcular áreas (paralelogramos y triángulos) y volúmenes (paralelepípedos y tetraedros), sin necesidad de hallar ninguna altura por separado.
+KEY: **Área del paralelogramo:** $|\overrightarrow{AB}\times\overrightarrow{AC}|$; **triángulo:** la mitad.
+KEY: **Volumen del paralelepípedo:** $|[\overrightarrow{AB},\overrightarrow{AC},\overrightarrow{AD}]|$; **tetraedro:** un sexto.
+KEY: El factor $1/6$ del tetraedro combina el $1/3$ del volumen de una pirámide con el $1/2$ del área de su base triangular (demostrado en el bloque 'Aplicaciones: alineación, coplanaridad, alturas y cuarto vértice').
+KEY: Con vértices dados por coordenadas, el primer paso es siempre formar los vectores desde un vértice común.
+# selectividad_matematicas__mat_integrales
+## 01_La_primitiva_y_la_integral_indefinida.json :: La primitiva y la integral indefinida
+BIG: Integrar es deshacer una derivada: $F$ es primitiva de $f$ si $F'=f$, y como la derivada de una constante es $0$, cada función tiene infinitas primitivas, todas de la forma $F(x)+C$, que juntas forman la integral indefinida $\int f(x)\,dx$.
+KEY: $F$ es primitiva de $f$ si y solo si $F'(x)=f(x)$.
+KEY: Si $F$ es primitiva de $f$, también lo es $F+C$ para cualquier constante $C\in\mathbb R$.
+KEY: $\int f(x)\,dx = F(x)+C$ representa el conjunto de todas las primitivas de $f$.
+## 02_Integrales_inmediatas_y_propiedades.json :: Integrales inmediatas y propiedades
+BIG: La tabla de integrales inmediatas es la tabla de derivadas leída al revés, y la linealidad permite descomponer cualquier suma o múltiplo constante en esas filas básicas; el único cuidado especial es el caso $n=-1$ de la regla de la potencia, que se resuelve con el logaritmo.
+KEY: $\int x^ndx=\frac{x^{n+1}}{n+1}+C$ solo si $n\ne-1$; si $n=-1$, se usa $\int\frac1xdx=\ln|x|+C$.
+KEY: La integral de una suma es la suma de integrales, y las constantes salen fuera de la integral (linealidad).
+KEY: Solo se añade una constante $C$ al final de todo el cálculo, nunca una por cada término.
+## 03_Integración_por_cambio_de_variable.json :: Integración por cambio de variable
+BIG: El cambio de variable deshace la regla de la cadena: si el integrando es una función compuesta multiplicada por (un múltiplo de) la derivada de su interior, llamar $u$ a esa parte interior convierte la integral en una inmediata en $u$, que luego hay que devolver a la variable $x$.
+KEY: Se necesita que el integrando contenga, multiplicando a la composición, un factor igual o proporcional a $g'(x)$.
+KEY: Procedimiento: $u=g(x)$, $du=g'(x)dx$, sustituir todo en $u$, integrar, deshacer el cambio.
+KEY: Si tras el cambio queda alguna $x$ que no se puede expresar en función de $u$ (despejándola de $u=g(x)$), ese cambio no sirve.
+## 04_Integración_por_partes.json :: Integración por partes
+BIG: La integración por partes deshace la regla de derivación de un producto; eligiendo bien qué factor es $u$ (siguiendo el criterio práctico: logaritmo, luego polinomio, antes que exponencial o trigonométrica) la integral se transforma en otra más simple, y en el caso especial de las integrales cíclicas, la técnica se completa despejando algebraicamente en vez de derivando sin fin.
+KEY: Fórmula: $\int u\,dv = uv - \int v\,du$.
+KEY: Criterio práctico: logaritmo como $u$; entre polinomio y exponencial/trigonométrica, el polinomio como $u$ (baja de grado).
+KEY: Si la integral original reaparece tras aplicar partes dos veces, se despeja como una ecuación (integral cíclica).
+## 05_Integración_de_funciones_racionales.json :: Integración de funciones racionales
+BIG: Toda integral racional se resuelve en tres fases: dividir si el numerador no tiene ya grado menor que el denominador, factorizar el denominador, y descomponer en fracciones simples según el tipo de raíces (simples, múltiples, o un factor cuadrático sin raíces reales), cada una de las cuales se integra con una fila ya conocida de la tabla de inmediatas.
+KEY: Si $\operatorname{grado}(P)\ge\operatorname{grado}(Q)$, dividir primero: el cociente se integra directo, y solo el resto necesita descomposición.
+KEY: Raíces reales simples: $\frac{A}{x-a}+\cdots$, con coeficientes hallados sustituyendo por cada raíz.
+KEY: Raíz múltiple: un término por cada potencia; factor cuadrático irreducible: numerador de grado uno y la fila de la arcotangente.
+## 06_Integrales_trigonométricas_y_otros_métodos.json :: Integrales trigonométricas y otros métodos
+BIG: Ninguna potencia de exponente $\ge2$ de seno o coseno, sola, es una integral inmediata (sí lo es $\operatorname{sen}^nx\cos x$, de tipo potencia): las potencias pares se resuelven rebajando el grado con la fórmula del ángulo doble, las impares separando un factor y aplicando un cambio de variable con la identidad pitagórica, y los casos que no encajan en ninguno de los dos, reconociendo otra identidad trigonométrica auxiliar.
+KEY: Potencia par: usar $\operatorname{sen}^2x=\frac{1-\cos2x}2$ o $\cos^2x=\frac{1+\cos2x}2$ para rebajar el grado.
+KEY: Potencia impar: separar un factor, reescribir el resto con $\operatorname{sen}^2x=1-\cos^2x$ (o viceversa) y cambiar de variable.
+KEY: Si no encaja ninguno de los dos casos, buscar una identidad auxiliar (por ejemplo, la del ángulo mitad).
+## 07_La_integral_definida_y_la_función_área.json :: La integral definida y la función área
+BIG: La integral definida $\int_a^bf(x)dx$ es el límite de una suma de áreas de rectángulos (suma de Riemann): un número concreto, interpretable como el área con signo entre la gráfica de $f$ y el eje OX, y muy distinto de la integral indefinida (una familia de funciones).
+KEY: La integral definida es un número, nunca lleva $+C$.
+KEY: Representa el área con signo: positiva donde $f\ge0$, negativa donde $f<0$.
+KEY: Cumple linealidad, aditividad respecto al intervalo, y $\int_b^af=-\int_a^bf$.
+## 08_El_teorema_del_valor_medio_integral.json :: El teorema del valor medio integral
+BIG: Si $f$ es continua en $[a,b]$, existe algún punto $c$ donde $f(c)$ coincide con el valor medio de $f$ en ese intervalo; geométricamente, un rectángulo de base $b-a$ y altura $f(c)$ tiene la misma área que la región bajo la curva, pero ese $c$ hay que calcularlo resolviendo una ecuación, no suponerlo igual al punto medio del intervalo.
+KEY: Hipótesis imprescindible: $f$ continua en todo $[a,b]$.
+KEY: Valor medio de $f$ en $[a,b]$: $\dfrac1{b-a}\int_a^bf(x)dx$.
+KEY: El punto $c$ se halla resolviendo $f(c)=\text{valor medio}$ y comprobando que cae dentro de $[a,b]$.
+## 09_El_teorema_fundamental_del_cálculo_y_la_regla_de_Barrow.json :: El teorema fundamental del cálculo y la regla de Barrow
+BIG: El teorema fundamental del cálculo demuestra que integrar y derivar son operaciones inversas: la función $F(x)=\int_a^xf(t)dt$ tiene a $f$ como su derivada; la regla de Barrow, consecuencia directa, permite calcular cualquier integral definida como $F(b)-F(a)$ usando cualquier primitiva, sin que la elección de la constante $C$ afecte al resultado.
+KEY: $F(x)=\int_a^xf(t)dt \Rightarrow F'(x)=f(x)$ (teorema fundamental, con regla de la cadena si el límite superior no es $x$ puro).
+KEY: Regla de Barrow: $\int_a^bf(x)dx=F(b)-F(a)$, con cualquier primitiva $F$ de $f$.
+KEY: La constante $C$ de la primitiva se cancela siempre al aplicar Barrow: no hay que preocuparse por su valor.
+## 10_El_área_encerrada_bajo_una_curva.json :: El área encerrada bajo una curva
+BIG: El área geométrica bajo una curva coincide con la integral definida solo cuando la función no cambia de signo en el intervalo; si cambia, hay que localizar los cortes con OX, dividir en tramos y sumar el valor absoluto de la integral en cada uno, porque el área nunca puede ser negativa ni cancelarse entre tramos.
+KEY: Antes de calcular un área, localizar los cortes con OX dentro del intervalo.
+KEY: Si no hay cortes interiores (o $f$ no cambia de signo), el área es $\left|\int_a^bf(x)dx\right|$.
+KEY: Si hay cortes interiores, dividir en tramos y sumar el valor absoluto de cada integral parcial.
+## 11_El_área_comprendida_entre_dos_curvas.json :: El área comprendida entre dos curvas
+BIG: El área entre dos curvas es el área bajo la función diferencia $h(x)=f(x)-g(x)$: se localizan los cortes resolviendo $f(x)=g(x)$, se comprueba en cada tramo cuál función va por encima (puede invertirse de un tramo a otro), se integra «la de arriba menos la de abajo» en cada uno, y se suman los valores absolutos.
+KEY: Los cortes entre $f$ y $g$ se hallan resolviendo $f(x)=g(x)$.
+KEY: En cada tramo, se comprueba (con un único punto de prueba) cuál función va por encima; el orden puede invertirse de un tramo a otro.
+KEY: Área total: suma de los valores absolutos de la integral de «arriba menos abajo» en cada tramo.
+## 12_Volumen_de_un_sólido_de_revolución.json :: Volumen de un sólido de revolución
+BIG: El volumen de un sólido de revolución generado al girar $y=f(x)$ alrededor de OX se calcula sumando (integrando) el volumen de muchas rodajas cilíndricas delgadas, cuya base es un círculo de área $\pi[f(x)]^2$ y cuyo grosor es $dx$: $V=\pi\int_a^b[f(x)]^2dx$, una fórmula que reproduce exactamente los volúmenes conocidos del cono y la esfera cuando se aplica a la recta y a la semicircunferencia, respectivamente.
+KEY: Cada rodaja es un disco de radio $f(x)$ y área $\pi[f(x)]^2$: el cuadrado nunca se omite.
+KEY: Fórmula: $V=\pi\int_a^b[f(x)]^2dx$, girando alrededor del eje OX.
+KEY: Aplicada a $f(x)=x$ reproduce el cono; aplicada a $f(x)=\sqrt{R^2-x^2}$ reproduce la esfera.
+# selectividad_matematicas__mat_limites
+## 01_La_idea_de_límite_y_su_definición.json :: La idea de límite y su definición
+BIG: El límite describe hacia qué número se acercan los valores de una función cerca de un punto, exista o no la función exactamente en ese punto.
+KEY: $\lim_{x\to a} f(x) = L$ significa que $f(x)$ se acerca a $L$ tanto como se quiera, con $x$ suficientemente cerca de $a$ (sin ser $a$).
+KEY: La definición formal usa entornos: $0<|x-a|<\delta \Rightarrow |f(x)-L|<\varepsilon$, para cualquier $\varepsilon>0$.
+KEY: Si $f$ es polinómica, o racional con denominador no nulo en $a$, el límite se calcula por sustitución directa.
+KEY: Si la sustitución da $0/0$, se factoriza numerador y denominador y se cancela el factor común antes de sustituir de nuevo.
+KEY: El límite y el valor $f(a)$ son preguntas independientes: pueden coincidir, diferir, o que solo exista una de las dos.
+## 02_Límites_laterales_y_existencia_del_límite.json :: Límites laterales y existencia del límite
+BIG: Un límite existe exactamente cuando acercarse por la izquierda y por la derecha lleva al mismo número.
+KEY: El límite lateral izquierdo $\lim_{x\to a^-} f(x)$ y el derecho $\lim_{x\to a^+} f(x)$ usan entornos que solo miran a un lado de $a$.
+KEY: $\lim_{x\to a} f(x)$ existe si y solo si los dos laterales existen y coinciden; en ese caso, el límite es ese valor común.
+KEY: En una función a trozos, el límite en el punto de empalme se calcula con un lateral por cada rama.
+KEY: Si los laterales son finitos pero distintos, la conclusión correcta es que el límite no existe, no una aproximación entre los dos valores.
+KEY: Una expresión con valor absoluto que cambia de signo en el punto de estudio es una función a trozos disfrazada.
+## 03_Operaciones_con_límites.json :: Operaciones con límites
+BIG: Conocidos los límites de dos funciones, el límite de su suma, producto, cociente o composición se obtiene combinando esos dos números, sin volver a la definición.
+KEY: $\lim(f\pm g)=\lim f\pm\lim g$ y $\lim(f\cdot g)=\lim f\cdot\lim g$, sin condiciones adicionales.
+KEY: $\lim(f/g)=\lim f/\lim g$ **solo si** $\lim g \neq 0$.
+KEY: $\lim\sqrt[n]{f}=\sqrt[n]{\lim f}$ (si $\lim f\geq0$ cuando $n$ es par) y $\lim f^n = (\lim f)^n$.
+KEY: Para una composición con una función habitual, se calcula primero el límite de la función interior y se aplica después la exterior.
+KEY: Estas propiedades combinan límites ya conocidos: no sirven para deducir que un límite existe sin haberlo comprobado antes.
+## 04_Límites_infinitos_y_límites_en_el_infinito.json :: Límites infinitos y límites en el infinito
+BIG: El infinito aparece en los límites de dos maneras: la función puede crecer sin cota cerca de un punto (límite infinito → asíntota vertical) o la variable puede crecer sin cota mientras la función se acerca a un valor fijo (límite en el infinito → asíntota horizontal).
+KEY: Una asíntota vertical en $x=a$ aparece cuando algún límite lateral de $f$ en $a$ es $+\infty$ o $-\infty$; el signo de cada lateral se determina con el signo del numerador en $a$ y el del denominador a cada lado.
+KEY: Si $q(a)=0$ y $p(a)\neq0$ hay asíntota vertical; si ambos se anulan, se simplifica y se vuelve a mirar: puede quedar un límite finito (agujero) o seguir habiendo asíntota, como en $\dfrac{x-2}{x^2-4x+4}=\dfrac{1}{x-2}$.
+KEY: $\lim_{x\to\pm\infty} f(x)=L$ (finito) describe una asíntota horizontal $y=L$.
+KEY: Para funciones racionales, el comportamiento en el infinito se clasifica comparando los grados de numerador y denominador.
+KEY: $\infty$ no es un número: operaciones como $\infty-\infty$ no tienen un valor fijo sin analizar las funciones concretas.
+## 05_Las_siete_indeterminaciones_y_cómo_se_rompen.json :: Las siete indeterminaciones y cómo se rompen
+BIG: Las siete indeterminaciones no son casos sin solución: son formas que exigen transformar la expresión antes de sustituir, y cada una tiene su técnica.
+KEY: $0/0$ y $\infty/\infty$: factorizar/simplificar o comparar grados (lecciones 1 y 4).
+KEY: $\infty-\infty$: racionalizar (multiplicar y dividir por el conjugado) o reducir a común denominador.
+KEY: $0\cdot\infty$: reescribir como un cociente para reducirlo a $0/0$ o $\infty/\infty$.
+KEY: $1^{\infty}$: fórmula del número $e$, $\lim f^g = e^{\lim(f-1)g}$.
+KEY: $0^0$ e $\infty^0$: tomar logaritmos y usar que cualquier potencia de $x$ crece más deprisa que $\ln x$.
+## 06_Continuidad_en_un_punto_y_continuidad_lateral.json :: Continuidad en un punto y continuidad lateral
+BIG: La continuidad en un punto traduce «dibujar sin levantar el lápiz» en tres condiciones comprobables: que la función exista, que tenga límite, y que ambos coincidan.
+KEY: $f$ es continua en $a$ si existe $f(a)$, existe $\lim_{x\to a} f(x)$, y ambos coinciden.
+KEY: Para fijar un parámetro de continuidad en el empalme de una función a trozos, se iguala el valor de la rama que define $f(a)$ con el límite lateral de la otra.
+KEY: La continuidad lateral extiende la idea a un solo lado; la continuidad en $[a,b]$ exige continuidad lateral en los dos extremos.
+KEY: Las funciones elementales son continuas en todo su dominio: los candidatos a discontinuidad están siempre fuera de él o en los empalmes de una función a trozos.
+## 07_Tipos_de_discontinuidad.json :: Tipos de discontinuidad
+BIG: Las discontinuidades se clasifican comparando los límites laterales: si son finitos y coinciden (continua, o evitable si no coincide con $f(a)$), si son finitos y distintos (salto finito), si alguno es infinito, coincidan o no entre sí (salto infinito, asintótica), o si alguno no existe en absoluto (esencial, 2ª especie).
+KEY: Evitable: el límite existe y es finito, pero no coincide con $f(a)$ (o $f(a)$ no existe); se repara redefiniendo ese punto.
+KEY: Salto: los dos laterales existen pero no son ambos finitos e iguales a la vez; es finito si los dos son números distintos, e infinito (asintótica) si alguno es $\pm\infty$, coincidan o no entre sí.
+KEY: 2ª especie: al menos un lateral no existe de ninguna forma (típicamente por oscilación).
+KEY: Un límite lateral infinito cuenta como existente en esta clasificación: da salto infinito, no 2ª especie.
+## 08_Teoremas_de_las_funciones_continuas_Bolzano_y_Weierstrass.json :: Teoremas de las funciones continuas: Bolzano y Weierstrass
+BIG: La continuidad en un intervalo cerrado tiene consecuencias muy fuertes: garantiza que la función no se "salta" ningún valor intermedio (Bolzano y valores intermedios) y que alcanza un máximo y un mínimo absolutos (Weierstrass), siempre que se cumplan todas sus hipótesis.
+KEY: Bolzano: continua en $[a,b]$ y signos opuestos en los extremos $\Rightarrow$ al menos una raíz en $(a,b)$ (nunca garantiza unicidad).
+KEY: La bisección sucesiva (aplicar Bolzano repetidamente con el punto medio) permite acotar la raíz con la precisión que se quiera.
+KEY: Valores intermedios: generalización de Bolzano a cualquier valor $k$ entre $f(a)$ y $f(b)$, no solo el cero.
+KEY: Weierstrass: continua en $[a,b]$ cerrado y acotado $\Rightarrow$ alcanza máximo y mínimo absolutos; si falla cualquiera de las dos hipótesis, puede no cumplirse.
+# selectividad_matematicas__mat_matrices
+## 01_Qué_es_una_matriz_dimensión_igualdad_y_tipos.json :: Qué es una matriz: dimensión, igualdad y tipos
+BIG: Una matriz es una tabla de números a la que se le han quitado los rótulos, y esa pérdida aparente es la que permite calcular con la tabla entera como si fuera un solo objeto.
+KEY: **Dimensión $m \times n$: filas por columnas**, en ese orden. Es un par ordenado, así que $2 \times 3$ y $3 \times 2$ son dimensiones distintas.
+KEY: **En $a_{ij}$ el primer subíndice es la fila y el segundo la columna.** Son una dirección, no un valor, y pueden apuntar a una casilla que no existe.
+KEY: **$A = B$ exige dos cosas:** misma dimensión y coincidencia en todas las posiciones. Una igualdad de matrices $m \times n$ equivale a $m \cdot n$ ecuaciones.
+KEY: **Las diagonales solo existen en matrices cuadradas:** la principal son los $a_{ii}$ y la secundaria los que cumplen $i + j = n + 1$.
+KEY: **Los tipos se encajan:** unidad $\subset$ escalar $\subset$ diagonal $\subset$ triangular (de los dos tipos a la vez). Y la condición de diagonal habla solo de lo que está fuera de la diagonal.
+## 02_Suma_de_matrices_y_producto_por_un_escalar.json :: Suma de matrices y producto por un escalar
+BIG: Sumar matrices y multiplicarlas por un número son operaciones casilla a casilla que no mezclan posiciones; por eso heredan las propiedades de los números reales y permiten tratar una tabla entera como un solo objeto algebraico.
+KEY: **$A+B$ solo está definida si $A$ y $B$ tienen la misma dimensión**, y entonces $c_{ij} = a_{ij}+b_{ij}$. El resultado conserva la dimensión.
+KEY: **$kA = (k\,a_{ij})$:** el escalar multiplica a todos los elementos, ceros incluidos. En particular $-A = (-1)A$ y $0 \cdot A$ es la matriz nula.
+KEY: **Las ocho propiedades** (asociativa, conmutativa, neutro, opuesto, las dos distributivas, asociativa mixta y unidad) permiten operar como con números mientras solo haya sumas y escalares.
+KEY: **El neutro es la matriz nula de la dimensión correspondiente**, y una matriz nunca es igual a un número.
+KEY: **Una ecuación matricial de este tipo se despeja primero y se sustituye después.** Sustituir antes multiplica el trabajo por el número de casillas.
+## 03_El_producto_de_matrices_y_por_qué_no_conmuta.json :: El producto de matrices y por qué no conmuta
+BIG: El producto de matrices no multiplica casillas: encadena dos relaciones a través de un índice común, que desaparece en el resultado. De ahí sale la condición de compatibilidad, la dimensión del producto y la pérdida de la conmutatividad.
+KEY: **Condición de compatibilidad:** $(m \times \mathbf{n})(\mathbf{n} \times p) = (m \times p)$. Las interiores coinciden y desaparecen; las exteriores dan la dimensión del resultado.
+KEY: **Cada casilla es fila por columna:** $c_{ij} = \sum_k a_{ik}b_{kj}$, una suma de $n$ productos. El recuento de sumandos es el mejor control de errores.
+KEY: **No conmuta, y de tres formas distintas:** puede que $BA$ no exista, que exista con otra dimensión, o que exista igual de grande y sea otra matriz.
+KEY: **Tampoco vale la regla del producto nulo ni la cancelación:** hay matrices no nulas con $AB = 0$, y de $AB=AC$ no se sigue $B=C$.
+KEY: **Sí hay asociativa, neutro ($AI=IA=A$), distributiva por los dos lados y potencias** $A^k$ para matrices cuadradas. Lo único que falta es conmutar, y es justo donde se concentran los errores.
+## 04_La_matriz_inversa_por_Gauss-Jordan.json :: La matriz inversa por Gauss-Jordan
+BIG: La matriz inversa es lo que permite «deshacer» una multiplicación de matrices, y el método de Gauss-Jordan la calcula y, al mismo tiempo, decide si existe: basta registrar en una mitad todo lo que se le hace a la otra.
+KEY: **$A^{-1}$ se define por $AA^{-1} = A^{-1}A = I$**, no por una receta sobre los elementos. Solo las matrices cuadradas pueden tenerla, y si existe es única.
+KEY: **No toda matriz cuadrada no nula tiene inversa.** Las que no la tienen se llaman singulares, y el propio método las detecta.
+KEY: **Gauss-Jordan:** se escribe $(A \mid I)$, se opera **por filas completas** hasta que la izquierda sea $I$, y entonces la derecha es $A^{-1}$.
+KEY: **Criterio de parada:** una fila nula en la mitad **izquierda** significa que no hay inversa, porque ninguna fila de $I$ es nula.
+KEY: **Al despejar, el lado importa:** $AX=B$ da $X=A^{-1}B$ y $XA=B$ da $X=BA^{-1}$. Y $(AB)^{-1} = B^{-1}A^{-1}$, con el orden invertido.
+## 05_Traspuesta_matrices_simétricas_y_antisimétricas.json :: Traspuesta, matrices simétricas y antisimétricas
+BIG: Trasponer es leer la misma tabla cambiando el papel de filas y columnas. Esa operación respeta la suma y el producto por escalares, **invierte el orden** en el producto de matrices, y da lugar a dos familias cuadradas con nombre propio: las simétricas y las antisimétricas.
+KEY: **$(A^t)_{ij} = a_{ji}$:** se intercambian los subíndices, la dimensión pasa de $m \times n$ a $n \times m$ y $(A^t)^t = A$.
+KEY: **La propiedad clave es $(A \cdot B)^t = B^t \cdot A^t$**, con el orden invertido. El argumento de dimensiones la demuestra sola: la otra versión no está ni definida.
+KEY: **Simétrica: $A^t = A$**, parejas iguales respecto de la diagonal, diagonal libre. **Antisimétrica: $A^t = -A$**, parejas opuestas y diagonal forzosamente nula. Las dos exigen ser cuadrada.
+KEY: **«Antisimétrica» no es «no simétrica»:** la mayoría de las matrices cuadradas no son ni una cosa ni la otra.
+KEY: **$A \cdot A^t$ es simétrica siempre**, y toda matriz cuadrada se escribe de forma única como $A = \frac{1}{2}(A+A^t) + \frac{1}{2}(A-A^t)$.
+## 06_El_rango_de_una_matriz_por_Gauss.json :: El rango de una matriz por Gauss
+BIG: El rango mide cuánta información independiente contiene una matriz: cuántas de sus filas no se pueden reconstruir a partir de las demás. Se calcula escalonando por transformaciones elementales, que no lo alteran, y contando filas no nulas.
+KEY: **Rango = número máximo de filas linealmente independientes**, y coincide con el de columnas independientes. De ahí la cota $\mathrm{rg}(A) \le \min(m,n)$.
+KEY: **La dependencia no es proporcionalidad:** cualquier combinación lineal cuenta, y por eso el rango se calcula y no se mira.
+KEY: **Las transformaciones elementales no cambian el rango**, porque son reversibles. En una matriz escalonada, el rango es el número de filas no nulas.
+KEY: **No se divide para normalizar pivotes.** Solo importa si un pivote es cero, y dividir por una expresión con parámetro hace perder el caso crítico.
+KEY: **Una matriz cuadrada de orden $n$ tiene inversa si y solo si su rango es $n$**, que es la versión en una frase del criterio de la fila nula.
+## 07_Matrices_como_modelo_grafos_y_tablas_de_doble_entrada.json :: Matrices como modelo: grafos y tablas de doble entrada
+BIG: Una matriz no solo guarda una tabla: permite **calcular** con ella. Codificar un grafo o una relación en una matriz convierte preguntas sobre caminos o sobre consumos en productos de matrices, porque el producto encadena dos relaciones por un índice intermedio que después desaparece.
+KEY: **Matriz de adyacencia:** $a_{ij}$ es el número de aristas de $i$ a $j$. Filas = origen, columnas = destino, y a cada grafo le corresponde una única matriz.
+KEY: **Simétrica $\iff$ cada conexión existe en los dos sentidos** (el grafo puede dibujarse sin flechas, como no dirigido), y **diagonal nula $\iff$ sin bucles**. Son dos propiedades independientes.
+KEY: **$(A^k)_{ij}$ cuenta los caminos de longitud exactamente $k$ de $i$ a $j$**, y la justificación está en la propia definición del producto: se suma sobre el vértice intermedio.
+KEY: **Los elementos de $A^2$ pueden pasar de 1**, y eso es información: hay varias rutas. Para «longitud a lo sumo $k$» se suma $A+A^2+\cdots+A^k$.
+KEY: **Al encadenar tablas, el índice común va en las columnas de la primera y en las filas de la segunda**, y desaparece en el resultado. El orden del producto es la dirección de la cadena.
+# selectividad_matematicas__mat_probabilidad
+## 01_Experimentos_aleatorios_y_álgebra_de_sucesos.json :: Experimentos aleatorios y álgebra de sucesos
+BIG: Un suceso es un conjunto de resultados posibles, y todo lo que se puede decir sobre sucesos —unión, intersección, contrario, compatibilidad— es exactamente lo que ya se sabía de conjuntos, aplicado a un contexto nuevo.
+KEY: **Experimento aleatorio:** su resultado no se puede predecir, aunque sí se conozcan los resultados posibles, reunidos en el espacio muestral $E$.
+KEY: **Suceso = subconjunto de $E$.** Elemental (un resultado), compuesto (varios), seguro ($E$) o imposible ($\varnothing$): todos son sucesos legítimos.
+KEY: **Unión «o», intersección «y», contrario «no».** El contrario se calcula siempre respecto de $E$ completo: $\bar A=E-A$.
+KEY: **Incompatibles ($A\cap B=\varnothing$) no es lo mismo que contrarios** (incompatibles y además $A\cup B=E$).
+KEY: **De Morgan:** $\overline{A\cup B}=\bar A\cap\bar B$.
+## 02_Asignación_de_probabilidad_y_axiomas.json :: Asignación de probabilidad y axiomas
+BIG: La probabilidad es un número entre 0 y 1 que cumple tres reglas fijas (los axiomas); Laplace es solo la forma más cómoda de calcularlo cuando hay simetría, no una definición alternativa.
+KEY: **Laplace:** $P(A)=\dfrac{\text{favorables}}{\text{posibles}}$, solo con equiprobabilidad; si no la hay, se usan frecuencias relativas.
+KEY: **Tres axiomas:** $P(E)=1$; $P(A)\geq 0$; si $A\cap B=\varnothing$, $P(A\cup B)=P(A)+P(B)$.
+KEY: **$P(\bar A)=1-P(A)$** y **$P(\varnothing)=0$** son consecuencias, no axiomas aparte.
+KEY: **$P(A\cup B)=P(A)+P(B)-P(A\cap B)$** es la fórmula general; con incompatibles se reduce a la suma.
+## 03_Probabilidad_condicionada_e_independencia.json :: Probabilidad condicionada e independencia
+BIG: Condicionar es recalcular una probabilidad dentro de un espacio muestral más pequeño; independencia es el caso particular en que ese recálculo no cambia nada.
+KEY: **$P(B/A)=P(A\cap B)/P(A)$**: probabilidad de $B$ dentro del espacio reducido donde $A$ ya ha ocurrido.
+KEY: **Regla del producto:** $P(A\cap B)=P(A)\cdot P(B/A)$ siempre; se reduce a $P(A)\cdot P(B)$ si son independientes.
+KEY: **Con reemplazamiento → independientes; sin reemplazamiento → dependientes** (el ejemplo más frecuente del tema).
+KEY: **Independiente no es lo mismo que incompatible.** Incompatibles con probabilidad positiva son siempre dependientes.
+## 04_Tablas_de_contingencia_y_diagramas_de_árbol.json :: Tablas de contingencia y diagramas de árbol
+BIG: Un árbol y una tabla de contingencia contienen la misma información sobre dos sucesos; el árbol la organiza por etapas y multiplica, la tabla la organiza en una cuadrícula y permite leer condicionadas por fila o por columna.
+KEY: **En un árbol:** las ramas de un nodo suman 1; un camino completo es el producto de sus ramas; las hojas, en conjunto, suman 1.
+KEY: **En una tabla:** las casillas interiores son probabilidades conjuntas; los marginales (fila o columna) son $P(A)$, $P(\bar A)$, $P(B)$, $P(\bar B)$.
+KEY: **Condicionar desde una tabla:** dividir la casilla entre el marginal de su fila (si se condiciona a esa fila) o de su columna (si se condiciona a esa columna).
+KEY: **De la misma tabla salen dos árboles distintos**, según qué suceso se ponga primero.
+## 05_El_teorema_de_la_probabilidad_total.json :: El teorema de la probabilidad total
+BIG: Cuando un suceso puede producirse por varias causas incompatibles, su probabilidad total es la suma de cada condicionada ponderada por lo frecuente que es su causa.
+KEY: **Sistema completo:** $A_1,\dots,A_n$ incompatibles dos a dos con unión $E$.
+KEY: **Teorema:** $P(B)=\sum_k P(B/A_k)\,P(A_k)$: suma de hojas de un árbol, formalizada.
+KEY: **Admite cualquier número de causas**, no solo dos.
+KEY: **No es una media simple**: cada condicionada se pesa por la probabilidad de su propia causa.
+## 06_El_teorema_de_Bayes.json :: El teorema de Bayes
+BIG: El teorema de Bayes invierte una condicionada conocida, P(efecto/causa), para obtener la condicionada que realmente interesa, P(causa/efecto), dividiendo entre la probabilidad total del efecto.
+KEY: **Fórmula:** $P(A_k/B)=\dfrac{P(B/A_k)P(A_k)}{\sum_i P(B/A_i)P(A_i)}$: numerador = hoja de arbol, denominador = $P(B)$.
+KEY: **No es una fórmula nueva:** reorganiza el teorema de la probabilidad total de la lección 5.
+KEY: **Paradoja del falso positivo:** con enfermedades raras, un test fiable puede dar P(enfermo/positivo) sorprendentemente baja.
+KEY: **$P(A/B)\neq P(B/A)$** en general: confundirlas es un error grave y frecuente (falacia del fiscal).
+## 07_Permutaciones_y_variaciones.json :: Permutaciones y variaciones
+BIG: Cuando el orden importa, hay que distinguir si entran todos los elementos disponibles (permutación) o solo algunos (variación), y si se permite repetir o no.
+KEY: **Permutacion** ($P_n=n!$): ordena TODOS los elementos disponibles.
+KEY: **Permutacion con repetición** ($PR_n^{a,b,\dots}=\dfrac{n!}{a!b!\cdots}$): hay elementos iguales entre si.
+KEY: **Variacion sin repetición** ($V_{m,n}=\dfrac{m!}{(m-n)!}$): elige y ordena solo $n$ de $m$ elementos, sin repetir.
+KEY: **Variacion con repetición** ($VR_{m,n}=m^n$): cada posición admite cualquiera de los $m$ elementos, pudiendo repetir.
+## 08_Combinaciones_y_números_combinatorios.json :: Combinaciones y números combinatorios
+BIG: Cuando el orden NO importa, el número de grupos posibles es una combinación: la variación correspondiente dividida entre las ordenaciones internas de cada grupo.
+KEY: **Combinación:** $\binom{m}{n}=\dfrac{m!}{n!\,(m-n)!}$, el orden NO importa.
+KEY: **Valores extremos:** $\binom{m}{0}=\binom{m}{m}=1$.
+KEY: **Simetría:** $\binom{m}{n}=\binom{m}{m-n}$.
+KEY: **Regla de Pascal:** $\binom{m}{n}=\binom{m-1}{n-1}+\binom{m-1}{n}$, origen del triangulo de Pascal.
+## 09_El_binomio_de_Newton.json :: El binomio de Newton
+BIG: El binomio de Newton da una fórmula directa para desarrollar $(a+b)^n$, con los números combinatorios de la lección 8 como coeficientes.
+KEY: **Fórmula:** $(a+b)^n=\sum_{k=0}^n\binom{n}{k}a^{n-k}b^k$, con $n+1$ terminos.
+KEY: **Coeficientes:** la fila $n$ del triangulo de Pascal.
+KEY: **Termino general:** $T_{k+1}=\binom{n}{k}a^{n-k}b^k$, para hallar un termino sin desarrollar todo.
+KEY: **Signos alternos en $(a-b)^n$:** factor $(-1)^k$ en cada termino.
+## 10_Combinatoria_aplicada_al_cálculo_de_probabilidades.json :: Combinatoria aplicada al cálculo de probabilidades
+BIG: La regla de Laplace, combinada con combinaciones, permite calcular probabilidades en espacios demasiado grandes para enumerar a mano.
+KEY: **Regla de oro:** numerador y denominador deben contarse con el mismo criterio (normalmente sin orden).
+KEY: **'Exactamente k de un tipo':** se multiplican las combinaciones de cada subgrupo.
+KEY: **'Al menos uno':** $P(\text{al menos uno})=1-P(\text{ninguno})$, más simple que sumar varios casos.
+KEY: **'Al menos k' con k>1:** el complementario es 'menos de k', no solo 'ninguno'.
+# selectividad_matematicas__mat_rectas_planos
+## 01_Las_cuatro_ecuaciones_de_la_recta_en_el_espacio.json :: Las cuatro ecuaciones de la recta en el espacio
+BIG: Una recta en el espacio se fija con un punto y una dirección, y esa misma idea se escribe de cuatro formas distintas —vectorial, paramétrica, continua e implícita, cada una útil para una tarea distinta; ninguna de ellas, ni el punto, ni el vector director, son únicos.
+KEY: **Vectorial/paramétrica:** $\overrightarrow{OP}=\overrightarrow{OP_0}+t\vec v$; existen siempre.
+KEY: **Continua:** $\dfrac{x-x_0}{v_1}=\dfrac{y-y_0}{v_2}=\dfrac{z-z_0}{v_3}$; solo si las tres componentes de $\vec v$ son no nulas.
+KEY: **Implícitas:** intersección de dos planos; se recupera $\vec v=\vec n_1\times\vec n_2$ a partir de sus normales.
+KEY: **Recta por dos puntos:** se usa $\vec{AB}$ como director; la alineación de tres puntos se comprueba con $\vec{AB}\times\vec{AC}=\vec 0$.
+KEY: **Nada de esto es único**: ni el punto, ni el vector director (salvo proporcionalidad), ni las ecuaciones implícitas (salvo combinación lineal).
+## 02_Las_ecuaciones_del_plano.json :: Las ecuaciones del plano
+BIG: Un plano se fija con un punto y dos direcciones no proporcionales; de ahí nace su ecuación general, de cuyos coeficientes se lee directamente el vector normal, el atajo más rápido para escribir la ecuación de un plano.
+KEY: **Vectorial/paramétrica:** necesitan DOS parámetros $\lambda,\mu$ (dos direcciones), a diferencia de la recta.
+KEY: **General:** $Ax+By+Cz+D=0$, obtenida igualando a 0 el determinante $|\overrightarrow{P_0P},\vec u,\vec v|$.
+KEY: **Vector normal:** $\vec n=(A,B,C)$, perpendicular al plano; permite la ecuación directa $A(x-x_0)+B(y-y_0)+C(z-z_0)=0$.
+KEY: **Segmentaria:** $x/a+y/b+z/c=1$, con $a,b,c$ los cortes con los ejes; no existe si el plano pasa por el origen ($D=0$) ni si es paralelo a algún eje ($A$, $B$ o $C$ igual a 0).
+## 03_El_plano_por_tres_puntos_y_la_coplanaridad.json :: El plano por tres puntos y la coplanaridad
+BIG: Tres puntos no alineados determinan un único plano reduciendo el problema a punto+2 vectores; cuatro puntos son coplanarios exactamente cuando el producto mixto de tres vectores con origen común se anula, el mismo patrón de 'determinante que se anula' que ya servía para la alineación de tres puntos.
+KEY: **Plano por 3 puntos:** se usa $A$ como punto y $\vec{AB},\vec{AC}$ como directores; exige que no estén alineados.
+KEY: **Alineación de 3 puntos:** $\vec{AB}\times\vec{AC}=\vec0$; si se cumple, no hay un único plano.
+KEY: **Coplanaridad de 4 puntos:** $[\vec{AB},\vec{AC},\vec{AD}]=0$, equivalente al determinante $4\times4$ con columna de unos.
+KEY: **El signo del producto mixto puede cambiar** según el orden de los vectores; que sea 0 o no, nunca.
+## 04_Posiciones_relativas_de_dos_planos.json :: Posiciones relativas de dos planos
+BIG: Dos planos solo pueden ser coincidentes, paralelos o secantes, y la clasificación se reduce siempre a comparar sus vectores normales: si son proporcionales, falta comprobar el término independiente; si no lo son, son secantes y su recta común tiene por director $\vec n_1\times\vec n_2$.
+KEY: **Normales no proporcionales** → secantes (se cortan en una recta).
+KEY: **Normales proporcionales, $D$ con la misma razón** → coincidentes.
+KEY: **Normales proporcionales, $D$ con razón distinta** → paralelos (y distintos).
+KEY: **Director de la recta intersección** (si secantes): $\vec n_1\times\vec n_2$.
+KEY: Esta clasificación NO distingue ángulos: 'secantes' incluye tanto planos casi paralelos como perpendiculares.
+## 05_Posiciones_relativas_de_recta_y_plano.json :: Posiciones relativas de recta y plano
+BIG: Una recta y un plano son secantes (en un único punto), paralelos, o la recta está contenida en el plano; el método de sustitución —llevar las paramétricas de la recta a la ecuación del plano— decide los tres casos de un vistazo según la ecuación lineal en $t$ que resulte.
+KEY: **Sustitución:** coeficiente de $t$ ≠0 → secantes (resolver $t$ da el punto); =0, término≠0 → paralelas; =0, término=0 → contenida.
+KEY: **Atajo vectorial:** $\vec v\cdot\vec n=0$ → paralelismo amplio; luego hay que comprobar un punto para precisar.
+KEY: **Recta-plano secantes dan un punto**, nunca una recta (eso es propio de dos planos).
+KEY: **Rango:** $(2,2)$→contenida; $(2,3)$→paralela; $(3,3)$→secante.
+## 06_Posiciones_relativas_de_dos_rectas.json :: Posiciones relativas de dos rectas
+BIG: Dos rectas en el espacio pueden ser coincidentes, paralelas y distintas, secantes (un punto) o cruzarse (ningún punto, pese a tener direcciones distintas); el rango de los directores decide entre los dos primeros casos o los dos últimos, y añadir el vector $\overrightarrow{P_1P_2}$ decide cuál de los dos exactamente.
+KEY: **Tabla de rangos:** $(1,1)$→coincidentes; $(1,2)$→paralelas; $(2,2)$→secantes; $(2,3)$→se cruzan.
+KEY: **'Se cruzan'** es un caso exclusivo del espacio: direcciones distintas que no llegan a tocarse.
+KEY: **Punto de corte:** sistema de 3 ecuaciones con 2 incógnitas ($t,s$); resolver con 2 y COMPROBAR la 3.ª siempre.
+KEY: **Recta en implícitas:** hallar antes su director con el producto vectorial de los normales de los dos planos.
+## 07_Haces_de_planos_y_rectas_definidas_por_intersección.json :: Haces de planos y rectas definidas por intersección
+BIG: Un haz de planos secantes a una recta $r$ (dada por dos planos $\pi_1,\pi_2$) es el conjunto $\pi_1+\lambda\pi_2=0$ de todos los planos que la contienen —salvo $\pi_2$ mismo, que queda fuera de la fórmula y hay que comprobar aparte; un haz de planos perpendiculares a $r$ usa en cambio su vector director como normal común, $v_1x+v_2y+v_3z+D=0$.
+KEY: **Haz secante:** $\pi_1+\lambda\pi_2=0$; representa todos los planos que contienen a $r$, EXCEPTO $\pi_2=0$ mismo.
+KEY: **Caso especial:** si la condición pedida no da solución en $\lambda$, comprobar si $\pi_2=0$ la cumple directamente.
+KEY: **Haz perpendicular:** $v_1x+v_2y+v_3z+D=0$, con $\vec v$ el director de $r$ (nunca el normal de los planos que la definen).
+KEY: **Simplificar una recta:** sustituir una de sus dos ecuaciones por una combinación lineal elegida, manteniendo la otra.
+## 08_Problemas_de_incidencia_estrategia_de_resolución.json :: Problemas de incidencia: estrategia de resolución
+BIG: Tres planos admiten ocho configuraciones geométricas distintas; el rango de $M$ y $M^*$ las agrupa en cinco combinaciones, pero tres de ellas esconden, cada una, dos configuraciones que solo se distinguen comprobando si alguna fila es proporcional a otra. Toda la unidad se resume en una estrategia de tres pasos: identificar cada objeto, convertir a forma común, y elegir el método de la lección que corresponda.
+KEY: **8 configuraciones**, agrupadas por rango: $(1,1)$; $(1,2)$ ×2; $(2,2)$ ×2 (una de ellas, recta común); $(2,3)$ ×2 (una de ellas, prisma sin bases); $(3,3)$.
+KEY: **Recta común** $(\mathrm{rg}=2,2$, sin proporcionalidad$)$ = pertenecer al mismo haz de planos secantes (lección 7).
+KEY: **Prisma sin bases**: se cortan dos a dos, pero nunca los tres a la vez.
+KEY: **Dos planos paralelos y distintos** ya bastan para declarar el sistema incompatible, sea cual sea el tercero.
+KEY: **Estrategia general:** identificar objeto → convertir a forma común → elegir método (lecciones 4 a 7).
+# selectividad_matematicas__mat_representacion
+## 01_Qué_información_da_una_función_y_qué_dan_sus_derivadas.json :: Qué información da una función y qué dan sus derivadas
+BIG: Representar una función es leer tres fuentes de información —la propia función, el signo de $f'$ y el signo de $f''$— y combinarlas; anular una derivada es solo el primer paso, nunca la conclusión.
+KEY: La función $f$ da dominio, cortes, simetrías y asíntotas.
+KEY: El signo de $f'$ da la monotonía; sus ceros son los puntos críticos, candidatos a extremo.
+KEY: El signo de $f''$ da la curvatura; sus ceros son los candidatos a punto de inflexión.
+KEY: Anular $f'$ (o $f''$) es necesario pero no suficiente: hace falta comprobar el cambio de signo.
+## 02_Dominio_recorrido_y_puntos_de_corte.json :: Dominio, recorrido y puntos de corte
+BIG: El dominio se calcula mirando qué operaciones restringen la expresión de $f$ (dividir, raíz par, logaritmo) y combinando todas sus condiciones; el recorrido y los cortes con los ejes se obtienen con un razonamiento directo sobre esa misma expresión.
+KEY: Racional: se excluyen las raíces del denominador.
+KEY: Raíz de índice par: el radicando debe ser $\ge0$.
+KEY: Logaritmo: el argumento debe ser $>0$ (estricto).
+KEY: Corte OY: se sustituye $x=0$ (como mucho uno). Corte OX: se resuelve $f(x)=0$ (puede haber varios).
+## 03_Asíntotas_verticales_horizontales_y_oblicuas.json :: Asíntotas verticales, horizontales y oblicuas
+BIG: Las asíntotas describen cómo se comporta una función cerca de un punto conflictivo o en el infinito, aproximándose a una recta fija; las tres clases (vertical, horizontal, oblicua) se buscan en ese orden, y horizontal y oblicua nunca coexisten en el mismo sentido.
+KEY: Vertical: algún límite lateral en $x_0$ es $\pm\infty$.
+KEY: Horizontal: el límite en el infinito es un número finito $y_0$.
+KEY: Oblicua: $m=\lim f(x)/x$ finito y $\ne0$; $n=\lim[f(x)-mx]$.
+KEY: Horizontal y oblicua son excluyentes en el mismo sentido del infinito.
+## 04_Simetrías_y_periodicidad.json :: Simetrías y periodicidad
+BIG: Comprobar si una función es par, impar o periódica no aporta información nueva sobre su forma, pero reduce a la mitad (o a un único período) el trabajo necesario para representarla.
+KEY: Par: $f(-x)=f(x)$, simetría respecto a OY.
+KEY: Impar: $f(-x)=-f(x)$, simetría respecto al origen.
+KEY: En un polinomio, basta con mirar la paridad de cada exponente.
+KEY: Periódica de período $T$: $f(x+T)=f(x)$ para todo $x$; en argumento lineal, $T=2\pi/|k|$ (seno/coseno) o $\pi/|k|$ (tangente/cotangente).
+## 05_El_guion_completo_para_representar_una_función.json :: El guion completo para representar una función
+BIG: Representar una función es aplicar, en orden, las preguntas de las lecciones anteriores (dominio, cortes, simetría, asíntotas, monotonía, curvatura) y aprovechar cada respuesta para simplificar las siguientes; el estudio de regiones cierra el proceso como comprobación.
+KEY: El guion tiene ocho pasos, pero no es una receta rígida: la simetría o la periodicidad detectadas pronto ahorran trabajo en los pasos siguientes.
+KEY: Un factor de exponente impar en la factorización cambia el signo de $f$ en su raíz (la gráfica cruza OX); uno de exponente par no lo cambia (la gráfica solo toca OX).
+KEY: El estudio de regiones es una comprobación, no un paso independiente: su resultado debe cuadrar con lo ya obtenido.
+## 06_Representar_funciones_polinómicas.json :: Representar funciones polinómicas
+BIG: Toda función polinómica comparte dominio $\mathbb R$, continuidad total y ausencia de asíntotas; lo único que distingue a cada una es su forma concreta, que el término de mayor grado resume en el infinito y que el guion completo detalla cerca del origen.
+KEY: Dominio siempre $\mathbb R$; si el grado es $\ge2$, sin asíntotas de ningún tipo y con ramas parabólicas.
+KEY: El comportamiento en $\pm\infty$ lo decide solo el término de mayor grado.
+KEY: Grado par: mismas ramas infinitas; grado impar: ramas opuestas.
+KEY: En una raíz de multiplicidad par la gráfica toca OX sin cruzarlo; de multiplicidad impar, lo cruza (con tangente horizontal si la multiplicidad es $\ge3$).
+## 07_Representar_funciones_racionales.json :: Representar funciones racionales
+BIG: Representar una función racional es aplicar el guion completo aprovechando dos atajos propios de esta familia: comparar grados para anticipar el tipo de asíntota, y combinar la paridad de numerador y denominador para la simetría.
+KEY: Grado numerador < denominador: horizontal $y=0$. Igual grado: horizontal $y=k$. Numerador un grado más: oblicua. Dos o más: rama parabólica.
+KEY: Paridad igual en numerador y denominador: función par. Paridad distinta: función impar.
+KEY: Un extremo relativo y una asíntota oblicua pueden coexistir en la misma función.
+## 08_Representar_funciones_con_radicales.json :: Representar funciones con radicales
+BIG: Una función con radical hereda gran parte de su comportamiento de la función que queda bajo la raíz; el trabajo consiste en identificar qué se hereda directamente (monotonía, cortes y la paridad) y qué exige un paso extra (el dominio con índice par, las asíntotas oblicuas con racionalización).
+KEY: Índice par: dominio restringido a $g(x)\ge0$. Índice impar: mismo dominio que $g$.
+KEY: Con índice par, $f=\sqrt g$ nunca es negativa, y su monotonía coincide con la de $g$.
+KEY: Las asíntotas oblicuas con radical cuadrático se calculan racionalizando con el conjugado.
+## 09_Representar_exponenciales_y_logarítmicas.json :: Representar exponenciales y logarítmicas
+BIG: Exponenciales y logaritmos se representan con el mismo guion de siempre (dominio, cortes, simetría, asíntotas, monotonía, curvatura), cambiando únicamente el cálculo de derivadas (regla de la cadena con $e^x$ o $\ln x$) y prestando atención a sus asíntotas características: horizontales en la exponencial, verticales en el logaritmo.
+KEY: El logaritmo exige argumento estrictamente positivo ($>0$), nunca $\ge0$.
+KEY: $a^x$ es monótona por sí sola; para cualquier otra expresión con exponenciales no se puede suponer la monotonía: hay que estudiar $f'$ como siempre.
+KEY: Las asíntotas verticales del logaritmo aparecen donde el argumento tiende a $0^+$; las horizontales de la exponencial, donde el exponente tiende a $-\infty$.
+## 10_Representar_funciones_trigonométricas.json :: Representar funciones trigonométricas
+BIG: Una función trigonométrica periódica se representa aplicando el guion completo de siempre, pero restringido a un único periodo (para $\operatorname{sen}(kx)$, $\cos(kx)$: $T=2\pi/|k|$; para $\operatorname{tg}(kx)$: $T=\pi/|k|$); el resto de la gráfica es ese mismo patrón repetido sin ningún cálculo adicional.
+KEY: El periodo de $a\,\operatorname{sen}(kx)$ o $a\cos(kx)$ es $T=2\pi/|k|$; la amplitud $a$ no influye en él.
+KEY: Basta con estudiar un intervalo de longitud $T$: fuera de él, el comportamiento se repite exactamente igual.
+KEY: Monotonía y curvatura se deciden con el mismo criterio de siempre ($f'$ y $f''$), aplicado dentro de ese único periodo.
+## 11_Funciones_definidas_a_trozos_y_con_valor_absoluto.json :: Funciones definidas a trozos y con valor absoluto
+BIG: Una función a trozos (y el valor absoluto, que siempre se puede reescribir como un caso particular de función a trozos) se representa estudiando cada rama por separado con el guion habitual, y comprobando aparte, en cada punto de cambio, la continuidad (límites laterales) y, si se pide, la derivabilidad (derivadas laterales): derivable implica continua, pero no al revés, así que la derivabilidad solo se comprueba una vez confirmada la continuidad.
+KEY: Continuidad en un punto de cambio: los dos límites laterales deben coincidir entre sí y con el valor de la función.
+KEY: Derivabilidad en un punto de cambio: además, las dos derivadas laterales deben coincidir; si no, hay un pico (aunque sea continua).
+KEY: En los ceros $a$ de $g$ con $g'(a)\ne0$ hay pico; si $g'(a)=0$ ($g$ toca el eje o lo cruza con tangente horizontal), $|g|$ es derivable en $a$ y no hay pico.
+# selectividad_matematicas__mat_sistemas
+## 01_Sistemas_lineales_expresión_matricial_y_clasificación.json :: Sistemas lineales: expresión matricial y clasificación
+BIG: Un sistema de ecuaciones lineales se puede escribir como un único producto de matrices, $AX=B$, y se clasifica en exactamente tres tipos según tenga una, infinitas o ninguna solución.
+KEY: Un sistema de $m$ ecuaciones con $n$ incógnitas tiene coeficientes $a_{ij}$ y términos independientes $b_i$; una solución cumple **todas** las ecuaciones a la vez.
+KEY: **SCD** (una solución), **SCI** (infinitas) o **SI** (ninguna): no hay más opciones ni casos intermedios.
+KEY: La forma matricial es $A\cdot X=B$, con $A$ ($m\times n$) de coeficientes, $X$ ($n\times 1$) de incógnitas y $B$ ($m\times 1$) de términos independientes.
+KEY: La matriz ampliada $A^{*}=(A\mid B)$ reúne todo el sistema en una sola tabla, de tamaño $m\times(n+1)$.
+KEY: Contar ecuaciones e incógnitas orienta pero no decide la clasificación: hay que comprobar si alguna ecuación es redundante o contradictoria.
+## 02_Sistemas_homogéneos_y_sistemas_equivalentes.json :: Sistemas homogéneos y sistemas equivalentes
+BIG: Un sistema homogéneo siempre tiene la solución trivial y nunca es incompatible; dos sistemas son equivalentes si comparten soluciones, y las transformaciones que lo garantizan son la base del método de Gauss.
+KEY: **Sistema homogéneo:** todos los términos independientes son $0$; la solución trivial $(0,\dots,0)$ se cumple siempre.
+KEY: Un sistema homogéneo solo puede ser **SCD** (solo la trivial) o **SCI** (la trivial y otras, infinitas).
+KEY: Un **SCI** se describe con una o varias incógnitas como **parámetro libre**, despejando las demás en función de ellas.
+KEY: **Sistemas equivalentes:** mismas soluciones, aunque tengan distinto número de ecuaciones.
+KEY: Las transformaciones que garantizan equivalencia son: reordenar, multiplicar por $k\neq 0$, $E_i\to E_i+kE_j$, y suprimir una ecuación combinación de las demás.
+## 03_El_método_de_Gauss.json :: El método de Gauss
+BIG: El método de Gauss transforma un sistema en otro equivalente y escalonado —cada ecuación con una incógnita menos que la anterior— a partir del cual se resuelve de abajo hacia arriba.
+KEY: Un sistema **escalonado** tiene en cada fila el pivote más a la derecha que en la anterior (al menos una incógnita menos); las filas nulas, si las hay, quedan al final.
+KEY: El método anula, columna a columna, los coeficientes por debajo de cada pivote, usando $F_i\to F_i+kF_j$.
+KEY: Al terminar, se resuelve por **sustitución regresiva**: de la última ecuación hacia la primera.
+KEY: La última fila (o filas, si no es cuadrado) decide la clasificación: pivote no nulo → SCD; $0=0$ → redundante (posible SCI); $0=k,\,k\neq0$ → contradicción (SI).
+KEY: El método se aplica igual sea cual sea el número de ecuaciones e incógnitas: solo cambia la lectura final.
+## 04_Resolver_un_sistema_con_la_matriz_inversa.json :: Resolver un sistema con la matriz inversa
+BIG: Si $A$ es invertible, un sistema $AX=B$ se resuelve directamente como $X=A^{-1}B$, el equivalente matricial de despejar $x=a^{-1}b$.
+KEY: Forma matricial: $AX=B$, con $A$ cuadrada, $X$ columna de incógnitas, $B$ columna de términos independientes.
+KEY: Si $A$ es invertible: $X=A^{-1}B$, un producto de matrices, nunca una división entrada a entrada.
+KEY: Si $A$ **no** es invertible, el método no se puede aplicar; eso no dice nada, por sí solo, sobre si el sistema tiene o no solución.
+KEY: El método compensa especialmente cuando hay que resolver el mismo $A$ para varios $B$ distintos: se invierte una sola vez.
+KEY: Comprobar siempre la solución en el sistema original detecta errores de signo en el producto final.
+## 05_El_teorema_de_Rouché-Frobenius.json :: El teorema de Rouché-Frobenius
+BIG: El teorema de Rouché-Frobenius clasifica cualquier sistema (SCD, SCI o SI) comparando el rango de la matriz de coeficientes con el de la matriz ampliada, sin necesidad de resolverlo.
+KEY: $\mathrm{rg}(A)\neq\mathrm{rg}(A\mid B)$: incompatible (SI).
+KEY: $\mathrm{rg}(A)=\mathrm{rg}(A\mid B)=n$: compatible determinado (SCD).
+KEY: $\mathrm{rg}(A)=\mathrm{rg}(A\mid B)<n$: compatible indeterminado (SCI), con $n-r$ parámetros libres.
+KEY: $\mathrm{rg}(A\mid B)\geq\mathrm{rg}(A)$ siempre; por eso no existe el caso $\mathrm{rg}(A)>\mathrm{rg}(A\mid B)$.
+KEY: Un sistema homogéneo es siempre compatible; es determinado si $\mathrm{rg}(A)=n$, indeterminado si $\mathrm{rg}(A)<n$.
+## 06_Discusión_de_sistemas_con_un_parámetro.json :: Discusión de sistemas con un parámetro
+BIG: Discutir un sistema con un parámetro es clasificarlo, con el teorema de Rouché-Frobenius, para cada valor posible de ese parámetro: primero el caso genérico, después cada valor especial (donde se anula un pivote).
+KEY: Un sistema con parámetro es una familia de sistemas, no un único sistema con una incógnita más.
+KEY: Se escalona dejando el parámetro como letra; los valores especiales son los que anulan algún pivote.
+KEY: Conviene factorizar la expresión que se anula para hallar sus raíces directamente.
+KEY: En cada valor especial, el término independiente de la fila decide si es SCI ($0=0$) o SI ($0=k\neq0$).
+KEY: El tipo de sistema no cambia de forma gradual: es constante en el caso genérico y solo cambia en los valores especiales exactos.
+KEY: Resolver para un valor concreto del parámetro es un paso aparte, posterior a la discusión completa.
+## 07_La_regla_de_Cramer.json :: La regla de Cramer
+BIG: En un sistema de Cramer (cuadrado, $\det(A)\neq0$), cada incógnita se obtiene con una fórmula propia, $x_i=\det(A_i)/\det(A)$, sustituyendo la columna $i$ de $A$ por los términos independientes.
+KEY: Sistema de Cramer: cuadrado y con $\det(A)\neq0$; equivale a ser compatible determinado.
+KEY: $x_i=\dfrac{\det(A_i)}{\det(A)}$, donde $A_i$ sustituye la columna $i$ (solo esa) por $B$.
+KEY: Si $\det(A)=0$, el método no se aplica; eso no decide, por sí solo, si el sistema tiene o no solución.
+KEY: Cramer exige $n+1$ determinantes: compensa en sistemas pequeños o cuando solo interesa una incógnita, no en general frente a Gauss.
+KEY: Si $\det(A)=0$ pero algún $\det(A_i)\neq0$, el sistema es incompatible.
+# selectividad_matematicas__mat_vectores
+## 01_Vectores_en_el_espacio_operaciones_y_bases.json :: Vectores en el espacio: operaciones y bases
+BIG: Un vector del espacio queda determinado por tres componentes (la diferencia de coordenadas entre su punto final e inicial); se opera con él componente a componente, y tres vectores forman una base cuando son linealmente independientes, lo que permite expresar cualquier otro vector de forma única como combinación lineal de ellos.
+KEY: $\vec{AB}=B-A$: coordenadas del punto final menos las del inicial.
+KEY: $|v|=\sqrt{v_1^2+v_2^2+v_3^2}$: se suman los cuadrados de las componentes antes de extraer la raíz.
+KEY: Suma, resta y producto por un escalar se hacen componente a componente.
+KEY: Una combinación lineal $v=\lambda_1u_1+\cdots+\lambda_ku_k$ se halla resolviendo un sistema de ecuaciones.
+KEY: Tres vectores forman una base del espacio si y solo si son linealmente independientes (determinante distinto de cero); en ese caso, cualquier vector se expresa de forma única en esa base.
+KEY: Un vector es "libre": queda determinado por sus componentes, no por el punto en que se represente.
+## 02_Dependencia_e_independencia_lineal.json :: Dependencia e independencia lineal
+BIG: Un conjunto de vectores es linealmente dependiente cuando alguno de ellos puede escribirse como combinación lineal de los demás; para tres vectores del espacio, esto se decide de forma rápida con el determinante de la matriz de sus componentes, y nunca puede haber más de tres vectores independientes en el espacio tridimensional.
+KEY: Un conjunto de vectores es dependiente si existe una combinación lineal no trivial de ellos que da el vector cero.
+KEY: Tres vectores del espacio son independientes si y solo si el determinante de la matriz formada por sus componentes es distinto de cero.
+KEY: Dos vectores son paralelos (dependientes) si y solo si sus componentes son proporcionales.
+KEY: En el espacio (dimensión 3), cuatro o más vectores son siempre linealmente dependientes.
+KEY: Cuando los vectores dependen de un parámetro, su dependencia puede cambiar según el valor de ese parámetro: se estudia factorizando el determinante y analizando sus raíces, igual que en la discusión de sistemas.
+## 03_El_producto_escalar_ángulos_y_cosenos_directores.json :: El producto escalar: ángulos y cosenos directores
+BIG: El producto escalar $u\cdot v=u_1v_1+u_2v_2+u_3v_3$ es un número que codifica el ángulo entre dos vectores, y permite decidir de forma inmediata si son perpendiculares.
+KEY: $u\cdot v$ es siempre un número, nunca otro vector.
+KEY: $\cos\theta=\dfrac{u\cdot v}{|u|\,|v|}$ da el ángulo entre $u$ y $v$.
+KEY: $u\cdot v=0$ (con ambos no nulos) equivale a perpendicularidad.
+KEY: El signo de $u\cdot v$ indica el tipo de ángulo, pero no dice nada sobre paralelismo.
+KEY: $\operatorname{proy}_u(v)=\dfrac{u\cdot v}{|u|}$ mide cuánto de $v$ se extiende en la dirección de $u$.
+KEY: Los cosenos directores de un vector cumplen $\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1$.
+## 04_El_producto_vectorial_y_el_área_de_un_paralelogramo.json :: El producto vectorial y el área de un paralelogramo
+BIG: El producto vectorial $u\times v$ es un vector perpendicular a $u$ y a $v$, cuyo módulo es el área del paralelogramo que ambos determinan.
+KEY: $u\times v$ es siempre otro vector, nunca un número.
+KEY: $u\times v$ es perpendicular tanto a $u$ como a $v$.
+KEY: $v\times u=-(u\times v)$: no es conmutativo.
+KEY: $|u\times v|=|u||v|\operatorname{sen}\theta$: coincide con el área del paralelogramo de lados $u,v$.
+KEY: Área del triángulo $ABC=\dfrac{|\vec{AB}\times\vec{AC}|}{2}$.
+KEY: El área NO es, en general, $|u|\cdot|v|$: solo cuando los lados son perpendiculares.
+## 05_El_producto_mixto_y_el_volumen_de_un_paralelepípedo.json :: El producto mixto y el volumen de un paralelepípedo
+BIG: El producto mixto $[u,v,w]=u\cdot(v\times w)$, calculable directamente como un determinante $3\times3$, da el volumen (con signo) del paralelepípedo de aristas $u,v,w$, y decide la coplanariedad de cuatro puntos.
+KEY: $[u,v,w]$ es siempre un único número, calculable directamente como $\det\begin{pmatrix}u_1&u_2&u_3\\v_1&v_2&v_3\\w_1&w_2&w_3\end{pmatrix}$.
+KEY: Permutación cíclica: mismo valor. Trasposición de dos vectores: cambia el signo.
+KEY: Volumen del paralelepípedo de aristas $u,v,w$: $|[u,v,w]|$.
+KEY: Volumen del tetraedro $ABCD$: $\dfrac{|[\vec{AB},\vec{AC},\vec{AD}]|}{6}$.
+KEY: Cuatro puntos son coplanarios si y solo si $[\vec{AB},\vec{AC},\vec{AD}]=0$.
+KEY: El producto mixto es, numéricamente, el mismo determinante que el criterio de independencia lineal de la lección 2.
+## 06_Coordenadas_sistemas_de_referencia_y_puntos_del_espacio.json :: Coordenadas, sistemas de referencia y puntos del espacio
+BIG: Los puntos del espacio se manipulan como vectores de posición: el punto medio, el baricentro, el cuarto vértice de un paralelogramo y el punto simétrico son todos combinaciones sencillas (sumas, restas, promedios) de esos vectores de posición.
+KEY: Punto medio de $A,B$: $M=\dfrac{A+B}{2}$ (una suma, no una resta).
+KEY: Baricentro de $A,B,C$: $G=\dfrac{A+B+C}{3}$.
+KEY: Alineación de $A,B,C$: $\vec{AB}$ y $\vec{AC}$ proporcionales (rango 1).
+KEY: Cuarto vértice de un paralelogramo $ABCD$: $D=C-\vec{AB}$.
+KEY: Punto simétrico de $A$ respecto de $M$: $A'=2M-A$.
+## 07_Elegir_la_herramienta_cuándo_escalar_vectorial_o_mixto.json :: Elegir la herramienta: cuándo escalar, vectorial o mixto
+BIG: Ante un problema de vectores, el primer paso no es calcular, sino identificar qué pregunta se plantea: ángulo o perpendicularidad (producto escalar), área o un vector perpendicular a otros dos (producto vectorial), o volumen y coplanariedad (producto mixto).
+KEY: Producto escalar: ángulo, perpendicularidad entre dos vectores dados, proyección. Resultado: un número.
+KEY: Producto vectorial: área, vector perpendicular a otros dos. Resultado: un vector.
+KEY: Producto mixto: volumen, coplanariedad de cuatro puntos. Resultado: un número.
+KEY: En problemas combinados, calcular los vectores de partida una sola vez y reutilizarlos en cada subpregunta.
+KEY: Si los vectores son mutuamente perpendiculares, $|[u,v,w]|=|u||v||w|$, sin necesidad de determinante.

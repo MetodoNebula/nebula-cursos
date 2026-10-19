@@ -1,0 +1,4038 @@
+{
+  "MF01_Álgebra.json": {
+    "id": "MF01",
+    "title": "Álgebra: despejar, factorizar y ecuaciones",
+    "subject": "Matemáticas",
+    "course_label": "Selectividad Matemáticas II",
+    "unit_id": "fundamentos",
+    "estimated_length": "0,5 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Remediación transversal (prerrequisito)",
+      "codes": [],
+      "status": "FOUNDATIONS",
+      "track": null
+    },
+    "objectives": [
+      {
+        "id": "LO-MF01-1",
+        "statement": "Despejar una incógnita aplicando la misma operación a los dos lados.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-MF01-2",
+        "statement": "Resolver una ecuación de segundo grado con la fórmula general y leer su discriminante.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-MF01-00",
+        "question": "¿Resolverías un ejercicio sencillo de álgebra: despejar, factorizar y ecuaciones sin mirar la teoría?",
+        "expected_answer": "Si haces los dos primeros ejercicios sin ayuda, salta a la práctica.",
+        "common_wrong_answers": [],
+        "interpretation": "Remediación just-in-time: entra aquí solo si un diagnóstico lo pide."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-MF01-0",
+        "type": "intuition",
+        "title": "Una ecuación es una balanza",
+        "scope": "CORE",
+        "body": "Una igualdad afirma que los dos lados pesan lo mismo. Mientras hagas **la misma operación en los dos lados**, el equilibrio se mantiene. Despejar una incógnita es solo usar esa libertad para dejarla sola, deshaciendo las operaciones que la rodean **en orden inverso** (lo de fuera primero), cada una con su inversa: sumar↔restar, multiplicar↔dividir, cuadrado↔raíz.",
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2",
+        "assets": [
+          {
+            "id": "AS-MF01-1",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 245\" width=\"380\" height=\"245\" role=\"img\" id=\"svg-bal\"><rect x=\"0\" y=\"0\" width=\"380\" height=\"245\" fill=\"none\"/><line x1=\"190\" y1=\"66\" x2=\"190\" y2=\"178\" stroke=\"#24312c\" stroke-width=\"3\"/><polygon points=\"166,205 214,205 190,178\" fill=\"#24312c\"/><line x1=\"70\" y1=\"66\" x2=\"310\" y2=\"66\" stroke=\"#24312c\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"70\" y1=\"66\" x2=\"70\" y2=\"100\" stroke=\"#24312c\" stroke-width=\"1.4\"/><path d=\"M 36 100 Q 70 134 104 100 Z\" fill=\"#d9efe8\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"70.0\" y=\"94.0\" fill=\"#20302a\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">x + 3</text><line x1=\"310\" y1=\"66\" x2=\"310\" y2=\"100\" stroke=\"#24312c\" stroke-width=\"1.4\"/><path d=\"M 276 100 Q 310 134 344 100 Z\" fill=\"#fbe8cf\" stroke=\"#c17a17\" stroke-width=\"2\"/><text x=\"310.0\" y=\"94.0\" fill=\"#20302a\" font-size=\"15\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">8</text><text x=\"190.0\" y=\"54.0\" fill=\"#20302a\" font-size=\"22\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">=</text><text x=\"190.0\" y=\"230.0\" fill=\"#5c6b67\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">lo que hagas a un lado, hazlo al otro</text></svg>",
+            "caption": "Para dejar sola la incógnita hay que quitar lo que la acompaña **en los dos lados a la vez**: eso es despejar, no 'pasar al otro lado' por arte de magia.",
+            "purpose": "Fijar que todo despeje es la misma operación en ambos lados."
+          }
+        ]
+      },
+      {
+        "id": "TH-MF01-1",
+        "type": "formalisation",
+        "title": "La ecuación de segundo grado",
+        "scope": "CORE",
+        "body": "Una ecuación $ax^2+bx+c=0$ (con $a\\neq0$) se resuelve con la **fórmula general**:\n\n$$x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$$\n\nEl radicando $\\Delta=b^2-4ac$ es el **discriminante** y decide cuántas soluciones reales hay: si $\\Delta>0$, dos distintas; si $\\Delta=0$, una (doble); si $\\Delta<0$, ninguna real. Mirar $\\Delta$ antes de calcular evita sorpresas.",
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF01-2",
+        "type": "worked_rule",
+        "title": "Factor común y productos notables",
+        "scope": "CORE",
+        "body": "Antes de aplicar fórmulas, conviene **factorizar**: sacar factor común ($ax+bx=(a+b)x$) o reconocer productos notables ($a^2-b^2=(a+b)(a-b)$, $(a\\pm b)^2=a^2\\pm2ab+b^2$). Un producto es cero cuando lo es alguno de sus factores, así que factorizar convierte una ecuación en varias triviales. Por ejemplo, $x^2-3x=0\\Rightarrow x(x-3)=0\\Rightarrow x=0$ o $x=3$, sin fórmula general.",
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF01-3",
+        "type": "connection",
+        "title": "Ampliación — más allá de lo esencial",
+        "scope": "ADVANCED",
+        "body": "**— Con despejar, factorizar y la fórmula general resuelves casi todo. Lo que sigue amplía. —**\n\nLas **relaciones de Cardano-Vieta** ligan las soluciones con los coeficientes: en $x^2+px+q=0$, la suma de raíces es $-p$ y el producto $q$. Permiten comprobar soluciones de cabeza o reconstruir la ecuación a partir de ellas. Para grados mayores, la factorización por **Ruffini** (dividir por $x-a$ cuando $a$ es raíz) reduce el grado paso a paso.",
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Despejar",
+        "definition": "Aislar una variable aplicando la misma operación a los dos lados."
+      },
+      {
+        "term": "Discriminante",
+        "definition": "$\\Delta=b^2-4ac$; su signo da el número de soluciones reales de $ax^2+bx+c=0$."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-MF01-1",
+        "level": "basic",
+        "statement": "Resuelve $2x^2-4x-6=0$.",
+        "knowns": [
+          "$a=2,b=-4,c=-6$"
+        ],
+        "unknowns": [
+          "las soluciones"
+        ],
+        "reasoning": [
+          "Discriminante: $\\Delta=(-4)^2-4\\cdot2\\cdot(-6)=16+48=64>0$: dos soluciones.",
+          "$x=\\dfrac{4\\pm\\sqrt{64}}{4}=\\dfrac{4\\pm8}{4}$.",
+          "$x_1=3$, $x_2=-1$."
+        ],
+        "solution": "$x=3$ y $x=-1$.",
+        "interpretation": "Comprobación con Vieta: suma $3+(-1)=2=-b/a$ ✓, producto $3\\cdot(-1)=-3=c/a$ ✓.",
+        "common_mistake": "Olvidar dividir todo entre $2a$, o equivocar el signo de $-b$.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "WE-MF01-2",
+        "level": "basic",
+        "statement": "Despeja $x$ de $\\dfrac{3x-1}{2}=5$.",
+        "knowns": [
+          "$\\frac{3x-1}{2}=5$"
+        ],
+        "unknowns": [
+          "$x$"
+        ],
+        "reasoning": [
+          "Multiplico los dos lados por 2: $3x-1=10$.",
+          "Sumo 1: $3x=11$.",
+          "Divido entre 3: $x=11/3$."
+        ],
+        "solution": "$x=\\dfrac{11}{3}$.",
+        "interpretation": "Se deshacen las operaciones de fuera hacia dentro: primero el denominador, luego el $-1$, luego el $3$.",
+        "common_mistake": "Multiplicar solo el numerador por 2 y dejar el resto igual.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "EX-MF01-G1",
+        "type": "GUIDED",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "difficulty": 2,
+        "statement": "Resuelve $x^2-6x+9=0$ e interpreta el discriminante.",
+        "hints": [
+          "Calcula $\\Delta$ primero.",
+          "Es un producto notable: $x^2-6x+9=(x-3)^2$."
+        ],
+        "answer": "$x=3$ (doble); $\\Delta=0$.",
+        "full_solution": "$\\Delta=36-36=0$: una solución doble. $(x-3)^2=0\\Rightarrow x=3$.",
+        "common_errors": [
+          "Dar dos soluciones distintas cuando $\\Delta=0$."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-MF01-S1",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "difficulty": 1,
+        "statement": "Despeja $h$ de $A=\\tfrac12 b h$.",
+        "hints": [
+          "Multiplica por 2 y divide entre $b$."
+        ],
+        "answer": "$h=2A/b$",
+        "full_solution": "$2A=bh\\Rightarrow h=\\dfrac{2A}{b}$.",
+        "common_errors": [
+          "Olvidar el factor 2."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF01-S2",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "difficulty": 2,
+        "statement": "Resuelve $x^2-5x=0$ por factorización.",
+        "hints": [
+          "Saca factor común $x$."
+        ],
+        "answer": "$x=0$ o $x=5$",
+        "full_solution": "$x(x-5)=0\\Rightarrow x=0$ o $x=5$.",
+        "common_errors": [
+          "Dividir entre $x$ y perder la solución $x=0$."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF01-S3",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-ALG"
+        ],
+        "difficulty": 2,
+        "statement": "¿Cuántas soluciones reales tiene $x^2+x+1=0$?",
+        "hints": [
+          "Mira el signo de $\\Delta$."
+        ],
+        "answer": "Ninguna real",
+        "full_solution": "$\\Delta=1-4=-3<0$: no hay soluciones reales.",
+        "common_errors": [
+          "Intentar sacar la raíz de un número negativo."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-MF01-1",
+        "stem": "Si el discriminante de $ax^2+bx+c=0$ es negativo, la ecuación tiene:",
+        "options": [
+          {
+            "key": "a",
+            "text": "dos soluciones reales",
+            "why_wrong": "$\\Delta>0$ daría dos."
+          },
+          {
+            "key": "b",
+            "text": "ninguna solución real"
+          },
+          {
+            "key": "c",
+            "text": "una solución doble",
+            "why_wrong": "Eso es $\\Delta=0$."
+          },
+          {
+            "key": "d",
+            "text": "infinitas",
+            "why_wrong": "Una cuadrática con $a\\neq0$ nunca tiene infinitas."
+          }
+        ],
+        "correct": "b",
+        "explanation": "$\\Delta<0$ obliga a sacar la raíz de un número negativo: no hay soluciones reales.",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-ALG"
+      },
+      {
+        "id": "MCQ-MF01-2",
+        "stem": "¿Cuál es la forma correcta de factorizar $x^2-9$?",
+        "options": [
+          {
+            "key": "a",
+            "text": "$(x-3)^2$",
+            "why_wrong": "Eso es $x^2-6x+9$."
+          },
+          {
+            "key": "b",
+            "text": "$(x-3)(x+3)$"
+          },
+          {
+            "key": "c",
+            "text": "$(x-9)(x+1)$",
+            "why_wrong": "No reproduce $x^2-9$ al multiplicar."
+          },
+          {
+            "key": "d",
+            "text": "no se puede factorizar",
+            "why_wrong": "Es una diferencia de cuadrados."
+          }
+        ],
+        "correct": "b",
+        "explanation": "Diferencia de cuadrados: $a^2-b^2=(a+b)(a-b)$, con $a=x$, $b=3$.",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-ALG"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-MF01-1",
+        "kind": "formula",
+        "front": "Fórmula general de 2.º grado",
+        "back": "$x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$. El radicando es el discriminante $\\Delta$.",
+        "concept_id": "C-MF-ALG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF01-2",
+        "kind": "check",
+        "front": "¿Qué dice el discriminante?",
+        "back": "$\\Delta>0$: dos soluciones; $\\Delta=0$: una doble; $\\Delta<0$: ninguna real.",
+        "concept_id": "C-MF-ALG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF01-3",
+        "kind": "procedure",
+        "front": "Despejar",
+        "back": "Misma operación a los dos lados, deshaciendo de fuera hacia dentro con la operación inversa.",
+        "concept_id": "C-MF-ALG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF01-4",
+        "kind": "formula",
+        "front": "Diferencia de cuadrados",
+        "back": "$a^2-b^2=(a+b)(a-b)$. Un producto es cero si lo es algún factor.",
+        "concept_id": "C-MF-ALG",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "M-MF01-1",
+        "incorrect_model": "«Dividir entre $x$ para simplificar $x^2=5x$.»",
+        "why_it_appears": "Parece una simplificación legítima.",
+        "diagnostic_signal": "Da $x=5$ y pierde $x=0$.",
+        "correct_model": "Dividir entre $x$ supone $x\\neq0$ y puede borrar una solución. Mejor pasar todo a un lado y factorizar: $x^2-5x=0\\Rightarrow x(x-5)=0$.",
+        "remediation": "Resolver $x^2=5x$ de las dos formas y comparar: factorizar conserva $x=0$.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-ALG"
+      },
+      {
+        "id": "M-MF01-2",
+        "incorrect_model": "«$(a+b)^2=a^2+b^2$.»",
+        "why_it_appears": "Se 'reparte' el cuadrado como si fuera lineal.",
+        "diagnostic_signal": "Olvida el doble producto $2ab$.",
+        "correct_model": "$(a+b)^2=a^2+2ab+b^2$: hay un término cruzado. Comprobar con números: $(1+2)^2=9\\neq1+4$.",
+        "remediation": "Desarrollar $(a+b)^2$ como $(a+b)(a+b)$ término a término.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-ALG"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Equivocar el signo de $-b$ en la fórmula general.",
+        "why": "El $-b$ con $b$ ya negativo despista.",
+        "how_to_avoid": "Escribir $-b$ aparte antes de sustituir: si $b=-4$, $-b=+4$.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Perder una solución al dividir por la incógnita.",
+        "why": "Dividir parece simplificar.",
+        "how_to_avoid": "Pasar todo a un lado y factorizar, nunca dividir por algo que puede ser 0.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Despejar es mantener una balanza en equilibrio; factorizar convierte una ecuación en varias triviales; y la fórmula general con su discriminante resuelve cualquier ecuación de segundo grado.",
+      "key_points": [
+        "Misma operación a los dos lados, de fuera hacia dentro.",
+        "$x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$; el signo de $\\Delta=b^2-4ac$ da el número de soluciones.",
+        "Factorizar (factor común, diferencia de cuadrados) y usar que un producto nulo anula un factor.",
+        "No dividir por la incógnita: se pierden soluciones."
+      ],
+      "formulas": [
+        "x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+        "a^2-b^2=(a+b)(a-b)",
+        "(a\\pm b)^2=a^2\\pm2ab+b^2"
+      ],
+      "what_to_remember_if_nothing_else": "La misma operación a los dos lados; y antes de la fórmula, mira si puedes factorizar."
+    },
+    "lang": "es",
+    "foundations_concept_tag": "C-MF-ALG",
+    "schema_v2": {
+      "canonical_lesson_id": "SELMAT::fundamentos::MF01",
+      "content_version": "2.0.0-pilot",
+      "title": "Álgebra: despejar, factorizar y ecuaciones",
+      "subject": "Matemáticas",
+      "curriculum": {
+        "framework": "Remediación transversal (prerrequisito)",
+        "codes": [],
+        "status": "FOUNDATIONS",
+        "track": null
+      },
+      "learning_design": {
+        "estimated_core_minutes": 18,
+        "estimated_standard_minutes": 30,
+        "estimated_advanced_minutes": 45,
+        "prerequisite_concept_ids": [],
+        "diagnostic_item_ids": [
+          "DIAG-MF01-00"
+        ],
+        "recommended_routes": {
+          "from_zero": [
+            "DIAG-MF01-00",
+            "EX-MF01-G1",
+            "EX-MF01-S1",
+            "EX-MF01-S2",
+            "EX-MF01-S3",
+            "MCQ-MF01-1",
+            "MCQ-MF01-2",
+            "TH-MF01-0",
+            "TH-MF01-1",
+            "TH-MF01-2",
+            "WE-MF01-1",
+            "WE-MF01-2"
+          ],
+          "standard": [
+            "DIAG-MF01-00",
+            "EX-MF01-G1",
+            "EX-MF01-S1",
+            "EX-MF01-S2",
+            "EX-MF01-S3",
+            "MCQ-MF01-1",
+            "MCQ-MF01-2",
+            "TH-MF01-0",
+            "TH-MF01-1",
+            "TH-MF01-2",
+            "WE-MF01-1",
+            "WE-MF01-2"
+          ],
+          "excellence": [
+            "DIAG-MF01-00",
+            "EX-MF01-G1",
+            "EX-MF01-S1",
+            "EX-MF01-S2",
+            "EX-MF01-S3",
+            "MCQ-MF01-1",
+            "MCQ-MF01-2",
+            "TH-MF01-0",
+            "TH-MF01-1",
+            "TH-MF01-2",
+            "TH-MF01-3",
+            "WE-MF01-1",
+            "WE-MF01-2"
+          ],
+          "quick_review": [
+            "TH-MF01-3"
+          ]
+        }
+      },
+      "objectives": [
+        {
+          "id": "LO-MF01-1",
+          "statement": "Despejar una incógnita aplicando la misma operación a los dos lados.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-MF01-2",
+          "statement": "Resolver una ecuación de segundo grado con la fórmula general y leer su discriminante.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        }
+      ],
+      "knowledge_model": {
+        "core_claims": [
+          {
+            "id": "CL-MF01-0",
+            "statement": "Misma operación a los dos lados, de fuera hacia dentro.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF01-1",
+            "statement": "$x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$; el signo de $\\Delta=b^2-4ac$ da el número de soluciones.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF01-2",
+            "statement": "Factorizar (factor común, diferencia de cuadrados) y usar que un producto nulo anula un factor.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF01-3",
+            "statement": "No dividir por la incógnita: se pierden soluciones.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          }
+        ],
+        "formulae": [
+          {
+            "id": "F-MF01-0",
+            "latex": "x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          },
+          {
+            "id": "F-MF01-1",
+            "latex": "a^2-b^2=(a+b)(a-b)",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          },
+          {
+            "id": "F-MF01-2",
+            "latex": "(a\\pm b)^2=a^2\\pm2ab+b^2",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          }
+        ],
+        "common_mistakes": [
+          {
+            "id": "M-MF01-1",
+            "incorrect_claim": "«Dividir entre $x$ para simplificar $x^2=5x$.»",
+            "correction": "Dividir entre $x$ supone $x\\neq0$ y puede borrar una solución. Mejor pasar todo a un lado y factorizar: $x^2-5x=0\\Rightarrow x(x-5)=0$.",
+            "diagnostic_cue": "Da $x=5$ y pierde $x=0$."
+          },
+          {
+            "id": "M-MF01-2",
+            "incorrect_claim": "«$(a+b)^2=a^2+b^2$.»",
+            "correction": "$(a+b)^2=a^2+2ab+b^2$: hay un término cruzado. Comprobar con números: $(1+2)^2=9\\neq1+4$.",
+            "diagnostic_cue": "Olvida el doble producto $2ab$."
+          }
+        ],
+        "exam_conventions": []
+      },
+      "presentation": {
+        "hook_problem": "Una igualdad afirma que los dos lados pesan lo mismo. Mientras hagas **la misma operación en los dos lados**, el equilibrio se mantiene. Despejar una incógnita es solo usar esa libertad para dejarla sola, deshaciendo las operaciones que la rodean **en orden inverso** (lo de fuera primero), cada una ",
+        "intuition_blocks": [
+          "TH-MF01-0"
+        ],
+        "core_blocks": [
+          "TH-MF01-1",
+          "TH-MF01-2"
+        ],
+        "standard_blocks": [],
+        "advanced_blocks": [
+          "TH-MF01-3"
+        ],
+        "worked_examples": [
+          "WE-MF01-1",
+          "WE-MF01-2"
+        ],
+        "faded_examples": [
+          "EX-MF01-G1"
+        ],
+        "micro_checks": [
+          "DIAG-MF01-00"
+        ],
+        "summary": {
+          "must_know": [
+            "Misma operación a los dos lados, de fuera hacia dentro.",
+            "$x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$; el signo de $\\Delta=b^2-4ac$ da el número de soluciones.",
+            "Factorizar (factor común, diferencia de cuadrados) y usar que un producto nulo anula un factor.",
+            "No dividir por la incógnita: se pierden soluciones."
+          ],
+          "conditions": [],
+          "common_error": "Equivocar el signo de $-b$ en la fórmula general.",
+          "next_step": "Siguiente lección de fundamentos."
+        }
+      },
+      "practice": {
+        "items": [
+          {
+            "id": "EX-MF01-S1",
+            "skills": [
+              "C-MF-ALG"
+            ],
+            "difficulty": 1,
+            "conceptual_depth": 1,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Multiplica por 2 y divide entre $b$."
+            ],
+            "answer": "$h=2A/b$",
+            "full_solution": "$2A=bh\\Rightarrow h=\\dfrac{2A}{b}$."
+          },
+          {
+            "id": "EX-MF01-S2",
+            "skills": [
+              "C-MF-ALG"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Saca factor común $x$."
+            ],
+            "answer": "$x=0$ o $x=5$",
+            "full_solution": "$x(x-5)=0\\Rightarrow x=0$ o $x=5$."
+          },
+          {
+            "id": "EX-MF01-S3",
+            "skills": [
+              "C-MF-ALG"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Mira el signo de $\\Delta$."
+            ],
+            "answer": "Ninguna real",
+            "full_solution": "$\\Delta=1-4=-3<0$: no hay soluciones reales."
+          },
+          {
+            "id": "EX-MF01-G1",
+            "skills": [
+              "C-MF-ALG"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Calcula $\\Delta$ primero.",
+              "Es un producto notable: $x^2-6x+9=(x-3)^2$."
+            ],
+            "answer": "$x=3$ (doble); $\\Delta=0$.",
+            "full_solution": "$\\Delta=36-36=0$: una solución doble. $(x-3)^2=0\\Rightarrow x=3$."
+          }
+        ],
+        "checkpoint_item_ids": [],
+        "exam_item_ids": [],
+        "challenge_item_ids": []
+      },
+      "qa": {
+        "validated_semantics": true,
+        "validated_numerics": true,
+        "validated_render": true,
+        "canonical_hash": "1e89fd7cf2340aba"
+      }
+    }
+  },
+  "MF02_Funciones.json": {
+    "id": "MF02",
+    "title": "Funciones: dominio, gráfica y transformaciones",
+    "subject": "Matemáticas",
+    "course_label": "Selectividad Matemáticas II",
+    "unit_id": "fundamentos",
+    "estimated_length": "0,5 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Remediación transversal (prerrequisito)",
+      "codes": [],
+      "status": "FOUNDATIONS",
+      "track": null
+    },
+    "objectives": [
+      {
+        "id": "LO-MF02-1",
+        "statement": "Determinar el dominio de una función (denominadores, raíces, logaritmos).",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-MF02-2",
+        "statement": "Reconocer la gráfica de las funciones elementales y el efecto de desplazamientos.",
+        "bloom": "understand",
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-MF02-00",
+        "question": "¿Resolverías un ejercicio sencillo de funciones: dominio, gráfica y transformaciones sin mirar la teoría?",
+        "expected_answer": "Si haces los dos primeros ejercicios sin ayuda, salta a la práctica.",
+        "common_wrong_answers": [],
+        "interpretation": "Remediación just-in-time: entra aquí solo si un diagnóstico lo pide."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-MF02-0",
+        "type": "intuition",
+        "title": "Una función es una máquina con reglas de entrada",
+        "scope": "CORE",
+        "body": "Una función $f$ transforma cada entrada $x$ en una única salida $f(x)$. Pero no toda entrada es válida: el **dominio** es el conjunto de $x$ para los que la operación tiene sentido. Antes de derivar, integrar o representar una función, el primer gesto es siempre preguntarse **dónde está definida**.",
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF02-1",
+        "type": "formalisation",
+        "title": "Las tres restricciones del dominio",
+        "scope": "CORE",
+        "body": "En Selectividad, el dominio se recorta por tres motivos, que hay que buscar siempre:\n\n- **Denominadores:** no pueden ser cero. $\\dfrac{1}{x-2}$ excluye $x=2$.\n- **Raíces de índice par:** el radicando debe ser $\\geq0$. $\\sqrt{x-1}$ exige $x\\geq1$.\n- **Logaritmos:** su argumento debe ser $>0$. $\\ln(x)$ exige $x>0$.\n\nSi aparecen varias, el dominio es la **intersección** de todas las condiciones.",
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF02-2",
+        "type": "worked_rule",
+        "title": "Las gráficas que hay que reconocer, y cómo se mueven",
+        "scope": "CORE",
+        "body": "Conviene tener en la cabeza la forma de las elementales: la recta, la **parábola** $y=x^2$ (un cuenco con vértice), la hipérbola $y=1/x$, la exponencial $y=e^x$ (crece sin parar) y el logaritmo $y=\\ln x$ (su reflejo). Sobre ellas, dos transformaciones básicas: $f(x)+k$ sube la gráfica $k$ unidades, y $f(x-a)$ la desplaza $a$ unidades a la **derecha** (ojo al signo: el $-a$ mueve hacia la derecha).",
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2",
+        "assets": [
+          {
+            "id": "AS-MF02-1",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 195\" width=\"400\" height=\"195\" role=\"img\" id=\"svg-parab\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"195\" fill=\"none\"/><line x1=\"40.0\" y1=\"160.0\" x2=\"352.0\" y2=\"160.0\" stroke=\"#24312c\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><polygon points=\"360.0,160.0 352.0,164.0 352.0,156.0\" fill=\"#24312c\"/><line x1=\"200.0\" y1=\"170.0\" x2=\"200.0\" y2=\"18.0\" stroke=\"#24312c\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><polygon points=\"200.0,10.0 204.0,18.0 196.0,18.0\" fill=\"#24312c\"/><path d=\"M 40.0,10.0 L 43.2,10.0 L 46.4,10.0 L 49.6,10.0 L 52.8,10.0 L 56.0,10.0 L 59.2,10.0 L 62.4,10.0 L 65.6,10.0 L 68.8,10.0 L 72.0,10.0 L 75.2,10.0 L 78.4,10.0 L 81.6,10.0 L 84.8,10.0 L 88.0,10.0 L 91.2,10.0 L 94.4,10.0 L 97.6,10.0 L 100.8,10.0 L 104.0,10.0 L 107.2,10.0 L 110.4,10.0 L 113.6,10.0 L 116.8,10.0 L 120.0,10.0 L 123.2,17.6 L 126.4,27.0 L 129.6,35.9 L 132.8,44.4 L 136.0,52.6 L 139.2,60.3 L 142.4,67.7 L 145.6,74.6 L 148.8,81.2 L 152.0,87.3 L 155.2,93.1 L 158.4,98.4 L 161.6,103.4 L 164.8,108.0 L 168.0,112.1 L 171.2,115.9 L 174.4,119.3 L 177.6,122.3 L 180.8,124.9 L 184.0,127.0 L 187.2,128.8 L 190.4,130.2 L 193.6,131.2 L 196.8,131.8 L 200.0,132.0 L 203.2,131.8 L 206.4,131.2 L 209.6,130.2 L 212.8,128.8 L 216.0,127.0 L 219.2,124.9 L 222.4,122.3 L 225.6,119.3 L 228.8,115.9 L 232.0,112.1 L 235.2,108.0 L 238.4,103.4 L 241.6,98.4 L 244.8,93.1 L 248.0,87.3 L 251.2,81.2 L 254.4,74.6 L 257.6,67.7 L 260.8,60.3 L 264.0,52.6 L 267.2,44.4 L 270.4,35.9 L 273.6,27.0 L 276.8,17.6 L 280.0,10.0 L 283.2,10.0 L 286.4,10.0 L 289.6,10.0 L 292.8,10.0 L 296.0,10.0 L 299.2,10.0 L 302.4,10.0 L 305.6,10.0 L 308.8,10.0 L 312.0,10.0 L 315.2,10.0 L 318.4,10.0 L 321.6,10.0 L 324.8,10.0 L 328.0,10.0 L 331.2,10.0 L 334.4,10.0 L 337.6,10.0 L 340.8,10.0 L 344.0,10.0 L 347.2,10.0 L 350.4,10.0 L 353.6,10.0 L 356.8,10.0 L 360.0,10.0\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"3\"/><circle cx=\"200.0\" cy=\"132\" r=\"4.5\" fill=\"#c17a17\"/><text x=\"210.0\" y=\"148.0\" fill=\"#c17a17\" font-size=\"12\" font-weight=\"800\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">vértice (mínimo)</text><text x=\"200.0\" y=\"180.0\" fill=\"#5c6b67\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">eje de simetría</text><text x=\"358.0\" y=\"178.0\" fill=\"#5c6b67\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-style:italic\">x</text></svg>",
+            "caption": "La parábola $y=x^2$: un 'cuenco' simétrico respecto a su eje, con el **vértice** en el punto más bajo (un mínimo). Desplazarla con $y=(x-a)^2+k$ mueve el vértice al punto $(a,k)$.",
+            "purpose": "Fijar la forma de la parábola y la idea de vértice/eje de simetría, base de la representación de funciones."
+          }
+        ]
+      },
+      {
+        "id": "TH-MF02-3",
+        "type": "connection",
+        "title": "Ampliación — más allá de lo esencial",
+        "scope": "ADVANCED",
+        "body": "**— Con el dominio y las gráficas elementales tienes lo esencial. Lo que sigue amplía. —**\n\nLa **composición** $(f\\circ g)(x)=f(g(x))$ encadena dos máquinas: su dominio exige que $x$ esté en el dominio de $g$ **y** que $g(x)$ esté en el de $f$. La **función inversa** $f^{-1}$ deshace a $f$ y su gráfica es la reflexión respecto a la recta $y=x$; existe solo si $f$ es inyectiva. Estas ideas reaparecen en la regla de la cadena (derivadas) y en exponenciales/logaritmos como pares inversos.",
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Dominio",
+        "definition": "Conjunto de valores de $x$ para los que $f(x)$ está definida."
+      },
+      {
+        "term": "Vértice de una parábola",
+        "definition": "Su punto extremo (mínimo si abre hacia arriba, máximo si hacia abajo); está sobre el eje de simetría."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-MF02-1",
+        "level": "basic",
+        "statement": "Halla el dominio de $f(x)=\\dfrac{\\sqrt{x-1}}{x-3}$.",
+        "knowns": [
+          "raíz par y denominador"
+        ],
+        "unknowns": [
+          "dominio"
+        ],
+        "reasoning": [
+          "La raíz exige $x-1\\geq0$, es decir $x\\geq1$.",
+          "El denominador exige $x-3\\neq0$, es decir $x\\neq3$.",
+          "Intersección: $x\\geq1$ quitando $x=3$."
+        ],
+        "solution": "$\\mathrm{Dom}(f)=[1,3)\\cup(3,+\\infty)$.",
+        "interpretation": "Las dos condiciones se cumplen a la vez: se toma la parte común y se excluye el punto prohibido.",
+        "common_mistake": "Olvidar una de las dos restricciones (la raíz o el denominador).",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "WE-MF02-2",
+        "level": "basic",
+        "statement": "¿Dónde está el vértice de $y=(x-2)^2+3$?",
+        "knowns": [
+          "parábola desplazada"
+        ],
+        "unknowns": [
+          "vértice"
+        ],
+        "reasoning": [
+          "La forma $y=(x-a)^2+k$ tiene el vértice en $(a,k)$.",
+          "Aquí $a=2$, $k=3$."
+        ],
+        "solution": "Vértice en $(2,3)$, mínimo.",
+        "interpretation": "El $-2$ dentro del paréntesis mueve el vértice a la derecha (a $x=2$), no a la izquierda.",
+        "common_mistake": "Tomar el vértice en $x=-2$ por el signo de dentro del paréntesis.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "EX-MF02-G1",
+        "type": "GUIDED",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "difficulty": 2,
+        "statement": "Halla el dominio de $f(x)=\\ln(x+2)$.",
+        "hints": [
+          "El argumento del logaritmo debe ser positivo.",
+          "Resuelve $x+2>0$."
+        ],
+        "answer": "$x>-2$, es decir $(-2,+\\infty)$.",
+        "full_solution": "$\\ln$ exige argumento $>0$: $x+2>0\\Rightarrow x>-2$.",
+        "common_errors": [
+          "Poner $\\geq$ en vez de $>$: el logaritmo de 0 no existe."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-MF02-S1",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "difficulty": 1,
+        "statement": "Dominio de $f(x)=\\dfrac{1}{x^2-4}$.",
+        "hints": [
+          "Denominador distinto de cero."
+        ],
+        "answer": "$x\\neq\\pm2$",
+        "full_solution": "$x^2-4=0\\Rightarrow x=\\pm2$, que se excluyen: $\\mathbb{R}\\setminus\\{-2,2\\}$.",
+        "common_errors": [
+          "Excluir solo $x=2$ y olvidar $x=-2$."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF02-S2",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "difficulty": 2,
+        "statement": "Dominio de $f(x)=\\sqrt{4-x^2}$.",
+        "hints": [
+          "Radicando $\\geq0$: resuelve $4-x^2\\geq0$."
+        ],
+        "answer": "$[-2,2]$",
+        "full_solution": "$4-x^2\\geq0\\Rightarrow x^2\\leq4\\Rightarrow -2\\leq x\\leq2$.",
+        "common_errors": [
+          "Resolver $x^2\\leq4$ como $x\\leq2$ olvidando el lado negativo."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF02-S3",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-FUN"
+        ],
+        "difficulty": 2,
+        "statement": "¿Hacia dónde mueve $y=x^2$ la transformación $y=x^2-5$?",
+        "hints": [
+          "$+k$ sube, $-k$ baja."
+        ],
+        "answer": "La baja 5 unidades.",
+        "full_solution": "$f(x)-5$ desplaza la gráfica 5 unidades hacia abajo; el vértice pasa de $(0,0)$ a $(0,-5)$.",
+        "common_errors": [
+          "Confundir desplazamiento vertical con horizontal."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-MF02-1",
+        "stem": "El dominio de $f(x)=\\sqrt{x-3}$ es:",
+        "options": [
+          {
+            "key": "a",
+            "text": "$x>3$",
+            "why_wrong": "El 3 sí vale: $\\sqrt0=0$ existe."
+          },
+          {
+            "key": "b",
+            "text": "$x\\geq3$"
+          },
+          {
+            "key": "c",
+            "text": "todo $\\mathbb{R}$",
+            "why_wrong": "La raíz par exige radicando no negativo."
+          },
+          {
+            "key": "d",
+            "text": "$x\\leq3$",
+            "why_wrong": "Sería al revés."
+          }
+        ],
+        "correct": "b",
+        "explanation": "La raíz de índice par exige radicando $\\geq0$: $x-3\\geq0\\Rightarrow x\\geq3$ (incluye el 3).",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-FUN"
+      },
+      {
+        "id": "MCQ-MF02-2",
+        "stem": "$y=(x+1)^2$ respecto a $y=x^2$ está:",
+        "options": [
+          {
+            "key": "a",
+            "text": "desplazada 1 a la derecha",
+            "why_wrong": "El $+1$ dentro mueve a la izquierda."
+          },
+          {
+            "key": "b",
+            "text": "desplazada 1 a la izquierda"
+          },
+          {
+            "key": "c",
+            "text": "subida 1",
+            "why_wrong": "Eso sería $y=x^2+1$."
+          },
+          {
+            "key": "d",
+            "text": "igual",
+            "why_wrong": "El paréntesis cambia la posición horizontal."
+          }
+        ],
+        "correct": "b",
+        "explanation": "$f(x+a)$ desplaza a la izquierda: el vértice pasa de $x=0$ a $x=-1$. El signo de dentro va 'al revés'.",
+        "difficulty": 2,
+        "objective_id": "",
+        "concept_id": "C-MF-FUN"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-MF02-1",
+        "kind": "procedure",
+        "front": "Las tres restricciones del dominio",
+        "back": "Denominador $\\neq0$; radicando de raíz par $\\geq0$; argumento de logaritmo $>0$. Si hay varias, se intersecan.",
+        "concept_id": "C-MF-FUN",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF02-2",
+        "kind": "check",
+        "front": "Desplazamientos",
+        "back": "$f(x)+k$: sube $k$. $f(x-a)$: a la derecha $a$ (el signo de dentro va al revés de lo que parece).",
+        "concept_id": "C-MF-FUN",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF02-3",
+        "kind": "definition",
+        "front": "Vértice de $y=(x-a)^2+k$",
+        "back": "Está en $(a,k)$; mínimo si abre hacia arriba.",
+        "concept_id": "C-MF-FUN",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF02-4",
+        "kind": "check",
+        "front": "Gráficas elementales",
+        "back": "Recta, parábola $x^2$, hipérbola $1/x$, exponencial $e^x$ (crece), logaritmo $\\ln x$ (su reflejo).",
+        "concept_id": "C-MF-FUN",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "M-MF02-1",
+        "incorrect_model": "«$f(x-a)$ desplaza la gráfica hacia la izquierda.»",
+        "why_it_appears": "El signo $-a$ sugiere 'restar = mover a la izquierda'.",
+        "diagnostic_signal": "Coloca el vértice de $(x-2)^2$ en $x=-2$.",
+        "correct_model": "$f(x-a)$ mueve a la **derecha**: la nueva gráfica vale en $x=a$ lo que la vieja valía en $0$. El efecto va al revés del signo visible.",
+        "remediation": "Tabular $y=(x-2)^2$ y ver que el mínimo cae en $x=2$.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-FUN"
+      },
+      {
+        "id": "M-MF02-2",
+        "incorrect_model": "«El dominio es todo $\\mathbb{R}$ salvo que se diga lo contrario.»",
+        "why_it_appears": "Muchas funciones de clase sí lo tienen.",
+        "diagnostic_signal": "No busca denominadores, raíces ni logaritmos.",
+        "correct_model": "El dominio hay que calcularlo siempre: denominadores, raíces pares y logaritmos lo recortan. Darlo por $\\mathbb{R}$ sin mirar es un error frecuente.",
+        "remediation": "Antes de nada, subrayar en la fórmula cada denominador, raíz y logaritmo.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-FUN"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Olvidar una restricción del dominio cuando hay varias.",
+        "why": "Se encuentra una y se da por terminado.",
+        "how_to_avoid": "Listar todas (denominadores, raíces, logaritmos) y hacer la intersección.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Confundir desplazamiento horizontal y vertical.",
+        "why": "Ambos usan un signo y una constante.",
+        "how_to_avoid": "Dentro del paréntesis = horizontal (y al revés del signo); fuera = vertical.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Antes de operar con una función hay que saber dónde vive (dominio) y qué forma tiene (gráfica). Tres restricciones recortan el dominio, y las gráficas elementales con sus desplazamientos cubren casi todo lo que se representa.",
+      "key_points": [
+        "Dominio: denominador $\\neq0$, radicando par $\\geq0$, argumento de $\\ln$ $>0$; interseca las condiciones.",
+        "Gráficas elementales: recta, parábola, hipérbola, exponencial, logaritmo.",
+        "$f(x)+k$ sube; $f(x-a)$ va a la derecha (signo al revés).",
+        "El vértice de $(x-a)^2+k$ está en $(a,k)$."
+      ],
+      "formulas": [
+        "\\sqrt{g(x)}:\\ g(x)\\geq0",
+        "\\ln(g(x)):\\ g(x)>0"
+      ],
+      "what_to_remember_if_nothing_else": "Calcula siempre el dominio primero: denominadores, raíces pares y logaritmos."
+    },
+    "lang": "es",
+    "foundations_concept_tag": "C-MF-FUN",
+    "schema_v2": {
+      "canonical_lesson_id": "SELMAT::fundamentos::MF02",
+      "content_version": "2.0.0-pilot",
+      "title": "Funciones: dominio, gráfica y transformaciones",
+      "subject": "Matemáticas",
+      "curriculum": {
+        "framework": "Remediación transversal (prerrequisito)",
+        "codes": [],
+        "status": "FOUNDATIONS",
+        "track": null
+      },
+      "learning_design": {
+        "estimated_core_minutes": 18,
+        "estimated_standard_minutes": 30,
+        "estimated_advanced_minutes": 45,
+        "prerequisite_concept_ids": [],
+        "diagnostic_item_ids": [
+          "DIAG-MF02-00"
+        ],
+        "recommended_routes": {
+          "from_zero": [
+            "DIAG-MF02-00",
+            "EX-MF02-G1",
+            "EX-MF02-S1",
+            "EX-MF02-S2",
+            "EX-MF02-S3",
+            "MCQ-MF02-1",
+            "MCQ-MF02-2",
+            "TH-MF02-0",
+            "TH-MF02-1",
+            "TH-MF02-2",
+            "WE-MF02-1",
+            "WE-MF02-2"
+          ],
+          "standard": [
+            "DIAG-MF02-00",
+            "EX-MF02-G1",
+            "EX-MF02-S1",
+            "EX-MF02-S2",
+            "EX-MF02-S3",
+            "MCQ-MF02-1",
+            "MCQ-MF02-2",
+            "TH-MF02-0",
+            "TH-MF02-1",
+            "TH-MF02-2",
+            "WE-MF02-1",
+            "WE-MF02-2"
+          ],
+          "excellence": [
+            "DIAG-MF02-00",
+            "EX-MF02-G1",
+            "EX-MF02-S1",
+            "EX-MF02-S2",
+            "EX-MF02-S3",
+            "MCQ-MF02-1",
+            "MCQ-MF02-2",
+            "TH-MF02-0",
+            "TH-MF02-1",
+            "TH-MF02-2",
+            "TH-MF02-3",
+            "WE-MF02-1",
+            "WE-MF02-2"
+          ],
+          "quick_review": [
+            "TH-MF02-3"
+          ]
+        }
+      },
+      "objectives": [
+        {
+          "id": "LO-MF02-1",
+          "statement": "Determinar el dominio de una función (denominadores, raíces, logaritmos).",
+          "bloom": "apply",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-MF02-2",
+          "statement": "Reconocer la gráfica de las funciones elementales y el efecto de desplazamientos.",
+          "bloom": "understand",
+          "required_for_mastery": true
+        }
+      ],
+      "knowledge_model": {
+        "core_claims": [
+          {
+            "id": "CL-MF02-0",
+            "statement": "Dominio: denominador $\\neq0$, radicando par $\\geq0$, argumento de $\\ln$ $>0$; interseca las condiciones.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF02-1",
+            "statement": "Gráficas elementales: recta, parábola, hipérbola, exponencial, logaritmo.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF02-2",
+            "statement": "$f(x)+k$ sube; $f(x-a)$ va a la derecha (signo al revés).",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF02-3",
+            "statement": "El vértice de $(x-a)^2+k$ está en $(a,k)$.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          }
+        ],
+        "formulae": [
+          {
+            "id": "F-MF02-0",
+            "latex": "\\sqrt{g(x)}:\\ g(x)\\geq0",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          },
+          {
+            "id": "F-MF02-1",
+            "latex": "\\ln(g(x)):\\ g(x)>0",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          }
+        ],
+        "common_mistakes": [
+          {
+            "id": "M-MF02-1",
+            "incorrect_claim": "«$f(x-a)$ desplaza la gráfica hacia la izquierda.»",
+            "correction": "$f(x-a)$ mueve a la **derecha**: la nueva gráfica vale en $x=a$ lo que la vieja valía en $0$. El efecto va al revés del signo visible.",
+            "diagnostic_cue": "Coloca el vértice de $(x-2)^2$ en $x=-2$."
+          },
+          {
+            "id": "M-MF02-2",
+            "incorrect_claim": "«El dominio es todo $\\mathbb{R}$ salvo que se diga lo contrario.»",
+            "correction": "El dominio hay que calcularlo siempre: denominadores, raíces pares y logaritmos lo recortan. Darlo por $\\mathbb{R}$ sin mirar es un error frecuente.",
+            "diagnostic_cue": "No busca denominadores, raíces ni logaritmos."
+          }
+        ],
+        "exam_conventions": []
+      },
+      "presentation": {
+        "hook_problem": "Una función $f$ transforma cada entrada $x$ en una única salida $f(x)$. Pero no toda entrada es válida: el **dominio** es el conjunto de $x$ para los que la operación tiene sentido. Antes de derivar, integrar o representar una función, el primer gesto es siempre preguntarse **dónde está definida**.",
+        "intuition_blocks": [
+          "TH-MF02-0"
+        ],
+        "core_blocks": [
+          "TH-MF02-1",
+          "TH-MF02-2"
+        ],
+        "standard_blocks": [],
+        "advanced_blocks": [
+          "TH-MF02-3"
+        ],
+        "worked_examples": [
+          "WE-MF02-1",
+          "WE-MF02-2"
+        ],
+        "faded_examples": [
+          "EX-MF02-G1"
+        ],
+        "micro_checks": [
+          "DIAG-MF02-00"
+        ],
+        "summary": {
+          "must_know": [
+            "Dominio: denominador $\\neq0$, radicando par $\\geq0$, argumento de $\\ln$ $>0$; interseca las condiciones.",
+            "Gráficas elementales: recta, parábola, hipérbola, exponencial, logaritmo.",
+            "$f(x)+k$ sube; $f(x-a)$ va a la derecha (signo al revés).",
+            "El vértice de $(x-a)^2+k$ está en $(a,k)$."
+          ],
+          "conditions": [],
+          "common_error": "Olvidar una restricción del dominio cuando hay varias.",
+          "next_step": "Siguiente lección de fundamentos."
+        }
+      },
+      "practice": {
+        "items": [
+          {
+            "id": "EX-MF02-S1",
+            "skills": [
+              "C-MF-FUN"
+            ],
+            "difficulty": 1,
+            "conceptual_depth": 1,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Denominador distinto de cero."
+            ],
+            "answer": "$x\\neq\\pm2$",
+            "full_solution": "$x^2-4=0\\Rightarrow x=\\pm2$, que se excluyen: $\\mathbb{R}\\setminus\\{-2,2\\}$."
+          },
+          {
+            "id": "EX-MF02-S2",
+            "skills": [
+              "C-MF-FUN"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Radicando $\\geq0$: resuelve $4-x^2\\geq0$."
+            ],
+            "answer": "$[-2,2]$",
+            "full_solution": "$4-x^2\\geq0\\Rightarrow x^2\\leq4\\Rightarrow -2\\leq x\\leq2$."
+          },
+          {
+            "id": "EX-MF02-S3",
+            "skills": [
+              "C-MF-FUN"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "$+k$ sube, $-k$ baja."
+            ],
+            "answer": "La baja 5 unidades.",
+            "full_solution": "$f(x)-5$ desplaza la gráfica 5 unidades hacia abajo; el vértice pasa de $(0,0)$ a $(0,-5)$."
+          },
+          {
+            "id": "EX-MF02-G1",
+            "skills": [
+              "C-MF-FUN"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "El argumento del logaritmo debe ser positivo.",
+              "Resuelve $x+2>0$."
+            ],
+            "answer": "$x>-2$, es decir $(-2,+\\infty)$.",
+            "full_solution": "$\\ln$ exige argumento $>0$: $x+2>0\\Rightarrow x>-2$."
+          }
+        ],
+        "checkpoint_item_ids": [],
+        "exam_item_ids": [],
+        "challenge_item_ids": []
+      },
+      "qa": {
+        "validated_semantics": true,
+        "validated_numerics": true,
+        "validated_render": true,
+        "canonical_hash": "cfdcd5177a4740a1"
+      }
+    }
+  },
+  "MF03_Trigonometría.json": {
+    "id": "MF03",
+    "title": "Trigonometría básica",
+    "subject": "Matemáticas",
+    "course_label": "Selectividad Matemáticas II",
+    "unit_id": "fundamentos",
+    "estimated_length": "0,5 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Remediación transversal (prerrequisito)",
+      "codes": [],
+      "status": "FOUNDATIONS",
+      "track": null
+    },
+    "objectives": [
+      {
+        "id": "LO-MF03-1",
+        "statement": "Usar seno, coseno y tangente en un triángulo rectángulo.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-MF03-2",
+        "statement": "Manejar la identidad fundamental y los valores de los ángulos clave.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-MF03-00",
+        "question": "¿Resolverías un ejercicio sencillo de trigonometría básica sin mirar la teoría?",
+        "expected_answer": "Si haces los dos primeros ejercicios sin ayuda, salta a la práctica.",
+        "common_wrong_answers": [],
+        "interpretation": "Remediación just-in-time: entra aquí solo si un diagnóstico lo pide."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-MF03-0",
+        "type": "intuition",
+        "title": "El triángulo rectángulo, otra vez",
+        "scope": "CORE",
+        "body": "La trigonometría aparece en geometría (ángulos entre rectas y planos), en derivadas e integrales de $\\mathrm{sen}$ y $\\cos$, y en los problemas de optimización con ángulos. La base es siempre el triángulo rectángulo y tres razones.",
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF03-1",
+        "type": "formalisation",
+        "title": "Las razones y la identidad fundamental",
+        "scope": "CORE",
+        "body": "Con un ángulo $\\theta$: $\\mathrm{sen}\\,\\theta=\\dfrac{\\text{opuesto}}{\\text{hipotenusa}}$, $\\cos\\theta=\\dfrac{\\text{adyacente}}{\\text{hipotenusa}}$, $\\mathrm{tg}\\,\\theta=\\dfrac{\\mathrm{sen}\\,\\theta}{\\cos\\theta}$. La **identidad fundamental** liga seno y coseno:\n\n$$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$$\n\nDe ella se despeja uno a partir del otro (cuidando el signo según el cuadrante).",
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2",
+        "assets": [
+          {
+            "id": "AS-MF03-1",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 250\" width=\"380\" height=\"250\" role=\"img\" id=\"svg-tri\"><rect x=\"0\" y=\"0\" width=\"380\" height=\"250\" fill=\"none\"/><polygon points=\"60,210 320,210 320,70\" fill=\"#d9efe8\" stroke=\"#0e7a68\" stroke-width=\"2.4\" stroke-linejoin=\"round\"/><path d=\"M 304 210 L 304 194 L 320 194\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.6\"/><path d=\"M 102 210 A 42 42 0 0 0 97.0 190.1\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\"/><text x=\"118.0\" y=\"196.0\" fill=\"#c17a17\" font-size=\"16\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-style:italic\">&#952;</text><text x=\"174.0\" y=\"134.0\" fill=\"#0e7a68\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">hipotenusa</text><text x=\"314.0\" y=\"144.0\" fill=\"#5c6b67\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"end\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">opuesto</text><text x=\"190.0\" y=\"232.0\" fill=\"#5c6b67\" font-size=\"12.5\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">adyacente</text></svg>",
+            "caption": "Las tres razones se leen del triángulo rectángulo respecto al ángulo $\\theta$: seno (opuesto/hipotenusa), coseno (adyacente/hipotenusa) y tangente (opuesto/adyacente).",
+            "purpose": "Anclar las definiciones en la figura, de donde salen todas."
+          }
+        ]
+      },
+      {
+        "id": "TH-MF03-2",
+        "type": "worked_rule",
+        "title": "Ángulos clave y radianes",
+        "scope": "CORE",
+        "body": "Hay que tener a mano: $\\mathrm{sen}\\,30°=\\cos60°=\\tfrac12$, $\\mathrm{sen}\\,45°=\\cos45°=\\tfrac{\\sqrt2}{2}$, $\\mathrm{sen}\\,60°=\\cos30°=\\tfrac{\\sqrt3}{2}$. En análisis, los ángulos van casi siempre en **radianes**: $180°=\\pi$ rad, $90°=\\pi/2$, $360°=2\\pi$. Las fórmulas de derivadas e integrales de funciones trigonométricas suponen radianes.",
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF03-3",
+        "type": "connection",
+        "title": "Ampliación — más allá de lo esencial",
+        "scope": "ADVANCED",
+        "body": "**— Con las razones, la identidad fundamental y los valores clave tienes lo esencial. —**\n\nLas **fórmulas del ángulo doble** $\\mathrm{sen}\\,2\\theta=2\\,\\mathrm{sen}\\,\\theta\\cos\\theta$ y $\\cos2\\theta=\\cos^2\\theta-\\mathrm{sen}^2\\theta$ aparecen al integrar $\\mathrm{sen}^2$ o $\\cos^2$. Y para ángulos pequeños (en radianes), $\\mathrm{sen}\\,\\theta\\approx\\theta$ y $\\cos\\theta\\approx1$, lo que da límites como $\\lim_{x\\to0}\\tfrac{\\mathrm{sen}\\,x}{x}=1$, clave en la definición de la derivada del seno.",
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Identidad fundamental",
+        "definition": "$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$, válida para todo ángulo."
+      },
+      {
+        "term": "Radián",
+        "definition": "Unidad natural de ángulo: $\\pi$ rad $=180°$. Las fórmulas de análisis la suponen."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-MF03-1",
+        "level": "basic",
+        "statement": "Si $\\cos\\theta=0{,}6$ y $\\theta$ está en el primer cuadrante, halla $\\mathrm{sen}\\,\\theta$.",
+        "knowns": [
+          "$\\cos\\theta=0{,}6$"
+        ],
+        "unknowns": [
+          "$\\mathrm{sen}\\,\\theta$"
+        ],
+        "reasoning": [
+          "Por la identidad fundamental, $\\mathrm{sen}^2\\theta=1-\\cos^2\\theta=1-0{,}36=0{,}64$.",
+          "$\\mathrm{sen}\\,\\theta=\\pm0{,}8$.",
+          "En el primer cuadrante el seno es positivo: $0{,}8$."
+        ],
+        "solution": "$\\mathrm{sen}\\,\\theta=0{,}8$.",
+        "interpretation": "El signo lo decide el cuadrante: no basta con la identidad, hay que elegir.",
+        "common_mistake": "Olvidar el $\\pm$ y el cuadrante, o restar mal dentro de la raíz.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "WE-MF03-2",
+        "level": "basic",
+        "statement": "Un ángulo de elevación de $30°$ ve la cima de un árbol a $12$ m de distancia horizontal. ¿Qué altura tiene?",
+        "knowns": [
+          "ángulo $30°$, adyacente $12$ m"
+        ],
+        "unknowns": [
+          "altura (opuesto)"
+        ],
+        "reasoning": [
+          "La altura es el cateto opuesto; la distancia, el adyacente: $\\mathrm{tg}\\,30°=\\text{altura}/12$.",
+          "$\\mathrm{tg}\\,30°=0{,}577$.",
+          "altura $=12\\cdot0{,}577=6{,}93$ m."
+        ],
+        "solution": "$\\approx6{,}9$ m.",
+        "interpretation": "Se elige la tangente porque relaciona los dos catetos, que son los datos.",
+        "common_mistake": "Usar el seno (que necesitaría la hipotenusa, que no se da).",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "EX-MF03-G1",
+        "type": "GUIDED",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "difficulty": 2,
+        "statement": "Comprueba que $\\mathrm{sen}\\,45°=\\cos45°$ y halla $\\mathrm{tg}\\,45°$.",
+        "hints": [
+          "Usa los valores clave.",
+          "$\\mathrm{tg}=\\mathrm{sen}/\\cos$."
+        ],
+        "answer": "$\\mathrm{tg}\\,45°=1$",
+        "full_solution": "$\\mathrm{sen}\\,45°=\\cos45°=\\tfrac{\\sqrt2}{2}$, luego $\\mathrm{tg}\\,45°=\\tfrac{\\sqrt2/2}{\\sqrt2/2}=1$.",
+        "common_errors": [
+          "Dar $\\mathrm{tg}\\,45°=\\sqrt2$."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-MF03-S1",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "difficulty": 1,
+        "statement": "¿Cuánto vale $\\mathrm{sen}\\,30°$?",
+        "hints": [
+          "Valor clave."
+        ],
+        "answer": "$1/2$",
+        "full_solution": "$\\mathrm{sen}\\,30°=0{,}5$.",
+        "common_errors": [
+          "Confundirlo con $\\cos30°=\\sqrt3/2$."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF03-S2",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "difficulty": 2,
+        "statement": "Pasa $120°$ a radianes.",
+        "hints": [
+          "$180°=\\pi$."
+        ],
+        "answer": "$2\\pi/3$",
+        "full_solution": "$120°\\cdot\\dfrac{\\pi}{180°}=\\dfrac{2\\pi}{3}$.",
+        "common_errors": [
+          "Multiplicar por $180/\\pi$ en vez de $\\pi/180$."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF03-S3",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-TRIG"
+        ],
+        "difficulty": 2,
+        "statement": "Si $\\mathrm{sen}\\,\\theta=1$, ¿cuánto vale $\\cos\\theta$?",
+        "hints": [
+          "Identidad fundamental."
+        ],
+        "answer": "$0$",
+        "full_solution": "$\\cos^2\\theta=1-1=0\\Rightarrow\\cos\\theta=0$ (es $\\theta=90°$).",
+        "common_errors": [
+          "Decir que $\\cos\\theta=1$."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-MF03-1",
+        "stem": "La identidad fundamental de la trigonometría es:",
+        "options": [
+          {
+            "key": "a",
+            "text": "$\\mathrm{sen}\\,\\theta+\\cos\\theta=1$",
+            "why_wrong": "Falso; lo que vale 1 es la suma de los cuadrados."
+          },
+          {
+            "key": "b",
+            "text": "$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$"
+          },
+          {
+            "key": "c",
+            "text": "$\\mathrm{sen}^2\\theta-\\cos^2\\theta=1$",
+            "why_wrong": "Ese es $-\\cos2\\theta$."
+          },
+          {
+            "key": "d",
+            "text": "$\\mathrm{tg}^2\\theta=1$",
+            "why_wrong": "Solo a 45°."
+          }
+        ],
+        "correct": "b",
+        "explanation": "$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$ para cualquier ángulo (es el teorema de Pitágoras en el círculo unidad).",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-TRIG"
+      },
+      {
+        "id": "MCQ-MF03-2",
+        "stem": "$\\pi/2$ radianes equivale a:",
+        "options": [
+          {
+            "key": "a",
+            "text": "$45°$",
+            "why_wrong": "Eso es $\\pi/4$."
+          },
+          {
+            "key": "b",
+            "text": "$90°$"
+          },
+          {
+            "key": "c",
+            "text": "$180°$",
+            "why_wrong": "Eso es $\\pi$."
+          },
+          {
+            "key": "d",
+            "text": "$360°$",
+            "why_wrong": "Eso es $2\\pi$."
+          }
+        ],
+        "correct": "b",
+        "explanation": "$\\pi$ rad $=180°$, luego $\\pi/2=90°$.",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-TRIG"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-MF03-1",
+        "kind": "formula",
+        "front": "Razones trigonométricas",
+        "back": "$\\mathrm{sen}=\\text{op}/\\text{hip}$, $\\cos=\\text{ady}/\\text{hip}$, $\\mathrm{tg}=\\mathrm{sen}/\\cos=\\text{op}/\\text{ady}$.",
+        "concept_id": "C-MF-TRIG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF03-2",
+        "kind": "formula",
+        "front": "Identidad fundamental",
+        "back": "$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$; para despejar uno del otro, cuida el signo del cuadrante.",
+        "concept_id": "C-MF-TRIG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF03-3",
+        "kind": "check",
+        "front": "Valores clave",
+        "back": "$30°{:}\\,\\tfrac12,\\tfrac{\\sqrt3}2$ · $45°{:}\\,\\tfrac{\\sqrt2}2,\\tfrac{\\sqrt2}2$ · $60°{:}\\,\\tfrac{\\sqrt3}2,\\tfrac12$ (seno, coseno).",
+        "concept_id": "C-MF-TRIG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF03-4",
+        "kind": "check",
+        "front": "Radianes",
+        "back": "$180°=\\pi$; análisis siempre en radianes. Pasar: $\\times\\pi/180$.",
+        "concept_id": "C-MF-TRIG",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "M-MF03-1",
+        "incorrect_model": "«$\\mathrm{sen}\\,\\theta+\\cos\\theta=1$.»",
+        "why_it_appears": "Se recuerda mal la identidad fundamental.",
+        "diagnostic_signal": "La usa sin cuadrados.",
+        "correct_model": "Lo que vale 1 es $\\mathrm{sen}^2\\theta+\\cos^2\\theta$. Comprobar con $45°$: $\\tfrac{\\sqrt2}2+\\tfrac{\\sqrt2}2=\\sqrt2\\neq1$, pero sus cuadrados suman 1.",
+        "remediation": "Sustituir un ángulo concreto y ver qué versión da 1.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-TRIG"
+      },
+      {
+        "id": "M-MF03-2",
+        "incorrect_model": "«Da igual grados o radianes.»",
+        "why_it_appears": "En un triángulo con grados funciona.",
+        "diagnostic_signal": "Deriva $\\mathrm{sen}\\,x$ con la calculadora en grados y obtiene valores raros.",
+        "correct_model": "Las fórmulas de análisis (derivadas, límites, integrales de trig) suponen radianes. En geometría elemental se usan grados; hay que saber en cuál se está.",
+        "remediation": "Comprobar $\\lim_{x\\to0}\\tfrac{\\mathrm{sen}\\,x}{x}=1$ solo vale con $x$ en radianes.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-TRIG"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Olvidar el signo al despejar de la identidad fundamental.",
+        "why": "La raíz da $\\pm$.",
+        "how_to_avoid": "Decidir el signo mirando el cuadrante del ángulo.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Mezclar grados y radianes.",
+        "why": "Se arrastra la costumbre de los grados al análisis.",
+        "how_to_avoid": "En límites, derivadas e integrales trig, trabajar en radianes.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Tres razones, la identidad fundamental y los valores de los ángulos clave resuelven la trigonometría de Selectividad; en análisis, todo va en radianes.",
+      "key_points": [
+        "$\\mathrm{sen},\\cos,\\mathrm{tg}$ desde el triángulo rectángulo.",
+        "$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$ (despejar con cuidado del signo).",
+        "Valores clave de 30°, 45°, 60°.",
+        "Radianes en análisis: $180°=\\pi$."
+      ],
+      "formulas": [
+        "\\mathrm{sen}^2\\theta+\\cos^2\\theta=1",
+        "\\mathrm{tg}\\,\\theta=\\dfrac{\\mathrm{sen}\\,\\theta}{\\cos\\theta}"
+      ],
+      "what_to_remember_if_nothing_else": "$\\mathrm{sen}^2+\\cos^2=1$, los valores de 30/45/60, y radianes en análisis."
+    },
+    "lang": "es",
+    "foundations_concept_tag": "C-MF-TRIG",
+    "schema_v2": {
+      "canonical_lesson_id": "SELMAT::fundamentos::MF03",
+      "content_version": "2.0.0-pilot",
+      "title": "Trigonometría básica",
+      "subject": "Matemáticas",
+      "curriculum": {
+        "framework": "Remediación transversal (prerrequisito)",
+        "codes": [],
+        "status": "FOUNDATIONS",
+        "track": null
+      },
+      "learning_design": {
+        "estimated_core_minutes": 18,
+        "estimated_standard_minutes": 30,
+        "estimated_advanced_minutes": 45,
+        "prerequisite_concept_ids": [],
+        "diagnostic_item_ids": [
+          "DIAG-MF03-00"
+        ],
+        "recommended_routes": {
+          "from_zero": [
+            "DIAG-MF03-00",
+            "EX-MF03-G1",
+            "EX-MF03-S1",
+            "EX-MF03-S2",
+            "EX-MF03-S3",
+            "MCQ-MF03-1",
+            "MCQ-MF03-2",
+            "TH-MF03-0",
+            "TH-MF03-1",
+            "TH-MF03-2",
+            "WE-MF03-1",
+            "WE-MF03-2"
+          ],
+          "standard": [
+            "DIAG-MF03-00",
+            "EX-MF03-G1",
+            "EX-MF03-S1",
+            "EX-MF03-S2",
+            "EX-MF03-S3",
+            "MCQ-MF03-1",
+            "MCQ-MF03-2",
+            "TH-MF03-0",
+            "TH-MF03-1",
+            "TH-MF03-2",
+            "WE-MF03-1",
+            "WE-MF03-2"
+          ],
+          "excellence": [
+            "DIAG-MF03-00",
+            "EX-MF03-G1",
+            "EX-MF03-S1",
+            "EX-MF03-S2",
+            "EX-MF03-S3",
+            "MCQ-MF03-1",
+            "MCQ-MF03-2",
+            "TH-MF03-0",
+            "TH-MF03-1",
+            "TH-MF03-2",
+            "TH-MF03-3",
+            "WE-MF03-1",
+            "WE-MF03-2"
+          ],
+          "quick_review": [
+            "TH-MF03-3"
+          ]
+        }
+      },
+      "objectives": [
+        {
+          "id": "LO-MF03-1",
+          "statement": "Usar seno, coseno y tangente en un triángulo rectángulo.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-MF03-2",
+          "statement": "Manejar la identidad fundamental y los valores de los ángulos clave.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        }
+      ],
+      "knowledge_model": {
+        "core_claims": [
+          {
+            "id": "CL-MF03-0",
+            "statement": "$\\mathrm{sen},\\cos,\\mathrm{tg}$ desde el triángulo rectángulo.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF03-1",
+            "statement": "$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$ (despejar con cuidado del signo).",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF03-2",
+            "statement": "Valores clave de 30°, 45°, 60°.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF03-3",
+            "statement": "Radianes en análisis: $180°=\\pi$.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          }
+        ],
+        "formulae": [
+          {
+            "id": "F-MF03-0",
+            "latex": "\\mathrm{sen}^2\\theta+\\cos^2\\theta=1",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          },
+          {
+            "id": "F-MF03-1",
+            "latex": "\\mathrm{tg}\\,\\theta=\\dfrac{\\mathrm{sen}\\,\\theta}{\\cos\\theta}",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          }
+        ],
+        "common_mistakes": [
+          {
+            "id": "M-MF03-1",
+            "incorrect_claim": "«$\\mathrm{sen}\\,\\theta+\\cos\\theta=1$.»",
+            "correction": "Lo que vale 1 es $\\mathrm{sen}^2\\theta+\\cos^2\\theta$. Comprobar con $45°$: $\\tfrac{\\sqrt2}2+\\tfrac{\\sqrt2}2=\\sqrt2\\neq1$, pero sus cuadrados suman 1.",
+            "diagnostic_cue": "La usa sin cuadrados."
+          },
+          {
+            "id": "M-MF03-2",
+            "incorrect_claim": "«Da igual grados o radianes.»",
+            "correction": "Las fórmulas de análisis (derivadas, límites, integrales de trig) suponen radianes. En geometría elemental se usan grados; hay que saber en cuál se está.",
+            "diagnostic_cue": "Deriva $\\mathrm{sen}\\,x$ con la calculadora en grados y obtiene valores raros."
+          }
+        ],
+        "exam_conventions": []
+      },
+      "presentation": {
+        "hook_problem": "La trigonometría aparece en geometría (ángulos entre rectas y planos), en derivadas e integrales de $\\mathrm{sen}$ y $\\cos$, y en los problemas de optimización con ángulos. La base es siempre el triángulo rectángulo y tres razones.",
+        "intuition_blocks": [
+          "TH-MF03-0"
+        ],
+        "core_blocks": [
+          "TH-MF03-1",
+          "TH-MF03-2"
+        ],
+        "standard_blocks": [],
+        "advanced_blocks": [
+          "TH-MF03-3"
+        ],
+        "worked_examples": [
+          "WE-MF03-1",
+          "WE-MF03-2"
+        ],
+        "faded_examples": [
+          "EX-MF03-G1"
+        ],
+        "micro_checks": [
+          "DIAG-MF03-00"
+        ],
+        "summary": {
+          "must_know": [
+            "$\\mathrm{sen},\\cos,\\mathrm{tg}$ desde el triángulo rectángulo.",
+            "$\\mathrm{sen}^2\\theta+\\cos^2\\theta=1$ (despejar con cuidado del signo).",
+            "Valores clave de 30°, 45°, 60°.",
+            "Radianes en análisis: $180°=\\pi$."
+          ],
+          "conditions": [],
+          "common_error": "Olvidar el signo al despejar de la identidad fundamental.",
+          "next_step": "Siguiente lección de fundamentos."
+        }
+      },
+      "practice": {
+        "items": [
+          {
+            "id": "EX-MF03-S1",
+            "skills": [
+              "C-MF-TRIG"
+            ],
+            "difficulty": 1,
+            "conceptual_depth": 1,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Valor clave."
+            ],
+            "answer": "$1/2$",
+            "full_solution": "$\\mathrm{sen}\\,30°=0{,}5$."
+          },
+          {
+            "id": "EX-MF03-S2",
+            "skills": [
+              "C-MF-TRIG"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "$180°=\\pi$."
+            ],
+            "answer": "$2\\pi/3$",
+            "full_solution": "$120°\\cdot\\dfrac{\\pi}{180°}=\\dfrac{2\\pi}{3}$."
+          },
+          {
+            "id": "EX-MF03-S3",
+            "skills": [
+              "C-MF-TRIG"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Identidad fundamental."
+            ],
+            "answer": "$0$",
+            "full_solution": "$\\cos^2\\theta=1-1=0\\Rightarrow\\cos\\theta=0$ (es $\\theta=90°$)."
+          },
+          {
+            "id": "EX-MF03-G1",
+            "skills": [
+              "C-MF-TRIG"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Usa los valores clave.",
+              "$\\mathrm{tg}=\\mathrm{sen}/\\cos$."
+            ],
+            "answer": "$\\mathrm{tg}\\,45°=1$",
+            "full_solution": "$\\mathrm{sen}\\,45°=\\cos45°=\\tfrac{\\sqrt2}{2}$, luego $\\mathrm{tg}\\,45°=\\tfrac{\\sqrt2/2}{\\sqrt2/2}=1$."
+          }
+        ],
+        "checkpoint_item_ids": [],
+        "exam_item_ids": [],
+        "challenge_item_ids": []
+      },
+      "qa": {
+        "validated_semantics": true,
+        "validated_numerics": true,
+        "validated_render": true,
+        "canonical_hash": "675a497d1b4e0edb"
+      }
+    }
+  },
+  "MF04_Vectores.json": {
+    "id": "MF04",
+    "title": "Vectores en el plano y el espacio",
+    "subject": "Matemáticas",
+    "course_label": "Selectividad Matemáticas II",
+    "unit_id": "fundamentos",
+    "estimated_length": "0,5 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Remediación transversal (prerrequisito)",
+      "codes": [],
+      "status": "FOUNDATIONS",
+      "track": null
+    },
+    "objectives": [
+      {
+        "id": "LO-MF04-1",
+        "statement": "Operar con vectores por componentes: suma, resta y producto por un escalar.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-MF04-2",
+        "statement": "Calcular el módulo de un vector y el vector entre dos puntos.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-MF04-00",
+        "question": "¿Resolverías un ejercicio sencillo de vectores en el plano y el espacio sin mirar la teoría?",
+        "expected_answer": "Si haces los dos primeros ejercicios sin ayuda, salta a la práctica.",
+        "common_wrong_answers": [],
+        "interpretation": "Remediación just-in-time: entra aquí solo si un diagnóstico lo pide."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-MF04-0",
+        "type": "intuition",
+        "title": "Flechas con coordenadas",
+        "scope": "CORE",
+        "body": "Un vector es una flecha: tiene módulo, dirección y sentido, pero se maneja por sus **componentes** $(v_1,v_2)$ en el plano o $(v_1,v_2,v_3)$ en el espacio. Toda la geometría de Selectividad (rectas, planos, distancias) se construye operando con vectores componente a componente.",
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2",
+        "assets": [
+          {
+            "id": "AS-MF04-1",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 240\" width=\"380\" height=\"240\" role=\"img\" id=\"svg-vec\"><rect x=\"0\" y=\"0\" width=\"380\" height=\"240\" fill=\"none\"/><line x1=\"58.0\" y1=\"208.0\" x2=\"343.0\" y2=\"208.0\" stroke=\"#24312c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><polygon points=\"352.0,208.0 343.0,212.5 343.0,203.5\" fill=\"#24312c\"/><line x1=\"58.0\" y1=\"208.0\" x2=\"58.0\" y2=\"47.0\" stroke=\"#24312c\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><polygon points=\"58.0,38.0 62.5,47.0 53.5,47.0\" fill=\"#24312c\"/><text x=\"348.0\" y=\"226.0\" fill=\"#5c6b67\" font-size=\"13\" font-weight=\"600\" text-anchor=\"end\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-style:italic\">x</text><text x=\"44.0\" y=\"46.0\" fill=\"#5c6b67\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-style:italic\">y</text><line x1=\"58\" y1=\"208\" x2=\"270\" y2=\"208\" stroke=\"#c17a17\" stroke-width=\"2.4\" stroke-dasharray=\"6,4\"/><line x1=\"270\" y1=\"208\" x2=\"270\" y2=\"74\" stroke=\"#c17a17\" stroke-width=\"2.4\" stroke-dasharray=\"6,4\"/><line x1=\"58.0\" y1=\"208.0\" x2=\"260.7\" y2=\"79.9\" stroke=\"#0e7a68\" stroke-width=\"3\" stroke-linecap=\"round\"/><polygon points=\"270.0,74.0 263.6,84.5 257.8,75.2\" fill=\"#0e7a68\"/><path d=\"M 102 208 A 44 44 0 0 0 95.2 184.5\" fill=\"none\" stroke=\"#20302a\" stroke-width=\"1.6\"/><text x=\"120.0\" y=\"193.0\" fill=\"#20302a\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-style:italic\">&#952;</text><text x=\"164.0\" y=\"232.0\" fill=\"#c17a17\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">V<tspan font-size=\"10.2px\" dy=\"3.3\">x</tspan><tspan font-size=\"0.01px\" dy=\"-3.3\">.</tspan></text><text x=\"294.0\" y=\"145.0\" fill=\"#c17a17\" font-size=\"15\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">V<tspan font-size=\"10.2px\" dy=\"3.3\">y</tspan><tspan font-size=\"0.01px\" dy=\"-3.3\">.</tspan></text><text x=\"152.0\" y=\"129.0\" fill=\"#0e7a68\" font-size=\"18\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">V</text><circle cx=\"270\" cy=\"74\" r=\"3.2\" fill=\"#0e7a68\"/></svg>",
+            "caption": "Un vector y sus componentes: las proyecciones sobre cada eje. El módulo es la longitud de la flecha y se obtiene con Pitágoras a partir de las componentes.",
+            "purpose": "Fijar que un vector = sus componentes, y el módulo sale de ellas."
+          }
+        ]
+      },
+      {
+        "id": "TH-MF04-1",
+        "type": "formalisation",
+        "title": "Operaciones y módulo",
+        "scope": "CORE",
+        "body": "Con $\\vec u=(u_1,u_2,u_3)$ y $\\vec v=(v_1,v_2,v_3)$:\n\n- **Suma/resta:** $\\vec u\\pm\\vec v=(u_1\\pm v_1,\\,u_2\\pm v_2,\\,u_3\\pm v_3)$, componente a componente.\n- **Por un escalar:** $k\\vec u=(ku_1,ku_2,ku_3)$.\n- **Módulo:** $|\\vec u|=\\sqrt{u_1^2+u_2^2+u_3^2}$ (Pitágoras).\n\nEl **vector que va de $A$ a $B$** es $\\vec{AB}=B-A$ (coordenadas del extremo menos las del origen).",
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2",
+        "assets": [
+          {
+            "id": "AS-MF04-2",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 230\" width=\"380\" height=\"230\" role=\"img\" id=\"svg-vsum\"><rect x=\"0\" y=\"0\" width=\"380\" height=\"230\" fill=\"none\"/><line x1=\"50.0\" y1=\"200.0\" x2=\"342.0\" y2=\"200.0\" stroke=\"#24312c\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><polygon points=\"350.0,200.0 342.0,204.0 342.0,196.0\" fill=\"#24312c\"/><line x1=\"50.0\" y1=\"200.0\" x2=\"50.0\" y2=\"38.0\" stroke=\"#24312c\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><polygon points=\"50.0,30.0 54.0,38.0 46.0,38.0\" fill=\"#24312c\"/><line x1=\"50.0\" y1=\"200.0\" x2=\"210.0\" y2=\"200.0\" stroke=\"#0e7a68\" stroke-width=\"2.8\" stroke-linecap=\"round\"/><polygon points=\"220.0,200.0 210.0,205.0 210.0,195.0\" fill=\"#0e7a68\"/><line x1=\"220.0\" y1=\"200.0\" x2=\"284.6\" y2=\"98.4\" stroke=\"#c17a17\" stroke-width=\"2.8\" stroke-linecap=\"round\"/><polygon points=\"290.0,90.0 288.8,101.1 280.4,95.8\" fill=\"#c17a17\"/><line x1=\"50.0\" y1=\"200.0\" x2=\"280.0\" y2=\"94.6\" stroke=\"#8a3d6b\" stroke-width=\"3\" stroke-linecap=\"round\"/><polygon points=\"290.0,90.0 282.3,99.6 277.7,89.6\" fill=\"#8a3d6b\"/><text x=\"135.0\" y=\"220.0\" fill=\"#0e7a68\" font-size=\"16\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">a</text><text x=\"271.0\" y=\"145.0\" fill=\"#c17a17\" font-size=\"16\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">b</text><text x=\"150.0\" y=\"137.0\" fill=\"#8a3d6b\" font-size=\"16\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">a+b</text></svg>",
+            "caption": "La suma de vectores se hace punta con cola; en coordenadas, es sumar las componentes. El resultado cierra el camino desde el origen del primero hasta la punta del último.",
+            "purpose": "Ligar la suma gráfica (punta-cola) con la suma por componentes."
+          }
+        ]
+      },
+      {
+        "id": "TH-MF04-2",
+        "type": "worked_rule",
+        "title": "El vector entre dos puntos, y por qué el orden importa",
+        "scope": "CORE",
+        "body": "$\\vec{AB}=B-A$ apunta **de $A$ hacia $B$**; $\\vec{BA}=A-B$ es el opuesto. El orden de la resta fija el sentido. Con $A(1,0,2)$ y $B(4,2,2)$: $\\vec{AB}=(3,2,0)$. Su módulo, $|\\vec{AB}|=\\sqrt{9+4+0}=\\sqrt{13}$, es la **distancia** entre los dos puntos.",
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF04-3",
+        "type": "connection",
+        "title": "Ampliación — más allá de lo esencial",
+        "scope": "ADVANCED",
+        "body": "**— Con componentes, módulo y $\\vec{AB}=B-A$ tienes la base. Lo que sigue amplía. —**\n\nEl **producto escalar** $\\vec u\\cdot\\vec v=u_1v_1+u_2v_2+u_3v_3=|\\vec u||\\vec v|\\cos\\alpha$ mide el ángulo entre vectores y detecta perpendicularidad ($\\vec u\\cdot\\vec v=0$). El **producto vectorial** $\\vec u\\times\\vec v$ da un vector perpendicular a ambos, cuyo módulo es el área del paralelogramo. Son las herramientas de ángulos, distancias y áreas en el espacio, que se estudian a fondo en las unidades de geometría.",
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Componentes",
+        "definition": "Las proyecciones del vector sobre los ejes; se opera con ellas de forma independiente."
+      },
+      {
+        "term": "Módulo",
+        "definition": "$|\\vec u|=\\sqrt{u_1^2+u_2^2+u_3^2}$, la longitud del vector; la distancia entre $A$ y $B$ es $|\\vec{AB}|$."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-MF04-1",
+        "level": "basic",
+        "statement": "Dados $A(1,2,0)$ y $B(4,6,0)$, halla $\\vec{AB}$ y la distancia $AB$.",
+        "knowns": [
+          "$A,B$"
+        ],
+        "unknowns": [
+          "$\\vec{AB}$, distancia"
+        ],
+        "reasoning": [
+          "$\\vec{AB}=B-A=(4-1,\\,6-2,\\,0-0)=(3,4,0)$.",
+          "$|\\vec{AB}|=\\sqrt{3^2+4^2+0}=\\sqrt{25}=5$."
+        ],
+        "solution": "$\\vec{AB}=(3,4,0)$; distancia $=5$.",
+        "interpretation": "El vector entre dos puntos es extremo menos origen; su módulo es la distancia.",
+        "common_mistake": "Restar al revés ($A-B$) y obtener el vector opuesto, o sumar en vez de restar.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "WE-MF04-2",
+        "level": "basic",
+        "statement": "Con $\\vec u=(2,-1,3)$ y $\\vec v=(0,4,-1)$, calcula $2\\vec u-\\vec v$.",
+        "knowns": [
+          "$\\vec u,\\vec v$"
+        ],
+        "unknowns": [
+          "$2\\vec u-\\vec v$"
+        ],
+        "reasoning": [
+          "$2\\vec u=(4,-2,6)$.",
+          "$2\\vec u-\\vec v=(4-0,\\,-2-4,\\,6-(-1))=(4,-6,7)$."
+        ],
+        "solution": "$(4,-6,7)$.",
+        "interpretation": "Primero el escalar, luego la resta, siempre componente a componente.",
+        "common_mistake": "Olvidar multiplicar todas las componentes por el escalar, o errar el signo de $6-(-1)$.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "EX-MF04-G1",
+        "type": "GUIDED",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "difficulty": 2,
+        "statement": "Halla el módulo de $\\vec u=(1,-2,2)$.",
+        "hints": [
+          "Pitágoras con las tres componentes.",
+          "Los signos no importan: van al cuadrado."
+        ],
+        "answer": "$3$",
+        "full_solution": "$|\\vec u|=\\sqrt{1+4+4}=\\sqrt9=3$.",
+        "common_errors": [
+          "Olvidar una componente o no elevar al cuadrado."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-MF04-S1",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "difficulty": 1,
+        "statement": "Suma $(3,1,0)+(−1,2,5)$.",
+        "hints": [
+          "Componente a componente."
+        ],
+        "answer": "$(2,3,5)$",
+        "full_solution": "$(3-1,\\,1+2,\\,0+5)=(2,3,5)$.",
+        "common_errors": [
+          "Sumar módulos en vez de componentes."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF04-S2",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "difficulty": 2,
+        "statement": "Halla $\\vec{AB}$ con $A(0,0,1)$, $B(2,-1,4)$.",
+        "hints": [
+          "$B-A$."
+        ],
+        "answer": "$(2,-1,3)$",
+        "full_solution": "$\\vec{AB}=(2-0,\\,-1-0,\\,4-1)=(2,-1,3)$.",
+        "common_errors": [
+          "Calcular $A-B$."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF04-S3",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-VEC"
+        ],
+        "difficulty": 2,
+        "statement": "¿Cuál es la distancia entre $P(1,1,1)$ y $Q(1,1,4)$?",
+        "hints": [
+          "Distancia $=|\\vec{PQ}|$."
+        ],
+        "answer": "$3$",
+        "full_solution": "$\\vec{PQ}=(0,0,3)$, $|\\vec{PQ}|=3$.",
+        "common_errors": [
+          "Sumar coordenadas en vez de restar."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-MF04-1",
+        "stem": "El vector que va de $A$ a $B$ es:",
+        "options": [
+          {
+            "key": "a",
+            "text": "$A-B$",
+            "why_wrong": "Ese es $\\vec{BA}$, el opuesto."
+          },
+          {
+            "key": "b",
+            "text": "$B-A$"
+          },
+          {
+            "key": "c",
+            "text": "$A+B$",
+            "why_wrong": "La suma de puntos no tiene ese significado."
+          },
+          {
+            "key": "d",
+            "text": "$|B-A|$",
+            "why_wrong": "Eso es un número (la distancia), no un vector."
+          }
+        ],
+        "correct": "b",
+        "explanation": "$\\vec{AB}=B-A$: extremo menos origen. Apunta de $A$ hacia $B$.",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-VEC"
+      },
+      {
+        "id": "MCQ-MF04-2",
+        "stem": "El módulo de $(0,3,4)$ es:",
+        "options": [
+          {
+            "key": "a",
+            "text": "7",
+            "why_wrong": "Eso sería $3+4$, no el módulo."
+          },
+          {
+            "key": "b",
+            "text": "5"
+          },
+          {
+            "key": "c",
+            "text": "25",
+            "why_wrong": "Es el módulo al cuadrado; falta la raíz."
+          },
+          {
+            "key": "d",
+            "text": "12",
+            "why_wrong": "Es el producto."
+          }
+        ],
+        "correct": "b",
+        "explanation": "$\\sqrt{0^2+3^2+4^2}=\\sqrt{25}=5$ (el 3-4-5 pitagórico).",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-VEC"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-MF04-1",
+        "kind": "formula",
+        "front": "Operaciones con vectores",
+        "back": "Suma/resta y producto por escalar, componente a componente. $|\\vec u|=\\sqrt{u_1^2+u_2^2+u_3^2}$.",
+        "concept_id": "C-MF-VEC",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF04-2",
+        "kind": "formula",
+        "front": "Vector entre dos puntos",
+        "back": "$\\vec{AB}=B-A$ (extremo menos origen); $|\\vec{AB}|$ es la distancia $AB$.",
+        "concept_id": "C-MF-VEC",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF04-3",
+        "kind": "check",
+        "front": "Orden de la resta",
+        "back": "$\\vec{AB}$ y $\\vec{BA}$ son opuestos: el orden fija el sentido.",
+        "concept_id": "C-MF-VEC",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF04-4",
+        "kind": "check",
+        "front": "Sumar vectores",
+        "back": "Nunca se suman módulos; se suman componentes (punta con cola).",
+        "concept_id": "C-MF-VEC",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "M-MF04-1",
+        "incorrect_model": "«El vector de $A$ a $B$ es $A-B$.»",
+        "why_it_appears": "Se lee 'de A' y se pone A primero.",
+        "diagnostic_signal": "Obtiene siempre el vector con el sentido cambiado.",
+        "correct_model": "$\\vec{AB}=B-A$: se resta el origen al extremo. Pensar 'a dónde llego menos de dónde salgo'.",
+        "remediation": "Dibujar dos puntos y comprobar hacia dónde apunta $B-A$.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-VEC"
+      },
+      {
+        "id": "M-MF04-2",
+        "incorrect_model": "«El módulo de la suma es la suma de módulos.»",
+        "why_it_appears": "Funciona con números.",
+        "diagnostic_signal": "Da $|\\vec u+\\vec v|=|\\vec u|+|\\vec v|$ siempre.",
+        "correct_model": "Solo coincide si los vectores son paralelos y del mismo sentido; en general $|\\vec u+\\vec v|\\leq|\\vec u|+|\\vec v|$. Hay que sumar componentes y luego el módulo.",
+        "remediation": "Sumar $(3,0)$ y $(0,4)$: módulos 3 y 4, pero el de la suma es 5, no 7.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-VEC"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Restar los puntos en el orden equivocado.",
+        "why": "'De A a B' sugiere empezar por A.",
+        "how_to_avoid": "$\\vec{AB}=B-A$: extremo menos origen, siempre.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Sumar módulos en vez de componentes.",
+        "why": "Parece lo natural.",
+        "how_to_avoid": "Operar componente a componente y sacar el módulo al final.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Los vectores se manejan por componentes: sumar, restar y escalar es hacerlo coordenada a coordenada, el módulo sale de Pitágoras y el vector entre dos puntos es extremo menos origen. Es la base de toda la geometría del curso.",
+      "key_points": [
+        "Operaciones componente a componente; $|\\vec u|=\\sqrt{\\sum u_i^2}$.",
+        "$\\vec{AB}=B-A$; su módulo es la distancia $AB$.",
+        "El orden de la resta fija el sentido.",
+        "Los módulos no se suman; se suman componentes."
+      ],
+      "formulas": [
+        "|\\vec u|=\\sqrt{u_1^2+u_2^2+u_3^2}",
+        "\\vec{AB}=B-A"
+      ],
+      "what_to_remember_if_nothing_else": "Todo por componentes; $\\vec{AB}=B-A$; módulo con Pitágoras."
+    },
+    "lang": "es",
+    "foundations_concept_tag": "C-MF-VEC",
+    "schema_v2": {
+      "canonical_lesson_id": "SELMAT::fundamentos::MF04",
+      "content_version": "2.0.0-pilot",
+      "title": "Vectores en el plano y el espacio",
+      "subject": "Matemáticas",
+      "curriculum": {
+        "framework": "Remediación transversal (prerrequisito)",
+        "codes": [],
+        "status": "FOUNDATIONS",
+        "track": null
+      },
+      "learning_design": {
+        "estimated_core_minutes": 18,
+        "estimated_standard_minutes": 30,
+        "estimated_advanced_minutes": 45,
+        "prerequisite_concept_ids": [],
+        "diagnostic_item_ids": [
+          "DIAG-MF04-00"
+        ],
+        "recommended_routes": {
+          "from_zero": [
+            "DIAG-MF04-00",
+            "EX-MF04-G1",
+            "EX-MF04-S1",
+            "EX-MF04-S2",
+            "EX-MF04-S3",
+            "MCQ-MF04-1",
+            "MCQ-MF04-2",
+            "TH-MF04-0",
+            "TH-MF04-1",
+            "TH-MF04-2",
+            "WE-MF04-1",
+            "WE-MF04-2"
+          ],
+          "standard": [
+            "DIAG-MF04-00",
+            "EX-MF04-G1",
+            "EX-MF04-S1",
+            "EX-MF04-S2",
+            "EX-MF04-S3",
+            "MCQ-MF04-1",
+            "MCQ-MF04-2",
+            "TH-MF04-0",
+            "TH-MF04-1",
+            "TH-MF04-2",
+            "WE-MF04-1",
+            "WE-MF04-2"
+          ],
+          "excellence": [
+            "DIAG-MF04-00",
+            "EX-MF04-G1",
+            "EX-MF04-S1",
+            "EX-MF04-S2",
+            "EX-MF04-S3",
+            "MCQ-MF04-1",
+            "MCQ-MF04-2",
+            "TH-MF04-0",
+            "TH-MF04-1",
+            "TH-MF04-2",
+            "TH-MF04-3",
+            "WE-MF04-1",
+            "WE-MF04-2"
+          ],
+          "quick_review": [
+            "TH-MF04-3"
+          ]
+        }
+      },
+      "objectives": [
+        {
+          "id": "LO-MF04-1",
+          "statement": "Operar con vectores por componentes: suma, resta y producto por un escalar.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-MF04-2",
+          "statement": "Calcular el módulo de un vector y el vector entre dos puntos.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        }
+      ],
+      "knowledge_model": {
+        "core_claims": [
+          {
+            "id": "CL-MF04-0",
+            "statement": "Operaciones componente a componente; $|\\vec u|=\\sqrt{\\sum u_i^2}$.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF04-1",
+            "statement": "$\\vec{AB}=B-A$; su módulo es la distancia $AB$.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF04-2",
+            "statement": "El orden de la resta fija el sentido.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF04-3",
+            "statement": "Los módulos no se suman; se suman componentes.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          }
+        ],
+        "formulae": [
+          {
+            "id": "F-MF04-0",
+            "latex": "|\\vec u|=\\sqrt{u_1^2+u_2^2+u_3^2}",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          },
+          {
+            "id": "F-MF04-1",
+            "latex": "\\vec{AB}=B-A",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          }
+        ],
+        "common_mistakes": [
+          {
+            "id": "M-MF04-1",
+            "incorrect_claim": "«El vector de $A$ a $B$ es $A-B$.»",
+            "correction": "$\\vec{AB}=B-A$: se resta el origen al extremo. Pensar 'a dónde llego menos de dónde salgo'.",
+            "diagnostic_cue": "Obtiene siempre el vector con el sentido cambiado."
+          },
+          {
+            "id": "M-MF04-2",
+            "incorrect_claim": "«El módulo de la suma es la suma de módulos.»",
+            "correction": "Solo coincide si los vectores son paralelos y del mismo sentido; en general $|\\vec u+\\vec v|\\leq|\\vec u|+|\\vec v|$. Hay que sumar componentes y luego el módulo.",
+            "diagnostic_cue": "Da $|\\vec u+\\vec v|=|\\vec u|+|\\vec v|$ siempre."
+          }
+        ],
+        "exam_conventions": []
+      },
+      "presentation": {
+        "hook_problem": "Un vector es una flecha: tiene módulo, dirección y sentido, pero se maneja por sus **componentes** $(v_1,v_2)$ en el plano o $(v_1,v_2,v_3)$ en el espacio. Toda la geometría de Selectividad (rectas, planos, distancias) se construye operando con vectores componente a componente.",
+        "intuition_blocks": [
+          "TH-MF04-0"
+        ],
+        "core_blocks": [
+          "TH-MF04-1",
+          "TH-MF04-2"
+        ],
+        "standard_blocks": [],
+        "advanced_blocks": [
+          "TH-MF04-3"
+        ],
+        "worked_examples": [
+          "WE-MF04-1",
+          "WE-MF04-2"
+        ],
+        "faded_examples": [
+          "EX-MF04-G1"
+        ],
+        "micro_checks": [
+          "DIAG-MF04-00"
+        ],
+        "summary": {
+          "must_know": [
+            "Operaciones componente a componente; $|\\vec u|=\\sqrt{\\sum u_i^2}$.",
+            "$\\vec{AB}=B-A$; su módulo es la distancia $AB$.",
+            "El orden de la resta fija el sentido.",
+            "Los módulos no se suman; se suman componentes."
+          ],
+          "conditions": [],
+          "common_error": "Restar los puntos en el orden equivocado.",
+          "next_step": "Siguiente lección de fundamentos."
+        }
+      },
+      "practice": {
+        "items": [
+          {
+            "id": "EX-MF04-S1",
+            "skills": [
+              "C-MF-VEC"
+            ],
+            "difficulty": 1,
+            "conceptual_depth": 1,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Componente a componente."
+            ],
+            "answer": "$(2,3,5)$",
+            "full_solution": "$(3-1,\\,1+2,\\,0+5)=(2,3,5)$."
+          },
+          {
+            "id": "EX-MF04-S2",
+            "skills": [
+              "C-MF-VEC"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "$B-A$."
+            ],
+            "answer": "$(2,-1,3)$",
+            "full_solution": "$\\vec{AB}=(2-0,\\,-1-0,\\,4-1)=(2,-1,3)$."
+          },
+          {
+            "id": "EX-MF04-S3",
+            "skills": [
+              "C-MF-VEC"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Distancia $=|\\vec{PQ}|$."
+            ],
+            "answer": "$3$",
+            "full_solution": "$\\vec{PQ}=(0,0,3)$, $|\\vec{PQ}|=3$."
+          },
+          {
+            "id": "EX-MF04-G1",
+            "skills": [
+              "C-MF-VEC"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Pitágoras con las tres componentes.",
+              "Los signos no importan: van al cuadrado."
+            ],
+            "answer": "$3$",
+            "full_solution": "$|\\vec u|=\\sqrt{1+4+4}=\\sqrt9=3$."
+          }
+        ],
+        "checkpoint_item_ids": [],
+        "exam_item_ids": [],
+        "challenge_item_ids": []
+      },
+      "qa": {
+        "validated_semantics": true,
+        "validated_numerics": true,
+        "validated_render": true,
+        "canonical_hash": "66e99f9ab50a1c2e"
+      }
+    }
+  },
+  "MF05_Matrices.json": {
+    "id": "MF05",
+    "title": "Operaciones con matrices",
+    "subject": "Matemáticas",
+    "course_label": "Selectividad Matemáticas II",
+    "unit_id": "fundamentos",
+    "estimated_length": "0,5 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Remediación transversal (prerrequisito)",
+      "codes": [],
+      "status": "FOUNDATIONS",
+      "track": null
+    },
+    "objectives": [
+      {
+        "id": "LO-MF05-1",
+        "statement": "Sumar matrices y multiplicar por un escalar.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-MF05-2",
+        "statement": "Multiplicar matrices comprobando la compatibilidad de dimensiones.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-MF05-00",
+        "question": "¿Resolverías un ejercicio sencillo de operaciones con matrices sin mirar la teoría?",
+        "expected_answer": "Si haces los dos primeros ejercicios sin ayuda, salta a la práctica.",
+        "common_wrong_answers": [],
+        "interpretation": "Remediación just-in-time: entra aquí solo si un diagnóstico lo pide."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-MF05-0",
+        "type": "intuition",
+        "title": "Tablas con las que se calcula",
+        "scope": "CORE",
+        "body": "Una matriz es una tabla de números ordenada en filas y columnas. Su dimensión $m\\times n$ (filas por columnas) manda en todo: decide qué operaciones son posibles. Las matrices son la herramienta de los sistemas de ecuaciones y de las transformaciones geométricas.",
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF05-1",
+        "type": "formalisation",
+        "title": "Suma, escalar y producto",
+        "scope": "CORE",
+        "body": "La **suma** se hace casilla a casilla y exige **misma dimensión**. El **producto por un escalar** multiplica cada casilla. El **producto de matrices** $A\\cdot B$ es distinto: solo se puede si el número de **columnas de $A$** coincide con el de **filas de $B$**, y el resultado tiene las filas de $A$ y las columnas de $B$. Cada casilla $(i,j)$ es la fila $i$ de $A$ 'multiplicada' por la columna $j$ de $B$ (suma de productos).",
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2",
+        "assets": [
+          {
+            "id": "AS-MF05-1",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 185\" width=\"400\" height=\"185\" role=\"img\" id=\"svg-matprod\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"185\" fill=\"none\"/><rect x=\"30\" y=\"50\" width=\"90\" height=\"60\" fill=\"#d9efe8\" stroke=\"#24312c\" stroke-width=\"1.6\" rx=\"4\"/><text x=\"75.0\" y=\"126.0\" fill=\"#5c6b67\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">A (2×3)</text><text x=\"140.0\" y=\"86.0\" fill=\"#20302a\" font-size=\"22\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">·</text><rect x=\"160\" y=\"40\" width=\"60\" height=\"80\" fill=\"#fbe8cf\" stroke=\"#24312c\" stroke-width=\"1.6\" rx=\"4\"/><text x=\"190.0\" y=\"136.0\" fill=\"#5c6b67\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">B (3×2)</text><text x=\"238.0\" y=\"86.0\" fill=\"#20302a\" font-size=\"20\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">=</text><rect x=\"262\" y=\"50\" width=\"60\" height=\"60\" fill=\"#efe7f2\" stroke=\"#24312c\" stroke-width=\"1.6\" rx=\"4\"/><text x=\"292.0\" y=\"126.0\" fill=\"#5c6b67\" font-size=\"12\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">C (2×2)</text><text x=\"200.0\" y=\"150.0\" fill=\"#20302a\" font-size=\"12.5\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">columnas de A = filas de B  →  se pueden multiplicar</text><text x=\"200.0\" y=\"170.0\" fill=\"#5c6b67\" font-size=\"11.5\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">C es filas de A × columnas de B</text></svg>",
+            "caption": "Para multiplicar $A\\cdot B$, las **columnas de $A$** deben igualar las **filas de $B$**. El resultado hereda las filas de $A$ y las columnas de $B$: aquí $(2\\times3)\\cdot(3\\times2)=(2\\times2)$.",
+            "purpose": "Fijar la regla de compatibilidad de dimensiones del producto, el error más frecuente."
+          }
+        ]
+      },
+      {
+        "id": "TH-MF05-2",
+        "type": "caveat",
+        "title": "El producto no es conmutativo",
+        "scope": "CORE",
+        "body": "A diferencia de los números, $A\\cdot B\\neq B\\cdot A$ en general (a veces ni siquiera se puede calcular en los dos órdenes). Tampoco se cumple que $AB=0$ implique $A=0$ o $B=0$. Y $A^k$ significa multiplicar $A$ por sí misma $k$ veces, **nunca** elevar cada casilla. Estas diferencias con la aritmética ordinaria son la fuente habitual de errores.",
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF05-3",
+        "type": "connection",
+        "title": "Ampliación — más allá de lo esencial",
+        "scope": "ADVANCED",
+        "body": "**— Con suma, escalar, producto y la regla de dimensiones tienes lo esencial. —**\n\nLa **matriz identidad** $I$ actúa como el 1 ($AI=IA=A$). La **matriz inversa** $A^{-1}$ (cuando existe) cumple $AA^{-1}=I$ y permite 'despejar' en ecuaciones matriciales. El **determinante** decide si una matriz cuadrada tiene inversa ($\\det A\\neq0$). Estas ideas se desarrollan en las unidades de determinantes y sistemas.",
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Dimensión",
+        "definition": "$m\\times n$: número de filas por número de columnas. Decide qué operaciones son posibles."
+      },
+      {
+        "term": "Compatibilidad del producto",
+        "definition": "$A\\cdot B$ existe si columnas de $A$ = filas de $B$; el resultado es (filas de $A$)×(columnas de $B$)."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-MF05-1",
+        "level": "basic",
+        "statement": "¿Se puede calcular $A\\cdot B$ con $A$ de $2\\times3$ y $B$ de $3\\times4$? ¿De qué dimensión es?",
+        "knowns": [
+          "$A:2\\times3$, $B:3\\times4$"
+        ],
+        "unknowns": [
+          "¿posible? dimensión"
+        ],
+        "reasoning": [
+          "Columnas de $A$ = 3; filas de $B$ = 3: coinciden, así que **sí** se puede.",
+          "El resultado tiene filas de $A$ (2) y columnas de $B$ (4): es $2\\times4$."
+        ],
+        "solution": "Sí; $A\\cdot B$ es $2\\times4$.",
+        "interpretation": "El 'eslabón' interior (3 y 3) debe coincidir; los exteriores (2 y 4) dan la dimensión del resultado.",
+        "common_mistake": "Intentar $B\\cdot A$ (que aquí no se puede: columnas de $B$ = 4 ≠ filas de $A$ = 2).",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "WE-MF05-2",
+        "level": "basic",
+        "statement": "Calcula $\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}\\begin{pmatrix}3\\\\4\\end{pmatrix}$.",
+        "knowns": [
+          "$2\\times2$ por $2\\times1$"
+        ],
+        "unknowns": [
+          "el producto"
+        ],
+        "reasoning": [
+          "Compatible: $2$ columnas = $2$ filas. Resultado $2\\times1$.",
+          "Fila 1 por la columna: $1\\cdot3+2\\cdot4=11$.",
+          "Fila 2 por la columna: $0\\cdot3+1\\cdot4=4$."
+        ],
+        "solution": "$\\begin{pmatrix}11\\\\4\\end{pmatrix}$.",
+        "interpretation": "Cada casilla del resultado es una fila de la primera 'contra' la columna de la segunda.",
+        "common_mistake": "Multiplicar casilla con casilla en vez de fila por columna.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "EX-MF05-G1",
+        "type": "GUIDED",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "difficulty": 2,
+        "statement": "¿Se puede sumar una matriz $2\\times3$ con una $3\\times2$?",
+        "hints": [
+          "La suma exige misma dimensión.",
+          "$2\\times3$ y $3\\times2$ no son iguales."
+        ],
+        "answer": "No.",
+        "full_solution": "La suma solo es posible entre matrices de la **misma** dimensión; $2\\times3\\neq3\\times2$, así que no se pueden sumar (aunque tengan el mismo número de casillas).",
+        "common_errors": [
+          "Pensar que basta con tener el mismo número de elementos."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-MF05-S1",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "difficulty": 1,
+        "statement": "¿De qué dimensión es $A\\cdot B$ si $A$ es $3\\times2$ y $B$ es $2\\times5$?",
+        "hints": [
+          "Exteriores dan la dimensión."
+        ],
+        "answer": "$3\\times5$",
+        "full_solution": "Interiores $2=2$: compatible. Resultado $3\\times5$.",
+        "common_errors": [
+          "Dar $2\\times2$."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF05-S2",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "difficulty": 2,
+        "statement": "Calcula $3\\begin{pmatrix}1&-2\\\\0&4\\end{pmatrix}$.",
+        "hints": [
+          "Cada casilla por 3."
+        ],
+        "answer": "$\\begin{pmatrix}3&-6\\\\0&12\\end{pmatrix}$",
+        "full_solution": "Se multiplica cada elemento por el escalar.",
+        "common_errors": [
+          "Multiplicar solo la diagonal."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF05-S3",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-MAT"
+        ],
+        "difficulty": 2,
+        "statement": "¿Es cierto que $A\\cdot B=B\\cdot A$ siempre?",
+        "hints": [
+          "Piensa en la conmutatividad."
+        ],
+        "answer": "No",
+        "full_solution": "El producto de matrices no es conmutativo en general; a veces $B\\cdot A$ ni se puede calcular.",
+        "common_errors": [
+          "Asumir que se comporta como los números."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-MF05-1",
+        "stem": "$A\\cdot B$ se puede calcular cuando:",
+        "options": [
+          {
+            "key": "a",
+            "text": "$A$ y $B$ tienen la misma dimensión",
+            "why_wrong": "Eso es para la suma, no el producto."
+          },
+          {
+            "key": "b",
+            "text": "las columnas de $A$ igualan las filas de $B$"
+          },
+          {
+            "key": "c",
+            "text": "$A$ y $B$ son cuadradas",
+            "why_wrong": "No hace falta ser cuadradas; basta la compatibilidad interior."
+          },
+          {
+            "key": "d",
+            "text": "siempre",
+            "why_wrong": "Depende de las dimensiones."
+          }
+        ],
+        "correct": "b",
+        "explanation": "El producto exige columnas de $A$ = filas de $B$; el resultado es (filas de $A$)×(columnas de $B$).",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-MAT"
+      },
+      {
+        "id": "MCQ-MF05-2",
+        "stem": "$A^2$ significa:",
+        "options": [
+          {
+            "key": "a",
+            "text": "elevar cada casilla al cuadrado",
+            "why_wrong": "Eso no es la potencia de una matriz."
+          },
+          {
+            "key": "b",
+            "text": "$A\\cdot A$"
+          },
+          {
+            "key": "c",
+            "text": "el determinante al cuadrado",
+            "why_wrong": "No; es el producto de la matriz por sí misma."
+          },
+          {
+            "key": "d",
+            "text": "multiplicar por 2",
+            "why_wrong": "Eso sería $2A$."
+          }
+        ],
+        "correct": "b",
+        "explanation": "$A^2=A\\cdot A$ (producto matricial), definido solo para matrices cuadradas. No es elevar casillas.",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-MAT"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-MF05-1",
+        "kind": "check",
+        "front": "¿Cuándo se pueden sumar dos matrices?",
+        "back": "Solo si tienen la **misma dimensión**; se suman casilla a casilla.",
+        "concept_id": "C-MF-MAT",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF05-2",
+        "kind": "check",
+        "front": "¿Cuándo existe $A\\cdot B$?",
+        "back": "Si columnas de $A$ = filas de $B$. Resultado: filas de $A$ × columnas de $B$.",
+        "concept_id": "C-MF-MAT",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF05-3",
+        "kind": "check",
+        "front": "Conmutatividad",
+        "back": "$A\\cdot B\\neq B\\cdot A$ en general; el orden importa.",
+        "concept_id": "C-MF-MAT",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF05-4",
+        "kind": "check",
+        "front": "Potencia de una matriz",
+        "back": "$A^k=A\\cdots A$ ($k$ veces), solo cuadradas. Nunca es elevar cada casilla.",
+        "concept_id": "C-MF-MAT",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "M-MF05-1",
+        "incorrect_model": "«$A\\cdot B$ se calcula casilla con casilla, como la suma.»",
+        "why_it_appears": "La suma sí es casilla a casilla, y se generaliza.",
+        "diagnostic_signal": "Multiplica elemento a elemento y obtiene dimensiones imposibles.",
+        "correct_model": "El producto es fila por columna: cada casilla $(i,j)$ es una suma de productos de la fila $i$ de $A$ por la columna $j$ de $B$. Por eso importan las dimensiones.",
+        "remediation": "Multiplicar una $2\\times2$ por un vector columna paso a paso.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-MAT"
+      },
+      {
+        "id": "M-MF05-2",
+        "incorrect_model": "«Las matrices se comportan como los números.»",
+        "why_it_appears": "La notación invita a ello.",
+        "diagnostic_signal": "Usa $AB=BA$ o $A^2$ = casillas al cuadrado.",
+        "correct_model": "El producto no conmuta, $AB=0$ no implica $A=0$ o $B=0$, y $A^k$ es producto repetido. Son diferencias esenciales con la aritmética.",
+        "remediation": "Calcular $AB$ y $BA$ para dos matrices concretas y ver que difieren.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-MAT"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Intentar multiplicar matrices incompatibles.",
+        "why": "No se comprueban las dimensiones.",
+        "how_to_avoid": "Antes de multiplicar, comprobar columnas de A = filas de B.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Elevar cada casilla al cuadrado creyendo que es $A^2$.",
+        "why": "Se copia la notación de los números.",
+        "how_to_avoid": "$A^2=A\\cdot A$ con la regla fila por columna.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Las matrices se suman casilla a casilla (misma dimensión) y se multiplican fila por columna (columnas de A = filas de B). El producto no es conmutativo y $A^k$ es producto repetido, no casillas al cuadrado: ahí están casi todos los errores.",
+      "key_points": [
+        "Suma: misma dimensión, casilla a casilla.",
+        "Producto: columnas de A = filas de B; resultado (filas A)×(columnas B).",
+        "No conmuta: $AB\\neq BA$ en general.",
+        "$A^k=A\\cdots A$, nunca elevar casillas."
+      ],
+      "formulas": [
+        "A_{m\\times n}\\cdot B_{n\\times p}=C_{m\\times p}"
+      ],
+      "what_to_remember_if_nothing_else": "Mira las dimensiones antes de multiplicar; el producto es fila por columna y no conmuta."
+    },
+    "lang": "es",
+    "foundations_concept_tag": "C-MF-MAT",
+    "schema_v2": {
+      "canonical_lesson_id": "SELMAT::fundamentos::MF05",
+      "content_version": "2.0.0-pilot",
+      "title": "Operaciones con matrices",
+      "subject": "Matemáticas",
+      "curriculum": {
+        "framework": "Remediación transversal (prerrequisito)",
+        "codes": [],
+        "status": "FOUNDATIONS",
+        "track": null
+      },
+      "learning_design": {
+        "estimated_core_minutes": 18,
+        "estimated_standard_minutes": 30,
+        "estimated_advanced_minutes": 45,
+        "prerequisite_concept_ids": [],
+        "diagnostic_item_ids": [
+          "DIAG-MF05-00"
+        ],
+        "recommended_routes": {
+          "from_zero": [
+            "DIAG-MF05-00",
+            "EX-MF05-G1",
+            "EX-MF05-S1",
+            "EX-MF05-S2",
+            "EX-MF05-S3",
+            "MCQ-MF05-1",
+            "MCQ-MF05-2",
+            "TH-MF05-0",
+            "TH-MF05-1",
+            "TH-MF05-2",
+            "WE-MF05-1",
+            "WE-MF05-2"
+          ],
+          "standard": [
+            "DIAG-MF05-00",
+            "EX-MF05-G1",
+            "EX-MF05-S1",
+            "EX-MF05-S2",
+            "EX-MF05-S3",
+            "MCQ-MF05-1",
+            "MCQ-MF05-2",
+            "TH-MF05-0",
+            "TH-MF05-1",
+            "TH-MF05-2",
+            "WE-MF05-1",
+            "WE-MF05-2"
+          ],
+          "excellence": [
+            "DIAG-MF05-00",
+            "EX-MF05-G1",
+            "EX-MF05-S1",
+            "EX-MF05-S2",
+            "EX-MF05-S3",
+            "MCQ-MF05-1",
+            "MCQ-MF05-2",
+            "TH-MF05-0",
+            "TH-MF05-1",
+            "TH-MF05-2",
+            "TH-MF05-3",
+            "WE-MF05-1",
+            "WE-MF05-2"
+          ],
+          "quick_review": [
+            "TH-MF05-2",
+            "TH-MF05-3"
+          ]
+        }
+      },
+      "objectives": [
+        {
+          "id": "LO-MF05-1",
+          "statement": "Sumar matrices y multiplicar por un escalar.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-MF05-2",
+          "statement": "Multiplicar matrices comprobando la compatibilidad de dimensiones.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        }
+      ],
+      "knowledge_model": {
+        "core_claims": [
+          {
+            "id": "CL-MF05-0",
+            "statement": "Suma: misma dimensión, casilla a casilla.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF05-1",
+            "statement": "Producto: columnas de A = filas de B; resultado (filas A)×(columnas B).",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF05-2",
+            "statement": "No conmuta: $AB\\neq BA$ en general.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF05-3",
+            "statement": "$A^k=A\\cdots A$, nunca elevar casillas.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          }
+        ],
+        "formulae": [
+          {
+            "id": "F-MF05-0",
+            "latex": "A_{m\\times n}\\cdot B_{n\\times p}=C_{m\\times p}",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          }
+        ],
+        "common_mistakes": [
+          {
+            "id": "M-MF05-1",
+            "incorrect_claim": "«$A\\cdot B$ se calcula casilla con casilla, como la suma.»",
+            "correction": "El producto es fila por columna: cada casilla $(i,j)$ es una suma de productos de la fila $i$ de $A$ por la columna $j$ de $B$. Por eso importan las dimensiones.",
+            "diagnostic_cue": "Multiplica elemento a elemento y obtiene dimensiones imposibles."
+          },
+          {
+            "id": "M-MF05-2",
+            "incorrect_claim": "«Las matrices se comportan como los números.»",
+            "correction": "El producto no conmuta, $AB=0$ no implica $A=0$ o $B=0$, y $A^k$ es producto repetido. Son diferencias esenciales con la aritmética.",
+            "diagnostic_cue": "Usa $AB=BA$ o $A^2$ = casillas al cuadrado."
+          }
+        ],
+        "exam_conventions": []
+      },
+      "presentation": {
+        "hook_problem": "Una matriz es una tabla de números ordenada en filas y columnas. Su dimensión $m\\times n$ (filas por columnas) manda en todo: decide qué operaciones son posibles. Las matrices son la herramienta de los sistemas de ecuaciones y de las transformaciones geométricas.",
+        "intuition_blocks": [
+          "TH-MF05-0"
+        ],
+        "core_blocks": [
+          "TH-MF05-1",
+          "TH-MF05-2"
+        ],
+        "standard_blocks": [],
+        "advanced_blocks": [
+          "TH-MF05-3"
+        ],
+        "worked_examples": [
+          "WE-MF05-1",
+          "WE-MF05-2"
+        ],
+        "faded_examples": [
+          "EX-MF05-G1"
+        ],
+        "micro_checks": [
+          "DIAG-MF05-00"
+        ],
+        "summary": {
+          "must_know": [
+            "Suma: misma dimensión, casilla a casilla.",
+            "Producto: columnas de A = filas de B; resultado (filas A)×(columnas B).",
+            "No conmuta: $AB\\neq BA$ en general.",
+            "$A^k=A\\cdots A$, nunca elevar casillas."
+          ],
+          "conditions": [],
+          "common_error": "Intentar multiplicar matrices incompatibles.",
+          "next_step": "Siguiente lección de fundamentos."
+        }
+      },
+      "practice": {
+        "items": [
+          {
+            "id": "EX-MF05-S1",
+            "skills": [
+              "C-MF-MAT"
+            ],
+            "difficulty": 1,
+            "conceptual_depth": 1,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Exteriores dan la dimensión."
+            ],
+            "answer": "$3\\times5$",
+            "full_solution": "Interiores $2=2$: compatible. Resultado $3\\times5$."
+          },
+          {
+            "id": "EX-MF05-S2",
+            "skills": [
+              "C-MF-MAT"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Cada casilla por 3."
+            ],
+            "answer": "$\\begin{pmatrix}3&-6\\\\0&12\\end{pmatrix}$",
+            "full_solution": "Se multiplica cada elemento por el escalar."
+          },
+          {
+            "id": "EX-MF05-S3",
+            "skills": [
+              "C-MF-MAT"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Piensa en la conmutatividad."
+            ],
+            "answer": "No",
+            "full_solution": "El producto de matrices no es conmutativo en general; a veces $B\\cdot A$ ni se puede calcular."
+          },
+          {
+            "id": "EX-MF05-G1",
+            "skills": [
+              "C-MF-MAT"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "La suma exige misma dimensión.",
+              "$2\\times3$ y $3\\times2$ no son iguales."
+            ],
+            "answer": "No.",
+            "full_solution": "La suma solo es posible entre matrices de la **misma** dimensión; $2\\times3\\neq3\\times2$, así que no se pueden sumar (aunque tengan el mismo número de casillas)."
+          }
+        ],
+        "checkpoint_item_ids": [],
+        "exam_item_ids": [],
+        "challenge_item_ids": []
+      },
+      "qa": {
+        "validated_semantics": true,
+        "validated_numerics": true,
+        "validated_render": true,
+        "canonical_hash": "12a28e811a4a2745"
+      }
+    }
+  },
+  "MF06_Probabilidad.json": {
+    "id": "MF06",
+    "title": "Probabilidad básica",
+    "subject": "Matemáticas",
+    "course_label": "Selectividad Matemáticas II",
+    "unit_id": "fundamentos",
+    "estimated_length": "0,5 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Remediación transversal (prerrequisito)",
+      "codes": [],
+      "status": "FOUNDATIONS",
+      "track": null
+    },
+    "objectives": [
+      {
+        "id": "LO-MF06-1",
+        "statement": "Calcular probabilidades con la regla de Laplace en experimentos equiprobables.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-MF06-2",
+        "statement": "Usar un diagrama de árbol para sucesos en varias etapas.",
+        "bloom": "apply",
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-MF06-00",
+        "question": "¿Resolverías un ejercicio sencillo de probabilidad básica sin mirar la teoría?",
+        "expected_answer": "Si haces los dos primeros ejercicios sin ayuda, salta a la práctica.",
+        "common_wrong_answers": [],
+        "interpretation": "Remediación just-in-time: entra aquí solo si un diagnóstico lo pide."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-MF06-0",
+        "type": "intuition",
+        "title": "Medir la incertidumbre con un número entre 0 y 1",
+        "scope": "CORE",
+        "body": "La probabilidad de un suceso es un número entre 0 (imposible) y 1 (seguro) que mide cuán verosímil es. Es el prerrequisito de las variables aleatorias y las distribuciones (binomial, normal) del curso.",
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF06-1",
+        "type": "formalisation",
+        "title": "La regla de Laplace y sus condiciones",
+        "scope": "CORE",
+        "body": "**Cuando todos los resultados elementales son equiprobables**, la probabilidad de un suceso $A$ es:\n\n$$P(A)=\\dfrac{\\text{casos favorables}}{\\text{casos posibles}}$$\n\nLa condición de equiprobabilidad es esencial: la regla de Laplace **no** vale para una chincheta o un dado trucado. Cuando no hay simetría, la probabilidad se estima por **frecuencias relativas** (a posteriori), no con Laplace.",
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "TH-MF06-2",
+        "type": "worked_rule",
+        "title": "Varias etapas: el diagrama de árbol",
+        "scope": "CORE",
+        "body": "Para experimentos en varias etapas, un **árbol** organiza todo: cada rama lleva su probabilidad, se **multiplican** las probabilidades a lo largo de un camino y se **suman** los caminos que llevan al mismo resultado. Las hojas de un árbol completo **suman 1**, lo que permite hallar una probabilidad que falta.",
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2",
+        "assets": [
+          {
+            "id": "AS-MF06-1",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 210\" width=\"400\" height=\"210\" role=\"img\" id=\"svg-tree\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"210\" fill=\"none\"/><circle cx=\"50\" cy=\"100\" r=\"4\" fill=\"#24312c\"/><line x1=\"50\" y1=\"100\" x2=\"190\" y2=\"55\" stroke=\"#0e7a68\" stroke-width=\"2.2\"/><text x=\"116.0\" y=\"71.5\" fill=\"#0e7a68\" font-size=\"11.5\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">P(A)=0,6</text><circle cx=\"190\" cy=\"55\" r=\"4\" fill=\"#0e7a68\"/><text x=\"198.0\" y=\"59.0\" fill=\"#0e7a68\" font-size=\"13\" font-weight=\"800\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">A</text><line x1=\"50\" y1=\"100\" x2=\"190\" y2=\"150\" stroke=\"#c17a17\" stroke-width=\"2.2\"/><text x=\"116.0\" y=\"119.0\" fill=\"#c17a17\" font-size=\"11.5\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">P(B)=0,4</text><circle cx=\"190\" cy=\"150\" r=\"4\" fill=\"#c17a17\"/><text x=\"198.0\" y=\"154.0\" fill=\"#c17a17\" font-size=\"13\" font-weight=\"800\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">B</text><line x1=\"190\" y1=\"55\" x2=\"330\" y2=\"35\" stroke=\"#5c6b67\" stroke-width=\"1.6\"/><text x=\"260.0\" y=\"41.0\" fill=\"#5c6b67\" font-size=\"10.5\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">0,7</text><text x=\"336.0\" y=\"39.0\" fill=\"#20302a\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">A y C</text><line x1=\"190\" y1=\"55\" x2=\"330\" y2=\"78\" stroke=\"#5c6b67\" stroke-width=\"1.6\"/><text x=\"260.0\" y=\"62.5\" fill=\"#5c6b67\" font-size=\"10.5\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">0,3</text><text x=\"336.0\" y=\"82.0\" fill=\"#20302a\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">A y D</text><line x1=\"190\" y1=\"150\" x2=\"330\" y2=\"130\" stroke=\"#5c6b67\" stroke-width=\"1.6\"/><text x=\"260.0\" y=\"136.0\" fill=\"#5c6b67\" font-size=\"10.5\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">0,5</text><text x=\"336.0\" y=\"134.0\" fill=\"#20302a\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">B y C</text><line x1=\"190\" y1=\"150\" x2=\"330\" y2=\"172\" stroke=\"#5c6b67\" stroke-width=\"1.6\"/><text x=\"260.0\" y=\"157.0\" fill=\"#5c6b67\" font-size=\"10.5\" font-weight=\"700\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">0,5</text><text x=\"336.0\" y=\"176.0\" fill=\"#20302a\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">B y D</text><text x=\"200.0\" y=\"198.0\" fill=\"#c17a17\" font-size=\"12\" font-weight=\"800\" text-anchor=\"middle\" style=\"font-family:'Segoe UI',system-ui,-apple-system,sans-serif;\">cada rama multiplica · las hojas suman 1</text></svg>",
+            "caption": "En un diagrama de árbol, cada rama lleva su probabilidad; a lo largo de un camino se **multiplican** y las hojas de un árbol completo **suman 1**. Para hallar una probabilidad que falta, se usa que el total es 1.",
+            "purpose": "Fijar las dos reglas del árbol: multiplicar por caminos, sumar a 1."
+          }
+        ]
+      },
+      {
+        "id": "TH-MF06-3",
+        "type": "connection",
+        "title": "Ampliación — más allá de lo esencial",
+        "scope": "ADVANCED",
+        "body": "**— Con Laplace y el árbol resuelves lo esencial. Lo que sigue amplía. —**\n\nLa **probabilidad condicionada** $P(A|B)=\\dfrac{P(A\\cap B)}{P(B)}$ es la probabilidad de $A$ **sabiendo** que ha ocurrido $B$; es lo que se recorre en la segunda etapa de un árbol. Dos sucesos son **independientes** si $P(A\\cap B)=P(A)P(B)$ (saber uno no cambia el otro). El **teorema de Bayes** 'invierte' el árbol para calcular una causa a partir de un efecto. Todo se construye sobre el árbol básico.",
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "objective_ids": [],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Regla de Laplace",
+        "definition": "$P(A)=\\dfrac{\\text{favorables}}{\\text{posibles}}$, válida **solo con equiprobabilidad**."
+      },
+      {
+        "term": "Diagrama de árbol",
+        "definition": "Esquema de varias etapas: se multiplican probabilidades por camino y se suman los caminos; las hojas suman 1."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-MF06-1",
+        "level": "basic",
+        "statement": "Se lanza un dado. ¿Probabilidad de sacar un número par?",
+        "knowns": [
+          "dado equilibrado"
+        ],
+        "unknowns": [
+          "$P(\\text{par})$"
+        ],
+        "reasoning": [
+          "Resultados equiprobables: 1,2,3,4,5,6 (6 posibles).",
+          "Favorables (pares): 2,4,6 (3 casos).",
+          "$P=\\dfrac{3}{6}=\\dfrac12$."
+        ],
+        "solution": "$P(\\text{par})=\\tfrac12$.",
+        "interpretation": "La regla de Laplace vale porque un dado equilibrado es equiprobable.",
+        "common_mistake": "Contar mal los casos o aplicar Laplace a un dado trucado.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "WE-MF06-2",
+        "level": "basic",
+        "statement": "En un árbol de dos etapas, tres hojas valen $0{,}3$, $0{,}25$ y $0{,}15$. ¿Cuánto vale la cuarta?",
+        "knowns": [
+          "tres hojas; árbol completo"
+        ],
+        "unknowns": [
+          "cuarta hoja"
+        ],
+        "reasoning": [
+          "Las hojas de un árbol completo suman 1.",
+          "$x=1-0{,}3-0{,}25-0{,}15=0{,}3$."
+        ],
+        "solution": "La cuarta hoja vale $0{,}3$.",
+        "interpretation": "Se usa que el total es 1; no hace falta más información.",
+        "common_mistake": "Sumar mal o pensar que falta información.",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "EX-MF06-G1",
+        "type": "GUIDED",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "difficulty": 2,
+        "statement": "Se extraen dos cartas con reemplazo de una baraja; $P(\\text{as})=4/40$ cada vez. ¿$P$ de dos ases?",
+        "hints": [
+          "Con reemplazo, las dos extracciones son independientes.",
+          "Se multiplican las probabilidades."
+        ],
+        "answer": "$1/100$",
+        "full_solution": "Con reemplazo, $P(\\text{dos ases})=\\tfrac{4}{40}\\cdot\\tfrac{4}{40}=\\tfrac{1}{10}\\cdot\\tfrac{1}{10}=\\tfrac{1}{100}$.",
+        "common_errors": [
+          "Sumar en vez de multiplicar las etapas."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-MF06-S1",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "difficulty": 1,
+        "statement": "$P$ de sacar un corazón de una baraja de 40 cartas (10 corazones).",
+        "hints": [
+          "Laplace."
+        ],
+        "answer": "$1/4$",
+        "full_solution": "$P=\\dfrac{10}{40}=\\dfrac14$.",
+        "common_errors": [
+          "Olvidar simplificar o contar mal los favorables."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF06-S2",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "difficulty": 2,
+        "statement": "En un árbol, un camino tiene ramas $0{,}6$ y $0{,}5$. ¿Probabilidad de ese camino?",
+        "hints": [
+          "Se multiplican las ramas."
+        ],
+        "answer": "$0{,}3$",
+        "full_solution": "$0{,}6\\cdot0{,}5=0{,}3$.",
+        "common_errors": [
+          "Sumar las ramas en vez de multiplicarlas."
+        ],
+        "provenance": "foundations_v2"
+      },
+      {
+        "id": "EX-MF06-S3",
+        "type": "STANDARD",
+        "objective_ids": [],
+        "concept_ids": [
+          "C-MF-PROB"
+        ],
+        "difficulty": 2,
+        "statement": "¿Se puede usar Laplace con una chincheta que cae de punta o de lado?",
+        "hints": [
+          "¿Son equiprobables?"
+        ],
+        "answer": "No",
+        "full_solution": "No hay simetría que garantice equiprobabilidad; la probabilidad se estima por frecuencias relativas.",
+        "common_errors": [
+          "Aplicar $1/2$ sin justificar la equiprobabilidad."
+        ],
+        "provenance": "foundations_v2"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-MF06-1",
+        "stem": "La regla de Laplace $P=\\text{fav}/\\text{pos}$ es válida:",
+        "options": [
+          {
+            "key": "a",
+            "text": "siempre",
+            "why_wrong": "Falla si los resultados no son equiprobables."
+          },
+          {
+            "key": "b",
+            "text": "solo si los resultados son equiprobables"
+          },
+          {
+            "key": "c",
+            "text": "solo con dados",
+            "why_wrong": "Vale con cualquier experimento equiprobable."
+          },
+          {
+            "key": "d",
+            "text": "nunca en la práctica",
+            "why_wrong": "Vale siempre que haya simetría."
+          }
+        ],
+        "correct": "b",
+        "explanation": "Laplace exige equiprobabilidad; sin simetría (chincheta, dado trucado) se usan frecuencias relativas.",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-PROB"
+      },
+      {
+        "id": "MCQ-MF06-2",
+        "stem": "En un diagrama de árbol, a lo largo de un camino las probabilidades se:",
+        "options": [
+          {
+            "key": "a",
+            "text": "suman",
+            "why_wrong": "Se suman los caminos distintos, no las ramas de uno mismo."
+          },
+          {
+            "key": "b",
+            "text": "multiplican"
+          },
+          {
+            "key": "c",
+            "text": "restan",
+            "why_wrong": "No tiene sentido."
+          },
+          {
+            "key": "d",
+            "text": "promedian",
+            "why_wrong": "Tampoco."
+          }
+        ],
+        "correct": "b",
+        "explanation": "A lo largo de un camino se **multiplican**; se **suman** los distintos caminos que llevan al mismo resultado.",
+        "difficulty": 1,
+        "objective_id": "",
+        "concept_id": "C-MF-PROB"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-MF06-1",
+        "kind": "formula",
+        "front": "Regla de Laplace",
+        "back": "$P(A)=\\dfrac{\\text{favorables}}{\\text{posibles}}$, solo con equiprobabilidad.",
+        "concept_id": "C-MF-PROB",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF06-2",
+        "kind": "procedure",
+        "front": "Reglas del árbol",
+        "back": "Por un camino se multiplica; entre caminos se suma; las hojas suman 1.",
+        "concept_id": "C-MF-PROB",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF06-3",
+        "kind": "check",
+        "front": "Sin equiprobabilidad",
+        "back": "Laplace no vale: se estima por frecuencias relativas.",
+        "concept_id": "C-MF-PROB",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-MF06-4",
+        "kind": "definition",
+        "front": "Independencia",
+        "back": "$A$ y $B$ independientes si $P(A\\cap B)=P(A)P(B)$: saber uno no cambia el otro.",
+        "concept_id": "C-MF-PROB",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "M-MF06-1",
+        "incorrect_model": "«La probabilidad siempre es favorables entre posibles.»",
+        "why_it_appears": "Es la primera fórmula que se aprende.",
+        "diagnostic_signal": "Aplica Laplace a experimentos no equiprobables.",
+        "correct_model": "Laplace exige equiprobabilidad. Para una chincheta o un dado trucado hay que usar frecuencias relativas observadas, no el cociente de casos.",
+        "remediation": "Preguntarse siempre: ¿hay simetría que haga equiprobables los resultados?",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-PROB"
+      },
+      {
+        "id": "M-MF06-2",
+        "incorrect_model": "«En un árbol, las probabilidades de las ramas se suman.»",
+        "why_it_appears": "Se confunde multiplicar por camino con sumar.",
+        "diagnostic_signal": "Suma las ramas de un mismo camino.",
+        "correct_model": "A lo largo de un camino se **multiplican**; solo se suman los **distintos** caminos que acaban en el mismo suceso. Las hojas completas suman 1.",
+        "remediation": "Recorrer un árbol concreto comprobando que las hojas suman 1.",
+        "related_exercises": [],
+        "source_induced": false,
+        "concept_id": "C-MF-PROB"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Aplicar Laplace sin comprobar la equiprobabilidad.",
+        "why": "Es la fórmula más conocida.",
+        "how_to_avoid": "Antes de usarla, justificar que los resultados son equiprobables por simetría.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Sumar en vez de multiplicar a lo largo de un camino del árbol.",
+        "why": "Las dos operaciones aparecen en el árbol.",
+        "how_to_avoid": "Multiplicar por camino, sumar entre caminos; comprobar que las hojas suman 1.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "La probabilidad mide la incertidumbre con un número entre 0 y 1. Con equiprobabilidad se usa Laplace (favorables entre posibles); en varias etapas, un árbol donde se multiplica por camino y se suma entre caminos. Es la base de las distribuciones del curso.",
+      "key_points": [
+        "Laplace $P=\\text{fav}/\\text{pos}$ **solo** con equiprobabilidad; si no, frecuencias relativas.",
+        "Árbol: multiplicar por camino, sumar entre caminos; las hojas suman 1.",
+        "Independencia: $P(A\\cap B)=P(A)P(B)$.",
+        "Probabilidad entre 0 y 1."
+      ],
+      "formulas": [
+        "P(A)=\\dfrac{\\text{favorables}}{\\text{posibles}}",
+        "P(A\\cap B)=P(A)P(B)\\ (\\text{indep.})"
+      ],
+      "what_to_remember_if_nothing_else": "Laplace solo con equiprobabilidad; en el árbol, multiplicar por camino y sumar entre caminos."
+    },
+    "lang": "es",
+    "foundations_concept_tag": "C-MF-PROB",
+    "schema_v2": {
+      "canonical_lesson_id": "SELMAT::fundamentos::MF06",
+      "content_version": "2.0.0-pilot",
+      "title": "Probabilidad básica",
+      "subject": "Matemáticas",
+      "curriculum": {
+        "framework": "Remediación transversal (prerrequisito)",
+        "codes": [],
+        "status": "FOUNDATIONS",
+        "track": null
+      },
+      "learning_design": {
+        "estimated_core_minutes": 18,
+        "estimated_standard_minutes": 30,
+        "estimated_advanced_minutes": 45,
+        "prerequisite_concept_ids": [],
+        "diagnostic_item_ids": [
+          "DIAG-MF06-00"
+        ],
+        "recommended_routes": {
+          "from_zero": [
+            "DIAG-MF06-00",
+            "EX-MF06-G1",
+            "EX-MF06-S1",
+            "EX-MF06-S2",
+            "EX-MF06-S3",
+            "MCQ-MF06-1",
+            "MCQ-MF06-2",
+            "TH-MF06-0",
+            "TH-MF06-1",
+            "TH-MF06-2",
+            "WE-MF06-1",
+            "WE-MF06-2"
+          ],
+          "standard": [
+            "DIAG-MF06-00",
+            "EX-MF06-G1",
+            "EX-MF06-S1",
+            "EX-MF06-S2",
+            "EX-MF06-S3",
+            "MCQ-MF06-1",
+            "MCQ-MF06-2",
+            "TH-MF06-0",
+            "TH-MF06-1",
+            "TH-MF06-2",
+            "WE-MF06-1",
+            "WE-MF06-2"
+          ],
+          "excellence": [
+            "DIAG-MF06-00",
+            "EX-MF06-G1",
+            "EX-MF06-S1",
+            "EX-MF06-S2",
+            "EX-MF06-S3",
+            "MCQ-MF06-1",
+            "MCQ-MF06-2",
+            "TH-MF06-0",
+            "TH-MF06-1",
+            "TH-MF06-2",
+            "TH-MF06-3",
+            "WE-MF06-1",
+            "WE-MF06-2"
+          ],
+          "quick_review": [
+            "TH-MF06-3"
+          ]
+        }
+      },
+      "objectives": [
+        {
+          "id": "LO-MF06-1",
+          "statement": "Calcular probabilidades con la regla de Laplace en experimentos equiprobables.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-MF06-2",
+          "statement": "Usar un diagrama de árbol para sucesos en varias etapas.",
+          "bloom": "apply",
+          "required_for_mastery": true
+        }
+      ],
+      "knowledge_model": {
+        "core_claims": [
+          {
+            "id": "CL-MF06-0",
+            "statement": "Laplace $P=\\text{fav}/\\text{pos}$ **solo** con equiprobabilidad; si no, frecuencias relativas.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF06-1",
+            "statement": "Árbol: multiplicar por camino, sumar entre caminos; las hojas suman 1.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF06-2",
+            "statement": "Independencia: $P(A\\cap B)=P(A)P(B)$.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          },
+          {
+            "id": "CL-MF06-3",
+            "statement": "Probabilidad entre 0 y 1.",
+            "epistemic_type": "EXACT",
+            "conditions": [],
+            "source_objective_ids": []
+          }
+        ],
+        "formulae": [
+          {
+            "id": "F-MF06-0",
+            "latex": "P(A)=\\dfrac{\\text{favorables}}{\\text{posibles}}",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          },
+          {
+            "id": "F-MF06-1",
+            "latex": "P(A\\cap B)=P(A)P(B)\\ (\\text{indep.})",
+            "meaning": "",
+            "conditions": [],
+            "epistemic_type": "EXACT"
+          }
+        ],
+        "common_mistakes": [
+          {
+            "id": "M-MF06-1",
+            "incorrect_claim": "«La probabilidad siempre es favorables entre posibles.»",
+            "correction": "Laplace exige equiprobabilidad. Para una chincheta o un dado trucado hay que usar frecuencias relativas observadas, no el cociente de casos.",
+            "diagnostic_cue": "Aplica Laplace a experimentos no equiprobables."
+          },
+          {
+            "id": "M-MF06-2",
+            "incorrect_claim": "«En un árbol, las probabilidades de las ramas se suman.»",
+            "correction": "A lo largo de un camino se **multiplican**; solo se suman los **distintos** caminos que acaban en el mismo suceso. Las hojas completas suman 1.",
+            "diagnostic_cue": "Suma las ramas de un mismo camino."
+          }
+        ],
+        "exam_conventions": []
+      },
+      "presentation": {
+        "hook_problem": "La probabilidad de un suceso es un número entre 0 (imposible) y 1 (seguro) que mide cuán verosímil es. Es el prerrequisito de las variables aleatorias y las distribuciones (binomial, normal) del curso.",
+        "intuition_blocks": [
+          "TH-MF06-0"
+        ],
+        "core_blocks": [
+          "TH-MF06-1",
+          "TH-MF06-2"
+        ],
+        "standard_blocks": [],
+        "advanced_blocks": [
+          "TH-MF06-3"
+        ],
+        "worked_examples": [
+          "WE-MF06-1",
+          "WE-MF06-2"
+        ],
+        "faded_examples": [
+          "EX-MF06-G1"
+        ],
+        "micro_checks": [
+          "DIAG-MF06-00"
+        ],
+        "summary": {
+          "must_know": [
+            "Laplace $P=\\text{fav}/\\text{pos}$ **solo** con equiprobabilidad; si no, frecuencias relativas.",
+            "Árbol: multiplicar por camino, sumar entre caminos; las hojas suman 1.",
+            "Independencia: $P(A\\cap B)=P(A)P(B)$.",
+            "Probabilidad entre 0 y 1."
+          ],
+          "conditions": [],
+          "common_error": "Aplicar Laplace sin comprobar la equiprobabilidad.",
+          "next_step": "Siguiente lección de fundamentos."
+        }
+      },
+      "practice": {
+        "items": [
+          {
+            "id": "EX-MF06-S1",
+            "skills": [
+              "C-MF-PROB"
+            ],
+            "difficulty": 1,
+            "conceptual_depth": 1,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Laplace."
+            ],
+            "answer": "$1/4$",
+            "full_solution": "$P=\\dfrac{10}{40}=\\dfrac14$."
+          },
+          {
+            "id": "EX-MF06-S2",
+            "skills": [
+              "C-MF-PROB"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Se multiplican las ramas."
+            ],
+            "answer": "$0{,}3$",
+            "full_solution": "$0{,}6\\cdot0{,}5=0{,}3$."
+          },
+          {
+            "id": "EX-MF06-S3",
+            "skills": [
+              "C-MF-PROB"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "¿Son equiprobables?"
+            ],
+            "answer": "No",
+            "full_solution": "No hay simetría que garantice equiprobabilidad; la probabilidad se estima por frecuencias relativas."
+          },
+          {
+            "id": "EX-MF06-G1",
+            "skills": [
+              "C-MF-PROB"
+            ],
+            "difficulty": 2,
+            "conceptual_depth": 2,
+            "cognitive_level": "apply",
+            "official_track": null,
+            "route_visibility": [
+              "excellence",
+              "from_zero",
+              "standard"
+            ],
+            "hints": [
+              "Con reemplazo, las dos extracciones son independientes.",
+              "Se multiplican las probabilidades."
+            ],
+            "answer": "$1/100$",
+            "full_solution": "Con reemplazo, $P(\\text{dos ases})=\\tfrac{4}{40}\\cdot\\tfrac{4}{40}=\\tfrac{1}{10}\\cdot\\tfrac{1}{10}=\\tfrac{1}{100}$."
+          }
+        ],
+        "checkpoint_item_ids": [],
+        "exam_item_ids": [],
+        "challenge_item_ids": []
+      },
+      "qa": {
+        "validated_semantics": true,
+        "validated_numerics": true,
+        "validated_render": true,
+        "canonical_hash": "dae2f62d8bb61506"
+      }
+    }
+  }
+}

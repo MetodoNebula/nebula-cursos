@@ -1446,8 +1446,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "de0fb75e1bb23a0a"
+        "validated_render": true,
+        "canonical_hash": "904de4009b17031a"
       }
     }
   },
@@ -3277,8 +3277,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "ae3592803ad96dc9"
+        "validated_render": true,
+        "canonical_hash": "bfacd87309e902bc"
       }
     }
   },
@@ -4964,8 +4964,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "c62d904e2ae45898"
+        "validated_render": true,
+        "canonical_hash": "dc03183f420f7a8d"
       }
     }
   },
@@ -6802,8 +6802,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "ba4d6446d021cd09"
+        "validated_render": true,
+        "canonical_hash": "ca1be98f9dc9fe56"
       }
     }
   },
@@ -8499,8 +8499,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "8d69f24dd0a45a02"
+        "validated_render": true,
+        "canonical_hash": "23c5ce64f564df50"
       }
     }
   },
@@ -8698,20 +8698,6 @@
         "provenance": "SOURCE_DERIVED"
       },
       {
-        "id": "TH-06-3",
-        "type": "derivation",
-        "title": "De dónde sale ese $\\tfrac12$: el trabajo de una fuerza variable",
-        "scope": "ADVANCED",
-        "body": "El argumento del valor medio funciona porque la fuerza crece linealmente, pero el método general es otro, y conviene verlo una vez.\n\nSi la fuerza varía, se trocea el desplazamiento en intervalos tan pequeños que dentro de cada uno la fuerza se pueda considerar constante. En cada trocito el trabajo sí se calcula con la fórmula habitual, y el trabajo total es la suma de todos:\n\n$$W_T = W_1 + W_2 + \\dots + W_n = \\sum_{i=1}^{n} W_i \\ \\longrightarrow \\ \\int_0^x F_{\\text{ext}}\\,dx$$\n\n**Un aviso sobre el signo, que es donde se cometen los errores.** Hay dos cantidades distintas en juego y conviene elegir una sola ruta:\n\n- La **fuerza exterior** que hay que hacer para deformar el muelle lentamente vale $F_{\\text{ext}} = +kx$, y va en el **mismo** sentido que el desplazamiento. Su trabajo es\n$$E_p = \\int_0^x k\\,x'\\,dx' = \\left[\\dfrac{k\\,x'^2}{2}\\right]_0^x = \\tfrac12 kx^2$$\n- Alternativamente, la energía potencial es **menos** el trabajo de la fuerza **elástica**, que vale $-kx$:\n$$E_p = -\\int_0^x (-k\\,x')\\,dx' = \\tfrac12 kx^2$$\n\nLas dos rutas dan lo mismo. Lo que **no** se puede hacer es mezclarlas: poner la componente con signo ($-kx$) **y además** un $\\cos\\pi = -1$ por el ángulo entre fuerza y desplazamiento es contar el signo **dos veces**. Si además se iguala $E_p$ al trabajo de la fuerza elástica (olvidando el signo menos de $E_p=-W_{\\text{el}}$), el resultado sale correcto por pura cancelación de esos dos errores, pero el razonamiento no se sostiene, y en cuanto cambie la configuración dejará de salir bien.\n\n> **Regla práctica para no equivocarse nunca:** decide primero **de qué fuerza** estás calculando el trabajo. Si trabajas con componentes y signos, el coseno ya está dentro del signo y no se vuelve a poner. Si trabajas con módulos, entonces sí hace falta el coseno del ángulo.\n\nEste bloque se puede saltar sin perder nada operativo: el resultado $E_p=\\tfrac12 kx^2$ se usa igual.",
-        "concept_ids": [
-          "C-MAS-29"
-        ],
-        "objective_ids": [
-          "LO-06-2"
-        ],
-        "provenance": "SOURCE_DERIVED"
-      },
-      {
         "id": "TH-06-4",
         "type": "formalisation",
         "title": "La energía mecánica: lo único que no cambia",
@@ -8798,6 +8784,20 @@
         ],
         "objective_ids": [
           "LO-06-6"
+        ],
+        "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "TH-06-3",
+        "type": "derivation",
+        "title": "De dónde sale ese $\\tfrac12$: el trabajo de una fuerza variable",
+        "scope": "ADVANCED",
+        "body": "**— Hasta aquí, lo esencial. Lo que sigue amplía o justifica con más profundidad, y puede dejarse para una segunda lectura. —**\n\nEl argumento del valor medio funciona porque la fuerza crece linealmente, pero el método general es otro, y conviene verlo una vez.\n\nSi la fuerza varía, se trocea el desplazamiento en intervalos tan pequeños que dentro de cada uno la fuerza se pueda considerar constante. En cada trocito el trabajo sí se calcula con la fórmula habitual, y el trabajo total es la suma de todos:\n\n$$W_T = W_1 + W_2 + \\dots + W_n = \\sum_{i=1}^{n} W_i \\ \\longrightarrow \\ \\int_0^x F_{\\text{ext}}\\,dx$$\n\n**Un aviso sobre el signo, que es donde se cometen los errores.** Hay dos cantidades distintas en juego y conviene elegir una sola ruta:\n\n- La **fuerza exterior** que hay que hacer para deformar el muelle lentamente vale $F_{\\text{ext}} = +kx$, y va en el **mismo** sentido que el desplazamiento. Su trabajo es\n$$E_p = \\int_0^x k\\,x'\\,dx' = \\left[\\dfrac{k\\,x'^2}{2}\\right]_0^x = \\tfrac12 kx^2$$\n- Alternativamente, la energía potencial es **menos** el trabajo de la fuerza **elástica**, que vale $-kx$:\n$$E_p = -\\int_0^x (-k\\,x')\\,dx' = \\tfrac12 kx^2$$\n\nLas dos rutas dan lo mismo. Lo que **no** se puede hacer es mezclarlas: poner la componente con signo ($-kx$) **y además** un $\\cos\\pi = -1$ por el ángulo entre fuerza y desplazamiento es contar el signo **dos veces**. Si además se iguala $E_p$ al trabajo de la fuerza elástica (olvidando el signo menos de $E_p=-W_{\\text{el}}$), el resultado sale correcto por pura cancelación de esos dos errores, pero el razonamiento no se sostiene, y en cuanto cambie la configuración dejará de salir bien.\n\n> **Regla práctica para no equivocarse nunca:** decide primero **de qué fuerza** estás calculando el trabajo. Si trabajas con componentes y signos, el coseno ya está dentro del signo y no se vuelve a poner. Si trabajas con módulos, entonces sí hace falta el coseno del ángulo.\n\nEste bloque se puede saltar sin perder nada operativo: el resultado $E_p=\\tfrac12 kx^2$ se usa igual.",
+        "concept_ids": [
+          "C-MAS-29"
+        ],
+        "objective_ids": [
+          "LO-06-2"
         ],
         "provenance": "SOURCE_DERIVED"
       }
@@ -10155,8 +10155,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "fac54a2d14f625b1"
+        "validated_render": true,
+        "canonical_hash": "c07b3ef56cbf6cb0"
       }
     }
   },
@@ -10448,7 +10448,7 @@
         "id": "TH-07-7",
         "type": "formalisation",
         "title": "Oscilaciones amortiguadas",
-        "scope": "ENRICHMENT",
+        "scope": "CORE",
         "body": "Un movimiento oscilatorio es **amortiguado** si la energía mecánica disminuye gradualmente; como consecuencia, las oscilaciones se mantienen pero **su amplitud disminuye con el tiempo**.\n\nLa disminución suele ser de **tipo exponencial**, de modo que la elongación se escribe\n\n$$x = A\\,e^{-\\gamma t}\\operatorname{sen}(\\omega t + \\varphi_0)$$\n\nLa estructura de esta expresión es la clave para entenderla, y conviene leerla por partes:\n\n- $\\operatorname{sen}(\\omega t+\\varphi_0)$ es **la misma oscilación de siempre**, con un ritmo constante (casi igual al natural si el amortiguamiento es débil). El movimiento no se vuelve irregular: sigue yendo y viniendo con un periodo bien definido.\n- $A\\,e^{-\\gamma t}$ es la **envolvente**: la amplitud, que ya no es constante sino que decae. La curva de la oscilación queda atrapada entre $+Ae^{-\\gamma t}$ y $-Ae^{-\\gamma t}$, tocándolas alternativamente.\n- $\\gamma$ es la **constante de amortiguamiento**, y se mide en **s⁻¹** para que el exponente $\\gamma t$ sea un número puro. Mide con qué rapidez se pierde la energía: cuanto mayor es $\\gamma$, antes se para el oscilador.\n\n**Lo que decae es la envolvente, no el ritmo.** Esta distinción es la que más cuesta y la que más se ve en la gráfica: las oscilaciones se van haciendo pequeñas, pero siguen ocurriendo cada tanto tiempo, y con amortiguamiento débil, el periodo es prácticamente el del oscilador libre y no cambia con el tiempo.\n\n> Un número que da intuición: con $\\gamma = 0{,}35$ s⁻¹, la amplitud se reduce a la mitad al cabo de $t = \\ln 2/\\gamma = 1{,}98$ s, es decir, en unos dos segundos, y vuelve a reducirse a la mitad en los dos siguientes. La envolvente nunca llega a cero: se acerca indefinidamente.",
         "concept_ids": [
           "C-MAS-36"
@@ -10471,7 +10471,7 @@
         "id": "TH-07-8",
         "type": "formalisation",
         "title": "Oscilaciones forzadas y resonancia",
-        "scope": "ENRICHMENT",
+        "scope": "CORE",
         "body": "Si un oscilador real pierde energía, es posible **mantener su amplitud** haciendo que un agente externo le suministre justamente la que pierde por rozamiento. Llamamos **oscilaciones forzadas** a las producidas en un sistema oscilante por energía suministrada desde el exterior, y al sistema, **oscilador forzado**.\n\nDos ejemplos cotidianos: un **reloj de péndulo**, donde un resorte en espiral repone en cada ciclo la energía disipada, y una **persona en un columpio** a la que se impulsa lo justo para que no decaiga.\n\n**Y ahora la pregunta interesante: ¿importa el ritmo con que se empuja?**\n\n> Si la **frecuencia con que actúa la fuerza externa coincide con la frecuencia natural del oscilador**, la energía absorbida por éste es **máxima**. Decimos entonces que ésa es una **frecuencia resonante** y que el oscilador entra en **resonancia**.\n\n> **La resonancia no se produce porque la fuerza externa sea muy grande, sino porque actúa con la misma frecuencia que la natural del sistema oscilante.**\n\nEsa segunda frase merece leerse dos veces, porque desmonta de un golpe la imagen habitual de la resonancia. Las fotografías culturales del fenómeno —un puente que se derrumba, una copa que estalla— sugieren violencia, y es natural atribuir el efecto a la intensidad de la causa. Pero el mecanismo es otro: **es cuestión de sincronía, no de fuerza**.\n\nPiensa en el columpio. Quien empuja no necesita hacer mucha fuerza: le bastan empujones pequeños. Lo que hace que el columpio suba cada vez más es que los da **siempre en el mismo punto del ciclo**, de modo que cada empujón suma. Si empujara al azar, la mitad de las veces estaría frenando, y el columpio no subiría por mucha fuerza que hiciera.\n\n**Y si la energía llega más deprisa de lo que se disipa**, la amplitud crece excesivamente y puede llegar a producirse la **rotura del oscilador**, o un daño serio a su estructura interna. Esa es la parte espectacular del fenómeno, pero es la consecuencia, no la causa.",
         "concept_ids": [
           "C-MAS-37"
@@ -11592,7 +11592,7 @@
           "id": "LO-07-7",
           "statement": "Describir el **amortiguamiento** mediante la envolvente $A\\,e^{-\\gamma t}$, y explicar la **resonancia** como coincidencia de frecuencias y no como magnitud de la fuerza.",
           "bloom": "comprender",
-          "required_for_mastery": true
+          "required_for_mastery": false
         }
       ],
       "knowledge_model": {
@@ -11965,8 +11965,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "02a1be5d67ff699e"
+        "validated_render": true,
+        "canonical_hash": "aa58b26534c6c050"
       }
     }
   }

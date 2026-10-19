@@ -1,0 +1,1391 @@
+{
+  "type": "unit_checkpoints",
+  "title": "Unit Checkpoints",
+  "description": "Short quizzes at the end of each unit to verify understanding before progressing.",
+  "checkpoints": [
+    {
+      "unit_id": "U01_Measurement_and_Motion",
+      "title": "Checkpoint: Unit 1 Measurement and Motion",
+      "description": "Check your understanding of Unit 1 Measurement and Motion. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-MOTION-01-1",
+          "stem": "An object begins at the $2.0\\,\\mathrm{cm}$ mark and ends at the $9.4\\,\\mathrm{cm}$ mark of a ruler. What is its length?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$7.4\\,\\mathrm{cm}$"
+            },
+            {
+              "key": "B",
+              "text": "$9.4\\,\\mathrm{cm}$",
+              "why_wrong": "this is the final ruler position and assumes a zero start."
+            },
+            {
+              "key": "C",
+              "text": "$11.4\\,\\mathrm{cm}$",
+              "why_wrong": "this adds the two readings instead of subtracting them."
+            },
+            {
+              "key": "D",
+              "text": "$7.2\\,\\mathrm{cm}$",
+              "why_wrong": "this results from subtracting the decimal parts incorrectly."
+            }
+          ],
+          "correct": "A",
+          "explanation": "$9.4-2.0=7.4\\,\\mathrm{cm}$.",
+          "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::measuring_the_physical_world",
+          "source_lesson_title": "Measuring the physical world"
+        },
+        {
+          "id": "MCQ-MOTION-02-2",
+          "stem": "A runner starts at a flag, runs $300\\,\\mathrm{m}$ around a closed track and finishes back at the same flag. What is the runner's displacement for this run?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$0\\,\\mathrm{m}$"
+            },
+            {
+              "key": "B",
+              "text": "$300\\,\\mathrm{m}$",
+              "why_wrong": "this is the distance travelled around the track, not the directed change between the start and finish positions."
+            },
+            {
+              "key": "C",
+              "text": "$150\\,\\mathrm{m}$",
+              "why_wrong": "this halves the distance for no physical reason; the start and finish positions coincide exactly, not approximately."
+            },
+            {
+              "key": "D",
+              "text": "$-300\\,\\mathrm{m}$",
+              "why_wrong": "this attaches a sign to the full distance instead of recognising that the straight-line change from start to finish is zero."
+            }
+          ],
+          "correct": "A",
+          "explanation": "Displacement is the directed straight-line change from the starting position to the finishing position. Since the runner finishes exactly where she started, that change is zero, regardless of how far she actually ran.",
+          "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::speed_velocity_and_the_role_of_direction",
+          "source_lesson_title": "Speed, velocity and the role of direction"
+        },
+        {
+          "id": "MCQ-MOTION-03-2",
+          "stem": "A distance–time graph has a horizontal section lasting several seconds. What can be concluded about the object's speed during this section?",
+          "options": [
+            {
+              "key": "A",
+              "text": "It is zero: the object is at rest"
+            },
+            {
+              "key": "B",
+              "text": "It is a constant, nonzero speed",
+              "why_wrong": "a horizontal section means the distance coordinate is not changing at all, which rules out any nonzero speed."
+            },
+            {
+              "key": "C",
+              "text": "It is at its maximum value for the whole journey",
+              "why_wrong": "nothing about a flat section implies maximum speed; in fact the opposite is true, since the speed here is the smallest possible value, zero."
+            },
+            {
+              "key": "D",
+              "text": "It cannot be found without more information",
+              "why_wrong": "the gradient of a horizontal section is always exactly zero, which is already enough information to find the speed."
+            }
+          ],
+          "correct": "A",
+          "explanation": "A horizontal section has $\\Delta\\text{distance}=0$ over a nonzero $\\Delta\\text{time}$, so its gradient — and therefore its speed — is exactly zero: the object is at rest.",
+          "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::distancetime_graphs_as_stories_of_motion",
+          "source_lesson_title": "Distance–time graphs as stories of motion"
+        },
+        {
+          "id": "MCQ-MOTION-04-2",
+          "stem": "The area under a speed–time graph is calculated as $24$, from a speed in $\\mathrm{m/s}$ multiplied by a time in $\\mathrm{s}$. What does this area represent, and what is its correct unit?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A distance, in $\\mathrm{m}$"
+            },
+            {
+              "key": "B",
+              "text": "An acceleration, in $\\mathrm{m/s^2}$",
+              "why_wrong": "acceleration comes from the gradient of a speed–time graph, not its area; multiplying $\\mathrm{m/s}$ by $\\mathrm{s}$ cancels the seconds instead of adding another 'per second'."
+            },
+            {
+              "key": "C",
+              "text": "A time, in $\\mathrm{s^2}$",
+              "why_wrong": "this is not a meaningful physical quantity for this graph, and does not match either axis being multiplied."
+            },
+            {
+              "key": "D",
+              "text": "A speed, in $\\mathrm{m/s}$",
+              "why_wrong": "this is the unit of the vertical axis alone, before any multiplication by the time has been accounted for."
+            }
+          ],
+          "correct": "A",
+          "explanation": "$(\\mathrm{m/s})\\times\\mathrm{s}=\\mathrm{m}$: the seconds cancel, leaving a distance in metres. The area under a speed–time graph is always a distance.",
+          "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::speedtime_graphs_and_distance_travelled",
+          "source_lesson_title": "Speed–time graphs and distance travelled"
+        },
+        {
+          "id": "MCQ-MOTION-05-2",
+          "stem": "*Extension, beyond the 0654 syllabus.* Taking forward as positive, a particle's velocity is $-5\\,\\mathrm{m/s}$ and its acceleration is $-3\\,\\mathrm{m/s^2}$ (both backward). After $2\\,\\mathrm{s}$, is the particle's speed greater than or smaller than $5\\,\\mathrm{m/s}$?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Greater"
+            },
+            {
+              "key": "B",
+              "text": "Smaller, because a negative acceleration always means slowing down",
+              "why_wrong": "this treats the acceleration's sign alone as decisive; here the velocity is also negative, so acceleration and velocity point the same way, which speeds the particle up, not down."
+            },
+            {
+              "key": "C",
+              "text": "Unchanged, since both values given are negative and 'cancel out'",
+              "why_wrong": "the two negative signs do not cancel; multiplying a negative acceleration by a positive time and adding it to a negative velocity gives an even more negative (larger-magnitude) velocity."
+            },
+            {
+              "key": "D",
+              "text": "It cannot be determined without knowing the particle's mass",
+              "why_wrong": "mass plays no part in this kinematics calculation; the velocity after $2\\,\\mathrm{s}$ follows directly from $v=u+at$."
+            }
+          ],
+          "correct": "A",
+          "explanation": "$v=u+at=-5+(-3)(2)=-11\\,\\mathrm{m/s}$, so the speed rises from $5\\,\\mathrm{m/s}$ to $11\\,\\mathrm{m/s}$: greater. The acceleration and the velocity point the same (negative) way, so the particle speeds up despite the acceleration being negative.",
+          "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::acceleration_deceleration_and_free_fall",
+          "source_lesson_title": "Acceleration, deceleration and free fall"
+        }
+      ]
+    },
+    {
+      "unit_id": "U02_Mass_Weight_and_Density",
+      "title": "Checkpoint: Unit 2 Mass Weight and Density",
+      "description": "Check your understanding of Unit 2 Mass Weight and Density. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P02-01-1",
+          "stem": "A bag of sugar has a mass of 2.0 kg. Calculate its weight near the Earth's surface, taking $g=9.8\\,\\mathrm{N/kg}$.",
+          "options": [
+            {
+              "key": "A",
+              "text": "$19.6\\,\\mathrm{N}$"
+            },
+            {
+              "key": "B",
+              "text": "$2.0\\,\\mathrm{N}$",
+              "why_wrong": "this restates the mass value with the wrong unit, treating mass and weight as the same quantity."
+            },
+            {
+              "key": "C",
+              "text": "$11.8\\,\\mathrm{N}$",
+              "why_wrong": "this adds $g$ to the mass ($2.0+9.8$) instead of multiplying them."
+            },
+            {
+              "key": "D",
+              "text": "$20\\,\\mathrm{N}$",
+              "why_wrong": "this rounds $g$ up to 10 N/kg instead of using the correct value of 9.8 N/kg."
+            }
+          ],
+          "correct": "A",
+          "explanation": "$W=2.0\\times9.8=19.6\\,\\mathrm{N}$.",
+          "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::mass_weight_and_gravitational_field_strength",
+          "source_lesson_title": "Mass, weight and gravitational field strength"
+        },
+        {
+          "id": "MCQ-P02-01-3",
+          "stem": "A rock has a mass of 12 kg, and its weight on the Moon, where $g\\approx1.6\\,\\mathrm{N/kg}$, is about 19.2 N. What is its weight on Earth, where $g\\approx9.8\\,\\mathrm{N/kg}$?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$19.2\\,\\mathrm{N}$",
+              "why_wrong": "this repeats the Moon weight, as if weight did not change between locations."
+            },
+            {
+              "key": "B",
+              "text": "$12\\,\\mathrm{N}$",
+              "why_wrong": "this reports the mass number with the wrong unit, confusing mass with weight."
+            },
+            {
+              "key": "C",
+              "text": "$117.6\\,\\mathrm{N}$"
+            },
+            {
+              "key": "D",
+              "text": "$1.6\\,\\mathrm{N}$",
+              "why_wrong": "this reports the Moon's gravitational field strength itself, not a calculated weight."
+            }
+          ],
+          "correct": "C",
+          "explanation": "$W=12\\times9.8=117.6\\,\\mathrm{N}$.",
+          "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::mass_weight_and_gravitational_field_strength",
+          "source_lesson_title": "Mass, weight and gravitational field strength"
+        },
+        {
+          "id": "MCQ-P02-01-5",
+          "stem": "Gravitational field strength $g$ at a point is defined as which of the following?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The gravitational force per unit mass at that point"
+            },
+            {
+              "key": "B",
+              "text": "The gravitational force acting on the object at that point",
+              "why_wrong": "this is the object's weight, which gets larger for a larger mass; the field strength is the force on each kilogram, so it does not depend on the object placed there."
+            },
+            {
+              "key": "C",
+              "text": "The mass per unit gravitational force at that point",
+              "why_wrong": "this inverts the ratio; such a quantity would be measured in kg/N, not in N/kg."
+            },
+            {
+              "key": "D",
+              "text": "The gravitational force per unit volume at that point",
+              "why_wrong": "volume plays no part in $W=mg$; the field strength relates the gravitational force to the mass, not to the space the object occupies."
+            }
+          ],
+          "correct": "A",
+          "explanation": "Gravitational field strength is defined as the gravitational force per unit mass, $g=\\dfrac{W}{m}$, measured in N/kg. Near the Earth's surface $g\\approx9.8\\,\\mathrm{N/kg}$, meaning each kilogram of mass experiences about 9.8 N.",
+          "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::mass_weight_and_gravitational_field_strength",
+          "source_lesson_title": "Mass, weight and gravitational field strength"
+        },
+        {
+          "id": "MCQ-P02-02-2",
+          "stem": "An irregular solid is lowered into a measuring cylinder of water. The reading rises from 24 cm³ to 34 cm³. Which statement about the solid's volume is correct?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Its volume is 34 cm³, the final reading.",
+              "why_wrong": "this ignores the 24 cm³ of water that was already in the cylinder before the solid was added."
+            },
+            {
+              "key": "B",
+              "text": "Its volume is 24 cm³, the initial reading.",
+              "why_wrong": "this uses the reading taken before the solid was even added to the cylinder."
+            },
+            {
+              "key": "C",
+              "text": "Its volume is 10 cm³, the rise in the reading."
+            },
+            {
+              "key": "D",
+              "text": "Its volume cannot be found without also weighing the displaced water.",
+              "why_wrong": "the volume is found directly from the change in the cylinder's scale reading; no extra weighing is needed to find a volume this way."
+            }
+          ],
+          "correct": "C",
+          "explanation": "The solid's volume is the rise in the reading: $34-24=10\\,\\mathrm{cm^3}$.",
+          "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::measuring_density",
+          "source_lesson_title": "Measuring density"
+        },
+        {
+          "id": "MCQ-P02-02-4",
+          "stem": "Which pair of units could both correctly express a density?",
+          "options": [
+            {
+              "key": "A",
+              "text": "g/cm³ and kg/m³"
+            },
+            {
+              "key": "B",
+              "text": "g/cm³ and cm³/g",
+              "why_wrong": "cm³/g is the inverse of density (volume per unit mass), not another way of expressing density itself."
+            },
+            {
+              "key": "C",
+              "text": "kg/m³ and N/kg",
+              "why_wrong": "N/kg is the unit of gravitational field strength, not density."
+            },
+            {
+              "key": "D",
+              "text": "g/cm³ and kg",
+              "why_wrong": "kg alone is a unit of mass; it carries no information about volume, so it cannot express a density."
+            }
+          ],
+          "correct": "A",
+          "explanation": "g/cm³ and kg/m³ both give mass per unit volume, and they convert into each other using $1\\,\\mathrm{g/cm^3}=1000\\,\\mathrm{kg/m^3}$.",
+          "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::measuring_density",
+          "source_lesson_title": "Measuring density"
+        }
+      ]
+    },
+    {
+      "unit_id": "U03_Forces_and_Pressure",
+      "title": "Checkpoint: Unit 3 Forces and Pressure",
+      "description": "Check your understanding of Unit 3 Forces and Pressure. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P03-01-1",
+          "stem": "A box is pulled forward with $16\\,\\mathrm{N}$. Friction acts backward with $6\\,\\mathrm{N}$. What is the resultant force on the box?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$22\\,\\mathrm{N}$ forward",
+              "why_wrong": "adds the two forces instead of subtracting the backward force from the forward one."
+            },
+            {
+              "key": "B",
+              "text": "$10\\,\\mathrm{N}$ forward"
+            },
+            {
+              "key": "C",
+              "text": "$10\\,\\mathrm{N}$ backward",
+              "why_wrong": "has the correct size but the wrong direction; the larger force is forward, so the resultant must be forward."
+            },
+            {
+              "key": "D",
+              "text": "$6\\,\\mathrm{N}$ forward",
+              "why_wrong": "reports the friction force rather than the resultant of the two forces."
+            }
+          ],
+          "correct": "B",
+          "explanation": "$16-6=10\\,\\mathrm{N}$ forward, in the direction of the larger force.",
+          "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::resultant_forces_and_motion",
+          "source_lesson_title": "Resultant forces and motion"
+        },
+        {
+          "id": "MCQ-P03-02-1",
+          "stem": "A $4.0\\,\\mathrm{kg}$ object has a $30\\,\\mathrm{N}$ force acting forward and a $10\\,\\mathrm{N}$ force acting backward. What is its acceleration?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$7.5\\,\\mathrm{m\\,s^{-2}}$ forward",
+              "why_wrong": "substitutes the single 30 N force into F = ma instead of first finding the 20 N resultant."
+            },
+            {
+              "key": "B",
+              "text": "$2.5\\,\\mathrm{m\\,s^{-2}}$ forward",
+              "why_wrong": "substitutes the 10 N backward force alone into F = ma instead of the resultant."
+            },
+            {
+              "key": "C",
+              "text": "$5.0\\,\\mathrm{m\\,s^{-2}}$ forward"
+            },
+            {
+              "key": "D",
+              "text": "$10\\,\\mathrm{m\\,s^{-2}}$ forward",
+              "why_wrong": "adds the two forces together (40 N) instead of subtracting the backward force from the forward force."
+            }
+          ],
+          "correct": "C",
+          "explanation": "Resultant $=30-10=20\\,\\mathrm{N}$ forward; $a=20/4.0=5.0\\,\\mathrm{m\\,s^{-2}}$ forward.",
+          "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::force_changes_velocity",
+          "source_lesson_title": "Force changes velocity"
+        },
+        {
+          "id": "MCQ-P03-03-2",
+          "stem": "A load-extension graph has a straight region followed by a curve. Which point should be used to calculate the spring's spring constant?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Any point on the graph, since k = F/x always gives the same answer.",
+              "why_wrong": "is false beyond the limit of proportionality, where F/x changes from point to point."
+            },
+            {
+              "key": "B",
+              "text": "The point furthest from the origin, to use the largest possible numbers.",
+              "why_wrong": "may well lie beyond the limit of proportionality, giving an unreliable value."
+            },
+            {
+              "key": "C",
+              "text": "The origin, where the load and the extension are both zero.",
+              "why_wrong": "gives $0/0$, which has no value; k must be found from a point with a non-zero load and extension (or from the gradient) within the straight-line region."
+            },
+            {
+              "key": "D",
+              "text": "A point within the straight-line region."
+            }
+          ],
+          "correct": "D",
+          "explanation": "Only within the straight-line region is extension proportional to load, so only there does F/x give one consistent spring constant.",
+          "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::springs_extension_and_proportionality",
+          "source_lesson_title": "Springs, extension and proportionality"
+        },
+        {
+          "id": "MCQ-P03-04-3",
+          "stem": "A beam balances with a moment of $2.0\\,\\mathrm{N\\,m}$ on one side. A force of $8.0\\,\\mathrm{N}$ acts on the other side. At what perpendicular distance from the pivot must this force act?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$0.25\\,\\mathrm{m}$"
+            },
+            {
+              "key": "B",
+              "text": "$16\\,\\mathrm{m}$",
+              "why_wrong": "multiplies the moment by the force instead of dividing the moment by the force."
+            },
+            {
+              "key": "C",
+              "text": "$4.0\\,\\mathrm{m}$",
+              "why_wrong": "divides the force by the moment instead of the moment by the force, inverting the correct ratio."
+            },
+            {
+              "key": "D",
+              "text": "$6.0\\,\\mathrm{m}$",
+              "why_wrong": "subtracts the force from the moment instead of dividing one by the other."
+            }
+          ],
+          "correct": "A",
+          "explanation": "$d=2.0/8.0=0.25\\,\\mathrm{m}$.",
+          "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::moments_and_balanced_beams",
+          "source_lesson_title": "Moments and balanced beams"
+        },
+        {
+          "id": "MCQ-P03-05-4",
+          "stem": "An object is slowly tilted. At what point does it begin to topple?",
+          "options": [
+            {
+              "key": "A",
+              "text": "As soon as any tilt at all is applied, however small.",
+              "why_wrong": "ignores that a small tilt can leave the weight's line of action still within the base, so the object remains stable."
+            },
+            {
+              "key": "B",
+              "text": "When the vertical line through its centre of gravity moves outside its base."
+            },
+            {
+              "key": "C",
+              "text": "Only when the whole base has lost contact with the ground.",
+              "why_wrong": "an object starts to topple while one edge of its base is still touching the ground; what matters is whether the vertical line through its centre of gravity has moved outside the base."
+            },
+            {
+              "key": "D",
+              "text": "Only when the object is tilted past 90 degrees.",
+              "why_wrong": "is far too large a tilt in general; many everyday objects topple at a much smaller angle, depending on their base and centre-of-gravity height."
+            }
+          ],
+          "correct": "B",
+          "explanation": "An object topples once tilting moves the vertical line through its centre of gravity outside its base, so that its own weight produces a moment that continues the tilt.",
+          "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::centre_of_gravity_and_stability",
+          "source_lesson_title": "Centre of gravity and stability"
+        }
+      ]
+    },
+    {
+      "unit_id": "U04_Energy_Work_and_Power",
+      "title": "Checkpoint: Unit 4 Energy Work and Power",
+      "description": "Check your understanding of Unit 4 Energy Work and Power. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P04-01-1",
+          "stem": "A stretched catapult elastic band, about to launch a stone, mainly stores energy in which store?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Kinetic",
+              "why_wrong": "the band is not yet moving, so it has no meaningful kinetic energy to speak of."
+            },
+            {
+              "key": "B",
+              "text": "Gravitational potential",
+              "why_wrong": "this store depends on height above a reference level, and the band's height has not changed by being stretched."
+            },
+            {
+              "key": "C",
+              "text": "Elastic (strain)"
+            },
+            {
+              "key": "D",
+              "text": "Chemical",
+              "why_wrong": "no chemical bonds are being rearranged by simply stretching the band; stretching changes its shape, not its chemistry."
+            }
+          ],
+          "correct": "C",
+          "explanation": "Stretching a band stores energy in its elastic (strain) store, because of the deformation of its shape.",
+          "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::energy_stores_transfers_and_conservation",
+          "source_lesson_title": "Energy stores, transfers and conservation"
+        },
+        {
+          "id": "MCQ-P04-02-1",
+          "stem": "A trolley is pushed with a constant force of $14\\,\\mathrm{N}$ and moves $2.0\\,\\mathrm{m}$ in the direction of the push. How much work is done on the trolley?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$7\\,\\mathrm{J}$",
+              "why_wrong": "divides the force by the distance instead of multiplying them."
+            },
+            {
+              "key": "B",
+              "text": "$16\\,\\mathrm{N}$",
+              "why_wrong": "adds the force and the distance (14 + 2 = 16) instead of multiplying them, and gives the answer in newtons; work is measured in joules."
+            },
+            {
+              "key": "C",
+              "text": "$28\\,\\mathrm{J}$"
+            },
+            {
+              "key": "D",
+              "text": "$0\\,\\mathrm{J}$",
+              "why_wrong": "wrongly assumes no work is done, even though the trolley clearly moves in the direction of the push."
+            }
+          ],
+          "correct": "C",
+          "explanation": "$W=14\\,\\mathrm{N}\\times2.0\\,\\mathrm{m}=28\\,\\mathrm{J}$, since the force and displacement are along the same direction.",
+          "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::work_is_a_measured_energy_transfer",
+          "source_lesson_title": "Work is a measured energy transfer"
+        },
+        {
+          "id": "MCQ-P04-03-1",
+          "stem": "A $4.0\\,\\mathrm{kg}$ object moves at $3.0\\,\\mathrm{m/s}$. What is its kinetic energy?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$36\\,\\mathrm{J}$",
+              "why_wrong": "leaves out the factor of one-half, calculating $4.0\\times3.0^2$ without halving it."
+            },
+            {
+              "key": "B",
+              "text": "$6.0\\,\\mathrm{J}$",
+              "why_wrong": "forgets to square the speed, calculating $\\tfrac12\\times4.0\\times3.0$ instead."
+            },
+            {
+              "key": "C",
+              "text": "$18\\,\\mathrm{J}$"
+            },
+            {
+              "key": "D",
+              "text": "$12\\,\\mathrm{J}$",
+              "why_wrong": "leaves out both the square and the one-half, calculating $4.0\\times3.0$ alone."
+            }
+          ],
+          "correct": "C",
+          "explanation": "$E_k=\\tfrac12\\times4.0\\times3.0^2=\\tfrac12\\times4.0\\times9.0=18\\,\\mathrm{J}$.",
+          "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::kinetic_and_gravitational_energy",
+          "source_lesson_title": "Kinetic and gravitational energy"
+        },
+        {
+          "id": "MCQ-P04-04-1",
+          "stem": "A device transfers $400\\,\\mathrm{J}$ of energy in $8\\,\\mathrm{s}$. What is its power?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$3200\\,\\mathrm{W}$",
+              "why_wrong": "multiplies the energy by the time instead of dividing."
+            },
+            {
+              "key": "B",
+              "text": "$0.02\\,\\mathrm{W}$",
+              "why_wrong": "divides the time by the energy instead of the energy by the time."
+            },
+            {
+              "key": "C",
+              "text": "$50\\,\\mathrm{W}$"
+            },
+            {
+              "key": "D",
+              "text": "$50\\,\\mathrm{J}$",
+              "why_wrong": "has the correct number but the wrong unit; power is measured in watts, not joules."
+            }
+          ],
+          "correct": "C",
+          "explanation": "$P=400\\,\\mathrm{J}\\div8\\,\\mathrm{s}=50\\,\\mathrm{W}$.",
+          "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::power_and_efficiency",
+          "source_lesson_title": "Power and efficiency"
+        },
+        {
+          "id": "MCQ-P04-05-1",
+          "stem": "Which of these generation routes does NOT involve a boiler producing steam?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A coal power station",
+              "why_wrong": "coal is burned to boil water into steam, which turns the turbine."
+            },
+            {
+              "key": "B",
+              "text": "A nuclear power station",
+              "why_wrong": "nuclear fission releases heat that boils water into steam, which turns the turbine."
+            },
+            {
+              "key": "C",
+              "text": "A wind turbine"
+            },
+            {
+              "key": "D",
+              "text": "A biofuel power station",
+              "why_wrong": "biofuel is burned, just like a fossil fuel, to boil water into steam."
+            }
+          ],
+          "correct": "C",
+          "explanation": "A wind turbine is turned directly by moving air; no fuel is burned and no steam is produced.",
+          "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::choosing_energy_resources",
+          "source_lesson_title": "Choosing energy resources"
+        }
+      ]
+    },
+    {
+      "unit_id": "U05_Thermal_Physics",
+      "title": "Checkpoint: Unit 5 Thermal Physics",
+      "description": "Check your understanding of Unit 5 Thermal Physics. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P05-01-1",
+          "stem": "Pollen grains suspended in water are watched under a microscope and seen to jitter and change direction constantly. What is the best explanation for this motion?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The pollen grains are themselves water molecules moving randomly.",
+              "why_wrong": "confuses the large, visible pollen grain with the much smaller, invisible water molecules that actually strike it."
+            },
+            {
+              "key": "B",
+              "text": "The pollen grains are pulled by a weak current that changes direction every few seconds.",
+              "why_wrong": "invents an external current with no evidence, when the random collisions explanation already accounts for the motion."
+            },
+            {
+              "key": "C",
+              "text": "The pollen grains repel each other and bounce apart.",
+              "why_wrong": "describes an interaction between pollen grains, not the cause of a single grain's own erratic path."
+            },
+            {
+              "key": "D",
+              "text": "The pollen grains are struck unevenly, from random directions, by huge numbers of invisible, fast-moving water molecules."
+            }
+          ],
+          "correct": "D",
+          "explanation": "This is the standard particle-model explanation of Brownian motion: an unevenly, randomly bombarded large particle is pushed first one way, then another, by invisible fluid particles.",
+          "source_lesson": "GCSEPHYS::U05_Thermal_Physics::particles_temperature_and_evidence",
+          "source_lesson_title": "Particles, temperature and evidence"
+        },
+        {
+          "id": "MCQ-P05-02-2",
+          "stem": "A metal rod gets very slightly longer when heated. What is the correct particle-level explanation?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The particles vibrate more vigorously and settle, on average, slightly further apart from their neighbours."
+            },
+            {
+              "key": "B",
+              "text": "Each metal particle expands to a larger size.",
+              "why_wrong": "describes particles themselves growing, which does not happen; only their average spacing changes."
+            },
+            {
+              "key": "C",
+              "text": "New particles are created inside the rod as it heats up.",
+              "why_wrong": "invents particles appearing from nowhere, which has no basis in the particle model."
+            },
+            {
+              "key": "D",
+              "text": "The particles move from the cooler end of the rod to the hotter end.",
+              "why_wrong": "describes a bulk flow of particles along the rod, which is not what causes thermal expansion of a solid."
+            }
+          ],
+          "correct": "A",
+          "explanation": "Thermal expansion comes from more vigorous vibration increasing the average spacing between particles, not from the particles themselves changing size or number.",
+          "source_lesson": "GCSEPHYS::U05_Thermal_Physics::gas_pressure_and_thermal_expansion",
+          "source_lesson_title": "Gas pressure and thermal expansion"
+        },
+        {
+          "id": "MCQ-P05-03-3",
+          "stem": "Which pair of factors, if both increased while everything else is kept the same, would both increase the rate of evaporation from a liquid's surface?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Lower temperature and smaller exposed surface area.",
+              "why_wrong": "both changes listed would decrease, not increase, the rate of evaporation."
+            },
+            {
+              "key": "B",
+              "text": "Higher temperature and air movement across the surface."
+            },
+            {
+              "key": "C",
+              "text": "Higher temperature and a sealed, airtight container.",
+              "why_wrong": "a sealed container traps evaporated vapour above the surface, which slows net evaporation rather than increasing it, unlike moving air."
+            },
+            {
+              "key": "D",
+              "text": "Smaller exposed surface area and still air.",
+              "why_wrong": "both changes listed would decrease, not increase, the rate of evaporation."
+            }
+          ],
+          "correct": "B",
+          "explanation": "Higher temperature gives more surface particles enough energy to escape, and air movement sweeps away vapour that has already escaped, both increasing the net evaporation rate.",
+          "source_lesson": "GCSEPHYS::U05_Thermal_Physics::melting_boiling_and_evaporation",
+          "source_lesson_title": "Melting, boiling and evaporation"
+        },
+        {
+          "id": "MCQ-P05-04-3",
+          "stem": "Why do metals generally conduct thermal energy much better than non-metals?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Metal particles vibrate more strongly than non-metal particles even at the same temperature.",
+              "why_wrong": "is not the reason given in this lesson; particle vibration strength depends on temperature, not on whether a material is a metal."
+            },
+            {
+              "key": "B",
+              "text": "Metal particles are smaller than non-metal particles, so energy passes between them faster.",
+              "why_wrong": "invents a particle-size explanation that is not part of the conduction mechanism taught in this lesson."
+            },
+            {
+              "key": "C",
+              "text": "Metals have mobile delocalised electrons that drift quickly and carry energy along, in addition to particle-to-particle vibration."
+            },
+            {
+              "key": "D",
+              "text": "Non-metals do not have particles that vibrate at all.",
+              "why_wrong": "is incorrect: every solid's particles vibrate; non-metals still conduct, only more slowly, via vibration alone."
+            }
+          ],
+          "correct": "C",
+          "explanation": "The extra mechanism unique to metals is mobile delocalised electrons, which drift quickly and carry energy, on top of the particle-to-particle vibration every solid has.",
+          "source_lesson": "GCSEPHYS::U05_Thermal_Physics::conduction_through_materials",
+          "source_lesson_title": "Conduction through materials"
+        },
+        {
+          "id": "MCQ-P05-05-4",
+          "stem": "Which statement correctly distinguishes convection from conduction?",
+          "options": [
+            {
+              "key": "A",
+              "text": "In convection, only energy passes between particles that stay in place; in conduction, the whole material physically moves.",
+              "why_wrong": "swaps the two mechanisms: it is conduction where particles stay in place, and convection where the fluid physically moves."
+            },
+            {
+              "key": "B",
+              "text": "Convection and conduction both involve the same bulk movement of material, just in different states of matter.",
+              "why_wrong": "claims the two mechanisms are the same process in different states of matter, when they are genuinely different mechanisms (bulk flow vs vibration handover)."
+            },
+            {
+              "key": "C",
+              "text": "Convection only transfers energy, never any material; conduction transfers material as well as energy.",
+              "why_wrong": "gets both halves backwards: convection does transfer material (the fluid itself moves), while conduction transfers no material, only vibration energy."
+            },
+            {
+              "key": "D",
+              "text": "In convection, the fluid itself physically moves, carrying its particles and their energy; in conduction, particles stay near fixed positions and only vibration energy is passed along."
+            }
+          ],
+          "correct": "D",
+          "explanation": "Convection is bulk movement of fluid, carrying both particles and energy; conduction is energy (vibration, and in metals, electrons) passed between particles that stay near fixed positions.",
+          "source_lesson": "GCSEPHYS::U05_Thermal_Physics::convection_in_fluids",
+          "source_lesson_title": "Convection in fluids"
+        }
+      ]
+    },
+    {
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "title": "Checkpoint: Unit 6 Waves Light and Sound",
+      "description": "Check your understanding of Unit 6 Waves Light and Sound. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P06-01-1",
+          "stem": "A cork floats on a water surface as a wave passes underneath it. What happens to the cork over one full wave cycle?",
+          "options": [
+            {
+              "key": "A",
+              "text": "It moves up and down and returns close to where it started."
+            },
+            {
+              "key": "B",
+              "text": "It is carried forward along with the wave to a new position.",
+              "why_wrong": "treats the medium as if it travelled with the wave, rather than only oscillating about a fixed position."
+            },
+            {
+              "key": "C",
+              "text": "It stays completely still, because only light waves carry energy.",
+              "why_wrong": "wrongly assumes a water wave carries no energy to the cork; the cork clearly does move, just not along with the wave."
+            },
+            {
+              "key": "D",
+              "text": "It moves sideways, in the same direction the wave is travelling.",
+              "why_wrong": "describes longitudinal vibration in a case where the course treats this type of wave as transverse."
+            }
+          ],
+          "correct": "A",
+          "explanation": "A wave transfers energy through a medium while each part of the medium only oscillates about a fixed position; it does not travel along with the wave.",
+          "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::wave_quantities_and_types",
+          "source_lesson_title": "Wave quantities and types"
+        },
+        {
+          "id": "MCQ-P06-02-2",
+          "stem": "A wave passes cleanly through an open gap in a wall that is much wider than its wavelength, with no obstacle directly in its path. Does diffraction occur?",
+          "options": [
+            {
+              "key": "A",
+              "text": "No, because diffraction only happens when a wave hits a solid obstacle, not at an open gap.",
+              "why_wrong": "wrongly restricts diffraction to obstacles only; a gap is simply two edges close together, and diffraction occurs at a gap too."
+            },
+            {
+              "key": "B",
+              "text": "Yes, but only a little spreading, because the gap is much wider than the wavelength."
+            },
+            {
+              "key": "C",
+              "text": "No, because nothing happens to a wave unless it reflects off something.",
+              "why_wrong": "ignores diffraction entirely as a possible boundary effect."
+            },
+            {
+              "key": "D",
+              "text": "Yes, and the spreading would be exactly the same however wide the gap is.",
+              "why_wrong": "ignores that the amount of spreading depends on how the gap width compares with the wavelength."
+            }
+          ],
+          "correct": "B",
+          "explanation": "Diffraction happens at any gap, not only at obstacles; a gap much wider than the wavelength gives only slight spreading at its edges.",
+          "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::what_happens_at_boundaries_and_gaps",
+          "source_lesson_title": "What happens at boundaries and gaps"
+        },
+        {
+          "id": "MCQ-P06-03-3",
+          "stem": "An object is moved further away from a plane mirror. What happens to the size of its image?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The image gets smaller, like the object appears to a distant observer.",
+              "why_wrong": "wrongly applies ordinary distance-based perspective to a plane-mirror image, which always matches the object's size exactly."
+            },
+            {
+              "key": "B",
+              "text": "The image gets larger, to compensate for the increased distance.",
+              "why_wrong": "invents a compensating effect that a plane mirror does not produce."
+            },
+            {
+              "key": "C",
+              "text": "The image stays exactly the same size."
+            },
+            {
+              "key": "D",
+              "text": "The image disappears once the object passes a certain distance.",
+              "why_wrong": "invents a distance limit that does not exist for a plane mirror's image."
+            }
+          ],
+          "correct": "C",
+          "explanation": "A plane mirror always produces a same-size image; only the object and image distances from the mirror change as the object moves, never the image size.",
+          "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::reflection_and_plane_mirror_images",
+          "source_lesson_title": "Reflection and plane-mirror images"
+        },
+        {
+          "id": "MCQ-P06-04-4",
+          "stem": "A ray in air meets a transparent material at $25^\\circ$ to the normal, with the material's refractive index $n=1.5$. What is the angle of refraction?",
+          "options": [
+            {
+              "key": "A",
+              "text": "$37.5^\\circ$",
+              "why_wrong": "multiplies the angle of incidence by the refractive index directly, rather than applying sines and rearranging the equation."
+            },
+            {
+              "key": "B",
+              "text": "$25^\\circ$",
+              "why_wrong": "assumes no bending occurs even though the angle of incidence is not $0^\\circ$."
+            },
+            {
+              "key": "C",
+              "text": "$1.5^\\circ$",
+              "why_wrong": "treats the refractive index as something to multiply the angle by directly and then misplaces a decimal point, rather than using the sine relationship."
+            },
+            {
+              "key": "D",
+              "text": "$16.4^\\circ$"
+            }
+          ],
+          "correct": "D",
+          "explanation": "$\\sin r = \\sin25^\\circ/1.5 \\approx 0.4226/1.5 \\approx 0.2817$, so $r=\\sin^{-1}(0.2817)\\approx16.4^\\circ$.",
+          "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::refraction_total_internal_reflection_and_fibres",
+          "source_lesson_title": "Refraction, total internal reflection and fibres"
+        },
+        {
+          "id": "MCQ-P06-06-1",
+          "stem": "A radio wave and a gamma ray both travel through a vacuum. Which statement is correct?",
+          "options": [
+            {
+              "key": "A",
+              "text": "They travel at the same speed, but the gamma ray has a much higher frequency."
+            },
+            {
+              "key": "B",
+              "text": "The gamma ray travels faster, because it has a much higher frequency.",
+              "why_wrong": "wrongly links a higher frequency with a higher speed; speed in vacuum is the same for every electromagnetic wave."
+            },
+            {
+              "key": "C",
+              "text": "The radio wave travels faster, because it has a much longer wavelength.",
+              "why_wrong": "wrongly links a longer wavelength with a higher speed; again, speed in vacuum does not depend on wavelength."
+            },
+            {
+              "key": "D",
+              "text": "Neither can be compared, because they are fundamentally different kinds of wave.",
+              "why_wrong": "wrongly denies that radio waves and gamma rays belong to the same family of electromagnetic waves."
+            }
+          ],
+          "correct": "A",
+          "explanation": "All electromagnetic waves share the same speed in a vacuum; only their frequency and wavelength differ, and here the gamma ray has the much higher frequency.",
+          "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::the_electromagnetic_spectrum",
+          "source_lesson_title": "The electromagnetic spectrum"
+        }
+      ]
+    },
+    {
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "title": "Checkpoint: Unit 7 Electricity and Magnetism",
+      "description": "Check your understanding of Unit 7 Electricity and Magnetism. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P07-01-1",
+          "stem": "A bar magnet's south pole is held facing the south pole of a second bar magnet. What happens?",
+          "options": [
+            {
+              "key": "A",
+              "text": "They repel, because like poles repel."
+            },
+            {
+              "key": "B",
+              "text": "They attract, because opposite ends of two different magnets always pull together.",
+              "why_wrong": "treats attraction as a general property of 'two magnets' rather than depending on which poles actually face each other."
+            },
+            {
+              "key": "C",
+              "text": "Nothing happens, because both poles are the same type.",
+              "why_wrong": "wrongly assumes matching poles produce no force at all, rather than a repulsive one."
+            },
+            {
+              "key": "D",
+              "text": "They attract, because south poles are weaker than north poles.",
+              "why_wrong": "invents a size difference between pole types that has nothing to do with the like/unlike rule."
+            }
+          ],
+          "correct": "A",
+          "explanation": "S facing S is a like-pole pairing, and like poles repel.",
+          "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::magnets_and_magnetic_fields",
+          "source_lesson_title": "Magnets and magnetic fields"
+        },
+        {
+          "id": "MCQ-P07-03-2",
+          "stem": "Which statement correctly describes how to connect an ammeter to measure the current through a lamp?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Connect it across the lamp, in parallel with it.",
+              "why_wrong": "parallel connection is how a voltmeter is connected, not an ammeter; it would not force all the lamp's current through the meter."
+            },
+            {
+              "key": "B",
+              "text": "Break the wire to or from the lamp and insert the ammeter into the gap, in series."
+            },
+            {
+              "key": "C",
+              "text": "Connect it directly across the cell's terminals, anywhere in the circuit.",
+              "why_wrong": "an ammeter has a very low resistance, so connecting it straight across the cell would short-circuit the cell (a very large current that can damage the meter), and it would not be in series with the lamp."
+            },
+            {
+              "key": "D",
+              "text": "Connect it in series, but only if it is a digital ammeter.",
+              "why_wrong": "the series requirement applies to both analogue and digital ammeters; the type of display does not change how it must be wired."
+            }
+          ],
+          "correct": "B",
+          "explanation": "An ammeter must be in series, inserted directly into the wire whose current is being measured.",
+          "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::current_is_charge_flow",
+          "source_lesson_title": "Current is charge flow"
+        },
+        {
+          "id": "MCQ-P07-05-3",
+          "stem": "Two wires are made of the same material and have the same length. Wire P has twice the cross-sectional area of wire Q. Which wire has the greater resistance?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Wire P, because it contains more material overall.",
+              "why_wrong": "a larger cross-sectional area gives more parallel routes for charge, which lowers resistance, not raises it."
+            },
+            {
+              "key": "B",
+              "text": "Both wires have the same resistance, because they are the same length.",
+              "why_wrong": "length is equal, but cross-sectional area is not, and area also affects resistance."
+            },
+            {
+              "key": "C",
+              "text": "Wire Q, because it has the smaller cross-sectional area."
+            },
+            {
+              "key": "D",
+              "text": "It cannot be determined without knowing the exact material.",
+              "why_wrong": "the direction of the comparison (smaller area means greater resistance) does not depend on which specific material it is, only on the two wires sharing the same material and length."
+            }
+          ],
+          "correct": "C",
+          "explanation": "A smaller cross-sectional area gives fewer parallel routes for charge, so wire Q (half the area of P) has the greater resistance.",
+          "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::resistance_and_i_v_evidence",
+          "source_lesson_title": "Resistance and I-V evidence"
+        },
+        {
+          "id": "MCQ-P07-07-4",
+          "stem": "An LED in a simple loop with a working cell does not conduct and gives no light, but it conducts and lights as soon as the LED alone is turned round. What had happened?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The LED has been connected in parallel instead of in series.",
+              "why_wrong": "describes a different kind of wiring fault; an LED in parallel with another component could still conduct in its forward direction."
+            },
+            {
+              "key": "B",
+              "text": "The circuit has too high a resistance for any LED to light.",
+              "why_wrong": "is not supported by the question, which gives no resistance value and specifically describes a direction-related failure to conduct."
+            },
+            {
+              "key": "C",
+              "text": "The cell has been connected with its terminals reversed, which has no effect on an LED.",
+              "why_wrong": "contradicts the fact that reversing the cell would also reverse the direction current tries to flow through the LED, which does matter."
+            },
+            {
+              "key": "D",
+              "text": "The LED has been connected in its reverse direction, against the way its triangle points."
+            }
+          ],
+          "correct": "D",
+          "explanation": "An LED conducts, and emits light, only in its forward direction, the direction its triangle symbol points; connected the other way round, no current flows and no light is emitted.",
+          "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::drawing_and_reading_circuits",
+          "source_lesson_title": "Drawing and reading circuits"
+        },
+        {
+          "id": "MCQ-P07-10-1",
+          "stem": "A strong bar magnet sits completely motionless, fully inside a coil of wire connected to a sensitive meter. What does the meter read?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Zero, because nothing about the coil's exposure to the field is changing."
+            },
+            {
+              "key": "B",
+              "text": "A small but steady nonzero reading, because the field is strong.",
+              "why_wrong": "wrongly assumes a strong but unchanging field can induce a steady e.m.f.; induction needs a changing exposure to the field, not merely a strong one."
+            },
+            {
+              "key": "C",
+              "text": "A reading that slowly decreases to zero over several seconds.",
+              "why_wrong": "invents a gradual decay with no physical basis; with nothing changing, the reading is zero immediately, not after a delay."
+            },
+            {
+              "key": "D",
+              "text": "A reading equal to the field strength of the magnet.",
+              "why_wrong": "confuses the meter's reading (induced e.m.f.) with the magnet's field strength, which are different physical quantities, and ignores that no change means no induced e.m.f. at all."
+            }
+          ],
+          "correct": "A",
+          "explanation": "With the magnet motionless, nothing about the coil's exposure to the field is changing, so no e.m.f. is induced and the meter reads zero, regardless of how strong the magnet's field is.",
+          "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::induction_and_the_ac_generator",
+          "source_lesson_title": "Induction and the a.c. generator"
+        }
+      ]
+    },
+    {
+      "unit_id": "U08_Nuclear_Physics",
+      "title": "Checkpoint: Unit 8 Nuclear Physics",
+      "description": "Check your understanding of Unit 8 Nuclear Physics. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P08-01-1",
+          "stem": "What does the nucleon number $A$ of a nuclide actually count?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The number of protons only.",
+              "why_wrong": "this is what the proton number $Z$ counts, not $A$."
+            },
+            {
+              "key": "B",
+              "text": "The number of protons plus the number of neutrons."
+            },
+            {
+              "key": "C",
+              "text": "The number of electrons only.",
+              "why_wrong": "electrons are not counted by $A$ at all; in a neutral atom their number equals $Z$, not $A$."
+            },
+            {
+              "key": "D",
+              "text": "The number of neutrons only.",
+              "why_wrong": "this is the neutron number, $N=A-Z$, which is only part of what $A$ counts."
+            }
+          ],
+          "correct": "B",
+          "explanation": "$A$ is defined as protons plus neutrons together; neither alone, and never electrons.",
+          "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::nuclei_isotopes_and_nuclear_processes",
+          "source_lesson_title": "Nuclei, isotopes and nuclear processes"
+        },
+        {
+          "id": "MCQ-P08-02-1",
+          "stem": "A counter records 150 counts in 30 seconds. What is the count rate?",
+          "options": [
+            {
+              "key": "A",
+              "text": "150 counts per second",
+              "why_wrong": "this is the raw count, not divided by the 30 s time interval at all."
+            },
+            {
+              "key": "B",
+              "text": "5 counts per second"
+            },
+            {
+              "key": "C",
+              "text": "30 counts per second",
+              "why_wrong": "this uses the time value itself as if it were the rate, instead of dividing the count by the time."
+            },
+            {
+              "key": "D",
+              "text": "0.2 counts per second",
+              "why_wrong": "this divides time by counts ($30\\div150$) instead of counts by time."
+            }
+          ],
+          "correct": "B",
+          "explanation": "Count rate $=150\\div30=5$ counts per second.",
+          "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::detecting_ionising_radiation",
+          "source_lesson_title": "Detecting ionising radiation"
+        },
+        {
+          "id": "MCQ-P08-03-1",
+          "stem": "Which type of radiation is stopped by a single sheet of paper?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Beta",
+              "why_wrong": "beta needs a few millimetres of aluminium to be stopped; paper alone barely affects it."
+            },
+            {
+              "key": "B",
+              "text": "Alpha"
+            },
+            {
+              "key": "C",
+              "text": "Gamma",
+              "why_wrong": "gamma needs thick lead or concrete even to be significantly reduced, let alone stopped by something as thin as paper."
+            },
+            {
+              "key": "D",
+              "text": "All three are equally affected by paper.",
+              "why_wrong": "ignores that beta and gamma both pass through paper largely unaffected, unlike alpha."
+            }
+          ],
+          "correct": "B",
+          "explanation": "Alpha's strong ionising ability means it loses all its energy, and is stopped, within the thickness of a single sheet of paper.",
+          "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::alpha_beta_and_gamma",
+          "source_lesson_title": "Alpha, beta and gamma"
+        },
+        {
+          "id": "MCQ-P08-04-1",
+          "stem": "A sample's count rate is 60 counts/min. Its half-life is 4 minutes. What is the count rate after 8 minutes?",
+          "options": [
+            {
+              "key": "A",
+              "text": "30 counts/min",
+              "why_wrong": "only applies one halving, for one half-life, but 8 minutes is actually two half-lives."
+            },
+            {
+              "key": "B",
+              "text": "15 counts/min"
+            },
+            {
+              "key": "C",
+              "text": "0 counts/min",
+              "why_wrong": "wrongly assumes the entire sample has decayed, when in fact a quarter of the original count rate still remains."
+            },
+            {
+              "key": "D",
+              "text": "52 counts/min",
+              "why_wrong": "subtracts 8 from 60, treating the half-life as a simple countdown rather than a repeated halving."
+            }
+          ],
+          "correct": "B",
+          "explanation": "8 minutes is 2 half-lives, so $60\\to30\\to15$ counts/min.",
+          "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::random_decay_and_half_life",
+          "source_lesson_title": "Random decay and half-life"
+        },
+        {
+          "id": "MCQ-P08-05-1",
+          "stem": "Which type of radiation is used in a household smoke alarm, and why?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Gamma, because it is the most penetrating type available.",
+              "why_wrong": "gamma's very high penetration and weak ionisation make it poorly suited to creating a localised ionisation current inside such a small chamber."
+            },
+            {
+              "key": "B",
+              "text": "Alpha, because its strong, short-range ionisation inside the small chamber is easily interrupted by smoke, and it stays safely contained inside the device."
+            },
+            {
+              "key": "C",
+              "text": "Beta, because it has an intermediate range that suits any enclosed space.",
+              "why_wrong": "beta's greater range than alpha makes it less reliably contained within such a small sealed chamber."
+            },
+            {
+              "key": "D",
+              "text": "Any of the three would work equally well in a smoke alarm.",
+              "why_wrong": "ignores that each type's specific penetration and ionising ability determines whether it actually suits this particular small-chamber design."
+            }
+          ],
+          "correct": "B",
+          "explanation": "Alpha's intense, very-short-range ionisation is exactly matched to the scale of a small smoke-alarm chamber.",
+          "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::applications_and_safe_use",
+          "source_lesson_title": "Applications and safe use"
+        }
+      ]
+    },
+    {
+      "unit_id": "U09_Space_Physics",
+      "title": "Checkpoint: Unit 9 Space Physics",
+      "description": "Check your understanding of Unit 9 Space Physics. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": [
+        {
+          "id": "MCQ-P09-01-1",
+          "stem": "Which of the following lists four planets in the correct order of increasing distance from the Sun?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Earth, Mercury, Mars, Jupiter",
+              "why_wrong": "places Earth before Mercury, but Mercury is closer to the Sun than Earth."
+            },
+            {
+              "key": "B",
+              "text": "Mercury, Earth, Mars, Jupiter"
+            },
+            {
+              "key": "C",
+              "text": "Mercury, Mars, Earth, Jupiter",
+              "why_wrong": "swaps Earth and Mars; Earth is closer to the Sun than Mars."
+            },
+            {
+              "key": "D",
+              "text": "Jupiter, Mars, Earth, Mercury",
+              "why_wrong": "lists the four planets in decreasing distance from the Sun, the reverse of what was asked."
+            }
+          ],
+          "correct": "B",
+          "explanation": "The fixed order from the Sun is Mercury, Venus, Earth, Mars, Jupiter...; keeping only these four in that order gives Mercury, Earth, Mars, Jupiter.",
+          "source_lesson": "GCSEPHYS::U09_Space_Physics::the_solar_system_as_an_organised_system",
+          "source_lesson_title": "The Solar System as an organised system"
+        },
+        {
+          "id": "MCQ-P09-01-4",
+          "stem": "A newly found rocky body orbits the Sun directly, lies in the asteroid belt, and has an irregular, non-round shape. How should it be classified?",
+          "options": [
+            {
+              "key": "A",
+              "text": "As an asteroid."
+            },
+            {
+              "key": "B",
+              "text": "As a planet.",
+              "why_wrong": "requires the body to be round as well as orbiting the Sun directly; this body is not round."
+            },
+            {
+              "key": "C",
+              "text": "As a dwarf planet.",
+              "why_wrong": "requires the body to be round; a dwarf planet still has to pass the 'round' test, just not the 'cleared its neighbourhood' test."
+            },
+            {
+              "key": "D",
+              "text": "As a moon.",
+              "why_wrong": "requires the body to orbit a planet; this body orbits the Sun directly, not a planet."
+            }
+          ],
+          "correct": "A",
+          "explanation": "It orbits the Sun directly but is not round, which is exactly the asteroid case, distinct from both the planet and dwarf-planet categories (which both require roundness).",
+          "source_lesson": "GCSEPHYS::U09_Space_Physics::the_solar_system_as_an_organised_system",
+          "source_lesson_title": "The Solar System as an organised system"
+        },
+        {
+          "id": "MCQ-P09-02-3",
+          "stem": "How does the Sun mainly release its energy?",
+          "options": [
+            {
+              "key": "A",
+              "text": "By ordinary chemical combustion, burning hydrogen gas with oxygen.",
+              "why_wrong": "describes chemical burning, which needs oxygen and only rearranges electrons; the Sun's core has no oxygen supply and the process is nuclear, not chemical."
+            },
+            {
+              "key": "B",
+              "text": "By radioactive decay of heavy elements in its core.",
+              "why_wrong": "describes a different nuclear process used, for example, to explain some planetary interior heating, not the Sun's main energy source."
+            },
+            {
+              "key": "C",
+              "text": "By reflecting light from nearby stars.",
+              "why_wrong": "the Sun is itself the source of the light observed from it, not a reflector of light from elsewhere."
+            },
+            {
+              "key": "D",
+              "text": "By nuclear fusion, joining hydrogen nuclei into helium in its core."
+            }
+          ],
+          "correct": "D",
+          "explanation": "A stable star like the Sun releases energy through nuclear fusion of hydrogen into helium, not chemical combustion or radioactive decay.",
+          "source_lesson": "GCSEPHYS::U09_Space_Physics::the_sun_light_travel_and_orbits",
+          "source_lesson_title": "The Sun, light travel and orbits"
+        },
+        {
+          "id": "MCQ-P09-03-1",
+          "stem": "What will the Sun most likely become at the end of its life?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A black hole.",
+              "why_wrong": "is the ending for a very-high-mass star after a supernova; the Sun is a low-mass star and never reaches this branch."
+            },
+            {
+              "key": "B",
+              "text": "A neutron star.",
+              "why_wrong": "is the ending for a high-mass (but not very-high-mass) star after a supernova; the Sun's mass is too low for this branch."
+            },
+            {
+              "key": "C",
+              "text": "A white dwarf, after shedding a planetary nebula."
+            },
+            {
+              "key": "D",
+              "text": "A permanently stable star that never changes.",
+              "why_wrong": "ignores that every star changes once it exhausts the hydrogen fuel in its core, including the Sun."
+            }
+          ],
+          "correct": "C",
+          "explanation": "The Sun is a low-mass star, so its pathway is stable star, red giant, planetary nebula, white dwarf, with no supernova stage.",
+          "source_lesson": "GCSEPHYS::U09_Space_Physics::how_stars_change_with_mass",
+          "source_lesson_title": "How stars change with mass"
+        },
+        {
+          "id": "MCQ-P09-03-4",
+          "stem": "Why can material from a long-dead star's supernova end up inside a much later-forming planet?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Because supernova material is immediately destroyed, releasing new elements directly into forming planets.",
+              "why_wrong": "describes destruction, when the material is in fact scattered intact into space, not destroyed."
+            },
+            {
+              "key": "B",
+              "text": "Because the supernova's scattered material mixes into gas-and-dust clouds, which gravity can later pull together into new stars and planets."
+            },
+            {
+              "key": "C",
+              "text": "Because every supernova directly triggers the formation of exactly one new planet.",
+              "why_wrong": "invents a one-to-one, immediate link between a supernova and planet formation that is not how the recycling process works."
+            },
+            {
+              "key": "D",
+              "text": "Because planets always form from the exact same cloud as their host star's supernova, with no mixing involved.",
+              "why_wrong": "wrongly restricts the recycling to a single star's own cloud, when material from many earlier stars can mix together over long timescales."
+            }
+          ],
+          "correct": "B",
+          "explanation": "Supernova material is scattered, not destroyed; it mixes into surrounding gas and dust, and gravity can later gather a dense enough region of this enriched material into new stars and planets.",
+          "source_lesson": "GCSEPHYS::U09_Space_Physics::how_stars_change_with_mass",
+          "source_lesson_title": "How stars change with mass"
+        }
+      ]
+    },
+    {
+      "unit_id": "U10_Revision_and_Exam_Practice",
+      "title": "Checkpoint: Unit 10 Revision and Exam Practice",
+      "description": "Check your understanding of Unit 10 Revision and Exam Practice. You should score at least 60% before moving to the next unit.",
+      "pass_threshold_percent": 60,
+      "items": []
+    }
+  ]
+}

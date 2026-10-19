@@ -71,3 +71,36 @@ rama `main` para el detalle completo de cada una).
 
 ## Fase 9 — Deliverables finales (este commit)
 - `AUDIT_AFTER.md`, `PILOT_COMPARISON.md`, `CHANGELOG.md` (este fichero).
+
+## Auditoría v2 — 2026-10-19
+
+Auditoría independiente de 6 fases sobre el curso completo (88 lecciones,
+9 bundles, 3 ficheros de evaluación, 241 SVGs).
+
+### Correcciones aplicadas
+
+- **P0 — Nuclear Z>83→Z>82**: 28 instancias de `Z>83` reemplazadas por
+  `Z>82` en todo el bundle `selectividad_fisica__nuclear.json` (10
+  lecciones). El Bi-209 (Z=83) es alfa-inestable; el último elemento
+  verdaderamente estable es Pb (Z=82).
+- **P1 — Cuántica fracciones ambiguas**: 2 expresiones con barra `/` en
+  `exercises[0].full_solution` de L02 (efecto fotoeléctrico) sustituidas
+  por `\dfrac{}{}` para eliminar ambigüedad de precedencia.
+- **P1 — Relatividad conservación del momento**: Añadida nota en
+  `flashcards[9].back` de L05 (E₀=mc²) aclarando que un fotón aislado
+  no puede crear un par e⁺e⁻ sin un tercer cuerpo que absorba el retroceso.
+
+### Verificaciones completadas (0 nuevos P0/P1)
+
+- Escaneo profundo de física en las 88 lecciones: 0 errores.
+- scope + 0 MEZCLA: 731 bloques verificados, 0 violaciones.
+- schema_v2: 88 canonical IDs únicos, rutas a nivel de bloque, content_version.
+- Fundamentos: 6 micro-lecciones auditadas, sin errores.
+- Evaluación: diagnostic (22 items/14 ejes), checkpoints (31),
+  exam_mode (173+10+2+2) — 0 referencias rotas.
+- SVGs: 241 válidos, 87/88 cobertura.
+- Gates: 100% PASS.
+
+### Hallazgos P2 (5, no bloqueantes)
+
+Documentados en `AUDIT_REPORT_v2.md`.

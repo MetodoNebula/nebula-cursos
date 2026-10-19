@@ -265,7 +265,7 @@
         "type": "connection",
         "title": "La consecuencia: hay un tamaño máximo",
         "scope": "CORE",
-        "body": "Las propiedades 1 y 2, leídas juntas, predicen algo que la lista no dice y que gobernará media unidad.\n\n- La interacción fuerte es de **corto alcance**: un nucleón solo la siente con sus **vecinos inmediatos**. Añadir nucleones lejanos no le aporta más cohesión. La cohesión total crece, en consecuencia, más o menos **como $A$**.\n- La repulsión eléctrica es de **alcance infinito**: cada protón se repele con **todos** los demás a la vez, estén donde estén. El número de parejas de protones crece como $Z^{2}$, de modo que la repulsión total crece **como $Z^{2}$**.\n\nUna magnitud que crece como $Z^{2}$ acaba siempre por adelantar a otra que crece como $A$. Por lo tanto:\n\n> **Existe un límite superior al tamaño de los núcleos estables.** Pasado cierto punto no hay forma de equilibrar la repulsión, por muchos neutrones que se añadan.\n\nTres cosas que van a seguirse de aquí, y que conviene reconocer cuando lleguen:\n\n- que la curva de estabilidad de la próxima lección **baje** por la derecha;\n- que los núcleos pesados se deshagan de protones de dos en dos, en paquetes de cuatro nucleones (2 protones y 2 neutrones): las partículas alfa;\n- que no exista ningún núclido estable con $Z>83$.\n\nTres hechos distintos, una sola causa.",
+        "body": "Las propiedades 1 y 2, leídas juntas, predicen algo que la lista no dice y que gobernará media unidad.\n\n- La interacción fuerte es de **corto alcance**: un nucleón solo la siente con sus **vecinos inmediatos**. Añadir nucleones lejanos no le aporta más cohesión. La cohesión total crece, en consecuencia, más o menos **como $A$**.\n- La repulsión eléctrica es de **alcance infinito**: cada protón se repele con **todos** los demás a la vez, estén donde estén. El número de parejas de protones crece como $Z^{2}$, de modo que la repulsión total crece **como $Z^{2}$**.\n\nUna magnitud que crece como $Z^{2}$ acaba siempre por adelantar a otra que crece como $A$. Por lo tanto:\n\n> **Existe un límite superior al tamaño de los núcleos estables.** Pasado cierto punto no hay forma de equilibrar la repulsión, por muchos neutrones que se añadan.\n\nTres cosas que van a seguirse de aquí, y que conviene reconocer cuando lleguen:\n\n- que la curva de estabilidad de la próxima lección **baje** por la derecha;\n- que los núcleos pesados se deshagan de protones de dos en dos, en paquetes de cuatro nucleones (2 protones y 2 neutrones): las partículas alfa;\n- que no exista ningún núclido estable con $Z>82$.\n\nTres hechos distintos, una sola causa.",
         "concept_ids": [
           "C-NU-04",
           "C-NU-03"
@@ -1433,8 +1433,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "83df26c817668d47"
+        "validated_render": true,
+        "canonical_hash": "9d6090c144072337"
       }
     }
   },
@@ -3267,8 +3267,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "03b19840f3df5fed"
+        "validated_render": true,
+        "canonical_hash": "861d225bbfa1262c"
       }
     }
   },
@@ -3449,7 +3449,7 @@
         "type": "derivation",
         "title": "Por qué los núcleos pesados necesitan más neutrones",
         "scope": "CORE",
-        "body": "El tercer hecho, y el más importante de los tres, porque de él sale la forma de la banda.\n\n**El hecho.** Entre los núclidos ligeros, hasta $Z\\approx20$, el número de protones y el de neutrones son prácticamente **iguales**: la banda sigue la bisectriz $Z=N$. A partir de ahí, el número de neutrones crece **mucho más deprisa** que el de protones.\n\nLos números lo dicen solos:\n\n| Núclido | $Z$ | $N$ | $N/Z$ |\n|---|---|---|---|\n| $^{16}\\mathrm{O}$ | 8 | 8 | 1,00 |\n| $^{40}\\mathrm{Ca}$ | 20 | 20 | 1,00 |\n| $^{56}\\mathrm{Fe}$ | 26 | 30 | 1,15 |\n| $^{120}\\mathrm{Sn}$ | 50 | 70 | 1,40 |\n| $^{208}\\mathrm{Pb}$ | 82 | 126 | 1,54 |\n\n**Por qué.** Aquí se juntan las dos propiedades de la interacción fuerte que ya conocemos, y el argumento es el mismo que explicaba la caída de la curva $E_e/A$ por la derecha.\n\n- Al crecer el número de protones aumenta la **repulsión electrostática**, que es de alcance infinito y actúa **entre todas las parejas de protones a la vez**.\n- Para compensarla hace falta más **cohesión**, y la cohesión la aporta la interacción fuerte, que es **independiente de la carga**: un neutrón atrae a sus vecinos exactamente igual que un protón, pero **no aporta repulsión**.\n\nAñadir neutrones es, por tanto, la única manera de aumentar la cohesión sin aumentar al mismo tiempo la repulsión. Un neutrón es cohesión sin repulsión, hasta cierto punto.\n\n**Pero no se puede añadir neutrones sin límite.** Protones y neutrones ocupan cada uno sus propios niveles de energía, y en cada nivel caben como mucho dos nucleones de cada clase (principio de exclusión). Si hay demasiados neutrones, los nuevos tienen que ir a niveles cada vez más altos, cada vez más caros energéticamente, hasta que sale a cuenta convertir uno de esos neutrones en protón (de hecho, el neutrón libre ya es inestable). Por eso la banda tiene dos bordes, uno por exceso de protones y otro por exceso de neutrones, y por eso en los núcleos ligeros el reparto óptimo es, sencillamente, $N=Z$.\n\nEso explica la forma de la banda: arranca pegada a la bisectriz, donde la repulsión todavía es poca, y se va **separando por debajo de ella** —es decir, hacia valores de $N$ mayores que $Z$— a medida que $Z$ crece.\n\n> **Y explica también dónde termina.** Añadir neutrones ayuda, pero no indefinidamente: la interacción fuerte es de corto alcance y cada neutrón nuevo solo se une a sus vecinos inmediatos, mientras que la repulsión sigue creciendo con todas las parejas de protones. Por encima de $Z=83$ ya no hay proporción de neutrones que valga: **no existe ningún núclido estable con $Z>83$.**",
+        "body": "El tercer hecho, y el más importante de los tres, porque de él sale la forma de la banda.\n\n**El hecho.** Entre los núclidos ligeros, hasta $Z\\approx20$, el número de protones y el de neutrones son prácticamente **iguales**: la banda sigue la bisectriz $Z=N$. A partir de ahí, el número de neutrones crece **mucho más deprisa** que el de protones.\n\nLos números lo dicen solos:\n\n| Núclido | $Z$ | $N$ | $N/Z$ |\n|---|---|---|---|\n| $^{16}\\mathrm{O}$ | 8 | 8 | 1,00 |\n| $^{40}\\mathrm{Ca}$ | 20 | 20 | 1,00 |\n| $^{56}\\mathrm{Fe}$ | 26 | 30 | 1,15 |\n| $^{120}\\mathrm{Sn}$ | 50 | 70 | 1,40 |\n| $^{208}\\mathrm{Pb}$ | 82 | 126 | 1,54 |\n\n**Por qué.** Aquí se juntan las dos propiedades de la interacción fuerte que ya conocemos, y el argumento es el mismo que explicaba la caída de la curva $E_e/A$ por la derecha.\n\n- Al crecer el número de protones aumenta la **repulsión electrostática**, que es de alcance infinito y actúa **entre todas las parejas de protones a la vez**.\n- Para compensarla hace falta más **cohesión**, y la cohesión la aporta la interacción fuerte, que es **independiente de la carga**: un neutrón atrae a sus vecinos exactamente igual que un protón, pero **no aporta repulsión**.\n\nAñadir neutrones es, por tanto, la única manera de aumentar la cohesión sin aumentar al mismo tiempo la repulsión. Un neutrón es cohesión sin repulsión, hasta cierto punto.\n\n**Pero no se puede añadir neutrones sin límite.** Protones y neutrones ocupan cada uno sus propios niveles de energía, y en cada nivel caben como mucho dos nucleones de cada clase (principio de exclusión). Si hay demasiados neutrones, los nuevos tienen que ir a niveles cada vez más altos, cada vez más caros energéticamente, hasta que sale a cuenta convertir uno de esos neutrones en protón (de hecho, el neutrón libre ya es inestable). Por eso la banda tiene dos bordes, uno por exceso de protones y otro por exceso de neutrones, y por eso en los núcleos ligeros el reparto óptimo es, sencillamente, $N=Z$.\n\nEso explica la forma de la banda: arranca pegada a la bisectriz, donde la repulsión todavía es poca, y se va **separando por debajo de ella** —es decir, hacia valores de $N$ mayores que $Z$— a medida que $Z$ crece.\n\n> **Y explica también dónde termina.** Añadir neutrones ayuda, pero no indefinidamente: la interacción fuerte es de corto alcance y cada neutrón nuevo solo se une a sus vecinos inmediatos, mientras que la repulsión sigue creciendo con todas las parejas de protones. Por encima de $Z=82$ ya no hay proporción de neutrones que valga: **no existe ningún núclido estable con $Z>82$** (el $^{209}$Bi, $Z=83$, se desintegra con $t_{1/2}\\sim10^{19}$ años; en la práctica se trata como estable, pero en rigor no lo es).",
         "concept_ids": [
           "C-NU-12"
         ],
@@ -3463,7 +3463,7 @@
         "type": "formalisation",
         "title": "La carta de Segrè y cómo se lee",
         "scope": "CORE",
-        "body": "Los tres hechos anteriores, puestos en un mismo dibujo, dan la **carta de núclidos** o **diagrama de Segrè**: el número de protones $Z$ en vertical frente al número de neutrones $N$ en horizontal.\n\nLo que hay que saber leer en él son tres cosas:\n\n**1. La bisectriz $Z=N$.** Es la recta de referencia. Hasta $Z\\approx20$ los núclidos estables están prácticamente sobre ella.\n\n**2. La banda de estabilidad.** A partir de $Z\\approx20$ se separa de la bisectriz **hacia la derecha**, es decir, hacia más neutrones que protones, hasta llegar al $^{208}\\mathrm{Pb}$ con $N/Z=1{,}54$, el último estable en sentido estricto. Ahí se acaba: no hay ningún núclido estable con $Z>83$ (el $^{209}$Bi, $Z=83$, tiene un periodo tan enorme, $\\sim10^{19}$ años, que en la práctica se considera estable).\n\n**3. Las dos zonas a sus lados**, que son lo verdaderamente útil:\n\n- **Por encima de la banda** (más protones de los que le corresponderían para ese $N$): hay **exceso de protones**. Ese núclido tenderá a la estabilidad mediante un cambio que **disminuya su número de protones**.\n- **Por debajo de la banda** (más neutrones de los que le corresponderían para ese $Z$): hay **exceso de neutrones**. Tenderá a la estabilidad **disminuyendo su número de neutrones**.\n\n> **Esta es la idea operativa de la lección.** El diagrama no es una ilustración: es un **índice**. Dado un núclido cualquiera, su posición respecto de la banda dice en qué dirección tiene que moverse, y por tanto **qué le va a pasar**. La lección siguiente pondrá nombre y ecuación a cada uno de esos movimientos; aquí basta con saber señalar la dirección.",
+        "body": "Los tres hechos anteriores, puestos en un mismo dibujo, dan la **carta de núclidos** o **diagrama de Segrè**: el número de protones $Z$ en vertical frente al número de neutrones $N$ en horizontal.\n\nLo que hay que saber leer en él son tres cosas:\n\n**1. La bisectriz $Z=N$.** Es la recta de referencia. Hasta $Z\\approx20$ los núclidos estables están prácticamente sobre ella.\n\n**2. La banda de estabilidad.** A partir de $Z\\approx20$ se separa de la bisectriz **hacia la derecha**, es decir, hacia más neutrones que protones, hasta llegar al $^{208}\\mathrm{Pb}$ con $N/Z=1{,}54$, el último estable en sentido estricto. Ahí se acaba: no hay ningún núclido estable con $Z>82$ (el $^{209}$Bi, $Z=83$, tiene un periodo tan enorme, $\\sim10^{19}$ años, que en la práctica se considera estable).\n\n**3. Las dos zonas a sus lados**, que son lo verdaderamente útil:\n\n- **Por encima de la banda** (más protones de los que le corresponderían para ese $N$): hay **exceso de protones**. Ese núclido tenderá a la estabilidad mediante un cambio que **disminuya su número de protones**.\n- **Por debajo de la banda** (más neutrones de los que le corresponderían para ese $Z$): hay **exceso de neutrones**. Tenderá a la estabilidad **disminuyendo su número de neutrones**.\n\n> **Esta es la idea operativa de la lección.** El diagrama no es una ilustración: es un **índice**. Dado un núclido cualquiera, su posición respecto de la banda dice en qué dirección tiene que moverse, y por tanto **qué le va a pasar**. La lección siguiente pondrá nombre y ecuación a cada uno de esos movimientos; aquí basta con saber señalar la dirección.",
         "concept_ids": [
           "C-NU-12",
           "C-NU-13"
@@ -3488,7 +3488,7 @@
         "type": "worked_rule",
         "title": "Cómo situar un núclido en tres pasos",
         "scope": "CORE",
-        "body": "Para estimar si un núclido está dentro o fuera de la banda de estabilidad y, si está fuera, hacia dónde tiende:\n\n1. **Calcula $Z$ y $N=A-Z$.** Son las dos coordenadas del punto.\n2. **Calcula $N/Z$ y compáralo con el valor que tiene la banda para ese $Z$.** Como referencia rápida: $N/Z$ entre $1{,}0$ y $1{,}2$ para $Z\\le20$ (los de $Z$ par suelen tener $N=Z$; los de $Z$ impar, $N=Z+1$); $\\approx1{,}15$ hacia $Z=26$; $\\approx1{,}25$ hacia $Z=40$; $\\approx1{,}40$ hacia $Z=50$; hasta $\\approx1{,}54$ en $Z=82$. El criterio más fiable, sobre todo cerca de los bordes de esta franja, es el del atajo que viene después.\n3. **Decide la dirección.** Si tu $N/Z$ es **mayor** que el de la banda, sobran neutrones y hay que bajarlos. Si es **menor**, sobran protones y hay que bajarlos.\n\n> **Atajo que funciona casi siempre.** Compara el núclido con el isótopo estable más conocido de ese mismo elemento. El $^{14}\\mathrm{C}$ tiene dos neutrones más que el $^{12}\\mathrm{C}$, que es el estable: le sobran neutrones. El $^{11}\\mathrm{C}$ tiene uno menos: le sobran protones. Es el mismo razonamiento que el paso 2, pero sin cociente, y es más fiable que el cociente aproximado cuando el núclido está cerca del borde de la banda.\n\n> **Y una comprobación que nunca falla:** si el núclido tiene $Z>83$, no es estable, haga lo que haga su $N/Z$.",
+        "body": "Para estimar si un núclido está dentro o fuera de la banda de estabilidad y, si está fuera, hacia dónde tiende:\n\n1. **Calcula $Z$ y $N=A-Z$.** Son las dos coordenadas del punto.\n2. **Calcula $N/Z$ y compáralo con el valor que tiene la banda para ese $Z$.** Como referencia rápida: $N/Z$ entre $1{,}0$ y $1{,}2$ para $Z\\le20$ (los de $Z$ par suelen tener $N=Z$; los de $Z$ impar, $N=Z+1$); $\\approx1{,}15$ hacia $Z=26$; $\\approx1{,}25$ hacia $Z=40$; $\\approx1{,}40$ hacia $Z=50$; hasta $\\approx1{,}54$ en $Z=82$. El criterio más fiable, sobre todo cerca de los bordes de esta franja, es el del atajo que viene después.\n3. **Decide la dirección.** Si tu $N/Z$ es **mayor** que el de la banda, sobran neutrones y hay que bajarlos. Si es **menor**, sobran protones y hay que bajarlos.\n\n> **Atajo que funciona casi siempre.** Compara el núclido con el isótopo estable más conocido de ese mismo elemento. El $^{14}\\mathrm{C}$ tiene dos neutrones más que el $^{12}\\mathrm{C}$, que es el estable: le sobran neutrones. El $^{11}\\mathrm{C}$ tiene uno menos: le sobran protones. Es el mismo razonamiento que el paso 2, pero sin cociente, y es más fiable que el cociente aproximado cuando el núclido está cerca del borde de la banda.\n\n> **Y una comprobación que nunca falla:** si el núclido tiene $Z>82$, no es estable, haga lo que haga su $N/Z$.",
         "concept_ids": [
           "C-NU-13"
         ],
@@ -3517,7 +3517,7 @@
         "type": "self_explanation",
         "title": "Compruébalo tú",
         "scope": "CORE",
-        "body": "Sin mirar el diagrama:\n\n1. **Di los siete números mágicos** y pon un ejemplo de núclido doblemente mágico.\n2. **Explica en dos frases por qué un núcleo pesado necesita más neutrones que protones.** Si tu explicación no menciona el alcance de alguna de las dos fuerzas, está incompleta.\n3. **El $^{131}\\mathrm{I}$ tiene $Z=53$ y $N=78$. ¿Le sobran neutrones o protones?** Pista: el yodo estable es el $^{127}\\mathrm{I}$.\n4. **¿Por qué no existe ningún núclido estable con $Z>83$, por bien elegida que esté su proporción de neutrones?**",
+        "body": "Sin mirar el diagrama:\n\n1. **Di los siete números mágicos** y pon un ejemplo de núclido doblemente mágico.\n2. **Explica en dos frases por qué un núcleo pesado necesita más neutrones que protones.** Si tu explicación no menciona el alcance de alguna de las dos fuerzas, está incompleta.\n3. **El $^{131}\\mathrm{I}$ tiene $Z=53$ y $N=78$. ¿Le sobran neutrones o protones?** Pista: el yodo estable es el $^{127}\\mathrm{I}$.\n4. **¿Por qué no existe ningún núclido estable con $Z>82$, por bien elegida que esté su proporción de neutrones?**",
         "concept_ids": [
           "C-NU-10",
           "C-NU-12",
@@ -3648,7 +3648,7 @@
         "knowns": [
           "La interacción fuerte es de corto alcance e independiente de la carga",
           "La repulsión eléctrica es de alcance infinito y actúa entre todas las parejas de protones",
-          "No existe ningún núclido estable con $Z>83$"
+          "No existe ningún núclido estable con $Z>82$"
         ],
         "unknowns": [
           "qué parte del argumento vale",
@@ -3659,11 +3659,11 @@
           "(a) La primera parte es **correcta y es exactamente la razón de que la banda se separe de la bisectriz**: un neutrón aporta cohesión y no aporta repulsión, de modo que aumentar $N$ es la forma barata de compensar el crecimiento de $Z$.",
           "(b) El fallo está en suponer que esa estrategia escala indefinidamente. La cohesión que aporta un neutrón nuevo es **local**: la interacción fuerte es de corto alcance y ese neutrón solo se une a sus vecinos inmediatos, de modo que la cohesión total crece aproximadamente como el número de nucleones.",
           "En cambio la repulsión que hay que compensar crece con el número de **parejas** de protones, es decir, aproximadamente como $Z^{2}$. Y hay un segundo problema: añadir neutrones de más saca al núclido de la banda por el otro lado, y entonces le sobran neutrones.",
-          "(c) El hecho experimental es que **no existe ningún núclido estable con $Z>83$**, ni uno solo, pese a que se conocen muchos isótopos de cada uno de esos elementos, con proporciones de neutrones muy distintas. Si la estrategia funcionase, habría alguno."
+          "(c) El hecho experimental es que **no existe ningún núclido estable con $Z>82$**, ni uno solo, pese a que se conocen muchos isótopos de cada uno de esos elementos, con proporciones de neutrones muy distintas. Si la estrategia funcionase, habría alguno."
         ],
-        "solution": "(a) Es correcto que un neutrón aporta cohesión sin aportar repulsión; de ahí la forma de la banda. (b) Falla al suponer que eso escala: la cohesión crece como $A$ porque la interacción fuerte es de corto alcance, mientras que la repulsión crece como $Z^{2}$; y un exceso de neutrones saca al núclido de la banda por el otro lado. (c) Que no existe ningún núclido estable con $Z>83$.",
+        "solution": "(a) Es correcto que un neutrón aporta cohesión sin aportar repulsión; de ahí la forma de la banda. (b) Falla al suponer que eso escala: la cohesión crece como $A$ porque la interacción fuerte es de corto alcance, mientras que la repulsión crece como $Z^{2}$; y un exceso de neutrones saca al núclido de la banda por el otro lado. (c) Que no existe ningún núclido estable con $Z>82$.",
         "interpretation": "El razonamiento del alumno no es tonto: es el razonamiento correcto llevado un paso más allá de donde vale. Reconocer **hasta dónde** vale un argumento es más difícil, y más útil, que saber si es verdadero o falso. Y en este caso el límite del argumento es exactamente el mismo que hace bajar la curva $E_e/A$ por la derecha.",
-        "common_mistake": "Responder solo «es falso porque no existen núclidos estables con $Z>83$». Es cierto, pero es la respuesta al apartado (c): no explica **por qué** falla el argumento, que es lo que se pregunta en (b).",
+        "common_mistake": "Responder solo «es falso porque no existen núclidos estables con $Z>82$». Es cierto, pero es la respuesta al apartado (c): no explica **por qué** falla el argumento, que es lo que se pregunta en (b).",
         "objective_ids": [
           "LO-03-3"
         ],
@@ -3849,7 +3849,7 @@
         ],
         "difficulty": 3,
         "marks": 4,
-        "statement": "**(a)** Explique, razonadamente, por qué los núclidos estables ligeros tienen aproximadamente el mismo número de protones que de neutrones, mientras que los pesados tienen bastantes más neutrones que protones. **(b)** El $^{131}_{\\ 53}\\mathrm{I}$ es radiactivo. Determine su número de neutrones y su cociente $N/Z$, y compárelo con el del $^{127}_{\\ 53}\\mathrm{I}$, que es el isótopo estable del yodo. **(c)** Indique, razonadamente, si el yodo-131 tiene exceso de protones o de neutrones y qué debe disminuir para acercarse a la banda de estabilidad. **(d)** Justifique por qué no existe ningún núclido estable con $Z>83$.",
+        "statement": "**(a)** Explique, razonadamente, por qué los núclidos estables ligeros tienen aproximadamente el mismo número de protones que de neutrones, mientras que los pesados tienen bastantes más neutrones que protones. **(b)** El $^{131}_{\\ 53}\\mathrm{I}$ es radiactivo. Determine su número de neutrones y su cociente $N/Z$, y compárelo con el del $^{127}_{\\ 53}\\mathrm{I}$, que es el isótopo estable del yodo. **(c)** Indique, razonadamente, si el yodo-131 tiene exceso de protones o de neutrones y qué debe disminuir para acercarse a la banda de estabilidad. **(d)** Justifique por qué no existe ningún núclido estable con $Z>82$.",
         "answer": "(a) Porque la repulsión eléctrica crece con el número de parejas de protones y los neutrones aportan cohesión sin aportar repulsión. (b) $^{131}\\mathrm{I}$: $N=78$, $N/Z=1{,}47$; $^{127}\\mathrm{I}$: $N=74$, $N/Z=1{,}40$. (c) Exceso de neutrones: debe disminuir $N$. (d) Porque la cohesión crece como $A$ y la repulsión como $Z^{2}$, de modo que a partir de cierto $Z$ ninguna proporción de neutrones basta.",
         "full_solution": "**(a)** En un núcleo ligero hay pocos protones, de modo que la repulsión electrostática total es pequeña y la interacción fuerte la compensa sin dificultad: el reparto más favorable es el simétrico, $N\\approx Z$. Al crecer $Z$, la repulsión aumenta deprisa, porque es de **alcance infinito** y actúa entre **todas** las parejas de protones a la vez. Hace falta entonces más cohesión, y los neutrones son la forma de conseguirla: la interacción fuerte es **independiente de la carga**, de modo que un neutrón atrae a sus vecinos igual que un protón, pero **no añade repulsión**. Por eso la proporción de neutrones crece con $Z$.\n\n**(b)** $^{131}\\mathrm{I}$: $N=131-53=78$, luego $N/Z=78/53=1{,}47$. $^{127}\\mathrm{I}$: $N=127-53=74$, luego $N/Z=74/53=1{,}40$.\n\n**(c)** El yodo-131 tiene **cuatro neutrones más** que el isótopo estable del mismo elemento, y su cociente es mayor ($1{,}47$ frente a $1{,}40$). Está, por tanto, por debajo de la banda de estabilidad: tiene **exceso de neutrones**, y se acercará a la banda mediante un cambio que **disminuya su número de neutrones**.\n\n**(d)** La cohesión que aporta la interacción fuerte crece aproximadamente como el número de nucleones, $A$, porque es de corto alcance y cada nucleón solo se une a sus vecinos inmediatos. La repulsión eléctrica crece aproximadamente como $Z^{2}$, porque actúa entre todas las parejas de protones. La repulsión crece más deprisa que la cohesión, de modo que la energía de enlace por nucleón disminuye; además, añadir neutrones de más saca al núclido de la banda por el lado contrario. Por encima de $Z=83$ ya compensa expulsar una partícula α (o partirse), y todos los núclidos con esa carga se desintegran.",
         "mark_scheme": [
@@ -3881,7 +3881,7 @@
         "marks": 4,
         "statement": "Razone si las siguientes afirmaciones son verdaderas o falsas. **(a)** «Un núclido cuyo número másico sea un número mágico es especialmente estable.» **(b)** «Todos los núclidos con $Z$ y $N$ pares son estables.» **(c)** «En la banda de estabilidad, el cociente $N/Z$ vale aproximadamente 1 para los núclidos ligeros y llega a valer en torno a 1,5 para los más pesados.» **(d)** «Un núclido situado por encima de la banda de estabilidad en el plano $(N,Z)$ tiene exceso de neutrones.»",
         "answer": "(a) Falsa. (b) Falsa. (c) Verdadera. (d) Falsa.",
-        "full_solution": "**(a) Falsa.** Los números mágicos se refieren a $Z$ y a $N$ **por separado**, no a $A$. El $^{20}\\mathrm{Ne}$ tiene $A=20$, pero sus números son $Z=10$ y $N=10$, y ninguno de los dos es mágico. Lo que sí es especialmente estable es un núclido doblemente mágico, como el $^{40}\\mathrm{Ca}$ ($Z=N=20$).\n\n**(b) Falsa.** La paridad es una **tendencia**, no un criterio absoluto: la mayoría de los núclidos estables son par-par, pero existen muchísimos núclidos par-par inestables, empezando por todos los que tienen $Z>83$. El criterio de paridad solo discrimina bien entre núclidos que ya estén cerca de la banda, como los isóbaros vecinos.\n\n**(c) Verdadera.** Es exactamente la forma de la banda: $N/Z=1{,}00$ en el $^{16}\\mathrm{O}$ y en el $^{40}\\mathrm{Ca}$, y $N/Z=126/82=1{,}54$ en el $^{208}\\mathrm{Pb}$, que es el núclido estable más pesado.\n\n**(d) Falsa.** Es al revés. En este diagrama $Z$ está en el eje vertical, de modo que estar **por encima** de la banda significa tener más protones de los que le corresponderían a ese número de neutrones: **exceso de protones**. El exceso de neutrones desplaza el punto hacia la derecha, es decir, por **debajo** de la banda.",
+        "full_solution": "**(a) Falsa.** Los números mágicos se refieren a $Z$ y a $N$ **por separado**, no a $A$. El $^{20}\\mathrm{Ne}$ tiene $A=20$, pero sus números son $Z=10$ y $N=10$, y ninguno de los dos es mágico. Lo que sí es especialmente estable es un núclido doblemente mágico, como el $^{40}\\mathrm{Ca}$ ($Z=N=20$).\n\n**(b) Falsa.** La paridad es una **tendencia**, no un criterio absoluto: la mayoría de los núclidos estables son par-par, pero existen muchísimos núclidos par-par inestables, empezando por todos los que tienen $Z>82$. El criterio de paridad solo discrimina bien entre núclidos que ya estén cerca de la banda, como los isóbaros vecinos.\n\n**(c) Verdadera.** Es exactamente la forma de la banda: $N/Z=1{,}00$ en el $^{16}\\mathrm{O}$ y en el $^{40}\\mathrm{Ca}$, y $N/Z=126/82=1{,}54$ en el $^{208}\\mathrm{Pb}$, que es el núclido estable más pesado.\n\n**(d) Falsa.** Es al revés. En este diagrama $Z$ está en el eje vertical, de modo que estar **por encima** de la banda significa tener más protones de los que le corresponderían a ese número de neutrones: **exceso de protones**. El exceso de neutrones desplaza el punto hacia la derecha, es decir, por **debajo** de la banda.",
         "mark_scheme": [
           "Obtienes 1 punto por cada apartado que califiques correctamente como verdadero o falso **y justifiques** (4 apartados, 4 puntos)",
           "Si no justificas tu respuesta no puntúas ese apartado, aunque la calificación V/F sea correcta",
@@ -3908,14 +3908,14 @@
           "C-NU-12"
         ],
         "difficulty": 5,
-        "statement": "El $^{208}\\mathrm{Pb}$ es doblemente mágico ($Z=82$, $N=126$) y es el núclido estable más pesado que existe. Un estudiante razona: «si los números mágicos dan estabilidad, debería poder encontrarse algún núclido estable con $Z>83$ eligiendo bien su número de neutrones; por ejemplo, algo con $N=126$ y $Z$ un poco mayor». **(a)** ¿Por qué no funciona? **(b)** Combina en tu respuesta el argumento del alcance de la interacción fuerte (lección 1) con la forma de la curva $E_e/A$ (lección 2). **(c)** ¿Qué dice todo esto sobre la jerarquía entre los tres criterios de estabilidad de esta lección?",
+        "statement": "El $^{208}\\mathrm{Pb}$ es doblemente mágico ($Z=82$, $N=126$) y es el núclido estable más pesado que existe. Un estudiante razona: «si los números mágicos dan estabilidad, debería poder encontrarse algún núclido estable con $Z>82$ eligiendo bien su número de neutrones; por ejemplo, algo con $N=126$ y $Z$ un poco mayor». **(a)** ¿Por qué no funciona? **(b)** Combina en tu respuesta el argumento del alcance de la interacción fuerte (lección 1) con la forma de la curva $E_e/A$ (lección 2). **(c)** ¿Qué dice todo esto sobre la jerarquía entre los tres criterios de estabilidad de esta lección?",
         "hints": [
           "Pregúntate qué significa exactamente que un núclido sea «estable»: no es que ninguna otra distribución de esos nucleones tenga más energía de enlace por nucleón (con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos ganaría energía). Significa que no se ha observado que se desintegre en un tiempo medible.",
           "Para que una desintegración ocurra en la práctica no basta con que libere energía ($Q>0$): la partícula alfa tiene que atravesar la barrera coulombiana por efecto túnel. Compara lo que ocurre en la zona de $Z\\approx83$-$84$ con lo que ocurriría en $Z\\approx30$.",
           "Un número mágico como $N=126$ aporta un extra local de energía de enlace, igual que en el propio $^{208}\\mathrm{Pb}$. Pregúntate si ese extra puede, por sí solo, hacer $Q_\\alpha<0$ o engordar la barrera lo bastante como para alargar el periodo a escalas geológicas."
         ],
-        "answer": "(a) Porque el criterio correcto de estabilidad no es «ninguna otra configuración tiene más energía de enlace por nucleón» (con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía): es que la desintegración no se observe en un tiempo medible. Un núclido con $N=126$ y $Z=84$ existe: es el $^{210}\\mathrm{Po}$, y es radiactivo alfa con $T_{1/2}=138$ días. (b) Pasado el hierro la repulsión (que crece como $Z^{2}$) gana terreno a la cohesión (que crece como $A$), de modo que para $Z$ grande la emisión alfa libera energía ($Q_\\alpha>0$); lo que decide si eso ocurre en un tiempo medible es si la partícula alfa consigue atravesar la barrera coulombiana por efecto túnel, probabilidad que crece muy deprisa con $Z$ y con $Q_\\alpha$. Para $Z\\le83$ es tan baja que el periodo supera la edad del universo (o el núclido es sencillamente estable); para $Z>83$, ya no. (c) Que el criterio de primer orden es si algún proceso de desintegración resulta energéticamente posible y lo bastante probable como para dar un periodo observable; los números mágicos y la paridad son correcciones finas que alargan o acortan esos periodos entre vecinos, pero no pueden volver estable lo que no lo es.",
-        "full_solution": "**(a) y (b).** El criterio «ninguna otra configuración de esos mismos nucleones tiene mayor energía de enlace por nucleón» no es la definición correcta de estabilidad: con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía de enlace (como le ocurre a casi cualquier núclido con $A\\gtrsim60$). Lo que de verdad define un núclido estable es que no se ha observado que se desintegre en ningún tiempo medible, y eso depende tanto de si el proceso libera energía ($Q>0$) como de la **barrera** que haya que atravesar para que ocurra.\n\nEn la zona de $A\\approx210$ la curva $E_e/A$ lleva mucho rato **bajando**: la interacción fuerte es de corto alcance, así que la cohesión crece aproximadamente como $A$, mientras que la repulsión eléctrica, de alcance infinito, crece como $Z^{2}$. Pasado el hierro el segundo término gana terreno, y a partir de cierto $Z$ la emisión de una partícula alfa libera energía ($Q_\\alpha>0$). Pero que $Q_\\alpha>0$ no basta para que la desintegración sea instantánea: la partícula alfa tiene que atravesar por efecto túnel la barrera coulombiana, y la probabilidad de conseguirlo depende muy sensiblemente de $Q_\\alpha$ y de $Z$. Para $Z\\le83$ esa probabilidad es tan baja que, en los casos conocidos, el periodo de semidesintegración supera la edad del universo (o el núclido es sencillamente estable); para $Z>83$ ya no: todos los núclidos conocidos con $Z>83$ se desintegran en tiempos medibles, desde fracciones de segundo hasta miles de millones de años, pero siempre finitos y observados.\n\nEsto responde también a la propuesta del estudiante: un núclido con $N=126$ y $Z=84$ existe —es el $^{210}\\mathrm{Po}$— y es radiactivo alfa, con un periodo de solo 138 días. Tener $N$ mágico no evita que se desintegre, porque $Q_\\alpha$ ya es positivo y la barrera ya es lo bastante fina.\n\n¿Qué aportan entonces los números mágicos? Un **extra local**: entre dos núclidos vecinos, el que tenga una capa completa tiene algo más energía de enlace, y en los casos límite eso puede ser la diferencia entre un periodo de segundos y uno de miles de millones de años. Pero un extra local no puede anular una tendencia de fondo (la curva bajando, la barrera cada vez más fácil de atravesar): no convierte en estable lo que no lo es. El $^{208}\\mathrm{Pb}$ aprovecha ese extra al máximo —por eso es el último estable y por eso es tan abundante como producto final de las cadenas de desintegración—, pero es exactamente eso: **el último**, no el principio de una nueva serie.\n\n**(c)** De aquí sale una jerarquía clara entre los tres criterios de la lección:\n\n1. **La posición respecto de la banda y la curva $E_e/A$** decide si, en esa región, algún proceso de desintegración resulta energéticamente favorable ($Q>0$). Es el criterio de primer orden, junto con la barrera que haya que atravesar para que ese proceso tenga una probabilidad apreciable.\n2. **La paridad y los números mágicos** deciden **entre vecinos**: alargan o acortan los periodos de semidesintegración, y explican por qué un núclido concreto es más abundante o vive más que sus vecinos. Son correcciones finas.\n\nNingún criterio fino convierte en estable un núclido cuyo periodo de desintegración, por la región de la curva en la que está, resulte corto en la práctica. Y, al revés, donde ningún proceso es energéticamente favorable o la barrera resulta insuperable, los criterios finos son los que explican los detalles, como que el $^{208}\\mathrm{Pb}$, doblemente mágico, sea el núclido estable más pesado que existe.",
+        "answer": "(a) Porque el criterio correcto de estabilidad no es «ninguna otra configuración tiene más energía de enlace por nucleón» (con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía): es que la desintegración no se observe en un tiempo medible. Un núclido con $N=126$ y $Z=84$ existe: es el $^{210}\\mathrm{Po}$, y es radiactivo alfa con $T_{1/2}=138$ días. (b) Pasado el hierro la repulsión (que crece como $Z^{2}$) gana terreno a la cohesión (que crece como $A$), de modo que para $Z$ grande la emisión alfa libera energía ($Q_\\alpha>0$); lo que decide si eso ocurre en un tiempo medible es si la partícula alfa consigue atravesar la barrera coulombiana por efecto túnel, probabilidad que crece muy deprisa con $Z$ y con $Q_\\alpha$. Para $Z\\le83$ es tan baja que el periodo supera la edad del universo (o el núclido es sencillamente estable); para $Z>82$, ya no. (c) Que el criterio de primer orden es si algún proceso de desintegración resulta energéticamente posible y lo bastante probable como para dar un periodo observable; los números mágicos y la paridad son correcciones finas que alargan o acortan esos periodos entre vecinos, pero no pueden volver estable lo que no lo es.",
+        "full_solution": "**(a) y (b).** El criterio «ninguna otra configuración de esos mismos nucleones tiene mayor energía de enlace por nucleón» no es la definición correcta de estabilidad: con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía de enlace (como le ocurre a casi cualquier núclido con $A\\gtrsim60$). Lo que de verdad define un núclido estable es que no se ha observado que se desintegre en ningún tiempo medible, y eso depende tanto de si el proceso libera energía ($Q>0$) como de la **barrera** que haya que atravesar para que ocurra.\n\nEn la zona de $A\\approx210$ la curva $E_e/A$ lleva mucho rato **bajando**: la interacción fuerte es de corto alcance, así que la cohesión crece aproximadamente como $A$, mientras que la repulsión eléctrica, de alcance infinito, crece como $Z^{2}$. Pasado el hierro el segundo término gana terreno, y a partir de cierto $Z$ la emisión de una partícula alfa libera energía ($Q_\\alpha>0$). Pero que $Q_\\alpha>0$ no basta para que la desintegración sea instantánea: la partícula alfa tiene que atravesar por efecto túnel la barrera coulombiana, y la probabilidad de conseguirlo depende muy sensiblemente de $Q_\\alpha$ y de $Z$. Para $Z\\le83$ esa probabilidad es tan baja que, en los casos conocidos, el periodo de semidesintegración supera la edad del universo (o el núclido es sencillamente estable); para $Z>82$ ya no: todos los núclidos conocidos con $Z>82$ se desintegran en tiempos medibles, desde fracciones de segundo hasta miles de millones de años, pero siempre finitos y observados.\n\nEsto responde también a la propuesta del estudiante: un núclido con $N=126$ y $Z=84$ existe —es el $^{210}\\mathrm{Po}$— y es radiactivo alfa, con un periodo de solo 138 días. Tener $N$ mágico no evita que se desintegre, porque $Q_\\alpha$ ya es positivo y la barrera ya es lo bastante fina.\n\n¿Qué aportan entonces los números mágicos? Un **extra local**: entre dos núclidos vecinos, el que tenga una capa completa tiene algo más energía de enlace, y en los casos límite eso puede ser la diferencia entre un periodo de segundos y uno de miles de millones de años. Pero un extra local no puede anular una tendencia de fondo (la curva bajando, la barrera cada vez más fácil de atravesar): no convierte en estable lo que no lo es. El $^{208}\\mathrm{Pb}$ aprovecha ese extra al máximo —por eso es el último estable y por eso es tan abundante como producto final de las cadenas de desintegración—, pero es exactamente eso: **el último**, no el principio de una nueva serie.\n\n**(c)** De aquí sale una jerarquía clara entre los tres criterios de la lección:\n\n1. **La posición respecto de la banda y la curva $E_e/A$** decide si, en esa región, algún proceso de desintegración resulta energéticamente favorable ($Q>0$). Es el criterio de primer orden, junto con la barrera que haya que atravesar para que ese proceso tenga una probabilidad apreciable.\n2. **La paridad y los números mágicos** deciden **entre vecinos**: alargan o acortan los periodos de semidesintegración, y explican por qué un núclido concreto es más abundante o vive más que sus vecinos. Son correcciones finas.\n\nNingún criterio fino convierte en estable un núclido cuyo periodo de desintegración, por la región de la curva en la que está, resulte corto en la práctica. Y, al revés, donde ningún proceso es energéticamente favorable o la barrera resulta insuperable, los criterios finos son los que explican los detalles, como que el $^{208}\\mathrm{Pb}$, doblemente mágico, sea el núclido estable más pesado que existe.",
         "common_errors": [
           "Responder solo «porque a partir de $Z=83$ no hay núclidos estables». Es el hecho que hay que explicar, no la explicación.",
           "Suponer que un número mágico puede compensar cualquier cosa. Aporta unos pocos MeV sobre una energía de enlace de más de mil: es una corrección, no un indulto."
@@ -4119,7 +4119,7 @@
             "key": "C",
             "text": "Se prolonga indefinidamente, aunque los núclidos muy pesados tengan periodos de vida cortos.",
             "misconception_id": null,
-            "why_wrong": "La banda es, por definición, el conjunto de los núclidos **estables**, y no hay ninguno con $Z>83$. Existen núclidos más pesados, pero todos ellos son inestables."
+            "why_wrong": "La banda es, por definición, el conjunto de los núclidos **estables**, y no hay ninguno con $Z>82$. Existen núclidos más pesados, pero todos ellos son inestables."
           },
           {
             "key": "D",
@@ -4180,7 +4180,7 @@
         "id": "FC-03-6",
         "kind": "recall",
         "front": "Valores de $N/Z$ en la banda de estabilidad",
-        "back": "$1{,}00$ hasta $Z\\approx20$ ($^{40}\\mathrm{Ca}$); $1{,}15$ en el $^{56}\\mathrm{Fe}$; $1{,}40$ en el $^{120}\\mathrm{Sn}$; $1{,}54$ en el $^{208}\\mathrm{Pb}$ ($Z=82$), de los valores más altos de la banda y el último núclido estable en sentido estricto: no hay ninguno estable con $Z>83$.",
+        "back": "$1{,}00$ hasta $Z\\approx20$ ($^{40}\\mathrm{Ca}$); $1{,}15$ en el $^{56}\\mathrm{Fe}$; $1{,}40$ en el $^{120}\\mathrm{Sn}$; $1{,}54$ en el $^{208}\\mathrm{Pb}$ ($Z=82$), de los valores más altos de la banda y el último núclido estable en sentido estricto: no hay ninguno estable con $Z>82$.",
         "concept_id": "C-NU-12",
         "difficulty": 2
       },
@@ -4196,7 +4196,7 @@
         "id": "FC-03-8",
         "kind": "application",
         "front": "Atajo para situar un núclido sin mirar el diagrama",
-        "back": "Compáralo con el isótopo **estable** de su mismo elemento. Si tiene más neutrones que él, le sobran neutrones; si tiene menos, le sobran protones. Y si $Z>83$, no es estable haga lo que haga.",
+        "back": "Compáralo con el isótopo **estable** de su mismo elemento. Si tiene más neutrones que él, le sobran neutrones; si tiene menos, le sobran protones. Y si $Z>82$, no es estable haga lo que haga.",
         "concept_id": "C-NU-13",
         "difficulty": 2
       },
@@ -4277,7 +4277,7 @@
         "related_misconception": null
       },
       {
-        "mistake": "Suponer que un número mágico puede hacer estable a un núclido con $Z>83$.",
+        "mistake": "Suponer que un número mágico puede hacer estable a un núclido con $Z>82$.",
         "why": "Se interpreta «aporta estabilidad» como «garantiza estabilidad».",
         "how_to_avoid": "Recordar la jerarquía: la posición respecto de la banda decide si un núclido puede ser estable; los números mágicos y la paridad solo deciden entre vecinos.",
         "related_misconception": null
@@ -4289,7 +4289,7 @@
       "Memoriza los siete números mágicos y dos ejemplos de núclido doblemente mágico. Es lo único de esta lección que hay que saber de memoria.",
       "No memorices los recuentos exactos de la tabla de paridad: lo que se evalúa es la tendencia (par-par domina, impar-impar es rarísimo).",
       "Antes de interpretar una posición en el diagrama, comprueba qué magnitud va en cada eje. En esta unidad, $Z$ en vertical y $N$ en horizontal.",
-      "Si en un problema aparece un núclido con $Z>83$, no hace falta ningún cálculo: no es estable."
+      "Si en un problema aparece un núclido con $Z>82$, no hace falta ningún cálculo: no es estable."
     ],
     "summary": {
       "big_idea": "De los miles de pares $(N,Z)$ imaginables, solo unos pocos cientos corresponden a núclidos estables, y todos ellos se apiñan en una franja estrecha cuya forma está dictada por el alcance de las dos fuerzas que compiten en el núcleo.",
@@ -4297,7 +4297,7 @@
         "**Números mágicos** $2,8,20,28,50,82,126$: se aplican a $Z$ y a $N$ por separado. Un núclido **doblemente mágico** los tiene los dos, y es especialmente estable. Sugieren que el núcleo tiene niveles de energía por capas.",
         "**Paridad:** la gran mayoría de los núclidos estables son par-par y los impar-impar son rarísimos. Los nucleones se emparejan.",
         "**Proporción $N/Z$:** vale 1 hasta $Z\\approx20$ y crece hasta $1{,}54$ en el $^{208}\\mathrm{Pb}$, porque el neutrón aporta cohesión sin aportar repulsión.",
-        "**La banda de estabilidad** arranca sobre la bisectriz $Z=N$, se separa de ella hacia más neutrones y no tiene ningún núclido estable con $Z>83$ (el último en sentido estricto es el $^{208}\\mathrm{Pb}$).",
+        "**La banda de estabilidad** arranca sobre la bisectriz $Z=N$, se separa de ella hacia más neutrones y no tiene ningún núclido estable con $Z>82$ (el último en sentido estricto es el $^{208}\\mathrm{Pb}$).",
         "**Leer el diagrama:** por encima de la banda sobran protones (hay que bajar $Z$); por debajo sobran neutrones (hay que bajar $N$). Esa lectura es el índice de la lección siguiente.",
         "La banda y la curva $E_e/A$ son **la misma física**: la curva dice cuánta energía se gana al estabilizarse y la banda, en qué dirección hay que moverse."
       ],
@@ -4480,7 +4480,7 @@
           },
           {
             "id": "CL-L03-3",
-            "statement": "**La banda de estabilidad** arranca sobre la bisectriz $Z=N$, se separa de ella hacia más neutrones y no tiene ningún núclido estable con $Z>83$ (el último en sentido estricto es el $^{208}\\mathrm{Pb}$).",
+            "statement": "**La banda de estabilidad** arranca sobre la bisectriz $Z=N$, se separa de ella hacia más neutrones y no tiene ningún núclido estable con $Z>82$ (el último en sentido estricto es el $^{208}\\mathrm{Pb}$).",
             "epistemic_type": "MODEL",
             "conditions": [],
             "counterexamples": [],
@@ -4545,7 +4545,7 @@
           "Memoriza los siete números mágicos y dos ejemplos de núclido doblemente mágico. Es lo único de esta lección que hay que saber de memoria.",
           "No memorices los recuentos exactos de la tabla de paridad: lo que se evalúa es la tendencia (par-par domina, impar-impar es rarísimo).",
           "Antes de interpretar una posición en el diagrama, comprueba qué magnitud va en cada eje. En esta unidad, $Z$ en vertical y $N$ en horizontal.",
-          "Si en un problema aparece un núclido con $Z>83$, no hace falta ningún cálculo: no es estable."
+          "Si en un problema aparece un núclido con $Z>82$, no hace falta ningún cálculo: no es estable."
         ]
       },
       "presentation": {
@@ -4584,7 +4584,7 @@
             "**Números mágicos** $2,8,20,28,50,82,126$: se aplican a $Z$ y a $N$ por separado. Un núclido **doblemente mágico** los tiene los dos, y es especialmente estable. Sugieren que el núcleo tiene niveles de energía por capas.",
             "**Paridad:** la gran mayoría de los núclidos estables son par-par y los impar-impar son rarísimos. Los nucleones se emparejan.",
             "**Proporción $N/Z$:** vale 1 hasta $Z\\approx20$ y crece hasta $1{,}54$ en el $^{208}\\mathrm{Pb}$, porque el neutrón aporta cohesión sin aportar repulsión.",
-            "**La banda de estabilidad** arranca sobre la bisectriz $Z=N$, se separa de ella hacia más neutrones y no tiene ningún núclido estable con $Z>83$ (el último en sentido estricto es el $^{208}\\mathrm{Pb}$).",
+            "**La banda de estabilidad** arranca sobre la bisectriz $Z=N$, se separa de ella hacia más neutrones y no tiene ningún núclido estable con $Z>82$ (el último en sentido estricto es el $^{208}\\mathrm{Pb}$).",
             "**Leer el diagrama:** por encima de la banda sobran protones (hay que bajar $Z$); por debajo sobran neutrones (hay que bajar $N$). Esa lectura es el índice de la lección siguiente.",
             "La banda y la curva $E_e/A$ son **la misma física**: la curva dice cuánta energía se gana al estabilizarse y la banda, en qué dirección hay que moverse."
           ],
@@ -4721,8 +4721,8 @@
               "Para que una desintegración ocurra en la práctica no basta con que libere energía ($Q>0$): la partícula alfa tiene que atravesar la barrera coulombiana por efecto túnel. Compara lo que ocurre en la zona de $Z\\approx83$-$84$ con lo que ocurriría en $Z\\approx30$.",
               "Un número mágico como $N=126$ aporta un extra local de energía de enlace, igual que en el propio $^{208}\\mathrm{Pb}$. Pregúntate si ese extra puede, por sí solo, hacer $Q_\\alpha<0$ o engordar la barrera lo bastante como para alargar el periodo a escalas geológicas."
             ],
-            "answer": "(a) Porque el criterio correcto de estabilidad no es «ninguna otra configuración tiene más energía de enlace por nucleón» (con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía): es que la desintegración no se observe en un tiempo medible. Un núclido con $N=126$ y $Z=84$ existe: es el $^{210}\\mathrm{Po}$, y es radiactivo alfa con $T_{1/2}=138$ días. (b) Pasado el hierro la repulsión (que crece como $Z^{2}$) gana terreno a la cohesión (que crece como $A$), de modo que para $Z$ grande la emisión alfa libera energía ($Q_\\alpha>0$); lo que decide si eso ocurre en un tiempo medible es si la partícula alfa consigue atravesar la barrera coulombiana por efecto túnel, probabilidad que crece muy deprisa con $Z$ y con $Q_\\alpha$. Para $Z\\le83$ es tan baja que el periodo supera la edad del universo (o el núclido es sencillamente estable); para $Z>83$, ya no. (c) Que el criterio de primer orden es si algún proceso de desintegración resulta energéticamente posible y lo bastante probable como para dar un periodo observable; los números mágicos y la paridad son correcciones finas que alargan o acortan esos periodos entre vecinos, pero no pueden volver estable lo que no lo es.",
-            "full_solution": "**(a) y (b).** El criterio «ninguna otra configuración de esos mismos nucleones tiene mayor energía de enlace por nucleón» no es la definición correcta de estabilidad: con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía de enlace (como le ocurre a casi cualquier núclido con $A\\gtrsim60$). Lo que de verdad define un núclido estable es que no se ha observado que se desintegre en ningún tiempo medible, y eso depende tanto de si el proceso libera energía ($Q>0$) como de la **barrera** que haya que atravesar para que ocurra.\n\nEn la zona de $A\\approx210$ la curva $E_e/A$ lleva mucho rato **bajando**: la interacción fuerte es de corto alcance, así que la cohesión crece aproximadamente como $A$, mientras que la repulsión eléctrica, de alcance infinito, crece como $Z^{2}$. Pasado el hierro el segundo término gana terreno, y a partir de cierto $Z$ la emisión de una partícula alfa libera energía ($Q_\\alpha>0$). Pero que $Q_\\alpha>0$ no basta para que la desintegración sea instantánea: la partícula alfa tiene que atravesar por efecto túnel la barrera coulombiana, y la probabilidad de conseguirlo depende muy sensiblemente de $Q_\\alpha$ y de $Z$. Para $Z\\le83$ esa probabilidad es tan baja que, en los casos conocidos, el periodo de semidesintegración supera la edad del universo (o el núclido es sencillamente estable); para $Z>83$ ya no: todos los núclidos conocidos con $Z>83$ se desintegran en tiempos medibles, desde fracciones de segundo hasta miles de millones de años, pero siempre finitos y observados.\n\nEsto responde también a la propuesta del estudiante: un núclido con $N=126$ y $Z=84$ existe —es el $^{210}\\mathrm{Po}$— y es radiactivo alfa, con un periodo de solo 138 días. Tener $N$ mágico no evita que se desintegre, porque $Q_\\alpha$ ya es positivo y la barrera ya es lo bastante fina.\n\n¿Qué aportan entonces los números mágicos? Un **extra local**: entre dos núclidos vecinos, el que tenga una capa completa tiene algo más energía de enlace, y en los casos límite eso puede ser la diferencia entre un periodo de segundos y uno de miles de millones de años. Pero un extra local no puede anular una tendencia de fondo (la curva bajando, la barrera cada vez más fácil de atravesar): no convierte en estable lo que no lo es. El $^{208}\\mathrm{Pb}$ aprovecha ese extra al máximo —por eso es el último estable y por eso es tan abundante como producto final de las cadenas de desintegración—, pero es exactamente eso: **el último**, no el principio de una nueva serie.\n\n**(c)** De aquí sale una jerarquía clara entre los tres criterios de la lección:\n\n1. **La posición respecto de la banda y la curva $E_e/A$** decide si, en esa región, algún proceso de desintegración resulta energéticamente favorable ($Q>0$). Es el criterio de primer orden, junto con la barrera que haya que atravesar para que ese proceso tenga una probabilidad apreciable.\n2. **La paridad y los números mágicos** deciden **entre vecinos**: alargan o acortan los periodos de semidesintegración, y explican por qué un núclido concreto es más abundante o vive más que sus vecinos. Son correcciones finas.\n\nNingún criterio fino convierte en estable un núclido cuyo periodo de desintegración, por la región de la curva en la que está, resulte corto en la práctica. Y, al revés, donde ningún proceso es energéticamente favorable o la barrera resulta insuperable, los criterios finos son los que explican los detalles, como que el $^{208}\\mathrm{Pb}$, doblemente mágico, sea el núclido estable más pesado que existe."
+            "answer": "(a) Porque el criterio correcto de estabilidad no es «ninguna otra configuración tiene más energía de enlace por nucleón» (con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía): es que la desintegración no se observe en un tiempo medible. Un núclido con $N=126$ y $Z=84$ existe: es el $^{210}\\mathrm{Po}$, y es radiactivo alfa con $T_{1/2}=138$ días. (b) Pasado el hierro la repulsión (que crece como $Z^{2}$) gana terreno a la cohesión (que crece como $A$), de modo que para $Z$ grande la emisión alfa libera energía ($Q_\\alpha>0$); lo que decide si eso ocurre en un tiempo medible es si la partícula alfa consigue atravesar la barrera coulombiana por efecto túnel, probabilidad que crece muy deprisa con $Z$ y con $Q_\\alpha$. Para $Z\\le83$ es tan baja que el periodo supera la edad del universo (o el núclido es sencillamente estable); para $Z>82$, ya no. (c) Que el criterio de primer orden es si algún proceso de desintegración resulta energéticamente posible y lo bastante probable como para dar un periodo observable; los números mágicos y la paridad son correcciones finas que alargan o acortan esos periodos entre vecinos, pero no pueden volver estable lo que no lo es.",
+            "full_solution": "**(a) y (b).** El criterio «ninguna otra configuración de esos mismos nucleones tiene mayor energía de enlace por nucleón» no es la definición correcta de estabilidad: con ese criterio el propio $^{208}\\mathrm{Pb}$ sería «inestable», porque partido en dos fragmentos de $A\\approx104$ ganaría energía de enlace (como le ocurre a casi cualquier núclido con $A\\gtrsim60$). Lo que de verdad define un núclido estable es que no se ha observado que se desintegre en ningún tiempo medible, y eso depende tanto de si el proceso libera energía ($Q>0$) como de la **barrera** que haya que atravesar para que ocurra.\n\nEn la zona de $A\\approx210$ la curva $E_e/A$ lleva mucho rato **bajando**: la interacción fuerte es de corto alcance, así que la cohesión crece aproximadamente como $A$, mientras que la repulsión eléctrica, de alcance infinito, crece como $Z^{2}$. Pasado el hierro el segundo término gana terreno, y a partir de cierto $Z$ la emisión de una partícula alfa libera energía ($Q_\\alpha>0$). Pero que $Q_\\alpha>0$ no basta para que la desintegración sea instantánea: la partícula alfa tiene que atravesar por efecto túnel la barrera coulombiana, y la probabilidad de conseguirlo depende muy sensiblemente de $Q_\\alpha$ y de $Z$. Para $Z\\le83$ esa probabilidad es tan baja que, en los casos conocidos, el periodo de semidesintegración supera la edad del universo (o el núclido es sencillamente estable); para $Z>82$ ya no: todos los núclidos conocidos con $Z>82$ se desintegran en tiempos medibles, desde fracciones de segundo hasta miles de millones de años, pero siempre finitos y observados.\n\nEsto responde también a la propuesta del estudiante: un núclido con $N=126$ y $Z=84$ existe —es el $^{210}\\mathrm{Po}$— y es radiactivo alfa, con un periodo de solo 138 días. Tener $N$ mágico no evita que se desintegre, porque $Q_\\alpha$ ya es positivo y la barrera ya es lo bastante fina.\n\n¿Qué aportan entonces los números mágicos? Un **extra local**: entre dos núclidos vecinos, el que tenga una capa completa tiene algo más energía de enlace, y en los casos límite eso puede ser la diferencia entre un periodo de segundos y uno de miles de millones de años. Pero un extra local no puede anular una tendencia de fondo (la curva bajando, la barrera cada vez más fácil de atravesar): no convierte en estable lo que no lo es. El $^{208}\\mathrm{Pb}$ aprovecha ese extra al máximo —por eso es el último estable y por eso es tan abundante como producto final de las cadenas de desintegración—, pero es exactamente eso: **el último**, no el principio de una nueva serie.\n\n**(c)** De aquí sale una jerarquía clara entre los tres criterios de la lección:\n\n1. **La posición respecto de la banda y la curva $E_e/A$** decide si, en esa región, algún proceso de desintegración resulta energéticamente favorable ($Q>0$). Es el criterio de primer orden, junto con la barrera que haya que atravesar para que ese proceso tenga una probabilidad apreciable.\n2. **La paridad y los números mágicos** deciden **entre vecinos**: alargan o acortan los periodos de semidesintegración, y explican por qué un núclido concreto es más abundante o vive más que sus vecinos. Son correcciones finas.\n\nNingún criterio fino convierte en estable un núclido cuyo periodo de desintegración, por la región de la curva en la que está, resulte corto en la práctica. Y, al revés, donde ningún proceso es energéticamente favorable o la barrera resulta insuperable, los criterios finos son los que explican los detalles, como que el $^{208}\\mathrm{Pb}$, doblemente mágico, sea el núclido estable más pesado que existe."
           }
         ],
         "checkpoint_item_ids": [],
@@ -4737,8 +4737,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "223ed3e6a6294b92"
+        "validated_render": true,
+        "canonical_hash": "da286ad5a4939161"
       }
     }
   },
@@ -4919,7 +4919,7 @@
         "type": "intuition",
         "title": "Del mapa a la ecuación",
         "scope": "CORE",
-        "body": "La lección anterior terminó con un mapa y una dirección: dado un núclido, su posición respecto de la banda de estabilidad dice si le sobran protones o neutrones. Esta lección pone **nombre y ecuación** a cada uno de esos movimientos: son cinco procesos —alfa, beta menos, beta más (o su alternativa, la captura electrónica), gamma y la fisión espontánea de los núcleos más pesados.\n\nAntes, un hecho que decide el carácter de todo lo que viene. Algunos elementos —la mayor parte de ellos con $Z>83$— se transforman **espontáneamente** en átomos de otros elementos de número atómico próximo, emitiendo a la vez partículas y energía. El fenómeno se descubrió en **1896** y se atribuye a **Henri Becquerel**; el Premio Nobel de Física de 1903 lo compartió con Pierre y Marie Curie.\n\nY lo decisivo:\n\n> **La radiactividad es un fenómeno NUCLEAR.**\n\nOcurre **dentro del núcleo**, no en la corteza. Esa frase, que parece una precisión menor, tiene consecuencias inmediatas y muy prácticas: **no hay reacción química, ni temperatura, ni cambio de estado que la altere** (la única excepción, minúscula, es la captura electrónica, que necesita electrones de la corteza: su ritmo varía como mucho en un 0,1 % según el compuesto; a efectos prácticos y de examen, la radiactividad es independiente de la química y de la temperatura). Un átomo de yodo-131 se desintegra al mismo ritmo esté en forma de yoduro, disuelto, congelado o al rojo vivo. La razón ya la conocemos de la primera lección: la química toca la corteza, a $10^{-10}$ m y con energías de unos pocos electronvoltios; la desintegración ocurre a $10^{-14}$ m y maneja millones de electronvoltios.\n\nLa radiación emitida tiene energía suficiente para **arrancar electrones a la materia que atraviesa**: por eso se llama **radiación ionizante**, y por eso es peligrosa.",
+        "body": "La lección anterior terminó con un mapa y una dirección: dado un núclido, su posición respecto de la banda de estabilidad dice si le sobran protones o neutrones. Esta lección pone **nombre y ecuación** a cada uno de esos movimientos: son cinco procesos —alfa, beta menos, beta más (o su alternativa, la captura electrónica), gamma y la fisión espontánea de los núcleos más pesados.\n\nAntes, un hecho que decide el carácter de todo lo que viene. Algunos elementos —la mayor parte de ellos con $Z>82$— se transforman **espontáneamente** en átomos de otros elementos de número atómico próximo, emitiendo a la vez partículas y energía. El fenómeno se descubrió en **1896** y se atribuye a **Henri Becquerel**; el Premio Nobel de Física de 1903 lo compartió con Pierre y Marie Curie.\n\nY lo decisivo:\n\n> **La radiactividad es un fenómeno NUCLEAR.**\n\nOcurre **dentro del núcleo**, no en la corteza. Esa frase, que parece una precisión menor, tiene consecuencias inmediatas y muy prácticas: **no hay reacción química, ni temperatura, ni cambio de estado que la altere** (la única excepción, minúscula, es la captura electrónica, que necesita electrones de la corteza: su ritmo varía como mucho en un 0,1 % según el compuesto; a efectos prácticos y de examen, la radiactividad es independiente de la química y de la temperatura). Un átomo de yodo-131 se desintegra al mismo ritmo esté en forma de yoduro, disuelto, congelado o al rojo vivo. La razón ya la conocemos de la primera lección: la química toca la corteza, a $10^{-10}$ m y con energías de unos pocos electronvoltios; la desintegración ocurre a $10^{-14}$ m y maneja millones de electronvoltios.\n\nLa radiación emitida tiene energía suficiente para **arrancar electrones a la materia que atraviesa**: por eso se llama **radiación ionizante**, y por eso es peligrosa.",
         "concept_ids": [
           "C-NU-14"
         ],
@@ -5077,7 +5077,7 @@
         "type": "connection",
         "title": "El diagrama de Segrè, leído como índice",
         "scope": "CORE",
-        "body": "Ahora se puede cerrar lo que la lección anterior dejó abierto. Cada zona del diagrama corresponde a un mecanismo, y por eso la carta de núclidos se publica **coloreada**: el color de un punto dice qué va a hacer ese núcleo.\n\n| Dónde está el núclido | Qué le sobra | Qué hace | Hacia dónde se mueve |\n|---|---|---|---|\n| Por debajo de la banda | neutrones | $\\beta^{-}$ | $\\Delta N=-1$, $\\Delta Z=+1$ |\n| Por encima de la banda | protones | $\\beta^{+}$ o captura electrónica | $\\Delta N=+1$, $\\Delta Z=-1$ |\n| Más allá del final de la banda ($Z>83$) | tamaño | $\\alpha$ | $\\Delta N=-2$, $\\Delta Z=-2$ |\n| Muy pesado y muy inestable | tamaño | fisión espontánea | se parte en dos |\n| En cualquier sitio, recién desintegrado | energía interna | $\\gamma$ | no se mueve |\n\n**Los cinco procesos son una sola idea:** cada núcleo se desplaza en el plano $(N,Z)$ hacia la banda negra, y dispone de tres movimientos —uno largo en diagonal (alfa) y dos cortos en sentidos opuestos (las dos betas)—, de una rotura en dos (la fisión espontánea, en los más pesados) y de un reajuste que no lo mueve (la gamma).\n\nY esto conecta con el hilo de la unidad. Moverse hacia la banda es, en la curva de energía de enlace por nucleón, **subir**. Las dos representaciones dicen lo mismo: la banda, en qué dirección; la curva, cuánta energía se gana. La lección siguiente calculará exactamente cuánta.",
+        "body": "Ahora se puede cerrar lo que la lección anterior dejó abierto. Cada zona del diagrama corresponde a un mecanismo, y por eso la carta de núclidos se publica **coloreada**: el color de un punto dice qué va a hacer ese núcleo.\n\n| Dónde está el núclido | Qué le sobra | Qué hace | Hacia dónde se mueve |\n|---|---|---|---|\n| Por debajo de la banda | neutrones | $\\beta^{-}$ | $\\Delta N=-1$, $\\Delta Z=+1$ |\n| Por encima de la banda | protones | $\\beta^{+}$ o captura electrónica | $\\Delta N=+1$, $\\Delta Z=-1$ |\n| Más allá del final de la banda ($Z>82$) | tamaño | $\\alpha$ | $\\Delta N=-2$, $\\Delta Z=-2$ |\n| Muy pesado y muy inestable | tamaño | fisión espontánea | se parte en dos |\n| En cualquier sitio, recién desintegrado | energía interna | $\\gamma$ | no se mueve |\n\n**Los cinco procesos son una sola idea:** cada núcleo se desplaza en el plano $(N,Z)$ hacia la banda negra, y dispone de tres movimientos —uno largo en diagonal (alfa) y dos cortos en sentidos opuestos (las dos betas)—, de una rotura en dos (la fisión espontánea, en los más pesados) y de un reajuste que no lo mueve (la gamma).\n\nY esto conecta con el hilo de la unidad. Moverse hacia la banda es, en la curva de energía de enlace por nucleón, **subir**. Las dos representaciones dicen lo mismo: la banda, en qué dirección; la curva, cuánta energía se gana. La lección siguiente calculará exactamente cuánta.",
         "concept_ids": [
           "C-NU-16",
           "C-NU-15"
@@ -5400,8 +5400,8 @@
           "Comprueba los balances escribiendo las dos sumas, aunque el resultado parezca evidente. El hábito es lo que se evalúa.",
           "Para (d), fíjate en el número atómico de los tres y recuerda dónde termina la banda de estabilidad."
         ],
-        "answer": "(a) $^{232}_{\\ 90}\\mathrm{Th}\\to{}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. (b) $^{239}_{\\ 94}\\mathrm{Pu}\\to{}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. (c) $^{210}_{\\ 84}\\mathrm{Po}\\to{}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. (d) Los tres tienen $Z>83$, donde ya no hay núclidos estables: su problema es el tamaño, y la emisión alfa es la manera de reducirlo.",
-        "full_solution": "**(a)** $^{232}_{\\ 90}\\mathrm{Th}\\ \\to\\ {}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. $A$: $232=228+4$ ✓ · $Z$: $90=88+2$ ✓\n\n**(b)** $^{239}_{\\ 94}\\mathrm{Pu}\\ \\to\\ {}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. $A$: $239=235+4$ ✓ · $Z$: $94=92+2$ ✓\n\n**(c)** $^{210}_{\\ 84}\\mathrm{Po}\\ \\to\\ {}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. $A$: $210=206+4$ ✓ · $Z$: $84=82+2$ ✓\n\n**(d)** Los tres tienen $Z>83$: $90$, $94$ y $84$. En esa región la banda de estabilidad ya se ha terminado, de modo que **ningún** núclido es estable, por buena que sea su proporción de neutrones. Lo que les sobra no es una clase de nucleón, sino **tamaño**, y la emisión alfa es la manera de deshacerse de cuatro nucleones a la vez. Por eso era previsible: cuando el problema es el tamaño, el remedio es la alfa.\n\n> Nótese además el apartado (c): el hijo es el $^{206}\\mathrm{Pb}$, que tiene $Z=82$, mágico. No es casualidad que las series radiactivas naturales terminen todas en isótopos del plomo.",
+        "answer": "(a) $^{232}_{\\ 90}\\mathrm{Th}\\to{}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. (b) $^{239}_{\\ 94}\\mathrm{Pu}\\to{}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. (c) $^{210}_{\\ 84}\\mathrm{Po}\\to{}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. (d) Los tres tienen $Z>82$, donde ya no hay núclidos estables: su problema es el tamaño, y la emisión alfa es la manera de reducirlo.",
+        "full_solution": "**(a)** $^{232}_{\\ 90}\\mathrm{Th}\\ \\to\\ {}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. $A$: $232=228+4$ ✓ · $Z$: $90=88+2$ ✓\n\n**(b)** $^{239}_{\\ 94}\\mathrm{Pu}\\ \\to\\ {}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. $A$: $239=235+4$ ✓ · $Z$: $94=92+2$ ✓\n\n**(c)** $^{210}_{\\ 84}\\mathrm{Po}\\ \\to\\ {}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. $A$: $210=206+4$ ✓ · $Z$: $84=82+2$ ✓\n\n**(d)** Los tres tienen $Z>82$: $90$, $94$ y $84$. En esa región la banda de estabilidad ya se ha terminado, de modo que **ningún** núclido es estable, por buena que sea su proporción de neutrones. Lo que les sobra no es una clase de nucleón, sino **tamaño**, y la emisión alfa es la manera de deshacerse de cuatro nucleones a la vez. Por eso era previsible: cuando el problema es el tamaño, el remedio es la alfa.\n\n> Nótese además el apartado (c): el hijo es el $^{206}\\mathrm{Pb}$, que tiene $Z=82$, mágico. No es casualidad que las series radiactivas naturales terminen todas en isótopos del plomo.",
         "common_errors": [
           "Restar 2 a $A$ y 4 a $Z$, invirtiendo los dos cambios. El balance lo detecta de inmediato.",
           "En (d), responder «porque son radiactivos». La pregunta es por qué emiten **alfa** y no otra cosa, y la respuesta está en que su problema es el tamaño."
@@ -5725,7 +5725,7 @@
             "key": "C",
             "text": "Emisión $\\alpha$, que disminuye $Z$ en dos unidades.",
             "misconception_id": null,
-            "why_wrong": "Es cierto que disminuye $Z$, pero también $N$ en dos unidades, de modo que apenas modifica el cociente $N/Z$: mueve el punto en diagonal a 45°, prácticamente sin cambiar el cociente $N/Z$. La alfa resuelve un problema de **tamaño**, no de proporción, y es característica de núclidos con $Z>83$."
+            "why_wrong": "Es cierto que disminuye $Z$, pero también $N$ en dos unidades, de modo que apenas modifica el cociente $N/Z$: mueve el punto en diagonal a 45°, prácticamente sin cambiar el cociente $N/Z$. La alfa resuelve un problema de **tamaño**, no de proporción, y es característica de núclidos con $Z>82$."
           },
           {
             "key": "D",
@@ -6424,8 +6424,8 @@
               "Comprueba los balances escribiendo las dos sumas, aunque el resultado parezca evidente. El hábito es lo que se evalúa.",
               "Para (d), fíjate en el número atómico de los tres y recuerda dónde termina la banda de estabilidad."
             ],
-            "answer": "(a) $^{232}_{\\ 90}\\mathrm{Th}\\to{}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. (b) $^{239}_{\\ 94}\\mathrm{Pu}\\to{}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. (c) $^{210}_{\\ 84}\\mathrm{Po}\\to{}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. (d) Los tres tienen $Z>83$, donde ya no hay núclidos estables: su problema es el tamaño, y la emisión alfa es la manera de reducirlo.",
-            "full_solution": "**(a)** $^{232}_{\\ 90}\\mathrm{Th}\\ \\to\\ {}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. $A$: $232=228+4$ ✓ · $Z$: $90=88+2$ ✓\n\n**(b)** $^{239}_{\\ 94}\\mathrm{Pu}\\ \\to\\ {}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. $A$: $239=235+4$ ✓ · $Z$: $94=92+2$ ✓\n\n**(c)** $^{210}_{\\ 84}\\mathrm{Po}\\ \\to\\ {}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. $A$: $210=206+4$ ✓ · $Z$: $84=82+2$ ✓\n\n**(d)** Los tres tienen $Z>83$: $90$, $94$ y $84$. En esa región la banda de estabilidad ya se ha terminado, de modo que **ningún** núclido es estable, por buena que sea su proporción de neutrones. Lo que les sobra no es una clase de nucleón, sino **tamaño**, y la emisión alfa es la manera de deshacerse de cuatro nucleones a la vez. Por eso era previsible: cuando el problema es el tamaño, el remedio es la alfa.\n\n> Nótese además el apartado (c): el hijo es el $^{206}\\mathrm{Pb}$, que tiene $Z=82$, mágico. No es casualidad que las series radiactivas naturales terminen todas en isótopos del plomo."
+            "answer": "(a) $^{232}_{\\ 90}\\mathrm{Th}\\to{}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. (b) $^{239}_{\\ 94}\\mathrm{Pu}\\to{}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. (c) $^{210}_{\\ 84}\\mathrm{Po}\\to{}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. (d) Los tres tienen $Z>82$, donde ya no hay núclidos estables: su problema es el tamaño, y la emisión alfa es la manera de reducirlo.",
+            "full_solution": "**(a)** $^{232}_{\\ 90}\\mathrm{Th}\\ \\to\\ {}^{228}_{\\ 88}\\mathrm{Ra}+{}^{4}_{2}\\mathrm{He}$. $A$: $232=228+4$ ✓ · $Z$: $90=88+2$ ✓\n\n**(b)** $^{239}_{\\ 94}\\mathrm{Pu}\\ \\to\\ {}^{235}_{\\ 92}\\mathrm{U}+{}^{4}_{2}\\mathrm{He}$. $A$: $239=235+4$ ✓ · $Z$: $94=92+2$ ✓\n\n**(c)** $^{210}_{\\ 84}\\mathrm{Po}\\ \\to\\ {}^{206}_{\\ 82}\\mathrm{Pb}+{}^{4}_{2}\\mathrm{He}$. $A$: $210=206+4$ ✓ · $Z$: $84=82+2$ ✓\n\n**(d)** Los tres tienen $Z>82$: $90$, $94$ y $84$. En esa región la banda de estabilidad ya se ha terminado, de modo que **ningún** núclido es estable, por buena que sea su proporción de neutrones. Lo que les sobra no es una clase de nucleón, sino **tamaño**, y la emisión alfa es la manera de deshacerse de cuatro nucleones a la vez. Por eso era previsible: cuando el problema es el tamaño, el remedio es la alfa.\n\n> Nótese además el apartado (c): el hijo es el $^{206}\\mathrm{Pb}$, que tiene $Z=82$, mágico. No es casualidad que las series radiactivas naturales terminen todas en isótopos del plomo."
           },
           {
             "id": "EX-04-S2",
@@ -6614,8 +6614,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "a7924d53eb6b9588"
+        "validated_render": true,
+        "canonical_hash": "d9d9d9c0bcb1963c"
       }
     }
   },
@@ -8267,8 +8267,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "3ee0a3210c95a7c0"
+        "validated_render": true,
+        "canonical_hash": "abc638c1a68d8c50"
       }
     }
   },
@@ -10258,8 +10258,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "3fb3155feff8e9c9"
+        "validated_render": true,
+        "canonical_hash": "47a2d05990ef13dd"
       }
     }
   },
@@ -11988,8 +11988,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "91913cb2af2d9e86"
+        "validated_render": true,
+        "canonical_hash": "2344325e4b586522"
       }
     }
   },
@@ -13481,8 +13481,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "45e61cbb20235172"
+        "validated_render": true,
+        "canonical_hash": "506155f203260e08"
       }
     }
   },
@@ -15253,8 +15253,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "50f3a93741d855af"
+        "validated_render": true,
+        "canonical_hash": "b1352db61b819fd3"
       }
     }
   },
@@ -16322,7 +16322,6 @@
             "TH-10-5",
             "TH-10-6",
             "TH-10-7",
-            "TH-10-8",
             "WE-10-1",
             "WE-10-2",
             "WE-10-3",
@@ -16349,7 +16348,6 @@
             "TH-10-5",
             "TH-10-6",
             "TH-10-7",
-            "TH-10-8",
             "WE-10-1",
             "WE-10-2",
             "WE-10-3",
@@ -16550,10 +16548,11 @@
         "standard_blocks": [
           "TH-10-5",
           "TH-10-6",
-          "TH-10-7",
+          "TH-10-7"
+        ],
+        "advanced_blocks": [
           "TH-10-8"
         ],
-        "advanced_blocks": [],
         "worked_examples": [
           "WE-10-1",
           "WE-10-2",
@@ -16684,8 +16683,8 @@
       "qa": {
         "validated_semantics": true,
         "validated_numerics": true,
-        "validated_render": false,
-        "canonical_hash": "dc9bcced5b2359e0"
+        "validated_render": true,
+        "canonical_hash": "2e14615678fcd09c"
       }
     }
   }

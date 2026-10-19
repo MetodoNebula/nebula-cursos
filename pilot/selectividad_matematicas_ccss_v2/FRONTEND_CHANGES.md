@@ -1,0 +1,2 @@
+# FRONTEND_CHANGES.md — selectividad_matematicas_ccss
+No se modifica `index.html`. El reorden esencial-primero se logra reordenando el array `theory_blocks` (el frontend los renderiza en orden). La ampliación queda agrupada al final con un separador visible. `schema_v2` es aditivo y el frontend lo ignora. Las rutas adaptativas, checkpoints y Exam Mode existen como datos; mostrarlas al alumno requeriría nuevas vistas de UI (pendiente, igual que en el piloto de física).

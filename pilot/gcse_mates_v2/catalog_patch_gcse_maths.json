@@ -1,0 +1,26 @@
+{
+  "course": "gcse_mates",
+  "action": "add_unit",
+  "unit": {
+    "id": "U00_Foundations",
+    "title": "Module 0 – Foundations",
+    "description": "Prerequisite arithmetic, fractions, basic algebra, coordinates, units and shape recognition for students starting GCSE Mathematics from scratch.",
+    "order": 0,
+    "lessons": [
+      "01_Arithmetic_Fluency.json",
+      "02_Fractions_Decimals_Percentages.json",
+      "03_Basic_Algebra.json",
+      "04_Coordinates_and_Graphs.json",
+      "05_Units_and_Measurement.json",
+      "06_Shape_Recognition.json"
+    ],
+    "bundle": "gcse_mates__U00_Foundations.json",
+    "route_scope": {
+      "DESDE_CERO": "required",
+      "STANDARD": "skip_if_diagnostic_pass",
+      "EXCELLENCE": "skip",
+      "FAST_REVIEW": "skip"
+    }
+  },
+  "notes": "Apply this patch to catalog.json to register the new Foundations unit. The U00 bundle must be placed in bundles/ and encrypted before deploying."
+}

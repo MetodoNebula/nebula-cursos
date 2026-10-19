@@ -1,0 +1,4610 @@
+{
+  "01_Arithmetic_Fluency.json": {
+    "id": "L01",
+    "title": "Arithmetic Fluency",
+    "subject": "Mathematics",
+    "course_label": "Cambridge IGCSE Mathematics 0580 · Foundations · Core",
+    "unit_id": "U-MATH-FOUNDATIONS",
+    "estimated_length": "0.75 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Cambridge IGCSE Mathematics 0580",
+      "codes": [
+        "FOUNDATION"
+      ],
+      "status": "SUPPLEMENTARY",
+      "track": "Core"
+    },
+    "objectives": [
+      {
+        "id": "LO-FND-01-1",
+        "text": "Perform addition, subtraction, multiplication and division with positive and negative integers."
+      },
+      {
+        "id": "LO-FND-01-2",
+        "text": "Apply the correct order of operations (BIDMAS/BODMAS) to evaluate numerical expressions."
+      },
+      {
+        "id": "LO-FND-01-3",
+        "text": "Use mental strategies for efficient calculation."
+      },
+      {
+        "id": "LO-FND-01-4",
+        "text": "Identify and use factors, multiples and prime numbers in simple contexts."
+      },
+      {
+        "id": "LO-FND-01-5",
+        "text": "Estimate answers by rounding before calculating."
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DI-FND-01-1",
+        "stem": "Work out $12 + 7 \\times 3$.",
+        "answer": "$33$",
+        "objective_id": "LO-FND-01-2"
+      },
+      {
+        "id": "DI-FND-01-2",
+        "stem": "Calculate $(-5) + 8$.",
+        "answer": "$3$",
+        "objective_id": "LO-FND-01-1"
+      },
+      {
+        "id": "DI-FND-01-3",
+        "stem": "List all the factors of $24$.",
+        "answer": "$1, 2, 3, 4, 6, 8, 12, 24$",
+        "objective_id": "LO-FND-01-4"
+      },
+      {
+        "id": "DI-FND-01-4",
+        "stem": "Estimate $49.7 \\times 3.1$ by rounding each number to 1 significant figure.",
+        "answer": "$50 \\times 3 = 150$",
+        "objective_id": "LO-FND-01-5"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-FND-01-0",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Why arithmetic fluency matters",
+        "concept_ids": [
+          "C-FND-01-FLUENCY"
+        ],
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Every topic in IGCSE Mathematics rests on confident number work. If you can add, subtract, multiply and divide quickly and accurately, you free up your attention for the new ideas in each unit. Think of arithmetic as the alphabet of mathematics — you need it to read everything else."
+      },
+      {
+        "id": "TH-FND-01-1",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "The four operations",
+        "concept_ids": [
+          "C-FND-01-OPS"
+        ],
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "The four basic operations are:\n\n| Operation | Symbol | Example |\n|---|---|---|\n| Addition | $+$ | $7 + 5 = 12$ |\n| Subtraction | $-$ | $12 - 5 = 7$ |\n| Multiplication | $\\times$ | $4 \\times 6 = 24$ |\n| Division | $\\div$ | $24 \\div 6 = 4$ |\n\n[[green:Addition and multiplication are *commutative*: the order does not matter.]] For example, $3 + 8 = 8 + 3$ and $4 \\times 7 = 7 \\times 4$. Subtraction and division are **not** commutative."
+      },
+      {
+        "id": "TH-FND-01-2",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Negative numbers on the number line",
+        "concept_ids": [
+          "C-FND-01-NEG"
+        ],
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Negative numbers sit to the left of zero on the number line. The further left, the smaller the value:\n\n$$\\cdots\\;-3\\;-2\\;-1\\;\\;0\\;\\;1\\;\\;2\\;\\;3\\;\\cdots$$\n\n[[red:$-5$ is *less than* $-2$ because it is further from zero in the negative direction.]]"
+      },
+      {
+        "id": "TH-FND-01-3",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Adding and subtracting negative numbers",
+        "concept_ids": [
+          "C-FND-01-NEG"
+        ],
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Rules for combining signs:\n\n• $a + (+b) = a + b$ — adding a positive moves right.\n• $a + (-b) = a - b$ — adding a negative moves left.\n• $a - (+b) = a - b$ — subtracting a positive moves left.\n• $a - (-b) = a + b$ — [[green:subtracting a negative moves right (two negatives make a positive).]]\n\n**Example:** $(-3) - (-7) = -3 + 7 = 4$."
+      },
+      {
+        "id": "TH-FND-01-4",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Multiplying and dividing negative numbers",
+        "concept_ids": [
+          "C-FND-01-NEG"
+        ],
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "When multiplying or dividing:\n\n| Signs | Result | Example |\n|---|---|---|\n| $(+) \\times (+)$ | $+$ | $3 \\times 4 = 12$ |\n| $(-) \\times (-)$ | $+$ | $(-3)\\times(-4) = 12$ |\n| $(+) \\times (-)$ | $-$ | $3 \\times (-4) = -12$ |\n| $(-) \\times (+)$ | $-$ | $(-3)\\times 4 = -12$ |\n\n[[green:Same signs → positive. Different signs → negative.]] The same rule applies to division."
+      },
+      {
+        "id": "TH-FND-01-5",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "BIDMAS / BODMAS — order of operations",
+        "concept_ids": [
+          "C-FND-01-BIDMAS"
+        ],
+        "objective_ids": [
+          "LO-FND-01-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "When an expression contains more than one operation, follow this order:\n\n**B** — Brackets first\n**I/O** — Indices (powers) / Orders\n**D** — Division\n**M** — Multiplication\n**A** — Addition\n**S** — Subtraction\n\n[[red:Division and multiplication share the same priority — work left to right.]] The same applies to addition and subtraction.\n\n**Example:** $3 + 4 \\times 2 = 3 + 8 = 11$, **not** $14$."
+      },
+      {
+        "id": "TH-FND-01-6",
+        "type": "worked_example",
+        "scope": "CORE",
+        "title": "Applying BIDMAS to a multi-step expression",
+        "concept_ids": [
+          "C-FND-01-BIDMAS"
+        ],
+        "objective_ids": [
+          "LO-FND-01-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Evaluate** $5 + 2 \\times (8 - 3)^2 \\div 10$.\n\n1. **Brackets:** $8 - 3 = 5$\n2. **Indices:** $5^2 = 25$\n3. **Multiply/Divide left to right:** $2 \\times 25 = 50$, then $50 \\div 10 = 5$\n4. **Add:** $5 + 5 = \\mathbf{10}$"
+      },
+      {
+        "id": "TH-FND-01-7",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Mental strategies for addition",
+        "concept_ids": [
+          "C-FND-01-MENTAL"
+        ],
+        "objective_ids": [
+          "LO-FND-01-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Bridging through 10 (or 100):** To add $47 + 36$, think $47 + 3 = 50$, then $50 + 33 = 83$.\n\n**Compensation:** To add $99 + 56$, compute $100 + 56 = 156$, then subtract $1$ to get $155$.\n\nPractise these shortcuts until they feel natural — they save time in exams."
+      },
+      {
+        "id": "TH-FND-01-8",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Mental strategies for multiplication",
+        "concept_ids": [
+          "C-FND-01-MENTAL"
+        ],
+        "objective_ids": [
+          "LO-FND-01-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Doubling and halving:** $16 \\times 25 = 8 \\times 50 = 4 \\times 100 = 400$.\n\n**Partitioning:** $13 \\times 7 = 10 \\times 7 + 3 \\times 7 = 70 + 21 = 91$.\n\n**Using near-facts:** $19 \\times 6 = 20 \\times 6 - 1 \\times 6 = 120 - 6 = 114$."
+      },
+      {
+        "id": "TH-FND-01-9",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Factors, multiples and primes",
+        "concept_ids": [
+          "C-FND-01-FACTORS"
+        ],
+        "objective_ids": [
+          "LO-FND-01-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• A **factor** of $n$ divides $n$ exactly. The factors of $12$ are $1, 2, 3, 4, 6, 12$.\n• A **multiple** of $n$ is $n$ times a positive integer. The first five multiples of $7$ are $7, 14, 21, 28, 35$.\n• A **prime number** has exactly two factors: $1$ and itself. The first primes are $2, 3, 5, 7, 11, 13, \\ldots$\n\n[[red:$1$ is **not** a prime because it has only one factor.]]"
+      },
+      {
+        "id": "TH-FND-01-10",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Finding all factors systematically",
+        "concept_ids": [
+          "C-FND-01-FACTORS"
+        ],
+        "objective_ids": [
+          "LO-FND-01-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To list all factors of $36$, test divisors from $1$ upward and record both members of each pair:\n\n$1 \\times 36,\\quad 2 \\times 18,\\quad 3 \\times 12,\\quad 4 \\times 9,\\quad 6 \\times 6$\n\nStop when the pairs meet. Factors of $36$: $\\{1, 2, 3, 4, 6, 9, 12, 18, 36\\}$."
+      },
+      {
+        "id": "TH-FND-01-11",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Estimating by rounding",
+        "concept_ids": [
+          "C-FND-01-EST"
+        ],
+        "objective_ids": [
+          "LO-FND-01-5"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To estimate, round each number to one significant figure, then calculate:\n\n**Example:** Estimate $387 \\times 0.52$.\n\n$387 \\approx 400$, $0.52 \\approx 0.5$\n\n$400 \\times 0.5 = 200$\n\n[[green:An estimate lets you check whether your exact answer is reasonable.]]"
+      },
+      {
+        "id": "TH-FND-01-12",
+        "type": "summary",
+        "scope": "CORE",
+        "title": "Key facts to remember",
+        "concept_ids": [
+          "C-FND-01-FLUENCY"
+        ],
+        "objective_ids": [
+          "LO-FND-01-1",
+          "LO-FND-01-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• Follow BIDMAS for the order of operations — brackets first, then indices, then multiplication/division (left to right), then addition/subtraction (left to right).\n• Same signs multiply to positive; different signs multiply to negative.\n• Subtracting a negative is the same as adding.\n• A factor divides exactly; a multiple is a product.\n• $1$ is not prime; $2$ is the only even prime."
+      }
+    ],
+    "keywords": [
+      "integer",
+      "negative number",
+      "BIDMAS",
+      "BODMAS",
+      "order of operations",
+      "factor",
+      "multiple",
+      "prime",
+      "estimate",
+      "rounding"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FND-01-1",
+        "title": "Negative number arithmetic",
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "concept_ids": [
+          "C-FND-01-NEG"
+        ],
+        "difficulty": 1,
+        "statement": "Calculate $(-8) + 3 - (-5)$.",
+        "solution_steps": [
+          {
+            "step": "$(-8) + 3 = -5$",
+            "explanation": "Starting at $-8$, move $3$ to the right."
+          },
+          {
+            "step": "$-5 - (-5) = -5 + 5 = 0$",
+            "explanation": "Subtracting a negative is the same as adding."
+          }
+        ],
+        "common_mistake": "Writing $-5 - (-5) = -10$ by treating both minus signs as subtraction.",
+        "exam_tip": "Show every sign change explicitly — examiners award method marks for clear working."
+      },
+      {
+        "id": "WE-FND-01-2",
+        "title": "Order of operations",
+        "objective_ids": [
+          "LO-FND-01-2"
+        ],
+        "concept_ids": [
+          "C-FND-01-BIDMAS"
+        ],
+        "difficulty": 1,
+        "statement": "Evaluate $18 \\div 3 + 4 \\times 2 - 1$.",
+        "solution_steps": [
+          {
+            "step": "$18 \\div 3 = 6$",
+            "explanation": "Division first (left to right before addition/subtraction)."
+          },
+          {
+            "step": "$4 \\times 2 = 8$",
+            "explanation": "Then multiplication."
+          },
+          {
+            "step": "$6 + 8 - 1 = 13$",
+            "explanation": "Finally, add and subtract left to right."
+          }
+        ],
+        "common_mistake": "Adding $3 + 4$ before dividing — ignoring BIDMAS.",
+        "exam_tip": "Write each step on a new line and underline the part you are calculating next."
+      },
+      {
+        "id": "WE-FND-01-3",
+        "title": "Estimation",
+        "objective_ids": [
+          "LO-FND-01-5"
+        ],
+        "concept_ids": [
+          "C-FND-01-EST"
+        ],
+        "difficulty": 1,
+        "statement": "Estimate $19.6 \\times 4.87$.",
+        "solution_steps": [
+          {
+            "step": "Round: $19.6 \\approx 20$, $4.87 \\approx 5$",
+            "explanation": "Round each to 1 significant figure."
+          },
+          {
+            "step": "$20 \\times 5 = 100$",
+            "explanation": "Multiply the rounded values."
+          }
+        ],
+        "common_mistake": "Rounding $4.87$ to $4$ instead of $5$.",
+        "exam_tip": "State your rounded values before calculating so the examiner can see your method."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FND-01-1",
+        "statement": "Evaluate $6 + 2 \\times 5$.",
+        "hints": [
+          "Which operation do you perform first?",
+          "Multiply before you add."
+        ],
+        "answer": "$16$"
+      },
+      {
+        "id": "GE-FND-01-2",
+        "statement": "Calculate $(-4) \\times (-3)$.",
+        "hints": [
+          "Same signs or different signs?",
+          "Same signs → positive result."
+        ],
+        "answer": "$12$"
+      },
+      {
+        "id": "GE-FND-01-3",
+        "statement": "List all factors of $18$.",
+        "hints": [
+          "Start with $1 \\times 18$, then try $2$, $3$, ..."
+        ],
+        "answer": "$1, 2, 3, 6, 9, 18$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FND-01-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "concept_ids": [
+          "C-FND-01-OPS"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Calculate: (a) $45 + 78$ (b) $102 - 67$ (c) $14 \\times 12$ (d) $156 \\div 12$.",
+        "answer": "(a) $123$ (b) $35$ (c) $168$ (d) $13$",
+        "full_solution": "(a) $45 + 78 = 123$. (b) $102 - 67 = 35$. (c) $14 \\times 12 = 14 \\times 10 + 14 \\times 2 = 140 + 28 = 168$. (d) $156 \\div 12 = 13$ since $12 \\times 13 = 156$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-01-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-1"
+        ],
+        "concept_ids": [
+          "C-FND-01-NEG"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Calculate: (a) $(-3) + (-9)$ (b) $7 - (-4)$ (c) $(-6) \\times 5$ (d) $(-20) \\div (-4)$.",
+        "answer": "(a) $-12$ (b) $11$ (c) $-30$ (d) $5$",
+        "full_solution": "(a) $(-3) + (-9) = -12$. (b) $7 - (-4) = 7 + 4 = 11$. (c) Different signs → $-30$. (d) Same signs → $5$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-01-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-2"
+        ],
+        "concept_ids": [
+          "C-FND-01-BIDMAS"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Evaluate: (a) $3 + 4 \\times 5$ (b) $(3 + 4) \\times 5$ (c) $20 - 6 \\div 2$.",
+        "answer": "(a) $23$ (b) $35$ (c) $17$",
+        "full_solution": "(a) $4 \\times 5 = 20$, then $3 + 20 = 23$. (b) Brackets first: $7 \\times 5 = 35$. (c) $6 \\div 2 = 3$, then $20 - 3 = 17$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-01-S4",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-2"
+        ],
+        "concept_ids": [
+          "C-FND-01-BIDMAS"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Evaluate $2 \\times (7 - 3)^2 + 6 \\div 3$.",
+        "answer": "$34$",
+        "full_solution": "Brackets: $7 - 3 = 4$. Indices: $4^2 = 16$. Multiply: $2 \\times 16 = 32$. Divide: $6 \\div 3 = 2$. Add: $32 + 2 = 34$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-01-S5",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-3"
+        ],
+        "concept_ids": [
+          "C-FND-01-MENTAL"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Use a mental strategy to calculate: (a) $99 + 47$ (b) $25 \\times 16$.",
+        "answer": "(a) $146$ (b) $400$",
+        "full_solution": "(a) $100 + 47 - 1 = 146$ (compensation). (b) $25 \\times 16 = 50 \\times 8 = 400$ (doubling and halving).",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-01-S6",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-4"
+        ],
+        "concept_ids": [
+          "C-FND-01-FACTORS"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "(a) List all factors of $30$. (b) Write down the first six multiples of $8$. (c) Which of $15, 17, 21, 23, 27$ are prime?",
+        "answer": "(a) $1,2,3,5,6,10,15,30$ (b) $8,16,24,32,40,48$ (c) $17, 23$",
+        "full_solution": "(a) Factor pairs: $1\\times30, 2\\times15, 3\\times10, 5\\times6$. (b) $8\\times1$ through $8\\times6$. (c) $15=3\\times5$, $21=3\\times7$, $27=3\\times9$, so only $17$ and $23$ are prime.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-01-S7",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-5"
+        ],
+        "concept_ids": [
+          "C-FND-01-EST"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Estimate: (a) $312 \\times 4.8$ (b) $7890 \\div 39$.",
+        "answer": "(a) $\\approx 1500$ (b) $\\approx 200$",
+        "full_solution": "(a) $300 \\times 5 = 1500$. (b) $8000 \\div 40 = 200$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-01-S8",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-01-1",
+          "LO-FND-01-2"
+        ],
+        "concept_ids": [
+          "C-FND-01-NEG",
+          "C-FND-01-BIDMAS"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Evaluate $(-2)^3 + 5 \\times (-3)$.",
+        "answer": "$-23$",
+        "full_solution": "$(-2)^3 = -8$. Then $5 \\times (-3) = -15$. Finally $-8 + (-15) = -23$.",
+        "common_errors": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-FND-01-1",
+        "stem": "What is $5 + 3 \\times 4$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$32$",
+            "misconception_id": "MIS-FND-01-1",
+            "why_wrong": "Adds before multiplying, ignoring BIDMAS."
+          },
+          {
+            "key": "B",
+            "text": "$17$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$60$",
+            "misconception_id": null,
+            "why_wrong": "Multiplies all three numbers."
+          },
+          {
+            "key": "D",
+            "text": "$12$",
+            "misconception_id": null,
+            "why_wrong": "Only computes $3 \\times 4$ and forgets to add $5$."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Multiplication before addition: $3 \\times 4 = 12$, then $5 + 12 = 17$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-01-2",
+        "concept_id": "C-FND-01-BIDMAS"
+      },
+      {
+        "id": "MCQ-FND-01-2",
+        "stem": "Calculate $(-6) \\times (-4)$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$-24$",
+            "misconception_id": "MIS-FND-01-2",
+            "why_wrong": "Applies the negative sign to the product even though both numbers are negative."
+          },
+          {
+            "key": "B",
+            "text": "$24$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$-10$",
+            "misconception_id": null,
+            "why_wrong": "Adds instead of multiplying."
+          },
+          {
+            "key": "D",
+            "text": "$10$",
+            "misconception_id": null,
+            "why_wrong": "Adds the absolute values."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Same signs → positive: $6 \\times 4 = 24$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-01-1",
+        "concept_id": "C-FND-01-NEG"
+      },
+      {
+        "id": "MCQ-FND-01-3",
+        "stem": "Which of the following is a prime number?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$1$",
+            "misconception_id": "MIS-FND-01-3",
+            "why_wrong": "$1$ has only one factor, so it is not prime."
+          },
+          {
+            "key": "B",
+            "text": "$9$",
+            "misconception_id": null,
+            "why_wrong": "$9 = 3 \\times 3$, so it is not prime."
+          },
+          {
+            "key": "C",
+            "text": "$15$",
+            "misconception_id": null,
+            "why_wrong": "$15 = 3 \\times 5$, so it is not prime."
+          },
+          {
+            "key": "D",
+            "text": "$13$",
+            "misconception_id": null,
+            "why_wrong": null
+          }
+        ],
+        "correct": "D",
+        "explanation": "$13$ has exactly two factors: $1$ and $13$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-01-4",
+        "concept_id": "C-FND-01-FACTORS"
+      },
+      {
+        "id": "MCQ-FND-01-4",
+        "stem": "Estimate $48.3 \\times 5.1$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$200$",
+            "misconception_id": null,
+            "why_wrong": "Rounds $48.3$ to $40$."
+          },
+          {
+            "key": "B",
+            "text": "$250$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$245$",
+            "misconception_id": null,
+            "why_wrong": "Uses exact calculation rather than estimation."
+          },
+          {
+            "key": "D",
+            "text": "$500$",
+            "misconception_id": null,
+            "why_wrong": "Rounds $48.3$ to $100$."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$48.3 \\approx 50$ and $5.1 \\approx 5$, so $50 \\times 5 = 250$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-01-5",
+        "concept_id": "C-FND-01-EST"
+      },
+      {
+        "id": "MCQ-FND-01-5",
+        "stem": "What is $7 - (-3)$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$4$",
+            "misconception_id": "MIS-FND-01-2",
+            "why_wrong": "Subtracts $3$ from $7$ instead of adding."
+          },
+          {
+            "key": "B",
+            "text": "$10$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$-10$",
+            "misconception_id": null,
+            "why_wrong": "Takes both as negative."
+          },
+          {
+            "key": "D",
+            "text": "$-4$",
+            "misconception_id": null,
+            "why_wrong": "Reverses the subtraction."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Subtracting a negative is the same as adding: $7 + 3 = 10$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-01-1",
+        "concept_id": "C-FND-01-NEG"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-FND-01-1",
+        "kind": "definition",
+        "front": "What does BIDMAS stand for?",
+        "back": "Brackets, Indices, Division, Multiplication, Addition, Subtraction — the order in which operations are performed.",
+        "concept_id": "C-FND-01-BIDMAS",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-01-2",
+        "kind": "definition",
+        "front": "What is a factor?",
+        "back": "A factor of a number divides into it exactly with no remainder. For example, the factors of $12$ are $1, 2, 3, 4, 6, 12$.",
+        "concept_id": "C-FND-01-FACTORS",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-01-3",
+        "kind": "definition",
+        "front": "What is a prime number?",
+        "back": "A number with exactly two factors: $1$ and itself. The first primes are $2, 3, 5, 7, 11, 13, \\ldots$ Note: $1$ is NOT prime.",
+        "concept_id": "C-FND-01-FACTORS",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-01-4",
+        "kind": "rule",
+        "front": "What happens when you multiply two negative numbers?",
+        "back": "The result is positive. Same signs → positive, different signs → negative.",
+        "concept_id": "C-FND-01-NEG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-01-5",
+        "kind": "rule",
+        "front": "What is $a - (-b)$ equal to?",
+        "back": "$a + b$. Subtracting a negative is the same as adding.",
+        "concept_id": "C-FND-01-NEG",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-01-6",
+        "kind": "definition",
+        "front": "What is a multiple?",
+        "back": "A multiple of $n$ is $n$ multiplied by a positive integer. For example, the multiples of $5$ are $5, 10, 15, 20, \\ldots$",
+        "concept_id": "C-FND-01-FACTORS",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-FND-01-1",
+        "description": "Performing addition before multiplication when there are no brackets.",
+        "remedy": "Remember BIDMAS: multiply and divide before you add and subtract."
+      },
+      {
+        "id": "MIS-FND-01-2",
+        "description": "Treating a negative times a negative as negative.",
+        "remedy": "Same signs always give a positive result."
+      },
+      {
+        "id": "MIS-FND-01-3",
+        "description": "Thinking $1$ is a prime number.",
+        "remedy": "A prime has exactly two factors. $1$ has only one factor (itself), so it is not prime."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "id": "CM-FND-01-1",
+        "description": "Ignoring BIDMAS and working left to right.",
+        "correction": "Always check for brackets, then indices, then ×/÷ before +/−."
+      },
+      {
+        "id": "CM-FND-01-2",
+        "description": "Writing $-5 - (-3) = -8$ instead of $-2$.",
+        "correction": "Subtracting a negative means adding: $-5 + 3 = -2$."
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "Follow BIDMAS: Brackets → Indices → Division/Multiplication → Addition/Subtraction.",
+        "Same signs multiply to give a positive; different signs multiply to give a negative.",
+        "Subtracting a negative is the same as adding a positive.",
+        "A factor divides exactly; a multiple is a product; a prime has exactly two factors.",
+        "Estimate by rounding to 1 significant figure before calculating."
+      ],
+      "next_steps": "You are ready for fractions, decimals and percentages."
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEMATHS::U00_Foundations::arithmetic_fluency",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 1
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": [
+        {
+          "block_id": "TH-FND-01-5",
+          "type": "LAW",
+          "note": "BIDMAS / BODMAS — order of operations"
+        },
+        {
+          "block_id": "TH-FND-01-9",
+          "type": "DEFINITION",
+          "note": "Factors, multiples and primes"
+        }
+      ]
+    }
+  },
+  "02_Fractions_Decimals_Percentages.json": {
+    "id": "L02",
+    "title": "Fractions, Decimals and Percentages",
+    "subject": "Mathematics",
+    "course_label": "Cambridge IGCSE Mathematics 0580 · Foundations · Core",
+    "unit_id": "U-MATH-FOUNDATIONS",
+    "estimated_length": "0.75 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Cambridge IGCSE Mathematics 0580",
+      "codes": [
+        "FOUNDATION"
+      ],
+      "status": "SUPPLEMENTARY",
+      "track": "Core"
+    },
+    "objectives": [
+      {
+        "id": "LO-FND-02-1",
+        "text": "Convert between fractions, decimals and percentages."
+      },
+      {
+        "id": "LO-FND-02-2",
+        "text": "Find equivalent fractions and simplify fractions to their lowest terms."
+      },
+      {
+        "id": "LO-FND-02-3",
+        "text": "Add and subtract fractions with different denominators."
+      },
+      {
+        "id": "LO-FND-02-4",
+        "text": "Multiply and divide simple fractions."
+      },
+      {
+        "id": "LO-FND-02-5",
+        "text": "Order fractions, decimals and percentages on a number line."
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DI-FND-02-1",
+        "stem": "Write $\\tfrac{3}{4}$ as a decimal.",
+        "answer": "$0.75$",
+        "objective_id": "LO-FND-02-1"
+      },
+      {
+        "id": "DI-FND-02-2",
+        "stem": "Simplify $\\tfrac{12}{18}$.",
+        "answer": "$\\tfrac{2}{3}$",
+        "objective_id": "LO-FND-02-2"
+      },
+      {
+        "id": "DI-FND-02-3",
+        "stem": "Calculate $\\tfrac{1}{3} + \\tfrac{1}{4}$.",
+        "answer": "$\\tfrac{7}{12}$",
+        "objective_id": "LO-FND-02-3"
+      },
+      {
+        "id": "DI-FND-02-4",
+        "stem": "Write $0.35$ as a percentage.",
+        "answer": "$35\\%$",
+        "objective_id": "LO-FND-02-1"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-FND-02-0",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Fractions as parts of a whole",
+        "concept_ids": [
+          "C-FND-02-FRAC"
+        ],
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "A fraction $\\tfrac{a}{b}$ means $a$ equal parts out of $b$. The top number (numerator) counts how many parts you have; the bottom number (denominator) tells you how many equal parts make the whole.\n\n[[green:$\\tfrac{3}{4}$ means 3 parts out of 4 equal pieces.]]"
+      },
+      {
+        "id": "TH-FND-02-1",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Equivalent fractions",
+        "concept_ids": [
+          "C-FND-02-EQUIV"
+        ],
+        "objective_ids": [
+          "LO-FND-02-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Two fractions are **equivalent** if they represent the same amount. You create an equivalent fraction by multiplying (or dividing) both the numerator and denominator by the same non-zero number:\n\n$$\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}$$\n\n[[red:You must do the same to top and bottom — otherwise the value changes.]]"
+      },
+      {
+        "id": "TH-FND-02-2",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Simplifying fractions",
+        "concept_ids": [
+          "C-FND-02-SIMPLIFY"
+        ],
+        "objective_ids": [
+          "LO-FND-02-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To simplify a fraction, divide the numerator and denominator by their highest common factor (HCF):\n\n$$\\frac{12}{18} = \\frac{12 \\div 6}{18 \\div 6} = \\frac{2}{3}$$\n\nA fraction is in its **lowest terms** when the HCF of the numerator and denominator is $1$."
+      },
+      {
+        "id": "TH-FND-02-3",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Converting fractions to decimals",
+        "concept_ids": [
+          "C-FND-02-CONV"
+        ],
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Divide the numerator by the denominator:\n\n$$\\frac{3}{8} = 3 \\div 8 = 0.375$$\n\nSome fractions give recurring decimals: $\\tfrac{1}{3} = 0.333\\ldots = 0.\\dot{3}$"
+      },
+      {
+        "id": "TH-FND-02-4",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Converting decimals to fractions",
+        "concept_ids": [
+          "C-FND-02-CONV"
+        ],
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Write the decimal as a fraction over a power of $10$, then simplify:\n\n$$0.45 = \\frac{45}{100} = \\frac{9}{20}$$"
+      },
+      {
+        "id": "TH-FND-02-5",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Converting between percentages, fractions and decimals",
+        "concept_ids": [
+          "C-FND-02-PCT"
+        ],
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• **Fraction → percentage:** multiply by $100$: $\\tfrac{3}{5} \\times 100 = 60\\%$\n• **Percentage → fraction:** write over $100$, simplify: $35\\% = \\tfrac{35}{100} = \\tfrac{7}{20}$\n• **Decimal → percentage:** multiply by $100$: $0.72 \\times 100 = 72\\%$\n• **Percentage → decimal:** divide by $100$: $45\\% = 0.45$"
+      },
+      {
+        "id": "TH-FND-02-6",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Adding and subtracting fractions",
+        "concept_ids": [
+          "C-FND-02-ADDSUB"
+        ],
+        "objective_ids": [
+          "LO-FND-02-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To add or subtract fractions, they must share a common denominator.\n\n$$\\frac{2}{5} + \\frac{1}{3} = \\frac{6}{15} + \\frac{5}{15} = \\frac{11}{15}$$\n\n**Steps:**\n1. Find the lowest common denominator (LCD): $\\text{LCM}(5, 3) = 15$.\n2. Convert each fraction.\n3. Add (or subtract) the numerators.\n4. Simplify if possible."
+      },
+      {
+        "id": "TH-FND-02-7",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Multiplying fractions",
+        "concept_ids": [
+          "C-FND-02-MULT"
+        ],
+        "objective_ids": [
+          "LO-FND-02-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "[[green:Multiply numerators together and denominators together:]]$$\\frac{2}{3} \\times \\frac{4}{5} = \\frac{2 \\times 4}{3 \\times 5} = \\frac{8}{15}$$\n\nYou can cancel common factors before multiplying to keep numbers small:\n\n$$\\frac{3}{4} \\times \\frac{8}{9} = \\frac{\\cancel{3}^{1}}{\\cancel{4}^{1}} \\times \\frac{\\cancel{8}^{2}}{\\cancel{9}^{3}} = \\frac{2}{3}$$"
+      },
+      {
+        "id": "TH-FND-02-8",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Dividing fractions",
+        "concept_ids": [
+          "C-FND-02-DIV"
+        ],
+        "objective_ids": [
+          "LO-FND-02-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To divide by a fraction, [[green:multiply by its reciprocal (flip the second fraction):]]$$\\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8} = 1\\tfrac{7}{8}$$\n\nRemember: **K**eep the first fraction, **F**lip the second, **C**hange to multiplication (KFC)."
+      },
+      {
+        "id": "TH-FND-02-9",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Ordering fractions, decimals and percentages",
+        "concept_ids": [
+          "C-FND-02-ORDER"
+        ],
+        "objective_ids": [
+          "LO-FND-02-5"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To compare a mixture of fractions, decimals and percentages, convert them all to the same form (decimals are usually easiest):\n\n**Example:** Order $\\tfrac{3}{8}$, $0.4$, $37\\%$ from smallest to largest.\n\n$\\tfrac{3}{8} = 0.375$, $0.4 = 0.4$, $37\\% = 0.37$\n\nOrder: $37\\% < \\tfrac{3}{8} < 0.4$"
+      },
+      {
+        "id": "TH-FND-02-10",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Mixed numbers and improper fractions",
+        "concept_ids": [
+          "C-FND-02-MIXED"
+        ],
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "An **improper fraction** has a numerator larger than its denominator: $\\tfrac{7}{4}$.\n\nA **mixed number** combines a whole number and a fraction: $1\\tfrac{3}{4}$.\n\nTo convert: $\\tfrac{7}{4} = 1$ remainder $3$, so $\\tfrac{7}{4} = 1\\tfrac{3}{4}$.\n\nTo go the other way: $2\\tfrac{1}{3} = \\tfrac{2 \\times 3 + 1}{3} = \\tfrac{7}{3}$."
+      },
+      {
+        "id": "TH-FND-02-11",
+        "type": "summary",
+        "scope": "CORE",
+        "title": "Conversion reference",
+        "concept_ids": [
+          "C-FND-02-CONV"
+        ],
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Key equivalences to memorise:\n\n| Fraction | Decimal | Percentage |\n|---|---|---|\n| $\\tfrac{1}{2}$ | $0.5$ | $50\\%$ |\n| $\\tfrac{1}{4}$ | $0.25$ | $25\\%$ |\n| $\\tfrac{3}{4}$ | $0.75$ | $75\\%$ |\n| $\\tfrac{1}{5}$ | $0.2$ | $20\\%$ |\n| $\\tfrac{1}{10}$ | $0.1$ | $10\\%$ |\n| $\\tfrac{1}{3}$ | $0.\\dot{3}$ | $33.\\dot{3}\\%$ |"
+      }
+    ],
+    "keywords": [
+      "fraction",
+      "decimal",
+      "percentage",
+      "numerator",
+      "denominator",
+      "equivalent fraction",
+      "simplify",
+      "lowest terms",
+      "improper fraction",
+      "mixed number",
+      "reciprocal"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FND-02-1",
+        "title": "Adding fractions with different denominators",
+        "objective_ids": [
+          "LO-FND-02-3"
+        ],
+        "concept_ids": [
+          "C-FND-02-ADDSUB"
+        ],
+        "difficulty": 1,
+        "statement": "Calculate $\\tfrac{2}{3} + \\tfrac{3}{5}$.",
+        "solution_steps": [
+          {
+            "step": "LCD of $3$ and $5$ is $15$.",
+            "explanation": "Find the lowest common multiple of the denominators."
+          },
+          {
+            "step": "$\\tfrac{2}{3} = \\tfrac{10}{15}$ and $\\tfrac{3}{5} = \\tfrac{9}{15}$.",
+            "explanation": "Convert each fraction."
+          },
+          {
+            "step": "$\\tfrac{10}{15} + \\tfrac{9}{15} = \\tfrac{19}{15} = 1\\tfrac{4}{15}$.",
+            "explanation": "Add numerators and convert to mixed number."
+          }
+        ],
+        "common_mistake": "Adding numerators and denominators: $\\tfrac{2}{3} + \\tfrac{3}{5} = \\tfrac{5}{8}$.",
+        "exam_tip": "Always show your common denominator — it earns a method mark even if your final answer is wrong."
+      },
+      {
+        "id": "WE-FND-02-2",
+        "title": "Converting between forms",
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "concept_ids": [
+          "C-FND-02-CONV"
+        ],
+        "difficulty": 1,
+        "statement": "Write $\\tfrac{7}{20}$ as (a) a decimal and (b) a percentage.",
+        "solution_steps": [
+          {
+            "step": "(a) $7 \\div 20 = 0.35$",
+            "explanation": "Divide numerator by denominator."
+          },
+          {
+            "step": "(b) $0.35 \\times 100 = 35\\%$",
+            "explanation": "Multiply the decimal by $100$."
+          }
+        ],
+        "common_mistake": "Writing $\\tfrac{7}{20} = 7\\%$ by only looking at the numerator.",
+        "exam_tip": "You can also compute $\\tfrac{7}{20} \\times 100 = 35$ directly for the percentage."
+      },
+      {
+        "id": "WE-FND-02-3",
+        "title": "Dividing fractions",
+        "objective_ids": [
+          "LO-FND-02-4"
+        ],
+        "concept_ids": [
+          "C-FND-02-DIV"
+        ],
+        "difficulty": 1,
+        "statement": "Calculate $\\tfrac{5}{6} \\div \\tfrac{2}{3}$.",
+        "solution_steps": [
+          {
+            "step": "Keep $\\tfrac{5}{6}$, flip $\\tfrac{2}{3}$ to $\\tfrac{3}{2}$.",
+            "explanation": "KFC: Keep, Flip, Change."
+          },
+          {
+            "step": "$\\tfrac{5}{6} \\times \\tfrac{3}{2} = \\tfrac{15}{12}$.",
+            "explanation": "Multiply numerators and denominators."
+          },
+          {
+            "step": "$\\tfrac{15}{12} = \\tfrac{5}{4} = 1\\tfrac{1}{4}$.",
+            "explanation": "Simplify by dividing by $3$."
+          }
+        ],
+        "common_mistake": "Flipping the first fraction instead of the second.",
+        "exam_tip": "Always flip the fraction you are dividing BY, not the one you start with."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FND-02-1",
+        "statement": "Simplify $\\tfrac{18}{24}$.",
+        "hints": [
+          "What is the HCF of $18$ and $24$?",
+          "HCF is $6$. Divide both by $6$."
+        ],
+        "answer": "$\\tfrac{3}{4}$"
+      },
+      {
+        "id": "GE-FND-02-2",
+        "statement": "Calculate $\\tfrac{3}{4} - \\tfrac{1}{6}$.",
+        "hints": [
+          "Find the LCD of $4$ and $6$.",
+          "LCD is $12$. Convert both fractions."
+        ],
+        "answer": "$\\tfrac{7}{12}$"
+      },
+      {
+        "id": "GE-FND-02-3",
+        "statement": "Write $0.125$ as a fraction in its simplest form.",
+        "hints": [
+          "$0.125 = \\tfrac{125}{1000}$",
+          "Divide by $125$."
+        ],
+        "answer": "$\\tfrac{1}{8}$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FND-02-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "concept_ids": [
+          "C-FND-02-CONV"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Convert to decimals: (a) $\\tfrac{1}{8}$ (b) $\\tfrac{2}{5}$ (c) $\\tfrac{7}{20}$.",
+        "answer": "(a) $0.125$ (b) $0.4$ (c) $0.35$",
+        "full_solution": "(a) $1 \\div 8 = 0.125$. (b) $2 \\div 5 = 0.4$. (c) $7 \\div 20 = 0.35$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-02-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "concept_ids": [
+          "C-FND-02-PCT"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Convert to percentages: (a) $\\tfrac{4}{5}$ (b) $0.62$ (c) $\\tfrac{7}{25}$.",
+        "answer": "(a) $80\\%$ (b) $62\\%$ (c) $28\\%$",
+        "full_solution": "(a) $\\tfrac{4}{5} \\times 100 = 80\\%$. (b) $0.62 \\times 100 = 62\\%$. (c) $\\tfrac{7}{25} \\times 100 = 28\\%$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-02-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-2"
+        ],
+        "concept_ids": [
+          "C-FND-02-SIMPLIFY"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Simplify: (a) $\\tfrac{15}{25}$ (b) $\\tfrac{24}{36}$ (c) $\\tfrac{14}{49}$.",
+        "answer": "(a) $\\tfrac{3}{5}$ (b) $\\tfrac{2}{3}$ (c) $\\tfrac{2}{7}$",
+        "full_solution": "(a) HCF is $5$: $\\tfrac{15}{25} = \\tfrac{3}{5}$. (b) HCF is $12$: $\\tfrac{24}{36} = \\tfrac{2}{3}$. (c) HCF is $7$: $\\tfrac{14}{49} = \\tfrac{2}{7}$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-02-S4",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-3"
+        ],
+        "concept_ids": [
+          "C-FND-02-ADDSUB"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Calculate: (a) $\\tfrac{1}{4} + \\tfrac{2}{3}$ (b) $\\tfrac{5}{6} - \\tfrac{1}{2}$.",
+        "answer": "(a) $\\tfrac{11}{12}$ (b) $\\tfrac{1}{3}$",
+        "full_solution": "(a) LCD $= 12$: $\\tfrac{3}{12} + \\tfrac{8}{12} = \\tfrac{11}{12}$. (b) LCD $= 6$: $\\tfrac{5}{6} - \\tfrac{3}{6} = \\tfrac{2}{6} = \\tfrac{1}{3}$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-02-S5",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-4"
+        ],
+        "concept_ids": [
+          "C-FND-02-MULT"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Calculate: (a) $\\tfrac{3}{5} \\times \\tfrac{2}{7}$ (b) $\\tfrac{4}{9} \\times \\tfrac{3}{8}$.",
+        "answer": "(a) $\\tfrac{6}{35}$ (b) $\\tfrac{1}{6}$",
+        "full_solution": "(a) $\\tfrac{3 \\times 2}{5 \\times 7} = \\tfrac{6}{35}$. (b) Cancel $3$ and $9$ ($\\div 3$) and $4$ and $8$ ($\\div 4$): $\\tfrac{1}{3} \\times \\tfrac{1}{2} = \\tfrac{1}{6}$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-02-S6",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-4"
+        ],
+        "concept_ids": [
+          "C-FND-02-DIV"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Calculate: (a) $\\tfrac{2}{3} \\div \\tfrac{4}{5}$ (b) $3 \\div \\tfrac{1}{2}$.",
+        "answer": "(a) $\\tfrac{5}{6}$ (b) $6$",
+        "full_solution": "(a) $\\tfrac{2}{3} \\times \\tfrac{5}{4} = \\tfrac{10}{12} = \\tfrac{5}{6}$. (b) $3 \\times 2 = 6$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-02-S7",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-5"
+        ],
+        "concept_ids": [
+          "C-FND-02-ORDER"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Put in order from smallest to largest: $\\tfrac{2}{5}$, $45\\%$, $0.38$.",
+        "answer": "$0.38 < \\tfrac{2}{5} < 45\\%$",
+        "full_solution": "$\\tfrac{2}{5} = 0.4$, $45\\% = 0.45$. Order: $0.38 < 0.4 < 0.45$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-02-S8",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-02-1"
+        ],
+        "concept_ids": [
+          "C-FND-02-MIXED"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Convert $3\\tfrac{2}{5}$ to an improper fraction, then to a decimal.",
+        "answer": "$\\tfrac{17}{5} = 3.4$",
+        "full_solution": "$3\\tfrac{2}{5} = \\tfrac{3 \\times 5 + 2}{5} = \\tfrac{17}{5}$. Then $17 \\div 5 = 3.4$.",
+        "common_errors": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-FND-02-1",
+        "stem": "What is $\\tfrac{3}{5}$ as a percentage?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$30\\%$",
+            "misconception_id": "MIS-FND-02-1",
+            "why_wrong": "Divides numerator by denominator incorrectly."
+          },
+          {
+            "key": "B",
+            "text": "$35\\%$",
+            "misconception_id": null,
+            "why_wrong": "Confuses $\\tfrac{3}{5}$ with $\\tfrac{7}{20}$."
+          },
+          {
+            "key": "C",
+            "text": "$60\\%$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$53\\%$",
+            "misconception_id": null,
+            "why_wrong": "Writes the digits of the fraction side by side."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$\\tfrac{3}{5} \\times 100 = 60\\%$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-02-1",
+        "concept_id": "C-FND-02-PCT"
+      },
+      {
+        "id": "MCQ-FND-02-2",
+        "stem": "Which fraction is equivalent to $\\tfrac{4}{6}$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$\\tfrac{2}{3}$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$\\tfrac{3}{2}$",
+            "misconception_id": null,
+            "why_wrong": "Inverts the fraction."
+          },
+          {
+            "key": "C",
+            "text": "$\\tfrac{8}{10}$",
+            "misconception_id": null,
+            "why_wrong": "Adds $4$ to numerator and denominator."
+          },
+          {
+            "key": "D",
+            "text": "$\\tfrac{2}{4}$",
+            "misconception_id": null,
+            "why_wrong": "Only simplifies the numerator."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Divide both by $2$: $\\tfrac{4}{6} = \\tfrac{2}{3}$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-02-2",
+        "concept_id": "C-FND-02-EQUIV"
+      },
+      {
+        "id": "MCQ-FND-02-3",
+        "stem": "Calculate $\\tfrac{1}{2} + \\tfrac{1}{3}$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$\\tfrac{2}{5}$",
+            "misconception_id": "MIS-FND-02-2",
+            "why_wrong": "Adds numerators and denominators separately."
+          },
+          {
+            "key": "B",
+            "text": "$\\tfrac{5}{6}$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$\\tfrac{1}{6}$",
+            "misconception_id": null,
+            "why_wrong": "Multiplies instead of adding."
+          },
+          {
+            "key": "D",
+            "text": "$\\tfrac{3}{6}$",
+            "misconception_id": null,
+            "why_wrong": "Finds common denominator but only converts one fraction."
+          }
+        ],
+        "correct": "B",
+        "explanation": "LCD $= 6$: $\\tfrac{3}{6} + \\tfrac{2}{6} = \\tfrac{5}{6}$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-02-3",
+        "concept_id": "C-FND-02-ADDSUB"
+      },
+      {
+        "id": "MCQ-FND-02-4",
+        "stem": "What is $\\tfrac{2}{3} \\times \\tfrac{3}{4}$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$\\tfrac{6}{12}$",
+            "misconception_id": null,
+            "why_wrong": "Correct multiplication but not simplified."
+          },
+          {
+            "key": "B",
+            "text": "$\\tfrac{1}{2}$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$\\tfrac{5}{7}$",
+            "misconception_id": null,
+            "why_wrong": "Adds numerators and denominators."
+          },
+          {
+            "key": "D",
+            "text": "$\\tfrac{8}{9}$",
+            "misconception_id": null,
+            "why_wrong": "Divides instead of multiplying."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$\\tfrac{2 \\times 3}{3 \\times 4} = \\tfrac{6}{12} = \\tfrac{1}{2}$. (Or cancel the $3$s first.)",
+        "difficulty": 1,
+        "objective_id": "LO-FND-02-4",
+        "concept_id": "C-FND-02-MULT"
+      },
+      {
+        "id": "MCQ-FND-02-5",
+        "stem": "Which is the largest: $\\tfrac{3}{8}$, $0.4$, $38\\%$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$\\tfrac{3}{8}$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$0.4$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$38\\%$",
+            "misconception_id": null,
+            "why_wrong": "$38\\% = 0.38$, which is the smallest."
+          },
+          {
+            "key": "D",
+            "text": "They are all equal",
+            "misconception_id": null,
+            "why_wrong": null
+          }
+        ],
+        "correct": "B",
+        "explanation": "$\\tfrac{3}{8} = 0.375$, $38\\% = 0.38$, $0.4 = 0.4$. The largest is $0.4$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-02-5",
+        "concept_id": "C-FND-02-ORDER"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-FND-02-1",
+        "kind": "definition",
+        "front": "What is the numerator?",
+        "back": "The top number of a fraction — it counts how many parts you have.",
+        "concept_id": "C-FND-02-FRAC",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-02-2",
+        "kind": "definition",
+        "front": "What is the denominator?",
+        "back": "The bottom number of a fraction — it tells you how many equal parts make the whole.",
+        "concept_id": "C-FND-02-FRAC",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-02-3",
+        "kind": "rule",
+        "front": "How do you convert a fraction to a percentage?",
+        "back": "Multiply the fraction by $100$. For example, $\\tfrac{3}{5} \\times 100 = 60\\%$.",
+        "concept_id": "C-FND-02-PCT",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-02-4",
+        "kind": "rule",
+        "front": "How do you add fractions with different denominators?",
+        "back": "Find a common denominator, convert both fractions, then add the numerators.",
+        "concept_id": "C-FND-02-ADDSUB",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-02-5",
+        "kind": "rule",
+        "front": "How do you divide by a fraction?",
+        "back": "Keep the first fraction, flip the second, multiply. (KFC method.)",
+        "concept_id": "C-FND-02-DIV",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-02-6",
+        "kind": "definition",
+        "front": "What is a reciprocal?",
+        "back": "The reciprocal of $\\tfrac{a}{b}$ is $\\tfrac{b}{a}$. A number times its reciprocal equals $1$.",
+        "concept_id": "C-FND-02-DIV",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-FND-02-1",
+        "description": "Thinking $\\tfrac{3}{5}$ as a percentage is $35\\%$ (reading the digits).",
+        "remedy": "Multiply by $100$: $\\tfrac{3}{5} \\times 100 = 60\\%$."
+      },
+      {
+        "id": "MIS-FND-02-2",
+        "description": "Adding fractions by adding numerators and denominators separately.",
+        "remedy": "You must find a common denominator first."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "id": "CM-FND-02-1",
+        "description": "Flipping the wrong fraction when dividing.",
+        "correction": "Always flip the fraction you are dividing BY (the second one)."
+      },
+      {
+        "id": "CM-FND-02-2",
+        "description": "Forgetting to simplify the final answer.",
+        "correction": "Always check if the numerator and denominator share a common factor."
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "To convert a fraction to a decimal, divide the numerator by the denominator.",
+        "To convert to a percentage, multiply by $100$.",
+        "Add/subtract fractions: find a common denominator first.",
+        "Multiply fractions: multiply tops together and bottoms together.",
+        "Divide by a fraction: Keep, Flip, Change (multiply by the reciprocal)."
+      ],
+      "next_steps": "You are ready to work with fractions in algebraic expressions."
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEMATHS::U00_Foundations::fractions_decimals_percentages",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 2
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "03_Basic_Algebra.json": {
+    "id": "L03",
+    "title": "Basic Algebra",
+    "subject": "Mathematics",
+    "course_label": "Cambridge IGCSE Mathematics 0580 · Foundations · Core",
+    "unit_id": "U-MATH-FOUNDATIONS",
+    "estimated_length": "0.75 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Cambridge IGCSE Mathematics 0580",
+      "codes": [
+        "FOUNDATION"
+      ],
+      "status": "SUPPLEMENTARY",
+      "track": "Core"
+    },
+    "objectives": [
+      {
+        "id": "LO-FND-03-1",
+        "text": "Use letters to represent unknown values and write simple algebraic expressions."
+      },
+      {
+        "id": "LO-FND-03-2",
+        "text": "Substitute numerical values into algebraic expressions and evaluate."
+      },
+      {
+        "id": "LO-FND-03-3",
+        "text": "Collect like terms to simplify expressions."
+      },
+      {
+        "id": "LO-FND-03-4",
+        "text": "Solve simple one-step and two-step linear equations."
+      },
+      {
+        "id": "LO-FND-03-5",
+        "text": "Understand and use correct algebraic notation."
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DI-FND-03-1",
+        "stem": "If $x = 4$, find the value of $3x + 5$.",
+        "answer": "$17$",
+        "objective_id": "LO-FND-03-2"
+      },
+      {
+        "id": "DI-FND-03-2",
+        "stem": "Simplify $5a + 3b - 2a + b$.",
+        "answer": "$3a + 4b$",
+        "objective_id": "LO-FND-03-3"
+      },
+      {
+        "id": "DI-FND-03-3",
+        "stem": "Solve $x + 7 = 12$.",
+        "answer": "$x = 5$",
+        "objective_id": "LO-FND-03-4"
+      },
+      {
+        "id": "DI-FND-03-4",
+        "stem": "Write an expression for 'five more than twice a number $n$'.",
+        "answer": "$2n + 5$",
+        "objective_id": "LO-FND-03-1"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-FND-03-0",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "What is algebra?",
+        "concept_ids": [
+          "C-FND-03-INTRO"
+        ],
+        "objective_ids": [
+          "LO-FND-03-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Algebra uses letters to stand for numbers we do not yet know (or that can vary). Instead of saying 'I think of a number, double it, and add three', we write $2n + 3$. This compact language lets us describe relationships, set up equations, and solve problems."
+      },
+      {
+        "id": "TH-FND-03-1",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Algebraic notation conventions",
+        "concept_ids": [
+          "C-FND-03-NOTATION"
+        ],
+        "objective_ids": [
+          "LO-FND-03-5"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "In algebra:\n• $3a$ means $3 \\times a$ — we drop the multiplication sign.\n• $ab$ means $a \\times b$.\n• $\\tfrac{a}{b}$ means $a \\div b$.\n• $a^2$ means $a \\times a$.\n• [[red:Write $3a$, never $a3$.]] The number always goes before the letter.\n• [[red:Write $a$ not $1a$; write $-b$ not $-1b$.]]"
+      },
+      {
+        "id": "TH-FND-03-2",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Terms, expressions, equations",
+        "concept_ids": [
+          "C-FND-03-VOCAB"
+        ],
+        "objective_ids": [
+          "LO-FND-03-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• A **term** is a single part of an expression: $5x$, $-3y^2$, $7$.\n• An **expression** is a collection of terms with no equals sign: $2x + 3y - 1$.\n• An **equation** has an equals sign and a value to find: $2x + 5 = 13$.\n• A **coefficient** is the number in front of a letter: in $7m$, the coefficient is $7$."
+      },
+      {
+        "id": "TH-FND-03-3",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Substitution",
+        "concept_ids": [
+          "C-FND-03-SUB"
+        ],
+        "objective_ids": [
+          "LO-FND-03-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To **substitute**, replace each letter with its given value and compute:\n\n**Example:** Find $3a - 2b$ when $a = 5$, $b = 4$.\n\n$3(5) - 2(4) = 15 - 8 = 7$\n\n[[green:Use brackets around negative values to avoid sign errors: if $a = -2$, write $3(-2) = -6$.]]"
+      },
+      {
+        "id": "TH-FND-03-4",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Like terms",
+        "concept_ids": [
+          "C-FND-03-LIKE"
+        ],
+        "objective_ids": [
+          "LO-FND-03-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Like terms** have the same letter(s) raised to the same power:\n• $5x$ and $-2x$ are like terms (both have $x$).\n• $3x^2$ and $7x^2$ are like terms (both have $x^2$).\n• [[red:$4x$ and $4x^2$ are **not** like terms — different powers.]]"
+      },
+      {
+        "id": "TH-FND-03-5",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Collecting like terms",
+        "concept_ids": [
+          "C-FND-03-COLLECT"
+        ],
+        "objective_ids": [
+          "LO-FND-03-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Add or subtract the coefficients of like terms:\n\n$$4x + 3y - x + 5y = (4x - x) + (3y + 5y) = 3x + 8y$$\n\nDifferent letters and constant numbers cannot be combined."
+      },
+      {
+        "id": "TH-FND-03-6",
+        "type": "worked_example",
+        "scope": "CORE",
+        "title": "Collecting like terms with negatives",
+        "concept_ids": [
+          "C-FND-03-COLLECT"
+        ],
+        "objective_ids": [
+          "LO-FND-03-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Simplify** $7a - 3b + 2a + b - 4$.\n\nGroup like terms: $(7a + 2a) + (-3b + b) + (-4) = 9a - 2b - 4$."
+      },
+      {
+        "id": "TH-FND-03-7",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Solving one-step equations",
+        "concept_ids": [
+          "C-FND-03-SOLVE"
+        ],
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Use **inverse operations** to isolate the unknown:\n\n• $x + 5 = 12$ → subtract $5$: $x = 7$\n• $x - 3 = 10$ → add $3$: $x = 13$\n• $4x = 20$ → divide by $4$: $x = 5$\n• $\\tfrac{x}{3} = 6$ → multiply by $3$: $x = 18$\n\n[[green:Whatever you do to one side, you must do to the other.]]"
+      },
+      {
+        "id": "TH-FND-03-8",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Solving two-step equations",
+        "concept_ids": [
+          "C-FND-03-SOLVE2"
+        ],
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Example:** Solve $2x + 5 = 13$.\n\n1. Subtract $5$: $2x = 8$\n2. Divide by $2$: $x = 4$\n\n**Check:** $2(4) + 5 = 13$ ✓\n\n[[red:Always undo addition/subtraction first, then multiplication/division.]]"
+      },
+      {
+        "id": "TH-FND-03-9",
+        "type": "worked_example",
+        "scope": "CORE",
+        "title": "Equation with the unknown on the right",
+        "concept_ids": [
+          "C-FND-03-SOLVE2"
+        ],
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Solve** $15 = 3y - 6$.\n\n1. Add $6$: $21 = 3y$\n2. Divide by $3$: $y = 7$\n\nIt does not matter which side the unknown is on — apply the same method."
+      },
+      {
+        "id": "TH-FND-03-10",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Why checking matters",
+        "concept_ids": [
+          "C-FND-03-CHECK"
+        ],
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "After solving, substitute your answer back into the original equation to check it works. This takes a few seconds and catches sign errors and arithmetic mistakes — two of the most common reasons students lose marks."
+      },
+      {
+        "id": "TH-FND-03-11",
+        "type": "summary",
+        "scope": "CORE",
+        "title": "Key algebra rules",
+        "concept_ids": [
+          "C-FND-03-INTRO"
+        ],
+        "objective_ids": [
+          "LO-FND-03-1",
+          "LO-FND-03-3",
+          "LO-FND-03-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• A letter represents a number; $3a$ means $3 \\times a$.\n• Only like terms can be combined: $5x + 2x = 7x$, but $5x + 2y$ cannot simplify further.\n• To solve an equation, use inverse operations to isolate the variable.\n• Always check your solution by substituting back."
+      }
+    ],
+    "keywords": [
+      "algebra",
+      "expression",
+      "equation",
+      "term",
+      "coefficient",
+      "like terms",
+      "substitute",
+      "solve",
+      "inverse operation",
+      "variable"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FND-03-1",
+        "title": "Substitution with negative values",
+        "objective_ids": [
+          "LO-FND-03-2"
+        ],
+        "concept_ids": [
+          "C-FND-03-SUB"
+        ],
+        "difficulty": 1,
+        "statement": "Find the value of $a^2 - 3a + 1$ when $a = -2$.",
+        "solution_steps": [
+          {
+            "step": "$a^2 = (-2)^2 = 4$",
+            "explanation": "Square $-2$: negative times negative is positive."
+          },
+          {
+            "step": "$-3a = -3 \\times (-2) = 6$",
+            "explanation": "Multiply; two negatives give positive."
+          },
+          {
+            "step": "$4 + 6 + 1 = 11$",
+            "explanation": "Add the results."
+          }
+        ],
+        "common_mistake": "Writing $(-2)^2 = -4$ (forgetting that squaring a negative gives a positive).",
+        "exam_tip": "Use brackets around negative numbers when substituting to keep track of signs."
+      },
+      {
+        "id": "WE-FND-03-2",
+        "title": "Collecting like terms",
+        "objective_ids": [
+          "LO-FND-03-3"
+        ],
+        "concept_ids": [
+          "C-FND-03-COLLECT"
+        ],
+        "difficulty": 1,
+        "statement": "Simplify $6x + 4y - 2x + y - 3$.",
+        "solution_steps": [
+          {
+            "step": "Group $x$ terms: $6x - 2x = 4x$",
+            "explanation": "Combine the $x$ terms."
+          },
+          {
+            "step": "Group $y$ terms: $4y + y = 5y$",
+            "explanation": "Combine the $y$ terms."
+          },
+          {
+            "step": "Result: $4x + 5y - 3$",
+            "explanation": "Write the simplified expression."
+          }
+        ],
+        "common_mistake": "Combining $4y$ and $-3$ to get $1y$.",
+        "exam_tip": "Underline each group of like terms in a different way to keep track."
+      },
+      {
+        "id": "WE-FND-03-3",
+        "title": "Solving a two-step equation",
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "concept_ids": [
+          "C-FND-03-SOLVE2"
+        ],
+        "difficulty": 1,
+        "statement": "Solve $5x - 3 = 22$.",
+        "solution_steps": [
+          {
+            "step": "Add $3$: $5x = 25$",
+            "explanation": "Undo the subtraction first."
+          },
+          {
+            "step": "Divide by $5$: $x = 5$",
+            "explanation": "Then undo the multiplication."
+          },
+          {
+            "step": "Check: $5(5) - 3 = 25 - 3 = 22$ ✓",
+            "explanation": "Substitute back to verify."
+          }
+        ],
+        "common_mistake": "Dividing by $5$ before adding $3$.",
+        "exam_tip": "Always deal with the + or − first, then the × or ÷."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FND-03-1",
+        "statement": "If $x = 3$, find $2x^2 + x$.",
+        "hints": [
+          "$x^2 = 9$",
+          "$2(9) + 3 = 21$"
+        ],
+        "answer": "$21$"
+      },
+      {
+        "id": "GE-FND-03-2",
+        "statement": "Simplify $3m + 5n - m + 2n$.",
+        "hints": [
+          "Combine $m$ terms and $n$ terms separately."
+        ],
+        "answer": "$2m + 7n$"
+      },
+      {
+        "id": "GE-FND-03-3",
+        "statement": "Solve $4x + 1 = 17$.",
+        "hints": [
+          "Subtract $1$ from both sides.",
+          "Then divide by $4$."
+        ],
+        "answer": "$x = 4$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FND-03-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-1"
+        ],
+        "concept_ids": [
+          "C-FND-03-NOTATION"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Write an algebraic expression for: (a) 'three more than $x$' (b) 'twice $y$ minus five' (c) '$n$ squared plus four'.",
+        "answer": "(a) $x + 3$ (b) $2y - 5$ (c) $n^2 + 4$",
+        "full_solution": "(a) $x + 3$. (b) $2y - 5$. (c) $n^2 + 4$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-03-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-2"
+        ],
+        "concept_ids": [
+          "C-FND-03-SUB"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "If $a = 3$ and $b = -2$, evaluate: (a) $4a + b$ (b) $a^2 - b$ (c) $2ab$.",
+        "answer": "(a) $10$ (b) $11$ (c) $-12$",
+        "full_solution": "(a) $4(3) + (-2) = 12 - 2 = 10$. (b) $9 - (-2) = 9 + 2 = 11$. (c) $2(3)(-2) = -12$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-03-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-3"
+        ],
+        "concept_ids": [
+          "C-FND-03-COLLECT"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Simplify: (a) $5a + 3a$ (b) $7x - 2x + 4$ (c) $3p + 2q - p - 5q$.",
+        "answer": "(a) $8a$ (b) $5x + 4$ (c) $2p - 3q$",
+        "full_solution": "(a) $5a + 3a = 8a$. (b) $7x - 2x = 5x$, so $5x + 4$. (c) $(3p - p) + (2q - 5q) = 2p - 3q$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-03-S4",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "concept_ids": [
+          "C-FND-03-SOLVE"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Solve: (a) $x + 8 = 15$ (b) $x - 3 = 11$ (c) $5x = 35$ (d) $\\tfrac{x}{4} = 6$.",
+        "answer": "(a) $x = 7$ (b) $x = 14$ (c) $x = 7$ (d) $x = 24$",
+        "full_solution": "(a) $x = 15 - 8 = 7$. (b) $x = 11 + 3 = 14$. (c) $x = 35 \\div 5 = 7$. (d) $x = 6 \\times 4 = 24$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-03-S5",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "concept_ids": [
+          "C-FND-03-SOLVE2"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Solve: (a) $3x + 7 = 22$ (b) $4x - 5 = 11$ (c) $\\tfrac{x}{2} + 3 = 10$.",
+        "answer": "(a) $x = 5$ (b) $x = 4$ (c) $x = 14$",
+        "full_solution": "(a) $3x = 15$, $x = 5$. (b) $4x = 16$, $x = 4$. (c) $\\tfrac{x}{2} = 7$, $x = 14$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-03-S6",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-2"
+        ],
+        "concept_ids": [
+          "C-FND-03-SUB"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Given $p = -1$ and $q = 5$, evaluate $3p^2 + 2pq - q$.",
+        "answer": "$-12$",
+        "full_solution": "$3(-1)^2 = 3$. $2(-1)(5) = -10$. $-q = -5$. Total: $3 - 10 - 5 = -12$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-03-S7",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-3"
+        ],
+        "concept_ids": [
+          "C-FND-03-COLLECT"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Simplify $4x^2 + 3x - x^2 + 5x - 2$.",
+        "answer": "$3x^2 + 8x - 2$",
+        "full_solution": "$(4x^2 - x^2) + (3x + 5x) - 2 = 3x^2 + 8x - 2$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-03-S8",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-03-4"
+        ],
+        "concept_ids": [
+          "C-FND-03-SOLVE2"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Solve $20 - 3x = 8$.",
+        "answer": "$x = 4$",
+        "full_solution": "$-3x = 8 - 20 = -12$. $x = -12 \\div (-3) = 4$.",
+        "common_errors": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-FND-03-1",
+        "stem": "If $y = -3$, what is $y^2 + 1$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$-8$",
+            "misconception_id": "MIS-FND-03-1",
+            "why_wrong": "Computes $(-3)^2 = -9$ (wrong sign on the square)."
+          },
+          {
+            "key": "B",
+            "text": "$10$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$8$",
+            "misconception_id": null,
+            "why_wrong": "Computes $(-3)^2 = 9$ but subtracts $1$ instead of adding."
+          },
+          {
+            "key": "D",
+            "text": "$-10$",
+            "misconception_id": null,
+            "why_wrong": "Both sign errors."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$y^2 = (-3)^2 = 9$, so $9 + 1 = 10$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-03-2",
+        "concept_id": "C-FND-03-SUB"
+      },
+      {
+        "id": "MCQ-FND-03-2",
+        "stem": "Simplify $8m - 3n + 2m + n$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$10m - 2n$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$10m - 4n$",
+            "misconception_id": null,
+            "why_wrong": "Subtracts $n$ instead of adding."
+          },
+          {
+            "key": "C",
+            "text": "$6m - 4n$",
+            "misconception_id": null,
+            "why_wrong": "Subtracts the $m$ terms."
+          },
+          {
+            "key": "D",
+            "text": "$8mn$",
+            "misconception_id": "MIS-FND-03-2",
+            "why_wrong": "Combines unlike terms and multiplies."
+          }
+        ],
+        "correct": "A",
+        "explanation": "$8m + 2m = 10m$ and $-3n + n = -2n$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-03-3",
+        "concept_id": "C-FND-03-COLLECT"
+      },
+      {
+        "id": "MCQ-FND-03-3",
+        "stem": "Solve $2x + 3 = 15$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$x = 9$",
+            "misconception_id": null,
+            "why_wrong": "Only subtracts $3$ from $15$ without dividing."
+          },
+          {
+            "key": "B",
+            "text": "$x = 6$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$x = 7.5$",
+            "misconception_id": null,
+            "why_wrong": "Divides the whole right side by $2$ first."
+          },
+          {
+            "key": "D",
+            "text": "$x = 24$",
+            "misconception_id": null,
+            "why_wrong": "Subtracts wrong and then multiplies."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$2x = 12$, so $x = 6$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-03-4",
+        "concept_id": "C-FND-03-SOLVE2"
+      },
+      {
+        "id": "MCQ-FND-03-4",
+        "stem": "Which of these is an equation?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$3x + 5$",
+            "misconception_id": null,
+            "why_wrong": "This is an expression (no equals sign)."
+          },
+          {
+            "key": "B",
+            "text": "$3x + 5 = 20$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$3, 5, 7, 9, \\ldots$",
+            "misconception_id": null,
+            "why_wrong": "This is a sequence."
+          },
+          {
+            "key": "D",
+            "text": "$x > 3$",
+            "misconception_id": null,
+            "why_wrong": "This is an inequality."
+          }
+        ],
+        "correct": "B",
+        "explanation": "An equation contains an equals sign and can be solved for an unknown.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-03-1",
+        "concept_id": "C-FND-03-VOCAB"
+      },
+      {
+        "id": "MCQ-FND-03-5",
+        "stem": "What is the coefficient of $x$ in $4x^2 - 7x + 2$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$4$",
+            "misconception_id": null,
+            "why_wrong": "That is the coefficient of $x^2$."
+          },
+          {
+            "key": "B",
+            "text": "$-7$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$7$",
+            "misconception_id": null,
+            "why_wrong": "Ignores the negative sign."
+          },
+          {
+            "key": "D",
+            "text": "$2$",
+            "misconception_id": null,
+            "why_wrong": "That is the constant term."
+          }
+        ],
+        "correct": "B",
+        "explanation": "The coefficient is the number multiplying the letter. The $x$ term is $-7x$, so the coefficient is $-7$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-03-5",
+        "concept_id": "C-FND-03-VOCAB"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-FND-03-1",
+        "kind": "definition",
+        "front": "What is a variable?",
+        "back": "A letter that represents a number whose value can change or is unknown.",
+        "concept_id": "C-FND-03-INTRO",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-03-2",
+        "kind": "definition",
+        "front": "What is the difference between an expression and an equation?",
+        "back": "An expression has no equals sign (e.g. $3x + 2$); an equation does (e.g. $3x + 2 = 11$).",
+        "concept_id": "C-FND-03-VOCAB",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-03-3",
+        "kind": "rule",
+        "front": "What does it mean to 'collect like terms'?",
+        "back": "Add or subtract terms that have the same letter(s) and power. For example, $5x + 2x = 7x$.",
+        "concept_id": "C-FND-03-COLLECT",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-03-4",
+        "kind": "rule",
+        "front": "How do you solve a one-step equation?",
+        "back": "Use the inverse (opposite) operation. Addition ↔ subtraction, multiplication ↔ division.",
+        "concept_id": "C-FND-03-SOLVE",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-03-5",
+        "kind": "rule",
+        "front": "In $5ab$, what does the $5$ represent?",
+        "back": "The coefficient — the number multiplying the variables.",
+        "concept_id": "C-FND-03-NOTATION",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-03-6",
+        "kind": "definition",
+        "front": "What does 'substitute' mean in algebra?",
+        "back": "Replace each letter with a given number, then work out the value of the expression.",
+        "concept_id": "C-FND-03-SUB",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-FND-03-1",
+        "description": "Thinking $(-3)^2 = -9$ (not squaring the negative correctly).",
+        "remedy": "$(-3)^2 = (-3) \\times (-3) = +9$. Same signs → positive."
+      },
+      {
+        "id": "MIS-FND-03-2",
+        "description": "Combining unlike terms: writing $5x + 3y = 8xy$.",
+        "remedy": "You can only add or subtract terms with the same letter and power."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "id": "CM-FND-03-1",
+        "description": "Forgetting to multiply the coefficient when substituting.",
+        "correction": "If $x = 4$, then $3x = 3 \\times 4 = 12$, not $34$."
+      },
+      {
+        "id": "CM-FND-03-2",
+        "description": "Applying inverse operations in the wrong order when solving two-step equations.",
+        "correction": "Undo + or − first, then undo × or ÷."
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "Letters represent numbers; $3a$ means $3 \\times a$.",
+        "Substitute by replacing letters with values and computing carefully.",
+        "Only like terms (same letter, same power) can be combined.",
+        "Solve equations by applying inverse operations to both sides.",
+        "Always check your answer by substituting it back."
+      ],
+      "next_steps": "You are now ready to explore coordinate geometry and more complex equations."
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEMATHS::U00_Foundations::basic_algebra",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 3
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "04_Coordinates_and_Graphs.json": {
+    "id": "L04",
+    "title": "Coordinates and Graphs",
+    "subject": "Mathematics",
+    "course_label": "Cambridge IGCSE Mathematics 0580 · Foundations · Core",
+    "unit_id": "U-MATH-FOUNDATIONS",
+    "estimated_length": "0.75 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Cambridge IGCSE Mathematics 0580",
+      "codes": [
+        "FOUNDATION"
+      ],
+      "status": "SUPPLEMENTARY",
+      "track": "Core"
+    },
+    "objectives": [
+      {
+        "id": "LO-FND-04-1",
+        "text": "Understand the Cartesian coordinate system with $x$- and $y$-axes."
+      },
+      {
+        "id": "LO-FND-04-2",
+        "text": "Plot and read coordinates in all four quadrants."
+      },
+      {
+        "id": "LO-FND-04-3",
+        "text": "Identify the quadrant a point lies in from its coordinates."
+      },
+      {
+        "id": "LO-FND-04-4",
+        "text": "Draw simple graphs from a table of values."
+      },
+      {
+        "id": "LO-FND-04-5",
+        "text": "Read values from a graph, including between plotted points."
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DI-FND-04-1",
+        "stem": "What are the coordinates of the origin?",
+        "answer": "$(0, 0)$",
+        "objective_id": "LO-FND-04-1"
+      },
+      {
+        "id": "DI-FND-04-2",
+        "stem": "In which quadrant is the point $(-3, 2)$?",
+        "answer": "Second quadrant",
+        "objective_id": "LO-FND-04-3"
+      },
+      {
+        "id": "DI-FND-04-3",
+        "stem": "A point has coordinates $(4, -1)$. How far right of the $y$-axis is it?",
+        "answer": "$4$ units",
+        "objective_id": "LO-FND-04-2"
+      },
+      {
+        "id": "DI-FND-04-4",
+        "stem": "If $y = 2x + 1$, find $y$ when $x = 3$.",
+        "answer": "$7$",
+        "objective_id": "LO-FND-04-4"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-FND-04-0",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "The coordinate plane as an address system",
+        "concept_ids": [
+          "C-FND-04-PLANE"
+        ],
+        "objective_ids": [
+          "LO-FND-04-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "A coordinate system is like a street grid. The horizontal road ($x$-axis) and the vertical road ($y$-axis) cross at the **origin** $(0,0)$. Every point's address is a pair of numbers $(x, y)$: go $x$ units along, then $y$ units up (or down if negative)."
+      },
+      {
+        "id": "TH-FND-04-1",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "The Cartesian plane",
+        "concept_ids": [
+          "C-FND-04-PLANE"
+        ],
+        "objective_ids": [
+          "LO-FND-04-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "The **Cartesian plane** (named after René Descartes) has:\n• A horizontal **$x$-axis** — positive to the right, negative to the left.\n• A vertical **$y$-axis** — positive upward, negative downward.\n• The **origin** where they meet: $(0, 0)$.\n\nA point is written $(x, y)$: [[green:$x$ first (along), then $y$ (up).]]"
+      },
+      {
+        "id": "TH-FND-04-2",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "The four quadrants",
+        "concept_ids": [
+          "C-FND-04-QUAD"
+        ],
+        "objective_ids": [
+          "LO-FND-04-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "The axes divide the plane into four **quadrants**, numbered anticlockwise from the top right:\n\n| Quadrant | $x$ | $y$ | Example |\n|---|---|---|---|\n| 1st (top right) | $+$ | $+$ | $(3, 2)$ |\n| 2nd (top left) | $-$ | $+$ | $(-4, 1)$ |\n| 3rd (bottom left) | $-$ | $-$ | $(-2, -5)$ |\n| 4th (bottom right) | $+$ | $-$ | $(1, -3)$ |\n\nPoints on the axes are not in any quadrant."
+      },
+      {
+        "id": "TH-FND-04-3",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Plotting a point",
+        "concept_ids": [
+          "C-FND-04-PLOT"
+        ],
+        "objective_ids": [
+          "LO-FND-04-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To plot $(3, -2)$:\n1. Start at the origin.\n2. Move $3$ units to the right (positive $x$).\n3. Move $2$ units down (negative $y$).\n4. Mark the point with a cross or dot.\n\n[[red:Always go along the $x$-axis first, then up/down.]] A helpful mnemonic: 'along the corridor, then up the stairs'."
+      },
+      {
+        "id": "TH-FND-04-4",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Reading coordinates from a grid",
+        "concept_ids": [
+          "C-FND-04-READ"
+        ],
+        "objective_ids": [
+          "LO-FND-04-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To read the coordinates of a plotted point:\n1. Draw a vertical line from the point to the $x$-axis — this gives the $x$-coordinate.\n2. Draw a horizontal line from the point to the $y$-axis — this gives the $y$-coordinate.\n3. Write them as $(x, y)$."
+      },
+      {
+        "id": "TH-FND-04-5",
+        "type": "worked_example",
+        "scope": "CORE",
+        "title": "Plotting points in all four quadrants",
+        "concept_ids": [
+          "C-FND-04-PLOT"
+        ],
+        "objective_ids": [
+          "LO-FND-04-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Plot and label these points:** $A(2, 3)$, $B(-4, 1)$, $C(-1, -3)$, $D(3, -2)$.\n\n• $A$ is in the 1st quadrant (right 2, up 3).\n• $B$ is in the 2nd quadrant (left 4, up 1).\n• $C$ is in the 3rd quadrant (left 1, down 3).\n• $D$ is in the 4th quadrant (right 3, down 2)."
+      },
+      {
+        "id": "TH-FND-04-6",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Drawing a graph from a table of values",
+        "concept_ids": [
+          "C-FND-04-GRAPH"
+        ],
+        "objective_ids": [
+          "LO-FND-04-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To draw the graph of $y = 2x - 1$:\n\n1. **Make a table** of $x$ and $y$ values:\n\n| $x$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$ |\n|---|---|---|---|---|---|---|\n| $y$ | $-5$ | $-3$ | $-1$ | $1$ | $3$ | $5$ |\n\n2. **Plot** each pair $(x, y)$.\n3. **Join** the points with a straight line (for a linear equation).\n4. **Label** the line with its equation."
+      },
+      {
+        "id": "TH-FND-04-7",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "What straight-line graphs look like",
+        "concept_ids": [
+          "C-FND-04-LINEAR"
+        ],
+        "objective_ids": [
+          "LO-FND-04-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "If the equation has no $x^2$ term (it is 'linear'), the graph is a straight line. Equations like $y = x + 3$, $y = -2x$, and $y = \\tfrac{1}{2}x - 1$ all produce straight lines.\n\nThe number multiplying $x$ controls the steepness (gradient), and the constant shifts the line up or down."
+      },
+      {
+        "id": "TH-FND-04-8",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Reading values from a graph",
+        "concept_ids": [
+          "C-FND-04-READGRAPH"
+        ],
+        "objective_ids": [
+          "LO-FND-04-5"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To find $y$ when $x = 2$ from a graph:\n1. Find $x = 2$ on the horizontal axis.\n2. Draw a vertical line up to the graph.\n3. From where it meets the graph, draw a horizontal line to the $y$-axis.\n4. Read the $y$-value.\n\n[[green:If the point falls between grid lines, give your best estimate.]]"
+      },
+      {
+        "id": "TH-FND-04-9",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Key points on axes",
+        "concept_ids": [
+          "C-FND-04-AXES"
+        ],
+        "objective_ids": [
+          "LO-FND-04-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• Every point on the $x$-axis has $y = 0$: e.g. $(5, 0)$, $(-3, 0)$.\n• Every point on the $y$-axis has $x = 0$: e.g. $(0, 4)$, $(0, -2)$.\n• The **origin** is the only point on both axes: $(0, 0)$."
+      },
+      {
+        "id": "TH-FND-04-10",
+        "type": "summary",
+        "scope": "CORE",
+        "title": "Coordinates checklist",
+        "concept_ids": [
+          "C-FND-04-PLANE"
+        ],
+        "objective_ids": [
+          "LO-FND-04-1",
+          "LO-FND-04-2",
+          "LO-FND-04-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• Coordinates are written $(x, y)$ — horizontal first, vertical second.\n• The four quadrants are numbered anticlockwise from the top right.\n• 'Along the corridor, up the stairs' reminds you of the plotting order.\n• A linear equation produces a straight-line graph.\n• Use a table of values to plot a graph systematically."
+      }
+    ],
+    "keywords": [
+      "coordinate",
+      "Cartesian plane",
+      "x-axis",
+      "y-axis",
+      "origin",
+      "quadrant",
+      "plot",
+      "graph",
+      "linear",
+      "table of values"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FND-04-1",
+        "title": "Identifying quadrants",
+        "objective_ids": [
+          "LO-FND-04-3"
+        ],
+        "concept_ids": [
+          "C-FND-04-QUAD"
+        ],
+        "difficulty": 1,
+        "statement": "State the quadrant for each point: (a) $(5, -3)$ (b) $(-2, -4)$ (c) $(-1, 6)$.",
+        "solution_steps": [
+          {
+            "step": "(a) $x > 0$, $y < 0$: 4th quadrant.",
+            "explanation": "Positive $x$, negative $y$."
+          },
+          {
+            "step": "(b) $x < 0$, $y < 0$: 3rd quadrant.",
+            "explanation": "Both negative."
+          },
+          {
+            "step": "(c) $x < 0$, $y > 0$: 2nd quadrant.",
+            "explanation": "Negative $x$, positive $y$."
+          }
+        ],
+        "common_mistake": "Reversing $x$ and $y$ — writing the quadrant for $(y, x)$ instead.",
+        "exam_tip": "Remember: $x$ is always the first number in the pair."
+      },
+      {
+        "id": "WE-FND-04-2",
+        "title": "Completing a table of values",
+        "objective_ids": [
+          "LO-FND-04-4"
+        ],
+        "concept_ids": [
+          "C-FND-04-GRAPH"
+        ],
+        "difficulty": 1,
+        "statement": "Complete a table of values for $y = 3x + 2$ using $x = -1, 0, 1, 2$.",
+        "solution_steps": [
+          {
+            "step": "$x = -1$: $y = 3(-1) + 2 = -1$",
+            "explanation": "Substitute each $x$ value."
+          },
+          {
+            "step": "$x = 0$: $y = 2$; $x = 1$: $y = 5$; $x = 2$: $y = 8$",
+            "explanation": "Continue for all values."
+          }
+        ],
+        "common_mistake": "Writing $3(-1) = -3$ but then adding $2$ incorrectly to get $-5$.",
+        "exam_tip": "Substitute carefully, especially with negative $x$ values."
+      },
+      {
+        "id": "WE-FND-04-3",
+        "title": "Reading a graph",
+        "objective_ids": [
+          "LO-FND-04-5"
+        ],
+        "concept_ids": [
+          "C-FND-04-READGRAPH"
+        ],
+        "difficulty": 1,
+        "statement": "From the graph of $y = x + 1$, read the value of $y$ when $x = 2.5$.",
+        "solution_steps": [
+          {
+            "step": "Locate $x = 2.5$ on the horizontal axis.",
+            "explanation": "Halfway between $2$ and $3$."
+          },
+          {
+            "step": "Go up to the line, then across to the $y$-axis: $y = 3.5$.",
+            "explanation": "$2.5 + 1 = 3.5$."
+          }
+        ],
+        "common_mistake": "Reading the wrong axis.",
+        "exam_tip": "Use a ruler to draw your projection lines neatly."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FND-04-1",
+        "statement": "Write the coordinates of a point that is $3$ units left and $5$ units up from the origin.",
+        "hints": [
+          "Left means negative $x$.",
+          "Up means positive $y$."
+        ],
+        "answer": "$(-3, 5)$"
+      },
+      {
+        "id": "GE-FND-04-2",
+        "statement": "In which quadrant is $(-7, -1)$?",
+        "hints": [
+          "Both coordinates are negative."
+        ],
+        "answer": "3rd quadrant"
+      },
+      {
+        "id": "GE-FND-04-3",
+        "statement": "Complete: if $y = x - 4$, then when $x = 6$, $y = \\ldots$",
+        "hints": [
+          "$6 - 4 = ?$"
+        ],
+        "answer": "$y = 2$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FND-04-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-2"
+        ],
+        "concept_ids": [
+          "C-FND-04-PLOT"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Write the coordinates of these points: (a) $4$ right, $2$ up from origin (b) $1$ left, $3$ down (c) $5$ right, on the $x$-axis.",
+        "answer": "(a) $(4, 2)$ (b) $(-1, -3)$ (c) $(5, 0)$",
+        "full_solution": "(a) Right = positive $x$, up = positive $y$: $(4, 2)$. (b) Left = $-1$, down = $-3$: $(-1, -3)$. (c) On $x$-axis means $y = 0$: $(5, 0)$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-04-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-3"
+        ],
+        "concept_ids": [
+          "C-FND-04-QUAD"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "State the quadrant: (a) $(3, 7)$ (b) $(-5, 2)$ (c) $(-3, -8)$ (d) $(6, -1)$.",
+        "answer": "(a) 1st (b) 2nd (c) 3rd (d) 4th",
+        "full_solution": "(a) Both positive → 1st. (b) $x<0, y>0$ → 2nd. (c) Both negative → 3rd. (d) $x>0, y<0$ → 4th.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-04-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-4"
+        ],
+        "concept_ids": [
+          "C-FND-04-GRAPH"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Complete a table for $y = 2x + 3$ with $x = -2, -1, 0, 1, 2$ and plot the graph.",
+        "answer": "$x=-2: y=-1$; $x=-1: y=1$; $x=0: y=3$; $x=1: y=5$; $x=2: y=7$",
+        "full_solution": "Substituting: $y = 2(-2)+3 = -1$, $y = 2(-1)+3 = 1$, $y = 2(0)+3 = 3$, $y = 2(1)+3 = 5$, $y = 2(2)+3 = 7$. Plot and join with a straight line.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-04-S4",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-1"
+        ],
+        "concept_ids": [
+          "C-FND-04-AXES"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Write three different points that lie on the $x$-axis.",
+        "answer": "Any three with $y = 0$, e.g. $(1,0)$, $(-4,0)$, $(0,0)$",
+        "full_solution": "Every point on the $x$-axis has $y$-coordinate equal to $0$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-04-S5",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-2"
+        ],
+        "concept_ids": [
+          "C-FND-04-PLOT"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Plot the points $A(0, 4)$, $B(4, 0)$, $C(0, -2)$, $D(-3, 0)$ and describe what you notice.",
+        "answer": "They all lie on the axes.",
+        "full_solution": "$A$ and $C$ are on the $y$-axis ($x = 0$). $B$ and $D$ are on the $x$-axis ($y = 0$).",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-04-S6",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-4"
+        ],
+        "concept_ids": [
+          "C-FND-04-GRAPH"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Complete a table for $y = -x + 4$ with $x = 0, 1, 2, 3, 4$ and describe the graph.",
+        "answer": "$y = 4, 3, 2, 1, 0$. Straight line sloping downward from left to right.",
+        "full_solution": "When $x = 0$: $y = 4$. When $x = 4$: $y = 0$. The negative coefficient makes the line slope down.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-04-S7",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-5"
+        ],
+        "concept_ids": [
+          "C-FND-04-READGRAPH"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "A graph shows the line $y = \\tfrac{1}{2}x + 1$. Use the equation to find $y$ when $x = 5$.",
+        "answer": "$y = 3.5$",
+        "full_solution": "$y = \\tfrac{1}{2}(5) + 1 = 2.5 + 1 = 3.5$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-04-S8",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-04-3"
+        ],
+        "concept_ids": [
+          "C-FND-04-QUAD"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Point $P$ has coordinates $(a, b)$ where $a > 0$ and $b < 0$. What quadrant is $P$ in? What quadrant is $(-a, -b)$ in?",
+        "answer": "$P$ is in the 4th quadrant. $(-a, -b)$ is in the 2nd quadrant.",
+        "full_solution": "$P$: positive $x$, negative $y$ → 4th. $(-a, -b)$: negative $x$, positive $y$ → 2nd (the opposite quadrant).",
+        "common_errors": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-FND-04-1",
+        "stem": "What are the coordinates of the origin?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$(1, 1)$",
+            "misconception_id": null,
+            "why_wrong": "$(1, 1)$ is one unit from the origin in each direction."
+          },
+          {
+            "key": "B",
+            "text": "$(0, 0)$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$(0, 1)$",
+            "misconception_id": null,
+            "why_wrong": "This is one unit up on the $y$-axis."
+          },
+          {
+            "key": "D",
+            "text": "$(x, y)$",
+            "misconception_id": null,
+            "why_wrong": "$(x, y)$ is a general point, not a specific one."
+          }
+        ],
+        "correct": "B",
+        "explanation": "The origin is where the axes cross, at $(0, 0)$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-04-1",
+        "concept_id": "C-FND-04-PLANE"
+      },
+      {
+        "id": "MCQ-FND-04-2",
+        "stem": "In which quadrant is $(-2, 5)$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "1st",
+            "misconception_id": null,
+            "why_wrong": "1st quadrant has both coordinates positive."
+          },
+          {
+            "key": "B",
+            "text": "2nd",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "3rd",
+            "misconception_id": null,
+            "why_wrong": "3rd quadrant has both coordinates negative."
+          },
+          {
+            "key": "D",
+            "text": "4th",
+            "misconception_id": null,
+            "why_wrong": "4th quadrant has $x > 0$ and $y < 0$."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$x < 0$ and $y > 0$: top left → 2nd quadrant.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-04-3",
+        "concept_id": "C-FND-04-QUAD"
+      },
+      {
+        "id": "MCQ-FND-04-3",
+        "stem": "Which point lies on the $y$-axis?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$(3, 0)$",
+            "misconception_id": null,
+            "why_wrong": "This lies on the $x$-axis ($y = 0$)."
+          },
+          {
+            "key": "B",
+            "text": "$(0, -4)$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$(1, 1)$",
+            "misconception_id": null,
+            "why_wrong": "Neither coordinate is zero."
+          },
+          {
+            "key": "D",
+            "text": "$(-2, 3)$",
+            "misconception_id": null,
+            "why_wrong": "This is in the 2nd quadrant."
+          }
+        ],
+        "correct": "B",
+        "explanation": "A point is on the $y$-axis when its $x$-coordinate is $0$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-04-1",
+        "concept_id": "C-FND-04-AXES"
+      },
+      {
+        "id": "MCQ-FND-04-4",
+        "stem": "The point $(3, -2)$ is plotted by going...",
+        "options": [
+          {
+            "key": "A",
+            "text": "$3$ right, $2$ up",
+            "misconception_id": null,
+            "why_wrong": "$y = -2$ means DOWN $2$."
+          },
+          {
+            "key": "B",
+            "text": "$3$ right, $2$ down",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$2$ left, $3$ down",
+            "misconception_id": "MIS-FND-04-1",
+            "why_wrong": "Swaps $x$ and $y$ and misreads signs."
+          },
+          {
+            "key": "D",
+            "text": "$3$ left, $2$ up",
+            "misconception_id": null,
+            "why_wrong": "$x = 3$ means RIGHT $3$."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$x = 3$: go right $3$. $y = -2$: go down $2$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-04-2",
+        "concept_id": "C-FND-04-PLOT"
+      },
+      {
+        "id": "MCQ-FND-04-5",
+        "stem": "If $y = x + 5$, what is $y$ when $x = -3$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$8$",
+            "misconception_id": null,
+            "why_wrong": "This would be $3 + 5$."
+          },
+          {
+            "key": "B",
+            "text": "$-8$",
+            "misconception_id": null,
+            "why_wrong": "This would be $-3 - 5$."
+          },
+          {
+            "key": "C",
+            "text": "$2$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$-2$",
+            "misconception_id": null,
+            "why_wrong": "Subtracts $5$ instead of adding."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$y = (-3) + 5 = 2$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-04-4",
+        "concept_id": "C-FND-04-GRAPH"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-FND-04-1",
+        "kind": "definition",
+        "front": "What is the origin?",
+        "back": "The point $(0, 0)$ where the $x$-axis and $y$-axis cross.",
+        "concept_id": "C-FND-04-PLANE",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-04-2",
+        "kind": "rule",
+        "front": "In $(x, y)$, which comes first?",
+        "back": "$x$ (horizontal) comes first, $y$ (vertical) second. 'Along the corridor, then up the stairs.'",
+        "concept_id": "C-FND-04-PLOT",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-04-3",
+        "kind": "definition",
+        "front": "Which quadrant has both coordinates negative?",
+        "back": "The 3rd quadrant (bottom left).",
+        "concept_id": "C-FND-04-QUAD",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-04-4",
+        "kind": "rule",
+        "front": "How do you know a point is on the $x$-axis?",
+        "back": "Its $y$-coordinate is $0$.",
+        "concept_id": "C-FND-04-AXES",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-04-5",
+        "kind": "rule",
+        "front": "What type of graph does a linear equation produce?",
+        "back": "A straight line.",
+        "concept_id": "C-FND-04-LINEAR",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-04-6",
+        "kind": "definition",
+        "front": "Name the four quadrants in order.",
+        "back": "1st (top right, $+,+$), 2nd (top left, $-,+$), 3rd (bottom left, $-,-$), 4th (bottom right, $+,-$).",
+        "concept_id": "C-FND-04-QUAD",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-FND-04-1",
+        "description": "Swapping the $x$- and $y$-coordinates when plotting or reading points.",
+        "remedy": "Always write $x$ first (horizontal), then $y$ (vertical). Remember: 'along the corridor, up the stairs'."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "id": "CM-FND-04-1",
+        "description": "Plotting $(-3, 2)$ as $3$ right and $2$ up.",
+        "correction": "Negative $x$ means go LEFT."
+      },
+      {
+        "id": "CM-FND-04-2",
+        "description": "Joining plotted points with a curve when the equation is linear.",
+        "correction": "If there is no $x^2$ or higher power, use a ruler — the graph should be a straight line."
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "Coordinates are written $(x, y)$: horizontal first, then vertical.",
+        "The four quadrants are numbered anticlockwise from the top right.",
+        "Points on the axes have one coordinate equal to zero.",
+        "A linear equation gives a straight-line graph.",
+        "To draw a graph, make a table of values, plot the points, and join them."
+      ],
+      "next_steps": "You are ready for gradient and straight-line graphs."
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEMATHS::U00_Foundations::coordinates_and_graphs",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 4
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "05_Units_and_Measurement.json": {
+    "id": "L05",
+    "title": "Units and Measurement",
+    "subject": "Mathematics",
+    "course_label": "Cambridge IGCSE Mathematics 0580 · Foundations · Core",
+    "unit_id": "U-MATH-FOUNDATIONS",
+    "estimated_length": "0.75 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Cambridge IGCSE Mathematics 0580",
+      "codes": [
+        "FOUNDATION"
+      ],
+      "status": "SUPPLEMENTARY",
+      "track": "Core"
+    },
+    "objectives": [
+      {
+        "id": "LO-FND-05-1",
+        "text": "Know the standard metric units for length, mass and capacity."
+      },
+      {
+        "id": "LO-FND-05-2",
+        "text": "Convert between metric units using powers of 10."
+      },
+      {
+        "id": "LO-FND-05-3",
+        "text": "Read values from scales accurately, including between marked divisions."
+      },
+      {
+        "id": "LO-FND-05-4",
+        "text": "Perform calculations with time, including the 24-hour clock."
+      },
+      {
+        "id": "LO-FND-05-5",
+        "text": "Choose appropriate units for a given measurement context."
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DI-FND-05-1",
+        "stem": "Convert $3.5\\,\\text{km}$ to metres.",
+        "answer": "$3500\\,\\text{m}$",
+        "objective_id": "LO-FND-05-2"
+      },
+      {
+        "id": "DI-FND-05-2",
+        "stem": "How many minutes in $2.5$ hours?",
+        "answer": "$150$ minutes",
+        "objective_id": "LO-FND-05-4"
+      },
+      {
+        "id": "DI-FND-05-3",
+        "stem": "Convert $450\\,\\text{g}$ to kilograms.",
+        "answer": "$0.45\\,\\text{kg}$",
+        "objective_id": "LO-FND-05-2"
+      },
+      {
+        "id": "DI-FND-05-4",
+        "stem": "What time is $15{:}30$ on the 12-hour clock?",
+        "answer": "$3{:}30\\,\\text{pm}$",
+        "objective_id": "LO-FND-05-4"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-FND-05-0",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Why measurement matters",
+        "concept_ids": [
+          "C-FND-05-INTRO"
+        ],
+        "objective_ids": [
+          "LO-FND-05-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Measurement turns the world into numbers we can compare, calculate with and communicate. You already measure every day — checking the time, weighing ingredients, reading a thermometer. In IGCSE Mathematics, accurate measurement and unit conversion underpin geometry, data, and real-world problem solving."
+      },
+      {
+        "id": "TH-FND-05-1",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Metric units of length",
+        "concept_ids": [
+          "C-FND-05-LENGTH"
+        ],
+        "objective_ids": [
+          "LO-FND-05-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "| Unit | Symbol | Relative size |\n|---|---|---|\n| kilometre | km | $1\\,\\text{km} = 1000\\,\\text{m}$ |\n| metre | m | base unit |\n| centimetre | cm | $1\\,\\text{m} = 100\\,\\text{cm}$ |\n| millimetre | mm | $1\\,\\text{cm} = 10\\,\\text{mm}$ |\n\n[[green:The prefix tells you the factor: *kilo* = $1000$, *centi* = $\\tfrac{1}{100}$, *milli* = $\\tfrac{1}{1000}$.]]"
+      },
+      {
+        "id": "TH-FND-05-2",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Metric units of mass and capacity",
+        "concept_ids": [
+          "C-FND-05-MASS"
+        ],
+        "objective_ids": [
+          "LO-FND-05-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Mass:** $1\\,\\text{kg} = 1000\\,\\text{g}$, $1\\,\\text{tonne} = 1000\\,\\text{kg}$\n\n**Capacity (volume of liquid):** $1\\,\\text{litre} = 1000\\,\\text{ml}$, $1\\,\\text{cl} = 10\\,\\text{ml}$\n\n[[red:Mass and weight are used interchangeably in everyday language, but scientifically they are different.]]"
+      },
+      {
+        "id": "TH-FND-05-3",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Converting between metric units",
+        "concept_ids": [
+          "C-FND-05-CONVERT"
+        ],
+        "objective_ids": [
+          "LO-FND-05-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To convert:\n• **Larger → smaller:** [[green:multiply]] (more smaller units fit).\n• **Smaller → larger:** [[red:divide]] (fewer bigger units needed).\n\n**Examples:**\n• $2.5\\,\\text{km} = 2.5 \\times 1000 = 2500\\,\\text{m}$\n• $350\\,\\text{g} = 350 \\div 1000 = 0.35\\,\\text{kg}$\n• $1.2\\,\\text{m} = 1.2 \\times 100 = 120\\,\\text{cm}$"
+      },
+      {
+        "id": "TH-FND-05-4",
+        "type": "worked_example",
+        "scope": "CORE",
+        "title": "Multi-step conversion",
+        "concept_ids": [
+          "C-FND-05-CONVERT"
+        ],
+        "objective_ids": [
+          "LO-FND-05-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Convert $4.7\\,\\text{km}$ to centimetres.**\n\n$4.7\\,\\text{km} = 4.7 \\times 1000\\,\\text{m} = 4700\\,\\text{m}$\n\n$4700\\,\\text{m} = 4700 \\times 100\\,\\text{cm} = 470\\,000\\,\\text{cm}$\n\nOr in one step: $\\times 100\\,000$."
+      },
+      {
+        "id": "TH-FND-05-5",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Reading a scale",
+        "concept_ids": [
+          "C-FND-05-SCALE"
+        ],
+        "objective_ids": [
+          "LO-FND-05-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To read a scale:\n1. Identify what two neighbouring marked values are.\n2. Count how many small divisions are between them.\n3. Work out what each small division is worth: $\\text{gap} \\div \\text{divisions}$.\n4. Count from the lower marked value to the pointer.\n\n**Example:** Marks at $20$ and $30$ with $5$ small divisions → each division = $2$."
+      },
+      {
+        "id": "TH-FND-05-6",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "The 24-hour clock",
+        "concept_ids": [
+          "C-FND-05-TIME"
+        ],
+        "objective_ids": [
+          "LO-FND-05-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "The 24-hour clock runs from $00{:}00$ (midnight) to $23{:}59$.\n\n| 12-hour | 24-hour |\n|---|---|\n| $12{:}00$ midnight | $00{:}00$ |\n| $8{:}30\\,\\text{am}$ | $08{:}30$ |\n| $12{:}00$ noon | $12{:}00$ |\n| $3{:}45\\,\\text{pm}$ | $15{:}45$ |\n| $11{:}15\\,\\text{pm}$ | $23{:}15$ |\n\nTo convert pm → 24-hour: add $12$ to the hours."
+      },
+      {
+        "id": "TH-FND-05-7",
+        "type": "procedure",
+        "scope": "CORE",
+        "title": "Time calculations",
+        "concept_ids": [
+          "C-FND-05-TIMECALC"
+        ],
+        "objective_ids": [
+          "LO-FND-05-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "To find the time between $09{:}45$ and $13{:}20$:\n\n1. From $09{:}45$ to $10{:}00$ = $15$ minutes.\n2. From $10{:}00$ to $13{:}00$ = $3$ hours.\n3. From $13{:}00$ to $13{:}20$ = $20$ minutes.\n4. Total = $3$ hours $35$ minutes.\n\n[[red:Do not subtract times like decimals. $13.20 - 9.45 \\neq 3.75$, because there are $60$ minutes in an hour, not $100$.]]"
+      },
+      {
+        "id": "TH-FND-05-8",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Choosing appropriate units",
+        "concept_ids": [
+          "C-FND-05-CHOOSE"
+        ],
+        "objective_ids": [
+          "LO-FND-05-5"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Choose the unit that gives a sensible number:\n\n• Length of a pencil: cm (not km!)\n• Distance between cities: km\n• Mass of a person: kg\n• Volume of a swimming pool: litres or m³\n• Volume of a teaspoon: ml\n\nAvoiding very large or very small numbers makes answers easier to understand."
+      },
+      {
+        "id": "TH-FND-05-9",
+        "type": "summary",
+        "scope": "CORE",
+        "title": "Conversion shortcuts",
+        "concept_ids": [
+          "C-FND-05-CONVERT"
+        ],
+        "objective_ids": [
+          "LO-FND-05-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**Length:** mm $\\xrightarrow{\\times 10}$ cm $\\xrightarrow{\\times 100}$ m $\\xrightarrow{\\times 1000}$ km (reverse: divide)\n\n**Mass:** g $\\xrightarrow{\\times 1000}$ kg $\\xrightarrow{\\times 1000}$ tonne\n\n**Capacity:** ml $\\xrightarrow{\\times 1000}$ litre\n\n**Time:** $60$ seconds = $1$ minute, $60$ minutes = $1$ hour, $24$ hours = $1$ day"
+      }
+    ],
+    "keywords": [
+      "metric",
+      "kilometre",
+      "metre",
+      "centimetre",
+      "millimetre",
+      "kilogram",
+      "gram",
+      "litre",
+      "millilitre",
+      "24-hour clock",
+      "convert",
+      "scale"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FND-05-1",
+        "title": "Metric conversion",
+        "objective_ids": [
+          "LO-FND-05-2"
+        ],
+        "concept_ids": [
+          "C-FND-05-CONVERT"
+        ],
+        "difficulty": 1,
+        "statement": "Convert $2750\\,\\text{ml}$ to litres.",
+        "solution_steps": [
+          {
+            "step": "Smaller → larger: divide by $1000$.",
+            "explanation": "$1$ litre $= 1000\\,\\text{ml}$."
+          },
+          {
+            "step": "$2750 \\div 1000 = 2.75\\,\\text{litres}$.",
+            "explanation": "Move the decimal three places left."
+          }
+        ],
+        "common_mistake": "Multiplying by $1000$ instead of dividing (getting $2\\,750\\,000$).",
+        "exam_tip": "Ask yourself: should the answer be bigger or smaller? Fewer litres than millilitres makes sense."
+      },
+      {
+        "id": "WE-FND-05-2",
+        "title": "Time calculation",
+        "objective_ids": [
+          "LO-FND-05-4"
+        ],
+        "concept_ids": [
+          "C-FND-05-TIMECALC"
+        ],
+        "difficulty": 1,
+        "statement": "A film starts at $19{:}50$ and lasts $1$ hour $45$ minutes. When does it end?",
+        "solution_steps": [
+          {
+            "step": "$19{:}50 + 1\\,\\text{hour} = 20{:}50$",
+            "explanation": "Add the hours first."
+          },
+          {
+            "step": "$20{:}50 + 45\\,\\text{min} = 21{:}35$",
+            "explanation": "$50 + 45 = 95$ min $= 1$ hour $35$ min, so $20{:}50 + 45 = 21{:}35$."
+          }
+        ],
+        "common_mistake": "Writing $20{:}50 + 0{:}45 = 20{:}95$ and leaving it as that.",
+        "exam_tip": "When minutes pass $60$, carry $1$ into the hours."
+      },
+      {
+        "id": "WE-FND-05-3",
+        "title": "Reading a scale",
+        "objective_ids": [
+          "LO-FND-05-3"
+        ],
+        "concept_ids": [
+          "C-FND-05-SCALE"
+        ],
+        "difficulty": 1,
+        "statement": "A weighing scale shows marks at $200\\,\\text{g}$ and $300\\,\\text{g}$ with $5$ small divisions between them. The pointer is on the $3$rd small division past $200$. What is the reading?",
+        "solution_steps": [
+          {
+            "step": "Each division $= \\frac{300 - 200}{5} = 20\\,\\text{g}$.",
+            "explanation": "Divide the gap by the number of divisions."
+          },
+          {
+            "step": "$200 + 3 \\times 20 = 260\\,\\text{g}$.",
+            "explanation": "Count from the lower mark."
+          }
+        ],
+        "common_mistake": "Assuming each division is $10\\,\\text{g}$ without checking.",
+        "exam_tip": "Always calculate what each division is worth before reading off."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FND-05-1",
+        "statement": "Convert $6.2\\,\\text{kg}$ to grams.",
+        "hints": [
+          "$1\\,\\text{kg} = 1000\\,\\text{g}$",
+          "Multiply by $1000$."
+        ],
+        "answer": "$6200\\,\\text{g}$"
+      },
+      {
+        "id": "GE-FND-05-2",
+        "statement": "How many seconds in $5$ minutes?",
+        "hints": [
+          "$1$ minute $= 60$ seconds."
+        ],
+        "answer": "$300$ seconds"
+      },
+      {
+        "id": "GE-FND-05-3",
+        "statement": "Convert $17{:}30$ to 12-hour clock.",
+        "hints": [
+          "Subtract $12$ from the hour.",
+          "It's pm."
+        ],
+        "answer": "$5{:}30\\,\\text{pm}$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FND-05-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-2"
+        ],
+        "concept_ids": [
+          "C-FND-05-CONVERT"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Convert: (a) $3.2\\,\\text{m}$ to cm (b) $750\\,\\text{g}$ to kg (c) $4500\\,\\text{ml}$ to litres.",
+        "answer": "(a) $320\\,\\text{cm}$ (b) $0.75\\,\\text{kg}$ (c) $4.5\\,\\text{litres}$",
+        "full_solution": "(a) $3.2 \\times 100 = 320$. (b) $750 \\div 1000 = 0.75$. (c) $4500 \\div 1000 = 4.5$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-05-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-2"
+        ],
+        "concept_ids": [
+          "C-FND-05-LENGTH"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Convert $5.6\\,\\text{km}$ to: (a) metres (b) centimetres.",
+        "answer": "(a) $5600\\,\\text{m}$ (b) $560\\,000\\,\\text{cm}$",
+        "full_solution": "(a) $5.6 \\times 1000 = 5600$. (b) $5600 \\times 100 = 560\\,000$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-05-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-4"
+        ],
+        "concept_ids": [
+          "C-FND-05-TIME"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Convert to 24-hour time: (a) $7{:}15\\,\\text{am}$ (b) $9{:}45\\,\\text{pm}$ (c) $12{:}30\\,\\text{am}$.",
+        "answer": "(a) $07{:}15$ (b) $21{:}45$ (c) $00{:}30$",
+        "full_solution": "(a) Morning, same: $07{:}15$. (b) Add $12$: $21{:}45$. (c) After midnight: $00{:}30$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-05-S4",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-4"
+        ],
+        "concept_ids": [
+          "C-FND-05-TIMECALC"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "How long is it from $08{:}40$ to $11{:}15$?",
+        "answer": "$2$ hours $35$ minutes",
+        "full_solution": "$08{:}40$ to $09{:}00$ = $20$ min. $09{:}00$ to $11{:}00$ = $2$ h. $11{:}00$ to $11{:}15$ = $15$ min. Total = $2$ h $35$ min.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-05-S5",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-5"
+        ],
+        "concept_ids": [
+          "C-FND-05-CHOOSE"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Suggest the best metric unit for: (a) the height of a door (b) the mass of an apple (c) the capacity of a bath.",
+        "answer": "(a) metres (b) grams (c) litres",
+        "full_solution": "(a) About $2\\,\\text{m}$. (b) About $150\\,\\text{g}$. (c) About $200\\,\\text{litres}$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-05-S6",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-3"
+        ],
+        "concept_ids": [
+          "C-FND-05-SCALE"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "A thermometer has marks at $20°\\text{C}$ and $30°\\text{C}$ with $10$ small divisions between them. The mercury is at the $7$th division past $20$. What is the temperature?",
+        "answer": "$27°\\text{C}$",
+        "full_solution": "Each division $= \\tfrac{10}{10} = 1°\\text{C}$. Reading = $20 + 7 = 27°\\text{C}$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-05-S7",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-2"
+        ],
+        "concept_ids": [
+          "C-FND-05-CONVERT"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "A recipe needs $1.5\\,\\text{litres}$ of water. You have a $250\\,\\text{ml}$ measuring cup. How many full cups do you need?",
+        "answer": "$6$ cups",
+        "full_solution": "$1.5\\,\\text{litres} = 1500\\,\\text{ml}$. $1500 \\div 250 = 6$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-05-S8",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-05-4"
+        ],
+        "concept_ids": [
+          "C-FND-05-TIMECALC"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "A train departs at $14{:}47$ and arrives at $16{:}23$. How long is the journey?",
+        "answer": "$1$ hour $36$ minutes",
+        "full_solution": "$14{:}47$ to $15{:}47$ = $1$ hour. $15{:}47$ to $16{:}23$ = $36$ min. Total = $1$ h $36$ min.",
+        "common_errors": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-FND-05-1",
+        "stem": "How many centimetres are in $2.4$ metres?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$24$",
+            "misconception_id": null,
+            "why_wrong": "Multiplied by $10$ instead of $100$."
+          },
+          {
+            "key": "B",
+            "text": "$240$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$2400$",
+            "misconception_id": null,
+            "why_wrong": "Multiplied by $1000$ (that would be mm)."
+          },
+          {
+            "key": "D",
+            "text": "$0.024$",
+            "misconception_id": null,
+            "why_wrong": "Divided instead of multiplying."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$2.4 \\times 100 = 240\\,\\text{cm}$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-05-2",
+        "concept_id": "C-FND-05-CONVERT"
+      },
+      {
+        "id": "MCQ-FND-05-2",
+        "stem": "Which unit would you use to measure the mass of a car?",
+        "options": [
+          {
+            "key": "A",
+            "text": "grams",
+            "misconception_id": null,
+            "why_wrong": "Too small — a car would be millions of grams."
+          },
+          {
+            "key": "B",
+            "text": "kilograms",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "millilitres",
+            "misconception_id": null,
+            "why_wrong": "That measures capacity, not mass."
+          },
+          {
+            "key": "D",
+            "text": "centimetres",
+            "misconception_id": null,
+            "why_wrong": "That measures length, not mass."
+          }
+        ],
+        "correct": "B",
+        "explanation": "A car has a mass of about $1000$–$2000\\,\\text{kg}$ ($1$–$2$ tonnes).",
+        "difficulty": 1,
+        "objective_id": "LO-FND-05-5",
+        "concept_id": "C-FND-05-CHOOSE"
+      },
+      {
+        "id": "MCQ-FND-05-3",
+        "stem": "What is $4{:}15\\,\\text{pm}$ in 24-hour time?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$4{:}15$",
+            "misconception_id": "MIS-FND-05-1",
+            "why_wrong": "Forgets to add $12$ for pm times."
+          },
+          {
+            "key": "B",
+            "text": "$14{:}15$",
+            "misconception_id": null,
+            "why_wrong": "Only adds $10$ instead of $12$."
+          },
+          {
+            "key": "C",
+            "text": "$16{:}15$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$04{:}15$",
+            "misconception_id": null,
+            "why_wrong": "This is $4{:}15\\,\\text{am}$."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Add $12$: $4 + 12 = 16$, so $16{:}15$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-05-4",
+        "concept_id": "C-FND-05-TIME"
+      },
+      {
+        "id": "MCQ-FND-05-4",
+        "stem": "How many millilitres in $3$ litres?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$30$",
+            "misconception_id": null,
+            "why_wrong": "Multiplied by $10$ instead of $1000$."
+          },
+          {
+            "key": "B",
+            "text": "$300$",
+            "misconception_id": null,
+            "why_wrong": "Multiplied by $100$."
+          },
+          {
+            "key": "C",
+            "text": "$3000$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$0.003$",
+            "misconception_id": null,
+            "why_wrong": "Divided instead of multiplying."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$3 \\times 1000 = 3000\\,\\text{ml}$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-05-2",
+        "concept_id": "C-FND-05-CONVERT"
+      },
+      {
+        "id": "MCQ-FND-05-5",
+        "stem": "A clock shows $23{:}50$. How many minutes until midnight?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$50$",
+            "misconception_id": null,
+            "why_wrong": "Counts from $23{:}00$."
+          },
+          {
+            "key": "B",
+            "text": "$10$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$110$",
+            "misconception_id": null,
+            "why_wrong": "Adds $60 + 50$."
+          },
+          {
+            "key": "D",
+            "text": "$70$",
+            "misconception_id": null,
+            "why_wrong": "Counts $24 - 23 = 1$ hour then adds $50$ min."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Midnight is $00{:}00 = 24{:}00$. $24{:}00 - 23{:}50 = 10$ minutes.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-05-4",
+        "concept_id": "C-FND-05-TIMECALC"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-FND-05-1",
+        "kind": "rule",
+        "front": "How many centimetres in $1$ metre?",
+        "back": "$100\\,\\text{cm}$.",
+        "concept_id": "C-FND-05-LENGTH",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-05-2",
+        "kind": "rule",
+        "front": "How many grams in $1$ kilogram?",
+        "back": "$1000\\,\\text{g}$.",
+        "concept_id": "C-FND-05-MASS",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-05-3",
+        "kind": "rule",
+        "front": "How many millilitres in $1$ litre?",
+        "back": "$1000\\,\\text{ml}$.",
+        "concept_id": "C-FND-05-MASS",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-05-4",
+        "kind": "rule",
+        "front": "To convert pm time to 24-hour, you...",
+        "back": "Add $12$ to the hours. For example, $3{:}00\\,\\text{pm} = 15{:}00$.",
+        "concept_id": "C-FND-05-TIME",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-05-5",
+        "kind": "rule",
+        "front": "Larger to smaller units: do you multiply or divide?",
+        "back": "Multiply. More small units fit into the same amount.",
+        "concept_id": "C-FND-05-CONVERT",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-05-6",
+        "kind": "rule",
+        "front": "How many minutes in $1$ hour?",
+        "back": "$60$ minutes. (And $60$ seconds in $1$ minute.)",
+        "concept_id": "C-FND-05-TIMECALC",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-FND-05-1",
+        "description": "Not adding $12$ when converting pm times to 24-hour format.",
+        "remedy": "For any pm time (except $12$ noon), add $12$: $2\\text{pm} = 14{:}00$."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "id": "CM-FND-05-1",
+        "description": "Subtracting times as if they are decimals ($13.20 - 9.45 = 3.75$).",
+        "correction": "Use hours and minutes separately. There are $60$ minutes in an hour, not $100$."
+      },
+      {
+        "id": "CM-FND-05-2",
+        "description": "Multiplying when converting from small to large units.",
+        "correction": "Small → large means fewer units, so divide."
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "Kilo- means $1000$, centi- means $\\tfrac{1}{100}$, milli- means $\\tfrac{1}{1000}$.",
+        "Larger → smaller: multiply. Smaller → larger: divide.",
+        "$1\\,\\text{m} = 100\\,\\text{cm} = 1000\\,\\text{mm}$. $1\\,\\text{kg} = 1000\\,\\text{g}$. $1\\,\\text{L} = 1000\\,\\text{ml}$.",
+        "For 24-hour time: add $12$ to pm hours.",
+        "When reading a scale, always work out what each small division is worth."
+      ],
+      "next_steps": "You are ready to tackle mensuration — area, perimeter, and volume."
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEMATHS::U00_Foundations::units_and_measurement",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 5
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "06_Shape_Recognition.json": {
+    "id": "L06",
+    "title": "Shape Recognition",
+    "subject": "Mathematics",
+    "course_label": "Cambridge IGCSE Mathematics 0580 · Foundations · Core",
+    "unit_id": "U-MATH-FOUNDATIONS",
+    "estimated_length": "0.75 h",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Cambridge IGCSE Mathematics 0580",
+      "codes": [
+        "FOUNDATION"
+      ],
+      "status": "SUPPLEMENTARY",
+      "track": "Core"
+    },
+    "objectives": [
+      {
+        "id": "LO-FND-06-1",
+        "text": "Name and identify common 2D shapes and describe their properties."
+      },
+      {
+        "id": "LO-FND-06-2",
+        "text": "Classify triangles by sides and angles."
+      },
+      {
+        "id": "LO-FND-06-3",
+        "text": "Name and identify common 3D shapes and their features."
+      },
+      {
+        "id": "LO-FND-06-4",
+        "text": "Identify lines of symmetry in 2D shapes."
+      },
+      {
+        "id": "LO-FND-06-5",
+        "text": "Classify angles as acute, right, obtuse, reflex and straight."
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DI-FND-06-1",
+        "stem": "How many sides does a hexagon have?",
+        "answer": "$6$",
+        "objective_id": "LO-FND-06-1"
+      },
+      {
+        "id": "DI-FND-06-2",
+        "stem": "What type of triangle has all three sides equal?",
+        "answer": "Equilateral",
+        "objective_id": "LO-FND-06-2"
+      },
+      {
+        "id": "DI-FND-06-3",
+        "stem": "Name a 3D shape that has no flat faces.",
+        "answer": "Sphere",
+        "objective_id": "LO-FND-06-3"
+      },
+      {
+        "id": "DI-FND-06-4",
+        "stem": "An angle of $120°$ is called ...",
+        "answer": "Obtuse",
+        "objective_id": "LO-FND-06-5"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-FND-06-0",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Shapes are everywhere",
+        "concept_ids": [
+          "C-FND-06-INTRO"
+        ],
+        "objective_ids": [
+          "LO-FND-06-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "From floor tiles to football nets, from the cross-section of a bridge to the packaging of a box, geometry starts with recognising shapes and their properties. Naming shapes accurately is the foundation for area, volume, symmetry, and transformation work in IGCSE."
+      },
+      {
+        "id": "TH-FND-06-1",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Polygons",
+        "concept_ids": [
+          "C-FND-06-POLYGON"
+        ],
+        "objective_ids": [
+          "LO-FND-06-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "A **polygon** is a closed 2D shape with straight sides.\n\n| Name | Sides |\n|---|---|\n| Triangle | $3$ |\n| Quadrilateral | $4$ |\n| Pentagon | $5$ |\n| Hexagon | $6$ |\n| Heptagon | $7$ |\n| Octagon | $8$ |\n| Decagon | $10$ |\n\nA **regular** polygon has all sides equal and all angles equal. Otherwise it is **irregular**."
+      },
+      {
+        "id": "TH-FND-06-2",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Types of triangle",
+        "concept_ids": [
+          "C-FND-06-TRI"
+        ],
+        "objective_ids": [
+          "LO-FND-06-2"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "**By sides:**\n• **Equilateral** — all $3$ sides equal, all angles $60°$.\n• **Isosceles** — $2$ sides equal, $2$ base angles equal.\n• **Scalene** — no sides equal, no angles equal.\n\n**By angles:**\n• **Acute** — all angles less than $90°$.\n• **Right-angled** — one angle is exactly $90°$.\n• **Obtuse** — one angle greater than $90°$.\n\n[[green:A triangle can be described by both classifications, e.g. 'right-angled isosceles'.]]"
+      },
+      {
+        "id": "TH-FND-06-3",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Special quadrilaterals",
+        "concept_ids": [
+          "C-FND-06-QUAD"
+        ],
+        "objective_ids": [
+          "LO-FND-06-1"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "| Shape | Key properties |\n|---|---|\n| Square | $4$ equal sides, $4$ right angles |\n| Rectangle | Opposite sides equal, $4$ right angles |\n| Parallelogram | Opposite sides parallel and equal |\n| Rhombus | $4$ equal sides, opposite angles equal |\n| Trapezium | Exactly one pair of parallel sides |\n| Kite | Two pairs of adjacent sides equal |\n\n[[red:A square is a special case of a rectangle (and also of a rhombus).]]"
+      },
+      {
+        "id": "TH-FND-06-4",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Types of angle",
+        "concept_ids": [
+          "C-FND-06-ANGLES"
+        ],
+        "objective_ids": [
+          "LO-FND-06-5"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "| Type | Range | Example |\n|---|---|---|\n| Acute | $0° < \\theta < 90°$ | $45°$ |\n| Right | exactly $90°$ | corner of a page |\n| Obtuse | $90° < \\theta < 180°$ | $120°$ |\n| Straight | exactly $180°$ | a straight line |\n| Reflex | $180° < \\theta < 360°$ | $270°$ |"
+      },
+      {
+        "id": "TH-FND-06-5",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Lines of symmetry",
+        "concept_ids": [
+          "C-FND-06-SYM"
+        ],
+        "objective_ids": [
+          "LO-FND-06-4"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "A **line of symmetry** divides a shape into two halves that are mirror images of each other.\n\n• Equilateral triangle: $3$ lines of symmetry.\n• Square: $4$ lines of symmetry.\n• Rectangle: $2$ lines of symmetry.\n• Circle: infinitely many.\n• Parallelogram (not a rectangle): $0$ lines of symmetry.\n\n[[green:Fold the shape along the line — if both halves match exactly, it is a line of symmetry.]]"
+      },
+      {
+        "id": "TH-FND-06-6",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Common 3D shapes",
+        "concept_ids": [
+          "C-FND-06-3D"
+        ],
+        "objective_ids": [
+          "LO-FND-06-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "| Shape | Faces | Edges | Vertices |\n|---|---|---|---|\n| Cube | $6$ (all squares) | $12$ | $8$ |\n| Cuboid | $6$ (rectangles) | $12$ | $8$ |\n| Triangular prism | $5$ | $9$ | $6$ |\n| Cylinder | $3$ ($2$ circles + $1$ curved) | $2$ | $0$ |\n| Cone | $2$ ($1$ circle + $1$ curved) | $1$ | $1$ |\n| Sphere | $1$ (curved) | $0$ | $0$ |\n| Square-based pyramid | $5$ | $8$ | $5$ |"
+      },
+      {
+        "id": "TH-FND-06-7",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Prisms and pyramids",
+        "concept_ids": [
+          "C-FND-06-PRISM"
+        ],
+        "objective_ids": [
+          "LO-FND-06-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "A **prism** has a uniform cross-section along its length — slice it anywhere parallel to the end and you get the same shape. The name comes from the cross-section: a triangular prism has a triangle at each end, a hexagonal prism has a hexagon.\n\nA **pyramid** has a base and triangular faces that meet at a point (apex). A square-based pyramid has a square base and $4$ triangular faces."
+      },
+      {
+        "id": "TH-FND-06-8",
+        "type": "definition",
+        "scope": "CORE",
+        "title": "Euler's formula for polyhedra",
+        "concept_ids": [
+          "C-FND-06-EULER"
+        ],
+        "objective_ids": [
+          "LO-FND-06-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "For any convex polyhedron (a 3D shape with flat faces):\n\n$$V - E + F = 2$$\n\nwhere $V$ = vertices, $E$ = edges, $F$ = faces.\n\n**Check with a cube:** $8 - 12 + 6 = 2$ ✓\n\nThis can help you find a missing count."
+      },
+      {
+        "id": "TH-FND-06-9",
+        "type": "intuition",
+        "scope": "CORE",
+        "title": "Recognising shapes in real life",
+        "concept_ids": [
+          "C-FND-06-INTRO"
+        ],
+        "objective_ids": [
+          "LO-FND-06-1",
+          "LO-FND-06-3"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "Practice spotting shapes around you:\n• A football is made of pentagons and hexagons.\n• A can of soup is a cylinder.\n• A road sign might be a triangle, hexagon, or octagon.\n• Roof structures often contain triangular prisms.\n\nThe better you recognise shapes, the faster you can choose the right formula in an exam."
+      },
+      {
+        "id": "TH-FND-06-10",
+        "type": "summary",
+        "scope": "CORE",
+        "title": "Shape properties checklist",
+        "concept_ids": [
+          "C-FND-06-INTRO"
+        ],
+        "objective_ids": [
+          "LO-FND-06-1",
+          "LO-FND-06-2",
+          "LO-FND-06-3",
+          "LO-FND-06-4",
+          "LO-FND-06-5"
+        ],
+        "provenance": "AUTHOR_ORIGINAL",
+        "body": "• A polygon is a closed shape with straight sides.\n• Triangles are classified by sides (equilateral, isosceles, scalene) and angles (acute, right, obtuse).\n• Special quadrilaterals have specific properties of sides, angles, and parallelism.\n• Angles: acute ($<90°$), right ($90°$), obtuse ($90$–$180°$), reflex ($>180°$).\n• $V - E + F = 2$ for any convex polyhedron.\n• A line of symmetry produces a mirror image on each side."
+      }
+    ],
+    "keywords": [
+      "polygon",
+      "triangle",
+      "quadrilateral",
+      "equilateral",
+      "isosceles",
+      "scalene",
+      "prism",
+      "pyramid",
+      "symmetry",
+      "acute",
+      "obtuse",
+      "reflex",
+      "vertex",
+      "edge",
+      "face"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FND-06-1",
+        "title": "Identifying a quadrilateral from properties",
+        "objective_ids": [
+          "LO-FND-06-1"
+        ],
+        "concept_ids": [
+          "C-FND-06-QUAD"
+        ],
+        "difficulty": 1,
+        "statement": "A shape has $4$ sides. Two pairs of sides are parallel and all sides are equal in length, but the angles are not all $90°$. Name the shape.",
+        "solution_steps": [
+          {
+            "step": "All sides equal → could be a square or a rhombus.",
+            "explanation": "Narrow down the possibilities."
+          },
+          {
+            "step": "Angles are not $90°$ → not a square.",
+            "explanation": "A square requires right angles."
+          },
+          {
+            "step": "Answer: rhombus.",
+            "explanation": "A rhombus has equal sides but angles are not necessarily $90°$."
+          }
+        ],
+        "common_mistake": "Saying 'parallelogram' — while true, 'rhombus' is more specific.",
+        "exam_tip": "Always give the most specific name that fits all the properties."
+      },
+      {
+        "id": "WE-FND-06-2",
+        "title": "Using Euler's formula",
+        "objective_ids": [
+          "LO-FND-06-3"
+        ],
+        "concept_ids": [
+          "C-FND-06-EULER"
+        ],
+        "difficulty": 2,
+        "statement": "A polyhedron has $5$ faces and $6$ vertices. How many edges does it have?",
+        "solution_steps": [
+          {
+            "step": "$V - E + F = 2$",
+            "explanation": "Write Euler's formula."
+          },
+          {
+            "step": "$6 - E + 5 = 2$",
+            "explanation": "Substitute $V = 6$, $F = 5$."
+          },
+          {
+            "step": "$E = 9$",
+            "explanation": "Rearrange: $E = 6 + 5 - 2 = 9$."
+          }
+        ],
+        "common_mistake": "Substituting incorrectly and getting $E = 3$.",
+        "exam_tip": "Check: does $6 - 9 + 5 = 2$? Yes. A triangular prism matches this."
+      },
+      {
+        "id": "WE-FND-06-3",
+        "title": "Counting lines of symmetry",
+        "objective_ids": [
+          "LO-FND-06-4"
+        ],
+        "concept_ids": [
+          "C-FND-06-SYM"
+        ],
+        "difficulty": 1,
+        "statement": "How many lines of symmetry does a regular pentagon have?",
+        "solution_steps": [
+          {
+            "step": "A regular polygon with $n$ sides has $n$ lines of symmetry.",
+            "explanation": "Each line goes from a vertex to the midpoint of the opposite side."
+          },
+          {
+            "step": "A pentagon has $5$ sides → $5$ lines of symmetry.",
+            "explanation": "Apply the rule."
+          }
+        ],
+        "common_mistake": "Only finding $1$ or $2$ lines and stopping.",
+        "exam_tip": "For a regular polygon, the number of lines of symmetry equals the number of sides."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FND-06-1",
+        "statement": "A triangle has sides $5\\,\\text{cm}$, $5\\,\\text{cm}$ and $8\\,\\text{cm}$. Classify it by its sides.",
+        "hints": [
+          "Two sides are equal."
+        ],
+        "answer": "Isosceles"
+      },
+      {
+        "id": "GE-FND-06-2",
+        "statement": "How many faces does a triangular prism have?",
+        "hints": [
+          "It has $2$ triangular ends and $3$ rectangular sides."
+        ],
+        "answer": "$5$ faces"
+      },
+      {
+        "id": "GE-FND-06-3",
+        "statement": "Is an angle of $195°$ acute, obtuse, or reflex?",
+        "hints": [
+          "It's greater than $180°$."
+        ],
+        "answer": "Reflex"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FND-06-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-1"
+        ],
+        "concept_ids": [
+          "C-FND-06-POLYGON"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Name the polygon with: (a) $5$ sides (b) $8$ sides (c) $10$ sides.",
+        "answer": "(a) Pentagon (b) Octagon (c) Decagon",
+        "full_solution": "(a) Penta = $5$. (b) Octa = $8$. (c) Deca = $10$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-06-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-2"
+        ],
+        "concept_ids": [
+          "C-FND-06-TRI"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Classify each triangle: (a) sides $3, 4, 5$, angles $37°, 53°, 90°$ (b) sides $6, 6, 6$ (c) sides $4, 7, 9$.",
+        "answer": "(a) Right-angled scalene (b) Equilateral (c) Scalene",
+        "full_solution": "(a) Has a $90°$ angle and no equal sides. (b) All sides equal. (c) No sides equal.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-06-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-1"
+        ],
+        "concept_ids": [
+          "C-FND-06-QUAD"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Which quadrilateral has exactly one pair of parallel sides?",
+        "answer": "Trapezium",
+        "full_solution": "A trapezium (US: trapezoid) has one pair of parallel sides. A parallelogram has two.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-06-S4",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-5"
+        ],
+        "concept_ids": [
+          "C-FND-06-ANGLES"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "Classify: (a) $15°$ (b) $90°$ (c) $135°$ (d) $200°$ (e) $180°$.",
+        "answer": "(a) Acute (b) Right (c) Obtuse (d) Reflex (e) Straight",
+        "full_solution": "(a) $<90°$. (b) Exactly $90°$. (c) Between $90°$ and $180°$. (d) $>180°$. (e) Exactly $180°$.",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-06-S5",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-4"
+        ],
+        "concept_ids": [
+          "C-FND-06-SYM"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "State the number of lines of symmetry: (a) equilateral triangle (b) rectangle (c) parallelogram (d) regular hexagon.",
+        "answer": "(a) $3$ (b) $2$ (c) $0$ (d) $6$",
+        "full_solution": "(a) $3$ (from each vertex to midpoint of opposite side). (b) $2$ (horizontal and vertical). (c) $0$ (a non-rectangular parallelogram has no mirror symmetry). (d) $6$ (a regular $n$-gon has $n$ lines).",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-06-S6",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-3"
+        ],
+        "concept_ids": [
+          "C-FND-06-3D"
+        ],
+        "difficulty": 1,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "State the number of faces, edges and vertices of a square-based pyramid.",
+        "answer": "$5$ faces, $8$ edges, $5$ vertices",
+        "full_solution": "$1$ square base + $4$ triangular faces = $5$ faces. Check: $5 - 8 + 5 = 2$ ✓",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-06-S7",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-3"
+        ],
+        "concept_ids": [
+          "C-FND-06-PRISM"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "A prism has a hexagonal cross-section. How many faces, edges and vertices does it have?",
+        "answer": "$8$ faces, $18$ edges, $12$ vertices",
+        "full_solution": "$2$ hexagonal ends + $6$ rectangular sides = $8$ faces. $6 + 6 = 12$ vertices. $6 + 6 + 6 = 18$ edges. Check: $12 - 18 + 8 = 2$ ✓",
+        "common_errors": []
+      },
+      {
+        "id": "EX-FND-06-S8",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-FND-06-3"
+        ],
+        "concept_ids": [
+          "C-FND-06-EULER"
+        ],
+        "difficulty": 2,
+        "provenance": "AUTHOR_ORIGINAL",
+        "statement": "A polyhedron has $12$ edges and $8$ faces. Use Euler's formula to find the number of vertices.",
+        "answer": "$V = 6$",
+        "full_solution": "$V - 12 + 8 = 2$, so $V = 6$.",
+        "common_errors": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-FND-06-1",
+        "stem": "How many sides does an octagon have?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$6$",
+            "misconception_id": null,
+            "why_wrong": "That's a hexagon."
+          },
+          {
+            "key": "B",
+            "text": "$7$",
+            "misconception_id": null,
+            "why_wrong": "That's a heptagon."
+          },
+          {
+            "key": "C",
+            "text": "$8$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$10$",
+            "misconception_id": null,
+            "why_wrong": "That's a decagon."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Octa- means $8$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-06-1",
+        "concept_id": "C-FND-06-POLYGON"
+      },
+      {
+        "id": "MCQ-FND-06-2",
+        "stem": "A triangle with two equal sides is called...",
+        "options": [
+          {
+            "key": "A",
+            "text": "equilateral",
+            "misconception_id": null,
+            "why_wrong": "Equilateral has ALL three sides equal."
+          },
+          {
+            "key": "B",
+            "text": "isosceles",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "scalene",
+            "misconception_id": null,
+            "why_wrong": "Scalene has NO equal sides."
+          },
+          {
+            "key": "D",
+            "text": "right-angled",
+            "misconception_id": null,
+            "why_wrong": "That classifies by angles, not sides."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Isosceles = two sides (and two angles) equal.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-06-2",
+        "concept_id": "C-FND-06-TRI"
+      },
+      {
+        "id": "MCQ-FND-06-3",
+        "stem": "An angle of $250°$ is...",
+        "options": [
+          {
+            "key": "A",
+            "text": "acute",
+            "misconception_id": null,
+            "why_wrong": "Acute is less than $90°$."
+          },
+          {
+            "key": "B",
+            "text": "obtuse",
+            "misconception_id": null,
+            "why_wrong": "Obtuse is between $90°$ and $180°$."
+          },
+          {
+            "key": "C",
+            "text": "straight",
+            "misconception_id": null,
+            "why_wrong": "Straight is exactly $180°$."
+          },
+          {
+            "key": "D",
+            "text": "reflex",
+            "misconception_id": null,
+            "why_wrong": null
+          }
+        ],
+        "correct": "D",
+        "explanation": "$250°$ is between $180°$ and $360°$, so it is reflex.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-06-5",
+        "concept_id": "C-FND-06-ANGLES"
+      },
+      {
+        "id": "MCQ-FND-06-4",
+        "stem": "Which 3D shape has $1$ curved face and $0$ edges?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Cylinder",
+            "misconception_id": null,
+            "why_wrong": "A cylinder has $2$ edges."
+          },
+          {
+            "key": "B",
+            "text": "Cone",
+            "misconception_id": null,
+            "why_wrong": "A cone has $1$ edge."
+          },
+          {
+            "key": "C",
+            "text": "Sphere",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "Cube",
+            "misconception_id": null,
+            "why_wrong": "A cube has $12$ edges and flat faces only."
+          }
+        ],
+        "correct": "C",
+        "explanation": "A sphere has one curved surface, no edges and no vertices.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-06-3",
+        "concept_id": "C-FND-06-3D"
+      },
+      {
+        "id": "MCQ-FND-06-5",
+        "stem": "How many lines of symmetry does a square have?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$1$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$2$",
+            "misconception_id": null,
+            "why_wrong": "That's a rectangle."
+          },
+          {
+            "key": "C",
+            "text": "$4$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$8$",
+            "misconception_id": null,
+            "why_wrong": "No 2D shape with $4$ sides has $8$ lines of symmetry."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$2$ through midpoints of opposite sides + $2$ through opposite corners = $4$.",
+        "difficulty": 1,
+        "objective_id": "LO-FND-06-4",
+        "concept_id": "C-FND-06-SYM"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FC-FND-06-1",
+        "kind": "definition",
+        "front": "What is a polygon?",
+        "back": "A closed 2D shape made of straight sides.",
+        "concept_id": "C-FND-06-POLYGON",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-06-2",
+        "kind": "definition",
+        "front": "Name the three types of triangle by sides.",
+        "back": "Equilateral (all equal), isosceles (two equal), scalene (none equal).",
+        "concept_id": "C-FND-06-TRI",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-06-3",
+        "kind": "definition",
+        "front": "What is a reflex angle?",
+        "back": "An angle greater than $180°$ but less than $360°$.",
+        "concept_id": "C-FND-06-ANGLES",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-06-4",
+        "kind": "definition",
+        "front": "What is a prism?",
+        "back": "A 3D shape with a uniform cross-section along its length — its two ends are identical polygons.",
+        "concept_id": "C-FND-06-PRISM",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-06-5",
+        "kind": "rule",
+        "front": "What is Euler's formula for polyhedra?",
+        "back": "$V - E + F = 2$, where $V$ = vertices, $E$ = edges, $F$ = faces.",
+        "concept_id": "C-FND-06-EULER",
+        "difficulty": 1
+      },
+      {
+        "id": "FC-FND-06-6",
+        "kind": "definition",
+        "front": "What is a line of symmetry?",
+        "back": "A line that divides a shape into two mirror-image halves.",
+        "concept_id": "C-FND-06-SYM",
+        "difficulty": 1
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-FND-06-1",
+        "description": "Thinking a parallelogram always has lines of symmetry.",
+        "remedy": "A generic parallelogram has NO lines of symmetry (only rotational symmetry). Rectangles and rhombuses are special cases with symmetry lines."
+      },
+      {
+        "id": "MIS-FND-06-2",
+        "description": "Confusing faces and edges on 3D shapes.",
+        "remedy": "A face is a flat (or curved) surface. An edge is a line where two faces meet."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "id": "CM-FND-06-1",
+        "description": "Calling every 4-sided shape a rectangle.",
+        "correction": "Check the properties: are all angles $90°$? Are opposite sides equal? Use the most specific name."
+      },
+      {
+        "id": "CM-FND-06-2",
+        "description": "Forgetting the curved face of a cylinder or cone when counting faces.",
+        "correction": "A cylinder has $3$ faces (including the curved surface); a cone has $2$."
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "key_points": [
+        "A polygon is a closed 2D shape with straight sides; the name tells you how many.",
+        "Triangles: equilateral ($3$ equal), isosceles ($2$ equal), scalene (none equal).",
+        "Special quadrilaterals: square, rectangle, parallelogram, rhombus, trapezium, kite.",
+        "Angles: acute ($< 90°$), right ($90°$), obtuse ($90$–$180°$), reflex ($>180°$).",
+        "$V - E + F = 2$ for convex polyhedra."
+      ],
+      "next_steps": "You are ready for congruence, similarity, and angle properties."
+    },
+    "lang": "en",
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEMATHS::U00_Foundations::shape_recognition",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 6
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": false
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": [
+        {
+          "block_id": "TH-FND-06-8",
+          "type": "LAW",
+          "note": "Euler's formula V - E + F = 2"
+        }
+      ]
+    }
+  }
+}

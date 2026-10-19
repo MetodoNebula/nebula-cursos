@@ -1,0 +1,50 @@
+{
+  "modes": [
+    {
+      "id": "exam_por_tema",
+      "name": "Examen por tema",
+      "description": "6-8 preguntas de una sola unidad",
+      "questions_per_unit": 7,
+      "time_limit_min": null,
+      "units": [
+        "U-ESO-01",
+        "U-ESO-02",
+        "U-ESO-03",
+        "U-ESO-04"
+      ],
+      "selection": "random_from_unit"
+    },
+    {
+      "id": "exam_mixto",
+      "name": "Examen mixto",
+      "description": "15 preguntas aleatorias de todas las unidades",
+      "total_questions": 15,
+      "time_limit_min": null,
+      "distribution": "proportional_to_lesson_count",
+      "selection": "random_across_units"
+    },
+    {
+      "id": "exam_cronometrado",
+      "name": "Examen cronometrado",
+      "description": "12 preguntas en 30 minutos",
+      "total_questions": 12,
+      "time_limit_min": 30,
+      "distribution": "proportional_to_lesson_count",
+      "selection": "random_across_units"
+    },
+    {
+      "id": "exam_final",
+      "name": "Examen final",
+      "description": "20 preguntas de todo el curso en 45 minutos",
+      "total_questions": 20,
+      "time_limit_min": 45,
+      "distribution": {
+        "U-ESO-01": 4,
+        "U-ESO-02": 6,
+        "U-ESO-03": 5,
+        "U-ESO-04": 5
+      },
+      "selection": "balanced_difficulty"
+    }
+  ]
+}

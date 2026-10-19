@@ -1,0 +1,92 @@
+{
+  "course": "selectividad_fisica",
+  "audit_date": "2026-10-19",
+  "auditor": "Claude (Auditoría v2)",
+  "findings": [
+    {
+      "id": "F1-001",
+      "severity": "P0",
+      "status": "FIXED",
+      "bundle": "selectividad_fisica__nuclear.json",
+      "scope": "28 instances across all 10 lessons",
+      "description": "Stability threshold Z>83 should be Z>82. Bi-209 (Z=83) is alpha-unstable (t½ ≈ 1.9×10¹⁹ years). Last truly stable element is Pb (Z=82).",
+      "field_pattern": "theory_blocks, flashcards, common_mistakes, exam_notes",
+      "fix_applied": "Global replace Z>83 → Z>82",
+      "reference": "Marcillac et al. (2003), Nature 422:876"
+    },
+    {
+      "id": "F1-002",
+      "severity": "P1",
+      "status": "FIXED",
+      "bundle": "selectividad_fisica__cuantica.json",
+      "lesson": "02_El_efecto_fotoeléctrico_y_el_fotón.json",
+      "field": "exercises[0].full_solution",
+      "scope": "2 instances",
+      "description": "Inline division 3·10⁸/400·10⁻⁹ ambiguous due to operator precedence.",
+      "fix_applied": "Replaced with \\dfrac{3\\cdot10^{8}}{400\\cdot10^{-9}}"
+    },
+    {
+      "id": "F1-003",
+      "severity": "P1",
+      "status": "FIXED",
+      "bundle": "selectividad_fisica__relatividad.json",
+      "lesson": "05_La_energía_en_reposo_E_0mc2.json",
+      "field": "flashcards[9].back",
+      "scope": "1 instance",
+      "description": "Pair production threshold 2mₑc² stated without noting that an isolated photon cannot create the pair (momentum conservation violation).",
+      "fix_applied": "Appended clarification note about third body needed for momentum conservation"
+    },
+    {
+      "id": "F5-001",
+      "severity": "P1",
+      "status": "FIXED",
+      "file": "exam_mode.json",
+      "field": "topic_questions.optica[8-15].marks",
+      "scope": "8 questions",
+      "description": "Óptica exam questions had marks=10 while rest of course uses marks=3-5, creating ~2× scoring imbalance.",
+      "fix_applied": "marks: 10 → marks: 5 in 8 questions"
+    }
+  ],
+  "p2_observations": [
+    {
+      "id": "F4-P2-001",
+      "phase": 4,
+      "description": "No standalone kinematics lesson in fundamentos (MRU/MRUA covered in main units)",
+      "action": "NOTED — design choice"
+    },
+    {
+      "id": "F4-P2-002",
+      "phase": 4,
+      "description": "Empty objective_ids in 12 worked_examples across fundamentos",
+      "action": "NOTED — informational field"
+    },
+    {
+      "id": "F6-P2-001",
+      "phase": 6,
+      "description": "30/241 SVGs use consistent secondary palette colors outside core Nebula palette",
+      "action": "NOTED — de facto extended palette"
+    },
+    {
+      "id": "F6-P2-002",
+      "phase": 6,
+      "description": "1 lesson without SVG: ondas/05b (procedural lesson, diagram in 05a)",
+      "action": "NOTED"
+    },
+    {
+      "id": "F3-P2-001",
+      "phase": 3,
+      "description": "epistemic_type = NONE for all 88 lessons",
+      "action": "NOTED — acceptable"
+    }
+  ],
+  "gates_result": {
+    "json_valid": true,
+    "canonical_ids_unique": true,
+    "zero_mezcla": true,
+    "mcq_keys_valid": true,
+    "svg_xml_valid": true,
+    "required_fields": true,
+    "total_errors": 0,
+    "verdict": "ALL PASS"
+  }
+}

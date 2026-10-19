@@ -1,0 +1,1261 @@
+{
+  "type": "exam_mode",
+  "title": "GCSE Physics Practice Exam",
+  "description": "A timed practice exam covering all units. Simulates exam conditions with a mix of topics.",
+  "instructions": "Answer all questions. You have 60 minutes. Each question is worth 1 mark. Read each question carefully and select the best answer.",
+  "time_limit_minutes": 60,
+  "total_marks": 40,
+  "grade_boundaries": {
+    "9": 90,
+    "8": 80,
+    "7": 70,
+    "6": 60,
+    "5": 50,
+    "4": 40,
+    "3": 30,
+    "2": 20,
+    "1": 10
+  },
+  "items": [
+    {
+      "id": "MCQ-MOTION-01-1",
+      "stem": "An object begins at the $2.0\\,\\mathrm{cm}$ mark and ends at the $9.4\\,\\mathrm{cm}$ mark of a ruler. What is its length?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$7.4\\,\\mathrm{cm}$"
+        },
+        {
+          "key": "B",
+          "text": "$9.4\\,\\mathrm{cm}$",
+          "why_wrong": "this is the final ruler position and assumes a zero start."
+        },
+        {
+          "key": "C",
+          "text": "$11.4\\,\\mathrm{cm}$",
+          "why_wrong": "this adds the two readings instead of subtracting them."
+        },
+        {
+          "key": "D",
+          "text": "$7.2\\,\\mathrm{cm}$",
+          "why_wrong": "this results from subtracting the decimal parts incorrectly."
+        }
+      ],
+      "correct": "A",
+      "explanation": "$9.4-2.0=7.4\\,\\mathrm{cm}$.",
+      "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::measuring_the_physical_world",
+      "source_lesson_title": "Measuring the physical world",
+      "unit_id": "U01_Measurement_and_Motion",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-MOTION-02-3",
+      "stem": "Which of these quantities is a vector?",
+      "options": [
+        {
+          "key": "A",
+          "text": "the distance a car has travelled",
+          "why_wrong": "distance is the total path length with no direction attached; it is a scalar."
+        },
+        {
+          "key": "B",
+          "text": "the velocity of a car"
+        },
+        {
+          "key": "C",
+          "text": "the time taken for the journey",
+          "why_wrong": "time has a size only and no direction; it is a scalar."
+        },
+        {
+          "key": "D",
+          "text": "the temperature inside the car",
+          "why_wrong": "temperature has a size only; attaching a direction to it would add no information."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Velocity is speed in a stated direction, so it needs both a magnitude and a direction to be fully described; that is exactly what makes it a vector.",
+      "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::speed_velocity_and_the_role_of_direction",
+      "source_lesson_title": "Speed, velocity and the role of direction",
+      "unit_id": "U01_Measurement_and_Motion",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-MOTION-03-4",
+      "stem": "A distance–time table reads $t=0,4,9,13\\,\\mathrm{s}$ with distance $0,12,12,52\\,\\mathrm{m}$, with a rest between $t=4\\,\\mathrm{s}$ and $t=9\\,\\mathrm{s}$. Which calculation correctly finds the speed of the final rising section, from $t=9\\,\\mathrm{s}$ to $t=13\\,\\mathrm{s}$?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$(52-0)/(13-0)=4.0\\,\\mathrm{m/s}$, using the very first and very last points",
+          "why_wrong": "this spans the whole journey, including the rising first section and the five-second rest, so it does not isolate the final section's own gradient."
+        },
+        {
+          "key": "B",
+          "text": "$(12-12)/(9-4)=0\\,\\mathrm{m/s}$, using the two points at the ends of the rest",
+          "why_wrong": "this correctly calculates zero, but zero is the speed of the rest section (B), not of the final rising section (C) the question asks about."
+        },
+        {
+          "key": "C",
+          "text": "$(52-12)/(13-9)=10.0\\,\\mathrm{m/s}$, using the two points at the ends of the final section"
+        },
+        {
+          "key": "D",
+          "text": "$(12-0)/(4-0)=3.0\\,\\mathrm{m/s}$, using the two points at the ends of the first section",
+          "why_wrong": "this correctly calculates the first rising section's speed, not the final section's; the two points chosen do not lie on the final section at all."
+        }
+      ],
+      "correct": "C",
+      "explanation": "The final rising section runs only from $t=9\\,\\mathrm{s}$ ($12\\,\\mathrm{m}$) to $t=13\\,\\mathrm{s}$ ($52\\,\\mathrm{m}$); using exactly those two points gives $(52-12)/(13-9)=10.0\\,\\mathrm{m/s}$. Every other option uses at least one point from a different section.",
+      "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::distancetime_graphs_as_stories_of_motion",
+      "source_lesson_title": "Distance–time graphs as stories of motion",
+      "unit_id": "U01_Measurement_and_Motion",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-MOTION-05-1",
+      "stem": "For the same straight section of a speed–time graph, what do its gradient and its area under the graph each represent?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gradient gives distance; area gives acceleration",
+          "why_wrong": "this reverses the two operations: gradient is a rate of change (giving acceleration), while area is an accumulation (giving distance)."
+        },
+        {
+          "key": "B",
+          "text": "Both give acceleration",
+          "why_wrong": "area and gradient are different mathematical operations on the graph and do not give the same physical quantity."
+        },
+        {
+          "key": "C",
+          "text": "Both give distance",
+          "why_wrong": "gradient is a rate of change of speed, not an accumulation of distance; only the area represents distance."
+        },
+        {
+          "key": "D",
+          "text": "Gradient gives acceleration; area gives distance"
+        }
+      ],
+      "correct": "D",
+      "explanation": "Gradient is $\\Delta(\\text{speed})/\\Delta(\\text{time})$, which is acceleration; area is (speed)$\\times$(time) accumulated over an interval, which is distance. The same graph supports both calculations, but they are not the same operation.",
+      "source_lesson": "GCSEPHYS::U01_Measurement_and_Motion::acceleration_deceleration_and_free_fall",
+      "source_lesson_title": "Acceleration, deceleration and free fall",
+      "unit_id": "U01_Measurement_and_Motion",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P02-01-1",
+      "stem": "A bag of sugar has a mass of 2.0 kg. Calculate its weight near the Earth's surface, taking $g=9.8\\,\\mathrm{N/kg}$.",
+      "options": [
+        {
+          "key": "A",
+          "text": "$19.6\\,\\mathrm{N}$"
+        },
+        {
+          "key": "B",
+          "text": "$2.0\\,\\mathrm{N}$",
+          "why_wrong": "this restates the mass value with the wrong unit, treating mass and weight as the same quantity."
+        },
+        {
+          "key": "C",
+          "text": "$11.8\\,\\mathrm{N}$",
+          "why_wrong": "this adds $g$ to the mass ($2.0+9.8$) instead of multiplying them."
+        },
+        {
+          "key": "D",
+          "text": "$20\\,\\mathrm{N}$",
+          "why_wrong": "this rounds $g$ up to 10 N/kg instead of using the correct value of 9.8 N/kg."
+        }
+      ],
+      "correct": "A",
+      "explanation": "$W=2.0\\times9.8=19.6\\,\\mathrm{N}$.",
+      "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::mass_weight_and_gravitational_field_strength",
+      "source_lesson_title": "Mass, weight and gravitational field strength",
+      "unit_id": "U02_Mass_Weight_and_Density",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P02-02-2",
+      "stem": "An irregular solid is lowered into a measuring cylinder of water. The reading rises from 24 cm³ to 34 cm³. Which statement about the solid's volume is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Its volume is 34 cm³, the final reading.",
+          "why_wrong": "this ignores the 24 cm³ of water that was already in the cylinder before the solid was added."
+        },
+        {
+          "key": "B",
+          "text": "Its volume is 24 cm³, the initial reading.",
+          "why_wrong": "this uses the reading taken before the solid was even added to the cylinder."
+        },
+        {
+          "key": "C",
+          "text": "Its volume is 10 cm³, the rise in the reading."
+        },
+        {
+          "key": "D",
+          "text": "Its volume cannot be found without also weighing the displaced water.",
+          "why_wrong": "the volume is found directly from the change in the cylinder's scale reading; no extra weighing is needed to find a volume this way."
+        }
+      ],
+      "correct": "C",
+      "explanation": "The solid's volume is the rise in the reading: $34-24=10\\,\\mathrm{cm^3}$.",
+      "source_lesson": "GCSEPHYS::U02_Mass_Weight_and_Density::measuring_density",
+      "source_lesson_title": "Measuring density",
+      "unit_id": "U02_Mass_Weight_and_Density",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P03-01-1",
+      "stem": "A box is pulled forward with $16\\,\\mathrm{N}$. Friction acts backward with $6\\,\\mathrm{N}$. What is the resultant force on the box?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$22\\,\\mathrm{N}$ forward",
+          "why_wrong": "adds the two forces instead of subtracting the backward force from the forward one."
+        },
+        {
+          "key": "B",
+          "text": "$10\\,\\mathrm{N}$ forward"
+        },
+        {
+          "key": "C",
+          "text": "$10\\,\\mathrm{N}$ backward",
+          "why_wrong": "has the correct size but the wrong direction; the larger force is forward, so the resultant must be forward."
+        },
+        {
+          "key": "D",
+          "text": "$6\\,\\mathrm{N}$ forward",
+          "why_wrong": "reports the friction force rather than the resultant of the two forces."
+        }
+      ],
+      "correct": "B",
+      "explanation": "$16-6=10\\,\\mathrm{N}$ forward, in the direction of the larger force.",
+      "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::resultant_forces_and_motion",
+      "source_lesson_title": "Resultant forces and motion",
+      "unit_id": "U03_Forces_and_Pressure",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P03-02-1",
+      "stem": "A $4.0\\,\\mathrm{kg}$ object has a $30\\,\\mathrm{N}$ force acting forward and a $10\\,\\mathrm{N}$ force acting backward. What is its acceleration?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$7.5\\,\\mathrm{m\\,s^{-2}}$ forward",
+          "why_wrong": "substitutes the single 30 N force into F = ma instead of first finding the 20 N resultant."
+        },
+        {
+          "key": "B",
+          "text": "$2.5\\,\\mathrm{m\\,s^{-2}}$ forward",
+          "why_wrong": "substitutes the 10 N backward force alone into F = ma instead of the resultant."
+        },
+        {
+          "key": "C",
+          "text": "$5.0\\,\\mathrm{m\\,s^{-2}}$ forward"
+        },
+        {
+          "key": "D",
+          "text": "$10\\,\\mathrm{m\\,s^{-2}}$ forward",
+          "why_wrong": "adds the two forces together (40 N) instead of subtracting the backward force from the forward force."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Resultant $=30-10=20\\,\\mathrm{N}$ forward; $a=20/4.0=5.0\\,\\mathrm{m\\,s^{-2}}$ forward.",
+      "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::force_changes_velocity",
+      "source_lesson_title": "Force changes velocity",
+      "unit_id": "U03_Forces_and_Pressure",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P03-03-2",
+      "stem": "A load-extension graph has a straight region followed by a curve. Which point should be used to calculate the spring's spring constant?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Any point on the graph, since k = F/x always gives the same answer.",
+          "why_wrong": "is false beyond the limit of proportionality, where F/x changes from point to point."
+        },
+        {
+          "key": "B",
+          "text": "The point furthest from the origin, to use the largest possible numbers.",
+          "why_wrong": "may well lie beyond the limit of proportionality, giving an unreliable value."
+        },
+        {
+          "key": "C",
+          "text": "The origin, where the load and the extension are both zero.",
+          "why_wrong": "gives $0/0$, which has no value; k must be found from a point with a non-zero load and extension (or from the gradient) within the straight-line region."
+        },
+        {
+          "key": "D",
+          "text": "A point within the straight-line region."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Only within the straight-line region is extension proportional to load, so only there does F/x give one consistent spring constant.",
+      "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::springs_extension_and_proportionality",
+      "source_lesson_title": "Springs, extension and proportionality",
+      "unit_id": "U03_Forces_and_Pressure",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P03-04-3",
+      "stem": "A beam balances with a moment of $2.0\\,\\mathrm{N\\,m}$ on one side. A force of $8.0\\,\\mathrm{N}$ acts on the other side. At what perpendicular distance from the pivot must this force act?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$0.25\\,\\mathrm{m}$"
+        },
+        {
+          "key": "B",
+          "text": "$16\\,\\mathrm{m}$",
+          "why_wrong": "multiplies the moment by the force instead of dividing the moment by the force."
+        },
+        {
+          "key": "C",
+          "text": "$4.0\\,\\mathrm{m}$",
+          "why_wrong": "divides the force by the moment instead of the moment by the force, inverting the correct ratio."
+        },
+        {
+          "key": "D",
+          "text": "$6.0\\,\\mathrm{m}$",
+          "why_wrong": "subtracts the force from the moment instead of dividing one by the other."
+        }
+      ],
+      "correct": "A",
+      "explanation": "$d=2.0/8.0=0.25\\,\\mathrm{m}$.",
+      "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::moments_and_balanced_beams",
+      "source_lesson_title": "Moments and balanced beams",
+      "unit_id": "U03_Forces_and_Pressure",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P03-05-4",
+      "stem": "An object is slowly tilted. At what point does it begin to topple?",
+      "options": [
+        {
+          "key": "A",
+          "text": "As soon as any tilt at all is applied, however small.",
+          "why_wrong": "ignores that a small tilt can leave the weight's line of action still within the base, so the object remains stable."
+        },
+        {
+          "key": "B",
+          "text": "When the vertical line through its centre of gravity moves outside its base."
+        },
+        {
+          "key": "C",
+          "text": "Only when the whole base has lost contact with the ground.",
+          "why_wrong": "an object starts to topple while one edge of its base is still touching the ground; what matters is whether the vertical line through its centre of gravity has moved outside the base."
+        },
+        {
+          "key": "D",
+          "text": "Only when the object is tilted past 90 degrees.",
+          "why_wrong": "is far too large a tilt in general; many everyday objects topple at a much smaller angle, depending on their base and centre-of-gravity height."
+        }
+      ],
+      "correct": "B",
+      "explanation": "An object topples once tilting moves the vertical line through its centre of gravity outside its base, so that its own weight produces a moment that continues the tilt.",
+      "source_lesson": "GCSEPHYS::U03_Forces_and_Pressure::centre_of_gravity_and_stability",
+      "source_lesson_title": "Centre of gravity and stability",
+      "unit_id": "U03_Forces_and_Pressure",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P04-01-1",
+      "stem": "A stretched catapult elastic band, about to launch a stone, mainly stores energy in which store?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kinetic",
+          "why_wrong": "the band is not yet moving, so it has no meaningful kinetic energy to speak of."
+        },
+        {
+          "key": "B",
+          "text": "Gravitational potential",
+          "why_wrong": "this store depends on height above a reference level, and the band's height has not changed by being stretched."
+        },
+        {
+          "key": "C",
+          "text": "Elastic (strain)"
+        },
+        {
+          "key": "D",
+          "text": "Chemical",
+          "why_wrong": "no chemical bonds are being rearranged by simply stretching the band; stretching changes its shape, not its chemistry."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Stretching a band stores energy in its elastic (strain) store, because of the deformation of its shape.",
+      "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::energy_stores_transfers_and_conservation",
+      "source_lesson_title": "Energy stores, transfers and conservation",
+      "unit_id": "U04_Energy_Work_and_Power",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P04-02-2",
+      "stem": "A waiter carries a tray horizontally at a constant height across a room, walking $6.0\\,\\mathrm{m}$. The tray's weight is $20\\,\\mathrm{N}$, acting vertically downward, supported by an equal upward force from the waiter's hand. How much work does the waiter's vertical supporting force do on the tray during the $6.0\\,\\mathrm{m}$ walk?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$120\\,\\mathrm{J}$",
+          "why_wrong": "multiplies the vertical force by the horizontal distance, but that distance is not along the force's own direction."
+        },
+        {
+          "key": "B",
+          "text": "$20\\,\\mathrm{N}$",
+          "why_wrong": "gives the wrong unit; even if a value were correct, work must be expressed in joules."
+        },
+        {
+          "key": "C",
+          "text": "$3.3\\,\\mathrm{J}$",
+          "why_wrong": "divides the force by the distance instead of recognising that the distance along the force's own direction is zero."
+        },
+        {
+          "key": "D",
+          "text": "$0\\,\\mathrm{J}$"
+        }
+      ],
+      "correct": "D",
+      "explanation": "The tray's height does not change, so there is zero displacement in the direction of the vertical supporting force; that force therefore does zero work, even though the tray moves 6.0 m horizontally.",
+      "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::work_is_a_measured_energy_transfer",
+      "source_lesson_title": "Work is a measured energy transfer",
+      "unit_id": "U04_Energy_Work_and_Power",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P04-03-3",
+      "stem": "A $2.0\\,\\mathrm{kg}$ object is raised $10.0\\,\\mathrm{m}$ vertically. What is its change in gravitational potential energy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$196\\,\\mathrm{J}$"
+        },
+        {
+          "key": "B",
+          "text": "$20\\,\\mathrm{J}$",
+          "why_wrong": "calculates only $m\\times\\Delta h$, leaving out the gravitational field strength $g$ entirely."
+        },
+        {
+          "key": "C",
+          "text": "$100\\,\\mathrm{J}$",
+          "why_wrong": "wrongly borrows the kinetic-energy formula's structure, calculating $\\tfrac12\\times2.0\\times10.0^2$ instead of $mg\\Delta h$."
+        },
+        {
+          "key": "D",
+          "text": "$19.6\\,\\mathrm{J}$",
+          "why_wrong": "calculates only $m\\times g$ (the object's weight), leaving out the height entirely."
+        }
+      ],
+      "correct": "A",
+      "explanation": "$\\Delta E_p=2.0\\times9.8\\times10.0=196\\,\\mathrm{J}$.",
+      "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::kinetic_and_gravitational_energy",
+      "source_lesson_title": "Kinetic and gravitational energy",
+      "unit_id": "U04_Energy_Work_and_Power",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P04-04-4",
+      "stem": "A device receives $80\\,\\mathrm{J}$ of input energy and wastes $60\\,\\mathrm{J}$, which spreads into the internal (thermal) store of the surroundings. What is its efficiency?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$75\\%$",
+          "why_wrong": "reports the wasted fraction ($60/80$) instead of the useful fraction."
+        },
+        {
+          "key": "B",
+          "text": "$25\\%$"
+        },
+        {
+          "key": "C",
+          "text": "$33\\%$",
+          "why_wrong": "divides the useful energy by the wasted energy ($20/60$) instead of by the total input."
+        },
+        {
+          "key": "D",
+          "text": "$60\\%$",
+          "why_wrong": "uses the wasted energy value directly as if it were already a percentage, without calculating a ratio at all."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Useful output $=80-60=20\\,\\mathrm{J}$, so efficiency $=\\dfrac{20}{80}\\times100\\%=25\\%$.",
+      "source_lesson": "GCSEPHYS::U04_Energy_Work_and_Power::power_and_efficiency",
+      "source_lesson_title": "Power and efficiency",
+      "unit_id": "U04_Energy_Work_and_Power",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P05-01-1",
+      "stem": "Pollen grains suspended in water are watched under a microscope and seen to jitter and change direction constantly. What is the best explanation for this motion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The pollen grains are themselves water molecules moving randomly.",
+          "why_wrong": "confuses the large, visible pollen grain with the much smaller, invisible water molecules that actually strike it."
+        },
+        {
+          "key": "B",
+          "text": "The pollen grains are pulled by a weak current that changes direction every few seconds.",
+          "why_wrong": "invents an external current with no evidence, when the random collisions explanation already accounts for the motion."
+        },
+        {
+          "key": "C",
+          "text": "The pollen grains repel each other and bounce apart.",
+          "why_wrong": "describes an interaction between pollen grains, not the cause of a single grain's own erratic path."
+        },
+        {
+          "key": "D",
+          "text": "The pollen grains are struck unevenly, from random directions, by huge numbers of invisible, fast-moving water molecules."
+        }
+      ],
+      "correct": "D",
+      "explanation": "This is the standard particle-model explanation of Brownian motion: an unevenly, randomly bombarded large particle is pushed first one way, then another, by invisible fluid particles.",
+      "source_lesson": "GCSEPHYS::U05_Thermal_Physics::particles_temperature_and_evidence",
+      "source_lesson_title": "Particles, temperature and evidence",
+      "unit_id": "U05_Thermal_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P05-02-2",
+      "stem": "A metal rod gets very slightly longer when heated. What is the correct particle-level explanation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The particles vibrate more vigorously and settle, on average, slightly further apart from their neighbours."
+        },
+        {
+          "key": "B",
+          "text": "Each metal particle expands to a larger size.",
+          "why_wrong": "describes particles themselves growing, which does not happen; only their average spacing changes."
+        },
+        {
+          "key": "C",
+          "text": "New particles are created inside the rod as it heats up.",
+          "why_wrong": "invents particles appearing from nowhere, which has no basis in the particle model."
+        },
+        {
+          "key": "D",
+          "text": "The particles move from the cooler end of the rod to the hotter end.",
+          "why_wrong": "describes a bulk flow of particles along the rod, which is not what causes thermal expansion of a solid."
+        }
+      ],
+      "correct": "A",
+      "explanation": "Thermal expansion comes from more vigorous vibration increasing the average spacing between particles, not from the particles themselves changing size or number.",
+      "source_lesson": "GCSEPHYS::U05_Thermal_Physics::gas_pressure_and_thermal_expansion",
+      "source_lesson_title": "Gas pressure and thermal expansion",
+      "unit_id": "U05_Thermal_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P05-03-3",
+      "stem": "Which pair of factors, if both increased while everything else is kept the same, would both increase the rate of evaporation from a liquid's surface?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lower temperature and smaller exposed surface area.",
+          "why_wrong": "both changes listed would decrease, not increase, the rate of evaporation."
+        },
+        {
+          "key": "B",
+          "text": "Higher temperature and air movement across the surface."
+        },
+        {
+          "key": "C",
+          "text": "Higher temperature and a sealed, airtight container.",
+          "why_wrong": "a sealed container traps evaporated vapour above the surface, which slows net evaporation rather than increasing it, unlike moving air."
+        },
+        {
+          "key": "D",
+          "text": "Smaller exposed surface area and still air.",
+          "why_wrong": "both changes listed would decrease, not increase, the rate of evaporation."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Higher temperature gives more surface particles enough energy to escape, and air movement sweeps away vapour that has already escaped, both increasing the net evaporation rate.",
+      "source_lesson": "GCSEPHYS::U05_Thermal_Physics::melting_boiling_and_evaporation",
+      "source_lesson_title": "Melting, boiling and evaporation",
+      "unit_id": "U05_Thermal_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P05-04-3",
+      "stem": "Why do metals generally conduct thermal energy much better than non-metals?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Metal particles vibrate more strongly than non-metal particles even at the same temperature.",
+          "why_wrong": "is not the reason given in this lesson; particle vibration strength depends on temperature, not on whether a material is a metal."
+        },
+        {
+          "key": "B",
+          "text": "Metal particles are smaller than non-metal particles, so energy passes between them faster.",
+          "why_wrong": "invents a particle-size explanation that is not part of the conduction mechanism taught in this lesson."
+        },
+        {
+          "key": "C",
+          "text": "Metals have mobile delocalised electrons that drift quickly and carry energy along, in addition to particle-to-particle vibration."
+        },
+        {
+          "key": "D",
+          "text": "Non-metals do not have particles that vibrate at all.",
+          "why_wrong": "is incorrect: every solid's particles vibrate; non-metals still conduct, only more slowly, via vibration alone."
+        }
+      ],
+      "correct": "C",
+      "explanation": "The extra mechanism unique to metals is mobile delocalised electrons, which drift quickly and carry energy, on top of the particle-to-particle vibration every solid has.",
+      "source_lesson": "GCSEPHYS::U05_Thermal_Physics::conduction_through_materials",
+      "source_lesson_title": "Conduction through materials",
+      "unit_id": "U05_Thermal_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P05-05-4",
+      "stem": "Which statement correctly distinguishes convection from conduction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "In convection, only energy passes between particles that stay in place; in conduction, the whole material physically moves.",
+          "why_wrong": "swaps the two mechanisms: it is conduction where particles stay in place, and convection where the fluid physically moves."
+        },
+        {
+          "key": "B",
+          "text": "Convection and conduction both involve the same bulk movement of material, just in different states of matter.",
+          "why_wrong": "claims the two mechanisms are the same process in different states of matter, when they are genuinely different mechanisms (bulk flow vs vibration handover)."
+        },
+        {
+          "key": "C",
+          "text": "Convection only transfers energy, never any material; conduction transfers material as well as energy.",
+          "why_wrong": "gets both halves backwards: convection does transfer material (the fluid itself moves), while conduction transfers no material, only vibration energy."
+        },
+        {
+          "key": "D",
+          "text": "In convection, the fluid itself physically moves, carrying its particles and their energy; in conduction, particles stay near fixed positions and only vibration energy is passed along."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Convection is bulk movement of fluid, carrying both particles and energy; conduction is energy (vibration, and in metals, electrons) passed between particles that stay near fixed positions.",
+      "source_lesson": "GCSEPHYS::U05_Thermal_Physics::convection_in_fluids",
+      "source_lesson_title": "Convection in fluids",
+      "unit_id": "U05_Thermal_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P06-01-1",
+      "stem": "A cork floats on a water surface as a wave passes underneath it. What happens to the cork over one full wave cycle?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It moves up and down and returns close to where it started."
+        },
+        {
+          "key": "B",
+          "text": "It is carried forward along with the wave to a new position.",
+          "why_wrong": "treats the medium as if it travelled with the wave, rather than only oscillating about a fixed position."
+        },
+        {
+          "key": "C",
+          "text": "It stays completely still, because only light waves carry energy.",
+          "why_wrong": "wrongly assumes a water wave carries no energy to the cork; the cork clearly does move, just not along with the wave."
+        },
+        {
+          "key": "D",
+          "text": "It moves sideways, in the same direction the wave is travelling.",
+          "why_wrong": "describes longitudinal vibration in a case where the course treats this type of wave as transverse."
+        }
+      ],
+      "correct": "A",
+      "explanation": "A wave transfers energy through a medium while each part of the medium only oscillates about a fixed position; it does not travel along with the wave.",
+      "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::wave_quantities_and_types",
+      "source_lesson_title": "Wave quantities and types",
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P06-02-2",
+      "stem": "A wave passes cleanly through an open gap in a wall that is much wider than its wavelength, with no obstacle directly in its path. Does diffraction occur?",
+      "options": [
+        {
+          "key": "A",
+          "text": "No, because diffraction only happens when a wave hits a solid obstacle, not at an open gap.",
+          "why_wrong": "wrongly restricts diffraction to obstacles only; a gap is simply two edges close together, and diffraction occurs at a gap too."
+        },
+        {
+          "key": "B",
+          "text": "Yes, but only a little spreading, because the gap is much wider than the wavelength."
+        },
+        {
+          "key": "C",
+          "text": "No, because nothing happens to a wave unless it reflects off something.",
+          "why_wrong": "ignores diffraction entirely as a possible boundary effect."
+        },
+        {
+          "key": "D",
+          "text": "Yes, and the spreading would be exactly the same however wide the gap is.",
+          "why_wrong": "ignores that the amount of spreading depends on how the gap width compares with the wavelength."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Diffraction happens at any gap, not only at obstacles; a gap much wider than the wavelength gives only slight spreading at its edges.",
+      "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::what_happens_at_boundaries_and_gaps",
+      "source_lesson_title": "What happens at boundaries and gaps",
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P06-03-3",
+      "stem": "An object is moved further away from a plane mirror. What happens to the size of its image?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The image gets smaller, like the object appears to a distant observer.",
+          "why_wrong": "wrongly applies ordinary distance-based perspective to a plane-mirror image, which always matches the object's size exactly."
+        },
+        {
+          "key": "B",
+          "text": "The image gets larger, to compensate for the increased distance.",
+          "why_wrong": "invents a compensating effect that a plane mirror does not produce."
+        },
+        {
+          "key": "C",
+          "text": "The image stays exactly the same size."
+        },
+        {
+          "key": "D",
+          "text": "The image disappears once the object passes a certain distance.",
+          "why_wrong": "invents a distance limit that does not exist for a plane mirror's image."
+        }
+      ],
+      "correct": "C",
+      "explanation": "A plane mirror always produces a same-size image; only the object and image distances from the mirror change as the object moves, never the image size.",
+      "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::reflection_and_plane_mirror_images",
+      "source_lesson_title": "Reflection and plane-mirror images",
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P06-04-4",
+      "stem": "A ray in air meets a transparent material at $25^\\circ$ to the normal, with the material's refractive index $n=1.5$. What is the angle of refraction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$37.5^\\circ$",
+          "why_wrong": "multiplies the angle of incidence by the refractive index directly, rather than applying sines and rearranging the equation."
+        },
+        {
+          "key": "B",
+          "text": "$25^\\circ$",
+          "why_wrong": "assumes no bending occurs even though the angle of incidence is not $0^\\circ$."
+        },
+        {
+          "key": "C",
+          "text": "$1.5^\\circ$",
+          "why_wrong": "treats the refractive index as something to multiply the angle by directly and then misplaces a decimal point, rather than using the sine relationship."
+        },
+        {
+          "key": "D",
+          "text": "$16.4^\\circ$"
+        }
+      ],
+      "correct": "D",
+      "explanation": "$\\sin r = \\sin25^\\circ/1.5 \\approx 0.4226/1.5 \\approx 0.2817$, so $r=\\sin^{-1}(0.2817)\\approx16.4^\\circ$.",
+      "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::refraction_total_internal_reflection_and_fibres",
+      "source_lesson_title": "Refraction, total internal reflection and fibres",
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P06-06-1",
+      "stem": "A radio wave and a gamma ray both travel through a vacuum. Which statement is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They travel at the same speed, but the gamma ray has a much higher frequency."
+        },
+        {
+          "key": "B",
+          "text": "The gamma ray travels faster, because it has a much higher frequency.",
+          "why_wrong": "wrongly links a higher frequency with a higher speed; speed in vacuum is the same for every electromagnetic wave."
+        },
+        {
+          "key": "C",
+          "text": "The radio wave travels faster, because it has a much longer wavelength.",
+          "why_wrong": "wrongly links a longer wavelength with a higher speed; again, speed in vacuum does not depend on wavelength."
+        },
+        {
+          "key": "D",
+          "text": "Neither can be compared, because they are fundamentally different kinds of wave.",
+          "why_wrong": "wrongly denies that radio waves and gamma rays belong to the same family of electromagnetic waves."
+        }
+      ],
+      "correct": "A",
+      "explanation": "All electromagnetic waves share the same speed in a vacuum; only their frequency and wavelength differ, and here the gamma ray has the much higher frequency.",
+      "source_lesson": "GCSEPHYS::U06_Waves_Light_and_Sound::the_electromagnetic_spectrum",
+      "source_lesson_title": "The electromagnetic spectrum",
+      "unit_id": "U06_Waves_Light_and_Sound",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-01-1",
+      "stem": "A bar magnet's south pole is held facing the south pole of a second bar magnet. What happens?",
+      "options": [
+        {
+          "key": "A",
+          "text": "They repel, because like poles repel."
+        },
+        {
+          "key": "B",
+          "text": "They attract, because opposite ends of two different magnets always pull together.",
+          "why_wrong": "treats attraction as a general property of 'two magnets' rather than depending on which poles actually face each other."
+        },
+        {
+          "key": "C",
+          "text": "Nothing happens, because both poles are the same type.",
+          "why_wrong": "wrongly assumes matching poles produce no force at all, rather than a repulsive one."
+        },
+        {
+          "key": "D",
+          "text": "They attract, because south poles are weaker than north poles.",
+          "why_wrong": "invents a size difference between pole types that has nothing to do with the like/unlike rule."
+        }
+      ],
+      "correct": "A",
+      "explanation": "S facing S is a like-pole pairing, and like poles repel.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::magnets_and_magnetic_fields",
+      "source_lesson_title": "Magnets and magnetic fields",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-02-2",
+      "stem": "After rubbing, a duster carries a charge of $+4.0\\,\\mathrm{nC}$. What is the charge on the rod it was rubbed with?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$+4.0\\,\\mathrm{nC}$",
+          "why_wrong": "gives the duster's own charge again, rather than the rod's, and ignores that the two must be opposite in sign."
+        },
+        {
+          "key": "B",
+          "text": "$-4.0\\,\\mathrm{nC}$"
+        },
+        {
+          "key": "C",
+          "text": "$0\\,\\mathrm{nC}$",
+          "why_wrong": "would only be correct if the rod had somehow kept all its electrons, but rubbing has definitely transferred charge."
+        },
+        {
+          "key": "D",
+          "text": "Cannot be determined from the information given.",
+          "why_wrong": "conservation of charge is exactly enough information: the rod's charge must be the negative of the duster's."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Conservation of charge: the pair started neutral, so the rod's charge must be equal in size and opposite in sign to the duster's, $(+4.0)+(-4.0)=0$.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::charge_and_electric_fields",
+      "source_lesson_title": "Charge and electric fields",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-03-3",
+      "stem": "In a metal wire connected to a cell, which way do the electrons actually drift?",
+      "options": [
+        {
+          "key": "A",
+          "text": "From the positive terminal to the negative terminal, the same way as conventional current.",
+          "why_wrong": "describes conventional current direction, not the actual direction electrons move."
+        },
+        {
+          "key": "B",
+          "text": "Electrons do not move in a metal wire; only the field moves.",
+          "why_wrong": "electrons are the mobile charge carriers in a metal and genuinely drift along the wire; the field is not a separate moving object."
+        },
+        {
+          "key": "C",
+          "text": "From the negative terminal to the positive terminal."
+        },
+        {
+          "key": "D",
+          "text": "Back and forth randomly, with no overall direction.",
+          "why_wrong": "describes random thermal motion only, ignoring the steady overall drift superimposed on it by the cell's field."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Electrons are negative, so they are repelled from the negative terminal and attracted to the positive terminal: they drift from negative to positive, opposite to conventional current.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::current_is_charge_flow",
+      "source_lesson_title": "Current is charge flow",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-04-4",
+      "stem": "A $9.0\\,\\mathrm{V}$ battery is connected in series to two resistors. The p.d. across the first resistor is $3.5\\,\\mathrm{V}$. What is the p.d. across the second resistor?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$3.5\\,\\mathrm{V}$",
+          "why_wrong": "wrongly assumes both resistors must share the source voltage equally, rather than the two p.d.s simply adding to it."
+        },
+        {
+          "key": "B",
+          "text": "$9.0\\,\\mathrm{V}$",
+          "why_wrong": "would mean the first resistor's p.d. was ignored entirely, leaving the full source voltage across the second resistor alone."
+        },
+        {
+          "key": "C",
+          "text": "$12.5\\,\\mathrm{V}$",
+          "why_wrong": "adds the two given voltages instead of subtracting the known p.d. from the source voltage."
+        },
+        {
+          "key": "D",
+          "text": "$5.5\\,\\mathrm{V}$"
+        }
+      ],
+      "correct": "D",
+      "explanation": "In series, the p.d.s add up to the source voltage: $9.0\\,\\mathrm{V} - 3.5\\,\\mathrm{V} = 5.5\\,\\mathrm{V}$.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::voltage_as_energy_per_charge",
+      "source_lesson_title": "Voltage as energy per charge",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-06-1",
+      "stem": "Which statement about the kilowatt-hour (kW h) is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "It is a unit of energy, equal to the energy transferred by a 1 kW appliance running for 1 hour."
+        },
+        {
+          "key": "B",
+          "text": "It is a unit of power, equal to 1000 watts sustained for an hour.",
+          "why_wrong": "describes power sustained over time, which is actually energy, not a unit of power itself."
+        },
+        {
+          "key": "C",
+          "text": "It is the same as a joule, just under a different name.",
+          "why_wrong": "a kW h and a joule are both energy units, but they are not the same size: $1\\,\\mathrm{kWh}=3\\,600\\,000\\,\\mathrm{J}$, not $1\\,\\mathrm{J}$."
+        },
+        {
+          "key": "D",
+          "text": "It measures how quickly an appliance uses energy.",
+          "why_wrong": "describes power (a rate), not the kilowatt-hour, which measures a total amount of energy transferred."
+        }
+      ],
+      "correct": "A",
+      "explanation": "A kilowatt-hour is an energy unit: $1\\,\\mathrm{kWh} = 1000\\,\\mathrm{W}\\times3600\\,\\mathrm{s} = 3\\,600\\,000\\,\\mathrm{J}$.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::electrical_power_energy_and_cost",
+      "source_lesson_title": "Electrical power, energy and cost",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-07-2",
+      "stem": "The same cell and two lamps, joined one after another with no branch, are drawn first as a rectangle and then redrawn as an L-shaped loop with two corners. What has changed about the circuit's arrangement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The circuit has become parallel, because the shape is no longer a simple rectangle.",
+          "why_wrong": "confuses the physical outline of the drawing with the node connections, which decide series or parallel and have not changed here."
+        },
+        {
+          "key": "B",
+          "text": "Nothing: the node connections are unchanged, so it is the identical series circuit."
+        },
+        {
+          "key": "C",
+          "text": "The resistance of each lamp has increased because the wire is now longer.",
+          "why_wrong": "assumes redrawing a diagram changes a physical property of a component, which it cannot do."
+        },
+        {
+          "key": "D",
+          "text": "It cannot be decided without knowing the physical length of each wire.",
+          "why_wrong": "wrongly treats wire length as relevant to series/parallel arrangement, when only the node connections matter."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Series or parallel is decided entirely by which nodes each component shares, never by the physical shape or size of the drawing; here the node sequence is identical in both diagrams.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::drawing_and_reading_circuits",
+      "source_lesson_title": "Drawing and reading circuits",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-08-3",
+      "stem": "A $5.0\\,\\Omega$ resistor and a $20\\,\\Omega$ resistor are connected in parallel. What is the equivalent resistance?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$25\\,\\Omega$",
+          "why_wrong": "adds the two resistances directly, as in series, which gives a value larger than either branch and cannot be correct for a parallel combination."
+        },
+        {
+          "key": "B",
+          "text": "$12.5\\,\\Omega$",
+          "why_wrong": "averages the two resistances instead of applying $1/R_{\\text{total}}=1/R_1+1/R_2$; the correct result must be smaller than the smaller branch, $5.0\\,\\Omega$, and $12.5\\,\\Omega$ is not."
+        },
+        {
+          "key": "C",
+          "text": "$4.0\\,\\Omega$"
+        },
+        {
+          "key": "D",
+          "text": "$5.0\\,\\Omega$",
+          "why_wrong": "equals the smaller branch exactly, which would mean the second branch carries no current at all; a genuine second path must reduce the combined resistance below $5.0\\,\\Omega$."
+        }
+      ],
+      "correct": "C",
+      "explanation": "$1/R_{\\text{total}}=1/5.0+1/20=4/20+1/20=5/20=1/4.0$, so $R_{\\text{total}}=4.0\\,\\Omega$, smaller than both branch resistances, as expected for a parallel combination.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::series_and_parallel_networks",
+      "source_lesson_title": "Series and parallel networks",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-09-4",
+      "stem": "A hairdryer has a plastic casing with no metal parts a user could touch, and no earth pin on its plug. Why is this design safe?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Plastic conducts electricity poorly enough that a fault current is always small.",
+          "why_wrong": "misdescribes the mechanism: the plastic casing is not a poor conductor carrying a small fault current, it is a non-conducting barrier that a fault cannot reach through to a touchable surface at all."
+        },
+        {
+          "key": "B",
+          "text": "The missing earth pin automatically makes the appliance's internal voltage lower.",
+          "why_wrong": "confuses the presence or absence of an earth pin with the appliance's operating voltage, which is unaffected by whether an earth wire is fitted."
+        },
+        {
+          "key": "C",
+          "text": "A hairdryer draws too little current for any fault to be dangerous.",
+          "why_wrong": "is not the real reason; double insulation protects regardless of the current a fault might otherwise draw, by preventing any touchable surface from becoming live."
+        },
+        {
+          "key": "D",
+          "text": "The plastic casing means no fault inside can ever make an outer touchable surface live, so no earth path is needed."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Double insulation works by ensuring no touchable part is ever connected to a live conductor, even if an internal fault occurs, so there is no live case for an earth wire to protect against in the first place.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::electrical_safety",
+      "source_lesson_title": "Electrical safety",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P07-11-1",
+      "stem": "An electric fan has a motor that spins its blades when plugged in. Which statement correctly describes its energy transformation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Electrical energy is transformed into mechanical (kinetic) energy."
+        },
+        {
+          "key": "B",
+          "text": "Mechanical energy is transformed into electrical energy, which is then transformed back into mechanical energy.",
+          "why_wrong": "adds an unnecessary and incorrect extra step; a motor transforms electrical energy directly into mechanical energy, with no intermediate stage."
+        },
+        {
+          "key": "C",
+          "text": "The fan is a generator, so it produces electrical energy as the blades spin.",
+          "why_wrong": "confuses a motor with a generator; the fan is supplied with electrical energy and outputs mechanical energy, the reverse of a generator."
+        },
+        {
+          "key": "D",
+          "text": "No energy transformation occurs; the blades simply spin because current is present.",
+          "why_wrong": "ignores that a transformation must occur for the blades to gain kinetic energy at all, which cannot appear from nowhere."
+        }
+      ],
+      "correct": "A",
+      "explanation": "A motor is supplied with electrical energy and transforms it into mechanical (kinetic) energy, turning its shaft and the attached blades.",
+      "source_lesson": "GCSEPHYS::U07_Electricity_and_Magnetism::current_makes_fields_and_motor_forces",
+      "source_lesson_title": "Current makes fields and motor forces",
+      "unit_id": "U07_Electricity_and_Magnetism",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P08-01-1",
+      "stem": "What does the nucleon number $A$ of a nuclide actually count?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The number of protons only.",
+          "why_wrong": "this is what the proton number $Z$ counts, not $A$."
+        },
+        {
+          "key": "B",
+          "text": "The number of protons plus the number of neutrons."
+        },
+        {
+          "key": "C",
+          "text": "The number of electrons only.",
+          "why_wrong": "electrons are not counted by $A$ at all; in a neutral atom their number equals $Z$, not $A$."
+        },
+        {
+          "key": "D",
+          "text": "The number of neutrons only.",
+          "why_wrong": "this is the neutron number, $N=A-Z$, which is only part of what $A$ counts."
+        }
+      ],
+      "correct": "B",
+      "explanation": "$A$ is defined as protons plus neutrons together; neither alone, and never electrons.",
+      "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::nuclei_isotopes_and_nuclear_processes",
+      "source_lesson_title": "Nuclei, isotopes and nuclear processes",
+      "unit_id": "U08_Nuclear_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P08-02-2",
+      "stem": "Which statement about background radiation is correct?",
+      "options": [
+        {
+          "key": "A",
+          "text": "With no sample present, a detector should read exactly zero.",
+          "why_wrong": "ignores that background radiation is present essentially everywhere, from sources with nothing to do with any particular sample."
+        },
+        {
+          "key": "B",
+          "text": "Background radiation comes only from radioactive samples that have previously been left in the room.",
+          "why_wrong": "ignores natural sources such as cosmic rays and radon gas, which are present with or without any sample ever having been in the room."
+        },
+        {
+          "key": "C",
+          "text": "A detector will usually record a small, nonzero count rate even when no radioactive sample is nearby."
+        },
+        {
+          "key": "D",
+          "text": "Background radiation can always be reduced to exactly zero by moving far enough from any rocks or buildings.",
+          "why_wrong": "ignores sources such as cosmic rays and radiation from inside the body, which persist regardless of distance from rocks or buildings."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Background radiation, from sources such as radon gas, rocks, cosmic rays and food, means a detector almost always reads some small nonzero rate even with no sample present.",
+      "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::detecting_ionising_radiation",
+      "source_lesson_title": "Detecting ionising radiation",
+      "unit_id": "U08_Nuclear_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P08-03-3",
+      "stem": "Which statement correctly compares ionising ability and penetrating power across the three emission types?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The type that penetrates furthest always ionises most strongly as it travels.",
+          "why_wrong": "gets the relationship backwards: the furthest-penetrating type (gamma) is in fact the weakest ioniser of the three."
+        },
+        {
+          "key": "B",
+          "text": "Ionising ability and penetrating power are completely unrelated properties.",
+          "why_wrong": "overlooks the clear trade-off: stronger ionisation along a path causes faster absorption and therefore shorter penetration."
+        },
+        {
+          "key": "C",
+          "text": "Beta ionises more strongly than alpha, because beta travels faster.",
+          "why_wrong": "alpha, not beta, is the most strongly ionising of the three, despite beta's higher speed; speed alone does not decide ionising ability here."
+        },
+        {
+          "key": "D",
+          "text": "Alpha ionises most strongly but penetrates least far; gamma ionises most weakly but penetrates furthest."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Ionising ability and penetrating power run in opposite directions between alpha and gamma, with beta intermediate on both.",
+      "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::alpha_beta_and_gamma",
+      "source_lesson_title": "Alpha, beta and gamma",
+      "unit_id": "U08_Nuclear_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P08-04-4",
+      "stem": "A nuclide $^{A}_{Z}X$ emits a gamma ray only. What are the nucleon number and proton number of the resulting nuclide?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Unchanged: still $A$ and $Z$."
+        },
+        {
+          "key": "B",
+          "text": "$A-4$ and $Z-2$.",
+          "why_wrong": "this is the change produced by alpha decay, not by gamma emission."
+        },
+        {
+          "key": "C",
+          "text": "$A$ unchanged, but $Z+1$.",
+          "why_wrong": "this is the change produced by beta-minus decay, not by gamma emission."
+        },
+        {
+          "key": "D",
+          "text": "$A-1$ and $Z-1$.",
+          "why_wrong": "invents a change that matches neither alpha nor beta decay, and gamma emission changes neither number at all."
+        }
+      ],
+      "correct": "A",
+      "explanation": "Gamma emission releases energy only; the nucleon number and proton number are unchanged.",
+      "source_lesson": "GCSEPHYS::U08_Nuclear_Physics::random_decay_and_half_life",
+      "source_lesson_title": "Random decay and half-life",
+      "unit_id": "U08_Nuclear_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P09-01-1",
+      "stem": "Which of the following lists four planets in the correct order of increasing distance from the Sun?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Earth, Mercury, Mars, Jupiter",
+          "why_wrong": "places Earth before Mercury, but Mercury is closer to the Sun than Earth."
+        },
+        {
+          "key": "B",
+          "text": "Mercury, Earth, Mars, Jupiter"
+        },
+        {
+          "key": "C",
+          "text": "Mercury, Mars, Earth, Jupiter",
+          "why_wrong": "swaps Earth and Mars; Earth is closer to the Sun than Mars."
+        },
+        {
+          "key": "D",
+          "text": "Jupiter, Mars, Earth, Mercury",
+          "why_wrong": "lists the four planets in decreasing distance from the Sun, the reverse of what was asked."
+        }
+      ],
+      "correct": "B",
+      "explanation": "The fixed order from the Sun is Mercury, Venus, Earth, Mars, Jupiter...; keeping only these four in that order gives Mercury, Earth, Mars, Jupiter.",
+      "source_lesson": "GCSEPHYS::U09_Space_Physics::the_solar_system_as_an_organised_system",
+      "source_lesson_title": "The Solar System as an organised system",
+      "unit_id": "U09_Space_Physics",
+      "marks": 1
+    },
+    {
+      "id": "MCQ-P09-02-2",
+      "stem": "A planet moves in a stable circular orbit around the Sun. In which direction does the Sun's gravitational force act on the planet?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Along the direction the planet is moving, pushing it forward.",
+          "why_wrong": "would speed the planet up continuously, which does not happen in a stable circular orbit."
+        },
+        {
+          "key": "B",
+          "text": "Directly away from the Sun.",
+          "why_wrong": "would push the planet away rather than bend its path into a closed orbit around the Sun."
+        },
+        {
+          "key": "C",
+          "text": "Directly toward the Sun, perpendicular to the planet's velocity."
+        },
+        {
+          "key": "D",
+          "text": "There is no net gravitational force once the orbit is stable.",
+          "why_wrong": "wrongly assumes a stable orbit means no force acts; gravity is continuously acting and is exactly what keeps the orbit stable."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Gravity acts toward the Sun, perpendicular to the planet's motion, continuously changing its direction without changing its speed; this is what sustains a stable circular orbit.",
+      "source_lesson": "GCSEPHYS::U09_Space_Physics::the_sun_light_travel_and_orbits",
+      "source_lesson_title": "The Sun, light travel and orbits",
+      "unit_id": "U09_Space_Physics",
+      "marks": 1
+    }
+  ]
+}
