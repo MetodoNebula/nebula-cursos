@@ -5026,7 +5026,7 @@
       },
       {
         "id": "LO-05-4",
-        "statement": "Aplicar la hipótesis de de Broglie $\\lambda = h/mv$ en problemas directos e inversos, incluidos los de electrones acelerados por una diferencia de potencial.",
+        "statement": "Aplicar la hipótesis de de Broglie $\\lambda = h/p$ (con $p=mv$ como aproximación no relativista, válida para $v\\ll c$) en problemas directos e inversos, incluidos los de electrones acelerados por una diferencia de potencial.",
         "bloom": "aplicar",
         "concept_ids": [
           "C-CU-26",
@@ -5224,7 +5224,7 @@
         "type": "formalisation",
         "title": "De Broglie, 1924: la misma ecuación, al revés",
         "scope": "CORE",
-        "body": "Compton acababa de demostrar que algo que se creía una onda tiene momento. Louis de Broglie hizo entonces la pregunta simétrica: si una onda tiene momento, **¿tendrá longitud de onda una partícula?**\n\nSu hipótesis, de 1924, es exactamente eso:\n\n> **Toda partícula en movimiento lleva asociada una onda, cuya longitud de onda es**\n> $$\\boxed{\\lambda = \\frac{h}{p} = \\frac{h}{mv}}$$\n\nNo hay ninguna deducción detrás. Es una hipótesis de simetría: si la naturaleza usa la misma relación en un sentido, probablemente la use en el otro. Y resultó ser cierta.\n\nLa consecuencia es que **la materia también tiene naturaleza dual**. El aspecto ondulatorio es imperceptible en objetos grandes, como se verá enseguida con un número, pero es perfectamente visible en electrones.\n\n**Una advertencia sobre qué clase de onda es ésta.** «Lleva asociada una onda» no significa que la partícula recorra un camino ondulado. Si así fuera, el electrón tendría una trayectoria perfectamente definida y no habría nada nuevo. Lo que esa onda describe es **dónde es probable encontrar a la partícula**; su amplitud no se mide en metros de desplazamiento. La formalización de esa idea es el contenido de la lección siguiente, pero conviene no construir mientras tanto la imagen equivocada.\n\n> **Dos nombres para la misma magnitud.** En $\\lambda = h/mv$, el producto $mv$ es el momento lineal. Conviene escribir la fórmula como $\\lambda = h/p$ y recordar que, según el objeto, ese $p$ se calcula de una manera o de otra: $mv$ si tiene masa, $E/c$ si es un fotón.",
+        "body": "Compton acababa de demostrar que algo que se creía una onda tiene momento. Louis de Broglie hizo entonces la pregunta simétrica: si una onda tiene momento, **¿tendrá longitud de onda una partícula?**\n\nSu hipótesis, de 1924, es exactamente eso:\n\n> **Toda partícula en movimiento lleva asociada una onda, cuya longitud de onda es**\n> $$\\boxed{\\lambda = \\frac{h}{p} = \\frac{h}{mv}}$$\n\nNo hay ninguna deducción detrás. Es una hipótesis de simetría: si la naturaleza usa la misma relación en un sentido, probablemente la use en el otro. Y resultó ser cierta.\n\nLa consecuencia es que **la materia también tiene naturaleza dual**. El aspecto ondulatorio es imperceptible en objetos grandes, como se verá enseguida con un número, pero es perfectamente visible en electrones.\n\n**Una advertencia sobre qué clase de onda es ésta.** «Lleva asociada una onda» no significa que la partícula recorra un camino ondulado. Si así fuera, el electrón tendría una trayectoria perfectamente definida y no habría nada nuevo. Lo que esa onda describe es **dónde es probable encontrar a la partícula**; su amplitud no se mide en metros de desplazamiento. La formalización de esa idea es el contenido de la lección siguiente, pero conviene no construir mientras tanto la imagen equivocada.\n\n> **Dos nombres para la misma magnitud.** En $\\lambda = h/mv$, el producto $mv$ es el momento lineal. Conviene escribir la fórmula como $\\lambda = h/p$ y recordar que, según el objeto, ese $p$ se calcula de una manera o de otra: $mv$ si tiene masa, $E/c$ si es un fotón.\n>\n> **La fórmula canónica es $\\lambda=h/p$.** $p=mv$ es la expresión del momento lineal **no relativista** ($v\\ll c$), que es la que sirve en todos los problemas de este curso. Si alguna vez una partícula se acercase a la velocidad de la luz, habría que usar el momento relativista; eso queda fuera de este curso, pero conviene saber que $p=mv$ no es la definición de $p$, es un caso particular de ella.",
         "concept_ids": [
           "C-CU-26"
         ],
@@ -5330,7 +5330,7 @@
         "type": "caveat",
         "title": "Dos descuidos que cuestan puntos",
         "scope": "CORE",
-        "body": "**La masa que va en $\\lambda = h/mv$ es la de la partícula del problema.** Parece obvio y se falla constantemente, porque el valor de $m_e$ está tan a mano que se escribe solo. Si el enunciado habla de un protón, de un neutrón o de una molécula, la masa es la suya. Y como $\\lambda \\propto 1/\\sqrt{m}$ para la misma energía, usar la masa equivocada no da un error pequeño: entre un protón y un electrón hay un factor $\\sqrt{1836} = 42{,}8$.\n\n**Las constantes se toman de los datos del enunciado.** Es frecuente que un mismo desarrollo empiece con $h = 6{,}626\\cdot10^{-34}$ J$\\cdot$s en los datos y use $6{,}63\\cdot10^{-34}$ en la cuenta. A tres cifras significativas el resultado no cambia, de modo que no es un error de física; pero en un examen es una incoherencia visible y evitable. **Usa el valor que te dan, el mismo de principio a fin, y redondea solo al final.**",
+        "body": "**La masa que va en $\\lambda = h/mv$ es la de la partícula del problema.** Parece obvio y se falla constantemente, porque el valor de $m_e$ está tan a mano que se escribe solo. Si el enunciado habla de un protón, de un neutrón o de una molécula, la masa es la suya. Y como $\\lambda \\propto 1/\\sqrt{m}$ para la misma energía, usar la masa equivocada no da un error pequeño: entre un protón y un electrón hay un factor $\\sqrt{1836} = 42{,}8$.\n\n**Las constantes se toman de los datos del enunciado.** Es frecuente que un mismo desarrollo empiece con $h = 6{,}626\\cdot10^{-34}$ J$\\cdot$s en los datos y use $6{,}63\\cdot10^{-34}$ en la cuenta. A tres cifras significativas el resultado no cambia, de modo que no es un error de física; pero en un examen es una incoherencia visible y evitable. **Usa el valor que te dan, el mismo de principio a fin, y redondea solo al final.**\n\n**Recordatorio de alcance:** $\\lambda=h/mv$ es $\\lambda=h/p$ con $p=mv$ no relativista. Para los electrones, protones y neutrones de este curso, acelerados por diferencias de potencial de laboratorio, $v\\ll c$ y la aproximación es excelente.",
         "concept_ids": [
           "C-CU-26"
         ],
@@ -5373,7 +5373,7 @@
       },
       {
         "term": "Onda de materia",
-        "definition": "Onda asociada a toda partícula en movimiento, de longitud $\\lambda = h/mv$. No es una trayectoria: describe dónde es probable encontrar a la partícula.",
+        "definition": "Onda asociada a toda partícula en movimiento, de longitud $\\lambda = h/p$ (fórmula canónica; $p=mv$ solo como aproximación no relativista, $v\\ll c$). No es una trayectoria: describe dónde es probable encontrar a la partícula.",
         "concept_id": "C-CU-26"
       },
       {
@@ -6351,7 +6351,7 @@
       "key_points": [
         "**El fotón tiene momento:** $p = E/c = h/\\lambda$, obtenido de $E^2 = m^2c^4+p^2c^2$ con $m = 0$. **Nunca** de $p = mv$, porque la masa en reposo del fotón es cero.",
         "**El efecto Compton** es una colisión: el fotón cede energía al electrón, baja su frecuencia y sube su longitud de onda. El balance es $E_{\\mathrm{abs}} = h(f-f')$. Se observa con rayos X porque el aumento es de unos picómetros.",
-        "**La hipótesis de de Broglie:** toda partícula en movimiento lleva asociada una onda de longitud $\\lambda = h/p = h/mv$. Para la energía cinética, $\\lambda = h/\\sqrt{2mE_c}$; para un electrón acelerado, $\\lambda(\\mathrm{nm}) \\approx 1{,}23/\\sqrt{V}$.",
+        "**La hipótesis de de Broglie:** toda partícula en movimiento lleva asociada una onda de longitud $\\lambda = h/p$ (fórmula canónica), con $p=mv$ como aproximación no relativista $v\\ll c$. Para la energía cinética, $\\lambda = h/\\sqrt{2mE_c}$; para un electrón acelerado, $\\lambda(\\mathrm{nm}) \\approx 1{,}23/\\sqrt{V}$.",
         "**El hilo de la unidad llega aquí a su punto culminante:** $p = h/\\lambda$ y $\\lambda = h/p$ son la misma relación. A un lado una magnitud de onda, al otro una de partícula, y $h$ exactamente en la frontera, haciendo de tipo de cambio.",
         "**Davisson y Germer, 1927:** los electrones se difractan en un cristal con máximos en direcciones discretas, y las direcciones son las que predice $h/mv$. Hace falta un cristal porque sus huecos miden décimas de nanómetro, igual que la longitud de onda.",
         "**Y el segundo cruce del umbral:** la pregunta «¿la luz es onda o partícula?» no tiene respuesta porque está mal hecha. Cada experimento revela un comportamiento y nunca los dos; eso es la complementariedad. Y por la hipótesis de de Broglie, todo ello vale igual para la materia."
@@ -6394,7 +6394,7 @@
       },
       {
         "id": "LO-06-2",
-        "statement": "Decidir, mediante el criterio dimensional (que el producto tenga dimensiones de J$\\cdot$s), si un par de magnitudes está sujeto al principio.",
+        "statement": "Usar el criterio dimensional (que el producto tenga dimensiones de J$\\cdot$s) como filtro **necesario pero no suficiente** para descartar pares no conjugados, y reconocer los pares realmente conjugados de este curso (posición-momento en la misma dirección, energía-tiempo, ángulo-momento angular) sin generalizar a cualquier par que pase el filtro dimensional.",
         "bloom": "aplicar",
         "concept_ids": [
           "C-CU-31"
@@ -6809,22 +6809,23 @@
       {
         "id": "WE-06-3",
         "level": "transfer",
-        "statement": "Sin memorizar ninguna lista, decide cuáles de estos pares de magnitudes están sujetos al principio de indeterminación: **(a)** fuerza y tiempo; **(b)** momento angular y ángulo; **(c)** energía y posición. Usa el criterio dimensional.",
+        "statement": "Decide cuáles de estos pares de magnitudes están sujetos al principio de indeterminación: **(a)** fuerza y tiempo; **(b)** momento angular y ángulo; **(c)** energía y posición. Usa el criterio dimensional como filtro para descartar, y comprueba además si el par superviviente es uno de los pares conjugados estudiados en el curso.",
         "knowns": [
-          "El criterio: están sujetos al principio los pares cuyo producto tiene dimensiones de J$\\cdot$s"
+          "El criterio dimensional (filtro necesario, no suficiente): si el producto NO tiene dimensiones de J$\\cdot$s, el par seguro que no está sujeto al principio",
+          "Los pares conjugados estudiados en el curso: posición-momento (misma dirección), energía-tiempo, ángulo-momento angular"
         ],
         "unknowns": [
           "Si cada par cumple el criterio"
         ],
         "reasoning": [
-          "El criterio es puramente dimensional, de modo que el procedimiento es siempre el mismo: escribir las dimensiones de cada magnitud, multiplicarlas y comparar con J$\\cdot$s.",
+          "El criterio dimensional sirve para **descartar**: si el producto no tiene dimensiones de J$\\cdot$s, el par no está sujeto al principio, sin excepción. Pero que sí las tenga NO basta para afirmar que están sujetos: hace falta además que sean uno de los pares conjugados realmente estudiados.",
           "**(a)** $[F] = \\mathrm{N}$ y $[t] = \\mathrm{s}$, luego $[F][t] = \\mathrm{N\\cdot s}$. Y $\\mathrm{N\\cdot s} = \\mathrm{kg\\,m\\,s^{-2}\\cdot s} = \\mathrm{kg\\,m\\,s^{-1}}$, que son las dimensiones de un **momento lineal**, no de J$\\cdot$s. **No cumple el criterio.**",
-          "**(b)** El momento angular tiene las mismas dimensiones que $mvr$: $\\mathrm{kg\\,m\\,s^{-1}\\cdot m} = \\mathrm{kg\\,m^2\\,s^{-1}} = \\mathrm{J\\cdot s}$. Y el ángulo es adimensional, de modo que el producto sigue teniendo dimensiones de J$\\cdot$s. **Sí cumple el criterio.**",
+          "**(b)** El momento angular tiene las mismas dimensiones que $mvr$: $\\mathrm{kg\\,m\\,s^{-1}\\cdot m} = \\mathrm{kg\\,m^2\\,s^{-1}} = \\mathrm{J\\cdot s}$. Y el ángulo es adimensional, de modo que el producto sigue teniendo dimensiones de J$\\cdot$s. **Pasa el filtro dimensional** — y, además, ángulo y momento angular son precisamente uno de los pares conjugados del curso (el análogo rotacional de posición-momento), así que **sí** está sujeto al principio. La razón última no es la coincidencia dimensional, sino que ambas magnitudes son variables canónicamente conjugadas.",
           "**(c)** $[E][x] = \\mathrm{J\\cdot m}$, que no son J$\\cdot$s. **No cumple el criterio.**",
           "Conviene observar que el momento angular tiene **las mismas dimensiones que $h$**, lo que no es casualidad: es exactamente lo que el segundo postulado de Bohr cuantizaba en múltiplos de $h/2\\pi$."
         ],
-        "solution": "**(a)** No. **(b)** Sí. **(c)** No.\n\nSolo (b) tiene un producto con dimensiones de J$\\cdot$s.",
-        "interpretation": "El criterio dimensional convierte una lista que habría que memorizar en algo que se decide en veinte segundos con un papel. Y revela algo más: la magnitud que tiene las dimensiones de $h$ es el **momento angular**, que es precisamente la que Bohr cuantizó. Las dimensiones de una constante no son un detalle de contabilidad: dicen sobre qué magnitudes actúa.",
+        "solution": "**(a)** No. **(b)** Sí. **(c)** No.\n\n(a) y (c) se descartan ya por el filtro dimensional (no dan J$\\cdot$s). (b) pasa el filtro dimensional Y es un par conjugado estudiado (ángulo-momento angular): por eso, y no solo por la dimensión, está sujeto al principio.",
+        "interpretation": "El criterio dimensional convierte una lista que habría que memorizar en algo que se decide en veinte segundos con un papel. Y revela algo más: la magnitud que tiene las dimensiones de $h$ es el **momento angular**, que es precisamente la que Bohr cuantizó. Las dimensiones de una constante no son un detalle de contabilidad: dicen sobre qué magnitudes actúa. Aun así, el filtro dimensional por sí solo no demuestra la conjugación: $x$ y $p_y$ (posición y momento en direcciones distintas) también tienen producto con dimensiones de J$\\cdot$s y, sin embargo, son compatibles. Lo decisivo es ser un par canónicamente conjugado, no solo tener las dimensiones correctas.",
         "common_mistake": "Decidir de memoria que «fuerza y tiempo sí, porque el impulso tiene que ver con el momento». El impulso **es** un momento lineal, y por eso precisamente no tiene las dimensiones de la constante de Planck.",
         "objective_ids": [
           "LO-06-2"
@@ -7215,7 +7216,7 @@
       },
       {
         "id": "MCQ-06-6",
-        "stem": "Usando el criterio dimensional, ¿cuál de estos pares de magnitudes está sujeto al principio de indeterminación?",
+        "stem": "¿Cuál de estos pares de magnitudes está sujeto al principio de indeterminación (dimensión de J$\\cdot$s Y par conjugado reconocido)?",
         "options": [
           {
             "key": "A",
@@ -7243,7 +7244,7 @@
           }
         ],
         "correct": "C",
-        "explanation": "El criterio es que el producto tenga las dimensiones de la constante de Planck, J$\\cdot$s. El momento angular tiene las mismas dimensiones que $mvr$, es decir $\\mathrm{kg\\,m^2\\,s^{-1}} = \\mathrm{J\\cdot s}$, y el ángulo es adimensional: el producto cumple el criterio. No es casualidad que la magnitud con las dimensiones de $h$ sea precisamente la que Bohr cuantizó en múltiplos de $h/2\\pi$.",
+        "explanation": "El filtro dimensional descarta A, B y D (sus productos no dan J$\\cdot$s). El momento angular y el ángulo sí dan J$\\cdot$s ($\\mathrm{kg\\,m^2\\,s^{-1}}$), pero eso solo los deja como candidatos: lo que confirma que están sujetos al principio es que, además, son el par conjugado rotacional estudiado en el curso (análogo a posición-momento). El filtro dimensional nunca basta por sí solo para afirmar conjugación: $x$ y $p_y$, por ejemplo, también dan J$\\cdot$s y son compatibles.",
         "difficulty": 3,
         "objective_id": "LO-06-2",
         "concept_id": "C-CU-31"
@@ -7305,7 +7306,7 @@
         "id": "FC-06-3",
         "kind": "condition",
         "front": "¿Cómo saber si un par de magnitudes está sujeto al principio?",
-        "back": "Criterio dimensional: lo está si **el producto tiene dimensiones de J$\\cdot$s**, las de la constante de Planck. $[x][p] = \\mathrm{J\\cdot s}$ ✓; $[E][t] = \\mathrm{J\\cdot s}$ ✓; $[F][t] = \\mathrm{kg\\,m\\,s^{-1}}$ ✗. No hay que memorizar ninguna lista.",
+        "back": "El criterio dimensional es un filtro **necesario, no suficiente**: si el producto NO tiene dimensiones de J$\\cdot$s (como $[F][t]=\\mathrm{kg\\,m\\,s^{-1}}$ ✗), el par seguro que no está sujeto. Si SÍ las tiene ($[x][p]=\\mathrm{J\\cdot s}$, $[E][t]=\\mathrm{J\\cdot s}$, $[L][\\theta]=\\mathrm{J\\cdot s}$), hay que comprobar además que sea un par conjugado reconocido — no basta con la dimensión (p. ej. $x$ y $p_y$ también dan J$\\cdot$s y son compatibles).",
         "concept_id": "C-CU-31",
         "difficulty": 2
       },
@@ -7464,7 +7465,7 @@
     "summary": {
       "big_idea": "El electrón no tiene una trayectoria que no podamos medir: no tiene trayectoria. Y la cuantización, que durante toda la unidad fue una hipótesis puesta a mano, resulta ser una consecuencia inevitable de describir al electrón como una onda ligada.",
       "key_points": [
-        "**El principio:** $\\Delta x\\cdot\\Delta p \\ge h/4\\pi$ y $\\Delta E\\cdot\\Delta t \\ge h/4\\pi$, con $h/4\\pi = \\hbar/2 = 5{,}3\\cdot10^{-35}$ J$\\cdot$s. Es una cota inferior, acota un **producto**, y el criterio para saber qué pares cumple es dimensional: que el producto tenga dimensiones de J$\\cdot$s.",
+        "**El principio:** $\\Delta x\\cdot\\Delta p \\ge h/4\\pi$ y $\\Delta E\\cdot\\Delta t \\ge h/4\\pi$, con $h/4\\pi = \\hbar/2 = 5{,}3\\cdot10^{-35}$ J$\\cdot$s. Es una cota inferior, acota un **producto**, el criterio dimensional (producto con dimensiones de J$\\cdot$s) descarta pares que no cumplen, pero no basta por sí solo para afirmar que un par sí está sujeto: hace falta que además sea un par canónicamente conjugado (posición-momento en la misma dirección, energía-tiempo, ángulo-momento angular).",
         "**Es intrínseca, no instrumental.** Existe antes de medir y no depende del método. El argumento del microscopio de Heisenberg es una analogía excelente para ver la escala del efecto, y **no** es la razón del principio.",
         "**El tercer cruce del umbral:** para un electrón atómico, $\\Delta v \\ge 5{,}8\\cdot10^{5}$ m/s, el 26 % de la velocidad orbital de Bohr. Con esa imprecisión no hay trayectoria que describir. La órbita se cae; los niveles de energía y la escala del átomo sobreviven.",
         "**Born:** $|\\psi|^2$ es la densidad de probabilidad de encontrar al electrón; integrada en un volumen da la probabilidad en esa región, nunca en un punto exacto. No hay órbitas definidas, pero sí regiones donde es muy probable encontrarlo.",

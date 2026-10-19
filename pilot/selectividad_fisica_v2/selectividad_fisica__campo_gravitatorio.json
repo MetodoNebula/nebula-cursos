@@ -3551,7 +3551,7 @@
       },
       {
         "id": "LO-04-3",
-        "statement": "Justificar, a partir del perfil completo $g(r)$, que el valor de $g$ es **máximo en la superficie** y que disminuye tanto si se sube como si se baja hacia el centro.",
+        "statement": "Justificar, a partir del perfil completo $g(r)$, que, en el modelo de Tierra homogénea, el valor de $g$ es **máximo en la superficie** y que disminuye tanto si se sube como si se baja hacia el centro.",
         "bloom": "analizar",
         "concept_ids": [
           "C-F08",
@@ -4521,7 +4521,7 @@
         "**La forma cociente:** $g = g_0R_T^{2}/(R_T+h)^{2}$ permite comparar alturas sin conocer $G$ ni $M_T$, porque se cancelan.",
         "**Decrecimiento no lineal:** duplicar la distancia al centro divide $g$ por 4. Y $g$ no se anula a ninguna distancia finita.",
         "**[Ampliación] En el interior**, bajo la hipótesis de esfera sólida y homogénea, solo contribuye la masa encerrada y resulta $g = g_0\\,r/R_T$: variación **lineal**, nula en el centro.",
-        "**El máximo de $g$ está en la superficie.** Disminuye tanto si se sube como si se baja, y por leyes distintas: $1/r^{2}$ hacia fuera, lineal hacia dentro.",
+        "**En el modelo de Tierra homogénea, el máximo de $g$ está en la superficie.** Disminuye tanto si se sube como si se baja, y por leyes distintas: $1/r^{2}$ hacia fuera, lineal hacia dentro.",
         "**[Enriquecimiento]** En la superficie real, $g$ es mínima en el ecuador y máxima en los polos (rotación + achatamiento), con una diferencia del 0,5 %. Contenido de ampliación."
       ],
       "formulas": [
@@ -4529,7 +4529,7 @@
         "g=g_0\\,\\frac{R_T^{2}}{(R_T+h)^{2}}",
         "g=g_0\\,\\frac{r}{R_T}=g_0\\,\\frac{R_T-h}{R_T}\\quad (r\\le R_T,\\ \\text{esfera homogénea})"
       ],
-      "what_to_remember_if_nothing_else": "La distancia se mide desde el centro ($R_T+h$, nunca $h$), $g$ va como $1/r^{2}$ fuera del planeta, y el máximo de $g$ está en la superficie, no en el centro."
+      "what_to_remember_if_nothing_else": "La distancia se mide desde el centro ($R_T+h$, nunca $h$), $g$ va como $1/r^{2}$ fuera del planeta, y en el modelo de Tierra homogénea (el que se usa en Selectividad) el máximo de $g$ está en la superficie, no en el centro."
     },
     "lang": "es"
   },
@@ -4954,7 +4954,7 @@
       },
       {
         "term": "Fuerza disipativa",
-        "definition": "Fuerza no conservativa que se opone siempre al desplazamiento, como el rozamiento; su trabajo es negativo en ambos sentidos y no admite energía potencial asociada.",
+        "definition": "Fuerza no conservativa que se opone al desplazamiento cuando desliza sobre una superficie fija, como el rozamiento cinético en el modelo habitual de este curso (si la superficie también se mueve, como en una cinta transportadora, el rozamiento estático puede llegar a realizar trabajo positivo); su trabajo es negativo en ambos sentidos y no admite energía potencial asociada.",
         "concept_id": "C-F09"
       },
       {
@@ -6994,7 +6994,7 @@
       },
       {
         "id": "LO-07-3",
-        "statement": "Aplicar $\\Delta E_m=W_{nc}$ cuando hay fuerzas disipativas y justificar que el trabajo del rozamiento es **siempre negativo**, de modo que $E_m$ solo puede disminuir.",
+        "statement": "Aplicar $\\Delta E_m=W_{nc}$ cuando hay fuerzas disipativas y justificar que, para un cuerpo que desliza sobre una superficie fija (el modelo habitual de este curso), el trabajo del rozamiento es **siempre negativo**, de modo que $E_m$ solo puede disminuir.",
         "bloom": "aplicar",
         "concept_ids": [
           "C-F14",
@@ -7988,7 +7988,7 @@
         "id": "FC-07-4",
         "kind": "conceptual",
         "front": "¿Por qué el trabajo del rozamiento es **siempre** negativo?",
-        "back": "Porque se opone al desplazamiento: el ángulo es $180^\\circ$ y $W_{nc}=-F_R\\Delta r<0$. Luego **con rozamiento $E_m$ solo puede disminuir**; si sale $\\Delta E_m>0$, hay un error de signo.",
+        "back": "Porque se opone al desplazamiento: el ángulo es $180^\\circ$ y $W_{nc}=-F_R\\Delta r<0$. Luego **con rozamiento $E_m$ solo puede disminuir**; si sale $\\Delta E_m>0$, hay un error de signo. (Esto supone que la superficie está fija; si ella también se mueve —una cinta transportadora— el rozamiento estático puede llegar a hacer trabajo positivo, pero eso no ocurre en los problemas de esta unidad.)",
         "concept_id": "C-F14",
         "difficulty": 2
       },
@@ -8120,7 +8120,7 @@
         "**La ecuación de la lección es una sola:** $\\Delta E_m=W_{nc}$. La conservación, $\\Delta E_m=0$, es su caso particular con $W_{nc}=0$.",
         "**La deducción** parte de dos teoremas sobre el mismo trabajo: $W=\\Delta E_c$ (válido siempre) y $W=-\\Delta E_p$ (válido solo para fuerzas conservativas). La hipótesis entra en el segundo, y ahí se rompe la igualdad cuando hay rozamiento.",
         "**La condición de validez** no es que no existan fuerzas no conservativas, sino que **no realicen trabajo**. La normal no estorba porque $\\cos 90^\\circ=0$.",
-        "**$W_{nc}$ del rozamiento es siempre negativo** ($\\cos 180^\\circ=-1$), luego $E_m$ **solo puede disminuir**. Un $\\Delta E_m>0$ con rozamiento es un error de signo, no un descubrimiento.",
+        "**Sobre una superficie fija (el modelo de este curso), $W_{nc}$ del rozamiento es siempre negativo** ($\\cos 180^\\circ=-1$), luego $E_m$ **solo puede disminuir**. Un $\\Delta E_m>0$ con rozamiento es un error de signo, no un descubrimiento.",
         "**La energía total se conserva siempre**; la mecánica, no. Lo que sale de $E_c+E_p$ entra en energía interna. Es la diferencia que separa la idea errónea «el rozamiento destruye energía» de la física correcta.",
         "**Elegir la $E_p$ correcta es parte del problema:** $mgh$ si $h\\ll R_T$, $-GM_Tm/r$ en otro caso. El error de $mgh$ vale exactamente $h/R_T$. Nunca mezclar las dos en una misma ecuación.",
         "Tres de los cinco ejemplos resueltos (y dos de los ejercicios) son **problemas generales de conservación**, no de campo gravitatorio; se trabajan aquí porque enseñan el método con una geometría visible."
