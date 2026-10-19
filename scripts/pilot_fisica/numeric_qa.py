@@ -25,7 +25,7 @@ import json, re, os, math, sys
 BASE = os.path.expanduser("~/mnt/Nebula_Cursos_Web")
 PILOT = os.path.join(BASE, "pilot/selectividad_fisica_v2")
 UNITS = ["campo_gravitatorio","mas","ondas","electromagnetismo","optica",
-         "relatividad","cuantica","nuclear"]
+         "relatividad","cuantica","nuclear","fundamentos"]
 
 SOLUTION_FIELDS = ["answer", "solution", "full_solution"]
 CONTAINER_KEYS = ["worked_examples","guided_exercises","exercises",

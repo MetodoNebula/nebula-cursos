@@ -41,7 +41,7 @@ import json, os, re, hashlib
 BASE = os.path.expanduser("~/mnt/Nebula_Cursos_Web")
 PILOT = os.path.join(BASE, "pilot/selectividad_fisica_v2")
 UNITS = ["campo_gravitatorio","mas","ondas","electromagnetismo","optica",
-         "relatividad","cuantica","nuclear"]
+         "relatividad","cuantica","nuclear","fundamentos"]
 
 # Epistemic overrides for the 22 Fase-1-audited claims: (unit, lesson_id_prefix) -> list of (substring, epistemic_type)
 EPISTEMIC_OVERRIDES = [

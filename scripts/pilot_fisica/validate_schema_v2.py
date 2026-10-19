@@ -2,7 +2,7 @@
 import json, os
 from collections import Counter
 BASE = os.path.expanduser("~/mnt/Nebula_Cursos_Web/pilot/selectividad_fisica_v2")
-UNITS = ["campo_gravitatorio","mas","ondas","electromagnetismo","optica","relatividad","cuantica","nuclear"]
+UNITS = ["campo_gravitatorio","mas","ondas","electromagnetismo","optica","relatividad","cuantica","nuclear","fundamentos"]
 
 canonical_ids = Counter()
 errors = []
