@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+import json, os
+BASE = os.path.expanduser("~/mnt/Nebula_Cursos_Web/pilot/selectividad_fisica_v2")
+fp = os.path.join(BASE, "selectividad_fisica__mas.json")
+d = json.load(open(fp, encoding="utf-8"))
+lesson = d["01_Movimientos_periódicos_oscilatorios_y_vibratorios.json"]
+print("TOP KEYS:", list(lesson.keys()))
+print("id:", lesson.get("id"))
+print("estimated_length:", lesson.get("estimated_length"))
+print("estimated_difficulty:", lesson.get("estimated_difficulty"))
+print("curriculum:", lesson.get("curriculum"))
+print("prerequisites sample:", json.dumps(lesson.get("prerequisites",[])[:2], ensure_ascii=False))
+print("diagnostic_items sample id:", [di.get("id") for di in lesson.get("diagnostic_items",[])])
+print("theory_blocks[0] keys:", list(lesson["theory_blocks"][0].keys()))
+print("theory_blocks scopes:", [tb.get("scope") for tb in lesson["theory_blocks"]])
+print("theory_blocks types:", [tb.get("type") for tb in lesson["theory_blocks"]])
+print("objectives[0] keys:", list(lesson["objectives"][0].keys()))
+print("exercises[0] keys:", list(lesson["exercises"][0].keys()) if lesson.get("exercises") else None)
+print("mcq[0] keys:", list(lesson["mcq"][0].keys()))
+print("exam_questions[0] keys:", list(lesson.get("exam_questions",[{}])[0].keys()) if lesson.get("exam_questions") else None)
+print("challenge_questions[0] keys:", list(lesson.get("challenge_questions",[{}])[0].keys()) if lesson.get("challenge_questions") else None)
