@@ -1599,7 +1599,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "0e46cd8cbdaa9fa9"
+        "canonical_hash": "1863fdc8ecd829c1"
       }
     }
   },
@@ -3648,7 +3648,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "af9381ceff0d7e99"
+        "canonical_hash": "2c2d89837c3384e6"
       }
     }
   },
@@ -5564,7 +5564,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "1b940e2bbbf9da67"
+        "canonical_hash": "60d31143f34d4c9c"
       }
     }
   },
@@ -7078,7 +7078,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "e57dc53f150713ad"
+        "canonical_hash": "b761bb7d9f6a3ed6"
       }
     }
   },
@@ -8903,7 +8903,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "25194158e5cbaf6d"
+        "canonical_hash": "bf99c5a4bc40b6b5"
       }
     }
   },
@@ -10654,7 +10654,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "cbf3096155346a7f"
+        "canonical_hash": "4e96d56bbed9b1da"
       }
     }
   },
@@ -12513,7 +12513,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "4d5b0ff60b281b87"
+        "canonical_hash": "0ad1bd2a49c2950f"
       }
     }
   },
@@ -14537,7 +14537,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "ed3ebc1603b7a027"
+        "canonical_hash": "d0c4fee802f3d92d"
       }
     }
   },
@@ -16287,7 +16287,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "13f3c368c6f58cc1"
+        "canonical_hash": "1cb1da6b389cafd2"
       }
     }
   },
@@ -17957,7 +17957,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "5704291c1fdb4a69"
+        "canonical_hash": "9265ba24060a198e"
       }
     }
   },
@@ -18003,6 +18003,33 @@
           "C-OPT-13"
         ],
         "scope": "CORE"
+      },
+      {
+        "id": "LO-03-2",
+        "statement": "Enunciar la **condición doble** de la reflexión total —del medio más refringente al menos refringente **y** con $\\hat\\imath>L$— y justificar por qué si $n_1<n_2$ no existe ángulo límite.",
+        "bloom": "analizar",
+        "concept_ids": [
+          "C-OPT-13"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-03-4",
+        "statement": "Explicar el funcionamiento de la fibra óptica, midiendo el ángulo con la **normal a la pared**, que es perpendicular al eje.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-OPT-14"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-03-6",
+        "statement": "Definir el **ángulo de Brewster** como aquel para el cual el rayo reflejado y el refractado son perpendiculares, y deducir $\\mathrm{tg}\\,\\theta_B=n_2/n_1$.",
+        "bloom": "comprender",
+        "concept_ids": [
+          "C-OPT-15"
+        ],
+        "scope": "ENRICHMENT"
       }
     ],
     "prerequisites": [
@@ -18770,6 +18797,24 @@
           "statement": "Reconocer que un seno mayor que 1 no es un error de cuenta, sino la fórmula afirmando que el fenómeno **no existe** en ese sentido.",
           "bloom": "evaluar",
           "required_for_mastery": true
+        },
+        {
+          "id": "LO-03-2",
+          "statement": "Enunciar la **condición doble** de la reflexión total —del medio más refringente al menos refringente **y** con $\\hat\\imath>L$— y justificar por qué si $n_1<n_2$ no existe ángulo límite.",
+          "bloom": "analizar",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-03-4",
+          "statement": "Explicar el funcionamiento de la fibra óptica, midiendo el ángulo con la **normal a la pared**, que es perpendicular al eje.",
+          "bloom": "aplicar",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-03-6",
+          "statement": "Definir el **ángulo de Brewster** como aquel para el cual el rayo reflejado y el refractado son perpendiculares, y deducir $\\mathrm{tg}\\,\\theta_B=n_2/n_1$.",
+          "bloom": "comprender",
+          "required_for_mastery": true
         }
       ],
       "knowledge_model": {
@@ -19001,7 +19046,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "92c71a07b4f9426d"
+        "canonical_hash": "23edcc551f28e51c"
       }
     }
   },
@@ -19020,6 +19065,34 @@
       "track": null
     },
     "objectives": [
+      {
+        "id": "LO-03-1",
+        "statement": "Definir el **ángulo límite** como el ángulo de incidencia para el cual el rayo refractado sale rasante a la superficie ($\\hat r=90^\\circ$), y deducir $\\mathrm{sen}\\,L=n_2/n_1$.",
+        "bloom": "comprender",
+        "concept_ids": [
+          "C-OPT-12"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-03-3",
+        "statement": "Calcular ángulos límite y decidir, dado un par de medios y un ángulo de incidencia, si hay refracción o reflexión total.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-OPT-12",
+          "C-OPT-13"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-03-5",
+        "statement": "Reconocer que un seno mayor que 1 no es un error de cuenta, sino la fórmula afirmando que el fenómeno **no existe** en ese sentido.",
+        "bloom": "evaluar",
+        "concept_ids": [
+          "C-OPT-13"
+        ],
+        "scope": "CORE"
+      },
       {
         "id": "LO-03-2",
         "statement": "Enunciar la **condición doble** de la reflexión total —del medio más refringente al menos refringente **y** con $\\hat\\imath>L$— y justificar por qué si $n_1<n_2$ no existe ángulo límite.",
@@ -19649,6 +19722,24 @@
       },
       "objectives": [
         {
+          "id": "LO-03-1",
+          "statement": "Definir el **ángulo límite** como el ángulo de incidencia para el cual el rayo refractado sale rasante a la superficie ($\\hat r=90^\\circ$), y deducir $\\mathrm{sen}\\,L=n_2/n_1$.",
+          "bloom": "comprender",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-03-3",
+          "statement": "Calcular ángulos límite y decidir, dado un par de medios y un ángulo de incidencia, si hay refracción o reflexión total.",
+          "bloom": "aplicar",
+          "required_for_mastery": true
+        },
+        {
+          "id": "LO-03-5",
+          "statement": "Reconocer que un seno mayor que 1 no es un error de cuenta, sino la fórmula afirmando que el fenómeno **no existe** en ese sentido.",
+          "bloom": "evaluar",
+          "required_for_mastery": true
+        },
+        {
           "id": "LO-03-2",
           "statement": "Enunciar la **condición doble** de la reflexión total —del medio más refringente al menos refringente **y** con $\\hat\\imath>L$— y justificar por qué si $n_1<n_2$ no existe ángulo límite.",
           "bloom": "analizar",
@@ -19843,7 +19934,7 @@
         "validated_semantics": true,
         "validated_numerics": true,
         "validated_render": false,
-        "canonical_hash": "d776c1961a5e07da"
+        "canonical_hash": "98fb1458c0d53aa5"
       }
     }
   }
