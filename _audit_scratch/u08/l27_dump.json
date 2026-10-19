@@ -1,0 +1,819 @@
+{
+  "id": "L27",
+  "title": "Aplicaciones, reciclaje e impacto ambiental de los polímeros",
+  "subject": "Química",
+  "course_label": "Química · 2º Bachillerato · Química del carbono e isomería",
+  "unit_id": "U-QUI-08-ORGANICA",
+  "estimated_length": "1.5 h",
+  "estimated_difficulty": 4,
+  "curriculum": {
+    "framework": "PAU Nacional (España) · Química 2º Bachillerato",
+    "codes": [
+      "QUI-08-27"
+    ],
+    "status": "DEFINIDO",
+    "track": [
+      "COMUN"
+    ]
+  },
+  "objectives": [
+    {
+      "id": "LO-Q08-27-1",
+      "statement": "Seleccionar razonadamente qué tipo de polímero conviene para una aplicación dada, justificando con criterios químicos (estructura de cadena, comportamiento térmico, grupo funcional) y no con afirmaciones genéricas.",
+      "bloom": "aplicar",
+      "concept_ids": [
+        "C-Q08-27-1"
+      ]
+    },
+    {
+      "id": "LO-Q08-27-2",
+      "statement": "Diferenciar el reciclaje mecánico (refundir un termoplástico) del reciclaje químico (despolimerizar por hidrólisis un poliéster o una poliamida hasta sus monómeros), explicando por qué cada tipo de polímero admite uno, otro o ninguno.",
+      "bloom": "comprender",
+      "concept_ids": [
+        "C-Q08-27-2"
+      ]
+    },
+    {
+      "id": "LO-Q08-27-3",
+      "statement": "Razonar, a partir de la estructura de cadena, por qué un termoestable no admite reciclaje mecánico y por qué un polímero de adición como el PE no admite el mismo reciclaje químico sencillo que un poliéster.",
+      "bloom": "analizar",
+      "concept_ids": [
+        "C-Q08-27-2"
+      ]
+    },
+    {
+      "id": "LO-Q08-27-4",
+      "statement": "Relacionar la persistencia ambiental de un polímero con el tipo de enlaces de su cadena principal, distinguiendo cadenas C-C (resistentes a la hidrólisis) de cadenas con enlaces éster o amida (potencialmente hidrolizables).",
+      "bloom": "analizar",
+      "concept_ids": [
+        "C-Q08-27-3"
+      ]
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "P-Q08-27-1",
+      "statement": "Recordar la diferencia entre un polímero termoplástico y uno termoestable, y entre uno de adición y uno de condensación.",
+      "blocking": true,
+      "why_it_matters": "Qué tipo de reciclaje es posible depende directamente de estas dos clasificaciones ya vistas."
+    },
+    {
+      "id": "P-Q08-27-2",
+      "statement": "Recordar que la esterificación es una reacción en equilibrio: el éster puede romperse de nuevo en ácido y alcohol mediante hidrólisis, la reacción inversa.",
+      "blocking": true,
+      "why_it_matters": "El reciclaje químico de un poliéster no es más que llevar esa reversibilidad, ya conocida a escala de una molécula, a escala de todo el polímero."
+    },
+    {
+      "id": "P-Q08-27-3",
+      "statement": "Reconocer que la cadena principal de un polímero de adición como el PE está formada exclusivamente por enlaces C-C, sin heteroátomos intercalados.",
+      "blocking": false,
+      "why_it_matters": "Es la razón estructural por la que estos polímeros no se pueden hidrolizar de vuelta a monómeros con la misma facilidad que un poliéster o una poliamida."
+    }
+  ],
+  "diagnostic_items": [
+    {
+      "id": "DIAG-Q08-27-1",
+      "prerequisite": "P-Q08-27-2",
+      "question": "¿Qué reacción permite romper un enlace éster y recuperar el ácido carboxílico y el alcohol de partida?",
+      "expected_answer": "La hidrólisis: reacción con agua (normalmente con catálisis ácida o básica) que rompe el enlace éster, dando de vuelta el ácido carboxílico y el alcohol.",
+      "common_wrong_answers": [
+        {
+          "answer": "Nombrar la esterificación en vez de su inversa, o no identificar el agua como reactivo necesario.",
+          "interpretation": "No tiene claro que la hidrólisis es exactamente el sentido inverso de la esterificación, la base de todo el reciclaje químico de esta lección."
+        }
+      ],
+      "interpretation": "Sin este concepto, el argumento central del reciclaje químico (hidrólisis = esterificación en sentido inverso) no se entiende.",
+      "remediation_action": "Repasar la reacción de esterificación como equilibrio: ácido + alcohol ⇌ éster + agua, y señalar que la hidrólisis es exactamente el sentido inverso.",
+      "blocking": true
+    },
+    {
+      "id": "DIAG-Q08-27-2",
+      "prerequisite": "P-Q08-27-3",
+      "question": "¿Qué tipo de enlaces forman la cadena principal del polietileno (PE)? ¿Y la del PET?",
+      "expected_answer": "La cadena principal del PE está formada solo por enlaces C-C. La del PET tiene, además de enlaces C-C y C-H, enlaces éster (C-O) intercalados en la cadena.",
+      "common_wrong_answers": [
+        {
+          "answer": "Decir que ambas cadenas son iguales, o no identificar el enlace éster del PET.",
+          "interpretation": "No distingue la cadena principal de un polímero de adición de la de uno de condensación, la base de todo el argumento sobre reciclaje y persistencia ambiental."
+        }
+      ],
+      "interpretation": "Sin esta distinción, no se puede justificar por qué el PE y el PET admiten vías de reciclaje distintas.",
+      "remediation_action": "Dibujar un fragmento de cadena de PE y uno de PET y marcar en cuál de los dos hay átomos de oxígeno intercalados en la cadena principal.",
+      "blocking": true
+    }
+  ],
+  "theory_blocks": [
+    {
+      "id": "TH-Q08-27-1",
+      "type": "connection",
+      "title": "Decidir con química, no con eslóganes",
+      "body": "Es fácil oír frases como «el plástico es malo para el medio ambiente» o «hay que reciclar más», pero esta lección pide algo más concreto: usar lo que ya sabes sobre la estructura de los polímeros (de las dos lecciones anteriores) para razonar qué polímero conviene para una aplicación, cómo se puede reciclar cada tipo y por qué unos persisten en el ambiente más que otros.\n\nLas tres preguntas que vertebran la lección son siempre las mismas: ¿qué propiedades exige la aplicación?, ¿es termoplástico o termoestable?, ¿tiene la cadena principal enlaces hidrolizables (éster, amida) o solo enlaces C-C?",
+      "objective_ids": [
+        "LO-Q08-27-1",
+        "LO-Q08-27-2",
+        "LO-Q08-27-4"
+      ],
+      "concept_ids": [
+        "C-Q08-27-1"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "TH-Q08-27-2",
+      "type": "worked_rule",
+      "title": "Elegir el polímero adecuado para una aplicación",
+      "body": "Elegir un material no es una cuestión de gusto: cada aplicación exige unas propiedades concretas, y esas propiedades se explican por la estructura del polímero.\n\nEnvase ligero y transparente para una bebida, que además se quiera reciclar fácilmente: conviene un termoplástico con buena resistencia mecánica en paredes finas y transparencia óptica, como el PET. Al ser termoplástico, además, admite reciclaje mecánico (refundido) y químico (hidrólisis a sus monómeros). Tubería rígida, resistente a productos químicos agresivos: conviene un polímero más rígido y químicamente inerte, como el PVC. Bolsa flexible y barata, de un solo uso: conviene un termoplástico muy flexible y barato de producir, como el PE de baja densidad (PE-LD), cuyas cadenas ramificadas le dan esa flexibilidad. Aislante térmico ligero para un envase o la construcción: conviene un material con mucho aire ocluido, como el poliestireno expandido (EPS). Mango de una sartén o la carcasa de un enchufe, que no debe ablandarse ni deformarse cerca de una fuente de calor: aquí conviene precisamente un termoestable (como la baquelita), a costa de renunciar a la posibilidad de remoldearlo o reciclarlo mecánicamente.\n\nEn todos los casos, la elección es un compromiso: ninguna aplicación obtiene 'la propiedad perfecta' sin ceder en otra (el termoestable del último ejemplo gana resistencia térmica, pero pierde reciclabilidad mecánica).",
+      "objective_ids": [
+        "LO-Q08-27-1"
+      ],
+      "concept_ids": [
+        "C-Q08-27-1"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "TH-Q08-27-3",
+      "type": "formalisation",
+      "title": "Reciclaje mecánico frente a reciclaje químico",
+      "body": "Reciclaje mecánico: consiste en fundir un termoplástico ya usado y darle una nueva forma, sin romper intencionadamente ningún enlace químico de la cadena. Solo es posible si el polímero no está reticulado (si no, no funde de forma reversible, como viste en la lección anterior). Tiene un límite práctico: cada ciclo de fusión somete a las cadenas a calor y esfuerzo mecánico, y algunas se rompen por el camino (un proceso llamado degradación térmica), así que el material reciclado mecánicamente suele perder algo de calidad en cada ciclo.\n\nReciclaje químico: consiste en romper el polímero, mediante una reacción química, hasta recuperar sus monómeros originales, que después se pueden volver a polimerizar dando un material de calidad equivalente a la virgen. Para un poliéster como el PET o una poliamida como el nailon, esta reacción es sencillamente la hidrólisis del enlace éster o amida: el mismo equilibrio, llevado en sentido inverso, que ya conoces de la esterificación (ácido + alcohol ⇌ éster + agua). Calentando el polímero con agua (y, normalmente, un catalizador) se recuperan el diácido y el diol (o la diamina) de partida, listos para usarse de nuevo como monómeros.\n\nUn polímero de adición como el PE no tiene esta salida tan directa: su cadena principal es solo C-C, sin ningún enlace éster o amida que hidrolizar. Para 'deshacerlo' hasta moléculas pequeñas hace falta romper enlaces covalentes C-C mucho más fuertes, normalmente con procesos de temperatura muy alta (pirólisis), bastante más exigentes energéticamente que una simple hidrólisis.",
+      "objective_ids": [
+        "LO-Q08-27-2",
+        "LO-Q08-27-3"
+      ],
+      "concept_ids": [
+        "C-Q08-27-2"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "TH-Q08-27-4",
+      "type": "formalisation",
+      "title": "Persistencia ambiental: el papel del tipo de enlace",
+      "body": "El petróleo, disponible y barato, ha hecho posible fabricar plásticos a gran escala, lo que ha facilitado muchísimo el desarrollo de todo tipo de aplicaciones; pero esa misma facilidad de producción, unida a que muchos plásticos tardan mucho en descomponerse, ha convertido al plástico desechado en un problema medioambiental importante, en el que el reciclaje tiene un papel central.\n\nLa razón química de esa persistencia es la misma que la del reciclaje químico, mirada ahora desde el lado ambiental: una cadena de solo enlaces C-C (como la del PE, el PP o el esqueleto del PVC) es muy resistente a la hidrólisis. Ni el agua ni la mayoría de los microorganismos del suelo disponen de una vía química sencilla para atacar esos enlaces, así que el material puede persistir en el ambiente durante muchísimo tiempo (del orden de siglos, según las condiciones). Un poliéster o una poliamida, en cambio, tienen enlaces éster o amida intercalados en la propia cadena principal: son, en principio, hidrolizables, aunque en condiciones ambientales normales (temperatura baja, poco catalizador) esa hidrólisis sea muy lenta. Es justamente esta diferencia la que se aprovecha, de forma deliberada, al diseñar materiales 'compostables': suelen ser poliésteres con enlaces especialmente susceptibles a la hidrólisis, pensados para degradarse en condiciones de compostaje industrial (temperatura y humedad controladas) mucho más rápido de lo que lo haría un polímero de cadena C-C pura.",
+      "objective_ids": [
+        "LO-Q08-27-4"
+      ],
+      "concept_ids": [
+        "C-Q08-27-3"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "TH-Q08-27-5",
+      "type": "connection",
+      "title": "Para ir más allá: códigos de identificación de plásticos",
+      "body": "Para facilitar su separación antes de reciclar, muchos envases llevan un código numérico del 1 al 7 que identifica el tipo de plástico:\n\n| Código | Polímero |\n|---|---|\n| 1 | PET (politereftalato de etileno) |\n| 2 | PE-HD (polietileno de alta densidad) |\n| 3 | PVC (policloruro de vinilo) |\n| 4 | PE-LD (polietileno de baja densidad) |\n| 5 | PP (polipropileno) |\n| 6 | PS (poliestireno) |\n| 7 | Otros (incluye, por ejemplo, el policarbonato) |\n\nEstos códigos no indican por sí solos si un envase se recicla realmente en una planta dada (eso depende también de la infraestructura disponible), pero sí permiten separar correctamente materiales que, de mezclarse, degradarían la calidad del reciclado (por ejemplo, un PVC mezclado con PET puede arruinar un lote entero de reciclaje mecánico de PET).",
+      "objective_ids": [
+        "LO-Q08-27-2"
+      ],
+      "concept_ids": [
+        "C-Q08-27-2"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    }
+  ],
+  "keywords": [
+    {
+      "term": "Reciclaje mecánico",
+      "definition": "Fundir y remoldear un termoplástico sin romper intencionadamente sus enlaces químicos.",
+      "concept_id": "C-Q08-27-2"
+    },
+    {
+      "term": "Reciclaje químico",
+      "definition": "Romper el polímero mediante una reacción química (hidrólisis, en poliésteres y poliamidas) hasta recuperar sus monómeros originales.",
+      "concept_id": "C-Q08-27-2"
+    },
+    {
+      "term": "Despolimerización",
+      "definition": "Proceso de romper un polímero hasta sus monómeros constituyentes, base del reciclaje químico.",
+      "concept_id": "C-Q08-27-2"
+    },
+    {
+      "term": "Código de identificación de plásticos",
+      "definition": "Numeración del 1 al 7 que identifica el tipo de resina de un envase plástico, para facilitar su separación antes del reciclaje.",
+      "concept_id": "C-Q08-27-2"
+    },
+    {
+      "term": "Biodegradabilidad",
+      "definition": "Capacidad de un material de descomponerse por acción de agentes químicos o biológicos (agua, microorganismos); depende del tipo de enlace de la cadena y de las condiciones ambientales.",
+      "concept_id": "C-Q08-27-3"
+    },
+    {
+      "term": "Persistencia ambiental",
+      "definition": "Tiempo que un material permanece sin descomponerse en el medio ambiente; mayor en cadenas C-C puras que en cadenas con enlaces éster o amida.",
+      "concept_id": "C-Q08-27-3"
+    }
+  ],
+  "worked_examples": [
+    {
+      "id": "WE-Q08-27-1",
+      "level": "basic",
+      "statement": "Se necesita elegir un material para una botella de agua desechable: debe ser ligera, transparente, resistente a la presión interna del gas si es agua con gas, y se quiere que, tras su uso, pueda reciclarse con facilidad. De entre el PET, el PVC y la baquelita, ¿cuál es la elección más razonable? Justifica con al menos dos criterios.",
+      "knowns": [
+        "PET: termoplástico, poliéster, transparente, buena resistencia mecánica en paredes finas",
+        "PVC: termoplástico, rígido, menos transparente en formulaciones habituales",
+        "Baquelita: termoestable, opaca, no se remoldea"
+      ],
+      "unknowns": [
+        "Material más adecuado, con justificación"
+      ],
+      "reasoning": [
+        "La baquelita queda descartada de inmediato: al ser termoestable, no se puede moldear en una forma de pared fina y translúcida con los procesos habituales de fabricación de botellas, y tampoco admite reciclaje mecánico.",
+        "Entre PET y PVC, el PET es la opción habitual para este tipo de envase por su buena transparencia y resistencia mecánica en paredes delgadas.",
+        "Además, al ser un poliéster termoplástico, el PET admite tanto reciclaje mecánico (refundido) como químico (hidrólisis a sus monómeros), lo que facilita más su reciclaje que el PVC."
+      ],
+      "solution": "El PET es la elección más razonable: es transparente, resistente en paredes finas y, por ser un poliéster termoplástico, admite reciclaje tanto mecánico como químico.",
+      "interpretation": "Es, de hecho, el material real que se usa para este tipo de envase; el razonamiento (transparencia + reciclabilidad por ser poliéster termoplástico) es el mismo que justifica esa elección industrial.",
+      "common_mistake": "Elegir un material solo por una propiedad (por ejemplo, 'la baquelita es muy resistente') sin comprobar si cumple el resto de requisitos de la aplicación (aquí, la necesidad de moldearse en pared fina y transparente).",
+      "objective_ids": [
+        "LO-Q08-27-1"
+      ],
+      "concept_ids": [
+        "C-Q08-27-1"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "WE-Q08-27-2",
+      "level": "standard",
+      "statement": "El mango de una sartén se fabrica habitualmente con un polímero termoestable (como la baquelita) en vez de con un termoplástico barato como el PE. (a) ¿Qué ventaja aporta el termoestable para esta aplicación concreta? (b) ¿Qué se pierde, en términos de reciclaje, al elegir un termoestable?",
+      "knowns": [
+        "Termoestable: no se ablanda de forma reversible al calentar, no admite reciclaje mecánico",
+        "Termoplástico (PE): se ablandaría a temperaturas relativamente bajas"
+      ],
+      "unknowns": [
+        "Ventaja del termoestable en esta aplicación; coste en términos de reciclaje"
+      ],
+      "reasoning": [
+        "El mango de una sartén está expuesto a temperaturas bastante más altas que, por ejemplo, un envase de alimentos: un termoplástico común se ablandaría o deformaría con el calor de la cocina.",
+        "Un termoestable, al no tener cadenas independientes que deslicen entre sí, mantiene su forma y su rigidez incluso a esas temperaturas más altas.",
+        "A cambio, esa misma ausencia de cadenas independientes es la que impide reciclarlo mecánicamente: no se puede fundir y remoldear como un termoplástico."
+      ],
+      "solution": "(a) El termoestable conserva su forma y rigidez a temperaturas donde un termoplástico común ya se habría ablandado, precisamente porque no tiene cadenas sueltas que deslicen entre sí. (b) Se pierde la posibilidad de reciclaje mecánico: al final de su vida útil, el mango no se puede refundir como un termoplástico.",
+      "interpretation": "Es un compromiso deliberado: se sacrifica la reciclabilidad mecánica a cambio de una propiedad (resistencia térmica sin deformarse) que la aplicación exige de forma crítica por seguridad.",
+      "common_mistake": "Juzgar la elección del termoestable como un 'error' de diseño por no ser reciclable, sin tener en cuenta que un termoplástico sencillamente no serviría para esa aplicación concreta.",
+      "objective_ids": [
+        "LO-Q08-27-1",
+        "LO-Q08-27-3"
+      ],
+      "concept_ids": [
+        "C-Q08-27-1",
+        "C-Q08-27-2"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "WE-Q08-27-3",
+      "level": "reasoning",
+      "statement": "Explica, en términos de la reacción química implicada, cómo se llevaría a cabo el reciclaje químico de un envase de PET, y por qué ese mismo procedimiento no serviría para reciclar químicamente una bolsa de polietileno (PE) de la misma manera.",
+      "knowns": [
+        "PET: poliéster, formado por condensación de ácido tereftálico y etilenglicol",
+        "PE: polímero de adición, cadena principal formada solo por enlaces C-C"
+      ],
+      "unknowns": [
+        "Procedimiento de reciclaje químico del PET; razón por la que no sirve igual para el PE"
+      ],
+      "reasoning": [
+        "El PET se formó originalmente por condensación, liberando agua en cada enlace éster; la reacción inversa, la hidrólisis, rompe esos mismos enlaces éster añadiendo agua de nuevo.",
+        "Sometiendo el PET a hidrólisis (con agua y, normalmente, un catalizador ácido o básico, a temperatura elevada), se recuperan el ácido tereftálico y el etilenglicol, los monómeros originales, que pueden purificarse y volver a polimerizarse.",
+        "El PE no tiene ningún enlace éster ni amida en su cadena principal que hidrolizar: toda su cadena es C-C. Para romperla hasta fragmentos pequeños no basta con añadir agua; haría falta romper enlaces covalentes C-C, mucho más fuertes, típicamente con procesos de muy alta temperatura (pirólisis) en vez de una hidrólisis sencilla."
+      ],
+      "solution": "El PET se recicla químicamente por hidrólisis de sus enlaces éster, recuperando ácido tereftálico y etilenglicol. El PE no admite el mismo procedimiento porque su cadena principal, de solo enlaces C-C, no tiene ningún enlace susceptible de hidrolizarse: habría que recurrir a procesos mucho más exigentes energéticamente, como la pirólisis.",
+      "interpretation": "Esta es la razón estructural, no una diferencia de 'buena' o 'mala' voluntad en el reciclaje: el tipo de mecanismo de polimerización (condensación frente a adición) deja una marca permanente en la cadena principal que determina, después, qué rutas de reciclaje son químicamente razonables.",
+      "common_mistake": "Proponer 'simplemente calentar con agua' como reciclaje químico universal para cualquier plástico, sin comprobar si la cadena principal tiene algún enlace hidrolizable.",
+      "objective_ids": [
+        "LO-Q08-27-2",
+        "LO-Q08-27-3"
+      ],
+      "concept_ids": [
+        "C-Q08-27-2"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "WE-Q08-27-4",
+      "level": "exam",
+      "statement": "Una bolsa de PE puede persistir en el medio ambiente durante siglos, mientras que un envase de un cierto bioplástico de poliéster, diseñado para compostaje industrial, se degrada en semanas bajo condiciones controladas de humedad y temperatura. (a) Explica la diferencia a partir del tipo de enlace de la cadena principal de cada material. (b) ¿Implica esto que cualquier poliéster se degrada rápido en cualquier condición ambiental? Razona.",
+      "knowns": [
+        "PE: cadena principal de solo enlaces C-C",
+        "Bioplástico de poliéster: cadena principal con enlaces éster intercalados, diseñado para compostaje industrial"
+      ],
+      "unknowns": [
+        "Razón estructural de la diferencia de persistencia; si la rapidez de degradación es universal para cualquier poliéster"
+      ],
+      "reasoning": [
+        "La cadena de solo C-C del PE no tiene ningún punto de ataque sencillo para el agua ni para la mayoría de los microorganismos: persiste mucho tiempo.",
+        "El bioplástico de poliéster tiene enlaces éster, intrínsecamente hidrolizables, repartidos a lo largo de toda la cadena: el agua (con ayuda, en compostaje industrial, de temperatura y humedad altas, y de microorganismos adaptados) puede ir rompiendo esos enlaces.",
+        "Pero la velocidad de esa hidrólisis depende mucho de las condiciones: a temperatura ambiente y humedad baja (como en un vertedero convencional o en el mar), la misma reacción puede ser mucho más lenta que en un compostador industrial, diseñado específicamente para acelerarla."
+      ],
+      "solution": "(a) El PE no tiene enlaces hidrolizables en su cadena principal (solo C-C), de ahí su persistencia; el bioplástico de poliéster sí los tiene (enlaces éster), lo que permite su hidrólisis. (b) No: que un poliéster sea en principio hidrolizable no garantiza que se degrade rápido en cualquier entorno; la velocidad depende fuertemente de las condiciones (temperatura, humedad, microorganismos presentes), y un etiquetado de 'compostable' suele implicar condiciones industriales concretas, no cualquier vertedero o el medio marino.",
+      "interpretation": "Distingue dos preguntas que conviene no mezclar: '¿tiene el material una vía química de degradación?' (depende de su estructura, aquí sí para el poliéster) y '¿se degradará rápido en el entorno concreto donde acabe?' (depende de las condiciones, no solo de la estructura).",
+      "common_mistake": "Concluir que 'compostable' significa 'se degrada rápido en cualquier sitio', ignorando que esas condiciones de degradación rápida suelen ser específicas de una instalación industrial.",
+      "objective_ids": [
+        "LO-Q08-27-4"
+      ],
+      "concept_ids": [
+        "C-Q08-27-3"
+      ],
+      "provenance": "SOURCE_DERIVED"
+    }
+  ],
+  "guided_exercises": [
+    {
+      "id": "EX-Q08-27-G1",
+      "type": "GUIDED",
+      "objective_ids": [
+        "LO-Q08-27-1"
+      ],
+      "concept_ids": [
+        "C-Q08-27-1"
+      ],
+      "difficulty": 2,
+      "statement": "Se necesita un material para fabricar tuberías de desagüe doméstico: debe ser rígido, resistente a sustancias corrosivas y barato. (a) ¿Qué tipo de comportamiento térmico (termoplástico o termoestable) es preferible aquí, teniendo en cuenta que las tuberías se cortan y ensamblan con piezas moldeadas? (b) De los polímeros vistos en la unidad, ¿cuál encaja mejor con estos requisitos?",
+      "hints": [
+        "Para (a), piensa en qué comportamiento térmico facilita fabricar piezas de ensamblaje (codos, uniones) a partir de un tubo recto.",
+        "Para (b), recuerda qué polímero se mencionó explícitamente como ejemplo para tuberías rígidas resistentes a productos químicos."
+      ],
+      "answer": "(a) Termoplástico. (b) El PVC.",
+      "full_solution": "(a) Un termoplástico es preferible porque admite ablandarse con calor para fabricar piezas especiales (codos, derivaciones) a partir del mismo material, y porque al final de su vida útil puede reciclarse mecánicamente; un termoestable no ofrecería esa flexibilidad de fabricación ni esa posibilidad de reciclaje. (b) El PVC es la elección habitual: es un termoplástico razonablemente rígido, resistente a muchas sustancias corrosivas y barato de producir, lo que encaja con los tres requisitos del enunciado.",
+      "common_errors": [
+        "Elegir un termoestable por asociarlo, sin más análisis, con 'más resistente', sin tener en cuenta que aquí la aplicación necesita moldeo y reciclaje, no resistencia térmica extrema."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "EX-Q08-27-G2",
+      "type": "GUIDED",
+      "objective_ids": [
+        "LO-Q08-27-2",
+        "LO-Q08-27-3"
+      ],
+      "concept_ids": [
+        "C-Q08-27-2"
+      ],
+      "difficulty": 3,
+      "statement": "Se dispone de tres residuos plásticos: 1) botellas de PET; 2) una pieza de baquelita (termoestable); 3) bolsas de PE-LD. (a) ¿Cuáles admiten reciclaje mecánico? (b) ¿Cuál admite, además, reciclaje químico por hidrólisis con relativa facilidad? (c) ¿Cuál de los tres no admite ninguno de los dos tipos de reciclaje aquí descritos?",
+      "hints": [
+        "Para (a), recuerda que el reciclaje mecánico exige ausencia de entrecruzamiento (ser termoplástico).",
+        "Para (b), recuerda qué tipo de enlace en la cadena principal hace falta para que la hidrólisis sea sencilla."
+      ],
+      "answer": "(a) El PET y las bolsas de PE-LD. (b) El PET. (c) La baquelita.",
+      "full_solution": "(a) El PET y el PE-LD son termoplásticos, sin entrecruzamiento covalente entre cadenas, así que ambos pueden fundirse y remoldearse: admiten reciclaje mecánico. La baquelita, termoestable, no. (b) De los dos termoplásticos, solo el PET tiene enlaces éster intercalados en su cadena principal, heredados de su formación por condensación: puede hidrolizarse de vuelta a ácido tereftálico y etilenglicol. El PE-LD, de cadena principal C-C pura (polímero de adición), no tiene esa vía sencilla. (c) La baquelita queda fuera de los dos tipos de reciclaje descritos en esta lección: no admite el mecánico (termoestable, no funde de forma reversible) ni el químico por hidrólisis sencilla aquí tratado, al no tener una cadena lineal regular con enlaces éster o amida fácilmente accesibles al agua.",
+      "common_errors": [
+        "Suponer que el PE-LD, al ser termoplástico, también admite el mismo reciclaje químico por hidrólisis que el PET.",
+        "Pensar que 'no reciclable mecánicamente' significa automáticamente 'reciclable químicamente', en vez de comprobar cada vía por separado."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "EX-Q08-27-S1",
+      "type": "STANDARD",
+      "objective_ids": [
+        "LO-Q08-27-1"
+      ],
+      "concept_ids": [
+        "C-Q08-27-1"
+      ],
+      "difficulty": 2,
+      "statement": "Se busca un material para fabricar el relleno aislante de una nevera portátil: debe ser muy ligero y aislar bien el calor. Explica, a partir de su estructura, por qué el poliestireno expandido (EPS) es una elección razonable, y qué otra propiedad (pensando en el reciclaje) habría que tener en cuenta a la hora de desecharlo.",
+      "hints": [
+        "Piensa en qué hace que un material aísle bien el calor: no suele ser el polímero en sí, sino algo que atrapa dentro de su estructura."
+      ],
+      "answer": "El EPS aísla bien por el aire ocluido en su estructura (mal conductor del calor) y es muy ligero; aunque es termoplástico y en principio reciclable, su baja densidad complica la logística de recogida.",
+      "full_solution": "El poliestireno expandido no aísla bien por ser 'poliestireno' en sí, sino por su estructura física: está formado por un entramado de poliestireno con una enorme cantidad de aire ocluido en pequeñas celdillas. El aire es un mal conductor del calor, así que ese entramado con mucho aire atrapado dificulta la transmisión de calor por conducción; y, al ser mayoritariamente aire, el material resulta muy ligero para el volumen que ocupa. Es poliestireno, un termoplástico, así que en principio admite reciclaje mecánico (refundiéndolo), pero su bajísima densidad (mucho volumen por poca masa) hace que transportarlo y procesarlo en una planta de reciclaje sea comparativamente más costoso que con un plástico denso del mismo peso.",
+      "common_errors": [
+        "Atribuir la capacidad aislante al 'poliestireno' como si fuera una propiedad intrínseca del polímero, sin mencionar el papel del aire ocluido en su estructura expandida."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "EX-Q08-27-S2",
+      "type": "STANDARD",
+      "objective_ids": [
+        "LO-Q08-27-2"
+      ],
+      "concept_ids": [
+        "C-Q08-27-2"
+      ],
+      "difficulty": 2,
+      "statement": "Explica por qué mezclar, sin separar, PVC y PET en un mismo lote de reciclaje mecánico puede arruinar la calidad del material reciclado, aunque los dos sean termoplásticos.",
+      "hints": [
+        "Piensa en que 'ser termoplástico' no significa 'ser compatible con cualquier otro termoplástico al fundirse juntos'."
+      ],
+      "answer": "Son químicamente muy distintos (temperaturas de procesado distintas, posible liberación de compuestos corrosivos del PVC), por lo que al fundirse juntos no se obtiene un material homogéneo de buena calidad.",
+      "full_solution": "Ser termoplástico garantiza que un polímero puede fundirse y remoldearse por sí solo, pero no garantiza que sea compatible con otro termoplástico distinto al fundirse junto a él. El PVC y el PET son químicamente muy diferentes: el PVC es un polímero de adición con átomos de cloro en su estructura y una temperatura de procesado distinta a la del PET, un poliéster de condensación. Al fundirlos juntos sin separar, no se obtiene un material homogéneo con las propiedades de ninguno de los dos por separado, sino una mezcla de mala calidad mecánica; además, el PVC puede descomponer liberando compuestos clorados corrosivos a las temperaturas de procesado del PET, dañando tanto el producto como el propio equipo de reciclaje. Por eso los códigos de identificación de plásticos (1 a 7) existen precisamente para poder separar antes de procesar.",
+      "common_errors": [
+        "Razonar que, como los dos son termoplásticos, 'deberían' mezclarse bien, sin tener en cuenta que son compuestos químicos distintos con propiedades de procesado distintas."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "EX-Q08-27-S3",
+      "type": "STANDARD",
+      "objective_ids": [
+        "LO-Q08-27-4"
+      ],
+      "concept_ids": [
+        "C-Q08-27-3"
+      ],
+      "difficulty": 3,
+      "statement": "Un estudiante afirma: «El nailon, al ser una poliamida como las proteínas (también formadas por enlaces amida), debería degradarse en el ambiente tan rápido como una proteína». ¿Es correcto el razonamiento? Señala al menos un factor, además del tipo de enlace, que el estudiante no está teniendo en cuenta.",
+      "hints": [
+        "El tipo de enlace (amida) es el mismo, pero ¿es lo único que determina la velocidad de una hidrólisis en el ambiente?"
+      ],
+      "answer": "Es parcialmente correcto pero incompleto: falta considerar si existen enzimas específicas (proteasas) que ataquen eficazmente ese enlace; las proteínas sí las tienen, el nailon no.",
+      "full_solution": "El tipo de enlace (amida) es, en efecto, el mismo en el nailon y en una proteína, y ambos son en principio hidrolizables por la misma razón química. Pero el estudiante olvida un factor decisivo: la velocidad de hidrólisis en el ambiente no depende solo de que el enlace sea hidrolizable en teoría, sino de si existe una vía eficaz (catalizador, enzima) que acelere esa reacción en condiciones reales. Las proteínas se degradan con rapidez en el ambiente porque multitud de microorganismos poseen enzimas (proteasas) evolucionadas específicamente para reconocer y romper sus enlaces amida. El nailon, aunque comparte el tipo de enlace, tiene una secuencia y un entorno molecular muy distintos a los de una proteína natural, por lo que esas mismas enzimas no lo reconocen con la misma eficacia, y su hidrólisis sin catalizador específico es mucho más lenta: en la práctica, el nailon persiste en el ambiente mucho más tiempo que una proteína.",
+      "common_errors": [
+        "Aceptar el razonamiento completo del estudiante solo porque el tipo de enlace es el mismo, sin considerar el papel de los catalizadores biológicos específicos."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    }
+  ],
+  "exam_questions": [
+    {
+      "id": "EX-Q08-27-EXAM1",
+      "type": "EXAM",
+      "objective_ids": [
+        "LO-Q08-27-2",
+        "LO-Q08-27-3"
+      ],
+      "concept_ids": [
+        "C-Q08-27-2"
+      ],
+      "difficulty": 3,
+      "marks": 4,
+      "statement": "Razone si las siguientes afirmaciones son verdaderas o falsas. (a) «Un termoestable no se puede reciclar mecánicamente porque todo el material forma una única red de enlaces covalentes, sin cadenas independientes que fundir». (b) «El reciclaje químico del PET es, en esencia, la reacción inversa de la esterificación que lo formó». (c) «El PE se puede reciclar químicamente por hidrólisis con la misma facilidad que el PET». (d) «Separar los plásticos por su código de identificación (1 a 7) antes de reciclar no tiene ninguna utilidad práctica si todos son termoplásticos».",
+      "answer": "(a) Verdadera. (b) Verdadera. (c) Falsa. (d) Falsa.",
+      "full_solution": "(a) Verdadera: es la razón estructural vista en la lección anterior y retomada aquí: sin cadenas independientes que separar, calentar un termoestable no produce una fusión reversible, así que no cabe el reciclaje mecánico tal como se entiende para un termoplástico. (b) Verdadera: el PET se formó liberando agua en cada enlace éster (condensación); el reciclaje químico añade agua de nuevo para romper esos mismos enlaces (hidrólisis), recuperando ácido tereftálico y etilenglicol. (c) Falsa: el PE tiene una cadena principal de solo enlaces C-C, sin ningún enlace éster o amida que hidrolizar; despolimerizarlo exige romper enlaces covalentes C-C mucho más fuertes, con procesos como la pirólisis, no una simple hidrólisis. (d) Falsa: aunque dos plásticos sean ambos termoplásticos, pueden ser químicamente muy distintos (distinta temperatura de procesado, posible liberación de compuestos corrosivos al mezclarse, como el PVC con el PET) y mezclarlos sin separar degrada la calidad del material reciclado.",
+      "mark_scheme": [
+        "1 punto por cada apartado correctamente calificado y justificado",
+        "Sin justificación, 0 puntos aunque la calificación V/F sea correcta",
+        "En (c) se exige mencionar explícitamente la ausencia de enlaces hidrolizables en la cadena del PE"
+      ],
+      "common_errors": [
+        "En (d), responder 'falsa' sin dar la razón química (incompatibilidad de procesado, no solo 'son distintos').",
+        "En (c), responder 'verdadera' asumiendo que cualquier plástico se puede hidrolizar igual de fácil."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    },
+    {
+      "id": "EX-Q08-27-EXAM2",
+      "type": "EXAM",
+      "objective_ids": [
+        "LO-Q08-27-4"
+      ],
+      "concept_ids": [
+        "C-Q08-27-3"
+      ],
+      "difficulty": 4,
+      "marks": 3,
+      "statement": "Una empresa debe elegir entre dos materiales para fabricar bolsas de un solo uso: Material A, un polímero de adición de cadena C-C pura, muy barato, que persistirá en el ambiente durante siglos si se desecha de forma incontrolada. Material B, un poliéster específicamente diseñado para degradarse por hidrólisis en condiciones de compostaje industrial, algo más caro de producir. (a) Si la empresa solo tiene en cuenta el coste de producción, ¿qué material elegiría? (b) Argumenta, con criterios químicos y no solo de opinión, qué información adicional necesitaría un consumidor para que el material B cumpla realmente su promesa ambiental.",
+      "answer": "(a) El material A. (b) Necesitaría saber si el residuo llegará realmente a una instalación de compostaje industrial con las condiciones adecuadas; sin eso, la hidrólisis puede ser casi tan lenta como la persistencia del material A.",
+      "full_solution": "(a) Atendiendo solo al coste de producción, la empresa elegiría el material A, más barato por ser un simple polímero de adición. (b) El argumento químico central es que el material B solo cumple su promesa de degradarse rápido en las condiciones específicas para las que fue diseñado (temperatura y humedad de un compostaje industrial, a menudo con microorganismos concretos). Su cadena principal, con enlaces éster hidrolizables, hace posible esa degradación, pero no la garantiza en cualquier entorno: en un vertedero convencional, enterrado y a temperatura ambiente, la misma hidrólisis puede ser muy lenta. Un consumidor necesitaría saber, por tanto, si existe y va a usarse de verdad una instalación de compostaje industrial adecuada para ese residuo; sin esa información, pagar más por el material B no garantiza ninguna ventaja ambiental real frente al material A.",
+      "mark_scheme": [
+        "1 punto por responder correctamente (a)",
+        "1 punto por identificar que la hidrolizabilidad del material B depende de las condiciones, no solo de su estructura",
+        "1 punto por concluir explícitamente que la ventaja ambiental exige una infraestructura de desecho adecuada, no basta con la composición química del material"
+      ],
+      "common_errors": [
+        "Responder (b) solo con la estructura química (enlaces hidrolizables), sin señalar que las condiciones ambientales reales son igual de determinantes."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    }
+  ],
+  "challenge_questions": [
+    {
+      "id": "CH-Q08-27-1",
+      "type": "CHALLENGE",
+      "objective_ids": [
+        "LO-Q08-27-2",
+        "LO-Q08-27-3",
+        "LO-Q08-27-4"
+      ],
+      "concept_ids": [
+        "C-Q08-27-2",
+        "C-Q08-27-3"
+      ],
+      "difficulty": 5,
+      "statement": "Se propone fabricar un polímero de adición (cadena principal C-C) que incorpore, de vez en cuando, algún enlace éster intercalado deliberadamente en la cadena principal (no como grupo lateral, sino como parte de la propia cadena), con el objetivo de que sea más fácil de degradar que un polímero de adición convencional. Razona, a partir de todo lo visto en la unidad sobre adición, condensación, reciclaje e impacto ambiental, por qué esta estrategia podría funcionar, y qué comprobación habría que hacer antes de anunciarlo como 'biodegradable'.",
+      "hints": [
+        "Piensa en qué hace vulnerable a la hidrólisis un enlace éster, y si esa vulnerabilidad depende de cómo se formó originalmente el enlace (adición o condensación) o solo de qué tipo de enlace es.",
+        "Recuerda el argumento de la lección sobre la diferencia entre 'tener una vía química de degradación' y 'degradarse rápido en un entorno real'."
+      ],
+      "answer": "La estrategia es químicamente razonable: la vulnerabilidad del enlace éster depende de su naturaleza, no de si el polímero se formó por adición o condensación. Pero antes de llamarlo 'biodegradable' hay que medir experimentalmente la velocidad real de degradación en condiciones ambientales representativas, no solo demostrar que la hidrólisis es posible en laboratorio.",
+      "full_solution": "El argumento químico a favor de la estrategia es sólido: lo que determina si un enlace es susceptible de hidrólisis es su propia naturaleza (un enlace éster es polar y tiene un carbono electrófilo accesible al agua), no el mecanismo por el cual se formó originalmente el polímero. Intercalar enlaces éster en una cadena principal, aunque el resto siga siendo C-C típico de una adición, introduce puntos de ataque para el agua que una cadena puramente C-C no tiene, y en principio facilitaría tanto el reciclaje químico parcial como la degradación ambiental, siguiendo la misma lógica vista para el PET. Sin embargo, como se discutió para los bioplásticos compostables, que un enlace sea 'en principio' hidrolizable no garantiza una degradación rápida en cualquier entorno real: la frecuencia con la que aparecen esos enlaces en la cadena, su accesibilidad física al agua (si quedan 'enterrados' dentro de zonas muy cristalinas del material, por ejemplo), la temperatura y humedad del entorno de desecho, y la posible intervención de microorganismos son factores adicionales que determinarían la velocidad real. Antes de anunciar el material como 'biodegradable', habría que medir experimentalmente su velocidad de degradación en condiciones representativas del destino real del residuo (vertedero, compostaje industrial, medio marino...), no solo demostrar en laboratorio que la hidrólisis es posible con catalizador y temperatura elevados.",
+      "common_errors": [
+        "Concluir que, por tener algún enlace éster, el material sería automáticamente 'biodegradable' sin matizar sobre la frecuencia de esos enlaces ni las condiciones reales de degradación."
+      ],
+      "provenance": "SOURCE_DERIVED"
+    }
+  ],
+  "mcq": [
+    {
+      "id": "MCQ-Q08-27-1",
+      "stem": "¿Cuál es la diferencia esencial entre el reciclaje mecánico y el reciclaje químico de un polímero?",
+      "options": [
+        {
+          "key": "A",
+          "text": "El mecánico funde y remoldea el polímero sin romper sus enlaces químicos; el químico lo rompe hasta sus monómeros mediante una reacción.",
+          "why_wrong": null
+        },
+        {
+          "key": "B",
+          "text": "El mecánico es más caro que el químico en todos los casos.",
+          "why_wrong": "El coste relativo depende del material y del proceso concreto; no es el criterio que define la diferencia entre ambos."
+        },
+        {
+          "key": "C",
+          "text": "El químico solo sirve para polímeros naturales.",
+          "why_wrong": "El reciclaje químico por hidrólisis se aplica típicamente a poliésteres y poliamidas sintéticos, como el PET o el nailon, no a polímeros naturales en particular."
+        },
+        {
+          "key": "D",
+          "text": "No hay ninguna diferencia real; son dos nombres para el mismo proceso.",
+          "why_wrong": "Son dos procesos distintos: uno conserva las cadenas poliméricas y solo cambia su forma; el otro las rompe químicamente hasta los monómeros."
+        }
+      ],
+      "correct": "A",
+      "explanation": "El reciclaje mecánico refunde el polímero sin romper enlaces de la cadena; el químico rompe la cadena mediante una reacción (típicamente hidrólisis) hasta recuperar los monómeros originales.",
+      "difficulty": 2,
+      "objective_id": "LO-Q08-27-2",
+      "concept_id": "C-Q08-27-2"
+    },
+    {
+      "id": "MCQ-Q08-27-2",
+      "stem": "¿Por qué el PET admite reciclaje químico por hidrólisis con relativa facilidad, mientras que el PE no?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Porque el PET es más barato de producir que el PE.",
+          "why_wrong": "El coste de producción no determina qué reacciones químicas son posibles sobre la cadena principal del polímero."
+        },
+        {
+          "key": "B",
+          "text": "Porque el PET tiene enlaces éster intercalados en su cadena principal, susceptibles de hidrolizarse; el PE tiene una cadena principal de solo enlaces C-C.",
+          "why_wrong": null
+        },
+        {
+          "key": "C",
+          "text": "Porque el PET es termoestable y el PE termoplástico.",
+          "why_wrong": "Los dos son termoplásticos; esa clasificación no es la que distingue su posibilidad de reciclaje químico por hidrólisis."
+        },
+        {
+          "key": "D",
+          "text": "Porque el PE tiene mayor masa molecular media que el PET.",
+          "why_wrong": "La masa molecular no es el factor relevante aquí; lo es el tipo de enlace presente en la cadena principal."
+        }
+      ],
+      "correct": "B",
+      "explanation": "La hidrólisis ataca enlaces éster o amida; el PET los tiene intercalados en su cadena (procede de una condensación), mientras que el PE, de adición, tiene una cadena principal de solo C-C, sin ese punto de ataque.",
+      "difficulty": 2,
+      "objective_id": "LO-Q08-27-3",
+      "concept_id": "C-Q08-27-2"
+    },
+    {
+      "id": "MCQ-Q08-27-3",
+      "stem": "¿Por qué un termoestable, como el de la carcasa de un enchufe, no se puede reciclar mecánicamente?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Porque es demasiado caro de fundir.",
+          "why_wrong": "El coste no es la razón estructural; la razón es que no existe una fusión reversible que aprovechar."
+        },
+        {
+          "key": "B",
+          "text": "Porque contiene algún metal en su composición.",
+          "why_wrong": "La imposibilidad de reciclaje mecánico de un termoestable no depende de si contiene metal, sino de su propia estructura de red covalente."
+        },
+        {
+          "key": "C",
+          "text": "Porque todo el material forma una única red de enlaces covalentes, sin cadenas independientes que fundir y remoldear.",
+          "why_wrong": null
+        },
+        {
+          "key": "D",
+          "text": "Porque su punto de fusión es, sencillamente, demasiado alto para los hornos industriales actuales.",
+          "why_wrong": "No es una cuestión de alcanzar suficiente temperatura: un termoestable no funde de forma reversible a ninguna temperatura, porque calentarlo rompe su propia red covalente en vez de licuar cadenas independientes."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Sin cadenas independientes que separar (todo es una única red covalente), no existe el proceso de fusión reversible que el reciclaje mecánico necesita.",
+      "difficulty": 2,
+      "objective_id": "LO-Q08-27-3",
+      "concept_id": "C-Q08-27-2"
+    },
+    {
+      "id": "MCQ-Q08-27-4",
+      "stem": "¿Qué factor adicional, más allá de que un enlace sea 'en principio' hidrolizable, determina si un material se degrada rápido en un entorno real?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ninguno; si el enlace es hidrolizable, el material se degrada siempre a la misma velocidad en cualquier entorno.",
+          "why_wrong": "La velocidad real de hidrólisis depende fuertemente de las condiciones del entorno, no solo de que el enlace sea hidrolizable en principio."
+        },
+        {
+          "key": "B",
+          "text": "El color del material.",
+          "why_wrong": "El color no es un factor químico relevante para la velocidad de hidrólisis de la cadena principal."
+        },
+        {
+          "key": "C",
+          "text": "El precio de venta del producto final.",
+          "why_wrong": "El precio de mercado no tiene relación causal con la velocidad de una reacción química de degradación."
+        },
+        {
+          "key": "D",
+          "text": "Las condiciones ambientales (temperatura, humedad) y la disponibilidad de catalizadores o microorganismos que ataquen ese enlace.",
+          "why_wrong": null
+        }
+      ],
+      "correct": "D",
+      "explanation": "Que un enlace sea hidrolizable es una condición necesaria, no suficiente: la velocidad real depende también de las condiciones ambientales y de si existen catalizadores (incluidos enzimáticos) eficaces para esa reacción concreta.",
+      "difficulty": 3,
+      "objective_id": "LO-Q08-27-4",
+      "concept_id": "C-Q08-27-3"
+    },
+    {
+      "id": "MCQ-Q08-27-5",
+      "stem": "Para fabricar el mango de una sartén, que no debe deformarse cerca del fuego, ¿qué tipo de polímero es preferible, aunque suponga renunciar al reciclaje mecánico?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Un termoestable muy reticulado, como la baquelita.",
+          "why_wrong": null
+        },
+        {
+          "key": "B",
+          "text": "Un termoplástico de cadena muy ramificada.",
+          "why_wrong": "Un termoplástico, ramificado o no, se ablandaría con el calor de la cocina, lo que es justamente lo que se quiere evitar."
+        },
+        {
+          "key": "C",
+          "text": "Un elastómero ligeramente entrecruzado, como el caucho vulcanizado.",
+          "why_wrong": "Un elastómero está pensado para estirarse y recuperar su forma, no para mantener rigidez estructural a temperaturas elevadas como la de una sartén."
+        },
+        {
+          "key": "D",
+          "text": "Cualquier polímero de adición, porque todos resisten bien el calor por igual.",
+          "why_wrong": "No todos los polímeros de adición resisten igual el calor; muchos termoplásticos de adición se ablandan a temperaturas relativamente bajas."
+        }
+      ],
+      "correct": "A",
+      "explanation": "Un termoestable muy reticulado no tiene cadenas independientes que deslicen con el calor, así que mantiene su rigidez a temperaturas donde un termoplástico ya se habría ablandado, a costa de no poder reciclarse mecánicamente.",
+      "difficulty": 2,
+      "objective_id": "LO-Q08-27-1",
+      "concept_id": "C-Q08-27-1"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "FC-Q08-27-1",
+      "kind": "recall",
+      "front": "Tres preguntas para elegir, reciclar o valorar un polímero",
+      "back": "¿Qué propiedades exige la aplicación?, ¿es termoplástico o termoestable?, ¿tiene la cadena principal enlaces hidrolizables (éster, amida) o solo C-C?",
+      "concept_id": "C-Q08-27-1",
+      "difficulty": 1
+    },
+    {
+      "id": "FC-Q08-27-2",
+      "kind": "comparison",
+      "front": "Reciclaje mecánico frente a reciclaje químico",
+      "back": "Mecánico: refunde un termoplástico sin romper enlaces (pierde calidad en cada ciclo). Químico: hidrólisis que rompe el polímero hasta sus monómeros originales (calidad equivalente a la virgen).",
+      "concept_id": "C-Q08-27-2",
+      "difficulty": 2
+    },
+    {
+      "id": "FC-Q08-27-3",
+      "kind": "misconception",
+      "front": "¿Reciclar significa siempre fundir y remoldear?",
+      "back": "No: también existe el reciclaje químico (hidrólisis hasta los monómeros), posible en poliésteres y poliamidas aunque no sean fácilmente reciclables mecánicamente o viceversa.",
+      "concept_id": "C-Q08-27-2",
+      "difficulty": 2
+    },
+    {
+      "id": "FC-Q08-27-4",
+      "kind": "conceptual",
+      "front": "¿Por qué el PE no admite reciclaje químico sencillo por hidrólisis?",
+      "back": "Su cadena principal es solo C-C, sin enlaces éster o amida; romperla exige procesos mucho más exigentes energéticamente, como la pirólisis.",
+      "concept_id": "C-Q08-27-2",
+      "difficulty": 2
+    },
+    {
+      "id": "FC-Q08-27-5",
+      "kind": "misconception",
+      "front": "¿Todos los plásticos persisten igual de tiempo en el ambiente?",
+      "back": "No: las cadenas C-C puras (PE, PP, PVC) resisten mucho la hidrólisis y persisten; las cadenas con éster o amida (poliésteres, poliamidas) son hidrolizables en principio, aunque la velocidad real depende de las condiciones.",
+      "concept_id": "C-Q08-27-3",
+      "difficulty": 2
+    },
+    {
+      "id": "FC-Q08-27-6",
+      "kind": "conceptual",
+      "front": "¿Basta con que un enlace sea 'hidrolizable en principio' para que el material se degrade rápido?",
+      "back": "No: la velocidad real depende también de las condiciones ambientales (temperatura, humedad) y de la disponibilidad de catalizadores o microorganismos específicos.",
+      "concept_id": "C-Q08-27-3",
+      "difficulty": 3
+    },
+    {
+      "id": "FC-Q08-27-7",
+      "kind": "application",
+      "front": "Reciclaje químico del PET",
+      "back": "Hidrólisis de sus enlaces éster (con agua y catalizador, a temperatura elevada), recuperando ácido tereftálico y etilenglicol, los monómeros originales.",
+      "concept_id": "C-Q08-27-2",
+      "difficulty": 2
+    },
+    {
+      "id": "FC-Q08-27-8",
+      "kind": "transfer",
+      "front": "¿Por qué el nailon no se degrada tan rápido como una proteína, aunque ambos tengan enlace amida?",
+      "back": "Porque las proteínas cuentan con enzimas específicas (proteasas) evolucionadas para atacarlas; el nailon, con la misma química de enlace pero distinto entorno molecular, no es reconocido con la misma eficacia.",
+      "concept_id": "C-Q08-27-3",
+      "difficulty": 4
+    },
+    {
+      "id": "FC-Q08-27-9",
+      "kind": "application",
+      "front": "Códigos de identificación de plásticos 1 a 7",
+      "back": "1 PET, 2 PE-HD, 3 PVC, 4 PE-LD, 5 PP, 6 PS, 7 otros; facilitan separar materiales antes de reciclar para no degradar la calidad del lote.",
+      "concept_id": "C-Q08-27-2",
+      "difficulty": 2
+    },
+    {
+      "id": "FC-Q08-27-10",
+      "kind": "transfer",
+      "front": "¿Por qué elegir un termoestable para el mango de una sartén, si pierde reciclabilidad mecánica?",
+      "back": "Porque no tiene cadenas independientes que deslicen con el calor, así que mantiene su forma y rigidez a temperaturas donde un termoplástico se ablandaría: es un compromiso deliberado entre seguridad térmica y reciclabilidad.",
+      "concept_id": "C-Q08-27-1",
+      "difficulty": 3
+    }
+  ],
+  "misconceptions": [
+    {
+      "id": "MIS-Q08-27-1",
+      "incorrect_model": "Reciclar un plástico significa siempre fundirlo y volver a moldearlo con el mismo material.",
+      "why_it_appears": "El reciclaje mecánico es el más visible (contenedores, plantas de triturado y fusión), y se olvida que existe también el reciclaje químico, con condiciones de aplicabilidad distintas.",
+      "diagnostic_signal": "No distingue reciclaje mecánico de reciclaje químico al explicar cómo se recicla un poliéster.",
+      "correct_model": "Hay, al menos, dos estrategias distintas. El reciclaje mecánico refunde un termoplástico y le da nueva forma, sin romper sus enlaces químicos (solo funciona si no hay entrecruzamiento). El reciclaje químico rompe el polímero hasta sus monómeros originales mediante una reacción química (típicamente hidrólisis en poliésteres y poliamidas), y esos monómeros pueden volver a polimerizarse dando un material de calidad equivalente a la virgen. Un termoestable no admite el mecánico (no funde de forma reversible), pero en algunos casos sí puede degradarse químicamente, aunque con más dificultad que un poliéster.",
+      "remediation": "Ante cualquier polímero, preguntarse por separado: ¿admite reciclaje mecánico (es termoplástico)?, ¿admite reciclaje químico (tiene enlaces hidrolizables en su cadena principal)?",
+      "related_exercises": "ejemplo 3, práctica guiada 2 y pregunta de examen 1(c)",
+      "source_induced": true
+    },
+    {
+      "id": "MIS-Q08-27-2",
+      "incorrect_model": "Todos los plásticos tardan 'muchísimo tiempo' en degradarse en el ambiente, sin ninguna diferencia química entre unos y otros.",
+      "why_it_appears": "Se repite una idea divulgativa general sin conectarla con el tipo de enlace de la cadena principal de cada polímero concreto.",
+      "diagnostic_signal": "Afirma que un bioplástico compostable persiste tanto tiempo como una bolsa de PE.",
+      "correct_model": "La persistencia ambiental depende del tipo de enlace de la cadena principal. Un polímero con cadena principal de solo enlaces C-C (PE, PP, PVC) es muy resistente a la hidrólisis: el agua y la mayoría de los microorganismos no tienen una vía química sencilla para romper esos enlaces, y el material persiste durante mucho tiempo. Un poliéster o una poliamida, con enlaces éster o amida intercalados en la cadena, sí son susceptibles de hidrolizarse (aunque sea lentamente en condiciones ambientales normales), lo que explica que algunos materiales de este tipo se diseñen específicamente para degradarse más rápido en condiciones controladas de compostaje.",
+      "remediation": "Comparar explícitamente la cadena principal de un polímero de adición (solo C-C) con la de un poliéster o una poliamida (con heteroátomos intercalados) antes de hacer cualquier afirmación sobre su persistencia ambiental.",
+      "related_exercises": "ejemplo 4, ejercicio 3 y pregunta de examen 1(c)",
+      "source_induced": true
+    }
+  ],
+  "common_mistakes": [
+    {
+      "mistake": "Tratar el reciclaje mecánico como la única forma de reciclaje posible.",
+      "why": "Es el tipo de reciclaje más visible (contenedores, plantas de triturado y fusión), y se olvida que existe también el reciclaje químico, con condiciones de aplicabilidad distintas.",
+      "how_to_avoid": "Ante cualquier polímero, preguntarse por separado si admite reciclaje mecánico (termoplástico sin entrecruzar) y si admite reciclaje químico (enlaces hidrolizables en la cadena principal).",
+      "related_misconception": "MIS-Q08-27-1"
+    },
+    {
+      "mistake": "Afirmar que todos los plásticos persisten en el ambiente 'igual de mucho tiempo', sin relacionarlo con su estructura química.",
+      "why": "El error se detecta al contrastar el resultado con las condiciones y relaciones del problema.",
+      "how_to_avoid": "Comprobar si la cadena principal del polímero en cuestión tiene o no enlaces hidrolizables (éster, amida) antes de hacer afirmaciones sobre su persistencia.",
+      "related_misconception": "MIS-Q08-27-2"
+    },
+    {
+      "mistake": "Juzgar la elección de un termoestable para una aplicación como un error de diseño, sin considerar qué requisito concreto cubre que un termoplástico no cubriría.",
+      "why": "Se valora solo el criterio de reciclabilidad, ignorando otros requisitos (resistencia térmica, rigidez permanente) que la aplicación también exige.",
+      "how_to_avoid": "Antes de criticar la elección de un material, identificar todos los requisitos de la aplicación, no solo el de reciclaje.",
+      "related_misconception": null
+    },
+    {
+      "mistake": "Asumir que 'tener un enlace hidrolizable' garantiza una degradación ambiental rápida, sin más condiciones.",
+      "why": "Se confunde la posibilidad química de una reacción con la certeza de que ocurrirá rápido en cualquier entorno real.",
+      "how_to_avoid": "Distinguir siempre entre 'tiene una vía química de degradación' (depende de la estructura) y 'se degrada rápido aquí y ahora' (depende también de las condiciones ambientales y de catalizadores disponibles).",
+      "related_misconception": null
+    }
+  ],
+  "exam_notes": [
+    "El tipo de pregunta más frecuente da una aplicación concreta (envase, tubería, aislante, pieza expuesta al calor) y pide justificar la elección de material con criterios estructurales, no solo nombrar el polímero correcto.",
+    "Es habitual pedir explicar el reciclaje químico de un poliéster o una poliamida como la reacción inversa de su formación por condensación (hidrólisis), conectando directamente con la lección de polimerización por condensación.",
+    "Las preguntas sobre impacto ambiental valoran especialmente que la respuesta se apoye en el tipo de enlace de la cadena principal, no en una opinión genérica sobre 'el plástico es malo'.",
+    "Conviene tener preparada la distinción entre 'hidrolizable en principio' y 'se degrada rápido en la práctica', que es un matiz que se pide con frecuencia en preguntas de razonamiento sobre bioplásticos."
+  ],
+  "summary": {
+    "big_idea": "Elegir un polímero para una aplicación, decidir cómo reciclarlo y valorar su impacto ambiental son, los tres, razonamientos que parten de la misma base química: su estructura de cadena y el tipo de enlace que la forma.",
+    "key_points": [
+      "Elegir material: siempre un compromiso entre las propiedades que exige la aplicación, el comportamiento térmico y la facilidad de reciclaje.",
+      "Reciclaje mecánico: solo posible en termoplásticos (sin entrecruzamiento); pierde algo de calidad en cada ciclo.",
+      "Reciclaje químico: hidrólisis de enlaces éster o amida, posible en poliésteres y poliamidas (como el PET o el nailon), no en polímeros de adición de cadena C-C pura (como el PE).",
+      "Persistencia ambiental: las cadenas C-C puras resisten mucho la hidrólisis y persisten; las cadenas con ésteres/amidas son hidrolizables en principio, pero la velocidad real depende de las condiciones del entorno.",
+      "Un termoestable no admite reciclaje mecánico (no funde de forma reversible) ni, en general, el mismo reciclaje químico sencillo que un poliéster lineal."
+    ],
+    "formulas": [],
+    "what_to_remember_if_nothing_else": "Antes de valorar un material (elegirlo, reciclarlo o juzgar su impacto ambiental), pregúntate: ¿qué propiedades exige la aplicación?, ¿es termoplástico o termoestable?, ¿tiene su cadena principal enlaces hidrolizables o es C-C puro?"
+  },
+  "lang": "es"
+}
