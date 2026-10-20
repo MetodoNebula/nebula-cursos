@@ -1,0 +1,2071 @@
+{
+  "lesson_01.json": {
+    "lesson_id": "U-4Q-05-L01",
+    "title": "Mol",
+    "course_label": "4.º ESO · El mol y la estequiometría",
+    "objectives": [
+      {
+        "statement": "Explicar Mol con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de mol para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar la analogía de la docena y la escala del número de Avogadro para estimar cantidades de sustancia en problemas cotidianos."
+      },
+      {
+        "statement": "Distinguir el número de partículas (N) de la cantidad de sustancia (n) y detectar errores al confundir ambas magnitudes."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "¿Qué es el mol?",
+        "body": "Imagina que trabajas en una fábrica de tornillos. No vendes tornillos de uno en uno: los empaquetas en cajas de 100. Los huevos van en docenas, el papel en resmas de 500 hojas. Cada producto tiene su «unidad de paquete» que facilita contar grandes cantidades.\n\nEn química ocurre lo mismo. Los átomos y las moléculas son tan pequeños que contarlos de uno en uno es absurdo: ¡un simple vaso de agua contiene trillones de moléculas! Por eso los químicos inventaron su propia unidad de paquete: el **mol**.\n\nUn mol es simplemente un «paquete» que contiene siempre la misma cantidad de partículas: exactamente $6{,}022 \\times 10^{23}$ unidades. Este número se llama **número de Avogadro** ($N_A$).\n\nLa belleza del mol está en que conecta el mundo invisible de los átomos con el mundo tangible del laboratorio. Cuando coges 12 g de carbono puro, tienes exactamente 1 mol de átomos de carbono. Cuando pesas 18 g de agua, tienes 1 mol de moléculas de H₂O. El mol es el puente entre lo que puedes pesar en una balanza y lo que no puedes ver ni con el mejor microscopio.\n\nLas dos ecuaciones clave son:\n\n$n = \\dfrac{m}{M}$ — para pasar de gramos a moles\n\n$N = n \\cdot N_A$ — para pasar de moles a partículas",
+        "formula": "$n=\\dfrac{m}{M};\\quad N=nN_A$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Analogía del mol: docena, resma y mol como unidades de conteo\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Unidades de conteo: del día a día a la química</text>\n\n    <!-- Dozen eggs -->\n    <rect x=\"20\" y=\"50\" width=\"160\" height=\"220\" rx=\"12\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n    <text x=\"100\" y=\"78\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c17a17\">1 DOCENA</text>\n    <!-- Egg shapes -->\n    <ellipse cx=\"60\" cy=\"110\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"100\" cy=\"110\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"140\" cy=\"110\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"60\" cy=\"155\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"100\" cy=\"155\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"140\" cy=\"155\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"60\" cy=\"200\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"100\" cy=\"200\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <ellipse cx=\"140\" cy=\"200\" rx=\"16\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"100\" y=\"248\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#c17a17\">12</text>\n    <text x=\"100\" y=\"264\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">unidades</text>\n\n    <!-- Ream of paper -->\n    <rect x=\"220\" y=\"50\" width=\"160\" height=\"220\" rx=\"12\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n    <text x=\"300\" y=\"78\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#8a3d6b\">1 RESMA</text>\n    <!-- Paper stack -->\n    <rect x=\"255\" y=\"100\" width=\"90\" height=\"4\" rx=\"1\" fill=\"#e8e3d8\" stroke=\"#8a3d6b\" stroke-width=\"0.8\"/>\n    <rect x=\"255\" y=\"108\" width=\"90\" height=\"4\" rx=\"1\" fill=\"#e8e3d8\" stroke=\"#8a3d6b\" stroke-width=\"0.8\"/>\n    <rect x=\"255\" y=\"116\" width=\"90\" height=\"4\" rx=\"1\" fill=\"#e8e3d8\" stroke=\"#8a3d6b\" stroke-width=\"0.8\"/>\n    <rect x=\"255\" y=\"124\" width=\"90\" height=\"4\" rx=\"1\" fill=\"#e8e3d8\" stroke=\"#8a3d6b\" stroke-width=\"0.8\"/>\n    <rect x=\"255\" y=\"132\" width=\"90\" height=\"60\" rx=\"2\" fill=\"#e8e3d8\" stroke=\"#8a3d6b\" stroke-width=\"1.2\"/>\n    <line x1=\"260\" y1=\"142\" x2=\"340\" y2=\"142\" stroke=\"#8a3d6b\" stroke-width=\"0.5\" opacity=\"0.4\"/>\n    <line x1=\"260\" y1=\"152\" x2=\"340\" y2=\"152\" stroke=\"#8a3d6b\" stroke-width=\"0.5\" opacity=\"0.4\"/>\n    <line x1=\"260\" y1=\"162\" x2=\"340\" y2=\"162\" stroke=\"#8a3d6b\" stroke-width=\"0.5\" opacity=\"0.4\"/>\n    <line x1=\"260\" y1=\"172\" x2=\"340\" y2=\"172\" stroke=\"#8a3d6b\" stroke-width=\"0.5\" opacity=\"0.4\"/>\n    <line x1=\"260\" y1=\"182\" x2=\"340\" y2=\"182\" stroke=\"#8a3d6b\" stroke-width=\"0.5\" opacity=\"0.4\"/>\n    <text x=\"300\" y=\"248\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#8a3d6b\">500</text>\n    <text x=\"300\" y=\"264\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">hojas</text>\n\n    <!-- 1 Mol -->\n    <rect x=\"420\" y=\"50\" width=\"160\" height=\"220\" rx=\"12\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/>\n    <text x=\"500\" y=\"78\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0e7a68\">1 MOL</text>\n    <!-- Swarm of dots representing atoms -->\n    <circle cx=\"450\" cy=\"110\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.7\"/>\n    <circle cx=\"465\" cy=\"105\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.7\"/>\n    <circle cx=\"480\" cy=\"112\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.7\"/>\n    <circle cx=\"495\" cy=\"107\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.7\"/>\n    <circle cx=\"510\" cy=\"114\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.7\"/>\n    <circle cx=\"525\" cy=\"108\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.7\"/>\n    <circle cx=\"540\" cy=\"113\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.7\"/>\n    <circle cx=\"455\" cy=\"125\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n    <circle cx=\"470\" cy=\"120\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n    <circle cx=\"485\" cy=\"127\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n    <circle cx=\"500\" cy=\"122\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n    <circle cx=\"515\" cy=\"129\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n    <circle cx=\"530\" cy=\"123\" r=\"3\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n    <circle cx=\"460\" cy=\"140\" r=\"2.5\" fill=\"#0e7a68\" opacity=\"0.5\"/>\n    <circle cx=\"475\" cy=\"136\" r=\"2.5\" fill=\"#0e7a68\" opacity=\"0.5\"/>\n    <circle cx=\"490\" cy=\"143\" r=\"2.5\" fill=\"#0e7a68\" opacity=\"0.5\"/>\n    <circle cx=\"505\" cy=\"138\" r=\"2.5\" fill=\"#0e7a68\" opacity=\"0.5\"/>\n    <circle cx=\"520\" cy=\"145\" r=\"2.5\" fill=\"#0e7a68\" opacity=\"0.5\"/>\n    <circle cx=\"535\" cy=\"139\" r=\"2.5\" fill=\"#0e7a68\" opacity=\"0.5\"/>\n    <circle cx=\"465\" cy=\"155\" r=\"2\" fill=\"#0e7a68\" opacity=\"0.4\"/>\n    <circle cx=\"480\" cy=\"152\" r=\"2\" fill=\"#0e7a68\" opacity=\"0.4\"/>\n    <circle cx=\"495\" cy=\"158\" r=\"2\" fill=\"#0e7a68\" opacity=\"0.4\"/>\n    <circle cx=\"510\" cy=\"153\" r=\"2\" fill=\"#0e7a68\" opacity=\"0.4\"/>\n    <circle cx=\"525\" cy=\"160\" r=\"2\" fill=\"#0e7a68\" opacity=\"0.4\"/>\n    <circle cx=\"470\" cy=\"170\" r=\"1.5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"485\" cy=\"168\" r=\"1.5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"500\" cy=\"173\" r=\"1.5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"515\" cy=\"169\" r=\"1.5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"530\" cy=\"175\" r=\"1.5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <text x=\"500\" y=\"200\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\" opacity=\"0.5\">· · · · · · · · ·</text>\n    <text x=\"500\" y=\"235\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">6,022 × 10²³</text>\n    <text x=\"500\" y=\"264\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">partículas</text>\n\n    <!-- Bottom comparison -->\n    <text x=\"300\" y=\"305\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\" opacity=\"0.7\">Cada grupo tiene su «unidad de conteo»: la química usa el mol</text>\n    </svg>",
+            "caption": "Unidades de conteo: docena, resma y mol"
+          }
+        ],
+        "student_text": "Imagina que trabajas en una fábrica de tornillos. No vendes tornillos de uno en uno: los empaquetas en cajas de 100. Los huevos van en docenas, el papel en resmas de 500 hojas. Cada producto tiene ..."
+      },
+      {
+        "title": "El número de Avogadro",
+        "body": "El número de Avogadro, $N_A = 6{,}022 \\times 10^{23}\\;\\text{mol}^{-1}$, es difícil de imaginar. Es un número tan grande que supera cualquier experiencia cotidiana. Vamos a intentar comprenderlo.\n\nSi contaras un átomo por segundo sin parar, necesitarías unos **19 billones de años** para terminar un solo mol. El universo tiene solo 13.800 millones de años, así que necesitarías más de mil veces la edad del universo.\n\nOtra forma de verlo: si cada átomo de un mol fuese un grano de arena, tendrías suficiente arena para cubrir toda la superficie de la Tierra con una capa de un metro de espesor. Y si fuesen gotas de agua, llenarías el mar Mediterráneo varias veces.\n\nSin embargo, pese a ser un número colosal, es perfectamente manejable en química gracias a la notación científica. Cuando dices «tengo 2 moles de oxígeno», estás diciendo de forma elegante que tienes $1{,}204 \\times 10^{24}$ moléculas. Mucho más práctico, ¿no?\n\nEl número de Avogadro se eligió de forma que la masa en gramos de un mol de cualquier elemento coincida numéricamente con su masa atómica en unidades de masa atómica (u). Así, si el carbono tiene una masa atómica de 12 u, un mol de carbono pesa exactamente 12 g. Esta coincidencia no es casual: es precisamente la definición del mol.",
+        "formula": "$N_A=6{,}022\\cdot10^{23}\\ \\mathrm{mol^{-1}}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Infografía: la escala del número de Avogadro\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"30\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">¿Cuánto es 6,022 × 10²³?</text>\n\n    <!-- Timeline bar -->\n    <rect x=\"40\" y=\"60\" width=\"520\" height=\"30\" rx=\"15\" fill=\"#e8e3d8\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n    <rect x=\"40\" y=\"60\" width=\"45\" height=\"30\" rx=\"15\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <text x=\"63\" y=\"80\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#0e7a68\">Universo</text>\n    <text x=\"63\" y=\"97\" font-size=\"8\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\">13 800 mill. años</text>\n\n    <rect x=\"40\" y=\"60\" width=\"520\" height=\"30\" rx=\"15\" fill=\"none\"/>\n    <line x1=\"400\" y1=\"60\" x2=\"400\" y2=\"90\" stroke=\"#c17a17\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/>\n    <text x=\"400\" y=\"105\" text-anchor=\"middle\" font-size=\"8\" fill=\"#c17a17\">Contando 1 átomo/s:</text>\n    <text x=\"400\" y=\"117\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#c17a17\">19 billones de años</text>\n\n    <!-- Visual comparisons -->\n    <rect x=\"40\" y=\"140\" width=\"245\" height=\"75\" rx=\"10\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <circle cx=\"80\" cy=\"178\" r=\"22\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <text x=\"80\" y=\"182\" text-anchor=\"middle\" font-size=\"20\">🌍</text>\n    <text x=\"180\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Si cada átomo fuese</text>\n    <text x=\"180\" y=\"183\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">un grano de arena:</text>\n    <text x=\"180\" y=\"200\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0e7a68\">cubrirían la Tierra</text>\n    <text x=\"180\" y=\"212\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">con 1 m de espesor</text>\n\n    <rect x=\"315\" y=\"140\" width=\"245\" height=\"75\" rx=\"10\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <circle cx=\"355\" cy=\"178\" r=\"22\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"355\" y=\"182\" text-anchor=\"middle\" font-size=\"20\">💧</text>\n    <text x=\"450\" y=\"168\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">1 mol de gotas</text>\n    <text x=\"450\" y=\"183\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">de agua llenaría</text>\n    <text x=\"450\" y=\"200\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c17a17\">el mar Mediterráneo</text>\n    <text x=\"450\" y=\"212\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">varias veces</text>\n\n    <!-- Central number -->\n    <rect x=\"120\" y=\"240\" width=\"360\" height=\"55\" rx=\"12\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <text x=\"300\" y=\"268\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0e7a68\">Nₐ = 6,022 × 10²³ mol⁻¹</text>\n    <text x=\"300\" y=\"288\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">El número más grande que usarás en química</text>\n    </svg>",
+            "caption": "La escala inimaginable del número de Avogadro"
+          }
+        ],
+        "student_text": "El número de Avogadro, $N_A = 6{,}022 \\times 10^{23}\\;\\text{mol}^{-1}$, es difícil de imaginar. Es un número tan grande que supera cualquier experiencia cotidiana. Vamos a intentar comprenderlo."
+      },
+      {
+        "title": "Mol en el sistema SI y analogía con la docena",
+        "body": "Desde 2019, el mol es una de las siete unidades fundamentales del Sistema Internacional (SI), al mismo nivel que el metro, el kilogramo o el segundo. Su definición moderna es elegante y precisa:\n\n**Un mol contiene exactamente $6{,}022\\,140\\,76 \\times 10^{23}$ entidades elementales.**\n\nAntes de 2019, el mol se definía como «la cantidad de sustancia que contiene tantas entidades como átomos hay en 12 g de carbono-12». La definición nueva fija el número de Avogadro como una constante exacta, sin referencia a ningún material concreto.\n\nPiensa en la analogía de la docena: nadie necesita una docena de referencia guardada en una caja fuerte. Una docena son 12, punto. Del mismo modo, un mol son $6{,}022\\,140\\,76 \\times 10^{23}$, sin necesidad de comparar con un trozo de carbono.\n\nUn detalle crucial: el mol cuenta **entidades**, no necesariamente átomos. Puedes tener un mol de átomos, un mol de moléculas, un mol de iones, un mol de electrones... Por eso, siempre debes especificar qué estás contando. Decir «un mol de oxígeno» es ambiguo: ¿un mol de átomos de O, o un mol de moléculas de O₂? En química, la precisión importa.",
+        "formula": "$N=n\\cdot N_A$",
+        "assets": [],
+        "student_text": "Desde 2019, el mol es una de las siete unidades fundamentales del Sistema Internacional (SI), al mismo nivel que el metro, el kilogramo o el segundo. Su definición moderna es elegante y precisa:"
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "**Comprobación rápida**: Para verificar que has entendido el concepto de mol, hazte estas preguntas:\n\n1. ¿Cuántas partículas hay en 3 moles de cualquier sustancia? → $3 \\times 6{,}022 \\times 10^{23} = 1{,}807 \\times 10^{24}$ partículas.\n\n2. Si tienes $1{,}204 \\times 10^{24}$ átomos de hierro, ¿cuántos moles son? → $n = N/N_A = 1{,}204 \\times 10^{24} / 6{,}022 \\times 10^{23} = 2$ mol.\n\n**Errores frecuentes**: Confundir «mol» con «molécula». Un mol no es una molécula: es un paquete de $6{,}022 \\times 10^{23}$ partículas. Otro error habitual es olvidar especificar qué se está contando. «2 moles de cloro» puede significar 2 mol de Cl (átomos) o 2 mol de Cl₂ (moléculas), y las cantidades de átomos son muy diferentes.\n\n**Límite**: El mol es una unidad de conteo, no una propiedad de la materia. No tiene sentido decir que una sustancia «es un mol»: lo correcto es decir que tienes una cierta cantidad de sustancia medida en moles.",
+        "assets": [],
+        "formula": "$n=\\dfrac{m}{M};\\quad N=nN_A$",
+        "student_text": "**Comprobación rápida**: Para verificar que has entendido el concepto de mol, hazte estas preguntas:"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Moléculas en una muestra de agua",
+        "statement": "¿Cuántas moléculas hay en 0,250 mol de agua? Usa $N_A$=6,022·10²³ mol⁻¹ y explica qué representa el resultado.",
+        "steps": [
+          "Identificamos la entidad pedida: moléculas de H₂O, no su masa ni su volumen.",
+          "Aplicamos $N=nN_A$ con n=0,250 mol: $N=0,250\\times6,022\\times10^{23}=1,51\\times10^{23}$.",
+          "El resultado representa el número de moléculas individuales de agua presentes en la muestra.",
+          "Comprobación inversa: $n=N/N_A=1,51\\times10^{23}/6,022\\times10^{23}=0,250$ mol, coincide con el dato de partida.",
+          "Comprobación específica: se revisa que se ha usado N=n·N_A (no n=m/M, porque el dato ya está en mol) y que el resultado es un número de partículas, adimensional."
+        ],
+        "answer": "N=1,51·10²³ moléculas de H₂O.",
+        "verification": "Se comprueba dividiendo el resultado entre N_A: se recuperan los 0,250 mol de partida."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Átomos en CO₂",
+        "statement": "Calcula el número total de átomos en 0,25 mol de CO₂.",
+        "steps": [
+          "Hay $0,25N_A=1,51\\times10^{23}$ moléculas.",
+          "Cada molécula contiene 3 átomos: N (átomos)=3(1,51·10²³).",
+          "El total es 4,52·10²³ átomos.",
+          "Se distingue número de moléculas de número de átomos.",
+          "Comprobación específica: se revisa que el número de átomos sea 3 veces el número de moléculas, porque el CO₂ tiene 3 átomos por molécula (1 C + 2 O)."
+        ],
+        "answer": "4,52·10²³ átomos.",
+        "verification": "Se comprueba que 3×1,51×10²³=4,52×10²³ átomos, coherente con la fórmula CO₂."
+      },
+      {
+        "id": "deep-domain-worked-3",
+        "title": "Moles y moléculas de agua",
+        "statement": "Convierte 36,0 g de H₂O en moles y moléculas (M=18,0 g/mol).",
+        "steps": [
+          "$n=\\dfrac{36,0}{18,0}=2,00\\,\\mathrm{mol}$.",
+          "El número de moléculas es $N=nN_A$=2,00(6,022·10²³).",
+          "Por tanto, N=1,204·10²⁴ moléculas.",
+          "La masa se recupera con m=nM=2,00(18,0)=36,0 g.",
+          "Comprobación específica: se revisa que n=m/M y N=nN_A se han aplicado en el orden correcto (primero masa→mol con M=18,0 g/mol, después mol→moléculas con N_A)."
+        ],
+        "answer": "2,00 mol y 1,204·10²⁴ moléculas.",
+        "verification": "Se recupera la masa: m=nM=2,00×18,0=36,0 g, igual al dato de partida."
+      },
+      {
+        "id": "deep-domain-worked-4",
+        "title": "Comparar partículas",
+        "statement": "Compara el número de partículas en 0,50 mol de He y 20,0 g de Ne (M=20,0 g/mol).",
+        "steps": [
+          "20,0 g de Ne corresponden a $n=\\dfrac{20,0}{20,0}$=1,00 mol.",
+          "1,00 mol contiene el doble de partículas que 0,50 mol.",
+          "La masa no se compara directamente porque He y Ne tienen masas molares distintas.",
+          "La respuesta se expresa como razón de cantidades de sustancia.",
+          "Comprobación específica: se revisa que la comparación se hace en moles (cantidad de sustancia), no en masa, porque He y Ne tienen masas molares distintas (4,0 y 20,0 g/mol)."
+        ],
+        "answer": "Ne tiene el doble de partículas.",
+        "verification": "Se confirma que 1,00 mol de Ne tiene el doble de partículas que 0,50 mol de He, aunque sus masas (20,0 g frente a 2,0 g) sean muy distintas."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-guided-1",
+        "statement": "Calcula moles y partículas de 36 g de H2O.",
+        "scaffold": "Separa el problema en dos pasos: primero calcula los moles con n=m/M, después pasa a partículas con N=nN_A. Comprueba que las unidades se cancelan correctamente en cada paso.",
+        "answer": "n=2,00 mol y N=1,204×10²⁴ moléculas.",
+        "full_solution": "Paso 1: n=m/M=36/18,0=2,00 mol. Paso 2: N=n·N_A=2,00×6,022×10²³=1,204×10²⁴ moléculas de H₂O."
+      },
+      {
+        "id": "deep-domain-guided-2",
+        "statement": "Compara partículas en 0,5 mol He y 20 g Ne (M(Ne)=20,0 g/mol).",
+        "scaffold": "Convierte primero los 20 g de Ne a moles usando M(Ne); después compara directamente los moles, ya que 1 mol siempre contiene el mismo número de partículas (N_A), sea la sustancia que sea.",
+        "answer": "Ambas no tienen el mismo número de partículas: n(Ne)=1,0 mol es el doble de los 0,5 mol de He, así que el Ne tiene el doble de partículas.",
+        "full_solution": "n(He)=0,5 mol (dato directo). n(Ne)=m/M=20,0/20,0=1,0 mol. Como N=n·N_A, la muestra de Ne tiene el doble de partículas que la de He (1,0 mol frente a 0,5 mol), aunque sus masas (20 g y 2 g) sean distintas."
+      },
+      {
+        "id": "deep-domain-guided-3",
+        "statement": "Explica por qué masa y número de partículas no son intercambiables.",
+        "scaffold": "Piensa en dos sustancias con masas molares muy distintas (p. ej. H₂ y O₂): compara qué pasa si tomas la misma masa de cada una, en vez de los mismos moles.",
+        "answer": "Porque el número de partículas depende de los moles (N=nN_A), no directamente de la masa; dos muestras con la misma masa pero distinta masa molar tienen distinto número de partículas.",
+        "full_solution": "Ejemplo: 2 g de H₂ (M=2,0 g/mol) son n=1,0 mol → N=6,022×10²³ moléculas. 2 g de O₂ (M=32,0 g/mol) son n=0,0625 mol → N=3,76×10²² moléculas. Igual masa, número de partículas muy distinto: la relación directa es con los moles, no con la masa."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "¿Cuántas moléculas hay en 5 mol de N₂?",
+        "answer": "N=5 × 6,022 × 10²³ = 3,011 × 10²⁴ moléculas.",
+        "full_solution": "N=n·N_A=5×6,022×10²³=3,011×10²⁴ moléculas de N₂.",
+        "hints": [
+          "Recuerda que N_A=6,022×10²³ mol⁻¹.",
+          "No hace falta calcular masa molar: el dato ya está en mol."
+        ],
+        "reasoning": [
+          "La entidad pedida es la molécula de N₂ (no los átomos de N por separado).",
+          "Se aplica N=n·N_A con n=5 mol.",
+          "El resultado se expresa en número de moléculas (adimensional), no en moles."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Si tienes 9,033 × 10²³ iones Cl⁻, ¿cuántos moles tienes?",
+        "answer": "n=9,033·10²³/(6,022·10²³)=1,5 mol.",
+        "full_solution": "n=N/N_A=9,033×10²³/6,022×10²³=1,50 mol de iones Cl⁻.",
+        "hints": [
+          "Divide el número de partículas entre N_A.",
+          "Comprueba que 1,5×6,022×10²³=9,033×10²³."
+        ],
+        "reasoning": [
+          "La entidad es el ion Cl⁻, cuyo dato ya está en número de partículas.",
+          "Se despeja n de N=n·N_A: n=N/N_A.",
+          "El resultado se expresa en mol."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Calcula el número de moléculas que hay en 3,00 mol de O₂.",
+        "answer": "N=1,81×10²⁴ moléculas de O₂.",
+        "full_solution": "Se aplica N=n·N_A: N=3,00×6,022×10²³=1,807×10²⁴≈1,81×10²⁴ moléculas de O₂.",
+        "hints": [
+          "Usa N=n·N_A directamente, no necesitas masa molar."
+        ]
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "¿Cuántos átomos de oxígeno hay en 2,00 mol de O₂?",
+        "answer": "N(átomos de O)=2,41×10²⁴.",
+        "full_solution": "Cada molécula de O₂ tiene 2 átomos de O. N(moléculas)=2,00×6,022×10²³=1,204×10²⁴. N(átomos O)=2×1,204×10²⁴=2,41×10²⁴ átomos.",
+        "hints": [
+          "Multiplica primero por N_A y después por el número de átomos de O en la molécula."
+        ]
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Una muestra contiene 1,505×10²³ iones Na⁺ y el mismo número de iones Cl⁻. ¿Cuántos moles de NaCl (fórmulas unidad) representa, y cuántos moles de iones totales hay?",
+        "answer": "n(NaCl)=0,250 mol; moles de iones totales=0,500 mol.",
+        "full_solution": "Cada fórmula unidad de NaCl aporta 1 ion Na⁺ y 1 ion Cl⁻, así que n(NaCl)=n(Na⁺)=1,505×10²³/6,022×10²³=0,250 mol. Los iones totales (Na⁺+Cl⁻) son el doble: 0,500 mol de iones.",
+        "hints": [
+          "Cada fórmula unidad de NaCl aporta un Na⁺ y un Cl⁻."
+        ]
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Si representas el número de partículas N frente a la cantidad de sustancia n para una misma sustancia, ¿qué tipo de gráfica obtienes y qué representa la pendiente?",
+        "answer": "Una recta que pasa por el origen; la pendiente es N_A=6,022×10²³ mol⁻¹.",
+        "full_solution": "Como N=n·N_A, N es proporcional a n: la gráfica N-n es una línea recta que pasa por (0,0) y cuya pendiente es precisamente el número de Avogadro, N_A.",
+        "hints": [
+          "Piensa en N=n·N_A como una recta y=mx."
+        ]
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un compañero afirma que '2 mol de O₂ tienen más partículas que 2 mol de O₃ porque el O₂ es más pequeño'. ¿Es correcto? Corrige el error.",
+        "answer": "Es incorrecto: ambas muestras tienen el mismo número de moléculas (2×N_A), porque 1 mol siempre contiene N_A entidades, sea la molécula que sea.",
+        "full_solution": "N=n·N_A no depende del tamaño de la partícula, solo de n. Para n=2 mol, tanto O₂ como O₃ tienen N=2×6,022×10²³=1,204×10²⁴ moléculas (si se piden átomos, O₃ tendría más: 3 átomos por molécula frente a 2).",
+        "hints": [
+          "N=n·N_A no depende del tamaño de la partícula."
+        ]
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Una muestra de un gas diatómico X₂ contiene 1,204×10²⁴ moléculas y tiene una masa de 56,0 g. Calcula la masa molar de X₂ y la de X. ¿Qué elemento podría ser?",
+        "answer": "M(X₂)=28,0 g/mol; M(X)=14,0 g/mol; probablemente nitrógeno (N₂).",
+        "full_solution": "n=N/N_A=1,204×10²⁴/6,022×10²³=2,00 mol. M(X₂)=m/n=56,0/2,00=28,0 g/mol. Como la molécula es diatómica, M(X)=28,0/2=14,0 g/mol, compatible con el nitrógeno.",
+        "hints": [
+          "Primero obtén los moles a partir del número de partículas, y luego usa M=m/n."
+        ]
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-01-1",
+        "stem": "¿Cuántas entidades contiene exactamente 1 mol de cualquier sustancia?",
+        "options": [
+          {
+            "key": "A",
+            "text": "6,022 × 10²⁰",
+            "why_wrong": "Es tres órdenes de magnitud menor que el número de Avogadro real."
+          },
+          {
+            "key": "B",
+            "text": "6,022 × 10²³"
+          },
+          {
+            "key": "C",
+            "text": "6,022 × 10²⁶",
+            "why_wrong": "Es tres órdenes de magnitud mayor que el número de Avogadro real."
+          },
+          {
+            "key": "D",
+            "text": "1,000 × 10²³",
+            "why_wrong": "Confunde el valor real con una potencia de 10 redondeada sin el factor 6,022."
+          }
+        ],
+        "explanation": "Por definición, 1 mol equivale exactamente a N_A=6,022 × 10²³ entidades (número de Avogadro), sea cual sea la partícula considerada.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-01-2",
+        "stem": "¿Con qué letra se simboliza la cantidad de sustancia en el SI?",
+        "options": [
+          {
+            "key": "A",
+            "text": "m",
+            "why_wrong": "m es el símbolo de la masa, no de la cantidad de sustancia."
+          },
+          {
+            "key": "B",
+            "text": "M",
+            "why_wrong": "M es el símbolo de la masa molar."
+          },
+          {
+            "key": "C",
+            "text": "n"
+          },
+          {
+            "key": "D",
+            "text": "N",
+            "why_wrong": "N es el símbolo del número de partículas, no de la cantidad de sustancia en mol."
+          }
+        ],
+        "explanation": "La cantidad de sustancia se representa con la letra minúscula n (no confundir con N, número de partículas, ni con M, masa molar).",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-01-3",
+        "stem": "Si tienes 2 mol de NaCl, ¿cuántas fórmulas unidad de NaCl tienes?",
+        "options": [
+          {
+            "key": "A",
+            "text": "6,022 × 10²³",
+            "why_wrong": "Es el número de fórmulas unidad en 1 mol, no en 2 mol."
+          },
+          {
+            "key": "B",
+            "text": "1,204 × 10²³",
+            "why_wrong": "Es un error de un orden de magnitud: falta multiplicar correctamente por 2."
+          },
+          {
+            "key": "C",
+            "text": "1,204 × 10²⁴"
+          },
+          {
+            "key": "D",
+            "text": "3,011 × 10²³",
+            "why_wrong": "Corresponde a 0,5 mol, no a 2 mol."
+          }
+        ],
+        "explanation": "N=2 × 6,022 × 10²³ = 1,204 × 10²⁴ fórmulas unidad de NaCl.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-01-4",
+        "stem": "¿Cuál de las siguientes afirmaciones sobre el mol es FALSA?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Es una unidad del SI.",
+            "why_wrong": "Es verdadera: el mol es efectivamente una unidad del SI, por lo que no es la respuesta a esta pregunta."
+          },
+          {
+            "key": "B",
+            "text": "Depende del tipo de partícula."
+          },
+          {
+            "key": "C",
+            "text": "Equivale a $N_A$ entidades.",
+            "why_wrong": "Es verdadera: 1 mol equivale siempre a N_A=6,022×10²³ entidades."
+          },
+          {
+            "key": "D",
+            "text": "Se usa para contar partículas microscópicas.",
+            "why_wrong": "Es verdadera: el mol se usa precisamente para contar partículas microscópicas mediante una cantidad macroscópica."
+          }
+        ],
+        "explanation": "La afirmación falsa es B: el mol siempre representa N_A entidades, sea cual sea el tipo de partícula considerada (átomos, moléculas, iones...). Las otras tres afirmaciones son verdaderas.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué es el mol?",
+        "back": "Unidad SI de cantidad de sustancia; 1 mol = 6,022 × 10²³ entidades."
+      },
+      {
+        "front": "¿Cuánto vale $N_A$?",
+        "back": "$N_A=6{,}022\\cdot10^{23}\\ \\mathrm{mol^{-1}}$ (número de Avogadro)."
+      },
+      {
+        "front": "Fórmula para calcular el número de partículas",
+        "back": "$N=n\\cdot N_A$"
+      },
+      {
+        "front": "Analogía del mol",
+        "back": "Como una docena = 12 unidades, 1 mol = 6,022 × 10²³ partículas."
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Creer que el mol varía según la sustancia (siempre es $N_A$ entidades).",
+        "correct_model": "El mol es siempre el mismo número de entidades (N_A=6,022×10²³), independientemente de si se cuentan átomos, moléculas o iones; lo que cambia de una sustancia a otra es su masa molar.",
+        "remediation": "Practica comparando 1 mol de distintas sustancias (He, H₂O, NaCl): el número de partículas es el mismo, aunque sus masas sean muy distintas."
+      },
+      {
+        "incorrect_model": "Confundir n (cantidad en mol) con N (número de partículas).",
+        "correct_model": "n es la cantidad de sustancia (en mol) y N es el número de partículas (un recuento); se relacionan mediante N=n·N_A, pero no son la misma magnitud ni tienen las mismas unidades.",
+        "remediation": "Antes de calcular, escribe explícitamente qué magnitud pide el problema (n o N) y en qué unidades debe darse la respuesta."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "mol",
+        "definition": "Unidad del SI para la cantidad de sustancia; 1 mol contiene N_A entidades elementales."
+      },
+      {
+        "term": "número de Avogadro",
+        "definition": "Constante N_A=6,02214076×10²³ mol⁻¹ que indica cuántas entidades elementales hay en 1 mol."
+      },
+      {
+        "term": "cantidad de sustancia",
+        "definition": "Magnitud física (símbolo n, unidad mol) que mide la cantidad de entidades elementales de una muestra."
+      },
+      {
+        "term": "$N_A$",
+        "definition": "Símbolo del número de Avogadro, 6,022×10²³ mol⁻¹."
+      },
+      {
+        "term": "partículas",
+        "definition": "Entidades elementales que se cuentan con el mol: átomos, moléculas, iones u otras unidades elementales."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Operaciones con números, unidades del SI, lectura de tablas y gráficas, y notación científica.",
+        "why_it_matters": "Sin dominar la notación científica y las unidades del SI no se puede interpretar correctamente N_A ni expresar cantidades de sustancia."
+      }
+    ],
+    "summary": {
+      "big_idea": "El mol es el puente entre el mundo microscópico (átomos, moléculas, iones) y el mundo macroscópico (gramos, laboratorio): 1 mol siempre contiene N_A=6,022×10²³ entidades, sea cual sea la sustancia.",
+      "key_points": [
+        "Mol es la unidad del Sistema Internacional (SI) para medir la cantidad de sustancia.",
+        "El número de Avogadro vale $N_A=6{,}022\\cdot10^{23}\\ \\mathrm{mol^{-1}}$.",
+        "La cantidad de sustancia es una de las siete magnitudes básicas del SI y su unidad es el mol.",
+        "Antes de multiplicar por N_A, identifica siempre qué entidad se está contando (átomos, moléculas o iones)."
+      ],
+      "formulas": [
+        "$n=\\dfrac{m}{M};\\quad N=nN_A$"
+      ],
+      "what_to_remember_if_nothing_else": "1 mol = 6,022×10²³ entidades (N=n·N_A), sea cual sea la partícula; no confundas n (mol) con N (número de partículas)."
+    },
+    "exam_questions": [
+      {
+        "statement": "Convierte 36,0 g de H₂O en moles, moléculas y átomos totales usando M=18,0 g/mol.",
+        "answer": "n=2,00 mol; N(moléculas)=1,2044×10²⁴; N(átomos totales)=3,613×10²⁴.",
+        "full_solution": "Paso 1: $n=\\dfrac{36,0}{18,0}=2,00\\,\\mathrm{mol}$. Paso 2: $N=nN_A=2,00\\times6,022\\times10^{23}=1,2044\\times10^{24}$ moléculas. Paso 3: cada molécula de H₂O tiene 3 átomos (2 H + 1 O), así que $N(\\text{átomos})=3\\times1,2044\\times10^{24}=3,613\\times10^{24}$ átomos en total.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Define el mol y escribe el valor del número de Avogadro con sus unidades.",
+        "answer": "El mol es la cantidad de sustancia que contiene exactamente N_A entidades elementales. $N_A=6{,}02214076\\cdot10^{23}\\ \\mathrm{mol^{-1}}$ (≈6,022×10²³ mol⁻¹).",
+        "full_solution": "Por definición del SI (desde 2019), el mol es la unidad de cantidad de sustancia tal que 1 mol contiene exactamente $N_A=6,02214076\\times10^{23}$ entidades elementales, ya sean átomos, moléculas, iones u otras partículas; en los cálculos se suele redondear a 6,022×10²³ mol⁻¹.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Una muestra contiene 3,011×10²³ moléculas de CO₂. Calcula su masa y el número total de átomos.",
+        "answer": "m=22,0 g; N(átomos)=9,033×10²³ átomos.",
+        "full_solution": "3,011·10²³ moléculas de CO₂ son n=3,011×10²³/6,022×10²³=0,500 mol. Su masa es m=nM=0,500·44,0=22,0 g. Cada molécula tiene 3 átomos (1C+2O): N(átomos)=3×3,011×10²³=9,033×10²³.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Un mol de átomos de oro (Au) tiene una masa de 197 g. ¿Cuál es la masa de un solo átomo de Au en gramos?",
+        "answer": "m(átomo de Au)=3,27×10⁻²² g.",
+        "full_solution": "La masa de un solo átomo se obtiene dividiendo la masa molar entre N_A: m(átomo Au)=M/N_A=197/(6,022×10²³)=3,27×10⁻²² g.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_02.json": {
+    "lesson_id": "U-4Q-05-L02",
+    "title": "Masa molar",
+    "course_label": "4.º ESO · El mol y la estequiometría",
+    "objectives": [
+      {
+        "statement": "Explicar Masa molar con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de masa molar para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar cómo la masa molar permite pasar de la escala atómica (u) a la escala de laboratorio (gramos)."
+      },
+      {
+        "statement": "Detectar errores habituales al calcular masas molares, como olvidar un subíndice o confundir masa atómica con masa molar."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Definición de masa molar",
+        "body": "Si el mol es el paquete, la **masa molar** es cuánto pesa ese paquete. Cada sustancia tiene su propia masa molar, igual que una docena de huevos no pesa lo mismo que una docena de sandías.\n\nLa masa molar ($M$) se define como la masa de un mol de una sustancia, y se mide en **gramos por mol** (g/mol). Lo más elegante del sistema es que el valor numérico de la masa molar coincide con la masa atómica que aparece en la tabla periódica:\n\n- Un átomo de carbono tiene una masa atómica de 12 u → $M(\\text{C}) = 12\\;\\text{g/mol}$\n- Un átomo de oxígeno tiene una masa atómica de 16 u → $M(\\text{O}) = 16\\;\\text{g/mol}$\n- Un átomo de hierro tiene una masa atómica de 56 u → $M(\\text{Fe}) = 56\\;\\text{g/mol}$\n\nEsto significa que si pones 12 g de carbono en una balanza, tienes exactamente 1 mol de átomos de carbono. Si pones 56 g de hierro, tienes exactamente 1 mol de átomos de hierro. Ambas muestras contienen el mismo número de átomos ($6{,}022 \\times 10^{23}$), pero pesan cantidades muy diferentes.\n\nLa masa molar es el factor de conversión que conecta los gramos (lo que mides) con los moles (lo que necesitas para los cálculos):\n\n$n = \\dfrac{m}{M}$",
+        "formula": "$n=\\dfrac{m}{M};\\quad N=nN_A$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Masas molares de diferentes elementos: misma cantidad, distinta masa\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">1 mol de cada elemento: misma cantidad, distinta masa</text>\n\n    <!-- Carbon pile -->\n    <rect x=\"30\" y=\"50\" width=\"150\" height=\"230\" rx=\"12\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n    <rect x=\"55\" y=\"65\" width=\"100\" height=\"40\" rx=\"6\" fill=\"#24312c\" opacity=\"0.15\"/>\n    <text x=\"105\" y=\"90\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"var(--axes,#24312c)\">C</text>\n    <!-- Small pile -->\n    <ellipse cx=\"105\" cy=\"200\" rx=\"50\" ry=\"15\" fill=\"#24312c\" opacity=\"0.2\"/>\n    <ellipse cx=\"105\" cy=\"190\" rx=\"42\" ry=\"12\" fill=\"#24312c\" opacity=\"0.25\"/>\n    <ellipse cx=\"105\" cy=\"182\" rx=\"34\" ry=\"10\" fill=\"#24312c\" opacity=\"0.3\"/>\n    <text x=\"105\" y=\"165\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">grafito</text>\n    <text x=\"105\" y=\"240\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"var(--axes,#24312c)\">12 g</text>\n    <text x=\"105\" y=\"258\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">12 g/mol</text>\n\n    <!-- Oxygen gas -->\n    <rect x=\"225\" y=\"50\" width=\"150\" height=\"230\" rx=\"12\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <rect x=\"250\" y=\"65\" width=\"100\" height=\"40\" rx=\"6\" fill=\"#0e7a68\" opacity=\"0.15\"/>\n    <text x=\"300\" y=\"90\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#0e7a68\">O₂</text>\n    <!-- Gas cylinder -->\n    <rect x=\"275\" y=\"130\" width=\"50\" height=\"80\" rx=\"8\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <rect x=\"287\" y=\"122\" width=\"26\" height=\"12\" rx=\"3\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <line x1=\"300\" y1=\"118\" x2=\"300\" y2=\"122\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n    <text x=\"300\" y=\"175\" text-anchor=\"middle\" font-size=\"9\" fill=\"#0e7a68\">gas</text>\n    <text x=\"300\" y=\"240\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0e7a68\">32 g</text>\n    <text x=\"300\" y=\"258\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">32 g/mol</text>\n\n    <!-- Iron -->\n    <rect x=\"420\" y=\"50\" width=\"150\" height=\"230\" rx=\"12\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <rect x=\"445\" y=\"65\" width=\"100\" height=\"40\" rx=\"6\" fill=\"#c17a17\" opacity=\"0.15\"/>\n    <text x=\"495\" y=\"90\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#c17a17\">Fe</text>\n    <!-- Large block -->\n    <rect x=\"460\" y=\"140\" width=\"70\" height=\"70\" rx=\"4\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <line x1=\"460\" y1=\"140\" x2=\"475\" y2=\"125\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <line x1=\"530\" y1=\"140\" x2=\"545\" y2=\"125\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <line x1=\"475\" y1=\"125\" x2=\"545\" y2=\"125\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <line x1=\"545\" y1=\"125\" x2=\"545\" y2=\"195\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <line x1=\"530\" y1=\"210\" x2=\"545\" y2=\"195\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <text x=\"495\" y=\"240\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#c17a17\">56 g</text>\n    <text x=\"495\" y=\"258\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">56 g/mol</text>\n\n    <!-- Bottom note -->\n    <text x=\"300\" y=\"305\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\" opacity=\"0.7\">Los tres contienen exactamente 6,022 × 10²³ partículas</text>\n    </svg>",
+            "caption": "Un mol de diferentes elementos: misma cantidad, distinta masa"
+          }
+        ],
+        "student_text": "Si el mol es el paquete, la **masa molar** es cuánto pesa ese paquete. Cada sustancia tiene su propia masa molar, igual que una docena de huevos no pesa lo mismo que una docena de sandías."
+      },
+      {
+        "title": "Cálculo de la masa molar de compuestos",
+        "body": "Para un compuesto, la masa molar se calcula sumando las masas atómicas de todos los átomos presentes en la fórmula. Es como calcular el peso de una receta sumando los ingredientes.\n\nTomemos el agua, $\\text{H}_2\\text{O}$:\n\n$M(\\text{H}_2\\text{O}) = 2 \\times M(\\text{H}) + 1 \\times M(\\text{O}) = 2 \\times 1 + 1 \\times 16 = 18\\;\\text{g/mol}$\n\nEs decir, un mol de agua pesa 18 g, algo menos que una cucharada sopera. En esos 18 g hay $6{,}022 \\times 10^{23}$ moléculas de agua.\n\nVeamos otro ejemplo con glucosa, $\\text{C}_6\\text{H}_{12}\\text{O}_6$:\n\n$M = 6 \\times 12 + 12 \\times 1 + 6 \\times 16 = 72 + 12 + 96 = 180\\;\\text{g/mol}$\n\nLa fórmula general es:\n\n$M(\\text{A}_x\\text{B}_y) = x \\cdot M(\\text{A}) + y \\cdot M(\\text{B})$\n\n**Consejo práctico**: Organiza el cálculo en una tabla con tres columnas — elemento, número de átomos y contribución en g/mol — y suma al final. Así evitarás errores, especialmente con fórmulas largas como la del sulfato de aluminio $\\text{Al}_2(\\text{SO}_4)_3$, donde hay que «repartir» el subíndice 3 a todo lo que está dentro del paréntesis.",
+        "formula": "$M(\\mathrm{A_xB_y})=xM(\\mathrm{A})+yM(\\mathrm{B})$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 280\" role=\"img\" aria-label=\"Masa molar del agua: desglose de contribuciones de cada átomo\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Masa molar del H₂O: sumando las piezas</text>\n\n    <!-- Water molecule -->\n    <circle cx=\"200\" cy=\"130\" r=\"32\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n    <text x=\"200\" y=\"135\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0e7a68\">O</text>\n    <line x1=\"172\" y1=\"145\" x2=\"145\" y2=\"175\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2.5\"/>\n    <circle cx=\"135\" cy=\"185\" r=\"22\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n    <text x=\"135\" y=\"190\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">H</text>\n    <line x1=\"228\" y1=\"145\" x2=\"255\" y2=\"175\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2.5\"/>\n    <circle cx=\"265\" cy=\"185\" r=\"22\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n    <text x=\"265\" y=\"190\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">H</text>\n\n    <!-- Recipe card -->\n    <rect x=\"340\" y=\"60\" width=\"230\" height=\"170\" rx=\"12\" fill=\"var(--bg,#fbfcfd)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n    <rect x=\"340\" y=\"60\" width=\"230\" height=\"35\" rx=\"12\" fill=\"#0e7a68\" opacity=\"0.1\"/>\n    <text x=\"455\" y=\"83\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0e7a68\">Receta de masa molar</text>\n\n    <text x=\"360\" y=\"115\" font-size=\"12\" fill=\"#c17a17\" font-weight=\"bold\">2 × H</text>\n    <text x=\"430\" y=\"115\" font-size=\"12\" fill=\"var(--text,#20302a)\">= 2 × 1 g/mol</text>\n    <text x=\"545\" y=\"115\" text-anchor=\"end\" font-size=\"13\" font-weight=\"bold\" fill=\"#c17a17\">2 g</text>\n\n    <line x1=\"360\" y1=\"125\" x2=\"550\" y2=\"125\" stroke=\"var(--axes,#24312c)\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n\n    <text x=\"360\" y=\"148\" font-size=\"12\" fill=\"#0e7a68\" font-weight=\"bold\">1 × O</text>\n    <text x=\"430\" y=\"148\" font-size=\"12\" fill=\"var(--text,#20302a)\">= 1 × 16 g/mol</text>\n    <text x=\"545\" y=\"148\" text-anchor=\"end\" font-size=\"13\" font-weight=\"bold\" fill=\"#0e7a68\">16 g</text>\n\n    <line x1=\"360\" y1=\"165\" x2=\"550\" y2=\"165\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n\n    <text x=\"360\" y=\"190\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">M(H₂O)</text>\n    <text x=\"545\" y=\"190\" text-anchor=\"end\" font-size=\"16\" font-weight=\"bold\" fill=\"#0e7a68\">18 g/mol</text>\n\n    <!-- Bottom -->\n    <text x=\"300\" y=\"265\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\" opacity=\"0.7\">18 g de agua contienen exactamente 1 mol de moléculas de H₂O</text>\n    </svg>",
+            "caption": "Masa molar del H₂O: sumando las contribuciones de cada átomo"
+          }
+        ],
+        "student_text": "Para un compuesto, la masa molar se calcula sumando las masas atómicas de todos los átomos presentes en la fórmula. Es como calcular el peso de una receta sumando los ingredientes."
+      },
+      {
+        "title": "Conversión entre masa y cantidad de sustancia",
+        "body": "La ecuación $n = \\dfrac{m}{M}$ es probablemente la que más usarás en química. Permite convertir entre gramos (lo que lees en la balanza) y moles (lo que necesitas para estequiometría, concentraciones y casi todo lo demás).\n\n**De gramos a moles** (lo más habitual):\n\nSi tienes 54 g de agua, ¿cuántos moles son?\n\n$n = \\dfrac{m}{M} = \\dfrac{54\\;\\text{g}}{18\\;\\text{g/mol}} = 3\\;\\text{mol de H}_2\\text{O}$\n\n**De moles a gramos** (para preparar reactivos):\n\nNecesitas 0,5 mol de NaCl ($M = 58{,}5\\;\\text{g/mol}$). ¿Cuánto pesas?\n\n$m = n \\times M = 0{,}5 \\times 58{,}5 = 29{,}25\\;\\text{g}$\n\n**Truco dimensional**: Fíjate en las unidades. Si divides g entre g/mol, los gramos se simplifican y quedan moles. Si multiplicas mol por g/mol, quedan gramos. Las unidades siempre te dicen si vas por buen camino.\n\nEn el laboratorio, la secuencia típica es: 1) Calcula cuántos moles necesitas, 2) Usa $m = n \\times M$ para saber cuántos gramos pesar, 3) Pesa en la balanza. Simple y eficaz.",
+        "formula": "$n=\\dfrac{m}{M}$",
+        "assets": [],
+        "student_text": "La ecuación $n = \\dfrac{m}{M}$ es probablemente la que más usarás en química. Permite convertir entre gramos (lo que lees en la balanza) y moles (lo que necesitas para estequiometría, concentracion..."
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "**Ejercicio de comprobación**: Calcula la masa molar del ácido sulfúrico, $\\text{H}_2\\text{SO}_4$:\n\n$M = 2 \\times 1 + 1 \\times 32 + 4 \\times 16 = 2 + 32 + 64 = 98\\;\\text{g/mol}$\n\n¿Cuántos moles hay en 49 g de $\\text{H}_2\\text{SO}_4$?\n\n$n = \\dfrac{49}{98} = 0{,}5\\;\\text{mol}$\n\n**Errores frecuentes**: Olvidar multiplicar por los subíndices. En $\\text{Ca(OH)}_2$, hay **2** grupos OH, así que son 2 oxígenos y 2 hidrógenos, no 1 de cada uno. Otro error es usar la masa atómica de O₂ (32) cuando la fórmula indica O (16): mira siempre qué indica la fórmula.\n\n**Límite del modelo**: La masa molar usa masas atómicas promedio (que tienen en cuenta los isótopos naturales). Para cálculos con isótopos específicos (como en datación radiactiva o medicina nuclear), hay que usar la masa del isótopo concreto, no la masa molar estándar.",
+        "assets": [],
+        "formula": "$n=\\dfrac{m}{M};\\quad N=nN_A$",
+        "student_text": "**Ejercicio de comprobación**: Calcula la masa molar del ácido sulfúrico, $\\text{H}_2\\text{SO}_4$:"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Masa molar del agua",
+        "statement": "Calcula la masa molar de H₂O usando H=1,0 y O=16,0.",
+        "steps": [
+          "$M=2(1,0)+16,0=18,0\\,\\mathrm{g/mol}$.",
+          "Se multiplican las masas atómicas por los subíndices.",
+          "La fórmula contiene dos átomos de H y uno de O.",
+          "La unidad final es g/mol.",
+          "Comprobación: la unidad final es g/mol, coherente con una masa molar, y el valor 18,0 g/mol coincide con el dato tabulado del agua."
+        ],
+        "answer": "$M(\\mathrm{H_2O})=18,0\\,\\mathrm{g/mol}$.",
+        "verification": "Se comprueba sumando de nuevo: 2×1,0+16,0=18,0 g/mol."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Masa molar del carbonato",
+        "statement": "Calcula la masa molar de CaCO₃ con Ca=40,1, C=12,0 y O=16,0 g/mol.",
+        "steps": [
+          "$M=40,1+12,0+3(16,0)=100,1\\,\\mathrm{g/mol}$.",
+          "El subíndice 3 multiplica solo al oxígeno.",
+          "Se puede usar para convertir masa de CaCO₃ a moles.",
+          "La suma ponderada debe conservar la unidad g/mol.",
+          "Comprobación: se revisa que el subíndice 3 multiplica solo al oxígeno (no a todo el compuesto) y que el resultado, 100,1 g/mol, es razonable para una sal."
+        ],
+        "answer": "$M(\\mathrm{CaCO_3})=100,1\\,\\mathrm{g/mol}$.",
+        "verification": "Se comprueba sumando de nuevo: 40,1+12,0+3×16,0=100,1 g/mol."
+      },
+      {
+        "id": "deep-domain-worked-3",
+        "title": "Masa molar experimental",
+        "statement": "Una muestra de 9,00 g contiene 0,100 mol de sustancia. Determina su masa molar e interpreta el resultado.",
+        "steps": [
+          "$M=\\dfrac{m}{n}=\\dfrac{9,00}{0,100}=90,0\\,\\mathrm{g/mol}$.",
+          "La masa molar es una propiedad de la sustancia, no de la cantidad de muestra.",
+          "El resultado permite comparar con masas molares tabuladas o con una fórmula propuesta.",
+          "Se verifica que nM=0,100(90,0)=9,00 g.",
+          "Comprobación: se revisa que M se obtiene dividiendo masa entre moles (no al revés) y que el resultado, 90,0 g/mol, es un valor razonable de masa molar."
+        ],
+        "answer": "$M=90,0\\,\\mathrm{g/mol}$.",
+        "verification": "Se comprueba multiplicando: n×M=0,100×90,0=9,00 g, igual al dato de partida."
+      },
+      {
+        "id": "deep-domain-worked-4",
+        "title": "Moles a partir de masa",
+        "statement": "Calcula los moles presentes en 49,0 g de H₂SO₄, cuya masa molar es 98,0 g/mol.",
+        "steps": [
+          "$n=\\dfrac{49,0}{98,0}=0,500\\,\\mathrm{mol}$.",
+          "La relación usa la masa molar del compuesto completo.",
+          "No se multiplica por el número de átomos de hidrógeno, azufre u oxígeno.",
+          "La comprobación nM=0,500(98,0)=49,0 g confirma el resultado.",
+          "Comprobación: se revisa que se ha dividido por la masa molar del compuesto completo (98,0 g/mol), no por la de un elemento aislado."
+        ],
+        "answer": "n=0,500 mol.",
+        "verification": "Se comprueba multiplicando: n×M=0,500×98,0=49,0 g, igual al dato de partida."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-guided-1",
+        "statement": "Calcula la masa molar de H₂SO₄ (H=1,0; S=32,1; O=16,0 g/mol).",
+        "scaffold": "Suma las masas atómicas multiplicadas por los subíndices de cada elemento: 2 átomos de H, 1 de S y 4 de O.",
+        "answer": "M(H₂SO₄)=98,1 g/mol.",
+        "full_solution": "M(H₂SO₄)=2×M(H)+M(S)+4×M(O)=2×1,0+32,1+4×16,0=2,0+32,1+64,0=98,1 g/mol."
+      },
+      {
+        "id": "deep-domain-guided-2",
+        "statement": "Calcula los moles en 49,0 g de H₂SO₄.",
+        "scaffold": "Usa la masa molar obtenida en el ejercicio anterior (M=98,1 g/mol) y aplica n=m/M.",
+        "answer": "n=0,500 mol.",
+        "full_solution": "n=m/M=49,0/98,1=0,500 mol."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula la masa molar del NH₃ (N=14,0; H=1,0 g/mol).",
+        "answer": "M=14,0 + 3× 1,0 = 17,0 g/mol.",
+        "full_solution": "M(NH₃)=M(N)+3×M(H)=14,0+3×1,0=17,0 g/mol.",
+        "hints": [
+          "No olvides multiplicar la masa del H por 3, el subíndice del hidrógeno en NH₃."
+        ],
+        "reasoning": [
+          "Se identifica 1 átomo de N y 3 de H en la fórmula.",
+          "Se multiplica cada masa atómica por su subíndice y se suma.",
+          "El resultado se expresa en g/mol."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Cuántos moles hay en 9,0 g de H₂O (M=18,0 g/mol)?",
+        "answer": "$n=\\dfrac{9,0}{18,0}$ = 0,50 mol.",
+        "full_solution": "n=m/M=9,0/18,0=0,50 mol.",
+        "hints": [
+          "Usa M(H₂O)=18,0 g/mol."
+        ],
+        "reasoning": [
+          "Se aplica n=m/M con los datos del enunciado.",
+          "El resultado se expresa en mol."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Calcula la masa molar de H₂O con H=1,0 y O=16,0 g/mol.",
+        "answer": "M(H₂O)=18,0 g/mol.",
+        "full_solution": "M(H₂O)=2×1,0+16,0=18,0 g/mol."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Calcula la masa molar de CaCO₃ con Ca=40,1; C=12,0 y O=16,0 g/mol.",
+        "answer": "M(CaCO₃)=100,1 g/mol.",
+        "full_solution": "M(CaCO₃)=40,1+12,0+3×16,0=100,1 g/mol."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Una muestra de 9,00 g contiene 0,100 mol. Determina su masa molar.",
+        "answer": "M=90,0 g/mol.",
+        "full_solution": "M=m/n=9,00/0,100=90,0 g/mol."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa cómo cambia la masa de una muestra al aumentar los moles y usa la pendiente.",
+        "answer": "La gráfica m-n es una recta por el origen; la pendiente es la masa molar M.",
+        "full_solution": "Como m=n·M, la masa es proporcional a los moles: la gráfica m frente a n es una recta que pasa por (0,0) con pendiente M (en g/mol).",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige: 'el subíndice 3 de CaCO₃ multiplica toda la fórmula'.",
+        "answer": "Es incorrecto: el subíndice 3 en CaCO₃ corresponde solo a los 3 átomos de O (fórmula Ca·C·O₃), no multiplica a Ca ni a C.",
+        "full_solution": "M(CaCO₃)=M(Ca)+M(C)+3×M(O)=40,1+12,0+3×16,0=100,1 g/mol; el 3 solo afecta al oxígeno."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña una identificación de fórmula compatible con una masa molar medida y discute isómeros o composiciones posibles.",
+        "answer": "Una masa molar de 30,0 g/mol es compatible con C₂H₆ (etano) o con otras combinaciones de masa equivalente; hace falta información adicional (composición porcentual) para decidir.",
+        "full_solution": "Ejemplo: si M=30,0 g/mol, C₂H₆ (2×12,0+6×1,0=30,0) cumple la masa molar, pero no es la única posibilidad teórica; se necesita la composición porcentual o el espectro para confirmar la fórmula exacta."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-02-1",
+        "stem": "¿En qué unidad se expresa habitualmente la masa molar en química?",
+        "options": [
+          {
+            "key": "A",
+            "text": "g",
+            "why_wrong": "g es la unidad de masa, pero la masa molar debe incluir también 'por mol' (g/mol)."
+          },
+          {
+            "key": "B",
+            "text": "g/mol"
+          },
+          {
+            "key": "C",
+            "text": "u/mol",
+            "why_wrong": "u (unidad de masa atómica) se usa para la masa de un átomo individual, no para la masa molar de 1 mol de sustancia."
+          },
+          {
+            "key": "D",
+            "text": "g/L",
+            "why_wrong": "g/L es la unidad de densidad o concentración, no de masa molar."
+          }
+        ],
+        "explanation": "La masa molar se expresa habitualmente en g/mol, ya que así se relaciona directamente la masa en gramos con la cantidad de sustancia en moles.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-02-2",
+        "stem": "¿Cuál es la masa molar del agua H₂O?",
+        "options": [
+          {
+            "key": "A",
+            "text": "16 g/mol",
+            "why_wrong": "Es solo la masa molar del oxígeno; falta sumar los dos átomos de hidrógeno."
+          },
+          {
+            "key": "B",
+            "text": "17 g/mol",
+            "why_wrong": "Corresponde a sumar solo un H (1)+O(16)=17, olvidando que el agua tiene 2 átomos de H."
+          },
+          {
+            "key": "C",
+            "text": "18 g/mol"
+          },
+          {
+            "key": "D",
+            "text": "20 g/mol",
+            "why_wrong": "No corresponde a ningún cálculo correcto con las masas atómicas de H y O."
+          }
+        ],
+        "explanation": "M(H₂O) = 2× 1,0 + 16,0 = 18,0 g/mol.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-02-3",
+        "stem": "¿Qué fórmula relaciona masa, mol y masa molar?",
+        "options": [
+          {
+            "key": "A",
+            "text": "n=m · M",
+            "why_wrong": "Multiplicar, en vez de dividir, daría unidades de g²/mol, sin sentido físico."
+          },
+          {
+            "key": "B",
+            "text": "M=m · n",
+            "why_wrong": "Esta expresión mezcla masa molar y masa de forma incorrecta; no aísla n."
+          },
+          {
+            "key": "C",
+            "text": "$n=\\dfrac{m}{M}$"
+          },
+          {
+            "key": "D",
+            "text": "$m=\\dfrac{n}{M}$",
+            "why_wrong": "Dividir la cantidad de sustancia entre la masa molar no da unidades de masa."
+          }
+        ],
+        "explanation": "$n=\\dfrac{m}{M}$ es la definición operativa de cantidad de sustancia a partir de la masa y la masa molar.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-02-4",
+        "stem": "La masa molar del NaCl es 58,5 g/mol. ¿Cuántos moles hay en 117 g?",
+        "options": [
+          {
+            "key": "A",
+            "text": "1 mol",
+            "why_wrong": "Corresponde a dividir solo por la mitad de la masa molar."
+          },
+          {
+            "key": "B",
+            "text": "1,5 mol",
+            "why_wrong": "No resulta de dividir 117 g entre 58,5 g/mol."
+          },
+          {
+            "key": "C",
+            "text": "2 mol"
+          },
+          {
+            "key": "D",
+            "text": "58,5 mol",
+            "why_wrong": "Confunde la masa molar con el resultado del cociente."
+          }
+        ],
+        "explanation": "$n=\\dfrac{117\\ \\mathrm{g}}{58{,}5\\ \\mathrm{g/mol}}=2{,}00\\ \\mathrm{mol}$.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Masa molar (M)",
+        "back": "Masa de 1 mol de sustancia; unidades g/mol; numéricamente = masa atómica/molecular en u."
+      },
+      {
+        "front": "M(H₂O)",
+        "back": "18 g/mol (2× 1 + 16)."
+      },
+      {
+        "front": "Fórmula n=?",
+        "back": "$n=\\dfrac{m}{M}$"
+      },
+      {
+        "front": "M(CO₂)",
+        "back": "44 g/mol (12 + 2× 16)."
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Confundir masa atómica (u) con masa molar (g/mol).",
+        "correct_model": "La masa atómica (en u) y la masa molar (en g/mol) tienen el mismo valor numérico, pero son magnitudes distintas: una describe un átomo individual y la otra, 1 mol de esa sustancia.",
+        "remediation": "Escribe siempre las unidades (u o g/mol) para no mezclar la escala atómica con la escala de laboratorio."
+      },
+      {
+        "incorrect_model": "Olvidar multiplicar por el subíndice de cada elemento en la fórmula.",
+        "correct_model": "Cada subíndice de la fórmula química indica cuántos átomos de ese elemento hay, y hay que multiplicar su masa atómica por ese subíndice antes de sumar.",
+        "remediation": "Antes de sumar, escribe la fórmula desglosada, p. ej. CaCO₃ = 1 Ca + 1 C + 3 O, y multiplica cada masa atómica por su subíndice."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "masa molar",
+        "definition": "Masa de 1 mol de una sustancia; se expresa en g/mol y coincide numéricamente con la masa atómica, molecular o de fórmula en u."
+      },
+      {
+        "term": "g/mol",
+        "definition": "Unidad habitual de la masa molar: gramos de sustancia por cada mol."
+      },
+      {
+        "term": "masa atómica",
+        "definition": "Masa media de los átomos de un elemento, en unidades de masa atómica (u); su valor numérico coincide con la masa molar del elemento en g/mol."
+      },
+      {
+        "term": "$n=\\dfrac{m}{M}$",
+        "definition": "Fórmula que relaciona la cantidad de sustancia (n) con la masa (m) y la masa molar (M)."
+      },
+      {
+        "term": "compuesto",
+        "definition": "Sustancia formada por dos o más elementos combinados en proporción fija, cuya masa molar es la suma de las masas molares de sus átomos."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Comprender el concepto de mol y las relaciones n=m/M y N=nN_A, y saber trabajar con unidades del SI y notación científica.",
+        "why_it_matters": "La masa molar se usa precisamente para calcular n a partir de la masa, por lo que hay que dominar primero qué es un mol y cómo se relaciona con N."
+      }
+    ],
+    "summary": {
+      "big_idea": "La masa molar conecta la masa que se mide en el laboratorio (gramos) con la cantidad de sustancia (moles), sumando las masas atómicas de cada elemento según los subíndices de la fórmula.",
+      "key_points": [
+        "La masa molar (M) es la masa de un mol de una sustancia y se expresa en gramos por mol (g/mol).",
+        "Para un compuesto, la masa molar se obtiene sumando las masas molares de todos los átomos que forman la fórmula.",
+        "La relación fundamental entre masa (m), cantidad de sustancia (n) y masa molar (M) es: $n=\\dfrac{m}{M}$ y, despejando m: m = n × M.",
+        "Antes de calcular M, escribe la fórmula desglosada por elementos y comprueba que cada masa atómica está multiplicada por su subíndice correcto."
+      ],
+      "formulas": [
+        "$n=\\dfrac{m}{M};\\quad N=nN_A$"
+      ],
+      "what_to_remember_if_nothing_else": "M=m/n se mide en g/mol; para compuestos, se calcula sumando las masas atómicas de cada elemento multiplicadas por su subíndice en la fórmula."
+    },
+    "exam_questions": [
+      {
+        "statement": "Calcula la masa molar de CaCO₃ usando Ca=40,1, C=12,0 y O=16,0 g/mol; después calcula los moles en 25,0 g.",
+        "answer": "M(CaCO₃)=100,1 g/mol; n=0,250 mol.",
+        "full_solution": "M(CaCO₃)=40,1+12,0+3·16,0=100,1 g/mol. Para 25,0 g, $n=\\dfrac{25,0}{100,1}=0,250\\ \\mathrm{mol}$.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Calcula la masa molar de la glucosa C₆H₁₂O₆ y determina cuántos moles hay en 180 g.",
+        "answer": "M(glucosa)=180 g/mol; n=1,00 mol.",
+        "full_solution": "M=6×12,0+12×1,0+6×16,0=72,0+12,0+96,0=180 g/mol; $n=\\dfrac{180}{180}=1,00$ mol.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Una muestra de 9,00 g contiene 0,100 mol. Determina su masa molar y explica qué información adicional necesitarías para conocer su fórmula.",
+        "answer": "M=90,0 g/mol. Para conocer la fórmula hacen falta datos adicionales, como la composición porcentual.",
+        "full_solution": "$M=\\dfrac{m}{n}=\\dfrac{9,00}{0,100}=90,0\\,\\mathrm{g/mol}$. Para conocer la fórmula hacen falta, por ejemplo, la composición porcentual o las masas de cada elemento; la masa molar sola no fija qué átomos contiene.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "¿Cuántos átomos de oxígeno hay en 44 g de CO₂?",
+        "answer": "N(átomos de O)=1,204×10²⁴.",
+        "full_solution": "n(CO₂)=44/44=1,00 mol. N(moléculas)=1,00×6,022×10²³=6,022×10²³. Cada molécula tiene 2 átomos de O: N(átomos de O)=2×6,022×10²³=1,204×10²⁴.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_03.json": {
+    "lesson_id": "U-4Q-05-L03",
+    "title": "Partículas",
+    "course_label": "4.º ESO · El mol y la estequiometría",
+    "objectives": [
+      {
+        "statement": "Explicar Partículas con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de partículas para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar fórmulas químicas para decidir si se cuentan átomos, moléculas o iones antes de aplicar N=n·N_A."
+      },
+      {
+        "statement": "Detectar errores de un factor 2 o 3 al confundir el número de moléculas con el número de átomos."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "La ecuación $N=n\\cdot N_A$",
+        "body": "Ya sabes pasar de gramos a moles con $n = m/M$. Ahora damos un paso más: de moles a **número de partículas** con $N = n \\cdot N_A$.\n\nImagina que tienes un vaso con 18 mL de agua (que pesan 18 g). Eso es exactamente 1 mol de H₂O. ¿Cuántas moléculas hay en ese vaso?\n\n$N = 1\\;\\text{mol} \\times 6{,}022 \\times 10^{23}\\;\\text{mol}^{-1} = 6{,}022 \\times 10^{23}$ moléculas\n\nPero eso no es todo. Cada molécula de agua tiene 3 átomos (2 de H y 1 de O). Así que en ese humilde vaso hay:\n\n- $6{,}022 \\times 10^{23}$ moléculas de H₂O\n- $2 \\times 6{,}022 \\times 10^{23} = 1{,}204 \\times 10^{24}$ átomos de hidrógeno\n- $6{,}022 \\times 10^{23}$ átomos de oxígeno\n- En total: $3 \\times 6{,}022 \\times 10^{23} = 1{,}807 \\times 10^{24}$ átomos\n\nEl camino completo es:\n\n$$\\text{Gramos} \\xrightarrow{\\div M} \\text{Moles} \\xrightarrow{\\times N_A} \\text{Partículas}$$\n\nEl mol siempre es la estación central: para ir de gramos a partículas (o al revés), siempre pasas por moles.",
+        "formula": "$N=nN_A$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Del vaso de agua a las moléculas: escala macroscópica a microscópica\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"25\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Del vaso al átomo: tres escalas</text>\n\n    <!-- Macroscopic: glass of water -->\n    <rect x=\"20\" y=\"50\" width=\"160\" height=\"230\" rx=\"12\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <text x=\"100\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">MACROSCÓPICO</text>\n    <!-- Glass shape -->\n    <path d=\"M60,105 L60,200 Q60,220 80,220 L120,220 Q140,220 140,200 L140,105 Z\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <path d=\"M62,130 L62,200 Q62,218 80,218 L120,218 Q138,218 138,200 L138,130 Z\" fill=\"#0e7a68\" opacity=\"0.15\"/>\n    <text x=\"100\" y=\"175\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">H₂O</text>\n    <text x=\"100\" y=\"250\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">18 mL</text>\n    <text x=\"100\" y=\"268\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">= 18 g = 1 mol</text>\n\n    <!-- Arrow 1 -->\n    <line x1=\"185\" y1=\"165\" x2=\"215\" y2=\"165\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\"/>\n    <defs><marker id=\"arrowhead\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6 Z\" fill=\"var(--axes,#24312c)\"/></marker></defs>\n\n    <!-- Molar: counting -->\n    <rect x=\"220\" y=\"50\" width=\"160\" height=\"230\" rx=\"12\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"300\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">CANTIDAD</text>\n    <!-- n symbol large -->\n    <text x=\"300\" y=\"160\" text-anchor=\"middle\" font-size=\"48\" font-weight=\"bold\" fill=\"#c17a17\" opacity=\"0.3\">n</text>\n    <text x=\"300\" y=\"200\" text-anchor=\"middle\" font-size=\"13\" fill=\"#c17a17\">n = m / M</text>\n    <text x=\"300\" y=\"220\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">= 18 / 18</text>\n    <text x=\"300\" y=\"250\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">1 mol</text>\n\n    <!-- Arrow 2 -->\n    <line x1=\"385\" y1=\"165\" x2=\"415\" y2=\"165\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\" marker-end=\"url(#arrowhead)\"/>\n\n    <!-- Microscopic: particles -->\n    <rect x=\"420\" y=\"50\" width=\"160\" height=\"230\" rx=\"12\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n    <text x=\"500\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#8a3d6b\">MICROSCÓPICO</text>\n    <!-- Molecule swarm -->\n    <g opacity=\"0.6\">\n    <circle cx=\"460\" cy=\"110\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"453\" cy=\"115\" r=\"2.5\" fill=\"#c17a17\"/><circle cx=\"467\" cy=\"115\" r=\"2.5\" fill=\"#c17a17\"/>\n    <circle cx=\"500\" cy=\"105\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"493\" cy=\"110\" r=\"2.5\" fill=\"#c17a17\"/><circle cx=\"507\" cy=\"110\" r=\"2.5\" fill=\"#c17a17\"/>\n    <circle cx=\"540\" cy=\"112\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"533\" cy=\"117\" r=\"2.5\" fill=\"#c17a17\"/><circle cx=\"547\" cy=\"117\" r=\"2.5\" fill=\"#c17a17\"/>\n    <circle cx=\"470\" cy=\"140\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"463\" cy=\"145\" r=\"2.5\" fill=\"#c17a17\"/><circle cx=\"477\" cy=\"145\" r=\"2.5\" fill=\"#c17a17\"/>\n    <circle cx=\"510\" cy=\"135\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"503\" cy=\"140\" r=\"2.5\" fill=\"#c17a17\"/><circle cx=\"517\" cy=\"140\" r=\"2.5\" fill=\"#c17a17\"/>\n    <circle cx=\"480\" cy=\"165\" r=\"3.5\" fill=\"#0e7a68\"/><circle cx=\"474\" cy=\"169\" r=\"2\" fill=\"#c17a17\"/><circle cx=\"486\" cy=\"169\" r=\"2\" fill=\"#c17a17\"/>\n    <circle cx=\"520\" cy=\"160\" r=\"3.5\" fill=\"#0e7a68\"/><circle cx=\"514\" cy=\"164\" r=\"2\" fill=\"#c17a17\"/><circle cx=\"526\" cy=\"164\" r=\"2\" fill=\"#c17a17\"/>\n    </g>\n    <text x=\"500\" y=\"195\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\" opacity=\"0.6\">· · · · · · ·</text>\n    <text x=\"500\" y=\"215\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">N = n × Nₐ</text>\n    <text x=\"500\" y=\"250\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">6,022 × 10²³</text>\n    <text x=\"500\" y=\"268\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">moléculas</text>\n\n    <text x=\"300\" y=\"308\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\" opacity=\"0.7\">El mol conecta lo que pesamos con lo que no podemos ver</text>\n    </svg>",
+            "caption": "Del vaso de agua a las moléculas: tres escalas conectadas por el mol"
+          }
+        ],
+        "student_text": "Ya sabes pasar de gramos a moles con $n = m/M$. Ahora damos un paso más: de moles a **número de partículas** con $N = n \\cdot N_A$."
+      },
+      {
+        "title": "Tipos de partículas según la sustancia",
+        "body": "Cuando dices «1 mol», la siguiente pregunta es siempre: **¿un mol de qué?** El tipo de partícula que cuentas depende de la sustancia.\n\n**Átomos**: Los elementos metálicos (Fe, Cu, Au…) y los gases nobles (He, Ne, Ar…) existen como átomos individuales. Un mol de hierro son $6{,}022 \\times 10^{23}$ átomos de Fe.\n\n**Moléculas**: Los compuestos covalentes y muchos elementos no metálicos forman moléculas. Un mol de agua son $6{,}022 \\times 10^{23}$ moléculas de H₂O. Pero cuidado: un mol de O₂ son $6{,}022 \\times 10^{23}$ moléculas, que contienen $1{,}204 \\times 10^{24}$ átomos de oxígeno (el doble, porque cada molécula tiene 2 átomos).\n\n**Unidades fórmula**: Los compuestos iónicos como el NaCl no forman moléculas individuales, sino redes cristalinas. Un mol de NaCl son $6{,}022 \\times 10^{23}$ «pares» Na⁺Cl⁻ (unidades fórmula), que contienen $6{,}022 \\times 10^{23}$ iones Na⁺ y $6{,}022 \\times 10^{23}$ iones Cl⁻.\n\nEsta distinción es esencial para no cometer errores en los cálculos. Siempre pregúntate: ¿qué estoy contando exactamente?",
+        "formula": "$N=nN_A$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\" role=\"img\" aria-label=\"Tipos de partículas: átomos, moléculas y unidades fórmula\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">1 mol = 6,022 × 10²³ partículas… pero ¿de qué tipo?</text>\n\n    <!-- Atoms: Fe -->\n    <rect x=\"20\" y=\"55\" width=\"170\" height=\"210\" rx=\"12\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"105\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">ÁTOMOS</text>\n    <text x=\"105\" y=\"97\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Elementos metálicos</text>\n    <circle cx=\"70\" cy=\"140\" r=\"18\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"70\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">Fe</text>\n    <circle cx=\"105\" cy=\"140\" r=\"18\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"105\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">Fe</text>\n    <circle cx=\"140\" cy=\"140\" r=\"18\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"140\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">Fe</text>\n    <text x=\"105\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">1 mol de Fe =</text>\n    <text x=\"105\" y=\"207\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c17a17\">6,022 × 10²³ átomos</text>\n    <text x=\"105\" y=\"248\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">56 g</text>\n\n    <!-- Molecules: H₂O -->\n    <rect x=\"215\" y=\"55\" width=\"170\" height=\"210\" rx=\"12\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <text x=\"300\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">MOLÉCULAS</text>\n    <text x=\"300\" y=\"97\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Compuestos covalentes</text>\n    <!-- H₂O molecules -->\n    <circle cx=\"270\" cy=\"138\" r=\"14\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n    <circle cx=\"260\" cy=\"148\" r=\"9\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <circle cx=\"280\" cy=\"148\" r=\"9\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <circle cx=\"310\" cy=\"133\" r=\"14\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n    <circle cx=\"300\" cy=\"143\" r=\"9\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <circle cx=\"320\" cy=\"143\" r=\"9\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n    <text x=\"300\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">1 mol de H₂O =</text>\n    <text x=\"300\" y=\"207\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0e7a68\">6,022 × 10²³ moléculas</text>\n    <text x=\"300\" y=\"227\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">(con 3 átomos cada una)</text>\n    <text x=\"300\" y=\"248\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">18 g</text>\n\n    <!-- Formula units: NaCl -->\n    <rect x=\"410\" y=\"55\" width=\"170\" height=\"210\" rx=\"12\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n    <text x=\"495\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#8a3d6b\">UNIDADES FÓRMULA</text>\n    <text x=\"495\" y=\"97\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Compuestos iónicos</text>\n    <!-- NaCl pairs -->\n    <circle cx=\"470\" cy=\"133\" r=\"14\" fill=\"#8a3d6b\" opacity=\"0.15\" stroke=\"#8a3d6b\" stroke-width=\"1\"/>\n    <text x=\"470\" y=\"137\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8a3d6b\">Na⁺</text>\n    <circle cx=\"495\" cy=\"133\" r=\"16\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n    <text x=\"495\" y=\"137\" text-anchor=\"middle\" font-size=\"9\" fill=\"#0e7a68\">Cl⁻</text>\n    <circle cx=\"520\" cy=\"148\" r=\"14\" fill=\"#8a3d6b\" opacity=\"0.15\" stroke=\"#8a3d6b\" stroke-width=\"1\"/>\n    <text x=\"520\" y=\"152\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8a3d6b\">Na⁺</text>\n    <text x=\"495\" y=\"190\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">1 mol de NaCl =</text>\n    <text x=\"495\" y=\"207\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#8a3d6b\">6,022 × 10²³ pares</text>\n    <text x=\"495\" y=\"227\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">(Na⁺ + Cl⁻ cada uno)</text>\n    <text x=\"495\" y=\"248\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">58,5 g</text>\n\n    <text x=\"300\" y=\"290\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\" opacity=\"0.7\">La partícula que cuentas depende del tipo de sustancia</text>\n    </svg>",
+            "caption": "Tipos de partículas: átomos, moléculas y unidades fórmula"
+          }
+        ],
+        "student_text": "Cuando dices «1 mol», la siguiente pregunta es siempre: **¿un mol de qué?** El tipo de partícula que cuentas depende de la sustancia."
+      },
+      {
+        "title": "Conversión inversa: de partículas a moles",
+        "body": "A veces el problema te da el número de partículas y te pide los moles (o los gramos). El camino inverso es igual de sencillo:\n\n$$n = \\dfrac{N}{N_A}$$\n\n**Ejemplo**: Un detector registra $3{,}011 \\times 10^{22}$ átomos de helio. ¿Cuántos moles son?\n\n$n = \\dfrac{3{,}011 \\times 10^{22}}{6{,}022 \\times 10^{23}} = 0{,}05\\;\\text{mol de He}$\n\nY si quieres la masa: $m = n \\times M = 0{,}05 \\times 4 = 0{,}2\\;\\text{g}$.\n\n**Truco para no perderte**: Piensa en el sentido de la operación.\n- Si bajas de escala (de muchas partículas a pocos moles), **divides** por $N_A$.\n- Si subes de escala (de pocos moles a muchas partículas), **multiplicas** por $N_A$.\n\nEs lógico: $N_A$ es un número enorme, así que dividir por él te da un número mucho más pequeño (los moles), y multiplicar por él te da uno mucho más grande (las partículas).\n\nComprueba siempre el resultado: si tienes menos de un mol, el número de partículas debe ser menor que $6{,}022 \\times 10^{23}$. Si tienes más de un mol, debe ser mayor. Esta verificación rápida detecta errores de exponente.",
+        "formula": "$n=\\dfrac{N}{N_A}$",
+        "assets": [],
+        "student_text": "A veces el problema te da el número de partículas y te pide los moles (o los gramos). El camino inverso es igual de sencillo:"
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "**Ejercicio integrador**: Tienes 4,4 g de CO₂ ($M = 44\\;\\text{g/mol}$).\n\n1. ¿Cuántos moles? $n = 4{,}4/44 = 0{,}1$ mol\n2. ¿Cuántas moléculas? $N = 0{,}1 \\times 6{,}022 \\times 10^{23} = 6{,}022 \\times 10^{22}$ moléculas\n3. ¿Cuántos átomos en total? Cada molécula de CO₂ tiene 3 átomos (1C + 2O), así que $3 \\times 6{,}022 \\times 10^{22} = 1{,}807 \\times 10^{23}$ átomos\n4. ¿Cuántos átomos de oxígeno? $2 \\times 6{,}022 \\times 10^{22} = 1{,}204 \\times 10^{23}$ átomos de O\n\n**Comprobación**: Los átomos de C + los de O deben sumar el total de átomos: $6{,}022 \\times 10^{22} + 1{,}204 \\times 10^{23} = 1{,}807 \\times 10^{23}$ ✓\n\n**Límite**: Esta conversión supone que conoces exactamente la fórmula de la sustancia. En sustancias reales impuras o en polímeros (donde la fórmula es aproximada), el cálculo da un resultado aproximado. En sustancias puras bien definidas, el resultado es exacto.",
+        "assets": [],
+        "formula": "$N=nN_A$",
+        "student_text": "**Ejercicio integrador**: Tienes 4,4 g de CO₂ ($M = 44\\;\\text{g/mol}$)."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Mol y partículas",
+        "statement": "Calcula moléculas en 0,25 mol de CO2.",
+        "steps": [
+          "Usamos $N=nN_A$=0,25(6,022·10²³).",
+          "N=1,51·10²³ moléculas.",
+          "Cada molécula contiene tres átomos, por lo que hay 4,52·10²³ átomos totales.",
+          "Se distingue número de moléculas de número total de átomos.",
+          "Comprobación específica: se revisa que se ha aplicado N=n·N_A (no n=m/M, porque el dato ya está en mol) y que el número de átomos (3 por molécula de CO₂) se calcula aparte."
+        ],
+        "answer": "1,51·10²³ moléculas.",
+        "verification": "Se comprueba que 3×1,51×10²³=4,52×10²³ átomos, coherente con la fórmula CO₂."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Átomos totales",
+        "statement": "Calcula átomos totales en 0,50 mol de CO₂.",
+        "steps": [
+          "Hay $0,50N_A=3,011\\times10^{23}$ moléculas.",
+          "Cada molécula contiene 3 átomos, así que el total es 9,03·10²³ átomos.",
+          "Se multiplica por el número de átomos de la fórmula, no por la masa molar.",
+          "La especie química y la cantidad de entidades deben quedar claras.",
+          "Comprobación específica: se revisa que se multiplica por el número de átomos por molécula (3 en CO₂), no por la masa molar."
+        ],
+        "answer": "9,03·10²³ átomos.",
+        "verification": "Se comprueba que 3×3,011×10²³=9,03×10²³ átomos."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Diseña un problema de transferencia sobre Partículas que obligue a combinar dos ideas y especifica cómo comprobarías las unidades y la magnitud final.",
+        "scaffold": "Elige una conversión que combine masa y número de partículas de dos sustancias distintas, y antes de concluir comprueba que las unidades finales son números de partículas (sin unidades) o mol.",
+        "answer": "Ejemplo: comparar los átomos de O en 10,0 g de CaCO₃ frente a los átomos de O en 5,00 g de H₂O.",
+        "full_solution": "Para CaCO₃ (M=100,1 g/mol): n=10,0/100,1=0,0999 mol → N(moléculas)=6,01×10²² → N(átomos O)=3×6,01×10²²=1,80×10²³. Para H₂O (M=18,0 g/mol): n=5,00/18,0=0,278 mol → N(moléculas)=1,67×10²³ → N(átomos O)=1×1,67×10²³=1,67×10²³. El CaCO₃ aporta algo más de átomos de O a pesar de la menor masa."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Analiza una respuesta incorrecta sobre Partículas: localiza el primer paso que falla, corrígelo con $N=nN_A$ y explica por qué el procedimiento alternativo no es válido.",
+        "scaffold": "Localiza el primer paso erróneo (por ejemplo, olvidar multiplicar por N_A o confundir átomos con moléculas) y recalcula aplicando N=n·N_A correctamente.",
+        "answer": "Ejemplo de error: decir que 0,5 mol de O₂ tiene 6,022×10²³ átomos de O (olvida el subíndice 2 del oxígeno).",
+        "full_solution": "Lo correcto es N(moléculas de O₂)=0,5×6,022×10²³=3,011×10²³ y N(átomos de O)=2×3,011×10²³=6,022×10²³ átomos; el error estaba en no multiplicar por el subíndice 2 del oxígeno."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "¿Cuántas moléculas hay en 4 mol de NH₃?",
+        "answer": "N=4 × 6,022 × 10²³ = 2,409 × 10²⁴ moléculas.",
+        "full_solution": "N=n·N_A=4×6,022×10²³=2,409×10²⁴ moléculas de NH₃.",
+        "hints": [
+          "Aplica directamente N=n·N_A; el dato ya está en mol."
+        ],
+        "reasoning": [
+          "La entidad pedida es la molécula de NH₃.",
+          "Se aplica N=n·N_A con n=4 mol.",
+          "El resultado es un número de partículas, sin unidades."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Cuántos moles son 1,806 × 10²⁴ iones Na⁺?",
+        "answer": "n=1,806·10²⁴/(6,022·10²³)=3 mol.",
+        "full_solution": "n=N/N_A=1,806×10²⁴/6,022×10²³=3,00 mol de iones Na⁺.",
+        "hints": [
+          "Divide el número de partículas entre N_A."
+        ],
+        "reasoning": [
+          "La entidad es el ion Na⁺, dato ya en número de partículas.",
+          "Se despeja n de N=n·N_A.",
+          "El resultado se expresa en mol."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Calcula moléculas en 0,25 mol de CO₂ y átomos totales en esa cantidad.",
+        "answer": "N(moléculas)=1,51×10²³; N(átomos)=4,52×10²³.",
+        "full_solution": "N=n·N_A=0,25×6,022×10²³=1,51×10²³ moléculas. Cada molécula de CO₂ tiene 3 átomos (1C+2O): N(átomos)=3×1,51×10²³=4,52×10²³ átomos."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Compara el número de partículas de 0,50 mol de He y 20,0 g de Ne (M(Ne)=20,0 g/mol).",
+        "answer": "n(Ne)=1,00 mol, el doble que los 0,50 mol de He; por tanto, Ne tiene el doble de partículas.",
+        "full_solution": "n(He)=0,50 mol (dato directo). n(Ne)=m/M=20,0/20,0=1,00 mol. Como N=n·N_A, Ne tiene el doble de partículas que He."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Decide qué muestra contiene más átomos: 1 mol de O₂ o 1 mol de O₃ y justifica.",
+        "answer": "1 mol de O₃ tiene más átomos: 3N_A frente a 2N_A.",
+        "full_solution": "1 mol de O₂ contiene N_A moléculas × 2 átomos/molécula = 2N_A=1,204×10²⁴ átomos. 1 mol de O₃ contiene N_A moléculas × 3 átomos/molécula = 3N_A=1,807×10²⁴ átomos. O₃ tiene un 50% más de átomos."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa la cadena masa → moles → moléculas → átomos para 36 g de H₂O.",
+        "answer": "n=2,00 mol; N(moléculas)=1,204×10²⁴; N(átomos de H)=2,408×10²⁴.",
+        "full_solution": "n=m/M=36,0/18,0=2,00 mol. N(moléculas)=n·N_A=2,00×6,022×10²³=1,204×10²⁴. Cada molécula tiene 2 átomos de H: N(átomos de H)=2×1,204×10²⁴=2,408×10²⁴."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige: 'la muestra con mayor masa siempre tiene más partículas'.",
+        "answer": "Es incorrecto: el número de partículas depende de los moles (N=nN_A), no directamente de la masa.",
+        "full_solution": "Ejemplo: 2 g de H₂ (M=2,0) son 1,0 mol → 6,022×10²³ moléculas. 20 g de I₂ (M=254) son solo 0,079 mol → 4,76×10²² moléculas. La muestra de H₂, con menos masa, tiene muchas más partículas."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña una conversión inversa que permita identificar una muestra a partir de masa y número de entidades.",
+        "answer": "A partir de N y m se puede calcular la masa molar: n=N/N_A, M=m/n, y comparar con valores tabulados.",
+        "full_solution": "Ejemplo: una muestra de 7,00 g contiene 1,505×10²³ partículas. n=N/N_A=1,505×10²³/6,022×10²³=0,250 mol. M=m/n=7,00/0,250=28,0 g/mol, compatible con N₂ o C₂H₄."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-03-1",
+        "stem": "¿Cuántas moléculas hay en 2 mol de H₂O?",
+        "options": [
+          {
+            "key": "A",
+            "text": "6,022 × 10²³",
+            "why_wrong": "Es el número de moléculas en 1 mol, no en 2 mol."
+          },
+          {
+            "key": "B",
+            "text": "1,204 × 10²⁴"
+          },
+          {
+            "key": "C",
+            "text": "3,011 × 10²³",
+            "why_wrong": "Corresponde a 0,5 mol, no a 2 mol."
+          },
+          {
+            "key": "D",
+            "text": "2,000 × 10²³",
+            "why_wrong": "No resulta de multiplicar 2×N_A; falta aplicar correctamente N=n·N_A."
+          }
+        ],
+        "explanation": "N=2 × 6,022 × 10²³ = 1,204 × 10²⁴ moléculas de H₂O.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-03-2",
+        "stem": "1 mol de O₂ contiene ¿cuántos átomos de O?",
+        "options": [
+          {
+            "key": "A",
+            "text": "6,022 × 10²³",
+            "why_wrong": "Es el número de moléculas de O₂, no de átomos de O (cada molécula tiene 2)."
+          },
+          {
+            "key": "B",
+            "text": "1,204 × 10²⁴"
+          },
+          {
+            "key": "C",
+            "text": "3,011 × 10²³",
+            "why_wrong": "Corresponde a medio mol de átomos de O, no a 1 mol de O₂ completo."
+          },
+          {
+            "key": "D",
+            "text": "1 átomo",
+            "why_wrong": "Confunde el número de átomos por molécula (2) con el número total de átomos en la muestra."
+          }
+        ],
+        "explanation": "1 mol O₂ → 6,022× 10²³ moléculas; cada molécula tiene 2 átomos de O → 1,204× 10²⁴ átomos de O.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-03-3",
+        "stem": "¿Qué fórmula permite obtener moles a partir de partículas?",
+        "options": [
+          {
+            "key": "A",
+            "text": "n=N · $N_A$",
+            "why_wrong": "Multiplicar N por N_A da un número enorme sin sentido físico para una cantidad de sustancia."
+          },
+          {
+            "key": "B",
+            "text": "$n=\\dfrac{N}{N_A}$"
+          },
+          {
+            "key": "C",
+            "text": "$N=nN_A$",
+            "why_wrong": "Es la fórmula para ir de moles a partículas, no al revés."
+          },
+          {
+            "key": "D",
+            "text": "$n=\\dfrac{N_A}{N}$",
+            "why_wrong": "No proviene de despejar correctamente n de N=n·N_A."
+          }
+        ],
+        "explanation": "Despejando de N=n × $N_A$ obtenemos $n=\\dfrac{N}{N_A}$.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-03-4",
+        "stem": "¿Cuántas fórmulas unidad de NaCl hay en 0,5 mol?",
+        "options": [
+          {
+            "key": "A",
+            "text": "3,011 × 10²³"
+          },
+          {
+            "key": "B",
+            "text": "6,022 × 10²³",
+            "why_wrong": "Corresponde a 1 mol, no a 0,5 mol."
+          },
+          {
+            "key": "C",
+            "text": "1,204 × 10²⁴",
+            "why_wrong": "Es el doble de lo que correspondería a 0,5 mol."
+          },
+          {
+            "key": "D",
+            "text": "1,506 × 10²³",
+            "why_wrong": "No resulta de multiplicar 0,5×N_A correctamente."
+          }
+        ],
+        "explanation": "N=0,5·6,022·10²³=3,011·10²³ fórmulas unidad de NaCl.",
+        "correct": "A"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Fórmula partículas–mol",
+        "back": "$N=n\\cdot N_A$"
+      },
+      {
+        "front": "Fórmula mol–partículas",
+        "back": "$n=\\dfrac{N}{N_A}$"
+      },
+      {
+        "front": "2 mol H₂O → moléculas",
+        "back": "1,204 × 10²⁴ moléculas."
+      },
+      {
+        "front": "Entidad en un metal (ej. Fe)",
+        "back": "Átomos; 1 mol Fe = 6,022 × 10²³ átomos."
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Contar átomos en lugar de moléculas (o viceversa) sin revisar la fórmula.",
+        "correct_model": "Hay que decidir primero qué entidad se pide (átomos, moléculas o iones) revisando la fórmula química, antes de aplicar N=n·N_A.",
+        "remediation": "Subraya en el enunciado si se pide 'átomos de X' o 'moléculas de la sustancia' antes de calcular."
+      },
+      {
+        "incorrect_model": "Olvidar multiplicar por el número de átomos de un elemento dentro de la molécula.",
+        "correct_model": "Si se pide el número de átomos de un elemento dentro de una molécula poliatómica, hay que multiplicar el número de moléculas por el subíndice de ese elemento en la fórmula.",
+        "remediation": "Escribe la fórmula y su subíndice antes de multiplicar, por ejemplo N(H) en CH₄ = 4×N(moléculas)."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "$N=n\\cdot N_A$",
+        "definition": "Fórmula que relaciona el número de partículas (N) con la cantidad de sustancia (n) y el número de Avogadro."
+      },
+      {
+        "term": "partículas",
+        "definition": "Átomos, moléculas, iones u otras entidades elementales que se cuentan mediante el mol."
+      },
+      {
+        "term": "conversión",
+        "definition": "Cambio de una magnitud a otra equivalente, aquí entre número de partículas y cantidad de sustancia."
+      },
+      {
+        "term": "átomos",
+        "definition": "Unidades elementales de un elemento; en moléculas poliatómicas hay que multiplicar por el subíndice correspondiente para contarlos."
+      },
+      {
+        "term": "moléculas",
+        "definition": "Entidades formadas por varios átomos unidos; su número se calcula con N=n·N_A."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Saber calcular masas molares y usar n=m/M y la notación científica.",
+        "why_it_matters": "Sin dominar el cálculo de masas molares no se puede pasar de la masa de una muestra al número de moles, paso previo imprescindible para calcular el número de partículas."
+      }
+    ],
+    "summary": {
+      "big_idea": "El número de partículas N se obtiene siempre multiplicando los moles por N_A, pero antes hay que decidir qué entidad se cuenta: átomos, moléculas o iones.",
+      "key_points": [
+        "La relación entre el número de partículas (N), los moles (n) y el número de Avogadro ($N_A$) es simplemente N=n · $N_A$.",
+        "Es importante especificar qué tipo de entidad se cuenta, porque depende de la naturaleza de la sustancia.",
+        "Si conocemos el número de partículas y queremos obtener los moles, despejamos n: $n=\\dfrac{N}{N_A}$.",
+        "Para contar átomos de un elemento dentro de una molécula, multiplica el número de moléculas por el subíndice de ese elemento en la fórmula."
+      ],
+      "formulas": [
+        "$N=nN_A$"
+      ],
+      "what_to_remember_if_nothing_else": "N=n·N_A cuenta siempre entidades iguales; identifica si son átomos, moléculas o iones antes de calcular."
+    },
+    "exam_questions": [
+      {
+        "statement": "Compara el número de átomos de 1,00 mol de O₂ y 1,00 mol de O₃; razona sin confundir moléculas y átomos.",
+        "answer": "O₃ tiene un 50% más de átomos que O₂ (3N_A frente a 2N_A).",
+        "full_solution": "Un mol de O₂ contiene $N_A$ moléculas y, como cada molécula tiene 2 átomos, contiene $2N_A=1,2044\\times10^{24}$ átomos. Un mol de O₃ contiene $3N_A=1,8066\\times10^{24}$ átomos: un 50 % más.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "¿Cuántos átomos de hidrógeno hay en 3 mol de CH₄?",
+        "answer": "N(H)=7,228×10²⁴ átomos de H.",
+        "full_solution": "N(CH₄)=3×6,022×10²³=1,807×10²⁴ moléculas; cada una tiene 4 H → N(H)=4×1,807×10²⁴=7,228×10²⁴ átomos de H.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Diseña una cadena de conversión para pasar de masa de una sal a iones totales en disolución, indicando qué dato de disociación necesitas.",
+        "answer": "La cadena es masa → moles (con M) → unidades fórmula (con N_A) → iones totales (multiplicando por el número de iones por fórmula).",
+        "full_solution": "La cadena es: masa → moles usando M; moles → unidades fórmula usando $N_A$; y, si la sal se disocia completamente, multiplicar por el número de iones de cada unidad. Hay que conocer la fórmula y el grado de disociación; por ejemplo, Na₂SO₄ aporta 3 iones por unidad.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Una muestra contiene 1,204 × 10²⁴ moléculas de glucosa C₆H₁₂O₆. ¿Cuántos átomos de C, H y O hay en total?",
+        "answer": "Hay 48 mol de átomos en total: 2,89×10²⁵ átomos (7,23×10²⁴ de C, 1,45×10²⁵ de H y 7,23×10²⁴ de O).",
+        "full_solution": "n(glucosa)=1,204×10²⁴/6,022×10²³=2,00 mol. Cada molécula tiene 6 C, 12 H y 6 O: n(C)=12,0 mol → N(C)=7,23×10²⁴; n(H)=24,0 mol → N(H)=1,45×10²⁵; n(O)=12,0 mol → N(O)=7,23×10²⁴. En total, 48,0 mol de átomos → 2,89×10²⁵ átomos.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_04.json": {
+    "lesson_id": "U-4Q-05-L04",
+    "title": "Composición porcentual",
+    "course_label": "4.º ESO · El mol y la estequiometría",
+    "objectives": [
+      {
+        "statement": "Explicar Composición porcentual con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de composición porcentual para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar la composición porcentual de un compuesto para deducir su fórmula empírica."
+      },
+      {
+        "statement": "Detectar errores habituales como olvidar el subíndice de un elemento o no comprobar que los porcentajes suman 100%."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Fórmula de la composición porcentual",
+        "body": "La **composición porcentual** te dice qué fracción de la masa total de un compuesto corresponde a cada elemento. Es como una etiqueta nutricional, pero para átomos en vez de calorías.\n\nLa fórmula es:\n\n$$\\%X = \\dfrac{a_X \\cdot M(X)}{M(\\text{compuesto})} \\times 100$$\n\ndonde $a_X$ es el número de átomos de X en la fórmula y $M(X)$ es su masa atómica.\n\n¿Para qué sirve? Imagina que un geólogo analiza un mineral y encuentra que contiene un 63,5 % de hierro. Con ese dato puede deducir la fórmula del mineral. O un nutricionista que necesita saber qué porcentaje de una vitamina es carbono para calcular su valor calórico.\n\nLa composición porcentual también es fundamental en la industria: si fabricas acero y necesitas un cierto porcentaje de carbono, debes saber cuánto carbono aporta cada reactivo.\n\n**Propiedad clave**: La suma de los porcentajes de todos los elementos siempre debe dar **100 %**. Si no da 100 %, hay un error en el cálculo. Esta es tu mejor herramienta de comprobación.",
+        "formula": "$\\%X=\\dfrac{a_X M(X)}{M(\\mathrm{compuesto})}\\times100$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 280\" role=\"img\" aria-label=\"Composición porcentual del agua H₂O como diagrama circular\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Composición porcentual del H₂O</text>\n\n    <!-- Pie chart -->\n    <!-- O segment: 88.9% ≈ 320° starting at top -->\n    <circle cx=\"200\" cy=\"155\" r=\"90\" fill=\"none\" stroke=\"#e8e3d8\" stroke-width=\"1\"/>\n    <!-- Full circle background -->\n    <circle cx=\"200\" cy=\"155\" r=\"80\" fill=\"#0e7a68\" opacity=\"0.15\"/>\n    <!-- H segment: small wedge 11.1% ≈ 40° -->\n    <path d=\"M200,155 L200,75 A80,80 0 0,1 251,98 Z\" fill=\"#c17a17\" opacity=\"0.3\" stroke=\"var(--bg,#fbfcfd)\" stroke-width=\"2\"/>\n\n    <!-- Labels on pie -->\n    <text x=\"185\" y=\"180\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0e7a68\">O</text>\n    <text x=\"185\" y=\"200\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0e7a68\">88,9 %</text>\n    <text x=\"235\" y=\"95\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">H</text>\n    <text x=\"255\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">11,1 %</text>\n\n    <!-- Molecule and calculation -->\n    <circle cx=\"430\" cy=\"100\" r=\"28\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n    <text x=\"430\" y=\"105\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0e7a68\">O</text>\n    <line x1=\"407\" y1=\"118\" x2=\"385\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n    <circle cx=\"378\" cy=\"150\" r=\"20\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n    <text x=\"378\" y=\"155\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c17a17\">H</text>\n    <line x1=\"453\" y1=\"118\" x2=\"475\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n    <circle cx=\"482\" cy=\"150\" r=\"20\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n    <text x=\"482\" y=\"155\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c17a17\">H</text>\n\n    <!-- Calculation box -->\n    <rect x=\"350\" y=\"185\" width=\"220\" height=\"75\" rx=\"10\" fill=\"var(--bg,#fbfcfd)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n    <text x=\"460\" y=\"208\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">%H = 2×1/18 × 100 = 11,1 %</text>\n    <text x=\"460\" y=\"230\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">%O = 1×16/18 × 100 = 88,9 %</text>\n    <line x1=\"370\" y1=\"240\" x2=\"550\" y2=\"240\" stroke=\"var(--axes,#24312c)\" stroke-width=\"0.8\"/>\n    <text x=\"460\" y=\"255\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Total = 100 % ✓</text>\n    </svg>",
+            "caption": "Composición porcentual del agua: el oxígeno domina la masa"
+          }
+        ],
+        "student_text": "La **composición porcentual** te dice qué fracción de la masa total de un compuesto corresponde a cada elemento. Es como una etiqueta nutricional, pero para átomos en vez de calorías."
+      },
+      {
+        "title": "Composición porcentual del agua H₂O",
+        "body": "Apliquemos la fórmula al agua, $\\text{H}_2\\text{O}$ ($M = 18\\;\\text{g/mol}$):\n\n**Porcentaje de hidrógeno:**\n$$\\%\\text{H} = \\dfrac{2 \\times 1}{18} \\times 100 = \\dfrac{2}{18} \\times 100 = 11{,}1\\;\\%$$\n\n**Porcentaje de oxígeno:**\n$$\\%\\text{O} = \\dfrac{1 \\times 16}{18} \\times 100 = \\dfrac{16}{18} \\times 100 = 88{,}9\\;\\%$$\n\n**Comprobación:** $11{,}1 + 88{,}9 = 100{,}0\\;\\%$ ✓\n\nEste resultado tiene una interpretación sorprendente: aunque el agua tiene el doble de átomos de hidrógeno que de oxígeno, casi el 89 % de su masa viene del oxígeno. ¿Por qué? Porque un átomo de oxígeno pesa 16 veces más que uno de hidrógeno.\n\nEsto ilustra una idea general: la composición porcentual refleja la **masa**, no el número de átomos. Dos compuestos pueden tener el mismo número de átomos de un elemento pero porcentajes muy distintos si las masas atómicas de los otros elementos son diferentes.\n\nCada 100 g de agua contienen 11,1 g de hidrógeno y 88,9 g de oxígeno. Esto se cumple siempre, independientemente de la cantidad de agua que tengas: es una propiedad intensiva.",
+        "formula": "$\\%X=\\dfrac{a_X M(X)}{M(\\mathrm{compuesto})}\\times100$",
+        "assets": [],
+        "student_text": "Apliquemos la fórmula al agua, $\\text{H}_2\\text{O}$ ($M = 18\\;\\text{g/mol}$):"
+      },
+      {
+        "title": "Composición porcentual del CO₂",
+        "body": "Ahora con dióxido de carbono, $\\text{CO}_2$ ($M = 44\\;\\text{g/mol}$):\n\n**Porcentaje de carbono:**\n$$\\%\\text{C} = \\dfrac{1 \\times 12}{44} \\times 100 = 27{,}3\\;\\%$$\n\n**Porcentaje de oxígeno:**\n$$\\%\\text{O} = \\dfrac{2 \\times 16}{44} \\times 100 = 72{,}7\\;\\%$$\n\n**Comprobación:** $27{,}3 + 72{,}7 = 100{,}0\\;\\%$ ✓\n\nComparando con el agua, vemos que el oxígeno sigue dominando la masa (72,7 % en CO₂ vs 88,9 % en H₂O), pero ahora el «otro» elemento (carbono, 27,3 %) aporta más que el hidrógeno en el agua (11,1 %). Tiene sentido: el carbono pesa 12 veces más que el hidrógeno.\n\n**Aplicación práctica**: Esta información es crucial en química ambiental. Si sabes que una fábrica emite 1000 kg de CO₂, puedes calcular que contienen $1000 \\times 0{,}273 = 273$ kg de carbono. Esa es la cantidad de carbono que se ha liberado a la atmósfera.\n\nObserva cómo el mismo tipo de cálculo puede responder preguntas muy diferentes: desde la composición de un mineral hasta el impacto ambiental de una combustión.",
+        "formula": "$\\%X=\\dfrac{a_X M(X)}{M(\\mathrm{compuesto})}\\times100$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 280\" role=\"img\" aria-label=\"Composición porcentual del CO₂ como diagrama circular\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Composición porcentual del CO₂</text>\n\n    <!-- Pie chart -->\n    <circle cx=\"200\" cy=\"155\" r=\"80\" fill=\"#0e7a68\" opacity=\"0.15\"/>\n    <!-- C segment: 27.3% ≈ 98° -->\n    <path d=\"M200,155 L200,75 A80,80 0 0,1 278,124 Z\" fill=\"#c17a17\" opacity=\"0.3\" stroke=\"var(--bg,#fbfcfd)\" stroke-width=\"2\"/>\n\n    <text x=\"230\" y=\"105\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#c17a17\">C</text>\n    <text x=\"248\" y=\"120\" text-anchor=\"middle\" font-size=\"12\" fill=\"#c17a17\">27,3 %</text>\n    <text x=\"175\" y=\"195\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0e7a68\">O</text>\n    <text x=\"175\" y=\"215\" text-anchor=\"middle\" font-size=\"14\" fill=\"#0e7a68\">72,7 %</text>\n\n    <!-- Comparison with H₂O -->\n    <rect x=\"340\" y=\"60\" width=\"230\" height=\"190\" rx=\"12\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n    <text x=\"455\" y=\"85\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Comparación</text>\n\n    <!-- H₂O mini bar -->\n    <text x=\"360\" y=\"115\" font-size=\"11\" fill=\"var(--text,#20302a)\">H₂O</text>\n    <rect x=\"395\" y=\"102\" width=\"160\" height=\"18\" rx=\"4\" fill=\"#0e7a68\" opacity=\"0.2\"/>\n    <rect x=\"395\" y=\"102\" width=\"18\" height=\"18\" rx=\"4\" fill=\"#c17a17\" opacity=\"0.4\"/>\n    <text x=\"405\" y=\"115\" text-anchor=\"middle\" font-size=\"8\" fill=\"#c17a17\">H</text>\n    <text x=\"475\" y=\"115\" text-anchor=\"middle\" font-size=\"8\" fill=\"#0e7a68\">O 88,9%</text>\n\n    <!-- CO₂ mini bar -->\n    <text x=\"360\" y=\"150\" font-size=\"11\" fill=\"var(--text,#20302a)\">CO₂</text>\n    <rect x=\"395\" y=\"137\" width=\"160\" height=\"18\" rx=\"4\" fill=\"#0e7a68\" opacity=\"0.2\"/>\n    <rect x=\"395\" y=\"137\" width=\"44\" height=\"18\" rx=\"4\" fill=\"#c17a17\" opacity=\"0.4\"/>\n    <text x=\"417\" y=\"150\" text-anchor=\"middle\" font-size=\"8\" fill=\"#c17a17\">C 27,3%</text>\n    <text x=\"497\" y=\"150\" text-anchor=\"middle\" font-size=\"8\" fill=\"#0e7a68\">O 72,7%</text>\n\n    <!-- Calculation -->\n    <text x=\"455\" y=\"185\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">M(CO₂) = 12 + 2×16 = 44 g/mol</text>\n    <text x=\"455\" y=\"202\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">%C = 12/44 × 100 = 27,3 %</text>\n    <text x=\"455\" y=\"219\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">%O = 32/44 × 100 = 72,7 %</text>\n    <line x1=\"380\" y1=\"228\" x2=\"530\" y2=\"228\" stroke=\"var(--axes,#24312c)\" stroke-width=\"0.8\"/>\n    <text x=\"455\" y=\"243\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Total = 100 % ✓</text>\n    </svg>",
+            "caption": "Comparación de composición porcentual: H₂O vs CO₂"
+          }
+        ],
+        "student_text": "Ahora con dióxido de carbono, $\\text{CO}_2$ ($M = 44\\;\\text{g/mol}$):"
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "De la composición a la fórmula empírica",
+        "body": "El proceso inverso es igual de útil: dado el porcentaje de cada elemento, ¿cuál es la fórmula del compuesto? Esta es la **fórmula empírica**, la proporción más simple entre los átomos.\n\n**Procedimiento paso a paso:**\n\n1. **Supón 100 g** de compuesto. Así, cada porcentaje se convierte directamente en gramos.\n\n2. **Divide entre la masa atómica** de cada elemento para obtener moles.\n\n3. **Divide todos los resultados** entre el más pequeño para obtener la relación más simple.\n\n4. Si los cocientes no son enteros, multiplica todos por el menor número que los convierta en enteros.\n\n**Ejemplo**: Un compuesto tiene 40 % de C, 6,7 % de H y 53,3 % de O.\n\n- C: $40/12 = 3{,}33$ mol\n- H: $6{,}7/1 = 6{,}7$ mol\n- O: $53{,}3/16 = 3{,}33$ mol\n\nDividimos entre 3,33 (el menor): C = 1, H = 2, O = 1 → Fórmula empírica: **CH₂O**\n\nEsta fórmula empírica corresponde a varios compuestos (formaldehído CH₂O, ácido acético C₂H₄O₂, glucosa C₆H₁₂O₆…). Para distinguirlos, necesitas la masa molar experimental, que te da la **fórmula molecular**: el múltiplo exacto de la empírica.",
+        "assets": [],
+        "formula": "$\\%X=\\dfrac{a_X M(X)}{M(\\mathrm{compuesto})}\\times100$",
+        "student_text": "El proceso inverso es igual de útil: dado el porcentaje de cada elemento, ¿cuál es la fórmula del compuesto? Esta es la **fórmula empírica**, la proporción más simple entre los átomos."
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-5",
+        "title": "% de cada elemento en el amoniaco NH₃",
+        "statement": "Calcula el % de cada elemento en el amoniaco NH₃ (N=14,0; H=1,0 g/mol).",
+        "steps": [
+          "M(NH₃) = 14,0 + 3× 1,0 = 17,0 g/mol.",
+          "%N=(1 × 14,0 / 17,0) × 100 = 82,4 %.",
+          "%H = (3 × 1,0 / 17,0) × 100 = 17,6 %.",
+          "Verificación: 82,4 + 17,6 = 100 % ✓."
+        ],
+        "answer": "82,4 % N; 17,6 % H.",
+        "verification": "La suma de porcentajes es 100 %, cálculo correcto.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "deep-domain-worked-6",
+        "title": "% de cada elemento en el carbonato cálcico CaCO₃",
+        "statement": "Calcula el % de cada elemento en el carbonato cálcico CaCO₃ (Ca=40,0; C=12,0; O=16,0 g/mol).",
+        "steps": [
+          "M(CaCO₃) = 40,0 + 12,0 + 3× 16,0 = 100,0 g/mol.",
+          "%Ca = (40,0/100,0) × 100 = 40,0 %.",
+          "%C = (12,0/100,0) × 100 = 12,0 %.",
+          "%O = (48,0/100,0) × 100 = 48,0 %.",
+          "Suma: 40,0 + 12,0 + 48,0 = 100 % ✓.",
+          "Comprobación: como M(CaCO₃)=100 g/mol exactamente, cada porcentaje coincide con la masa en gramos del elemento en 100 g de muestra; la suma 40%+12%+48%=100% confirma el cálculo."
+        ],
+        "answer": "40,0 % Ca; 12,0 % C; 48,0 % O.",
+        "verification": "CaCO₃ tiene M=100 g/mol, lo que simplifica los cálculos: % = masa del elemento directamente.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Agua",
+        "statement": "Calcula %H y %O en H₂O usando H=1 y O=16.",
+        "steps": [
+          "M=2(1)+16=18 g mol⁻¹.",
+          "$\\%\\mathrm{H}=\\dfrac{2\\cdot1,0}{18,0}\\cdot100=11{,}1\\,\\%$ y $\\%\\mathrm{O}=\\dfrac{16,0}{18,0}\\cdot100=88{,}9\\,\\%$.",
+          "La suma es 100 %, control interno del cálculo.",
+          "El porcentaje en masa no coincide con proporción de átomos.",
+          "Comprobación: se revisa que la suma de %H+%O sea 100% y que las unidades (%) sean correctas."
+        ],
+        "answer": "11,1 % H y 88,9 % O.",
+        "verification": "Se comprueba sumando 11,1%+88,9%=100,0%."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Dióxido de carbono",
+        "statement": "Calcula el porcentaje de oxígeno en CO₂.",
+        "steps": [
+          "M=12+2(16)=44 g mol⁻¹.",
+          "$\\%\\mathrm{O}=\\dfrac{32,0}{44,0}\\cdot100=72{,}7\\,\\%$.",
+          "El carbono aporta el 27,3 % restante.",
+          "La suma de porcentajes debe ser 100 %.",
+          "Comprobación: se revisa que %C+%O=100% y que se ha usado la masa molar completa del CO₂ (44,0 g/mol) en el denominador."
+        ],
+        "answer": "72,7 % de O.",
+        "verification": "Se comprueba sumando 27,3%+72,7%=100,0%."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Calcula el %Fe en Fe₂O₃ y en Fe₃O₄ (Fe=55,8; O=16,0 g/mol) y decide qué mineral es más rico en hierro.",
+        "scaffold": "Calcula primero la masa molar de cada óxido, después la masa de Fe que aporta cada uno y, por último, el porcentaje.",
+        "answer": "Fe₂O₃: %Fe=69,9%. Fe₃O₄: %Fe=72,4%. La magnetita (Fe₃O₄) es más rica en hierro.",
+        "full_solution": "Fe₂O₃: M=2×55,8+3×16,0=159,6 g/mol; %Fe=(111,6/159,6)×100=69,9%. Fe₃O₄: M=3×55,8+4×16,0=231,4 g/mol; %Fe=(167,4/231,4)×100≈72,4%.",
+        "assets": []
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "A partir de una muestra con 46,7% N, decide si corresponde a la urea CO(NH₂)₂ o al nitrato de amonio NH₄NO₃, y explica tu razonamiento.",
+        "scaffold": "Calcula el %N de cada compuesto candidato y compáralo con el dato experimental.",
+        "answer": "Corresponde a la urea (%N=46,7%), no al nitrato de amonio (%N=35,0%).",
+        "full_solution": "M(urea)=12,0+16,0+2×14,0+4×1,0=60,0 g/mol; %N=(28,0/60,0)×100=46,7%. M(NH₄NO₃)=80,0 g/mol; %N=(28,0/80,0)×100=35,0%. El 46,7% coincide con la urea."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula la composición porcentual del HCl (H=1,0; Cl=35,5 g/mol).",
+        "answer": "%H=2,74 %; %Cl=97,26 %.",
+        "full_solution": "M(HCl)=1,0+35,5=36,5 g/mol. %H=(1,0/36,5)×100=2,74%. %Cl=(35,5/36,5)×100=97,26%. Suma=2,74+97,26=100% ✓.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Cuántos gramos de N hay en 85 g de NH₃? (N=14,0; H=1,0 g/mol)",
+        "answer": "n(NH₃) = 85/17,0 = 5,00 mol; m(N) = 5,00× 14,0 = 70,0 g. O bien: 82,4% de 85 g=70,0 g.",
+        "full_solution": "M(NH₃)=17,0 g/mol. n(NH₃)=85/17,0=5,00 mol. Como hay 1 mol de N por mol de NH₃, m(N)=5,00×14,0=70,0 g.",
+        "hints": [],
+        "reasoning": [
+          "1 mol de NH₃ contiene 1 mol de N (un átomo de N por fórmula).",
+          "Se calculan los moles de NH₃ y se multiplican por la masa atómica del N.",
+          "Alternativa equivalente: %N=82,4% de 85 g =70,0 g."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Calcula el % de N en el nitrato de amonio NH₄NO₃ (N=14,0; H=1,0; O=16,0 g/mol).",
+        "answer": "%N=35,0 %.",
+        "full_solution": "M(NH₄NO₃)=14,0+4×1,0+14,0+3×16,0=80,0 g/mol. Hay 2 átomos de N: %N=(2×14,0/80,0)×100=35,0%.",
+        "assets": [],
+        "reasoning": []
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Calcula la masa de Fe en 50,0 g de Fe₂O₃ (Fe=55,8; O=16,0 g/mol).",
+        "answer": "m(Fe)=35,0 g (%Fe=69,9%).",
+        "full_solution": "M(Fe₂O₃)=2×55,8+3×16,0=159,6 g/mol. %Fe=(111,6/159,6)×100=69,9%. m(Fe)=0,699×50,0=35,0 g.",
+        "assets": [],
+        "reasoning": []
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Compara la riqueza en nitrógeno de la urea CO(NH₂)₂ y del nitrato de amonio NH₄NO₃ (N=14,0; C=12,0; O=16,0; H=1,0 g/mol). ¿Cuál es mejor fertilizante por masa?",
+        "answer": "Urea: %N=46,7%. NH₄NO₃: %N=35,0%. La urea es más rica en nitrógeno.",
+        "full_solution": "M(urea)=12,0+16,0+2×14,0+4×1,0=60,0 g/mol; %N=(28,0/60,0)×100=46,7%. M(NH₄NO₃)=80,0 g/mol; %N=35,0%. 46,7%>35,0%, así que la urea aporta más N por kg.",
+        "assets": [],
+        "reasoning": []
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Si en 100 g de distintos hidrocarburos CₙH₂ₙ₊₂ se representan los porcentajes de C y H frente a n, ¿qué tendencia esperarías para %H al aumentar n?",
+        "answer": "%H disminuye al aumentar n, porque la proporción de átomos de C (más pesados) crece.",
+        "full_solution": "Para CH₄, %H=(4×1,0/16,0)×100=25,0%. Para C₄H₁₀, %H=(10×1,0/58,0)×100=17,2%. A medida que crece la cadena, el carbono (más pesado) pesa más en proporción, y %H tiende a bajar.",
+        "assets": [],
+        "reasoning": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "A partir de 75% C y 25% H, deduce la fórmula empírica. Un compañero propone C₃H, ¿es correcto?",
+        "answer": "La fórmula empírica correcta es CH₄ (metano); C₃H es incorrecta.",
+        "full_solution": "En 100 g: n(C)=75/12,0=6,25 mol; n(H)=25/1,0=25,0 mol. Dividiendo por el menor (6,25): C:H=1:4 → CH₄. La propuesta C₃H invierte la proporción.",
+        "assets": [],
+        "reasoning": []
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Un estudiante calcula el %O en H₂SO₄ como (16,0/98,1)×100=16,3%, olvidando el subíndice 4 del oxígeno. ¿Cuál es el valor correcto?",
+        "answer": "%O correcto=65,3%.",
+        "full_solution": "M(H₂SO₄)=2×1,0+32,1+4×16,0=98,1 g/mol. %O=(4×16,0/98,1)×100=65,2%≈65,3%. El error fue no multiplicar por el subíndice 4.",
+        "assets": [],
+        "reasoning": []
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-04-1",
+        "stem": "¿Cuál es el %O en H₂O?",
+        "options": [
+          {
+            "key": "A",
+            "text": "11,1%",
+            "why_wrong": "Es el %H, no el %O."
+          },
+          {
+            "key": "B",
+            "text": "66,7%",
+            "why_wrong": "No corresponde a ningún cálculo correcto de composición porcentual del agua."
+          },
+          {
+            "key": "C",
+            "text": "88,9%"
+          },
+          {
+            "key": "D",
+            "text": "50%",
+            "why_wrong": "Asume erróneamente que ambos elementos pesan igual."
+          }
+        ],
+        "explanation": "%O = (16,0/18,0)× 100 = 88,9%.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-04-2",
+        "stem": "La fórmula de la composición porcentual del elemento X es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "%X = M(X) / M(compuesto)",
+            "why_wrong": "Falta multiplicar por el subíndice del elemento y por 100."
+          },
+          {
+            "key": "B",
+            "text": "$\\%X=\\dfrac{a_X M(X)}{M(\\mathrm{compuesto})}\\times100$"
+          },
+          {
+            "key": "C",
+            "text": "%X = a_X × 100",
+            "why_wrong": "No tiene en cuenta ni la masa del elemento ni la del compuesto."
+          },
+          {
+            "key": "D",
+            "text": "$\\%X=\\dfrac{M(\\mathrm{compuesto})}{a_X\\,M(X)}\\times100$",
+            "why_wrong": "Invierte el cociente: pone la masa del compuesto en el numerador en vez del denominador."
+          }
+        ],
+        "explanation": "La fórmula correcta incluye el subíndice $a_X$ del elemento, su masa molar M(X) y la masa molar del compuesto.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-04-3",
+        "stem": "¿Cuánto suman los porcentajes de todos los elementos de un compuesto?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Depende del compuesto",
+            "why_wrong": "La suma es siempre 100%, independientemente del compuesto (salvo redondeo)."
+          },
+          {
+            "key": "B",
+            "text": "50%",
+            "why_wrong": "Solo tendría sentido si hubiera exactamente dos elementos a partes iguales, lo que no es general."
+          },
+          {
+            "key": "C",
+            "text": "200%",
+            "why_wrong": "200% no tiene sentido como porcentaje de una masa total."
+          },
+          {
+            "key": "D",
+            "text": "100%"
+          }
+        ],
+        "explanation": "La suma de los porcentajes de todos los elementos debe ser 100% (salvo pequeñas diferencias de redondeo).",
+        "correct": "D"
+      },
+      {
+        "id": "MC-lesson-04-4",
+        "stem": "En el CO₂, ¿cuál es el %C aproximado?",
+        "options": [
+          {
+            "key": "A",
+            "text": "27,3%"
+          },
+          {
+            "key": "B",
+            "text": "72,7%",
+            "why_wrong": "Es el %O, no el %C."
+          },
+          {
+            "key": "C",
+            "text": "50%",
+            "why_wrong": "No resulta de ningún cálculo correcto con las masas molares de C y O."
+          },
+          {
+            "key": "D",
+            "text": "12%",
+            "why_wrong": "Es la masa atómica del carbono en u, no su porcentaje en masa dentro del CO₂."
+          }
+        ],
+        "explanation": "%C = (12,0/44,0)× 100 = 27,3%.",
+        "correct": "A"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Fórmula %X",
+        "back": "$\\%X=\\dfrac{a_X M(X)}{M(\\mathrm{compuesto})}\\times100$"
+      },
+      {
+        "front": "%H en H₂O",
+        "back": "11,1 %"
+      },
+      {
+        "front": "%O en H₂O",
+        "back": "88,9 %"
+      },
+      {
+        "front": "Verificación del cálculo",
+        "back": "La suma de todos los % debe ser 100 % (salvo redondeo)."
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Olvidar multiplicar M(X) por el subíndice a_X.",
+        "correct_model": "El subíndice de cada elemento en la fórmula (a_X) multiplica a su masa molar antes de dividir entre la masa molar del compuesto; olvidarlo es un error muy común.",
+        "remediation": "Escribe primero a_X·M(X) para cada elemento antes de aplicar la fórmula del %."
+      },
+      {
+        "incorrect_model": "No verificar que la suma de % sea 100%.",
+        "correct_model": "La suma de todos los porcentajes de un compuesto debe dar 100% (salvo pequeñas diferencias de redondeo); si no es así, hay un error de cálculo.",
+        "remediation": "Suma siempre los porcentajes obtenidos al final como comprobación rápida del resultado."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "composición porcentual",
+        "definition": "Porcentaje en masa que aporta cada elemento a la masa total de un compuesto."
+      },
+      {
+        "term": "porcentaje en masa",
+        "definition": "Fracción de la masa total de una muestra que corresponde a un elemento, expresada en %."
+      },
+      {
+        "term": "análisis elemental",
+        "definition": "Técnica que determina la composición porcentual de los elementos de un compuesto a partir de una muestra."
+      },
+      {
+        "term": "fórmula empírica",
+        "definition": "Fórmula que expresa la proporción mínima de átomos de cada elemento en un compuesto, obtenida a partir de su composición porcentual."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Comprender cómo se calcula el número de partículas (N=nN_A) y la masa molar de un compuesto, y saber trabajar con unidades del SI.",
+        "why_it_matters": "La composición porcentual se basa en comparar la masa molar de cada elemento con la del compuesto completo, así que hay que saber calcular masas molares antes de continuar."
+      }
+    ],
+    "summary": {
+      "big_idea": "La composición porcentual compara la masa que aporta cada elemento con la masa molar total del compuesto, y sus porcentajes siempre suman 100%.",
+      "key_points": [
+        "La composición porcentual (o composición en masa) indica qué fracción del total de la masa de un compuesto corresponde a cada elemento.",
+        "Para H₂O, M=18 g mol⁻¹.",
+        "Para el dióxido de carbono CO₂, M=44 g mol⁻¹.",
+        "Comprueba siempre que la suma de los porcentajes de todos los elementos sea 100% (salvo redondeo)."
+      ],
+      "formulas": [
+        "$\\%X=\\dfrac{a_X M(X)}{M(\\mathrm{compuesto})}\\times100$"
+      ],
+      "what_to_remember_if_nothing_else": "%X=(a_X·M(X)/M(compuesto))×100; la suma de todos los %X debe dar 100%."
+    },
+    "exam_questions": [
+      {
+        "statement": "Calcula la composición porcentual de H₂O y CO₂ y comprueba que cada suma da 100 %.",
+        "answer": "H₂O: 11,1% H y 88,9% O. CO₂: 27,3% C y 72,7% O.",
+        "full_solution": "En H₂O, M=18,0: $\\%\\mathrm{H}=\\dfrac{2}{18}\\cdot100=11,1\\%$ y $\\%\\mathrm{O}=\\dfrac{16}{18}\\cdot100=88,9\\%$. En CO₂, M=44,0: $\\%\\mathrm{C}=\\dfrac{12}{44}\\cdot100=27,3\\%$ y $\\%\\mathrm{O}=\\dfrac{32}{44}\\cdot100=72,7\\%$. En ambos casos la suma es 100% salvo redondeo.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Calcula la composición porcentual del sulfato de calcio CaSO₄. M(S)=32.",
+        "answer": "M(CaSO₄)=136 g/mol; %Ca=29,4%, %S=23,5%, %O=47,1%.",
+        "full_solution": "M(CaSO₄) = 40+32+4× 16 = 136 g/mol; %Ca=(40/136)×100=29,4%, %S=(32/136)×100=23,5%, %O=(64/136)×100=47,1%. Suma=100% ✓.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Una muestra tiene 40,0 % C, 6,7 % H y 53,3 % O. Propón una fórmula empírica y explica por qué la fórmula molecular requiere masa molar.",
+        "answer": "Fórmula empírica: CH₂O. Para la fórmula molecular hace falta conocer la masa molar real.",
+        "full_solution": "En 100 g de muestra: n(C)=40,0/12,0=3,33 mol; n(H)=6,7/1,0=6,7 mol; n(O)=53,3/16,0=3,33 mol. Dividiendo entre el menor (3,33): C:H:O=1:2:1 → fórmula empírica CH₂O. Para la fórmula molecular haría falta conocer la masa molar real y ver cuántas veces se repite la fórmula empírica (p. ej., si M=180 g/mol, se repite 6 veces → C₆H₁₂O₆, glucosa).",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_05.json": {
+    "lesson_id": "U-4Q-05-L05",
+    "title": "Cadena de conversiones",
+    "course_label": "4.º ESO · El mol y la estequiometría",
+    "objectives": [
+      {
+        "statement": "Explicar Cadena de conversiones con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de cadena de conversiones para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una cadena de conversión completa (masa→mol→partículas→átomos) identificando el factor usado en cada paso."
+      },
+      {
+        "statement": "Detectar errores de invertir un factor (multiplicar en vez de dividir) o de omitir el subíndice de un elemento."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "El triángulo de conversiones: masa, mol y partículas",
+        "body": "En química cuantitativa, manejas tres tipos de cantidades: la **masa** (en gramos, lo que mides con una balanza), la **cantidad de sustancia** (en moles, lo que usas en los cálculos) y el **número de partículas** (átomos, moléculas o iones). Estas tres cantidades forman un triángulo de conversiones, y el **mol está siempre en el centro**.\n\nLas conversiones son:\n\n- **Masa → Moles**: $n = m/M$ (divides entre la masa molar)\n- **Moles → Masa**: $m = n \\times M$ (multiplicas por la masa molar)\n- **Moles → Partículas**: $N = n \\times N_A$ (multiplicas por Avogadro)\n- **Partículas → Moles**: $n = N/N_A$ (divides entre Avogadro)\n\nNo existe una fórmula directa que pase de gramos a partículas: siempre pasas por moles. El mol es la «estación de intercambio» del triángulo.\n\n**Regla mnemotécnica**: Si piensas en el mol como el centro de una rotonda, solo hay dos salidas: una hacia los gramos (con $M$) y otra hacia las partículas (con $N_A$). No hay atajo.\n\nEste triángulo es la herramienta más versátil de la estequiometría. Domínalo y podrás resolver cualquier problema de cantidad de sustancia.",
+        "formula": "$m\\to n\\to N$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 340\" role=\"img\" aria-label=\"Triángulo de conversiones: masa, mol y partículas\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">El triángulo de conversiones</text>\n\n    <!-- Triangle -->\n    <polygon points=\"300,60 100,280 500,280\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n\n    <!-- Top: Masa -->\n    <rect x=\"240\" y=\"45\" width=\"120\" height=\"35\" rx=\"10\" fill=\"#c17a17\" opacity=\"0.15\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n    <text x=\"300\" y=\"68\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">Masa (g)</text>\n\n    <!-- Bottom-left: Mol -->\n    <rect x=\"40\" y=\"270\" width=\"120\" height=\"35\" rx=\"10\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n    <text x=\"100\" y=\"293\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">Mol</text>\n\n    <!-- Bottom-right: Partículas -->\n    <rect x=\"440\" y=\"270\" width=\"140\" height=\"35\" rx=\"10\" fill=\"#8a3d6b\" opacity=\"0.15\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n    <text x=\"510\" y=\"293\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#8a3d6b\">Partículas</text>\n\n    <!-- Left side: Masa ↔ Mol -->\n    <text x=\"165\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0e7a68\" transform=\"rotate(-52, 165, 152)\">÷ M (g/mol)</text>\n    <polygon points=\"155,195 150,185 160,185\" fill=\"#0e7a68\"/>\n    <text x=\"225\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" fill=\"#c17a17\" transform=\"rotate(-52, 225, 195)\">× M (g/mol)</text>\n    <polygon points=\"235,152 230,162 240,162\" fill=\"#c17a17\"/>\n\n    <!-- Right side: Mol ↔ Partículas -->\n    <text x=\"435\" y=\"152\" text-anchor=\"middle\" font-size=\"12\" fill=\"#8a3d6b\" transform=\"rotate(52, 435, 152)\">× Nₐ</text>\n    <polygon points=\"445,195 440,185 450,185\" fill=\"#8a3d6b\"/>\n    <text x=\"370\" y=\"195\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0e7a68\" transform=\"rotate(52, 370, 195)\">÷ Nₐ</text>\n    <polygon points=\"358,152 353,162 363,162\" fill=\"#0e7a68\"/>\n\n    <!-- Bottom: direct path (rarely used) -->\n    <text x=\"300\" y=\"295\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\" opacity=\"0.5\">Siempre se pasa por el mol</text>\n\n    <!-- Central mol hub -->\n    <circle cx=\"300\" cy=\"220\" r=\"25\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#0e7a68\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n    <text x=\"300\" y=\"225\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">HUB</text>\n\n    <text x=\"300\" y=\"332\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\" opacity=\"0.7\">El mol es la estación central: todas las conversiones pasan por él</text>\n    </svg>",
+            "caption": "El triángulo de conversiones: masa, mol y partículas"
+          }
+        ],
+        "student_text": "En química cuantitativa, manejas tres tipos de cantidades: la **masa** (en gramos, lo que mides con una balanza), la **cantidad de sustancia** (en moles, lo que usas en los cálculos) y el **número ..."
+      },
+      {
+        "title": "Factores de conversión y dimensiones",
+        "body": "El método de los **factores de conversión** (o análisis dimensional) te permite encadenar varias conversiones en una sola línea, sin perder el hilo. La idea es multiplicar por fracciones que valen 1 pero que cambian las unidades.\n\nPor ejemplo, para pasar 36 g de H₂O a moléculas:\n\n$$36\\;\\text{g} \\times \\dfrac{1\\;\\text{mol}}{18\\;\\text{g}} \\times \\dfrac{6{,}022 \\times 10^{23}\\;\\text{moléculas}}{1\\;\\text{mol}} = 1{,}204 \\times 10^{24}\\;\\text{moléculas}$$\n\nObserva cómo las unidades se van cancelando: g con g, mol con mol, y al final quedan moléculas. Si las unidades no cuadran, sabes que algo está mal.\n\n**¿Y si quieres átomos de H?** Añade un factor más:\n\n$$1{,}204 \\times 10^{24}\\;\\text{moléculas} \\times \\dfrac{2\\;\\text{átomos H}}{1\\;\\text{molécula}} = 2{,}408 \\times 10^{24}\\;\\text{átomos de H}$$\n\nEl factor 2 sale de la fórmula H₂O: cada molécula aporta 2 átomos de hidrógeno.\n\n**Ventaja del método**: Puedes encadenar tantos pasos como necesites en una sola expresión. Las unidades te guían y te protegen de errores. Si al final no te quedan las unidades esperadas, revisa la cadena.",
+        "formula": "$m\\to n\\to N$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\" role=\"img\" aria-label=\"Cadena de conversiones: de 36 g de H₂O a átomos de hidrógeno\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n    <text x=\"300\" y=\"22\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Ejemplo completo: 36 g de H₂O → átomos de H</text>\n\n    <!-- Conveyor belt segments -->\n    <!-- Segment 1: mass -->\n    <rect x=\"10\" y=\"55\" width=\"120\" height=\"65\" rx=\"10\" fill=\"#c17a17\" opacity=\"0.12\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"70\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">36 g H₂O</text>\n    <text x=\"70\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">masa</text>\n\n    <!-- Arrow 1 -->\n    <line x1=\"135\" y1=\"87\" x2=\"155\" y2=\"87\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n    <polygon points=\"155,82 165,87 155,92\" fill=\"var(--axes,#24312c)\"/>\n    <text x=\"150\" y=\"75\" text-anchor=\"middle\" font-size=\"9\" fill=\"#0e7a68\">÷ 18</text>\n\n    <!-- Segment 2: mol -->\n    <rect x=\"170\" y=\"55\" width=\"120\" height=\"65\" rx=\"10\" fill=\"#0e7a68\" opacity=\"0.12\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n    <text x=\"230\" y=\"78\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">2 mol H₂O</text>\n    <text x=\"230\" y=\"96\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">cantidad</text>\n\n    <!-- Arrow 2 -->\n    <line x1=\"295\" y1=\"87\" x2=\"315\" y2=\"87\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n    <polygon points=\"315,82 325,87 315,92\" fill=\"var(--axes,#24312c)\"/>\n    <text x=\"310\" y=\"75\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8a3d6b\">× Nₐ</text>\n\n    <!-- Segment 3: molecules -->\n    <rect x=\"330\" y=\"55\" width=\"130\" height=\"65\" rx=\"10\" fill=\"#8a3d6b\" opacity=\"0.12\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n    <text x=\"395\" y=\"75\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#8a3d6b\">1,204 × 10²⁴</text>\n    <text x=\"395\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">moléculas</text>\n\n    <!-- Arrow 3 -->\n    <line x1=\"465\" y1=\"87\" x2=\"485\" y2=\"87\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n    <polygon points=\"485,82 495,87 485,92\" fill=\"var(--axes,#24312c)\"/>\n    <text x=\"480\" y=\"75\" text-anchor=\"middle\" font-size=\"9\" fill=\"#c17a17\">× 2</text>\n\n    <!-- Segment 4: H atoms -->\n    <rect x=\"500\" y=\"55\" width=\"90\" height=\"65\" rx=\"10\" fill=\"#c17a17\" opacity=\"0.12\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n    <text x=\"545\" y=\"75\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c17a17\">2,408 × 10²⁴</text>\n    <text x=\"545\" y=\"93\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">átomos H</text>\n\n    <!-- Detailed calculation boxes below -->\n    <rect x=\"20\" y=\"145\" width=\"560\" height=\"130\" rx=\"12\" fill=\"var(--bg,#fbfcfd)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n    <text x=\"300\" y=\"170\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Paso a paso</text>\n\n    <text x=\"40\" y=\"195\" font-size=\"11\" fill=\"#c17a17\">1.</text>\n    <text x=\"55\" y=\"195\" font-size=\"11\" fill=\"var(--text,#20302a)\">n = m / M = 36 g ÷ 18 g/mol = 2 mol de H₂O</text>\n\n    <text x=\"40\" y=\"218\" font-size=\"11\" fill=\"#0e7a68\">2.</text>\n    <text x=\"55\" y=\"218\" font-size=\"11\" fill=\"var(--text,#20302a)\">N = n × Nₐ = 2 × 6,022 × 10²³ = 1,204 × 10²⁴ moléculas</text>\n\n    <text x=\"40\" y=\"241\" font-size=\"11\" fill=\"#8a3d6b\">3.</text>\n    <text x=\"55\" y=\"241\" font-size=\"11\" fill=\"var(--text,#20302a)\">Átomos de H = 1,204 × 10²⁴ × 2 H/molécula = 2,408 × 10²⁴ átomos</text>\n\n    <text x=\"40\" y=\"264\" font-size=\"11\" fill=\"var(--axes,#24312c)\">✓</text>\n    <text x=\"55\" y=\"264\" font-size=\"11\" fill=\"var(--text,#20302a)\">Cada molécula de H₂O tiene 2 átomos de H y 1 de O</text>\n    </svg>",
+            "caption": "Cadena completa: de 36 g de H₂O a átomos de hidrógeno"
+          }
+        ],
+        "student_text": "El método de los **factores de conversión** (o análisis dimensional) te permite encadenar varias conversiones en una sola línea, sin perder el hilo. La idea es multiplicar por fracciones que valen ..."
+      },
+      {
+        "title": "Ejemplo completo: 36 g de H₂O → mol → moléculas → átomos de H",
+        "body": "Vamos a resolver paso a paso: **¿Cuántos átomos de hidrógeno hay en 36 g de H₂O?**\n\n**Paso 1: De gramos a moles**\n$$n = \\dfrac{m}{M} = \\dfrac{36\\;\\text{g}}{18\\;\\text{g/mol}} = 2\\;\\text{mol de H}_2\\text{O}$$\n\n**Paso 2: De moles a moléculas**\n$$N_{\\text{moléculas}} = n \\times N_A = 2 \\times 6{,}022 \\times 10^{23} = 1{,}204 \\times 10^{24}\\;\\text{moléculas}$$\n\n**Paso 3: De moléculas a átomos de H**\nCada molécula de H₂O contiene 2 átomos de H:\n$$N_{\\text{H}} = 1{,}204 \\times 10^{24} \\times 2 = 2{,}408 \\times 10^{24}\\;\\text{átomos de H}$$\n\n**Comprobación dimensional**: g → mol → moléculas → átomos ✓\n\n**Comprobación numérica**: 36 g son 2 moles, así que el número de moléculas debe ser el doble de $N_A$, es decir, $\\sim 1{,}2 \\times 10^{24}$. Correcto. Y como cada molécula tiene 2 H, los átomos de H son $\\sim 2{,}4 \\times 10^{24}$. Correcto.\n\n**Nota**: Si te pidiesen los átomos de O, serían $1{,}204 \\times 10^{24}$ (uno por molécula). Y el total de átomos sería $2{,}408 \\times 10^{24} + 1{,}204 \\times 10^{24} = 3{,}612 \\times 10^{24}$.",
+        "formula": "$m\\to n\\to N$",
+        "assets": [],
+        "student_text": "Vamos a resolver paso a paso: **¿Cuántos átomos de hidrógeno hay en 36 g de H₂O?**"
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "**Problema para practicar**: ¿Cuántos átomos de oxígeno hay en 9,8 g de H₂SO₄?\n\nDatos: $M(\\text{H}_2\\text{SO}_4) = 98\\;\\text{g/mol}$, hay 4 átomos de O por molécula.\n\n1. $n = 9{,}8/98 = 0{,}1\\;\\text{mol}$\n2. $N_{\\text{moléculas}} = 0{,}1 \\times 6{,}022 \\times 10^{23} = 6{,}022 \\times 10^{22}$\n3. $N_{\\text{O}} = 6{,}022 \\times 10^{22} \\times 4 = 2{,}409 \\times 10^{23}$ átomos de O\n\n**Errores típicos en la cadena de conversiones**:\n- Multiplicar cuando hay que dividir (o viceversa). Remedio: sigue las unidades.\n- Confundir átomos por molécula con moles. En H₂SO₄ hay 4 O por molécula, no 4 moles de O por mol (bueno, sí, son lo mismo, pero no confundas los niveles).\n- Olvidar que los subíndices indican cuántos átomos de ese elemento hay en cada unidad.\n\n**Límite**: Estos cálculos suponen sustancias puras. Si la muestra tiene impurezas, el resultado será aproximado. En la práctica, primero se purifica y luego se mide.",
+        "assets": [],
+        "formula": "$m\\to n\\to N$",
+        "student_text": "**Problema para practicar**: ¿Cuántos átomos de oxígeno hay en 9,8 g de H₂SO₄?"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Masa a partículas",
+        "statement": "Calcula moléculas de agua en 36 g de H2O (M=18,0 g/mol).",
+        "steps": [
+          "Moles: $n=\\dfrac{m}{M}=\\dfrac{36\\ \\mathrm{g}}{18{,}0\\ \\mathrm{g/mol}}=2{,}00\\ \\mathrm{mol}$.",
+          "Moléculas: N=2,00(6,022·10²³)=1,20·10²⁴.",
+          "La cadena correcta es g → mol → partículas.",
+          "Las unidades se cancelan: $\\mathrm{g}\\cdot\\dfrac{\\mathrm{mol}}{\\mathrm{g}}\\cdot\\dfrac{\\text{partículas}}{\\mathrm{mol}}$.",
+          "Comprobación: se revisa que primero se dividió por M (masa→mol) y después se multiplicó por N_A (mol→partículas), en ese orden."
+        ],
+        "answer": "1,20·10²⁴ moléculas.",
+        "verification": "Se comprueba dividiendo 1,20×10²⁴ entre N_A: se recuperan los 2,00 mol de partida."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Partículas a masa",
+        "statement": "Calcula la masa de 3,011·10²³ moléculas de O₂ (M=32,0 g/mol).",
+        "steps": [
+          "Moles: $n=\\dfrac{N}{N_A}$=0,500 mol.",
+          "Masa: m=nM=0,500(32,0)=16,0 g.",
+          "La cadena es partículas → mol → masa.",
+          "El subíndice 2 ya está incorporado en la masa molar de O₂.",
+          "Comprobación: se revisa que primero se dividió entre N_A (partículas→mol) y después se multiplicó por M (mol→masa), en ese orden."
+        ],
+        "answer": "16,0 g de O₂.",
+        "verification": "Se comprueba dividiendo 16,0 g entre M=32,0 g/mol: se recuperan los 0,500 mol, y 0,500×N_A=3,011×10²³ moléculas, igual al dato de partida."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Explica una predicción comprobable de Cadena de conversiones y relaciona la evidencia con $m\\to n\\to N$, sin limitarte a nombrar la regla.",
+        "scaffold": "Elige una cadena de conversión (p. ej. masa→mol→partículas) y antes de concluir comprueba que las unidades finales son las que pide el problema.",
+        "answer": "Ejemplo: predecir cuántos átomos de O hay en 5,00 g de CaO (M=56,1 g/mol).",
+        "full_solution": "n=5,00/56,1=0,0891 mol. N(fórmulas)=0,0891×6,022×10²³=5,37×10²². Como hay 1 átomo de O por fórmula, N(O)=5,37×10²²."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Compara dos especies de Cadena de conversiones que solo difieran en una magnitud microscópica y predice qué propiedad observable cambiará.",
+        "scaffold": "Elige dos sustancias con la misma cantidad de sustancia (mismo n) pero masas molares distintas y predice qué propiedad macroscópica (masa) cambia.",
+        "answer": "Ejemplo: 1,00 mol de H₂ frente a 1,00 mol de O₂: mismo número de partículas, masas muy distintas (2,0 g frente a 32,0 g).",
+        "full_solution": "Ambas muestras tienen N=N_A moléculas (porque n=1,00 mol en los dos casos), pero m=n·M da 2,0 g para H₂ y 32,0 g para O₂: la masa observable cambia aunque el número de partículas sea el mismo."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "¿Cuántos átomos de H hay en 34 g de H₂O₂? (H=1,0; O=16,0 g/mol)",
+        "answer": "M(H₂O₂)=34,0 g/mol; n=1,00 mol; N(H₂O₂)=6,022× 10²³; N(H)=2× 6,022× 10²³=1,204× 10²⁴ átomos.",
+        "full_solution": "M(H₂O₂)=2×1,0+2×16,0=34,0 g/mol. n=m/M=34,0/34,0=1,00 mol. N(moléculas)=1,00×6,022×10²³=6,022×10²³. Cada molécula tiene 2 átomos de H: N(H)=2×6,022×10²³=1,204×10²⁴ átomos.",
+        "hints": [],
+        "reasoning": [
+          "Se calcula M(H₂O₂)=2×1,0+2×16,0=34,0 g/mol.",
+          "n=m/M=34,0/34,0=1,00 mol.",
+          "Cada molécula de H₂O₂ tiene 2 átomos de H: N(H)=2×N(moléculas)."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Qué masa tienen 1,204× 10²⁴ átomos de Fe? (M(Fe)=55,8 g/mol)",
+        "answer": "n=1,204·10²⁴/(6,022·10²³)=2,00 mol; m=2,00·55,8=111,6 g≈112 g.",
+        "full_solution": "n=N/N_A=1,204×10²⁴/6,022×10²³=2,00 mol. m=n·M=2,00×55,8=111,6 g.",
+        "hints": [],
+        "reasoning": [
+          "Se despeja n de N=n·N_A.",
+          "Se aplica m=n·M con M(Fe)=55,8 g/mol."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Calcula los átomos de O que hay en 10,0 g de CaCO₃ (M=100,1 g/mol).",
+        "answer": "N(átomos de O)=1,81×10²³.",
+        "full_solution": "n=m/M=10,0/100,1=0,0999 mol. N(moléculas)=n·N_A=0,0999×6,022×10²³=6,01×10²². Cada fórmula tiene 3 átomos de O: N(O)=3×6,01×10²²=1,81×10²³."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Calcula la masa de 5,00×10²² moléculas de CO₂ (M=44,0 g/mol).",
+        "answer": "m=3,65 g.",
+        "full_solution": "n=N/N_A=5,00×10²²/6,022×10²³=0,0830 mol. m=n·M=0,0830×44,0=3,65 g."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Calcula el número total de iones en 14,2 g de Na₂SO₄ (M=142 g/mol).",
+        "answer": "N(iones)=1,81×10²³.",
+        "full_solution": "n=m/M=14,2/142=0,100 mol. N(fórmulas unidad)=n·N_A=0,100×6,022×10²³=6,022×10²². Cada fórmula aporta 3 iones (2 Na⁺+1 SO₄²⁻): N(iones)=3×6,022×10²²=1,81×10²³."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa la masa de Cu frente al número de átomos y explica qué representa la pendiente.",
+        "answer": "La gráfica es una recta por el origen; la pendiente es M(Cu)/N_A, la masa de un solo átomo de Cu.",
+        "full_solution": "m=n·M=(N/N_A)·M, así que m es proporcional a N con pendiente M/N_A=63,5/(6,022×10²³)=1,05×10⁻²² g/átomo."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un compañero calcula la masa de 2,00 mol de Fe multiplicando por N_A en vez de por M. ¿Cuál es el error y el resultado correcto?",
+        "answer": "Error: confunde M con N_A. Resultado correcto: m=2,00×55,8=111,6 g.",
+        "full_solution": "Para pasar de mol a masa se usa m=n·M (M=55,8 g/mol para Fe), no N_A. El cálculo correcto es m=2,00×55,8=111,6 g, no 2,00×6,022×10²³."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Calcula la masa de un solo átomo de Cu (M=63,5 g/mol) y compárala con la de un átomo de Fe (M=55,8 g/mol).",
+        "answer": "m(Cu)=1,05×10⁻²² g; m(Fe)=9,27×10⁻²³ g; el átomo de Cu es algo más pesado.",
+        "full_solution": "m(átomo)=M/N_A. Cu: 63,5/(6,022×10²³)=1,05×10⁻²² g. Fe: 55,8/(6,022×10²³)=9,27×10⁻²³ g."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-05-1",
+        "stem": "Para pasar de gramos a partículas, el orden correcto de pasos es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "partículas → mol → masa",
+            "why_wrong": "Es el camino inverso: parte de partículas en vez de masa."
+          },
+          {
+            "key": "B",
+            "text": "masa → N_A → M",
+            "why_wrong": "No tiene sentido dimensional: no se puede ir directamente de masa a N_A."
+          },
+          {
+            "key": "C",
+            "text": "masa → mol → partículas"
+          },
+          {
+            "key": "D",
+            "text": "mol → masa → partículas",
+            "why_wrong": "Parte de mol, no de masa, que es el dato inicial del problema."
+          }
+        ],
+        "explanation": "Primero se divide entre M para obtener mol, luego se multiplica por $N_A$ para obtener partículas.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-05-2",
+        "stem": "¿Cuántos átomos de O hay en 1 mol de CO₂?",
+        "options": [
+          {
+            "key": "A",
+            "text": "6,022× 10²³",
+            "why_wrong": "Es el número de moléculas de CO₂, no el número de átomos de O (cada molécula tiene 2)."
+          },
+          {
+            "key": "B",
+            "text": "1,204× 10²⁴"
+          },
+          {
+            "key": "C",
+            "text": "3,011× 10²³",
+            "why_wrong": "Corresponde a medio mol de átomos de O, no a 1 mol de CO₂ completo."
+          },
+          {
+            "key": "D",
+            "text": "2 átomos",
+            "why_wrong": "Es el número de átomos de O por molécula, no el número total en 1 mol."
+          }
+        ],
+        "explanation": "1 mol CO₂ → 6,022× 10²³ moléculas; cada molécula tiene 2 O → 1,204× 10²⁴ átomos de O.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-05-3",
+        "stem": "36 g de H₂O equivalen a ¿cuántas moléculas?",
+        "options": [
+          {
+            "key": "A",
+            "text": "6,022× 10²³",
+            "why_wrong": "Es el número de moléculas en 1 mol, pero 36 g de H₂O son 2 mol, no 1."
+          },
+          {
+            "key": "B",
+            "text": "3,011× 10²³",
+            "why_wrong": "Corresponde a 0,5 mol, no a los 2 mol que hay en 36 g de H₂O."
+          },
+          {
+            "key": "C",
+            "text": "1,204× 10²⁴"
+          },
+          {
+            "key": "D",
+            "text": "2,408× 10²⁴",
+            "why_wrong": "Es el número de átomos de H en esa muestra, no el número de moléculas."
+          }
+        ],
+        "explanation": "$n=\\dfrac{36}{18}$=2 mol; N=2·6,022·10²³=1,204·10²⁴ moléculas.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-05-4",
+        "stem": "El factor de conversión de mol a masa es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "dividir entre M",
+            "why_wrong": "Dividir entre M es el paso de masa a mol, no de mol a masa."
+          },
+          {
+            "key": "B",
+            "text": "multiplicar por $N_A$",
+            "why_wrong": "Ese factor convierte mol en partículas, no en masa."
+          },
+          {
+            "key": "C",
+            "text": "multiplicar por M"
+          },
+          {
+            "key": "D",
+            "text": "dividir entre $N_A$",
+            "why_wrong": "Ese factor convierte partículas en mol, no mol en masa."
+          }
+        ],
+        "explanation": "m=n · M; el factor de conversión de mol a masa es la masa molar M (g/mol).",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Cadena masa → mol → partículas",
+        "back": "÷M luego × $N_A$"
+      },
+      {
+        "front": "Cadena partículas → mol → masa",
+        "back": "÷$N_A$ luego × M"
+      },
+      {
+        "front": "36 g H₂O → mol",
+        "back": "2 mol"
+      },
+      {
+        "front": "2 mol H₂O → moléculas",
+        "back": "1,204 × 10²⁴ moléculas"
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Invertir el orden de los factores (multiplicar por M cuando hay que dividir).",
+        "correct_model": "Cada paso de la cadena masa→mol→partículas usa un factor distinto (M para masa↔mol, N_A para mol↔partículas); hay que multiplicar o dividir según se vaya hacia partículas o hacia masa.",
+        "remediation": "Escribe la cadena completa con flechas antes de calcular, indicando qué factor se usa en cada paso."
+      },
+      {
+        "incorrect_model": "No considerar el número de átomos de cada elemento dentro de la molécula en el paso final.",
+        "correct_model": "Al pasar de moléculas a átomos de un elemento concreto hay que multiplicar además por el subíndice de ese elemento en la fórmula.",
+        "remediation": "Añade un paso explícito 'moléculas → átomos de X' multiplicando por el subíndice correspondiente."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "conversión",
+        "definition": "Cambio de una magnitud a otra equivalente usando un factor de conversión."
+      },
+      {
+        "term": "masa molar",
+        "definition": "Masa de 1 mol de sustancia (g/mol); es el factor que conecta masa y moles."
+      },
+      {
+        "term": "Avogadro",
+        "definition": "Número de Avogadro, N_A=6,022×10²³ mol⁻¹, que conecta moles y número de partículas."
+      },
+      {
+        "term": "análisis dimensional",
+        "definition": "Técnica que usa factores de conversión para pasar de unas unidades a otras, cancelando las no deseadas."
+      },
+      {
+        "term": "factores de conversión",
+        "definition": "Fracciones equivalentes a 1 que permiten cambiar las unidades de una magnitud sin cambiar su valor."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Comprender la composición porcentual y, en general, cómo se relacionan masa, moles y número de partículas.",
+        "why_it_matters": "La cadena de conversiones combina todas las relaciones anteriores (n=m/M y N=nN_A), así que hay que dominarlas por separado antes de encadenarlas."
+      }
+    ],
+    "summary": {
+      "big_idea": "La cadena masa→mol→partículas conecta las tres magnitudes clave de la química cuantitativa mediante dos factores: la masa molar M y el número de Avogadro N_A.",
+      "key_points": [
+        "En química cuantitativa existen tres magnitudes clave: la masa (m, en gramos), la cantidad de sustancia (n, en mol) y el número de partículas (N, adimensional).",
+        "Un factor de conversión es una fracción cuyo numerador y denominador son equivalentes pero expresados en unidades distintas.",
+        "Paso 1 (masa → mol): n=36 g / 18 g· mol⁻¹ = 2 mol H₂O.",
+        "Antes de calcular, escribe la cadena completa (p. ej. masa → mol → moléculas → átomos) para no saltarte ningún paso."
+      ],
+      "formulas": [
+        "$m\\to n\\to N$"
+      ],
+      "what_to_remember_if_nothing_else": "m↔n se relacionan con M; n↔N se relacionan con N_A; para átomos de un elemento, multiplica además por su subíndice."
+    },
+    "exam_questions": [
+      {
+        "statement": "Calcula la masa de O₂ correspondiente a 3,011×10²³ moléculas y comprueba la cadena partículas → moles → masa.",
+        "answer": "m=16,0 g de O₂.",
+        "full_solution": "n(O₂)=3,011·10²³/$N_A$=0,500 mol. Con M(O₂)=32,0 g/mol, m=nM=0,500·32,0=16,0 g.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Calcula el número de átomos de N presentes en 28 g de N₂.",
+        "answer": "N(N)=1,204×10²⁴ átomos de N.",
+        "full_solution": "M(N₂)=28,0 g/mol; n=28,0/28,0=1,00 mol; N(N₂)=1,00×6,022×10²³=6,022× 10²³ moléculas; N(N)=2× 6,022× 10²³=1,204× 10²⁴ átomos de N.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Construye un problema inverso en el que se conozca el número de entidades y se pida la fórmula o masa del compuesto; especifica los datos mínimos.",
+        "answer": "Ejemplo: a partir de 3,011·10²³ unidades de NaCl se obtiene m=29,3 g.",
+        "full_solution": "Ejemplo inverso: si hay 3,011·10²³ unidades de NaCl, primero $n=\\dfrac{N}{N_A}$=0,500 mol y después m=nM=0,500·58,5=29,3 g. Los datos mínimos son la especie química, $N_A$ y la masa molar.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "¿Cuántos gramos de glucosa C₆H₁₂O₆ hay que tomar para tener 1,806× 10²⁴ átomos de carbono?",
+        "answer": "m=90,0 g de glucosa.",
+        "full_solution": "n(C)=1,806×10²⁴/6,022×10²³=3,00 mol de átomos de C. Cada molécula de glucosa tiene 6 átomos de C, así que n(glucosa)=3,00/6=0,500 mol. m=n·M=0,500×180=90,0 g.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  }
+}

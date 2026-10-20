@@ -1,0 +1,2406 @@
+{
+  "lesson_01.json": {
+    "id": "L01",
+    "title": "Presión",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Fluidos",
+    "unit_id": "U-4F-03",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE1,1",
+        "CE2,1"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Explicar Presión con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de presión para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Presión."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Presión."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Operaciones con números, unidades del SI, lectura de tablas y gráficas, y notación científica.",
+        "why_it_matters": "Sin dominar estas operaciones no se puede despejar F o A en $p=\\dfrac{F}{A}$, convertir cm² o mm² a m² en los ejercicios de esta lección, ni interpretar correctamente los datos de fuerza y superficie de cada problema."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué es una fuerza? ¿Cuál es su unidad en el SI?",
+        "expected_answer": "Una fuerza es una interacción que puede cambiar el movimiento o deformar un cuerpo. Su unidad en el SI es el newton (N)."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si una fuerza de 100 N actúa sobre 0,5 m², ¿cuánto vale la presión?",
+        "expected_answer": "$P=\\dfrac{F}{A}$ = 100/0,5 = 200 Pa"
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Más fuerza siempre significa más presión.",
+        "correct_model": "La presión depende tanto de la fuerza como del área. La misma fuerza sobre un área menor genera mayor presión (tacón fino vs suela plana)."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El pascal y el newton son la misma magnitud.",
+        "correct_model": "El newton mide fuerza. El pascal mide presión: 1 Pa = 1 N/m². Son magnitudes diferentes aunque relacionadas."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Definición de presión y su unidad",
+        "body": "Imagina que caminas por la nieve con tacones de aguja. A cada paso, el tacón se hunde hasta el fondo. Ahora cálzate unas raquetas de nieve: pisas la misma nieve, con el mismo peso, pero flotas sobre la superficie. ¿Por qué?\n\nLa diferencia es la **presión**: la fuerza que ejerce tu peso repartida entre el área de contacto. Con un tacón de apenas 1 cm², toda tu fuerza se concentra en un punto diminuto. Con una raqueta de 2000 cm², esa misma fuerza se reparte en un área enorme.\n\nMatemáticamente, la presión se define como:\n\n$$p = \\frac{F_{\\perp}}{A}$$\n\ndonde $F_{\\perp}$ es la componente de la fuerza perpendicular a la superficie y $A$ es el área de contacto.\n\nLa unidad en el SI es el **pascal** (Pa): $1\\,\\text{Pa} = 1\\,\\text{N/m}^2$. Un pascal es muy poquito — la presión atmosférica ronda los $101\\,325\\,\\text{Pa}$. Por eso se usan múltiplos como el kilopascal (kPa) o unidades prácticas como el bar o la atmósfera.\n\nLa clave es que la presión no depende solo de cuánta fuerza aplicas, sino de sobre cuánta superficie la repartes.",
+        "provenance": "SOURCE (DERIVED)",
+        "student_text": "La presión mide la fuerza por unidad de superficie: p = F/A, en pascales (Pa). A mayor área, menor presión para la misma fuerza.",
+        "formula": "$p=\\dfrac{F_\\perp}{A}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Comparación de presión: tacón vs raqueta de nieve\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <defs>\n    <pattern id=\"ground\" width=\"10\" height=\"10\" patternUnits=\"userSpaceOnUse\">\n      <line x1=\"0\" y1=\"10\" x2=\"10\" y2=\"0\" stroke=\"#e8e3d8\" stroke-width=\"0.8\"/>\n    </pattern>\n  </defs>\n  <!-- Left: stiletto heel -->\n  <rect x=\"20\" y=\"240\" width=\"260\" height=\"60\" fill=\"url(#ground)\" stroke=\"#24312c\"/>\n  <text x=\"150\" y=\"30\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"15\" font-weight=\"bold\">¿Por qué se hunde un tacón y no una raqueta?</text>\n  <!-- leg + heel -->\n  <rect x=\"130\" y=\"120\" width=\"12\" height=\"100\" rx=\"3\" fill=\"#8a3d6b\"/>\n  <rect x=\"128\" y=\"220\" width=\"16\" height=\"20\" rx=\"2\" fill=\"#8a3d6b\"/>\n  <line x1=\"136\" y1=\"240\" x2=\"136\" y2=\"260\" stroke=\"#8a3d6b\" stroke-width=\"2\" stroke-dasharray=\"4\"/>\n  <text x=\"136\" y=\"275\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"10\">A = 1 cm²</text>\n  <!-- force arrow -->\n  <line x1=\"136\" y1=\"80\" x2=\"136\" y2=\"118\" stroke=\"#c17a17\" stroke-width=\"2.5\" marker-end=\"url(#arrowA)\"/>\n  <text x=\"136\" y=\"75\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"11\" font-weight=\"bold\">F = 600 N</text>\n  <!-- pressure calc left -->\n  <text x=\"136\" y=\"295\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"12\" font-weight=\"bold\">P = 6 000 000 Pa</text>\n\n  <!-- Right: snowshoe -->\n  <rect x=\"320\" y=\"240\" width=\"260\" height=\"60\" fill=\"url(#ground)\" stroke=\"#24312c\"/>\n  <ellipse cx=\"450\" cy=\"230\" rx=\"80\" ry=\"15\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <rect x=\"444\" y=\"130\" width=\"12\" height=\"100\" rx=\"3\" fill=\"#0e7a68\"/>\n  <text x=\"450\" y=\"275\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\">A = 2000 cm²</text>\n  <!-- force arrow -->\n  <line x1=\"450\" y1=\"90\" x2=\"450\" y2=\"128\" stroke=\"#c17a17\" stroke-width=\"2.5\" marker-end=\"url(#arrowA)\"/>\n  <text x=\"450\" y=\"85\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"11\" font-weight=\"bold\">F = 600 N</text>\n  <!-- pressure calc right -->\n  <text x=\"450\" y=\"295\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"12\" font-weight=\"bold\">P = 3 000 Pa</text>\n\n  <!-- Arrows marker -->\n  <defs>\n    <marker id=\"arrowA\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L8,3 L0,6\" fill=\"#c17a17\"/>\n    </marker>\n  </defs>\n  <!-- Divider -->\n  <line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"300\" stroke=\"#e8e3d8\" stroke-width=\"1\" stroke-dasharray=\"6\"/>\n  <!-- Bottom label -->\n  <text x=\"300\" y=\"315\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"11\">Misma fuerza, distinta área → distinta presión</text>\n</svg>",
+            "caption": "Misma fuerza, distinta área: el tacón concentra la presión, la raqueta la reparte."
+          }
+        ]
+      },
+      {
+        "title": "Conversión de unidades de presión",
+        "body": "La presión puede medirse en varias unidades según el contexto. En física usamos el pascal (Pa), pero en medicina hablan de mmHg, en mecánica de bar, y en meteorología de atmósferas.\n\nLas equivalencias esenciales son:\n\n$$1\\,\\text{atm} = 101\\,325\\,\\text{Pa} = 760\\,\\text{mmHg} = 1{,}013\\,\\text{bar}$$\n\nUn truco para recordarlo: 1 atm ≈ $10^5$ Pa (cien mil pascales), lo cual es «mucho de poco». Y 760 mmHg viene del experimento de Torricelli: una columna de mercurio de 760 mm sostiene exactamente la presión del aire al nivel del mar.\n\nPara convertir entre unidades, usa factores de conversión como en cualquier magnitud:\n\n$$2{,}5\\,\\text{atm} \\times \\frac{101\\,325\\,\\text{Pa}}{1\\,\\text{atm}} = 253\\,312{,}5\\,\\text{Pa}$$\n\nEn problemas de hidrostática también aparece el metro de columna de agua (m.c.a.): $1\\,\\text{atm} \\approx 10\\,\\text{m.c.a.}$, lo que significa que necesitas una columna de agua de 10 metros para igualar la presión atmosférica. Esto conecta directamente con la presión hidrostática.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "1 atm = 101 325 Pa = 760 mmHg = 1,013 bar. Para convertir entre unidades, se usan factores de conversión.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Escala de unidades de presión con equivalencias\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">Escala de presión: equivalencias</text>\n  <!-- Vertical bar -->\n  <rect x=\"140\" y=\"45\" width=\"30\" height=\"240\" rx=\"15\" fill=\"#e8e3d8\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <!-- Fill gradient -->\n  <rect x=\"143\" y=\"55\" width=\"24\" height=\"220\" rx=\"12\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n  <rect x=\"143\" y=\"195\" width=\"24\" height=\"80\" rx=\"12\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <!-- Tick at 1 atm level (y=195) -->\n  <line x1=\"130\" y1=\"195\" x2=\"170\" y2=\"195\" stroke=\"#c17a17\" stroke-width=\"3\"/>\n  <!-- Labels right side -->\n  <text x=\"185\" y=\"200\" fill=\"#c17a17\" font-size=\"13\" font-weight=\"bold\">1 atm</text>\n  <text x=\"185\" y=\"218\" fill=\"var(--text,#20302a)\" font-size=\"11\">= 101 325 Pa</text>\n  <text x=\"185\" y=\"234\" fill=\"var(--text,#20302a)\" font-size=\"11\">= 760 mmHg</text>\n  <text x=\"185\" y=\"250\" fill=\"var(--text,#20302a)\" font-size=\"11\">= 1,013 bar</text>\n  <text x=\"185\" y=\"266\" fill=\"var(--text,#20302a)\" font-size=\"11\">≈ 10 m.c.a.</text>\n  <!-- Higher pressure (y=105) -->\n  <line x1=\"130\" y1=\"105\" x2=\"170\" y2=\"105\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <text x=\"185\" y=\"110\" fill=\"#8a3d6b\" font-size=\"12\" font-weight=\"bold\">2 atm</text>\n  <text x=\"185\" y=\"126\" fill=\"var(--text,#20302a)\" font-size=\"10\">≈ 202 650 Pa</text>\n  <!-- Low pressure (y=240) -->\n  <line x1=\"130\" y1=\"240\" x2=\"170\" y2=\"240\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <text x=\"185\" y=\"290\" fill=\"#0e7a68\" font-size=\"12\">0,5 atm (≈ 5500 m altitud)</text>\n  <!-- Vacuum marker at top -->\n  <line x1=\"130\" y1=\"55\" x2=\"170\" y2=\"55\" stroke=\"#24312c\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/>\n  <text x=\"185\" y=\"60\" fill=\"var(--text,#20302a)\" font-size=\"10\" opacity=\"0.6\">Vacío perfecto (0 Pa)</text>\n  <!-- Labels left side -->\n  <text x=\"120\" y=\"200\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"11\">Nivel del mar →</text>\n  <text x=\"120\" y=\"110\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"10\">10 m bajo agua →</text>\n  <text x=\"120\" y=\"290\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"10\">Cima Everest →</text>\n  <!-- Bottom note -->\n  <text x=\"300\" y=\"305\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\" opacity=\"0.7\">m.c.a. = metros de columna de agua</text>\n</svg>",
+            "caption": "Escala de presión: equivalencias entre Pa, atm, mmHg, bar y m.c.a."
+          }
+        ]
+      },
+      {
+        "title": "Aplicaciones cotidianas de la presión",
+        "body": "La presión aparece por todas partes en tu vida diaria, aunque no siempre la reconozcas.\n\n**Los neumáticos del coche** se inflan a unas 2-2,5 atm. Si la presión baja, el neumático se deforma: más caucho toca el suelo, aumenta el rozamiento y el coche gasta más gasolina. Si la presión sube demasiado, solo toca una franja estrecha y el agarre empeora.\n\n**Un clavo penetra la madera** porque su punta tiene un área diminuta. Cuando golpeas con un martillo, la fuerza se concentra en una fracción de milímetro cuadrado, generando presiones enormes que superan la resistencia de la madera.\n\n**El tensiómetro** mide la presión arterial en mmHg. Unos valores típicos son 120/80 mmHg (sistólica/diastólica). La sangre empuja las paredes de tus arterias exactamente como un fluido empuja las paredes de un tubo.\n\n**Las cuchillas de patinaje** son finas para concentrar el peso del patinador en una línea estrecha, creando una presión suficiente para fundir ligeramente la superficie del hielo y reducir el rozamiento. Es la misma idea del tacón y la raqueta: misma fuerza, distinta presión.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "La presión explica por qué los clavos penetran, por qué se inflan los neumáticos a cierta presión, y cómo funciona un tensiómetro.",
+        "assets": []
+      },
+      {
+        "title": "Presión absoluta, presión manométrica y conversión de áreas",
+        "body": "Cuando inflas un neumático y el manómetro marca «2 bar», ¿eso significa que dentro hay 2 bar de presión? No exactamente: el manómetro mide la presión **por encima de la atmosférica**.\n\nLa presión absoluta es la presión total real en un punto:\n\n$$p_{\\text{abs}} = p_{\\text{atm}} + p_{\\text{man}}$$\n\nSi la presión atmosférica es $1{,}013\\,\\text{bar}$ y el manómetro marca $2\\,\\text{bar}$, la presión absoluta dentro del neumático es $3{,}013\\,\\text{bar}$.\n\n¿Por qué se usa la presión manométrica? Porque es más práctica en el día a día. Al inflador o al mecánico le interesa cuánto más que la atmósfera tiene el neumático, no la presión total.\n\nOjo con las conversiones de área: a veces la superficie viene en cm² y necesitas m². Recuerda que $1\\,\\text{m}^2 = 10\\,000\\,\\text{cm}^2$, así que $1\\,\\text{cm}^2 = 10^{-4}\\,\\text{m}^2$. Es un error clásico olvidar elevar al cuadrado el factor.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "p_abs = p_atm + p_man. La presión manométrica es la que miden los instrumentos sobre la atmosférica. Cuidado con convertir cm² a m²: 1 cm² = 10⁻⁴ m².",
+        "formula": "$p_{\\mathrm{abs}}=p_{\\mathrm{man}}+p_{\\mathrm{atm}}$",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Antes de resolver un problema de presión, identifica qué tipo de presión te piden: ¿absoluta o manométrica? Comprueba las unidades de fuerza (N) y área (m²). Si el área viene en cm², conviértela a m² dividiendo entre $10\\,000$.\n\nPregunta de autoevaluación: ¿por qué una persona con esquís no se hunde en la nieve, pero sin esquís sí? Explica usando la fórmula $p = F/A$.",
+        "assets": []
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Presión ejercida por una mesa",
+        "steps": [
+          "Peso de la mesa: F=m· g = 20 × 9,8 = 196 N",
+          "Área de una pata: A=π · r² = π · (0,01)² = 3,14 × 10⁻⁴ m²",
+          "Área total de contacto (4 patas): A=4 × 3,14 × 10⁻⁴ = 1,257 × 10⁻³ m²",
+          "Presión: $P=\\dfrac{F}{A_{\\mathrm{total}}}$ = 196 / 1,257× 10⁻³ ≈ 155 972 Pa ≈ 1,56 × 10⁵ Pa",
+          "Comprobación: 155 972 Pa / 101 325 Pa/atm ≈ 1,54 atm; es razonable porque el peso se concentra en una superficie de contacto muy pequeña (4 patas de 1 cm de radio)."
+        ],
+        "answer": "P ≈ 1,56 × 10⁵ Pa ≈ 1,54 atm",
+        "verification": "Es razonable: 155 972 Pa supera la presión atmosférica (101 325 Pa), lo que concuerda con patas pequeñas concentrando el peso de toda la mesa.",
+        "provenance": "GENERATED (EXAMPLE)",
+        "reasoning": [],
+        "assets": [],
+        "statement": "Una mesa de 20 kg se apoya en el suelo mediante 4 patas cilíndricas de 1 cm de radio cada una. Calcula la presión que ejerce sobre el suelo y exprésala también en atmósferas."
+      },
+      {
+        "title": "Conversión de presión de neumático",
+        "steps": [
+          "Conversión a Pa: 2,4 bar × 100 000 Pa/bar = 240 000 Pa (presión manométrica)",
+          "Presión atmosférica estándar: P=101 325 Pa",
+          "Presión absoluta en Pa: P=240 000 + 101 325 = 341 325 Pa",
+          "Conversión a atm: P=341 325 / 101 325 = 3,37 atm",
+          "Comprobación: la presión absoluta (341 325 Pa) debe ser mayor que la manométrica (240 000 Pa) porque se le suma la atmosférica; 3,37 atm es un valor típico de neumático de coche bien inflado."
+        ],
+        "answer": "Presión absoluta: 341 325 Pa ≈ 3,37 atm",
+        "verification": "Coherente: presiones de neumático de coche suelen estar entre 2 y 3 bar manométricos.",
+        "provenance": "GENERATED (EXAMPLE)",
+        "reasoning": [],
+        "assets": [],
+        "statement": "El manómetro de un taller indica que la presión del neumático es 2,4 bar (presión manométrica). Expresa esta presión en Pa y en atm absolutas (presión absoluta = presión manométrica + presión atmosférica)."
+      },
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Presión y superficie",
+        "statement": "Una fuerza de 240 N actúa sobre un área de 0,12 m². Calcula la presión.",
+        "steps": [
+          "$p=\\dfrac{240}{0,12}=2000\\,\\mathrm{Pa}$.",
+          "Si la misma fuerza se reparte en 0,24 m², la presión se reduce a 1000 Pa.",
+          "La presión no es la fuerza: depende también del área.",
+          "Las unidades son N/m², equivalentes a Pa.",
+          "Comprobación: al duplicar el área (de 0,12 a 0,24 m²) la presión se reduce exactamente a la mitad (de 2000 a 1000 Pa), coherente con la relación inversa $p\\propto 1/A$."
+        ],
+        "answer": "p=2000 Pa.",
+        "verification": "1000/2000=0,5 y el área se duplicó (0,24/0,12=2): la presión es inversamente proporcional al área, como predice $p=F/A$."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Tacón y nieve",
+        "statement": "Explica por qué unas raquetas reducen el hundimiento en nieve usando un ejemplo numérico.",
+        "steps": [
+          "Una persona de 600 N sobre 0,030 m² ejerce p=20000 Pa.",
+          "Con raquetas de 0,30 m², $p=\\dfrac{600}{0,30}$=2000 Pa.",
+          "La fuerza es la misma, pero un área diez veces mayor reduce la presión a la décima parte.",
+          "La conclusión requiere comparar áreas efectivas de contacto.",
+          "Comprobación: 600 N repartidos en 10 veces más área (de 0,030 a 0,30 m²) dan una presión 10 veces menor (de 20 000 a 2000 Pa), igual que predice $p=F/A$."
+        ],
+        "answer": "La presión se reduce de 20000 a 2000 Pa.",
+        "verification": "20000/2000=10 coincide con la razón de áreas (0,30/0,030=10): a mayor área, menor presión en la misma proporción inversa."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Dos bloques iguales de 50 N se apoyan en el suelo: el bloque A sobre una base de 0,02 m² y el bloque B sobre una base de 0,08 m². Dibuja el diagrama de fuerzas de cada bloque (peso y normal) y decide si el rozamiento debería entrar en el cálculo de la presión sobre el suelo.",
+        "scaffold": "Recuerda que la presión solo usa la fuerza perpendicular a la superficie de apoyo; el rozamiento es una fuerza tangencial (horizontal) y, al no haber deslizamiento, ni siquiera llega a aparecer.",
+        "full_solution": "En ambos bloques la única fuerza perpendicular al suelo es el peso (la normal la equilibra). Como no hay fuerza horizontal ni deslizamiento, no aparece rozamiento, y aunque apareciera sería tangencial y no entraría en p=F/A. $p_A=\\dfrac{50}{0,02}=2500\\,\\mathrm{Pa}$; $p_B=\\dfrac{50}{0,08}=625\\,\\mathrm{Pa}$.",
+        "answer": "p_A=2500 Pa; p_B=625 Pa; el rozamiento no interviene en el cálculo de la presión normal, aunque el peso de los dos bloques sea igual."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Compara la presión que ejerce un elefante de 40 000 N de peso apoyado sobre sus 4 patas (área total de contacto 0,50 m²) con la de una bailarina de 450 N apoyada de puntillas sobre un pie (área de contacto 5 cm²). Predice quién ejerce más presión sobre el suelo y comprueba la predicción con el cálculo.",
+        "scaffold": "Convierte primero las áreas a m² y aplica p=F/A a cada caso antes de comparar; no compares directamente los pesos.",
+        "full_solution": "Elefante: $p=\\dfrac{40000}{0,50}=80\\,000\\,\\mathrm{Pa}$. Bailarina: $A=5\\,\\mathrm{cm^2}=5\\times10^{-4}\\,\\mathrm{m^2}$; $p=\\dfrac{450}{5\\times10^{-4}}=900\\,000\\,\\mathrm{Pa}$.",
+        "answer": "La bailarina ejerce más presión (900 000 Pa) que el elefante (80 000 Pa) pese a pesar casi 90 veces menos, porque su área de apoyo es muchísimo más pequeña."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un libro de 1,2 kg descansa sobre una mesa. Su base mide 20 cm × 30 cm. ¿Qué presión ejerce sobre la mesa?",
+        "answer": "F=1,2·9,8=11,76 N; A=0,20·0,30=0,060 m²; $p=\\dfrac{F}{A}$=196 Pa.",
+        "full_solution": "Paso 1: convierte la masa a peso con $F=m\\cdot g=1,2\\times9,8=11,76\\,\\mathrm{N}$. Paso 2: convierte las dimensiones de la base a metros (20 cm=0,20 m; 30 cm=0,30 m) y calcula $A=0,20\\times0,30=0,060\\,\\mathrm{m^2}$. Paso 3: aplica $p=\\dfrac{F}{A}=\\dfrac{11,76}{0,060}=196\\,\\mathrm{Pa}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Qué fuerza debe ejercerse sobre una jeringuilla de sección 0,5 cm² para conseguir una presión de 300 kPa en el líquido?",
+        "answer": "F=P· A=300 000× 0,5× 10⁻⁴=15 N",
+        "full_solution": "Paso 1: convierte la sección a m²: $0,5\\,\\mathrm{cm^2}=0,5\\times10^{-4}\\,\\mathrm{m^2}=5\\times10^{-5}\\,\\mathrm{m^2}$. Paso 2: despeja la fuerza de $p=\\dfrac{F}{A}$: $F=p\\cdot A$. Paso 3: sustituye: $F=300\\,000\\times5\\times10^{-5}=15\\,\\mathrm{N}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Una caja ejerce una fuerza de 240 N sobre una base de 0,12 m². Calcula la presión media sobre el suelo y explica qué le ocurre a la presión si la misma caja se apoya sobre el doble de área.",
+        "hints": [
+          "Aplica p=F/A con los datos originales.",
+          "Para el área doble, F no cambia; solo cambia A."
+        ],
+        "full_solution": "Con los datos originales: $p=\\dfrac{240}{0,12}=2000\\,\\mathrm{Pa}$. Si el área se duplica a 0,24 m² sin cambiar la fuerza: $p=\\dfrac{240}{0,24}=1000\\,\\mathrm{Pa}$.",
+        "answer": "p=2000 Pa inicialmente; al duplicar el área, la presión se reduce a la mitad (1000 Pa).",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "La punta de un clavo tiene un área de 0,8 mm². Si un martillo aplica una fuerza de 150 N sobre la cabeza del clavo (y esa fuerza se transmite íntegra a la punta), calcula la presión en la punta y compárala con la presión atmosférica.",
+        "hints": [
+          "Convierte 0,8 mm² a m² (1 mm²=10⁻⁶ m²).",
+          "Compara el resultado dividiéndolo entre 101 325 Pa."
+        ],
+        "full_solution": "Área: $A=0,8\\,\\mathrm{mm^2}=0,8\\times10^{-6}\\,\\mathrm{m^2}=8\\times10^{-7}\\,\\mathrm{m^2}$. Presión: $p=\\dfrac{150}{8\\times10^{-7}}\\approx1,88\\times10^{8}\\,\\mathrm{Pa}$. Comparación: $\\dfrac{1,88\\times10^{8}}{101325}\\approx1854$ veces la presión atmosférica.",
+        "answer": "p≈1,88×10⁸ Pa, unas 1850 veces la presión atmosférica: por eso un clavo penetra con tan poca fuerza.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Una persona empuja una caja apoyada en el suelo con una fuerza de 80 N dirigida 30° respecto a la vertical (hacia abajo y hacia delante), sobre una superficie de contacto de 0,05 m². Calcula la presión que se añade sobre el suelo debida solo a la componente perpendicular de esa fuerza.",
+        "hints": [
+          "Solo la componente perpendicular a la superficie genera presión: F⊥=F·cos θ.",
+          "El ángulo se mide respecto a la vertical, la dirección perpendicular al suelo."
+        ],
+        "full_solution": "Componente perpendicular: $F_\\perp=F\\cos\\theta=80\\times\\cos30°=80\\times0,866=69,3\\,\\mathrm{N}$. Presión añadida: $p=\\dfrac{F_\\perp}{A}=\\dfrac{69,3}{0,05}=1386\\,\\mathrm{Pa}$.",
+        "answer": "p≈1386 Pa (la componente horizontal de la fuerza no contribuye a la presión sobre el suelo).",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Con una fuerza constante F=600 N, calcula la presión para áreas de apoyo de 0,1; 0,2; 0,3 y 0,4 m², organiza los resultados en una tabla y describe qué tipo de gráfica p–A se obtiene.",
+        "hints": [
+          "Calcula p=F/A para cada valor de A.",
+          "Observa si la relación entre p y A es lineal o no."
+        ],
+        "full_solution": "p=600/0,1=6000 Pa; p=600/0,2=3000 Pa; p=600/0,3=2000 Pa; p=600/0,4=1500 Pa. Al representar p frente a A se obtiene una curva decreciente (una hipérbola), no una recta, porque $p=\\dfrac{600}{A}$ es una relación de proporcionalidad inversa.",
+        "answer": "La gráfica p–A es una hipérbola decreciente: p es inversamente proporcional a A.",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un compañero afirma: «cuanto más pesa una persona, más presión ejerce siempre sobre el suelo». Corrige esta afirmación usando el ejemplo de una misma persona de 700 N que se apoya primero sobre un tacón fino (área 5 cm²) y luego sobre una zapatilla (área 200 cm²).",
+        "hints": [
+          "Calcula la presión en los dos casos con el mismo peso.",
+          "El peso (la fuerza) no cambia; solo cambia el área."
+        ],
+        "full_solution": "Con el tacón: $A=5\\,\\mathrm{cm^2}=5\\times10^{-4}\\,\\mathrm{m^2}$, $p=\\dfrac{700}{5\\times10^{-4}}=1,4\\times10^{6}\\,\\mathrm{Pa}$. Con la zapatilla: $A=200\\,\\mathrm{cm^2}=0,02\\,\\mathrm{m^2}$, $p=\\dfrac{700}{0,02}=35\\,000\\,\\mathrm{Pa}$. El peso es idéntico en ambos casos, pero la presión cambia 40 veces: la afirmación es falsa porque la presión depende del área, no solo del peso.",
+        "answer": "Falso: con el mismo peso (700 N), la presión varía de 35 000 Pa (zapatilla) a 1,4·10⁶ Pa (tacón) según el área, no según el peso.",
+        "assets": []
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña un experimento sencillo para estimar la presión que ejerce la mordida de una persona, indicando qué instrumentos usarías, cómo calcularías la presión y qué fuentes de incertidumbre tendría tu medida.",
+        "hints": [
+          "Necesitas medir una fuerza y un área de contacto.",
+          "El área de contacto real entre los dientes y el sensor no es perfectamente conocida."
+        ],
+        "full_solution": "Montaje: colocar entre los dientes un sensor de fuerza (o una almohadilla de presión calibrada) de área conocida A, y pedir que se muerda con la fuerza máxima; el sensor registra F. La presión se calcula como $p=\\dfrac{F}{A}$. Incertidumbres: el área de contacto real puede ser menor que el área total del sensor, la fuerza puede variar entre repeticiones (conviene repetir y promediar) y la deformación del sensor puede alterar el área efectiva.",
+        "answer": "Un diseño válido mide F con un sensor de fuerza y A con el área real de contacto, calcula p=F/A y repite la medida varias veces para estimar la incertidumbre.",
+        "assets": []
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Explica por qué las mochilas con tirantes anchos son más cómodas que las de tirantes finos, aplicando el concepto de presión.",
+        "answer": "La presión $P=\\dfrac{F}{A}$. El peso de la mochila (F) es el mismo en ambos casos. Con tirantes anchos el área A es mayor, por lo que la presión sobre el hombro es menor y resulta menos molesta. Con tirantes finos A es pequeño y P es grande, provocando dolor.",
+        "full_solution": "La presión que sufre el hombro es $p=\\dfrac{F}{A}$, donde F es el peso de la mochila (igual en los dos casos) y A es el área de contacto del tirante. Con un tirante ancho, A es grande y p es pequeña; con un tirante fino, A es pequeña y, para el mismo F, p es mucho mayor, lo que concentra la fuerza sobre el hombro y produce dolor.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un submarino a 500 m de profundidad soporta la presión del agua (ρ =1025 kg/m³) más la atmosférica. ¿Cuántos Pa totales actúan sobre su casco? ¿Cuántas atmósferas?",
+        "answer": "P=ρ gh=1025× 9,8× 500=5 022 500 Pa; P=5 022 500+101 325=5 123 825 Pa≈50,6 atm",
+        "full_solution": "Paso 1: presión hidrostática del agua a 500 m: $p_{\\mathrm{agua}}=\\rho gh=1025\\times9,8\\times500=5\\,022\\,500\\,\\mathrm{Pa}$. Paso 2: la presión total (absoluta) suma la atmosférica: $p_{\\mathrm{total}}=5\\,022\\,500+101\\,325=5\\,123\\,825\\,\\mathrm{Pa}$. Paso 3: en atmósferas: $5\\,123\\,825/101\\,325\\approx50,6\\,\\mathrm{atm}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": []
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L01-1",
+        "stem": "¿Cuál es la unidad de presión en el Sistema Internacional?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. newton (N)",
+            "why_wrong": "El newton es la unidad de fuerza, no de presión."
+          },
+          {
+            "key": "B",
+            "text": "B. pascal (Pa)"
+          },
+          {
+            "key": "C",
+            "text": "C. bar (bar)",
+            "why_wrong": "El bar es una unidad de presión, pero no es la unidad del SI (1 bar=100 000 Pa)."
+          },
+          {
+            "key": "D",
+            "text": "D. atmósfera (atm)",
+            "why_wrong": "La atmósfera es una unidad de presión de uso práctico, pero no es la unidad del SI."
+          }
+        ],
+        "explanation": "La unidad de presión en el SI es el pascal: 1 Pa=1 N/m². El newton mide fuerza, y el bar y la atmósfera son unidades de presión fuera del SI.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L01-2",
+        "stem": "Una fuerza de 500 N actúa sobre una superficie de 0,25 m². ¿Cuál es la presión?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 125 Pa",
+            "why_wrong": "Resulta de multiplicar F×A en vez de dividir F/A."
+          },
+          {
+            "key": "B",
+            "text": "B. 125 N",
+            "why_wrong": "125 N no es una presión (unidad incorrecta) y además el valor numérico también es erróneo."
+          },
+          {
+            "key": "C",
+            "text": "C. 2000 Pa"
+          },
+          {
+            "key": "D",
+            "text": "D. 0,0005 Pa",
+            "why_wrong": "Resulta de invertir la fracción (A/F en vez de F/A)."
+          }
+        ],
+        "explanation": "$p=\\dfrac{F}{A}=\\dfrac{500}{0,25}=2000\\,\\mathrm{Pa}$.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L01-3",
+        "stem": "¿Cuántos Pa equivale 1 atm?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 100 000 Pa",
+            "why_wrong": "100 000 Pa es la definición de 1 bar, no de 1 atm."
+          },
+          {
+            "key": "B",
+            "text": "B. 101 325 Pa"
+          },
+          {
+            "key": "C",
+            "text": "C. 760 Pa",
+            "why_wrong": "760 es el número de mmHg que equivalen a 1 atm, no los pascales."
+          },
+          {
+            "key": "D",
+            "text": "D. 133 322 Pa",
+            "why_wrong": "133 322 Pa equivale, aproximadamente, a 1000 mmHg, no a 1 atm."
+          }
+        ],
+        "explanation": "Por definición, 1 atm=101 325 Pa=760 mmHg≈1,01325 bar.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L01-4",
+        "stem": "¿Por qué los esquís son anchos y largos?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Para aumentar la fuerza sobre la nieve.",
+            "why_wrong": "El peso de la persona (la fuerza) no cambia por llevar esquís; lo que cambia es el área de apoyo."
+          },
+          {
+            "key": "B",
+            "text": "B. Para reducir la presión y no hundirse."
+          },
+          {
+            "key": "C",
+            "text": "C. Para aumentar la velocidad de deslizamiento.",
+            "why_wrong": "La forma ancha no busca aumentar la velocidad, sino repartir el peso sobre más superficie."
+          },
+          {
+            "key": "D",
+            "text": "D. Para reducir la fuerza de gravedad.",
+            "why_wrong": "La gravedad no cambia por el tamaño del esquí; solo depende de la masa y de g."
+          }
+        ],
+        "explanation": "Al aumentar el área de apoyo A sin cambiar el peso F, la presión $p=\\dfrac{F}{A}$ disminuye, evitando que la persona se hunda en la nieve.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué es la presión y cuál es su fórmula?",
+        "back": "Presión=Fuerza / Área. $P=\\dfrac{F}{A}$. Se mide en Pascales (Pa). Representa la fuerza perpendicular por unidad de superficie.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Cuántos Pa tiene 1 atm?",
+        "back": "1 atm = 101 325 Pa. También: 1 atm = 760 mmHg = 1,01325 bar.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Por qué un tacón fino duele más que una suela plana?",
+        "back": "Misma fuerza (peso), pero el tacón tiene un área mucho menor. $P=\\dfrac{F}{A}$ → menor área = mayor presión sobre el pie.",
+        "provenance": "GENERATED (EXPLANATION)"
+      },
+      {
+        "front": "¿Cómo se convierte de bar a Pa?",
+        "back": "1 bar = 100 000 Pa. Se multiplica el número de bares por 100 000. Ejemplo: 2,5 bar = 250 000 Pa.",
+        "provenance": "GENERATED (EXPLANATION)"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "presión",
+        "definition": "Magnitud física que mide la fuerza perpendicular repartida sobre una superficie: $p=\\dfrac{F}{A}$."
+      },
+      {
+        "term": "pascal",
+        "definition": "Unidad de presión en el SI. 1 Pa = 1 N/m², la presión de 1 newton repartido sobre 1 metro cuadrado."
+      },
+      {
+        "term": "fuerza",
+        "definition": "Interacción capaz de deformar un cuerpo o cambiar su movimiento; se mide en newtons (N) y es el numerador en $p=\\dfrac{F}{A}$."
+      },
+      {
+        "term": "área",
+        "definition": "Extensión de la superficie sobre la que se reparte la fuerza; es el denominador en $p=\\dfrac{F}{A}$ y debe expresarse en m² para obtener la presión en pascales."
+      },
+      {
+        "term": "atmósfera",
+        "definition": "Unidad de presión basada en la presión media del aire al nivel del mar: 1 atm = 101 325 Pa."
+      },
+      {
+        "term": "bar",
+        "definition": "Unidad de presión muy usada en meteorología e ingeniería: 1 bar = 100 000 Pa ≈ 0,9869 atm."
+      },
+      {
+        "term": "conversión de unidades",
+        "definition": "Proceso de expresar una misma presión en distintas unidades (Pa, atm, bar, mmHg) multiplicando o dividiendo por el factor de equivalencia correspondiente."
+      }
+    ],
+    "source_references": [
+      "RD 217/2022 saberes básicos Física y Química 4º ESO — Fuerzas y movimiento",
+      "Serway & Jewett, Physics for Scientists and Engineers, Cap. 15"
+    ],
+    "curriculum_refs": [
+      "CE1,1 Resolver problemas de mecánica aplicando las leyes fundamentales",
+      "CE2,1 Usar el lenguaje matemático en contextos científicos"
+    ],
+    "confidence_notes": [
+      "Valores numéricos verificados con calculadora",
+      "Equivalencias de unidades contrastadas con NIST"
+    ],
+    "internal_review": {
+      "checks": [
+        "4 MCQ con opciones A-D",
+        "4 flashcards",
+        "3 theory (blocks) ≥ 200 chars",
+        "2 worked (examples) con pasos numéricos"
+      ],
+      "fixes_applied": [
+        "Añadido ejemplo de tacón en theory (block) 1"
+      ],
+      "remaining_concerns": []
+    },
+    "summary": {
+      "big_idea": "Presión se entiende relacionando el modelo científico con magnitudes observables, representaciones y límites de validez.",
+      "key_points": [
+        "La presión (P) se define como la fuerza (F) que actúa perpendicularmente sobre una superficie dividida por el área (A) de dicha superficie: $P=\\dfrac{F}{A}$.",
+        "Existen varias unidades habituales de presión.",
+        "La presión explica numerosos fenómenos de la vida diaria.",
+        "Para aplicar **Presión** hay que definir el sistema, elegir el modelo, mantener las unidades y comprobar el resultado."
+      ],
+      "formulas": [
+        "$p=\\dfrac{F_\\perp}{A}$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $p=\\dfrac{F}{A}$, define el sistema y comprueba unidades, signos, conservación y límites del modelo."
+    }
+  },
+  "lesson_02.json": {
+    "id": "L02",
+    "title": "Presión hidrostática",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Fluidos",
+    "unit_id": "U-4F-03",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE1,1",
+        "CE2,1"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Explicar Presión hidrostática con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de presión hidrostática para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Presión hidrostática."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Presión hidrostática."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Comprender la presión ($p=F/A$) y la densidad ($\\rho=m/V$), y saber trabajar con unidades del SI.",
+        "why_it_matters": "La presión hidrostática $p=\\rho gh$ combina la densidad del fluido con la noción de presión como fuerza repartida en un área; sin tener claros ambos conceptos no se puede entender por qué la presión aumenta con la profundidad."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué es la densidad? ¿Cuál es la densidad del agua?",
+        "expected_answer": "La densidad es la masa por unidad de volumen: $\\rho=\\dfrac{m}{V}$. La densidad del agua es 1000 kg/m³ = 1 g/cm³."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Cómo cambia la presión cuando te sumerges en una piscina?",
+        "expected_answer": "Aumenta con la profundidad, porque hay más columna de agua encima ejerciendo su peso."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La presión hidrostática depende del volumen total del líquido.",
+        "correct_model": "La presión hidrostática P=ρ gh solo depende de la densidad del fluido y de la profundidad h, no del volumen ni de la forma del recipiente."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "En vasos comunicantes el líquido siempre sube más en el vaso más estrecho.",
+        "correct_model": "En vasos comunicantes con el mismo fluido, el nivel es idéntico en todos los vasos, independientemente de su anchura."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Presión hidrostática: fórmula y derivación",
+        "body": "Cuando buceas en una piscina, a apenas un par de metros de profundidad ya notas una presión incómoda en los oídos. A 10 metros, la presión se ha duplicado respecto a la superficie. ¿De dónde viene esa presión?\n\nViene del peso del agua que hay encima de ti. Cada capa de agua empuja a la de abajo, y cuanto más profundo estás, más capas tienes encima. La presión que ejerce un fluido en reposo se llama **presión hidrostática** y depende de tres cosas: la densidad del fluido ($\\rho$), la aceleración de la gravedad ($g$) y la profundidad ($h$).\n\n$$p = p_0 + \\rho g h$$\n\ndonde $p_0$ es la presión en la superficie (normalmente la atmosférica).\n\nEn agua dulce ($\\rho = 1000\\,\\text{kg/m}^3$), cada metro de profundidad añade unos $9\\,800\\,\\text{Pa} \\approx 0{,}1\\,\\text{atm}$. Por eso a 10 m la presión total es $\\approx 2\\,\\text{atm}$: una de la atmósfera y otra del agua.\n\nFíjate en que la presión hidrostática no depende de la forma del recipiente ni de cuánta agua haya en horizontal, solo de la profundidad. Un tubo estrecho de 10 m genera la misma presión en el fondo que un océano de 10 m.",
+        "provenance": "SOURCE (DERIVED)",
+        "student_text": "La presión hidrostática es P = P₀ + ρgh. Depende de la profundidad, la densidad del fluido y la gravedad, pero NO de la forma del recipiente.",
+        "formula": "$p=p_0+\\rho gh$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Presión hidrostática: aumenta con la profundidad\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <defs>\n    <linearGradient id=\"waterGrad\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#b3e0f2\"/>\n      <stop offset=\"100%\" stop-color=\"#1a5276\"/>\n    </linearGradient>\n    <marker id=\"arrowP\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L8,3 L0,6\" fill=\"#c17a17\"/>\n    </marker>\n  </defs>\n  <!-- Sky -->\n  <rect x=\"0\" y=\"0\" width=\"600\" height=\"50\" fill=\"var(--bg,#fbfcfd)\"/>\n  <text x=\"300\" y=\"25\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">¿Por qué duelen los oídos al bucear?</text>\n  <!-- Water surface -->\n  <line x1=\"0\" y1=\"50\" x2=\"600\" y2=\"50\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <text x=\"560\" y=\"65\" text-anchor=\"end\" fill=\"#0e7a68\" font-size=\"10\">Superficie</text>\n  <!-- Water body -->\n  <rect x=\"0\" y=\"50\" width=\"600\" height=\"260\" fill=\"url(#waterGrad)\" opacity=\"0.5\"/>\n  <!-- Depth markers -->\n  <line x1=\"80\" y1=\"50\" x2=\"80\" y2=\"310\" stroke=\"#24312c\" stroke-width=\"1\" stroke-dasharray=\"4\"/>\n  <line x1=\"70\" y1=\"110\" x2=\"90\" y2=\"110\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <text x=\"65\" y=\"114\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"10\">1 m</text>\n  <line x1=\"70\" y1=\"170\" x2=\"90\" y2=\"170\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <text x=\"65\" y=\"174\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"10\">2 m</text>\n  <line x1=\"70\" y1=\"230\" x2=\"90\" y2=\"230\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <text x=\"65\" y=\"234\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"10\">3 m</text>\n  <line x1=\"70\" y1=\"290\" x2=\"90\" y2=\"290\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <text x=\"65\" y=\"294\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"10\">4 m</text>\n  <!-- Swimmer at 1m -->\n  <circle cx=\"200\" cy=\"110\" r=\"10\" fill=\"#c17a17\"/>\n  <line x1=\"200\" y1=\"120\" x2=\"200\" y2=\"145\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <line x1=\"185\" y1=\"130\" x2=\"215\" y2=\"130\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <!-- Pressure arrows at different depths (getting wider) -->\n  <line x1=\"320\" y1=\"110\" x2=\"380\" y2=\"110\" stroke=\"#c17a17\" stroke-width=\"2\" marker-end=\"url(#arrowP)\"/>\n  <text x=\"395\" y=\"114\" fill=\"#c17a17\" font-size=\"10\">P = 111 kPa</text>\n  <line x1=\"310\" y1=\"170\" x2=\"390\" y2=\"170\" stroke=\"#c17a17\" stroke-width=\"2.5\" marker-end=\"url(#arrowP)\"/>\n  <text x=\"395\" y=\"174\" fill=\"#c17a17\" font-size=\"10\">P = 121 kPa</text>\n  <line x1=\"300\" y1=\"230\" x2=\"400\" y2=\"230\" stroke=\"#c17a17\" stroke-width=\"3\" marker-end=\"url(#arrowP)\"/>\n  <text x=\"405\" y=\"234\" fill=\"#c17a17\" font-size=\"10\">P = 131 kPa</text>\n  <line x1=\"290\" y1=\"290\" x2=\"410\" y2=\"290\" stroke=\"#c17a17\" stroke-width=\"3.5\" marker-end=\"url(#arrowP)\"/>\n  <text x=\"415\" y=\"294\" fill=\"#c17a17\" font-size=\"10\">P = 141 kPa</text>\n  <!-- Formula -->\n  <rect x=\"130\" y=\"52\" width=\"180\" height=\"22\" rx=\"4\" fill=\"var(--bg,#fbfcfd)\" opacity=\"0.85\"/>\n  <text x=\"220\" y=\"68\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"12\" font-weight=\"bold\">P = P₀ + ρ·g·h</text>\n</svg>",
+            "caption": "La presión aumenta con la profundidad: cada metro de agua añade ≈ 10 kPa."
+          }
+        ]
+      },
+      {
+        "title": "Principio de Pascal y vasos comunicantes",
+        "body": "El **principio de Pascal** dice que cualquier cambio de presión aplicado a un fluido encerrado se transmite íntegramente a todos los puntos del fluido.\n\nUna consecuencia directa son los **vasos comunicantes**: si conectas dos recipientes por abajo y viertes el mismo líquido, este sube hasta la misma altura en ambos, sin importar la forma ni el ancho de cada recipiente.\n\n¿Por qué? Porque la presión en el fondo de ambos debe ser igual (están conectados). Como $p = \\rho g h$ y la densidad y la gravedad son las mismas, la única forma de que $p_1 = p_2$ es que $h_1 = h_2$.\n\nEsto sorprende al principio: un tubo estrechísimo junto a una piscina enorme mostrarán el agua al mismo nivel. No importa el volumen, solo la profundidad.\n\nSi usas dos líquidos de distinta densidad (como agua y aceite), las alturas ya no coinciden: el más denso alcanza menos altura. En ese caso, $\\rho_1 g h_1 = \\rho_2 g h_2$, así que $h_1 / h_2 = \\rho_2 / \\rho_1$.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "Pascal: la presión se transmite íntegramente a todo el fluido. En vasos comunicantes con el mismo líquido, la altura es igual en ambos lados.",
+        "formula": "$p_A=p_B\\Rightarrow h_A=h_B$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Vasos comunicantes: el líquido alcanza la misma altura en ambos lados\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">Principio de Pascal y vasos comunicantes</text>\n  <!-- Left vessel (narrow) -->\n  <rect x=\"100\" y=\"80\" width=\"40\" height=\"180\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"2\"/>\n  <rect x=\"102\" y=\"140\" width=\"36\" height=\"118\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n  <!-- Right vessel (wide) -->\n  <rect x=\"350\" y=\"80\" width=\"120\" height=\"180\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"2\"/>\n  <rect x=\"352\" y=\"140\" width=\"116\" height=\"118\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n  <!-- Connecting tube at bottom -->\n  <rect x=\"140\" y=\"240\" width=\"210\" height=\"20\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"2\"/>\n  <rect x=\"142\" y=\"242\" width=\"206\" height=\"16\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n  <!-- Same height line -->\n  <line x1=\"80\" y1=\"140\" x2=\"490\" y2=\"140\" stroke=\"#c17a17\" stroke-width=\"1.5\" stroke-dasharray=\"6\"/>\n  <text x=\"510\" y=\"144\" fill=\"#c17a17\" font-size=\"11\" font-weight=\"bold\">Mismo nivel</text>\n  <!-- Height labels -->\n  <line x1=\"55\" y1=\"140\" x2=\"55\" y2=\"258\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <line x1=\"50\" y1=\"140\" x2=\"60\" y2=\"140\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <line x1=\"50\" y1=\"258\" x2=\"60\" y2=\"258\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"45\" y=\"200\" text-anchor=\"end\" fill=\"#8a3d6b\" font-size=\"11\">h</text>\n  <line x1=\"490\" y1=\"140\" x2=\"490\" y2=\"258\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <line x1=\"485\" y1=\"140\" x2=\"495\" y2=\"140\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <line x1=\"485\" y1=\"258\" x2=\"495\" y2=\"258\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"500\" y=\"200\" fill=\"#8a3d6b\" font-size=\"11\">h</text>\n  <!-- Pressure labels -->\n  <text x=\"120\" y=\"275\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"11\" font-weight=\"bold\">P₁ = ρgh</text>\n  <text x=\"410\" y=\"275\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"11\" font-weight=\"bold\">P₂ = ρgh</text>\n  <!-- Equals -->\n  <text x=\"265\" y=\"295\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"14\" font-weight=\"bold\">P₁ = P₂  →  h₁ = h₂</text>\n  <!-- Width labels -->\n  <text x=\"120\" y=\"75\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\">Estrecho</text>\n  <text x=\"410\" y=\"75\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\">Ancho</text>\n</svg>",
+            "caption": "Vasos comunicantes: independientemente del ancho, el líquido alcanza la misma altura."
+          }
+        ]
+      },
+      {
+        "title": "Ecuación fundamental de la hidrostática, presión absoluta y paradoja hidrostática",
+        "body": "La **ecuación fundamental de la hidrostática** relaciona la diferencia de presión entre dos puntos de un fluido en reposo con la diferencia de profundidad:\n\n$$\\Delta p = \\rho g \\Delta h$$\n\nSi el punto A está más abajo que el punto B, entonces $p_A > p_B$. La presión siempre aumenta hacia abajo en un fluido en reposo.\n\nDe aquí sale la **presión absoluta** en un punto a profundidad $h$ bajo la superficie:\n\n$$p_{\\text{abs}} = p_{\\text{atm}} + \\rho g h$$\n\nY de aquí viene la famosa **paradoja hidrostática**: la presión en el fondo de un recipiente no depende de la cantidad de líquido (volumen), sino solo de la profundidad.\n\nTres recipientes con formas distintas — uno ancho, uno estrecho y uno con forma de cono invertido — si tienen el mismo líquido y la misma profundidad, ejercen la misma presión en el fondo. ¿Cómo puede ser que el ancho, con más peso de agua, tenga la misma presión que el estrecho?\n\nPorque las paredes inclinadas del recipiente ancho soportan parte del peso. La presión en el fondo solo «ve» la columna vertical de fluido.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "ΔP = ρgΔh. La presión absoluta es p_abs = p_atm + ρgh. Paradoja hidrostática: la presión en el fondo solo depende de la profundidad, no de la forma.",
+        "formula": "$\\Delta p=\\rho g\\Delta h$",
+        "assets": []
+      },
+      {
+        "title": "Prensa hidráulica y multiplicación de fuerzas",
+        "body": "La **prensa hidráulica** es una de las aplicaciones más espectaculares del principio de Pascal: con una fuerza pequeña puedes levantar un coche.\n\nEl truco es usar dos pistones de distinto tamaño conectados por un fluido. Según Pascal, la presión se transmite íntegramente:\n\n$$\\frac{F_1}{A_1} = \\frac{F_2}{A_2}$$\n\nSi el pistón grande tiene un área 100 veces mayor que el pequeño, la fuerza de salida será 100 veces mayor que la de entrada.\n\nEjemplo: empujas con $50\\,\\text{N}$ sobre un pistón de $10\\,\\text{cm}^2$. Al otro lado, un pistón de $1000\\,\\text{cm}^2$ ejerce:\n\n$$F_2 = 50 \\times \\frac{1000}{10} = 5000\\,\\text{N}$$\n\n¡Suficiente para levantar un coche pequeño!\n\nPero no hay nada gratis: lo que ganas en fuerza lo pierdes en desplazamiento. El pistón pequeño tiene que bajar mucho para que el grande suba un poco. La energía (fuerza × desplazamiento) se conserva.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "Prensa hidráulica: F₁/A₁ = F₂/A₂. Multiplica la fuerza según la razón de áreas, pero a costa de desplazamiento.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Prensa hidráulica: fuerza pequeña levanta un coche\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">Prensa hidráulica: multiplicar fuerzas</text>\n  <!-- Left small piston -->\n  <rect x=\"60\" y=\"90\" width=\"60\" height=\"20\" rx=\"3\" fill=\"#8a3d6b\" opacity=\"0.8\"/>\n  <rect x=\"85\" y=\"60\" width=\"10\" height=\"30\" fill=\"#8a3d6b\"/>\n  <!-- Arrow down on small piston -->\n  <line x1=\"90\" y1=\"30\" x2=\"90\" y2=\"58\" stroke=\"#c17a17\" stroke-width=\"2.5\" marker-end=\"url(#arrowH)\"/>\n  <text x=\"90\" y=\"24\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"12\" font-weight=\"bold\">F₁ = 50 N</text>\n  <!-- Left cylinder -->\n  <rect x=\"60\" y=\"110\" width=\"60\" height=\"120\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <rect x=\"62\" y=\"112\" width=\"56\" height=\"116\" fill=\"#0e7a68\" opacity=\"0.25\"/>\n  <!-- Connecting tube -->\n  <rect x=\"120\" y=\"190\" width=\"260\" height=\"40\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <rect x=\"122\" y=\"192\" width=\"256\" height=\"36\" fill=\"#0e7a68\" opacity=\"0.25\"/>\n  <!-- Right large piston -->\n  <rect x=\"380\" y=\"130\" width=\"160\" height=\"25\" rx=\"3\" fill=\"#8a3d6b\" opacity=\"0.8\"/>\n  <rect x=\"453\" y=\"60\" width=\"14\" height=\"70\" fill=\"#8a3d6b\"/>\n  <!-- Car on large piston -->\n  <rect x=\"400\" y=\"85\" width=\"120\" height=\"40\" rx=\"8\" fill=\"#c17a17\" opacity=\"0.7\"/>\n  <circle cx=\"420\" cy=\"125\" r=\"8\" fill=\"#24312c\"/>\n  <circle cx=\"500\" cy=\"125\" r=\"8\" fill=\"#24312c\"/>\n  <rect x=\"430\" y=\"78\" width=\"50\" height=\"20\" rx=\"4\" fill=\"#c17a17\" opacity=\"0.5\"/>\n  <!-- Arrow up on car -->\n  <line x1=\"460\" y1=\"70\" x2=\"460\" y2=\"42\" stroke=\"#0e7a68\" stroke-width=\"2.5\" marker-end=\"url(#arrowT)\"/>\n  <text x=\"460\" y=\"37\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"12\" font-weight=\"bold\">F₂ = 5000 N</text>\n  <!-- Right cylinder -->\n  <rect x=\"380\" y=\"155\" width=\"160\" height=\"75\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <rect x=\"382\" y=\"157\" width=\"156\" height=\"71\" fill=\"#0e7a68\" opacity=\"0.25\"/>\n  <!-- Area labels -->\n  <text x=\"90\" y=\"245\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"11\">A₁ = 10 cm²</text>\n  <text x=\"460\" y=\"245\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"11\">A₂ = 1000 cm²</text>\n  <!-- Formula -->\n  <rect x=\"150\" y=\"260\" width=\"300\" height=\"45\" rx=\"8\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"300\" y=\"280\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"12\">F₁/A₁ = F₂/A₂  →  F₂ = F₁ · (A₂/A₁)</text>\n  <text x=\"300\" y=\"298\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"11\" font-weight=\"bold\">¡Multiplica la fuerza ×100!</text>\n  <!-- Markers -->\n  <defs>\n    <marker id=\"arrowH\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L8,3 L0,6\" fill=\"#c17a17\"/>\n    </marker>\n    <marker id=\"arrowT\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L8,3 L0,6\" fill=\"#0e7a68\"/>\n    </marker>\n  </defs>\n</svg>",
+            "caption": "Prensa hidráulica: una fuerza pequeña en el pistón pequeño genera una fuerza enorme en el grande."
+          }
+        ]
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Para resolver problemas de presión hidrostática, sigue estos pasos:\n\n1. Identifica qué te piden: ¿presión absoluta o manométrica?\n2. Localiza los puntos en el fluido y mide la profundidad $h$ desde la superficie libre.\n3. Aplica $p = p_0 + \\rho g h$ con las unidades correctas (kg/m³, m/s², m).\n4. Si hay prensa hidráulica, usa $F_1/A_1 = F_2/A_2$.\n\nComprueba que tu resultado tiene sentido: la presión siempre aumenta con la profundidad, y la fuerza del pistón grande siempre es mayor que la del pequeño.",
+        "assets": []
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Presión al fondo de una piscina",
+        "steps": [
+          "Presión hidrostática: P=ρ · g· h = 1000 × 9,8 × 2,5 = 24 500 Pa",
+          "Presión atmosférica: P=101 325 Pa",
+          "Presión total: P=$P_{\\mathrm{atm}}$ + P (hidro) = 101 325 + 24 500 = 125 825 Pa",
+          "En atm: 125 825 / 101 325 = 1,24 atm",
+          "Comprobación: cada 10 m en agua pura añaden ≈98 000 Pa ≈0,97 atm; para 2,5 m el incremento es la cuarta parte (24 500 Pa), coherente con el resultado de 1,24 atm en total."
+        ],
+        "answer": "P=125 825 Pa ≈ 1,24 atm",
+        "verification": "Coherente: cada 10 m en agua pura añade 98 000 Pa ≈ 1 atm. Para 2,5 m el incremento es 24 500 Pa ≈ 0,24 atm, total ≈ 1,24 atm.",
+        "provenance": "GENERATED (EXAMPLE)",
+        "reasoning": [],
+        "assets": [],
+        "statement": "Una piscina tiene 2,5 m de profundidad. El agua tiene densidad 1000 kg/m³. Calcula la presión total en el fondo (incluida la atmosférica)."
+      },
+      {
+        "title": "Prensa hidráulica: cálculo de fuerza",
+        "steps": [
+          "Convertir áreas: A₁ = 5× 10⁻⁴ m²; A₂ = 300× 10⁻⁴ = 3× 10⁻² m²",
+          "Presión generada: P=F₁/A₁ = 80 / 5× 10⁻⁴ = 160 000 Pa",
+          "Fuerza en émbolo grande: F₂ = P × A₂ = 160 000 × 3× 10⁻² = 4 800 N",
+          "Relación de amplificación: F₂/F₁ = A₂/A₁ = 300/5 = 60",
+          "Comprobación: F₂/F₁=4800/80=60, coincide exactamente con A₂/A₁=300/5=60, como exige el principio de Pascal."
+        ],
+        "answer": "F₂ = 4 800 N (60 veces la fuerza aplicada)",
+        "verification": "La razón F₂/F₁ = A₂/A₁ = 60 coincide con el resultado directo.",
+        "provenance": "GENERATED (EXAMPLE)",
+        "reasoning": [],
+        "assets": [],
+        "statement": "Una prensa hidráulica tiene un émbolo pequeño de área A₁ = 5 cm² y uno grande de A₂ = 300 cm². Se aplica una fuerza de 80 N en el émbolo pequeño. ¿Qué fuerza se obtiene en el grande?"
+      },
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Profundidad",
+        "statement": "Calcula la presión manométrica a 2,5 m bajo el agua (ρ=1000 kg/m³).",
+        "steps": [
+          "p (h)=ρ gh=1000(9,8)(2,5)=24500 Pa.",
+          "La presión absoluta sería p₀+p (h) si se toma la atmósfera como exterior.",
+          "Duplicar la profundidad duplica la presión manométrica en el modelo.",
+          "No depende de la forma del recipiente, sino de profundidad, densidad y g.",
+          "Comprobación: al duplicar la profundidad (de 2,5 a 5 m) la presión manométrica se duplica (de 24 500 a 49 000 Pa), coherente con la proporcionalidad directa de p respecto a h."
+        ],
+        "answer": "p (h)=24,5 kPa.",
+        "verification": "24 500 Pa / (1000×9,8) = 2,5 m, que coincide con la profundidad del enunciado: el cálculo es consistente."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Prensa hidráulica",
+        "statement": "Una prensa tiene áreas 0,01 y 0,20 m². Si se aplican 100 N en la pequeña, calcula la fuerza ideal grande.",
+        "steps": [
+          "La presión se transmite: $\\dfrac{F_1}{A_1}=\\dfrac{F_2}{A_2}$.",
+          "F₂=100($\\dfrac{0,20}{0,01}$)=2000 N.",
+          "La fuerza aumenta a costa de recorrer más distancia en el pistón pequeño.",
+          "El resultado ideal desprecia pérdidas y fugas.",
+          "Comprobación: la razón de áreas A₂/A₁=0,20/0,01=20 coincide exactamente con la razón de fuerzas F₂/F₁=2000/100=20, como exige el principio de Pascal."
+        ],
+        "answer": "F₂=2000 N.",
+        "verification": "F₂/F₁=20 = A₂/A₁=20: el resultado es consistente con $\\dfrac{F_1}{A_1}=\\dfrac{F_2}{A_2}$."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Dos buceadores miden la presión manométrica a la misma profundidad: uno en una piscina de agua dulce (ρ=1000 kg/m³) y otro en el mar (ρ=1025 kg/m³), ambos a 8 m. Construye el balance p=ρgh para cada caso y decide qué magnitudes deben incluirse (y cuáles no, como la forma del recipiente o el volumen total de agua).",
+        "scaffold": "La presión hidrostática solo depende de ρ, g y h; no depende de la forma del recipiente ni del volumen total de líquido (paradoja hidrostática).",
+        "full_solution": "Piscina: $p=1000\\times9,8\\times8=78\\,400\\,\\mathrm{Pa}$. Mar: $p=1025\\times9,8\\times8=80\\,360\\,\\mathrm{Pa}$. Solo intervienen ρ, g y h; la forma del recipiente y el volumen total de agua no forman parte de la fórmula.",
+        "answer": "p_piscina=78 400 Pa; p_mar=80 360 Pa; la diferencia se debe únicamente a la mayor densidad del agua de mar."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Compara la presión manométrica a 3 m de profundidad en un vaso estrecho y en una piscina ancha, ambos con agua dulce (ρ=1000 kg/m³). Predice si cambia el resultado al cambiar la anchura del recipiente y comprueba tu predicción con el cálculo.",
+        "scaffold": "Aplica p=ρgh en ambos casos; fíjate en que la fórmula no incluye el área ni el volumen del recipiente.",
+        "full_solution": "En los dos casos: $p=1000\\times9,8\\times3=29\\,400\\,\\mathrm{Pa}$. El resultado no cambia, porque la presión hidrostática solo depende de la profundidad y de la densidad del líquido, no de la anchura o la forma del recipiente (paradoja hidrostática).",
+        "answer": "p=29 400 Pa en ambos casos: la anchura del recipiente no influye en la presión a una profundidad dada."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula la profundidad a la que la presión hidrostática del agua de mar (ρ =1025 kg/m³) es igual a 5 atm (sin contar la atmosférica).",
+        "answer": "P=ρ gh → h = P/(ρ g) = $\\dfrac{5× 101325}{1025× 9,8}$ = 506625/10045 ≈ 50,4 m",
+        "full_solution": "Paso 1: expresa 5 atm en pascales: $5\\times101\\,325=506\\,625\\,\\mathrm{Pa}$. Paso 2: despeja h de $p=\\rho gh$: $h=\\dfrac{p}{\\rho g}$. Paso 3: sustituye: $h=\\dfrac{506\\,625}{1025\\times9,8}=\\dfrac{506\\,625}{10\\,045}\\approx50,4\\,\\mathrm{m}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una presa retiene agua a 40 m de altura. Calcula la presión manométrica y la presión absoluta sobre la compuerta inferior.",
+        "answer": "p (h)=1000·9,8·40=392 000 Pa; p (total)=392 000+101 325=493 325 Pa≈4,87 atm.",
+        "full_solution": "Paso 1: presión manométrica (la que ejerce solo el agua): $p_{\\mathrm{man}}=\\rho gh=1000\\times9,8\\times40=392\\,000\\,\\mathrm{Pa}$. Paso 2: presión absoluta, sumando la atmosférica: $p_{\\mathrm{abs}}=392\\,000+101\\,325=493\\,325\\,\\mathrm{Pa}\\approx4,87\\,\\mathrm{atm}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Un buceador desciende hasta 4 m de profundidad en una piscina de agua dulce (ρ=1000 kg/m³). Calcula la presión manométrica y decide cómo cambiaría si descendiera hasta 8 m.",
+        "hints": [
+          "Aplica p=ρgh con h=4 m.",
+          "Para h=8 m, observa cómo cambia p si h se duplica."
+        ],
+        "full_solution": "A 4 m: $p=1000\\times9,8\\times4=39\\,200\\,\\mathrm{Pa}$. A 8 m: $p=1000\\times9,8\\times8=78\\,400\\,\\mathrm{Pa}$: al duplicar la profundidad, la presión también se duplica.",
+        "answer": "p(4 m)=39 200 Pa; p(8 m)=78 400 Pa: la presión es directamente proporcional a la profundidad.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Un submarinista mide una presión absoluta de 250 000 Pa. Calcula a qué profundidad se encuentra en agua de mar (ρ=1025 kg/m³), separando la presión manométrica de la absoluta.",
+        "hints": [
+          "Resta primero la presión atmosférica para obtener la manométrica.",
+          "Despeja h de p_man=ρgh."
+        ],
+        "full_solution": "Presión manométrica: $p_{\\mathrm{man}}=p_{\\mathrm{abs}}-p_{\\mathrm{atm}}=250\\,000-101\\,325=148\\,675\\,\\mathrm{Pa}$. Profundidad: $h=\\dfrac{p_{\\mathrm{man}}}{\\rho g}=\\dfrac{148\\,675}{1025\\times9,8}\\approx14,8\\,\\mathrm{m}$.",
+        "answer": "h≈14,8 m (la presión manométrica es 148 675 Pa, no los 250 000 Pa de presión absoluta).",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Dos puntos A y B están en el mismo líquido en reposo, con A a 2 m de profundidad y B a 6 m. Calcula la diferencia de presión Δp entre ambos puntos para agua dulce (ρ=1000 kg/m³) y explica por qué no depende de la forma del recipiente.",
+        "hints": [
+          "Usa Δp=ρgΔh con Δh=6-2=4 m.",
+          "La fórmula de la hidrostática no incluye el área ni el volumen."
+        ],
+        "full_solution": "$\\Delta h=6-2=4\\,\\mathrm{m}$. $\\Delta p=\\rho g\\Delta h=1000\\times9,8\\times4=39\\,200\\,\\mathrm{Pa}$. No depende de la forma del recipiente porque la ecuación $p=\\rho gh$ solo usa la densidad, la gravedad y la profundidad (paradoja hidrostática).",
+        "answer": "Δp=39 200 Pa, el mismo valor sea cual sea la forma del recipiente.",
+        "assets": []
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Calcula la presión manométrica en agua de mar (ρ=1025 kg/m³) a 0, 5, 10 y 15 m de profundidad, y describe la gráfica p frente a profundidad que se obtiene.",
+        "hints": [
+          "Aplica p=ρgh en cada profundidad.",
+          "Observa si los puntos siguen una línea recta y cuál sería su pendiente."
+        ],
+        "full_solution": "p(0)=0 Pa; p(5)=1025×9,8×5=50 225 Pa; p(10)=100 450 Pa; p(15)=150 675 Pa. Los puntos están sobre una recta que pasa por el origen, con pendiente ρg=1025×9,8=10 045 Pa/m.",
+        "answer": "La gráfica p–profundidad es una recta que pasa por el origen, con pendiente ρg=10 045 Pa/m.",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un compañero afirma: «el recipiente con más litros de agua siempre tiene más presión en el fondo». Corrige esta afirmación comparando un vaso estrecho y una piscina ancha, ambos con 1,5 m de agua dulce (ρ=1000 kg/m³).",
+        "hints": [
+          "Calcula la presión en el fondo de ambos recipientes con la misma profundidad.",
+          "Fíjate en que la fórmula p=ρgh no incluye el volumen de agua."
+        ],
+        "full_solution": "En ambos casos, $p=\\rho gh=1000\\times9,8\\times1,5=14\\,700\\,\\mathrm{Pa}$, aunque la piscina contenga muchos más litros de agua que el vaso. La afirmación es falsa: la presión en el fondo depende solo de la profundidad y la densidad, no del volumen total de líquido (paradoja hidrostática).",
+        "answer": "Falso: con la misma profundidad (1,5 m) ambos recipientes tienen la misma presión en el fondo (14 700 Pa), aunque contengan volúmenes de agua muy distintos.",
+        "assets": []
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña un experimento para medir la densidad de un líquido desconocido usando solo un tubo en U, agua (densidad conocida) y una regla, explicando qué medidas tomarías y cómo estimarías la incertidumbre.",
+        "hints": [
+          "En un tubo en U con dos líquidos inmiscibles en equilibrio se cumple ρ₁h₁=ρ₂h₂.",
+          "La incertidumbre en la densidad depende de la precisión con la que midas las alturas."
+        ],
+        "full_solution": "Se vierte agua (ρ_agua=1000 kg/m³) en una rama del tubo en U y el líquido desconocido en la otra, de forma que no se mezclen. En equilibrio, $\\rho_{\\mathrm{agua}}h_{\\mathrm{agua}}=\\rho_{\\mathrm{x}}h_{\\mathrm{x}}$, por lo que $\\rho_{\\mathrm{x}}=\\rho_{\\mathrm{agua}}\\dfrac{h_{\\mathrm{agua}}}{h_{\\mathrm{x}}}$. Se mide h_agua y h_x con la regla varias veces y se promedia; la incertidumbre de ρ_x se estima propagando el error de lectura de la regla (por ejemplo ±1 mm) en cada altura.",
+        "answer": "Midiendo las alturas de ambas columnas en el tubo en U y aplicando ρx=ρagua·(hagua/hx) se obtiene la densidad del líquido desconocido, con una incertidumbre que depende de la precisión al medir h.",
+        "assets": []
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Explica qué son los vasos comunicantes y por qué el nivel del líquido es el mismo en todos ellos.",
+        "answer": "Los vasos comunicantes son recipientes conectados por la base. El nivel es igual porque si hubiera diferencia de altura, la presión en la parte inferior sería mayor en el lado más alto (P=ρ gh), lo que empujaría el fluido hacia el otro lado hasta igualar los niveles.",
+        "full_solution": "Si los niveles fueran distintos, en la parte inferior común la presión del lado más alto sería mayor ($p=\\rho gh$, con h mayor), lo que generaría una fuerza neta que empuja el líquido hacia el lado de menor presión. El flujo continúa hasta que ambas alturas (y por tanto ambas presiones en la base) se igualan: en equilibrio, $p_A=p_B\\Rightarrow h_A=h_B$, sin que importe la forma de cada vaso.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "El lago Baikal tiene una profundidad máxima de 1 642 m. ¿Cuál es la presión en su punto más profundo? Expresa en atm. (ρ (agua) dulce = 1000 kg/m³)",
+        "answer": "p (h)=1000·9,8·1642=16 091 600 Pa; p (total)≈16 192 925 Pa y p (total)/101325≈159,8 atm.",
+        "full_solution": "Paso 1: presión manométrica: $p_{\\mathrm{man}}=\\rho gh=1000\\times9,8\\times1642=16\\,091\\,600\\,\\mathrm{Pa}$. Paso 2: presión absoluta: $p_{\\mathrm{abs}}=16\\,091\\,600+101\\,325=16\\,192\\,925\\,\\mathrm{Pa}$. Paso 3: en atmósferas: $16\\,192\\,925/101\\,325\\approx159,8\\,\\mathrm{atm}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": []
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L02-1",
+        "stem": "¿De qué depende la presión hidrostática?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Del volumen del líquido y su temperatura",
+            "why_wrong": "La presión hidrostática no depende del volumen total de líquido ni de su temperatura, sino de la profundidad, la densidad y g."
+          },
+          {
+            "key": "B",
+            "text": "B. De la densidad, la gravedad y la profundidad"
+          },
+          {
+            "key": "C",
+            "text": "C. Del peso total del líquido en el recipiente",
+            "why_wrong": "El peso total del líquido depende del volumen, que no aparece en p=ρgh."
+          },
+          {
+            "key": "D",
+            "text": "D. De la forma del recipiente",
+            "why_wrong": "La paradoja hidrostática muestra que la presión no depende de la forma del recipiente, solo de ρ, g y h."
+          }
+        ],
+        "explanation": "La ecuación $p=\\rho gh$ muestra que la presión hidrostática solo depende de la densidad del fluido, la gravedad y la profundidad, no del volumen, la forma del recipiente ni el peso total del líquido.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L02-2",
+        "stem": "¿Cuál es la presión hidrostática a 5 m de profundidad en agua pura (ρ=1000 kg/m³, g=9,8 m/s²)?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 490 Pa",
+            "why_wrong": "Resulta de usar h=0,05 m en vez de 5 m."
+          },
+          {
+            "key": "B",
+            "text": "B. 4900 Pa",
+            "why_wrong": "Falta un factor 10: corresponde a usar g≈0,98 o h=0,5 m."
+          },
+          {
+            "key": "C",
+            "text": "C. 49 000 Pa"
+          },
+          {
+            "key": "D",
+            "text": "D. 490 000 Pa",
+            "why_wrong": "Resulta de multiplicar por 10 de más, como si h=50 m."
+          }
+        ],
+        "explanation": "$p=\\rho gh=1000\\times9,8\\times5=49\\,000\\,\\mathrm{Pa}$.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L02-3",
+        "stem": "¿Cuál de estos fenómenos ilustra el principio de vasos comunicantes?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Un submarino sumergiéndose",
+            "why_wrong": "La inmersión de un submarino se explica por flotación (cambio de densidad media con los tanques de lastre), no por vasos comunicantes."
+          },
+          {
+            "key": "B",
+            "text": "B. El nivel del mar igual en todos los océanos"
+          },
+          {
+            "key": "C",
+            "text": "C. Una jeringuilla aspirando líquido",
+            "why_wrong": "La jeringuilla funciona por diferencia de presión al mover el émbolo, no por vasos comunicantes."
+          },
+          {
+            "key": "D",
+            "text": "D. El empuje que recibe un barco",
+            "why_wrong": "El empuje de un barco es un fenómeno de flotación (principio de Arquímedes), no de vasos comunicantes."
+          }
+        ],
+        "explanation": "Los océanos están conectados entre sí por el fondo marino y se comportan como un gran sistema de vasos comunicantes: por eso el nivel medio del mar es prácticamente el mismo en todo el planeta.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L02-4",
+        "stem": "En una prensa hidráulica, si el émbolo pequeño tiene área 10 cm² y el grande 500 cm², ¿qué fuerza produce una entrada de 100 N?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 2 N",
+            "why_wrong": "Resulta de invertir la razón de áreas (10/500 en vez de 500/10)."
+          },
+          {
+            "key": "B",
+            "text": "B. 500 N",
+            "why_wrong": "No corresponde a aplicar correctamente F2=F1·(A2/A1)."
+          },
+          {
+            "key": "C",
+            "text": "C. 5000 N"
+          },
+          {
+            "key": "D",
+            "text": "D. 50 000 N",
+            "why_wrong": "Resulta de multiplicar por 500 en vez de por la razón de áreas (50)."
+          }
+        ],
+        "explanation": "$F_2=F_1\\dfrac{A_2}{A_1}=100\\times\\dfrac{500}{10}=5000\\,\\mathrm{N}$.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Fórmula de la presión hidrostática",
+        "back": "p (h)=ρ gh, con ρ en kg/m³, g en m/s² y h en m; el resultado queda en Pa.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Qué son los vasos comunicantes?",
+        "back": "Recipientes conectados por la base que contienen el mismo fluido. En equilibrio, el nivel del líquido es idéntico en todos ellos.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Cada cuántos metros se añade ~1 atm en el mar?",
+        "back": "Cada 10 m de profundidad en agua de mar (ρ ≈1025 kg/m³) se añaden aproximadamente 1 atm (≈100 000 Pa).",
+        "provenance": "GENERATED (EXPLANATION)"
+      },
+      {
+        "front": "Principio de Pascal (prensa hidráulica)",
+        "back": "La presión aplicada sobre un fluido encerrado se transmite íntegra en todas las direcciones. Permite amplificar fuerzas: F₂/F₁ = A₂/A₁.",
+        "provenance": "GENERATED (EXPLANATION)"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "presión hidrostática",
+        "definition": "Presión que ejerce un fluido en reposo debida al peso de la columna de líquido situada encima: $p=\\rho gh$."
+      },
+      {
+        "term": "P=ρ gh",
+        "definition": "Ecuación fundamental de la hidrostática: la presión manométrica es el producto de la densidad del fluido, la gravedad y la profundidad."
+      },
+      {
+        "term": "vasos comunicantes",
+        "definition": "Conjunto de recipientes conectados por su parte inferior en los que un mismo líquido en reposo alcanza siempre el mismo nivel."
+      },
+      {
+        "term": "prensa hidráulica",
+        "definition": "Dispositivo que amplifica una fuerza aplicándola sobre un émbolo pequeño y transmitiéndola, por el principio de Pascal, a un émbolo de mayor área."
+      },
+      {
+        "term": "principio de Pascal",
+        "definition": "Principio que establece que la presión aplicada en un punto de un fluido en reposo se transmite íntegra a todos los puntos del fluido."
+      },
+      {
+        "term": "profundidad",
+        "definition": "Distancia vertical h desde la superficie libre del fluido hasta el punto donde se mide la presión; a mayor profundidad, mayor presión hidrostática."
+      }
+    ],
+    "source_references": [
+      "RD 217/2022 saberes básicos FyQ 4º ESO — Fluidos",
+      "Tipler, Física, vol. 1, Cap. 13"
+    ],
+    "curriculum_refs": [
+      "CE1,1 Resolver problemas aplicando leyes fundamentales",
+      "CE2,1 Lenguaje matemático científico"
+    ],
+    "confidence_notes": [
+      "Valores numéricos verificados",
+      "Paradoja hidrostática explicada correctamente"
+    ],
+    "internal_review": {
+      "checks": [
+        "4 MCQ",
+        "4 flashcards",
+        "3 theory (blocks) ≥ 200 chars",
+        "2 worked (examples) numéricos"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    },
+    "summary": {
+      "big_idea": "Presión hidrostática se entiende relacionando el modelo científico con magnitudes observables, representaciones y límites de validez.",
+      "key_points": [
+        "La presión que ejerce una columna de líquido de altura h, densidad ρ, sometida a la gravedad g, se obtiene dividiendo el peso de esa columna por su sección: $p=\\rho gh$.",
+        "Los vasos comunicantes son recipientes conectados entre sí por la parte inferior.",
+        "La prensa hidráulica se basa en el principio de Pascal: la presión aplicada a un fluido encerrado se transmite íntegra en todas las direcciones, lo que permite amplificar una fuerza.",
+        "Para aplicar **Presión hidrostática** hay que definir el sistema, elegir el modelo, mantener las unidades y comprobar el resultado."
+      ],
+      "formulas": [
+        "$p=p_0+\\rho gh$",
+        "$\\dfrac{F_1}{A_1}=\\dfrac{F_2}{A_2}$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $p=p_0+\\rho gh$, define el sistema y comprueba unidades, signos, conservación y límites del modelo."
+    }
+  },
+  "lesson_03.json": {
+    "id": "L03",
+    "title": "Atmósfera",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Fluidos",
+    "unit_id": "U-4F-03",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE1,1",
+        "CE2,2"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Explicar Atmósfera con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de atmósfera para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Atmósfera."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Atmósfera."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Comprender la presión hidrostática ($p=\\rho gh$) y saber trabajar con unidades del SI.",
+        "why_it_matters": "La presión atmosférica es, en el fondo, la presión hidrostática de la columna de aire que nos rodea; el barómetro de Torricelli y la fórmula barométrica reutilizan directamente $p=\\rho gh$ aplicada al mercurio y al aire."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Por qué sentimos presión sobre nuestro cuerpo aunque estemos en el aire?",
+        "expected_answer": "Porque la atmósfera tiene masa y el aire ejerce su peso sobre todos los cuerpos: eso es la presión atmosférica."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué valor tiene la presión atmosférica estándar en Pa?",
+        "expected_answer": "101 325 Pa = 1 atm"
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La presión atmosférica solo actúa hacia abajo.",
+        "correct_model": "La presión atmosférica actúa en todas las direcciones, incluidas laterales y hacia arriba, porque los gases transmiten la presión en todas las direcciones."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "En la montaña hay más presión porque estamos más cerca del sol.",
+        "correct_model": "En la montaña hay MENOS presión, porque hay menos columna de aire encima. La temperatura del sol no influye directamente en la presión atmosférica local."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "La presión atmosférica y el barómetro de Torricelli",
+        "body": "En 1643, Evangelista Torricelli hizo un experimento brillante: llenó un tubo de vidrio de un metro con mercurio, lo tapó con el dedo, lo invirtió y lo sumergió en un recipiente con más mercurio. Al retirar el dedo, el mercurio bajó… pero no del todo. Se quedó a 760 mm de altura.\n\n¿Qué sostenía esa columna de mercurio? La **presión atmosférica**. El peso del aire empuja sobre la superficie del mercurio en el recipiente, y esa presión se transmite (Pascal) hacia arriba dentro del tubo, sosteniendo la columna.\n\n$$p_{\\text{atm}} = \\rho_{\\text{Hg}} \\cdot g \\cdot h = 13\\,600 \\times 9{,}8 \\times 0{,}76 \\approx 101\\,325\\,\\text{Pa}$$\n\nTorricelli no solo midió la presión atmosférica por primera vez: también creó el primer vacío artificial de la historia en el espacio sobre el mercurio.\n\nDe aquí viene la unidad mmHg (milímetros de mercurio): $1\\,\\text{atm} = 760\\,\\text{mmHg}$. Se usa mercurio y no agua porque es 13,6 veces más denso: con agua necesitarías un tubo de ¡10 metros!",
+        "provenance": "SOURCE (DERIVED)",
+        "student_text": "Torricelli midió la presión atmosférica con una columna de mercurio de 760 mm. P_atm = ρ_Hg · g · h ≈ 101 325 Pa = 1 atm.",
+        "formula": "$p=\\rho gh$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Barómetro de Torricelli: columna de mercurio de 760 mm\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">El barómetro de Torricelli (1643)</text>\n  <!-- Mercury dish -->\n  <ellipse cx=\"300\" cy=\"270\" rx=\"120\" ry=\"20\" fill=\"#e8e3d8\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <rect x=\"180\" y=\"250\" width=\"240\" height=\"20\" fill=\"#e8e3d8\" stroke=\"none\"/>\n  <ellipse cx=\"300\" cy=\"250\" rx=\"120\" ry=\"20\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <!-- Mercury in dish -->\n  <ellipse cx=\"300\" cy=\"258\" rx=\"100\" ry=\"12\" fill=\"#8a3d6b\" opacity=\"0.4\"/>\n  <!-- Glass tube -->\n  <rect x=\"285\" y=\"40\" width=\"30\" height=\"220\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"2\" rx=\"2\"/>\n  <!-- Mercury in tube -->\n  <rect x=\"287\" y=\"65\" width=\"26\" height=\"193\" fill=\"#8a3d6b\" opacity=\"0.5\"/>\n  <!-- Vacuum at top -->\n  <rect x=\"287\" y=\"42\" width=\"26\" height=\"23\" fill=\"var(--bg,#fbfcfd)\" stroke=\"none\"/>\n  <text x=\"275\" y=\"55\" text-anchor=\"end\" fill=\"var(--text,#20302a)\" font-size=\"10\" font-style=\"italic\">Vacío</text>\n  <!-- Height marker -->\n  <line x1=\"340\" y1=\"65\" x2=\"340\" y2=\"258\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <line x1=\"332\" y1=\"65\" x2=\"348\" y2=\"65\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <line x1=\"332\" y1=\"258\" x2=\"348\" y2=\"258\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <text x=\"360\" y=\"165\" fill=\"#c17a17\" font-size=\"13\" font-weight=\"bold\">760 mm</text>\n  <!-- Atmospheric pressure arrows -->\n  <line x1=\"140\" y1=\"240\" x2=\"175\" y2=\"255\" stroke=\"#0e7a68\" stroke-width=\"2\" marker-end=\"url(#arrowAtm)\"/>\n  <line x1=\"420\" y1=\"240\" x2=\"385\" y2=\"255\" stroke=\"#0e7a68\" stroke-width=\"2\" marker-end=\"url(#arrowAtm)\"/>\n  <line x1=\"140\" y1=\"260\" x2=\"175\" y2=\"262\" stroke=\"#0e7a68\" stroke-width=\"2\" marker-end=\"url(#arrowAtm)\"/>\n  <line x1=\"420\" y1=\"260\" x2=\"385\" y2=\"262\" stroke=\"#0e7a68\" stroke-width=\"2\" marker-end=\"url(#arrowAtm)\"/>\n  <text x=\"100\" y=\"235\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\">Presión</text>\n  <text x=\"100\" y=\"247\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\">atmosférica</text>\n  <text x=\"460\" y=\"235\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\">Presión</text>\n  <text x=\"460\" y=\"247\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\">atmosférica</text>\n  <!-- Bottom label -->\n  <text x=\"300\" y=\"305\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"11\">La atmósfera empuja el mercurio hasta 760 mm = 1 atm</text>\n  <defs>\n    <marker id=\"arrowAtm\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L8,3 L0,6\" fill=\"#0e7a68\"/>\n    </marker>\n  </defs>\n</svg>",
+            "caption": "El barómetro de Torricelli: la atmósfera sostiene 760 mm de mercurio."
+          }
+        ]
+      },
+      {
+        "title": "Variación de la presión atmosférica con la altitud (ampliación)",
+        "body": "Subir una montaña o volar en avión te lleva a zonas con menos aire encima, así que la presión atmosférica disminuye con la altitud.\n\nA nivel del mar, $p \\approx 1\\,\\text{atm}$. A 5500 metros de altitud (cima de muchos picos andinos), la presión cae a la mitad: $\\approx 0{,}5\\,\\text{atm}$. Por eso los alpinistas necesitan oxígeno suplementario.\n\nLa disminución no es lineal sino exponencial:\n\n$$p(h) = p_0 \\, e^{-h/H}$$\n\ndonde $H \\approx 8{,}5\\,\\text{km}$ es la «altura de escala» de la atmósfera. Esto significa que cada 5,5 km de subida la presión se reduce a la mitad.\n\nLos aviones comerciales vuelan a unos 10 000 m, donde la presión exterior es solo $\\approx 0{,}25\\,\\text{atm}$. Por eso la cabina va presurizada: se mantiene a unos 0,75 atm (equivalente a unos 2400 m de altitud).\n\nEste concepto también explica por qué el agua hierve a menor temperatura en la montaña: con menos presión atmosférica, las moléculas escapan del líquido más fácilmente.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "La presión disminuye exponencialmente con la altitud: p(h) = p₀·e^(-h/H), con H ≈ 8,5 km. Cada 5,5 km se reduce a la mitad.",
+        "formula": "$p(h)=p_0\\,e^{-h/H}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"La presión atmosférica disminuye con la altitud\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">La presión disminuye con la altitud</text>\n  <!-- Mountain profile -->\n  <polygon points=\"30,290 150,120 200,160 280,80 350,140 420,100 500,200 570,290\" fill=\"#e8e3d8\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <!-- Snow caps -->\n  <polygon points=\"265,90 280,80 295,90\" fill=\"white\" stroke=\"#24312c\" stroke-width=\"0.5\"/>\n  <polygon points=\"408,110 420,100 432,110\" fill=\"white\" stroke=\"#24312c\" stroke-width=\"0.5\"/>\n  <!-- Sea level line -->\n  <line x1=\"20\" y1=\"290\" x2=\"580\" y2=\"290\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <text x=\"585\" y=\"294\" fill=\"#0e7a68\" font-size=\"9\">Nivel del mar</text>\n  <!-- Pressure markers with gauge icons -->\n  <!-- Sea level -->\n  <circle cx=\"80\" cy=\"290\" r=\"16\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"80\" y=\"294\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"8\" font-weight=\"bold\">1 atm</text>\n  <text x=\"80\" y=\"306\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"9\">0 m</text>\n  <!-- 2000m -->\n  <circle cx=\"200\" cy=\"200\" r=\"16\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"200\" y=\"204\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"8\" font-weight=\"bold\">0.8 atm</text>\n  <text x=\"200\" y=\"220\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"9\">2 000 m</text>\n  <!-- 5500m (top) -->\n  <circle cx=\"350\" cy=\"110\" r=\"16\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"350\" y=\"114\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"8\" font-weight=\"bold\">0.5 atm</text>\n  <text x=\"350\" y=\"130\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"9\">5 500 m</text>\n  <!-- Airplane at high altitude -->\n  <polygon points=\"480,45 520,50 530,55 520,55 530,60 480,55 470,58 470,48\" fill=\"#8a3d6b\" opacity=\"0.6\"/>\n  <line x1=\"500\" y1=\"42\" x2=\"510\" y2=\"42\" stroke=\"#8a3d6b\" stroke-width=\"1\"/>\n  <circle cx=\"500\" cy=\"60\" r=\"16\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"500\" y=\"64\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"8\" font-weight=\"bold\">0.25 atm</text>\n  <text x=\"500\" y=\"78\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"9\">10 000 m</text>\n  <!-- Decreasing arrow -->\n  <line x1=\"40\" y1=\"280\" x2=\"40\" y2=\"50\" stroke=\"#0e7a68\" stroke-width=\"1.5\" stroke-dasharray=\"4\" marker-end=\"url(#arrowUp)\"/>\n  <text x=\"30\" y=\"165\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\" transform=\"rotate(-90,30,165)\">Altitud</text>\n  <defs>\n    <marker id=\"arrowUp\" markerWidth=\"8\" markerHeight=\"6\" refX=\"4\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,6 L4,0 L8,6\" fill=\"#0e7a68\"/>\n    </marker>\n  </defs>\n</svg>",
+            "caption": "La presión se reduce con la altitud: a 5500 m es la mitad, a 10000 m un cuarto."
+          }
+        ]
+      },
+      {
+        "title": "Aplicaciones de la presión atmosférica",
+        "body": "La presión atmosférica es invisible, pero tiene efectos por todas partes.\n\n**Beber con pajita**: Al succionar, reduces la presión dentro de tu boca. La presión atmosférica, que sigue empujando sobre la superficie del líquido en el vaso, fuerza al líquido a subir por la pajita hasta tu boca. No «aspiras» el líquido; la atmósfera lo empuja.\n\n**Ventosa**: Cuando presionas una ventosa contra una superficie lisa, expulsas el aire. La presión atmosférica exterior empuja la ventosa contra la superficie con una fuerza $F = \\Delta p \\cdot A$. Una ventosa de 10 cm de diámetro ($A \\approx 78\\,\\text{cm}^2$) puede sostener unos $780\\,\\text{N} \\approx 80\\,\\text{kg}$.\n\n**Aspiradora**: Crea una zona de baja presión en su interior. La presión atmosférica empuja el aire (y con él, el polvo) hacia dentro.\n\nTodos estos ejemplos comparten la misma física: la diferencia de presión entre dos zonas genera una fuerza neta que empuja el fluido (o los objetos en él) de la zona de mayor presión hacia la de menor presión.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "Pajita, ventosa y aspiradora funcionan porque la presión atmosférica empuja hacia zonas de menor presión. F = ΔP · A.",
+        "formula": "$F=\\Delta p\\cdot A$",
+        "assets": []
+      },
+      {
+        "title": "Presión atmosférica y meteorología",
+        "body": "Los mapas del tiempo que ves en las noticias están llenos de isobaras: líneas que unen puntos con la misma presión atmosférica.\n\nCuando la presión en una zona es más alta que la de alrededor, se forma un **anticiclón** (A): el aire desciende, se calienta y se dispersa. Resultado: cielos despejados y tiempo estable.\n\nCuando la presión es más baja, se forma una **borrasca** (B): el aire sube, se enfría, y el vapor de agua se condensa. Resultado: nubes, lluvia y viento.\n\nEl viento sopla desde las zonas de alta presión hacia las de baja presión, pero la rotación de la Tierra lo desvía (efecto Coriolis), haciendo que gire en sentido horario alrededor de los anticiclones y antihorario alrededor de las borrascas (en el hemisferio norte).\n\nAsí que la próxima vez que veas el tiempo en las noticias, sabrás que todo se reduce a diferencias de presión atmosférica.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "Anticiclón = alta presión → buen tiempo. Borrasca = baja presión → lluvia y viento. El viento sopla de alta a baja presión, desviado por Coriolis.",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Para problemas de presión atmosférica, recuerda:\n\n- La presión estándar al nivel del mar es $1\\,\\text{atm} = 101\\,325\\,\\text{Pa}$.\n- El barómetro mide la presión absoluta; un manómetro mide la diferencia respecto a la atmósfera.\n- Para estimar la presión a cierta altitud, usa la fórmula barométrica o la aproximación de que baja unos $12\\,\\text{Pa}$ por cada metro de ascenso (cerca del nivel del mar).\n\nPregunta de autoevaluación: si Torricelli hubiera usado agua en vez de mercurio, ¿qué altura alcanzaría la columna? (Pista: $\\rho_{\\text{agua}} \\approx 1000\\,\\text{kg/m}^3$).",
+        "assets": []
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Presión atmosférica",
+        "statement": "Calcula la fuerza aproximada sobre una ventana de 1,2 m² si la presión exterior es 101325 Pa y la interior es 99000 Pa.",
+        "steps": [
+          "La diferencia es Δp=101325-99000=2325 Pa.",
+          "F=Δp A=2325(1,2)=2790 N.",
+          "La fuerza neta apunta desde el exterior hacia el interior porque la presión exterior es mayor.",
+          "La presión absoluta no se multiplica sin restar antes la presión interior.",
+          "Comprobación: 2790 N repartidos sobre 1,2 m² equivalen a 2325 Pa, que coincide con Δp; el valor es pequeño frente a multiplicar directamente 101325×1,2 (que daría un resultado sin sentido, sin restar antes)."
+        ],
+        "answer": "F=2,79·10³ N.",
+        "verification": "F/A=2790/1,2=2325 Pa=Δp: el resultado es consistente con los datos del problema."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Altitud",
+        "statement": "Explica por qué disminuye la presión atmosférica al subir y qué efecto tiene sobre la ebullición.",
+        "steps": [
+          "La columna de aire encima es menor y pesa menos por unidad de área.",
+          "La presión exterior sobre el líquido disminuye.",
+          "La ebullición comienza cuando la presión de vapor iguala la exterior, por lo que ocurre a menor temperatura.",
+          "No significa que el líquido tenga menos energía interna por definición: cambia la condición de ebullición.",
+          "Comprobación: a 3000 m la presión atmosférica es ≈0,70 atm, y en esas condiciones el agua hierve a ≈90 °C, un dato experimental conocido que confirma el razonamiento."
+        ],
+        "answer": "A mayor altitud, menor presión y menor temperatura de ebullición.",
+        "verification": "El resultado cualitativo (menor altitud → menor presión → menor temperatura de ebullición) es coherente con el dato de que el agua hierve a ≈90 °C a 3000 m, en vez de a 100 °C."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Una ventosa circular de 8 cm de diámetro se pega a una pared tras expulsar casi todo el aire interior (la presión interior baja a 60 000 Pa). Construye el balance de fuerzas sobre la ventosa (presión atmosférica exterior, presión interior y peso) y decide qué fuerzas hay que incluir para saber si la ventosa se sostiene sola.",
+        "scaffold": "El área de un círculo es A=πr²; la fuerza neta que sujeta la ventosa es F=Δp·A, y debe compararse con el peso de lo que cuelgue de ella.",
+        "full_solution": "Radio: r=0,04 m; A=π(0,04)²≈5,03×10⁻³ m². Δp=101325-60000=41325 Pa. F=Δp·A=41325×5,03×10⁻³≈208 N. Esta es la fuerza máxima que la ventosa puede resistir antes de despegarse; si el peso de lo que cuelga es menor que 208 N, la ventosa se sostiene.",
+        "answer": "F≈208 N: la ventosa puede sujetar objetos de hasta unos 21 kg de masa (peso<208 N) antes de despegarse."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Compara la presión atmosférica en una ciudad costera (nivel del mar, 1 atm) y en una ciudad de montaña a 3000 m (≈0,70 atm). Predice cómo cambiaría la temperatura de ebullición del agua en cada caso y comprueba con los datos conocidos.",
+        "scaffold": "El agua hierve cuando su presión de vapor iguala a la presión exterior; a menor presión exterior, se alcanza esa igualdad a menor temperatura.",
+        "full_solution": "A nivel del mar (1 atm) el agua hierve a 100 °C. A 3000 m, con ≈0,70 atm, el agua hierve a una temperatura menor, aproximadamente 90 °C, porque la presión de vapor del agua alcanza ese valor más bajo (0,70 atm) a una temperatura inferior.",
+        "answer": "A nivel del mar el agua hierve a 100 °C; a 3000 m, a ≈90 °C, porque la presión exterior que debe igualar la presión de vapor es menor."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "La presión atmosférica en Madrid (660 m sobre el nivel del mar) es aproximadamente 0,929 atm. Exprésala en Pa y en bar.",
+        "answer": "Pa: 0,929× 101325 = 94 131 Pa. Bar: 94131/100000 = 0,941 bar",
+        "full_solution": "Paso 1: convierte a pascales multiplicando por 101 325 Pa/atm: $0,929\\times101\\,325\\approx94\\,131\\,\\mathrm{Pa}$. Paso 2: convierte a bar dividiendo entre 100 000 Pa/bar: $94\\,131/100\\,000\\approx0,941\\,\\mathrm{bar}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Por qué a 3 000 m de altitud el agua hierve a ≈90 °C en vez de 100 °C?",
+        "answer": "El agua hierve cuando su presión de vapor iguala la presión exterior. A 3000 m la presión es ≈0,69 atm, menor que al nivel del mar, así que la presión de vapor la iguala a menor temperatura (≈90 °C).",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Expresa la presión atmosférica estándar (101 325 Pa) en hPa, en bar y en mmHg, usando las equivalencias 1 atm=1013 hPa=1,01325 bar=760 mmHg.",
+        "hints": [
+          "Cada equivalencia es un factor de conversión directo desde 1 atm.",
+          "No necesitas calcular nada nuevo: solo aplicar las equivalencias dadas."
+        ],
+        "full_solution": "Como 101 325 Pa=1 atm, basta usar las equivalencias: en hPa, 1013 hPa; en bar, 1,01325 bar; en mmHg, 760 mmHg.",
+        "answer": "101 325 Pa = 1013 hPa = 1,01325 bar = 760 mmHg.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Una ventosa de área 15 cm² sujeta un gancho de pared. Si la presión en el interior de la ventosa baja a 70 000 Pa, calcula la fuerza máxima que puede soportar antes de despegarse.",
+        "hints": [
+          "Convierte el área a m² (1 cm²=10⁻⁴ m²).",
+          "Usa F=Δp·A con Δp=p_atm-p_interior."
+        ],
+        "full_solution": "Área: $A=15\\,\\mathrm{cm^2}=15\\times10^{-4}\\,\\mathrm{m^2}$. $\\Delta p=101\\,325-70\\,000=31\\,325\\,\\mathrm{Pa}$. $F=\\Delta p\\cdot A=31\\,325\\times15\\times10^{-4}\\approx47\\,\\mathrm{N}$.",
+        "answer": "F≈47 N (equivalente a sujetar un peso de unos 4,8 kg).",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Un excursionista sube de 0 m a 3000 m de altitud, donde la presión es ≈0,70 atm. Decide qué le ocurrirá a una bolsa de patatas cerrada herméticamente a nivel del mar cuando llegue arriba, y por qué.",
+        "hints": [
+          "La bolsa contiene aire a la presión de cuando se cerró (1 atm).",
+          "Compara la presión interior constante con la presión exterior, que disminuye."
+        ],
+        "full_solution": "El aire dentro de la bolsa sigue a ≈1 atm (no puede escapar), mientras que la presión exterior baja a ≈0,70 atm. Al ser mayor la presión interior que la exterior, la bolsa se hincha y puede llegar a hincharse mucho o incluso reventar si la diferencia es grande.",
+        "answer": "La bolsa se hincha, porque la presión interior (1 atm) supera a la presión exterior (0,70 atm) a 3000 m.",
+        "assets": []
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Usando los valores de referencia p≈1 atm a 0 m, p≈0,93 atm a 660 m y p≈0,70 atm a 3000 m, representa (en una tabla) la presión frente a la altitud y describe cómo es la gráfica.",
+        "hints": [
+          "Observa si los puntos se alinean en una recta o si la presión cae más deprisa al principio.",
+          "Recuerda que el modelo teórico es una exponencial decreciente, p(h)=p0·e^(-h/H)."
+        ],
+        "full_solution": "Los puntos (0, 1 atm), (660, 0,93 atm) y (3000, 0,70 atm) no están alineados en una recta: la presión cae más deprisa cerca del nivel del mar y más despacio a gran altitud, típico de una curva exponencial decreciente p(h)=p0·e^(-h/H).",
+        "answer": "La gráfica p–altitud es una curva exponencial decreciente, no una recta.",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un compañero afirma: «en la montaña hace más frío, así que la presión atmosférica debería ser mayor, porque el aire frío pesa más». Explica por qué esta idea es incorrecta.",
+        "hints": [
+          "La presión atmosférica depende de la cantidad de columna de aire que hay encima, no solo de su temperatura.",
+          "Compara la altura de columna de aire que queda por encima a 0 m y a 3000 m."
+        ],
+        "full_solution": "Aunque el aire frío es algo más denso, lo que determina sobre todo la presión atmosférica es la cantidad de columna de aire que queda por encima del punto de medida. A 3000 m queda mucho menos aire encima que a nivel del mar, así que la presión es menor (≈0,70 atm) aunque haga más frío. El efecto de la menor columna de aire domina sobre el efecto de la temperatura.",
+        "answer": "Falso: a pesar de hacer más frío, la presión en la montaña es menor porque hay menos columna de aire encima, no más.",
+        "assets": []
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña un experimento para estimar la presión atmosférica de tu localidad usando una botella, agua y un tubo flexible largo (más de 1 m), explicando el montaje y las fuentes de incertidumbre.",
+        "hints": [
+          "Un tubo con agua puede actuar como un barómetro de agua, aunque necesite mucha más altura que uno de mercurio.",
+          "Piensa en cómo medirías la altura de la columna de agua que queda en equilibrio."
+        ],
+        "full_solution": "Se llena completamente de agua un tubo transparente de más de 10,3 m (o, de forma más realista en el aula, se usa un tramo de tubo con el extremo sumergido en una botella y se razona sobre el límite teórico) y se invierte, tapando un extremo, sobre un recipiente con agua. En equilibrio, la columna de agua que queda sin caer tiene una altura h tal que $p_{\\mathrm{atm}}=\\rho_{\\mathrm{agua}}gh$, de donde $p_{\\mathrm{atm}}=\\rho_{\\mathrm{agua}}gh$. Incertidumbres: la dificultad de evitar burbujas de aire en el tubo, el error al medir la altura con una regla y pequeñas variaciones de temperatura que afectan ligeramente a la densidad del agua.",
+        "answer": "Midiendo la altura de la columna de agua en equilibrio dentro de un tubo muy largo e invertido, y aplicando p_atm=ρ_agua·g·h, se puede estimar la presión atmosférica (con una incertidumbre debida a burbujas de aire y al error de medida de h).",
+        "assets": []
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Describe el experimento de Torricelli. ¿Por qué la columna de mercurio se queda a 760 mm y no cae completamente?",
+        "answer": "Se llena un tubo cerrado con mercurio y se invierte sobre un recipiente con mercurio. La columna cae hasta que su peso (P=ρ gh) equilibra la presión atmosférica exterior (101 325 Pa). Con ρ =13600 kg/m³ eso corresponde a h=760 mm. Si cayera más, la presión atmosférica la empujaría hacia arriba.",
+        "full_solution": "Se llena por completo de mercurio un tubo de vidrio de algo más de 76 cm, cerrado por un extremo, y se invierte (tapando el extremo abierto) sobre una cubeta con mercurio, destapándolo ya sumergido. El mercurio del tubo cae, dejando un espacio casi vacío en la parte superior, hasta que la presión que ejerce la columna restante, $\\rho_{\\mathrm{Hg}}gh$, iguala a la presión atmosférica exterior que empuja el mercurio de la cubeta hacia arriba por el tubo: $h=\\dfrac{p_{\\mathrm{atm}}}{\\rho_{\\mathrm{Hg}}g}=\\dfrac{101\\,325}{13\\,600\\times9,8}\\approx0,760\\,\\mathrm{m}$. Si la columna fuera más alta, su peso superaría a la fuerza que ejerce la presión atmosférica y el mercurio seguiría cayendo; si fuera más baja, la presión atmosférica la empujaría hacia arriba.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Si llenáramos el barómetro de Torricelli con agua (ρ =1000 kg/m³) en vez de mercurio, ¿qué altura alcanzaría la columna? ¿Sería práctico?",
+        "answer": "h=p/(ρ g)=101325/(1000·9,8)=10,34 m. No sería práctico: el tubo debería superar los 10 m, y además el vapor de agua reduciría algo la columna real.",
+        "full_solution": "Altura teórica: $h=\\dfrac{p_{\\mathrm{atm}}}{\\rho_{\\mathrm{agua}}g}=\\dfrac{101\\,325}{1000\\times9,8}\\approx10,34\\,\\mathrm{m}$. No sería práctico: se necesitaría un tubo de más de 10 m, muy difícil de manejar en un laboratorio. Además, a diferencia del mercurio (que apenas se evapora), el agua tiene una presión de vapor apreciable (≈2,3 kPa a 20 °C) que ocuparía parte del «vacío» superior, reduciendo la columna real a unos 10,1 m en vez de los 10,34 m teóricos.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": []
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L03-1",
+        "stem": "¿Cuánto vale la presión atmosférica estándar al nivel del mar?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 100 000 Pa",
+            "why_wrong": "100 000 Pa es la definición de 1 bar, no de 1 atm."
+          },
+          {
+            "key": "B",
+            "text": "B. 101 325 Pa"
+          },
+          {
+            "key": "C",
+            "text": "C. 760 Pa",
+            "why_wrong": "760 es el número de mmHg equivalentes a 1 atm, no los pascales."
+          },
+          {
+            "key": "D",
+            "text": "D. 133 322 Pa",
+            "why_wrong": "133 322 Pa corresponde aproximadamente a 1000 mmHg, no a 1 atm."
+          }
+        ],
+        "explanation": "Por definición, la presión atmosférica estándar es 101 325 Pa = 1 atm = 760 mmHg.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L03-2",
+        "stem": "¿Qué fluido usó Torricelli en su barómetro y por qué?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Agua, porque es fácil de conseguir",
+            "why_wrong": "Con agua la columna necesaria sería de más de 10 m, poco práctica para un tubo de laboratorio."
+          },
+          {
+            "key": "B",
+            "text": "B. Mercurio, porque es 13,6 veces más denso que el agua y permite un tubo más corto"
+          },
+          {
+            "key": "C",
+            "text": "C. Aceite, porque no se evapora",
+            "why_wrong": "El aceite no es especialmente denso ni fue el fluido histórico usado por Torricelli."
+          },
+          {
+            "key": "D",
+            "text": "D. Alcohol, porque es transparente",
+            "why_wrong": "La transparencia no es la razón; además el alcohol es menos denso que el agua, necesitaría un tubo aún más largo."
+          }
+        ],
+        "explanation": "Torricelli usó mercurio porque, al ser 13,6 veces más denso que el agua, basta una columna de solo 760 mm para equilibrar la presión atmosférica, frente a los más de 10 m que necesitaría el agua.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L03-3",
+        "stem": "¿Qué ocurre con la presión atmosférica al subir una montaña?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Aumenta porque hay más calor del sol",
+            "why_wrong": "La radiación solar no determina directamente la presión atmosférica local."
+          },
+          {
+            "key": "B",
+            "text": "B. Se mantiene constante",
+            "why_wrong": "La presión cambia claramente con la altitud, como muestran los datos de Madrid (660 m) o el Everest."
+          },
+          {
+            "key": "C",
+            "text": "C. Disminuye porque hay menos columna de aire encima"
+          },
+          {
+            "key": "D",
+            "text": "D. Aumenta porque el aire está más frío y pesa más",
+            "why_wrong": "Aunque el aire frío es algo más denso, lo que domina es que queda mucha menos columna de aire por encima, así que la presión disminuye."
+          }
+        ],
+        "explanation": "Al subir, queda menos masa de aire por encima del punto de medida, de modo que la presión atmosférica disminuye con la altitud.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L03-4",
+        "stem": "Una pajita funciona porque:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Succiona el líquido hacia arriba activamente",
+            "why_wrong": "La boca no «succiona» con una fuerza propia: solo reduce la presión en su interior."
+          },
+          {
+            "key": "B",
+            "text": "B. Al reducir la presión en la boca, la presión atmosférica empuja el líquido"
+          },
+          {
+            "key": "C",
+            "text": "C. La tensión superficial sube el líquido",
+            "why_wrong": "La tensión superficial es responsable de la capilaridad en tubos muy finos, no del funcionamiento habitual de una pajita."
+          },
+          {
+            "key": "D",
+            "text": "D. El calor de la boca hace subir el líquido",
+            "why_wrong": "La temperatura de la boca no tiene relación con que el líquido suba por la pajita."
+          }
+        ],
+        "explanation": "Al reducir la presión en el extremo superior de la pajita, la presión atmosférica (mayor) que actúa sobre la superficie libre del líquido lo empuja hacia la zona de menor presión, haciéndolo subir.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Valor de la presión atmosférica estándar",
+        "back": "P₀ = 101 325 Pa = 1 atm = 760 mmHg = 1,01325 bar. Es la presión media al nivel del mar.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Qué es el vacío de Torricelli?",
+        "back": "El espacio sobre la columna de mercurio en el barómetro de Torricelli, donde prácticamente no hay aire. Es casi un vacío perfecto.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Por qué hay menos presión en la montaña?",
+        "back": "Porque hay menos columna de aire (menos masa de atmósfera) encima. La presión disminuye exponencialmente con la altitud.",
+        "provenance": "GENERATED (EXPLANATION)"
+      },
+      {
+        "front": "¿A qué temperatura hierve el agua a 3 000 m de altitud?",
+        "back": "Aproximadamente a 90 °C, porque la presión atmosférica es menor (~0,69-0,70 atm) y la presión de vapor del agua iguala esa presión exterior a una temperatura más baja que a nivel del mar.",
+        "provenance": "GENERATED (EXPLANATION)"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "presión atmosférica",
+        "definition": "Presión que ejerce el peso de la columna de aire de la atmósfera sobre los cuerpos; a nivel del mar vale, en promedio, 101 325 Pa."
+      },
+      {
+        "term": "barómetro",
+        "definition": "Instrumento que mide la presión atmosférica, como el de mercurio de Torricelli o los barómetros aneroides (con una cápsula metálica deformable)."
+      },
+      {
+        "term": "Torricelli",
+        "definition": "Científico italiano que en 1643 ideó el primer barómetro de mercurio y demostró la existencia de la presión atmosférica."
+      },
+      {
+        "term": "atmósfera",
+        "definition": "Capa de gases que envuelve la Tierra; también nombre de la unidad de presión (atm) basada en la presión media del aire al nivel del mar."
+      },
+      {
+        "term": "altitud",
+        "definition": "Altura sobre el nivel del mar; al aumentar la altitud disminuye la presión atmosférica porque queda menos columna de aire encima."
+      },
+      {
+        "term": "mmHg",
+        "definition": "Milímetro de mercurio: unidad de presión basada en la altura de una columna de mercurio en equilibrio con la presión medida. 760 mmHg=1 atm."
+      },
+      {
+        "term": "vacío",
+        "definition": "Región con ausencia (casi total) de materia y, por tanto, de presión; en el barómetro de Torricelli aparece sobre la columna de mercurio."
+      }
+    ],
+    "source_references": [
+      "RD 217/2022 saberes básicos FyQ 4º ESO",
+      "Física y Química 4º ESO, editorial Anaya"
+    ],
+    "curriculum_refs": [
+      "CE1,1 Resolver problemas de física",
+      "CE2,2 Relacionar fenómenos físicos con aplicaciones tecnológicas"
+    ],
+    "confidence_notes": [
+      "Cálculo de Torricelli verificado numéricamente",
+      "Temperaturas de ebullición en altitud contrastadas"
+    ],
+    "internal_review": {
+      "checks": [
+        "4 MCQ",
+        "4 flashcards",
+        "3 theory (blocks)",
+        "2 worked (examples)"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    },
+    "summary": {
+      "big_idea": "Atmósfera se entiende relacionando el modelo científico con magnitudes observables, representaciones y límites de validez.",
+      "key_points": [
+        "La atmósfera terrestre ejerce presión sobre todos los cuerpos.",
+        "La presión atmosférica disminuye con la altitud porque hay menos masa de aire encima.",
+        "La presión atmosférica tiene numerosas aplicaciones prácticas.",
+        "Para aplicar **Atmósfera** hay que definir el sistema, elegir el modelo, mantener las unidades y comprobar el resultado."
+      ],
+      "formulas": [
+        "$p=\\rho gh$",
+        "$F=\\Delta p\\cdot A$",
+        "$p(h)=p_0\\,e^{-h/H}$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $p=\\rho gh$ para el barómetro de Torricelli y $F=\\Delta p\\cdot A$ para ventosas y pajitas; define el sistema y comprueba unidades, signos y límites del modelo."
+    }
+  },
+  "lesson_04.json": {
+    "id": "L04",
+    "title": "Empuje",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Fluidos",
+    "unit_id": "U-4F-03",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE1,1",
+        "CE2,1"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Explicar Empuje con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de empuje para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Empuje."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Empuje."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Presión hidrostática ($p=\\rho gh$), densidad ($\\rho=m/V$), peso ($P=mg$) y conversión de cm³ a m³.",
+        "why_it_matters": "El empuje se deduce comparando la presión hidrostática en la cara inferior y la superior de un cuerpo sumergido, y su cálculo exige pasar de densidad y volumen a una fuerza en newtons, igual que al calcular pesos."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Por qué parece que los objetos pesan menos dentro del agua?",
+        "expected_answer": "Porque el agua ejerce un empuje hacia arriba sobre ellos, reduciendo el peso aparente."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué es la densidad del agua? ¿Y la del hierro?",
+        "expected_answer": "Agua: ρ =1000 kg m⁻³. Hierro: ρ ≈ 7800 kg/m³."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El empuje depende del peso del objeto.",
+        "correct_model": "El empuje depende del volumen del fluido desplazado (E = ρ (fluido)· V (sumergido)· g), no del peso del objeto. Un globo lleno de helio y una bola de plomo del mismo volumen reciben el mismo empuje del aire."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El empuje solo actúa en agua.",
+        "correct_model": "El empuje actúa en cualquier fluido: agua, aceite, aire, mercurio. Los globos aerostáticos flotan en el aire por el empuje del aire sobre el volumen que ocupan."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Qué significa el empuje",
+        "body": "Cuando sumerges un objeto en agua, parece que pesa menos. Intenta levantar una piedra grande bajo el agua y notarás que es sorprendentemente fácil. ¿Qué fuerza «ayuda» a sostenerla?\n\nEsa fuerza se llama **empuje** ($E$) y fue descubierta por Arquímedes. Aparece porque la presión hidrostática empuja más por debajo del objeto (donde hay más profundidad) que por arriba. La diferencia neta es una fuerza ascendente:\n\n$$E = \\rho_f \\cdot g \\cdot V_{\\text{desplazado}}$$\n\ndonde $\\rho_f$ es la densidad del fluido, $g$ la gravedad y $V_{\\text{desplazado}}$ el volumen de fluido que el objeto «aparta» al sumergirse.\n\nDicho de forma más intuitiva: **el empuje es igual al peso del fluido desplazado**. Si sumerges un bloque de 1 litro en agua, el empuje será el peso de 1 litro de agua ($\\approx 9{,}8\\,\\text{N}$).\n\nEl empuje no depende del material del objeto, solo de su volumen sumergido y de la densidad del fluido. Un bloque de plomo y otro de madera del mismo tamaño reciben exactamente el mismo empuje.",
+        "formula": "$E=\\rho_f gV_{\\mathrm{desplazado}}$",
+        "provenance": "SOURCE_DERIVED",
+        "student_text": "El empuje es la fuerza ascendente que un fluido ejerce sobre un objeto sumergido: E = ρ_fluido · g · V_desplazado. Es igual al peso del fluido desplazado.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\" role=\"img\" aria-label=\"Empuje de Arquímedes: fuerza ascendente igual al peso del fluido desplazado\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">Principio de Arquímedes: el empuje</text>\n  <defs>\n    <marker id=\"arrowE\" markerWidth=\"8\" markerHeight=\"6\" refX=\"4\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,6 L4,0 L8,6\" fill=\"#0e7a68\"/>\n    </marker>\n    <marker id=\"arrowW\" markerWidth=\"8\" markerHeight=\"6\" refX=\"4\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L4,6 L8,0\" fill=\"#c17a17\"/>\n    </marker>\n  </defs>\n  <!-- Water container -->\n  <rect x=\"50\" y=\"60\" width=\"280\" height=\"230\" fill=\"#0e7a68\" opacity=\"0.12\" stroke=\"#24312c\" stroke-width=\"2\" rx=\"4\"/>\n  <!-- Water surface -->\n  <line x1=\"52\" y1=\"80\" x2=\"328\" y2=\"80\" stroke=\"#0e7a68\" stroke-width=\"1.5\" stroke-dasharray=\"6\"/>\n  <text x=\"310\" y=\"74\" fill=\"#0e7a68\" font-size=\"9\">Superficie</text>\n  <!-- Submerged block -->\n  <rect x=\"120\" y=\"140\" width=\"80\" height=\"80\" rx=\"6\" fill=\"#8a3d6b\" opacity=\"0.5\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <text x=\"160\" y=\"185\" text-anchor=\"middle\" fill=\"white\" font-size=\"12\" font-weight=\"bold\">V</text>\n  <!-- Weight arrow (down) -->\n  <line x1=\"160\" y1=\"222\" x2=\"160\" y2=\"270\" stroke=\"#c17a17\" stroke-width=\"3\" marker-end=\"url(#arrowW)\"/>\n  <text x=\"175\" y=\"265\" fill=\"#c17a17\" font-size=\"12\" font-weight=\"bold\">W = mg</text>\n  <!-- Buoyancy arrow (up) -->\n  <line x1=\"160\" y1=\"138\" x2=\"160\" y2=\"90\" stroke=\"#0e7a68\" stroke-width=\"3\" marker-end=\"url(#arrowE)\"/>\n  <text x=\"175\" y=\"100\" fill=\"#0e7a68\" font-size=\"12\" font-weight=\"bold\">E = ρ꜀gV</text>\n  <!-- Overflow container -->\n  <rect x=\"340\" y=\"150\" width=\"80\" height=\"100\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"1.5\" rx=\"4\"/>\n  <rect x=\"342\" y=\"180\" width=\"76\" height=\"68\" fill=\"#0e7a68\" opacity=\"0.2\"/>\n  <!-- Overflow arrow -->\n  <path d=\"M330,160 Q360,120 370,148\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/>\n  <text x=\"380\" y=\"265\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\">Agua desplazada</text>\n  <!-- Formula box -->\n  <rect x=\"370\" y=\"50\" width=\"210\" height=\"70\" rx=\"8\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"475\" y=\"72\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"11\" font-weight=\"bold\">Principio de Arquímedes</text>\n  <text x=\"475\" y=\"92\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"13\" font-weight=\"bold\">E = ρ꜀ · g · V_desp</text>\n  <text x=\"475\" y=\"110\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\">E = peso del fluido desplazado</text>\n</svg>",
+            "caption": "Empuje de Arquímedes: el bloque sumergido recibe una fuerza ascendente igual al peso del agua desplazada."
+          }
+        ]
+      },
+      {
+        "title": "Peso aparente, flotación y criterio de densidades",
+        "body": "Cuando sumerges un objeto, compiten dos fuerzas: su peso ($W = mg$) hacia abajo y el empuje ($E = \\rho_f g V$) hacia arriba.\n\nEl **peso aparente** es lo que «pesa» el objeto dentro del fluido:\n\n$$W_{\\text{ap}} = W - E$$\n\nSi $W > E$ → el objeto se hunde (su densidad es mayor que la del fluido).\nSi $W = E$ → flotación neutra (misma densidad).\nSi $W < E$ → el objeto sube y flota en la superficie.\n\nEl **criterio de densidades** resume todo esto de forma sencilla:\n\n- Si $\\rho_{\\text{objeto}} > \\rho_{\\text{fluido}}$ → se hunde.\n- Si $\\rho_{\\text{objeto}} = \\rho_{\\text{fluido}}$ → flotación neutra.\n- Si $\\rho_{\\text{objeto}} < \\rho_{\\text{fluido}}$ → flota.\n\nUn corcho ($\\rho \\approx 200\\,\\text{kg/m}^3$) flota con la mayor parte fuera del agua. La madera ($\\rho \\approx 500\\,\\text{kg/m}^3$) flota con la mitad sumergida. El hierro ($\\rho = 7800\\,\\text{kg/m}^3$) se va al fondo sin remedio.",
+        "formula": "$a=\\dfrac{E-P}{m}$",
+        "provenance": "GENERATED_EXPLANATION",
+        "student_text": "W_ap = W - E. Si ρ_objeto > ρ_fluido → se hunde. Si ρ_objeto < ρ_fluido → flota. La fracción sumergida depende de la razón de densidades.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 310\" role=\"img\" aria-label=\"Criterio de densidades: corcho flota, madera flota parcialmente, hierro se hunde\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">Criterio de densidades: ¿flota o se hunde?</text>\n  <!-- Water container -->\n  <rect x=\"50\" y=\"55\" width=\"500\" height=\"230\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#24312c\" stroke-width=\"1.5\" rx=\"6\"/>\n  <!-- Water surface -->\n  <line x1=\"52\" y1=\"100\" x2=\"548\" y2=\"100\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <!-- Object 1: Cork (floats mostly above) -->\n  <rect x=\"80\" y=\"85\" width=\"50\" height=\"40\" rx=\"6\" fill=\"#c17a17\" opacity=\"0.6\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"105\" y=\"108\" text-anchor=\"middle\" fill=\"#24312c\" font-size=\"9\" font-weight=\"bold\">Corcho</text>\n  <text x=\"105\" y=\"140\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"9\">ρ = 200</text>\n  <text x=\"105\" y=\"154\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"9\">kg/m³</text>\n  <text x=\"105\" y=\"170\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\" font-weight=\"bold\">FLOTA</text>\n  <!-- Object 2: Wood (half submerged) -->\n  <rect x=\"205\" y=\"80\" width=\"50\" height=\"50\" rx=\"6\" fill=\"#c17a17\" opacity=\"0.8\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"230\" y=\"108\" text-anchor=\"middle\" fill=\"white\" font-size=\"9\" font-weight=\"bold\">Madera</text>\n  <text x=\"230\" y=\"145\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"9\">ρ = 500</text>\n  <text x=\"230\" y=\"159\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"9\">kg/m³</text>\n  <text x=\"230\" y=\"175\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\" font-weight=\"bold\">FLOTA</text>\n  <!-- Object 3: Water-density (neutral) -->\n  <rect x=\"330\" y=\"95\" width=\"50\" height=\"50\" rx=\"6\" fill=\"#0e7a68\" opacity=\"0.5\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"355\" y=\"123\" text-anchor=\"middle\" fill=\"white\" font-size=\"8\" font-weight=\"bold\">Pez</text>\n  <text x=\"355\" y=\"160\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"9\">ρ ≈ 1000</text>\n  <text x=\"355\" y=\"174\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"9\">kg/m³</text>\n  <text x=\"355\" y=\"190\" text-anchor=\"middle\" fill=\"#24312c\" font-size=\"10\" font-weight=\"bold\">NEUTRO</text>\n  <!-- Object 4: Iron (sinks) -->\n  <rect x=\"455\" y=\"200\" width=\"50\" height=\"50\" rx=\"6\" fill=\"#8a3d6b\" opacity=\"0.7\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"480\" y=\"228\" text-anchor=\"middle\" fill=\"white\" font-size=\"9\" font-weight=\"bold\">Hierro</text>\n  <text x=\"480\" y=\"265\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"9\">ρ = 7800</text>\n  <text x=\"480\" y=\"279\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"9\">kg/m³</text>\n  <text x=\"480\" y=\"295\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"10\" font-weight=\"bold\">SE HUNDE</text>\n  <!-- Water density reference -->\n  <rect x=\"180\" y=\"45\" width=\"240\" height=\"22\" rx=\"6\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n  <text x=\"300\" y=\"60\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"11\">ρ_agua = 1000 kg/m³</text>\n</svg>",
+            "caption": "Criterio de densidades: el corcho flota, la madera flota parcialmente, el hierro se hunde."
+          }
+        ]
+      },
+      {
+        "title": "Cómo calcularlo y comprobarlo",
+        "body": "Para calcular el empuje y el peso aparente, sigue estos pasos:\n\n**Paso 1**: Identifica el fluido y busca su densidad ($\\rho_f$).\n\n**Paso 2**: Calcula el volumen sumergido del objeto. Si está totalmente sumergido, es su volumen total. Si flota, es la parte que está por debajo de la superficie.\n\n**Paso 3**: Aplica la fórmula del empuje:\n\n$$E = \\rho_f \\cdot g \\cdot V_{\\text{sumergido}}$$\n\n**Paso 4**: Calcula el peso aparente: $W_{\\text{ap}} = W - E$.\n\n**Comprobación**: el empuje nunca puede ser negativo (siempre empuja hacia arriba), y el peso aparente de un objeto que flota es cero (en equilibrio, $E = W$).\n\nSi te dan la masa del objeto y su densidad, puedes obtener su volumen con $V = m/\\rho$.",
+        "provenance": "GENERATED_EXPLANATION",
+        "student_text": "Procedimiento: 1. Buscar ρ_fluido. 2. Calcular V_sumergido. 3. E = ρ_f · g · V. 4. W_ap = W - E.",
+        "assets": []
+      },
+      {
+        "title": "Ejemplo guiado",
+        "body": "**Problema**: Un bloque de aluminio ($\\rho = 2700\\,\\text{kg/m}^3$, $V = 0{,}002\\,\\text{m}^3$) se sumerge completamente en agua ($\\rho = 1000\\,\\text{kg/m}^3$). Calcula su peso, el empuje y el peso aparente.\n\n**Masa**: $m = \\rho \\cdot V = 2700 \\times 0{,}002 = 5{,}4\\,\\text{kg}$\n\n**Peso**: $W = mg = 5{,}4 \\times 9{,}8 = 52{,}9\\,\\text{N}$\n\n**Empuje**: $E = \\rho_f \\cdot g \\cdot V = 1000 \\times 9{,}8 \\times 0{,}002 = 19{,}6\\,\\text{N}$\n\n**Peso aparente**: $W_{\\text{ap}} = 52{,}9 - 19{,}6 = 33{,}3\\,\\text{N}$\n\n**Comprobación**: el aluminio es más denso que el agua ($2700 > 1000$), así que se hunde. El peso aparente es positivo pero menor que el peso real. Tiene sentido.",
+        "provenance": "SOURCE_DERIVED",
+        "student_text": "Ejemplo: bloque de aluminio en agua. W = 52,9 N, E = 19,6 N, W_ap = 33,3 N. Se hunde porque ρ_Al > ρ_agua.",
+        "assets": []
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Arquímedes",
+        "statement": "Un bloque desplaza 0,015 m³ de agua. Calcula el empuje con ρ=1000 kg/m³.",
+        "steps": [
+          "El volumen desplazado es el volumen sumergido.",
+          "E=ρ gV=1000(9,8)(0,015)=147 N.",
+          "El empuje es vertical hacia arriba y depende del fluido y del volumen desplazado.",
+          "Comparar con el peso permite decidir si acelera hacia arriba o hacia abajo.",
+          "Comprobación: el agua desplazada tiene una masa de ρV=1000×0,015=15 kg, cuyo peso es 15×9,8=147 N, idéntico al empuje calculado."
+        ],
+        "answer": "E=147 N.",
+        "verification": "15 kg de agua desplazada pesan 147 N, el mismo valor que el empuje: el resultado es consistente con el principio de Arquímedes."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Objeto sumergido",
+        "statement": "Un objeto de 4 kg y volumen 0,003 m³ está totalmente sumergido en agua. Decide su aceleración inicial.",
+        "steps": [
+          "Empuje: E=1000(9,8)(0,003)=29,4 N.",
+          "Peso: P=4(9,8)=39,2 N.",
+          "Resultante: 29,4-39,2=-9,8 N, hacia abajo.",
+          "$a=F_{\\mathrm{net}}/m=-9,8/4=-2,45\\,\\mathrm{m/s^2}$.",
+          "Comprobación: la densidad del objeto es ρ=4/0,003≈1333 kg/m³, mayor que la del agua (1000 kg/m³), por lo que es coherente que el objeto se hunda (acelere hacia abajo)."
+        ],
+        "answer": "Acelera hacia abajo a 2,45 m/s².",
+        "verification": "Como ρ_objeto (1333 kg/m³) > ρ_agua (1000 kg/m³), el criterio de densidades predice que se hunde, en concordancia con la aceleración negativa obtenida."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Un corcho de 0,002 m³ y una bola de plomo del mismo volumen (0,002 m³) se sumergen por completo en agua (ρ=1000 kg/m³). Construye el balance de fuerzas de cada uno (peso y empuje) y decide qué magnitud es igual en ambos casos y cuál no.",
+        "scaffold": "El empuje solo depende del volumen sumergido y de la densidad del fluido, no de la densidad ni del peso del objeto; el peso sí depende de la masa de cada objeto.",
+        "full_solution": "Empuje (igual en los dos casos, porque el volumen sumergido y el fluido son los mismos): $E=\\rho_{\\mathrm{agua}}Vg=1000\\times0,002\\times9,8=19,6\\,\\mathrm{N}$. El peso es distinto: el corcho (ρ≈240 kg/m³) pesa mucho menos que la bola de plomo (ρ≈11 300 kg/m³) para el mismo volumen, así que el corcho sube (E>P) y el plomo se hunde (E<P).",
+        "answer": "E=19,6 N en ambos casos; lo que cambia es el peso, por lo que el corcho sube y la bola de plomo se hunde."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Compara el empuje que recibe un mismo objeto de 0,01 m³ totalmente sumergido primero en agua dulce (ρ=1000 kg/m³) y después en agua de mar (ρ=1025 kg/m³). Predice en qué caso el empuje es mayor y comprueba con el cálculo.",
+        "scaffold": "El volumen sumergido es el mismo en los dos casos; solo cambia la densidad del fluido.",
+        "full_solution": "En agua dulce: $E=1000\\times0,01\\times9,8=98\\,\\mathrm{N}$. En agua de mar: $E=1025\\times0,01\\times9,8=100,45\\,\\mathrm{N}$. El empuje es mayor en agua de mar porque su densidad es mayor, aunque el volumen sumergido sea idéntico.",
+        "answer": "E=98 N en agua dulce y E=100,45 N en agua de mar: el empuje es mayor en el fluido más denso."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un barco desplaza 2500 m³ de agua de mar (ρ = 1025 kg/m³). Calcula el empuje que recibe y su masa equivalente.",
+        "answer": "E = 1025 × 2500 × 9,8 = 25 112 500 N ≈ 25,1 MN",
+        "full_solution": "Paso 1: aplica $E=\\rho_f gV=1025\\times9,8\\times2500=25\\,112\\,500\\,\\mathrm{N}\\approx25,1\\,\\mathrm{MN}$. Paso 2: la masa de agua desplazada (igual a la masa del barco si flota en equilibrio) es $m=\\rho_f V=1025\\times2500=2\\,562\\,500\\,\\mathrm{kg}\\approx2,56\\times10^{6}\\,\\mathrm{kg}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un objeto de 200 g de masa y 80 cm³ de volumen se sumerge en agua. ¿Cuál es su peso aparente?",
+        "answer": "P=0,2× 9,8=1,96 N; E=1000× 80× 10⁻⁶× 9,8=0,784 N; P=1,96–0,784=1,176 N",
+        "full_solution": "Paso 1: peso real: $P=mg=0,2\\times9,8=1,96\\,\\mathrm{N}$. Paso 2: convierte el volumen a m³: $80\\,\\mathrm{cm^3}=80\\times10^{-6}\\,\\mathrm{m^3}$, y calcula el empuje: $E=\\rho_{\\mathrm{agua}}Vg=1000\\times80\\times10^{-6}\\times9,8=0,784\\,\\mathrm{N}$. Paso 3: peso aparente: $P_{\\mathrm{aparente}}=P-E=1,96-0,784=1,176\\,\\mathrm{N}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Una piedra de 0,002 m³ se sumerge por completo en agua (ρ=1000 kg/m³). Calcula el empuje que recibe y decide cómo cambiaría si se sumergiera en aceite (ρ=920 kg/m³).",
+        "hints": [
+          "Aplica E=ρf·g·V con los datos del agua.",
+          "Para el aceite, solo cambia la densidad del fluido."
+        ],
+        "full_solution": "En agua: $E=1000\\times9,8\\times0,002=19,6\\,\\mathrm{N}$. En aceite: $E=920\\times9,8\\times0,002=18,0\\,\\mathrm{N}$.",
+        "answer": "E=19,6 N en agua; en aceite sería menor, E=18,0 N, porque el aceite es menos denso.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Un buzo de 70 kg y volumen corporal 0,068 m³ está totalmente sumergido en agua de mar (ρ=1025 kg/m³). Calcula el empuje, el peso y decide si tiende a subir o a hundirse sin el equipo de lastre.",
+        "hints": [
+          "Calcula E=ρf·g·V y P=mg por separado.",
+          "Compara ambos valores para decidir el sentido de la fuerza neta."
+        ],
+        "full_solution": "Empuje: $E=1025\\times9,8\\times0,068\\approx683\\,\\mathrm{N}$. Peso: $P=70\\times9,8=686\\,\\mathrm{N}$. Como E≈683 N es casi igual a P≈686 N (ligeramente menor), el buzo tiende a hundirse muy levemente, casi en equilibrio.",
+        "answer": "E≈683 N; P≈686 N: el buzo está casi en equilibrio, con una ligerísima tendencia a hundirse.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Dos esferas del mismo volumen (0,001 m³), una de madera (ρ=600 kg/m³) y otra de aluminio (ρ=2700 kg/m³), se sumergen por completo en agua. Decide el sentido de la aceleración de cada una.",
+        "hints": [
+          "El empuje es el mismo para las dos, porque tienen el mismo volumen sumergido.",
+          "Compara el empuje con el peso de cada esfera para decidir el signo de la aceleración."
+        ],
+        "full_solution": "Empuje (igual en ambas): $E=1000\\times9,8\\times0,001=9,8\\,\\mathrm{N}$. Madera: $P=600\\times0,001\\times9,8=5,88\\,\\mathrm{N}$; como E>P, acelera hacia arriba. Aluminio: $P=2700\\times0,001\\times9,8=26,46\\,\\mathrm{N}$; como E<P, acelera hacia abajo.",
+        "answer": "La esfera de madera acelera hacia arriba (E=9,8 N > P=5,88 N); la de aluminio acelera hacia abajo (E=9,8 N < P=26,46 N).",
+        "assets": []
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Calcula el empuje en agua (ρ=1000 kg/m³) para volúmenes sumergidos de 0,001; 0,002; 0,003 y 0,004 m³, y describe la gráfica E frente a V que se obtiene.",
+        "hints": [
+          "Aplica E=ρf·g·V para cada volumen.",
+          "Observa si los puntos se alinean en una recta que pasa por el origen."
+        ],
+        "full_solution": "E(0,001)=9,8 N; E(0,002)=19,6 N; E(0,003)=29,4 N; E(0,004)=39,2 N. Los puntos están sobre una recta que pasa por el origen con pendiente ρf·g=1000×9,8=9800 N/m³.",
+        "answer": "La gráfica E–V es una recta que pasa por el origen, con pendiente ρf·g=9800 N/m³.",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un compañero afirma: «los objetos pesados siempre se hunden». Corrige esta afirmación comparando un barco de acero (densidad media del conjunto ≈600 kg/m³ por el aire interior) con una piedra pequeña de acero macizo (ρ≈7800 kg/m³), ambos en agua (ρ=1000 kg/m³).",
+        "hints": [
+          "Lo relevante no es el peso total, sino la densidad media del objeto comparada con la del fluido.",
+          "El barco contiene grandes huecos de aire que reducen su densidad media."
+        ],
+        "full_solution": "El barco, aunque pese mucho más en total, tiene una densidad media (acero+aire interior) de unos 600 kg/m³, menor que la del agua (1000 kg/m³), así que flota. La piedra de acero macizo tiene una densidad de 7800 kg/m³, mayor que la del agua, así que se hunde aunque pese mucho menos que el barco. Lo decisivo es la densidad media, no el peso total.",
+        "answer": "Falso: el barco (más pesado, pero con densidad media menor que el agua) flota, mientras que la piedra de acero (mucho más ligera, pero más densa que el agua) se hunde.",
+        "assets": []
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña un experimento para medir la densidad de una piedra irregular usando una balanza, un hilo y un recipiente con agua, explicando cómo obtendrías el volumen y qué incertidumbres tendría la medida.",
+        "hints": [
+          "El peso aparente en agua permite calcular el empuje, y el empuje permite calcular el volumen sumergido.",
+          "V=E/(ρagua·g); luego ρpiedra=m/V."
+        ],
+        "full_solution": "Se pesa la piedra en aire (peso real P) y, suspendida de un hilo, sumergida por completo en agua (peso aparente P_ap). El empuje es $E=P-P_{\\mathrm{ap}}$, y como $E=\\rho_{\\mathrm{agua}}Vg$, el volumen de la piedra es $V=\\dfrac{E}{\\rho_{\\mathrm{agua}}g}$. La densidad de la piedra es $\\rho_{\\mathrm{piedra}}=\\dfrac{m}{V}=\\dfrac{P/g}{V}$. Incertidumbres: la precisión de la balanza al pesar P y P_ap, burbujas de aire adheridas a la piedra que falsean el volumen, y pequeñas corrientes en el agua al sumergirla.",
+        "answer": "Pesando la piedra en aire y sumergida en agua, el empuje E=P-P_ap da el volumen V=E/(ρagua·g), y de ahí la densidad ρ=m/V, con una incertidumbre debida a la precisión de la balanza y a posibles burbujas de aire.",
+        "assets": []
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Enuncia el principio de Arquímedes y deduce la fórmula E = ρ (fluido) · V (sumergido) · g a partir de la diferencia de presiones en las caras de un cubo.",
+        "answer": "El enunciado establece que el empuje es igual al peso del fluido desplazado. La deducción compara la presión P₂ = ρg(h₁+L) en la cara inferior con P₁ = ρgh₁ en la cara superior del cubo de lado L. La diferencia de fuerzas es E = (P₂-P₁)· L² = ρ · g· L· L² = ρgV.",
+        "full_solution": "El principio de Arquímedes afirma que todo cuerpo sumergido en un fluido recibe un empuje vertical hacia arriba igual al peso del fluido que desaloja. Para un cubo de lado L con la cara superior a profundidad h₁ y la inferior a h₁+L: $p_1=\\rho gh_1$ (arriba) y $p_2=\\rho g(h_1+L)$ (abajo). Las fuerzas horizontales sobre las caras laterales se anulan por simetría, así que la fuerza neta vertical es $E=(p_2-p_1)L^2=\\rho gL\\cdot L^2=\\rho gV$, con $V=L^3$ el volumen del cubo (igual al volumen de fluido desplazado).",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un cubo de hielo (ρ =917 kg/m³) flota en agua (ρ =1000 kg/m³). ¿Qué fracción del cubo queda bajo el agua?",
+        "answer": "En equilibrio, $E=P$. Por tanto, $\\rho_{\\mathrm{agua}}V_{\\mathrm{sum}}g=\\rho_{\\mathrm{hielo}}V_{\\mathrm{total}}g$ y $\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{917}{1000}=0,917$. El 91,7 % del hielo queda bajo el agua.",
+        "full_solution": "En equilibrio, el empuje iguala al peso: $E=P\\Rightarrow\\rho_{\\mathrm{agua}}V_{\\mathrm{sum}}g=\\rho_{\\mathrm{hielo}}V_{\\mathrm{total}}g$. Simplificando g y despejando la fracción sumergida: $\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{\\rho_{\\mathrm{hielo}}}{\\rho_{\\mathrm{agua}}}=\\dfrac{917}{1000}=0,917$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": []
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L04-1",
+        "stem": "El empuje que recibe un objeto sumergido en un fluido depende de:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. El peso del objeto y la densidad del fluido",
+            "why_wrong": "El empuje no depende del peso del objeto, sino del volumen que desplaza."
+          },
+          {
+            "key": "B",
+            "text": "B. El volumen sumergido y la densidad del fluido"
+          },
+          {
+            "key": "C",
+            "text": "C. La masa del objeto y la temperatura del fluido",
+            "why_wrong": "Ni la masa del objeto ni la temperatura del fluido aparecen en E=ρf·g·V."
+          },
+          {
+            "key": "D",
+            "text": "D. El peso del objeto y su forma",
+            "why_wrong": "La forma solo importa en cuanto determina el volumen sumergido, no el peso del objeto."
+          }
+        ],
+        "explanation": "Según $E=\\rho_f gV_{\\mathrm{sumergido}}$, el empuje depende únicamente de la densidad del fluido y del volumen sumergido, no del peso ni de la densidad del objeto.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L04-2",
+        "stem": "¿En qué dirección actúa el empuje?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Siempre hacia abajo",
+            "why_wrong": "El empuje se opone al peso, así que actúa hacia arriba, no hacia abajo."
+          },
+          {
+            "key": "B",
+            "text": "B. En la misma dirección que el movimiento del objeto",
+            "why_wrong": "El empuje no depende de si el objeto se mueve ni de hacia dónde lo hace."
+          },
+          {
+            "key": "C",
+            "text": "C. Vertical y hacia arriba"
+          },
+          {
+            "key": "D",
+            "text": "D. Horizontal",
+            "why_wrong": "El empuje surge de la diferencia de presión entre la cara inferior y superior, que es una dirección vertical, no horizontal."
+          }
+        ],
+        "explanation": "El empuje siempre es vertical y hacia arriba, porque la presión hidrostática es mayor en la cara inferior del cuerpo que en la superior.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L04-3",
+        "stem": "Un cubo de 1 dm³ sumergido en agua (ρ =1000 kg m⁻³) recibe un empuje de:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 1 N",
+            "why_wrong": "Corresponde a olvidar la gravedad g en el cálculo."
+          },
+          {
+            "key": "B",
+            "text": "B. 9,8 N"
+          },
+          {
+            "key": "C",
+            "text": "C. 98 N",
+            "why_wrong": "Resulta de usar 10 dm³=0,01 m³ en vez de 1 dm³=0,001 m³."
+          },
+          {
+            "key": "D",
+            "text": "D. 1000 N",
+            "why_wrong": "Corresponde a multiplicar solo por la densidad, sin incluir g ni convertir correctamente el volumen."
+          }
+        ],
+        "explanation": "$1\\,\\mathrm{dm^3}=10^{-3}\\,\\mathrm{m^3}$, por lo que $E=\\rho gV=1000\\times9,8\\times10^{-3}=9,8\\,\\mathrm{N}$.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L04-4",
+        "stem": "Un globo de helio en el aire experimenta empuje porque:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. El helio es más ligero que el aire",
+            "why_wrong": "Que el helio sea menos denso explica que el globo suba (E>P), pero el empuje en sí existe por el aire desplazado, no por el helio."
+          },
+          {
+            "key": "B",
+            "text": "B. El globo desplaza aire, cuyo peso genera el empuje ascensional"
+          },
+          {
+            "key": "C",
+            "text": "C. El calor del helio lo empuja hacia arriba",
+            "why_wrong": "El helio no está caliente; la fuerza ascensional es el empuje del aire, no un efecto térmico."
+          },
+          {
+            "key": "D",
+            "text": "D. La presión del helio es mayor que la del aire exterior",
+            "why_wrong": "El empuje no depende de la presión interior del globo, sino del peso del aire que desplaza su volumen."
+          }
+        ],
+        "explanation": "El empuje aparece porque el globo ocupa un volumen de aire que, si no estuviera el globo, pesaría $\\rho_{\\mathrm{aire}}Vg$; como ese peso es mayor que el peso del helio más el globo, la fuerza neta es ascensional.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Principio de Arquímedes",
+        "back": "Todo cuerpo sumergido en un fluido experimenta un empuje vertical y hacia arriba igual al peso del fluido desplazado: $E=\\rho_{\\mathrm{fluido}}\\,V_{\\mathrm{sum}}\\,g$.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Fórmula del peso aparente",
+        "back": "P=P (real) – E. El peso aparente siempre es menor que el peso real cuando el objeto está sumergido en un fluido.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Por qué los globos de helio ascienden?",
+        "back": "El empuje del aire (E = ρ (aire)· V· g) es mayor que el peso del helio más el globo, lo que genera una fuerza ascensional neta.",
+        "provenance": "GENERATED (EXPLANATION)"
+      },
+      {
+        "front": "¿De qué depende el empuje?",
+        "back": "Del volumen sumergido y de la densidad del fluido: $E=\\rho_{\\mathrm{fluido}}\\,V_{\\mathrm{sum}}\\,g$. Para un cuerpo totalmente sumergido no depende del peso ni de la densidad del objeto; si el cuerpo flota, en cambio, E=P y el volumen sumergido se ajusta según su densidad.",
+        "provenance": "GENERATED (EXPLANATION)"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "empuje",
+        "definition": "Fuerza vertical hacia arriba que ejerce un fluido sobre un cuerpo sumergido, igual al peso del fluido desplazado: $E=\\rho_f gV$."
+      },
+      {
+        "term": "Arquímedes",
+        "definition": "Científico griego al que se atribuye el principio que explica el empuje: todo cuerpo sumergido recibe un empuje igual al peso del fluido desplazado."
+      },
+      {
+        "term": "flotación",
+        "definition": "Situación en la que un cuerpo permanece en equilibrio en la superficie de un fluido porque el empuje iguala a su peso (E=P)."
+      },
+      {
+        "term": "densidad",
+        "definition": "Masa por unidad de volumen de un cuerpo o fluido ($\\rho=m/V$); compararla con la del fluido permite predecir si un objeto flota o se hunde."
+      },
+      {
+        "term": "volumen sumergido",
+        "definition": "Parte del volumen de un cuerpo que queda bajo la superficie del fluido; determina, junto con la densidad del fluido, el valor del empuje."
+      },
+      {
+        "term": "peso aparente",
+        "definition": "Peso que parece tener un objeto sumergido, igual al peso real menos el empuje: $P_{\\mathrm{aparente}}=P_{\\mathrm{real}}-E$."
+      }
+    ],
+    "source_references": [
+      "RD 217/2022 saberes básicos FyQ 4º ESO",
+      "Serway, Física, Cap. 15,4"
+    ],
+    "curriculum_refs": [
+      "CE1,1 Leyes fundamentales de la física",
+      "CE2,1 Lenguaje matemático"
+    ],
+    "confidence_notes": [
+      "Derivación del empuje verificada",
+      "Ejemplos numéricos calculados con calculadora"
+    ],
+    "internal_review": {
+      "checks": [
+        "4 MCQ",
+        "4 flashcards",
+        "3 theory (blocks)",
+        "2 worked (examples)"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    },
+    "summary": {
+      "big_idea": "El empuje conecta una causa —la diferencia de presiones entre la cara inferior y la superior de un cuerpo sumergido— con una medida observable —la disminución del peso aparente—.",
+      "key_points": [
+        "El empuje siempre apunta verticalmente hacia arriba.",
+        "Su valor es el peso del fluido desplazado: $E=\\rho_f gV_{\\mathrm{desplazado}}$.",
+        "El peso aparente disminuye en una cantidad igual al empuje: $P_{\\mathrm{aparente}}=P_{\\mathrm{real}}-E$.",
+        "Para decidir si flota o se hunde hay que comparar empuje y peso, no memorizar una regla aislada."
+      ],
+      "formulas": [
+        "$E=\\rho_f gV_{\\mathrm{desplazado}}$",
+        "$P_{\\mathrm{aparente}}=P_{\\mathrm{real}}-E$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $E=\\rho_f gV_{\\mathrm{desplazado}}$, define el sistema y comprueba unidades, signos, conservación y límites del modelo."
+    }
+  },
+  "lesson_05.json": {
+    "id": "L05",
+    "title": "Flotación",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Fluidos",
+    "unit_id": "U-4F-03",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE1,1",
+        "CE2,1",
+        "CE2,2"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Explicar Flotación con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de flotación para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Flotación."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Flotación."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Comprender el empuje ($E=\\rho_f gV_{\\mathrm{sum}}$) y el criterio E-P en equilibrio, y saber trabajar con unidades del SI.",
+        "why_it_matters": "Decidir si un cuerpo flota, se hunde o queda en equilibrio exige comparar directamente el empuje (lo visto en la lección anterior) con el peso, y calcular qué fracción del volumen debe quedar sumergida para que E=P."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Un cubo de madera (ρ =600 kg/m³) y un cubo de hierro (ρ =7800 kg/m³) del mismo volumen se lanzan al agua. ¿Cuál flota y cuál se hunde?",
+        "expected_answer": "La madera flota (ρ <1000 kg/m³). El hierro se hunde (ρ >1000 kg/m³)."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Cuándo el empuje iguala al peso de un objeto?",
+        "expected_answer": "Cuando el objeto está en equilibrio flotando en la superficie (parcialmente sumergido) o completamente sumergido sin acelerar."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Un objeto flota si es ligero.",
+        "correct_model": "Un objeto flota si su DENSIDAD MEDIA es menor que la del fluido, independientemente de su masa total. Un barco de acero de millones de toneladas flota porque su densidad media (acero + aire interior) es menor que la del agua."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Si un objeto flota, el empuje es mayor que su peso.",
+        "correct_model": "Cuando un objeto flota en equilibrio, empuje = peso exactamente. Si E > P, el objeto sube; si E < P, se hunde; si E = P, flota o queda en equilibrio."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Condiciones de flotación, hundimiento y equilibrio",
+        "body": "¿Por qué un tronco flota, un submarino puede elegir y un ancla se hunde?\n\nLa respuesta está en comparar la densidad del objeto con la del fluido.\n\nCuando un objeto **flota en equilibrio**, el empuje iguala exactamente a su peso: $E = W$. Esto nos da una relación muy útil:\n\n$$\\frac{V_{\\text{sumergido}}}{V_{\\text{total}}} = \\frac{\\rho_{\\text{objeto}}}{\\rho_{\\text{fluido}}}$$\n\nEs decir, la fracción del volumen que se sumerge es igual a la razón de densidades.\n\nUn tronco de pino ($\\rho \\approx 600\\,\\text{kg/m}^3$) en agua dulce se sumerge un 60 %: $600/1000 = 0{,}6$.\n\nUn iceberg ($\\rho \\approx 917\\,\\text{kg/m}^3$) en agua de mar ($\\rho \\approx 1025\\,\\text{kg/m}^3$) se sumerge un 89 %: solo vemos un 11 % del iceberg. De ahí la expresión «la punta del iceberg».\n\n**Condiciones resumidas**:\n- $\\rho_{\\text{obj}} < \\rho_{\\text{fluido}}$ → flota (se sumerge parcialmente).\n- $\\rho_{\\text{obj}} = \\rho_{\\text{fluido}}$ → flotación neutra (sumergido sin subir ni bajar).\n- $\\rho_{\\text{obj}} > \\rho_{\\text{fluido}}$ → se hunde.",
+        "provenance": "SOURCE (DERIVED)",
+        "student_text": "En flotación: E = W y V_sum/V_total = ρ_obj/ρ_fluido. Si ρ_obj < ρ_fluido → flota; si ρ_obj > ρ_fluido → se hunde.",
+        "formula": "$E=P$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Condiciones de flotación: tronco, pato, submarino y ancla en el agua\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">¿Flota o se hunde?</text>\n  <!-- Water -->\n  <rect x=\"30\" y=\"100\" width=\"540\" height=\"190\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#24312c\" stroke-width=\"1.5\" rx=\"6\"/>\n  <line x1=\"32\" y1=\"130\" x2=\"568\" y2=\"130\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <text x=\"565\" y=\"124\" text-anchor=\"end\" fill=\"#0e7a68\" font-size=\"9\">Superficie</text>\n  <!-- 1. Wooden log floating -->\n  <rect x=\"55\" y=\"115\" width=\"80\" height=\"30\" rx=\"8\" fill=\"#c17a17\" opacity=\"0.7\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"95\" y=\"134\" text-anchor=\"middle\" fill=\"white\" font-size=\"9\" font-weight=\"bold\">Tronco</text>\n  <text x=\"95\" y=\"158\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"9\">ρ = 600 kg/m³</text>\n  <text x=\"95\" y=\"172\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\" font-weight=\"bold\">Flota (60%)</text>\n  <!-- E and W arrows -->\n  <line x1=\"95\" y1=\"112\" x2=\"95\" y2=\"88\" stroke=\"#0e7a68\" stroke-width=\"2\" marker-end=\"url(#arrUp)\"/>\n  <text x=\"110\" y=\"93\" fill=\"#0e7a68\" font-size=\"8\">E</text>\n  <line x1=\"95\" y1=\"147\" x2=\"95\" y2=\"147\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <!-- 2. Rubber duck (very low density) -->\n  <ellipse cx=\"240\" cy=\"120\" rx=\"30\" ry=\"18\" fill=\"#c17a17\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <circle cx=\"252\" cy=\"112\" r=\"12\" fill=\"#c17a17\"/>\n  <circle cx=\"255\" cy=\"109\" r=\"2\" fill=\"#24312c\"/>\n  <text x=\"240\" y=\"158\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"9\">ρ = 100 kg/m³</text>\n  <text x=\"240\" y=\"172\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\" font-weight=\"bold\">Flota (10%)</text>\n  <!-- 3. Submarine (adjustable) -->\n  <ellipse cx=\"385\" cy=\"180\" rx=\"55\" ry=\"20\" fill=\"#24312c\" opacity=\"0.4\" stroke=\"#24312c\" stroke-width=\"1.5\"/>\n  <rect x=\"365\" y=\"165\" width=\"40\" height=\"10\" rx=\"3\" fill=\"#24312c\" opacity=\"0.5\"/>\n  <text x=\"385\" y=\"218\" text-anchor=\"middle\" fill=\"#24312c\" font-size=\"9\">ρ ajustable</text>\n  <text x=\"385\" y=\"232\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\" font-weight=\"bold\">Submarino</text>\n  <!-- 4. Iron anchor (sinks) -->\n  <polygon points=\"510,230 530,230 540,250 530,250 535,280 525,270 520,280 515,270 505,280 510,270 500,250 510,250\" fill=\"#8a3d6b\" opacity=\"0.7\" stroke=\"#8a3d6b\" stroke-width=\"1\"/>\n  <text x=\"520\" y=\"218\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"9\">ρ = 7800</text>\n  <text x=\"520\" y=\"300\" text-anchor=\"middle\" fill=\"#8a3d6b\" font-size=\"10\" font-weight=\"bold\">Se hunde</text>\n  <!-- Reference density -->\n  <rect x=\"180\" y=\"40\" width=\"240\" height=\"22\" rx=\"6\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n  <text x=\"300\" y=\"55\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"11\">ρ_agua = 1000 kg/m³</text>\n  <defs>\n    <marker id=\"arrUp\" markerWidth=\"8\" markerHeight=\"6\" refX=\"4\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,6 L4,0 L8,6\" fill=\"#0e7a68\"/>\n    </marker>\n  </defs>\n</svg>",
+            "caption": "La densidad decide: el tronco flota un 60%, el pato de goma un 10%, el ancla se hunde directamente."
+          }
+        ]
+      },
+      {
+        "title": "Por qué flota un barco de acero",
+        "body": "El acero tiene una densidad de $7800\\,\\text{kg/m}^3$, casi 8 veces la del agua. Entonces, ¿cómo puede flotar un barco de acero?\n\nEl truco es que el barco no es un bloque macizo de acero. Es un **casco hueco** que encierra un enorme volumen de aire. La densidad que importa para la flotación no es la del material, sino la **densidad media** del objeto completo:\n\n$$\\rho_{\\text{media}} = \\frac{m_{\\text{total}}}{V_{\\text{total}}}$$\n\nEl acero del casco pesa mucho, pero el volumen total incluye todo el aire interior. Como el aire pesa poquísimo ($\\rho \\approx 1{,}2\\,\\text{kg/m}^3$), la densidad media del conjunto queda por debajo de $1000\\,\\text{kg/m}^3$.\n\nLa fracción sumergida cumple la misma regla:\n\n$$\\frac{V_{\\text{sumergido}}}{V_{\\text{total}}} = \\frac{\\rho_{\\text{barco}}}{\\rho_{\\text{agua}}}$$\n\nCuanta más carga lleva el barco, mayor es su densidad media, y más se hunde. Los barcos tienen marcas en el casco (líneas de Plimsoll) que indican hasta dónde es seguro cargarlos.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "Un barco de acero flota porque su densidad MEDIA (casco+aire) es menor que la del agua. Cuanta más carga, más se hunde.",
+        "formula": "$\\dfrac{V_{\\mathrm{sumergido}}}{V_{\\mathrm{total}}}=\\dfrac{\\rho_{\\mathrm{objeto}}}{\\rho_{\\mathrm{fluido}}}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 310\" role=\"img\" aria-label=\"Sección transversal de un barco: casco de acero con aire dentro, densidad media menor que el agua\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">¿Por qué flota un barco de acero?</text>\n  <!-- Water -->\n  <rect x=\"30\" y=\"165\" width=\"540\" height=\"130\" fill=\"#0e7a68\" opacity=\"0.12\"/>\n  <line x1=\"30\" y1=\"165\" x2=\"570\" y2=\"165\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <!-- Ship hull cross section -->\n  <path d=\"M120,165 L120,100 L140,80 L460,80 L480,100 L480,165 Z\" fill=\"#24312c\" opacity=\"0.15\" stroke=\"#24312c\" stroke-width=\"2\"/>\n  <!-- Steel walls emphasized -->\n  <line x1=\"120\" y1=\"165\" x2=\"120\" y2=\"100\" stroke=\"#8a3d6b\" stroke-width=\"5\"/>\n  <line x1=\"120\" y1=\"100\" x2=\"140\" y2=\"80\" stroke=\"#8a3d6b\" stroke-width=\"5\"/>\n  <line x1=\"140\" y1=\"80\" x2=\"460\" y2=\"80\" stroke=\"#8a3d6b\" stroke-width=\"5\"/>\n  <line x1=\"460\" y1=\"80\" x2=\"480\" y2=\"100\" stroke=\"#8a3d6b\" stroke-width=\"5\"/>\n  <line x1=\"480\" y1=\"100\" x2=\"480\" y2=\"165\" stroke=\"#8a3d6b\" stroke-width=\"5\"/>\n  <!-- Air inside label -->\n  <text x=\"300\" y=\"130\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"16\" font-weight=\"bold\">AIRE</text>\n  <text x=\"300\" y=\"148\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"11\">(ρ ≈ 1,2 kg/m³)</text>\n  <!-- Steel label -->\n  <text x=\"100\" y=\"140\" text-anchor=\"end\" fill=\"#8a3d6b\" font-size=\"10\" font-weight=\"bold\">Acero</text>\n  <text x=\"100\" y=\"153\" text-anchor=\"end\" fill=\"#8a3d6b\" font-size=\"9\">ρ = 7800</text>\n  <!-- Volume total bracket -->\n  <line x1=\"110\" y1=\"75\" x2=\"490\" y2=\"75\" stroke=\"#c17a17\" stroke-width=\"1\" stroke-dasharray=\"4\"/>\n  <text x=\"300\" y=\"70\" text-anchor=\"middle\" fill=\"#c17a17\" font-size=\"10\">V_total (casco + aire)</text>\n  <!-- Submerged portion -->\n  <line x1=\"110\" y1=\"165\" x2=\"110\" y2=\"210\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"105\" y=\"195\" text-anchor=\"end\" fill=\"#0e7a68\" font-size=\"9\">Línea de flotación</text>\n  <!-- Calculation box -->\n  <rect x=\"100\" y=\"230\" width=\"400\" height=\"70\" rx=\"8\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"300\" y=\"252\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"11\">ρ_media = masa_total / V_total</text>\n  <text x=\"300\" y=\"270\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"11\">Mucho aire + poco acero → ρ_media &lt; 1000 kg/m³</text>\n  <text x=\"300\" y=\"290\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"12\" font-weight=\"bold\">¡El barco flota!</text>\n</svg>",
+            "caption": "Sección del barco: el casco de acero encierra aire, haciendo que la densidad media sea menor que la del agua."
+          }
+        ]
+      },
+      {
+        "title": "Aplicaciones: submarinos, peces y densímetros",
+        "body": "El principio de flotación tiene aplicaciones fascinantes:\n\n**Submarinos**: Tienen tanques de lastre que pueden llenarse de agua (para hundirse) o vaciarse con aire comprimido (para subir). Al ajustar la cantidad de agua en los tanques, el submarino cambia su densidad media y controla su profundidad.\n\n**Peces**: Muchos peces tienen una vejiga natatoria llena de gas. Hinchándola o desinflándola, ajustan su densidad para flotar a la profundidad que quieran sin tener que nadar activamente. Es como llevar un flotador interno.\n\n**Densímetro**: Un tubo de vidrio con lastre en la base que flota en un líquido. Cuanto más denso es el líquido, menos se sumerge el tubo. La escala marcada en el tubo permite leer directamente la densidad del líquido. Se usa para medir la densidad de la leche, el vino, la cerveza o la orina en análisis clínicos.\n\n**Mar Muerto**: El agua del Mar Muerto tiene tanta sal ($\\rho \\approx 1240\\,\\text{kg/m}^3$) que una persona ($\\rho \\approx 1060\\,\\text{kg/m}^3$) flota sin esfuerzo alguno.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "student_text": "Submarinos usan tanques de lastre, peces usan la vejiga natatoria, densímetros miden la densidad de un líquido por flotación.",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Para resolver problemas de flotación:\n\n1. Compara $\\rho_{\\text{objeto}}$ con $\\rho_{\\text{fluido}}$ para saber si flota o se hunde.\n2. Si flota, usa $V_{\\text{sum}}/V_{\\text{total}} = \\rho_{\\text{obj}}/\\rho_{\\text{fluido}}$ para calcular la fracción sumergida.\n3. Si se hunde, calcula $E$ con $V_{\\text{total}}$ y luego $W_{\\text{ap}} = W - E$.\n\n**Comprobación**: un objeto que flota tiene peso aparente cero. La fracción sumergida siempre es un número entre 0 y 1 (entre 0 % y 100 %). Si te sale mayor que 1, el objeto se hunde.\n\nPregunta de autoevaluación: un cubito de hielo ($\\rho = 917\\,\\text{kg/m}^3$) flota en agua dulce. ¿Qué porcentaje sobresale?",
+        "assets": []
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Fracción sumergida",
+        "statement": "Un bloque de madera de densidad 600 kg/m³ flota en agua. ¿Qué fracción de su volumen queda sumergida?",
+        "steps": [
+          "En equilibrio E=P: ρ (agua)gV (sum)=ρ (madera)gV.",
+          "Se simplifica: V (sum)/$V=\\dfrac{600}{1000}$=0,60.",
+          "Queda sumergido el 60 % y fuera el 40 %.",
+          "La relación vale para un fluido homogéneo y objeto flotando sin aceleración.",
+          "Comprobación: 600/1000=0,60 coincide con la fracción sumergida obtenida; además 0<0,60<1, un valor físicamente posible para un objeto que flota."
+        ],
+        "answer": "60 % sumergido.",
+        "verification": "La densidad de la madera (600 kg/m³) es menor que la del agua (1000 kg/m³), así que debe flotar con una fracción sumergida menor que 1; el resultado (0,60) es coherente."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Densidad y decisión",
+        "statement": "Un sólido de 2,0 kg ocupa 1,5·10⁻³ m³ (1,5 L). Decide si flota en agua.",
+        "steps": [
+          "$\\rho=\\dfrac{m}{V}$=2,0/(1,5·10⁻³)=1333 kg/m³.",
+          "Como su densidad es mayor que la del agua, totalmente sumergido pesa más que el empuje máximo.",
+          "Tenderá a hundirse; un hueco o volumen adicional podría cambiar la densidad media de un objeto hueco.",
+          "La comparación debe hacerse con densidades, no solo con masas.",
+          "Comprobación: el empuje máximo (con todo el volumen sumergido) sería E=1000×9,8×1,5×10⁻³=14,7 N, menor que el peso real P=2,0×9,8=19,6 N, lo que confirma que se hunde."
+        ],
+        "answer": "Se hunde; ρ=1333 kg m⁻³.",
+        "verification": "E_máx=14,7 N < P=19,6 N: el objeto no puede flotar ni en equilibrio sumergido, por lo que se hunde, coherente con ρ=1333 kg/m³ > ρ_agua=1000 kg/m³."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Un bloque de poliestireno (ρ=50 kg/m³) y un cubo de hierro (ρ=7800 kg/m³) del mismo volumen (0,002 m³) se dejan caer al agua. Construye el balance E-P para cada uno y decide si acelera hacia arriba, hacia abajo o queda en equilibrio.",
+        "scaffold": "Primero calcula el empuje máximo (con todo el volumen sumergido) para ambos; luego compáralo con el peso de cada objeto.",
+        "full_solution": "Empuje máximo (igual para los dos, mismo volumen): $E=1000\\times9,8\\times0,002=19,6\\,\\mathrm{N}$. Poliestireno: $P=50\\times0,002\\times9,8=0,98\\,\\mathrm{N}$; como E>P, sube y acaba flotando en la superficie. Hierro: $P=7800\\times0,002\\times9,8=152,9\\,\\mathrm{N}$; como E<P, se hunde.",
+        "answer": "El poliestireno sube y flota (E=19,6 N > P=0,98 N); el hierro se hunde (E=19,6 N < P=152,9 N)."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Compara la fracción sumergida de un mismo trozo de madera (ρ=700 kg/m³) flotando primero en agua dulce (ρ=1000 kg/m³) y después en agua de mar (ρ=1025 kg/m³). Predice en qué líquido se sumerge más y comprueba con el cálculo.",
+        "scaffold": "Usa V_sum/V_total=ρ_objeto/ρ_fluido en los dos casos.",
+        "full_solution": "En agua dulce: $\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{700}{1000}=0,70$ (70 %). En agua de mar: $\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{700}{1025}\\approx0,683$ (68,3 %). La madera se sumerge algo menos en agua de mar, porque esta es más densa.",
+        "answer": "70 % sumergido en agua dulce frente a 68,3 % en agua de mar: en el líquido más denso, el objeto flota más alto."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un corcho (ρ =200 kg m⁻³) de 50 g flota en agua. ¿Qué volumen está bajo el agua?",
+        "answer": "En equilibrio, E=P: $\\rho_{\\mathrm{agua}}V_{\\mathrm{sum}}g=mg$, de donde $V_{\\mathrm{sum}}=m/\\rho_{\\mathrm{agua}}=0,05/1000=5\\times10^{-5}\\,\\mathrm{m^3}=50\\,\\mathrm{cm^3}$. El volumen total del corcho es $V_{\\mathrm{total}}=m/\\rho_{\\mathrm{corcho}}=0,05/200=2,5\\times10^{-4}\\,\\mathrm{m^3}=250\\,\\mathrm{cm^3}$, por lo que la fracción sumergida es 50/250=20%.",
+        "full_solution": "Paso 1: en equilibrio $E=P$, es decir, $\\rho_{\\mathrm{agua}}V_{\\mathrm{sum}}g=mg$; despejando, $V_{\\mathrm{sum}}=\\dfrac{m}{\\rho_{\\mathrm{agua}}}=\\dfrac{0,05}{1000}=5\\times10^{-5}\\,\\mathrm{m^3}=50\\,\\mathrm{cm^3}$ (este es el volumen bajo el agua). Paso 2 (para contextualizar la fracción): el volumen total del corcho es $V_{\\mathrm{total}}=\\dfrac{m}{\\rho_{\\mathrm{corcho}}}=\\dfrac{0,05}{200}=2,5\\times10^{-4}\\,\\mathrm{m^3}=250\\,\\mathrm{cm^3}$, así que la fracción sumergida es $50/250=20\\%$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Qué masa máxima de carga puede llevar un bote de madera de masa 30 kg y volumen total 0,08 m³ para que no se hunda? (ρ =1000 kg m⁻³)",
+        "answer": "$E_{\\max}=\\rho_{\\mathrm{agua}}V_{\\mathrm{total}}g=1000\\times0,08\\times9,8=784\\,\\mathrm{N}$ → masa máxima total = 784/9,8 = 80 kg. Carga máxima = 80-30 = 50 kg.",
+        "full_solution": "Paso 1: el empuje máximo, con todo el volumen del bote sumergido, es $E_{\\max}=\\rho_{\\mathrm{agua}}V_{\\mathrm{total}}g=1000\\times0,08\\times9,8=784\\,\\mathrm{N}$. Paso 2: esa fuerza debe igualar como máximo al peso total (bote+carga): $m_{\\mathrm{total}}=E_{\\max}/g=784/9,8=80\\,\\mathrm{kg}$. Paso 3: la carga máxima es $m_{\\mathrm{carga}}=m_{\\mathrm{total}}-m_{\\mathrm{bote}}=80-30=50\\,\\mathrm{kg}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Un juguete de goma (ρ=350 kg/m³) flota en agua. Calcula qué fracción de su volumen queda sumergida y decide si flotaría más alto o más bajo en aceite (ρ=920 kg/m³).",
+        "hints": [
+          "Usa V_sum/V_total=ρ_objeto/ρ_fluido.",
+          "Compara el resultado con agua y con aceite."
+        ],
+        "full_solution": "En agua: $\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{350}{1000}=0,35$ (35 %). En aceite: $\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{350}{920}\\approx0,38$ (38 %).",
+        "answer": "35 % sumergido en agua; en aceite se sumergiría algo más (≈38 %), porque el aceite es menos denso.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Una balsa de madera de 40 kg y volumen total 0,10 m³ flota en un lago (ρ=1000 kg/m³). Calcula la fracción sumergida y la masa máxima de carga que soportaría antes de hundirse.",
+        "hints": [
+          "La densidad media de la balsa es su masa dividida por su volumen total.",
+          "La carga máxima corresponde a que el empuje máximo (todo el volumen sumergido) iguale al peso total."
+        ],
+        "full_solution": "Densidad media: $\\rho=40/0,10=400\\,\\mathrm{kg/m^3}$; fracción sumergida: $400/1000=0,40$ (40 %). Empuje máximo: $E_{\\max}=1000\\times0,10\\times9,8=980\\,\\mathrm{N}$, equivalente a una masa máxima de $980/9,8=100\\,\\mathrm{kg}$. Carga máxima: $100-40=60\\,\\mathrm{kg}$.",
+        "answer": "40 % sumergido sin carga; puede soportar hasta 60 kg de carga antes de hundirse.",
+        "reasoning": [],
+        "assets": []
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Un submarino ajusta sus tanques de lastre hasta que su densidad media es exactamente 1025 kg/m³, igual a la del agua de mar que lo rodea. Decide qué le ocurre: ¿sube, baja o queda en equilibrio? Explica qué cambiaría si añadiera un poco más de agua a los tanques.",
+        "hints": [
+          "Compara la densidad media del submarino con la del agua de mar.",
+          "Si añade agua, su densidad media aumenta."
+        ],
+        "full_solution": "Como $\\rho_{\\mathrm{submarino}}=\\rho_{\\mathrm{agua}}$, el empuje (calculado con el volumen total, que ahora coincide con el volumen sumergido) iguala exactamente al peso: $E=P$, así que el submarino queda en equilibrio, ni sube ni baja, a la profundidad en la que esté. Si añadiera más agua a los tanques, su densidad media superaría a la del agua de mar y empezaría a hundirse.",
+        "answer": "Queda en equilibrio (E=P) a profundidad constante; si añade más agua a los tanques, su densidad media aumenta por encima de la del agua de mar y empieza a hundirse.",
+        "assets": []
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Para un objeto de densidad fija ρ_obj=800 kg/m³, calcula la fracción sumergida V_sum/V_total si flota en fluidos de densidad 800, 1000, 1200 y 1600 kg/m³, y describe la gráfica fracción sumergida frente a densidad del fluido.",
+        "hints": [
+          "Usa V_sum/V_total=ρ_objeto/ρ_fluido en cada caso.",
+          "Observa si la fracción sumergida aumenta o disminuye al aumentar la densidad del fluido."
+        ],
+        "full_solution": "Con ρ_fluido=800: fracción=800/800=1,00 (100 %, justo en el límite de hundirse). Con 1000: 800/1000=0,80. Con 1200: 800/1200≈0,67. Con 1600: 800/1600=0,50. La fracción sumergida disminuye al aumentar la densidad del fluido, siguiendo una curva decreciente (proporcionalidad inversa).",
+        "answer": "La fracción sumergida disminuye de 100 % a 50 % al aumentar la densidad del fluido de 800 a 1600 kg/m³: cuanto más denso el fluido, menos se hunde el objeto.",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un compañero afirma: «si un objeto flota, el empuje tiene que ser mayor que su peso, porque si no, no podría sostenerlo». Corrige esta afirmación explicando qué ocurre exactamente en el equilibrio de flotación.",
+        "hints": [
+          "Distingue entre el proceso de ascenso (antes de alcanzar el equilibrio) y el estado final de equilibrio.",
+          "En equilibrio, por definición, la fuerza neta es cero."
+        ],
+        "full_solution": "Mientras el objeto asciende hacia la superficie (porque inicialmente E>P con todo el volumen sumergido), sí hay una fuerza neta hacia arriba. Pero en el momento en que flota en equilibrio, ya no acelera, y eso solo es posible si la fuerza neta es cero, es decir, si $E=P$ exactamente (con la fracción de volumen sumergido que corresponda). Si E fuera mayor que P de forma permanente, el objeto seguiría acelerando hacia arriba y saldría disparado fuera del agua, lo que no ocurre.",
+        "answer": "Falso: en el equilibrio de flotación, E=P exactamente; solo durante el ascenso previo (antes de llegar al equilibrio) puede haber E>P.",
+        "assets": []
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña un densímetro sencillo con un tubo de ensayo, algo de arena o perdigones (para lastre) y una regla, explicando cómo lo calibrarías para medir la densidad de distintos líquidos y qué incertidumbres tendría.",
+        "hints": [
+          "Un densímetro flota más alto en líquidos más densos.",
+          "Puedes calibrarlo sumergiéndolo en líquidos de densidad conocida y marcando el nivel de flotación."
+        ],
+        "full_solution": "Se añade arena o perdigones al fondo de un tubo de ensayo cerrado hasta que flote verticalmente y de forma estable en agua (ρ=1000 kg/m³); se marca el nivel de flotación (donde V_sum/V_total=ρ_tubo/1000). Repitiendo el proceso en líquidos de densidad conocida (por ejemplo, disoluciones de sal de distinta concentración, ya calibradas con una balanza y una probeta) se obtienen varias marcas de referencia en el vástago, construyendo una escala de densidades. Incertidumbres: la precisión al leer el nivel de flotación con la regla, pequeñas burbujas de aire adheridas al tubo y variaciones de temperatura que cambian ligeramente la densidad de los líquidos de calibración.",
+        "answer": "Lastrando un tubo de ensayo para que flote verticalmente y marcando su nivel de flotación en líquidos de densidad conocida se construye una escala que permite leer la densidad de un líquido nuevo por el nivel al que flota el tubo.",
+        "assets": []
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Explica por qué un barco de acero flota aunque el acero sea más denso que el agua.",
+        "answer": "El barco no es acero macizo: tiene grandes volúmenes de aire en su interior. La densidad media del conjunto (acero + aire + carga) resulta menor que la del agua. Por eso el barco se hunde solo hasta que el peso del agua desplazada iguala su propio peso (E = P), y queda flotando en equilibrio. Si se llena de agua (densidad media aumenta) o si el volumen del casco disminuye (por daños), puede hundirse.",
+        "full_solution": "Aunque el acero (ρ≈7800 kg/m³) es mucho más denso que el agua (1000 kg/m³), el barco no es un bloque macizo: su interior contiene grandes espacios de aire, por lo que la densidad media del conjunto (acero+aire+carga, dividido por el volumen total del casco) es menor que la del agua. El barco se hunde en el agua solo hasta que el peso del agua desplazada por el volumen sumergido iguala exactamente su propio peso, es decir, hasta alcanzar E=P, y entonces queda flotando en equilibrio. Si el casco se llena de agua (al dañarse, por ejemplo) o si su volumen efectivo disminuye, la densidad media puede superar la del agua y el barco se hunde.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un cubito de hielo (ρ =917 kg m⁻³) flota en un vaso de agua. Cuando el hielo se derrite completamente, ¿sube o baja el nivel del agua? Justifica con cálculos.",
+        "answer": "El hielo flotante desplaza agua cuyo peso es igual al peso del hielo. Al fundirse, el agua producida ocupa exactamente el volumen que antes ocupaba el agua desplazada; por eso el nivel no cambia.",
+        "full_solution": "Tomemos un cubito de 10 g como ejemplo. Volumen del hielo: $V_{\\mathrm{hielo}}=\\dfrac{m}{\\rho_{\\mathrm{hielo}}}=\\dfrac{10}{0,917}\\approx10,9\\,\\mathrm{cm^3}$. Como el hielo flota en equilibrio ($E=P$), el volumen de agua que desplaza es $V_{\\mathrm{desplazado}}=\\dfrac{m}{\\rho_{\\mathrm{agua}}}=\\dfrac{10}{1}=10\\,\\mathrm{cm^3}$ (91,7 % del cubito, coherente con $917/1000$). Al fundirse, los 10 g de hielo se convierten en 10 g de agua, que ocupan exactamente $V=\\dfrac{10}{1}=10\\,\\mathrm{cm^3}$: el mismo volumen que antes desplazaba el hielo flotante. Por eso el nivel del agua en el vaso no cambia.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": []
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L05-1",
+        "stem": "Un objeto flota en la superficie de un líquido. ¿Qué relación existe entre el empuje y el peso?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. E > P",
+            "why_wrong": "Si E fuera mayor que P de forma permanente, el objeto seguiría acelerando hacia arriba y no estaría en equilibrio."
+          },
+          {
+            "key": "B",
+            "text": "B. E < P",
+            "why_wrong": "Si E fuera menor que P, el objeto se hundiría en vez de flotar en equilibrio."
+          },
+          {
+            "key": "C",
+            "text": "C. E = P"
+          },
+          {
+            "key": "D",
+            "text": "D. No hay relación",
+            "why_wrong": "El equilibrio de flotación exige, por definición, que la fuerza neta (E-P) sea cero."
+          }
+        ],
+        "explanation": "Un objeto en equilibrio flotando no acelera, así que la fuerza neta debe ser cero: el empuje iguala exactamente al peso, E=P.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L05-2",
+        "stem": "¿Qué fracción de un iceberg (ρ =917 kg/m³) está sumergida en agua de mar (ρ =1025 kg/m³)?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 50%",
+            "why_wrong": "No corresponde a la razón de densidades 917/1025."
+          },
+          {
+            "key": "B",
+            "text": "B. 75%",
+            "why_wrong": "No corresponde a la razón de densidades 917/1025."
+          },
+          {
+            "key": "C",
+            "text": "C. 89,5%"
+          },
+          {
+            "key": "D",
+            "text": "D. 100%",
+            "why_wrong": "Si estuviera sumergido al 100 %, el iceberg no flotaría en la superficie, sino en equilibrio total (y solo si ρ_hielo=ρ_agua, que no es el caso)."
+          }
+        ],
+        "explanation": "$\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{\\rho_{\\mathrm{hielo}}}{\\rho_{\\mathrm{agua}}}=\\dfrac{917}{1025}\\approx0,895$, es decir, un 89,5 %.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L05-3",
+        "stem": "¿Por qué los submarinos pueden hundirse y luego volver a la superficie?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Cambian su forma para aumentar el volumen",
+            "why_wrong": "El casco rígido de un submarino no cambia de forma ni de volumen de forma significativa."
+          },
+          {
+            "key": "B",
+            "text": "B. Llenan o vacían tanques de lastre con agua para cambiar su densidad media"
+          },
+          {
+            "key": "C",
+            "text": "C. Usan motores que los empujan hacia abajo o hacia arriba",
+            "why_wrong": "Los motores sirven para el movimiento horizontal; el control de profundidad se hace cambiando la densidad media con los tanques de lastre."
+          },
+          {
+            "key": "D",
+            "text": "D. Cambian la densidad del agua de mar que los rodea",
+            "why_wrong": "Un submarino no puede cambiar la densidad del agua de mar que lo rodea."
+          }
+        ],
+        "explanation": "Al llenar los tanques de lastre con agua, el submarino aumenta su densidad media y se hunde; al vaciarlos con aire comprimido, la disminuye y asciende.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L05-4",
+        "stem": "Una madera de densidad 600 kg/m³ flota en agua (ρ =1000 kg m⁻³). ¿Qué porcentaje está sumergido?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 40%",
+            "why_wrong": "40 % sería la fracción que queda fuera del agua, no la sumergida."
+          },
+          {
+            "key": "B",
+            "text": "B. 60%"
+          },
+          {
+            "key": "C",
+            "text": "C. 167%",
+            "why_wrong": "Un porcentaje mayor que 100 % no es físicamente posible para la fracción sumergida de un objeto que flota."
+          },
+          {
+            "key": "D",
+            "text": "D. 100%",
+            "why_wrong": "100 % correspondería a un objeto justo en el límite de hundirse (ρ_objeto=ρ_fluido), no es el caso aquí."
+          }
+        ],
+        "explanation": "$\\dfrac{V_{\\mathrm{sum}}}{V_{\\mathrm{total}}}=\\dfrac{\\rho_{\\mathrm{madera}}}{\\rho_{\\mathrm{agua}}}=\\dfrac{600}{1000}=0,60$, es decir, un 60 %.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Condición de flotación en la superficie",
+        "back": "Un objeto flota si su densidad media es menor que la del fluido ($\\rho_{\\mathrm{obj}}<\\rho_{\\mathrm{fluido}}$). En equilibrio E = P. La fracción sumergida es $\\rho_{\\mathrm{obj}}/\\rho_{\\mathrm{fluido}}$.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Por qué flota un barco de acero?",
+        "back": "Porque la densidad MEDIA del barco (acero + espacios de aire) es menor que la del agua. El gran volumen de los espacios vacíos reduce la densidad media global.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Qué le ocurre a un objeto si $\\rho_{\\mathrm{obj}}>\\rho_{\\mathrm{fluido}}$?",
+        "back": "Se hunde, porque el empuje máximo (con todo el volumen sumergido) es menor que el peso del objeto.",
+        "provenance": "GENERATED (EXPLANATION)"
+      },
+      {
+        "front": "Fracción sumergida de un objeto flotante",
+        "back": "V (sumergido) / V=$\\rho_{\\mathrm{objeto}}$ / $\\rho_{\\mathrm{fluido}}$. Ejemplo: hielo (ρ =917) en agua (ρ =1000): 91,7% bajo el agua.",
+        "provenance": "GENERATED (EXPLANATION)"
+      }
+    ],
+    "keywords": [
+      {
+        "term": "flotación",
+        "definition": "Estado de equilibrio de un cuerpo en la superficie de un fluido en el que el empuje iguala exactamente al peso (E=P)."
+      },
+      {
+        "term": "empuje",
+        "definition": "Fuerza vertical hacia arriba que ejerce un fluido sobre un cuerpo, igual al peso del fluido desplazado por la parte sumergida."
+      },
+      {
+        "term": "densidad",
+        "definition": "Masa por unidad de volumen; comparar la densidad de un objeto con la del fluido permite predecir si flotará, se hundirá o quedará en equilibrio sumergido."
+      },
+      {
+        "term": "barco",
+        "definition": "Ejemplo clásico de flotación: aunque sus materiales (acero) sean más densos que el agua, su densidad media (incluyendo el aire interior) es menor."
+      },
+      {
+        "term": "iceberg",
+        "definition": "Bloque de hielo flotante cuya fracción sumergida (≈89,5 % en agua de mar) depende de la razón entre la densidad del hielo y la del agua."
+      },
+      {
+        "term": "submarino",
+        "definition": "Embarcación que controla su profundidad llenando o vaciando tanques de lastre para ajustar su densidad media."
+      },
+      {
+        "term": "vejiga natatoria",
+        "definition": "Órgano interno de muchos peces que, llenándose o vaciándose de gas, ajusta la densidad media del pez para mantenerlo a una profundidad sin esfuerzo."
+      }
+    ],
+    "source_references": [
+      "RD 217/2022 saberes básicos FyQ 4º ESO",
+      "Física conceptual, Hewitt, Cap. 14"
+    ],
+    "curriculum_refs": [
+      "CE1,1",
+      "CE2,1",
+      "CE2,2 Explicar fenómenos cotidianos con conceptos físicos"
+    ],
+    "confidence_notes": [
+      "Cálculo del iceberg verificado: 917/1025=0,895",
+      "Ejemplo del barco verificado con E=P"
+    ],
+    "internal_review": {
+      "checks": [
+        "4 MCQ",
+        "4 flashcards",
+        "3 theory (blocks)",
+        "2 worked (examples) numéricos"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    },
+    "summary": {
+      "big_idea": "Flotación se entiende relacionando el modelo científico con magnitudes observables, representaciones y límites de validez.",
+      "key_points": [
+        "El comportamiento de un objeto en un fluido depende de comparar el empuje (E) y el peso (P): si ρ(objeto) < ρ(fluido), el objeto sube (E>P con todo el volumen sumergido) hasta flotar en equilibrio en la superficie, donde finalmente E=P con solo una parte del volumen sumergida.",
+        "El acero tiene una densidad de ρ ≈ 7 800 kg/m³, muy superior a la del agua (1 000 kg/m³).",
+        "Los submarinos controlan su flotabilidad modificando la cantidad de agua en sus tanques de lastre.",
+        "Para aplicar **Flotación** hay que definir el sistema, elegir el modelo, mantener las unidades y comprobar el resultado."
+      ],
+      "formulas": [
+        "$E=P$",
+        "$\\dfrac{V_{\\mathrm{sumergido}}}{V_{\\mathrm{total}}}=\\dfrac{\\rho_{\\mathrm{objeto}}}{\\rho_{\\mathrm{fluido}}}$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $E=P$ en equilibrio, define el sistema y comprueba unidades, signos, conservación y límites del modelo."
+    }
+  }
+}

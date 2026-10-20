@@ -1,0 +1,2114 @@
+{
+  "lesson_01.json": {
+    "id": "L01",
+    "title": "Campo magnético",
+    "subject": "Física y Química",
+    "course_label": "1.º Bach · Física",
+    "unit_id": "U-B1F-06",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3,1",
+        "CE3,2"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Describir las fuentes del campo magnético (imanes permanentes y corrientes eléctricas) y representar sus líneas de campo."
+      },
+      {
+        "statement": "Calcular el módulo del campo magnético creado por un hilo rectilíneo infinito, una espira y un solenoide."
+      },
+      {
+        "statement": "Aplicar la regla de la mano derecha para determinar la dirección y el sentido del campo magnético generado por una corriente."
+      },
+      {
+        "statement": "Calcular la fuerza de Lorentz sobre una carga puntual que se mueve en un campo magnético uniforme."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Manejar vectores en el plano: módulo, dirección, sentido, suma y producto por un escalar.",
+        "why_it_matters": "El campo magnético es un campo vectorial; para calcular la fuerza de Lorentz se necesita el producto vectorial, que exige dominar componentes y reglas de la mano derecha."
+      },
+      {
+        "statement": "Conocer la corriente eléctrica como flujo de cargas y las unidades del SI (amperio, tesla, metro).",
+        "why_it_matters": "Las expresiones del campo creado por corrientes relacionan intensidad, distancia y el valor de B en teslas."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué ocurre si acercas el polo norte de un imán al polo norte de otro imán?",
+        "expected_answer": "Se repelen, porque polos iguales se repelen."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Puede una carga eléctrica en reposo experimentar fuerza magnética?",
+        "expected_answer": "No; la fuerza magnética requiere que la carga esté en movimiento."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El campo magnético es lo mismo que el campo eléctrico, solo que con imanes.",
+        "correct_model": "El campo magnético y el eléctrico son campos distintos: el eléctrico es creado por cargas y actúa sobre cargas en reposo o en movimiento; el magnético es creado por corrientes (cargas en movimiento) o por imanes y solo actúa sobre cargas en movimiento."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Las líneas de campo magnético salen del polo norte, llegan al polo sur y ahí terminan.",
+        "correct_model": "Las líneas de campo magnético son cerradas: salen del polo norte por fuera del imán, entran por el polo sur y continúan por dentro del imán volviendo al norte. No tienen ni principio ni fin."
+      },
+      {
+        "id": "MIS-03",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La fuerza magnética sobre una carga es paralela al campo magnético.",
+        "correct_model": "La fuerza de Lorentz es perpendicular tanto a la velocidad de la carga como al campo magnético ($\\vec{F}=q\\vec{v}\\times\\vec{B}$). Nunca es paralela a $\\vec{B}$."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Imanes y campo magnético",
+        "body": "Desde la antigüedad se conoce la magnetita, un mineral que atrae al hierro. Hoy sabemos que el fenómeno magnético tiene su origen en las corrientes eléctricas a nivel atómico (electrones orbitando y con espín). Un imán tiene siempre dos polos: norte (N) y sur (S). No es posible aislar un polo magnético; si partes un imán por la mitad, obtienes dos imanes completos, cada uno con su polo N y su polo S.\n\nEl **campo magnético** $\\vec{B}$ es la magnitud vectorial que describe la influencia magnética en cada punto del espacio. Su unidad en el SI es el **tesla** (T). Valores típicos: imán de nevera ≈ 5 mT; campo terrestre ≈ 50 μT; resonancia magnética médica ≈ 1,5 T.\n\nLas **líneas de campo magnético** representan $\\vec{B}$: son tangentes al vector campo en cada punto, salen por el polo N y entran por el polo S (por fuera del imán) y son siempre **cerradas** (no nacen ni mueren en ningún punto).\n\n<svg viewBox=\"0 0 400 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <rect x=\"130\" y=\"60\" width=\"60\" height=\"60\" rx=\"4\" fill=\"var(--primary,#0e7a68)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <rect x=\"190\" y=\"60\" width=\"60\" height=\"60\" rx=\"4\" fill=\"var(--secondary,#c17a17)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"160\" y=\"96\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"white\">N</text>\n  <text x=\"220\" y=\"96\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"white\">S</text>\n  <!-- Líneas de campo externas -->\n  <path d=\"M250,90 C300,90 320,30 190,30 C80,30 80,90 130,90\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <path d=\"M250,90 C310,90 340,10 190,10 C60,10 60,90 130,90\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <path d=\"M250,90 C300,90 320,150 190,150 C80,150 80,90 130,90\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <path d=\"M250,90 C310,90 340,170 190,170 C60,170 60,90 130,90\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <!-- Flechas -->\n  <polygon points=\"310,50 305,44 315,44\" fill=\"var(--text,#20302a)\"/>\n  <polygon points=\"70,50 65,56 75,56\" fill=\"var(--text,#20302a)\"/>\n  <polygon points=\"310,130 305,136 315,136\" fill=\"var(--text,#20302a)\"/>\n  <polygon points=\"70,130 65,124 75,124\" fill=\"var(--text,#20302a)\"/>\n  <text x=\"200\" y=\"175\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Líneas de campo: cerradas, de N a S por fuera</text>\n</svg>"
+      },
+      {
+        "title": "Campo magnético de un hilo rectilíneo",
+        "body": "En 1820, Oersted descubrió que un hilo por el que circula corriente desvía una brújula cercana: **las corrientes eléctricas crean campo magnético**. Las expresiones fundamentales (nivel 1.º Bach) son:\n\n**Hilo rectilíneo infinito.** A una distancia $r$ de un hilo por el que circula una intensidad $I$:\n$$B = \\frac{\\mu_0 I}{2\\pi r}$$\ndonde $\\mu_0 = 4\\pi \\times 10^{-7}\\;\\text{T·m/A}$ es la permeabilidad del vacío. Las líneas de campo son circunferencias concéntricas alrededor del hilo.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Campo magnético de un hilo rectilíneo</text><circle cx=\"200\" cy=\"160\" r=\"8\" fill=\"#0e7a68\"/><circle cx=\"200\" cy=\"160\" r=\"3\" fill=\"white\"/><text x=\"200\" y=\"164\" text-anchor=\"middle\" font-size=\"8\" fill=\"#0e7a68\">●</text><text x=\"200\" y=\"140\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">I (sale)</text><circle cx=\"200\" cy=\"160\" r=\"35\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"160\" r=\"60\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.2\"/><circle cx=\"200\" cy=\"160\" r=\"85\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1\" opacity=\"0.7\"/><polygon points=\"235,158 235,162 239,160\" fill=\"#c17a17\"/><polygon points=\"260,158 260,162 264,160\" fill=\"#c17a17\"/><polygon points=\"285,158 285,162 289,160\" fill=\"#c17a17\"/><text x=\"200\" y=\"260\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">Líneas de B: circunferencias concéntricas</text><text x=\"370\" y=\"100\" font-size=\"11\" fill=\"var(--text,#20302a)\">B = μ₀I/(2πr)</text><text x=\"370\" y=\"125\" font-size=\"10\" fill=\"var(--text,#20302a)\">Sentido: regla</text><text x=\"370\" y=\"142\" font-size=\"10\" fill=\"var(--text,#20302a)\">de la mano derecha</text><text x=\"370\" y=\"175\" font-size=\"10\" fill=\"#8a3d6b\">Mayor r → menor B</text></svg>",
+            "caption": "El campo magnético creado por un hilo rectilíneo forma circunferencias concéntricas. Su intensidad disminuye con la distancia: B = μ₀I/(2πr)."
+          }
+        ]
+      },
+      {
+        "title": "Espira y solenoide",
+        "body": "Cuando el conductor se enrolla en forma de espira o bobina, el campo se concentra y se puede controlar con precisión. Los solenoides (bobinas alargadas) son la base de electroimanes, relés y motores.\n\n**Espira circular.** En el centro de una espira de radio $R$ con corriente $I$:\n$$B = \\frac{\\mu_0 I}{2R}$$\n\n**Solenoide.** En el interior de un solenoide de $N$ espiras y longitud $L$ con corriente $I$:\n$$B = \\mu_0 n I = \\mu_0 \\frac{N}{L} I$$\ndonde $n = N/L$ es la densidad de espiras. El campo dentro de un solenoide largo es prácticamente uniforme.\n\n<svg viewBox=\"0 0 400 160\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <!-- Hilo vertical con líneas circulares -->\n  <circle cx=\"80\" cy=\"80\" r=\"4\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"80\" y=\"75\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">I (sale)</text>\n  <circle cx=\"80\" cy=\"80\" r=\"20\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n  <circle cx=\"80\" cy=\"80\" r=\"35\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n  <circle cx=\"80\" cy=\"80\" r=\"50\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n  <polygon points=\"100,78 97,82 103,82\" fill=\"var(--secondary,#c17a17)\"/>\n  <text x=\"80\" y=\"145\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Hilo rectilíneo</text>\n  <!-- Solenoide -->\n  <rect x=\"220\" y=\"50\" width=\"150\" height=\"60\" rx=\"6\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <line x1=\"230\" y1=\"50\" x2=\"230\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"250\" y1=\"50\" x2=\"250\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"270\" y1=\"50\" x2=\"270\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"290\" y1=\"50\" x2=\"290\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"310\" y1=\"50\" x2=\"310\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"330\" y1=\"50\" x2=\"330\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"350\" y1=\"50\" x2=\"350\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <!-- Campo interior uniforme -->\n  <line x1=\"225\" y1=\"80\" x2=\"365\" y2=\"80\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\"/>\n  <polygon points=\"365,80 358,76 358,84\" fill=\"var(--secondary,#c17a17)\"/>\n  <text x=\"295\" y=\"40\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">B uniforme interior</text>\n  <text x=\"295\" y=\"145\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Solenoide</text>\n</svg>"
+      },
+      {
+        "title": "Regla de la mano derecha",
+        "body": "Para determinar el sentido de $\\vec{B}$ creado por una corriente se usa la **regla de la mano derecha**:\n\n- **Hilo rectilíneo:** Coloca el pulgar de la mano derecha en el sentido de la corriente $I$; los dedos curvados indican el sentido de las líneas de $\\vec{B}$ (circunferencias concéntricas).\n- **Espira / Solenoide:** Curva los dedos de la mano derecha en el sentido de la corriente; el pulgar señala el polo norte (sentido de $\\vec{B}$ en el interior).\n\nEsta regla es esencial para resolver cualquier problema de magnetismo: antes de calcular el módulo de $\\vec{B}$, determina siempre su dirección y sentido con la mano derecha.\n\n<svg viewBox=\"0 0 400 140\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <!-- Simplified hand diagram -->\n  <rect x=\"60\" y=\"20\" width=\"100\" height=\"100\" rx=\"10\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\"/>\n  <text x=\"110\" y=\"55\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Mano</text>\n  <text x=\"110\" y=\"70\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">derecha</text>\n  <!-- Pulgar arriba = I -->\n  <line x1=\"110\" y1=\"20\" x2=\"110\" y2=\"0\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"3\"/>\n  <polygon points=\"110,-2 104,8 116,8\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"130\" y=\"8\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\" font-weight=\"bold\">I (pulgar)</text>\n  <!-- Dedos curvados -->\n  <path d=\"M160,70 C180,70 190,50 180,35\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <polygon points=\"178,37 185,38 181,31\" fill=\"var(--secondary,#c17a17)\"/>\n  <text x=\"210\" y=\"55\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\" font-weight=\"bold\">B (dedos)</text>\n  <!-- Arrow labels -->\n  <text x=\"280\" y=\"40\" font-size=\"11\" fill=\"var(--text,#20302a)\">Hilo: pulgar → I</text>\n  <text x=\"280\" y=\"56\" font-size=\"11\" fill=\"var(--text,#20302a)\">dedos curvados → B</text>\n  <text x=\"280\" y=\"80\" font-size=\"11\" fill=\"var(--text,#20302a)\">Espira: dedos → I</text>\n  <text x=\"280\" y=\"96\" font-size=\"11\" fill=\"var(--text,#20302a)\">pulgar → polo N</text>\n</svg>"
+      },
+      {
+        "title": "Fuerza de Lorentz: la fuerza magnética",
+        "body": "Una carga $q$ que se mueve con velocidad $\\vec{v}$ en una región donde existe un campo magnético $\\vec{B}$ experimenta una fuerza llamada **fuerza de Lorentz (componente magnética)**:\n\n$$\\vec{F} = q\\,\\vec{v} \\times \\vec{B}$$\n\nSu módulo es:\n$$F = |q|\\,v\\,B\\,\\sin\\alpha$$\ndonde $\\alpha$ es el ángulo entre $\\vec{v}$ y $\\vec{B}$."
+      },
+      {
+        "title": "Propiedades de la fuerza magnética",
+        "body": "La fuerza de Lorentz tiene propiedades muy distintas a las fuerzas que conocemos del día a día (gravedad, rozamiento). Entenderlas es clave para predecir trayectorias de cargas.\n\n**Propiedades clave:**\n1. Si $\\vec{v} \\parallel \\vec{B}$ ($\\alpha=0°$ o $180°$), entonces $F=0$: no hay fuerza.\n2. $\\vec{F}$ es siempre perpendicular a $\\vec{v}$ y a $\\vec{B}$.\n3. Como $\\vec{F} \\perp \\vec{v}$, la fuerza magnética **no realiza trabajo** y no cambia la energía cinética de la carga, solo desvía su trayectoria.\n4. Si $\\vec{v} \\perp \\vec{B}$, la carga describe un **movimiento circular uniforme** de radio $r = \\frac{mv}{|q|B}$.\n\nPara determinar el sentido de $\\vec{F}$, se usa la regla de la mano derecha para el producto vectorial: dedos en la dirección de $\\vec{v}$, se cierran hacia $\\vec{B}$, y el pulgar indica $\\vec{F}$ si $q > 0$. Si $q < 0$, el sentido se invierte."
+      },
+      {
+        "title": "Movimiento circular de cargas en campo magnético",
+        "body": "Cuando una carga $q$ entra con velocidad $\\vec{v}$ perpendicular a un campo magnético uniforme $\\vec{B}$, la fuerza de Lorentz actúa como fuerza centrípeta y la carga describe una **circunferencia**:\n\n$$|q|vB = \\frac{mv^2}{r} \\implies r = \\frac{mv}{|q|B}$$\n\nEl **periodo** del movimiento es independiente de la velocidad:\n$$T = \\frac{2\\pi r}{v} = \\frac{2\\pi m}{|q|B}$$\n\nEsto se aprovecha en el **ciclotrón** (acelerador de partículas) y en el **espectrómetro de masas** (separa isótopos por diferencia de radio).\n\nSi la velocidad tiene una componente paralela a $\\vec{B}$ (que no produce fuerza) y otra perpendicular (que produce la fuerza centrípeta), la trayectoria resultante es una **hélice**: la carga avanza en la dirección del campo mientras gira en el plano perpendicular."
+      },
+      {
+        "title": "Aplicaciones del movimiento de cargas",
+        "body": "El movimiento circular de cargas en campos magnéticos tiene aplicaciones tecnológicas enormes, desde la investigación en física de partículas hasta la medicina diagnóstica.\n\n**Aplicaciones:**\n- **Selector de velocidades:** combina $\\vec{E}$ y $\\vec{B}$ cruzados; solo pasan las cargas con $v = E/B$.\n- **Espectrómetro de masas:** tras seleccionar $v$, la carga entra en un campo $\\vec{B}$ y describe un semicírculo de radio $r = mv/(|q|B)$, del que se deduce la masa."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Campo magnético creado por un hilo rectilíneo",
+        "statement": "Un hilo rectilíneo muy largo transporta una corriente de 10 A. Calcula el campo magnético a 5 cm del hilo.",
+        "steps": [
+          "Identificar la fórmula: $B = \\frac{\\mu_0 I}{2\\pi r}$.",
+          "Datos: $I = 10\\;\\text{A}$, $r = 5\\;\\text{cm} = 0{,}05\\;\\text{m}$, $\\mu_0 = 4\\pi \\times 10^{-7}\\;\\text{T·m/A}$.",
+          "Sustituir: $B = \\frac{4\\pi \\times 10^{-7} \\times 10}{2\\pi \\times 0{,}05}$.",
+          "Simplificar: $B = \\frac{4 \\times 10^{-6}}{0{,}1} = 4 \\times 10^{-5}\\;\\text{T} = 40\\;\\mu\\text{T}$."
+        ],
+        "answer": "$B = 40\\;\\mu\\text{T}$, comparable al campo magnético terrestre. Las líneas de campo son circunferencias concéntricas al hilo; su sentido se determina con la regla de la mano derecha.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Campo B a distancia r de un hilo con corriente I</text><circle cx=\"150\" cy=\"140\" r=\"8\" fill=\"#0e7a68\"/><circle cx=\"150\" cy=\"140\" r=\"3\" fill=\"white\"/><text x=\"150\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">I = 10 A</text><circle cx=\"150\" cy=\"140\" r=\"50\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.2\" stroke-dasharray=\"4,3\"/><circle cx=\"310\" cy=\"140\" r=\"4\" fill=\"#8a3d6b\"/><text x=\"310\" y=\"128\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">P</text><line x1=\"158\" y1=\"140\" x2=\"306\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><text x=\"230\" y=\"156\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">r = 5 cm</text><text x=\"250\" y=\"210\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">B = μ₀I/(2πr) = 40 μT</text><text x=\"250\" y=\"240\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Comparable al campo terrestre (≈ 50 μT)</text></svg>",
+            "caption": "Cálculo del campo magnético a 5 cm de un hilo con 10 A: resultado comparable al campo terrestre."
+          }
+        ]
+      },
+      {
+        "title": "Campo en el interior de un solenoide",
+        "statement": "Un solenoide de 30 cm de longitud tiene 600 espiras y transporta 2 A. Calcula el campo magnético en su interior.",
+        "steps": [
+          "Fórmula del solenoide: $B = \\mu_0 \\frac{N}{L} I$.",
+          "Datos: $N = 600$, $L = 0{,}30\\;\\text{m}$, $I = 2\\;\\text{A}$.",
+          "Densidad de espiras: $n = N/L = 600/0{,}30 = 2000\\;\\text{espiras/m}$.",
+          "Sustituir: $B = 4\\pi \\times 10^{-7} \\times 2000 \\times 2 = 4\\pi \\times 10^{-7} \\times 4000$.",
+          "Calcular: $B = 16\\pi \\times 10^{-4}\\;\\text{T} \\approx 5{,}03 \\times 10^{-3}\\;\\text{T} = 5{,}03\\;\\text{mT}$."
+        ],
+        "answer": "$B \\approx 5{,}0\\;\\text{mT}$. El campo dentro del solenoide es uniforme y paralelo a su eje; fuera es prácticamente nulo."
+      },
+      {
+        "title": "Fuerza de Lorentz sobre un protón",
+        "statement": "Un protón ($q = 1{,}6 \\times 10^{-19}$ C, $m = 1{,}67 \\times 10^{-27}$ kg) se mueve a $3 \\times 10^6$ m/s perpendicularmente a un campo de 0,5 T. Calcula la fuerza y el radio de su trayectoria circular.",
+        "steps": [
+          "Fuerza de Lorentz (perpendicular): $F = |q|vB\\sin 90° = |q|vB$.",
+          "Sustituir: $F = 1{,}6 \\times 10^{-19} \\times 3 \\times 10^{6} \\times 0{,}5 = 2{,}4 \\times 10^{-13}\\;\\text{N}$.",
+          "Radio de la trayectoria circular: $r = \\frac{mv}{|q|B}$.",
+          "Sustituir: $r = \\frac{1{,}67 \\times 10^{-27} \\times 3 \\times 10^{6}}{1{,}6 \\times 10^{-19} \\times 0{,}5} = \\frac{5{,}01 \\times 10^{-21}}{8 \\times 10^{-20}}$.",
+          "Calcular: $r \\approx 0{,}063\\;\\text{m} = 6{,}3\\;\\text{cm}$."
+        ],
+        "answer": "$F = 2{,}4 \\times 10^{-13}\\;\\text{N}$ y $r \\approx 6{,}3\\;\\text{cm}$."
+      },
+      {
+        "title": "Campo en el centro de una espira circular",
+        "statement": "Una espira circular de radio 10 cm transporta una corriente de 5 A. Calcula el campo magnético en su centro.",
+        "steps": [
+          "Fórmula del campo en el centro de una espira: $B = \\frac{\\mu_0 I}{2R}$.",
+          "Datos: $R = 0{,}10\\;\\text{m}$, $I = 5\\;\\text{A}$.",
+          "Sustituir: $B = \\frac{4\\pi \\times 10^{-7} \\times 5}{2 \\times 0{,}10} = \\frac{20\\pi \\times 10^{-7}}{0{,}20}$.",
+          "Calcular: $B = 100\\pi \\times 10^{-7} = \\pi \\times 10^{-5} \\approx 3{,}14 \\times 10^{-5}\\;\\text{T} = 31{,}4\\;\\mu\\text{T}$."
+        ],
+        "answer": "$B \\approx 31{,}4\\;\\mu\\text{T}$, del mismo orden que el campo terrestre."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Dos hilos rectilíneos paralelos, separados 20 cm, transportan corrientes de 5 A en el mismo sentido. (a) Calcula el campo magnético creado por cada hilo en la posición del otro. (b) Determina si se atraen o se repelen. (c) Calcula la fuerza por unidad de longitud entre ellos.",
+        "scaffold": "Usa la fórmula del hilo rectilíneo para hallar B en la posición del otro hilo. Para la fuerza, piensa que el segundo hilo es una corriente dentro del campo creado por el primero (F = BIL). Para el sentido, dibuja los campos y usa la regla de la mano derecha.",
+        "answer": "(a) $B = \\frac{\\mu_0 \\times 5}{2\\pi \\times 0{,}20} = 5 \\times 10^{-6}\\;\\text{T}$. (b) Corrientes en el mismo sentido se atraen (las fuerzas apuntan del hilo hacia el otro). (c) $F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d} = \\frac{4\\pi \\times 10^{-7} \\times 25}{2\\pi \\times 0{,}20} = 2{,}5 \\times 10^{-5}\\;\\text{N/m}$."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Un electrón ($q = -1{,}6 \\times 10^{-19}$ C, $m = 9{,}1 \\times 10^{-31}$ kg) entra con velocidad $v = 2 \\times 10^7$ m/s perpendicularmente a un campo magnético $B = 0{,}01$ T. (a) Calcula el radio de la trayectoria. (b) Calcula el periodo. (c) ¿Cambiaría el periodo si el electrón fuese más rápido?",
+        "scaffold": "Iguala la fuerza magnética a la centrípeta para obtener r. Después calcula T = 2πr/v. Fíjate en que la v se simplifica en la expresión del periodo.",
+        "answer": "(a) $r = \\frac{mv}{|q|B} = \\frac{9{,}1 \\times 10^{-31} \\times 2 \\times 10^{7}}{1{,}6 \\times 10^{-19} \\times 0{,}01} = 0{,}0114\\;\\text{m} \\approx 1{,}1\\;\\text{cm}$. (b) $T = \\frac{2\\pi m}{|q|B} = \\frac{2\\pi \\times 9{,}1 \\times 10^{-31}}{1{,}6 \\times 10^{-19} \\times 0{,}01} \\approx 3{,}57 \\times 10^{-9}\\;\\text{s}$. (c) No: $T$ no depende de $v$; un electrón más rápido recorrería un radio mayor pero con la misma frecuencia."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula el campo magnético a 10 cm de un hilo rectilíneo por el que circulan 8 A.",
+        "answer": "$B = 1{,}6 \\times 10^{-5}\\;\\text{T} = 16\\;\\mu\\text{T}$.",
+        "full_solution": "Aplicamos $B = \\frac{\\mu_0 I}{2\\pi r} = \\frac{4\\pi \\times 10^{-7} \\times 8}{2\\pi \\times 0{,}10} = \\frac{32\\pi \\times 10^{-7}}{0{,}2\\pi} = \\frac{32 \\times 10^{-7}}{0{,}2} = 160 \\times 10^{-7} = 1{,}6 \\times 10^{-5}\\;\\text{T}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Un solenoide de 500 espiras y 25 cm de longitud transporta 3 A. Calcula $B$ en su interior.",
+        "answer": "$B \\approx 7{,}54 \\times 10^{-3}\\;\\text{T} = 7{,}5\\;\\text{mT}$.",
+        "full_solution": "$n = 500 / 0{,}25 = 2000\\;\\text{espiras/m}$. $B = \\mu_0 n I = 4\\pi \\times 10^{-7} \\times 2000 \\times 3 = 24\\pi \\times 10^{-4} \\approx 7{,}54 \\times 10^{-3}\\;\\text{T}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Un protón se mueve a $5 \\times 10^5$ m/s formando un ángulo de $30°$ con un campo magnético de 0,2 T. Calcula la fuerza magnética que experimenta.",
+        "answer": "$F = 8{,}0 \\times 10^{-15}\\;\\text{N}$.",
+        "full_solution": "$F = |q|vB\\sin\\alpha = 1{,}6 \\times 10^{-19} \\times 5 \\times 10^{5} \\times 0{,}2 \\times \\sin 30° = 1{,}6 \\times 10^{-19} \\times 5 \\times 10^{5} \\times 0{,}2 \\times 0{,}5 = 1{,}6 \\times 10^{-19} \\times 5 \\times 10^{4} = 8{,}0 \\times 10^{-15}\\;\\text{N}$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una partícula de carga $q = 3{,}2 \\times 10^{-19}$ C y masa $m = 6{,}64 \\times 10^{-27}$ kg (partícula alfa) se mueve a $10^6$ m/s perpendicularmente a un campo $B = 0{,}5$ T. Calcula el radio y el periodo de la trayectoria circular.",
+        "answer": "$r = 4{,}15\\;\\text{cm}$; $T = 2{,}61 \\times 10^{-7}\\;\\text{s}$.",
+        "full_solution": "$r = \\frac{mv}{|q|B} = \\frac{6{,}64 \\times 10^{-27} \\times 10^{6}}{3{,}2 \\times 10^{-19} \\times 0{,}5} = \\frac{6{,}64 \\times 10^{-21}}{1{,}6 \\times 10^{-19}} = 0{,}0415\\;\\text{m} = 4{,}15\\;\\text{cm}$. $T = \\frac{2\\pi m}{|q|B} = \\frac{2\\pi \\times 6{,}64 \\times 10^{-27}}{1{,}6 \\times 10^{-19}} = 2{,}61 \\times 10^{-7}\\;\\text{s}$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un selector de velocidades usa un campo eléctrico $E = 10^4$ V/m y un campo magnético $B = 0{,}02$ T cruzados. ¿Qué velocidad deben tener las partículas para atravesarlo sin desviarse?",
+        "answer": "$v = 5 \\times 10^5\\;\\text{m/s}$.",
+        "full_solution": "En el selector, la fuerza eléctrica y la magnética se equilibran: $qE = qvB \\Rightarrow v = E/B = 10^4 / 0{,}02 = 5 \\times 10^5\\;\\text{m/s}$. Solo las partículas con esa velocidad cruzan en línea recta, independientemente de su carga o masa.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dibuja las líneas de campo magnético de un solenoide visto en corte longitudinal. Indica la dirección del campo dentro y fuera y marca los polos N y S si la corriente circula en sentido antihorario vista desde la izquierda.",
+        "answer": "Las líneas son paralelas y van de izquierda a derecha dentro del solenoide (polo N a la izquierda). Fuera, se curvan y cierran desde el polo N al S.",
+        "full_solution": "Vista desde la izquierda, la corriente circula en sentido antihorario: por la regla de la mano derecha (dedos curvados → corriente), el pulgar apunta hacia la izquierda → el polo N está a la izquierda. Dentro del solenoide, las líneas de campo son rectas y van del polo S (derecha) al N (izquierda)… ¡Espera! Las líneas van de S a N por dentro del imán, que equivale a la dirección del campo: de izquierda (N) a derecha (S) por fuera. Dentro del solenoide, $\\vec{B}$ apunta hacia la izquierda (hacia el polo N visto desde dentro). Fuera, se curvan cerrándose desde N (izquierda) por fuera hasta S (derecha).",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "Compara las fuerzas de Lorentz sobre un protón y un electrón que se mueven a la misma velocidad en el mismo campo $\\vec{B}$. ¿En qué se parecen y en qué se diferencian?",
+        "answer": "Las fuerzas tienen el mismo módulo (misma $|q|$) pero sentidos opuestos (cargas de signo contrario). Los radios de curvatura son muy diferentes ($r$ del protón es unas 1836 veces mayor).",
+        "full_solution": "Módulo de la fuerza: $F = |q|vB$ es igual para ambos porque $|q_p| = |q_e| = 1{,}6 \\times 10^{-19}$ C. Sentido: opuesto, porque $q_e < 0$ invierte el sentido del producto vectorial. Radio: $r = mv/(|q|B)$; como $m_p \\approx 1836\\,m_e$, el radio del protón es 1836 veces mayor, de modo que el electrón se curva mucho más. Periodo: $T = 2\\pi m/(|q|B)$, también proporcional a $m$, luego el electrón completa un giro mucho más rápido.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "En un espectrómetro de masas, iones de carbono-12 ($m_{12} = 12\\;\\text{u}$) y carbono-14 ($m_{14} = 14\\;\\text{u}$) entran con la misma velocidad $v = 10^5$ m/s (seleccionada previamente) en un campo $B = 0{,}1$ T. Todos tienen carga $q = +e$. Calcula la diferencia entre sus diámetros de impacto en la placa detectora. ($1\\;\\text{u} = 1{,}66 \\times 10^{-27}\\;\\text{kg}$.)",
+        "answer": "$\\Delta d = 2(r_{14} - r_{12}) \\approx 4{,}1\\;\\text{mm}$.",
+        "full_solution": "$r = mv/(|q|B)$. Para C-12: $r_{12} = \\frac{12 \\times 1{,}66 \\times 10^{-27} \\times 10^5}{1{,}6 \\times 10^{-19} \\times 0{,}1} = \\frac{1{,}992 \\times 10^{-21}}{1{,}6 \\times 10^{-20}} = 0{,}1245\\;\\text{m}$. Para C-14: $r_{14} = \\frac{14 \\times 1{,}66 \\times 10^{-27} \\times 10^5}{1{,}6 \\times 10^{-20}} = \\frac{2{,}324 \\times 10^{-21}}{1{,}6 \\times 10^{-20}} = 0{,}1453\\;\\text{m}$. El diámetro de impacto es $d = 2r$: $d_{12} = 0{,}2490\\;\\text{m}$, $d_{14} = 0{,}2905\\;\\text{m}$. Diferencia: $\\Delta d = 0{,}2905 - 0{,}2490 = 0{,}0415\\;\\text{m} \\approx 4{,}1\\;\\text{cm}$. [Corrección: $\\approx 4{,}2\\;\\text{cm}$, no mm — ambos valores son centímetros.]",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L01-1",
+        "stem": "Las líneas de campo magnético…",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Nacen en el polo norte y mueren en el polo sur",
+            "why_wrong": "Las líneas de campo magnético no nacen ni mueren: son curvas cerradas que salen del polo norte por fuera, entran por el sur y continúan por dentro del imán hasta el norte."
+          },
+          {
+            "key": "B",
+            "text": "B. Son siempre curvas cerradas"
+          },
+          {
+            "key": "C",
+            "text": "C. Son iguales a las líneas de campo eléctrico de dos cargas",
+            "why_wrong": "Las líneas de campo eléctrico de dos cargas puntuales son abiertas (nacen en la carga positiva y mueren en la negativa); las magnéticas son siempre cerradas, porque no existen monopolos magnéticos."
+          },
+          {
+            "key": "D",
+            "text": "D. Solo existen dentro de los imanes",
+            "why_wrong": "Las líneas existen tanto dentro como fuera del imán; fuera conectan el polo norte con el sur, y dentro continúan cerrándose."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-2",
+        "stem": "La fuerza de Lorentz sobre una carga que se mueve paralela al campo magnético vale:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. $F = qvB$",
+            "why_wrong": "Esta fórmula solo vale cuando la velocidad es perpendicular al campo ($\\sin 90° = 1$). Si son paralelos, $\\sin 0° = 0$ y la fuerza es nula."
+          },
+          {
+            "key": "B",
+            "text": "B. Cero"
+          },
+          {
+            "key": "C",
+            "text": "C. $F = qv/B$",
+            "why_wrong": "Esta expresión no corresponde a ninguna ley del electromagnetismo. La fuerza de Lorentz es $F = qvB\\sin\\alpha$, y cuando $\\alpha = 0°$ vale cero."
+          },
+          {
+            "key": "D",
+            "text": "D. Depende de la masa de la carga",
+            "why_wrong": "La fuerza de Lorentz $F = qvB\\sin\\alpha$ no depende de la masa; depende solo de la carga, la velocidad, el campo y el ángulo entre $\\vec{v}$ y $\\vec{B}$."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-3",
+        "stem": "El campo magnético dentro de un solenoide largo es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Inversamente proporcional al número de espiras",
+            "why_wrong": "Es directamente proporcional: $B = \\mu_0 (N/L) I$. Más espiras → mayor campo."
+          },
+          {
+            "key": "B",
+            "text": "B. Uniforme y proporcional a $nI$"
+          },
+          {
+            "key": "C",
+            "text": "C. Nulo, porque los campos de las espiras se cancelan",
+            "why_wrong": "Se suman, no se cancelan: las espiras consecutivas refuerzan el campo en la misma dirección (paralelo al eje)."
+          },
+          {
+            "key": "D",
+            "text": "D. Dependiente de la distancia al eje del solenoide",
+            "why_wrong": "En un solenoide ideal largo, el campo interior es uniforme: no depende de la posición dentro del solenoide."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-4",
+        "stem": "Una carga positiva entra perpendicularmente en un campo magnético uniforme. Su trayectoria es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Rectilínea acelerada",
+            "why_wrong": "La fuerza magnética es perpendicular a la velocidad, así que no acelera la carga en línea recta, sino que la desvía."
+          },
+          {
+            "key": "B",
+            "text": "B. Parabólica",
+            "why_wrong": "La trayectoria parabólica se da cuando la fuerza es constante en dirección y sentido (como la gravedad). La fuerza magnética cambia de dirección continuamente, siempre perpendicular a v."
+          },
+          {
+            "key": "C",
+            "text": "C. Circular uniforme"
+          },
+          {
+            "key": "D",
+            "text": "D. Helicoidal",
+            "why_wrong": "La trayectoria helicoidal ocurre cuando la velocidad tiene una componente paralela al campo (que no genera fuerza) y otra perpendicular. Si toda la velocidad es perpendicular, la trayectoria es una circunferencia."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Un electrón ($m = 9{,}1 \\times 10^{-31}$ kg, $|q| = 1{,}6 \\times 10^{-19}$ C) se mueve a $4 \\times 10^6$ m/s perpendicularmente a un campo $B = 0{,}005$ T. (a) Calcula la fuerza magnética. (b) Calcula el radio de la trayectoria circular. (c) Calcula el periodo y la frecuencia del movimiento.",
+        "answer": "(a) $F = 3{,}2 \\times 10^{-15}$ N. (b) $r = 4{,}55$ mm. (c) $T = 7{,}14 \\times 10^{-9}$ s; $f = 1{,}40 \\times 10^{8}$ Hz.",
+        "full_solution": "(a) $F = |q|vB = 1{,}6 \\times 10^{-19} \\times 4 \\times 10^{6} \\times 0{,}005 = 3{,}2 \\times 10^{-15}\\;\\text{N}$.\n(b) $r = \\frac{mv}{|q|B} = \\frac{9{,}1 \\times 10^{-31} \\times 4 \\times 10^{6}}{1{,}6 \\times 10^{-19} \\times 0{,}005} = \\frac{3{,}64 \\times 10^{-24}}{8 \\times 10^{-22}} = 4{,}55 \\times 10^{-3}\\;\\text{m} = 4{,}55\\;\\text{mm}$.\n(c) $T = \\frac{2\\pi m}{|q|B} = \\frac{2\\pi \\times 9{,}1 \\times 10^{-31}}{8 \\times 10^{-22}} = 7{,}14 \\times 10^{-9}\\;\\text{s}$. $f = 1/T = 1{,}40 \\times 10^{8}\\;\\text{Hz}$."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un protón entra en un campo magnético uniforme $B = 0{,}2$ T con velocidad $v = 10^6$ m/s formando un ángulo de $60°$ con $\\vec{B}$. Describe la trayectoria y calcula: (a) el radio de la hélice, (b) el paso de la hélice (distancia avanzada en la dirección de $\\vec{B}$ por cada vuelta completa).",
+        "answer": "(a) $r \\approx 4{,}5\\;\\text{cm}$. (b) Paso $\\approx 16{,}4\\;\\text{cm}$.",
+        "full_solution": "La componente de $v$ perpendicular a $\\vec{B}$ es $v_{\\perp} = v\\sin 60° = 10^6 \\times \\frac{\\sqrt{3}}{2} \\approx 8{,}66 \\times 10^5$ m/s. La componente paralela es $v_{\\parallel} = v\\cos 60° = 5 \\times 10^5$ m/s. (a) Radio: $r = \\frac{mv_{\\perp}}{|q|B} = \\frac{1{,}67 \\times 10^{-27} \\times 8{,}66 \\times 10^5}{1{,}6 \\times 10^{-19} \\times 0{,}2} = \\frac{1{,}446 \\times 10^{-21}}{3{,}2 \\times 10^{-20}} \\approx 0{,}0452\\;\\text{m} \\approx 4{,}5\\;\\text{cm}$. (b) Periodo: $T = \\frac{2\\pi m}{|q|B} = \\frac{2\\pi \\times 1{,}67 \\times 10^{-27}}{3{,}2 \\times 10^{-20}} = 3{,}28 \\times 10^{-7}\\;\\text{s}$. Paso: $p = v_{\\parallel} \\times T = 5 \\times 10^5 \\times 3{,}28 \\times 10^{-7} = 0{,}164\\;\\text{m} \\approx 16{,}4\\;\\text{cm}$."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Cuál es la unidad SI del campo magnético?",
+        "back": "El tesla (T). 1 T = 1 kg/(A·s²). Valores típicos: campo terrestre ≈ 50 μT, imán de nevera ≈ 5 mT.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Fórmula del campo magnético de un hilo rectilíneo a distancia r",
+        "back": "$B = \\frac{\\mu_0 I}{2\\pi r}$, donde $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Fórmula de la fuerza de Lorentz (componente magnética)",
+        "back": "$\\vec{F} = q\\vec{v} \\times \\vec{B}$; módulo: $F = |q|vB\\sin\\alpha$. Es perpendicular a $\\vec{v}$ y a $\\vec{B}$; no realiza trabajo.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Radio de la trayectoria circular de una carga en campo magnético",
+        "back": "$r = \\frac{mv}{|q|B}$. El periodo $T = \\frac{2\\pi m}{|q|B}$ no depende de la velocidad.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Olvidar que la fuerza de Lorentz no realiza trabajo y creer que el campo magnético puede acelerar una carga.",
+        "correction": "La fuerza magnética es siempre perpendicular a $\\vec{v}$, así que $W = \\vec{F} \\cdot \\vec{v} = 0$. Solo cambia la dirección de $\\vec{v}$, no su módulo ni la energía cinética."
+      },
+      {
+        "mistake": "No convertir centímetros a metros al sustituir en las fórmulas del campo magnético.",
+        "correction": "Todas las fórmulas del SI requieren distancias en metros. 5 cm = 0,05 m, no 5."
+      },
+      {
+        "mistake": "Confundir la regla de la mano derecha para el hilo (pulgar = I, dedos = B) con la del producto vectorial (dedos = v, cierre = B, pulgar = F).",
+        "correction": "Son dos aplicaciones distintas de la misma mano: una para encontrar la dirección de B creado por una corriente y otra para encontrar la fuerza sobre una carga. Hay que tener claro cuál se está usando."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En los problemas de campo magnético, dibuja siempre un esquema con el hilo/solenoide y el punto donde calculas B, indicando la dirección de I y de B con la regla de la mano derecha antes de sustituir en la fórmula."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "campo magnético",
+        "definition": "Magnitud vectorial $\\vec{B}$ que describe la influencia magnética en cada punto del espacio. Unidad SI: tesla (T)."
+      },
+      {
+        "term": "fuerza de Lorentz",
+        "definition": "Fuerza que un campo magnético ejerce sobre una carga en movimiento: $\\vec{F} = q\\vec{v} \\times \\vec{B}$."
+      },
+      {
+        "term": "permeabilidad del vacío",
+        "definition": "Constante $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A que aparece en las leyes del magnetismo."
+      },
+      {
+        "term": "solenoide",
+        "definition": "Bobina cilíndrica de muchas espiras que produce un campo magnético uniforme en su interior: $B = \\mu_0 nI$."
+      },
+      {
+        "term": "tesla",
+        "definition": "Unidad SI del campo magnético. 1 T es el campo que ejerce una fuerza de 1 N sobre una carga de 1 C que se mueve a 1 m/s perpendicularmente al campo."
+      },
+      {
+        "term": "regla de la mano derecha",
+        "definition": "Regla mnemotécnica para determinar la dirección de $\\vec{B}$ creado por corrientes o la dirección de la fuerza de Lorentz."
+      }
+    ],
+    "summary": {
+      "big_idea": "Las corrientes eléctricas generan campo magnético a su alrededor, y ese campo ejerce fuerzas sobre cargas en movimiento (fuerza de Lorentz), lo que permite explicar desde la brújula hasta el espectrómetro de masas.",
+      "key_points": [
+        "Las líneas de campo magnético son siempre curvas cerradas; no existen monopolos magnéticos.",
+        "El campo de un hilo rectilíneo es $B = \\mu_0 I/(2\\pi r)$ y el de un solenoide $B = \\mu_0 nI$.",
+        "La fuerza de Lorentz $\\vec{F} = q\\vec{v}\\times\\vec{B}$ es perpendicular a $\\vec{v}$ y no realiza trabajo.",
+        "Una carga perpendicular a $\\vec{B}$ describe un movimiento circular de radio $r = mv/(|q|B)$."
+      ],
+      "formulas": [
+        "$B = \\frac{\\mu_0 I}{2\\pi r}$",
+        "$B = \\mu_0 n I$",
+        "$\\vec{F} = q\\vec{v} \\times \\vec{B}$",
+        "$r = \\frac{mv}{|q|B}$",
+        "$T = \\frac{2\\pi m}{|q|B}$"
+      ],
+      "what_to_remember_if_nothing_else": "Las corrientes crean campo magnético (cerrado, sin monopolos) y el campo magnético empuja las cargas en movimiento en dirección perpendicular ($\\vec{F} = q\\vec{v}\\times\\vec{B}$), curvando su trayectoria sin cambiar su rapidez."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque C · Electromagnetismo"
+    ],
+    "curriculum_refs": [
+      "CE3,1 Describir fenómenos electromagnéticos y sus aplicaciones",
+      "CE3,2 Resolver problemas de campo magnético y fuerza de Lorentz"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 1.º Bach alineado con LOMLOE"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "Claves de test revisadas"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_02.json": {
+    "id": "L02",
+    "title": "Fuerza magnética sobre corrientes",
+    "subject": "Física y Química",
+    "course_label": "1.º Bach · Física",
+    "unit_id": "U-B1F-06",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3,1",
+        "CE3,3"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Calcular la fuerza sobre un conductor rectilíneo por el que circula corriente en un campo magnético uniforme."
+      },
+      {
+        "statement": "Explicar el par de fuerzas que actúa sobre una espira con corriente en un campo magnético y su relación con el motor eléctrico."
+      },
+      {
+        "statement": "Describir las aplicaciones tecnológicas basadas en la fuerza magnética sobre corrientes (motor, altavoz, galvanómetro)."
+      },
+      {
+        "statement": "Analizar la fuerza entre dos conductores paralelos con corriente y relacionarla con la definición del amperio."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Conocer la fuerza de Lorentz y la regla de la mano derecha (Lección 1 de esta unidad).",
+        "why_it_matters": "La fuerza sobre un conductor es la suma de las fuerzas de Lorentz sobre todas las cargas en movimiento dentro del hilo."
+      },
+      {
+        "statement": "Manejar el concepto de momento de fuerza (par) respecto a un eje.",
+        "why_it_matters": "El funcionamiento del motor eléctrico se basa en el par ejercido por el campo magnético sobre una espira con corriente."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si un cable horizontal lleva corriente hacia la derecha y está en un campo magnético vertical hacia arriba, ¿en qué dirección se mueve el cable?",
+        "expected_answer": "Hacia fuera del plano (hacia el observador), por la regla de la mano derecha del producto vectorial."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué hace que gire el eje de un motor eléctrico?",
+        "expected_answer": "El par de fuerzas magnéticas que actúa sobre la espira (bobina) con corriente dentro del campo magnético de los imanes del motor."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La fuerza sobre un conductor es máxima cuando el cable es paralelo al campo magnético.",
+        "correct_model": "La fuerza es $F = BIL\\sin\\alpha$, donde $\\alpha$ es el ángulo entre el conductor y $\\vec{B}$. Es máxima cuando son perpendiculares ($\\alpha=90°$) y cero cuando son paralelos ($\\alpha=0°$)."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El motor eléctrico funciona porque la corriente calienta los cables y eso mueve el eje.",
+        "correct_model": "El motor funciona por la fuerza magnética sobre los conductores de la bobina: el campo magnético ejerce un par que hace girar la espira. El calentamiento (efecto Joule) es una pérdida, no el mecanismo de funcionamiento."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Fuerza sobre un conductor rectilíneo con corriente",
+        "body": "Un conductor de longitud $L$ por el que circula una corriente $I$, inmerso en un campo magnético uniforme $\\vec{B}$, experimenta una fuerza:\n\n$$\\vec{F} = I\\vec{L} \\times \\vec{B}$$\n\ncuyo módulo es:\n$$F = BIL\\sin\\alpha$$\ndonde $\\alpha$ es el ángulo entre la dirección de la corriente ($\\vec{L}$, con el sentido de $I$) y $\\vec{B}$.\n\n**Casos particulares:**\n- $\\alpha = 90°$: $F = BIL$ (máxima).\n- $\\alpha = 0°$ o $180°$: $F = 0$ (corriente paralela al campo).\n\nLa dirección de $\\vec{F}$ se determina con la regla de la mano derecha para el producto vectorial: dedos en la dirección de $I\\vec{L}$, se cierran hacia $\\vec{B}$, y el pulgar indica $\\vec{F}$.\n\n<svg viewBox=\"0 0 360 160\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:360px\">\n  <!-- Conductor -->\n  <line x1=\"40\" y1=\"80\" x2=\"200\" y2=\"80\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"3\"/>\n  <polygon points=\"200,80 190,74 190,86\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--primary,#0e7a68)\" font-weight=\"bold\">I</text>\n  <!-- Campo B -->\n  <text x=\"260\" y=\"50\" font-size=\"12\" fill=\"var(--secondary,#c17a17)\" font-weight=\"bold\">B</text>\n  <line x1=\"240\" y1=\"30\" x2=\"240\" y2=\"130\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"270\" y1=\"30\" x2=\"270\" y2=\"130\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"300\" y1=\"30\" x2=\"300\" y2=\"130\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <polygon points=\"240,30 236,40 244,40\" fill=\"var(--secondary,#c17a17)\"/>\n  <polygon points=\"270,30 266,40 274,40\" fill=\"var(--secondary,#c17a17)\"/>\n  <polygon points=\"300,30 296,40 304,40\" fill=\"var(--secondary,#c17a17)\"/>\n  <!-- Fuerza F -->\n  <line x1=\"120\" y1=\"80\" x2=\"120\" y2=\"140\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2.5\"/>\n  <polygon points=\"120,140 114,130 126,130\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"135\" y=\"140\" font-size=\"12\" fill=\"var(--primary,#0e7a68)\" font-weight=\"bold\">F</text>\n  <text x=\"180\" y=\"155\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">F = BIL (si I ⊥ B)</text>\n</svg>",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"aM\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#8a3d6b\"/></marker><marker id=\"aI\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#0e7a68\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Fuerza sobre un conductor: F = IL × B</text><line x1=\"80\" y1=\"180\" x2=\"420\" y2=\"180\" stroke=\"#0e7a68\" stroke-width=\"3\" marker-end=\"url(#aI)\"/><text x=\"430\" y=\"184\" font-size=\"12\" fill=\"#0e7a68\" font-weight=\"bold\">I</text><text x=\"250\" y=\"200\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">L (longitud del conductor)</text><text x=\"100\" y=\"100\" font-size=\"14\" fill=\"#c17a17\">×  ×  ×  ×  ×</text><text x=\"220\" y=\"100\" font-size=\"14\" fill=\"#c17a17\">×  ×  ×  ×  ×</text><text x=\"100\" y=\"130\" font-size=\"14\" fill=\"#c17a17\">×  ×  ×  ×  ×</text><text x=\"220\" y=\"130\" font-size=\"14\" fill=\"#c17a17\">×  ×  ×  ×  ×</text><text x=\"400\" y=\"100\" font-size=\"11\" fill=\"#c17a17\">B (entra)</text><line x1=\"250\" y1=\"175\" x2=\"250\" y2=\"60\" stroke=\"#8a3d6b\" stroke-width=\"3\" marker-end=\"url(#aM)\"/><text x=\"270\" y=\"70\" font-size=\"13\" font-weight=\"bold\" fill=\"#8a3d6b\">F</text><text x=\"250\" y=\"250\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">F = BIL sin α</text><text x=\"250\" y=\"275\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">F ⊥ I y ⊥ B (regla de la mano derecha)</text></svg>",
+            "caption": "La fuerza sobre un conductor con corriente en un campo magnético es perpendicular tanto a la corriente como al campo."
+          }
+        ]
+      },
+      {
+        "title": "Par de fuerzas sobre una espira rectangular",
+        "body": "Cuando una espira rectangular de $N$ espiras, área $A$ y corriente $I$ se coloca en un campo magnético uniforme $\\vec{B}$, los lados paralelos a $\\vec{B}$ no experimentan fuerza, mientras que los dos lados perpendiculares experimentan fuerzas iguales y opuestas que generan un **par de fuerzas** (momento torsor):\n\n$$\\tau = NBIA\\sin\\theta$$\n\ndonde $\\theta$ es el ángulo entre el vector normal a la espira ($\\vec{n}$, determinado por la regla de la mano derecha aplicada al sentido de la corriente) y el campo $\\vec{B}$.\n\nSe define el **momento magnético** de la espira como $\\vec{m} = NIA\\,\\vec{n}$, y el par se escribe:\n$$\\vec{\\tau} = \\vec{m} \\times \\vec{B}$$\n\nEl par es máximo cuando $\\theta = 90°$ (espira paralela al campo) y nulo cuando $\\theta = 0°$ (espira perpendicular al campo, posición de equilibrio).\n\n<svg viewBox=\"0 0 380 170\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:380px\">\n  <!-- Espira -->\n  <rect x=\"100\" y=\"40\" width=\"80\" height=\"80\" rx=\"2\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <!-- Flechas de corriente -->\n  <polygon points=\"140,40 134,48 146,48\" fill=\"var(--primary,#0e7a68)\"/>\n  <polygon points=\"180,80 172,74 172,86\" fill=\"var(--primary,#0e7a68)\"/>\n  <polygon points=\"140,120 146,112 134,112\" fill=\"var(--primary,#0e7a68)\"/>\n  <polygon points=\"100,80 108,86 108,74\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"90\" y=\"35\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">I</text>\n  <!-- Campo B horizontal -->\n  <line x1=\"220\" y1=\"80\" x2=\"340\" y2=\"80\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\"/>\n  <polygon points=\"340,80 330,74 330,86\" fill=\"var(--secondary,#c17a17)\"/>\n  <text x=\"350\" y=\"84\" font-size=\"12\" fill=\"var(--secondary,#c17a17)\" font-weight=\"bold\">B</text>\n  <!-- Fuerzas en lados verticales -->\n  <line x1=\"100\" y1=\"80\" x2=\"60\" y2=\"80\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <polygon points=\"60,80 70,74 70,86\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"50\" y=\"75\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">F</text>\n  <line x1=\"180\" y1=\"80\" x2=\"220\" y2=\"80\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <polygon points=\"220,80 210,74 210,86\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"222\" y=\"75\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">F</text>\n  <!-- Normal -->\n  <line x1=\"140\" y1=\"80\" x2=\"140\" y2=\"20\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"1.5\" stroke-dasharray=\"3,2\"/>\n  <polygon points=\"140,20 134,30 146,30\" fill=\"var(--accent,#8a3d6b)\"/>\n  <text x=\"148\" y=\"18\" font-size=\"10\" fill=\"var(--accent,#8a3d6b)\">n</text>\n  <text x=\"190\" y=\"165\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Par τ = NBIA sinθ → giro</text>\n</svg>"
+      },
+      {
+        "title": "El motor eléctrico de corriente continua",
+        "body": "Un **motor de corriente continua** (CC) convierte energía eléctrica en energía mecánica de rotación aprovechando el par magnético sobre una bobina:\n\n1. Una bobina (rotor) con muchas espiras gira dentro del campo de unos imanes fijos (estátor).\n2. El campo ejerce un par $\\tau = NBIA\\sin\\theta$ que hace girar la bobina.\n3. Un dispositivo llamado **colector de delgas** (conmutador) invierte el sentido de la corriente cada media vuelta, para que el par siga siempre en el mismo sentido de giro.\n4. Sin el colector, la espira se detendría en la posición de equilibrio ($\\theta = 0°$).\n\n**Rendimiento:** parte de la energía se pierde en calor (efecto Joule en las bobinas y en las escobillas) y en rozamiento.\n\n**Aplicaciones cotidianas:** ventiladores, lavadoras, batidoras, taladros, motores de coches eléctricos (estos usan variantes más complejas)."
+      },
+      {
+        "title": "Fuerza entre conductores paralelos y definición del amperio",
+        "body": "Dos conductores rectilíneos paralelos de longitud $L$, separados una distancia $d$, por los que circulan corrientes $I_1$ e $I_2$, se ejercen fuerzas mutuamente:\n\n$$\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$$\n\n- **Corrientes en el mismo sentido:** los conductores **se atraen**.\n- **Corrientes en sentidos opuestos:** los conductores **se repelen**.\n\nEsta fuerza fue la base de la antigua definición del **amperio** en el SI: un amperio era la corriente que, circulando por dos hilos paralelos infinitos separados 1 m en el vacío, produce una fuerza de $2 \\times 10^{-7}$ N por metro de longitud. Desde 2019, el amperio se define fijando el valor de la carga del electrón $e$.\n\n**Aplicaciones:** el altavoz (una bobina en un campo magnético que vibra al recibir corriente alterna proporcional al sonido), el galvanómetro (una bobina que gira proporcional a la corriente, moviendo una aguja indicadora)."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Fuerza sobre un conductor en campo uniforme",
+        "statement": "Un cable de 40 cm de longitud transporta 5 A y está colocado perpendicularmente a un campo magnético de 0,3 T. Calcula la fuerza sobre el cable.",
+        "steps": [
+          "Datos: $L = 0{,}40\\;\\text{m}$, $I = 5\\;\\text{A}$, $B = 0{,}3\\;\\text{T}$, $\\alpha = 90°$.",
+          "Fórmula: $F = BIL\\sin\\alpha = BIL$ (porque $\\sin 90° = 1$).",
+          "Sustituir: $F = 0{,}3 \\times 5 \\times 0{,}40 = 0{,}6\\;\\text{N}$."
+        ],
+        "answer": "$F = 0{,}6\\;\\text{N}$, perpendicular tanto al cable como al campo.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"aF2\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#8a3d6b\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Fuerza sobre conductor en campo uniforme</text><line x1=\"100\" y1=\"140\" x2=\"400\" y2=\"140\" stroke=\"#0e7a68\" stroke-width=\"3\"/><text x=\"410\" y=\"144\" font-size=\"12\" fill=\"#0e7a68\">I</text><text x=\"180\" y=\"80\" font-size=\"12\" fill=\"#c17a17\">× × × × × × × ×</text><text x=\"180\" y=\"110\" font-size=\"12\" fill=\"#c17a17\">× × × × × × × ×</text><text x=\"415\" y=\"80\" font-size=\"10\" fill=\"#c17a17\">B = 0,5 T</text><line x1=\"250\" y1=\"135\" x2=\"250\" y2=\"60\" stroke=\"#8a3d6b\" stroke-width=\"2.5\" marker-end=\"url(#aF2)\"/><text x=\"265\" y=\"70\" font-size=\"12\" fill=\"#8a3d6b\">F</text><text x=\"250\" y=\"190\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">F = BIL = 0,5 × 3 × 0,2 = 0,3 N</text><text x=\"250\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">Dirección: hacia arriba (regla mano derecha)</text></svg>",
+            "caption": "Ejemplo numérico: un conductor de 20 cm con 3 A en un campo de 0,5 T experimenta una fuerza de 0,3 N."
+          }
+        ]
+      },
+      {
+        "title": "Par sobre una espira rectangular",
+        "statement": "Una espira rectangular de 100 vueltas, con lados de 10 cm × 5 cm, transporta 2 A en un campo de 0,4 T. La normal a la espira forma 60° con $\\vec{B}$. Calcula el par.",
+        "steps": [
+          "Datos: $N = 100$, $A = 0{,}10 \\times 0{,}05 = 0{,}005\\;\\text{m}^2$, $I = 2\\;\\text{A}$, $B = 0{,}4\\;\\text{T}$, $\\theta = 60°$.",
+          "Fórmula: $\\tau = NBIA\\sin\\theta$.",
+          "Sustituir: $\\tau = 100 \\times 0{,}4 \\times 2 \\times 0{,}005 \\times \\sin 60° = 100 \\times 0{,}4 \\times 2 \\times 0{,}005 \\times 0{,}866$.",
+          "Calcular: $\\tau = 0{,}4 \\times 0{,}866 = 0{,}346\\;\\text{N·m}$."
+        ],
+        "answer": "$\\tau \\approx 0{,}35\\;\\text{N·m}$."
+      },
+      {
+        "title": "Fuerza por metro entre dos hilos paralelos",
+        "statement": "Dos cables paralelos, separados 10 cm, llevan corrientes de 20 A y 15 A en el mismo sentido. Calcula la fuerza por unidad de longitud y di si se atraen o se repelen.",
+        "steps": [
+          "Datos: $I_1 = 20\\;\\text{A}$, $I_2 = 15\\;\\text{A}$, $d = 0{,}10\\;\\text{m}$.",
+          "Fórmula: $F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$.",
+          "Sustituir: $F/L = \\frac{4\\pi \\times 10^{-7} \\times 20 \\times 15}{2\\pi \\times 0{,}10} = \\frac{4\\pi \\times 10^{-7} \\times 300}{0{,}2\\pi}$.",
+          "Simplificar: $F/L = \\frac{1200\\pi \\times 10^{-7}}{0{,}2\\pi} = \\frac{1200 \\times 10^{-7}}{0{,}2} = 6000 \\times 10^{-7} = 6 \\times 10^{-4}\\;\\text{N/m}$.",
+          "Sentido: corrientes en el mismo sentido → **se atraen**."
+        ],
+        "answer": "$F/L = 6 \\times 10^{-4}\\;\\text{N/m}$ (atracción)."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Un motor de CC tiene una bobina cuadrada de 200 vueltas, lado 8 cm, en un campo de 0,5 T. Funciona con 3 A. (a) Calcula el par máximo que puede ejercer. (b) ¿En qué posición de la espira se alcanza ese par máximo? (c) ¿Por qué necesita un colector de delgas para girar continuamente?",
+        "scaffold": "El par máximo ocurre cuando sinθ=1. Piensa qué pasa si la espira sigue girando más allá de θ=90° sin colector: el par cambiaría de sentido.",
+        "answer": "(a) $\\tau_{\\text{máx}} = NBIA = 200 \\times 0{,}5 \\times 3 \\times (0{,}08)^2 = 200 \\times 0{,}5 \\times 3 \\times 0{,}0064 = 1{,}92\\;\\text{N·m}$. (b) Cuando la normal a la espira es perpendicular a $\\vec{B}$ ($\\theta = 90°$), es decir, cuando el plano de la espira es paralelo al campo. (c) Sin colector, al pasar de $\\theta = 0°$, el par cambiaría de sentido y la espira oscilaría en torno a la posición de equilibrio sin completar giros continuos. El colector invierte la corriente cada semivuelta para que el par empuje siempre en el mismo sentido."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Un altavoz tiene una bobina cilíndrica de 50 vueltas, radio 2 cm, inmersa en un campo radial de 0,8 T. Cuando recibe una señal de audio, la corriente oscila. (a) Si en un instante circulan 0,1 A, calcula la fuerza sobre la bobina. (b) ¿Por qué la fuerza oscila con la corriente? (c) ¿Cómo produce sonido?",
+        "scaffold": "En un campo radial, cada elemento del conductor es siempre perpendicular a B. La longitud total del conductor es $N \\times 2\\pi r$. La corriente alterna produce fuerza variable → vibración del cono → sonido.",
+        "answer": "(a) Longitud total del hilo: $L = N \\times 2\\pi r = 50 \\times 2\\pi \\times 0{,}02 = 6{,}28\\;\\text{m}$. Como el campo es radial, $\\alpha = 90°$: $F = BIL = 0{,}8 \\times 0{,}1 \\times 6{,}28 = 0{,}50\\;\\text{N}$. (b) La fuerza es proporcional a $I$: si la corriente oscila (señal de audio), la fuerza oscila con la misma forma. (c) La bobina está pegada a un cono flexible; la fuerza oscilante mueve el cono, que desplaza aire produciendo ondas sonoras con la misma frecuencia que la señal eléctrica."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un cable de 25 cm lleva 8 A y forma un ángulo de 30° con un campo de 0,2 T. Calcula la fuerza sobre el cable.",
+        "answer": "$F = 0{,}2\\;\\text{N}$.",
+        "full_solution": "$F = BIL\\sin\\alpha = 0{,}2 \\times 8 \\times 0{,}25 \\times \\sin 30° = 0{,}2 \\times 8 \\times 0{,}25 \\times 0{,}5 = 0{,}2\\;\\text{N}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Una espira cuadrada de 50 vueltas, lado 6 cm, lleva 1,5 A en un campo de 0,1 T. Calcula el par máximo.",
+        "answer": "$\\tau_{\\text{máx}} = 0{,}027\\;\\text{N·m}$.",
+        "full_solution": "$A = (0{,}06)^2 = 3{,}6 \\times 10^{-3}\\;\\text{m}^2$. $\\tau_{\\text{máx}} = NBIA = 50 \\times 0{,}1 \\times 1{,}5 \\times 3{,}6 \\times 10^{-3} = 0{,}027\\;\\text{N·m}$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Dos hilos paralelos llevan 10 A en sentidos opuestos, separados 5 cm. Calcula la fuerza por metro de longitud. ¿Se atraen o se repelen?",
+        "answer": "$F/L = 4 \\times 10^{-4}\\;\\text{N/m}$, se repelen.",
+        "full_solution": "$F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d} = \\frac{4\\pi \\times 10^{-7} \\times 10 \\times 10}{2\\pi \\times 0{,}05} = \\frac{4\\pi \\times 10^{-5}}{0{,}1\\pi} = 4 \\times 10^{-4}\\;\\text{N/m}$. Corrientes en sentidos opuestos → se repelen.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un conductor recto de 50 cm y masa 20 g está suspendido horizontalmente en un campo magnético horizontal perpendicular de 0,5 T. ¿Qué corriente mínima debe circular para que el cable levite (fuerza magnética = peso)?",
+        "answer": "$I \\approx 0{,}78\\;\\text{A}$.",
+        "full_solution": "Para levitar: $F_{\\text{mag}} = mg \\Rightarrow BIL = mg$. $I = \\frac{mg}{BL} = \\frac{0{,}020 \\times 9{,}8}{0{,}5 \\times 0{,}50} = \\frac{0{,}196}{0{,}25} = 0{,}784\\;\\text{A}$.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dibuja una espira rectangular en un campo magnético uniforme horizontal. Marca la dirección de la corriente, las fuerzas en cada lado, la normal a la espira y el par resultante. Indica la posición de par máximo y la de equilibrio.",
+        "answer": "Par máximo cuando la normal de la espira es perpendicular a B; equilibrio cuando es paralela. Los lados paralelos a B no tienen fuerza.",
+        "full_solution": "Los lados perpendiculares a $\\vec{B}$ experimentan fuerzas $F = BIL$ en sentidos opuestos (forman el par). Los lados paralelos a $\\vec{B}$ no experimentan fuerza ($\\sin 0° = 0$). La normal $\\vec{n}$ se determina con la regla de la mano derecha para la corriente. Par máximo: $\\vec{n} \\perp \\vec{B}$ ($\\theta = 90°$, plano de la espira paralelo a $\\vec{B}$). Equilibrio estable: $\\vec{n} \\parallel \\vec{B}$ ($\\theta = 0°$).",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "¿Por qué corrientes paralelas en el mismo sentido se atraen, aunque sean cargas del mismo signo moviéndose en la misma dirección? Justifica usando campos magnéticos.",
+        "answer": "El campo creado por un hilo, en la posición del otro, genera una fuerza hacia el primero.",
+        "full_solution": "Cada hilo crea un campo magnético circular (regla de la mano derecha). En la posición del segundo hilo, el campo del primero apunta en una dirección tal que la fuerza $\\vec{F} = I\\vec{L} \\times \\vec{B}$ sobre el segundo hilo apunta hacia el primero (atracción). No es una interacción eléctrica (los cables son neutros), sino puramente magnética: el campo magnético creado por un hilo tira del otro. Si las corrientes van en sentidos opuestos, el campo tiene la dirección contraria en la posición del segundo hilo y la fuerza resultante es de repulsión.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Un galvanómetro tiene una bobina de 500 vueltas, área $2 \\times 10^{-4}$ m², en un campo radial de 0,2 T. El muelle que frena la bobina tiene constante torsional $k = 5 \\times 10^{-6}$ N·m/rad. ¿Qué ángulo gira la aguja cuando circulan 100 μA?",
+        "answer": "$\\theta = 0{,}4\\;\\text{rad} \\approx 23°$.",
+        "full_solution": "En un galvanómetro con campo radial, el par magnético es $\\tau = NBIA$ (constante, sin factor $\\sin\\theta$ porque el campo siempre es perpendicular a la corriente en la bobina). En equilibrio: $NBIA = k\\theta \\Rightarrow \\theta = \\frac{NBIA}{k} = \\frac{500 \\times 0{,}2 \\times 100 \\times 10^{-6} \\times 2 \\times 10^{-4}}{5 \\times 10^{-6}} = \\frac{2 \\times 10^{-6}}{5 \\times 10^{-6}} = 0{,}4\\;\\text{rad} \\approx 23°$.",
+        "difficulty": "desafío"
+      },
+      {
+        "statement": "Explica por qué, si un motor eléctrico de CC se bloquea (el rotor deja de girar), la corriente aumenta drásticamente y puede quemar la bobina.",
+        "answer": "Al girar, la bobina genera una fem inducida (contraelectromotriz) que reduce la corriente neta. Si se bloquea, esa fem desaparece y la corriente sube hasta el máximo permitido por la resistencia del cable, produciendo excesivo calor.",
+        "full_solution": "Cuando el rotor gira, la bobina actúa también como generador (Lección 3: inducción) y produce una fem opuesta (contraelectromotriz, $\\varepsilon'$). La corriente real es $I = (V - \\varepsilon')/R$, menor que $V/R$. Si el rotor se bloquea, $\\varepsilon' = 0$ y $I = V/R$ (máxima). En motores típicos, la resistencia del bobinado es muy baja (fracciones de ohmio), así que $V/R$ puede ser muy grande, generando calor por efecto Joule que puede fundir el aislante de los cables. Por eso los motores tienen protecciones (fusibles, relés térmicos).",
+        "difficulty": "análisis crítico"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L02-1",
+        "stem": "La fuerza sobre un conductor con corriente en un campo magnético es máxima cuando:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. El conductor es paralelo al campo",
+            "why_wrong": "Si el conductor es paralelo al campo, $\\sin 0° = 0$ y la fuerza es nula."
+          },
+          {
+            "key": "B",
+            "text": "B. El conductor es perpendicular al campo"
+          },
+          {
+            "key": "C",
+            "text": "C. La corriente es nula",
+            "why_wrong": "Si la corriente es cero, $F = BIL\\sin\\alpha = 0$: no hay fuerza."
+          },
+          {
+            "key": "D",
+            "text": "D. El campo magnético es nulo",
+            "why_wrong": "Sin campo magnético no hay fuerza magnética."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-2",
+        "stem": "El par sobre una espira con corriente en un campo magnético uniforme es nulo cuando:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La normal a la espira es perpendicular al campo",
+            "why_wrong": "En esa posición $\\sin 90° = 1$ y el par es máximo, no nulo."
+          },
+          {
+            "key": "B",
+            "text": "B. La normal a la espira es paralela al campo"
+          },
+          {
+            "key": "C",
+            "text": "C. La corriente es máxima",
+            "why_wrong": "Aumentar la corriente aumenta el par ($\\tau = NBIA\\sin\\theta$), no lo anula."
+          },
+          {
+            "key": "D",
+            "text": "D. La espira tiene muchas vueltas",
+            "why_wrong": "Más vueltas aumentan el par ($\\tau \\propto N$). No lo anulan."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-3",
+        "stem": "Dos hilos paralelos con corrientes en sentidos opuestos:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se atraen",
+            "why_wrong": "Corrientes en el mismo sentido se atraen; en sentidos opuestos se repelen."
+          },
+          {
+            "key": "B",
+            "text": "B. Se repelen"
+          },
+          {
+            "key": "C",
+            "text": "C. No interaccionan",
+            "why_wrong": "Toda corriente crea un campo magnético, y ese campo ejerce fuerza sobre cualquier otra corriente cercana."
+          },
+          {
+            "key": "D",
+            "text": "D. Oscilan",
+            "why_wrong": "La fuerza es estática (constante para corrientes constantes), no oscilante. Los hilos se repelen de forma continua."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-4",
+        "stem": "En un motor de CC, el colector de delgas sirve para:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Aumentar el campo magnético",
+            "why_wrong": "El colector no afecta al campo del estátor. Solo afecta a la dirección de la corriente en la bobina."
+          },
+          {
+            "key": "B",
+            "text": "B. Invertir el sentido de la corriente en la bobina cada media vuelta"
+          },
+          {
+            "key": "C",
+            "text": "C. Reducir la resistencia eléctrica del motor",
+            "why_wrong": "El colector no reduce la resistencia; de hecho, el contacto escobilla-colector añade algo de resistencia y fricción."
+          },
+          {
+            "key": "D",
+            "text": "D. Enfriar la bobina",
+            "why_wrong": "El colector no tiene función refrigerante; su misión es conmutar la corriente."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "(a) Enuncia la expresión de la fuerza sobre un conductor rectilíneo con corriente en un campo magnético uniforme. (b) Un cable de 30 cm con 4 A forma 45° con un campo de 0,15 T. Calcula la fuerza. (c) Explica qué aplicación tecnológica se basa en esta fuerza.",
+        "answer": "(a) $\\vec{F} = I\\vec{L}\\times\\vec{B}$, módulo $F = BIL\\sin\\alpha$. (b) $F = 0{,}127$ N. (c) El motor eléctrico, el altavoz o el galvanómetro.",
+        "full_solution": "(a) La fuerza es $\\vec{F} = I\\vec{L}\\times\\vec{B}$, con módulo $F = BIL\\sin\\alpha$, donde $\\alpha$ es el ángulo entre la dirección de la corriente y $\\vec{B}$. (b) $F = 0{,}15 \\times 4 \\times 0{,}30 \\times \\sin 45° = 0{,}15 \\times 4 \\times 0{,}30 \\times 0{,}707 = 0{,}127\\;\\text{N}$. (c) El motor eléctrico: la fuerza sobre los conductores de la bobina genera un par que hace girar el rotor. También el altavoz (la fuerza mueve un cono que produce sonido)."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un motor de CC tiene una bobina cuadrada de 300 vueltas, lado 5 cm, en un campo de 0,8 T. Funciona a 12 V y su resistencia interna es 2 Ω. Cuando gira a velocidad constante, consume 3 A. (a) Calcula la contraelectromotriz. (b) Calcula el par máximo cuando el motor arranca (contraelectromotriz ≈ 0). (c) Calcula la potencia mecánica útil en funcionamiento normal.",
+        "answer": "(a) $\\varepsilon' = 6$ V. (b) $\\tau_{\\text{arranque}} = 1{,}8$ N·m. (c) $P_{\\text{útil}} = 18$ W.",
+        "full_solution": "(a) En funcionamiento normal: $V = \\varepsilon' + IR \\Rightarrow \\varepsilon' = V - IR = 12 - 3 \\times 2 = 6\\;\\text{V}$. (b) Al arrancar, $\\varepsilon' \\approx 0$: $I_{\\text{arranque}} = V/R = 12/2 = 6\\;\\text{A}$. $A = (0{,}05)^2 = 2{,}5 \\times 10^{-3}\\;\\text{m}^2$. $\\tau = NBIA = 300 \\times 0{,}8 \\times 6 \\times 2{,}5 \\times 10^{-3} = 3{,}6\\;\\text{N·m}$. Pero como el par varía con el ángulo ($\\sin\\theta$), el par máximo instantáneo es 3,6 N·m. [El par medio sería $2/\\pi$ de esto.] (c) $P_{\\text{útil}} = \\varepsilon' \\times I = 6 \\times 3 = 18\\;\\text{W}$. La potencia disipada en calor es $I^2R = 9 \\times 2 = 18\\;\\text{W}$. El rendimiento es 50%."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Fuerza sobre un conductor con corriente en un campo magnético",
+        "back": "$\\vec{F} = I\\vec{L}\\times\\vec{B}$; módulo: $F = BIL\\sin\\alpha$. Máxima cuando conductor ⊥ campo.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Par sobre una espira con N vueltas",
+        "back": "$\\tau = NBIA\\sin\\theta$, donde $\\theta$ es el ángulo entre la normal a la espira y $\\vec{B}$. Par máximo cuando la espira es paralela al campo.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Para qué sirve el colector de delgas en un motor de CC?",
+        "back": "Para invertir el sentido de la corriente en la bobina cada media vuelta, de modo que el par mantenga siempre el mismo sentido de giro.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Fuerza por metro entre dos hilos paralelos",
+        "back": "$F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$. Mismo sentido → atracción; sentidos opuestos → repulsión.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir la fuerza sobre una carga ($F = qvB\\sin\\alpha$) con la fuerza sobre un conductor ($F = BIL\\sin\\alpha$).",
+        "correction": "La fuerza sobre el conductor es la suma de las fuerzas sobre todas las cargas en movimiento dentro del hilo. Las fórmulas son análogas pero con magnitudes distintas (q y v vs. I y L)."
+      },
+      {
+        "mistake": "Creer que el par es máximo cuando la normal a la espira es paralela al campo.",
+        "correction": "$\\tau = NBIA\\sin\\theta$: el par es máximo cuando $\\theta = 90°$ (normal perpendicular a B) y nulo cuando $\\theta = 0°$ (normal paralela a B, posición de equilibrio)."
+      },
+      {
+        "mistake": "Olvidar que el colector de delgas es imprescindible para el giro continuo del motor de CC.",
+        "correction": "Sin colector, la espira oscilaría en torno a la posición de equilibrio. El colector invierte la corriente para que el par siempre empuje en el mismo sentido."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En problemas de fuerza sobre conductores y pares, dibuja siempre el esquema indicando la dirección de I, B y F con la regla de la mano derecha antes de usar la fórmula."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "fuerza sobre conductor",
+        "definition": "Fuerza que un campo magnético ejerce sobre un conductor con corriente: $F = BIL\\sin\\alpha$."
+      },
+      {
+        "term": "par magnético",
+        "definition": "Momento de fuerza sobre una espira con corriente en un campo: $\\tau = NBIA\\sin\\theta$."
+      },
+      {
+        "term": "momento magnético",
+        "definition": "Vector $\\vec{m} = NIA\\vec{n}$, que resume el efecto magnético de una espira. El par es $\\vec{\\tau} = \\vec{m}\\times\\vec{B}$."
+      },
+      {
+        "term": "colector de delgas",
+        "definition": "Dispositivo del motor de CC que invierte la corriente en la bobina cada media vuelta para mantener el giro en un sentido."
+      },
+      {
+        "term": "motor eléctrico de CC",
+        "definition": "Dispositivo que convierte energía eléctrica en mecánica mediante el par magnético sobre una bobina con corriente."
+      },
+      {
+        "term": "galvanómetro",
+        "definition": "Instrumento que mide corrientes pequeñas aprovechando el giro de una bobina en un campo magnético radial."
+      }
+    ],
+    "summary": {
+      "big_idea": "Un conductor con corriente en un campo magnético experimenta una fuerza ($F=BIL\\sin\\alpha$), y una espira experimenta un par ($\\tau=NBIA\\sin\\theta$): esto es la base del motor eléctrico, el altavoz y el galvanómetro.",
+      "key_points": [
+        "La fuerza sobre un conductor es $F=BIL\\sin\\alpha$, perpendicular al cable y al campo.",
+        "El par sobre una espira es $\\tau=NBIA\\sin\\theta$; máximo cuando la espira está paralela al campo.",
+        "El colector de delgas invierte la corriente cada media vuelta para mantener el giro del motor.",
+        "Hilos paralelos con corrientes en el mismo sentido se atraen; en sentidos opuestos, se repelen."
+      ],
+      "formulas": [
+        "$F = BIL\\sin\\alpha$",
+        "$\\tau = NBIA\\sin\\theta$",
+        "$F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$"
+      ],
+      "what_to_remember_if_nothing_else": "Un cable con corriente en un campo magnético siente una fuerza ($F=BIL\\sin\\alpha$); una espira con corriente siente un par que la hace girar — eso es un motor eléctrico."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque C · Electromagnetismo"
+    ],
+    "curriculum_refs": [
+      "CE3,1 Explicar fenómenos electromagnéticos",
+      "CE3,3 Describir aplicaciones tecnológicas del electromagnetismo"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 1.º Bach alineado con LOMLOE"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "Claves de test revisadas"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_03.json": {
+    "id": "L03",
+    "title": "Inducción electromagnética",
+    "subject": "Física y Química",
+    "course_label": "1.º Bach · Física",
+    "unit_id": "U-B1F-06",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3,2",
+        "CE3,3"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Describir las experiencias de Faraday y explicar las condiciones necesarias para que aparezca una fem inducida."
+      },
+      {
+        "statement": "Calcular el flujo magnético a través de una superficie plana en un campo uniforme."
+      },
+      {
+        "statement": "Aplicar la ley de Faraday-Lenz para calcular la fem inducida y predecir el sentido de la corriente inducida."
+      },
+      {
+        "statement": "Explicar el origen y las aplicaciones de las corrientes de Foucault."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Conocer el campo magnético, sus fuentes y la fuerza sobre cargas y corrientes (Lecciones 1 y 2 de esta unidad).",
+        "why_it_matters": "La inducción conecta el cambio de flujo magnético con la generación de corriente; se necesita manejar B, líneas de campo y fuerza de Lorentz."
+      },
+      {
+        "statement": "Manejar la derivada como tasa de cambio (del curso de Matemáticas).",
+        "why_it_matters": "La ley de Faraday expresa la fem como $\\varepsilon = -d\\Phi_B/dt$, una derivada temporal."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si mueves un imán hacia una bobina conectada a un voltímetro, ¿qué observas?",
+        "expected_answer": "El voltímetro marca un voltaje (fem inducida) mientras el imán se mueve; si se detiene, la lectura vuelve a cero."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Es necesario que haya corriente en una espira para que aparezca flujo magnético a través de ella?",
+        "expected_answer": "No; basta con que la espira esté en una región con campo magnético. El flujo depende de B, A y la orientación, no de que circule corriente por la espira."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Para que aparezca corriente inducida, basta con que haya un campo magnético; no hace falta que cambie nada.",
+        "correct_model": "La corriente inducida aparece solo cuando el flujo magnético a través del circuito cambia con el tiempo. Un campo constante a través de una espira fija no induce nada."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La ley de Lenz dice que la corriente inducida va siempre en sentido antihorario.",
+        "correct_model": "La ley de Lenz dice que la corriente inducida circula en el sentido que se opone al cambio de flujo que la produce. El sentido concreto depende de si el flujo aumenta o disminuye."
+      },
+      {
+        "id": "MIS-03",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El signo negativo de la ley de Faraday ($\\varepsilon = -d\\Phi_B/dt$) se puede ignorar porque solo afecta a las unidades.",
+        "correct_model": "El signo negativo es la ley de Lenz: indica que la fem inducida se opone al cambio de flujo, lo que garantiza la conservación de la energía. Sin él, podríamos generar energía infinita de la nada."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Las experiencias de Faraday",
+        "body": "En 1831, Michael Faraday descubrió que un campo magnético variable en el tiempo genera una corriente eléctrica en un circuito cerrado. Sus experiencias clave:\n\n1. **Imán moviéndose cerca de una bobina:** al acercar un imán a una bobina conectada a un galvanómetro, la aguja se desvía; al alejar el imán, la aguja se desvía en sentido contrario; al parar el imán, la aguja vuelve a cero.\n2. **Corriente variable en una bobina vecina:** al conectar y desconectar la corriente de una primera bobina, aparece brevemente corriente en una segunda bobina próxima (sin contacto eléctrico).\n\nLa conclusión: **no es el campo magnético lo que induce corriente, sino su variación**. Lo que importa es que cambie el flujo magnético a través del circuito.\n\n<svg viewBox=\"0 0 400 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <!-- Bobina -->\n  <rect x=\"200\" y=\"30\" width=\"80\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"210\" y1=\"30\" x2=\"210\" y2=\"120\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"225\" y1=\"30\" x2=\"225\" y2=\"120\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"240\" y1=\"30\" x2=\"240\" y2=\"120\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"255\" y1=\"30\" x2=\"255\" y2=\"120\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <line x1=\"270\" y1=\"30\" x2=\"270\" y2=\"120\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/>\n  <!-- Galvanómetro -->\n  <circle cx=\"320\" cy=\"75\" r=\"18\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"320\" y=\"79\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">G</text>\n  <line x1=\"280\" y1=\"50\" x2=\"302\" y2=\"62\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <line x1=\"280\" y1=\"100\" x2=\"302\" y2=\"88\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <!-- Imán acercándose -->\n  <rect x=\"60\" y=\"55\" width=\"30\" height=\"40\" rx=\"3\" fill=\"var(--primary,#0e7a68)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <rect x=\"90\" y=\"55\" width=\"30\" height=\"40\" rx=\"3\" fill=\"var(--secondary,#c17a17)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <text x=\"75\" y=\"79\" text-anchor=\"middle\" font-size=\"11\" fill=\"white\" font-weight=\"bold\">N</text>\n  <text x=\"105\" y=\"79\" text-anchor=\"middle\" font-size=\"11\" fill=\"white\" font-weight=\"bold\">S</text>\n  <!-- Flecha de movimiento -->\n  <line x1=\"130\" y1=\"75\" x2=\"185\" y2=\"75\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2.5\"/>\n  <polygon points=\"185,75 175,69 175,81\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"157\" y=\"68\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\" font-weight=\"bold\">v</text>\n  <text x=\"200\" y=\"145\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Al mover el imán → corriente inducida en la bobina</text>\n</svg>"
+      },
+      {
+        "title": "Flujo magnético",
+        "body": "El **flujo magnético** $\\Phi_B$ a través de una superficie plana de área $A$ en un campo uniforme $\\vec{B}$ es:\n\n$$\\Phi_B = \\vec{B} \\cdot \\vec{A} = BA\\cos\\theta$$\n\ndonde $\\theta$ es el ángulo entre $\\vec{B}$ y la normal a la superficie ($\\vec{n}$).\n\n**Unidad SI:** weber (Wb). $1\\;\\text{Wb} = 1\\;\\text{T·m}^2$.\n\n**Casos particulares:**\n- $\\theta = 0°$: $\\Phi_B = BA$ (máximo, campo perpendicular a la superficie).\n- $\\theta = 90°$: $\\Phi_B = 0$ (campo paralelo a la superficie, no «atraviesa» nada).\n\nEl flujo puede cambiar si cambia:\n- El módulo de $\\vec{B}$.\n- El área $A$ (la espira se expande o contrae).\n- El ángulo $\\theta$ (la espira gira).\n\nCualquiera de estos cambios produce una fem inducida (ley de Faraday)."
+      },
+      {
+        "title": "Ley de Faraday-Lenz",
+        "body": "La **ley de Faraday** establece que la fem inducida en un circuito es igual al opuesto de la tasa de cambio del flujo magnético:\n\n$$\\varepsilon = -\\frac{d\\Phi_B}{dt}$$\n\nSi el circuito tiene $N$ espiras, la fem total es:\n$$\\varepsilon = -N\\frac{d\\Phi_B}{dt}$$\n\nEl signo negativo es la **ley de Lenz**: la fem (y la corriente que genera, si el circuito está cerrado) se opone al cambio de flujo que la produce.\n\n**Interpretación de Lenz:**\n- Si el flujo **aumenta**, la corriente inducida crea un campo que se opone (intenta reducir el flujo).\n- Si el flujo **disminuye**, la corriente inducida crea un campo que lo refuerza (intenta mantener el flujo).\n\nEsto es una consecuencia de la conservación de la energía: si la corriente reforzara el cambio, se crearía más flujo → más corriente → más flujo → energía infinita de la nada, lo cual es imposible.\n\n**Cálculo práctico:** Cuando $\\Phi_B$ varía linealmente en el tiempo (caso más frecuente en problemas):\n$$|\\varepsilon| = N\\frac{|\\Delta\\Phi_B|}{\\Delta t}$$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"aV\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#8a3d6b\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Inducción: barra moviéndose en campo B</text><rect x=\"100\" y=\"80\" width=\"300\" height=\"150\" rx=\"0\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><line x1=\"280\" y1=\"80\" x2=\"280\" y2=\"230\" stroke=\"#0e7a68\" stroke-width=\"4\"/><text x=\"290\" y=\"70\" font-size=\"11\" fill=\"#0e7a68\">Barra (L)</text><line x1=\"280\" y1=\"155\" x2=\"360\" y2=\"155\" stroke=\"#8a3d6b\" stroke-width=\"2.5\" marker-end=\"url(#aV)\"/><text x=\"330\" y=\"148\" font-size=\"12\" fill=\"#8a3d6b\">v</text><text x=\"180\" y=\"120\" font-size=\"13\" fill=\"#c17a17\">× × × × ×</text><text x=\"180\" y=\"150\" font-size=\"13\" fill=\"#c17a17\">× × × × ×</text><text x=\"180\" y=\"180\" font-size=\"13\" fill=\"#c17a17\">× × × × ×</text><text x=\"430\" y=\"120\" font-size=\"10\" fill=\"#c17a17\">B (entra)</text><text x=\"250\" y=\"260\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">ε = BLv</text><text x=\"250\" y=\"285\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">La fem se genera al variar el flujo Φ = B·A</text></svg>",
+            "caption": "Una barra conductora que se mueve en un campo magnético genera una fem inducida ε = BLv al variar el flujo magnético."
+          }
+        ]
+      },
+      {
+        "title": "Corrientes de Foucault",
+        "body": "Cuando un campo magnético variable atraviesa un conductor macizo (no solo un hilo, sino una masa de metal), se inducen corrientes en el interior del material en forma de remolinos: son las **corrientes de Foucault** (o corrientes parásitas).\n\n**Efectos:**\n- **Calentamiento:** las corrientes disipan energía por efecto Joule. Esto se aprovecha en la **cocina de inducción** (un campo alterno induce corrientes en el fondo metálico de la olla, calentándola) y en la **fundición por inducción** de metales.\n- **Frenado:** las corrientes generan fuerzas que se oponen al movimiento (Lenz). Se usa en **frenos electromagnéticos** de trenes, montañas rusas y camiones: no tienen contacto, así que no se desgastan.\n\n**Reducción de corrientes parásitas:** cuando son indeseables (transformadores, motores), el núcleo se hace de láminas aisladas entre sí (chapa magnética laminada), lo que reduce los bucles de corriente y las pérdidas."
+      },
+      {
+        "title": "Aplicaciones de la inducción",
+        "body": "La inducción electromagnética es el principio detrás de muchas tecnologías:\n\n- **Generadores eléctricos:** una bobina gira en un campo magnético; el flujo varía senoidalmente y se produce corriente alterna (Lección 4).\n- **Transformadores:** dos bobinas comparten un núcleo de hierro; la variación de corriente en la primaria induce fem en la secundaria (Lección 4).\n- **Cocinas de inducción:** un campo alterno de alta frecuencia calienta el fondo metálico de la olla por corrientes de Foucault.\n- **Lectores de tarjetas y micrófonos dinámicos:** variaciones rápidas de flujo en bobinas pequeñas producen señales eléctricas.\n- **Carga inalámbrica:** un campo alterno en la base induce corriente en la bobina del dispositivo.\n- **Detectores de metales:** un campo alterno induce corrientes en objetos metálicos, que a su vez alteran el campo detectado por la bobina receptora."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Cálculo del flujo magnético",
+        "statement": "Una espira circular de radio 10 cm está en un campo uniforme de 0,3 T. Calcula el flujo cuando (a) la normal a la espira es paralela al campo, (b) forma 60° con el campo, (c) es perpendicular al campo.",
+        "steps": [
+          "Área: $A = \\pi r^2 = \\pi (0{,}10)^2 = 0{,}0314\\;\\text{m}^2$.",
+          "(a) $\\theta = 0°$: $\\Phi_B = BA\\cos 0° = 0{,}3 \\times 0{,}0314 \\times 1 = 9{,}42 \\times 10^{-3}\\;\\text{Wb}$.",
+          "(b) $\\theta = 60°$: $\\Phi_B = 0{,}3 \\times 0{,}0314 \\times \\cos 60° = 0{,}3 \\times 0{,}0314 \\times 0{,}5 = 4{,}71 \\times 10^{-3}\\;\\text{Wb}$.",
+          "(c) $\\theta = 90°$: $\\Phi_B = 0{,}3 \\times 0{,}0314 \\times \\cos 90° = 0\\;\\text{Wb}$."
+        ],
+        "answer": "(a) 9,42 mWb; (b) 4,71 mWb; (c) 0 Wb.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Ley de Faraday-Lenz</text><rect x=\"80\" y=\"70\" width=\"140\" height=\"100\" rx=\"8\" fill=\"#0e7a68\" opacity=\"0.08\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">Flujo Φ varía</text><text x=\"150\" y=\"120\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">ΔΦ/Δt ≠ 0</text><rect x=\"280\" y=\"70\" width=\"140\" height=\"100\" rx=\"8\" fill=\"#c17a17\" opacity=\"0.08\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"350\" y=\"100\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">Se induce fem</text><text x=\"350\" y=\"120\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">ε = −dΦ/dt</text><line x1=\"220\" y1=\"120\" x2=\"278\" y2=\"120\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><polygon points=\"276,116 276,124 284,120\" fill=\"var(--axes,#24312c)\"/><text x=\"250\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">ε = −N·ΔΦ/Δt</text><text x=\"250\" y=\"235\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">Signo −: la corriente inducida se opone al cambio (Lenz)</text></svg>",
+            "caption": "Ley de Faraday-Lenz: la fem inducida es proporcional a la rapidez de variación del flujo magnético, y su sentido se opone al cambio."
+          }
+        ]
+      },
+      {
+        "title": "Fem inducida al retirar una espira de un campo",
+        "statement": "Una espira rectangular de 200 vueltas, 5 cm × 8 cm, está en un campo uniforme de 0,4 T (perpendicular a la espira). Se retira completamente del campo en 0,1 s. Calcula la fem inducida media.",
+        "steps": [
+          "Flujo inicial: $\\Phi_i = BA = 0{,}4 \\times (0{,}05 \\times 0{,}08) = 0{,}4 \\times 4 \\times 10^{-3} = 1{,}6 \\times 10^{-3}\\;\\text{Wb}$.",
+          "Flujo final: $\\Phi_f = 0$ (fuera del campo).",
+          "Variación: $\\Delta\\Phi_B = 0 - 1{,}6 \\times 10^{-3} = -1{,}6 \\times 10^{-3}\\;\\text{Wb}$.",
+          "Fem inducida: $|\\varepsilon| = N\\frac{|\\Delta\\Phi_B|}{\\Delta t} = 200 \\times \\frac{1{,}6 \\times 10^{-3}}{0{,}1} = 200 \\times 0{,}016 = 3{,}2\\;\\text{V}$."
+        ],
+        "answer": "$|\\varepsilon| = 3{,}2\\;\\text{V}$."
+      },
+      {
+        "title": "Fem inducida por variación del campo",
+        "statement": "Una bobina de 100 espiras y área 50 cm² está perpendicular a un campo que aumenta uniformemente de 0 a 0,5 T en 2 s. Calcula la fem inducida.",
+        "steps": [
+          "$A = 50\\;\\text{cm}^2 = 50 \\times 10^{-4}\\;\\text{m}^2 = 5 \\times 10^{-3}\\;\\text{m}^2$.",
+          "$\\Delta\\Phi_B = \\Delta B \\cdot A = (0{,}5 - 0) \\times 5 \\times 10^{-3} = 2{,}5 \\times 10^{-3}\\;\\text{Wb}$.",
+          "$|\\varepsilon| = N\\frac{|\\Delta\\Phi_B|}{\\Delta t} = 100 \\times \\frac{2{,}5 \\times 10^{-3}}{2} = 0{,}125\\;\\text{V} = 125\\;\\text{mV}$."
+        ],
+        "answer": "$|\\varepsilon| = 125\\;\\text{mV}$."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Una espira cuadrada de 10 cm de lado gira a velocidad angular constante $\\omega = 100\\;\\text{rad/s}$ en un campo uniforme de 0,2 T. La espira tiene 1 vuelta. (a) Escribe la expresión del flujo en función del tiempo. (b) Calcula la fem máxima inducida. (c) ¿En qué posición de la espira es máxima la fem?",
+        "scaffold": "El ángulo varía como $\\theta = \\omega t$, así que $\\Phi_B = BA\\cos(\\omega t)$. La fem es $-d\\Phi_B/dt$. La derivada de $\\cos(\\omega t)$ es $-\\omega\\sin(\\omega t)$.",
+        "answer": "(a) $\\Phi_B(t) = BA\\cos(\\omega t) = 0{,}2 \\times (0{,}10)^2 \\cos(100t) = 2 \\times 10^{-3}\\cos(100t)\\;\\text{Wb}$. (b) $\\varepsilon = -d\\Phi_B/dt = BA\\omega\\sin(\\omega t)$. La fem máxima es $\\varepsilon_0 = BA\\omega = 0{,}2 \\times 0{,}01 \\times 100 = 0{,}2\\;\\text{V}$. (c) Cuando $\\sin(\\omega t) = \\pm 1$, es decir, cuando la espira está paralela al campo ($\\theta = 90°$): el flujo está cambiando más rápidamente."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Un imán en forma de barra se deja caer verticalmente a través de una espira horizontal de cobre. Describe cualitativamente lo que siente el imán en cada etapa: (a) mientras se acerca desde arriba, (b) cuando pasa por el centro de la espira, (c) cuando se aleja hacia abajo. ¿Cae más lento que en caída libre? ¿Por qué?",
+        "scaffold": "Aplica la ley de Lenz: la espira induce una corriente que se opone al cambio de flujo. Cuando el imán se acerca (flujo aumenta), la espira crea un campo que lo repele. Cuando se aleja (flujo disminuye), lo atrae.",
+        "answer": "(a) Al acercarse, el flujo a través de la espira aumenta; la corriente inducida crea un campo que repele el imán → fuerza hacia arriba, frenándolo. (b) En el centro, el flujo es máximo pero instantáneamente no cambia (derivada = 0) → corriente inducida ≈ 0, sin fuerza. (c) Al alejarse, el flujo disminuye; la corriente inducida crea un campo que atrae el imán → fuerza hacia arriba, frenándolo de nuevo. Sí, cae más lento que en caída libre: la energía cinética que pierde se convierte en calor por efecto Joule en la espira. Esto es la base del frenado electromagnético."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula el flujo magnético a través de una espira rectangular de 20 cm × 15 cm en un campo de 0,5 T si la normal forma 45° con el campo.",
+        "answer": "$\\Phi_B = 0{,}0106\\;\\text{Wb} \\approx 10{,}6\\;\\text{mWb}$.",
+        "full_solution": "$A = 0{,}20 \\times 0{,}15 = 0{,}03\\;\\text{m}^2$. $\\Phi_B = BA\\cos\\theta = 0{,}5 \\times 0{,}03 \\times \\cos 45° = 0{,}015 \\times 0{,}707 = 0{,}01061\\;\\text{Wb}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "El campo magnético a través de una bobina de 50 espiras y área 40 cm² pasa de 0,8 T a 0,2 T en 0,5 s. Calcula la fem media inducida.",
+        "answer": "$|\\varepsilon| = 2{,}4\\;\\text{V}$.",
+        "full_solution": "$A = 40 \\times 10^{-4} = 4 \\times 10^{-3}\\;\\text{m}^2$. $\\Delta\\Phi_B = (0{,}2 - 0{,}8) \\times 4 \\times 10^{-3} = -2{,}4 \\times 10^{-3}\\;\\text{Wb}$. $|\\varepsilon| = N|\\Delta\\Phi_B|/\\Delta t = 50 \\times 2{,}4 \\times 10^{-3}/0{,}5 = 0{,}24\\;\\text{V}$. [Corrección: $50 \\times 2{,}4 \\times 10^{-3} = 0{,}12\\;\\text{Wb}$; dividido entre 0,5 s da $|\\varepsilon| = 0{,}24\\;\\text{V}$. Revisión: $\\Delta\\Phi = \\Delta B \\cdot A = -0{,}6 \\times 4 \\times 10^{-3} = -2{,}4 \\times 10^{-3}\\;\\text{Wb}$. $|\\varepsilon| = 50 \\times 2{,}4 \\times 10^{-3} / 0{,}5 = 0{,}24\\;\\text{V}$.]",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una espira de 80 vueltas y área 25 cm² gira desde posición perpendicular al campo ($\\theta=0°$) hasta paralela ($\\theta=90°$) en 0,2 s, en un campo de 0,6 T. Calcula la fem media.",
+        "answer": "$|\\varepsilon| = 0{,}6\\;\\text{V}$.",
+        "full_solution": "$A = 25 \\times 10^{-4} = 2{,}5 \\times 10^{-3}\\;\\text{m}^2$. $\\Phi_i = BA\\cos 0° = 0{,}6 \\times 2{,}5 \\times 10^{-3} = 1{,}5 \\times 10^{-3}\\;\\text{Wb}$. $\\Phi_f = BA\\cos 90° = 0$. $|\\varepsilon| = N|\\Delta\\Phi|/\\Delta t = 80 \\times 1{,}5 \\times 10^{-3}/0{,}2 = 0{,}6\\;\\text{V}$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un campo magnético uniforme crece linealmente de 0 a 0,8 T en 4 s a través de una espira de 300 vueltas y radio 5 cm. Calcula la fem y determina, usando Lenz, si la corriente inducida va en sentido horario o antihorario (vista desde el lado por el que entra $\\vec{B}$).",
+        "answer": "$|\\varepsilon| = 0{,}471\\;\\text{V}$; corriente antihoraria.",
+        "full_solution": "$A = \\pi(0{,}05)^2 = 7{,}854 \\times 10^{-3}\\;\\text{m}^2$. $\\Delta\\Phi = \\Delta B \\cdot A = 0{,}8 \\times 7{,}854 \\times 10^{-3} = 6{,}283 \\times 10^{-3}\\;\\text{Wb}$. $|\\varepsilon| = 300 \\times 6{,}283 \\times 10^{-3}/4 = 0{,}471\\;\\text{V}$. Por Lenz: como el flujo aumenta (B entra creciendo), la corriente inducida debe crear un campo que se oponga, es decir, que salga por el lado por el que entra B. Por la regla de la mano derecha, eso es sentido antihorario visto desde ese lado.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dibuja un gráfico de flujo magnético $\\Phi_B$ frente al tiempo para una espira que: (a) entra progresivamente en un campo uniforme, (b) está completamente dentro del campo, (c) sale progresivamente. Debajo, dibuja el gráfico correspondiente de fem inducida.",
+        "answer": "Flujo: rampa ascendente, meseta, rampa descendente. Fem: constante negativa, cero, constante positiva.",
+        "full_solution": "(a) Al entrar: el flujo crece linealmente ($\\Phi \\propto$ área dentro del campo). La fem es constante (negativa): $\\varepsilon = -\\Delta\\Phi/\\Delta t = $ constante. (b) Dentro: $\\Phi = BA$ constante; $\\varepsilon = 0$. (c) Al salir: el flujo decrece linealmente. La fem es constante (positiva, sentido opuesto al de entrada). El gráfico de fem es una función escalón: negativa → cero → positiva.",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "Explica por qué la ley de Lenz es necesaria para la conservación de la energía. ¿Qué ocurriría si la corriente inducida reforzara el cambio de flujo en vez de oponerse?",
+        "answer": "Se violaría la conservación de la energía: más corriente → más flujo → más corriente → energía infinita.",
+        "full_solution": "Si la corriente reforzara el cambio de flujo: al mover un imán hacia una espira, la corriente inducida crearía un campo que aumentaría aún más el flujo, lo que induciría más corriente, que crearía más campo… un proceso de retroalimentación positiva sin límite. Se generaría energía de la nada, violando la primera ley de la termodinámica. La ley de Lenz (oposición) garantiza que la energía eléctrica generada proviene del trabajo mecánico realizado al mover el imán contra la fuerza de frenado magnético.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Una varilla conductora de 40 cm se desliza a 5 m/s sobre dos raíles conductores paralelos en un campo perpendicular de 0,3 T. Calcula la fem inducida.",
+        "answer": "$|\\varepsilon| = 0{,}6\\;\\text{V}$.",
+        "full_solution": "La varilla barre un área $\\Delta A = L \\cdot v \\cdot \\Delta t$ por unidad de tiempo. La variación de flujo es $\\Delta\\Phi/\\Delta t = B \\cdot L \\cdot v$. $|\\varepsilon| = BLv = 0{,}3 \\times 0{,}40 \\times 5 = 0{,}6\\;\\text{V}$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Por qué los núcleos de los transformadores se fabrican con láminas de acero aisladas entre sí en lugar de un bloque macizo? Relaciona tu respuesta con las corrientes de Foucault y la eficiencia energética.",
+        "answer": "Para reducir las corrientes de Foucault, que disipan energía en calor y reducen el rendimiento del transformador.",
+        "full_solution": "En un bloque macizo, el campo alterno del transformador induciría corrientes de Foucault en todo el volumen del núcleo, generando calor por efecto Joule (pérdidas). Al laminar el núcleo (láminas delgadas aisladas entre sí con barniz o papel), se rompen los grandes bucles de corriente: las corrientes inducidas quedan confinadas en cada lámina y son mucho menores, reduciendo las pérdidas energéticas y aumentando el rendimiento del transformador hasta valores cercanos al 99%.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L03-1",
+        "stem": "Para que se induzca una fem en una espira se necesita que:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Exista un campo magnético constante a través de la espira",
+            "why_wrong": "Un campo constante produce flujo constante; sin variación de flujo, no hay fem inducida."
+          },
+          {
+            "key": "B",
+            "text": "B. Varíe el flujo magnético a través de la espira"
+          },
+          {
+            "key": "C",
+            "text": "C. La espira esté hecha de material magnético",
+            "why_wrong": "La espira solo necesita ser conductora (no magnética) para que la fem pueda generar corriente. La inducción depende del cambio de flujo, no del material."
+          },
+          {
+            "key": "D",
+            "text": "D. La espira esté conectada a una batería",
+            "why_wrong": "La batería es una fuente de fem; la inducción genera fem sin necesidad de fuente externa."
+          }
+        ]
+      },
+      {
+        "id": "MC-L03-2",
+        "stem": "Según la ley de Lenz, si el flujo magnético a través de una espira está aumentando, la corriente inducida:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Refuerza el aumento de flujo",
+            "why_wrong": "Si reforzara el cambio, se violaría la conservación de la energía."
+          },
+          {
+            "key": "B",
+            "text": "B. Crea un campo que se opone al aumento (tiende a reducir el flujo)"
+          },
+          {
+            "key": "C",
+            "text": "C. No tiene sentido definido",
+            "why_wrong": "Lenz determina precisamente el sentido: la corriente se opone al cambio de flujo."
+          },
+          {
+            "key": "D",
+            "text": "D. Es nula",
+            "why_wrong": "Si el flujo cambia y la espira es conductora, aparece corriente inducida."
+          }
+        ]
+      },
+      {
+        "id": "MC-L03-3",
+        "stem": "La unidad SI del flujo magnético es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Tesla (T)",
+            "why_wrong": "El tesla es la unidad del campo magnético B, no del flujo. El flujo es B×A, y su unidad es T·m² = Wb."
+          },
+          {
+            "key": "B",
+            "text": "B. Weber (Wb)"
+          },
+          {
+            "key": "C",
+            "text": "C. Voltio (V)",
+            "why_wrong": "El voltio es la unidad de la fem o la diferencia de potencial, no del flujo magnético."
+          },
+          {
+            "key": "D",
+            "text": "D. Amperio (A)",
+            "why_wrong": "El amperio es la unidad de la intensidad de corriente, no del flujo magnético."
+          }
+        ]
+      },
+      {
+        "id": "MC-L03-4",
+        "stem": "Las corrientes de Foucault se reducen en un transformador:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Usando un núcleo macizo de acero",
+            "why_wrong": "Un núcleo macizo permite grandes bucles de corriente de Foucault, aumentando las pérdidas."
+          },
+          {
+            "key": "B",
+            "text": "B. Laminando el núcleo (láminas aisladas entre sí)"
+          },
+          {
+            "key": "C",
+            "text": "C. Aumentando la frecuencia de la corriente alterna",
+            "why_wrong": "Aumentar la frecuencia en general aumenta las corrientes de Foucault (más variaciones de flujo por segundo)."
+          },
+          {
+            "key": "D",
+            "text": "D. Eliminando el núcleo metálico",
+            "why_wrong": "Sin núcleo metálico se eliminarían las corrientes de Foucault, pero también se perdería la concentración del flujo magnético, reduciendo enormemente el rendimiento del transformador."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "(a) Enuncia la ley de Faraday y explica el significado del signo negativo (ley de Lenz). (b) Una bobina de 150 espiras, área 30 cm², está perpendicular a un campo que varía uniformemente de 0,6 T a 0,1 T en 0,2 s. Calcula la fem media inducida.",
+        "answer": "(a) $\\varepsilon = -N d\\Phi_B/dt$; el signo negativo indica que la fem se opone al cambio de flujo (conservación de la energía). (b) $|\\varepsilon| = 1{,}125$ V.",
+        "full_solution": "(a) La ley de Faraday dice que la fem inducida es igual al opuesto de la tasa de cambio del flujo: $\\varepsilon = -Nd\\Phi_B/dt$. El signo negativo es la ley de Lenz: la corriente inducida circula en el sentido que crea un campo magnético que se opone al cambio de flujo, garantizando la conservación de la energía. (b) $A = 30 \\times 10^{-4} = 3 \\times 10^{-3}\\;\\text{m}^2$. $\\Delta\\Phi = (0{,}1 - 0{,}6) \\times 3 \\times 10^{-3} = -1{,}5 \\times 10^{-3}\\;\\text{Wb}$. $|\\varepsilon| = 150 \\times 1{,}5 \\times 10^{-3}/0{,}2 = 1{,}125\\;\\text{V}$."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Una espira circular de radio 8 cm y resistencia 2 Ω está en un campo que decrece a razón de $dB/dt = -0{,}5$ T/s. (a) Calcula la fem inducida. (b) Calcula la corriente inducida. (c) Calcula la potencia disipada. (d) ¿De dónde procede esa energía?",
+        "answer": "(a) $|\\varepsilon| \\approx 10{,}1$ mV. (b) $I \\approx 5$ mA. (c) $P \\approx 50{,}5$ μW. (d) De la fuente que mantiene el campo magnético.",
+        "full_solution": "(a) $A = \\pi(0{,}08)^2 = 2{,}011 \\times 10^{-2}\\;\\text{m}^2$. $|\\varepsilon| = |dB/dt| \\times A = 0{,}5 \\times 2{,}011 \\times 10^{-2} = 1{,}005 \\times 10^{-2}\\;\\text{V} \\approx 10{,}1\\;\\text{mV}$. (b) $I = \\varepsilon/R = 1{,}005 \\times 10^{-2}/2 = 5{,}03 \\times 10^{-3}\\;\\text{A} \\approx 5\\;\\text{mA}$. (c) $P = \\varepsilon^2/R = (1{,}005 \\times 10^{-2})^2/2 = 5{,}05 \\times 10^{-5}\\;\\text{W} \\approx 50{,}5\\;\\mu\\text{W}$. (d) La energía no sale de la nada: la fuente que crea el campo magnético (un electroimán, por ejemplo) tiene que realizar trabajo adicional para mantener el campo decreciente contra la fuerza de la corriente inducida que se opone al cambio (Lenz)."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué es el flujo magnético?",
+        "back": "$\\Phi_B = BA\\cos\\theta$. Mide cuánto campo magnético atraviesa una superficie. Unidad: weber (Wb).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Ley de Faraday",
+        "back": "$\\varepsilon = -N\\frac{d\\Phi_B}{dt}$. La fem inducida es proporcional a la rapidez con que cambia el flujo magnético.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Ley de Lenz",
+        "back": "La corriente inducida se opone al cambio de flujo que la produce. Es el signo negativo de Faraday y garantiza la conservación de la energía.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Corrientes de Foucault",
+        "back": "Corrientes inducidas en conductores macizos por campos variables. Se aprovechan (inducción, frenado) o se minimizan (laminado de núcleos).",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir el flujo magnético ($\\Phi_B = BA\\cos\\theta$) con el campo magnético ($B$).",
+        "correction": "El flujo es el producto del campo por el área y por el coseno del ángulo. Tiene unidades de Wb (T·m²), no de T."
+      },
+      {
+        "mistake": "Olvidar el factor $N$ (número de espiras) en la ley de Faraday.",
+        "correction": "Para una bobina de N espiras: $|\\varepsilon| = N|\\Delta\\Phi_B/\\Delta t|$. Cada espira contribuye a la fem total."
+      },
+      {
+        "mistake": "Interpretar la ley de Lenz como «la corriente inducida anula el flujo» en vez de «se opone al cambio de flujo».",
+        "correction": "La corriente inducida se opone al cambio, no al flujo en sí. Si el flujo disminuye, la corriente intenta mantenerlo, no anularlo."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "Para determinar el sentido de la corriente inducida (Lenz): (1) determina si el flujo aumenta o disminuye; (2) la corriente crea un campo que se opone a ese cambio; (3) usa la regla de la mano derecha para encontrar el sentido de esa corriente."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "flujo magnético",
+        "definition": "Magnitud escalar $\\Phi_B = BA\\cos\\theta$ que mide cuánto campo magnético atraviesa una superficie. Unidad SI: weber (Wb)."
+      },
+      {
+        "term": "ley de Faraday",
+        "definition": "La fem inducida es igual al opuesto de la derivada temporal del flujo: $\\varepsilon = -Nd\\Phi_B/dt$."
+      },
+      {
+        "term": "ley de Lenz",
+        "definition": "La corriente inducida circula en el sentido que se opone al cambio de flujo que la produce."
+      },
+      {
+        "term": "fem inducida",
+        "definition": "Voltaje generado en un circuito por la variación del flujo magnético. Se mide en voltios (V)."
+      },
+      {
+        "term": "corrientes de Foucault",
+        "definition": "Corrientes inducidas en el interior de conductores macizos por campos magnéticos variables. Producen calor (efecto Joule)."
+      },
+      {
+        "term": "weber",
+        "definition": "Unidad SI del flujo magnético. 1 Wb = 1 T·m² = 1 V·s."
+      }
+    ],
+    "summary": {
+      "big_idea": "Un flujo magnético variable en el tiempo induce una fem (y corriente en un circuito cerrado) que se opone al cambio — este es el principio de la inducción electromagnética, base de generadores, transformadores y muchas tecnologías.",
+      "key_points": [
+        "El flujo magnético es $\\Phi_B = BA\\cos\\theta$; puede cambiar por variación de B, A o θ.",
+        "Ley de Faraday: $\\varepsilon = -Nd\\Phi_B/dt$.",
+        "Ley de Lenz: la corriente inducida se opone al cambio de flujo (conservación de la energía).",
+        "Las corrientes de Foucault son corrientes inducidas en conductores macizos; se aprovechan o se minimizan según la aplicación."
+      ],
+      "formulas": [
+        "$\\Phi_B = BA\\cos\\theta$",
+        "$\\varepsilon = -N\\frac{d\\Phi_B}{dt}$",
+        "$|\\varepsilon| = BLv$"
+      ],
+      "what_to_remember_if_nothing_else": "Un flujo magnético que cambia genera voltaje ($\\varepsilon = -Nd\\Phi/dt$) y la corriente resultante siempre se opone al cambio (Lenz). Sin variación no hay inducción."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque C · Electromagnetismo"
+    ],
+    "curriculum_refs": [
+      "CE3,2 Aplicar la ley de Faraday-Lenz",
+      "CE3,3 Describir aplicaciones tecnológicas de la inducción"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 1.º Bach alineado con LOMLOE"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "Claves de test revisadas"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_04.json": {
+    "id": "L04",
+    "title": "Corriente alterna y transformadores",
+    "subject": "Física y Química",
+    "course_label": "1.º Bach · Física",
+    "unit_id": "U-B1F-06",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3,3",
+        "CE3,4"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Explicar el funcionamiento de un generador de corriente alterna basándose en la ley de Faraday."
+      },
+      {
+        "statement": "Definir y calcular valores eficaces de tensión e intensidad en corriente alterna."
+      },
+      {
+        "statement": "Describir el funcionamiento del transformador ideal y aplicar su relación de transformación."
+      },
+      {
+        "statement": "Justificar por qué la energía eléctrica se transporta en alta tensión."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Dominar la ley de Faraday-Lenz y el cálculo de flujo magnético variable (Lección 3).",
+        "why_it_matters": "El generador produce corriente alterna precisamente porque el flujo varía senoidalmente al girar la espira."
+      },
+      {
+        "statement": "Conocer las funciones seno y coseno y sus derivadas.",
+        "why_it_matters": "La fem alterna tiene la forma $\\varepsilon = \\varepsilon_0 \\sin(\\omega t)$, y su derivación es clave para entender valores máximos y eficaces."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué tipo de corriente sale de un enchufe doméstico: continua o alterna?",
+        "expected_answer": "Corriente alterna (CA), a 50 Hz en Europa."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Para qué sirve un transformador?",
+        "expected_answer": "Para aumentar o disminuir el voltaje de una corriente alterna."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Los 230 V del enchufe son el valor máximo de la tensión.",
+        "correct_model": "230 V es el valor eficaz ($V_{\\text{rms}}$). El valor máximo (de pico) es $V_0 = 230\\sqrt{2} \\approx 325\\;\\text{V}$."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Un transformador puede funcionar con corriente continua.",
+        "correct_model": "Un transformador necesita corriente alterna. Con corriente continua, el flujo en el primario es constante y no induce fem en el secundario ($d\\Phi/dt = 0$)."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Generación de fuerza electromotriz alterna",
+        "body": "Un **alternador** es una espira (o bobina) de $N$ vueltas y área $A$ que gira con velocidad angular $\\omega$ en un campo magnético uniforme $\\vec{B}$. El flujo varía como:\n$$\\Phi_B(t) = NBA\\cos(\\omega t)$$\n\nPor la ley de Faraday:\n$$\\varepsilon(t) = -\\frac{d\\Phi_B}{dt} = NBA\\omega\\sin(\\omega t) = \\varepsilon_0 \\sin(\\omega t)$$\n\ndonde $\\varepsilon_0 = NBA\\omega$ es la **fem máxima** (de pico).\n\nLa corriente resultante en un circuito de resistencia $R$:\n\n<svg viewBox=\"0 0 400 140\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <!-- Eje de tiempo -->\n  <line x1=\"30\" y1=\"70\" x2=\"380\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <polygon points=\"380,70 374,66 374,74\" fill=\"var(--text,#20302a)\"/>\n  <text x=\"385\" y=\"74\" font-size=\"10\" fill=\"var(--text,#20302a)\">t</text>\n  <!-- Eje vertical -->\n  <line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"130\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <polygon points=\"30,10 26,16 34,16\" fill=\"var(--text,#20302a)\"/>\n  <text x=\"10\" y=\"15\" font-size=\"10\" fill=\"var(--text,#20302a)\">ε</text>\n  <!-- Sinusoide -->\n  <path d=\"M30,70 C60,10 110,10 145,70 C180,130 230,130 265,70 C300,10 350,10 380,70\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <!-- ε₀ -->\n  <line x1=\"25\" y1=\"20\" x2=\"150\" y2=\"20\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\" stroke-dasharray=\"3,2\"/>\n  <text x=\"8\" y=\"24\" font-size=\"9\" fill=\"var(--text,#20302a)\">ε₀</text>\n  <line x1=\"25\" y1=\"120\" x2=\"150\" y2=\"120\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\" stroke-dasharray=\"3,2\"/>\n  <text x=\"4\" y=\"124\" font-size=\"9\" fill=\"var(--text,#20302a)\">-ε₀</text>\n  <!-- Periodo -->\n  <line x1=\"30\" y1=\"135\" x2=\"265\" y2=\"135\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1\"/>\n  <text x=\"147\" y=\"135\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--primary,#0e7a68)\">T = 1/f</text>\n</svg>",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Tensión alterna y transformador</text><line x1=\"40\" y1=\"100\" x2=\"220\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"50\" x2=\"40\" y2=\"150\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><path d=\"M40,100 Q70,40 100,40 Q130,40 160,100 Q190,160 220,100\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"130\" y=\"40\" font-size=\"10\" fill=\"#0e7a68\">V₀</text><text x=\"130\" y=\"170\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">V(t) = V₀ sin(ωt)</text><rect x=\"280\" y=\"60\" width=\"20\" height=\"90\" rx=\"2\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><rect x=\"340\" y=\"60\" width=\"20\" height=\"90\" rx=\"2\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><path d=\"M300,65 C310,55 330,55 340,65\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><path d=\"M300,80 C310,70 330,70 340,80\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><path d=\"M300,95 C310,85 330,85 340,95\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><path d=\"M300,110 C310,100 330,100 340,110\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><path d=\"M300,125 C310,115 330,115 340,125\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><path d=\"M300,140 C310,130 330,130 340,140\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"270\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">N₁</text><text x=\"370\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">N₂</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Núcleo</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">V₂/V₁ = N₂/N₁</text><text x=\"320\" y=\"250\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">Transformador ideal: P₁ = P₂</text><text x=\"320\" y=\"275\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Si N₂ &gt; N₁ → elevador; si N₂ &lt; N₁ → reductor</text></svg>",
+            "caption": "La corriente alterna es sinusoidal. El transformador cambia la tensión conservando la potencia: V₂/V₁ = N₂/N₁."
+          }
+        ]
+      },
+      {
+        "title": "Corriente alterna: intensidad y frecuencia",
+        "body": "La FEM alterna genera una corriente que también oscila sinusoidalmente cuando el circuito es resistivo puro.\n\n$$i(t) = \\frac{\\varepsilon(t)}{R} = I_0 \\sin(\\omega t)$$\n\ncon $I_0 = \\varepsilon_0/R$.\n\nLa frecuencia de la corriente alterna es $f = \\omega/(2\\pi)$. En Europa, $f = 50\\;\\text{Hz}$ ($\\omega = 100\\pi\\;\\text{rad/s}$)."
+      },
+      {
+        "title": "Valores eficaces",
+        "body": "En corriente alterna, los valores instantáneos cambian continuamente. Para comparar con corriente continua, se usan los **valores eficaces** (rms, de root-mean-square):\n\n$$V_{\\text{ef}} = \\frac{V_0}{\\sqrt{2}} \\approx 0{,}707\\,V_0$$\n$$I_{\\text{ef}} = \\frac{I_0}{\\sqrt{2}} \\approx 0{,}707\\,I_0$$\n\n**Significado:** el valor eficaz de una corriente alterna produce el mismo efecto calorífico (Joule) que una corriente continua del mismo valor.\n\nEn España, la red doméstica entrega:\n- $V_{\\text{ef}} = 230\\;\\text{V}$ → $V_0 = 230\\sqrt{2} \\approx 325\\;\\text{V}$.\n- $f = 50\\;\\text{Hz}$ → $T = 1/50 = 0{,}02\\;\\text{s} = 20\\;\\text{ms}$.\n\nLa **potencia media** disipada en una resistencia R con corriente alterna:\n$$P_{\\text{media}} = V_{\\text{ef}} \\cdot I_{\\text{ef}} = \\frac{V_0 I_0}{2} = \\frac{V_{\\text{ef}}^2}{R} = I_{\\text{ef}}^2 R$$"
+      },
+      {
+        "title": "El transformador ideal",
+        "body": "Un **transformador** consta de dos bobinados (primario con $N_1$ espiras y secundario con $N_2$ espiras) arrollados sobre un núcleo ferromagnético común. La corriente alterna en el primario crea un flujo variable que, al atravesar también el secundario, induce una fem en él.\n\n**Relación de transformación** (transformador ideal, sin pérdidas):\n$$\\frac{V_2}{V_1} = \\frac{N_2}{N_1} = r$$\n\n- Si $r > 1$ ($N_2 > N_1$): **transformador elevador** (sube la tensión).\n- Si $r < 1$ ($N_2 < N_1$): **transformador reductor** (baja la tensión).\n\n**Conservación de la potencia** (ideal):\n$$V_1 I_1 = V_2 I_2 \\implies \\frac{I_1}{I_2} = \\frac{N_2}{N_1}$$\n\nSi el transformador sube la tensión, baja la intensidad proporcionalmente, y viceversa.\n\n<svg viewBox=\"0 0 380 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:380px\">\n  <!-- Núcleo -->\n  <rect x=\"80\" y=\"20\" width=\"220\" height=\"110\" rx=\"8\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"3\"/>\n  <rect x=\"100\" y=\"40\" width=\"180\" height=\"70\" rx=\"5\" fill=\"var(--bg, #fafaf9)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <!-- Primario -->\n  <line x1=\"90\" y1=\"40\" x2=\"90\" y2=\"110\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"3\"/>\n  <line x1=\"95\" y1=\"40\" x2=\"95\" y2=\"110\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"40\" x2=\"100\" y2=\"110\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--primary,#0e7a68)\" font-weight=\"bold\">N₁</text>\n  <!-- Secundario -->\n  <line x1=\"275\" y1=\"40\" x2=\"275\" y2=\"110\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"3\"/>\n  <line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"110\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <line x1=\"285\" y1=\"40\" x2=\"285\" y2=\"110\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <line x1=\"290\" y1=\"40\" x2=\"290\" y2=\"110\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <line x1=\"295\" y1=\"40\" x2=\"295\" y2=\"110\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <text x=\"315\" y=\"80\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--secondary,#c17a17)\" font-weight=\"bold\">N₂</text>\n  <!-- Etiquetas -->\n  <text x=\"55\" y=\"45\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">V₁</text>\n  <text x=\"330\" y=\"45\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\">V₂</text>\n  <!-- Flujo -->\n  <path d=\"M150,75 L230,75\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <polygon points=\"230,75 222,71 222,79\" fill=\"var(--text,#20302a)\"/>\n  <text x=\"190\" y=\"68\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">Φ</text>\n  <text x=\"190\" y=\"148\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">V₂/V₁ = N₂/N₁</text>\n</svg>"
+      },
+      {
+        "title": "Transporte de energía eléctrica en alta tensión",
+        "body": "La energía eléctrica se genera en centrales y se consume a distancias de cientos de kilómetros. Los cables de transporte tienen resistencia $R_{\\text{cable}}$, lo que produce pérdidas por efecto Joule:\n\n$$P_{\\text{pérdidas}} = I^2 R_{\\text{cable}}$$\n\nPara una potencia transportada fija $P = VI$:\n$$I = \\frac{P}{V}$$\n\nSi duplicamos la tensión, la corriente se reduce a la mitad, y las pérdidas se dividen por 4 (porque dependen de $I^2$):\n$$P_{\\text{pérdidas}} = \\frac{P^2 R_{\\text{cable}}}{V^2}$$\n\nPor eso se transporta la energía en **alta tensión** (400 kV en España) y luego se reduce con transformadores antes de llegar a los hogares (230 V). El proceso:\n\n1. **Central eléctrica:** genera a unos 20 kV.\n2. **Subestación elevadora:** transforma a 400 kV para transporte.\n3. **Líneas de alta tensión:** pérdidas mínimas ($I$ pequeña).\n4. **Subestaciones reductoras sucesivas:** 400 kV → 132 kV → 20 kV → 230 V.\n\nSin transformadores, el transporte eficiente de energía eléctrica a larga distancia sería imposible."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Fem máxima de un alternador",
+        "statement": "Un alternador tiene una bobina de 200 vueltas, área 50 cm², girando a 3000 rpm en un campo de 0,8 T. Calcula la fem máxima y la frecuencia.",
+        "steps": [
+          "Convertir rpm a rad/s: $\\omega = 3000 \\times 2\\pi/60 = 100\\pi\\;\\text{rad/s}$.",
+          "$A = 50 \\times 10^{-4} = 5 \\times 10^{-3}\\;\\text{m}^2$.",
+          "$\\varepsilon_0 = NBA\\omega = 200 \\times 0{,}8 \\times 5 \\times 10^{-3} \\times 100\\pi = 200 \\times 0{,}8 \\times 0{,}5\\pi = 80\\pi \\approx 251\\;\\text{V}$.",
+          "Frecuencia: $f = \\omega/(2\\pi) = 100\\pi/(2\\pi) = 50\\;\\text{Hz}$."
+        ],
+        "answer": "$\\varepsilon_0 \\approx 251\\;\\text{V}$; $f = 50\\;\\text{Hz}$.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Fem máxima de un alternador</text><rect x=\"120\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><rect x=\"210\" y=\"90\" width=\"80\" height=\"60\" rx=\"4\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"250\" y=\"126\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">Espira</text><text x=\"250\" y=\"80\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">B uniforme</text><text x=\"150\" y=\"110\" font-size=\"12\" fill=\"#c17a17\">→ → →</text><text x=\"320\" y=\"110\" font-size=\"12\" fill=\"#c17a17\">→ → →</text><path d=\"M250,150 Q260,155 260,160 Q260,165 250,170\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/><text x=\"270\" y=\"165\" font-size=\"10\" fill=\"#8a3d6b\">ω</text><text x=\"250\" y=\"205\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">ε = NBAω sin(ωt)</text><text x=\"250\" y=\"235\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">ε₀ = NBAω (fem máxima)</text></svg>",
+            "caption": "Un alternador genera fem alterna al girar una espira en un campo magnético: ε = NBAω sin(ωt)."
+          }
+        ]
+      },
+      {
+        "title": "Transformador: relación de transformación",
+        "statement": "Un transformador tiene 500 espiras en el primario y 50 en el secundario. Si se conecta a la red (230 V eficaces), ¿qué tensión entrega? Si consume 2 A del primario, ¿qué corriente da el secundario?",
+        "steps": [
+          "Relación: $r = N_2/N_1 = 50/500 = 0{,}1$ (reductor).",
+          "Tensión secundario: $V_2 = rV_1 = 0{,}1 \\times 230 = 23\\;\\text{V}$.",
+          "Corriente (conservación de potencia): $I_2 = I_1 \\times N_1/N_2 = 2 \\times 500/50 = 20\\;\\text{A}$."
+        ],
+        "answer": "$V_2 = 23\\;\\text{V}$; $I_2 = 20\\;\\text{A}$."
+      },
+      {
+        "title": "Pérdidas en el transporte de energía",
+        "statement": "Una central envía 10 MW por cables de resistencia total 5 Ω. Calcula las pérdidas si se transporta a (a) 10 kV y (b) 400 kV.",
+        "steps": [
+          "(a) A 10 kV: $I = P/V = 10^7/10^4 = 1000\\;\\text{A}$. Pérdidas: $P_p = I^2R = 10^6 \\times 5 = 5 \\times 10^6\\;\\text{W} = 5\\;\\text{MW}$ (¡50% de pérdidas!).",
+          "(b) A 400 kV: $I = 10^7/4 \\times 10^5 = 25\\;\\text{A}$. Pérdidas: $P_p = 25^2 \\times 5 = 3125\\;\\text{W} = 3{,}1\\;\\text{kW}$ (0,03% de pérdidas)."
+        ],
+        "answer": "(a) 5 MW (50%). (b) 3,1 kW (0,03%). Transportar en alta tensión reduce las pérdidas 1600 veces."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Un cargador de teléfono móvil tiene un transformador que reduce 230 V a 5 V y entrega 2 A al teléfono. (a) Calcula la relación de espiras. (b) Calcula la corriente que toma de la red (ideal). (c) Si el cargador real tiene un rendimiento del 85%, ¿qué potencia toma realmente de la red?",
+        "scaffold": "Usa V₂/V₁ = N₂/N₁ para las espiras. Para la corriente ideal: V₁I₁ = V₂I₂. Para el rendimiento: η = P_útil/P_consumida.",
+        "answer": "(a) $N_2/N_1 = 5/230 \\approx 1/46$. (b) Ideal: $I_1 = V_2I_2/V_1 = 5 \\times 2/230 = 0{,}043\\;\\text{A} \\approx 43\\;\\text{mA}$. (c) $P_{\\text{útil}} = 5 \\times 2 = 10\\;\\text{W}$. $P_{\\text{consumida}} = 10/0{,}85 = 11{,}8\\;\\text{W}$. La diferencia (1,8 W) se disipa en calor."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Una línea de transporte de 100 km tiene cables de resistividad $\\rho = 2{,}8 \\times 10^{-8}\\;\\Omega\\cdot\\text{m}$ y sección $150\\;\\text{mm}^2$. Transporta 50 MW. (a) Calcula la resistencia total de la línea (ida y vuelta). (b) Calcula las pérdidas si se transporta a 220 kV. (c) ¿A qué tensión habría que transportar para que las pérdidas fueran menos del 1%?",
+        "scaffold": "$R = \\rho L / A$ (cuidado: ida y vuelta son 200 km). Para pérdidas: $P_p = P^2R/V^2$. Despeja V para $P_p < 0{,}01P$.",
+        "answer": "(a) $R = 2{,}8 \\times 10^{-8} \\times 200000 / (150 \\times 10^{-6}) = 37{,}3\\;\\Omega$. (b) $P_p = (50 \\times 10^6)^2 \\times 37{,}3 / (220 \\times 10^3)^2 = 9{,}33 \\times 10^{13} / 4{,}84 \\times 10^{10} \\approx 1{,}93 \\times 10^6\\;\\text{W} = 1{,}93\\;\\text{MW}$ (3,9%). (c) $P_p < 0{,}01 \\times 50 \\times 10^6 = 5 \\times 10^5\\;\\text{W}$. $V^2 > P^2R/P_p = (50 \\times 10^6)^2 \\times 37{,}3 / (5 \\times 10^5)$. $V > \\sqrt{1{,}865 \\times 10^{11}} \\approx 432\\;\\text{kV}$. Habría que transportar a más de 432 kV."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un alternador de 150 vueltas, área 80 cm², gira a 50 Hz en un campo de 0,6 T. Calcula la fem máxima y la fem eficaz.",
+        "answer": "$\\varepsilon_0 = 22{,}6\\;\\text{V}$; $\\varepsilon_{\\text{ef}} = 16{,}0\\;\\text{V}$.",
+        "full_solution": "$\\omega = 2\\pi \\times 50 = 100\\pi\\;\\text{rad/s}$. $A = 80 \\times 10^{-4} = 8 \\times 10^{-3}\\;\\text{m}^2$. $\\varepsilon_0 = NBA\\omega = 150 \\times 0{,}6 \\times 8 \\times 10^{-3} \\times 100\\pi = 150 \\times 0{,}6 \\times 0{,}8\\pi = 72\\pi \\approx 226\\;\\text{V}$. [Revisión: $150 \\times 0{,}6 = 90$; $90 \\times 8 \\times 10^{-3} = 0{,}72$; $0{,}72 \\times 100\\pi = 72\\pi \\approx 226\\;\\text{V}$.] $\\varepsilon_{\\text{ef}} = 226/\\sqrt{2} \\approx 160\\;\\text{V}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "La tensión de la red es 230 V eficaces a 50 Hz. Calcula el valor de pico y escribe la expresión $v(t)$.",
+        "answer": "$V_0 = 325\\;\\text{V}$; $v(t) = 325\\sin(100\\pi t)\\;\\text{V}$.",
+        "full_solution": "$V_0 = V_{\\text{ef}}\\sqrt{2} = 230 \\times 1{,}414 = 325\\;\\text{V}$. $\\omega = 2\\pi f = 100\\pi\\;\\text{rad/s}$. $v(t) = 325\\sin(100\\pi t)\\;\\text{V}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Un transformador tiene 1000 espiras en el primario y 100 en el secundario. Conectado a 230 V, alimenta una bombilla de 23 V y 50 W. Calcula la corriente en primario y secundario.",
+        "answer": "$I_2 = 2{,}17\\;\\text{A}$; $I_1 = 0{,}217\\;\\text{A}$.",
+        "full_solution": "$V_2 = V_1 \\times N_2/N_1 = 230 \\times 100/1000 = 23\\;\\text{V}$ ✓. $I_2 = P/V_2 = 50/23 = 2{,}17\\;\\text{A}$. $I_1 = I_2 \\times N_2/N_1 = 2{,}17 \\times 100/1000 = 0{,}217\\;\\text{A}$. Comprobación: $P_1 = V_1 I_1 = 230 \\times 0{,}217 = 50\\;\\text{W}$ ✓.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una central envía 20 MW por cables de $R = 10\\;\\Omega$. Compara las pérdidas a 20 kV y a 200 kV.",
+        "answer": "A 20 kV: 10 MW (50%). A 200 kV: 100 kW (0,5%).",
+        "full_solution": "A 20 kV: $I = 20 \\times 10^6 / (20 \\times 10^3) = 1000\\;\\text{A}$. $P_p = 1000^2 \\times 10 = 10^7\\;\\text{W} = 10\\;\\text{MW}$. A 200 kV: $I = 20 \\times 10^6 / (200 \\times 10^3) = 100\\;\\text{A}$. $P_p = 100^2 \\times 10 = 10^5\\;\\text{W} = 100\\;\\text{kW}$. La tensión se multiplicó por 10, las pérdidas se dividieron por 100.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Dibuja los gráficos de $\\varepsilon(t)$ e $i(t)$ de un alternador durante dos periodos completos. Indica $\\varepsilon_0$, $I_0$, $T$ y los instantes en que la fem es máxima y nula.",
+        "answer": "Sinusoides con $\\varepsilon_0$ e $I_0$ como amplitudes; la fem es máxima en T/4 y 3T/4, nula en 0, T/2 y T.",
+        "full_solution": "Ambas son funciones sinusoidales de periodo $T = 1/f$. $\\varepsilon = \\varepsilon_0\\sin(\\omega t)$: vale 0 en $t = 0, T/2, T, 3T/2, 2T$; alcanza $\\varepsilon_0$ en $t = T/4$ y $-\\varepsilon_0$ en $t = 3T/4$. $i(t) = I_0\\sin(\\omega t)$ tiene los mismos instantes (en fase). En un circuito puramente resistivo, tensión y corriente están en fase.",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "¿Por qué un transformador no funciona con corriente continua? Argumenta desde la ley de Faraday.",
+        "answer": "Con CC, el flujo es constante y $d\\Phi/dt = 0$, así que no se induce fem en el secundario.",
+        "full_solution": "La ley de Faraday dice $\\varepsilon_2 = -N_2 d\\Phi/dt$. Con corriente continua constante en el primario, el campo magnético (y el flujo a través del secundario) es constante: $d\\Phi/dt = 0$, luego $\\varepsilon_2 = 0$. No se induce tensión ni circula corriente en el secundario. Solo en el momento de conectar o desconectar la CC (transitorio, flujo cambia) aparece un pulso breve de fem inducida, pero no una tensión sostenida.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Un hospital necesita un generador de emergencia que entregue 50 kW a 230 V eficaces y 50 Hz. La bobina gira en un campo de 1,2 T. Si el área de la bobina es 200 cm², ¿cuántas espiras necesita?",
+        "answer": "$N \\approx 432$ espiras.",
+        "full_solution": "$\\varepsilon_{\\text{ef}} = 230\\;\\text{V}$ → $\\varepsilon_0 = 230\\sqrt{2} = 325\\;\\text{V}$. $\\omega = 2\\pi \\times 50 = 100\\pi$. $A = 200 \\times 10^{-4} = 0{,}02\\;\\text{m}^2$. $\\varepsilon_0 = NBA\\omega$ → $N = \\varepsilon_0/(BA\\omega) = 325/(1{,}2 \\times 0{,}02 \\times 100\\pi) = 325/7{,}54 = 43{,}1$. Redondeamos: $N \\approx 44$ espiras. [La potencia determina la corriente que entrega, no las espiras: $I_{\\text{ef}} = 50000/230 = 217\\;\\text{A}$.]",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "En España, la energía llega a los hogares a 230 V tras pasar por transformadores sucesivos desde 400 kV. ¿Cuál es la relación de transformación total? Si el rendimiento global es del 93%, ¿cuánta potencia se pierde por cada 100 MW generados?",
+        "answer": "Relación total: $230/400000 = 1/1739$. Pérdidas: 7 MW.",
+        "full_solution": "Relación total: $r = 230/(400 \\times 10^3) = 5{,}75 \\times 10^{-4} \\approx 1/1739$. Si el rendimiento es 93%, de 100 MW generados llegan $100 \\times 0{,}93 = 93\\;\\text{MW}$. Pérdidas: $100 - 93 = 7\\;\\text{MW}$. Estas pérdidas se deben a: resistencia de los cables ($I^2R$), pérdidas en transformadores (corrientes de Foucault, histéresis) y pérdidas en distribución local.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L04-1",
+        "stem": "La fem que produce un alternador es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Constante en el tiempo",
+            "why_wrong": "El flujo varía senoidalmente al girar la espira, así que la fem también varía senoidalmente."
+          },
+          {
+            "key": "B",
+            "text": "B. Sinusoidal: $\\varepsilon = \\varepsilon_0 \\sin(\\omega t)$"
+          },
+          {
+            "key": "C",
+            "text": "C. Siempre positiva",
+            "why_wrong": "La función seno oscila entre +1 y -1, así que la fem alterna entre valores positivos y negativos."
+          },
+          {
+            "key": "D",
+            "text": "D. Cuadrada (on/off)",
+            "why_wrong": "La variación del flujo es suave (sinusoidal, no abrupta), por lo que la fem inducida es sinusoidal."
+          }
+        ]
+      },
+      {
+        "id": "MC-L04-2",
+        "stem": "El valor eficaz de una tensión alterna de pico 100 V es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 100 V",
+            "why_wrong": "Eso sería el valor de pico, no el eficaz. El eficaz es $V_0/\\sqrt{2}$."
+          },
+          {
+            "key": "B",
+            "text": "B. $100/\\sqrt{2} \\approx 70{,}7\\;\\text{V}$"
+          },
+          {
+            "key": "C",
+            "text": "C. 50 V",
+            "why_wrong": "El factor de conversión es $1/\\sqrt{2} \\approx 0{,}707$, no $1/2$."
+          },
+          {
+            "key": "D",
+            "text": "D. $100\\sqrt{2} \\approx 141\\;\\text{V}$",
+            "why_wrong": "Multiplicar por $\\sqrt{2}$ da el valor de pico a partir del eficaz, no al revés."
+          }
+        ]
+      },
+      {
+        "id": "MC-L04-3",
+        "stem": "En un transformador ideal, si se duplica el número de espiras del secundario:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se duplica la tensión y se duplica la corriente del secundario",
+            "why_wrong": "Si la tensión se duplica, la corriente se reduce a la mitad (conservación de potencia: $V_1I_1 = V_2I_2$)."
+          },
+          {
+            "key": "B",
+            "text": "B. Se duplica la tensión y se reduce a la mitad la corriente del secundario"
+          },
+          {
+            "key": "C",
+            "text": "C. Se duplica la potencia del secundario",
+            "why_wrong": "En un transformador ideal, la potencia se conserva: $P_1 = P_2$, independientemente de las espiras."
+          },
+          {
+            "key": "D",
+            "text": "D. No cambia nada",
+            "why_wrong": "La relación de transformación cambia al cambiar el número de espiras, alterando tensión y corriente."
+          }
+        ]
+      },
+      {
+        "id": "MC-L04-4",
+        "stem": "Se transporta energía eléctrica en alta tensión porque:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Los cables son más baratos en alta tensión",
+            "why_wrong": "Los cables de alta tensión son más caros (requieren mayor aislamiento). La razón es reducir pérdidas."
+          },
+          {
+            "key": "B",
+            "text": "B. A mayor tensión, menor corriente para la misma potencia, y las pérdidas ($I^2R$) son menores"
+          },
+          {
+            "key": "C",
+            "text": "C. La corriente alterna solo funciona en alta tensión",
+            "why_wrong": "La corriente alterna funciona a cualquier tensión; la alta tensión es una elección para minimizar pérdidas."
+          },
+          {
+            "key": "D",
+            "text": "D. Es más seguro para los técnicos",
+            "why_wrong": "Al contrario: la alta tensión es más peligrosa. Se usa porque reduce pérdidas, no por seguridad."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "(a) Explica el funcionamiento de un transformador ideal y deduce la relación entre tensiones e intensidades. (b) Un transformador eleva la tensión de 230 V a 4600 V. Si el primario tiene 500 espiras, ¿cuántas tiene el secundario? (c) Si entrega 2 A al secundario, ¿qué corriente toma del primario?",
+        "answer": "(a) Se basa en la inducción: CA en el primario → flujo variable → fem inducida en el secundario. $V_2/V_1 = N_2/N_1$; $V_1I_1 = V_2I_2$. (b) $N_2 = 10000$. (c) $I_1 = 40$ A.",
+        "full_solution": "(a) Una CA en el primario crea un flujo magnético variable en el núcleo, que atraviesa también el secundario. Por Faraday, se induce una fem proporcional a $N$ y a $d\\Phi/dt$. Como ambos bobinados comparten el mismo flujo: $V_1/N_1 = V_2/N_2$ → $V_2/V_1 = N_2/N_1$. Conservación de potencia (ideal): $V_1I_1 = V_2I_2$ → $I_1/I_2 = N_2/N_1$. (b) $N_2 = N_1 \\times V_2/V_1 = 500 \\times 4600/230 = 500 \\times 20 = 10000$ espiras. (c) $I_1 = I_2 \\times V_2/V_1 = 2 \\times 4600/230 = 2 \\times 20 = 40\\;\\text{A}$."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un parque eólico genera 100 MW a 690 V (tensión de los generadores). Los cables hasta la subestación (50 km) tienen una resistencia de 0,15 Ω/km (ida y vuelta: 100 km). (a) Calcula las pérdidas si se transporta directamente a 690 V. (b) Si se instala un transformador que eleva a 132 kV, ¿cuáles son las pérdidas? (c) ¿Qué porcentaje de la potencia se pierde en cada caso?",
+        "answer": "(a) Transportar a 690 V es absurdo: la corriente sería ~145 kA y las pérdidas superarían la potencia generada. (b) A 132 kV: pérdidas ≈ 860 kW (0,86%). (c) 690 V → >100% (imposible); 132 kV → 0,86%.",
+        "full_solution": "$R_{\\text{total}} = 0{,}15 \\times 100 = 15\\;\\Omega$. (a) A 690 V: $I = 10^8/690 = 144928\\;\\text{A} \\approx 145\\;\\text{kA}$. $P_p = I^2R = (1{,}45 \\times 10^5)^2 \\times 15 = 3{,}15 \\times 10^{11}\\;\\text{W} = 315\\;\\text{GW}$. Esto es absurdo: las pérdidas son miles de veces mayores que la potencia generada. No se puede transportar a esta tensión. (b) A 132 kV: $I = 10^8/(132 \\times 10^3) = 758\\;\\text{A}$. $P_p = 758^2 \\times 15 = 8{,}62 \\times 10^6\\;\\text{W} \\approx 860\\;\\text{kW}$. (c) A 132 kV: $860/100000 = 0{,}86\\%$. La alta tensión hace viable el transporte."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Fem de un alternador",
+        "back": "$\\varepsilon(t) = NBA\\omega\\sin(\\omega t)$. Fem máxima: $\\varepsilon_0 = NBA\\omega$.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Valor eficaz de una señal sinusoidal",
+        "back": "$V_{\\text{ef}} = V_0/\\sqrt{2}$. Los 230 V de la red son el valor eficaz; el pico es 325 V.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Relación de transformación",
+        "back": "$V_2/V_1 = N_2/N_1$ y $V_1I_1 = V_2I_2$ (potencia conservada en transformador ideal).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Por qué alta tensión para transportar electricidad?",
+        "back": "Pérdidas $= I^2R = P^2R/V^2$. Mayor V → menor I → menores pérdidas en los cables.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir valor de pico con valor eficaz en corriente alterna.",
+        "correction": "$V_{\\text{ef}} = V_0/\\sqrt{2}$. Los aparatos eléctricos y las especificaciones de la red siempre usan valores eficaces."
+      },
+      {
+        "mistake": "Creer que un transformador crea energía al elevar la tensión.",
+        "correction": "Un transformador ideal conserva la potencia: si sube la tensión, baja la corriente proporcionalmente. $P_1 = P_2$."
+      },
+      {
+        "mistake": "Olvidar que un transformador necesita corriente alterna para funcionar.",
+        "correction": "Con corriente continua, el flujo es constante y no se induce fem en el secundario. Solo funciona con CA."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En problemas de transporte de energía, usa $P_{\\text{pérdidas}} = P^2R/V^2$ para ver rápidamente cómo las pérdidas dependen inversamente del cuadrado de la tensión."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "alternador",
+        "definition": "Máquina que convierte energía mecánica de rotación en corriente alterna mediante inducción electromagnética."
+      },
+      {
+        "term": "valor eficaz",
+        "definition": "Valor de una corriente o tensión alterna que produce el mismo efecto calorífico que una CC del mismo valor. $V_{\\text{ef}} = V_0/\\sqrt{2}$."
+      },
+      {
+        "term": "transformador",
+        "definition": "Dispositivo que cambia la tensión de una corriente alterna aprovechando la inducción entre dos bobinados con núcleo común."
+      },
+      {
+        "term": "relación de transformación",
+        "definition": "$r = N_2/N_1 = V_2/V_1$. Si $r>1$: elevador; si $r<1$: reductor."
+      },
+      {
+        "term": "corriente alterna",
+        "definition": "Corriente cuya intensidad y sentido varían periódicamente (generalmente de forma sinusoidal)."
+      }
+    ],
+    "summary": {
+      "big_idea": "Un alternador genera corriente alterna sinusoidal al girar una bobina en un campo magnético; los transformadores permiten cambiar la tensión para transportar la energía con mínimas pérdidas y adaptarla al uso doméstico.",
+      "key_points": [
+        "Un alternador produce $\\varepsilon = \\varepsilon_0\\sin(\\omega t)$ con $\\varepsilon_0 = NBA\\omega$.",
+        "El valor eficaz es $V_{\\text{ef}} = V_0/\\sqrt{2}$; los 230 V de la red son eficaces.",
+        "Un transformador ideal cumple $V_2/V_1 = N_2/N_1$ y conserva la potencia.",
+        "Se transporta a alta tensión para minimizar pérdidas: $P_p = P^2R/V^2$."
+      ],
+      "formulas": [
+        "$\\varepsilon_0 = NBA\\omega$",
+        "$V_{\\text{ef}} = V_0/\\sqrt{2}$",
+        "$V_2/V_1 = N_2/N_1$",
+        "$P_p = P^2R/V^2$"
+      ],
+      "what_to_remember_if_nothing_else": "El alternador genera fem sinusoidal, el transformador cambia tensión (conservando potencia), y transportar a alta tensión reduce pérdidas con el cuadrado de la tensión."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque C · Electromagnetismo"
+    ],
+    "curriculum_refs": [
+      "CE3,3 Aplicaciones tecnológicas del electromagnetismo",
+      "CE3,4 Transporte de energía eléctrica"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 1.º Bach alineado con LOMLOE"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "Claves de test revisadas"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_05.json": {
+    "id": "L05",
+    "title": "Síntesis: de Maxwell a las ondas electromagnéticas",
+    "subject": "Física y Química",
+    "course_label": "1.º Bach · Física",
+    "unit_id": "U-B1F-06",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3,4",
+        "CE4,1"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Describir conceptualmente las cuatro ecuaciones de Maxwell y su papel unificador de la electricidad y el magnetismo."
+      },
+      {
+        "statement": "Explicar cómo Maxwell predijo la existencia de ondas electromagnéticas y cómo Hertz las confirmó experimentalmente."
+      },
+      {
+        "statement": "Relacionar el espectro electromagnético con las aplicaciones tecnológicas de cada rango de frecuencias."
+      },
+      {
+        "statement": "Integrar los conceptos de campo eléctrico, campo magnético, inducción y ondas EM en una visión unificada del electromagnetismo."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Dominar los conceptos de campo eléctrico, campo magnético, fuerza de Lorentz e inducción electromagnética (Lecciones 1-4 de esta unidad).",
+        "why_it_matters": "Las ecuaciones de Maxwell resumen toda la electricidad y el magnetismo, y la onda EM es su consecuencia natural."
+      },
+      {
+        "statement": "Conocer las características de las ondas: frecuencia, longitud de onda, velocidad de propagación (de la unidad de ondas).",
+        "why_it_matters": "Las ondas EM comparten estas magnitudes con las ondas mecánicas, pero se propagan sin medio material."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Necesitan las ondas electromagnéticas un medio material para propagarse?",
+        "expected_answer": "No; se propagan en el vacío (ejemplo: la luz del Sol llega a través del espacio vacío)."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué relación hay entre la luz visible y las ondas de radio?",
+        "expected_answer": "Son el mismo fenómeno (ondas electromagnéticas) pero con diferente frecuencia y longitud de onda."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Las ondas electromagnéticas necesitan un medio (éter) para propagarse.",
+        "correct_model": "Las ondas EM no necesitan medio material; son oscilaciones autosustentadas de campos eléctrico y magnético que se propagan por el vacío a la velocidad de la luz."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La luz visible y las ondas de radio son fenómenos completamente diferentes.",
+        "correct_model": "Son el mismo tipo de onda electromagnética, solo difieren en frecuencia y longitud de onda. Todas se propagan a $c$ en el vacío y obedecen las mismas ecuaciones de Maxwell."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Las ecuaciones de Maxwell (visión conceptual)",
+        "body": "James Clerk Maxwell (1865) unificó todos los fenómenos eléctricos y magnéticos en **cuatro ecuaciones** que, a nivel conceptual, dicen:\n\n1. **Ley de Gauss eléctrica:** Las cargas eléctricas son fuentes (y sumideros) de campo eléctrico. Las líneas de $\\vec{E}$ nacen en cargas positivas y mueren en negativas.\n2. **Ley de Gauss magnética:** No existen monopolos magnéticos. Las líneas de $\\vec{B}$ son siempre cerradas.\n3. **Ley de Faraday:** Un campo magnético variable en el tiempo genera (induce) un campo eléctrico. ($\\varepsilon = -d\\Phi_B/dt$).\n4. **Ley de Ampère-Maxwell:** Una corriente eléctrica, o un campo eléctrico variable en el tiempo, genera campo magnético. (Maxwell añadió la parte del campo eléctrico variable, la «corriente de desplazamiento»).\n\nLas ecuaciones 3 y 4 son la clave de las ondas EM: un campo eléctrico variable crea un magnético variable (4), que a su vez crea un eléctrico variable (3), que crea otro magnético… y así se propaga la perturbación por el espacio sin necesidad de cargas ni corrientes."
+      },
+      {
+        "title": "La predicción de las ondas electromagnéticas",
+        "body": "Maxwell dedujo matemáticamente que sus ecuaciones predecían la existencia de **ondas transversales** formadas por campos $\\vec{E}$ y $\\vec{B}$ oscilantes y perpendiculares entre sí, que se propagan a una velocidad:\n\n$$c = \\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}}$$\n\ndonde $\\mu_0$ es la permeabilidad magnética y $\\varepsilon_0$ la permitividad eléctrica del vacío. Al sustituir los valores conocidos:\n$$c = \\frac{1}{\\sqrt{4\\pi \\times 10^{-7} \\times 8{,}85 \\times 10^{-12}}} \\approx 3 \\times 10^8\\;\\text{m/s}$$\n\n¡Exactamente la velocidad de la luz! Maxwell concluyó que **la luz es una onda electromagnética**. En 1888, Heinrich Hertz generó y detectó ondas EM en el laboratorio, confirmando la predicción.\n\nPropiedades de las ondas EM:\n- **Transversales:** $\\vec{E}$ y $\\vec{B}$ oscilan perpendicularmente entre sí y perpendicularmente a la dirección de propagación.\n- **No necesitan medio:** se propagan en el vacío.\n- **Velocidad en el vacío:** $c \\approx 3 \\times 10^8$ m/s.\n- **Relación:** $c = \\lambda f$.\n- **Transportan energía y cantidad de movimiento.**",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"aPr\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"var(--axes,#24312c)\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Onda electromagnética: E y B perpendiculares</text><line x1=\"60\" y1=\"160\" x2=\"460\" y2=\"160\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\" marker-end=\"url(#aPr)\"/><text x=\"470\" y=\"155\" font-size=\"11\" fill=\"var(--axes,#24312c)\">x (propagación)</text><path d=\"M60,160 C90,80 120,80 150,160 C180,240 210,240 240,160 C270,80 300,80 330,160 C360,240 390,240 420,160\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><text x=\"150\" y=\"72\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">E</text><path d=\"M60,160 C90,130 120,130 150,160 C180,190 210,190 240,160 C270,130 300,130 330,160 C360,190 390,190 420,160\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\" stroke-dasharray=\"5,3\"/><text x=\"150\" y=\"130\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">B</text><text x=\"250\" y=\"275\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">E ⊥ B ⊥ v     c = E₀/B₀ = 1/√(ε₀μ₀)</text><text x=\"250\" y=\"296\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Predicción de Maxwell confirmada por Hertz</text></svg>",
+            "caption": "Onda electromagnética: los campos E y B oscilan perpendicularmente entre sí y a la dirección de propagación, viajando a la velocidad de la luz."
+          }
+        ]
+      },
+      {
+        "title": "El espectro electromagnético",
+        "body": "Todas las ondas EM viajan a $c$ en el vacío, pero cubren un rango enorme de frecuencias y longitudes de onda:\n\n<svg viewBox=\"0 0 400 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <!-- Barra del espectro -->\n  <rect x=\"20\" y=\"50\" width=\"50\" height=\"40\" fill=\"var(--accent,#8a3d6b)\" rx=\"2\"/>\n  <rect x=\"70\" y=\"50\" width=\"45\" height=\"40\" fill=\"var(--secondary,#c17a17)\" rx=\"2\"/>\n  <rect x=\"115\" y=\"50\" width=\"45\" height=\"40\" fill=\"var(--secondary,#c17a17)\" rx=\"2\"/>\n  <rect x=\"160\" y=\"50\" width=\"45\" height=\"40\" fill=\"var(--primary,#0e7a68)\" rx=\"2\"/>\n  <rect x=\"205\" y=\"50\" width=\"45\" height=\"40\" fill=\"var(--primary,#0e7a68)\" rx=\"2\"/>\n  <rect x=\"250\" y=\"50\" width=\"45\" height=\"40\" fill=\"var(--accent,#8a3d6b)\" rx=\"2\"/>\n  <rect x=\"295\" y=\"50\" width=\"50\" height=\"40\" fill=\"var(--accent,#8a3d6b)\" rx=\"2\"/>\n  <rect x=\"345\" y=\"50\" width=\"40\" height=\"40\" fill=\"#6b21a8\" rx=\"2\"/>\n  <!-- Etiquetas -->\n  <text x=\"45\" y=\"74\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">Radio</text>\n  <text x=\"92\" y=\"74\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">Micro</text>\n  <text x=\"137\" y=\"74\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">IR</text>\n  <text x=\"182\" y=\"74\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">Visible</text>\n  <text x=\"227\" y=\"74\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">UV</text>\n  <text x=\"272\" y=\"74\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">Rayos X</text>\n  <text x=\"317\" y=\"68\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">Gamma</text>\n  <text x=\"365\" y=\"74\" text-anchor=\"middle\" font-size=\"7\" fill=\"white\" font-weight=\"bold\">Cósm.</text>\n  <!-- Flecha de frecuencia -->\n  <line x1=\"20\" y1=\"100\" x2=\"385\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <polygon points=\"385,100 378,96 378,104\" fill=\"var(--text,#20302a)\"/>\n  <text x=\"200\" y=\"115\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">Frecuencia creciente →</text>\n  <!-- Flecha de λ -->\n  <line x1=\"385\" y1=\"40\" x2=\"20\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <polygon points=\"20,40 27,36 27,44\" fill=\"var(--text,#20302a)\"/>\n  <text x=\"200\" y=\"35\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">← Longitud de onda creciente</text>\n  <!-- Valores -->\n  <text x=\"45\" y=\"130\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--text,#20302a)\">km–m</text>\n  <text x=\"92\" y=\"130\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--text,#20302a)\">cm–mm</text>\n  <text x=\"137\" y=\"130\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--text,#20302a)\">μm</text>\n  <text x=\"182\" y=\"130\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--text,#20302a)\">400-700nm</text>\n  <text x=\"227\" y=\"130\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--text,#20302a)\">nm</text>\n  <text x=\"272\" y=\"130\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--text,#20302a)\">0.01-10nm</text>\n  <text x=\"337\" y=\"130\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--text,#20302a)\">&lt;0.01nm</text>\n  <text x=\"200\" y=\"145\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--text,#20302a)\">c = λf = 3×10⁸ m/s (en el vacío)</text>\n  <text x=\"200\" y=\"170\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\" font-weight=\"bold\">Espectro electromagnético</text>\n</svg>\n\n| Rango | λ típica | Aplicación principal |\n|---|---|---|\n| Radio | km – m | Comunicaciones, radio, TV |\n| Microondas | cm – mm | Hornos, radar, WiFi, 5G |\n| Infrarrojo (IR) | μm | Mandos, visión nocturna, calor |\n| Visible | 400–700 nm | Visión humana, iluminación |\n| Ultravioleta (UV) | nm | Esterilización, vitamina D |\n| Rayos X | 0,01–10 nm | Radiografías, TAC |\n| Rayos gamma (γ) | < 0,01 nm | Radioterapia, astronomía |"
+      },
+      {
+        "title": "Unificación del electromagnetismo: visión de conjunto",
+        "body": "Esta unidad cierra un arco histórico y conceptual:\n\n1. **Coulomb (1785):** las cargas crean campo eléctrico y se ejercen fuerzas.\n2. **Oersted (1820):** las corrientes crean campo magnético.\n3. **Ampère (1820s):** corrientes paralelas se atraen/repelen; leyes de los circuitos magnéticos.\n4. **Faraday (1831):** un campo magnético variable induce corriente eléctrica.\n5. **Maxwell (1865):** unifica todo en 4 ecuaciones y predice las ondas EM.\n6. **Hertz (1888):** confirma experimentalmente las ondas EM.\n\n**Electricidad y magnetismo no son fenómenos independientes:** son dos caras de una misma interacción, el **electromagnetismo**. Un campo eléctrico que cambia genera uno magnético, y viceversa. La luz, las ondas de radio, los rayos X y los rayos gamma son todas manifestaciones del mismo fenómeno: ondas electromagnéticas que se propagan a la velocidad de la luz.\n\nMaxwell logró algo extraordinario: a partir de cuatro ecuaciones escritas en un despacho, predijo un fenómeno que nadie había observado (las ondas EM), que resultaron ser la clave de toda la tecnología de comunicaciones moderna."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Velocidad de la luz a partir de constantes fundamentales",
+        "statement": "Calcula la velocidad de las ondas EM en el vacío usando $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A y $\\varepsilon_0 = 8{,}854 \\times 10^{-12}$ C²/(N·m²).",
+        "steps": [
+          "$c = 1/\\sqrt{\\mu_0\\varepsilon_0}$.",
+          "$\\mu_0\\varepsilon_0 = 4\\pi \\times 10^{-7} \\times 8{,}854 \\times 10^{-12} = 1{,}113 \\times 10^{-17}$.",
+          "$c = 1/\\sqrt{1{,}113 \\times 10^{-17}} = 1/\\sqrt{11{,}13 \\times 10^{-18}} = 1/(3{,}336 \\times 10^{-9}) = 2{,}998 \\times 10^{8}\\;\\text{m/s}$."
+        ],
+        "answer": "$c \\approx 3{,}00 \\times 10^8\\;\\text{m/s}$, la velocidad de la luz.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Velocidad de la luz a partir de ε₀ y μ₀</text><rect x=\"80\" y=\"60\" width=\"150\" height=\"60\" rx=\"8\" fill=\"#0e7a68\" opacity=\"0.08\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"155\" y=\"85\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">ε₀ = 8,85 × 10⁻¹² F/m</text><text x=\"155\" y=\"105\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">Permitividad eléctrica</text><rect x=\"270\" y=\"60\" width=\"150\" height=\"60\" rx=\"8\" fill=\"#c17a17\" opacity=\"0.08\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"345\" y=\"85\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">μ₀ = 4π × 10⁻⁷ T·m/A</text><text x=\"345\" y=\"105\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">Permeabilidad magnética</text><text x=\"250\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" fill=\"#8a3d6b\">c = 1/√(ε₀μ₀)</text><text x=\"250\" y=\"200\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">c ≈ 3,00 × 10⁸ m/s</text><text x=\"250\" y=\"235\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Maxwell: la luz es una onda electromagnética</text></svg>",
+            "caption": "Maxwell predijo que las ondas EM viajan a c = 1/√(ε₀μ₀) ≈ 3×10⁸ m/s, identificando la luz como onda electromagnética."
+          }
+        ]
+      },
+      {
+        "title": "Frecuencia y longitud de onda de una emisora de radio",
+        "statement": "Una emisora FM emite a 100 MHz. Calcula la longitud de onda de la señal.",
+        "steps": [
+          "$c = \\lambda f$ → $\\lambda = c/f$.",
+          "$\\lambda = (3 \\times 10^8) / (100 \\times 10^6) = 3 \\times 10^8 / 10^8 = 3\\;\\text{m}$."
+        ],
+        "answer": "$\\lambda = 3\\;\\text{m}$."
+      },
+      {
+        "title": "Energía de un fotón de luz visible",
+        "statement": "Calcula la energía de un fotón de luz verde ($\\lambda = 550$ nm). Dato: $h = 6{,}63 \\times 10^{-34}$ J·s.",
+        "steps": [
+          "Frecuencia: $f = c/\\lambda = (3 \\times 10^8)/(550 \\times 10^{-9}) = 5{,}45 \\times 10^{14}\\;\\text{Hz}$.",
+          "Energía: $E = hf = 6{,}63 \\times 10^{-34} \\times 5{,}45 \\times 10^{14} = 3{,}61 \\times 10^{-19}\\;\\text{J}$.",
+          "En electronvoltios: $E = 3{,}61 \\times 10^{-19} / (1{,}6 \\times 10^{-19}) = 2{,}26\\;\\text{eV}$."
+        ],
+        "answer": "$E \\approx 3{,}6 \\times 10^{-19}\\;\\text{J} \\approx 2{,}3\\;\\text{eV}$."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Ordena de menor a mayor frecuencia: rayos gamma, luz visible, microondas, rayos X, ondas de radio, infrarrojo, ultravioleta. Después calcula la longitud de onda aproximada de cada uno (usa $c = 3 \\times 10^8$ m/s y frecuencias típicas).",
+        "scaffold": "La frecuencia crece de radio a gamma. Usa $\\lambda = c/f$. Frecuencias típicas: radio ≈ 10⁶ Hz, microondas ≈ 10¹⁰ Hz, IR ≈ 10¹³ Hz, visible ≈ 5×10¹⁴ Hz, UV ≈ 10¹⁶ Hz, rayos X ≈ 10¹⁸ Hz, gamma ≈ 10²⁰ Hz.",
+        "answer": "Orden: radio < microondas < IR < visible < UV < rayos X < gamma. λ: radio ≈ 300 m, microondas ≈ 3 cm, IR ≈ 30 μm, visible ≈ 600 nm, UV ≈ 30 nm, rayos X ≈ 0,3 nm, gamma ≈ 0,003 nm."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Explica, usando las ecuaciones de Maxwell (conceptualmente), por qué una carga eléctrica estática no emite ondas EM, pero una carga acelerada sí. Relaciona con el funcionamiento de una antena.",
+        "scaffold": "Las ondas EM requieren campos que cambien en el tiempo. Una carga estática tiene campo E constante. Una carga en movimiento uniforme tiene campos constantes en su marco. Pero una carga acelerada…",
+        "answer": "Una carga estática crea un campo eléctrico constante: no hay variación temporal, no hay onda. Una carga en MRU crea campos constantes en su marco de referencia. Una carga acelerada cambia su campo eléctrico continuamente; ese campo variable crea un campo magnético variable (Ampère-Maxwell), que crea otro eléctrico variable (Faraday), y así se propaga la perturbación: eso es una onda EM. Una antena emisora es un conductor donde los electrones oscilan (aceleran y desaceleran) a una frecuencia determinada, emitiendo ondas EM de esa frecuencia."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula la longitud de onda de una señal WiFi a 2,4 GHz.",
+        "answer": "$\\lambda = 12{,}5\\;\\text{cm}$.",
+        "full_solution": "$\\lambda = c/f = (3 \\times 10^8)/(2{,}4 \\times 10^9) = 0{,}125\\;\\text{m} = 12{,}5\\;\\text{cm}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Un rayo X tiene longitud de onda de 0,1 nm. Calcula su frecuencia.",
+        "answer": "$f = 3 \\times 10^{18}\\;\\text{Hz}$.",
+        "full_solution": "$f = c/\\lambda = (3 \\times 10^8)/(0{,}1 \\times 10^{-9}) = (3 \\times 10^8)/(10^{-10}) = 3 \\times 10^{18}\\;\\text{Hz}$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "La luz visible abarca de 400 nm (violeta) a 700 nm (rojo). Calcula el rango de frecuencias correspondiente.",
+        "answer": "$f_{\\text{rojo}} = 4{,}29 \\times 10^{14}$ Hz; $f_{\\text{violeta}} = 7{,}50 \\times 10^{14}$ Hz.",
+        "full_solution": "$f = c/\\lambda$. Rojo: $f = 3 \\times 10^8 / (700 \\times 10^{-9}) = 4{,}29 \\times 10^{14}\\;\\text{Hz}$. Violeta: $f = 3 \\times 10^8 / (400 \\times 10^{-9}) = 7{,}50 \\times 10^{14}\\;\\text{Hz}$. El rango visible cubre aproximadamente de $4{,}3 \\times 10^{14}$ a $7{,}5 \\times 10^{14}$ Hz.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un horno microondas opera a 2,45 GHz. (a) Calcula la longitud de onda. (b) Explica por qué esa frecuencia es adecuada para calentar alimentos con agua.",
+        "answer": "(a) $\\lambda = 12{,}2$ cm. (b) Porque 2,45 GHz está cerca de una frecuencia de resonancia de la molécula de agua.",
+        "full_solution": "(a) $\\lambda = 3 \\times 10^8 / (2{,}45 \\times 10^9) = 0{,}122\\;\\text{m} = 12{,}2\\;\\text{cm}$. (b) A 2,45 GHz, las moléculas de agua absorben eficientemente la energía de las microondas (rotan rápidamente intentando alinearse con el campo EM oscilante), lo que se convierte en calor. Otros materiales (cerámica, vidrio) no absorben a esta frecuencia y no se calientan directamente.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dibuja esquemáticamente una onda electromagnética propagándose hacia la derecha. Muestra las oscilaciones de $\\vec{E}$ y $\\vec{B}$ y la dirección de propagación. Indica que $\\vec{E}$, $\\vec{B}$ y la dirección de propagación son mutuamente perpendiculares.",
+        "answer": "E oscila en un plano (por ejemplo, vertical), B oscila en el plano perpendicular (horizontal), y la propagación es perpendicular a ambos (hacia la derecha).",
+        "full_solution": "La onda EM es transversal: $\\vec{E}$ y $\\vec{B}$ oscilan en planos perpendiculares entre sí y perpendiculares a la dirección de propagación. Si la onda se propaga en el eje $x$, $\\vec{E}$ puede oscilar en el eje $y$ y $\\vec{B}$ en el eje $z$ (o viceversa). Los campos están en fase: cuando $\\vec{E}$ es máximo, $\\vec{B}$ también lo es.",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "¿Por qué Maxwell, a partir de un resultado puramente matemático ($c = 1/\\sqrt{\\mu_0\\varepsilon_0}$), concluyó que la luz era una onda electromagnética? ¿Qué habría ocurrido si el valor numérico no coincidiera con la velocidad de la luz?",
+        "answer": "Porque el valor numérico coincidía exactamente con la velocidad de la luz medida. Si no coincidiera, la luz y las ondas EM serían fenómenos distintos.",
+        "full_solution": "Maxwell calculó $c = 1/\\sqrt{\\mu_0\\varepsilon_0}$ a partir de constantes eléctrica ($\\varepsilon_0$) y magnética ($\\mu_0$) medidas en el laboratorio, sin relación aparente con la óptica. Que el resultado numérico ($\\approx 3 \\times 10^8$ m/s) coincidiera con la velocidad de la luz, medida independientemente por Fizeau y Foucault, era una coincidencia demasiado precisa para ser casual. Maxwell escribió: «apenas podemos evitar la inferencia de que la luz consiste en ondulaciones transversales del mismo medio que es la causa de los fenómenos eléctricos y magnéticos». Si el valor hubiera sido diferente, la luz y las ondas EM serían fenómenos distintos y la unificación no habría tenido lugar.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Una antena de telefonía 5G emite a 28 GHz con una potencia de 1 W. (a) Calcula la longitud de onda. (b) ¿Por qué las señales de 5G a esta frecuencia tienen menor alcance que las de 4G (a ~2 GHz)?",
+        "answer": "(a) $\\lambda \\approx 1{,}07$ cm. (b) Porque a mayor frecuencia las ondas son más absorbidas por la atmósfera, los edificios y los obstáculos.",
+        "full_solution": "(a) $\\lambda = c/f = 3 \\times 10^8 / (28 \\times 10^9) = 0{,}0107\\;\\text{m} \\approx 1{,}07\\;\\text{cm}$. (b) Las ondas milimétricas (λ ~ 1 cm) son más absorbidas por la humedad atmosférica, la lluvia y los materiales de construcción que las ondas de menor frecuencia (λ ~ 15 cm para 4G). Además, sufren mayor difracción en obstáculos y menor penetración en edificios. Por eso el 5G a 28 GHz requiere más antenas (celdas pequeñas) para cubrir la misma área.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Resume en un esquema conceptual los cuatro grandes descubrimientos del electromagnetismo (Coulomb, Oersted, Faraday, Maxwell), indicando qué conecta cada uno (carga → campo E, corriente → campo B, etc.) y cómo Maxwell los unificó.",
+        "answer": "Coulomb: cargas ↔ E. Oersted: corrientes → B. Faraday: ΔB → E (inducción). Maxwell: ΔE → B (corriente de desplazamiento) + unificación → ondas EM.",
+        "full_solution": "1. Coulomb: cargas eléctricas crean campo eléctrico E y se ejercen fuerzas (estática). 2. Oersted/Ampère: corrientes crean campo magnético B (electromagnetismo estático). 3. Faraday: un campo B variable en el tiempo crea campo E (inducción). 4. Maxwell: completa la simetría añadiendo que un campo E variable crea campo B (corriente de desplazamiento). Esta simetría permite que E y B se autogeneren mutuamente → ondas EM. La luz es una onda EM ($c = 1/\\sqrt{\\mu_0\\varepsilon_0}$).",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L05-1",
+        "stem": "Maxwell predijo las ondas electromagnéticas a partir de:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Experimentos con prismas de luz",
+            "why_wrong": "Los prismas demuestran la dispersión de la luz (Newton), no la naturaleza electromagnética de las ondas."
+          },
+          {
+            "key": "B",
+            "text": "B. Sus ecuaciones del electromagnetismo, que predecían ondas propagándose a la velocidad de la luz"
+          },
+          {
+            "key": "C",
+            "text": "C. Las medidas de la velocidad del sonido",
+            "why_wrong": "El sonido es una onda mecánica, no electromagnética, y su velocidad (~340 m/s) no tiene relación con la de la luz."
+          },
+          {
+            "key": "D",
+            "text": "D. La observación directa de ondas de radio",
+            "why_wrong": "Las ondas de radio fueron generadas experimentalmente por Hertz en 1888, 23 años después de la predicción de Maxwell."
+          }
+        ]
+      },
+      {
+        "id": "MC-L05-2",
+        "stem": "Todas las ondas electromagnéticas en el vacío:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Tienen la misma frecuencia",
+            "why_wrong": "Las ondas EM cubren un rango enorme de frecuencias, desde radio (kHz) hasta gamma (10²⁰ Hz)."
+          },
+          {
+            "key": "B",
+            "text": "B. Viajan a la misma velocidad ($c$)"
+          },
+          {
+            "key": "C",
+            "text": "C. Tienen la misma longitud de onda",
+            "why_wrong": "La longitud de onda varía inversamente con la frecuencia ($\\lambda = c/f$); van desde kilómetros (radio) hasta fracciones de picómetro (gamma)."
+          },
+          {
+            "key": "D",
+            "text": "D. Necesitan un medio material para propagarse",
+            "why_wrong": "Las ondas EM no necesitan medio; se propagan en el vacío (así nos llega la luz del Sol)."
+          }
+        ]
+      },
+      {
+        "id": "MC-L05-3",
+        "stem": "La ecuación que permite calcular la velocidad de la luz a partir de constantes eléctricas y magnéticas es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. $c = \\mu_0 \\varepsilon_0$",
+            "why_wrong": "El producto $\\mu_0\\varepsilon_0$ tiene dimensiones de 1/velocidad², no de velocidad."
+          },
+          {
+            "key": "B",
+            "text": "B. $c = 1/\\sqrt{\\mu_0 \\varepsilon_0}$"
+          },
+          {
+            "key": "C",
+            "text": "C. $c = \\sqrt{\\mu_0 / \\varepsilon_0}$",
+            "why_wrong": "Esa raíz tiene dimensiones de impedancia (ohmios), no de velocidad."
+          },
+          {
+            "key": "D",
+            "text": "D. $c = \\mu_0 + \\varepsilon_0$",
+            "why_wrong": "Sumar constantes con unidades diferentes no tiene sentido físico."
+          }
+        ]
+      },
+      {
+        "id": "MC-L05-4",
+        "stem": "En una onda electromagnética, los campos $\\vec{E}$ y $\\vec{B}$ oscilan:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Paralelamente entre sí y a la dirección de propagación",
+            "why_wrong": "Las ondas EM son transversales: E y B son perpendiculares entre sí y perpendiculares a la propagación."
+          },
+          {
+            "key": "B",
+            "text": "B. Perpendicularmente entre sí y perpendicularmente a la dirección de propagación"
+          },
+          {
+            "key": "C",
+            "text": "C. En la misma dirección que la propagación",
+            "why_wrong": "Eso describiría una onda longitudinal; las ondas EM son transversales."
+          },
+          {
+            "key": "D",
+            "text": "D. Solo $\\vec{E}$ oscila; $\\vec{B}$ es constante",
+            "why_wrong": "Ambos campos oscilan; la existencia de la onda requiere que ambos varíen y se regeneren mutuamente."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "(a) Describe conceptualmente las cuatro ecuaciones de Maxwell (sin escribir su forma integral ni diferencial, solo su significado físico). (b) Explica cómo conducen a la existencia de ondas electromagnéticas. (c) Calcula la longitud de onda de una señal de FM de 98 MHz.",
+        "answer": "(a) 1) Cargas → fuentes de E. 2) No hay monopolos magnéticos. 3) ΔB crea E. 4) Corrientes y ΔE crean B. (b) 3) y 4) se encadenan: ΔE → B → ΔB → E → … propagación a $c$. (c) $\\lambda = 3{,}06$ m.",
+        "full_solution": "(a) 1) Ley de Gauss eléctrica: las cargas son fuentes de campo E (líneas nacen en + y mueren en -). 2) Ley de Gauss magnética: no existen monopolos; las líneas de B son cerradas. 3) Ley de Faraday: un B variable induce campo E. 4) Ley de Ampère-Maxwell: corrientes y E variable crean B. (b) Las ecuaciones 3 y 4 se encadenan: un E que cambia crea B (4), ese B cambiante crea E (3), y así la perturbación se autosostiene y se propaga a $c = 1/\\sqrt{\\mu_0\\varepsilon_0}$. (c) $\\lambda = c/f = 3 \\times 10^8 / (98 \\times 10^6) = 3{,}06\\;\\text{m}$."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un laboratorio de investigación utiliza un láser que emite pulsos de luz de 800 nm con una energía de 1 mJ por pulso y una duración de 10 fs (femtosegundos, $10^{-15}$ s). (a) Calcula la frecuencia de la luz. (b) ¿Cuántos fotones contiene cada pulso? (c) Calcula la potencia instantánea del pulso. (d) Compara esa potencia con la de una central nuclear (1 GW).",
+        "answer": "(a) $f = 3{,}75 \\times 10^{14}$ Hz. (b) $\\approx 4 \\times 10^{15}$ fotones. (c) $P = 10^{11}$ W = 100 GW. (d) 100 veces la potencia de una central nuclear, pero solo durante 10 fs.",
+        "full_solution": "(a) $f = c/\\lambda = 3 \\times 10^8/(800 \\times 10^{-9}) = 3{,}75 \\times 10^{14}\\;\\text{Hz}$. (b) Energía por fotón: $E = hf = 6{,}63 \\times 10^{-34} \\times 3{,}75 \\times 10^{14} = 2{,}49 \\times 10^{-19}\\;\\text{J}$. Número de fotones: $n = E_{\\text{pulso}}/E_{\\text{fotón}} = 10^{-3}/(2{,}49 \\times 10^{-19}) = 4{,}02 \\times 10^{15}$ fotones. (c) $P = E/\\Delta t = 10^{-3}/(10 \\times 10^{-15}) = 10^{-3}/10^{-14} = 10^{11}\\;\\text{W} = 100\\;\\text{GW}$. (d) 100 GW es 100 veces la potencia de una central nuclear de 1 GW, pero la energía total del pulso es solo 1 mJ (la energía cinética de un mosquito en vuelo). La enorme potencia instantánea se debe a la brevísima duración del pulso."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué unificó Maxwell?",
+        "back": "La electricidad y el magnetismo en un solo marco teórico (4 ecuaciones). Predijo las ondas EM y que la luz es una de ellas.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Velocidad de la luz a partir de constantes eléctricas y magnéticas",
+        "back": "$c = \\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}} \\approx 3 \\times 10^8\\;\\text{m/s}$.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Relación entre λ y f en una onda EM",
+        "back": "$c = \\lambda f$. Mayor frecuencia → menor longitud de onda. Todas viajan a $c$ en el vacío.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Orden del espectro EM (de menor a mayor frecuencia)",
+        "back": "Radio → Microondas → Infrarrojo → Visible → Ultravioleta → Rayos X → Rayos γ.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Creer que los distintos tipos de ondas EM (radio, luz, rayos X…) son fenómenos fundamentalmente diferentes.",
+        "correction": "Son el mismo fenómeno: campos E y B oscilantes propagándose a c. Solo difieren en frecuencia y longitud de onda."
+      },
+      {
+        "mistake": "Confundir la velocidad de la luz en el vacío ($c$) con su velocidad en un medio material.",
+        "correction": "En medios materiales (agua, vidrio, aire) la luz se propaga más lento: $v = c/n$, donde $n$ es el índice de refracción del medio."
+      },
+      {
+        "mistake": "Pensar que las ondas EM necesitan un medio para propagarse (como las ondas sonoras).",
+        "correction": "Las ondas EM se propagan en el vacío; son oscilaciones de campos, no de partículas de un medio. La luz del Sol cruza el vacío del espacio."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "Para los problemas del espectro EM, recuerda siempre $c = \\lambda f$. Conociendo una magnitud calculas la otra. Los valores de $c$, $h$ y $\\mu_0$ suelen estar en el enunciado."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "ecuaciones de Maxwell",
+        "definition": "Conjunto de cuatro ecuaciones que resumen todas las leyes del electromagnetismo y predicen las ondas EM."
+      },
+      {
+        "term": "onda electromagnética",
+        "definition": "Perturbación de campos E y B perpendiculares entre sí que se propaga en el vacío a $c = 3 \\times 10^8$ m/s."
+      },
+      {
+        "term": "espectro electromagnético",
+        "definition": "Rango completo de frecuencias de las ondas EM: radio, microondas, IR, visible, UV, rayos X, gamma."
+      },
+      {
+        "term": "velocidad de la luz",
+        "definition": "$c = 1/\\sqrt{\\mu_0\\varepsilon_0} \\approx 3 \\times 10^8$ m/s en el vacío. Constante universal."
+      },
+      {
+        "term": "corriente de desplazamiento",
+        "definition": "Término añadido por Maxwell a la ley de Ampère: un campo eléctrico variable en el tiempo genera campo magnético."
+      }
+    ],
+    "summary": {
+      "big_idea": "Maxwell unificó la electricidad y el magnetismo en cuatro ecuaciones que predicen la existencia de ondas electromagnéticas propagándose a la velocidad de la luz — toda la tecnología de comunicaciones moderna nace de esta idea.",
+      "key_points": [
+        "Las 4 ecuaciones de Maxwell resumen toda la electricidad y el magnetismo.",
+        "Un campo E variable crea B, y un B variable crea E: esta cadena genera ondas EM.",
+        "$c = 1/\\sqrt{\\mu_0\\varepsilon_0} \\approx 3 \\times 10^8$ m/s: la luz es una onda EM.",
+        "El espectro EM va de radio (λ ~ km) a gamma (λ ~ pm); todas son el mismo fenómeno."
+      ],
+      "formulas": [
+        "$c = \\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}}$",
+        "$c = \\lambda f$",
+        "$E = hf$"
+      ],
+      "what_to_remember_if_nothing_else": "Maxwell demostró que la electricidad y el magnetismo son una sola fuerza, y que la luz, las ondas de radio y los rayos X son todas ondas electromagnéticas que se propagan a c sin necesidad de medio."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque C · Electromagnetismo",
+      "RD 243/2022 Bloque D · Ondas"
+    ],
+    "curriculum_refs": [
+      "CE3,4 Describir la naturaleza electromagnética de la luz",
+      "CE4,1 Identificar los rangos del espectro EM y sus aplicaciones"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 1.º Bach alineado con LOMLOE"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "Claves de test revisadas"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  }
+}

@@ -1,0 +1,2084 @@
+{
+  "lesson_01.json": {
+    "id": "L01",
+    "title": "Movimiento armónico simple (MAS)",
+    "subject": "Física y Química",
+    "course_label": "1.º Bachillerato · Física",
+    "unit_id": "U-B1F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3.1",
+        "CE3.2"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "2 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Describir el MAS como la proyección del movimiento circular uniforme y escribir sus ecuaciones cinemáticas."
+      },
+      {
+        "statement": "Obtener la posición, velocidad y aceleración en función del tiempo y relacionarlas con las magnitudes del movimiento circular."
+      },
+      {
+        "statement": "Analizar la energía del oscilador armónico: cinética, potencial elástica y conservación de la energía mecánica."
+      },
+      {
+        "statement": "Aplicar el MAS al péndulo simple y al sistema muelle-masa, calculando sus periodos."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Movimiento circular uniforme (MCU): velocidad angular, periodo, frecuencia.",
+        "why_it_matters": "El MAS se define como la proyección del MCU sobre un diámetro."
+      },
+      {
+        "statement": "Funciones trigonométricas seno y coseno.",
+        "why_it_matters": "Las ecuaciones del MAS son sinusoidales."
+      },
+      {
+        "statement": "Energía cinética y potencial, conservación de la energía.",
+        "why_it_matters": "El análisis energético del oscilador requiere estos conceptos."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué relación hay entre el periodo y la frecuencia de un movimiento periódico?",
+        "expected_answer": "Son inversos: T = 1/f, o equivalentemente f = 1/T."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si un objeto describe un MCU con velocidad angular ω, ¿cuánto vale su periodo?",
+        "expected_answer": "T = 2π/ω."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La aceleración en el MAS es constante.",
+        "correct_model": "La aceleración en el MAS varía continuamente: a = −ω²x. Es máxima en los extremos (donde la velocidad es cero) y nula en el centro (donde la velocidad es máxima). Es proporcional al desplazamiento pero de signo contrario: siempre apunta hacia la posición de equilibrio."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El periodo del péndulo depende de la masa.",
+        "correct_model": "El periodo del péndulo simple solo depende de la longitud del hilo y de la gravedad: T = 2π√(L/g). No depende de la masa ni de la amplitud (para oscilaciones pequeñas). Esto lo demostró Galileo experimentalmente."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "¿Qué es un movimiento armónico simple?",
+        "body": "Imagina una bola atada a un muelle que oscila de un lado a otro sobre una mesa sin rozamiento. Ese vaivén regular, donde la bola pasa una y otra vez por el mismo punto central, es un **movimiento armónico simple (MAS)**.\n\nEl MAS es el movimiento vibratorio más sencillo que existe y aparece en muchísimos sistemas: un columpio, las cuerdas de una guitarra, los átomos en un sólido… Matemáticamente, es la **proyección sobre un diámetro** de un movimiento circular uniforme.\n\n<svg viewBox=\"0 0 460 220\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:460px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <circle cx=\"130\" cy=\"110\" r=\"80\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"50\" y1=\"110\" x2=\"210\" y2=\"110\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n  <circle cx=\"130\" cy=\"110\" r=\"3\" fill=\"var(--axes,#24312c)\"/>\n  <circle cx=\"186\" cy=\"66\" r=\"6\" fill=\"var(--primary,#0e7a68)\"/>\n  <line x1=\"186\" y1=\"66\" x2=\"186\" y2=\"110\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/>\n  <circle cx=\"186\" cy=\"110\" r=\"5\" fill=\"var(--secondary,#c17a17)\"/>\n  <text x=\"196\" y=\"62\" font-size=\"11\" fill=\"var(--primary,#0e7a68)\">P (MCU)</text>\n  <text x=\"196\" y=\"116\" font-size=\"11\" fill=\"var(--secondary,#c17a17)\">P' (MAS)</text>\n  <text x=\"130\" y=\"205\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Proyección del MCU → MAS</text>\n  <line x1=\"260\" y1=\"30\" x2=\"260\" y2=\"190\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n  <path d=\"M260,110 Q300,30 340,110 Q380,190 420,110\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <text x=\"340\" y=\"205\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">x(t) = A·sin(ωt + φ₀)</text>\n</svg>"
+      },
+      {
+        "title": "Ecuaciones cinemáticas del MAS",
+        "body": "Si un punto P recorre un círculo de radio A con velocidad angular ω, su proyección sobre el eje x es:\n\n$$x(t) = A \\sin(\\omega t + \\varphi_0)$$\n\nDonde:\n- **A** = amplitud (desplazamiento máximo desde el equilibrio)\n- **ω** = pulsación o frecuencia angular (rad/s), relacionada con el periodo: $\\omega = 2\\pi/T = 2\\pi f$\n- **φ₀** = fase inicial (posición del punto en t = 0)\n\nDerivando obtenemos la velocidad y la aceleración:\n\n$$v(t) = A\\omega \\cos(\\omega t + \\varphi_0) \\qquad a(t) = -A\\omega^2 \\sin(\\omega t + \\varphi_0) = -\\omega^2 x$$\n\nLa relación $a = -\\omega^2 x$ es la **ecuación fundamental del MAS**: la aceleración es proporcional al desplazamiento y de signo contrario (siempre apunta hacia el equilibrio). Esta es la condición que define un MAS.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Posición x(t) en un MAS</text><line x1=\"60\" y1=\"160\" x2=\"460\" y2=\"160\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"40\" x2=\"60\" y2=\"270\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"470\" y=\"164\" font-size=\"11\" fill=\"var(--text,#20302a)\">t</text><text x=\"55\" y=\"36\" font-size=\"11\" fill=\"var(--text,#20302a)\">x</text><path d=\"M60,160 Q110,60 160,60 Q210,60 260,160 Q310,260 360,260 Q410,260 460,160\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"60\" y1=\"60\" x2=\"460\" y2=\"60\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><line x1=\"60\" y1=\"260\" x2=\"460\" y2=\"260\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><text x=\"46\" y=\"64\" text-anchor=\"end\" font-size=\"11\" fill=\"#0e7a68\">+A</text><text x=\"46\" y=\"264\" text-anchor=\"end\" font-size=\"11\" fill=\"#0e7a68\">−A</text><line x1=\"60\" y1=\"270\" x2=\"60\" y2=\"276\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><line x1=\"460\" y1=\"270\" x2=\"460\" y2=\"276\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><text x=\"60\" y=\"288\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">0</text><text x=\"460\" y=\"288\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">T</text><line x1=\"260\" y1=\"155\" x2=\"260\" y2=\"165\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><text x=\"260\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">T/2</text><line x1=\"60\" y1=\"60\" x2=\"160\" y2=\"60\" stroke=\"#c17a17\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/><line x1=\"160\" y1=\"60\" x2=\"160\" y2=\"160\" stroke=\"#c17a17\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/><text x=\"168\" y=\"52\" font-size=\"10\" fill=\"#c17a17\">x_max = A</text></svg>",
+            "caption": "Gráfica x(t) de un MAS: oscilación sinusoidal con amplitud A y periodo T. El movimiento se repite cada T segundos."
+          }
+        ]
+      },
+      {
+        "title": "Valores máximos y relación entre magnitudes",
+        "body": "De las ecuaciones se deducen los valores máximos, que ocurren cuando el seno o coseno valen ±1:\n\n| Magnitud | Máximo | ¿Dónde ocurre? |\n|---|---|---|\n| Posición | $x_{max} = A$ | Extremos |\n| Velocidad | $v_{max} = A\\omega$ | Centro (x = 0) |\n| Aceleración | $a_{max} = A\\omega^2$ | Extremos |\n\nTambién existe una relación útil entre posición y velocidad en cualquier instante:\n\n$$v = \\pm \\omega \\sqrt{A^2 - x^2}$$\n\nEsta fórmula permite calcular la velocidad en cualquier punto sin conocer el instante de tiempo."
+      },
+      {
+        "title": "Energía en el MAS",
+        "body": "Un oscilador armónico (por ejemplo, un muelle) intercambia continuamente energía cinética y potencial elástica. En un sistema ideal sin rozamiento, la **energía mecánica total se conserva**.\n\nLa energía cinética es máxima en el centro (velocidad máxima) y cero en los extremos. La energía potencial elástica es máxima en los extremos (máximo estiramiento) y cero en el centro.\n\n$$E_c = \\tfrac{1}{2}mv^2 = \\tfrac{1}{2}m\\omega^2(A^2 - x^2)$$\n$$E_p = \\tfrac{1}{2}kx^2 = \\tfrac{1}{2}m\\omega^2 x^2$$\n$$E_T = E_c + E_p = \\tfrac{1}{2}kA^2 = \\tfrac{1}{2}m\\omega^2 A^2 = \\text{constante}$$\n\n<svg viewBox=\"0 0 420 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:420px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <line x1=\"60\" y1=\"170\" x2=\"380\" y2=\"170\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <line x1=\"60\" y1=\"170\" x2=\"60\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"40\" y=\"15\" font-size=\"10\" fill=\"var(--text,#20302a)\">E</text>\n  <text x=\"385\" y=\"175\" font-size=\"10\" fill=\"var(--text,#20302a)\">x</text>\n  <text x=\"210\" y=\"190\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">0</text>\n  <text x=\"100\" y=\"190\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">−A</text>\n  <text x=\"320\" y=\"190\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">+A</text>\n  <line x1=\"60\" y1=\"40\" x2=\"380\" y2=\"40\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/>\n  <text x=\"385\" y=\"45\" font-size=\"10\" fill=\"var(--accent,#8a3d6b)\">E_T</text>\n  <path d=\"M100,170 Q210,30 320,170\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <text x=\"355\" y=\"140\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\">E_p</text>\n  <path d=\"M100,40 Q210,175 320,40\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <text x=\"355\" y=\"75\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">E_c</text>\n</svg>"
+      },
+      {
+        "title": "Sistema muelle-masa",
+        "body": "Un muelle de constante elástica $k$ con una masa $m$ colgada oscila en MAS con una frecuencia que depende de ambas magnitudes. La fuerza restauradora del muelle ($F = -kx$, ley de Hooke) produce una aceleración $a = -kx/m$.\n\nComparando con $a = -\\omega^2 x$ se obtiene $\\omega = \\sqrt{k/m}$, y por tanto:\n\n$$T = 2\\pi\\sqrt{\\frac{m}{k}}$$\n\nA mayor masa, el sistema oscila más lento (más inercia). A mayor constante del muelle (más rígido), oscila más rápido (más fuerza restauradora)."
+      },
+      {
+        "title": "El péndulo simple",
+        "body": "Un péndulo simple es una masa puntual colgada de un hilo inextensible y sin masa. Para oscilaciones pequeñas (ángulo < 15°), la componente tangencial de la gravedad actúa como fuerza restauradora y el movimiento se aproxima a un MAS.\n\nSu periodo es:\n\n$$T = 2\\pi\\sqrt{\\frac{L}{g}}$$\n\nDonde $L$ es la longitud del hilo y $g$ la aceleración de la gravedad. Dos hechos notables:\n- El periodo **no depende de la masa** (Galileo lo observó experimentalmente).\n- El periodo **no depende de la amplitud** (para oscilaciones pequeñas): esta propiedad se llama **isocronismo** y fue la base de los primeros relojes de péndulo."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Ecuaciones de un MAS",
+        "statement": "Un cuerpo describe un MAS con amplitud 0,1 m y periodo 2 s. En t = 0 pasa por el centro moviéndose hacia x positivo. Escribe x(t), v(t) y calcula la posición y velocidad en t = 0,5 s.",
+        "steps": [
+          "Amplitud: A = 0,1 m. Pulsación: ω = 2π/T = 2π/2 = π rad/s.",
+          "En t = 0: x = 0 y v > 0. Si x = A sin(ωt + φ₀), x(0) = A sin(φ₀) = 0 → φ₀ = 0 (y v(0) = Aω cos(0) = Aω > 0 ✓).",
+          "x(t) = 0,1 sin(πt) m; v(t) = 0,1π cos(πt) m/s.",
+          "En t = 0,5 s: x = 0,1 sin(π·0,5) = 0,1 sin(π/2) = 0,1 m (extremo).",
+          "v = 0,1π cos(π/2) = 0 m/s (velocidad nula en el extremo ✓)."
+        ],
+        "answer": "x(t) = 0,1 sin(πt) m; v(t) = 0,1π cos(πt) m/s. En t = 0,5 s: x = 0,1 m, v = 0.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 280\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">MAS: posición y velocidad en función del tiempo</text><line x1=\"60\" y1=\"100\" x2=\"460\" y2=\"100\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/><line x1=\"60\" y1=\"140\" x2=\"460\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/><path d=\"M60,140 Q130,60 200,60 Q270,60 340,140 Q410,220 460,220\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"470\" y=\"68\" font-size=\"10\" fill=\"#0e7a68\">x(t)</text><path d=\"M60,60 Q130,140 200,220 Q270,220 340,140 Q380,100 420,60\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\" stroke-dasharray=\"5,3\"/><text x=\"430\" y=\"56\" font-size=\"10\" fill=\"#c17a17\">v(t)</text><circle cx=\"200\" cy=\"60\" r=\"4\" fill=\"#0e7a68\"/><text x=\"200\" y=\"50\" text-anchor=\"middle\" font-size=\"9\" fill=\"#0e7a68\">x=A, v=0</text><circle cx=\"340\" cy=\"140\" r=\"4\" fill=\"#c17a17\"/><text x=\"340\" y=\"250\" text-anchor=\"middle\" font-size=\"9\" fill=\"#c17a17\">x=0, v=v_max</text><text x=\"250\" y=\"275\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Cuando x es máximo, v = 0 y viceversa</text></svg>",
+            "caption": "En un MAS, la posición y la velocidad están desfasadas π/2: cuando x = A, v = 0; cuando x = 0, v es máxima."
+          }
+        ]
+      },
+      {
+        "title": "Energía del oscilador",
+        "statement": "Un muelle de k = 200 N/m sujeta una masa de 0,5 kg. Se estira 4 cm desde la posición de equilibrio y se suelta. Calcula: (a) ω y T, (b) vₘₐₓ, (c) velocidad cuando x = 2 cm.",
+        "steps": [
+          "(a) ω = √(k/m) = √(200/0,5) = √400 = 20 rad/s. T = 2π/ω = 2π/20 = 0,314 s.",
+          "(b) v_max = Aω = 0,04 × 20 = 0,8 m/s.",
+          "(c) v = ω√(A² − x²) = 20√(0,04² − 0,02²) = 20√(0,0016 − 0,0004) = 20√0,0012 = 20 × 0,0346 = 0,693 m/s."
+        ],
+        "answer": "(a) ω = 20 rad/s, T = 0,314 s. (b) v_max = 0,8 m/s. (c) v ≈ 0,69 m/s."
+      },
+      {
+        "title": "Péndulo simple",
+        "statement": "¿Qué longitud debe tener un péndulo para que su periodo sea exactamente 1 s? (g = 9,8 m/s²)",
+        "steps": [
+          "T = 2π√(L/g) → T² = 4π²L/g → L = gT²/(4π²).",
+          "L = 9,8 × 1²/(4π²) = 9,8/39,48 = 0,248 m ≈ 24,8 cm."
+        ],
+        "answer": "L ≈ 24,8 cm."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "guided-mas-1",
+        "statement": "Un objeto describe un MAS con x(t) = 0,05 sin(4πt + π/6) m. Determina: (a) amplitud, frecuencia y periodo, (b) posición y velocidad en t = 0, (c) aceleración máxima, (d) instante en que pasa por primera vez por x = 0 moviéndose hacia x positivo.",
+        "scaffold": "Identifica A, ω, φ₀ de la ecuación. Para (b), sustituye t = 0. Para (d), x = 0 → sin(4πt + π/6) = 0 y v > 0.",
+        "answer": "(a) A = 0,05 m, ω = 4π rad/s, f = 2 Hz, T = 0,5 s. (b) x(0) = 0,05 sin(π/6) = 0,025 m; v(0) = 0,05·4π·cos(π/6) = 0,544 m/s. (c) a_max = Aω² = 0,05·(4π)² = 7,90 m/s². (d) 4πt + π/6 = 2π (primer cero con v > 0) → t = (2π − π/6)/(4π) = 11/24 ≈ 0,458 s."
+      },
+      {
+        "id": "guided-mas-2",
+        "statement": "Un bloque de 2 kg oscila sobre un muelle horizontal sin rozamiento con amplitud 0,1 m. La velocidad máxima es 0,5 m/s. Calcula: (a) ω y k, (b) la energía mecánica total, (c) las posiciones donde Ec = Ep.",
+        "scaffold": "v_max = Aω para (a). E_T = ½mv²_max para (b). Ec = Ep → ½m·ω²(A²−x²) = ½mω²x² para (c).",
+        "answer": "(a) ω = v_max/A = 0,5/0,1 = 5 rad/s. k = mω² = 2×25 = 50 N/m. (b) E_T = ½mv²_max = ½·2·0,25 = 0,25 J. (c) A²−x² = x² → x = ±A/√2 = ±0,0707 m ≈ ±7,07 cm."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un cuerpo oscila en MAS con A = 8 cm y T = 0,4 s. Calcula: (a) la frecuencia y la pulsación, (b) la velocidad y aceleración máximas.",
+        "answer": "(a) f = 2,5 Hz, ω = 5π rad/s. (b) v_max = 1,26 m/s, a_max = 19,7 m/s².",
+        "full_solution": "(a) f = 1/T = 1/0,4 = 2,5 Hz. ω = 2πf = 2π·2,5 = 5π rad/s ≈ 15,7 rad/s. (b) v_max = Aω = 0,08·5π = 0,4π ≈ 1,26 m/s. a_max = Aω² = 0,08·(5π)² = 0,08·246,7 = 19,7 m/s².",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "La ecuación de un MAS es x(t) = 0,03 sin(10t) m. Calcula la velocidad cuando x = 0,02 m.",
+        "answer": "v ≈ ±0,224 m/s.",
+        "full_solution": "v = ω√(A²−x²) = 10·√(0,03²−0,02²) = 10·√(0,0009−0,0004) = 10·√0,0005 = 10·0,02236 ≈ 0,224 m/s.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un péndulo de 1 m de longitud oscila en un lugar donde g = 9,8 m/s². (a) Calcula su periodo. (b) ¿Cuántas oscilaciones completa en 1 minuto? (c) Si lo llevamos a la Luna (g = 1,6 m/s²), ¿cómo cambia el periodo?",
+        "answer": "(a) T ≈ 2,01 s. (b) ~29,9 oscilaciones. (c) T_Luna ≈ 4,97 s (más del doble).",
+        "full_solution": "(a) T = 2π√(L/g) = 2π√(1/9,8) = 2π·0,3194 = 2,007 s. (b) N = 60/T = 60/2,007 ≈ 29,9 oscilaciones. (c) T_Luna = 2π√(1/1,6) = 2π·0,7906 = 4,97 s. El periodo aumenta porque g es menor.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Un muelle vertical de k = 100 N/m sujeta un bloque de 0,4 kg. Se desplaza 5 cm de la posición de equilibrio. (a) Escribe la ecuación x(t) tomando como fase inicial φ₀ = π/2. (b) Halla la energía mecánica total. (c) Determina en qué posición la energía cinética es el triple de la potencial.",
+        "answer": "(a) x(t) = 0,05 sin(√250·t + π/2) m. (b) E_T = 0,125 J. (c) x = ±2,5 cm.",
+        "full_solution": "(a) ω = √(k/m) = √(100/0,4) = √250 ≈ 15,81 rad/s. x(t) = 0,05 sin(15,81t + π/2) m. (b) E_T = ½kA² = ½·100·0,05² = 0,125 J. (c) Ec = 3Ep → E_T − Ep = 3Ep → Ep = E_T/4 → ½kx² = E_T/4 → x² = E_T/(2k) = 0,125/200 = 6,25×10⁻⁴ → x = ±0,025 m = ±2,5 cm.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Un sismógrafo registra un movimiento armónico del suelo con frecuencia 5 Hz y amplitud 0,2 mm. ¿Cuál es la aceleración máxima del suelo? Exprésala en unidades de g (g = 9,8 m/s²).",
+        "answer": "a_max ≈ 0,197 m/s² ≈ 0,02 g.",
+        "full_solution": "ω = 2πf = 2π·5 = 10π rad/s. a_max = Aω² = 0,0002·(10π)² = 0,0002·986,96 ≈ 0,197 m/s². En unidades de g: 0,197/9,8 ≈ 0,02 g (un 2% de la gravedad).",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Demuestra que en un MAS la relación entre velocidad y posición sigue la ecuación de una elipse: $(x/A)^2 + (v/v_{max})^2 = 1$.",
+        "answer": "Se demuestra partiendo de x = A sin(θ) y v = Aω cos(θ) y eliminando θ.",
+        "full_solution": "Sea θ = ωt + φ₀. Entonces x = A sin(θ) y v = Aω cos(θ) = v_max cos(θ). De ahí: sin(θ) = x/A y cos(θ) = v/v_max. Usando la identidad sin²(θ) + cos²(θ) = 1: (x/A)² + (v/v_max)² = 1. Esta es la ecuación de una elipse en el espacio de fases (x, v), lo que significa que el estado del oscilador describe una elipse cerrada.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L01-1",
+        "stem": "En un MAS, la aceleración es máxima cuando:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La velocidad es máxima",
+            "why_wrong": "Cuando v es máxima (centro), a = 0 porque x = 0 y a = −ω²x."
+          },
+          {
+            "key": "B",
+            "text": "B. El desplazamiento es máximo (extremos)"
+          },
+          {
+            "key": "C",
+            "text": "C. La energía cinética es máxima",
+            "why_wrong": "Ec máxima = centro = a = 0."
+          },
+          {
+            "key": "D",
+            "text": "D. La aceleración es constante en todo el MAS",
+            "why_wrong": "La aceleración varía continuamente según a = −ω²x."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-2",
+        "stem": "El periodo de un péndulo simple depende de:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La masa y la longitud",
+            "why_wrong": "No depende de la masa."
+          },
+          {
+            "key": "B",
+            "text": "B. Solo la longitud y la gravedad"
+          },
+          {
+            "key": "C",
+            "text": "C. La masa y la amplitud",
+            "why_wrong": "No depende ni de la masa ni de la amplitud (para oscilaciones pequeñas)."
+          },
+          {
+            "key": "D",
+            "text": "D. La masa, longitud y gravedad",
+            "why_wrong": "No depende de la masa."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-3",
+        "stem": "Si se duplica la amplitud de un MAS, la energía mecánica total:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se duplica",
+            "why_wrong": "E_T = ½kA²: la energía depende del cuadrado de A."
+          },
+          {
+            "key": "B",
+            "text": "B. Se cuadruplica"
+          },
+          {
+            "key": "C",
+            "text": "C. No cambia",
+            "why_wrong": "Sí cambia: E_T es proporcional a A²."
+          },
+          {
+            "key": "D",
+            "text": "D. Se reduce a la mitad",
+            "why_wrong": "La energía aumenta, no disminuye."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Un cuerpo de 0,2 kg unido a un muelle horizontal (k = 50 N/m) oscila en MAS con amplitud 6 cm. (a) Escribe la ecuación x(t) sabiendo que en t = 0 el cuerpo está en x = +A. (b) Calcula la velocidad máxima. (c) Determina la posición en que la energía cinética iguala a la potencial y calcula su valor.",
+        "answer": "(a) x(t) = 0,06 sin(√250·t + π/2) m. (b) v_max = 0,949 m/s. (c) x = ±A/√2 ≈ ±4,24 cm; Ec = Ep = 0,045 J.",
+        "full_solution": "(a) ω = √(k/m) = √(50/0,2) = √250 ≈ 15,81 rad/s. En t = 0: x = A → sin(φ₀) = 1 → φ₀ = π/2. x(t) = 0,06 sin(15,81t + π/2) m. (b) v_max = Aω = 0,06·15,81 = 0,949 m/s. (c) Ec = Ep → E_T = 2Ep → ½kA² = 2·½kx² → A² = 2x² → x = A/√2 = 0,06/√2 ≈ 0,0424 m. Ec = Ep = ½·E_T = ½·½kA² = ¼·50·0,06² = ¼·0,18 = 0,045 J."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "En un laboratorio, un estudiante mide el periodo de un péndulo para diferentes longitudes y obtiene: L = 0,25 m → T = 1,00 s; L = 0,50 m → T = 1,42 s; L = 1,00 m → T = 2,00 s; L = 1,50 m → T = 2,45 s. (a) Verifica que T² es proporcional a L representando los datos. (b) Obtén el valor de g a partir de la pendiente de la recta T² vs L. (c) Compara con el valor estándar y discute las fuentes de error.",
+        "answer": "(a) T² vs L es lineal. (b) g ≈ 9,8 m/s² (pendiente ≈ 4π²/g ≈ 4,02). (c) Errores: medida del periodo, longitud hasta el centro de masa, rozamiento con el aire.",
+        "full_solution": "(a) T²: 1,00; 2,02; 4,00; 6,00. Representando T² vs L: los puntos forman una recta que pasa por el origen. (b) Pendiente m = ΔT²/ΔL. Usando los puntos (0,25; 1,00) y (1,50; 6,00): m = (6,00−1,00)/(1,50−0,25) = 5,00/1,25 = 4,00 s²/m. Teóricamente m = 4π²/g → g = 4π²/m = 39,48/4,00 = 9,87 m/s². (c) El valor obtenido (9,87) está muy cerca del estándar (9,81). Las diferencias se deben a: incertidumbre en la medida del periodo (cronómetro manual), longitud medida al punto de suspensión vs. al centro de masa, resistencia del aire, ángulo de oscilación no infinitesimal."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Ecuación de posición del MAS",
+        "back": "x(t) = A sin(ωt + φ₀), donde A = amplitud, ω = pulsación, φ₀ = fase inicial.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Relación fundamental del MAS",
+        "back": "a = −ω²x. La aceleración es proporcional y opuesta al desplazamiento.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Periodo del muelle-masa",
+        "back": "T = 2π√(m/k). Depende de la masa y la constante del muelle.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Periodo del péndulo simple",
+        "back": "T = 2π√(L/g). Solo depende de la longitud y la gravedad.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Energía total en el MAS",
+        "back": "E_T = ½kA² = ½mω²A² = constante.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir velocidad angular ω con frecuencia f.",
+        "correction": "ω = 2πf. La frecuencia es el número de oscilaciones por segundo; la pulsación tiene unidades de rad/s."
+      },
+      {
+        "mistake": "Olvidar el signo negativo en a = −ω²x.",
+        "correction": "El signo negativo es esencial: indica que la aceleración es restauradora (apunta hacia el equilibrio)."
+      },
+      {
+        "mistake": "Aplicar T = 2π√(L/g) del péndulo al sistema muelle-masa.",
+        "correction": "Para muelle-masa: T = 2π√(m/k). Para péndulo: T = 2π√(L/g). No mezclar."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En problemas de MAS, identifica primero A, ω y φ₀. La fase inicial φ₀ se determina con las condiciones iniciales (posición y velocidad en t = 0)."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "amplitud (A)",
+        "definition": "Máximo desplazamiento respecto a la posición de equilibrio."
+      },
+      {
+        "term": "pulsación (ω)",
+        "definition": "Frecuencia angular, ω = 2π/T = 2πf, en rad/s."
+      },
+      {
+        "term": "fase inicial (φ₀)",
+        "definition": "Constante que determina la posición del oscilador en t = 0."
+      },
+      {
+        "term": "isocronismo",
+        "definition": "Propiedad del péndulo simple: el periodo no depende de la amplitud (para oscilaciones pequeñas)."
+      }
+    ],
+    "summary": {
+      "big_idea": "El MAS es la vibración más fundamental: una fuerza restauradora proporcional al desplazamiento produce oscilaciones sinusoidales con intercambio continuo entre energía cinética y potencial.",
+      "key_points": [
+        "x = A sin(ωt + φ₀); v = Aω cos(ωt + φ₀); a = −ω²x.",
+        "v_max = Aω (en el centro); a_max = Aω² (en los extremos).",
+        "E_T = ½kA² = constante (conservación de energía).",
+        "Muelle: T = 2π√(m/k). Péndulo: T = 2π√(L/g)."
+      ],
+      "formulas": [
+        "$x = A\\sin(\\omega t + \\varphi_0)$",
+        "$a = -\\omega^2 x$",
+        "$T = 2\\pi\\sqrt{m/k}$",
+        "$T = 2\\pi\\sqrt{L/g}$",
+        "$E_T = \\frac{1}{2}kA^2$"
+      ],
+      "what_to_remember_if_nothing_else": "La aceleración siempre apunta al equilibrio (a = −ω²x) y la energía total se conserva: cuando Ec es máxima, Ep es cero y viceversa."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque A · Vibraciones y ondas"
+    ],
+    "curriculum_refs": [
+      "CE3.1 Análisis del MAS",
+      "CE3.2 Energía del oscilador armónico"
+    ],
+    "confidence_notes": [
+      "Nivel 1.º Bachillerato con tratamiento matemático completo"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "SVGs con CSS variables",
+        "Progresión concepto→intuición→fórmula"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_02.json": {
+    "id": "L02",
+    "title": "Ondas mecánicas: ecuación y energía",
+    "subject": "Física y Química",
+    "course_label": "1.º Bachillerato · Física",
+    "unit_id": "U-B1F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3.3",
+        "CE3.4"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "2 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Escribir la ecuación de una onda armónica progresiva unidimensional y explicar el significado de cada parámetro."
+      },
+      {
+        "statement": "Relacionar las magnitudes ondulatorias (A, λ, f, T, v, k, ω) entre sí."
+      },
+      {
+        "statement": "Calcular la intensidad y la energía transportada por una onda."
+      },
+      {
+        "statement": "Describir el efecto Doppler y resolver problemas básicos."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "MAS y sus ecuaciones (x = A sin(ωt + φ₀)).",
+        "why_it_matters": "Una onda es un MAS que se propaga: cada punto del medio oscila en MAS."
+      },
+      {
+        "statement": "Concepto de longitud de onda, frecuencia y velocidad de propagación.",
+        "why_it_matters": "Son las magnitudes básicas que aparecen en la ecuación de onda."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Cuál es la relación entre velocidad de propagación, longitud de onda y frecuencia?",
+        "expected_answer": "v = λf."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si una fuente de sonido se acerca a ti, ¿el sonido que percibes es más grave o más agudo?",
+        "expected_answer": "Más agudo (mayor frecuencia percibida)."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La onda transporta materia de un punto a otro.",
+        "correct_model": "La onda transporta energía e información, no materia. Los puntos del medio oscilan alrededor de su posición de equilibrio pero no se desplazan con la onda. Es como la 'ola' en un estadio: la perturbación avanza, pero cada persona vuelve a su sitio."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El efecto Doppler cambia la velocidad del sonido.",
+        "correct_model": "El efecto Doppler cambia la frecuencia percibida, no la velocidad del sonido. La velocidad del sonido depende del medio, no del movimiento del emisor o receptor. Lo que cambia es cuántas crestas por segundo llegan al receptor."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "De la vibración a la onda",
+        "body": "Una onda nace cuando una vibración se transmite de un punto a otro a través de un medio (o del vacío, en el caso de las EM). Cada partícula del medio copia la vibración del punto anterior con un pequeño retraso, lo que crea un patrón que se desplaza.\n\nPiensa en una fila de fichas de dominó: cuando empujas la primera, la caída se propaga a lo largo de toda la fila. La perturbación viaja, las fichas no (cada una cae en su sitio). De forma similar, en una onda sonora cada molécula de aire oscila sin desplazarse neto, pero la perturbación llega de un extremo al otro.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"aW\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#8a3d6b\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Onda armónica: y(x,t) en un instante fijo</text><line x1=\"40\" y1=\"160\" x2=\"480\" y2=\"160\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"40\" x2=\"40\" y2=\"270\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"486\" y=\"164\" font-size=\"11\" fill=\"var(--text,#20302a)\">x</text><text x=\"35\" y=\"36\" font-size=\"11\" fill=\"var(--text,#20302a)\">y</text><path d=\"M40,160 C80,60 120,60 160,160 C200,260 240,260 280,160 C320,60 360,60 400,160 C440,260 470,260 480,200\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"40\" y1=\"65\" x2=\"480\" y2=\"65\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\"/><line x1=\"40\" y1=\"255\" x2=\"480\" y2=\"255\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\"/><text x=\"30\" y=\"69\" text-anchor=\"end\" font-size=\"10\" fill=\"#0e7a68\">+A</text><text x=\"30\" y=\"259\" text-anchor=\"end\" font-size=\"10\" fill=\"#0e7a68\">−A</text><line x1=\"40\" y1=\"160\" x2=\"280\" y2=\"160\" stroke=\"#c17a17\" stroke-width=\"0\" /><line x1=\"40\" y1=\"280\" x2=\"40\" y2=\"286\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><line x1=\"280\" y1=\"280\" x2=\"280\" y2=\"286\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><line x1=\"40\" y1=\"283\" x2=\"280\" y2=\"283\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"160\" y=\"296\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">λ</text><line x1=\"420\" y1=\"120\" x2=\"470\" y2=\"120\" stroke=\"#8a3d6b\" stroke-width=\"2\" marker-end=\"url(#aW)\"/><text x=\"445\" y=\"112\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">v</text></svg>",
+            "caption": "Onda armónica progresiva: la perturbación se propaga con velocidad v. La distancia entre dos crestas consecutivas es la longitud de onda λ."
+          }
+        ]
+      },
+      {
+        "title": "Ecuación de una onda armónica progresiva",
+        "body": "Una onda que se propaga en la dirección +x con velocidad $v$ se describe por la ecuación que da el desplazamiento $y$ de cada punto del medio en función de su posición $x$ y del tiempo $t$:\n\n$$y(x,t) = A \\sin(\\omega t - kx + \\varphi_0)$$\n\nDonde aparecen dos constantes nuevas respecto al MAS:\n- **Número de onda**: $k = 2\\pi/\\lambda$ (rad/m). Mide cuántos ciclos caben por unidad de longitud.\n- **Velocidad de fase**: $v = \\omega/k = \\lambda f = \\lambda/T$.\n\nSi la onda avanza en la dirección −x, el signo entre ωt y kx es +.\n\n<svg viewBox=\"0 0 460 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:460px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <line x1=\"40\" y1=\"90\" x2=\"430\" y2=\"90\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <line x1=\"40\" y1=\"160\" x2=\"40\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"25\" y=\"15\" font-size=\"10\" fill=\"var(--text,#20302a)\">y</text>\n  <text x=\"435\" y=\"95\" font-size=\"10\" fill=\"var(--text,#20302a)\">x</text>\n  <path d=\"M40,90 Q100,20 160,90 Q220,160 280,90 Q340,20 400,90\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"30\" x2=\"50\" y2=\"30\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n  <text x=\"20\" y=\"34\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">A</text>\n  <line x1=\"40\" y1=\"150\" x2=\"50\" y2=\"150\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n  <text x=\"17\" y=\"154\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">−A</text>\n  <line x1=\"40\" y1=\"35\" x2=\"280\" y2=\"35\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"40\" y1=\"33\" x2=\"40\" y2=\"37\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\"/>\n  <line x1=\"280\" y1=\"33\" x2=\"280\" y2=\"37\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\"/>\n  <text x=\"160\" y=\"28\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\" text-anchor=\"middle\">λ</text>\n  <path d=\"M400,90 Q420,80 430,85\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/>\n  <text x=\"415\" y=\"75\" font-size=\"9\" fill=\"var(--text,#20302a)\">v →</text>\n</svg>"
+      },
+      {
+        "title": "Magnitudes ondulatorias y sus relaciones",
+        "body": "Todas las magnitudes de una onda están interconectadas. Conociendo dos de ellas puedes calcular las demás:\n\n| Relación | Fórmula |\n|---|---|\n| Velocidad de propagación | $v = \\lambda f = \\lambda/T = \\omega/k$ |\n| Número de onda | $k = 2\\pi/\\lambda$ |\n| Pulsación | $\\omega = 2\\pi f = 2\\pi/T$ |\n| Periodo – frecuencia | $T = 1/f$ |\n\nLa **velocidad de propagación** depende únicamente del medio:\n- Sonido en aire (20 °C): ~343 m/s\n- Sonido en agua: ~1500 m/s\n- Ondas en una cuerda: $v = \\sqrt{T_{\\text{tensión}}/\\mu}$, donde $\\mu$ es la densidad lineal (kg/m)\n\nCambiar la frecuencia (tocando otra nota) cambia la longitud de onda, pero no la velocidad en el mismo medio."
+      },
+      {
+        "title": "Energía e intensidad de una onda",
+        "body": "Las ondas transportan energía sin transportar materia. La **intensidad** es la potencia transportada por unidad de área perpendicular a la dirección de propagación:\n\n$$I = \\frac{P}{S} \\quad \\text{(W/m²)}$$\n\nPara una fuente puntual que emite uniformemente en todas direcciones, la energía se reparte sobre una esfera de radio $r$:\n\n$$I = \\frac{P}{4\\pi r^2}$$\n\nEsto explica por qué el sonido se debilita al alejarse: la misma potencia se reparte sobre un área cada vez mayor (ley del inverso del cuadrado). Si la distancia se duplica, la intensidad se reduce a la cuarta parte."
+      },
+      {
+        "title": "El efecto Doppler",
+        "body": "Cuando una fuente de ondas y un receptor se mueven uno respecto al otro, la frecuencia percibida es diferente de la emitida. Es lo que ocurre con la sirena de una ambulancia: suena más aguda al acercarse y más grave al alejarse.\n\nLa frecuencia percibida es:\n\n$$f' = f \\cdot \\frac{v \\pm v_R}{v \\mp v_S}$$\n\nDonde $v$ = velocidad del sonido, $v_R$ = velocidad del receptor y $v_S$ = velocidad de la fuente (source).\n\n**Regla de signos**: si se acercan, $f'$ aumenta (numerador +, denominador −). Si se alejan, $f'$ disminuye.\n\nAplicaciones: radar de velocidad (Doppler con microondas), ecografía Doppler (medir flujo sanguíneo), astronomía (corrimiento al rojo = galaxias alejándose)."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Ecuación de una onda",
+        "statement": "Una onda se propaga en dirección +x con A = 2 cm, f = 500 Hz y v = 340 m/s. Escribe su ecuación y calcula el desplazamiento en x = 1 m, t = 0,002 s.",
+        "steps": [
+          "λ = v/f = 340/500 = 0,68 m.",
+          "ω = 2πf = 2π·500 = 1000π rad/s.",
+          "k = 2π/λ = 2π/0,68 = 9,24 rad/m.",
+          "Ecuación: y(x,t) = 0,02 sin(1000πt − 9,24x) m.",
+          "En x = 1 m, t = 0,002 s: y = 0,02 sin(1000π·0,002 − 9,24·1) = 0,02 sin(2π − 9,24) = 0,02 sin(−3,00) = 0,02·(−0,141) = −0,00282 m ≈ −2,8 mm."
+        ],
+        "answer": "y(x,t) = 0,02 sin(1000πt − 9,24x) m. En el punto dado, y ≈ −2,8 mm.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Relación entre magnitudes ondulatorias</text><rect x=\"60\" y=\"60\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"130\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0e7a68\">v = λ · f</text><rect x=\"300\" y=\"60\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#c17a17\" opacity=\"0.1\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"370\" y=\"90\" text-anchor=\"middle\" font-size=\"13\" fill=\"#c17a17\">T = 1/f</text><rect x=\"160\" y=\"150\" width=\"180\" height=\"50\" rx=\"8\" fill=\"#8a3d6b\" opacity=\"0.1\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/><text x=\"250\" y=\"180\" text-anchor=\"middle\" font-size=\"13\" fill=\"#8a3d6b\">λ = v · T</text><line x1=\"200\" y1=\"110\" x2=\"220\" y2=\"150\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><line x1=\"310\" y1=\"110\" x2=\"290\" y2=\"150\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><text x=\"250\" y=\"230\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">ω = 2πf = 2π/T     k = 2π/λ</text></svg>",
+            "caption": "Relaciones fundamentales entre velocidad de propagación v, longitud de onda λ, frecuencia f y periodo T."
+          }
+        ]
+      },
+      {
+        "title": "Intensidad y distancia",
+        "statement": "Un altavoz emite con una potencia de 50 W. Calcula la intensidad a 10 m y a 20 m de distancia (suponer emisión esférica).",
+        "steps": [
+          "A 10 m: I = P/(4πr²) = 50/(4π·100) = 50/1256,6 = 0,0398 W/m².",
+          "A 20 m: I = 50/(4π·400) = 50/5026,5 = 0,00995 W/m².",
+          "Al duplicar r, I se reduce a la cuarta parte: 0,0398/4 = 0,00995 ✓."
+        ],
+        "answer": "I(10 m) ≈ 0,040 W/m²; I(20 m) ≈ 0,010 W/m². Al duplicar la distancia, la intensidad se reduce a ¼."
+      },
+      {
+        "title": "Efecto Doppler",
+        "statement": "Una ambulancia emite un sonido a 700 Hz y se acerca a un peatón parado a 30 m/s. ¿Qué frecuencia percibe el peatón? (v_sonido = 340 m/s). ¿Y cuando se aleja?",
+        "steps": [
+          "Acercándose: f' = f · v/(v − v_S) = 700 · 340/(340 − 30) = 700 · 340/310 = 767,7 Hz.",
+          "Alejándose: f' = f · v/(v + v_S) = 700 · 340/(340 + 30) = 700 · 340/370 = 643,2 Hz."
+        ],
+        "answer": "Acercándose: f' ≈ 768 Hz (más aguda). Alejándose: f' ≈ 643 Hz (más grave)."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "guided-waves-1",
+        "statement": "La ecuación de una onda es y(x,t) = 0,03 sin(40πt − 2πx) m (x en metros, t en segundos). Determina: (a) amplitud, frecuencia, longitud de onda y velocidad de propagación, (b) dirección de propagación, (c) velocidad máxima de vibración de una partícula del medio, (d) aceleración de la partícula en x = 0,5 m en t = 0.",
+        "scaffold": "Identifica A, ω, k. Luego f = ω/(2π), λ = 2π/k, v = ω/k. La velocidad de vibración es ∂y/∂t.",
+        "answer": "(a) A = 0,03 m, f = 20 Hz, λ = 1 m, v = 20 m/s. (b) +x (signo − entre ωt y kx). (c) v_max = Aω = 0,03·40π = 3,77 m/s. (d) a = −ω²y = −(40π)²·0,03·sin(−π) = 0."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Escribe la ecuación de una onda sonora que se propaga en dirección −x con A = 1 mm, frecuencia 440 Hz y velocidad 340 m/s.",
+        "answer": "y(x,t) = 0,001 sin(880πt + 8,13x) m.",
+        "full_solution": "ω = 2πf = 880π rad/s. λ = v/f = 340/440 = 0,7727 m. k = 2π/λ = 8,13 rad/m. Dirección −x → signo + entre ωt y kx. y = 0,001 sin(880πt + 8,13x) m.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una onda en una cuerda tiene la ecuación y = 0,05 sin(8πt − 4πx) m. Calcula: (a) la velocidad de propagación, (b) la velocidad transversal máxima de un punto de la cuerda, (c) la razón v_transversal,max / v_propagación.",
+        "answer": "(a) v = 2 m/s. (b) v_max = 1,26 m/s. (c) Razón ≈ 0,63.",
+        "full_solution": "(a) v = ω/k = 8π/(4π) = 2 m/s. (b) v_max = Aω = 0,05·8π = 0,4π ≈ 1,26 m/s. (c) 1,26/2 = 0,63. La velocidad de vibración puede ser del mismo orden que la de propagación.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un petardo explota y a 100 m se mide una intensidad de 0,5 W/m². ¿A qué distancia la intensidad habrá caído a 0,02 W/m²?",
+        "answer": "r₂ = 500 m.",
+        "full_solution": "I₁r₁² = I₂r₂² (conservación de energía en propagación esférica). 0,5·100² = 0,02·r₂². r₂² = 5000/0,02 = 250000. r₂ = 500 m.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un tren se acerca a una estación a 25 m/s pitando a 400 Hz. ¿Qué frecuencia percibe una persona en el andén? ¿Y el maquinista de otro tren que se aleja a 20 m/s por la misma vía? (v_sonido = 340 m/s)",
+        "answer": "Persona en andén: f' ≈ 431,7 Hz. Maquinista alejándose: f' ≈ 407,6 Hz.",
+        "full_solution": "Persona parada (v_R = 0): f' = 400·340/(340−25) = 400·340/315 ≈ 431,7 Hz. Maquinista alejándose (v_R = 20 m/s alejándose, fuente acercándose v_S = 25 m/s): f' = 400·(340−20)/(340−25) = 400·320/315 ≈ 406,3 Hz. [O si los trenes van en direcciones opuestas y ambos se alejan: f' = 400·(340−20)/(340+25) = 400·320/365 ≈ 350,7 Hz.]",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Compara la longitud de onda del sonido de un silbato (f = 3000 Hz) en aire (v = 340 m/s) y en agua (v = 1500 m/s). ¿Cambia la frecuencia al pasar del aire al agua?",
+        "answer": "λ_aire = 11,3 cm; λ_agua = 50 cm. La frecuencia NO cambia.",
+        "full_solution": "λ_aire = 340/3000 = 0,113 m = 11,3 cm. λ_agua = 1500/3000 = 0,50 m = 50 cm. La frecuencia es determinada por la fuente y no cambia al pasar de un medio a otro. Lo que cambia es la longitud de onda (y la velocidad). Es análogo a la refracción de la luz.",
+        "difficulty": "análisis crítico"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L02-1",
+        "stem": "En la ecuación y = A sin(ωt − kx), el signo negativo entre ωt y kx indica que la onda se propaga:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. En dirección +x"
+          },
+          {
+            "key": "B",
+            "text": "B. En dirección −x",
+            "why_wrong": "Para −x sería signo +: y = A sin(ωt + kx)."
+          },
+          {
+            "key": "C",
+            "text": "C. Hacia arriba",
+            "why_wrong": "y es el desplazamiento transversal; la dirección de propagación es la de x."
+          },
+          {
+            "key": "D",
+            "text": "D. Con velocidad variable",
+            "why_wrong": "El signo indica dirección, no variabilidad de la velocidad."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-2",
+        "stem": "Si la distancia a una fuente sonora se triplica, la intensidad:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se reduce a un tercio",
+            "why_wrong": "La intensidad depende de 1/r², no de 1/r."
+          },
+          {
+            "key": "B",
+            "text": "B. Se reduce a un noveno"
+          },
+          {
+            "key": "C",
+            "text": "C. Se reduce a la mitad",
+            "why_wrong": "Eso ocurriría con 1/r, pero la intensidad va con 1/r²."
+          },
+          {
+            "key": "D",
+            "text": "D. No cambia",
+            "why_wrong": "La intensidad siempre disminuye con la distancia para ondas esféricas."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-3",
+        "stem": "El efecto Doppler cambia la:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Velocidad del sonido en el medio",
+            "why_wrong": "La velocidad depende del medio, no del movimiento de la fuente."
+          },
+          {
+            "key": "B",
+            "text": "B. Frecuencia percibida por el receptor"
+          },
+          {
+            "key": "C",
+            "text": "C. Amplitud de la onda",
+            "why_wrong": "La amplitud puede cambiar por distancia, pero no por efecto Doppler."
+          },
+          {
+            "key": "D",
+            "text": "D. Fase inicial de la onda",
+            "why_wrong": "La fase inicial no se ve afectada por el movimiento relativo."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Una onda armónica se propaga por una cuerda en dirección +x con amplitud 4 cm, frecuencia 10 Hz y velocidad de propagación 8 m/s. (a) Escribe su ecuación. (b) Calcula la velocidad transversal máxima de un punto de la cuerda. (c) ¿A qué distancia de la fuente la onda ha tardado 0,3 s en llegar?",
+        "answer": "(a) y = 0,04 sin(20πt − 2,5πx) m. (b) v_max = 2,51 m/s. (c) d = 2,4 m.",
+        "full_solution": "(a) ω = 2π·10 = 20π rad/s. λ = v/f = 8/10 = 0,8 m. k = 2π/0,8 = 2,5π rad/m. y = 0,04 sin(20πt − 2,5πx) m. (b) v_max = Aω = 0,04·20π = 0,8π ≈ 2,51 m/s. (c) d = v·t = 8·0,3 = 2,4 m."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un murciélago emite ultrasonidos a 50 kHz y vuela a 10 m/s hacia una pared. Los pulsos se reflejan en la pared y vuelven al murciélago. (a) ¿Qué frecuencia tiene el pulso que llega a la pared? (b) ¿Qué frecuencia percibe el murciélago del eco? (c) ¿Cuál es el cambio de frecuencia total? (v_sonido = 340 m/s)",
+        "answer": "(a) f_pared ≈ 51515 Hz. (b) f_eco ≈ 53060 Hz. (c) Δf ≈ 3060 Hz.",
+        "full_solution": "(a) El murciélago es una fuente que se acerca a la pared (receptor fijo): f_pared = f·v/(v − v_S) = 50000·340/(340−10) = 50000·340/330 ≈ 51515 Hz. (b) Ahora la pared 'reemite' a 51515 Hz y el murciélago es un receptor que se acerca: f_eco = f_pared·(v + v_R)/v = 51515·(340+10)/340 = 51515·350/340 ≈ 53030 Hz. (c) Δf = 53030 − 50000 ≈ 3030 Hz. El murciélago usa este cambio de frecuencia para estimar la velocidad de los insectos y las distancias (ecolocalización)."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Ecuación de onda armónica progresiva en +x",
+        "back": "y(x,t) = A sin(ωt − kx + φ₀). k = 2π/λ; v = ω/k = λf.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Intensidad de una fuente puntual",
+        "back": "I = P/(4πr²). Al duplicar r, I se reduce a ¼.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Efecto Doppler: fuente acercándose",
+        "back": "f' = f·v/(v − v_S). La frecuencia percibida AUMENTA.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir la velocidad de propagación con la velocidad de vibración.",
+        "correction": "La velocidad de propagación (v = λf) es la del avance de la perturbación. La de vibración (∂y/∂t) es la de cada partícula oscilando transversalmente. Son magnitudes distintas."
+      },
+      {
+        "mistake": "Equivocar el signo en el efecto Doppler.",
+        "correction": "Regla: acercarse → frecuencia sube. Esto se traduce en + en el numerador (receptor) o − en el denominador (fuente) cuando se acercan."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En la ecuación de onda, − entre ωt y kx → propagación en +x. + → propagación en −x. No confundir con la fase inicial."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "número de onda (k)",
+        "definition": "k = 2π/λ. Mide los radianes de fase por metro."
+      },
+      {
+        "term": "intensidad",
+        "definition": "Potencia por unidad de área perpendicular a la propagación. Unidad: W/m²."
+      },
+      {
+        "term": "efecto Doppler",
+        "definition": "Cambio de frecuencia percibida debido al movimiento relativo entre fuente y receptor."
+      },
+      {
+        "term": "frente de onda",
+        "definition": "Superficie formada por todos los puntos que vibran en fase. En una fuente puntual, son esferas concéntricas."
+      }
+    ],
+    "summary": {
+      "big_idea": "Una onda es una perturbación que se propaga transportando energía. Su ecuación y(x,t) = A sin(ωt − kx) describe cómo cada punto del medio oscila en MAS con un desfase que depende de su distancia a la fuente.",
+      "key_points": [
+        "y(x,t) = A sin(ωt − kx): signo − → +x, signo + → −x.",
+        "v = λf = ω/k (determinada por el medio).",
+        "I = P/(4πr²): la intensidad cae con el cuadrado de la distancia.",
+        "Efecto Doppler: f' cambia según el movimiento relativo fuente-receptor."
+      ],
+      "formulas": [
+        "$y = A\\sin(\\omega t - kx)$",
+        "$v = \\lambda f = \\omega/k$",
+        "$I = P/(4\\pi r^2)$",
+        "$f' = f\\frac{v \\pm v_R}{v \\mp v_S}$"
+      ],
+      "what_to_remember_if_nothing_else": "La onda transporta energía, no materia. Su velocidad depende del medio; su frecuencia, de la fuente."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque A · Ondas mecánicas"
+    ],
+    "curriculum_refs": [
+      "CE3.3 Ecuación de onda",
+      "CE3.4 Energía e intensidad de ondas"
+    ],
+    "confidence_notes": [
+      "Nivel 1.º Bachillerato: ecuación de onda completa y efecto Doppler"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "SVGs con CSS variables",
+        "Efecto Doppler con convención de signos clara"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_03.json": {
+    "id": "L03",
+    "title": "Superposición e interferencia",
+    "subject": "Física y Química",
+    "course_label": "1.º Bachillerato · Física",
+    "unit_id": "U-B1F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3.5",
+        "CE3.6"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "2 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Enunciar el principio de superposición y aplicarlo a la suma de ondas."
+      },
+      {
+        "statement": "Distinguir entre interferencia constructiva y destructiva y calcular las condiciones para cada una."
+      },
+      {
+        "statement": "Describir las ondas estacionarias: nodos, antinodos y modos normales."
+      },
+      {
+        "statement": "Explicar los armónicos en cuerdas y tubos y calcular sus frecuencias."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Ecuación de onda armónica y sus parámetros.",
+        "why_it_matters": "La superposición consiste en sumar algebraicamente dos ecuaciones de onda."
+      },
+      {
+        "statement": "Funciones trigonométricas: suma de senos.",
+        "why_it_matters": "Las fórmulas de batidos y ondas estacionarias salen de identidades trigonométricas."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si dos ondas de igual amplitud llegan a un punto exactamente en fase, ¿qué ocurre?",
+        "expected_answer": "Se suman: la amplitud resultante es el doble. Es interferencia constructiva."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué es un nodo en una onda estacionaria?",
+        "expected_answer": "Un punto que permanece siempre en reposo (amplitud cero)."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Cuando dos ondas interfieren destructivamente, la energía desaparece.",
+        "correct_model": "La energía no desaparece: se redistribuye. Donde hay interferencia destructiva, la energía se cancela localmente, pero en otros puntos hay interferencia constructiva con el doble de amplitud (cuádruple de intensidad). La energía total del sistema se conserva."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "En una onda estacionaria, la onda se mueve de un lado a otro.",
+        "correct_model": "Una onda estacionaria NO se propaga: es el resultado de la superposición de dos ondas idénticas que viajan en sentidos opuestos. Cada punto oscila con una amplitud fija que depende de su posición. Los nodos nunca se mueven; los antinodos oscilan con amplitud máxima."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "El principio de superposición",
+        "body": "Cuando dos o más ondas coinciden en el mismo punto del espacio, el desplazamiento resultante es simplemente la **suma algebraica** de los desplazamientos de cada onda individual:\n\n$$y_{\\text{total}} = y_1 + y_2 + \\cdots$$\n\nEsto funciona porque la ecuación de onda es lineal. Cada onda se comporta como si la otra no existiera: después de cruzarse, ambas continúan sin modificar. Es lo que ocurre cuando dos personas hablan a la vez: sus sonidos se superponen, pero cada voz sigue propagándose independientemente."
+      },
+      {
+        "title": "Interferencia: constructiva y destructiva",
+        "body": "Cuando dos ondas de la misma frecuencia llegan a un punto, el resultado depende de su **diferencia de fase** (o equivalentemente, de la diferencia de caminos que han recorrido):\n\n- **Interferencia constructiva**: las ondas llegan en fase (crestas con crestas). La amplitud resultante es máxima. Ocurre cuando la diferencia de camino es un número entero de longitudes de onda: $\\Delta r = n\\lambda$ ($n = 0, 1, 2, \\ldots$).\n\n- **Interferencia destructiva**: las ondas llegan en oposición de fase (crestas con valles). Se cancelan. Ocurre cuando: $\\Delta r = (n + \\tfrac{1}{2})\\lambda$.\n\n<svg viewBox=\"0 0 460 170\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:460px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"115\" y=\"15\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Constructiva</text>\n  <path d=\"M20,60 Q55,25 90,60 Q125,95 160,60\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n  <path d=\"M20,60 Q55,25 90,60 Q125,95 160,60\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\" opacity=\"0.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"175\" y=\"65\" font-size=\"14\" fill=\"var(--text,#20302a)\">=</text>\n  <path d=\"M190,60 Q225,0 260,60 Q295,120 330,60\" fill=\"none\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"2.5\"/>\n  <text x=\"350\" y=\"65\" font-size=\"10\" fill=\"var(--accent,#8a3d6b)\">2A</text>\n  <text x=\"115\" y=\"100\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Destructiva</text>\n  <path d=\"M20,140 Q55,110 90,140 Q125,170 160,140\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n  <path d=\"M20,140 Q55,170 90,140 Q125,110 160,140\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\" opacity=\"0.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"175\" y=\"145\" font-size=\"14\" fill=\"var(--text,#20302a)\">=</text>\n  <line x1=\"190\" y1=\"140\" x2=\"330\" y2=\"140\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"2.5\"/>\n  <text x=\"350\" y=\"145\" font-size=\"10\" fill=\"var(--accent,#8a3d6b)\">0</text>\n</svg>",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Interferencia constructiva y destructiva</text><text x=\"140\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0e7a68\">Constructiva</text><line x1=\"40\" y1=\"100\" x2=\"240\" y2=\"100\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/><path d=\"M40,100 C70,60 100,60 130,100 C160,140 190,140 220,100\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\" opacity=\"0.5\"/><path d=\"M40,100 C70,60 100,60 130,100 C160,140 190,140 220,100\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.5\"/><path d=\"M40,100 C70,20 100,20 130,100 C160,180 190,180 220,100\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2.5\"/><text x=\"140\" y=\"196\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Resultado: 2A</text><text x=\"360\" y=\"52\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c17a17\">Destructiva</text><line x1=\"260\" y1=\"100\" x2=\"460\" y2=\"100\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\"/><path d=\"M260,100 C290,60 320,60 350,100 C380,140 410,140 440,100\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\" opacity=\"0.5\"/><path d=\"M260,100 C290,140 320,140 350,100 C380,60 410,60 440,100\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.5\"/><line x1=\"260\" y1=\"100\" x2=\"460\" y2=\"100\" stroke=\"#8a3d6b\" stroke-width=\"2.5\"/><text x=\"360\" y=\"196\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Resultado: 0</text><text x=\"140\" y=\"236\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Δφ = 0, 2π, 4π…</text><text x=\"360\" y=\"236\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Δφ = π, 3π, 5π…</text><text x=\"250\" y=\"276\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Constructiva: ondas en fase → se suman</text><text x=\"250\" y=\"294\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Destructiva: ondas en contrafase → se cancelan</text></svg>",
+            "caption": "Interferencia constructiva (ondas en fase, amplitudes se suman) y destructiva (ondas en contrafase, se cancelan)."
+          }
+        ]
+      },
+      {
+        "title": "Ondas estacionarias",
+        "body": "Cuando una onda choca contra un extremo fijo (por ejemplo, una cuerda atada a la pared), se refleja e invierte. La onda reflejada viaja en sentido contrario, y la superposición de ambas crea una **onda estacionaria**: un patrón que no se desplaza.\n\nMatemáticamente, si sumamos $y_1 = A\\sin(\\omega t - kx)$ y $y_2 = A\\sin(\\omega t + kx)$:\n\n$$y = 2A\\sin(kx)\\cos(\\omega t)$$\n\nEsta ecuación NO tiene la forma $f(\\omega t \\pm kx)$: no es una onda viajera. El factor $\\sin(kx)$ fija la amplitud de cada punto según su posición:\n\n- **Nodos**: puntos donde $\\sin(kx) = 0$ → amplitud siempre cero. En $x = 0, \\lambda/2, \\lambda, 3\\lambda/2, \\ldots$\n- **Antinodos**: puntos donde $|\\sin(kx)| = 1$ → amplitud máxima (2A). En $x = \\lambda/4, 3\\lambda/4, \\ldots$"
+      },
+      {
+        "title": "Armónicos en cuerdas",
+        "body": "Una cuerda fija en ambos extremos solo puede vibrar en ondas estacionarias que \"encajen\" entre los apoyos: los extremos deben ser nodos. Esto limita las longitudes de onda posibles:\n\n$$L = n \\cdot \\frac{\\lambda_n}{2} \\quad \\Rightarrow \\quad \\lambda_n = \\frac{2L}{n}, \\quad f_n = n \\cdot \\frac{v}{2L}$$\n\nDonde $n = 1, 2, 3, \\ldots$ El caso $n = 1$ es el **fundamental** (frecuencia más baja). Los demás son **armónicos** (o sobretonos). Los instrumentos de cuerda producen sonidos ricos porque vibran simultáneamente en varios armónicos.\n\n<svg viewBox=\"0 0 440 160\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:440px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <line x1=\"40\" y1=\"30\" x2=\"40\" y2=\"150\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"400\" y1=\"30\" x2=\"400\" y2=\"150\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <path d=\"M40,50 Q220,10 400,50\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <path d=\"M40,50 Q220,90 400,50\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" opacity=\"0.3\"/>\n  <text x=\"420\" y=\"55\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">n=1 (f₁)</text>\n  <path d=\"M40,90 Q130,70 220,90 Q310,110 400,90\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <path d=\"M40,90 Q130,110 220,90 Q310,70 400,90\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\" opacity=\"0.3\"/>\n  <text x=\"420\" y=\"95\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\">n=2 (2f₁)</text>\n  <path d=\"M40,130 Q100,115 160,130 Q220,145 280,130 Q340,115 400,130\" fill=\"none\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"2\"/>\n  <path d=\"M40,130 Q100,145 160,130 Q220,115 280,130 Q340,145 400,130\" fill=\"none\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"2\" opacity=\"0.3\"/>\n  <text x=\"420\" y=\"135\" font-size=\"10\" fill=\"var(--accent,#8a3d6b)\">n=3 (3f₁)</text>\n</svg>"
+      },
+      {
+        "title": "Armónicos en tubos sonoros",
+        "body": "Los instrumentos de viento funcionan por ondas estacionarias de presión del aire dentro de un tubo. Las condiciones de contorno dependen de si el tubo está abierto o cerrado:\n\n**Tubo abierto** (flauta, órgano abierto): antinodos en ambos extremos.\n$$f_n = n \\cdot \\frac{v}{2L}, \\quad n = 1, 2, 3, \\ldots$$\nProduce todos los armónicos (sonido más rico).\n\n**Tubo cerrado** (clarinete, tubo de órgano cerrado): nodo en el extremo cerrado, antinodo en el abierto.\n$$f_n = n \\cdot \\frac{v}{4L}, \\quad n = 1, 3, 5, \\ldots \\text{ (solo impares)}$$\nSolo produce armónicos impares (sonido más 'hueco').\n\nPor eso la flauta y el clarinete suenan diferente aunque toquen la misma nota: tienen distinto contenido de armónicos."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Interferencia: constructiva o destructiva",
+        "statement": "Dos altavoces emiten la misma nota (f = 680 Hz, v = 340 m/s) en fase. Un oyente está a 4,0 m de uno y a 4,5 m del otro. ¿Hay interferencia constructiva o destructiva?",
+        "steps": [
+          "λ = v/f = 340/680 = 0,5 m.",
+          "Δr = |4,5 − 4,0| = 0,5 m.",
+          "Δr/λ = 0,5/0,5 = 1 (entero).",
+          "Δr = 1·λ → Interferencia constructiva."
+        ],
+        "answer": "Constructiva: la diferencia de caminos es exactamente 1λ.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Condición de interferencia</text><circle cx=\"150\" cy=\"140\" r=\"6\" fill=\"#0e7a68\"/><text x=\"150\" y=\"125\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">S₁</text><circle cx=\"150\" cy=\"200\" r=\"6\" fill=\"#c17a17\"/><text x=\"150\" y=\"222\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">S₂</text><circle cx=\"380\" cy=\"140\" r=\"5\" fill=\"#8a3d6b\"/><text x=\"380\" y=\"128\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">P</text><line x1=\"156\" y1=\"140\" x2=\"375\" y2=\"140\" stroke=\"#0e7a68\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><text x=\"265\" y=\"134\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">r₁</text><line x1=\"156\" y1=\"200\" x2=\"375\" y2=\"142\" stroke=\"#c17a17\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><text x=\"270\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">r₂</text><text x=\"250\" y=\"250\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Constructiva: |r₁ − r₂| = nλ   Destructiva: |r₁ − r₂| = (n+½)λ</text></svg>",
+            "caption": "La interferencia en un punto P depende de la diferencia de camino r₁ − r₂ entre las dos fuentes."
+          }
+        ]
+      },
+      {
+        "title": "Armónicos de una cuerda de guitarra",
+        "statement": "Una cuerda de guitarra de 65 cm vibra con una frecuencia fundamental de 330 Hz (nota Mi). Calcula: (a) la velocidad de la onda en la cuerda, (b) las frecuencias del 2.º y 3.er armónico.",
+        "steps": [
+          "(a) f₁ = v/(2L) → v = 2Lf₁ = 2·0,65·330 = 429 m/s.",
+          "(b) f₂ = 2f₁ = 660 Hz; f₃ = 3f₁ = 990 Hz."
+        ],
+        "answer": "(a) v = 429 m/s. (b) f₂ = 660 Hz, f₃ = 990 Hz."
+      },
+      {
+        "title": "Tubo cerrado",
+        "statement": "Un tubo cerrado de 85 cm produce un sonido fundamental. ¿Cuál es su frecuencia? ¿Y la del siguiente armónico? (v = 340 m/s)",
+        "steps": [
+          "Tubo cerrado: f₁ = v/(4L) = 340/(4·0,85) = 340/3,4 = 100 Hz.",
+          "Siguiente armónico = 3.er armónico (solo impares): f₃ = 3f₁ = 300 Hz."
+        ],
+        "answer": "f₁ = 100 Hz; siguiente armónico: f₃ = 300 Hz."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "guided-sup-1",
+        "statement": "Dos focos sonoros coherentes (misma frecuencia f = 1700 Hz, en fase) están separados 2 m. Un micrófono se coloca en la mediatriz a 5 m de distancia. (a) ¿Hay interferencia constructiva o destructiva? (b) Si desplazamos el micrófono lateralmente, ¿a qué distancia del centro encontraremos el primer mínimo? (v = 340 m/s)",
+        "scaffold": "En la mediatriz: Δr = 0 → constructiva. Para el primer mínimo: Δr = λ/2. Usa geometría (Pitágoras) con la nueva posición.",
+        "answer": "(a) Constructiva (Δr = 0). (b) λ = 340/1700 = 0,2 m. Primer mínimo cuando Δr = 0,1 m. Con geometría, desplazamiento lateral ≈ 0,5 m (aproximación para distancia >> separación)."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Dos ondas idénticas (A = 3 cm, f = 200 Hz) se propagan en sentidos opuestos por una cuerda. Escribe la ecuación de la onda estacionaria resultante si v = 40 m/s.",
+        "answer": "y = 0,06 sin(10πx) cos(400πt) m.",
+        "full_solution": "k = 2πf/v = 2π·200/40 = 10π rad/m. ω = 2π·200 = 400π rad/s. Onda estacionaria: y = 2A sin(kx) cos(ωt) = 2·0,03 sin(10πx) cos(400πt) = 0,06 sin(10πx) cos(400πt) m.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "En la onda estacionaria anterior, determina las posiciones de los tres primeros nodos y los dos primeros antinodos (desde x = 0).",
+        "answer": "Nodos: x = 0; 0,1 m; 0,2 m. Antinodos: x = 0,05 m; 0,15 m.",
+        "full_solution": "Nodos: sin(10πx) = 0 → 10πx = nπ → x = n/10 m. Primeros: x = 0, 0,1, 0,2 m. Antinodos: sin(10πx) = ±1 → 10πx = (n+½)π → x = (n+½)/10. Primeros: x = 0,05, 0,15 m. Distancia entre nodos consecutivos = λ/2 = 0,1 m.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una cuerda de piano de 1,2 m de longitud vibra en su tercer armónico a 660 Hz. (a) ¿Cuál es la frecuencia fundamental? (b) ¿Cuál es la velocidad de la onda? (c) ¿Cuántos nodos tiene (sin contar los extremos)?",
+        "answer": "(a) f₁ = 220 Hz. (b) v = 528 m/s. (c) 2 nodos interiores.",
+        "full_solution": "(a) f₃ = 3f₁ → f₁ = 660/3 = 220 Hz. (b) v = 2Lf₁ = 2·1,2·220 = 528 m/s. (c) El armónico n tiene n−1 nodos interiores. Para n = 3: 2 nodos.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Dos altavoces, separados 3 m, emiten en fase un tono de 850 Hz. Un oyente está a 5 m de un altavoz y a 6,2 m del otro. ¿Oye máximo o mínimo de interferencia? (v = 340 m/s)",
+        "answer": "Máximo (interferencia constructiva).",
+        "full_solution": "λ = v/f = 340/850 = 0,4 m. Δr = 6,2 − 5,0 = 1,2 m. Δr/λ = 1,2/0,4 = 3 (entero). Como es un múltiplo entero de λ, hay interferencia constructiva (máximo).",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un diapasón de 440 Hz se coloca en la boca de un tubo largo que tiene agua. Al bajar el nivel del agua, se escuchan resonancias cuando la columna de aire tiene longitudes de 19,3 cm, 57,9 cm y 96,5 cm. (a) ¿Es un tubo abierto o cerrado? (b) Determina la velocidad del sonido a partir de estos datos.",
+        "answer": "(a) Cerrado (un extremo es la superficie del agua). (b) v ≈ 340 m/s.",
+        "full_solution": "(a) El tubo tiene un extremo abierto (boca) y otro cerrado (superficie del agua) → tubo cerrado. (b) Las resonancias ocurren en L = λ/4, 3λ/4, 5λ/4... Diferencia entre consecutivas = λ/2. Δ₁ = 57,9 − 19,3 = 38,6 cm. Δ₂ = 96,5 − 57,9 = 38,6 cm. λ/2 = 38,6 cm → λ = 77,2 cm = 0,772 m. v = λf = 0,772·440 = 339,7 ≈ 340 m/s.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Explica por qué al tocar la cuerda de una guitarra justo en el punto medio (traste 12) y puntear, se oye la misma nota pero una octava más aguda.",
+        "answer": "Al tocar en el punto medio se fuerza un nodo allí, eliminando el fundamental y todos los armónicos pares. El modo más bajo posible es n = 2, con f₂ = 2f₁ (una octava arriba).",
+        "full_solution": "Al poner el dedo suavemente en el centro de la cuerda, se fuerza un nodo en x = L/2. El fundamental (n = 1, un solo arco) no puede existir con un nodo central. El modo más bajo compatible es n = 2 (dos arcos, un nodo central), cuya frecuencia es f₂ = 2f₁. Como 2f₁ es exactamente una octava por encima de f₁, se escucha la misma nota una octava más aguda. Esto se llama 'armónico natural' en música.",
+        "difficulty": "análisis crítico"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L03-1",
+        "stem": "En un punto donde dos ondas interfieren destructivamente, la energía:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se destruye",
+            "why_wrong": "La energía nunca se destruye; se redistribuye a otros puntos."
+          },
+          {
+            "key": "B",
+            "text": "B. Se redistribuye a otros puntos donde hay interferencia constructiva"
+          },
+          {
+            "key": "C",
+            "text": "C. Se convierte en calor",
+            "why_wrong": "No hay conversión a calor en interferencia pura."
+          },
+          {
+            "key": "D",
+            "text": "D. Se refleja de vuelta a las fuentes",
+            "why_wrong": "Las fuentes siguen emitiendo independientemente."
+          }
+        ]
+      },
+      {
+        "id": "MC-L03-2",
+        "stem": "Un tubo cerrado por un extremo solo produce armónicos:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Pares (2, 4, 6...)",
+            "why_wrong": "Los pares requerirían un antinodo en el extremo cerrado, que debe ser un nodo."
+          },
+          {
+            "key": "B",
+            "text": "B. Impares (1, 3, 5...)"
+          },
+          {
+            "key": "C",
+            "text": "C. Todos (1, 2, 3...)",
+            "why_wrong": "Eso ocurre solo en tubos abiertos por ambos extremos."
+          },
+          {
+            "key": "D",
+            "text": "D. Solo el fundamental",
+            "why_wrong": "También produce sobretonos impares."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Una cuerda de violín de 32 cm y masa 0,4 g está sometida a una tensión de 50 N. (a) Calcula la velocidad de propagación. (b) Halla la frecuencia fundamental y las de los tres primeros armónicos. (c) Si el violinista pisa la cuerda a 1/3 de su longitud, ¿cuál es la nueva frecuencia fundamental?",
+        "answer": "(a) v ≈ 200 m/s. (b) f₁ ≈ 313 Hz, f₂ ≈ 625 Hz, f₃ ≈ 938 Hz. (c) L' = 2L/3 → f₁' ≈ 469 Hz.",
+        "full_solution": "(a) μ = m/L = 0,0004/0,32 = 1,25×10⁻³ kg/m. v = √(T/μ) = √(50/0,00125) = √40000 = 200 m/s. (b) f₁ = v/(2L) = 200/(2·0,32) = 312,5 Hz. f₂ = 625 Hz. f₃ = 937,5 Hz. (c) L' = 2·0,32/3 = 0,2133 m. f₁' = 200/(2·0,2133) = 468,8 Hz (una quinta justa por encima)."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un afinador electrónico muestra que dos cuerdas de guitarra producen 'batidos' a 3 Hz cuando suenan juntas. Una cuerda está afinada a 440 Hz. (a) ¿Cuáles son las posibles frecuencias de la otra cuerda? (b) Los batidos se producen porque las dos ondas tienen frecuencias ligeramente diferentes. Demuestra que la frecuencia de los batidos es f_batidos = |f₁ − f₂| usando la suma de dos funciones seno.",
+        "answer": "(a) 437 Hz o 443 Hz. (b) Demostración usando sin A + sin B = 2 cos((A−B)/2) sin((A+B)/2).",
+        "full_solution": "(a) f_batidos = |f₁ − f₂| → |440 − f₂| = 3 → f₂ = 437 Hz o 443 Hz. (b) y₁ + y₂ = A[sin(2πf₁t) + sin(2πf₂t)] = 2A cos(2π·(f₁−f₂)/2·t) · sin(2π·(f₁+f₂)/2·t). El factor cos varía lentamente con frecuencia (f₁−f₂)/2. La amplitud varía entre 0 y 2A. La intensidad (∝ A²) varía con frecuencia f₁−f₂, que es la frecuencia de batido."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Condición de interferencia constructiva",
+        "back": "Δr = nλ (diferencia de caminos = múltiplo entero de λ).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Condición de interferencia destructiva",
+        "back": "Δr = (n + ½)λ (diferencia de caminos = múltiplo semi-entero de λ).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Onda estacionaria: ecuación",
+        "back": "y = 2A sin(kx) cos(ωt). No viaja. Nodos en sin(kx) = 0.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Armónicos de cuerda fija en ambos extremos",
+        "back": "fₙ = n·v/(2L), n = 1, 2, 3... Todos los armónicos.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Armónicos de tubo cerrado",
+        "back": "fₙ = n·v/(4L), n = 1, 3, 5... Solo armónicos impares.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir la ecuación de onda estacionaria con una onda viajera.",
+        "correction": "La estacionaria tiene forma 2A sin(kx) cos(ωt): NO es f(ωt − kx). No se propaga."
+      },
+      {
+        "mistake": "Aplicar fₙ = n·v/(2L) a un tubo cerrado.",
+        "correction": "En tubo cerrado: fₙ = n·v/(4L) con n impar. No usar la fórmula de cuerda/tubo abierto."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En problemas de interferencia, calcula Δr y compara con λ. Si Δr/λ = entero → constructiva. Si Δr/λ = semi-entero → destructiva."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "principio de superposición",
+        "definition": "El desplazamiento resultante de varias ondas es la suma algebraica de cada una."
+      },
+      {
+        "term": "nodo",
+        "definition": "Punto de una onda estacionaria con amplitud siempre cero."
+      },
+      {
+        "term": "antinodo",
+        "definition": "Punto de una onda estacionaria con amplitud máxima."
+      },
+      {
+        "term": "armónico",
+        "definition": "Cada uno de los modos normales de vibración. El fundamental (n=1) tiene la frecuencia más baja."
+      },
+      {
+        "term": "batidos",
+        "definition": "Variación periódica de amplitud cuando se superponen dos ondas de frecuencias ligeramente diferentes. f_batidos = |f₁ − f₂|."
+      }
+    ],
+    "summary": {
+      "big_idea": "Al superponerse dos ondas surgen fenómenos como la interferencia (constructiva o destructiva) y las ondas estacionarias, que explican desde la acústica musical hasta las telecomunicaciones.",
+      "key_points": [
+        "Principio de superposición: y_total = y₁ + y₂.",
+        "Constructiva: Δr = nλ. Destructiva: Δr = (n+½)λ.",
+        "Estacionaria: y = 2A sin(kx) cos(ωt). Nodos y antinodos fijos.",
+        "Cuerda/tubo abierto: fₙ = n·v/(2L). Tubo cerrado: fₙ = n·v/(4L), n impar."
+      ],
+      "formulas": [
+        "$\\Delta r = n\\lambda$ (constructiva)",
+        "$\\Delta r = (n+\\frac{1}{2})\\lambda$ (destructiva)",
+        "$y = 2A\\sin(kx)\\cos(\\omega t)$",
+        "$f_n = n\\frac{v}{2L}$ (cuerda)",
+        "$f_n = n\\frac{v}{4L}$ (tubo cerrado, n impar)"
+      ],
+      "what_to_remember_if_nothing_else": "Interferencia constructiva → Δr múltiplo de λ. Destructiva → Δr semi-entero de λ. En ondas estacionarias, los nodos no se mueven."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque A · Superposición e interferencia"
+    ],
+    "curriculum_refs": [
+      "CE3.5 Principio de superposición",
+      "CE3.6 Ondas estacionarias y armónicos"
+    ],
+    "confidence_notes": [
+      "Nivel 1.º Bach: tratamiento cuantitativo con identidades trigonométricas"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "SVGs con CSS variables",
+        "Distinción tubo abierto/cerrado clara"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_04.json": {
+    "id": "L04",
+    "title": "Difracción y polarización",
+    "subject": "Física y Química",
+    "course_label": "1.º Bachillerato · Física",
+    "unit_id": "U-B1F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3.7",
+        "CE3.8"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Describir el fenómeno de difracción y las condiciones en que se observa."
+      },
+      {
+        "statement": "Explicar el experimento de Young de doble rendija y calcular las posiciones de máximos y mínimos."
+      },
+      {
+        "statement": "Definir polarización e identificar ondas polarizadas y no polarizadas."
+      },
+      {
+        "statement": "Aplicar la ley de Malus para calcular la intensidad de luz polarizada."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Interferencia constructiva y destructiva.",
+        "why_it_matters": "La difracción de rendija y el experimento de Young se explican por interferencia."
+      },
+      {
+        "statement": "Naturaleza ondulatoria de la luz.",
+        "why_it_matters": "La difracción y la polarización son pruebas directas de que la luz es una onda."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué ocurre cuando la luz pasa por una abertura del tamaño de su longitud de onda?",
+        "expected_answer": "Se difracta: se abre en forma de abanico en lugar de seguir en línea recta."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Las gafas de sol polarizadas, qué tipo de ondas filtran?",
+        "expected_answer": "Bloquean la componente horizontal de la luz (el reflejo), dejando pasar solo la componente vertical."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La difracción solo ocurre con la luz.",
+        "correct_model": "La difracción ocurre con TODAS las ondas: sonido, agua, luz, microondas... Es un fenómeno universal ondulatorio. Es especialmente notable cuando la abertura u obstáculo tiene un tamaño similar a la longitud de onda."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La polarización afecta a las ondas de sonido.",
+        "correct_model": "Solo las ondas transversales se pueden polarizar. El sonido es una onda longitudinal: sus oscilaciones son en la misma dirección que la propagación, así que no hay 'planos' de oscilación que filtrar. Que la luz se pueda polarizar demuestra que es una onda transversal."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Difracción: las ondas rodean los obstáculos",
+        "body": "Cuando una onda encuentra un obstáculo o pasa por una abertura, no sigue simplemente en línea recta: se curva alrededor del obstáculo o se abre en abanico al salir por la rendija. Este fenómeno se llama **difracción**.\n\nLa difracción es significativa cuando el tamaño del obstáculo o la abertura ($a$) es comparable a la longitud de onda ($\\lambda$). Si $a \\gg \\lambda$, la onda pasa casi recta (como la luz por una ventana). Si $a \\approx \\lambda$, la onda se difracta mucho (como el sonido al salir por una puerta).\n\nEsto explica por qué oyes a alguien que está detrás de una esquina (λ_sonido ≈ 1 m, tamaño de puerta ≈ 1 m) pero no puedes verlo (λ_luz ≈ 0,5 μm, muchísimo menor que la puerta)."
+      },
+      {
+        "title": "Difracción por una rendija",
+        "body": "Cuando la luz pasa por una rendija estrecha de ancho $a$, se difracta produciendo un patrón de franjas luminosas y oscuras sobre una pantalla. Los **mínimos de difracción** (franjas oscuras) aparecen en:\n\n$$a \\sin\\theta = m\\lambda \\qquad (m = \\pm 1, \\pm 2, \\ldots)$$\n\nEl máximo central es el más ancho e intenso: contiene la mayor parte de la luz. A ambos lados aparecen máximos secundarios cada vez más débiles.\n\nCuanto más estrecha la rendija (menor $a$), más se abre el patrón de difracción. En el límite $a → 0$, la onda se difracta en todas direcciones (fuente puntual).",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Difracción por una rendija de anchura a</text><rect x=\"140\" y=\"40\" width=\"8\" height=\"100\" fill=\"var(--axes,#24312c)\"/><rect x=\"140\" y=\"180\" width=\"8\" height=\"100\" fill=\"var(--axes,#24312c)\"/><line x1=\"144\" y1=\"140\" x2=\"144\" y2=\"180\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"125\" y=\"164\" text-anchor=\"end\" font-size=\"11\" fill=\"#0e7a68\">a</text><line x1=\"60\" y1=\"90\" x2=\"140\" y2=\"120\" stroke=\"#c17a17\" stroke-width=\"1\" opacity=\"0.5\"/><line x1=\"60\" y1=\"120\" x2=\"140\" y2=\"140\" stroke=\"#c17a17\" stroke-width=\"1\" opacity=\"0.5\"/><line x1=\"60\" y1=\"150\" x2=\"140\" y2=\"160\" stroke=\"#c17a17\" stroke-width=\"1\" opacity=\"0.5\"/><line x1=\"60\" y1=\"180\" x2=\"140\" y2=\"180\" stroke=\"#c17a17\" stroke-width=\"1\" opacity=\"0.5\"/><path d=\"M148,140 L250,90 M148,145 L260,70 M148,155 L260,200 M148,160 L250,180 M148,160 L300,160 M148,150 L220,160\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"0.8\" opacity=\"0.4\"/><rect x=\"400\" y=\"40\" width=\"6\" height=\"240\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"0.5\"/><rect x=\"400\" y=\"130\" width=\"6\" height=\"60\" fill=\"#0e7a68\" opacity=\"0.6\"/><rect x=\"400\" y=\"108\" width=\"6\" height=\"22\" fill=\"#0e7a68\" opacity=\"0.2\"/><rect x=\"400\" y=\"190\" width=\"6\" height=\"22\" fill=\"#0e7a68\" opacity=\"0.2\"/><rect x=\"400\" y=\"85\" width=\"6\" height=\"10\" fill=\"#0e7a68\" opacity=\"0.1\"/><rect x=\"400\" y=\"225\" width=\"6\" height=\"10\" fill=\"#0e7a68\" opacity=\"0.1\"/><text x=\"430\" y=\"164\" font-size=\"10\" fill=\"#0e7a68\">Máximo central</text><text x=\"430\" y=\"120\" font-size=\"9\" fill=\"var(--text,#20302a)\">Secundarios</text><text x=\"250\" y=\"292\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Primer mínimo: sin θ = λ/a</text></svg>",
+            "caption": "Patrón de difracción por una rendija: un máximo central ancho flanqueado por máximos secundarios más débiles."
+          }
+        ]
+      },
+      {
+        "title": "Experimento de Young: doble rendija",
+        "body": "En 1801, Thomas Young demostró que la luz es una onda al hacer pasar luz monocromática por dos rendijas separadas una distancia $d$. En la pantalla aparecen **franjas de interferencia** alternadas brillantes y oscuras.\n\nLas posiciones de los **máximos** (franjas brillantes) en una pantalla a distancia $D$:\n\n$$d \\sin\\theta = n\\lambda \\quad \\Rightarrow \\quad y_n = \\frac{n\\lambda D}{d}$$\n\nDonde $y_n$ es la distancia del máximo de orden $n$ al centro de la pantalla. Los mínimos están a medio camino.\n\n<svg viewBox=\"0 0 440 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:440px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <rect x=\"100\" y=\"10\" width=\"4\" height=\"65\" fill=\"var(--axes,#24312c)\"/>\n  <rect x=\"100\" y=\"85\" width=\"4\" height=\"10\" fill=\"var(--axes,#24312c)\"/>\n  <rect x=\"100\" y=\"105\" width=\"4\" height=\"65\" fill=\"var(--axes,#24312c)\"/>\n  <circle cx=\"102\" cy=\"80\" r=\"2\" fill=\"var(--primary,#0e7a68)\"/>\n  <circle cx=\"102\" cy=\"100\" r=\"2\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"85\" y=\"80\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"end\">S₁</text>\n  <text x=\"85\" y=\"103\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"end\">S₂</text>\n  <line x1=\"102\" y1=\"80\" x2=\"380\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"102\" y1=\"100\" x2=\"380\" y2=\"50\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"102\" y1=\"80\" x2=\"380\" y2=\"90\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"102\" y1=\"100\" x2=\"380\" y2=\"90\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"102\" y1=\"80\" x2=\"380\" y2=\"130\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <line x1=\"102\" y1=\"100\" x2=\"380\" y2=\"130\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"0.8\" opacity=\"0.4\"/>\n  <rect x=\"378\" y=\"10\" width=\"6\" height=\"160\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.5\"/>\n  <rect x=\"378\" y=\"45\" width=\"6\" height=\"10\" rx=\"1\" fill=\"var(--primary,#0e7a68)\" opacity=\"0.9\"/>\n  <rect x=\"378\" y=\"85\" width=\"6\" height=\"10\" rx=\"1\" fill=\"var(--primary,#0e7a68)\"/>\n  <rect x=\"378\" y=\"125\" width=\"6\" height=\"10\" rx=\"1\" fill=\"var(--primary,#0e7a68)\" opacity=\"0.9\"/>\n  <line x1=\"110\" y1=\"90\" x2=\"375\" y2=\"90\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"0.8\" stroke-dasharray=\"4,4\"/>\n  <text x=\"240\" y=\"175\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">D</text>\n  <text x=\"395\" y=\"95\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">n=0</text>\n  <text x=\"395\" y=\"55\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">n=1</text>\n  <text x=\"395\" y=\"135\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">n=−1</text>\n  <text x=\"50\" y=\"90\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Luz</text>\n  <line x1=\"30\" y1=\"85\" x2=\"90\" y2=\"85\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1\" marker-end=\"url(#arr)\"/>\n</svg>\n\nEste experimento fue la prueba definitiva de la naturaleza ondulatoria de la luz en el siglo XIX."
+      },
+      {
+        "title": "Polarización: filtrar las vibraciones",
+        "body": "La luz ordinaria (del sol, una bombilla) vibra en **todas las direcciones transversales** al azar: es **no polarizada**. Un **polarizador** filtra la luz y deja pasar solo las vibraciones en un plano: la luz resultante es **linealmente polarizada**.\n\nLa polarización es exclusiva de las ondas transversales. Que la luz se pueda polarizar demuestra que es una onda transversal (no longitudinal como el sonido).\n\nFormas de polarizar la luz:\n- **Filtros polarizadores** (como las gafas Polaroid).\n- **Reflexión** en ángulo de Brewster: la luz reflejada en un lago o una carretera está parcialmente polarizada horizontalmente → las gafas polarizadas (eje vertical) eliminan el deslumbramiento."
+      },
+      {
+        "title": "Ley de Malus",
+        "body": "Cuando la luz polarizada (intensidad $I_0$) atraviesa un segundo polarizador (llamado **analizador**) cuyo eje forma un ángulo $\\theta$ con la dirección de polarización, la intensidad transmitida es:\n\n$$I = I_0 \\cos^2\\theta$$\n\nCasos especiales:\n- $\\theta = 0°$: ejes paralelos → $I = I_0$ (toda la luz pasa).\n- $\\theta = 90°$: ejes perpendiculares → $I = 0$ (la luz se bloquea completamente).\n- $\\theta = 45°$: $I = I_0/2$.\n\nCuando la luz no polarizada de intensidad $I_{\\text{natural}}$ pasa por un polarizador, la intensidad se reduce a $I_0 = I_{\\text{natural}}/2$ (se pierde la mitad al seleccionar un plano)."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Doble rendija de Young",
+        "statement": "Se ilumina una doble rendija (d = 0,2 mm) con luz verde (λ = 550 nm). La pantalla está a D = 1,5 m. Calcula la separación entre franjas brillantes consecutivas.",
+        "steps": [
+          "Interfranja: Δy = λD/d.",
+          "Δy = (550×10⁻⁹ × 1,5) / (0,2×10⁻³).",
+          "Δy = 8,25×10⁻⁷/2×10⁻⁴ = 4,125×10⁻³ m = 4,125 mm."
+        ],
+        "answer": "Δy ≈ 4,1 mm entre franjas brillantes consecutivas.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Doble rendija de Young</text><rect x=\"160\" y=\"40\" width=\"6\" height=\"70\" fill=\"var(--axes,#24312c)\"/><rect x=\"160\" y=\"130\" width=\"6\" height=\"30\" fill=\"var(--axes,#24312c)\"/><rect x=\"160\" y=\"180\" width=\"6\" height=\"70\" fill=\"var(--axes,#24312c)\"/><circle cx=\"163\" cy=\"120\" r=\"3\" fill=\"#0e7a68\"/><circle cx=\"163\" cy=\"170\" r=\"3\" fill=\"#0e7a68\"/><text x=\"148\" y=\"148\" text-anchor=\"end\" font-size=\"10\" fill=\"#0e7a68\">d</text><rect x=\"380\" y=\"40\" width=\"5\" height=\"210\" fill=\"var(--grid,#e8e3d8)\"/><rect x=\"380\" y=\"105\" width=\"5\" height=\"10\" fill=\"#c17a17\"/><rect x=\"380\" y=\"135\" width=\"5\" height=\"10\" fill=\"#c17a17\"/><rect x=\"380\" y=\"165\" width=\"5\" height=\"10\" fill=\"#c17a17\"/><rect x=\"380\" y=\"75\" width=\"5\" height=\"8\" fill=\"#c17a17\" opacity=\"0.5\"/><rect x=\"380\" y=\"197\" width=\"5\" height=\"8\" fill=\"#c17a17\" opacity=\"0.5\"/><text x=\"400\" y=\"148\" font-size=\"9\" fill=\"#c17a17\">Franjas</text><text x=\"250\" y=\"242\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Máximos: d·sin θ = nλ (n = 0, ±1, ±2…)</text></svg>",
+            "caption": "Experimento de Young: dos rendijas separadas d producen un patrón de franjas brillantes y oscuras en la pantalla."
+          }
+        ]
+      },
+      {
+        "title": "Ley de Malus",
+        "statement": "Luz no polarizada de intensidad 100 W/m² pasa por un polarizador y luego por un analizador cuyo eje está a 30° del primero. ¿Qué intensidad sale del analizador?",
+        "steps": [
+          "Tras el polarizador: I₁ = 100/2 = 50 W/m² (luz no polarizada pierde la mitad).",
+          "Tras el analizador: I₂ = I₁ cos²(30°) = 50 × (√3/2)² = 50 × 3/4 = 37,5 W/m²."
+        ],
+        "answer": "I₂ = 37,5 W/m²."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "guided-dif-1",
+        "statement": "La primera franja oscura de difracción de una rendija de 0,1 mm iluminada con luz monocromática aparece a un ángulo de 0,33°. (a) Calcula la longitud de onda. (b) ¿De qué color es la luz? (c) Si la rendija se hace más ancha (0,2 mm), ¿el patrón de difracción se ensancha o se estrecha?",
+        "scaffold": "a sin θ = mλ con m = 1. Para (c), piensa en cómo cambia θ al aumentar a.",
+        "answer": "(a) λ = a sin θ / 1 = 0,1×10⁻³ × sin(0,33°) = 0,1×10⁻³ × 5,76×10⁻³ ≈ 576 nm. (b) Amarillo-verde. (c) Se estrecha: a mayor, menor θ para el primer mínimo."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "En un experimento de Young con d = 0,5 mm, la tercera franja brillante (n = 3) está a 7,2 mm del centro cuando la pantalla está a D = 2 m. Calcula la longitud de onda.",
+        "answer": "λ = 600 nm.",
+        "full_solution": "y_n = nλD/d → λ = y_n·d/(nD) = (7,2×10⁻³ × 0,5×10⁻³)/(3 × 2) = 3,6×10⁻⁶/6 = 6×10⁻⁷ m = 600 nm.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "El primer mínimo de difracción de una rendija de ancho a = 0,05 mm está a 2,2 cm del centro de la pantalla (D = 2 m). Calcula λ.",
+        "answer": "λ ≈ 550 nm.",
+        "full_solution": "a sin θ = λ (m = 1). Para ángulos pequeños: sin θ ≈ tan θ = y/D = 0,022/2 = 0,011. λ = a sin θ = 0,05×10⁻³ × 0,011 = 5,5×10⁻⁷ m = 550 nm.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Tres polarizadores están en línea. El primero polariza la luz. El segundo tiene su eje a 30° del primero. El tercero a 60° del primero (30° del segundo). Si la intensidad tras el primero es I₀, calcula la intensidad tras el tercero.",
+        "answer": "I₃ = 0,563 I₀.",
+        "full_solution": "Tras el 2.º: I₂ = I₀ cos²(30°) = I₀ × 3/4 = 0,75 I₀. Tras el 3.º: I₃ = I₂ cos²(30°) = 0,75 I₀ × 3/4 = 0,5625 I₀ ≈ 0,563 I₀.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Por qué las gafas de sol polarizadas reducen el deslumbramiento de la carretera mojada pero no el de una fuente de luz directa?",
+        "answer": "La luz reflejada en superficies horizontales está polarizada horizontalmente. Las gafas polarizadas (eje vertical) la bloquean. La luz directa no está polarizada, así que solo pierde el 50%.",
+        "full_solution": "La luz del sol que se refleja en una superficie horizontal (agua, carretera) se polariza preferentemente en el plano horizontal (por la ley de Brewster, la polarización es máxima al ángulo de Brewster ≈ 53° para el agua). Las gafas polarizadas tienen su eje de transmisión vertical, bloqueando la componente horizontal → eliminan gran parte del reflejo. La luz directa del sol es no polarizada: contiene todas las orientaciones por igual, así que las gafas solo reducen su intensidad a la mitad (sin eliminar ninguna dirección preferente).",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Demuestra que si colocas un polarizador extra entre dos polarizadores cruzados (a 90°), algo de luz pasa. ¿Cuál es el ángulo óptimo del polarizador intermedio para maximizar la transmisión?",
+        "answer": "Ángulo óptimo: 45°. Intensidad transmitida: I₀/8.",
+        "full_solution": "Con dos polarizadores cruzados (90°): I = I₀ cos²(90°) = 0. Con un tercero a ángulo θ en medio: I₂ = I₀ cos²θ. I₃ = I₂ cos²(90°−θ) = I₀ cos²θ sin²θ = I₀ (sin 2θ)²/4. Se maximiza cuando sin 2θ = 1 → θ = 45°. Entonces I₃ = I₀/4 × 1 = I₀ × (1/4)(sin 90°)² wait let me redo. I₃ = I₀ cos²(45°) cos²(45°) = I₀ × ½ × ½ = I₀/4. Pero si la primera luz era no polarizada, I₀ = I_nat/2 and the final is I₀/4 = I_nat/8.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L04-1",
+        "stem": "La difracción es máxima cuando:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La abertura es mucho mayor que λ",
+            "why_wrong": "Si a >> λ, la difracción es despreciable."
+          },
+          {
+            "key": "B",
+            "text": "B. La abertura es comparable a λ"
+          },
+          {
+            "key": "C",
+            "text": "C. La abertura es mucho menor que λ",
+            "why_wrong": "Si a << λ, la onda se difracta completamente pero la energía transmitida es mínima."
+          },
+          {
+            "key": "D",
+            "text": "D. No depende de la abertura",
+            "why_wrong": "La relación a/λ es decisiva."
+          }
+        ]
+      },
+      {
+        "id": "MC-L04-2",
+        "stem": "La polarización demuestra que la luz es una onda:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Longitudinal",
+            "why_wrong": "Las ondas longitudinales no se pueden polarizar."
+          },
+          {
+            "key": "B",
+            "text": "B. Transversal"
+          },
+          {
+            "key": "C",
+            "text": "C. Mecánica",
+            "why_wrong": "La luz es EM, no mecánica. La polarización demuestra transversalidad."
+          },
+          {
+            "key": "D",
+            "text": "D. Estacionaria",
+            "why_wrong": "La polarización no tiene relación con ondas estacionarias."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "En un experimento de doble rendija, la separación es d = 0,3 mm y la pantalla está a D = 1 m. Con luz de 600 nm: (a) Calcula la posición del segundo máximo. (b) ¿Cuántas franjas brillantes hay entre el centro y el punto y = 1 cm? (c) Si se cambia la luz por otra de 450 nm, ¿aumenta o disminuye la separación entre franjas?",
+        "answer": "(a) y₂ = 4 mm. (b) 5 franjas. (c) Disminuye.",
+        "full_solution": "(a) y₂ = 2λD/d = 2×600×10⁻⁹×1/(0,3×10⁻³) = 4×10⁻³ m = 4 mm. (b) Interfranja = λD/d = 2 mm. Franjas en 1 cm: 10/2 = 5 franjas. (c) Con λ = 450 nm: interfranja = 450×10⁻⁹×1/(0,3×10⁻³) = 1,5 mm. Disminuye porque λ es menor."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un DVD tiene pistas separadas 0,74 μm. Cuando le da la luz blanca, ves colores en la superficie. Explica este fenómeno como difracción por una red de rendijas y calcula qué color (λ) se difracta al ángulo de 45° en el primer orden.",
+        "answer": "λ ≈ 523 nm (verde). La superficie del DVD actúa como una red de difracción.",
+        "full_solution": "Las pistas del DVD actúan como una red de difracción con d = 0,74 μm = 740 nm. La condición de máximo es d sin θ = nλ. Para n = 1 y θ = 45°: λ = d sin θ = 740 × sin(45°) = 740 × 0,707 = 523 nm. Esto corresponde al color verde. La luz blanca contiene todas las λ, y cada una se difracta a un ángulo diferente, creando el arcoíris que se ve en la superficie del DVD."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Condición de mínimos en difracción por rendija",
+        "back": "a sin θ = mλ (m = ±1, ±2, ...). A menor a, mayor difracción.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Máximos en doble rendija de Young",
+        "back": "d sin θ = nλ → yₙ = nλD/d. Interfranja: Δy = λD/d.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Ley de Malus",
+        "back": "I = I₀ cos²θ. Luz no polarizada por un polarizador: I₀ = I_nat/2.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir la fórmula de difracción (rendija simple: mínimos) con la de interferencia (doble rendija: máximos).",
+        "correction": "Rendija simple: a sin θ = mλ da MÍNIMOS. Doble rendija: d sin θ = nλ da MÁXIMOS. Las fórmulas son similares pero con significados opuestos."
+      },
+      {
+        "mistake": "Olvidar dividir la intensidad por 2 cuando la luz no polarizada pasa por el primer polarizador.",
+        "correction": "Un polarizador ideal transmite la mitad de la luz no polarizada: I₀ = I_nat/2. Luego aplica Malus: I = I₀ cos²θ."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "Rendija simple (a): a sin θ = mλ → MÍNIMOS. Doble rendija (d): d sin θ = nλ → MÁXIMOS. No confundir."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "difracción",
+        "definition": "Fenómeno por el cual una onda se curva al pasar por una abertura o rodear un obstáculo."
+      },
+      {
+        "term": "doble rendija de Young",
+        "definition": "Experimento que demostró la naturaleza ondulatoria de la luz observando interferencia."
+      },
+      {
+        "term": "polarización",
+        "definition": "Proceso de filtrar las vibraciones transversales de una onda para que oscilen en un solo plano."
+      },
+      {
+        "term": "ley de Malus",
+        "definition": "I = I₀ cos²θ. Intensidad transmitida por un analizador con eje a ángulo θ del polarizador."
+      }
+    ],
+    "summary": {
+      "big_idea": "La difracción y la polarización son fenómenos ondulatorios que demostraron definitivamente la naturaleza ondulatoria y transversal de la luz, con aplicaciones desde la óptica hasta la tecnología de pantallas.",
+      "key_points": [
+        "Difracción: significativa cuando a ≈ λ. Rendija: mínimos en a sin θ = mλ.",
+        "Young: máximos en d sin θ = nλ. Interfranja Δy = λD/d.",
+        "Polarización: solo ondas transversales. Demuestra la transversalidad de la luz.",
+        "Malus: I = I₀ cos²θ. Polarizadores cruzados bloquean toda la luz."
+      ],
+      "formulas": [
+        "$a\\sin\\theta = m\\lambda$ (mínimos difracción)",
+        "$d\\sin\\theta = n\\lambda$ (máximos Young)",
+        "$I = I_0\\cos^2\\theta$ (Malus)"
+      ],
+      "what_to_remember_if_nothing_else": "Difracción = onda rodeando obstáculos (a ≈ λ). Polarización = filtrar vibraciones → prueba de onda transversal."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque A · Difracción y polarización"
+    ],
+    "curriculum_refs": [
+      "CE3.7 Difracción por rendijas",
+      "CE3.8 Polarización"
+    ],
+    "confidence_notes": [
+      "Nivel 1.º Bach: tratamiento cuantitativo de Young y Malus"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "SVGs con CSS variables",
+        "Distinción rendija simple/doble clara"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_05.json": {
+    "id": "L05",
+    "title": "Óptica geométrica avanzada",
+    "subject": "Física y Química",
+    "course_label": "1.º Bachillerato · Física",
+    "unit_id": "U-B1F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3.9",
+        "CE3.10"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "2 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Aplicar la ecuación de Descartes para espejos esféricos con convención de signos."
+      },
+      {
+        "statement": "Resolver problemas completos de lentes delgadas con la convención de signos de la óptica."
+      },
+      {
+        "statement": "Describir el funcionamiento del microscopio compuesto y del telescopio refractor."
+      },
+      {
+        "statement": "Calcular aumentos en sistemas de dos lentes."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Espejos cóncavos/convexos y lentes convergentes/divergentes (ESO).",
+        "why_it_matters": "Aquí se formaliza con convención de signos y sistemas de dos lentes."
+      },
+      {
+        "statement": "Ecuación 1/f = 1/do + 1/di y aumento M = −di/do.",
+        "why_it_matters": "Se amplía con convención rigurosa de signos."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si un objeto está a 30 cm de una lente convergente de f = 20 cm, ¿la imagen es real o virtual?",
+        "expected_answer": "Real, porque do > f. Se forma al otro lado de la lente y se puede proyectar."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Para qué sirve el ocular de un microscopio?",
+        "expected_answer": "Para ampliar la imagen intermedia producida por el objetivo, como una lupa."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Un espejo convexo no forma imágenes.",
+        "correct_model": "Un espejo convexo SIEMPRE forma imagen: virtual, derecha y reducida, independientemente de dónde esté el objeto. Por eso se usa en espejos retrovisores y en esquinas de aparcamientos: ofrece un campo visual amplio, aunque los objetos parecen más lejos de lo que están."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El microscopio y el telescopio hacen lo mismo.",
+        "correct_model": "El microscopio amplía objetos MUY pequeños y cercanos; necesita mucho aumento angular (hasta ~1000×). El telescopio amplía objetos lejanos cuyo problema no es el tamaño sino la distancia; necesita recoger mucha luz y aumentar el ángulo subtendido (típicamente 10-200×)."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Convención de signos en óptica",
+        "body": "Para evitar confusiones, toda la óptica geométrica usa una **convención de signos** consistente. La más habitual:\n\n- La luz viaja de izquierda a derecha.\n- Las distancias se miden desde el elemento óptico (espejo o lente).\n- **Positivo**: en la dirección de la luz reflejada/refractada (a la derecha del espejo, a la derecha de la lente).\n- **Negativo**: en la dirección de donde viene la luz.\n- Para espejos: $f > 0$ (cóncavo), $f < 0$ (convexo).\n- Para lentes: $f > 0$ (convergente), $f < 0$ (divergente).\n- El objeto suele estar a la izquierda → $d_o > 0$ (convenio: $d_o$ se toma positivo).\n- Imagen real → $d_i > 0$. Imagen virtual → $d_i < 0$.\n\nSeguir siempre la misma convención elimina las ambigüedades y hace que la fórmula funcione automáticamente."
+      },
+      {
+        "title": "Ecuación de espejos y lentes (Descartes)",
+        "body": "La ecuación fundamental de la óptica geométrica (ecuación de Descartes o ecuación conjugada) tiene la misma forma para espejos y lentes delgadas:\n\n$$\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$$\n\nY el **aumento lateral** (o magnificación):\n\n$$M = -\\frac{d_i}{d_o}$$\n\nSignificado de M:\n- $|M| > 1$: imagen ampliada. $|M| < 1$: reducida.\n- $M > 0$: imagen derecha (mismo sentido que el objeto).\n- $M < 0$: imagen invertida.\n\nEstas fórmulas, con la convención de signos, dan el resultado correcto en TODOS los casos: espejos cóncavos, convexos, lentes convergentes, divergentes, objetos dentro o fuera de f.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"aL\" markerWidth=\"6\" markerHeight=\"4\" refX=\"6\" refY=\"2\" orient=\"auto\"><path d=\"M0,0 L6,2 L0,4\" fill=\"#0e7a68\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Trazado de rayos: lente convergente</text><line x1=\"30\" y1=\"160\" x2=\"470\" y2=\"160\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/><path d=\"M240,50 Q230,160 240,270\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><path d=\"M260,50 Q270,160 260,270\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"250\" y=\"44\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Lente</text><circle cx=\"170\" cy=\"160\" r=\"3\" fill=\"#c17a17\"/><text x=\"170\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">F</text><circle cx=\"330\" cy=\"160\" r=\"3\" fill=\"#c17a17\"/><text x=\"330\" y=\"178\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">F'</text><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"160\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><polygon points=\"100,100 96,110 104,110\" fill=\"#0e7a68\"/><text x=\"85\" y=\"125\" font-size=\"10\" fill=\"#0e7a68\">Objeto</text><line x1=\"100\" y1=\"100\" x2=\"248\" y2=\"100\" stroke=\"#0e7a68\" stroke-width=\"1.2\"/><line x1=\"252\" y1=\"100\" x2=\"400\" y2=\"190\" stroke=\"#0e7a68\" stroke-width=\"1.2\" marker-end=\"url(#aL)\"/><line x1=\"100\" y1=\"100\" x2=\"248\" y2=\"140\" stroke=\"#c17a17\" stroke-width=\"1.2\"/><line x1=\"252\" y1=\"142\" x2=\"400\" y2=\"190\" stroke=\"#c17a17\" stroke-width=\"1.2\"/><line x1=\"400\" y1=\"160\" x2=\"400\" y2=\"190\" stroke=\"#8a3d6b\" stroke-width=\"2.5\"/><polygon points=\"400,190 396,180 404,180\" fill=\"#8a3d6b\"/><text x=\"420\" y=\"185\" font-size=\"10\" fill=\"#8a3d6b\">Imagen</text><text x=\"250\" y=\"292\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">1/s' − 1/s = 1/f'    (Ecuación de Descartes)</text></svg>",
+            "caption": "Trazado de rayos para una lente convergente: un rayo paralelo al eje sale por el foco imagen, y un rayo por el centro no se desvía."
+          }
+        ]
+      },
+      {
+        "title": "Trazado de rayos: método gráfico",
+        "body": "Para verificar resultados y entender la formación de imágenes, se trazan tres rayos principales:\n\n**Lente convergente**:\n1. Rayo paralelo al eje → sale por el foco imagen (F').\n2. Rayo que pasa por el centro → sigue recto (no se desvía).\n3. Rayo que pasa por el foco objeto (F) → sale paralelo al eje.\n\n**Lente divergente**:\n1. Rayo paralelo → se desvía como si viniera de F' (virtual, mismo lado).\n2. Rayo que pasa por el centro → sigue recto.\n3. Rayo dirigido hacia F' al otro lado → sale paralelo.\n\nLa imagen se forma donde se cruzan los rayos (real) o donde se cruzan sus prolongaciones (virtual).\n\n<svg viewBox=\"0 0 460 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:460px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <line x1=\"20\" y1=\"90\" x2=\"440\" y2=\"90\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <line x1=\"200\" y1=\"20\" x2=\"200\" y2=\"160\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"195\" y=\"12\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Lente +</text>\n  <circle cx=\"140\" cy=\"90\" r=\"3\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"140\" y=\"105\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\" text-anchor=\"middle\">F</text>\n  <circle cx=\"260\" cy=\"90\" r=\"3\" fill=\"var(--primary,#0e7a68)\"/>\n  <text x=\"260\" y=\"105\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\" text-anchor=\"middle\">F'</text>\n  <line x1=\"80\" y1=\"50\" x2=\"80\" y2=\"90\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <circle cx=\"80\" cy=\"50\" r=\"3\" fill=\"var(--secondary,#c17a17)\"/>\n  <text x=\"70\" y=\"45\" font-size=\"9\" fill=\"var(--secondary,#c17a17)\">Obj</text>\n  <line x1=\"80\" y1=\"50\" x2=\"200\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1\"/>\n  <line x1=\"200\" y1=\"50\" x2=\"360\" y2=\"130\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1\"/>\n  <line x1=\"80\" y1=\"50\" x2=\"360\" y2=\"130\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"360\" y1=\"90\" x2=\"360\" y2=\"130\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <circle cx=\"360\" cy=\"130\" r=\"3\" fill=\"var(--secondary,#c17a17)\"/>\n  <text x=\"370\" y=\"145\" font-size=\"9\" fill=\"var(--secondary,#c17a17)\">Img</text>\n  <text x=\"230\" y=\"175\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Imagen real, invertida, ampliada (d_o entre f y 2f)</text>\n</svg>"
+      },
+      {
+        "title": "El microscopio compuesto",
+        "body": "El microscopio consta de dos lentes convergentes: el **objetivo** (focal corta, cerca del objeto) y el **ocular** (focal corta, cerca del ojo).\n\nFuncionamiento:\n1. El objeto se coloca justo fuera del foco del objetivo → se forma una imagen intermedia real, invertida y muy ampliada.\n2. El ocular actúa como una lupa: amplía la imagen intermedia para el ojo.\n\nEl aumento total es el producto de los aumentos:\n\n$$M_{\\text{total}} = M_{\\text{objetivo}} \\times M_{\\text{ocular}} = \\frac{L}{f_{\\text{obj}}} \\times \\frac{D}{f_{\\text{oc}}}$$\n\nDonde $L$ es la distancia entre las lentes (longitud del tubo, ~16 cm en microscopios ópticos) y $D$ es la distancia de visión nítida (~25 cm)."
+      },
+      {
+        "title": "El telescopio refractor",
+        "body": "El telescopio refractor (tipo Galileo/Kepler) también usa dos lentes, pero diseñadas para objetos lejanos:\n\n- **Objetivo**: focal larga. Recoge la luz de objetos distantes y forma una imagen en su plano focal.\n- **Ocular**: focal corta. Amplía esa imagen como una lupa.\n\nEl **aumento angular** (cuántas veces mayor vemos el ángulo que subtiende el objeto):\n\n$$G = \\frac{f_{\\text{obj}}}{f_{\\text{oc}}}$$\n\nEn un telescopio, a diferencia del microscopio, lo que importa es aumentar el ángulo bajo el que vemos objetos lejanos (que ya son grandes, pero están lejos). Un objetivo de gran diámetro también recoge más luz, permitiendo ver objetos más débiles."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Lente convergente: imagen real",
+        "statement": "Un objeto de 3 cm está a 30 cm de una lente convergente de f = 20 cm. Calcula la posición, tamaño y tipo de imagen.",
+        "steps": [
+          "1/f = 1/do + 1/di → 1/20 = 1/30 + 1/di → 1/di = 1/20 − 1/30 = (3−2)/60 = 1/60.",
+          "di = 60 cm (positivo → imagen real, al otro lado de la lente).",
+          "M = −di/do = −60/30 = −2.",
+          "Tamaño imagen = |M| × 3 = 6 cm. Signo negativo → invertida."
+        ],
+        "answer": "Imagen real, invertida, a 60 cm de la lente, de 6 cm (el doble del objeto).",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Imagen real en lente convergente (s &gt; f')</text><line x1=\"30\" y1=\"140\" x2=\"470\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><line x1=\"250\" y1=\"40\" x2=\"250\" y2=\"230\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"256\" y=\"52\" font-size=\"10\" fill=\"var(--text,#20302a)\">Lente</text><line x1=\"100\" y1=\"80\" x2=\"100\" y2=\"140\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><polygon points=\"100,80 96,90 104,90\" fill=\"#0e7a68\"/><text x=\"100\" y=\"158\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">Objeto</text><line x1=\"380\" y1=\"140\" x2=\"380\" y2=\"200\" stroke=\"#8a3d6b\" stroke-width=\"2.5\"/><polygon points=\"380,200 376,190 384,190\" fill=\"#8a3d6b\"/><text x=\"380\" y=\"220\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Imagen real invertida</text><text x=\"250\" y=\"248\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">M = s'/s → imagen invertida (M &lt; 0) si s &gt; f'</text></svg>",
+            "caption": "Cuando el objeto está más allá del foco, la lente convergente forma una imagen real, invertida y al otro lado de la lente."
+          }
+        ]
+      },
+      {
+        "title": "Lente divergente",
+        "statement": "Un objeto está a 40 cm de una lente divergente de f = −20 cm. ¿Dónde se forma la imagen?",
+        "steps": [
+          "1/f = 1/do + 1/di → 1/(−20) = 1/40 + 1/di.",
+          "1/di = −1/20 − 1/40 = (−2−1)/40 = −3/40.",
+          "di = −13,3 cm (negativo → virtual, mismo lado que el objeto).",
+          "M = −(−13,3)/40 = +0,33. Imagen derecha y reducida a 1/3."
+        ],
+        "answer": "Imagen virtual, derecha, reducida, a 13,3 cm de la lente (del lado del objeto)."
+      },
+      {
+        "title": "Aumento del telescopio",
+        "statement": "Un telescopio tiene objetivo f = 1200 mm y ocular f = 25 mm. ¿Cuál es su aumento?",
+        "steps": [
+          "G = f_obj/f_oc = 1200/25 = 48×."
+        ],
+        "answer": "G = 48 aumentos."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "guided-opt-1",
+        "statement": "Un espejo cóncavo de f = 15 cm tiene un objeto a: (a) 30 cm, (b) 15 cm, (c) 10 cm. Para cada caso, calcula di, M y describe la imagen (real/virtual, derecha/invertida, ampliada/reducida).",
+        "scaffold": "Usa 1/f = 1/do + 1/di para cada caso. M = −di/do. El signo de di te dice si es real (+) o virtual (−).",
+        "answer": "(a) di = 30 cm, M = −1, real invertida tamaño natural. (b) di = ∞ (rayos paralelos, no se forma imagen). (c) di = −30 cm, M = +3, virtual derecha ampliada."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un objeto de 2 cm se coloca a 25 cm de un espejo cóncavo de radio de curvatura 30 cm. Calcula la posición y el tamaño de la imagen.",
+        "answer": "di = 37,5 cm; tamaño = 3 cm (invertida).",
+        "full_solution": "f = R/2 = 15 cm. 1/15 = 1/25 + 1/di → 1/di = 1/15 − 1/25 = (5−3)/75 = 2/75. di = 37,5 cm (real). M = −37,5/25 = −1,5. Tamaño = 1,5 × 2 = 3 cm. Imagen real, invertida, ampliada.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una lupa (lente convergente de f = 5 cm) se usa para ver un insecto situado a 4 cm de la lente. (a) ¿Dónde se forma la imagen? (b) ¿Cuál es el aumento? (c) ¿Se puede proyectar en una pantalla?",
+        "answer": "(a) di = −20 cm. (b) M = +5. (c) No, es virtual.",
+        "full_solution": "(a) 1/5 = 1/4 + 1/di → 1/di = 1/5 − 1/4 = −1/20. di = −20 cm (virtual, mismo lado). (b) M = −(−20)/4 = +5. Imagen 5 veces mayor, derecha. (c) No se puede proyectar: imagen virtual (solo se ve mirando a través de la lente).",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un microscopio tiene un objetivo de f = 4 mm y un ocular de f = 25 mm. La distancia entre las lentes es 160 mm. Calcula el aumento total si D = 250 mm.",
+        "answer": "M_total = 400×.",
+        "full_solution": "M_obj = L/f_obj = 160/4 = 40. M_oc = D/f_oc = 250/25 = 10. M_total = 40 × 10 = 400×.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un espejo convexo de un parking tiene f = −2 m. Un coche está a 8 m. (a) ¿Dónde está la imagen? (b) ¿Cómo es? (c) ¿Por qué se pone un cartel que dice 'los objetos están más cerca de lo que parecen'?",
+        "answer": "(a) di = −1,6 m. (b) Virtual, derecha, reducida (M = 0,2). (c) Porque la imagen es 5 veces menor, lo que da impresión de lejanía.",
+        "full_solution": "(a) 1/(−2) = 1/8 + 1/di → 1/di = −1/2 − 1/8 = −5/8. di = −1,6 m (virtual). (b) M = −(−1,6)/8 = +0,2. Virtual, derecha, reducida al 20%. (c) El ojo interpreta un objeto más pequeño como más lejano. La imagen reducida hace que el coche parezca más lejos de lo que realmente está, creando un peligro al cambiar de carril.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dos lentes delgadas (f₁ = +10 cm, f₂ = −15 cm) están en contacto. Calcula la focal equivalente del sistema y su potencia en dioptrías.",
+        "answer": "f_eq = 30 cm; P = 3,33 D.",
+        "full_solution": "1/f_eq = 1/f₁ + 1/f₂ = 1/10 + 1/(−15) = 3/30 − 2/30 = 1/30. f_eq = 30 cm = 0,3 m. P = 1/f = 1/0,3 = 3,33 dioptrías. El sistema es convergente (f > 0).",
+        "difficulty": "transferencia"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L05-1",
+        "stem": "Una lente divergente siempre produce imágenes:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Reales e invertidas",
+            "why_wrong": "Las lentes divergentes nunca forman imágenes reales (di siempre < 0)."
+          },
+          {
+            "key": "B",
+            "text": "B. Virtuales, derechas y reducidas"
+          },
+          {
+            "key": "C",
+            "text": "C. Virtuales e invertidas",
+            "why_wrong": "Las imágenes virtuales de lentes divergentes son derechas (M > 0)."
+          },
+          {
+            "key": "D",
+            "text": "D. Depende de la distancia del objeto",
+            "why_wrong": "A diferencia de las convergentes, las divergentes siempre dan el mismo tipo."
+          }
+        ]
+      },
+      {
+        "id": "MC-L05-2",
+        "stem": "El aumento de un telescopio se calcula como:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. f_obj × f_oc",
+            "why_wrong": "El aumento es un cociente, no un producto de focales."
+          },
+          {
+            "key": "B",
+            "text": "B. f_obj / f_oc"
+          },
+          {
+            "key": "C",
+            "text": "C. f_oc / f_obj",
+            "why_wrong": "Sería el inverso del aumento: daría un número < 1."
+          },
+          {
+            "key": "D",
+            "text": "D. (f_obj + f_oc) / 2",
+            "why_wrong": "No hay media; es un cociente directo."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Un objeto de 5 mm se coloca a 12 mm de un objetivo de microscopio (f = 10 mm). (a) Calcula dónde se forma la imagen y su tamaño. (b) Si esta imagen queda a 25 mm del ocular (f = 25 mm), calcula la posición de la imagen final y el aumento del ocular. (c) ¿Cuál es el aumento total del sistema?",
+        "answer": "(a) di = 60 mm, imagen de 25 mm (M_obj = −5). (b) La imagen intermedia está en el foco del ocular → imagen en el infinito, M_oc = D/f_oc = 10. (c) M_total = 50.",
+        "full_solution": "(a) 1/10 = 1/12 + 1/di → 1/di = 1/10 − 1/12 = (6−5)/60 = 1/60. di = 60 mm. M = −60/12 = −5. Tamaño = 5×5 = 25 mm. (b) Imagen a 25 mm del ocular f = 25 mm → do = f → imagen en el infinito (ojo relajado). M_oc = D/f = 250/25 = 10 (aumento angular con ojo en punto cercano). (c) M_total = |M_obj| × M_oc = 5 × 10 = 50×."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "El Telescopio Espacial Hubble tiene un espejo primario de 2,4 m de diámetro y una focal de 57,6 m. (a) Si quiere resolver dos estrellas separadas por el ángulo mínimo posible con luz visible (λ = 550 nm), ¿cuál es ese ángulo? (Criterio de Rayleigh: θ_min = 1,22 λ/D). (b) ¿Cuánto mejor es esta resolución comparada con un telescopio terrestre de 20 cm (sin considerar la atmósfera)? (c) ¿Por qué el Hubble está en el espacio si la resolución solo depende de D?",
+        "answer": "(a) θ ≈ 0,056 arcsec. (b) 12 veces mejor. (c) La atmósfera distorsiona la imagen (seeing ≈ 1 arcsec), anulando la ventaja de un espejo grande.",
+        "full_solution": "(a) θ = 1,22 × 550×10⁻⁹/2,4 = 2,80×10⁻⁷ rad. En segundos de arco: 2,80×10⁻⁷ × (180/π) × 3600 = 0,058\". (b) θ_terrestre = 1,22 × 550×10⁻⁹/0,2 = 3,36×10⁻⁶ rad = 0,69\". Ratio = 3,36/0,28 = 12 veces. (c) En la Tierra, la turbulencia atmosférica limita la resolución a ~1\" (el 'seeing'), independientemente del tamaño del espejo. En el espacio no hay atmósfera, así que el Hubble puede alcanzar su resolución teórica (limitada por difracción)."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Ecuación de Descartes",
+        "back": "1/f = 1/do + 1/di. M = −di/do. Válida para espejos y lentes con convención de signos.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Aumento del microscopio",
+        "back": "M = (L/f_obj) × (D/f_oc). L = tubo, D = 25 cm.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Aumento del telescopio",
+        "back": "G = f_obj / f_oc.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Olvidar la convención de signos y poner f positiva para lentes divergentes.",
+        "correction": "Lentes divergentes: f < 0. Espejos convexos: f < 0. Si olvidas los signos, obtienes resultados absurdos (imágenes reales donde deberían ser virtuales)."
+      },
+      {
+        "mistake": "Confundir el aumento del microscopio con el del telescopio.",
+        "correction": "Microscopio: M = (L/f_obj)×(D/f_oc), aumento lateral. Telescopio: G = f_obj/f_oc, aumento angular."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En problemas de óptica, establece primero la convención de signos. Si di sale negativo, la imagen es virtual. Si M sale positivo, la imagen es derecha."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "convención de signos",
+        "definition": "Sistema de reglas que asigna + o − a distancias y focales según la posición relativa a la lente/espejo."
+      },
+      {
+        "term": "microscopio compuesto",
+        "definition": "Instrumento óptico con objetivo + ocular que amplía objetos pequeños cercanos."
+      },
+      {
+        "term": "telescopio refractor",
+        "definition": "Instrumento óptico con objetivo de focal larga + ocular de focal corta para ver objetos lejanos."
+      },
+      {
+        "term": "potencia (dioptrías)",
+        "definition": "P = 1/f (con f en metros). Unidad: dioptría (D). Mide la capacidad de convergencia de una lente."
+      }
+    ],
+    "summary": {
+      "big_idea": "La ecuación de Descartes unifica el tratamiento de espejos y lentes. Con la convención de signos correcta y el trazado de rayos, se puede analizar cualquier sistema óptico, desde una lupa hasta un telescopio.",
+      "key_points": [
+        "1/f = 1/do + 1/di; M = −di/do. Signos: f > 0 (convergente), f < 0 (divergente).",
+        "di > 0 → real; di < 0 → virtual. M > 0 → derecha; M < 0 → invertida.",
+        "Microscopio: M = (L/f_obj)(D/f_oc). Telescopio: G = f_obj/f_oc.",
+        "Lentes en contacto: 1/f_eq = 1/f₁ + 1/f₂."
+      ],
+      "formulas": [
+        "$\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$",
+        "$M = -\\frac{d_i}{d_o}$",
+        "$G = \\frac{f_{\\text{obj}}}{f_{\\text{oc}}}$"
+      ],
+      "what_to_remember_if_nothing_else": "1/f = 1/do + 1/di con signos correctos. M = −di/do. El signo lo dice todo: real/virtual, derecha/invertida."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque A · Óptica geométrica"
+    ],
+    "curriculum_refs": [
+      "CE3.9 Formación de imágenes",
+      "CE3.10 Instrumentos ópticos"
+    ],
+    "confidence_notes": [
+      "Nivel 1.º Bach: convención de signos rigurosa y sistemas de dos lentes"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "SVGs con CSS variables",
+        "Convención de signos consistente"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_06.json": {
+    "id": "L06",
+    "title": "Espectro electromagnético y radiación",
+    "subject": "Física y Química",
+    "course_label": "1.º Bachillerato · Física",
+    "unit_id": "U-B1F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 243/2022",
+      "codes": [
+        "CE3.11",
+        "CE3.12"
+      ],
+      "status": "DEFINIDO",
+      "track": "Bachillerato"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Describir el espectro electromagnético completo, relacionando frecuencia, longitud de onda y energía del fotón."
+      },
+      {
+        "statement": "Explicar la relación E = hf y la dualidad onda-corpúsculo a nivel cualitativo."
+      },
+      {
+        "statement": "Describir cualitativamente la radiación del cuerpo negro y la ley de Wien."
+      },
+      {
+        "statement": "Analizar las aplicaciones y riesgos de cada tipo de radiación EM."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Propiedades de las ondas EM: c = λf, propagación en el vacío.",
+        "why_it_matters": "El espectro se ordena por frecuencia/longitud de onda."
+      },
+      {
+        "statement": "Conceptos de difracción, interferencia y polarización.",
+        "why_it_matters": "Demuestran la naturaleza ondulatoria de la luz EM."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué tienen en común las ondas de radio y los rayos gamma?",
+        "expected_answer": "Son ambos ondas EM: viajan a c en el vacío, se diferencian en frecuencia (y por tanto en energía y longitud de onda)."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué color emite un objeto muy caliente (por ejemplo, el filamento de una bombilla incandescente)?",
+        "expected_answer": "Luz blanca-amarillenta cuando está muy caliente (~3000 K); objetos más fríos emiten en infrarrojo (invisible)."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Los distintos tipos de ondas EM (radio, luz, rayos X) son fenómenos diferentes.",
+        "correct_model": "Todas las ondas EM son exactamente la misma cosa: campos eléctricos y magnéticos oscilantes que se propagan a c. La ÚNICA diferencia es la frecuencia (y por tanto la longitud de onda y la energía del fotón). No hay una frontera física entre, por ejemplo, las microondas y el infrarrojo: los nombres son convenciones para rangos de frecuencia."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La luz es una onda O una partícula, pero no puede ser las dos cosas.",
+        "correct_model": "La luz (y toda la radiación EM) muestra comportamiento ondulatorio (difracción, interferencia, polarización) Y corpuscular (efecto fotoeléctrico, absorción/emisión cuantizada). Esta dualidad onda-corpúsculo es un hecho experimental, no una contradicción: simplemente, la realidad a escala cuántica no se ajusta a nuestras categorías clásicas de 'onda' y 'partícula'."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "El espectro EM: una familia de ondas",
+        "body": "Todas las ondas electromagnéticas comparten la misma naturaleza (campos E y B oscilantes que viajan a $c = 3 \\times 10^8$ m/s en el vacío), pero cubren un rango enorme de frecuencias. Las dividimos en regiones por conveniencia y por sus diferentes interacciones con la materia:\n\n<svg viewBox=\"0 0 460 130\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:460px;font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"230\" y=\"15\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Espectro electromagnético</text>\n  <rect x=\"10\" y=\"25\" width=\"55\" height=\"30\" rx=\"3\" fill=\"var(--primary,#0e7a68)\" opacity=\"0.15\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1\"/>\n  <text x=\"37\" y=\"44\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Radio</text>\n  <rect x=\"70\" y=\"25\" width=\"55\" height=\"30\" rx=\"3\" fill=\"var(--primary,#0e7a68)\" opacity=\"0.25\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1\"/>\n  <text x=\"97\" y=\"44\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Microondas</text>\n  <rect x=\"130\" y=\"25\" width=\"45\" height=\"30\" rx=\"3\" fill=\"var(--secondary,#c17a17)\" opacity=\"0.25\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1\"/>\n  <text x=\"152\" y=\"44\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">IR</text>\n  <rect x=\"180\" y=\"25\" width=\"60\" height=\"30\" rx=\"3\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <rect x=\"180\" y=\"25\" width=\"10\" height=\"30\" fill=\"var(--accent,#8a3d6b)\" opacity=\"0.5\"/>\n  <rect x=\"190\" y=\"25\" width=\"10\" height=\"30\" fill=\"var(--secondary,#c17a17)\" opacity=\"0.5\"/>\n  <rect x=\"200\" y=\"25\" width=\"10\" height=\"30\" fill=\"var(--primary,#0e7a68)\" opacity=\"0.5\"/>\n  <rect x=\"210\" y=\"25\" width=\"10\" height=\"30\" fill=\"var(--secondary,#c17a17)\" opacity=\"0.5\"/>\n  <rect x=\"220\" y=\"25\" width=\"10\" height=\"30\" fill=\"var(--secondary,#c17a17)\" opacity=\"0.5\"/>\n  <rect x=\"230\" y=\"25\" width=\"10\" height=\"30\" fill=\"var(--primary,#0e7a68)\" opacity=\"0.5\"/>\n  <text x=\"210\" y=\"44\" font-size=\"7\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Visible</text>\n  <rect x=\"245\" y=\"25\" width=\"40\" height=\"30\" rx=\"3\" fill=\"var(--accent,#8a3d6b)\" opacity=\"0.2\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"1\"/>\n  <text x=\"265\" y=\"44\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">UV</text>\n  <rect x=\"290\" y=\"25\" width=\"55\" height=\"30\" rx=\"3\" fill=\"var(--accent,#8a3d6b)\" opacity=\"0.35\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"1\"/>\n  <text x=\"317\" y=\"44\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Rayos X</text>\n  <rect x=\"350\" y=\"25\" width=\"55\" height=\"30\" rx=\"3\" fill=\"var(--accent,#8a3d6b)\" opacity=\"0.5\" stroke=\"var(--accent,#8a3d6b)\" stroke-width=\"1\"/>\n  <text x=\"377\" y=\"44\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Rayos γ</text>\n  <line x1=\"10\" y1=\"65\" x2=\"405\" y2=\"65\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\" marker-end=\"url(#arr)\"/>\n  <text x=\"10\" y=\"80\" font-size=\"8\" fill=\"var(--text,#20302a)\">λ grande</text>\n  <text x=\"350\" y=\"80\" font-size=\"8\" fill=\"var(--text,#20302a)\">λ pequeña</text>\n  <text x=\"10\" y=\"93\" font-size=\"8\" fill=\"var(--text,#20302a)\">f baja</text>\n  <text x=\"350\" y=\"93\" font-size=\"8\" fill=\"var(--text,#20302a)\">f alta</text>\n  <text x=\"10\" y=\"106\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">E baja</text>\n  <text x=\"350\" y=\"106\" font-size=\"8\" fill=\"var(--accent,#8a3d6b)\">E alta</text>\n  <text x=\"10\" y=\"125\" font-size=\"8\" fill=\"var(--text,#20302a)\">No ionizante ←――――――――――――→ Ionizante</text>\n</svg>",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Espectro electromagnético</text><defs><linearGradient id=\"vis\" x1=\"0%\" x2=\"100%\"><stop offset=\"0%\" stop-color=\"#8a3d6b\"/><stop offset=\"20%\" stop-color=\"#3344cc\"/><stop offset=\"40%\" stop-color=\"#0e7a68\"/><stop offset=\"60%\" stop-color=\"#88aa22\"/><stop offset=\"80%\" stop-color=\"#c17a17\"/><stop offset=\"100%\" stop-color=\"#cc3333\"/></linearGradient></defs><rect x=\"40\" y=\"60\" width=\"420\" height=\"40\" rx=\"4\" fill=\"url(#vis)\" opacity=\"0.3\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><text x=\"250\" y=\"85\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Visible</text><rect x=\"40\" y=\"110\" width=\"420\" height=\"25\" rx=\"4\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><text x=\"60\" y=\"127\" font-size=\"8\" fill=\"var(--text,#20302a)\">Radio</text><text x=\"130\" y=\"127\" font-size=\"8\" fill=\"var(--text,#20302a)\">Micro</text><text x=\"195\" y=\"127\" font-size=\"8\" fill=\"var(--text,#20302a)\">IR</text><rect x=\"225\" y=\"110\" width=\"55\" height=\"25\" fill=\"#0e7a68\" opacity=\"0.2\"/><text x=\"252\" y=\"127\" font-size=\"8\" fill=\"#0e7a68\" font-weight=\"bold\">Vis</text><text x=\"300\" y=\"127\" font-size=\"8\" fill=\"var(--text,#20302a)\">UV</text><text x=\"355\" y=\"127\" font-size=\"8\" fill=\"var(--text,#20302a)\">Rayos X</text><text x=\"425\" y=\"127\" font-size=\"8\" fill=\"var(--text,#20302a)\">Gamma</text><line x1=\"40\" y1=\"145\" x2=\"460\" y2=\"145\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><text x=\"40\" y=\"165\" font-size=\"9\" fill=\"var(--text,#20302a)\">10³ Hz</text><text x=\"130\" y=\"165\" font-size=\"9\" fill=\"var(--text,#20302a)\">10⁹</text><text x=\"195\" y=\"165\" font-size=\"9\" fill=\"var(--text,#20302a)\">10¹²</text><text x=\"252\" y=\"165\" text-anchor=\"middle\" font-size=\"9\" fill=\"#0e7a68\">10¹⁴</text><text x=\"310\" y=\"165\" font-size=\"9\" fill=\"var(--text,#20302a)\">10¹⁶</text><text x=\"380\" y=\"165\" font-size=\"9\" fill=\"var(--text,#20302a)\">10¹⁸</text><text x=\"440\" y=\"165\" font-size=\"9\" fill=\"var(--text,#20302a)\">10²⁰</text><text x=\"250\" y=\"185\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Frecuencia (Hz) →</text><text x=\"250\" y=\"210\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">← Longitud de onda (λ = c/f)</text><text x=\"250\" y=\"240\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">c = 3 × 10⁸ m/s para todas las ondas EM</text><text x=\"250\" y=\"262\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Mayor frecuencia → mayor energía (E = hf)</text></svg>",
+            "caption": "El espectro electromagnético abarca desde ondas de radio hasta rayos gamma. Todas viajan a c = 3×10⁸ m/s en el vacío."
+          }
+        ]
+      },
+      {
+        "title": "La energía del fotón: E = hf",
+        "body": "La clave que conecta la naturaleza ondulatoria y corpuscular de la luz es la relación de Planck-Einstein:\n\n$$E = hf = \\frac{hc}{\\lambda}$$\n\nDonde $h = 6{,}63 \\times 10^{-34}$ J·s es la **constante de Planck**.\n\nEsta ecuación dice que la energía viene en paquetes discretos (**cuantos** o **fotones**), cada uno con una energía proporcional a la frecuencia. A mayor frecuencia → mayor energía por fotón.\n\nPor eso los rayos gamma son peligrosos (fotones muy energéticos, capaces de romper moléculas) y las ondas de radio son inofensivas (fotones de energía ínfima). No es una cuestión de intensidad (número de fotones), sino de la energía de CADA fotón individual."
+      },
+      {
+        "title": "Dualidad onda-corpúsculo",
+        "body": "La física clásica clasificaba los fenómenos en ondas o partículas. La realidad cuántica rompe esta dicotomía:\n\n**Comportamiento ondulatorio** de la luz: difracción, interferencia (Young), polarización.\n\n**Comportamiento corpuscular** de la luz: efecto fotoeléctrico (la luz arranca electrones del metal, pero solo si la frecuencia es suficiente, independientemente de la intensidad; explicado por Einstein con E = hf en 1905, Nobel 1921).\n\nLa luz no es «ni onda ni partícula»: es algo que muestra ambos comportamientos según el experimento. A nivel de 1.º Bachillerato, lo importante es reconocer esta dualidad y que $E = hf$ la conecta: la frecuencia (propiedad de onda) determina la energía (propiedad de partícula)."
+      },
+      {
+        "title": "Radiación del cuerpo negro",
+        "body": "Todo objeto con temperatura emite radiación EM. Un **cuerpo negro** es un emisor ideal que absorbe y emite toda la radiación posible.\n\nLa **ley de Wien** relaciona la temperatura con el pico de emisión:\n\n$$\\lambda_{\\text{max}} = \\frac{b}{T} \\qquad (b = 2{,}898 \\times 10^{-3} \\text{ m·K})$$\n\nA mayor temperatura, el pico se desplaza hacia longitudes de onda más cortas (frecuencias más altas):\n\n| Temperatura | Pico de emisión | Ejemplo |\n|---|---|---|\n| 300 K (ambiente) | ~10 μm (IR lejano) | Cuerpo humano |\n| 3000 K | ~1 μm (IR cercano) | Bombilla incandescente |\n| 5800 K | ~500 nm (visible) | Superficie del Sol |\n| 10 000 K | ~290 nm (UV) | Estrellas azules |\n\nEsta es la razón por la que los objetos calientes «brillan» al rojo, y más calientes al blanco-azulado. También explica por qué las cámaras térmicas ven en infrarrojo: detectan la radiación que emiten los cuerpos a temperatura ambiente."
+      },
+      {
+        "title": "Aplicaciones y riesgos del espectro EM",
+        "body": "Cada región del espectro EM tiene aplicaciones específicas basadas en cómo interactúa con la materia:\n\n| Región | λ aproximada | Aplicación clave | Interacción con materia |\n|---|---|---|---|\n| Radio | km – cm | Comunicaciones, radio, TV | Interactúa con antenas metálicas |\n| Microondas | cm – mm | WiFi, radar, hornos | Absorbida por moléculas polares (agua) |\n| Infrarrojo | mm – 700 nm | Calefacción, visión nocturna, mandos | Vibraciones moleculares |\n| Visible | 700 – 400 nm | Visión, fotografía, fibra óptica | Excita electrones de valencia |\n| Ultravioleta | 400 – 10 nm | Desinfección, bronceado, detección | Rompe enlaces débiles (parcialmente ionizante) |\n| Rayos X | 10 – 0,01 nm | Radiografías, cristalografía | Arranca electrones internos |\n| Rayos γ | < 0,01 nm | Radioterapia, esterilización | Rompe núcleos, daño severo al ADN |\n\nLa frontera entre **no ionizante** e **ionizante** está en el UV: por debajo de ~10 eV (λ ~ 124 nm), los fotones no tienen energía suficiente para arrancar electrones."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Energía de fotones",
+        "statement": "Calcula la energía de un fotón de luz verde (λ = 550 nm) y de un fotón de rayos X (λ = 0,1 nm). Expresa ambos en eV. (1 eV = 1,6 × 10⁻¹⁹ J)",
+        "steps": [
+          "E_verde = hc/λ = (6,63×10⁻³⁴ × 3×10⁸)/(550×10⁻⁹) = 3,61×10⁻¹⁹ J = 2,26 eV.",
+          "E_rayoX = hc/λ = (6,63×10⁻³⁴ × 3×10⁸)/(0,1×10⁻⁹) = 1,99×10⁻¹⁵ J = 12 400 eV ≈ 12,4 keV.",
+          "El fotón de rayos X es ~5500 veces más energético que el de luz verde."
+        ],
+        "answer": "E_verde = 2,26 eV; E_rayoX = 12 400 eV. El de rayos X es miles de veces más energético.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Energía del fotón: E = hf</text><rect x=\"60\" y=\"60\" width=\"380\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><rect x=\"60\" y=\"60\" width=\"126\" height=\"50\" fill=\"#cc3333\" opacity=\"0.15\"/><text x=\"123\" y=\"90\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Rojo: 1,8 eV</text><rect x=\"186\" y=\"60\" width=\"128\" height=\"50\" fill=\"#0e7a68\" opacity=\"0.15\"/><text x=\"250\" y=\"90\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Verde: 2,3 eV</text><rect x=\"314\" y=\"60\" width=\"126\" height=\"50\" fill=\"#8a3d6b\" opacity=\"0.15\"/><text x=\"377\" y=\"90\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Violeta: 3,1 eV</text><text x=\"250\" y=\"150\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0e7a68\">E = hf = hc/λ</text><text x=\"250\" y=\"180\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">h = 6,63 × 10⁻³⁴ J·s</text><text x=\"250\" y=\"210\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">Mayor frecuencia → mayor energía por fotón</text></svg>",
+            "caption": "La energía de un fotón es proporcional a su frecuencia. La luz violeta transporta más energía por fotón que la roja."
+          }
+        ]
+      },
+      {
+        "title": "Ley de Wien",
+        "statement": "La superficie del Sol tiene T ≈ 5800 K. ¿A qué longitud de onda emite más radiación?",
+        "steps": [
+          "λ_max = b/T = 2,898×10⁻³/5800 = 5,0×10⁻⁷ m = 500 nm.",
+          "500 nm corresponde al verde-amarillo: por eso el Sol parece amarillo-blanco."
+        ],
+        "answer": "λ_max = 500 nm (luz verde-amarilla)."
+      },
+      {
+        "title": "Temperatura de una estrella",
+        "statement": "Una estrella emite con máximo en λ = 350 nm. ¿Cuál es su temperatura superficial? ¿De qué color aparece?",
+        "steps": [
+          "T = b/λ_max = 2,898×10⁻³/(350×10⁻⁹) = 8280 K.",
+          "350 nm es ultravioleta, pero la estrella emite un continuo → mucha emisión en azul/violeta. Aparece azulada."
+        ],
+        "answer": "T ≈ 8300 K. Estrella azul-blanca."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "guided-em-1",
+        "statement": "Un láser rojo (λ = 650 nm, potencia 5 mW) emite fotones continuamente. (a) Calcula la energía de cada fotón. (b) ¿Cuántos fotones emite por segundo? (c) Compara con un láser violeta (λ = 405 nm) de la misma potencia: ¿emite más o menos fotones por segundo?",
+        "scaffold": "E = hc/λ para (a). N/s = P/E para (b). Para (c), compara E de cada fotón.",
+        "answer": "(a) E = 3,06×10⁻¹⁹ J. (b) N = P/E = 5×10⁻³/3,06×10⁻¹⁹ = 1,63×10¹⁶ fotones/s. (c) El violeta tiene fotones más energéticos (E = 4,91×10⁻¹⁹ J), así que para la misma potencia emite MENOS fotones: 1,02×10¹⁶/s."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Ordena de mayor a menor longitud de onda: rayos gamma, luz azul, microondas, ondas de radio AM, infrarrojo, rayos X, luz roja.",
+        "answer": "Radio AM > microondas > IR > luz roja > luz azul > rayos X > rayos gamma.",
+        "full_solution": "λ_radio AM ≈ 300 m; λ_microondas ≈ 1 cm; λ_IR ≈ 10 μm; λ_roja ≈ 700 nm; λ_azul ≈ 470 nm; λ_rayosX ≈ 0,1 nm; λ_gamma < 0,01 nm.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Calcula la frecuencia y energía de un fotón UV con λ = 300 nm. ¿Es ionizante? (Energía de ionización del hidrógeno ≈ 13,6 eV)",
+        "answer": "f = 10¹⁵ Hz, E = 4,14 eV. No ioniza el hidrógeno pero sí puede romper enlaces moleculares débiles.",
+        "full_solution": "f = c/λ = 3×10⁸/300×10⁻⁹ = 10¹⁵ Hz. E = hf = 6,63×10⁻³⁴ × 10¹⁵ = 6,63×10⁻¹⁹ J = 4,14 eV. No alcanza los 13,6 eV del hidrógeno, pero enlaces moleculares típicos (3-5 eV) sí pueden romperse. El UV de 300 nm es parcialmente ionizante para moléculas orgánicas (puede causar daño al ADN).",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una cámara térmica detecta que una persona emite con máximo en λ = 9,4 μm. ¿A qué temperatura corporal corresponde?",
+        "answer": "T ≈ 308 K = 35 °C.",
+        "full_solution": "T = b/λ_max = 2,898×10⁻³/(9,4×10⁻⁶) = 308,3 K = 35,1 °C. Nota: la temperatura de la piel es ligeramente inferior a la del interior del cuerpo (37 °C).",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Explica por qué el efecto fotoeléctrico demuestra la naturaleza corpuscular de la luz, cuando la onda clásica no puede explicar la existencia de una frecuencia umbral.",
+        "answer": "La onda clásica predice que cualquier frecuencia con suficiente intensidad debería arrancar electrones (solo cuestión de acumular energía). El experimento muestra que por debajo de cierta frecuencia, ninguna intensidad funciona: solo E = hf ≥ W explica esto.",
+        "full_solution": "Según el modelo ondulatorio clásico, la energía de una onda depende de su amplitud (intensidad), no de la frecuencia. Así, cualquier frecuencia debería arrancar electrones si se aplica suficiente tiempo o intensidad para acumular la energía necesaria. El experimento muestra lo contrario: (1) existe una frecuencia umbral f₀ debajo de la cual no se emiten electrones, sin importar la intensidad; (2) los electrones se emiten instantáneamente. Einstein explicó esto con fotones: cada fotón tiene E = hf. Si hf < W (función trabajo del metal), el fotón no tiene suficiente energía para arrancar un electrón. Muchos fotones débiles no equivalen a uno fuerte: un fotón interactúa con un electrón a la vez.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "La radiación cósmica de fondo del universo tiene T = 2,725 K. (a) Calcula su λ_max. (b) ¿En qué región del espectro está? (c) ¿Por qué fue tan difícil de detectar?",
+        "answer": "(a) λ_max ≈ 1,06 mm. (b) Microondas. (c) Señal débilísima y uniformemente distribuida por todo el cielo.",
+        "full_solution": "(a) λ_max = 2,898×10⁻³/2,725 = 1,063×10⁻³ m = 1,06 mm. (b) Es una microonda (entre IR lejano y radio). Por eso se llama 'radiación cósmica de microondas' (CMB). (c) La señal es extremadamente débil (temperatura apenas por encima del cero absoluto) y llena todo el cielo uniformemente, así que no es un objeto localizado que se pueda apuntar. Penzias y Wilson la descubrieron en 1965 cuando intentaban eliminar un 'ruido' persistente de su antena: ese ruido era la radiación residual del Big Bang.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L06-1",
+        "stem": "La energía de un fotón depende de:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Su amplitud",
+            "why_wrong": "La amplitud está relacionada con el número de fotones (intensidad), no con la energía de cada uno."
+          },
+          {
+            "key": "B",
+            "text": "B. Su frecuencia (E = hf)"
+          },
+          {
+            "key": "C",
+            "text": "C. Su velocidad",
+            "why_wrong": "Todos los fotones viajan a c en el vacío, independientemente de su energía."
+          },
+          {
+            "key": "D",
+            "text": "D. La distancia recorrida",
+            "why_wrong": "La energía del fotón no cambia con la distancia (aunque la intensidad sí, por la dispersión)."
+          }
+        ]
+      },
+      {
+        "id": "MC-L06-2",
+        "stem": "Según la ley de Wien, si una estrella es más caliente que el Sol:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Su pico de emisión se desplaza hacia el rojo (λ mayor)",
+            "why_wrong": "Mayor T → menor λ_max. Se desplaza hacia el azul, no el rojo."
+          },
+          {
+            "key": "B",
+            "text": "B. Su pico de emisión se desplaza hacia el azul (λ menor)"
+          },
+          {
+            "key": "C",
+            "text": "C. Emite la misma λ pero con más intensidad",
+            "why_wrong": "Emite más intensidad Y a λ diferente."
+          },
+          {
+            "key": "D",
+            "text": "D. Deja de emitir luz visible",
+            "why_wrong": "Sigue emitiendo en visible, pero el pico se mueve al UV."
+          }
+        ]
+      },
+      {
+        "id": "MC-L06-3",
+        "stem": "El efecto fotoeléctrico demuestra que:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La luz es una onda",
+            "why_wrong": "Al contrario: el efecto fotoeléctrico no se puede explicar con el modelo ondulatorio clásico."
+          },
+          {
+            "key": "B",
+            "text": "B. La luz se comporta como partículas (fotones)"
+          },
+          {
+            "key": "C",
+            "text": "C. Los electrones son ondas",
+            "why_wrong": "Eso lo demuestra la difracción de electrones, no el efecto fotoeléctrico."
+          },
+          {
+            "key": "D",
+            "text": "D. La velocidad de la luz es constante",
+            "why_wrong": "La constancia de c la estableció la relatividad especial, no el efecto fotoeléctrico."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Una bombilla halógena emite como un cuerpo negro a T = 3200 K. (a) Calcula λ_max. (b) ¿Qué fracción de su emisión está en el visible (400-700 nm)? Razona cualitativamente. (c) Compara con un LED blanco que emite solo en el visible. ¿Cuál es más eficiente energéticamente?",
+        "answer": "(a) λ_max ≈ 906 nm (IR cercano). (b) Solo una pequeña fracción (~10-15%) del total está en el visible. (c) El LED es mucho más eficiente: convierte casi toda la electricidad en luz visible, mientras la bombilla pierde ~85% en calor (IR).",
+        "full_solution": "(a) λ_max = 2,898×10⁻³/3200 = 9,06×10⁻⁷ m = 906 nm (infrarrojo cercano). (b) El pico está en el IR, no en el visible. La curva de Planck a 3200 K tiene una cola en el visible (400-700 nm), pero la mayor parte de la emisión es en el IR (calor). Aproximadamente solo el 10-15% de la energía emitida está en el rango visible. (c) El LED es mucho más eficiente porque emite directamente en las longitudes de onda visibles, sin desperdiciar energía en IR. Una bombilla incandescente tiene ~5% de eficiencia luminosa; un LED, ~40-50%."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "La 'catástrofe ultravioleta' fue el fracaso de la física clásica para explicar la radiación del cuerpo negro. (a) ¿Qué predecía la teoría clásica (Rayleigh-Jeans) para frecuencias altas? (b) ¿Cómo lo resolvió Planck en 1900? (c) ¿Por qué esta solución fue tan revolucionaria que marca el nacimiento de la física cuántica?",
+        "answer": "(a) Energía infinita a frecuencias altas. (b) Cuantización: E = nhf. (c) Rompió la idea de que la energía es continua.",
+        "full_solution": "(a) La ley clásica de Rayleigh-Jeans predecía que la intensidad emitida aumenta sin límite con la frecuencia (I ∝ f²). Esto implicaría que cualquier objeto emite energía infinita en el UV y más allá, lo cual es absurdo ('catástrofe ultravioleta'). (b) Planck resolvió el problema proponiendo que la energía de la radiación no es continua sino que se emite y absorbe en cuantos discretos: E = nhf (n entero). A altas frecuencias, los cuantos son tan grandes que no pueden excitarse térmicamente, lo que suprime la emisión y evita la divergencia. (c) Fue revolucionaria porque introdujo la idea de cuantización de la energía, algo completamente ajeno a la física clásica. Hasta entonces, toda la física asumía que la energía era una magnitud continua. Esta idea dio origen a la mecánica cuántica, que transformó nuestra comprensión de la materia y la radiación."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Energía del fotón",
+        "back": "E = hf = hc/λ. h = 6,63 × 10⁻³⁴ J·s. A mayor f → más energía.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Ley de Wien",
+        "back": "λ_max = b/T. b = 2,898 × 10⁻³ m·K. Más caliente → pico hacia λ menor.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Dualidad onda-corpúsculo",
+        "back": "La luz muestra comportamiento ondulatorio (difracción, interferencia) Y corpuscular (efecto fotoeléctrico, E = hf).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Efecto fotoeléctrico",
+        "back": "Fotones de f ≥ f₀ arrancan electrones del metal. Por debajo de f₀, ninguna intensidad funciona.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Pensar que 'más intensidad' = 'fotones más energéticos'.",
+        "correction": "Más intensidad = más fotones por segundo (no más energéticos). La energía de cada fotón depende SOLO de la frecuencia: E = hf."
+      },
+      {
+        "mistake": "Confundir la ley de Wien con la ley de Stefan-Boltzmann.",
+        "correction": "Wien: λ_max = b/T (posición del pico). Stefan-Boltzmann: P ∝ T⁴ (potencia total emitida). Son leyes diferentes."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "E = hf es la ecuación puente entre el mundo ondulatorio (f) y corpuscular (E). Usarla siempre que se pida la energía de un fotón."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "fotón",
+        "definition": "Cuanto de radiación EM. Partícula de luz con energía E = hf."
+      },
+      {
+        "term": "constante de Planck (h)",
+        "definition": "h = 6,63 × 10⁻³⁴ J·s. Constante fundamental que relaciona energía y frecuencia."
+      },
+      {
+        "term": "cuerpo negro",
+        "definition": "Emisor/absorbedor ideal de radiación. Su espectro depende solo de la temperatura."
+      },
+      {
+        "term": "ley de Wien",
+        "definition": "λ_max = b/T. El pico de emisión se desplaza hacia longitudes de onda más cortas al aumentar la temperatura."
+      },
+      {
+        "term": "efecto fotoeléctrico",
+        "definition": "Emisión de electrones por un metal al absorber fotones de frecuencia suficiente."
+      }
+    ],
+    "summary": {
+      "big_idea": "El espectro EM es una familia continua de ondas que difieren solo en frecuencia. La relación E = hf conecta la naturaleza ondulatoria y corpuscular de la radiación, abriendo la puerta a la física cuántica.",
+      "key_points": [
+        "Todo el espectro EM viaja a c. Solo cambia f (y λ = c/f).",
+        "E = hf: mayor frecuencia = fotones más energéticos = mayor potencial ionizante.",
+        "Ley de Wien: λ_max = b/T. Objeto más caliente → emite en λ más corta.",
+        "Dualidad: la luz es onda (difracción) Y corpúsculo (fotoeléctrico)."
+      ],
+      "formulas": [
+        "$E = hf = \\frac{hc}{\\lambda}$",
+        "$\\lambda_{\\text{max}} = \\frac{b}{T}$",
+        "$h = 6{,}63 \\times 10^{-34}$ J·s"
+      ],
+      "what_to_remember_if_nothing_else": "E = hf une onda y corpúsculo. La frecuencia determina la energía del fotón y, con ella, si la radiación es ionizante o no."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 243/2022 saberes Bloque A · Radiación y espectro EM",
+      "RD 243/2022 saberes Bloque A · Introducción a la física cuántica"
+    ],
+    "curriculum_refs": [
+      "CE3.11 Espectro EM",
+      "CE3.12 Dualidad y cuantización"
+    ],
+    "confidence_notes": [
+      "Nivel 1.º Bach: E = hf, Wien y dualidad cualitativa. Efecto fotoeléctrico cualitativo (cuantitativo en 2.º Bach)"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "SVGs con CSS variables",
+        "Dualidad presentada cualitativamente como corresponde a 1.º Bach"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  }
+}

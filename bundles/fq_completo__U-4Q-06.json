@@ -1,0 +1,2409 @@
+{
+  "lesson_01.json": {
+    "lesson_id": "U-4Q-06-L01",
+    "title": "Molaridad",
+    "course_label": "4.º ESO · Disoluciones y gases",
+    "objectives": [
+      {
+        "statement": "Explicar Molaridad con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de molaridad para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Molaridad."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Molaridad."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Definición de molaridad",
+        "body": "En la cocina decimos «una cucharada de sal por litro». En el laboratorio necesitamos más precisión: ¿cuántas partículas de soluto hay exactamente en cada litro de disolución?\n\nLa molaridad (también llamada concentración molar, $C$ o $M$) responde a esa pregunta con una cifra concreta:\n\n$$C = \\frac{n}{V}$$\n\ndonde $n$ es la cantidad de sustancia en mol y $V$ el volumen de la disolución en litros (no del disolvente solo, sino de la mezcla completa).\n\nUnidades: $\\text{mol/L}$ o simplemente $\\text{M}$. Así, una disolución «1 M de NaCl» contiene exactamente 1 mol de cloruro de sodio (58,44 g) en cada litro de disolución.\n\n¿Por qué importa? Porque las reacciones químicas ocurren entre partículas, no entre gramos. Si quieres mezclar ácido y base en proporciones exactas para una neutralización, necesitas saber cuántos moles de cada uno añades, y la molaridad te da esa información directamente.\n\nTip práctico: si conoces la masa de soluto ($m$) y su masa molar ($M_r$), puedes encadenar: $C = \\frac{m}{M_r \\cdot V}$.",
+        "formula": "$c=\\dfrac{n}{V}\\ (\\mathrm{mol/L})$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Matraz aforado con disolución 1 M de NaCl y pantalla digital mostrando concentración\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <defs>\n    <linearGradient id=\"water4q6\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#0e7a68\" stop-opacity=\"0.15\"/>\n      <stop offset=\"100%\" stop-color=\"#0e7a68\" stop-opacity=\"0.35\"/>\n    </linearGradient>\n  </defs>\n  <!-- Volumetric flask -->\n  <path d=\"M240,60 L240,140 Q240,160 220,200 L190,260 Q180,280 200,290 L400,290 Q420,280 410,260 L380,200 Q360,160 360,140 L360,60\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <!-- Neck -->\n  <line x1=\"270\" y1=\"40\" x2=\"270\" y2=\"60\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"330\" y1=\"40\" x2=\"330\" y2=\"60\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"260\" y1=\"40\" x2=\"340\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <!-- Liquid fill -->\n  <path d=\"M230,180 Q230,165 225,195 L195,255 Q185,275 205,285 L395,285 Q415,275 405,255 L375,195 Q370,165 370,180 Z\" fill=\"url(#water4q6)\"/>\n  <!-- Solute particles -->\n  <circle cx=\"260\" cy=\"230\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <circle cx=\"300\" cy=\"250\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <circle cx=\"340\" cy=\"220\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <circle cx=\"280\" cy=\"260\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <circle cx=\"320\" cy=\"240\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <circle cx=\"250\" cy=\"250\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <circle cx=\"350\" cy=\"255\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <circle cx=\"310\" cy=\"270\" r=\"5\" fill=\"#c17a17\" opacity=\"0.8\"/>\n  <!-- Graduation mark -->\n  <line x1=\"225\" y1=\"180\" x2=\"240\" y2=\"180\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"210\" y=\"184\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"end\">1 L</text>\n  <!-- Labels -->\n  <text x=\"300\" y=\"25\" font-size=\"16\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Molaridad: C = n / V</text>\n  <!-- Digital display -->\n  <rect x=\"420\" y=\"130\" width=\"150\" height=\"60\" rx=\"8\" fill=\"var(--axes,#24312c)\" opacity=\"0.9\"/>\n  <text x=\"495\" y=\"155\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">CONCENTRACIÓN</text>\n  <text x=\"495\" y=\"178\" font-size=\"22\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"bold\">1,0 M</text>\n  <!-- Annotation -->\n  <text x=\"300\" y=\"310\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">1 mol de NaCl disuelto en 1 L de disolución</text>\n  <!-- Arrow from particles to display -->\n  <path d=\"M365,230 Q400,200 420,165\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\" marker-end=\"url(#arr4q6)\"/>\n  <defs><marker id=\"arr4q6\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#c17a17\"/></marker></defs>\n</svg>",
+            "caption": "Matraz aforado con disolución 1 M de NaCl y pantalla mostrando concentración"
+          }
+        ]
+      },
+      {
+        "title": "Preparación de una disolución: ejemplo NaCl 1 M en 500 mL",
+        "body": "Preparar una disolución de molaridad exacta es una habilidad básica de laboratorio. Sigue estos pasos con cuidado:\n\n**Paso 1 — Pesar.** Calcula la masa de soluto necesaria: $m = C \\cdot V \\cdot M_r$. Para 500 mL de NaCl 1 M: $m = 1 \\times 0{,}5 \\times 58{,}44 = 29{,}22\\text{ g}$. Pesa en una balanza analítica.\n\n**Paso 2 — Disolver.** Añade el soluto a un vaso de precipitados con un poco de agua destilada (no toda). Agita hasta disolución completa.\n\n**Paso 3 — Transferir.** Vierte la disolución en un matraz aforado de 500 mL. Enjuaga el vaso varias veces y añade los lavados al matraz para no perder soluto.\n\n**Paso 4 — Enrasar.** Añade agua destilada con cuidado hasta que el menisco inferior toque exactamente la marca de 500 mL. Tapa y agita invirtiendo varias veces.\n\nErrores comunes: medir el volumen de agua en vez del volumen final de disolución, o no enjuagar el vaso de precipitados (perdiendo soluto). El volumen final de la disolución incluye el soluto disuelto, por eso se enrasa después de añadirlo.",
+        "formula": "$m=cVM$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 190\" role=\"img\" aria-label=\"Cuatro pasos para preparar una disolución: pesar, disolver, transferir, enrasar\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <!-- Step 1: Balance -->\n  <rect x=\"20\" y=\"60\" width=\"120\" height=\"90\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"80\" y=\"50\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">1. Pesar</text>\n  <rect x=\"45\" y=\"95\" width=\"70\" height=\"8\" rx=\"2\" fill=\"var(--axes,#24312c)\"/>\n  <polygon points=\"80,95 70,85 90,85\" fill=\"var(--axes,#24312c)\"/>\n  <rect x=\"55\" y=\"75\" width=\"50\" height=\"15\" rx=\"3\" fill=\"#c17a17\" opacity=\"0.6\"/>\n  <text x=\"80\" y=\"87\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">NaCl</text>\n  <text x=\"80\" y=\"130\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">58,44 g</text>\n\n  <!-- Step 2: Dissolve -->\n  <rect x=\"160\" y=\"60\" width=\"120\" height=\"90\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"220\" y=\"50\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">2. Disolver</text>\n  <path d=\"M195,130 L195,90 Q195,85 200,85 L240,85 Q245,85 245,90 L245,130 Z\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <circle cx=\"210\" cy=\"110\" r=\"3\" fill=\"#c17a17\" opacity=\"0.7\"/>\n  <circle cx=\"225\" cy=\"105\" r=\"3\" fill=\"#c17a17\" opacity=\"0.7\"/>\n  <circle cx=\"230\" cy=\"118\" r=\"3\" fill=\"#c17a17\" opacity=\"0.7\"/>\n  <text x=\"220\" y=\"143\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">en un poco de H₂O</text>\n\n  <!-- Step 3: Transfer -->\n  <rect x=\"300\" y=\"60\" width=\"120\" height=\"90\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"360\" y=\"50\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">3. Transferir</text>\n  <path d=\"M340,130 L340,100 Q340,90 345,85 L355,80 L375,80 Q380,85 380,95 L380,130 Z\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"360\" y=\"143\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">al matraz aforado</text>\n\n  <!-- Step 4: Fill -->\n  <rect x=\"440\" y=\"60\" width=\"120\" height=\"90\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"500\" y=\"50\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">4. Enrasar</text>\n  <path d=\"M480,130 L480,100 Q480,90 485,85 L495,80 L515,80 Q520,85 520,95 L520,130 Z\" fill=\"#0e7a68\" opacity=\"0.3\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <line x1=\"475\" y1=\"95\" x2=\"525\" y2=\"95\" stroke=\"#c17a17\" stroke-width=\"1.5\" stroke-dasharray=\"3,2\"/>\n  <text x=\"500\" y=\"143\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">hasta la marca de 1 L</text>\n\n  <!-- Arrows -->\n  <path d=\"M145,105 L155,105\" stroke=\"#c17a17\" stroke-width=\"2\" marker-end=\"url(#fwd4q6)\"/>\n  <path d=\"M285,105 L295,105\" stroke=\"#c17a17\" stroke-width=\"2\" marker-end=\"url(#fwd4q6)\"/>\n  <path d=\"M425,105 L435,105\" stroke=\"#c17a17\" stroke-width=\"2\" marker-end=\"url(#fwd4q6)\"/>\n  <defs><marker id=\"fwd4q6\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#c17a17\"/></marker></defs>\n\n  <!-- Title -->\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Preparación de una disolución 1 M de NaCl</text>\n\n  <!-- Bottom annotation -->\n  <text x=\"300\" y=\"175\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Resultado: 1 L de disolución con exactamente 1 mol de NaCl</text>\n</svg>",
+            "caption": "Cuatro pasos para preparar una disolución: pesar, disolver, transferir y enrasar"
+          }
+        ]
+      },
+      {
+        "title": "Molaridad frente a porcentaje en masa (%m/m)",
+        "body": "La molaridad ($C$, en mol/L) y el porcentaje en masa ($\\%\\,m/m$) son dos formas de expresar la concentración, pero dan información diferente.\n\nEl porcentaje en masa indica cuántos gramos de soluto hay por cada 100 g de disolución:\n\n$$\\%\\,m/m = \\frac{m_{\\text{soluto}}}{m_{\\text{disolución}}} \\times 100$$\n\nEs fácil de medir (basta una balanza), pero no dice directamente cuántas partículas hay, así que no conecta con la estequiometría.\n\nLa molaridad relaciona moles con volumen. Es más útil para cálculos de reacciones, pero necesitas conocer la masa molar del soluto.\n\nPara convertir de $\\%\\,m/m$ a molaridad necesitas la densidad ($d$) de la disolución:\n\n$$C = \\frac{\\%\\,m/m \\cdot d \\cdot 10}{M_r}$$\n\ndonde $d$ está en g/mL y $M_r$ en g/mol. El factor 10 convierte las unidades.\n\nEjemplo: ácido sulfúrico comercial (96 $\\%$, $d = 1{,}84$ g/mL, $M_r = 98$ g/mol):\n\n$$C = \\frac{96 \\times 1{,}84 \\times 10}{98} = 18{,}0\\text{ M}$$\n\n¡Muy concentrado! Por eso siempre se diluye antes de usar.",
+        "formula": "$c=\\dfrac{10\\cdot(\\%m/m)\\cdot d}{M}$",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Comprueba tu comprensión: si disuelves 4,0 g de NaOH ($M_r = 40$ g/mol) en agua hasta completar 250 mL de disolución, la molaridad es $C = \\frac{4{,}0/40}{0{,}250} = 0{,}40$ M. Verifica siempre que las unidades cuadran: g entre g/mol da mol, y mol entre L da mol/L.",
+        "assets": [],
+        "formula": "$c_{\\text{nueva}}=\\dfrac{n}{V_{\\text{nuevo}}}$"
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Preparar 250 mL de H₂SO₄ 0,5 M",
+        "steps": [
+          "$n=cV=0{,}50\\,\\mathrm{mol/L}\\cdot 0{,}250\\,\\mathrm{L}=0{,}125\\,\\mathrm{mol}$ de H₂SO₄.",
+          "La concentración del ácido comercial es $c_{\\text{com}}=\\dfrac{10\\cdot 98\\cdot 1{,}84}{98}=18{,}4\\,\\mathrm{M}$.",
+          "El volumen de ácido comercial necesario es $V_1=\\dfrac{n}{c_{\\text{com}}}=\\dfrac{0{,}125}{18{,}4}=6{,}8\\cdot10^{-3}\\,\\mathrm{L}=6{,}8\\,\\mathrm{mL}$."
+        ],
+        "verification": "Verificación: $c=\\dfrac{0,125}{0,250}=0,50\\,\\mathrm{mol/L}$. ✓",
+        "reasoning": [],
+        "assets": [],
+        "statement": "Para preparar 250 mL de una disolución de H₂SO₄ 0,50 M a partir de ácido sulfúrico comercial del 98 % en masa y densidad 1,84 g/mL, calcula los moles necesarios, el volumen de ácido comercial que hay que medir y describe el procedimiento seguro de dilución.",
+        "answer": "Se necesitan 0,125 mol de H₂SO₄, es decir 6,8 mL del ácido comercial (18,4 M). Se ponen unos 150 mL de agua destilada en el matraz de 250 mL, se añaden lentamente los 6,8 mL de ácido sobre el agua (nunca al revés), se deja enfriar y se enrasa a 250 mL."
+      },
+      {
+        "title": "¿Cuántos moles de HCl hay en 300 mL de HCl 2 M?",
+        "steps": [
+          "Datos: c = 2 mol/L, V = 300 mL = 0,300 L; incógnita: n.",
+          "V=300 mL=0,300 L.",
+          "n=CV=2 mol/L·0,300 L=0,600 mol.",
+          "En 300 mL de HCl 2 M hay 0,600 mol de HCl, es decir 0,600·36,5 = 21,9 g de HCl.",
+          "Comprobación: $n/V=0,600/0,300=2\\,\\mathrm{mol/L}$, que coincide con la concentración dada. ✓"
+        ],
+        "verification": "Comprobación: C = 0,6 mol / 0,3 L = 2 M ✓.",
+        "reasoning": [],
+        "assets": [],
+        "statement": "¿Cuántos moles de HCl hay en 300 mL de HCl 2 M?",
+        "answer": "n = 0,600 mol de HCl (equivalen a 0,600·36,5 = 21,9 g)."
+      },
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Molaridad",
+        "statement": "Se disuelven 0,20 mol de soluto hasta 0,50 L de disolución. Calcula molaridad.",
+        "steps": [
+          "$c=\\dfrac{0,20}{0,50}=0,40\\,\\mathrm{M}$.",
+          "El volumen es el de la disolución final, no el agua añadida inicialmente.",
+          "Si se duplica V sin añadir soluto, c se reduce a 0,20 M.",
+          "Las unidades son mol/L.",
+          "Comprobación: si c = 0,40 M y V = 0,50 L, entonces n = cV = 0,20 mol, que coincide con el dato de partida. ✓"
+        ],
+        "answer": "c=0,40 M.",
+        "verification": "La concentración 0,40 M es coherente con los 0,20 mol disueltos en 0,50 L; si se hubiese usado el volumen de agua añadido en vez del volumen final, el resultado habría sido distinto e incorrecto."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Preparación desde sólido",
+        "statement": "Calcula masa de NaCl necesaria para 250 mL de disolución 0,20 M (M=58,5 g/mol).",
+        "steps": [
+          "n=cV=0,20(0,250)=0,0500 mol.",
+          "m=nM=0,0500(58,5)=2,93 g.",
+          "Se disuelve y se enrasa a 250 mL en matraz aforado.",
+          "El volumen final, no el volumen de agua usado para disolver, entra en c.",
+          "Comprobación: m/M = 2,93/58,5 = 0,0501 mol ≈ n calculado (0,0500 mol); la pequeña diferencia es por redondeo. ✓"
+        ],
+        "answer": "2,93 g de NaCl.",
+        "verification": "2,93 g de NaCl en 250 mL de disolución final equivalen a c = 0,0500/0,250 = 0,20 M, que coincide con el dato pedido."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Un ácido comercial de HCl es del 37 % en masa y tiene densidad 1,19 g/mL (M = 36,5 g/mol). Calcula su molaridad y comprueba que el resultado es del orden de magnitud esperado para un ácido concentrado.",
+        "scaffold": "Toma 1 L de disolución: calcula su masa total (1000·d), la masa de soluto (%/100 de esa masa) y, dividiendo entre M, los moles n; como el volumen es 1 L, c = n.",
+        "answer": "c = 12,1 M.",
+        "full_solution": "Masa de 1 L de disolución: 1000·1,19 = 1190 g. Masa de HCl: 0,37·1190 = 440,3 g. Moles: n = 440,3/36,5 = 12,1 mol. Como el volumen es 1 L, c = 12,1 mol/L = 12,1 M, un valor típico de un ácido concentrado."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Se quiere preparar 2,0 L de disolución de MgCl₂ 0,050 M a partir del sólido (M = 95 g/mol). Calcula la masa necesaria y describe el procedimiento con matraz aforado.",
+        "scaffold": "Calcula primero n = cV y después m = nM; luego describe pesar, disolver en menos volumen del final y enrasar.",
+        "answer": "m = 9,5 g de MgCl₂.",
+        "full_solution": "n = cV = 0,050·2,0 = 0,10 mol. m = nM = 0,10·95 = 9,5 g. Procedimiento: pesar 9,5 g de MgCl₂, disolverlos en aproximadamente 1,5 L de agua destilada en un matraz aforado de 2 L, y enrasar hasta la marca de 2 L; homogeneizar agitando."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula n en 750 mL de KOH 0,4 M.",
+        "answer": "n=cV=0,40·0,750=0,30 mol.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Datos: c = 0,4 mol/L, V = 750 mL = 0,750 L. n = cV = 0,40·0,750 = 0,30 mol de KOH."
+      },
+      {
+        "statement": "¿Qué volumen (en L) de HCl 3 M contiene 0,6 mol?",
+        "answer": "V = n/c = 0,6/3 = 0,2 L = 200 mL.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Datos: n = 0,6 mol, c = 3 mol/L. Despejando V de c = n/V: V = n/c = 0,6/3 = 0,200 L = 200 mL."
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Calcula la molaridad de una disolución que contiene 0,15 mol de soluto disueltos hasta un volumen final de 600 mL.",
+        "answer": "c = 0,25 M.",
+        "full_solution": "c = n/V = 0,15/0,600 = 0,25 mol/L = 0,25 M."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Prepara 500 mL de disolución de KCl 0,10 M a partir de KCl sólido (M = 74,6 g/mol). Calcula la masa necesaria.",
+        "answer": "m = 3,73 g.",
+        "full_solution": "n = cV = 0,10·0,500 = 0,0500 mol. m = nM = 0,0500·74,6 = 3,73 g. Se pesan 3,73 g de KCl, se disuelven en parte del agua y se enrasa a 500 mL en el matraz aforado."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Compara la concentración de 0,10 mol en 250 mL con 0,10 mol en 500 mL.",
+        "answer": "c₁ = 0,40 M; c₂ = 0,20 M.",
+        "full_solution": "c₁ = 0,10/0,250 = 0,40 M; c₂ = 0,10/0,500 = 0,20 M; al duplicar el volumen con los mismos moles, la concentración se reduce a la mitad."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa c frente a n cuando el volumen es constante y explica la pendiente.",
+        "assets": [],
+        "answer": "Recta por el origen, c=(1/V)·n.",
+        "full_solution": "c = (1/V)·n: la gráfica c frente a n es una recta que pasa por el origen con pendiente 1/V (en L⁻¹). Con V = 0,5 L: n = 0,1/0,2/0,3 mol dan c = 0,2/0,4/0,6 M; la pendiente es 1/0,5 = 2 L⁻¹."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige “la molaridad usa el volumen de agua añadido” y explica qué volumen debe medirse.",
+        "answer": "La afirmación es incorrecta.",
+        "full_solution": "La molaridad usa el volumen final de la disolución (medido en el matraz aforado, tras el enrase), no el volumen de agua añadida antes de enrasar; al disolver un sólido, el volumen total casi nunca coincide con el volumen de agua usada inicialmente."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña una preparación con matraz aforado, control de masa, enrase y verificación independiente.",
+        "assets": [],
+        "answer": "Ejemplo: CuSO₄ 0,15 M en 250 mL.",
+        "full_solution": "Ejemplo: preparar 250 mL de CuSO₄ 0,15 M. Se pesa con balanza de precisión la masa calculada (n=cV=0,0375 mol; m=0,0375·159,6=5,99 g), se disuelve en un vaso con ~150 mL de agua destilada, se trasvasa al matraz aforado de 250 mL lavando el vaso, se enrasa hasta la marca y se homogeneiza. Verificación independiente: medir la densidad o la conductividad de la disolución y compararla con tablas de referencia para esa concentración."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-01-1",
+        "stem": "La molaridad C se define como:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) gramos de soluto / L de disolvente",
+            "why_wrong": "Confunde disolvente con disolución; además mezcla masa con moles."
+          },
+          {
+            "key": "B",
+            "text": "B) mol de soluto / L de disolución"
+          },
+          {
+            "key": "C",
+            "text": "C) mol de soluto / kg de disolvente",
+            "why_wrong": "Es la definición de molalidad (mol/kg de disolvente), no de molaridad."
+          },
+          {
+            "key": "D",
+            "text": "D) gramos de soluto / 100 g de disolución",
+            "why_wrong": "Es la definición del porcentaje en masa (%m/m), no de la molaridad."
+          }
+        ],
+        "explanation": "C = n/V, donde V es el volumen de disolución en litros.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-01-2",
+        "stem": "Para preparar 500 mL de NaCl 1 M se necesitan (M=58,5 g mol⁻¹):",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 58,5 g",
+            "why_wrong": "58,5 g corresponden a 1 L de NaCl 1 M, no a los 500 mL pedidos."
+          },
+          {
+            "key": "B",
+            "text": "B) 29,25 g"
+          },
+          {
+            "key": "C",
+            "text": "C) 14,6 g",
+            "why_wrong": "14,6 g corresponderían a 250 mL, no a 500 mL."
+          },
+          {
+            "key": "D",
+            "text": "D) 117 g",
+            "why_wrong": "117 g corresponderían a 2 L, el doble del volumen pedido."
+          }
+        ],
+        "explanation": "n=1· 0,5=0,5 mol; m=0,5× 58,5=29,25 g.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-01-3",
+        "stem": "¿Cuántos moles hay en 200 mL de NaOH 2 M?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 0,1 mol",
+            "why_wrong": "0,1 mol sería el resultado de dividir 2 entre 0,2 en vez de multiplicar."
+          },
+          {
+            "key": "B",
+            "text": "B) 0,2 mol",
+            "why_wrong": "0,2 mol no corresponde a n=cV con estos datos."
+          },
+          {
+            "key": "C",
+            "text": "C) 0,4 mol"
+          },
+          {
+            "key": "D",
+            "text": "D) 4 mol",
+            "why_wrong": "4 mol confunde mL con L (sin convertir 200 mL a 0,200 L)."
+          }
+        ],
+        "explanation": "n=2 × 0,2 = 0,4 mol.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-01-4",
+        "stem": "Al preparar una disolución de molaridad exacta, el enrase al volumen final se hace:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) antes de añadir el soluto",
+            "why_wrong": "Si se enrasa antes de añadir el soluto, el volumen final no incluye el volumen que ocupa el soluto disuelto, y la concentración real no será la deseada."
+          },
+          {
+            "key": "B",
+            "text": "B) al principio con agua fría",
+            "why_wrong": "Enrasar al principio con agua fría no garantiza el volumen final una vez añadido y disuelto el soluto, y la temperatura puede cambiar el volumen."
+          },
+          {
+            "key": "C",
+            "text": "C) al final, en el matraz aforado"
+          },
+          {
+            "key": "D",
+            "text": "D) añadiendo el disolvente hasta la mitad",
+            "why_wrong": "Enrasar solo hasta la mitad no da el volumen final deseado."
+          }
+        ],
+        "explanation": "Se enrasa al final para asegurar el volumen exacto deseado.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Definición de molaridad",
+        "back": "C = n / V (mol/L); n en mol, V en litros."
+      },
+      {
+        "front": "Símbolo y unidad de molaridad",
+        "back": "La molaridad es $C=\\dfrac{n}{V}$; su unidad es mol/L, que también se escribe M."
+      },
+      {
+        "front": "Preparar NaCl 1M en 500 mL",
+        "back": "n=0,5 mol → m=29,25 g de NaCl; enrasar a 500 mL."
+      },
+      {
+        "front": "Diferencia molaridad vs %m/m",
+        "back": "Molaridad: mol/L de disolución; %m/m: g soluto/100 g disolución."
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Usar el volumen de disolvente en lugar del volumen de disolución.",
+        "correct_model": "V es el volumen final de la disolución, medido en el matraz aforado tras el enrase; no es el volumen de agua (o disolvente) que se añadió antes de disolver el soluto.",
+        "remediation": "Antes de calcular c, identifica explícitamente cuál es el volumen final de la disolución (el del matraz aforado) y comprueba que no se ha confundido con el volumen de disolvente añadido inicialmente."
+      },
+      {
+        "incorrect_model": "Confundir molaridad (mol/L) con molalidad (mol/kg).",
+        "correct_model": "La molalidad es mol de soluto por kg de disolvente y no depende de la temperatura; la molaridad es mol de soluto por litro de disolución y sí depende (ligeramente) de T, porque el volumen cambia con la temperatura.",
+        "remediation": "Antes de usar una concentración, identifica si el denominador es un volumen (molaridad, L) o una masa (molalidad, kg) y revisa si el problema depende de la temperatura."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "molaridad",
+        "definition": "Concentración molar: cantidad de soluto, en moles, disuelta en un litro de disolución (c = n/V)."
+      },
+      {
+        "term": "c = n/V",
+        "definition": "Fórmula de la molaridad: n son los moles de soluto y V el volumen de la disolución en litros."
+      },
+      {
+        "term": "mol/L",
+        "definition": "Unidad de la molaridad, también llamada M (molar)."
+      },
+      {
+        "term": "disolución",
+        "definition": "Mezcla homogénea de un soluto disuelto en un disolvente; su volumen es el que se usa en c = n/V."
+      },
+      {
+        "term": "matraz aforado",
+        "definition": "Material de vidrio con una marca de enrase que permite medir con precisión el volumen final de una disolución."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Calcular moles a partir de la masa: n = m/M, y operar con unidades del SI.",
+        "why_it_matters": "La molaridad se obtiene dividiendo los moles de soluto (que a menudo hay que calcular a partir de la masa) entre el volumen de disolución en litros."
+      },
+      {
+        "statement": "Convertir mililitros a litros y manejar notación científica.",
+        "why_it_matters": "Los volúmenes de las disoluciones suelen darse en mL y hay que pasarlos a L antes de aplicar c = n/V."
+      }
+    ],
+    "summary": {
+      "big_idea": "La molaridad $c=n/V$ mide cuántos moles de soluto hay en cada litro de disolución; para prepararla se pesa el soluto, se disuelve y se enrasa al volumen final en un matraz aforado, y se puede convertir a partir del %m/m conociendo la densidad.",
+      "key_points": [
+        "La molaridad o concentración molar (C) es la cantidad de soluto en moles disuelta en un litro de disolución.",
+        "Para preparar 500 mL=0,500 L de NaCl 1 M: n=CV=1·0,500=0,500 mol.",
+        "El porcentaje en masa (%m/m) indica los gramos de soluto por cada 100 g de disolución, sin referencia al volumen.",
+        "La molaridad depende ligeramente de la temperatura (porque V cambia), mientras que el %m/m no depende de T; para pasar de una a otra se necesita la densidad de la disolución."
+      ],
+      "formulas": [
+        "$c=\\dfrac{n}{V}$",
+        "$n=\\dfrac{m}{M}$",
+        "$m=cVM$",
+        "$c=\\dfrac{10\\cdot\\%\\cdot d}{M}$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $c=\\dfrac{n}{V}$ con V en litros de disolución (nunca de disolvente); enrasa siempre al final en el matraz aforado y comprueba las unidades."
+    },
+    "exam_questions": [
+      {
+        "statement": "Prepara 250 mL de NaCl 0,200 M y calcula la masa necesaria con M=58,5 g/mol.",
+        "answer": "n=CV=0,200·0,250=0,0500 mol. Con M=58,5 g/mol, m=nM=2,925 g. Se pesan 2,925 g, se disuelven y se enrasa a 250 mL.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Describe el procedimiento para preparar 1 L de NaCl 0,5 M e indica la masa necesaria.",
+        "answer": "n = cV = 0,5 mol/L·1,000 L = 0,500 mol; m = nM = 0,500·58,5 = 29,25 g.",
+        "full_solution": "Se pesan 29,25 g de NaCl en una balanza de precisión. Se disuelven en un vaso con 700-800 mL de agua destilada, agitando hasta disolución completa. Se trasvasa la disolución a un matraz aforado de 1 L, lavando el vaso con un poco más de agua para arrastrar todo el soluto, y se enrasa exactamente hasta la marca de 1 L. Se tapa y se homogeneiza invirtiendo el matraz varias veces.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Una disolución de NaCl etiquetada 0,50 M puede haberse preparado con un volumen leído mal. Diseña una comprobación gravimétrica de su concentración.",
+        "answer": "Toma un volumen conocido, por ejemplo 25,0 mL, evapóralo y seca el residuo hasta masa constante. Si quedan m gramos de NaCl, c=m/(58,5·0,0250). Repite con tres alícuotas y compara la dispersión; un error de lectura del volumen se transmite directamente a la concentración.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "Se toman 25,0 mL de la disolución etiquetada 0,50 M. Se evaporan y se seca el residuo de NaCl hasta masa constante. Si la etiqueta fuera correcta, la masa esperada sería m = c·V·M = 0,50·0,0250·58,5 = 0,731 g. Se compara la masa real obtenida con este valor: una diferencia significativa indica que el volumen real medido al prepararla no fue el indicado. Repetir con tres alícuotas y comparar la dispersión para distinguir error aleatorio de un error sistemático de preparación."
+      },
+      {
+        "statement": "Una disolución de H₂SO₄ comercial es 98 % m/m y tiene densidad 1,84 g/mL. Calcula su molaridad.",
+        "answer": "c = 18,4 M.",
+        "full_solution": "Se toma 1 L = 1000 mL de disolución. Su masa es 1000·1,84 = 1840 g. La masa de H₂SO₄ puro es 0,98·1840 = 1803 g. Los moles son n = 1803/98 = 18,4 mol. Como el volumen es 1 L, c = 18,4 mol/L = 18,4 M. (Equivalente a usar c = 10·%·d/M = 10·98·1,84/98 = 18,4 M.)",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_02.json": {
+    "lesson_id": "U-4Q-06-L02",
+    "title": "Dilución",
+    "course_label": "4.º ESO · Disoluciones y gases",
+    "objectives": [
+      {
+        "statement": "Explicar Dilución con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de dilución para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Dilución."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Dilución."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "La ley de dilución C₁V₁ = C₂V₂",
+        "body": "Imagina que tienes un zumo de naranja demasiado concentrado. ¿Qué haces? Añades agua. Al diluir, el número de moléculas de «sabor» no cambia — solo se reparten en más volumen. En química funciona igual.\n\nLa ley de dilución establece que el número de moles de soluto se conserva:\n\n$$C_1 V_1 = C_2 V_2$$\n\ndonde $C_1$ y $V_1$ son la concentración y volumen iniciales (disolución concentrada) y $C_2$ y $V_2$ los finales (disolución diluida).\n\n¿Por qué funciona? Porque al añadir disolvente no creas ni destruyes soluto: $n_1 = n_2$. Como $n = C \\cdot V$, la igualdad es directa.\n\nRegla clave: al diluir, el volumen aumenta y la concentración disminuye, pero su producto permanece constante. Si duplicas el volumen, la concentración se reduce a la mitad.\n\nEsta ecuación es una de las más usadas en el laboratorio: desde preparar reactivos hasta ajustar la dosis de un medicamento líquido.",
+        "formula": "$c_1V_1=c_2V_2$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 310\" role=\"img\" aria-label=\"Dilución: mismos moles de soluto repartidos en mayor volumen\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <!-- Title -->\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Dilución: C₁V₁ = C₂V₂</text>\n\n  <!-- Concentrated solution -->\n  <rect x=\"40\" y=\"60\" width=\"100\" height=\"160\" rx=\"8\" fill=\"#0e7a68\" opacity=\"0.35\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"90\" y=\"55\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Concentrada</text>\n  <!-- Many particles -->\n  <circle cx=\"60\" cy=\"90\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"80\" cy=\"85\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"100\" cy=\"92\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"120\" cy=\"88\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"70\" cy=\"110\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"90\" cy=\"105\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"110\" cy=\"112\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"65\" cy=\"130\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"85\" cy=\"128\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"105\" cy=\"135\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"120\" cy=\"132\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"75\" cy=\"150\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"95\" cy=\"155\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"115\" cy=\"148\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"60\" cy=\"170\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"80\" cy=\"175\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"100\" cy=\"168\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"120\" cy=\"172\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"70\" cy=\"195\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"90\" cy=\"190\" r=\"5\" fill=\"#c17a17\"/>\n  <text x=\"90\" y=\"235\" font-size=\"12\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">V₁ = 100 mL</text>\n  <text x=\"90\" y=\"250\" font-size=\"12\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">C₁ = 2 M</text>\n\n  <!-- Arrow + solvent -->\n  <text x=\"250\" y=\"120\" font-size=\"28\" fill=\"#0e7a68\">→</text>\n  <text x=\"250\" y=\"150\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">+ disolvente</text>\n  <path d=\"M200,155 Q220,170 235,155\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n  <path d=\"M265,155 Q280,170 300,155\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n\n  <!-- Dilute solution -->\n  <rect x=\"340\" y=\"60\" width=\"220\" height=\"160\" rx=\"8\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"450\" y=\"55\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Diluida</text>\n  <!-- Same particles, spread out -->\n  <circle cx=\"370\" cy=\"90\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"420\" cy=\"85\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"470\" cy=\"95\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"520\" cy=\"88\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"390\" cy=\"120\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"440\" cy=\"115\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"490\" cy=\"122\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"360\" cy=\"145\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"410\" cy=\"140\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"460\" cy=\"148\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"510\" cy=\"142\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"380\" cy=\"170\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"430\" cy=\"165\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"480\" cy=\"172\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"530\" cy=\"168\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"395\" cy=\"195\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"445\" cy=\"190\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"495\" cy=\"195\" r=\"5\" fill=\"#c17a17\"/>\n  <circle cx=\"540\" cy=\"188\" r=\"5\" fill=\"#c17a17\"/><circle cx=\"365\" cy=\"200\" r=\"5\" fill=\"#c17a17\"/>\n  <text x=\"450\" y=\"235\" font-size=\"12\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">V₂ = 400 mL</text>\n  <text x=\"450\" y=\"250\" font-size=\"12\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">C₂ = 0,5 M</text>\n\n  <!-- Key message -->\n  <rect x=\"130\" y=\"270\" width=\"340\" height=\"35\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\"/>\n  <text x=\"300\" y=\"292\" font-size=\"13\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Mismo número de moles de soluto → n₁ = n₂</text>\n</svg>",
+            "caption": "Dilución: mismas partículas de soluto repartidas en mayor volumen"
+          }
+        ]
+      },
+      {
+        "title": "Ejemplo: 200 mL de HCl 0,5 M desde HCl 2 M",
+        "body": "Problema: necesitas 200 mL de HCl 0,5 M y dispones de una disolución de HCl 2 M. ¿Cuánto volumen de la concentrada necesitas?\n\nAplica $C_1 V_1 = C_2 V_2$:\n\n$$2{,}0 \\times V_1 = 0{,}5 \\times 200$$\n\n$$V_1 = \\frac{0{,}5 \\times 200}{2{,}0} = 50\\text{ mL}$$\n\nProcedimiento: mide 50 mL de HCl 2 M con una pipeta y viértelos sobre unos 100 mL de agua destilada en un matraz aforado de 200 mL. Después, enrasa hasta los 200 mL con más agua.\n\nComprobación rápida: $n_1 = 2{,}0 \\times 0{,}050 = 0{,}10$ mol. $n_2 = 0{,}5 \\times 0{,}200 = 0{,}10$ mol. ¡Los moles coinciden!\n\nNota: el volumen de disolvente añadido NO es simplemente $V_2 - V_1$ (200 − 50 = 150 mL), porque los volúmenes de mezcla no siempre son aditivos. Por eso usamos el matraz aforado y enrasamos.",
+        "formula": "$c_1V_1=c_2V_2$",
+        "assets": []
+      },
+      {
+        "title": "Seguridad: siempre añadir ácido al agua",
+        "body": "Esta regla puede salvar vidas en el laboratorio: al preparar una disolución ácida desde un ácido concentrado, SIEMPRE se añade el ácido al agua, nunca al revés.\n\n¿Por qué? Al mezclar un ácido fuerte concentrado (como $\\text{H}_2\\text{SO}_4$ al 96%) con agua, se libera una enorme cantidad de calor (la reacción es muy exotérmica). Si viertes agua sobre el ácido concentrado, el agua puede hervir instantáneamente al contacto con el ácido caliente, provocando salpicaduras violentas de ácido concentrado.\n\nEn cambio, si añades ácido gota a gota sobre un gran volumen de agua, el calor se disipa en toda la masa de agua y la temperatura sube gradualmente.\n\nRegla mnemotécnica: «**A²** → **A**cido **A**l **A**gua». O en inglés: «Do as you oughta, add acid to water» (haz lo que debes, añade ácido al agua).\n\nEn caso de salpicadura: lava inmediatamente con abundante agua durante al menos 15 minutos y avisa al responsable del laboratorio.",
+        "formula": "$c_1V_1=c_2V_2$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 315\" role=\"img\" aria-label=\"Regla de seguridad: añadir ácido al agua, nunca al revés\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"28\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Regla de seguridad: ácido sobre agua</text>\n\n  <!-- CORRECT -->\n  <rect x=\"30\" y=\"50\" width=\"240\" height=\"220\" rx=\"10\" fill=\"#0e7a68\" opacity=\"0.08\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <text x=\"150\" y=\"75\" font-size=\"13\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">✓ CORRECTO</text>\n  <!-- Beaker with water -->\n  <path d=\"M80,230 L80,140 Q80,130 90,130 L210,130 Q220,130 220,140 L220,230 Z\" fill=\"#0e7a68\" opacity=\"0.12\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"150\" y=\"200\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">H₂O</text>\n  <!-- Pipette dropping acid -->\n  <rect x=\"140\" y=\"85\" width=\"20\" height=\"40\" rx=\"3\" fill=\"#c17a17\" opacity=\"0.4\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"150\" y=\"83\" font-size=\"9\" fill=\"#c17a17\" text-anchor=\"middle\">Ácido</text>\n  <!-- Drops -->\n  <ellipse cx=\"150\" cy=\"130\" rx=\"3\" ry=\"5\" fill=\"#c17a17\" opacity=\"0.6\"/>\n  <text x=\"150\" y=\"255\" font-size=\"10\" fill=\"#0e7a68\" text-anchor=\"middle\">Añadir ácido al agua</text>\n\n  <!-- WRONG -->\n  <rect x=\"330\" y=\"50\" width=\"240\" height=\"220\" rx=\"10\" fill=\"#8a3d6b\" opacity=\"0.08\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <text x=\"450\" y=\"75\" font-size=\"13\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"bold\">✗ INCORRECTO</text>\n  <!-- Beaker with acid -->\n  <path d=\"M380,230 L380,140 Q380,130 390,130 L510,130 Q520,130 520,140 L520,230 Z\" fill=\"#c17a17\" opacity=\"0.15\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"450\" y=\"200\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Ácido conc.</text>\n  <!-- Water being poured — splash! -->\n  <rect x=\"440\" y=\"85\" width=\"20\" height=\"40\" rx=\"3\" fill=\"#0e7a68\" opacity=\"0.3\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"450\" y=\"83\" font-size=\"9\" fill=\"#0e7a68\" text-anchor=\"middle\">H₂O</text>\n  <!-- Splash marks -->\n  <path d=\"M430,130 L420,110\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <path d=\"M450,128 L450,108\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <path d=\"M470,130 L480,110\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <circle cx=\"420\" cy=\"108\" r=\"3\" fill=\"#8a3d6b\" opacity=\"0.5\"/>\n  <circle cx=\"480\" cy=\"108\" r=\"3\" fill=\"#8a3d6b\" opacity=\"0.5\"/>\n  <circle cx=\"450\" cy=\"105\" r=\"3\" fill=\"#8a3d6b\" opacity=\"0.5\"/>\n  <text x=\"450\" y=\"255\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\">¡Salpicaduras violentas!</text>\n\n  <!-- Bottom banner -->\n  <rect x=\"100\" y=\"280\" width=\"400\" height=\"30\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\"/>\n  <text x=\"300\" y=\"300\" font-size=\"12\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Recuerda: «A² → Ácido Al Agua»</text>\n</svg>",
+            "caption": "Regla de seguridad: siempre añadir el ácido al agua, nunca al revés"
+          }
+        ]
+      },
+      {
+        "title": "Mezcla de disoluciones del mismo soluto",
+        "body": "Cuando mezclas dos disoluciones del mismo soluto pero con diferente concentración, el resultado tiene una concentración intermedia.\n\nLa clave sigue siendo la conservación de moles:\n\n$$n_{\\text{total}} = n_1 + n_2 = C_1 V_1 + C_2 V_2$$\n\nEl volumen total (aproximado) es $V_T = V_1 + V_2$, así que la concentración final:\n\n$$C_f = \\frac{C_1 V_1 + C_2 V_2}{V_1 + V_2}$$\n\nEjemplo: mezclas 100 mL de NaCl 0,5 M con 200 mL de NaCl 2 M.\n\n$$C_f = \\frac{0{,}5 \\times 100 + 2{,}0 \\times 200}{100 + 200} = \\frac{50 + 400}{300} = 1{,}5\\text{ M}$$\n\nLa concentración final (1,5 M) está entre las dos originales (0,5 y 2,0 M), más cerca de la más concentrada porque contribuyó con más volumen. Esto tiene sentido intuitivo: domina la disolución de la que hay más.",
+        "formula": "$c_f=\\dfrac{c_1V_1+c_2V_2}{V_1+V_2}$",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Comprobación: si diluyes 25 mL de NaOH 4 M hasta 500 mL, la concentración final es $C_2 = \\frac{4 \\times 25}{500} = 0{,}2$ M. Puedes verificar calculando moles: $n = 4 \\times 0{,}025 = 0{,}1$ mol, y $C = 0{,}1/0{,}5 = 0{,}2$ M. ✓",
+        "assets": [],
+        "formula": "$c_1V_1=c_2V_2$"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Preparar disolución",
+        "statement": "Se toman 25,0 mL de una disolución 2,0 M y se enrasan a 250 mL. Calcula concentración final.",
+        "steps": [
+          "Los moles de soluto permanecen: $c_1V_1=c_2V_2$.",
+          "c₂=2,0(25,0)/250=0,20 M.",
+          "Se añade disolvente, no soluto; el volumen final es el del matraz.",
+          "Un error de lectura del enrase altera directamente c₂.",
+          "Comprobación: $c_2=\\dfrac{c_1V_1}{V_2}=\\dfrac{2,0\\cdot 25,0}{250}=0,20\\,\\mathrm{M}$, que coincide con el resultado. ✓"
+        ],
+        "answer": "c₂=0,20 M.",
+        "verification": "Si el volumen de enrase se hubiera leído 10 mL por encima de 250 mL, c₂ habría resultado un ~4 % menor que el valor correcto."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Factor de dilución",
+        "statement": "Una disolución 0,80 M se diluye al cuádruple de volumen. Calcula la concentración.",
+        "steps": [
+          "Moles constantes implican $c_1V_1=c_2V_2$.",
+          "Si $V_2=4V_1$, $c_2=\\dfrac{c_1}{4}=\\dfrac{0{,}80}{4}=0{,}20\\,\\mathrm{M}$.",
+          "La concentración baja, pero la cantidad de soluto no cambia.",
+          "El factor de dilución es $f=\\dfrac{V_2}{V_1}=\\dfrac{c_1}{c_2}=4$: ambos cocientes coinciden porque los moles se conservan.",
+          "Comprobación: con $c_1=0,80$ M y $f=4$, $c_2=0,80/4=0,20$ M; los moles iniciales (0,80·V₁) y finales (0,20·4V₁=0,80V₁) coinciden. ✓"
+        ],
+        "answer": "0,20 M.",
+        "verification": "El resultado es coherente: al cuadruplicar el volumen la concentración se divide por 4, y los moles de soluto no cambian."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "¿Qué volumen de agua hay que añadir a 50 mL de HCl 1,2 M para obtener HCl 0,30 M?",
+        "scaffold": "Calcula primero el volumen final V₂ con c₁V₁=c₂V₂; el agua añadida es V₂ menos el volumen inicial de ácido.",
+        "answer": "Hay que añadir aproximadamente 150 mL de agua.",
+        "full_solution": "V₂ = c₁V₁/c₂ = 1,2·50/0,30 = 200 mL. El volumen de agua añadida es aproximadamente V₂ − V₁ = 200 − 50 = 150 mL (los volúmenes son aproximadamente aditivos en disoluciones diluidas)."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Se diluye una disolución al doble de volumen y después la disolución resultante se vuelve a diluir al triple de su nuevo volumen. ¿Qué factor de dilución total se ha aplicado?",
+        "scaffold": "Aplica la ley de dilución dos veces seguidas y multiplica los factores de cada etapa.",
+        "answer": "El factor de dilución total es 6.",
+        "full_solution": "Primera dilución: c₂ = c₁/2. Segunda dilución: c₃ = c₂/3 = c₁/6. El factor de dilución global es el producto de los factores sucesivos: 2·3 = 6; la concentración final es la sexta parte de la inicial."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "¿Qué volumen de HNO₃ 8 M se necesita para 400 mL de HNO₃ 0,4 M?",
+        "answer": "V₁ = (0,4 × 0,4)/8 = 0,02 L = 20 mL.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Datos: c₁=8 M, c₂=0,4 M, V₂=0,400 L. V₁ = c₂V₂/c₁ = 0,4·0,400/8 = 0,02 L = 20 mL."
+      },
+      {
+        "statement": "Se diluyen 30 mL de NaCl 6 M a 180 mL. ¿Cuál es la concentración final?",
+        "answer": "C₂ = (6 × 0,03)/0,18 = 1 M.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Datos: c₁=6 M, V₁=30 mL=0,030 L, V₂=180 mL=0,180 L. c₂ = c₁V₁/V₂ = 6·0,030/0,180 = 1 M."
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Prepara 150 mL de HNO₃ 0,25 M a partir de una disolución 5,0 M. ¿Qué volumen de la disolución concentrada se necesita?",
+        "answer": "V₁ = 7,5 mL.",
+        "full_solution": "V₁ = c₂V₂/c₁ = 0,25·0,150/5,0 = 0,0075 L = 7,5 mL. Se añaden 7,5 mL del ácido 5,0 M sobre agua y se enrasa a 150 mL."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Se diluyen 15 mL de KCl 3,0 M hasta 250 mL. Calcula la concentración final.",
+        "answer": "c₂ = 0,18 M.",
+        "full_solution": "c₂ = c₁V₁/V₂ = 3,0·15/250 = 0,18 M."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Se cuadruplica el volumen de una disolución de c₁ = 1,2 M sin añadir soluto. Predice la concentración final.",
+        "answer": "c₂ = 0,30 M.",
+        "full_solution": "Los moles se conservan: n = c₁V₁ = c₂(4V₁), luego c₂ = c₁/4 = 1,2/4 = 0,30 M."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa c frente a V para 0,10 mol de soluto, con V entre 0,1 y 1 L, y explica la forma de la curva.",
+        "assets": [],
+        "answer": "Hipérbola c=0,10/V.",
+        "full_solution": "c = n/V = 0,10/V: es una hipérbola (c·V = 0,10 = constante). Por ejemplo, V = 0,1/0,2/0,5/1 L dan c = 1/0,5/0,2/0,1 M. El área del rectángulo c·V bajo cada punto es siempre n = 0,10 mol, porque los moles no cambian al diluir."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige “la dilución crea moles de soluto” y comprueba el balance de moles.",
+        "answer": "La afirmación es falsa.",
+        "full_solution": "Al diluir, los moles de soluto no cambian (c₁V₁=c₂V₂); lo que aumenta es el volumen de disolvente, y por eso la concentración disminuye. El balance de moles antes y después debe ser el mismo."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña el procedimiento de laboratorio con pipeta, matraz, enrase y control de seguridad.",
+        "answer": "Ejemplo: 20,0 mL de HCl 2,0 M hasta 100 mL de HCl 0,40 M.",
+        "full_solution": "Ejemplo: diluir 20,0 mL de HCl 2,0 M hasta 100 mL de HCl 0,40 M. Se mide el volumen de ácido concentrado con una pipeta aforada de 20 mL, se vierte sobre unos 60 mL de agua destilada en un matraz aforado de 100 mL (nunca al revés), se deja enfriar y se enrasa hasta la marca de 100 mL; gafas y guantes de protección son obligatorios. Control de seguridad: trabajar en vitrina si el ácido es muy concentrado."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-02-1",
+        "stem": "La ley de dilución establece que:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) C₁ + V₁ = C₂ + V₂",
+            "why_wrong": "Suma magnitudes de distinta naturaleza (concentración y volumen), lo que no tiene sentido físico."
+          },
+          {
+            "key": "B",
+            "text": "B) C₁ × V₁ = C₂ × V₂"
+          },
+          {
+            "key": "C",
+            "text": "C) C₁ / V₁ = C₂ / V₂",
+            "why_wrong": "No corresponde a ninguna ley física de la dilución."
+          },
+          {
+            "key": "D",
+            "text": "D) C₁ × C₂ = V₁ × V₂",
+            "why_wrong": "Multiplicar concentraciones y volúmenes cruzados no conserva los moles de soluto."
+          }
+        ],
+        "explanation": "La cantidad de soluto (n=C· V) se conserva al diluir.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-02-2",
+        "stem": "Para preparar 200 mL de HCl 0,5 M desde HCl 2 M, se necesitan:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 100 mL",
+            "why_wrong": "100 mL correspondería a no diluir en absoluto (igual al volumen final)."
+          },
+          {
+            "key": "B",
+            "text": "B) 25 mL",
+            "why_wrong": "25 mL es la mitad del valor correcto."
+          },
+          {
+            "key": "C",
+            "text": "C) 50 mL"
+          },
+          {
+            "key": "D",
+            "text": "D) 80 mL",
+            "why_wrong": "80 mL no resulta de aplicar c₁V₁=c₂V₂ con estos datos."
+          }
+        ],
+        "explanation": "V₁ = (0,5× 0,2)/2 = 0,05 L = 50 mL.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-02-3",
+        "stem": "Al diluir ácido sulfúrico concentrado se debe:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) Añadir agua al ácido",
+            "why_wrong": "Añadir agua al ácido es justo lo que hay que evitar: el calor liberado puede provocar salpicaduras violentas de ácido concentrado."
+          },
+          {
+            "key": "B",
+            "text": "B) Añadir ácido al agua"
+          },
+          {
+            "key": "C",
+            "text": "C) Mezclar a partes iguales simultáneamente",
+            "why_wrong": "Mezclar a partes iguales y simultáneamente no controla el calor liberado ni evita las salpicaduras."
+          },
+          {
+            "key": "D",
+            "text": "D) Calentar primero el ácido",
+            "why_wrong": "Calentar el ácido antes de diluir aumenta el riesgo, no lo reduce."
+          }
+        ],
+        "explanation": "Siempre ácido al agua para evitar salpicaduras peligrosas.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-02-4",
+        "stem": "¿Cuál es la concentración de 50 mL de NaCl 4 M diluidos a 200 mL?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 16 M",
+            "why_wrong": "16 M es mayor que la concentración inicial (4 M): una dilución nunca puede aumentar la concentración."
+          },
+          {
+            "key": "B",
+            "text": "B) 2 M",
+            "why_wrong": "2 M no corresponde al cálculo con estos datos."
+          },
+          {
+            "key": "C",
+            "text": "C) 1 M"
+          },
+          {
+            "key": "D",
+            "text": "D) 0,5 M",
+            "why_wrong": "0,5 M es la mitad del valor correcto."
+          }
+        ],
+        "explanation": "C₂ = (4× 0,05)/0,2 = 1 M.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Ley de dilución",
+        "back": "C₁ × V₁ = C₂ × V₂"
+      },
+      {
+        "front": "¿Qué se conserva en una dilución?",
+        "back": "Los moles de soluto: n=cV=constante."
+      },
+      {
+        "front": "Protocolo de seguridad con ácidos",
+        "back": "Añadir SIEMPRE ácido al agua, nunca agua al ácido."
+      },
+      {
+        "front": "200 mL HCl 0,5M desde HCl 2M",
+        "back": "V₁ = 50 mL de HCl 2 M; enrasar a 200 mL con agua."
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Confundir qué es la disolución concentrada (C₁) y cuál la diluida (C₂).",
+        "correct_model": "La disolución concentrada (c₁, V₁) es siempre la que tiene mayor concentración, y la diluida (c₂, V₂) la de menor concentración; si al despejar resulta c₂ > c₁ hay un error, porque diluir nunca aumenta la concentración.",
+        "remediation": "Antes de sustituir en c₁V₁=c₂V₂, identifica cuál es la disolución de partida (más concentrada) y cuál la de llegada (más diluida), y comprueba al final que c₂ < c₁."
+      },
+      {
+        "incorrect_model": "Añadir agua al ácido en lugar de ácido al agua (peligro de salpicaduras).",
+        "correct_model": "El ácido se añade siempre sobre el agua, nunca al revés, porque la gran masa de agua absorbe el calor liberado en la dilución sin que la temperatura suba peligrosamente; si se hace al revés, el calor se concentra en la poca agua añadida al ácido y puede hervir y salpicar ácido concentrado.",
+        "remediation": "Antes de diluir un ácido concentrado, recuerda la regla 'ácido al agua' y describe explícitamente el orden de adición en el procedimiento."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "dilución",
+        "definition": "Proceso de añadir disolvente a una disolución para reducir su concentración sin cambiar los moles de soluto."
+      },
+      {
+        "term": "c₁V₁=c₂V₂",
+        "definition": "Ley de dilución: los moles de soluto (c·V) se conservan entre el estado concentrado (1) y el diluido (2)."
+      },
+      {
+        "term": "concentración",
+        "definition": "Cantidad de soluto por unidad de volumen (o de masa) de disolución; en este tema, la molaridad c=n/V."
+      },
+      {
+        "term": "seguridad",
+        "definition": "Al diluir ácidos concentrados se añade siempre el ácido sobre el agua, nunca al revés, por el calor que se libera."
+      },
+      {
+        "term": "moles conservados",
+        "definition": "En una dilución el número de moles de soluto no cambia; solo varía el volumen de disolución y, por tanto, la concentración."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Saber calcular la molaridad $c=n/V$ y despejar n, c o V en esa fórmula.",
+        "why_it_matters": "La ley de dilución c₁V₁=c₂V₂ se deduce de que los moles n=cV no cambian al diluir, así que hay que dominar primero la molaridad."
+      },
+      {
+        "statement": "Convertir mL a L y manejar operaciones con proporciones.",
+        "why_it_matters": "Los volúmenes de ácidos y disoluciones suelen darse en mL, y las dos disoluciones (concentrada y diluida) deben compararse en las mismas unidades."
+      }
+    ],
+    "summary": {
+      "big_idea": "Dilución se entiende relacionando el modelo científico con magnitudes observables, representaciones y límites de validez.",
+      "key_points": [
+        "Cuando se diluye una disolución, la cantidad de soluto (en moles) no cambia; solo aumenta el volumen de disolvente.",
+        "Se pide preparar 200 mL (V₂ = 0,2 L) de HCl 0,5 M (C₂) a partir de HCl 2 M (C₁).",
+        "Al diluir ácidos concentrados (especialmente H₂SO₄, HNO₃ o HCl) es imprescindible añadir SIEMPRE el ácido al agua, nunca al revés.",
+        "Para aplicar **Dilución** hay que definir el sistema, elegir el modelo, mantener las unidades y comprobar el resultado."
+      ],
+      "formulas": [
+        "$c_1V_1=c_2V_2$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $c_1V_1=c_2V_2$, define el sistema y comprueba unidades, signos, conservación y límites del modelo."
+    },
+    "exam_questions": [
+      {
+        "statement": "Prepara 100 mL de HNO₃ 0,400 M desde una disolución 8,0 M y especifica material, cálculo y seguridad.",
+        "answer": "$V_1=\\dfrac{c_2V_2}{c_1}=\\dfrac{0,400\\cdot0,100}{8,0}=0,00500\\,\\mathrm{L}=5,00\\,\\mathrm{mL}$. Mide 5,00 mL de ácido con pipeta, viértelos sobre parte del agua, deja enfriar y enrasa a 100 mL. Siempre ácido sobre agua.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "Datos: c₁=8,0 M, c₂=0,400 M, V₂=0,100 L. V₁ = c₂V₂/c₁ = 0,400·0,100/8,0 = 0,00500 L = 5,00 mL. Se mide esta cantidad de ácido con pipeta aforada, se vierte sobre unos 50 mL de agua en un matraz aforado de 100 mL, se deja enfriar y se enrasa a 100 mL. Comprobación: c = 8,0·5,00/100 = 0,400 M ✓."
+      },
+      {
+        "statement": "Explica cómo prepararías 100 mL de HCl 0,5 M a partir de HCl 2 M. Indica el volumen de ácido y el protocolo de seguridad.",
+        "answer": "V₁ = 25,0 mL de HCl 2 M.",
+        "full_solution": "V₁ = c₂V₂/c₁ = 0,5·0,100/2 = 0,025 L = 25,0 mL. Se mide 25,0 mL de HCl 2 M con una pipeta aforada. Se vierten en un matraz aforado de 100 mL que ya contiene unos 50 mL de agua destilada (siempre ácido sobre agua), se deja enfriar y se enrasa hasta la marca de 100 mL; se usan gafas y guantes de protección. Comprobación: c = 2·25,0/100 = 0,5 M ✓.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Una disolución 0,80 M se diluye al cuádruple de volumen. Explica qué se conserva, calcula concentración y analiza el efecto de un error de enrase.",
+        "answer": "Al cuadruplicar el volumen, los moles de soluto se conservan y la concentración pasa de 0,80 a $\\dfrac{0,80}{4}=0,20\\,\\mathrm{M}$. Si se enrasa por encima de la marca, V aumenta y la concentración real queda menor que la calculada.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "Como los moles de soluto se conservan al diluir, n = c₁V₁ = c₂V₂ con V₂=4V₁, y por tanto c₂ = c₁/4 = 0,80/4 = 0,20 M. Si al enrasar se sobrepasa la marca del matraz, el volumen real V₂ es mayor que el nominal, así que la concentración real sería menor que 0,20 M: el error de enrase se traduce directamente en un error de concentración."
+      },
+      {
+        "statement": "Tienes disoluciones de NaOH 1 M y 4 M. ¿Qué volúmenes hay que mezclar para obtener 500 mL de NaOH 2,2 M?",
+        "answer": "V₁ = 300 mL de NaOH 1 M y V₂ = 200 mL de NaOH 4 M.",
+        "full_solution": "Suponiendo volúmenes aditivos: V₁+V₂=0,500 L y 1·V₁+4·V₂=2,2·0,500=1,10 mol. Sustituyendo V₁=0,500−V₂: (0,500−V₂)+4V₂=1,10 → 3V₂=0,60 → V₂=0,200 L (200 mL de NaOH 4 M) y V₁=0,300 L (300 mL de NaOH 1 M). Comprobación: 0,300·1+0,200·4=0,300+0,800=1,10 mol en 0,500 L → c=2,2 M ✓.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_03.json": {
+    "lesson_id": "U-4Q-06-L03",
+    "title": "Relaciones p-v-t",
+    "course_label": "4.º ESO · Disoluciones y gases",
+    "objectives": [
+      {
+        "statement": "Explicar Relaciones p-v-t con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de relaciones p-v-t para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Relaciones p-v-t."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Relaciones p-v-t."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Ley de Boyle: presión y volumen a temperatura constante",
+        "body": "¿Has sentido cómo se te tapan los oídos al sumergirte en una piscina? Al bajar, la presión del agua comprime el aire atrapado en tus oídos. Este fenómeno cotidiano ilustra la ley de Boyle.\n\nRobert Boyle (1662) descubrió que, a temperatura constante, la presión y el volumen de un gas son inversamente proporcionales:\n\n$$P_1 V_1 = P_2 V_2 \\quad (T = \\text{cte})$$\n\nSi comprimes un gas a la mitad de su volumen, su presión se duplica. Si lo expandes al triple, su presión se reduce a un tercio.\n\nExplicación microscópica: al reducir el volumen, las partículas tienen menos espacio, chocan con más frecuencia contra las paredes del recipiente y la presión sube.\n\nPuedes comprobarlo con una jeringa tapada: al empujar el émbolo (menor $V$), sientes más resistencia (mayor $P$). Al soltarlo, el aire empuja el émbolo hacia fuera.\n\nCondición crucial: la temperatura debe ser constante. Si cambias $T$ al mismo tiempo, esta ley no se aplica sola — necesitarás la ley combinada.",
+        "formula": "$P_1V_1=P_2V_2$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 280\" role=\"img\" aria-label=\"Ley de Boyle: jeringa comprimida muestra relación inversa presión-volumen\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Ley de Boyle: P₁V₁ = P₂V₂  (T constante)</text>\n\n  <!-- Syringe 1: Large volume, low pressure -->\n  <rect x=\"30\" y=\"60\" width=\"220\" height=\"80\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <!-- Plunger handle -->\n  <rect x=\"25\" y=\"75\" width=\"10\" height=\"50\" rx=\"2\" fill=\"var(--axes,#24312c)\"/>\n  <!-- Gas particles -->\n  <circle cx=\"80\" cy=\"85\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <circle cx=\"120\" cy=\"95\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <circle cx=\"160\" cy=\"82\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <circle cx=\"100\" cy=\"110\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <circle cx=\"140\" cy=\"118\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <circle cx=\"200\" cy=\"90\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <circle cx=\"180\" cy=\"115\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <circle cx=\"60\" cy=\"120\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.6\"/>\n  <text x=\"140\" y=\"155\" font-size=\"12\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">V₁ = grande</text>\n  <!-- Pressure gauge -->\n  <circle cx=\"140\" cy=\"190\" r=\"25\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"140\" y=\"195\" font-size=\"10\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">P baja</text>\n  <line x1=\"140\" y1=\"170\" x2=\"150\" y2=\"178\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n\n  <!-- Arrow -->\n  <text x=\"300\" y=\"105\" font-size=\"24\" fill=\"#c17a17\" text-anchor=\"middle\">→</text>\n  <text x=\"300\" y=\"125\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">comprimir</text>\n\n  <!-- Syringe 2: Small volume, high pressure -->\n  <rect x=\"370\" y=\"60\" width=\"110\" height=\"80\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <rect x=\"365\" y=\"75\" width=\"10\" height=\"50\" rx=\"2\" fill=\"var(--axes,#24312c)\"/>\n  <!-- Push arrow -->\n  <path d=\"M345,100 L365,100\" stroke=\"#c17a17\" stroke-width=\"3\" marker-end=\"url(#psh4q6)\"/>\n  <defs><marker id=\"psh4q6\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#c17a17\"/></marker></defs>\n  <!-- Same particles, closer together -->\n  <circle cx=\"395\" cy=\"82\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <circle cx=\"415\" cy=\"90\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <circle cx=\"435\" cy=\"82\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <circle cx=\"405\" cy=\"105\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <circle cx=\"425\" cy=\"98\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <circle cx=\"455\" cy=\"95\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <circle cx=\"445\" cy=\"115\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <circle cx=\"390\" cy=\"120\" r=\"4\" fill=\"#0e7a68\" opacity=\"0.8\"/>\n  <text x=\"425\" y=\"155\" font-size=\"12\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">V₂ = pequeño</text>\n  <!-- Pressure gauge -->\n  <circle cx=\"425\" cy=\"190\" r=\"25\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"425\" y=\"195\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"bold\">P alta</text>\n  <line x1=\"425\" y1=\"170\" x2=\"445\" y2=\"175\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n\n  <!-- Bottom key -->\n  <rect x=\"120\" y=\"230\" width=\"360\" height=\"35\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\"/>\n  <text x=\"300\" y=\"252\" font-size=\"13\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">P × V = constante  (a temperatura constante)</text>\n</svg>",
+            "caption": "Ley de Boyle: al comprimir el émbolo (menor V), la presión aumenta"
+          }
+        ]
+      },
+      {
+        "title": "Ley de Charles: volumen y temperatura a presión constante",
+        "body": "¿Por qué vuela un globo aerostático? Porque el aire caliente ocupa más volumen que el frío. Jacques Charles (1787) cuantificó esta relación.\n\nA presión constante, el volumen de un gas es directamente proporcional a su temperatura absoluta (en kelvin):\n\n$$\\frac{V_1}{T_1} = \\frac{V_2}{T_2} \\quad (P = \\text{cte})$$\n\nDuplica la temperatura (en K) y el volumen se duplica. La relación es lineal: la gráfica $V$ frente a $T$ (en kelvin) es una recta que pasa por el origen.\n\n¡Cuidado con las unidades! La temperatura DEBE estar en kelvin: $T(\\text{K}) = T(°\\text{C}) + 273{,}15$. Si usas grados Celsius, las proporciones no funcionan porque el cero Celsius no es el «cero absoluto» de temperatura.\n\nExplicación microscópica: al calentar un gas, las partículas se mueven más rápido y golpean las paredes con más fuerza. Si el recipiente es flexible (un globo), se expande hasta que la presión interna vuelve a igualar la externa.\n\nAplicación: los meteorólogos usan esta ley para calcular cómo cambia el volumen de las masas de aire al ascender y enfriarse en la atmósfera.",
+        "formula": "$\\dfrac{V_1}{T_1}=\\dfrac{V_2}{T_2}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 325\" role=\"img\" aria-label=\"Ley de Charles: globo frío pequeño vs globo caliente grande mostrando proporcionalidad V-T\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Ley de Charles: V₁/T₁ = V₂/T₂  (P constante)</text>\n\n  <!-- Cold balloon -->\n  <ellipse cx=\"130\" cy=\"150\" rx=\"60\" ry=\"50\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <text x=\"130\" y=\"155\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">V₁</text>\n  <line x1=\"130\" y1=\"200\" x2=\"130\" y2=\"220\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"130\" y=\"240\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">T₁ = 273 K</text>\n  <text x=\"130\" y=\"258\" font-size=\"10\" fill=\"#0e7a68\" text-anchor=\"middle\">(0 °C — frío)</text>\n  <!-- Snowflake icon -->\n  <text x=\"130\" y=\"108\" font-size=\"16\" fill=\"#0e7a68\" text-anchor=\"middle\">❄</text>\n\n  <!-- Arrow -->\n  <text x=\"280\" y=\"155\" font-size=\"24\" fill=\"#c17a17\" text-anchor=\"middle\">→</text>\n  <text x=\"280\" y=\"175\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">calentar</text>\n\n  <!-- Hot balloon — bigger -->\n  <ellipse cx=\"430\" cy=\"150\" rx=\"100\" ry=\"80\" fill=\"#c17a17\" opacity=\"0.12\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <text x=\"430\" y=\"155\" font-size=\"14\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">V₂ = 2V₁</text>\n  <line x1=\"430\" y1=\"230\" x2=\"430\" y2=\"250\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"430\" y=\"268\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">T₂ = 546 K</text>\n  <text x=\"430\" y=\"286\" font-size=\"10\" fill=\"#c17a17\" text-anchor=\"middle\">(273 °C — caliente)</text>\n\n  <!-- Bottom -->\n  <rect x=\"140\" y=\"295\" width=\"320\" height=\"25\" rx=\"5\" fill=\"var(--grid,#e8e3d8)\"/>\n  <text x=\"300\" y=\"313\" font-size=\"12\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Doble temperatura (en K) → Doble volumen</text>\n</svg>",
+            "caption": "Ley de Charles: al calentar un globo (mayor T), su volumen se duplica"
+          }
+        ]
+      },
+      {
+        "title": "Ley de Gay-Lussac: presión y temperatura a volumen constante",
+        "body": "¿Por qué no debes dejar un aerosol al sol? Porque si el volumen del envase no puede cambiar, al subir la temperatura sube la presión — y puede explotar.\n\nGay-Lussac (1802) formuló que, a volumen constante, la presión es directamente proporcional a la temperatura absoluta:\n\n$$\\frac{P_1}{T_1} = \\frac{P_2}{T_2} \\quad (V = \\text{cte})$$\n\nEs la ley de la olla a presión: al calentar agua en un recipiente cerrado (volumen fijo), la presión aumenta. Esto eleva el punto de ebullición del agua, permitiendo cocinar a más de 100 °C y reducir el tiempo de cocción.\n\nEjemplo numérico: un neumático tiene $P = 2{,}0$ atm a 20 °C (293 K). Tras una carrera larga, la temperatura sube a 60 °C (333 K). Nueva presión:\n\n$$P_2 = P_1 \\cdot \\frac{T_2}{T_1} = 2{,}0 \\times \\frac{333}{293} = 2{,}27\\text{ atm}$$\n\nUn aumento del 14% que los ingenieros deben tener en cuenta al diseñar neumáticos.",
+        "formula": "$\\dfrac{P_1}{T_1}=\\dfrac{P_2}{T_2}$",
+        "assets": []
+      },
+      {
+        "title": "Ley combinada de los gases",
+        "body": "Si cambian $P$, $V$ y $T$ simultáneamente, las tres leyes anteriores se unifican en la ley combinada de los gases:\n\n$$\\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2}$$\n\nEs la herramienta más versátil: si una variable permanece constante, la ecuación se reduce automáticamente a Boyle, Charles o Gay-Lussac.\n\nProcedimiento para resolver problemas:\n1. Identifica el estado inicial ($P_1$, $V_1$, $T_1$) y el final ($P_2$, $V_2$, $T_2$).\n2. Convierte temperaturas a kelvin.\n3. Sustituye las cinco magnitudes conocidas.\n4. Despeja la incógnita.\n\nEjemplo: un gas ocupa 2 L a 1 atm y 300 K. ¿Qué volumen ocupa a 2 atm y 600 K?\n\n$$V_2 = V_1 \\cdot \\frac{P_1}{P_2} \\cdot \\frac{T_2}{T_1} = 2 \\cdot \\frac{1}{2} \\cdot \\frac{600}{300} = 2\\text{ L}$$\n\nDuplicar la presión reduce el volumen a la mitad, pero duplicar la temperatura lo duplica. Los efectos se compensan.",
+        "formula": "$\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}$",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Comprobación: un globo de 5 L a 25 °C y 1 atm se lleva a una montaña donde $P = 0{,}7$ atm y $T = 5$ °C. Nuevo volumen: $V_2 = 5 \\times \\frac{1}{0{,}7} \\times \\frac{278}{298} = 6{,}67$ L. El globo se hincha por la menor presión, aunque algo menos de lo esperado porque el frío lo contrae parcialmente.",
+        "assets": [],
+        "formula": "$\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}$"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Ley combinada",
+        "statement": "Un gas ocupa 2,0 L a 1,0 atm y 300 K. ¿Qué volumen ocupa a 0,80 atm y 360 K?",
+        "steps": [
+          "Usamos la ley combinada: $\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}$.",
+          "$V_2=\\dfrac{P_1V_1T_2}{P_2T_1}=\\dfrac{1{,}0\\cdot 2{,}0\\cdot 360}{0{,}80\\cdot 300}=3{,}0\\,\\mathrm{L}$.",
+          "Aumentar T y disminuir P favorecen un volumen mayor.",
+          "La temperatura debe expresarse en kelvin.",
+          "Comprobación: $\\dfrac{P_1V_1}{T_1}=\\dfrac{1,0\\cdot2,0}{300}=6,7\\cdot10^{-3}$ y $\\dfrac{P_2V_2}{T_2}=\\dfrac{0,80\\cdot3,0}{360}=6,7\\cdot10^{-3}$: coinciden. ✓"
+        ],
+        "answer": "V₂=3,0 L.",
+        "verification": "El volumen aumenta (de 2,0 a 3,0 L) porque la presión baja y la temperatura sube, dos efectos que favorecen un volumen mayor."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Presión y temperatura",
+        "statement": "Un gas a volumen constante pasa de 300 a 450 K y tenía 100 kPa. Calcula presión final.",
+        "steps": [
+          "A volumen y cantidad constantes, $\\dfrac{P}{T}$ es constante.",
+          "$P_2=P_1\\dfrac{T_2}{T_1}=100\\left(\\dfrac{450}{300}\\right)=150\\,\\mathrm{kPa}$.",
+          "La temperatura absoluta aumenta un 50 %, igual que la presión.",
+          "Usar °C directamente daría una relación incorrecta.",
+          "Comprobación: $\\dfrac{P_1}{T_1}=\\dfrac{100}{300}=0,333$ y $\\dfrac{P_2}{T_2}=\\dfrac{150}{450}=0,333$: coinciden. ✓"
+        ],
+        "answer": "150 kPa.",
+        "verification": "Un aumento del 50 % en la temperatura absoluta produce el mismo aumento relativo (50 %) en la presión, como exige la proporcionalidad directa de Gay-Lussac."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Una jeringa cerrada contiene 40 mL de aire a 1 atm; se empuja el émbolo hasta que el aire ocupa 25 mL, a temperatura constante. ¿Cuál es la presión final?",
+        "scaffold": "Identifica que T y n son constantes (ley de Boyle); aplica P₁V₁=P₂V₂ y despeja P₂.",
+        "answer": "P₂ = 1,6 atm.",
+        "full_solution": "P₁V₁=P₂V₂ → P₂ = P₁V₁/V₂ = 1·40/25 = 1,6 atm."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Un recipiente rígido con un gas a 1,0 atm y 290 K se calienta hasta 348 K. Calcula la presión final y explica qué ley se aplica.",
+        "scaffold": "El volumen es constante (recipiente rígido): es la ley de Gay-Lussac. Aplica P₁/T₁=P₂/T₂.",
+        "answer": "P₂ = 1,2 atm.",
+        "full_solution": "P₁/T₁=P₂/T₂ → P₂=P₁·T₂/T₁=1,0·348/290=1,2 atm."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un gas ocupa 8 L a 4 atm. ¿Qué volumen ocupa a 1 atm (T constante)?",
+        "answer": "V₂ = (4× 8)/1 = 32 L.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Datos: P₁=4 atm, V₁=8 L, T constante. Por Boyle, P₁V₁=P₂V₂ → V₂=(4·8)/1=32 L."
+      },
+      {
+        "statement": "Un gas está a 2 atm y 200 K. Se calienta a 400 K a V constante. ¿Nueva presión?",
+        "answer": "P₂ = 2× 400/200 = 4 atm.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Datos: P₁=2 atm, T₁=200 K, T₂=400 K, V constante (Gay-Lussac). P₂=P₁·T₂/T₁=2·400/200=4 atm."
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Un gas ocupa 3,0 L a 1,2 atm. Se expande hasta 0,90 atm a temperatura constante. Calcula el nuevo volumen.",
+        "answer": "V₂ = 4,0 L.",
+        "full_solution": "Boyle: P₁V₁=P₂V₂ → V₂=1,2·3,0/0,90=4,0 L."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "500 mL de gas a 27 °C se calientan hasta 87 °C a presión constante. Calcula el nuevo volumen.",
+        "answer": "V₂ = 600 mL.",
+        "full_solution": "T₁=27+273=300 K; T₂=87+273=360 K. Charles: V₂=V₁·T₂/T₁=500·360/300=600 mL."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Un neumático está a 2,2 atm y 17 °C. Tras un viaje largo su temperatura sube a 47 °C, a volumen constante. Calcula la nueva presión.",
+        "answer": "P₂ ≈ 2,43 atm.",
+        "full_solution": "T₁=17+273=290 K; T₂=47+273=320 K. Gay-Lussac: P₂=P₁·T₂/T₁=2,2·320/290=2,43 atm."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa el volumen de un gas frente a la temperatura en °C a presión constante y explica por qué la recta, prolongada, corta el eje en −273 °C.",
+        "answer": "Corta el eje en el cero absoluto.",
+        "full_solution": "La recta V frente a t(°C) tiene ecuación V=V₀(1+t/273); al extrapolar hasta V=0 se obtiene t=−273 °C, el cero absoluto, que corresponde a T=0 K. Por eso en las leyes de los gases la temperatura debe expresarse siempre en kelvin, donde la recta V-T pasa por el origen."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige la afirmación 'si duplico la temperatura en °C de 20 °C a 40 °C, el volumen se duplica' y calcula el valor correcto.",
+        "answer": "El volumen solo aumenta un 7 %.",
+        "full_solution": "Es incorrecto duplicar grados Celsius: hay que pasar a kelvin. T₁=20+273=293 K, T₂=40+273=313 K. V₂/V₁=T₂/T₁=313/293=1,07; el volumen solo aumenta un 7 %, no se duplica."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Un gas está a 10 L, 1 atm y 300 K. Se lleva a 2 atm y 600 K. Calcula el volumen final aplicando la ley combinada.",
+        "answer": "V₂ = 10 L.",
+        "full_solution": "Ley combinada: V₂=P₁V₁T₂/(P₂T₁)=1·10·600/(2·300)=10 L. Duplicar T duplicaría V, y duplicar P lo reduciría a la mitad; ambos efectos se compensan y el volumen no cambia."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-03-1",
+        "stem": "La ley de Boyle se aplica cuando:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) la presión es constante",
+            "why_wrong": "La presión constante corresponde a la ley de Charles, no a la de Boyle."
+          },
+          {
+            "key": "B",
+            "text": "B) la temperatura es constante"
+          },
+          {
+            "key": "C",
+            "text": "C) el volumen es constante",
+            "why_wrong": "El volumen constante corresponde a la ley de Gay-Lussac."
+          },
+          {
+            "key": "D",
+            "text": "D) n es constante y P varía con T",
+            "why_wrong": "Si n es constante y P varía con T a V constante, es de nuevo Gay-Lussac, no Boyle."
+          }
+        ],
+        "explanation": "Boyle: P₁V₁=P₂V₂ a temperatura constante (proceso isotérmico).",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-03-2",
+        "stem": "¿En qué unidades debe expresarse la temperatura en las leyes de los gases?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) Celsius (°C)",
+            "why_wrong": "Los grados Celsius pueden ser negativos y no son proporcionales a la energía cinética media; usarlos da resultados erróneos."
+          },
+          {
+            "key": "B",
+            "text": "B) Fahrenheit (°F)",
+            "why_wrong": "Los grados Fahrenheit tienen el mismo problema que los Celsius."
+          },
+          {
+            "key": "C",
+            "text": "C) Kelvin (K)"
+          },
+          {
+            "key": "D",
+            "text": "D) Cualquier unidad de temperatura",
+            "why_wrong": "No vale cualquier escala: debe usarse la escala absoluta (kelvin), donde T=0 corresponde a la ausencia de energía cinética media."
+          }
+        ],
+        "explanation": "Las leyes de gases requieren temperatura absoluta en Kelvin; $T(\\mathrm K)$=$T(^{\\circ}\\mathrm C)$+273.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-03-3",
+        "stem": "Un gas a 2 L y 300 K se calienta a 600 K a P constante. El nuevo volumen es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 1 L",
+            "why_wrong": "1 L implicaría que el volumen se reduce al calentar, lo contrario de la ley de Charles."
+          },
+          {
+            "key": "B",
+            "text": "B) 2 L",
+            "why_wrong": "2 L significaría que el volumen no cambia, lo que no es cierto si se calienta a presión constante."
+          },
+          {
+            "key": "C",
+            "text": "C) 4 L"
+          },
+          {
+            "key": "D",
+            "text": "D) 6 L",
+            "why_wrong": "6 L no corresponde al cálculo V₂=V₁T₂/T₁ con estos datos."
+          }
+        ],
+        "explanation": "V₂ = 2× 600/300 = 4 L (ley de Charles).",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-03-4",
+        "stem": "La ley de Gay-Lussac relaciona:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) P y V a T constante",
+            "why_wrong": "P y V a T constante es la ley de Boyle."
+          },
+          {
+            "key": "B",
+            "text": "B) V y T a P constante",
+            "why_wrong": "V y T a P constante es la ley de Charles."
+          },
+          {
+            "key": "C",
+            "text": "C) P y T a V constante"
+          },
+          {
+            "key": "D",
+            "text": "D) P, V y T simultáneamente",
+            "why_wrong": "No existe una ley elemental que relacione P, V y T simultáneamente sin fijar ninguna variable (para eso se usa la ley combinada o PV=nRT)."
+          }
+        ],
+        "explanation": "Gay-Lussac: P₁/T₁=P₂/T₂ a volumen constante.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Ley de Boyle",
+        "back": "P₁V₁ = P₂V₂ (T constante)"
+      },
+      {
+        "front": "Ley de Charles",
+        "back": "V₁/T₁ = V₂/T₂ (P constante; T en Kelvin)"
+      },
+      {
+        "front": "Ley de Gay-Lussac",
+        "back": "P₁/T₁ = P₂/T₂ (V constante; T en Kelvin)"
+      },
+      {
+        "front": "Conversión °C a K",
+        "back": "$T(\\mathrm K)$ = $T(^{\\circ}\\mathrm C)$ + 273"
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Usar °C en lugar de K en las leyes de Charles y Gay-Lussac.",
+        "correct_model": "La temperatura debe expresarse siempre en kelvin en las leyes de Charles y Gay-Lussac, porque V y P son proporcionales a la temperatura absoluta, no a los grados Celsius.",
+        "remediation": "Antes de sustituir en V₁/T₁=V₂/T₂ o P₁/T₁=P₂/T₂, convierte todas las temperaturas a kelvin sumando 273 a los grados Celsius."
+      },
+      {
+        "incorrect_model": "Confundir qué variable se mantiene constante en cada ley.",
+        "correct_model": "En la ley de Boyle la temperatura es constante; en la de Charles, la presión es constante; en la de Gay-Lussac, el volumen es constante. Hay que identificar primero cuál de las tres magnitudes no cambia en el problema.",
+        "remediation": "Lee el enunciado y señala explícitamente qué magnitud se mantiene constante antes de elegir la ley que corresponde."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Boyle",
+        "definition": "Ley que relaciona presión y volumen a temperatura y cantidad de gas constantes: P₁V₁=P₂V₂."
+      },
+      {
+        "term": "Charles",
+        "definition": "Ley que relaciona volumen y temperatura a presión constante: V₁/T₁=V₂/T₂ (T en kelvin)."
+      },
+      {
+        "term": "Gay-Lussac",
+        "definition": "Ley que relaciona presión y temperatura a volumen constante: P₁/T₁=P₂/T₂ (T en kelvin)."
+      },
+      {
+        "term": "Kelvin",
+        "definition": "Escala absoluta de temperatura (K = °C + 273); es la que debe usarse en las leyes de los gases."
+      },
+      {
+        "term": "presión",
+        "definition": "Fuerza por unidad de área que ejerce un gas sobre las paredes del recipiente."
+      },
+      {
+        "term": "volumen",
+        "definition": "Espacio que ocupa el gas; en las leyes P-V-T se expresa en litros o metros cúbicos."
+      },
+      {
+        "term": "temperatura",
+        "definition": "Medida de la energía cinética media de las partículas del gas; debe usarse en kelvin en estas leyes."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Proporcionalidad directa e inversa entre magnitudes.",
+        "why_it_matters": "Las leyes de Boyle, Charles y Gay-Lussac son relaciones de proporcionalidad directa o inversa entre P, V y T."
+      },
+      {
+        "statement": "Conversión entre grados Celsius y kelvin (T(K)=T(°C)+273).",
+        "why_it_matters": "Las leyes de los gases exigen usar la temperatura absoluta; usar °C directamente da resultados incorrectos."
+      }
+    ],
+    "summary": {
+      "big_idea": "Relaciones p-v-t se entiende relacionando el modelo científico con magnitudes observables, representaciones y límites de validez.",
+      "key_points": [
+        "La ley de Boyle (1662) establece que, a temperatura constante (proceso isotérmico), el producto de la presión y el volumen de un gas ideal es constante: P₁V₁ = P₂V₂.",
+        "La ley de Charles (1787) establece que, a presión constante (proceso isobárico), el volumen de un gas es directamente proporcional a su temperatura absoluta: V₁/T₁ = V₂/T₂.",
+        "La ley de Gay-Lussac (1802) establece que, a volumen constante (proceso isocórico), la presión de un gas es directamente proporcional a su temperatura absoluta: P₁/T₁ = P₂/T₂ (T en Kelvin siempre).",
+        "Para aplicar **Relaciones p-v-t** hay que definir el sistema, elegir el modelo, mantener las unidades y comprobar el resultado."
+      ],
+      "formulas": [
+        "$\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}$, define el sistema y comprueba unidades, signos, conservación y límites del modelo."
+    },
+    "exam_questions": [
+      {
+        "statement": "Un gas ocupa 2,0 L a 1,0 atm y 300 K. Calcula el volumen a 0,80 atm y 360 K.",
+        "answer": "$\\dfrac{P_1V_1}{T_1}=\\dfrac{P_2V_2}{T_2}\\Rightarrow V_2=\\dfrac{1{,}0\\cdot2{,}0\\cdot360}{0{,}80\\cdot300}=3{,}0\\,\\mathrm{L}$",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "Datos: P₁=1,0 atm, V₁=2,0 L, T₁=300 K, P₂=0,80 atm, T₂=360 K. De la ley combinada, $V_2=\\dfrac{P_1V_1T_2}{P_2T_1}=\\dfrac{1,0\\cdot2,0\\cdot360}{0,80\\cdot300}=3,0\\,\\mathrm{L}$. El volumen aumenta porque la presión baja y la temperatura sube, dos efectos que favorecen un volumen mayor."
+      },
+      {
+        "statement": "Enuncia la ley de Boyle y aplícala: un gas a 5 atm ocupa 2 L. ¿Qué volumen ocupa a 1 atm?",
+        "answer": "V₂ = 10 L.",
+        "full_solution": "Ley de Boyle: a temperatura y cantidad de gas constantes, P·V = constante (P y V son inversamente proporcionales). P₁V₁ = P₂V₂ → V₂ = P₁V₁/P₂ = 5·2/1 = 10 L. Al reducir la presión a la quinta parte, el volumen se multiplica por 5.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Explica qué ley usarías en tres cambios: volumen constante, temperatura constante y presión constante; indica qué gráfica linealizaría cada caso.",
+        "answer": "A volumen constante se usa $\\dfrac{P}{T}=\\mathrm{cte}$ y se linealiza P frente a T en kelvin. A temperatura constante, PV=cte y P frente a $\\dfrac{1}{V}$ es lineal. A presión constante, $\\dfrac{V}{T}=\\mathrm{cte}$ y V frente a T es lineal.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "A volumen constante (Gay-Lussac): P/T=cte, por lo que representar P frente a T (en kelvin) da una recta que pasa por el origen. A temperatura constante (Boyle): PV=cte, por lo que P frente a 1/V es una recta (P frente a V sería una hipérbola). A presión constante (Charles): V/T=cte, por lo que V frente a T (en kelvin) da una recta por el origen; si T se expresa en °C, la recta no pasa por el origen sino que corta el eje en −273 °C."
+      },
+      {
+        "statement": "Un gas ideal parte de P₁=1 atm, V₁=10 L, T₁=300 K. Se calienta a T₂=600 K y se duplica la presión. Calcula V₂.",
+        "answer": "V₂ = 10 L.",
+        "full_solution": "Ley combinada: V₂=P₁V₁T₂/(P₂T₁)=1·10·600/(2·300)=10 L. Interpretación: duplicar T duplicaría V, y duplicar P lo reduciría a la mitad; los dos efectos se compensan y el volumen no cambia.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_04.json": {
+    "lesson_id": "U-4Q-06-L04",
+    "title": "Gas ideal cualitativo",
+    "course_label": "4.º ESO · Disoluciones y gases",
+    "objectives": [
+      {
+        "statement": "Explicar Gas ideal cualitativo con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de gas ideal cualitativo para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Gas ideal cualitativo."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Gas ideal cualitativo."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "La ecuación de estado del gas ideal: PV = nRT",
+        "body": "Las tres leyes de los gases (Boyle, Charles, Gay-Lussac) son casos particulares de una sola ecuación universal que describe el comportamiento de un gas ideal:\n\n$$PV = nRT$$\n\nCinco magnitudes, una ecuación. Conociendo cuatro, puedes calcular la quinta:\n\n- $P$: presión (en atm o Pa)\n- $V$: volumen (en L o m³)\n- $n$: cantidad de sustancia (en mol)\n- $R$: constante universal de los gases\n- $T$: temperatura absoluta (siempre en kelvin)\n\n¿Por qué es tan poderosa? Porque conecta las propiedades macroscópicas del gas (presión, volumen, temperatura) con la cantidad de materia ($n$). Es el puente entre lo que mides con instrumentos y lo que ocurre a nivel molecular.\n\nLa ecuación predice, por ejemplo, que si inflas el doble de moles de aire en un neumático a $T$ constante y volumen fijo, la presión se duplica. O que al calentar un gas libre, se expande proporcionalmente.",
+        "formula": "$pV=nRT$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Ecuación PV=nRT con cinco variables como diales de un panel de control\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"30\" font-size=\"16\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Ecuación del gas ideal: PV = nRT</text>\n\n  <!-- Central equation -->\n  <rect x=\"180\" y=\"120\" width=\"240\" height=\"60\" rx=\"10\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"300\" y=\"158\" font-size=\"26\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">PV = nRT</text>\n\n  <!-- P dial -->\n  <circle cx=\"80\" cy=\"80\" r=\"40\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/>\n  <text x=\"80\" y=\"75\" font-size=\"22\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">P</text>\n  <text x=\"80\" y=\"95\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Presión</text>\n  <text x=\"80\" y=\"135\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Pa, atm</text>\n  <line x1=\"115\" y1=\"100\" x2=\"180\" y2=\"135\" stroke=\"#0e7a68\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n\n  <!-- V dial -->\n  <circle cx=\"520\" cy=\"80\" r=\"40\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2.5\"/>\n  <text x=\"520\" y=\"75\" font-size=\"22\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"bold\">V</text>\n  <text x=\"520\" y=\"95\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Volumen</text>\n  <text x=\"520\" y=\"135\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">L, m³</text>\n  <line x1=\"485\" y1=\"100\" x2=\"420\" y2=\"135\" stroke=\"#c17a17\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n\n  <!-- n dial -->\n  <circle cx=\"80\" cy=\"250\" r=\"40\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2.5\"/>\n  <text x=\"80\" y=\"245\" font-size=\"22\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"bold\">n</text>\n  <text x=\"80\" y=\"265\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Moles</text>\n  <text x=\"80\" y=\"300\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">mol</text>\n  <line x1=\"115\" y1=\"235\" x2=\"180\" y2=\"175\" stroke=\"#8a3d6b\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n\n  <!-- R constant -->\n  <rect x=\"240\" y=\"195\" width=\"120\" height=\"40\" rx=\"6\" fill=\"var(--axes,#24312c)\" opacity=\"0.1\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"300\" y=\"215\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">R = 0,082</text>\n  <text x=\"300\" y=\"230\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">L·atm·mol⁻¹·K⁻¹</text>\n\n  <!-- T dial -->\n  <circle cx=\"520\" cy=\"250\" r=\"40\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"2.5\"/>\n  <text x=\"520\" y=\"245\" font-size=\"22\" fill=\"var(--axes,#24312c)\" text-anchor=\"middle\" font-weight=\"bold\">T</text>\n  <text x=\"520\" y=\"265\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Temperatura</text>\n  <text x=\"520\" y=\"300\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">K (siempre)</text>\n  <line x1=\"485\" y1=\"235\" x2=\"420\" y2=\"175\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n</svg>",
+            "caption": "Las cinco variables de la ecuación PV = nRT como diales de un panel de control"
+          }
+        ]
+      },
+      {
+        "title": "La constante R y sus unidades",
+        "body": "La constante $R$ es el factor que une todas las magnitudes. Su valor depende de las unidades que uses:\n\n$$R = 0{,}082\\;\\frac{\\text{L} \\cdot \\text{atm}}{\\text{mol} \\cdot \\text{K}} = 8{,}314\\;\\frac{\\text{J}}{\\text{mol} \\cdot \\text{K}}$$\n\nUsa la primera forma cuando trabajes con presión en atm y volumen en litros (la combinación más habitual en problemas de gases). Usa la segunda en contextos energéticos o cuando la presión esté en pascales y el volumen en m³.\n\nTruco práctico: antes de sustituir en $PV = nRT$, comprueba que tus unidades son coherentes con la $R$ elegida. Si usas $R = 0{,}082$, la presión debe estar en atm, el volumen en litros y la temperatura en kelvin. Mezclar unidades es el error más frecuente en estos problemas.",
+        "formula": "$pV=nRT$",
+        "assets": []
+      },
+      {
+        "title": "Condiciones normales y volumen molar",
+        "body": "Las condiciones normales (CN) son un punto de referencia estándar:\n\n$$T = 273{,}15\\text{ K} \\quad (0\\text{ °C}), \\qquad P = 1\\text{ atm}$$\n\nEn estas condiciones, 1 mol de cualquier gas ideal ocupa exactamente:\n\n$$V_m = \\frac{RT}{P} = \\frac{0{,}082 \\times 273{,}15}{1} = 22{,}4\\text{ L/mol}$$\n\nEste dato es extraordinario: no importa si el gas es helio, nitrógeno o dióxido de carbono. Un mol de cada uno ocupa 22,4 L en CN. ¿Por qué? Porque en un gas ideal, las partículas están tan separadas que su tamaño y las fuerzas entre ellas son despreciables — solo importa cuántas hay.\n\nAplicación directa: si un gas ocupa 44,8 L en CN, contiene $44{,}8/22{,}4 = 2$ mol. Así puedes «contar» moles simplemente midiendo volúmenes.\n\nNota: la IUPAC ha redefinido las condiciones estándar como 25 °C y 1 bar ($V_m ≈ 24{,}8$ L/mol), pero en la ESO y bachillerato se siguen usando las CN clásicas.",
+        "formula": "$PV=nRT$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 315\" role=\"img\" aria-label=\"Cubo de 22,4 L representando el volumen molar con diferentes moléculas de gas\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Volumen molar en condiciones normales</text>\n\n  <!-- Cube representing 22.4 L -->\n  <!-- 3D cube with perspective -->\n  <polygon points=\"150,100 350,100 400,70 200,70\" fill=\"#0e7a68\" opacity=\"0.08\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <polygon points=\"350,100 400,70 400,230 350,260\" fill=\"#0e7a68\" opacity=\"0.12\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <polygon points=\"150,100 350,100 350,260 150,260\" fill=\"#0e7a68\" opacity=\"0.06\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n\n  <!-- Dimension labels -->\n  <text x=\"250\" y=\"92\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">~28,2 cm</text>\n  <text x=\"360\" y=\"170\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" transform=\"rotate(70,380,170)\">~28,2 cm</text>\n\n  <!-- Gas molecules inside -->\n  <circle cx=\"200\" cy=\"160\" r=\"6\" fill=\"#0e7a68\" opacity=\"0.5\"/><text x=\"200\" y=\"163\" font-size=\"6\" fill=\"#fff\" text-anchor=\"middle\">H₂</text>\n  <circle cx=\"250\" cy=\"180\" r=\"6\" fill=\"#c17a17\" opacity=\"0.5\"/><text x=\"250\" y=\"183\" font-size=\"6\" fill=\"#fff\" text-anchor=\"middle\">O₂</text>\n  <circle cx=\"300\" cy=\"150\" r=\"6\" fill=\"#8a3d6b\" opacity=\"0.5\"/><text x=\"300\" y=\"153\" font-size=\"6\" fill=\"#fff\" text-anchor=\"middle\">N₂</text>\n  <circle cx=\"280\" cy=\"210\" r=\"6\" fill=\"var(--axes,#24312c)\" opacity=\"0.4\"/><text x=\"280\" y=\"213\" font-size=\"5\" fill=\"#fff\" text-anchor=\"middle\">CO₂</text>\n  <circle cx=\"220\" cy=\"220\" r=\"6\" fill=\"#0e7a68\" opacity=\"0.4\"/><text x=\"220\" y=\"223\" font-size=\"6\" fill=\"#fff\" text-anchor=\"middle\">He</text>\n\n  <!-- Volume label -->\n  <rect x=\"170\" y=\"270\" width=\"200\" height=\"35\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\"/>\n  <text x=\"270\" y=\"292\" font-size=\"14\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">V_m = 22,4 L/mol</text>\n\n  <!-- Right annotations -->\n  <text x=\"440\" y=\"110\" font-size=\"11\" fill=\"var(--text,#20302a)\">Condiciones normales:</text>\n  <text x=\"440\" y=\"130\" font-size=\"11\" fill=\"#0e7a68\" font-weight=\"bold\">T = 273,15 K (0 °C)</text>\n  <text x=\"440\" y=\"150\" font-size=\"11\" fill=\"#0e7a68\" font-weight=\"bold\">P = 1 atm</text>\n  <text x=\"440\" y=\"185\" font-size=\"10\" fill=\"var(--text,#20302a)\">1 mol de cualquier gas</text>\n  <text x=\"440\" y=\"200\" font-size=\"10\" fill=\"var(--text,#20302a)\">ideal ocupa 22,4 L</text>\n  <text x=\"440\" y=\"230\" font-size=\"10\" fill=\"#c17a17\">Independiente del gas</text>\n</svg>",
+            "caption": "Un mol de cualquier gas ideal ocupa 22,4 L en condiciones normales"
+          }
+        ]
+      },
+      {
+        "title": "Modelo cinético y gas ideal",
+        "body": "La ecuación $PV = nRT$ describe un gas ideal, un modelo simplificado que funciona bien para gases reales a presiones moderadas y temperaturas altas.\n\nLas hipótesis del modelo cinético son:\n- Las partículas son puntos sin volumen propio.\n- No hay fuerzas de atracción ni repulsión entre ellas.\n- Se mueven en línea recta con velocidades aleatorias.\n- Sus choques contra las paredes del recipiente son perfectamente elásticos (conservan la energía cinética).\n\nLa presión es, en el fondo, el resultado estadístico de billones de impactos microscópicos contra las paredes del recipiente cada segundo. Al calentar, las partículas se mueven más rápido, golpean con más fuerza y frecuencia → la presión sube (o el volumen se expande si el recipiente es flexible).\n\n¿Cuándo falla el modelo? Cuando las partículas están muy juntas (alta presión) o muy lentas (baja temperatura) y las fuerzas intermoleculares dejan de ser despreciables. En esos casos, los gases reales se desvían del comportamiento ideal y se necesitan correcciones como la ecuación de van der Waals.",
+        "formula": "$V\\propto n\\ (P,T\\ \\text{ctes.})$",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Ejercicio de comprobación: ¿cuántos moles de O₂ hay en un tanque de 10 L a 5 atm y 27 °C?\n\n$n = \\frac{PV}{RT} = \\frac{5 \\times 10}{0{,}082 \\times 300} = 2{,}03$ mol.\n\nVerifica: a CN, 2,03 mol ocuparían $2{,}03 \\times 22{,}4 = 45{,}5$ L. Pero están comprimidos a 5 atm → $45{,}5 / 5 ≈ 9{,}1$ L, y además la temperatura es algo mayor que CN → se expanden un poco más, dando ≈ 10 L. ✓",
+        "assets": [],
+        "formula": "$pV=nRT$"
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "¿Cuántos moles hay en 5 L de gas a 2 atm y 300 K?",
+        "steps": [
+          "Datos y objetivo: ¿Cuántos moles hay en 5 L de gas a 2 atm y 300 K?",
+          "Datos: P=2 atm, V=5 L, T=300 K y R=0,082 atm L mol⁻¹ K⁻¹.",
+          "PV = nRT → n = PV/(RT)",
+          "$n=\\dfrac{2 × 5}{0,082 × 300}$ = 10 / 24,6 = 0,407 mol.",
+          "El resultado, 0,407 mol, es razonable: en condiciones normales (273 K, 1 atm) esos mismos 5 L contendrían 5/22,4=0,223 mol; aquí la presión es mayor (2 atm) a una temperatura algo mayor (300 K), lo que da un valor algo superior.",
+          "Comprobación: PV = 0,407×0,082×300 = 10,0 atm·L = 2 atm × 5 L ✓."
+        ],
+        "verification": "Verificación: PV = 0,407 × 0,082 × 300 = 10 atm· L ✓.",
+        "reasoning": [],
+        "assets": [],
+        "statement": "¿Cuántos moles hay en 5 L de gas a 2 atm y 300 K?",
+        "answer": "n = 0,407 mol."
+      },
+      {
+        "title": "¿Qué volumen ocupa 2 mol de gas ideal a 500 K y 101 325 Pa?",
+        "steps": [
+          "Datos y objetivo: ¿Qué volumen ocupa 2 mol de gas ideal a 500 K y 101 325 Pa?",
+          "Datos: n=2 mol; T=500 K; P=101 325 Pa; R=8,314 J/(mol· K).",
+          "V=nR$\\dfrac{T}{P}$ = (2 × 8,314 × 500) / 101 325",
+          "$V=\\dfrac{nRT}{P}=\\dfrac{2\\cdot8{,}314\\cdot500}{101325}=\\dfrac{8314}{101325}=0{,}0821\\,\\mathrm{m^3}=82{,}1\\,\\mathrm{L}$ (el numerador 8314 = 2·8,314·500).",
+          "A 500 K el volumen es 500/273 = 1,83 veces el volumen en condiciones normales: 2·22,4·1,83 ≈ 82 L, coherente con el resultado.",
+          "Comprobación: con R en unidades SI, [nRT]=mol·(Pa·m³·mol⁻¹·K⁻¹)·K=Pa·m³, que dividido entre P (Pa) da m³. ✓"
+        ],
+        "verification": "En CNT 2 mol ocuparían 44,8 L; a 500 K (mayor T) el volumen es mayor ✓.",
+        "reasoning": [],
+        "assets": [],
+        "statement": "¿Qué volumen ocupa 2 mol de gas ideal a 500 K y 101 325 Pa?",
+        "answer": "V = 0,0821 m³ = 82,1 L."
+      },
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Gas ideal",
+        "statement": "Calcula V de 0,50 mol a 300 K y 1,00 atm con R = 0,082 atm·L·mol⁻¹·K⁻¹.",
+        "steps": [
+          "$V=\\dfrac{nRT}{P}=\\dfrac{0{,}50\\cdot0{,}082\\cdot300}{1{,}00}=12{,}3\\,\\mathrm{L}$.",
+          "La temperatura está en kelvin y R usa atm· L.",
+          "Si se usara R en SI habría que convertir P a Pa y V a m³.",
+          "El volumen molar resultante, 12,3/0,50 = 24,6 L/mol, es algo mayor que 22,4 L/mol porque la temperatura (300 K) es mayor que la de condiciones normales (273 K): resultado razonable.",
+          "Comprobación: PV = 1,00×12,3 = 12,3 atm·L; nRT = 0,50×0,082×300 = 12,3 atm·L. Coinciden. ✓"
+        ],
+        "answer": "V=12,3 L.",
+        "verification": "El resultado es coherente: a mayor temperatura que las condiciones normales, el volumen ocupado por 0,50 mol es mayor que la mitad de 22,4 L (11,2 L)."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Se tienen 3,0 mol de un gas ideal en un recipiente de 10 L a 25 °C. Calcula la presión y comprueba que el resultado es coherente estimando el volumen molar.",
+        "scaffold": "Convierte T a kelvin, aplica PV=nRT con R=0,082 atm·L·mol⁻¹·K⁻¹ y despeja P.",
+        "answer": "P ≈ 7,33 atm.",
+        "full_solution": "T=25+273=298 K. P=nRT/V=3,0·0,082·298/10=7,33 atm. Comprobación: el volumen molar sería V/n=10/3,0=3,33 L/mol, bastante menor que 22,4 L/mol porque la presión (7,33 atm) es mucho mayor que 1 atm."
+      },
+      {
+        "id": "deep-domain-guided-gas-2",
+        "statement": "Un gas está a 1,2 atm y 4,0 L. Predice la presión si el volumen se reduce a 2,0 L a temperatura constante y representa el cambio en una gráfica p-V.",
+        "scaffold": "Identifica la variable constante, aplica Boyle y relaciona la pendiente o la curva con el modelo.",
+        "assets": [],
+        "answer": "P₂ = 2,4 atm.",
+        "full_solution": "Boyle (T constante): P₁V₁=P₂V₂ → P₂=1,2·4,0/2,0=2,4 atm; la isoterma P-V es una hipérbola con PV=4,8 atm·L constante."
+      },
+      {
+        "id": "deep-domain-guided-gas-3",
+        "statement": "Un alumno usa 25 °C directamente en PV=nRT. Detecta el error, corrígelo y explica cómo cambiaría el resultado.",
+        "scaffold": "Revisa la escala absoluta de temperatura, rehace el cálculo y estima el sentido del error.",
+        "answer": "El resultado sale muy alejado del correcto.",
+        "full_solution": "Usar T=25 en vez de T=298 K da un resultado erróneo, unas 298/25 ≈ 12 veces menor en V (o en P, según cuál se despeje); si en cambio se despeja n con T=25 el resultado sale unas 12 veces mayor que el correcto. Hay que convertir siempre a kelvin antes de sustituir en PV=nRT."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "¿Cuántos moles de gas hay en 11,2 L medidos en condiciones normales (0 °C, 1 atm)?",
+        "answer": "n = 0,500 mol.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "n = V/V_m = 11,2/22,4 = 0,500 mol (equivalente a n = PV/RT = 1·11,2/(0,082·273) = 0,500 mol)."
+      },
+      {
+        "statement": "¿Qué volumen ocupa 3 mol de gas a 546 K y 1 atm?",
+        "answer": "V=nR$\\dfrac{T}{P}$ = 3× 0,082× 546/1 = 134,3 L.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Datos: n=3 mol, T=546 K, P=1 atm, R=0,082 atm·L·mol⁻¹·K⁻¹. V=nRT/P=3×0,082×546/1=134,3 L."
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Calcula la presión de 2,0 mol de CO₂ en un recipiente de 10 L a 27 °C.",
+        "answer": "P = 4,92 atm.",
+        "full_solution": "T=27+273=300 K. P=nRT/V=2,0·0,082·300/10=4,92 atm."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Un gas está a 1,5 atm y 6,0 L. Calcula la presión al reducir V a 2,0 L a temperatura constante.",
+        "answer": "P₂ = 4,5 atm.",
+        "full_solution": "Boyle: P₁V₁=P₂V₂ → P₂=1,5·6,0/2,0=4,5 atm."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Explica qué ocurre con V si se duplican n y T manteniendo P.",
+        "answer": "V se multiplica por 4.",
+        "full_solution": "Como V = (RT/P)·n, al duplicar n el volumen se duplica; al duplicar también T, vuelve a duplicarse. En conjunto, V se multiplica por 2×2=4 (V es proporcional al producto n·T cuando P es constante)."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa la isoterma P-V y explica por qué no es una recta.",
+        "answer": "Es una hipérbola, no una recta.",
+        "full_solution": "Como PV=nRT=constante a T fija, P=cte/V: la gráfica P-V es una hipérbola, no una recta, porque P y V son inversamente proporcionales. Representando P frente a 1/V sí se obtendría una recta que pasa por el origen, de pendiente nRT."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige el uso de °C directamente en PV=nRT y analiza el valor obtenido.",
+        "answer": "El resultado sale muy alejado del correcto.",
+        "full_solution": "Usar T=25 en vez de 298 K subestima la temperatura en un factor 298/25≈11,9; como V (o P, o n, según cuál se despeje) es proporcional a T, el resultado calculado con 25 sale unas 12 veces menor que el correcto si se despeja V o P, y unas 12 veces mayor si se despeja n."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña una prueba para decidir cuándo un gas real se apartaría del modelo ideal.",
+        "answer": "Medir el factor de compresibilidad Z.",
+        "full_solution": "Se mide experimentalmente PV/(nRT) (el factor de compresibilidad Z) a distintas presiones y temperaturas: si Z se mantiene igual a 1 dentro del error experimental, el gas se comporta como ideal; si Z se aparta de 1 (más a alta presión o baja temperatura), el gas real se desvía del modelo ideal."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-04-1",
+        "stem": "La ecuación de estado del gas ideal es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) PV = nR",
+            "why_wrong": "Falta la temperatura: PV=nR no es dimensionalmente una ecuación de estado completa."
+          },
+          {
+            "key": "B",
+            "text": "B) PV = nRT"
+          },
+          {
+            "key": "C",
+            "text": "C) PV = nT/R",
+            "why_wrong": "PV = nT/R no es la ecuación correcta de los gases ideales."
+          },
+          {
+            "key": "D",
+            "text": "D) PV = RT/n",
+            "why_wrong": "PV = RT/n invierte incorrectamente el papel de n."
+          }
+        ],
+        "explanation": "PV = nRT, donde R es la constante de los gases y T la temperatura en Kelvin.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-04-2",
+        "stem": "¿Cuánto vale R en unidades SI (Pa, m³, mol, K)?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 0,082",
+            "why_wrong": "0,082 es el valor de R en atm·L·mol⁻¹·K⁻¹, no en unidades del SI."
+          },
+          {
+            "key": "B",
+            "text": "B) 8,314"
+          },
+          {
+            "key": "C",
+            "text": "C) 22,4",
+            "why_wrong": "22,4 es el volumen molar en CN (L/mol), no el valor de R."
+          },
+          {
+            "key": "D",
+            "text": "D) 6,022",
+            "why_wrong": "6,022 es el número de Avogadro (×10²³), no R."
+          }
+        ],
+        "explanation": "En el Sistema Internacional, R=8,314 J mol⁻¹ K⁻¹=8,314 Pa m³ mol⁻¹ K⁻¹.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-04-3",
+        "stem": "El volumen molar a CNT (T=273 K, P=1 atm) de un gas ideal es aproximadamente:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 1 L/mol",
+            "why_wrong": "1 L/mol es muy inferior al volumen molar real de un gas en condiciones normales."
+          },
+          {
+            "key": "B",
+            "text": "B) 8,314 L/mol",
+            "why_wrong": "8,314 L/mol confunde el valor numérico de R en el SI con un volumen molar en litros."
+          },
+          {
+            "key": "C",
+            "text": "C) 22,4 L/mol"
+          },
+          {
+            "key": "D",
+            "text": "D) 44,8 L/mol",
+            "why_wrong": "44,8 L/mol es el volumen de 2 mol en CN, no el volumen molar de 1 mol."
+          }
+        ],
+        "explanation": "V=R$\\dfrac{T}{P}$ ≈ 22,4 L mol⁻¹ a CNT.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-04-4",
+        "stem": "¿Cuántos moles hay en 44,8 L de gas ideal en condiciones normales?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 0,5 mol",
+            "why_wrong": "0,5 mol correspondería a 11,2 L, no a 44,8 L."
+          },
+          {
+            "key": "B",
+            "text": "B) 1 mol",
+            "why_wrong": "1 mol correspondería a 22,4 L, la mitad del volumen dado."
+          },
+          {
+            "key": "C",
+            "text": "C) 2 mol"
+          },
+          {
+            "key": "D",
+            "text": "D) 4 mol",
+            "why_wrong": "4 mol correspondería a 89,6 L, el doble del volumen dado."
+          }
+        ],
+        "explanation": "$n=\\dfrac{44,8}{22,4}=2,00\\,\\mathrm{mol}$.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Ecuación gas ideal",
+        "back": "PV = nRT"
+      },
+      {
+        "front": "R en unidades SI",
+        "back": "8,314 J/(mol· K) o Pa· m³/(mol· K)"
+      },
+      {
+        "front": "Volumen molar a CNT",
+        "back": "22,4 L/mol (T=273 K, P=101 325 Pa)"
+      },
+      {
+        "front": "CNT (condiciones normales)",
+        "back": "T=273 K, P = 101 325 Pa (1 atm)"
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Mezclar unidades de R (usar 8,314 con atm y litros o 0,082 con Pa y m³).",
+        "correct_model": "El valor de R depende de las unidades de P y V: se usa 0,082 atm·L·mol⁻¹·K⁻¹ si P está en atm y V en L, y 8,314 Pa·m³·mol⁻¹·K⁻¹ (=J·mol⁻¹·K⁻¹) si P está en Pa y V en m³. Nunca se mezclan los dos valores en el mismo cálculo.",
+        "remediation": "Antes de sustituir en PV=nRT, identifica las unidades de P y V del problema y elige el valor de R que les corresponde."
+      },
+      {
+        "incorrect_model": "Olvidar convertir °C a K antes de sustituir en PV=nRT.",
+        "correct_model": "La temperatura en PV=nRT debe estar siempre en kelvin, porque la ecuación relaciona el volumen y la presión con la temperatura absoluta, proporcional a la energía cinética media de las partículas.",
+        "remediation": "Convierte siempre los grados Celsius a kelvin (sumando 273) antes de sustituir cualquier temperatura en PV=nRT."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "gas ideal",
+        "definition": "Modelo en el que las partículas de un gas no tienen volumen propio y no interaccionan entre sí, salvo en los choques."
+      },
+      {
+        "term": "PV=nRT",
+        "definition": "Ecuación de estado del gas ideal: relaciona presión, volumen, moles, la constante R y la temperatura absoluta."
+      },
+      {
+        "term": "constante R",
+        "definition": "Constante universal de los gases: R=0,082 atm·L·mol⁻¹·K⁻¹ o R=8,314 Pa·m³·mol⁻¹·K⁻¹, según las unidades usadas."
+      },
+      {
+        "term": "volumen molar",
+        "definition": "Volumen que ocupa 1 mol de cualquier gas ideal en unas condiciones dadas de P y T; en condiciones normales es 22,4 L/mol."
+      },
+      {
+        "term": "CNT",
+        "definition": "Condiciones normales de temperatura y presión: 0 °C (273 K) y 1 atm (101 325 Pa)."
+      },
+      {
+        "term": "STP",
+        "definition": "Condiciones estándar según la IUPAC (desde 1982): 0 °C y 100 kPa (1 bar), con volumen molar 22,7 L/mol."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Conocer las leyes de Boyle, Charles y Gay-Lussac (relaciones entre P, V y T).",
+        "why_it_matters": "PV=nRT combina esas tres leyes en una sola ecuación cuando además se tiene en cuenta la cantidad de sustancia n."
+      },
+      {
+        "statement": "Convertir temperaturas de °C a K y trabajar con unidades del SI y con atm y litros.",
+        "why_it_matters": "La ecuación de los gases ideales exige T en kelvin y una constante R coherente con las unidades de P y V elegidas."
+      }
+    ],
+    "summary": {
+      "big_idea": "La ecuación de estado PV=nRT combina las leyes de Boyle, Charles y Gay-Lussac en una sola expresión que relaciona presión, volumen, cantidad de sustancia y temperatura absoluta de un gas ideal; además, el modelo cinético-molecular explica estas leyes como consecuencia del movimiento y los choques de las partículas.",
+      "key_points": [
+        "La ecuación de estado del gas ideal combina las leyes de Boyle, Charles y Gay-Lussac en una sola expresión: PV = nRT, donde P es la presión (Pa o atm), V es el volumen (m³ o L), n es la cantidad de sustancia (mol), R es la constante universal de los gases y T es la temperatura absoluta (K).",
+        "La ecuación PV=nRT solo funciona sin errores si la presión, el volumen, la temperatura y la constante R pertenecen al mismo sistema de unidades.",
+        "Las condiciones normales de temperatura y presión (CNT o STP en inglés) se definen como T=273 K (0 °C) y P = 101 325 Pa (1 atm).",
+        "La elección de R debe ser coherente con las unidades de P y V: R=0,082 atm·L·mol⁻¹·K⁻¹ con atm y L, o R=8,314 Pa·m³·mol⁻¹·K⁻¹ (=J·mol⁻¹·K⁻¹) en el Sistema Internacional; nunca se mezclan ambos valores en el mismo cálculo."
+      ],
+      "formulas": [
+        "$pV=nRT$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $PV=nRT$ con T siempre en kelvin y una R coherente con las unidades de P y V; en condiciones normales (0 °C, 1 atm) el volumen molar es 22,4 L/mol."
+    },
+    "exam_questions": [
+      {
+        "statement": "Calcula el volumen de 0,50 mol a 300 K y 1,00 atm con R=0,082 L·atm·mol⁻¹·K⁻¹ y comprueba unidades.",
+        "answer": "$V=\\dfrac{nRT}{P}=\\dfrac{0{,}50\\cdot0{,}082\\cdot300}{1{,}00}=12{,}3\\,\\mathrm{L}$",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "Datos: n=0,50 mol, T=300 K, P=1,00 atm, R=0,082 atm·L·mol⁻¹·K⁻¹ (unidades coherentes con P en atm y V en L). V = nRT/P = (0,50·0,082·300)/1,00 = 12,3 L."
+      },
+      {
+        "statement": "Aplica PV=nRT para calcular la masa de N₂ contenida en 20 L a 2 atm y 300 K (M(N₂)=28 g/mol).",
+        "answer": "m = 45,5 g.",
+        "full_solution": "n = PV/(RT) = (2·20)/(0,082·300) = 1,63 mol. m = n·M = 1,63·28 = 45,5 g de N₂.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un gas real se comprime a alta presión. Explica dos razones por las que PV=nRT puede fallar y qué observación experimental lo mostraría.",
+        "answer": "A alta presión o baja temperatura, un gas real se aleja del comportamiento ideal porque sus moléculas sí ocupan volumen y sí se atraen entre ellas, efectos que el modelo PV=nRT ignora.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "A presión alta las moléculas están muy juntas: su volumen propio deja de ser despreciable frente al volumen del recipiente, y las fuerzas de atracción entre ellas frenan los choques contra las paredes; el gas incluso puede llegar a licuarse. Esto se detecta experimentalmente midiendo el factor de compresibilidad Z=PV/(nRT): si Z=1 el gas se comporta como ideal, y si Z se aleja de 1 (por defecto o por exceso), el comportamiento real se desvía del modelo."
+      },
+      {
+        "statement": "¿A qué temperatura (°C) 1 mol de gas ideal ocupa 10 L a 3 atm?",
+        "answer": "t ≈ 92,9 °C.",
+        "full_solution": "T = PV/(nR) = (3·10)/(1·0,082) = 365,9 K. t = 365,9 − 273 = 92,9 °C (con R=0,08206 y 273,15 K: 92,4 °C).",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_05.json": {
+    "lesson_id": "U-4Q-06-L05",
+    "title": "Unidades",
+    "course_label": "4.º ESO · Disoluciones y gases",
+    "objectives": [
+      {
+        "statement": "Explicar Unidades con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de unidades para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Unidades."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Unidades."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Unidades y sus definiciones",
+        "body": "En física y química, cada magnitud tiene su unidad oficial en el Sistema Internacional (SI), pero en la práctica se usan muchas otras por tradición o conveniencia.\n\nLa presión, por ejemplo, se mide oficialmente en pascales ($1\\text{ Pa} = 1\\text{ N/m}^2$), pero los químicos prefieren la atmósfera ($\\text{atm}$) o el bar, los médicos usan $\\text{mmHg}$ (milímetros de mercurio) para la tensión arterial, y los mecánicos trabajan en $\\text{psi}$ (libras por pulgada cuadrada) para los neumáticos.\n\nEl volumen SI es el metro cúbico ($\\text{m}^3$), pero en el laboratorio se usa el litro ($1\\text{ L} = 10^{-3}\\text{ m}^3$) y el mililitro ($1\\text{ mL} = 1\\text{ cm}^3$).\n\nLa temperatura SI es el kelvin ($\\text{K}$), pero en la vida diaria usamos grados Celsius ($°\\text{C}$). Recuerda: $T(\\text{K}) = T(°\\text{C}) + 273{,}15$.\n\nDominar las conversiones es imprescindible: un error de unidades en un cálculo de gases puede dar un resultado absurdo. Siempre verifica que tus unidades son coherentes con la constante $R$ que estés usando.",
+        "formula": "$1\\,\\mathrm{atm}=101325\\,\\mathrm{Pa}$",
+        "assets": []
+      },
+      {
+        "title": "Equivalencias entre unidades de presión",
+        "body": "Una atmósfera ($1\\text{ atm}$) es la presión que ejerce la columna de aire sobre nosotros a nivel del mar. Es la referencia desde la que se definen las demás unidades de presión:\n\n$$1\\text{ atm} = 101\\,325\\text{ Pa} = 760\\text{ mmHg} = 1{,}013\\text{ bar} = 14{,}7\\text{ psi}$$\n\n¿De dónde sale el valor 760 mmHg? Del experimento de Torricelli (1643): la presión atmosférica sostiene una columna de mercurio de 760 mm de altura en un tubo cerrado invertido.\n\nConversiones útiles:\n- Para pasar de atm a Pa: multiplica por 101 325.\n- Para pasar de mmHg a atm: divide por 760.\n- Para pasar de bar a atm: divide por 1,013.\n\nConsejo: en los problemas de gases con $PV = nRT$, es más cómodo usar atm y $R = 0{,}082$ que pascales, a menos que el enunciado pida explícitamente unidades SI.",
+        "formula": "$1\\,\\mathrm{atm}=101325\\,\\mathrm{Pa}=760\\,\\mathrm{mmHg}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\" role=\"img\" aria-label=\"1 atm en el centro con equivalencias radiando: Pa, mmHg, bar, psi\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Equivalencias de presión</text>\n\n  <!-- Central circle -->\n  <circle cx=\"300\" cy=\"170\" r=\"55\" fill=\"#0e7a68\" opacity=\"0.12\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/>\n  <text x=\"300\" y=\"165\" font-size=\"16\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">1 atm</text>\n  <text x=\"300\" y=\"185\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">(referencia)</text>\n\n  <!-- Radial boxes -->\n  <!-- Pa -->\n  <rect x=\"60\" y=\"55\" width=\"140\" height=\"45\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"130\" y=\"75\" font-size=\"12\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"bold\">101 325 Pa</text>\n  <text x=\"130\" y=\"92\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">pascal (SI)</text>\n  <line x1=\"200\" y1=\"85\" x2=\"255\" y2=\"135\" stroke=\"#c17a17\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n\n  <!-- mmHg -->\n  <rect x=\"400\" y=\"55\" width=\"140\" height=\"45\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"470\" y=\"75\" font-size=\"12\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"bold\">760 mmHg</text>\n  <text x=\"470\" y=\"92\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">milímetros de mercurio</text>\n  <line x1=\"400\" y1=\"85\" x2=\"345\" y2=\"135\" stroke=\"#8a3d6b\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n\n  <!-- bar -->\n  <rect x=\"60\" y=\"240\" width=\"140\" height=\"45\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"130\" y=\"260\" font-size=\"12\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">1,013 bar</text>\n  <text x=\"130\" y=\"277\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">bar</text>\n  <line x1=\"200\" y1=\"255\" x2=\"255\" y2=\"205\" stroke=\"#0e7a68\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n\n  <!-- psi -->\n  <rect x=\"400\" y=\"240\" width=\"140\" height=\"45\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"470\" y=\"260\" font-size=\"12\" fill=\"var(--axes,#24312c)\" text-anchor=\"middle\" font-weight=\"bold\">14,7 psi</text>\n  <text x=\"470\" y=\"277\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">libras/pulgada²</text>\n  <line x1=\"400\" y1=\"255\" x2=\"345\" y2=\"205\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n</svg>",
+            "caption": "1 atm equivale a 101 325 Pa, 760 mmHg, 1,013 bar y 14,7 psi"
+          }
+        ]
+      },
+      {
+        "title": "Instrumentos de medida de presión: manómetro y barómetro",
+        "body": "Dos instrumentos clásicos miden la presión usando columnas de líquido (normalmente mercurio):\n\nEl **barómetro** mide la presión atmosférica. Consiste en un tubo cerrado lleno de mercurio, invertido sobre una cubeta. El mercurio desciende hasta que su peso equilibra la presión atmosférica que empuja sobre la cubeta. La altura de la columna de mercurio (típicamente 760 mm a nivel del mar) indica directamente la presión atmosférica: $P_{\\text{atm}} = \\rho_{Hg} \\cdot g \\cdot h$.\n\nEl **manómetro de tubo abierto** mide la presión de un gas encerrado comparándola con la atmosférica. Es un tubo en U con mercurio: un extremo conectado al gas y el otro abierto al aire. Si el nivel de mercurio es más alto en el lado abierto, la presión del gas es mayor que la atmosférica: $P_{\\text{gas}} = P_{\\text{atm}} + \\rho g \\Delta h$.\n\nHoy en día se usan sensores electrónicos, pero comprender estos instrumentos clásicos te ayuda a entender el concepto de presión como fuerza por unidad de área, y su relación con la densidad y la altura de una columna de fluido.",
+        "formula": "$P_{\\text{abs}}=P_{\\text{man}}+P_{\\text{atm}}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 295\" role=\"img\" aria-label=\"Manómetro de tubo abierto y barómetro de mercurio lado a lado\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Instrumentos de medida de presión</text>\n\n  <!-- Manometer -->\n  <text x=\"150\" y=\"55\" font-size=\"12\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">Manómetro de tubo abierto</text>\n  <!-- U-tube -->\n  <path d=\"M100,90 L100,220 Q100,240 120,240 L180,240 Q200,240 200,220 L200,90\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2.5\"/>\n  <!-- Mercury levels -->\n  <rect x=\"100\" y=\"160\" width=\"20\" height=\"80\" fill=\"#8a3d6b\" opacity=\"0.4\"/>\n  <rect x=\"182\" y=\"130\" width=\"20\" height=\"110\" fill=\"#8a3d6b\" opacity=\"0.4\"/>\n  <!-- Mercury surface -->\n  <line x1=\"100\" y1=\"160\" x2=\"120\" y2=\"160\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <line x1=\"182\" y1=\"130\" x2=\"202\" y2=\"130\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <!-- Height difference -->\n  <line x1=\"220\" y1=\"130\" x2=\"220\" y2=\"160\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <line x1=\"215\" y1=\"130\" x2=\"225\" y2=\"130\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n  <line x1=\"215\" y1=\"160\" x2=\"225\" y2=\"160\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n  <text x=\"235\" y=\"148\" font-size=\"9\" fill=\"#c17a17\">Δh</text>\n  <!-- Labels -->\n  <text x=\"90\" y=\"85\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"end\">Gas</text>\n  <text x=\"210\" y=\"85\" font-size=\"9\" fill=\"var(--text,#20302a)\">Abierto</text>\n  <text x=\"150\" y=\"270\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">P_gas = P_atm + ρgΔh</text>\n\n  <!-- Divider -->\n  <line x1=\"300\" y1=\"50\" x2=\"300\" y2=\"280\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n\n  <!-- Barometer -->\n  <text x=\"450\" y=\"55\" font-size=\"12\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">Barómetro de mercurio</text>\n  <!-- Dish -->\n  <path d=\"M380,240 Q380,260 420,260 L480,260 Q520,260 520,240 L520,230 L380,230 Z\" fill=\"#8a3d6b\" opacity=\"0.25\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <!-- Mercury in dish -->\n  <rect x=\"385\" y=\"225\" width=\"130\" height=\"10\" fill=\"#8a3d6b\" opacity=\"0.35\"/>\n  <!-- Inverted tube -->\n  <rect x=\"440\" y=\"80\" width=\"20\" height=\"150\" fill=\"#8a3d6b\" opacity=\"0.35\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <!-- Vacuum at top -->\n  <rect x=\"440\" y=\"70\" width=\"20\" height=\"15\" fill=\"var(--bg,#fbfcfd)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"475\" y=\"80\" font-size=\"8\" fill=\"var(--text,#20302a)\">vacío</text>\n  <!-- Height label -->\n  <line x1=\"425\" y1=\"85\" x2=\"425\" y2=\"225\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <line x1=\"420\" y1=\"85\" x2=\"430\" y2=\"85\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n  <line x1=\"420\" y1=\"225\" x2=\"430\" y2=\"225\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n  <text x=\"412\" y=\"160\" font-size=\"9\" fill=\"#c17a17\" text-anchor=\"end\">760 mm</text>\n  <!-- Atmospheric pressure arrows -->\n  <path d=\"M395,215 L395,225\" stroke=\"#0e7a68\" stroke-width=\"1.5\" marker-end=\"url(#dwn4q6)\"/>\n  <path d=\"M505,215 L505,225\" stroke=\"#0e7a68\" stroke-width=\"1.5\" marker-end=\"url(#dwn4q6)\"/>\n  <text x=\"395\" y=\"210\" font-size=\"7\" fill=\"#0e7a68\" text-anchor=\"middle\">P_atm</text>\n  <text x=\"505\" y=\"210\" font-size=\"7\" fill=\"#0e7a68\" text-anchor=\"middle\">P_atm</text>\n  <defs><marker id=\"dwn4q6\" markerWidth=\"6\" markerHeight=\"6\" refX=\"3\" refY=\"6\" orient=\"auto\"><path d=\"M0,0 L3,6 L6,0\" fill=\"#0e7a68\"/></marker></defs>\n\n  <text x=\"450\" y=\"280\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">P_atm = ρ_Hg · g · h</text>\n</svg>",
+            "caption": "Manómetro de tubo abierto (izquierda) y barómetro de mercurio (derecha)"
+          }
+        ]
+      },
+      {
+        "title": "Unidades de volumen, temperatura y concentración",
+        "body": "Otras conversiones fundamentales para problemas de disoluciones y gases:\n\n**Volumen:**\n$$1\\text{ m}^3 = 1000\\text{ L}, \\quad 1\\text{ L} = 1000\\text{ mL} = 1\\text{ dm}^3, \\quad 1\\text{ mL} = 1\\text{ cm}^3$$\n\n**Temperatura:**\n$$T(\\text{K}) = T(°\\text{C}) + 273{,}15$$\n\nRecuerda: en la ecuación de los gases, $T$ siempre en kelvin. Si usas Celsius en $PV = nRT$, el resultado será incorrecto.\n\n**Concentración:**\n$$C\\;(\\text{mol/L}) = \\frac{n}{V} = \\frac{m}{M_r \\cdot V}$$\n\nY para convertir de $\\%\\,m/m$ a molaridad (o viceversa), necesitas la densidad de la disolución como puente: $C = \\frac{\\%\\,m/m \\cdot d \\cdot 10}{M_r}$.\n\nUn truco útil: $1\\text{ mL de agua} \\approx 1\\text{ g}$ (porque $d_{\\text{agua}} \\approx 1\\text{ g/mL}$), pero esto NO vale para disoluciones concentradas, cuya densidad puede ser bastante diferente.",
+        "formula": "$1\\,\\mathrm{m^3}=1000\\,\\mathrm{L};\\quad 1\\,\\mathrm{L}=1000\\,\\mathrm{mL}$",
+        "assets": []
+      },
+      {
+        "title": "El método de los factores de conversión",
+        "body": "El método de los factores de conversión (análisis dimensional) es un procedimiento sistemático para convertir unidades sin equivocarte.\n\nLa idea: multiplica por fracciones que valgan 1 (numerador y denominador equivalentes) hasta llegar a la unidad deseada:\n\n$$750\\text{ mmHg} \\times \\frac{1\\text{ atm}}{760\\text{ mmHg}} = 0{,}987\\text{ atm}$$\n\nLa fracción $\\frac{1\\text{ atm}}{760\\text{ mmHg}} = 1$ porque 1 atm y 760 mmHg son la misma cantidad. Colocamos la unidad que queremos eliminar (mmHg) en el denominador para que se «tache».\n\nPara cadenas más largas, encadena factores:\n\n$$2{,}5\\text{ L} \\times \\frac{1000\\text{ mL}}{1\\text{ L}} \\times \\frac{1\\text{ cm}^3}{1\\text{ mL}} = 2500\\text{ cm}^3$$\n\nVentaja: si al final las unidades no cuadran, sabes que hay un error. Las unidades son tu «red de seguridad» ante errores numéricos.",
+        "formula": "$\\text{cantidad}\\times\\dfrac{\\text{unidad nueva}}{\\text{unidad antigua}}=\\text{cantidad en la unidad nueva}$",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Ejercicio: convierte 3,5 bar a mmHg.\n\nCamino: $3{,}5\\text{ bar} \\times \\frac{1\\text{ atm}}{1{,}013\\text{ bar}} \\times \\frac{760\\text{ mmHg}}{1\\text{ atm}} = 2627\\text{ mmHg}$\n\nComprobación: 3,5 bar ≈ 3,5 atm ≈ 3,5 × 760 ≈ 2660 mmHg. Nuestro resultado (2627) es algo menor porque 1 bar < 1 atm. ✓",
+        "assets": [],
+        "formula": "$1\\,\\mathrm{atm}=101\\,325\\,\\mathrm{Pa}=760\\,\\mathrm{mmHg}$"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Conversión de presión",
+        "statement": "Convierte 1,20 atm a Pa usando 1 atm=101325 Pa.",
+        "steps": [
+          "1,20(101325)=121590 Pa.",
+          "Con tres cifras significativas: 1,22·10⁵ Pa.",
+          "La unidad de presión del SI es Pa=N/m².",
+          "Un resultado en atm no es incorrecto si se pide atm, pero hay que declarar la unidad.",
+          "Comprobación: 121 590/101 325 = 1,20 ✓ (el valor en Pa debe ser del orden de 10⁵ veces el valor en atm)."
+        ],
+        "answer": "1,22·10⁵ Pa.",
+        "verification": "Comprobación específica de Unidades: se revisan unidades, signos, límites del modelo y si la conclusión responde a la pregunta."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Densidad de unidades",
+        "statement": "Expresa 1,0 g/cm³ en kg/m³.",
+        "steps": [
+          "1,0 g=10⁻³ kg.",
+          "$1\\,\\mathrm{cm^3}=(10^{-2}\\,\\mathrm{m})^3=10^{-6}\\,\\mathrm{m^3}$.",
+          "ρ=10⁻³/10⁻⁶=1000 kg m⁻³.",
+          "La conversión de volumen es cúbica, no lineal.",
+          "Comprobación: el agua tiene 1 g/cm³ = 1000 kg/m³ = 1 kg/L ✓ (densidad conocida del agua)."
+        ],
+        "answer": "1000 kg/m³.",
+        "verification": "Comprobación específica de Unidades: se revisan unidades, signos, límites del modelo y si la conclusión responde a la pregunta."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-guided-1",
+        "statement": "Convierte 250 mg/L a g/m³.",
+        "scaffold": "Convierte primero mg a g (÷1000) y luego L a m³ (×1000); comprueba que los dos factores se cancelan dejando g/m³.",
+        "answer": "250 g/m³.",
+        "full_solution": "250 mg/L · (1 g/1000 mg) · (1000 L/1 m³) = 250 g/m³."
+      },
+      {
+        "id": "deep-domain-guided-2",
+        "statement": "Comprueba dimensionalmente pV=nRT.",
+        "scaffold": "Sustituye las unidades de cada magnitud (Pa, m³, mol, J·mol⁻¹·K⁻¹, K) y simplifica paso a paso hasta llegar a julios en ambos lados.",
+        "answer": "Ambos miembros tienen unidades de energía (J).",
+        "full_solution": "[pV] = Pa·m³ = (N/m²)·m³ = N·m = J. [nRT] = mol·(J·mol⁻¹·K⁻¹)·K = J. Ambos miembros tienen unidades de energía (J), luego la ecuación es dimensionalmente coherente."
+      },
+      {
+        "id": "deep-domain-guided-3",
+        "statement": "Explica por qué 1 mol/L y 1 mmol/mL representan la misma concentración.",
+        "scaffold": "Escribe mmol y mL como potencias de 10 respecto a mol y L, y comprueba que el cociente no cambia.",
+        "answer": "Representan la misma concentración.",
+        "full_solution": "1 mmol/mL = (10⁻³ mol)/(10⁻³ L) = 1 mol/L: los dos factores 10⁻³ se cancelan, así que ambas unidades representan exactamente la misma concentración."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "¿Cuántos Pa son 3 atm?",
+        "answer": "3 × 101 325 = 303 975 Pa.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "3 atm × 101 325 Pa/atm = 303 975 Pa."
+      },
+      {
+        "statement": "Convierte 1520 mmHg a atm.",
+        "answer": "1520/760 = 2 atm.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "1520 mmHg ÷ 760 mmHg/atm = 2 atm."
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Convierte 745 mmHg a atm y a kPa.",
+        "answer": "0,980 atm = 99,3 kPa.",
+        "full_solution": "745/760=0,980 atm. 0,980·101,325=99,3 kPa."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Convierte 1020 hPa a atm.",
+        "answer": "≈1,007 atm.",
+        "full_solution": "1020 hPa=102 000 Pa. 102000/101325=1,007 atm."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Convierte 2,5 L a m³ y 350 mL a L.",
+        "answer": "2,5 L=2,5·10⁻³ m³; 350 mL=0,350 L.",
+        "full_solution": "2,5 L × (1 m³/1000 L) = 2,5·10⁻³ m³. 350 mL × (1 L/1000 mL) = 0,350 L."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Un manómetro marca 1,5 atm. Calcula la presión absoluta y explica la diferencia entre presión manométrica y absoluta.",
+        "answer": "P_abs = 2,5 atm.",
+        "full_solution": "P_abs=P_man+P_atm=1,5+1,0=2,5 atm. La presión absoluta es siempre la manométrica desplazada hacia arriba en 1 atm (la presión atmosférica)."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un resultado da 250 mg/L y se usa como si fueran 250 g/L al calcular una masa. Audita el error.",
+        "answer": "250 mg/L = 0,250 g/L, no 250 g/L.",
+        "full_solution": "250 mg/L = 0,250 g/L, mil veces menor que 250 g/L. Usar 250 g/L en vez de 0,250 g/L multiplica por 1000 cualquier masa o cantidad de moles calculada a partir de esa concentración."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Una disolución tiene densidad 1,84 g/mL. Exprésala en kg/m³ y deduce el método general para pasar de g/mL a kg/m³.",
+        "answer": "1840 kg/m³.",
+        "full_solution": "1,84 g/mL × (1 kg/1000 g) × (1 000 000 mL/1 m³) = 1,84×1000=1840 kg/m³ (el factor neto es 1000, porque g→kg divide entre 1000 y mL→m³ multiplica por 10⁶)."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-05-1",
+        "stem": "¿Cuántos Pa equivale 1 atm?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 760 Pa",
+            "why_wrong": "760 Pa confunde la unidad Pa con mmHg."
+          },
+          {
+            "key": "B",
+            "text": "B) 1 013 Pa",
+            "why_wrong": "1013 Pa es 100 veces menor que el valor correcto (confunde Pa con hPa)."
+          },
+          {
+            "key": "C",
+            "text": "C) 101 325 Pa"
+          },
+          {
+            "key": "D",
+            "text": "D) 100 000 Pa",
+            "why_wrong": "100 000 Pa es la definición del bar, no de la atmósfera."
+          }
+        ],
+        "explanation": "1 atm = 101 325 Pa (presión atmosférica estándar).",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-05-2",
+        "stem": "¿Cuántos mmHg equivale 1 atm?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 101 325 mmHg",
+            "why_wrong": "101 325 mmHg es un valor absurdo, muy superior al real."
+          },
+          {
+            "key": "B",
+            "text": "B) 760 mmHg"
+          },
+          {
+            "key": "C",
+            "text": "C) 1 013 mmHg",
+            "why_wrong": "1013 mmHg confunde mmHg con hPa."
+          },
+          {
+            "key": "D",
+            "text": "D) 100 mmHg",
+            "why_wrong": "100 mmHg es un valor demasiado pequeño."
+          }
+        ],
+        "explanation": "1 atm = 760 mmHg = 760 torr.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-05-3",
+        "stem": "El instrumento que mide la presión atmosférica se llama:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) manómetro",
+            "why_wrong": "El manómetro mide la presión relativa (manométrica) de un gas, no la presión atmosférica."
+          },
+          {
+            "key": "B",
+            "text": "B) termómetro",
+            "why_wrong": "El termómetro mide temperatura, no presión."
+          },
+          {
+            "key": "C",
+            "text": "C) barómetro"
+          },
+          {
+            "key": "D",
+            "text": "D) densímetro",
+            "why_wrong": "El densímetro mide densidad, no presión."
+          }
+        ],
+        "explanation": "El barómetro (de Torricelli) mide la presión atmosférica.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-05-4",
+        "stem": "1 bar equivale exactamente a:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) 1,013 atm",
+            "why_wrong": "1,013 atm es el valor aproximado (no exacto) de la relación entre bar y atmósfera; la equivalencia EXACTA de 1 bar, por definición, es con los pascales."
+          },
+          {
+            "key": "B",
+            "text": "B) 760 Pa",
+            "why_wrong": "760 Pa confunde el bar con el mmHg."
+          },
+          {
+            "key": "C",
+            "text": "C) 100 000 Pa"
+          },
+          {
+            "key": "D",
+            "text": "D) 101 325 mmHg",
+            "why_wrong": "101 325 mmHg confunde el bar con la atmósfera expresada en pascales."
+          }
+        ],
+        "explanation": "1 bar = 100 000 Pa = 10⁵ Pa (exactamente por definición).",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "1 atm en Pa",
+        "back": "1 atm = 101 325 Pa"
+      },
+      {
+        "front": "1 atm en mmHg",
+        "back": "1 atm = 760 mmHg = 760 torr"
+      },
+      {
+        "front": "1 atm en bar",
+        "back": "1 atm ≈ 1,013 bar"
+      },
+      {
+        "front": "Diferencia manómetro–barómetro",
+        "back": "Barómetro: presión atmosférica. Manómetro: presión relativa de un gas."
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Confundir Pa con kPa o hPa en las equivalencias.",
+        "correct_model": "Pa, kPa y hPa son la misma magnitud a distinta escala: 1 kPa = 1000 Pa y 1 hPa = 100 Pa; hay que fijarse en el prefijo antes de sustituir un número en una fórmula.",
+        "remediation": "Antes de usar un valor de presión, comprueba su prefijo (sin prefijo, k, h, m) y conviértelo explícitamente a pascales si es necesario."
+      },
+      {
+        "incorrect_model": "Olvidar sumar la presión atmosférica al leer un manómetro para obtener la presión absoluta.",
+        "correct_model": "La presión absoluta es la que debe usarse en PV=nRT; se calcula sumando la presión manométrica (la que marca el manómetro) y la presión atmosférica: $P_{\\text{abs}}=P_{\\text{man}}+P_{\\text{atm}}$.",
+        "remediation": "Antes de sustituir una presión leída en un manómetro en una ecuación de gases, comprueba si es manométrica o absoluta y suma la presión atmosférica si es necesario."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "pascal",
+        "definition": "Unidad de presión del SI: 1 Pa = 1 N/m²."
+      },
+      {
+        "term": "atm",
+        "definition": "Atmósfera, unidad de presión: 1 atm = 101 325 Pa = 760 mmHg."
+      },
+      {
+        "term": "bar",
+        "definition": "Unidad de presión que se define exactamente como 100 000 Pa; 1 atm ≈ 1,013 bar."
+      },
+      {
+        "term": "mmHg",
+        "definition": "Milímetro de mercurio: presión que ejerce una columna de mercurio de 1 mm de altura; también llamado torr."
+      },
+      {
+        "term": "torr",
+        "definition": "Unidad de presión equivalente al mmHg: 1 atm = 760 torr."
+      },
+      {
+        "term": "barómetro",
+        "definition": "Instrumento que mide la presión atmosférica."
+      },
+      {
+        "term": "manómetro",
+        "definition": "Instrumento que mide la presión relativa (manométrica) de un gas respecto a la atmósfera."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Dominar la ecuación de los gases ideales PV=nRT y sus unidades.",
+        "why_it_matters": "Para aplicar correctamente PV=nRT hay que saber convertir presión, volumen y temperatura a las unidades que exige la constante R elegida."
+      },
+      {
+        "statement": "Manejar potencias de 10 y notación científica.",
+        "why_it_matters": "Las conversiones entre pascales, atmósferas, mmHg y bar implican factores muy grandes o muy pequeños que conviene expresar en notación científica."
+      }
+    ],
+    "summary": {
+      "big_idea": "La presión se puede expresar en distintas unidades (Pa, atm, bar, mmHg) relacionadas por factores de conversión fijos; el barómetro mide la presión atmosférica y el manómetro la presión relativa de un gas, y ambas se combinan en la presión absoluta P_abs=P_man+P_atm.",
+      "key_points": [
+        "La presión se define como fuerza por unidad de área ($P=\\dfrac{F}{A}$).",
+        "Las equivalencias clave son: 1 atm = 101 325 Pa = 101,325 kPa = 760 mmHg = 760 torr ≈ 1,013 bar.",
+        "El barómetro mide la presión atmosférica.",
+        "El volumen, la temperatura y la concentración también tienen varias unidades habituales (L y m³; °C y K; g/L, mg/L y mol/L) que se convierten con el mismo método de factores de conversión que la presión."
+      ],
+      "formulas": [
+        "$1\\,\\mathrm{atm}=101\\,325\\,\\mathrm{Pa}=760\\,\\mathrm{mmHg}$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $1\\,\\mathrm{atm}=101325\\,\\mathrm{Pa}=760\\,\\mathrm{mmHg}$, identifica si una presión es absoluta o manométrica y convierte con factores de conversión, comprobando siempre las unidades finales."
+    },
+    "exam_questions": [
+      {
+        "statement": "Convierte 1,20 atm a Pa y kPa, y comprueba dimensionalmente PV=nRT en SI.",
+        "answer": "1,20 atm=1,20·101325=121590 Pa=121,59 kPa. En SI, [PV]=Pa·m³=J y [nRT]=mol·J·mol⁻¹·K⁻¹·K=J.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      },
+      {
+        "statement": "Indica las equivalencias de 1 atm en Pa, mmHg y bar, y explica qué mide un barómetro.",
+        "answer": "1 atm = 101 325 Pa = 760 mmHg = 1,013 bar.",
+        "full_solution": "1 atm = 101 325 Pa = 760 mmHg ≈ 1,013 bar. El barómetro mide la presión atmosférica: en el barómetro de Torricelli, la atmósfera sostiene una columna de mercurio de 760 mm de altura a nivel del mar y en condiciones normales.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un resultado usa 250 mg/L como si fueran 250 g/L. Detecta el error, corrígelo y explica cómo afectaría a un cálculo de moles.",
+        "answer": "250 mg/L=0,250 g/L, no 250 g/L. Confundirlas multiplica por 1000 la masa calculada y, por tanto, también los moles obtenidos mediante $n=\\dfrac{m}{M}$.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "250 mg/L equivalen a 250/1000 = 0,250 g/L, no a 250 g/L; confundir ambas multiplica por 1000 la masa de soluto considerada. Como los moles se calculan con n=m/M, ese error se traslada directamente: los moles calculados (y cualquier concentración molar derivada) también saldrían 1000 veces mayores de lo real."
+      },
+      {
+        "statement": "La presión en la cima del Everest es ≈ 33 000 Pa. Exprésala en atm y mmHg. ¿Cuántos moles de O₂ hay en 1 L a esa presión y 253 K?",
+        "answer": "0,326 atm; 248 mmHg; n ≈ 0,0157 mol.",
+        "full_solution": "P=33000/101325=0,326 atm=0,326·760=248 mmHg. n=PV/(RT)=0,326·1/(0,082·253)=0,0157 mol de O₂ (con R=8,314 y P en Pa, V en m³: n=33000·1,0·10⁻³/(8,314·253)=1,57·10⁻² mol, el mismo resultado).",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  },
+  "lesson_06.json": {
+    "lesson_id": "U-4Q-06-L06",
+    "title": "Situación experimental",
+    "course_label": "4.º ESO · Disoluciones y gases",
+    "objectives": [
+      {
+        "statement": "Explicar Situación experimental con lenguaje científico, definiendo magnitudes, modelos y unidades."
+      },
+      {
+        "statement": "Aplicar los conceptos de situación experimental para resolver problemas y justificar cada paso del razonamiento."
+      },
+      {
+        "statement": "Interpretar una tabla, gráfica, estructura o evidencia relacionada con Situación experimental."
+      },
+      {
+        "statement": "Analizar las hipótesis, límites y posibles errores de Situación experimental."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Diseño experimental: hipótesis, variables y controles",
+        "body": "Un experimento científico no es simplemente «mezclar cosas a ver qué pasa». Es un procedimiento diseñado cuidadosamente para responder una pregunta concreta, controlando todo lo que pueda interferir.\n\nLos elementos clave de un diseño experimental son:\n\n**Hipótesis:** una predicción verificable. Ejemplo: «Si comprimo un gas a temperatura constante, su presión aumentará inversamente al volumen» (ley de Boyle).\n\n**Variable independiente (VI):** la que tú cambias deliberadamente. En nuestro ejemplo: el volumen (mover el émbolo de la jeringa).\n\n**Variable dependiente (VD):** la que mides como respuesta. En nuestro ejemplo: la presión (lectura del sensor).\n\n**Variables controladas (VC):** las que mantienes constantes para que no interfieran. En nuestro ejemplo: la temperatura (termostatizar el sistema) y la cantidad de gas (jeringa sellada).\n\nSi no controlas las VC, no puedes saber si el cambio en la VD se debe a la VI o a otra cosa. Por eso, un buen diseño experimental exige identificar y controlar todas las variables relevantes.",
+        "formula": "$\\%\\,\\mathrm{error}=\\dfrac{|x_{\\mathrm{exp}}-x_{\\mathrm{ref}}|}{|x_{\\mathrm{ref}}|}\\times100$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 295\" role=\"img\" aria-label=\"Montaje experimental para la ley de Boyle con variables etiquetadas\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Diseño experimental: variables</text>\n\n  <!-- Lab setup -->\n  <!-- Syringe -->\n  <rect x=\"60\" y=\"120\" width=\"150\" height=\"50\" rx=\"5\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <rect x=\"55\" y=\"130\" width=\"10\" height=\"30\" rx=\"2\" fill=\"var(--axes,#24312c)\"/>\n  <text x=\"135\" y=\"150\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Jeringa (V)</text>\n  <!-- Arrow to sensor -->\n  <line x1=\"210\" y1=\"145\" x2=\"260\" y2=\"145\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <!-- Pressure sensor -->\n  <rect x=\"260\" y=\"115\" width=\"100\" height=\"60\" rx=\"8\" fill=\"var(--axes,#24312c)\" opacity=\"0.15\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"310\" y=\"140\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Sensor de</text>\n  <text x=\"310\" y=\"155\" font-size=\"9\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">presión</text>\n  <text x=\"310\" y=\"170\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">P = ?</text>\n  <!-- Thermometer -->\n  <rect x=\"400\" y=\"100\" width=\"30\" height=\"90\" rx=\"10\" fill=\"#c17a17\" opacity=\"0.15\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <circle cx=\"415\" cy=\"175\" r=\"12\" fill=\"#c17a17\" opacity=\"0.3\" stroke=\"#c17a17\" stroke-width=\"1\"/>\n  <text x=\"415\" y=\"145\" font-size=\"10\" fill=\"#c17a17\" text-anchor=\"middle\">T</text>\n\n  <!-- Variable labels with colored boxes -->\n  <!-- Independent -->\n  <rect x=\"30\" y=\"210\" width=\"170\" height=\"40\" rx=\"6\" fill=\"#0e7a68\" opacity=\"0.12\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"115\" y=\"228\" font-size=\"10\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">V. INDEPENDIENTE</text>\n  <text x=\"115\" y=\"243\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Volumen (lo que cambias)</text>\n  <line x1=\"115\" y1=\"210\" x2=\"115\" y2=\"170\" stroke=\"#0e7a68\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n\n  <!-- Dependent -->\n  <rect x=\"215\" y=\"210\" width=\"170\" height=\"40\" rx=\"6\" fill=\"#8a3d6b\" opacity=\"0.12\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"300\" y=\"228\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"bold\">V. DEPENDIENTE</text>\n  <text x=\"300\" y=\"243\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Presión (lo que mides)</text>\n  <line x1=\"310\" y1=\"210\" x2=\"310\" y2=\"180\" stroke=\"#8a3d6b\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n\n  <!-- Controlled -->\n  <rect x=\"400\" y=\"210\" width=\"170\" height=\"40\" rx=\"6\" fill=\"#c17a17\" opacity=\"0.12\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"485\" y=\"228\" font-size=\"10\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"bold\">V. CONTROLADA</text>\n  <text x=\"485\" y=\"243\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Temperatura (constante)</text>\n  <line x1=\"440\" y1=\"210\" x2=\"420\" y2=\"195\" stroke=\"#c17a17\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n\n  <!-- Bottom -->\n  <text x=\"300\" y=\"280\" font-size=\"11\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">Ejemplo: comprobar la ley de Boyle en el laboratorio</text>\n</svg>",
+            "caption": "Montaje para comprobar la ley de Boyle con variables identificadas"
+          }
+        ]
+      },
+      {
+        "title": "Medición de P, V y T y fuentes de error",
+        "body": "Ninguna medida experimental es perfecta. Toda medición tiene incertidumbre, y entenderla es fundamental para interpretar los resultados.\n\nDos conceptos clave — la analogía de la diana lo explica todo:\n\n**Precisión:** ¿están las medidas agrupadas entre sí? Una serie de medidas precisas tiene poca dispersión (todos los dardos cerca unos de otros), aunque no estén en el centro.\n\n**Exactitud:** ¿están las medidas cerca del valor real? Una serie exacta tiene su media cerca del centro de la diana.\n\nLo ideal es ser preciso Y exacto (dardos agrupados en el centro). Pero puede haber:\n- Error sistemático: desplaza todas las medidas en la misma dirección (preciso pero no exacto). Causa: instrumento mal calibrado, método con sesgo.\n- Error aleatorio: dispersa las medidas al azar alrededor del valor real (exacto pero no preciso). Causa: fluctuaciones ambientales, limitaciones del observador.\n\nEl error sistemático se corrige calibrando. El aleatorio se reduce repitiendo medidas y promediando.",
+        "formula": "$\\%\\,\\mathrm{error}=\\dfrac{|x_{\\mathrm{exp}}-x_{\\mathrm{ref}}|}{|x_{\\mathrm{ref}}|}\\times100$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 230\" role=\"img\" aria-label=\"Cuatro dianas mostrando combinaciones de precisión y exactitud\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"25\" font-size=\"15\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\" font-weight=\"bold\">Precisión y exactitud</text>\n\n  <!-- Target 1: Precise + Accurate -->\n  <g transform=\"translate(80,100)\">\n    <circle cx=\"0\" cy=\"0\" r=\"50\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1.5\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"35\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"20\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"2\" cy=\"-3\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"-3\" cy=\"2\" r=\"4\" fill=\"#0e7a68\"/>\n    <circle cx=\"1\" cy=\"4\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"-2\" cy=\"-1\" r=\"4\" fill=\"#0e7a68\"/>\n    <circle cx=\"4\" cy=\"1\" r=\"4\" fill=\"#0e7a68\"/>\n    <text x=\"0\" y=\"70\" font-size=\"10\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"bold\">Preciso y exacto</text>\n    <text x=\"0\" y=\"82\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">✓ ideal</text>\n  </g>\n\n  <!-- Target 2: Precise + Inaccurate -->\n  <g transform=\"translate(230,100)\">\n    <circle cx=\"0\" cy=\"0\" r=\"50\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1.5\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"35\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"20\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"22\" cy=\"-23\" r=\"4\" fill=\"#c17a17\"/><circle cx=\"18\" cy=\"-18\" r=\"4\" fill=\"#c17a17\"/>\n    <circle cx=\"25\" cy=\"-20\" r=\"4\" fill=\"#c17a17\"/><circle cx=\"20\" cy=\"-25\" r=\"4\" fill=\"#c17a17\"/>\n    <circle cx=\"23\" cy=\"-16\" r=\"4\" fill=\"#c17a17\"/>\n    <text x=\"0\" y=\"70\" font-size=\"10\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"bold\">Preciso, no exacto</text>\n    <text x=\"0\" y=\"82\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">error sistemático</text>\n  </g>\n\n  <!-- Target 3: Imprecise + Accurate -->\n  <g transform=\"translate(380,100)\">\n    <circle cx=\"0\" cy=\"0\" r=\"50\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1.5\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"35\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"20\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"-20\" cy=\"15\" r=\"4\" fill=\"#8a3d6b\"/><circle cx=\"18\" cy=\"-10\" r=\"4\" fill=\"#8a3d6b\"/>\n    <circle cx=\"-5\" cy=\"-25\" r=\"4\" fill=\"#8a3d6b\"/><circle cx=\"10\" cy=\"20\" r=\"4\" fill=\"#8a3d6b\"/>\n    <circle cx=\"-15\" cy=\"-8\" r=\"4\" fill=\"#8a3d6b\"/>\n    <text x=\"0\" y=\"70\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"bold\">Exacto, no preciso</text>\n    <text x=\"0\" y=\"82\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">error aleatorio</text>\n  </g>\n\n  <!-- Target 4: Imprecise + Inaccurate -->\n  <g transform=\"translate(530,100)\">\n    <circle cx=\"0\" cy=\"0\" r=\"50\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1.5\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"35\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"20\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n    <circle cx=\"0\" cy=\"0\" r=\"5\" fill=\"#0e7a68\" opacity=\"0.3\"/>\n    <circle cx=\"25\" cy=\"30\" r=\"4\" fill=\"var(--axes,#24312c)\"/><circle cx=\"-30\" cy=\"20\" r=\"4\" fill=\"var(--axes,#24312c)\"/>\n    <circle cx=\"15\" cy=\"-35\" r=\"4\" fill=\"var(--axes,#24312c)\"/><circle cx=\"-20\" cy=\"-25\" r=\"4\" fill=\"var(--axes,#24312c)\"/>\n    <circle cx=\"35\" cy=\"-10\" r=\"4\" fill=\"var(--axes,#24312c)\"/>\n    <text x=\"0\" y=\"70\" font-size=\"9\" fill=\"var(--axes,#24312c)\" text-anchor=\"middle\" font-weight=\"bold\">Ni preciso ni exacto</text>\n    <text x=\"0\" y=\"82\" font-size=\"8\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">ambos errores</text>\n  </g>\n\n  <!-- Bottom note -->\n  <text x=\"300\" y=\"215\" font-size=\"10\" fill=\"var(--text,#20302a)\" text-anchor=\"middle\">El centro de la diana representa el valor real de la magnitud</text>\n</svg>",
+            "caption": "Cuatro dianas: combinaciones de precisión y exactitud en las medidas"
+          }
+        ]
+      },
+      {
+        "title": "Tratamiento de datos y conclusiones",
+        "body": "Una vez recogidos los datos, hay que organizarlos y extraer conclusiones:\n\n**Tabla de datos:** organiza las medidas en una tabla clara con encabezados que incluyan la magnitud y su unidad. Ejemplo:\n\n| V (mL) | P (kPa) |\n|---------|---------|\n| 60      | 170     |\n| 40      | 250     |\n| 30      | 340     |\n\n**Gráfica:** representa $P$ frente a $1/V$ (no $P$ frente a $V$). Si la relación es inversamente proporcional (Boyle), $P$ vs $1/V$ será una recta que pasa por el origen.\n\n**Línea de mejor ajuste:** no conectes punto a punto. Dibuja la recta (o curva) que pase lo más cerca posible de todos los puntos. Los puntos que se alejan mucho pueden ser datos anómalos.\n\n**Conclusión:** ¿los datos apoyan la hipótesis? Si $P$ vs $1/V$ es lineal con $r^2 > 0{,}98$, los datos son coherentes con Boyle. Si no, busca causas: fugas de gas, cambios de temperatura, errores de lectura.",
+        "formula": "$\\%\\,\\mathrm{error}=\\dfrac{|x_{\\mathrm{exp}}-x_{\\mathrm{ref}}|}{|x_{\\mathrm{ref}}|}\\times100$",
+        "assets": []
+      },
+      {
+        "title": "Errores e incertidumbre",
+        "body": "Expresar un resultado sin su incertidumbre es como dar una dirección sin el número de la calle: incompleto.\n\n**Error absoluto ($\\varepsilon$):** la diferencia entre el valor medido y el real. Tiene las mismas unidades que la magnitud. Ejemplo: si mides 22,6 L pero el valor real es 22,4 L, $\\varepsilon = |22{,}6 - 22{,}4| = 0{,}2$ L.\n\n**Error relativo ($\\varepsilon_r$):** el cociente entre el error absoluto y el valor real, expresado normalmente en porcentaje:\n\n$$\\varepsilon_r = \\frac{\\varepsilon}{x_{\\text{real}}} \\times 100 = \\frac{0{,}2}{22{,}4} \\times 100 = 0{,}89\\%$$\n\nUn error del 0,89% es excelente. Un error del 15% sugiere problemas en el método o el instrumento.\n\n**Propagación de errores:** cuando combinas magnitudes medidas (sumas, productos), los errores se acumulan. En una suma: $\\varepsilon_{\\text{total}} = \\varepsilon_1 + \\varepsilon_2$. En un producto: $\\varepsilon_{r,\\text{total}} = \\varepsilon_{r,1} + \\varepsilon_{r,2}$.\n\nPor eso, cuantas más operaciones encadenes, mayor será la incertidumbre final. Usa instrumentos precisos y minimiza los pasos intermedios.",
+        "formula": "$E_{\\text{rel}}(\\%)=\\dfrac{|x-x_{\\text{ref}}|}{x_{\\text{ref}}}\\times100;\\quad \\bar x\\pm\\Delta x$",
+        "assets": []
+      },
+      {
+        "id": "tb-synthesis",
+        "title": "Aplicación, límites y comprobación",
+        "body": "Autoevaluación: mides la presión de un gas tres veces: 102,3 kPa, 101,8 kPa, 102,1 kPa. El valor real es 101,3 kPa.\n\nMedia: $(102{,}3 + 101{,}8 + 102{,}1)/3 = 102{,}07$ kPa (preciso: poca dispersión; pero no exacto: desplazado +0,77 kPa del valor real → posible error sistemático).\n\nError relativo: $0{,}77/101{,}3 \\times 100 = 0{,}76\\%$.",
+        "assets": [],
+        "formula": "$\\%\\,\\mathrm{error}=\\dfrac{|x_{\\mathrm{exp}}-x_{\\mathrm{ref}}|}{|x_{\\mathrm{ref}}|}\\times100$"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Variable y control",
+        "statement": "Diseña una prueba para estudiar cómo cambia la velocidad de disolución con temperatura.",
+        "steps": [
+          "Variable independiente: temperatura; dependiente: tiempo de disolución.",
+          "Se controlan masa y tamaño del soluto, volumen y agitación.",
+          "Se repite cada temperatura y se calcula media y dispersión.",
+          "La conclusión debe separar tendencia observada de causalidad y mencionar límites.",
+          "Comprobación: si se repite a una temperatura distinta y la tendencia (menor tiempo de disolución a mayor temperatura) se mantiene, la relación es robusta; si los controles (masa, tamaño, agitación) no se mantuvieron fijos, la comparación entre temperaturas no sería válida."
+        ],
+        "answer": "Temperatura independiente; tiempo dependiente; controles explícitos.",
+        "verification": "La conclusión solo es válida si todas las variables controladas (masa y tamaño del soluto, volumen, agitación) se mantuvieron realmente constantes en todas las repeticiones."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Calibración",
+        "statement": "Una balanza marca 102,0 g para una masa patrón de 100,0 g en tres medidas. Identifica el error dominante.",
+        "steps": [
+          "La lectura es repetible pero desplazada 2,0 g.",
+          "Es un error sistemático de calibración, no un error aleatorio que se cancele al promediar.",
+          "Se corrige ajustando la tara o restando la desviación validada.",
+          "Se debe comprobar con otros patrones para asegurar que la corrección es lineal.",
+          "Comprobación: si se usa un segundo patrón de masa distinta (p. ej. 50,0 g) y la balanza vuelve a marcar sistemáticamente 2 g más, se confirma que el error es de calibración y no aleatorio."
+        ],
+        "answer": "Error sistemático de +2,0 g.",
+        "verification": "Un error sistemático de +2,0 g (2 % de 100,0 g) no se corrige promediando: hay que tarar o calibrar la balanza."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Una jeringa de gas conectada a un manómetro se usa para comprobar la ley de Boyle: se mide V a varias presiones P manteniendo T constante. Propón la variable independiente, la dependiente, dos controles y qué gráfica usarías para decidir si los datos cumplen la ley.",
+        "scaffold": "La variable independiente es la que se fija o cambia a propósito (P); la dependiente es la que se mide como respuesta (V); los controles son T y la cantidad de gas (hermeticidad).",
+        "answer": "Independiente: P. Dependiente: V. Controles: temperatura y hermeticidad. Gráfica: P frente a 1/V.",
+        "full_solution": "Se fija la variable independiente (la presión P, controlada con el émbolo) y se mide la dependiente (el volumen V), manteniendo constantes la temperatura (esperando a que el gas vuelva a temperatura ambiente tras cada compresión) y la cantidad de gas (comprobando que no hay fugas). Representando P frente a 1/V, los puntos deben alinearse en una recta que pasa por el origen, de pendiente nRT, si la ley de Boyle se cumple."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Un grupo mide tres veces la masa de un patrón de 50,0 g y obtiene 52,1; 52,0 y 52,2 g. Otro grupo mide el mismo patrón una sola vez con un instrumento mejor calibrado y obtiene 50,0 g. Explica cuál de los dos resultados es más fiable y por qué, distinguiendo error aleatorio de sesgo sistemático.",
+        "scaffold": "Calcula la media y la dispersión del primer grupo y compáralas con el valor de referencia; identifica si la desviación es aleatoria o sistemática.",
+        "answer": "El primer grupo tiene un sesgo sistemático pese a ser preciso; el segundo es exacto.",
+        "full_solution": "Media del primer grupo: (52,1+52,0+52,2)/3=52,1 g; semidispersión (52,2−52,0)/2=0,1 g → 52,1±0,1 g. Esto es precisión alta (poca dispersión) pero exactitud baja: hay un sesgo sistemático de +2,1 g (4,2 % de error relativo) que no se corrige promediando más veces, sino calibrando el instrumento. El segundo grupo, con una sola medida que coincide con el patrón, no tiene ese sesgo, aunque convendría repetir la medida para evaluar también su precisión."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "En un experimento de Boyle se obtiene PV = 9,8 atm· L en vez de 10 atm· L. ¿Cuál es el error relativo?",
+        "answer": "Error = |9,8−10|/10 × 100 = 2%.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "Error = |9,8−10|/10 × 100 = 2 %."
+      },
+      {
+        "statement": "¿Qué gráfica linealiza la ley de Charles?",
+        "answer": "V frente a T (en K): recta que pasa por el origen con pendiente nR/P.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación",
+        "full_solution": "De PV=nRT a P y n constantes, V=(nR/P)·T: es la ecuación de una recta y=mx que pasa por el origen al representar V frente a T en kelvin, con pendiente nR/P. Si se usa t en °C en vez de T en K, la recta no pasa por el origen, sino que corta el eje de temperaturas en −273 °C."
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Una balanza da 102,0; 102,1 y 101,9 g para un patrón de 100,0 g. Distingue precisión y exactitud.",
+        "answer": "102,0 ± 0,1 g; precisa pero no exacta.",
+        "full_solution": "Media = 102,0 g; semidispersión = (102,1−101,9)/2 = 0,1 g → 102,0±0,1 g. Es precisa (poca dispersión) pero no exacta: error absoluto 2,0 g, error relativo 2 %, de tipo sistemático (probablemente de calibración)."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Calcula la media y la semidispersión de tres medidas de concentración: 0,198; 0,205 y 0,201 mol/L, y decide cómo informarlas.",
+        "answer": "c = 0,201 ± 0,004 M.",
+        "full_solution": "Media = (0,198+0,205+0,201)/3 = 0,201 M. Semidispersión = (0,205−0,198)/2 = 0,0035 ≈ 0,004 M. Resultado: c = 0,201 ± 0,004 M."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Compara un error aleatorio de lectura con un sesgo de calibración y explica qué repetición corrige cada uno.",
+        "answer": "El aleatorio se reduce promediando; el sistemático no.",
+        "full_solution": "Un error aleatorio de lectura varía de una medida a otra sin una dirección fija, y se reduce repitiendo la medida y promediando. Un sesgo de calibración desplaza todas las medidas en la misma dirección y cantidad, y no se corrige promediando: hay que comparar con un patrón conocido y corregir o calibrar el instrumento."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa medidas con barras de incertidumbre y decide si el modelo lineal es compatible con los datos.",
+        "answer": "Depende de si los puntos caen dentro de sus barras de error.",
+        "full_solution": "Si las barras de incertidumbre de los puntos permiten trazar una recta que pase por (o cerca de) todos ellos, el modelo lineal es compatible con los datos; si algún punto queda claramente fuera de su barra de error respecto a la recta ajustada, el modelo lineal no se ajusta bien o esa medida tiene un problema."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige “el promedio elimina cualquier error” y da un ejemplo de error sistemático.",
+        "answer": "La afirmación es falsa.",
+        "full_solution": "La afirmación es falsa: promediar solo reduce el error aleatorio (que varía sin dirección fija); un error sistemático, como una balanza mal calibrada que siempre marca 2 g de más, se mantiene igual por mucho que se promedie, porque desplaza todas las medidas en la misma dirección."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña un protocolo con controles, réplicas y criterio cuantitativo para validar un modelo experimental.",
+        "answer": "Protocolo con réplicas, calibración e intervalo de aceptación.",
+        "full_solution": "Protocolo: fijar la hipótesis (p. ej. 'la concentración preparada es c₀'), medir tres réplicas independientes con material aforado, calcular media y semidispersión, y aceptar la hipótesis solo si c₀ está dentro del intervalo media±semidispersión; en caso contrario, revisar el procedimiento o el instrumento."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-lesson-06-1",
+        "stem": "En un experimento la variable que se mide como respuesta se llama:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) variable independiente",
+            "why_wrong": "La variable independiente es la que se manipula, no la que se mide como respuesta."
+          },
+          {
+            "key": "B",
+            "text": "B) variable controlada",
+            "why_wrong": "La variable controlada se mantiene fija, no es la que se mide como resultado."
+          },
+          {
+            "key": "C",
+            "text": "C) variable dependiente"
+          },
+          {
+            "key": "D",
+            "text": "D) variable aleatoria",
+            "why_wrong": "No existe una 'variable aleatoria' en este sentido experimental; lo que puede ser aleatorio es el error de medida, no la variable en sí."
+          }
+        ],
+        "explanation": "La variable dependiente es la que responde a los cambios de la independiente.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-lesson-06-2",
+        "stem": "Para representar linealmente la ley de Boyle se grafica:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) P frente a V",
+            "why_wrong": "P frente a V da una hipérbola, no una recta, porque P y V son inversamente proporcionales."
+          },
+          {
+            "key": "B",
+            "text": "B) P frente a 1/V"
+          },
+          {
+            "key": "C",
+            "text": "C) V frente a T",
+            "why_wrong": "V frente a T es la linealización de la ley de Charles, no de la de Boyle."
+          },
+          {
+            "key": "D",
+            "text": "D) P· V frente a T",
+            "why_wrong": "P·V frente a T no tiene por qué dar una recta en general."
+          }
+        ],
+        "explanation": "P=k· ($\\dfrac{1}{V}$): P frente a 1/V da una recta de pendiente k=nRT.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-06-3",
+        "stem": "La principal fuente de error al usar una jeringa de gas es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) La masa del émbolo",
+            "why_wrong": "La masa del émbolo no suele cambiar entre medidas, así que no es la principal fuente de error del experimento."
+          },
+          {
+            "key": "B",
+            "text": "B) Las fugas de gas por falta de hermeticidad"
+          },
+          {
+            "key": "C",
+            "text": "C) El color del gas",
+            "why_wrong": "El color del gas no influye en la medida de P o V."
+          },
+          {
+            "key": "D",
+            "text": "D) El tipo de metal de la jeringa",
+            "why_wrong": "El tipo de metal de la jeringa no afecta de forma relevante a la medida si el material es rígido y no reactivo."
+          }
+        ],
+        "explanation": "Las fugas cambian n, invalidando la ecuación de estado.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-lesson-06-4",
+        "stem": "El error relativo (%) se calcula como:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A) |experimental − teórico| × 100",
+            "why_wrong": "Esa fórmula da el error absoluto multiplicado por 100, no un porcentaje relativo al valor teórico."
+          },
+          {
+            "key": "B",
+            "text": "B) (|experimental − teórico| / teórico) × 100"
+          },
+          {
+            "key": "C",
+            "text": "C) teórico / experimental × 100",
+            "why_wrong": "Invertir el cociente (teórico entre experimental) no da el error relativo correcto."
+          },
+          {
+            "key": "D",
+            "text": "D) (teórico − experimental) / 100",
+            "why_wrong": "Restar sin valor absoluto y sin dividir entre el valor teórico no es la definición de error relativo."
+          }
+        ],
+        "explanation": "Error relativo (%) = |valor exp. − valor teórico| / valor teórico × 100.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Variable independiente",
+        "back": "La que el experimentador manipula deliberadamente."
+      },
+      {
+        "front": "Variable dependiente",
+        "back": "La que se mide como respuesta."
+      },
+      {
+        "front": "Ley de Boyle linealizada",
+        "back": "Graficar P frente a 1/V → recta con pendiente nRT."
+      },
+      {
+        "front": "Error relativo",
+        "back": "|experimental − teórico| / teórico × 100 (%)"
+      }
+    ],
+    "misconceptions": [
+      {
+        "incorrect_model": "Confundir variable independiente con dependiente.",
+        "correct_model": "La variable independiente es la que el experimentador manipula a propósito; la dependiente es la que se mide como respuesta. En la ley de Boyle, la presión se manipula (independiente) y el volumen se mide como respuesta (dependiente), a temperatura y cantidad de gas controladas.",
+        "remediation": "Antes de analizar un experimento, identifica explícitamente cuál es la variable que se cambia a propósito y cuál es la que se mide como consecuencia."
+      },
+      {
+        "incorrect_model": "No considerar las fugas de gas como fuente de error principal en experimentos de gases.",
+        "correct_model": "En experimentos con gases encerrados en jeringas o recipientes, las fugas de gas son una fuente de error muy importante porque cambian la cantidad de gas n sin que el experimentador lo note, invalidando cualquier ley que suponga n constante.",
+        "remediation": "Antes de aceptar los datos de un experimento con gases, comprueba la hermeticidad del sistema (p. ej. repitiendo la medida inicial al final) para descartar fugas."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "experimento",
+        "definition": "Procedimiento diseñado para poner a prueba una hipótesis controlando variables y midiendo una respuesta."
+      },
+      {
+        "term": "variable controlada",
+        "definition": "Magnitud que se mantiene fija durante el experimento para que no influya en la variable dependiente."
+      },
+      {
+        "term": "error relativo",
+        "definition": "Cociente entre el error absoluto y el valor de referencia, expresado en porcentaje: |x_exp−x_ref|/x_ref×100."
+      },
+      {
+        "term": "ley de Boyle",
+        "definition": "Relación P₁V₁=P₂V₂ a temperatura y cantidad de gas constantes, usada aquí como ejemplo de diseño experimental."
+      },
+      {
+        "term": "diseño experimental",
+        "definition": "Planificación de un experimento especificando hipótesis, variable independiente, dependiente y controles."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Conocer las leyes de los gases y la molaridad (las magnitudes que se van a medir o verificar).",
+        "why_it_matters": "Para diseñar un experimento sobre Boyle, Charles o la preparación de una disolución hay que saber qué relación se espera comprobar."
+      },
+      {
+        "statement": "Convertir unidades y representar datos en una gráfica.",
+        "why_it_matters": "Linealizar una ley (p. ej. P frente a 1/V) y calcular medias o semidispersiones exige manejar unidades y gráficas con soltura."
+      }
+    ],
+    "summary": {
+      "big_idea": "Un buen diseño experimental identifica la hipótesis, la variable independiente, la dependiente y los controles, y distingue el error aleatorio (se reduce promediando) del error sistemático (no se reduce promediando: hay que calibrar o corregir el método).",
+      "key_points": [
+        "Un buen diseño experimental comienza con una hipótesis clara y testable.",
+        "Para medir presión se usa un manómetro calibrado; para volumen, jeringas graduadas o tubos de Schlenk; para temperatura, termómetros digitales de alta precisión.",
+        "Los datos experimentales se registran en una tabla con las variables y sus incertidumbres.",
+        "El resultado de una serie de medidas se expresa como media ± semidispersión, y la precisión (poca dispersión) no garantiza la exactitud (cercanía al valor de referencia)."
+      ],
+      "formulas": [
+        "$\\%\\,\\mathrm{error}=\\dfrac{|x_{\\mathrm{exp}}-x_{\\mathrm{ref}}|}{|x_{\\mathrm{ref}}|}\\times100$"
+      ],
+      "what_to_remember_if_nothing_else": "Usa $\\%\\,\\mathrm{error}=\\dfrac{|x_{\\mathrm{exp}}-x_{\\mathrm{ref}}|}{|x_{\\mathrm{ref}}|}\\times100$, identifica variable independiente/dependiente/controladas, y distingue error aleatorio de error sistemático antes de concluir."
+    },
+    "exam_questions": [
+      {
+        "statement": "Una balanza marca 102,0±0,1 g para un patrón de 100,0 g. Clasifica precisión y exactitud y propone una corrección.",
+        "answer": "La incertidumbre pequeña (±0,1 g) indica precisión, pero el promedio 102,0 g está desplazado 2,0 g del patrón: hay un error sistemático y poca exactitud. Tara la balanza, comprueba un patrón y repite las medidas.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "La incertidumbre pequeña (±0,1 g) en las tres medidas indica que son precisas (poca dispersión entre ellas). Pero su media, 102,0 g, está desplazada 2,0 g respecto al patrón de 100,0 g: eso es un error sistemático, y por tanto poca exactitud. Para corregirlo: tarar o calibrar la balanza con el patrón conocido, comprobar con otro patrón distinto que la corrección es válida, y repetir las medidas."
+      },
+      {
+        "statement": "Explica qué es una variable controlada en un experimento y da un ejemplo en la verificación de la ley de Boyle.",
+        "answer": "Es la variable que se mantiene constante para que no influya en la variable dependiente; en la verificación de Boyle, la temperatura y la cantidad de gas.",
+        "full_solution": "Una variable controlada es la que se mantiene constante durante el experimento para que no influya en la variable dependiente. En la verificación de la ley de Boyle se controlan la temperatura (se deja que el gas recupere la temperatura ambiente tras cada compresión) y la cantidad de gas (jeringa hermética, sin fugas); se varía P (variable independiente) y se mide V (variable dependiente).",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Diseña un protocolo para determinar una concentración desconocida con tres réplicas, calibración, incertidumbre y criterio de aceptación.",
+        "answer": "Calibra la balanza, prepara tres réplicas independientes, mide cada volumen con material aforado y registra incertidumbres. Calcula la media, la dispersión y la incertidumbre combinada; acepta el resultado solo si el intervalo de confianza incluye el valor de referencia o si cumple el criterio fijado antes del experimento.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": [],
+        "full_solution": "Protocolo: 1) Calibrar la balanza y el material volumétrico con un patrón conocido antes de empezar. 2) Preparar tres réplicas independientes de la medida (por ejemplo, tres valoraciones o tres pesadas con enrase). 3) Calcular la media y la semidispersión de las tres réplicas, y a partir de ellas la incertidumbre del resultado final. 4) Fijar de antemano un criterio de aceptación (por ejemplo, que el valor de referencia esté dentro de media±semidispersión) y aceptar el resultado solo si se cumple ese criterio."
+      },
+      {
+        "statement": "Unos estudiantes miden V a distintas T para 0,1 mol de gas en un recipiente con P=1 atm y obtienen: 300 K → 2,50 L; 400 K → 3,30 L; 500 K → 4,05 L. Calcula R a partir de estos datos y el error relativo respecto al valor de referencia 0,082 atm·L·mol⁻¹·K⁻¹.",
+        "answer": "R medio ≈ 0,0823 atm·L·mol⁻¹·K⁻¹; error relativo ≈ 0,3 %.",
+        "full_solution": "R = PV/(nT): a 300 K, R=1·2,50/(0,1·300)=0,0833; a 400 K, R=1·3,30/(0,1·400)=0,0825; a 500 K, R=1·4,05/(0,1·500)=0,0810 (unidades atm·L·mol⁻¹·K⁻¹). La media es R≈0,0823. Error relativo respecto a 0,082: |0,0823−0,082|/0,082×100≈0,3 %. Las pequeñas variaciones entre las tres medidas reflejan el error experimental típico de este tipo de montaje.",
+        "provenance": "EDITORIAL (DEEP)_REVIEW",
+        "assets": []
+      }
+    ]
+  }
+}

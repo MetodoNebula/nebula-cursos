@@ -1,0 +1,1946 @@
+{
+  "lesson_01.json": {
+    "id": "L01",
+    "title": "Pregunta-hipótesis-evidencia",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Método científico, medida y datos",
+    "unit_id": "U-ESO-01",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022 · Física y Química 3.º ESO",
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "90 min",
+    "estimated_difficulty": 1,
+    "objectives": [
+      {
+        "statement": "Distinguir pregunta científica, hipótesis, predicción y evidencia, indicando la función de cada una en una investigación."
+      },
+      {
+        "statement": "Formular una hipótesis que relacione variables y deducir una predicción medible que permita contrastarla."
+      },
+      {
+        "statement": "Interpretar una tabla de resultados para decidir si la evidencia es compatible con una predicción y explicar el alcance de esa conclusión."
+      },
+      {
+        "statement": "Identificar variables de control, fuentes de error y explicaciones alternativas en una investigación sencilla."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Operaciones con números, unidades del SI, lectura de tablas y gráficas, y notación científica.",
+        "why_it_matters": "En esta lección tendrás que calcular g a partir de una altura y un tiempo, comparar el resultado con 9,81 m/s² y leer tablas de datos de péndulo o de velocidad de reacción; sin soltura con operaciones, unidades y notación científica no podrás decidir si los datos apoyan o no una hipótesis."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-E01-01-1",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Una hipótesis es una idea sin base.",
+        "correct_model": "Una hipótesis es una afirmación provisional que relaciona variables y puede ponerse a prueba.",
+        "why_it_appears": "En el lenguaje cotidiano 'tener una hipótesis' se usa como sinónimo de 'suponer cualquier cosa', sin exigir que se pueda comprobar.",
+        "remediation": "Pide siempre que la hipótesis se escriba como 'Si… entonces… porque…', señalando qué variable se mide y qué resultado se esperaría encontrar."
+      },
+      {
+        "id": "MIS-E01-01-2",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Un experimento 'prueba' definitivamente una hipótesis.",
+        "correct_model": "Los datos son compatibles o incompatibles; nunca prueban con certeza absoluta.",
+        "why_it_appears": "Se confunde 'los datos apoyan la hipótesis' con 'la hipótesis queda demostrada para siempre', como en el ejemplo de la canica, donde un solo lanzamiento parece confirmar h=½gt².",
+        "remediation": "Acostumbra a decir 'los datos son compatibles con…' en vez de 'se demuestra que…', y exige réplicas antes de dar una conclusión por buena."
+      },
+      {
+        "id": "MIS-E01-01-3",
+        "provenance": "SOURCE (DERIVED)",
+        "incorrect_model": "Solo hay una variable independiente posible.",
+        "correct_model": "Puede haber varias, pero en un diseño controlado se cambia una a la vez.",
+        "why_it_appears": "En los primeros experimentos guiados solo se cambia una magnitud, y el alumno generaliza que no puede haber más de una variable que influya en el resultado.",
+        "remediation": "Analiza ejemplos con varias variables posibles (longitud y masa en un péndulo, luz y agua en una planta) y pide identificar cuál se cambia y cuáles se mantienen fijas en cada prueba."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-L01-01",
+        "title": "Pregunta científica, hipótesis y predicción",
+        "body": "Una pregunta científica identifica dos variables relacionables. La hipótesis es la explicación provisional de por qué ocurre algo ('el péndulo tarda más al aumentar L porque recorre un camino más largo en cada oscilación'); la predicción es el resultado numérico y comprobable que se deduce de ella ('si duplico L, T aumentará, aunque no al doble'). Toda predicción debe poder comprobarse con una medida.",
+        "provenance": "SOURCE (DERIVED)",
+        "formula": "$Y=f(X)$",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 520 260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Pregunta-hipótesis-evidencia\"><rect width=\"520\" height=\"260\" fill=\"#f8fafc\"/><text x=\"18\" y=\"25\" font-family=\"Arial\" font-size=\"15\" font-weight=\"700\" fill=\"#0f172a\">Pregunta-hipótesis-evidencia</text><rect x=\"28\" y=\"88\" width=\"132\" height=\"72\" rx=\"10\" fill=\"#dbeafe\" stroke=\"#2563eb\"/><rect x=\"194\" y=\"88\" width=\"132\" height=\"72\" rx=\"10\" fill=\"#dcfce7\" stroke=\"#16a34a\"/><rect x=\"360\" y=\"88\" width=\"132\" height=\"72\" rx=\"10\" fill=\"#fef3c7\" stroke=\"#d97706\"/><text x=\"62\" y=\"120\" font-family=\"Arial\" font-size=\"13\">hipótesis</text><text x=\"218\" y=\"120\" font-family=\"Arial\" font-size=\"13\">prueba</text><text x=\"384\" y=\"120\" font-family=\"Arial\" font-size=\"13\">evidencia</text><path d=\"M160 124H194M326 124H360\" stroke=\"#475569\" stroke-width=\"3\"/><text x=\"45\" y=\"145\" font-family=\"Arial\" font-size=\"11\">predicción</text><text x=\"211\" y=\"145\" font-family=\"Arial\" font-size=\"11\">variables controladas</text><text x=\"377\" y=\"145\" font-family=\"Arial\" font-size=\"11\">datos y conclusión</text><path d=\"M426 172C426 215,94 215,94 172\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\" stroke-dasharray=\"4,3\"/><polygon points=\"94,172 88,160 100,160\" fill=\"#64748b\"/><text x=\"200\" y=\"200\" font-family=\"Arial\" font-size=\"11\" fill=\"#64748b\">si no encaja, se revisa la hipótesis</text></svg>",
+            "caption": "Esquema del ciclo del método científico: hipótesis y predicción → experimento con variables controladas → datos y conclusión, que puede llevar a revisar la hipótesis si no encaja."
+          }
+        ],
+        "type": "intuition",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L01-02",
+        "title": "Diseño experimental controlado",
+        "body": "Para responder a una hipótesis se cambia solo la variable independiente, se mide la variable dependiente y se fijan todas las demás (variables de control). Sin control de variables, no se puede atribuir el cambio a una causa. Repetir la medida varias veces (réplicas) permite estimar la dispersión de los resultados y da más confianza en la conclusión.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [],
+        "type": "formalisation",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L01-03",
+        "title": "Evidencia y conclusión",
+        "body": "Los datos recogidos se comparan con la predicción. Una evidencia es compatible con la hipótesis si los datos coinciden con la predicción teniendo en cuenta la incertidumbre de las medidas (por ejemplo, 1,23 m predichos frente a 1,25 m medidos, con una diferencia pequeña y explicable por el instrumento). No basta con que los datos 'vayan en la misma dirección': deben encajar dentro de un margen razonable. Una anomalía obliga a revisar la hipótesis o el experimento, no a ignorarla.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "type": "worked_rule",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L01-04",
+        "title": "Representación gráfica de resultados",
+        "body": "Una gráfica de la variable dependiente frente a la independiente permite ver la tendencia. Los ejes deben llevar nombre, unidades y escala uniforme. No se debe confundir la línea de tendencia con los puntos individuales.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [],
+        "type": "caveat",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L01-05",
+        "title": "Predicción, correlación y otros términos del método",
+        "body": "Una observación es un dato o hecho registrado sin explicación ('el péndulo oscila más despacio'); una ley describe una regularidad observada, a menudo con una fórmula; una teoría explica por qué ocurre esa regularidad usando un modelo más amplio. Dos variables pueden estar correlacionadas (cambian juntas) sin que una cause la otra: por ejemplo, la velocidad de una reacción y la concentración pueden crecer juntas en un experimento donde también cambia, sin querer, la temperatura. Por eso una correlación solo se interpreta como causa cuando el diseño ha controlado las demás variables.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "type": "worked_rule",
+        "scope": "CORE"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Caída y tiempo",
+        "statement": "Se deja caer una canica desde $h=1{,}25\\,\\mathrm{m}$ y tarda $t=0{,}50\\,\\mathrm{s}$. Decide si los datos apoyan el modelo $h=\\tfrac12 g t^2$.",
+        "steps": [
+          "El modelo de caída libre predice $h=\\tfrac12 g t^2$ (lo estudiarás formalmente en 4.º ESO); aquí solo se usa como herramienta para comprobar si estos datos encajan con él.",
+          "Despejando $g$: $g=\\dfrac{2h}{t^2}=\\dfrac{2\\cdot1{,}25}{0{,}50^2}=10{,}0\\,\\mathrm{m/s^2}$.",
+          "El valor 10,0 m/s² difiere un 2 % de 9,81 m/s². Para $g=9{,}81\\,\\mathrm{m/s^2}$ el tiempo sería $t=\\sqrt{2h/g}=\\sqrt{2\\cdot1{,}25/9{,}81}=0{,}505\\,\\mathrm{s}$: la diferencia con el tiempo medido (0,005 s) es menor que la resolución del cronómetro (0,01 s) y que el tiempo de reacción típico (0,1–0,2 s), así que es compatible. El rozamiento con el aire frenaría la canica y daría un g medido MENOR que 9,81, no mayor; no puede explicar esta diferencia.",
+          "La predicción con $g=9{,}81\\,\\mathrm{m/s^2}$ es $h_{\\text{pred}}=\\tfrac12\\cdot9{,}81\\cdot0{,}50^2=1{,}23\\,\\mathrm{m}$ (cálculo exacto: 1,226 m), muy próxima a los 1,25 m medidos.",
+          "Comprobación: las unidades son correctas (m/s² a partir de m y s²) y el valor de g cae dentro del rango físico esperado en la superficie terrestre (9,78–9,83 m/s² según la latitud); 10,0 m/s² es razonable para una sola medida con cronómetro manual."
+        ],
+        "answer": "Sí: con t = 0,50 s se obtiene g ≈ 10,0 m/s², compatible con 9,81 m/s² dentro de la incertidumbre (la diferencia de tiempo, 0,005 s, es menor que la resolución del cronómetro). Los datos apoyan la hipótesis h=½gt², pero una sola medida no basta para darla por confirmada: habría que repetir la caída varias veces y a varias alturas.",
+        "verification": "Se comprueba que 10,0 m/s² tiene las unidades correctas y es físicamente razonable (próximo al valor estándar de la gravedad en la superficie terrestre); además la respuesta contesta explícitamente a la pregunta (sí/no y con qué margen)."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Comparar hipótesis",
+        "statement": "Para explicar que una planta crece más con luz, compara las hipótesis “la luz aumenta la fotosíntesis” y “la maceta con luz recibe más agua”.",
+        "steps": [
+          "Variable independiente: horas de luz; variable dependiente: masa seca o altura; controles: especie, agua, suelo y temperatura.",
+          "Predicción H1: a igual agua, más luz produce mayor crecimiento; H2: el crecimiento cambia al variar el riego aunque la luz sea igual.",
+          "Se preparan tres réplicas por condición y se mide a intervalos iguales.",
+          "La hipótesis mejor apoyada es la que explica el patrón sin confundir variables; se informa también la dispersión.",
+          "Comprobación: se ha controlado el agua, el suelo y la temperatura, así que cualquier diferencia de crecimiento solo puede achacarse a la luz; si no se hubiera controlado el agua, un resultado positivo sería solo una correlación, no una prueba de causalidad."
+        ],
+        "answer": "La comparación controla el agua y permite distinguir correlación de causalidad.",
+        "verification": "Se revisa que las tres réplicas por condición permitan estimar la dispersión y que la conclusión distinga explícitamente entre correlación (crecen juntas luz y masa) y causalidad (la luz es la causa, porque el agua se mantuvo igual)."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Diseña una prueba para decidir entre estas dos hipótesis sobre la fotosíntesis: 'una planta crece más con más horas de luz' frente a 'una planta crece más con más agua'. Fija una variable independiente, dos controles y una medida que permita decidir entre ambas.",
+        "scaffold": "Cambia solo las horas de luz manteniendo el riego igual en todas las macetas; mide la misma magnitud (p. ej. altura en cm) a los mismos días en todas ellas antes de comparar.",
+        "answer": "Se cambia solo la luz (p. ej. 4 h, 8 h, 12 h diarias) manteniendo agua, tipo de maceta, suelo y temperatura iguales en todas las macetas (controles); se mide la altura o la masa seca a los mismos días. Si la planta con más luz crece más sin que cambie el riego, la evidencia apoya la primera hipótesis y no la segunda.",
+        "full_solution": "Variable independiente: horas de luz diaria. Variable dependiente: altura (cm) o masa seca (g) de la planta. Controles: cantidad de agua, tipo de suelo, maceta, temperatura y especie, iguales en todos los grupos. Diseño: al menos 3 macetas por condición de luz (réplicas) para estimar la dispersión. Si al final del experimento las plantas con más horas de luz son sistemáticamente más altas, a pesar de recibir el mismo agua, el resultado apoya 'más luz → más crecimiento' y descarta que la diferencia se deba al agua, porque el agua no varió entre grupos."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Un informe afirma que 'el péndulo es isócrono para cualquier amplitud' basándose en una sola medida de T con una amplitud pequeña. Audita el resultado: explica cómo distinguirías un error aleatorio, un sesgo sistemático y una conclusión que excede los datos.",
+        "scaffold": "Repite la medida varias veces para ver si el valor cambia al azar (aleatorio); comprueba si el cronómetro o el método de suelta introducen siempre el mismo desvío (sistemático); compara lo que afirma la conclusión con el rango de amplitudes realmente probado.",
+        "answer": "Error aleatorio: la dispersión entre repeticiones con la misma amplitud (se reduce promediando). Sesgo sistemático: un desvío que se repite igual en todas las medidas, por ejemplo soltar siempre un poco tarde el cronómetro (no se reduce promediando). Conclusión que excede los datos: afirmar que vale 'para cualquier amplitud' habiendo probado solo una amplitud pequeña; la isocronía del péndulo solo es aproximadamente cierta para amplitudes pequeñas.",
+        "full_solution": "1) Para detectar error aleatorio, se repite la medida de T varias veces con la misma amplitud pequeña: si los valores varían sin patrón, es dispersión aleatoria, y la media de varias medidas es más fiable que una sola. 2) Para detectar sesgo sistemático, se revisa el procedimiento (reacción al pulsar el cronómetro, ángulo de suelta, rozamiento del eje): si siempre se desvía en el mismo sentido, es sistemático y no se arregla repitiendo, sino corrigiendo el método. 3) La conclusión 'isócrono para cualquier amplitud' excede los datos porque solo se ha probado una amplitud pequeña; para amplitudes grandes el periodo sí depende de la amplitud. Una conclusión correcta debe limitarse al rango de condiciones realmente ensayado."
+      }
+    ],
+    "exercises": [
+      {
+        "answer": "Hipótesis: a más capas de tela, enfriamiento más lento. Variable independiente: número de capas. Variable dependiente: tiempo que tarda en bajar de la temperatura inicial a 40 °C. Controles: temperatura inicial del agua (p. ej. 80 °C), volumen de agua, tipo de taza y temperatura ambiente.",
+        "full_solution": "Se parte siempre de la misma cantidad de agua (p. ej. 200 mL) a la misma temperatura inicial (80 °C), en la misma taza y en la misma habitación (temperatura ambiente constante): estos son los controles. Se cambia solo el número de capas de tela (0, 1, 2, 3…): esta es la variable independiente. Se mide el tiempo que tarda el agua en bajar hasta 40 °C con un termómetro: esta es la variable dependiente. Si al aumentar las capas aumenta sistemáticamente el tiempo de enfriamiento, los datos apoyan la hipótesis de que la tela actúa como aislante.",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "Diseña un experimento para comprobar si el número de capas de tela con que se envuelve una taza afecta al tiempo que tarda en enfriarse una taza de agua caliente. Indica hipótesis, variable independiente, variable dependiente y al menos dos controles.",
+        "hints": [
+          "Piensa qué cambia el experimentador y qué debe permanecer igual en todas las pruebas.",
+          "La temperatura final de referencia (p. ej. 40 °C) debe ser la misma en todas las repeticiones para poder comparar tiempos."
+        ],
+        "reasoning": [
+          "Se fija todo salvo el número de capas (controles).",
+          "Se mide siempre el mismo descenso de temperatura (variable dependiente) para poder comparar tiempos entre pruebas."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "answer": "Son compatibles: la velocidad crece al crecer la concentración, y además de forma casi proporcional (v/c ≈ 20, 19 y 20,3 (mL/s)/(mol/L)). No son concluyentes, porque solo hay tres puntos, sin repeticiones ni incertidumbre, y no se indica que se controlaran la temperatura, el volumen de disolución o el tamaño del sólido.",
+        "full_solution": "Se calcula el cociente v/c para cada punto: 2/0,1=20; 3,8/0,2=19; 6,1/0,3≈20,3 (mL/s)/(mol/L). Como los tres cocientes son muy parecidos, la velocidad es aproximadamente proporcional a la concentración, lo que es compatible con la hipótesis 'mayor concentración, mayor velocidad'. Sin embargo, con solo tres concentraciones y una sola medida en cada una, no se puede estimar la dispersión ni descartar que otros factores (temperatura, volumen, tamaño del sólido) hayan cambiado también; por eso la evidencia es compatible pero no concluyente.",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "Un experimento da los siguientes datos: concentración 0,1 mol/L → velocidad 2 mL/s; 0,2 mol/L → 3,8 mL/s; 0,3 mol/L → 6,1 mL/s. ¿Son compatibles con 'mayor concentración, mayor velocidad'? ¿Son concluyentes?",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Un péndulo de 0,25 m tarda 1,00 s en completar una oscilación, y uno de 1,00 m tarda 2,01 s. Formula una hipótesis sobre cómo depende el periodo T de la longitud L, identifica la variable independiente, la dependiente y dos controles, y decide qué dato adicional recogerías para comprobar la hipótesis.",
+        "answer": "Hipótesis: a mayor longitud, mayor periodo, pero no de forma proporcional (al multiplicar L por 4, T no se multiplica por 4, sino por ≈2). Variable independiente: longitud L. Variable dependiente: periodo T. Controles: amplitud pequeña, masa de la bola y punto de suelta. Dato adicional: medir T para longitudes intermedias (p. ej. 0,50 y 0,75 m) para confirmar la tendencia.",
+        "full_solution": "Al pasar de L=0,25 m a L=1,00 m (L se multiplica por 4), T pasa de 1,00 s a 2,01 s (T se multiplica por ≈2, no por 4): esto sugiere que T no es proporcional a L, sino que crece más despacio (de hecho, como √L). La hipótesis se escribe: 'si aumento la longitud del péndulo, el periodo aumentará, pero menos que proporcionalmente, porque T ∝ √L'. Variable independiente: L; dependiente: T; controles: amplitud (pequeña y constante), masa de la bola, lugar de suelta. Para comprobar la hipótesis con más confianza, conviene medir también longitudes intermedias, por ejemplo 0,50 m y 0,75 m, y comparar la tendencia completa.",
+        "hints": [
+          "Compara cuánto se multiplica L y cuánto se multiplica T entre los dos datos.",
+          "Si T fuera proporcional a L, al multiplicar L por 4 el periodo se multiplicaría también por 4."
+        ]
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Con un cronómetro se miden 10 periodos de un péndulo: T (s) = 1,42; 1,45; 1,40; 1,44; 1,43; 1,46; 1,41; 1,43; 1,44; 1,42. Calcula la media, estima la dispersión con el semirrango (máximo−mínimo)/2, y explica qué conclusión sería prudente.",
+        "answer": "Media ≈ 1,43 s. Semirrango = (1,46−1,40)/2 = 0,03 s. Resultado: T = (1,43 ± 0,03) s. Conclusión prudente: el periodo medido es compatible con un valor entre 1,40 y 1,46 s; con solo 10 medidas de un único péndulo no se puede generalizar a péndulos de otra longitud o amplitud.",
+        "full_solution": "Media: se suman las 10 medidas (14,30 s en total) y se dividen entre 10: 14,30/10 = 1,430 s. Dispersión: se usa el semirrango como estimación sencilla, (valor máximo − valor mínimo)/2 = (1,46−1,40)/2 = 0,03 s. Resultado: T = (1,43 ± 0,03) s. Esta forma de estimar la incertidumbre a partir de medidas repetidas se estudia con más detalle en la lección de incertidumbre y resolución; aquí basta con saber que un rango de valores parecidos entre sí indica una medida razonablemente repetible. La conclusión debe limitarse a este péndulo concreto: no se puede afirmar que todos los péndulos tengan este periodo.",
+        "hints": [
+          "Suma las 10 medidas y divide entre 10 para la media.",
+          "El semirrango es (máximo − mínimo) dividido entre 2."
+        ]
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Compara dos modelos: 'T depende de la longitud del péndulo' frente a 'T depende de la masa de la bola'. Diseña un ensayo que permita discriminar entre ambos.",
+        "answer": "Se cambia solo la masa (p. ej. 50 g, 100 g, 200 g) manteniendo L fija, y luego se cambia solo L manteniendo la masa fija. Resultado esperado: T no cambia al cambiar la masa (para oscilaciones pequeñas), pero sí cambia al cambiar L; por tanto, el modelo correcto es que T depende de L, no de la masa.",
+        "full_solution": "Primer ensayo: se fija L (p. ej. 0,50 m) y se mide T con bolas de 50 g, 100 g y 200 g, manteniendo la amplitud pequeña e igual en todas las pruebas. Si T es prácticamente el mismo en los tres casos, la masa no influye. Segundo ensayo: se fija la masa (p. ej. 100 g) y se mide T con L = 0,25; 0,50; 0,75 y 1,00 m. Si T cambia claramente con L, la longitud sí influye. El resultado conocido de la física del péndulo simple confirma que, para oscilaciones pequeñas, T no depende de la masa y sí depende de la longitud ($T=2\\pi\\sqrt{L/g}$)."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Con los datos de la tabla, representa el periodo T frente a la longitud L y describe la tendencia (¿crece de forma proporcional?). L (m): 0,25; 0,50; 0,75; 1,00. T (s): 1,00; 1,42; 1,74; 2,01.",
+        "answer": "T crece al crecer L, pero no proporcionalmente: al pasar de 0,25 a 0,50 m (L ×2), T pasa de 1,00 a 1,42 s (T ×1,42, no ×2); al pasar de 0,25 a 1,00 m (L ×4), T pasa de 1,00 a 2,01 s (T ×2,01, no ×4). La gráfica es una curva que se aplana, no una recta por el origen.",
+        "full_solution": "Se representan los cuatro puntos (L, T) y se observa que no están alineados en una recta que pase por el origen: la curva crece cada vez más despacio. Comparando razones: T(1,00 m)/T(0,25 m) = 2,01/1,00 = 2,01, mientras que L(1,00 m)/L(0,25 m) = 1,00/0,25 = 4. Como 2,01 ≈ √4, esto sugiere que T no es proporcional a L, sino aproximadamente proporcional a √L (relación que se estudiará formalmente más adelante, con T²∝L).",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un informe elimina las medidas que contradicen la hipótesis. Audita el procedimiento y propone un criterio previo.",
+        "answer": "Eliminar datos solo porque no gustan es una mala práctica (sesgo de confirmación): hace que el experimento parezca apoyar la hipótesis aunque no sea cierto. Criterio previo correcto: decidir antes de medir qué datos se considerarían 'anómalos' (p. ej. por un fallo visible del instrumento) y documentar cualquier dato excluido, sin usar como criterio si coincide o no con lo esperado.",
+        "full_solution": "El problema de eliminar medidas 'porque no coinciden con la hipótesis' es que el experimentador decide qué datos cuentan después de verlos, sesgando la conclusión a favor de lo que esperaba (sesgo de confirmación). Un procedimiento correcto exige fijar el criterio de exclusión antes de recoger los datos, por ejemplo: 'se descartará una medida solo si se detecta un fallo del instrumento o un error de procedimiento documentado', nunca por el valor numérico en sí. Además, se deben reportar todas las medidas obtenidas, incluidas las excluidas y el motivo, para que cualquier persona pueda comprobar que no se ha manipulado el resultado."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Reto opcional: usando la tabla de L y T del ejercicio anterior (quality-4), comprueba si la relación T²∝L está respaldada por los datos y qué limitación tendría el modelo.",
+        "answer": "Sí: T²/L es aproximadamente constante (≈4,00–4,04) para los cuatro puntos, lo que apoya T²∝L dentro de la precisión de los datos.",
+        "full_solution": "Se calcula T² para cada L: L=0,25→T²=1,00; L=0,50→T²≈2,02; L=0,75→T²≈3,03; L=1,00→T²≈4,04. El cociente T²/L es 4,00; 4,03; 4,04 y 4,04: prácticamente constante, lo que respalda T²∝L. La limitación del modelo es que solo se dispone de cuatro datos de un único péndulo y con una amplitud pequeña; no se ha comprobado si la relación se mantiene para amplitudes grandes ni con otro tipo de hilo o bola."
+      }
+    ],
+    "exam_questions": [
+      {
+        "answer": "Hipótesis: afirmación que relaciona dos variables y explica un fenómeno. Predicción: resultado concreto medible que se esperaría si la hipótesis fuera correcta. Evidencia: dato experimental que se compara con la predicción para evaluarla.",
+        "full_solution": "La hipótesis es la explicación provisional que relaciona dos variables, por ejemplo 'el péndulo tarda más al aumentar L porque recorre un camino más largo'. De esa hipótesis se deduce una predicción: un resultado numérico y comprobable, por ejemplo 'si L se multiplica por 4, T se multiplicará aproximadamente por 2'. La evidencia es el dato medido realmente (el periodo cronometrado) que se compara con la predicción: si coinciden dentro del margen de error, la evidencia es compatible con la hipótesis; si no coinciden, hay que revisar la hipótesis o el experimento.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": [],
+        "statement": "Explica la diferencia entre hipótesis, predicción y evidencia en el método científico.",
+        "marks": 3,
+        "mark_scheme": [
+          "1 punto: define hipótesis como explicación provisional que relaciona variables.",
+          "1 punto: identifica la predicción como resultado concreto y medible deducido de la hipótesis.",
+          "1 punto: explica que la evidencia es el dato comparado con la predicción para evaluarla."
+        ]
+      }
+    ],
+    "challenge_questions": [
+      {
+        "answer": "Sí; los datos pueden ser incompatibles por errores de medida, diseño inadecuado o variables no controladas. Por eso se repiten experimentos y se replican resultados antes de rechazar una hipótesis.",
+        "full_solution": "Sí puede ocurrir. Una hipótesis correcta puede parecer refutada si: (a) hay un error de medida grande (instrumento mal calibrado, lectura incorrecta); (b) el diseño no controla alguna variable relevante, que enmascara el efecto esperado; o (c) el tamaño de la muestra es pequeño y el azar produce un resultado atípico. Por eso, antes de rechazar una hipótesis bien fundamentada por un solo resultado incompatible, se repite el experimento (réplicas) y se revisa el procedimiento; solo si varios experimentos independientes y bien controlados siguen siendo incompatibles se considera seriamente abandonar la hipótesis.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "statement": "¿Puede una hipótesis ser correcta aunque los datos de un experimento sean incompatibles con ella? Justifica."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L01-01",
+        "stem": "Una hipótesis científica debe:",
+        "options": [
+          {
+            "key": "A",
+            "text": "No admitir modificaciones.",
+            "why_wrong": "Una hipótesis puede y debe modificarse si los datos no la respaldan; la rigidez no es una virtud científica."
+          },
+          {
+            "key": "B",
+            "text": "Relacionar dos variables y ser comprobable experimentalmente."
+          },
+          {
+            "key": "C",
+            "text": "Basarse solo en la intuición.",
+            "why_wrong": "La intuición puede sugerir una hipótesis, pero esta debe formularse de forma que se pueda comprobar con datos, no quedarse solo en una corazonada."
+          },
+          {
+            "key": "D",
+            "text": "Ser siempre verdadera.",
+            "why_wrong": "Una hipótesis es provisional: puede resultar falsa tras comprobarla, y eso no la invalida como hipótesis científica."
+          }
+        ],
+        "explanation": "Una hipótesis científica debe relacionar variables de forma que se puedan diseñar medidas que la pongan a prueba; no tiene por qué ser verdadera, ni basarse solo en intuición, ni permanecer inmodificable.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L01-02",
+        "stem": "Si en un experimento cambian dos variables a la vez:",
+        "options": [
+          {
+            "key": "A",
+            "text": "El resultado es más fiable.",
+            "why_wrong": "Al contrario: cambiar dos variables a la vez reduce la fiabilidad, porque no se puede saber cuál de ellas produjo el efecto."
+          },
+          {
+            "key": "B",
+            "text": "Se eliminan los errores de medida.",
+            "why_wrong": "Cambiar varias variables no tiene ninguna relación con los errores de medida del instrumento."
+          },
+          {
+            "key": "C",
+            "text": "No se puede saber cuál de las dos causa el efecto observado."
+          },
+          {
+            "key": "D",
+            "text": "La variable dependiente queda mejor controlada.",
+            "why_wrong": "Es al revés: con dos variables cambiando a la vez, la variable dependiente queda peor controlada, porque hay dos posibles causas mezcladas."
+          }
+        ],
+        "explanation": "Cuando cambian dos variables independientes a la vez, cualquier efecto observado podría deberse a una, a la otra, o a ambas combinadas: el diseño no permite distinguirlo.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L01-03",
+        "stem": "¿Qué hace que una evidencia sea 'concluyente'?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Que el investigador esté de acuerdo con el resultado.",
+            "why_wrong": "La opinión del investigador no aporta ninguna garantía científica; de hecho, buscar solo la confirmación es un sesgo que hay que evitar."
+          },
+          {
+            "key": "B",
+            "text": "Que el experimento dure mucho tiempo.",
+            "why_wrong": "La duración del experimento no garantiza nada por sí sola si no se han controlado las variables ni repetido las medidas."
+          },
+          {
+            "key": "C",
+            "text": "Que confirme lo que esperaba el investigador.",
+            "why_wrong": "Que el resultado coincida con lo esperado no lo hace más fiable; de hecho, hay que vigilar especialmente ese caso para no caer en el sesgo de confirmación."
+          },
+          {
+            "key": "D",
+            "text": "Que se reproduzca en experimentos controlados y descarte las explicaciones alternativas conocidas."
+          }
+        ],
+        "explanation": "Una evidencia es concluyente cuando se ha repetido en condiciones controladas y permite descartar razonablemente otras explicaciones; ni la opinión del investigador, ni la duración, ni la coincidencia con lo esperado garantizan esto por sí solas.",
+        "correct": "D"
+      },
+      {
+        "id": "MC-L01-04",
+        "stem": "En un experimento, la variable dependiente es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "La que se mantiene fija durante todo el experimento.",
+            "why_wrong": "Eso describe una variable de control, no la dependiente."
+          },
+          {
+            "key": "B",
+            "text": "La que se mide para ver si la hipótesis es compatible con los datos."
+          },
+          {
+            "key": "C",
+            "text": "La que no tiene unidades.",
+            "why_wrong": "Todas las magnitudes medibles tienen unidades; esto no distingue a la variable dependiente de las demás."
+          },
+          {
+            "key": "D",
+            "text": "La que modifica directamente el investigador.",
+            "why_wrong": "Eso describe la variable independiente, no la dependiente."
+          }
+        ],
+        "explanation": "La variable dependiente es la que se mide, porque su valor depende de lo que ocurra con la variable independiente, y permite evaluar si los datos apoyan la hipótesis.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué es una hipótesis científica?",
+        "back": "Una afirmación provisional que predice cómo cambia una variable dependiente al variar la independiente, y que puede ponerse a prueba.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "definition"
+      },
+      {
+        "front": "¿Qué son las variables de control?",
+        "back": "Las variables que se mantienen fijas para que solo cambie la independiente y el efecto observado sea atribuible a ella.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "definition"
+      },
+      {
+        "front": "¿Diferencia entre evidencia compatible y concluyente?",
+        "back": "Compatible: los datos coinciden con la predicción dentro del margen de incertidumbre de las medidas. Concluyente: además se ha repetido el experimento con control de variables, descartando explicaciones alternativas razonables.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "kind": "comparison"
+      },
+      {
+        "front": "¿Qué elementos debe llevar un eje de una gráfica experimental?",
+        "back": "Nombre de la variable, unidades entre paréntesis y escala uniforme.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "recall"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Formular la hipótesis sin indicar qué cambia y qué se mide.",
+        "why": "Al escribir deprisa, se da por hecho que 'ya se sabe' qué es la variable independiente y la dependiente, y se omiten en el enunciado.",
+        "how_to_avoid": "Antes de experimentar, escribe explícitamente: 'cambio ___ (independiente), mido ___ (dependiente), mantengo fijos ___ (controles)'."
+      },
+      {
+        "mistake": "Cambiar dos variables a la vez y sacar conclusiones.",
+        "why": "Cambiar varias cosas a la vez parece ahorrar tiempo, pero hace imposible saber cuál de ellas produjo el efecto observado.",
+        "how_to_avoid": "Diseña una tabla con una fila por prueba y revisa que, entre pruebas que se comparan, solo cambie una columna."
+      },
+      {
+        "mistake": "Confundir evidencia compatible con prueba definitiva.",
+        "why": "Cuando un primer resultado coincide con lo esperado, se tiende a darlo por demostrado y a dejar de buscar posibles errores o alternativas.",
+        "how_to_avoid": "Antes de concluir, pregúntate: '¿he repetido la medida?', '¿hay otra hipótesis que explique igual de bien estos datos?'."
+      },
+      {
+        "mistake": "Ignorar datos que no coinciden con la predicción.",
+        "why": "Los datos que no encajan resultan incómodos y se descartan como 'errores', aunque en realidad podrían señalar un problema real con la hipótesis o el experimento.",
+        "how_to_avoid": "Fija de antemano un criterio objetivo para descartar una medida (p. ej. un fallo visible del instrumento) y nunca decidas descartarla solo porque no coincide con lo esperado."
+      }
+    ],
+    "exam_notes": [
+      "En el examen, siempre identifica las tres variables (independiente, dependiente, control).",
+      "Al evaluar evidencia, indica si es compatible o concluyente y por qué."
+    ],
+    "keywords": [
+      {
+        "term": "hipótesis",
+        "definition": "Explicación provisional que relaciona dos variables y que puede ponerse a prueba con datos."
+      },
+      {
+        "term": "variable independiente",
+        "definition": "Magnitud que el experimentador cambia de forma deliberada entre pruebas."
+      },
+      {
+        "term": "variable dependiente",
+        "definition": "Magnitud que se mide para ver cómo responde al cambio de la variable independiente."
+      },
+      {
+        "term": "variable de control",
+        "definition": "Magnitud que se mantiene fija en todas las pruebas para que no afecte a la comparación."
+      },
+      {
+        "term": "evidencia",
+        "definition": "Dato experimental que se compara con la predicción de una hipótesis para evaluarla."
+      },
+      {
+        "term": "diseño experimental",
+        "definition": "Plan de un experimento que fija qué variable se cambia, cuál se mide y cuáles se controlan."
+      },
+      {
+        "term": "predicción",
+        "definition": "Resultado numérico y comprobable que se deduce de una hipótesis antes de medir."
+      }
+    ],
+    "summary": {
+      "big_idea": "El método científico avanza comparando predicciones concretas, deducidas de una hipótesis, con datos medidos en experimentos donde solo se cambia una variable y las demás se controlan.",
+      "key_points": [
+        "Una pregunta científica identifica dos variables relacionables.",
+        "Para responder a una hipótesis se cambia solo la variable independiente, se mide la variable dependiente y se fijan todas las demás (variables de control).",
+        "Los datos recogidos se comparan con la predicción dentro de su incertidumbre.",
+        "Una gráfica de la variable dependiente frente a la independiente permite ver la tendencia."
+      ],
+      "formulas": [
+        "$Y=f(X)$"
+      ],
+      "what_to_remember_if_nothing_else": "Antes de concluir, formula la predicción numérica de tu hipótesis, compárala con los datos medidos dentro de su incertidumbre, y no la declares demostrada con una sola medida."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "Libro (pendientes)_3 (ESO).pdf, tema 1, método científico",
+      "nebula (fisica)_quimica (eso)_1bach (curriculum)_master.json, FIS-01"
+    ],
+    "curriculum_refs": [
+      "LOMLOE, Física y Química 3.º ESO, saberes A: método científico y diseño experimental"
+    ],
+    "confidence_notes": [
+      "Contenido revisado y corregido tras una auditoría experta: se ajustó el análisis de errores del ejemplo de caída libre, se sustituyeron los ejercicios de plantilla sobre el péndulo por ejercicios con datos y solución, y se completaron las explicaciones del test."
+    ],
+    "internal_review": {
+      "checks": [
+        "Cada ejercicio y pregunta de test tiene ahora respuesta y resolución completa.",
+        "Las cuatro preguntas de test varían la clave correcta y explican por qué fallan los distractores.",
+        "Los keywords y prerequisitos están estructurados con definición y justificación."
+      ],
+      "fixes_applied": [
+        "Corregido el análisis del ejemplo de caída libre (el rozamiento no puede explicar un g medido mayor que 9,81).",
+        "Sustituidos los ejercicios de plantilla sobre el péndulo por ejercicios con datos numéricos y solución.",
+        "Añadida teoría sobre predicción, correlación/causalidad y réplicas."
+      ],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_02.json": {
+    "id": "L02",
+    "title": "El SI y las conversiones de unidades",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Método científico, medida y datos",
+    "unit_id": "U-ESO-01",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022 · Física y Química 3.º ESO",
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "90 min",
+    "estimated_difficulty": 1,
+    "objectives": [
+      {
+        "statement": "Reconocer las unidades básicas del SI y las magnitudes físicas que miden."
+      },
+      {
+        "statement": "Convertir longitudes, tiempos, áreas, volúmenes y masas mediante factores de conversión con las unidades escritas."
+      },
+      {
+        "statement": "Comprobar la coherencia de una conversión usando equivalencias entre unidades y el orden de magnitud del resultado."
+      },
+      {
+        "statement": "Detectar errores frecuentes de conversión, especialmente al elevar o reducir unidades de área y volumen."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Haber trabajado la diferencia entre hipótesis, variable y evidencia (lección 1), y manejar operaciones básicas, potencias de 10 y notación científica.",
+        "why_it_matters": "Convertir unidades consiste en multiplicar por fracciones iguales a 1 construidas con potencias de 10; sin soltura con potencias y notación científica es fácil perder un factor 10 o 1000 al cambiar de prefijo."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-E01-02-1",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La magnitud y la unidad son lo mismo.",
+        "correct_model": "La magnitud es la propiedad medida (longitud, masa…); la unidad es el patrón de comparación (metro, kilogramo…).",
+        "why_it_appears": "Se oye hablar indistintamente de 'la velocidad' y de 'los metros por segundo', como si fueran la misma palabra.",
+        "remediation": "Pide siempre nombrar primero la magnitud y después su unidad: 'la longitud (magnitud) se mide en metros (unidad)'."
+      },
+      {
+        "id": "MIS-E01-02-2",
+        "provenance": "SOURCE (DERIVED)",
+        "incorrect_model": "Para convertir km² a m² basta multiplicar por 1 000.",
+        "correct_model": "La longitud × 1 000 pero el área × (1 000)² = 1 000 000.",
+        "why_it_appears": "Al convertir longitudes basta multiplicar por el factor lineal, y se generaliza erróneamente la misma regla a superficies y volúmenes.",
+        "remediation": "Dibuja un cuadrado de 1 km de lado dividido en cuadrados de 1 m de lado y cuenta cuántos hay (1000×1000 = 10⁶), no solo 1000."
+      },
+      {
+        "id": "MIS-E01-02-3",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Se puede mezclar km/h y m/s en una misma fórmula.",
+        "correct_model": "Todas las magnitudes de una expresión deben estar en el mismo sistema antes de operar.",
+        "why_it_appears": "Como ambas son 'unidades de velocidad', parece que da igual cuál se use dentro de un cálculo.",
+        "remediation": "Antes de sustituir en cualquier fórmula, convierte todas las magnitudes al mismo sistema de unidades (preferiblemente el SI)."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-L02-01",
+        "title": "Magnitudes fundamentales del SI",
+        "body": "El SI define 7 magnitudes fundamentales, cada una con su unidad y símbolo: longitud (metro, m), masa (kilogramo, kg), tiempo (segundo, s), temperatura (kelvin, K), intensidad de corriente eléctrica (amperio, A), cantidad de sustancia (mol, mol) e intensidad luminosa (candela, cd). Las magnitudes derivadas se definen combinando fundamentales mediante una fórmula: la velocidad (unidad SI: m/s) se define como $v=\\dfrac{\\Delta x}{\\Delta t}$, y la densidad (unidad SI: kg/m³) como $\\rho=\\dfrac{m}{V}$; no hay que confundir la magnitud (velocidad, densidad) con su unidad (m/s, kg/m³).",
+        "provenance": "SOURCE (DERIVED)",
+        "formula": "$v=\\dfrac{\\Delta x}{\\Delta t}\\ (\\mathrm{m/s});\\quad \\rho=\\dfrac{m}{V}\\ (\\mathrm{kg/m^3})$",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 520 280\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Las 7 magnitudes fundamentales del SI\"><rect width=\"520\" height=\"280\" fill=\"#f8fafc\"/><text x=\"18\" y=\"25\" font-family=\"Arial\" font-size=\"15\" font-weight=\"700\" fill=\"#0f172a\">Las 7 magnitudes fundamentales del SI</text><text x=\"18\" y=\"50\" font-family=\"Arial\" font-size=\"12\" font-weight=\"700\" fill=\"#334155\">Magnitud</text><text x=\"260\" y=\"50\" font-family=\"Arial\" font-size=\"12\" font-weight=\"700\" fill=\"#334155\">Unidad</text><text x=\"400\" y=\"50\" font-family=\"Arial\" font-size=\"12\" font-weight=\"700\" fill=\"#334155\">Símbolo</text><line x1=\"18\" y1=\"58\" x2=\"500\" y2=\"58\" stroke=\"#94a3b8\"/><text x=\"18\" y=\"80\" font-family=\"Arial\" font-size=\"12\">longitud</text><text x=\"260\" y=\"80\" font-family=\"Arial\" font-size=\"12\">metro</text><text x=\"400\" y=\"80\" font-family=\"Arial\" font-size=\"12\">m</text><text x=\"18\" y=\"108\" font-family=\"Arial\" font-size=\"12\">masa</text><text x=\"260\" y=\"108\" font-family=\"Arial\" font-size=\"12\">kilogramo</text><text x=\"400\" y=\"108\" font-family=\"Arial\" font-size=\"12\">kg</text><text x=\"18\" y=\"136\" font-family=\"Arial\" font-size=\"12\">tiempo</text><text x=\"260\" y=\"136\" font-family=\"Arial\" font-size=\"12\">segundo</text><text x=\"400\" y=\"136\" font-family=\"Arial\" font-size=\"12\">s</text><text x=\"18\" y=\"164\" font-family=\"Arial\" font-size=\"12\">temperatura</text><text x=\"260\" y=\"164\" font-family=\"Arial\" font-size=\"12\">kelvin</text><text x=\"400\" y=\"164\" font-family=\"Arial\" font-size=\"12\">K</text><text x=\"18\" y=\"192\" font-family=\"Arial\" font-size=\"12\">intensidad de corriente</text><text x=\"260\" y=\"192\" font-family=\"Arial\" font-size=\"12\">amperio</text><text x=\"400\" y=\"192\" font-family=\"Arial\" font-size=\"12\">A</text><text x=\"18\" y=\"220\" font-family=\"Arial\" font-size=\"12\">cantidad de sustancia</text><text x=\"260\" y=\"220\" font-family=\"Arial\" font-size=\"12\">mol</text><text x=\"400\" y=\"220\" font-family=\"Arial\" font-size=\"12\">mol</text><text x=\"18\" y=\"248\" font-family=\"Arial\" font-size=\"12\">intensidad luminosa</text><text x=\"260\" y=\"248\" font-family=\"Arial\" font-size=\"12\">candela</text><text x=\"400\" y=\"248\" font-family=\"Arial\" font-size=\"12\">cd</text></svg>",
+            "caption": "Tabla de las 7 magnitudes fundamentales del SI con su unidad y símbolo."
+          }
+        ],
+        "type": "intuition",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L02-02",
+        "title": "Prefijos del SI",
+        "body": "Los prefijos multiplican la unidad base por una potencia de 10. Los más usados en 3.º ESO, de mayor a menor: giga (G) = $10^{9}$, mega (M) = $10^{6}$, kilo (k) = $10^{3}$, hecto (h) = $10^{2}$, deca (da) = $10^{1}$, unidad base = $10^{0}$, deci (d) = $10^{-1}$, centi (c) = $10^{-2}$, mili (m) = $10^{-3}$, micro (μ) = $10^{-6}$, nano (n) = $10^{-9}$. Para pasar de un prefijo a otro se multiplica o divide por la potencia de 10 correspondiente, como en una escalera, donde cada escalón hacia la derecha equivale a ×10. Ejemplo: $3{,}5\\,\\mathrm{mm}=3{,}5\\cdot10^{-3}\\,\\mathrm{m}$; $2\\,\\mathrm{dam}=2\\cdot10^{1}\\,\\mathrm{m}=20\\,\\mathrm{m}$.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [],
+        "type": "worked_rule",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L02-03",
+        "title": "Factor de conversión",
+        "body": "Un factor de conversión es una fracción igual a 1 construida con una equivalencia entre unidades, como $\\dfrac{1000\\,\\mathrm{m}}{1\\,\\mathrm{km}}$ o $\\dfrac{1\\,\\mathrm{h}}{3600\\,\\mathrm{s}}$ (a partir de $1\\,\\mathrm{km}=1000\\,\\mathrm{m}$ y $1\\,\\mathrm{h}=3600\\,\\mathrm{s}$). Se multiplica el valor por el factor y las unidades no deseadas se cancelan. Ejemplo: $72\\,\\dfrac{\\mathrm{km}}{\\mathrm{h}}\\cdot\\dfrac{1000\\,\\mathrm{m}}{1\\,\\mathrm{km}}\\cdot\\dfrac{1\\,\\mathrm{h}}{3600\\,\\mathrm{s}}=20\\,\\mathrm{m/s}$.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [],
+        "type": "worked_rule",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L02-04",
+        "title": "Magnitudes de área, volumen y capacidad",
+        "body": "Al convertir áreas, el factor de longitud se eleva al cuadrado: $1\\,\\mathrm{m^2}=(100\\,\\mathrm{cm})^2=10^{4}\\,\\mathrm{cm^2}$. Al convertir volúmenes, al cubo: $1\\,\\mathrm{m^3}=(100\\,\\mathrm{cm})^3=10^{6}\\,\\mathrm{cm^3}$. Error frecuente: usar el factor de longitud sin elevarlo. Para capacidades: $1\\,\\mathrm{L}=1\\,\\mathrm{dm^3}=1000\\,\\mathrm{cm^3}=1000\\,\\mathrm{mL}$, y $1\\,\\mathrm{m^3}=1000\\,\\mathrm{L}$, de modo que $1\\,\\mathrm{mL}=1\\,\\mathrm{cm^3}$. Para superficies de terreno se usa la hectárea: $1\\,\\mathrm{ha}=10^{4}\\,\\mathrm{m^2}$. Ejemplo de área: $2{,}5\\,\\mathrm{m^2}\\cdot\\left(\\dfrac{100\\,\\mathrm{cm}}{1\\,\\mathrm{m}}\\right)^2=2{,}5\\cdot10^{4}\\,\\mathrm{cm^2}=25\\,000\\,\\mathrm{cm^2}$.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "type": "caveat",
+        "scope": "CORE"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Velocidad en SI",
+        "statement": "Convierte 72 km/h a m/s y 4500 cm³ a litros.",
+        "steps": [
+          "Para la velocidad usamos 1 h = 3600 s y 1 km = 1000 m: 72·(1000/3600) = 20,0 m/s.",
+          "Para el volumen, 1 L = 1000 cm³: 4500 cm³ = 4,50 L.",
+          "Las unidades se cancelan en cada factor de conversión; la magnitud física no cambia.",
+          "Comprobación: 20,0 m/s·3,6 = 72 km/h."
+        ],
+        "answer": "20,0 m/s y 4,50 L.",
+        "verification": "Se comprueba por el camino inverso: 20,0 m/s × 3,6 = 72,0 km/h, y 4,50 L × 1000 = 4500 cm³; ambas coinciden con los datos de partida."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Densidad en unidades coherentes",
+        "statement": "Una pieza tiene m=0,240 kg y V=80,0 cm³. Expresa su densidad en kg/m³.",
+        "steps": [
+          "$80,0\\,\\mathrm{cm^3}\\times10^{-6}=8,00\\times10^{-5}\\,\\mathrm{m^3}$.",
+          "ρ=(m/V)=0,240/(8,00·10⁻⁵)=3,00·10³ kg/m³.",
+          "La misma densidad en g/cm³ es 3,00, porque 1 g/cm³ = 1000 kg/m³.",
+          "El resultado es compatible con un sólido denso; conviene comprobar siempre las unidades del volumen.",
+          "Comprobación: 3,00·10³ kg/m³ es coherente con un metal ligero a moderado (el aluminio tiene ≈2,70·10³ kg/m³ y el hierro ≈7,87·10³ kg/m³), así que el resultado es físicamente razonable."
+        ],
+        "answer": "ρ=3,00·10³ kg/m³.",
+        "verification": "Se comprueba convirtiendo de vuelta: 3,00·10³ kg/m³ ÷ 1000 = 3,00 g/cm³, y 0,240 kg / 3,00 g/cm³ = 80,0 cm³, que coincide con el volumen de partida."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Explica una predicción comprobable sobre conversión de unidades usando la equivalencia $1\\,\\mathrm{km}=1000\\,\\mathrm{m}$: decide si 'un coche a 90 km/h recorre más de 20 m cada segundo' es cierto, sin limitarte a repetir la regla de conversión.",
+        "scaffold": "Convierte primero 90 km/h a m/s con los factores $1000\\,\\mathrm{m}/1\\,\\mathrm{km}$ y $1\\,\\mathrm{h}/3600\\,\\mathrm{s}$, y compara el resultado con 20 m/s.",
+        "answer": "90 km/h = 90·(1000/3600) = 25,0 m/s, que es mayor que 20 m/s: la afirmación es cierta.",
+        "full_solution": "$90\\,\\dfrac{\\mathrm{km}}{\\mathrm{h}}\\cdot\\dfrac{1000\\,\\mathrm{m}}{1\\,\\mathrm{km}}\\cdot\\dfrac{1\\,\\mathrm{h}}{3600\\,\\mathrm{s}}=25{,}0\\,\\mathrm{m/s}$. Como 25,0 m/s > 20 m/s, la predicción 'recorre más de 20 m cada segundo' es correcta y se comprueba con esta única conversión."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Un grifo mal cerrado gotea 2 mL cada 5 s. ¿Cuántos litros se pierden en un día completo?",
+        "scaffold": "Calcula primero cuántos mL se pierden en 1 s, después en 1 hora (3600 s) y por último en 24 h; convierte el resultado final a litros.",
+        "answer": "34,56 L al día.",
+        "full_solution": "Caudal: $\\dfrac{2\\,\\mathrm{mL}}{5\\,\\mathrm{s}}=0{,}4\\,\\mathrm{mL/s}$. En un día hay $24\\cdot3600=86\\,400\\,\\mathrm{s}$. Volumen perdido: $0{,}4\\,\\mathrm{mL/s}\\cdot86\\,400\\,\\mathrm{s}=34\\,560\\,\\mathrm{mL}$. Convertido a litros: $34\\,560\\,\\mathrm{mL}\\cdot\\dfrac{1\\,\\mathrm{L}}{1000\\,\\mathrm{mL}}=34{,}56\\,\\mathrm{L}$."
+      }
+    ],
+    "exercises": [
+      {
+        "answer": "2,5 m³ × (1 000 L / 1 m³) = 2 500 L.",
+        "verification": "2 500 × 10⁻³ = 2,5 m³.",
+        "full_solution": "Como $1\\,\\mathrm{L}=10^{-3}\\,\\mathrm{m^3}$, en 1 m³ caben $\\dfrac{1}{10^{-3}}=1000$ litros; ese es el factor de conversión $\\dfrac{1000\\,\\mathrm{L}}{1\\,\\mathrm{m^3}}$ (la fracción inversa de la equivalencia dada). Aplicándolo: $2{,}5\\,\\mathrm{m^3}\\cdot\\dfrac{1000\\,\\mathrm{L}}{1\\,\\mathrm{m^3}}=2500\\,\\mathrm{L}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "Convierte 2,5 m³ a litros. (1 L = 1 dm³ = 10⁻³ m³)",
+        "hints": [],
+        "reasoning": [
+          "1 L = 10⁻³ m³, así que el factor inverso es 1000 L por cada m³.",
+          "Se multiplica 2,5 m³ por ese factor y se cancelan los m³."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "answer": "400 m=0,400 km=40 000 cm.",
+        "verification": "0,400 × 1 000 = 400 m y 40 000 / 100 = 400 m.",
+        "full_solution": "$400\\,\\mathrm{m}\\cdot\\dfrac{1\\,\\mathrm{km}}{1000\\,\\mathrm{m}}=0{,}400\\,\\mathrm{km}$. $400\\,\\mathrm{m}\\cdot\\dfrac{100\\,\\mathrm{cm}}{1\\,\\mathrm{m}}=4{,}00\\cdot10^{4}\\,\\mathrm{cm}=40\\,000\\,\\mathrm{cm}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "Una pista de atletismo mide 400 m. ¿Cuántos km es? ¿Cuántos cm?",
+        "hints": [],
+        "reasoning": [
+          "Para pasar a km se divide entre 1000.",
+          "Para pasar a cm se multiplica por 100."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Convierte 54 km/h a m/s y 2,50 g/cm³ a kg/m³, mostrando los factores de conversión.",
+        "answer": "54 km/h = 15,0 m/s; 2,50 g/cm³ = 2,50·10³ kg/m³.",
+        "full_solution": "$54\\,\\dfrac{\\mathrm{km}}{\\mathrm{h}}\\cdot\\dfrac{1000\\,\\mathrm{m}}{1\\,\\mathrm{km}}\\cdot\\dfrac{1\\,\\mathrm{h}}{3600\\,\\mathrm{s}}=15{,}0\\,\\mathrm{m/s}$. Para la densidad: $2{,}50\\,\\dfrac{\\mathrm{g}}{\\mathrm{cm^3}}\\cdot\\dfrac{1\\,\\mathrm{kg}}{1000\\,\\mathrm{g}}\\cdot\\left(\\dfrac{100\\,\\mathrm{cm}}{1\\,\\mathrm{m}}\\right)^3=2{,}50\\cdot10^{3}\\,\\mathrm{kg/m^3}$."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Una densidad es 7800 kg/m³. Exprésala en g/cm³ y comprueba la conversión inversa.",
+        "answer": "7800 kg/m³ = 7,80 g/cm³ (valor típico del hierro).",
+        "full_solution": "$7800\\,\\dfrac{\\mathrm{kg}}{\\mathrm{m^3}}\\cdot\\dfrac{1000\\,\\mathrm{g}}{1\\,\\mathrm{kg}}\\cdot\\left(\\dfrac{1\\,\\mathrm{m}}{100\\,\\mathrm{cm}}\\right)^3=7800\\cdot10^{-3}\\,\\mathrm{g/cm^3}=7{,}80\\,\\mathrm{g/cm^3}$. Comprobación inversa: $7{,}80\\,\\mathrm{g/cm^3}\\cdot1000=7800\\,\\mathrm{kg/m^3}$."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Un alumno calcula la velocidad media de un coche que recorre 90 km en 1,5 h de tres formas distintas y obtiene: (A) 60 km/h; (B) 60 m/s; (C) 16,7 m/s. ¿Cuál mezcla mal las unidades y cuál es correcta?",
+        "answer": "(A) 60 km/h es correcto en km/h (90/1,5=60). (B) 60 m/s es incorrecto: parece que solo cambiaron 'km' por 'm' sin convertir la hora a segundos. (C) 16,7 m/s es el resultado correcto en el SI.",
+        "full_solution": "Velocidad media: $v=\\dfrac{90\\,\\mathrm{km}}{1{,}5\\,\\mathrm{h}}=60\\,\\mathrm{km/h}$, correcto en km/h. Para pasar a m/s hay que convertir km a m Y h a s: $60\\,\\dfrac{\\mathrm{km}}{\\mathrm{h}}\\cdot\\dfrac{1000\\,\\mathrm{m}}{1\\,\\mathrm{km}}\\cdot\\dfrac{1\\,\\mathrm{h}}{3600\\,\\mathrm{s}}\\approx16{,}7\\,\\mathrm{m/s}$. El resultado (B), 60 m/s, se obtiene cambiando solo 'km' por 'm' pero olvidando convertir la hora a segundos: ese es el error de mezclar unidades."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Dibuja o describe la cadena de factores que convierte 5 km en metros y 2 h en segundos, indicando en qué paso se cancela cada unidad.",
+        "answer": "5 km → 5·1000 m = 5000 m (se cancela 'km'); 2 h → 2·3600 s = 7200 s (se cancela 'h').",
+        "full_solution": "$5\\,\\mathrm{km}\\cdot\\dfrac{1000\\,\\mathrm{m}}{1\\,\\mathrm{km}}=5000\\,\\mathrm{m}$: el 'km' del numerador se cancela con el 'km' del denominador del factor, quedando solo 'm'. De forma análoga, $2\\,\\mathrm{h}\\cdot\\dfrac{3600\\,\\mathrm{s}}{1\\,\\mathrm{h}}=7200\\,\\mathrm{s}$: la 'h' se cancela y queda 's'. Encadenando ambos factores se puede convertir directamente una velocidad en km/h a m/s, como en el ejemplo resuelto de 72 km/h."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Explica por qué multiplicar una longitud por 1000 no basta para convertir cm³ a m³.",
+        "answer": "Porque el volumen depende del cubo de la longitud: al pasar de cm a m cada dimensión se divide entre 100, pero el volumen se divide entre 100³=10⁶, no solo entre 100.",
+        "full_solution": "Un volumen tiene tres dimensiones (largo × ancho × alto), cada una en cm. Al convertir cada dimensión de cm a m se divide entre 100, así que el volumen completo se divide entre $100\\times100\\times100=10^{6}$: $1\\,\\mathrm{m^3}=10^{6}\\,\\mathrm{cm^3}$. Multiplicar solo una vez por el factor de longitud (÷100) sería como convertir solo una de las tres dimensiones y dejar las otras dos sin convertir, lo que da un resultado 10 000 veces demasiado grande."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña una tabla de equivalencias que permita convertir automáticamente una medida con prefijos y potencias (desde nano hasta giga).",
+        "answer": "Tabla: n=10⁻⁹, μ=10⁻⁶, m=10⁻³, c=10⁻², d=10⁻¹, (unidad)=10⁰, da=10¹, h=10², k=10³, M=10⁶, G=10⁹; para convertir de un prefijo a otro se multiplica por 10 elevado a la diferencia de exponentes.",
+        "full_solution": "Cada prefijo corresponde a una potencia de 10 (ver teoría). Para convertir, por ejemplo, de mm a km: mm = 10⁻³ m, km = 10³ m; en general, para pasar de un prefijo con exponente $a$ a otro con exponente $b$, se multiplica por $10^{a-b}$. Así, $1\\,\\mathrm{mm}=10^{-3}\\,\\mathrm{m}=10^{-3-3}\\,\\mathrm{km}=10^{-6}\\,\\mathrm{km}$. Una tabla con los exponentes de cada prefijo (n=−9 … G=9) permite automatizar cualquier conversión sin tener que memorizar cada caso por separado."
+      }
+    ],
+    "exam_questions": [
+      {
+        "answer": "0,015 m³ × 1 000 L/m³ = 15 L. 0,015 m³ × 10⁶ cm³/m³ = 15 000 cm³.",
+        "verification": "15 000 cm³ = 15 000/1 000 L = 15 L.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": [],
+        "statement": "Un depósito tiene 0,015 m³ de agua. Expresa ese volumen en litros y en cm³.",
+        "marks": 3,
+        "mark_scheme": [
+          "1 punto: convierte correctamente $0{,}015\\,m^3$ en $15\\,L$.",
+          "1 punto: convierte correctamente $0{,}015\\,m^3$ en $15\\,000\\,cm^3$.",
+          "1 punto: muestra un factor de conversión o equivalencia de volumen coherente."
+        ]
+      }
+    ],
+    "challenge_questions": [
+      {
+        "answer": "0,5 km = 500 m. Área = 500 × 200 = 100 000 m² = 10 ha.",
+        "verification": "100 000 / 10 000 = 10 ha.",
+        "full_solution": "Primero se convierte 0,5 km a m: $0{,}5\\,\\mathrm{km}\\cdot1000=500\\,\\mathrm{m}$. El área es $A=500\\,\\mathrm{m}\\times200\\,\\mathrm{m}=100\\,000\\,\\mathrm{m^2}$. Como $1\\,\\mathrm{ha}=10\\,000\\,\\mathrm{m^2}$, el área en hectáreas es $100\\,000/10\\,000=10\\,\\mathrm{ha}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": [],
+        "statement": "Una parcela mide 0,5 km de largo y 200 m de ancho. Calcula el área en m² y en ha (1 ha = 10 000 m²)."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L02-01",
+        "stem": "¿Cuántos mL hay en 0,25 L?",
+        "options": [
+          {
+            "key": "A",
+            "text": "2,5 mL",
+            "why_wrong": "Resulta de dividir por 100 en vez de multiplicar por 1000 (1 L = 1000 mL)."
+          },
+          {
+            "key": "B",
+            "text": "250 mL"
+          },
+          {
+            "key": "C",
+            "text": "0,25 mL",
+            "why_wrong": "Es el mismo número sin convertir: olvida aplicar el factor 1000 mL/1 L."
+          },
+          {
+            "key": "D",
+            "text": "2500 mL",
+            "why_wrong": "Resulta de multiplicar por 10 000 en lugar de por 1000."
+          }
+        ],
+        "explanation": "1 L = 1000 mL, así que 0,25 L × 1000 mL/L = 250 mL.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L02-02",
+        "stem": "¿Cuántos cm² hay en 1 m²?",
+        "options": [
+          {
+            "key": "A",
+            "text": "1 000 000",
+            "why_wrong": "Es el número de cm³ que hay en 1 m³ (factor al cubo), no de cm² en 1 m² (factor al cuadrado)."
+          },
+          {
+            "key": "B",
+            "text": "100",
+            "why_wrong": "Es el factor lineal (1 m = 100 cm) sin elevarlo al cuadrado, que es necesario para áreas."
+          },
+          {
+            "key": "C",
+            "text": "10 000"
+          },
+          {
+            "key": "D",
+            "text": "1 000",
+            "why_wrong": "No corresponde a ningún factor de conversión de longitud, área o volumen entre m y cm."
+          }
+        ],
+        "explanation": "El área se convierte elevando el factor de longitud al cuadrado: $1\\,\\mathrm{m^2}=(100\\,\\mathrm{cm})^2=10^4\\,\\mathrm{cm^2}=10\\,000\\,\\mathrm{cm^2}$.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L02-03",
+        "stem": "Para convertir 108 km/h a m/s el resultado correcto es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "38 880 m/s",
+            "why_wrong": "Resulta de multiplicar por 360 en vez de dividir por 3,6 (se han invertido los factores de conversión)."
+          },
+          {
+            "key": "B",
+            "text": "0,03 m/s",
+            "why_wrong": "Es un error de cálculo con la coma decimal mal colocada."
+          },
+          {
+            "key": "C",
+            "text": "108 000 m/s",
+            "why_wrong": "Convierte los km a m (×1000) pero olvida convertir las horas a segundos."
+          },
+          {
+            "key": "D",
+            "text": "30 m/s"
+          }
+        ],
+        "explanation": "$108\\,\\dfrac{\\mathrm{km}}{\\mathrm{h}}\\cdot\\dfrac{1000\\,\\mathrm{m}}{1\\,\\mathrm{km}}\\cdot\\dfrac{1\\,\\mathrm{h}}{3600\\,\\mathrm{s}}=30\\,\\mathrm{m/s}$; una forma rápida es dividir entre 3,6: $108/3{,}6=30$.",
+        "correct": "D"
+      },
+      {
+        "id": "MC-L02-04",
+        "stem": "¿Cuál de estas es una magnitud fundamental en el SI?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Densidad",
+            "why_wrong": "Es una magnitud derivada: se define como masa entre volumen (kg/m³)."
+          },
+          {
+            "key": "B",
+            "text": "Presión",
+            "why_wrong": "Es una magnitud derivada: se define como fuerza entre superficie."
+          },
+          {
+            "key": "C",
+            "text": "Temperatura (kelvin)"
+          },
+          {
+            "key": "D",
+            "text": "Velocidad",
+            "why_wrong": "Es una magnitud derivada: se define como distancia entre tiempo (m/s)."
+          }
+        ],
+        "explanation": "La temperatura (kelvin, K) es una de las 7 magnitudes fundamentales del SI; velocidad, densidad y presión se obtienen combinando magnitudes fundamentales, por lo que son derivadas.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Cuántos m/s son 1 km/h?",
+        "back": "$1\\,\\mathrm{km/h}=\\dfrac{1000}{3600}\\,\\mathrm{m/s}\\approx0,278\\,\\mathrm{m/s}$.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "recall"
+      },
+      {
+        "front": "¿Cuántos cm² tiene 1 m²?",
+        "back": "10 000 cm² (no 100, porque el área implica el cuadrado del factor lineal).",
+        "provenance": "GENERATED (EXPLANATION)",
+        "kind": "recall"
+      },
+      {
+        "front": "¿Diferencia entre magnitud fundamental y derivada?",
+        "back": "Fundamental: definida independientemente (metro, kilogramo, segundo…). Derivada: se obtiene de fundamentales (m/s, kg/m³…).",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "comparison"
+      },
+      {
+        "front": "¿Qué es un factor de conversión?",
+        "back": "Una fracción igual a 1 que expresa una equivalencia entre unidades, usada para cancelar las unidades no deseadas.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "definition"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Usar el factor lineal para convertir áreas o volúmenes.",
+        "why": "Al convertir longitudes basta un solo factor, y se aplica la misma idea sin darse cuenta de que el área o el volumen tienen más de una dimensión.",
+        "how_to_avoid": "Antes de convertir, cuenta cuántas 'dimensiones' tiene la magnitud (1 para longitud, 2 para área, 3 para volumen) y eleva el factor a esa potencia."
+      },
+      {
+        "mistake": "Invertir el factor de conversión.",
+        "why": "Al multiplicar en vez de dividir (o viceversa), las unidades no se cancelan correctamente y el resultado queda con un valor absurdamente grande o pequeño.",
+        "how_to_avoid": "Escribe el factor como fracción y comprueba que la unidad que quieres eliminar quede en la posición contraria (arriba si estaba abajo, y viceversa) antes de multiplicar."
+      },
+      {
+        "mistake": "Mezclar unidades de distintos sistemas en una misma fórmula.",
+        "why": "Al sustituir datos directamente en una fórmula, se olvida que todas las magnitudes deben estar expresadas en el mismo sistema de unidades antes de operar.",
+        "how_to_avoid": "Convierte todos los datos al SI (o al mismo sistema) antes de sustituir en cualquier fórmula, nunca después."
+      },
+      {
+        "mistake": "Omitir las unidades en el resultado.",
+        "why": "Al centrarse en el cálculo numérico, se olvida escribir la unidad final, lo que hace el resultado ambiguo o sin sentido físico.",
+        "how_to_avoid": "Acostumbra a escribir la unidad en cada paso de la conversión, no solo al final, para comprobar que se cancela correctamente."
+      }
+    ],
+    "exam_notes": [
+      "Escribe siempre el factor de conversión como fracción y cancela unidades antes de calcular.",
+      "En área, el factor va elevado al cuadrado; en volumen, al cubo."
+    ],
+    "keywords": [
+      {
+        "term": "SI",
+        "definition": "Sistema Internacional de Unidades: el conjunto de unidades de medida adoptado internacionalmente para la ciencia."
+      },
+      {
+        "term": "magnitud fundamental",
+        "definition": "Magnitud definida de forma independiente, como la longitud, la masa o el tiempo, que no se obtiene combinando otras."
+      },
+      {
+        "term": "magnitud derivada",
+        "definition": "Magnitud que se obtiene combinando magnitudes fundamentales mediante una fórmula, como la velocidad o la densidad."
+      },
+      {
+        "term": "prefijo",
+        "definition": "Partícula que se añade delante de una unidad para multiplicarla por una potencia de 10, como kilo- o mili-."
+      },
+      {
+        "term": "factor de conversión",
+        "definition": "Fracción igual a 1 construida con una equivalencia entre unidades, que se usa para cambiar de unidad sin cambiar la magnitud."
+      },
+      {
+        "term": "unidades",
+        "definition": "Patrones de comparación que permiten expresar el valor numérico de una magnitud medida."
+      }
+    ],
+    "summary": {
+      "big_idea": "Toda medida necesita una unidad del SI y, cuando esa unidad no es adecuada, se cambia multiplicando por factores de conversión que cancelan las unidades no deseadas sin alterar la magnitud física.",
+      "key_points": [
+        "El SI define 7 magnitudes fundamentales, cada una con su unidad y símbolo.",
+        "Los prefijos multiplican la unidad base por potencias de 10.",
+        "Un factor de conversión es una fracción igual a 1 construida con la equivalencia entre unidades.",
+        "Al convertir áreas, el factor de longitud se eleva al cuadrado; al convertir volúmenes, al cubo."
+      ],
+      "formulas": [
+        "$1\\,\\mathrm{km}=1000\\,\\mathrm{m};\\quad 1\\,\\mathrm{h}=3600\\,\\mathrm{s}$"
+      ],
+      "what_to_remember_if_nothing_else": "Multiplica por factores de conversión iguales a 1 y cancela unidades; en áreas eleva el factor al cuadrado y en volúmenes al cubo."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "nebula (fisica)_quimica (eso)_1bach (curriculum)_master.json, FIS-01-01, FIS-01-02"
+    ],
+    "curriculum_refs": [
+      "LOMLOE, Física y Química 3.º ESO, saberes A: medida y unidades"
+    ],
+    "confidence_notes": [
+      "Contenido revisado y corregido tras una auditoría experta: título corregido ('SI' en vez de 'Si'), figura sustituida por la tabla de magnitudes fundamentales, teoría ampliada (7 magnitudes, prefijos G–n, capacidad, hectárea) y ejercicios de plantilla sustituidos por ejercicios con datos y solución."
+    ],
+    "internal_review": {
+      "checks": [
+        "Cada ejercicio y pregunta de test tiene ahora respuesta y resolución completa.",
+        "Las cuatro preguntas de test varían la clave correcta y explican por qué fallan los distractores.",
+        "Los keywords y prerequisitos están estructurados con definición y justificación."
+      ],
+      "fixes_applied": [
+        "Corregido el título ('Si' → 'SI') en todos los campos donde aparecía.",
+        "Sustituida la figura de curva de calentamiento por una tabla de las 7 magnitudes fundamentales.",
+        "Ampliada la teoría con capacidad (L, dm³, mL), hectárea y prefijos adicionales.",
+        "Sustituido el guiado sin sentido sobre 'especies' por un ejercicio real de caudal."
+      ],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_03.json": {
+    "id": "L03",
+    "title": "Incertidumbre y resolución",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Método científico, medida y datos",
+    "unit_id": "U-ESO-01",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022 · Física y Química 3.º ESO",
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "105 min",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Distinguir resolución, precisión, exactitud e incertidumbre en una medición experimental."
+      },
+      {
+        "statement": "Expresar el resultado de una medida con una incertidumbre y una unidad coherentes con el instrumento empleado."
+      },
+      {
+        "statement": "Comparar conjuntos de medidas para reconocer dispersión, sesgo sistemático y proximidad al valor de referencia."
+      },
+      {
+        "statement": "Proponer una mejora concreta del procedimiento para reducir una fuente de incertidumbre identificada."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Haber comprendido el SI y las conversiones de unidades, y saber construir y cancelar factores de conversión.",
+        "why_it_matters": "Para expresar una medida como (valor ± incertidumbre) unidad necesitas manejar con soltura las unidades del SI y sus prefijos; además, calcular errores relativos implica dividir magnitudes con unidades coherentes."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-E01-03-1",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Más decimales siempre significa más precisión.",
+        "correct_model": "Los decimales que tiene sentido escribir dependen de la resolución del instrumento; escribir más decimales de los que el instrumento puede distinguir no aumenta ni la precisión ni la exactitud de la medida.",
+        "why_it_appears": "Una calculadora siempre da muchos decimales, y se tiende a copiarlos todos aunque el instrumento de medida no pueda distinguir esa cantidad de cifras.",
+        "remediation": "Redondea siempre el resultado final a la resolución (o incertidumbre) del instrumento usado, nunca a los decimales que da la calculadora."
+      },
+      {
+        "id": "MIS-E01-03-2",
+        "provenance": "SOURCE (DERIVED)",
+        "incorrect_model": "Preciso y exacto significan lo mismo.",
+        "correct_model": "Preciso: las medidas repetidas se agrupan cerca unas de otras. Exacto: el valor obtenido está cerca del valor real. Pueden darse por separado: un instrumento mal calibrado puede ser muy preciso (medidas muy agrupadas) pero no exacto.",
+        "why_it_appears": "En el lenguaje cotidiano 'preciso' se usa como sinónimo de 'exacto' o 'correcto', sin distinguir si las medidas se repiten cerca entre sí o si se acercan al valor real.",
+        "remediation": "Usa el ejemplo de las dianas: varios tiros agrupados lejos del centro son precisos pero no exactos; varios tiros dispersos pero centrados en promedio son exactos pero no precisos."
+      },
+      {
+        "id": "MIS-E01-03-3",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El cero siempre es significativo.",
+        "correct_model": "Los ceros a la izquierda del primer dígito no son significativos.",
+        "why_it_appears": "Se generaliza la regla de que 'los ceros entre dígitos son significativos' a todos los ceros, incluidos los que solo sitúan la coma decimal.",
+        "remediation": "Comprueba siempre la posición del cero: si está a la izquierda del primer dígito no nulo (como en 0,0034), no es significativo; si está entre dígitos o al final de un decimal, sí lo es."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-L03-01",
+        "title": "Resolución e incertidumbre",
+        "body": "Si te mides la altura con una cinta métrica de sastre, obtienes un valor redondeado al centímetro. Si usas un tallímetro de hospital, puedes llegar al milímetro. ¿Cuál es más fiable? La respuesta está en dos conceptos clave: **resolución** e **incertidumbre**.\n\nLa **resolución** de un instrumento es la división más pequeña que puede leer. Una regla graduada en milímetros tiene resolución de 1 mm; un calibre digital puede llegar a 0,01 mm. A mayor resolución, más detalle capturas.\n\nLa **incertidumbre** es el margen de duda asociado a cualquier medida. Aunque uses un instrumento muy fino, siempre existe un intervalo dentro del cual podría estar el valor real. Como regla general, la incertidumbre de una sola medida es la mitad de la resolución del instrumento.\n\nPor ejemplo, si mides 1,562 m con un metro de resolución 1 mm, la incertidumbre es ±0,5 mm = ±0,0005 m. Tu resultado se escribe: $h = (1{,}562 \\pm 0{,}001)$ m (redondeando la incertidumbre a una cifra).\n\nLa incertidumbre no es un error tuyo: es una propiedad inevitable de toda medida. Reconocerla es lo que distingue una medida científica de una estimación a ojo.",
+        "provenance": "SOURCE (DERIVED)",
+        "formula": "$x=(\\bar{x}\\pm u)\\,\\mathrm{unidad}$",
+        "assets": [],
+        "type": "intuition",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L03-02",
+        "title": "Precisión y exactitud",
+        "body": "Precisión y exactitud se confunden a menudo, pero son cosas muy distintas. Piensa en una diana:\n\n• **Preciso y exacto**: todos los dardos agrupados en el centro. Tus medidas son consistentes entre sí Y cercanas al valor real. Es el escenario ideal.\n\n• **Preciso pero no exacto**: los dardos están muy juntos, pero lejos del centro. Tus medidas son repetibles, pero hay un error sistemático (quizá el instrumento está mal calibrado).\n\n• **Exacto pero no preciso**: los dardos están dispersos, pero su centro coincide con la diana. En promedio aciertas, pero cada medida individual puede estar lejos.\n\n• **Ni preciso ni exacto**: dardos dispersos y lejos del centro. Las medidas son inútiles.\n\nLa **precisión** se mejora repitiendo medidas y tomando la media. La **exactitud** se mejora calibrando el instrumento o cambiando el método.\n\nEn el laboratorio, una balanza que siempre marca 2 g de más es precisa (da resultados repetibles) pero inexacta. Si la calibras, pasa a ser precisa y exacta. Si la mesa vibra, pierde precisión, aunque la media podría seguir siendo exacta.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Cuatro dianas ilustrando precisión y exactitud\" font-family=\"system-ui, sans-serif\" style=\"background:var(--bg,#fbfcfd)\"><style>text{fill:var(--text,#20302a)}.t{font-size:13px;font-weight:bold;text-anchor:middle}.l{font-size:11px;text-anchor:middle;font-weight:bold}.s{font-size:9px;text-anchor:middle;fill:var(--axes,#24312c)}</style><text class=\"t\" x=\"300\" y=\"22\">Precisión y exactitud</text><circle cx=\"145\" cy=\"115\" r=\"52\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.3\"/><circle cx=\"145\" cy=\"115\" r=\"35\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.4\"/><circle cx=\"145\" cy=\"115\" r=\"18\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.6\"/><circle cx=\"145\" cy=\"115\" r=\"3\" fill=\"#c17a17\"/><circle cx=\"143\" cy=\"112\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"147\" cy=\"116\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"144\" cy=\"118\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"148\" cy=\"113\" r=\"4\" fill=\"#0e7a68\"/><circle cx=\"145\" cy=\"114\" r=\"4\" fill=\"#0e7a68\"/><text class=\"l\" x=\"145\" y=\"182\" fill=\"#0e7a68\">Preciso + Exacto</text><text class=\"s\" x=\"145\" y=\"195\">✓ El ideal</text><circle cx=\"435\" cy=\"115\" r=\"52\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.3\"/><circle cx=\"435\" cy=\"115\" r=\"35\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.4\"/><circle cx=\"435\" cy=\"115\" r=\"18\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.6\"/><circle cx=\"435\" cy=\"115\" r=\"3\" fill=\"#c17a17\"/><circle cx=\"458\" cy=\"92\" r=\"4\" fill=\"#8a3d6b\"/><circle cx=\"460\" cy=\"96\" r=\"4\" fill=\"#8a3d6b\"/><circle cx=\"456\" cy=\"94\" r=\"4\" fill=\"#8a3d6b\"/><circle cx=\"461\" cy=\"90\" r=\"4\" fill=\"#8a3d6b\"/><circle cx=\"457\" cy=\"95\" r=\"4\" fill=\"#8a3d6b\"/><text class=\"l\" x=\"435\" y=\"182\" fill=\"#8a3d6b\">Preciso + Inexacto</text><text class=\"s\" x=\"435\" y=\"195\">Error sistemático</text><circle cx=\"145\" cy=\"250\" r=\"52\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.3\"/><circle cx=\"145\" cy=\"250\" r=\"35\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.4\"/><circle cx=\"145\" cy=\"250\" r=\"18\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.6\"/><circle cx=\"145\" cy=\"250\" r=\"3\" fill=\"#c17a17\"/><circle cx=\"130\" cy=\"235\" r=\"4\" fill=\"#c17a17\"/><circle cx=\"160\" cy=\"260\" r=\"4\" fill=\"#c17a17\"/><circle cx=\"140\" cy=\"268\" r=\"4\" fill=\"#c17a17\"/><circle cx=\"155\" cy=\"238\" r=\"4\" fill=\"#c17a17\"/><circle cx=\"135\" cy=\"255\" r=\"4\" fill=\"#c17a17\"/><text class=\"l\" x=\"145\" y=\"315\" fill=\"#c17a17\">Impreciso + Exacto</text><circle cx=\"435\" cy=\"250\" r=\"52\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.3\"/><circle cx=\"435\" cy=\"250\" r=\"35\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.4\"/><circle cx=\"435\" cy=\"250\" r=\"18\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\" opacity=\"0.6\"/><circle cx=\"435\" cy=\"250\" r=\"3\" fill=\"#c17a17\"/><circle cx=\"415\" cy=\"230\" r=\"4\" fill=\"var(--axes,#24312c)\"/><circle cx=\"460\" cy=\"268\" r=\"4\" fill=\"var(--axes,#24312c)\"/><circle cx=\"425\" cy=\"270\" r=\"4\" fill=\"var(--axes,#24312c)\"/><circle cx=\"455\" cy=\"235\" r=\"4\" fill=\"var(--axes,#24312c)\"/><circle cx=\"420\" cy=\"255\" r=\"4\" fill=\"var(--axes,#24312c)\"/><text class=\"l\" x=\"435\" y=\"315\" fill=\"var(--axes,#24312c)\">Impreciso + Inexacto</text></svg>",
+            "caption": "Cuatro escenarios de precisión y exactitud representados como impactos en una diana."
+          }
+        ],
+        "type": "caveat",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L03-03",
+        "title": "Cifras significativas",
+        "body": "¿Cuántas cifras merece la pena escribir en un resultado? Las **cifras significativas** son las que realmente aportan información fiable sobre tu medida.\n\nReglas básicas:\n\n• Todos los dígitos distintos de cero son significativos: 345 tiene 3 cifras significativas.\n\n• Los ceros entre dígitos significativos cuentan: 3,05 tiene 3 cifras significativas.\n\n• Los ceros a la izquierda no cuentan (solo sitúan la coma): 0,0042 tiene 2 cifras significativas.\n\n• Los ceros a la derecha de la coma sí cuentan: 2,30 tiene 3 cifras significativas (indica que mediste hasta las centésimas).\n\nAl operar, el resultado no puede tener más cifras significativas que el dato menos preciso. Si multiplicas $3{,}2 \\times 1{,}456$, el resultado tiene 2 cifras significativas: $4{,}7$, no $4{,}6592$.\n\nEn sumas y restas, lo que importa es la posición decimal: el resultado se redondea a la misma posición decimal que el sumando menos preciso.\n\nEscribir más cifras de las que permite tu instrumento es un engaño visual: da falsa sensación de precisión. Menos cifras de las debidas desperdician información que tu instrumento sí te dio.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [],
+        "type": "formalisation",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L03-04",
+        "title": "Expresar un resultado con incertidumbre",
+        "body": "Cuando mides y obtienes un número, ese número solo vale algo si va acompañado de su incertidumbre. Es la diferencia entre decir «la mesa mide 1,5 m» y «la mesa mide (1,502 ± 0,002) m».\n\nPara **expresar un resultado con incertidumbre** sigue estos pasos:\n\n1. Calcula el valor central: si has repetido la medida varias veces, es la media aritmética.\n\n2. Estima la incertidumbre: con una sola medida, toma la mitad de la resolución; con varias medidas, calcula la desviación o usa el rango dividido entre dos.\n\n3. Redondea la incertidumbre a 1 o 2 cifras significativas.\n\n4. Redondea el valor central hasta la misma posición decimal que la incertidumbre.\n\n5. Escribe el resultado: $x = (\\text{valor} \\pm \\text{incertidumbre})$ unidad.\n\nEjemplo: mides 5 veces la longitud de un bolígrafo y obtienes 14,1; 14,3; 14,2; 14,2; 14,1 cm. Media = 14,18 cm. El rango es 14,3 − 14,1 = 0,2 cm, así que la incertidumbre ≈ 0,1 cm. Resultado: $L = (14{,}2 \\pm 0{,}1)$ cm.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "type": "worked_rule",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L03-05",
+        "title": "Medidas repetidas y errores",
+        "body": "Una sola medida puede engañarte. Si mides la masa de una moneda y obtienes 7,48 g, ¿cómo sabes que no cometiste un error? Repetir la medida es la forma más sencilla de ganar confianza.\n\nAl repetir, aparecen pequeñas diferencias: 7,48; 7,51; 7,49; 7,50; 7,47 g. Estas variaciones son **errores aleatorios**: fluctuaciones imprevisibles que unas veces dan de más y otras de menos. Se reducen tomando la media de muchas medidas.\n\nPero hay otro tipo: el **error sistemático**, que siempre empuja la medida en la misma dirección. Si la balanza no está a cero antes de pesar, todas tus medidas saldrán desplazadas. Repetir no corrige un error sistemático; necesitas recalibrar o cambiar de método.\n\nLa diferencia entre el valor medido y el valor aceptado se llama **error absoluto**: $E_a = |x_{\\text{medido}} - x_{\\text{real}}|$. El **error relativo** lo expresa como fracción del valor real: $E_r = \\dfrac{E_a}{x_{\\text{real}}} \\times 100\\%$.\n\nUn error absoluto de 0,5 g es enorme si pesas una pastilla de 0,1 g, pero insignificante si pesas una sandía de 5 kg. El error relativo te dice cuánto importa realmente.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "formula": "$\\bar{x}=\\dfrac{\\sum x_i}{n};\\quad u\\approx\\dfrac{x_{\\max}-x_{\\min}}{2};\\quad E_r=\\dfrac{E_a}{x_{\\text{ref}}}\\cdot100\\,\\%$",
+        "assets": [],
+        "type": "caveat",
+        "scope": "CORE"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Medidas repetidas",
+        "statement": "Con una regla de resolución 0,1 cm se miden cuatro longitudes: 10,2; 10,3; 10,1 y 10,2 cm. Calcula la media, la semidispersión y expresa un resultado razonable.",
+        "steps": [
+          "La media es $\\bar{x}=\\dfrac{10{,}2+10{,}3+10{,}1+10{,}2}{4}=10{,}20\\,\\mathrm{cm}$.",
+          "La semidispersión de las medidas es $u=\\dfrac{10{,}3-10{,}1}{2}=0{,}1\\,\\mathrm{cm}$; como la incertidumbre instrumental sería $0{,}1/2=0{,}05\\,\\mathrm{cm}$, se toma la mayor: $u=\\max(0{,}1;\\,0{,}05)=0{,}1\\,\\mathrm{cm}$.",
+          "Se redondea la media a la misma cifra decimal que la incertidumbre (décimas): $x=(10{,}2\\pm0{,}1)\\,\\mathrm{cm}$.",
+          "La incertidumbre no debe escribirse con más cifras significativas que las que permite la dispersión de los datos (aquí, una cifra: 0,1 cm).",
+          "Comprobación: las cuatro medidas (10,1 a 10,3 cm) quedan dentro del intervalo [10,1; 10,3] cm definido por (10,2±0,1) cm, por lo que el resultado es coherente con los datos."
+        ],
+        "answer": "x=(10,2±0,1) cm.",
+        "verification": "Se comprueba que el intervalo (10,2±0,1) cm = [10,1; 10,3] cm contiene efectivamente las cuatro medidas originales."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Error relativo",
+        "statement": "Un tiempo experimental es 2,48±0,04 s y el valor de referencia es 2,50 s. Calcula el error relativo porcentual.",
+        "steps": [
+          "El error absoluto es |2,48-2,50|=0,02 s.",
+          "El error relativo es $\\dfrac{0,02}{2,50}=0,008$.",
+          "En porcentaje, 0,008·100=0,80%.",
+          "Como el error está por debajo de la incertidumbre relativa $\\dfrac{0,04}{2,48}\\approx1,6\\%$, la discrepancia es compatible.",
+          "Comprobación: un error relativo del 0,80 % es razonable para una medida de tiempo con cronómetro manual, y al ser menor que la incertidumbre relativa de la propia medida (≈1,6 %), la discrepancia no indica un problema real."
+        ],
+        "answer": "Error relativo: 0,80%.",
+        "verification": "Se comprueba que 0,80 % < 1,6 % (incertidumbre relativa de la medida), por lo que el resultado experimental es compatible con el valor de referencia."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Diseña una prueba para decidir si dos reglas distintas (una con resolución 1 mm y otra con resolución 0,1 mm) dan el mismo resultado al medir el grosor de un libro. Fija la magnitud que mides, dos controles y el criterio de incertidumbre que usarás para comparar.",
+        "scaffold": "Calcula la incertidumbre de cada regla como la mitad de su resolución, expresa cada medida como (valor ± incertidumbre) y comprueba si los intervalos se solapan.",
+        "answer": "Se mide el mismo libro con ambas reglas, en el mismo punto y sin comprimirlo (controles). Si los intervalos [valor−incertidumbre, valor+incertidumbre] de ambas reglas se solapan, las medidas son compatibles aunque los valores centrales no sean idénticos.",
+        "full_solution": "Magnitud: grosor del libro (mm). Controles: mismo libro, mismo punto de medida, sin presionar las tapas. Con la regla de 1 mm, la incertidumbre elemental es 0,5 mm; con la de 0,1 mm, es 0,05 mm. Si, por ejemplo, la regla gruesa da (18±0,5) mm y la fina da (17,9±0,05) mm, los intervalos [17,5; 18,5] y [17,85; 17,95] se solapan, así que ambas medidas son compatibles pese a usar instrumentos distintos."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Audita este resultado: 'con cuatro medidas de un mismo objeto obtuvimos 10,2; 10,3; 10,1 y 15,0 cm, y la media es 11,4 cm'. Explica cómo distinguirías un error aleatorio de un error sistemático y si la conclusión de 'media 11,4 cm' excede lo razonable.",
+        "scaffold": "Compara el valor 15,0 cm con el resto de medidas: ¿es coherente con la dispersión del resto, o parece un error puntual (p. ej. de lectura) que debería investigarse antes de incluirlo en la media?",
+        "answer": "El valor 15,0 cm se aparta mucho de las otras tres (10,1-10,3 cm) y probablemente sea un error de lectura o anotación (un error puntual, no aleatorio ni sistemático de instrumento); antes de calcular la media hay que revisar esa medida, no incluirla sin comprobar. Si se incluye sin más, la media (11,4 cm) no representa bien el conjunto de datos.",
+        "full_solution": "Las medidas 10,2; 10,3 y 10,1 cm son coherentes entre sí (semidispersión 0,1 cm), pero 15,0 cm está casi 5 cm por encima, mucho más que la dispersión típica del resto: esto sugiere un error puntual (p. ej. se leyó mal la cinta o se anotó mal el dato), no una variación aleatoria normal del instrumento. Un error aleatorio produciría valores dispersos pero del mismo orden que los demás; un error sistemático desplazaría todas las medidas en el mismo sentido, no solo una. Lo correcto es revisar esa medida concreta (repetirla) antes de incluirla en la media; si se mantiene sin revisar, la media de 11,4 cm no es representativa del grosor real del objeto."
+      }
+    ],
+    "exercises": [
+      {
+        "answer": "(15,35 ± 0,03) mm.",
+        "verification": "0,05/2 = 0,025 mm, que se redondea a 0,03 mm (1 c.s.).",
+        "full_solution": "La incertidumbre elemental es la mitad de la resolución: $u=0{,}05/2=0{,}025\\,\\mathrm{mm}$, que se redondea a 1 cifra significativa: 0,03 mm. Como el valor leído (15,35 mm) ya tiene dos cifras decimales, coincide con la posición decimal de la incertidumbre: $(15{,}35\\pm0{,}03)\\,\\mathrm{mm}$. Nota: en instrumentos de lectura directa (como un nonio o una pantalla digital), a veces se toma directamente la resolución como incertidumbre; con ese criterio el resultado sería $(15{,}35\\pm0{,}05)\\,\\mathrm{mm}$.",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "Un calibrador Vernier tiene resolución 0,05 mm. Lees 15,35 mm. Expresa el resultado con incertidumbre.",
+        "hints": [],
+        "reasoning": [
+          "La incertidumbre elemental es la mitad de la resolución del instrumento.",
+          "0,025 mm se redondea a una cifra significativa: 0,03 mm.",
+          "El valor y la incertidumbre deben compartir la misma posición decimal."
+        ],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "answer": "0,006 → 1 c.s.; 1,0040 → 5 c.s.; 300 → ambiguo (1, 2 o 3); 3,00× 10² → 3 c.s.",
+        "full_solution": "0,006 m: el 6 es el único dígito no nulo; los ceros a la izquierda no cuentan → 1 c.s. 1,0040 kg: todos los ceros están entre dígitos o al final de un decimal → 5 c.s. 300 s: al ser un número entero, los ceros finales son ambiguos → podría tener 1, 2 o 3 c.s. según la precisión real del instrumento. 3,00·10² s: la notación científica deja claro que hay 3 c.s. (el 3, el primer 0 y el segundo 0).",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "Indica cuántas cifras significativas tienen: 0,006 m; 1,0040 kg; 300 s; 3,00× 10² s.",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Un alumno pesa una piedra 5 veces con una balanza de resolución 0,1 g y obtiene: 24,3; 24,5; 24,2; 24,4 y 24,3 g. Calcula la media y la semidispersión, y expresa el resultado con su incertidumbre.",
+        "answer": "Media = 24,3 g; semidispersión = (24,5−24,2)/2 = 0,15 g ≈ 0,2 g. Resultado: (24,3 ± 0,2) g.",
+        "full_solution": "Media: (24,3+24,5+24,2+24,4+24,3)/5 = 121,7/5 = 24,34 g, que se redondea a 24,3 g. Semidispersión: (24,5−24,2)/2 = 0,15 g, que se redondea a 1 cifra significativa: 0,2 g (es mayor que la incertidumbre instrumental, 0,05 g, por lo que se usa la semidispersión). Resultado final: (24,3 ± 0,2) g."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Un cronómetro mide 2,46 s para un suceso cuyo valor de referencia es 2,50 s, con una incertidumbre instrumental de ±0,02 s. Calcula el error absoluto y el error relativo porcentual, y decide si el cronómetro es exacto.",
+        "answer": "Error absoluto 0,04 s; error relativo 1,6 %; no es exacto, porque el error supera la incertidumbre instrumental.",
+        "full_solution": "Error absoluto: $E_a=|2{,}46-2{,}50|=0{,}04\\,\\mathrm{s}$. Error relativo: $E_r=\\dfrac{0{,}04}{2{,}50}\\cdot100\\,\\%=1{,}6\\,\\%$. Como el error absoluto (0,04 s) es el doble de la incertidumbre instrumental (0,02 s), la medida no es compatible con el valor de referencia dentro de su incertidumbre: el cronómetro no es exacto (podría tener un error sistemático)."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Decide si dos medidas 12,4±0,3 y 12,9±0,3 son distinguibles con este instrumento.",
+        "answer": "No son claramente distinguibles: sus intervalos [12,1;12,7] y [12,6;13,2] se solapan.",
+        "full_solution": "Los intervalos son [12,1; 12,7] y [12,6; 13,2]. Se solapan entre 12,6 y 12,7, por lo que, aun siendo valores centrales distintos, las dos medidas no se pueden distinguir con seguridad con este instrumento; habría que reducir la incertidumbre (instrumento más preciso o más repeticiones) para afirmar que son diferentes."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "Representa estas cuatro medidas con sus barras de incertidumbre y explica qué significa que dos de ellas se solapen: A=(5,2±0,2) cm; B=(5,5±0,2) cm; C=(6,0±0,2) cm; D=(5,3±0,2) cm.",
+        "answer": "A y D se solapan (intervalos [5,0;5,4] y [5,1;5,5]): son compatibles entre sí. C no se solapa con A ni D: es significativamente distinta. B se solapa ligeramente con A, D y C en los extremos.",
+        "full_solution": "Intervalos: A=[5,0;5,4], B=[5,3;5,7], D=[5,1;5,5], C=[5,8;6,2]. A y D se solapan ampliamente, lo que indica que podrían representar el mismo valor real medido con dispersión normal. C no se solapa con A ni D, lo que indica una diferencia real, no solo debida a la incertidumbre. El solapamiento de intervalos es el criterio para decidir si dos medidas con incertidumbre son o no distinguibles."
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Un alumno informa 4,237 cm con una regla de milímetros. Corrige cifras significativas y justifica.",
+        "answer": "Con una regla de milímetros (resolución 1 mm = 0,1 cm, incertidumbre ±0,05 cm), solo tiene sentido dar una cifra decimal en cm: 4,2 cm, no 4,237 cm.",
+        "full_solution": "La resolución de la regla es 1 mm = 0,1 cm, así que la incertidumbre elemental es 0,05 cm. El valor debe redondearse a la misma posición decimal que la incertidumbre: 4,237 cm se redondea a 4,2 cm. Escribir 4,237 cm sugiere una precisión de centésimas y milésimas de cm que el instrumento no puede ofrecer; esto es un ejemplo de 'falsa precisión'."
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Diseña un protocolo para reducir incertidumbre aleatoria sin ocultar un posible sesgo sistemático.",
+        "answer": "Para reducir el error aleatorio se repite la medida muchas veces y se promedia; para no ocultar un posible error sistemático, se compara además con un patrón conocido o con otro instrumento calibrado, y se documenta cualquier desviación sistemática encontrada en vez de 'corregirla' promediando.",
+        "full_solution": "Un protocolo adecuado: (1) repetir la medida al menos 5-10 veces en las mismas condiciones y calcular la media y la semidispersión, lo que reduce el efecto del error aleatorio; (2) contrastar el instrumento con un patrón de referencia conocido (p. ej. una masa patrón, un bloque de longitud certificada) antes de empezar, para detectar un posible error sistemático (de cero o de calibración); (3) si se detecta un desvío sistemático, corregirlo o declararlo explícitamente en el resultado, sin intentar 'arreglarlo' simplemente promediando más medidas, porque promediar nunca elimina un error sistemático."
+      }
+    ],
+    "exam_questions": [
+      {
+        "answer": "Precisión: medidas agrupadas (poca dispersión). Exactitud: cerca del valor real. Ejemplo: dardos concentrados pero fuera de la diana = preciso, no exacto. Sí puede ser preciso sin ser exacto, si hay un error sistemático (instrumento mal calibrado).",
+        "full_solution": "Precisión: grado en que varias medidas repetidas se agrupan cerca unas de otras, sin importar si están cerca del valor real. Exactitud: grado en que el valor obtenido (o su media) está cerca del valor real o de referencia. Ejemplo: varios dardos muy juntos pero lejos de la diana son precisos pero no exactos; varios dardos dispersos pero centrados en promedio en la diana son exactos pero no precisos. Sí, una medida (o un conjunto de medidas) puede ser precisa sin ser exacta: ocurre cuando hay un error sistemático, como un instrumento mal calibrado que siempre se desvía en el mismo sentido, aunque las repeticiones sean muy parecidas entre sí.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": [],
+        "statement": "Distingue precisión y exactitud con un ejemplo. ¿Puede una medida ser precisa pero no exacta?",
+        "marks": 3,
+        "mark_scheme": [
+          "1 punto: distingue precisión como baja dispersión y exactitud como cercanía al valor real.",
+          "1 punto: aporta un ejemplo coherente de medidas precisas pero no exactas.",
+          "1 punto: atribuye correctamente ese caso a un sesgo o error sistemático."
+        ]
+      }
+    ],
+    "challenge_questions": [
+      {
+        "answer": "Sí: el intervalo de A es [31,5; 32,5] mm y el de B es [31,75; 31,85] mm; el intervalo de B está completamente dentro del de A, por lo que las medidas son compatibles.",
+        "full_solution": "Incertidumbre de A: la mitad de la resolución, 1/2=0,5 mm, consistente con el dato (32,0±0,5) mm, con intervalo [31,5; 32,5] mm. Incertidumbre de B: la mitad de su resolución, 0,1/2=0,05 mm, consistente con (31,80±0,05) mm, con intervalo [31,75; 31,85] mm. Como [31,75; 31,85] está dentro de [31,5; 32,5], el intervalo de B cae dentro del de A: ambas medidas son compatibles, y B, al ser más preciso, da información más fina sobre el valor real.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": [],
+        "statement": "Tienes dos instrumentos: A con resolución 1 mm y B con resolución 0,1 mm. Con A mides (32,0 ± 0,5) mm y con B mides (31,80 ± 0,05) mm. ¿Coinciden las medidas dentro de sus incertidumbres?"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L03-01",
+        "stem": "La resolución de un instrumento de medida es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "La mitad del error.",
+            "why_wrong": "Confunde resolución con incertidumbre elemental, que sí es la mitad de la resolución, pero no son lo mismo."
+          },
+          {
+            "key": "B",
+            "text": "La diferencia entre la medida y el valor real.",
+            "why_wrong": "Esa diferencia es el error absoluto, no la resolución del instrumento."
+          },
+          {
+            "key": "C",
+            "text": "La división más pequeña que puede distinguirse en su escala."
+          },
+          {
+            "key": "D",
+            "text": "El número de cifras significativas.",
+            "why_wrong": "Las cifras significativas dependen de cómo se escribe el resultado, no son una propiedad física del instrumento."
+          }
+        ],
+        "explanation": "La resolución es la menor división que el instrumento permite distinguir (p. ej. 1 mm en una regla milimetrada); la incertidumbre elemental se calcula a partir de ella como la mitad de la resolución.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L03-02",
+        "stem": "¿Cuántas cifras significativas tiene 0,0507?",
+        "options": [
+          {
+            "key": "A",
+            "text": "5",
+            "why_wrong": "Cuenta también los dos ceros iniciales, que no son significativos."
+          },
+          {
+            "key": "B",
+            "text": "4",
+            "why_wrong": "Cuenta un cero de más; solo el cero entre el 5 y el 7 es significativo, no los iniciales."
+          },
+          {
+            "key": "C",
+            "text": "2",
+            "why_wrong": "Ignora el cero entre el 5 y el 7, que sí es significativo por estar entre dígitos no nulos."
+          },
+          {
+            "key": "D",
+            "text": "3"
+          }
+        ],
+        "explanation": "Los ceros a la izquierda del primer dígito no nulo (los dos primeros) no son significativos; el cero entre el 5 y el 7 sí lo es, porque está entre dígitos significativos. Las cifras significativas son 5, 0 y 7: en total, 3.",
+        "correct": "D"
+      },
+      {
+        "id": "MC-L03-03",
+        "stem": "Una balanza muy sensible pero mal calibrada marca siempre 5 g de más. Sus medidas son:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Exactas pero no precisas.",
+            "why_wrong": "Al revés: al ser muy sensible, las repeticiones se agrupan cerca entre sí (precisas), pero el error de calibración las aleja del valor real (no exactas)."
+          },
+          {
+            "key": "B",
+            "text": "Ni precisas ni exactas.",
+            "why_wrong": "La balanza es muy sensible, así que sus repeticiones sí se agrupan cerca entre sí: son precisas, aunque no exactas."
+          },
+          {
+            "key": "C",
+            "text": "Precisas pero no exactas."
+          },
+          {
+            "key": "D",
+            "text": "Siempre incorrectas.",
+            "why_wrong": "No son 'siempre incorrectas': basta restar los 5 g del error sistemático para corregirlas, algo que no sería posible si fueran además poco precisas."
+          }
+        ],
+        "explanation": "Una balanza muy sensible da medidas muy agrupadas entre sí (precisas), pero el error sistemático de calibración (+5 g) las desplaza siempre en el mismo sentido respecto al valor real, por lo que no son exactas.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L03-04",
+        "stem": "El resultado (12,4 ± 0,5) cm indica que:",
+        "options": [
+          {
+            "key": "A",
+            "text": "El valor es exactamente 12,4 cm.",
+            "why_wrong": "La incertidumbre ±0,5 cm indica que el valor real puede estar en cualquier punto del intervalo, no que sea exactamente 12,4."
+          },
+          {
+            "key": "B",
+            "text": "La incertidumbre es el 12 % del valor.",
+            "why_wrong": "El error relativo es 0,5/12,4≈4 %, no 12 %."
+          },
+          {
+            "key": "C",
+            "text": "El valor puede ser cualquiera.",
+            "why_wrong": "No puede ser 'cualquiera': el resultado limita el valor real a un intervalo concreto, [11,9; 12,9] cm."
+          },
+          {
+            "key": "D",
+            "text": "El valor está entre 11,9 cm y 12,9 cm."
+          }
+        ],
+        "explanation": "(12,4±0,5) cm significa que el valor real se encuentra, con buena confianza, en el intervalo [12,4−0,5; 12,4+0,5] = [11,9; 12,9] cm.",
+        "correct": "D"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Cómo se calcula la incertidumbre elemental?",
+        "back": "Mitad de la resolución del instrumento.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "application"
+      },
+      {
+        "front": "¿Diferencia entre precisión y exactitud?",
+        "back": "Precisión: medidas agrupadas entre sí. Exactitud: medidas cerca del valor real.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "comparison"
+      },
+      {
+        "front": "¿Son significativos los ceros a la izquierda de 0,0034?",
+        "back": "No; los ceros a la izquierda del primer dígito no cero no son significativos. 0,0034 tiene 2 c.s.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "kind": "recall"
+      },
+      {
+        "front": "¿Cómo se escribe un resultado con incertidumbre?",
+        "back": "valor ± incertidumbre (unidad), con la incertidumbre redondeada a 1 o 2 c.s. y el valor alineado en el mismo decimal.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "application"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Copiar más decimales del instrumento sin justificarlo.",
+        "why": "Al ver muchos decimales en una calculadora o en una medida intermedia, se copian todos sin comprobar si el instrumento realmente permite distinguir esa precisión.",
+        "how_to_avoid": "Redondea siempre el resultado final a la resolución o incertidumbre real del instrumento, antes de dar la respuesta."
+      },
+      {
+        "mistake": "Confundir precisión con exactitud.",
+        "why": "Ambas palabras se usan como sinónimos en el lenguaje cotidiano, aunque describen cosas distintas: la dispersión entre medidas (precisión) y la cercanía al valor real (exactitud).",
+        "how_to_avoid": "Antes de calificar una medida, pregúntate por separado: ¿se repiten cerca unas de otras? (precisión) y ¿se acercan al valor real conocido? (exactitud)."
+      },
+      {
+        "mistake": "Dar la incertidumbre con más cifras significativas que el valor.",
+        "why": "Al calcular la incertidumbre con la calculadora, se copia el resultado completo sin redondear antes de ajustarlo al valor medido.",
+        "how_to_avoid": "Redondea primero la incertidumbre a una o dos cifras significativas, y después ajusta el valor para que tenga la misma posición decimal."
+      },
+      {
+        "mistake": "Ignorar el cero significativo a la derecha de un decimal.",
+        "why": "Se asume, por costumbre con los números enteros, que un cero al final nunca aporta información, sin distinguir si el número es un entero o un decimal medido.",
+        "how_to_avoid": "Recuerda que en un decimal medido (como 2,50 cm) el cero final sí es significativo: indica que el instrumento permite distinguir esa cifra."
+      }
+    ],
+    "exam_notes": [
+      "Indica siempre la resolución del instrumento antes de dar la incertidumbre.",
+      "El resultado debe tener valor ± incertidumbre con unidades."
+    ],
+    "keywords": [
+      {
+        "term": "resolución",
+        "definition": "La división más pequeña que un instrumento de medida permite distinguir en su escala."
+      },
+      {
+        "term": "incertidumbre",
+        "definition": "Margen alrededor de un valor medido dentro del cual se espera que esté el valor real."
+      },
+      {
+        "term": "precisión",
+        "definition": "Grado en que varias medidas repetidas de una misma magnitud se agrupan cerca unas de otras."
+      },
+      {
+        "term": "exactitud",
+        "definition": "Grado en que una medida (o su media) se acerca al valor real o de referencia."
+      },
+      {
+        "term": "cifras significativas",
+        "definition": "Dígitos de un número que aportan información real sobre la medida, sin contar los ceros que solo sitúan la coma."
+      },
+      {
+        "term": "error sistemático",
+        "definition": "Desviación que se repite siempre en el mismo sentido, por ejemplo por una mala calibración, y que no se reduce repitiendo la medida."
+      }
+    ],
+    "summary": {
+      "big_idea": "Toda medida debe expresarse con su incertidumbre, que depende de la resolución del instrumento o de la dispersión de medidas repetidas, y hay que distinguir precisión (repetibilidad) de exactitud (cercanía al valor real).",
+      "key_points": [
+        "La resolución de un instrumento es la división más pequeña que puede distinguirse en su escala.",
+        "La precisión describe la dispersión de varias medidas; la exactitud, qué tan cerca está el promedio del valor real.",
+        "Las cifras significativas son los dígitos que aportan información real sobre la medida.",
+        "Un resultado se expresa como: valor ± incertidumbre (unidad), con la incertidumbre alineada con el valor."
+      ],
+      "formulas": [
+        "$x=(\\bar{x}\\pm u)\\,\\mathrm{unidad}$"
+      ],
+      "what_to_remember_if_nothing_else": "Da siempre el resultado como (valor ± incertidumbre) con la unidad, ajustando el valor a la misma posición decimal que la incertidumbre, y no confundas precisión (medidas agrupadas) con exactitud (cerca del valor real)."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "nebula (fisica)_quimica (eso)_1bach (curriculum)_master.json, FIS-01-03"
+    ],
+    "curriculum_refs": [
+      "LOMLOE, Física y Química 3.º ESO, saberes A: medida y datos"
+    ],
+    "confidence_notes": [
+      "Contenido revisado y corregido tras una auditoría experta: se corrigió la concepción errónea invertida sobre precisión/exactitud, la regla de cifras significativas, el ejemplo de medidas repetidas y el desafío de los dos instrumentos, y se añadió teoría sobre media, semidispersión y errores aleatorios/sistemáticos."
+    ],
+    "internal_review": {
+      "checks": [
+        "Cada ejercicio y pregunta de test tiene ahora respuesta y resolución completa.",
+        "Las cuatro preguntas de test varían la clave correcta y explican por qué fallan los distractores.",
+        "Los keywords y prerequisitos están estructurados con definición y justificación."
+      ],
+      "fixes_applied": [
+        "Corregida la concepción errónea MIS-E01-03-2, que afirmaba al revés que precisión y exactitud no son sinónimos.",
+        "Corregida la regla (3) de cifras significativas sobre ceros decimales, y añadida la regla de ceros finales en enteros.",
+        "Añadido el bloque de teoría 'Medidas repetidas y errores' con media, semidispersión, error absoluto/relativo y errores aleatorios/sistemáticos.",
+        "Trasladada y ampliada la figura de dianas al bloque de precisión y exactitud, con los cuatro casos."
+      ],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_04.json": {
+    "id": "L04",
+    "title": "Tablas y gráficas",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Método científico, medida y datos",
+    "unit_id": "U-ESO-01",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022 · Física y Química 3.º ESO",
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "105 min",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Organizar datos experimentales en una tabla con títulos, unidades y cifras significativas adecuadas."
+      },
+      {
+        "statement": "Representar dos magnitudes en una gráfica con ejes, escala y unidades correctamente elegidos."
+      },
+      {
+        "statement": "Interpretar la pendiente y la forma de una gráfica en el contexto de la relación física estudiada."
+      },
+      {
+        "statement": "Distinguir interpolación de extrapolación y explicar cuándo una conclusión gráfica no está justificada."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Comprender incertidumbre y resolución, y saber expresar una medida como (valor ± incertidumbre), incluyendo $m=\\dfrac{\\Delta y}{\\Delta x}$.",
+        "why_it_matters": "Al representar datos con incertidumbre en una gráfica, necesitas saber leer el margen de cada punto para no confundir una pequeña dispersión experimental con un cambio real de tendencia, y necesitas la idea de pendiente para interpretar físicamente la recta de ajuste."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-E01-04-1",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La línea de tendencia debe pasar por todos los puntos.",
+        "correct_model": "La línea de mejor ajuste minimiza la distancia a los puntos; no tiene que pasar por ninguno en particular.",
+        "why_it_appears": "Se confunde la línea de mejor ajuste con 'unir los puntos', como se hace en una gráfica de evolución día a día.",
+        "remediation": "Recuerda que la línea de mejor ajuste representa el modelo o la tendencia general, y que los puntos individuales llevan su propia dispersión experimental."
+      },
+      {
+        "id": "MIS-E01-04-2",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Más puntos en la gráfica siempre significa más exactitud.",
+        "correct_model": "Tomar más puntos reduce el efecto de los errores aleatorios (al promediar), pero no corrige un error sistemático.",
+        "why_it_appears": "Se generaliza la idea de que 'más datos siempre son mejores' sin distinguir entre reducir la dispersión aleatoria y corregir un desvío sistemático del instrumento.",
+        "remediation": "Pregunta siempre: ¿el problema es que los puntos están dispersos (aleatorio, se arregla con más puntos) o que están todos desplazados en el mismo sentido (sistemático, no se arregla con más puntos, solo recalibrando)?"
+      },
+      {
+        "id": "MIS-E01-04-3",
+        "provenance": "SOURCE (DERIVED)",
+        "incorrect_model": "Correlación implica causalidad.",
+        "correct_model": "Dos variables pueden correlacionar sin que una cause la otra.",
+        "why_it_appears": "Cuando dos variables cambian juntas de forma llamativa, resulta tentador asumir que una es la causa de la otra sin comprobarlo con un experimento controlado.",
+        "remediation": "Antes de afirmar causalidad, pregúntate si se ha controlado experimentalmente la otra variable, o si podría haber una tercera variable que explique ambos cambios."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TH-L04-01",
+        "title": "Tabla de datos experimental",
+        "body": "Antes de hacer ninguna gráfica, necesitas organizar tus datos en una **tabla**. Una tabla bien hecha es como un mapa: te dice dónde estás y hacia dónde ir.\n\nImagina que cuelgas distintas masas de un muelle y mides cuánto se estira. Tus datos van en una tabla con estas reglas:\n\n• La **primera fila** es la cabecera: nombre de la magnitud y su unidad entre paréntesis. Ejemplo: «Masa (g)» y «Estiramiento (cm)».\n\n• La **variable independiente** (lo que tú cambias: la masa) va en la primera columna.\n\n• La **variable dependiente** (lo que mides: el estiramiento) va en la segunda columna.\n\n• Los datos se ordenan de menor a mayor de la variable independiente.\n\n• Si has repetido cada medida varias veces, incluye una columna con la media y, si es posible, otra con la incertidumbre.\n\nUna tabla clara permite a cualquier persona reproducir tu experimento y verificar tus conclusiones. Si alguien no entiende tu tabla sin explicaciones adicionales, necesita mejorarse.",
+        "provenance": "SOURCE (DERIVED)",
+        "formula": "$m=\\dfrac{\\Delta y}{\\Delta x}$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Tabla de datos del experimento del muelle: masa frente a estiramiento\" font-family=\"system-ui, sans-serif\" style=\"background:var(--bg,#fbfcfd)\"><style>text{fill:var(--text,#20302a);font-size:12px;text-anchor:middle}.t{font-size:13px;font-weight:bold}.h{font-size:11px;font-weight:bold;fill:#fff}.d{font-size:12px}.s{font-size:9px;fill:var(--axes,#24312c)}</style><text class=\"t\" x=\"300\" y=\"25\">Tabla de datos: Estiramiento de un muelle</text><rect x=\"130\" y=\"40\" width=\"170\" height=\"32\" rx=\"6\" fill=\"#0e7a68\"/><rect x=\"300\" y=\"40\" width=\"170\" height=\"32\" rx=\"6\" fill=\"#0e7a68\"/><text class=\"h\" x=\"215\" y=\"61\">Masa (g)</text><text class=\"h\" x=\"385\" y=\"61\">Estiramiento (cm)</text><rect x=\"130\" y=\"72\" width=\"340\" height=\"28\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.3\"/><text class=\"d\" x=\"215\" y=\"91\">50</text><text class=\"d\" x=\"385\" y=\"91\">1,2</text><rect x=\"130\" y=\"100\" width=\"340\" height=\"28\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.15\"/><text class=\"d\" x=\"215\" y=\"119\">100</text><text class=\"d\" x=\"385\" y=\"119\">2,5</text><rect x=\"130\" y=\"128\" width=\"340\" height=\"28\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.3\"/><text class=\"d\" x=\"215\" y=\"147\">150</text><text class=\"d\" x=\"385\" y=\"147\">3,6</text><rect x=\"130\" y=\"156\" width=\"340\" height=\"28\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.15\"/><text class=\"d\" x=\"215\" y=\"175\">200</text><text class=\"d\" x=\"385\" y=\"175\">4,9</text><rect x=\"130\" y=\"184\" width=\"340\" height=\"28\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.3\"/><text class=\"d\" x=\"215\" y=\"203\">250</text><text class=\"d\" x=\"385\" y=\"203\">6,1</text><rect x=\"130\" y=\"40\" width=\"340\" height=\"172\" rx=\"6\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"212\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><rect x=\"50\" y=\"235\" width=\"500\" height=\"65\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.25\"/><text class=\"s\" x=\"300\" y=\"255\" font-weight=\"bold\">Reglas de una buena tabla:</text><text class=\"s\" x=\"300\" y=\"272\">✓ Cabecera con magnitud y unidad  ✓ V. independiente en la 1ª columna</text><text class=\"s\" x=\"300\" y=\"289\">✓ Datos ordenados de menor a mayor  ✓ Unidades solo en la cabecera, no en cada celda</text></svg>",
+            "caption": "Ejemplo de tabla de datos bien organizada: el experimento del muelle con masa y estiramiento."
+          }
+        ],
+        "type": "intuition",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L04-02",
+        "title": "Construcción de una gráfica",
+        "body": "Con la tabla lista, el siguiente paso es transformar esos números en una imagen: la **gráfica**. Estos son los pasos, usando los datos del muelle como ejemplo:\n\n**1. Dibuja los ejes.** El eje horizontal ($x$) lleva la variable independiente (masa) y el vertical ($y$) la variable dependiente (estiramiento). Pon flechas en los extremos.\n\n**2. Etiqueta y escala.** Escribe el nombre de cada magnitud con su unidad: «Masa / g» y «Estiramiento / cm». Elige una escala que ocupe al menos dos tercios del papel. No empieces en cero si todos tus datos están entre 80 y 120.\n\n**3. Marca los puntos.** Usa cruces (+) o puntos con un círculo, nunca puntos diminutos que se pierdan.\n\n**4. Traza la línea de mejor ajuste.** No conectes punto a punto como un zigzag; busca la recta (o curva) que pase lo más cerca posible de todos los puntos, dejando aproximadamente la mitad por arriba y la mitad por abajo.\n\n**5. Pon un título.** Describe lo que muestra la gráfica: «Estiramiento de un muelle en función de la masa».\n\nUna gráfica bien construida revela de un vistazo la relación entre las variables.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 320\" role=\"img\" aria-label=\"Construcción paso a paso de una gráfica a partir de datos del muelle\" font-family=\"system-ui, sans-serif\" style=\"background:var(--bg,#fbfcfd)\"><style>text{fill:var(--text,#20302a);font-size:10px}.t{font-size:13px;font-weight:bold;text-anchor:middle}.ax{font-size:10px;fill:var(--axes,#24312c)}.pt{fill:#0e7a68;stroke:#fff;stroke-width:1}.ann{font-size:9px;fill:#c17a17;font-weight:bold}</style><text class=\"t\" x=\"300\" y=\"22\">Estiramiento de un muelle en función de la masa</text><line x1=\"80\" y1=\"270\" x2=\"530\" y2=\"270\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"80\" y1=\"270\" x2=\"80\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><polygon points=\"530,270 520,265 520,275\" fill=\"var(--axes,#24312c)\"/><polygon points=\"80,40 75,50 85,50\" fill=\"var(--axes,#24312c)\"/><text class=\"ax\" x=\"310\" y=\"295\" text-anchor=\"middle\" font-weight=\"bold\">Masa / g</text><text class=\"ax\" x=\"30\" y=\"155\" text-anchor=\"middle\" font-weight=\"bold\" transform=\"rotate(-90,30,155)\">Estiramiento / cm</text><line x1=\"80\" y1=\"234\" x2=\"520\" y2=\"234\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/><line x1=\"80\" y1=\"198\" x2=\"520\" y2=\"198\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/><line x1=\"80\" y1=\"162\" x2=\"520\" y2=\"162\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/><line x1=\"80\" y1=\"126\" x2=\"520\" y2=\"126\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/><line x1=\"80\" y1=\"90\" x2=\"520\" y2=\"90\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/><line x1=\"160\" y1=\"268\" x2=\"160\" y2=\"272\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"160\" y=\"284\" text-anchor=\"middle\">50</text><line x1=\"250\" y1=\"268\" x2=\"250\" y2=\"272\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"250\" y=\"284\" text-anchor=\"middle\">100</text><line x1=\"340\" y1=\"268\" x2=\"340\" y2=\"272\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"340\" y=\"284\" text-anchor=\"middle\">150</text><line x1=\"430\" y1=\"268\" x2=\"430\" y2=\"272\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"430\" y=\"284\" text-anchor=\"middle\">200</text><line x1=\"510\" y1=\"268\" x2=\"510\" y2=\"272\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"510\" y=\"284\" text-anchor=\"middle\">250</text><line x1=\"78\" y1=\"234\" x2=\"82\" y2=\"234\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"70\" y=\"238\" text-anchor=\"end\">1</text><line x1=\"78\" y1=\"198\" x2=\"82\" y2=\"198\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"70\" y=\"202\" text-anchor=\"end\">2</text><line x1=\"78\" y1=\"162\" x2=\"82\" y2=\"162\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"70\" y=\"166\" text-anchor=\"end\">3</text><line x1=\"78\" y1=\"126\" x2=\"82\" y2=\"126\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"70\" y=\"130\" text-anchor=\"end\">4</text><line x1=\"78\" y1=\"90\" x2=\"82\" y2=\"90\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"70\" y=\"94\" text-anchor=\"end\">5</text><line x1=\"78\" y1=\"54\" x2=\"82\" y2=\"54\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text class=\"ax\" x=\"70\" y=\"58\" text-anchor=\"end\">6</text><circle class=\"pt\" cx=\"166\" cy=\"227\" r=\"5\"/><circle class=\"pt\" cx=\"252\" cy=\"180\" r=\"5\"/><circle class=\"pt\" cx=\"338\" cy=\"140\" r=\"5\"/><circle class=\"pt\" cx=\"424\" cy=\"94\" r=\"5\"/><circle class=\"pt\" cx=\"510\" cy=\"50\" r=\"5\"/><line x1=\"85\" y1=\"262\" x2=\"520\" y2=\"42\" stroke=\"#0e7a68\" stroke-width=\"2.5\" opacity=\"0.7\"/><text class=\"ann\" x=\"525\" y=\"40\" text-anchor=\"start\">← línea de</text><text class=\"ann\" x=\"525\" y=\"52\" text-anchor=\"start\">   mejor ajuste</text><text class=\"ann\" x=\"175\" y=\"222\" text-anchor=\"start\">puntos →</text></svg>",
+            "caption": "Gráfica del estiramiento del muelle frente a la masa: puntos experimentales y línea de mejor ajuste."
+          }
+        ],
+        "type": "connection",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L04-03",
+        "title": "Línea de mejor ajuste",
+        "body": "La **línea de mejor ajuste** no pasa por todos los puntos: pasa entre ellos, lo más cerca posible del conjunto. ¿Por qué no unir punto a punto? Porque cada medida tiene su propia incertidumbre, y el zigzag amplifica esas pequeñas variaciones en lugar de mostrar la tendencia real.\n\nPara trazar una recta de mejor ajuste a mano:\n\n1. Observa la nube de puntos y decide si la tendencia es una recta o una curva.\n\n2. Si es una recta, coloca una regla de modo que quede aproximadamente la misma cantidad de puntos por encima que por debajo.\n\n3. La recta no tiene por qué pasar por el origen (0, 0), salvo que la física del problema lo exija.\n\n4. Si un punto queda claramente alejado de la tendencia general, márcalo como **dato anómalo** (outlier). No lo ignores sin más: investiga si hubo un error en esa medida antes de descartarlo.\n\nCon herramientas digitales, la recta de mejor ajuste se calcula por **mínimos cuadrados**, que minimiza la suma de los cuadrados de las distancias verticales de cada punto a la recta. Es lo que hace una calculadora o una hoja de cálculo cuando pides una «línea de tendencia».",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "type": "formalisation",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L04-04",
+        "title": "Tipos de relaciones",
+        "body": "No todas las gráficas son rectas. La forma de la línea de mejor ajuste te dice qué tipo de relación existe entre las variables:\n\n**Relación lineal (directa).** La gráfica es una recta que pasa por el origen o cerca de él: si duplicas $x$, se duplica $y$. Ejemplo: la ley de Hooke ($F = k \\cdot x$) — a doble fuerza, doble estiramiento.\n\n**Relación lineal con ordenada en el origen.** Recta que no pasa por cero. Ejemplo: conversión Celsius-Fahrenheit ($F = 1{,}8C + 32$). A 0 °C, $F$ no es cero.\n\n**Relación cuadrática.** Parábola: $y$ crece con el cuadrado de $x$. Ejemplo: la distancia en caída libre ($d = \\tfrac{1}{2}g t^2$) — el doble de tiempo da cuatro veces más distancia.\n\n**Relación inversa.** Hipérbola: al crecer $x$, $y$ disminuye. Ejemplo: la ley de Boyle ($P \\cdot V = \\text{cte}$) — a más volumen, menos presión.\n\n**Sin relación.** Nube dispersa sin patrón claro. Las variables son independientes.\n\nIdentificar el tipo de relación es el primer paso para encontrar la ecuación que describe el fenómeno.",
+        "provenance": "SOURCE (DERIVED)",
+        "assets": [],
+        "type": "connection",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L04-05",
+        "title": "Variables de un experimento y cómo leer la pendiente",
+        "body": "En todo experimento hay tres tipos de variables, y distinguirlas correctamente es fundamental:\n\n• **Variable independiente**: la que tú controlas y decides cambiar. Se representa en el eje $x$.\n\n• **Variable dependiente**: la que mides como respuesta. Va en el eje $y$.\n\n• **Variables controladas**: las que mantienes constantes para que no interfieran.\n\nLa **pendiente** de una gráfica lineal te dice cuánto cambia $y$ por cada unidad que cambia $x$:\n\n$m = \\dfrac{\\Delta y}{\\Delta x} = \\dfrac{y_2 - y_1}{x_2 - x_1}$\n\nPara leerla, elige dos puntos bien separados sobre la recta de ajuste (no sobre puntos experimentales individuales) y calcula el cociente. Las unidades de la pendiente son las unidades de $y$ divididas entre las unidades de $x$.\n\nSi la recta muestra estiramiento (cm) frente a masa (g), la pendiente tiene unidades de cm/g y te dice cuántos centímetros se estira el muelle por cada gramo que añades. Eso es, físicamente, la inversa de la constante del muelle.\n\nUna pendiente positiva indica que las variables crecen juntas; una pendiente negativa, que cuando una crece la otra disminuye.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "formula": "$m=\\dfrac{y_2-y_1}{x_2-x_1}$",
+        "assets": [],
+        "type": "worked_rule",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L04-06",
+        "title": "Ordenada en el origen, interpolación y extrapolación",
+        "body": "Además de la pendiente, una recta tiene otro parámetro importante: la **ordenada en el origen** ($b$), el valor de $y$ cuando $x = 0$. En la ecuación $y = mx + b$, $b$ es el punto donde la recta cruza el eje vertical.\n\nA veces $b$ tiene significado físico claro. En la ecuación de posición $x = x_0 + v \\cdot t$, la ordenada en el origen es la posición inicial $x_0$. Otras veces es simplemente un desplazamiento sin sentido físico directo.\n\nLa gráfica también permite hacer predicciones:\n\n• **Interpolación**: estimar un valor dentro del rango de tus datos. Si mediste con masas de 50, 100, 150 y 200 g, puedes leer de la recta el estiramiento para 120 g. Es fiable porque estás dentro de la zona donde sabes que la relación funciona.\n\n• **Extrapolación**: estimar un valor fuera del rango de tus datos, por ejemplo para 500 g. Es arriesgada porque la relación podría cambiar: quizá el muelle se deforma plásticamente con masas grandes y deja de cumplir la ley de Hooke.\n\nRegla práctica: interpola con confianza; extrapola con cautela y siempre indicando que es una estimación.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "type": "worked_rule",
+        "scope": "CORE"
+      },
+      {
+        "id": "TH-L04-07",
+        "title": "Barras, líneas o puntos dispersos",
+        "body": "No todos los datos se representan igual. Elegir el tipo de gráfica adecuado es tan importante como construirla bien.\n\n**Diagrama de barras**: ideal para comparar categorías discretas. Ejemplo: masa reciclada de papel, plástico y vidrio en tu instituto. Las barras son independientes (con hueco entre ellas) y su altura representa la cantidad.\n\n**Gráfica de líneas**: para mostrar cómo cambia una variable continua a lo largo de otra. Ejemplo: temperatura del agua mientras la calientas, medida cada minuto. Los puntos se unen con segmentos o una curva suave.\n\n**Diagrama de dispersión (nube de puntos)**: para explorar si existe relación entre dos variables continuas cuando no controlas una de ellas. Ejemplo: ¿hay relación entre las horas de estudio y la nota del examen en tu clase? Los puntos no se unen; buscas una tendencia.\n\nError común: usar barras para datos continuos (como la temperatura a lo largo del tiempo) o líneas para datos categóricos (como comparar alturas de distintos edificios). La clave es preguntarte: ¿tiene sentido un valor intermedio entre dos puntos? Si sí, usa líneas o dispersión. Si no, usa barras.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "type": "connection",
+        "scope": "CORE"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "deep-domain-worked-1",
+        "title": "Pendiente experimental",
+        "statement": "En un experimento se mide la posición x de un carrito en distintos instantes t, obteniendo la tabla: t (s): 0, 2, 4, 6. x (m): 0, 3,0, 6,1, 9,0. Estima la velocidad y comenta la dispersión.",
+        "steps": [
+          "Se traza la recta de ajuste que mejor equilibra los cuatro puntos y se leen dos puntos alejados de ella sobre la propia recta (no los datos originales): por ejemplo (1 s; 1,5 m) y (5 s; 7,5 m). La pendiente es $v=\\dfrac{\\Delta x}{\\Delta t}=\\dfrac{7{,}5-1{,}5}{5-1}=1{,}50\\,\\mathrm{m/s}$.",
+          "El punto (4 s; 6,1 m) se separa ligeramente de la recta ideal, que pasaría por (4 s; 6,0 m); esa pequeña diferencia (0,1 m) es la dispersión típica de una medida experimental.",
+          "La gráfica x-t es casi lineal; la pendiente de la recta de ajuste representa la velocidad media del carrito.",
+          "La conclusión debe incluir unidades y reconocer que una medida (6,1 m) no coincide exactamente con el modelo (6,0 m); por mínimos cuadrados, el ajuste completo daría 1,505 m/s, muy cerca de la estimación visual.",
+          "Comprobación: 1,50 m/s es un valor razonable para un carrito de laboratorio, y es consistente con los cuatro puntos de la tabla dentro de ±0,1 m."
+        ],
+        "answer": "$v\\approx1,50\\,\\mathrm{m/s}$.",
+        "verification": "Se comprueba sustituyendo: a 1,50 m/s, en 6 s el carrito recorrería 9,0 m, que coincide exactamente con el último dato de la tabla."
+      },
+      {
+        "id": "deep-domain-worked-2",
+        "title": "Elegir representación",
+        "statement": "Para comparar masa de cuatro muestras (12, 18, 9 y 15 g), decide entre gráfica de líneas y barras, y calcula el promedio.",
+        "steps": [
+          "Como las categorías son discretas, una gráfica de barras permite comparar mejor que una línea.",
+          "El promedio es (12+18+9+15)/4=13,5 g.",
+          "Los ejes deben indicar muestra y masa en gramos; no se debe unir categorías sin orden temporal.",
+          "Un promedio no sustituye a la gráfica: oculta la variación entre 9 y 18 g.",
+          "Comprobación: la media (13,5 g) queda dentro del rango de las cuatro masas (9 a 18 g), como debe ocurrir siempre con un promedio."
+        ],
+        "answer": "Barras y media 13,5 g.",
+        "verification": "Se comprueba que 13,5 g está entre el valor mínimo (9 g) y el máximo (18 g) de las cuatro muestras, y que la gráfica de barras permite ver que la muestra de 9 g se aparta bastante del resto, algo que el promedio por sí solo no muestra."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Construye una tabla de datos con al menos 4 pares (V, m) de un mismo líquido (puedes inventarlos de forma realista, p. ej. agua: ≈1 g por cada cm³), represéntalos en una gráfica y explica qué magnitud se obtiene de la pendiente.",
+        "scaffold": "Asegúrate de que los pares sean aproximadamente proporcionales (m/V casi constante) antes de calcular la pendiente de la recta que ajusta los puntos.",
+        "answer": "La pendiente de la gráfica masa-volumen es la densidad del líquido, en g/cm³ (o kg/m³ si se usan unidades del SI).",
+        "full_solution": "Por ejemplo, para agua: (10 cm³, 10 g), (20 cm³, 20 g), (30 cm³, 30 g), (40 cm³, 40 g). Al representarlos, los puntos están alineados en una recta que pasa por el origen, de pendiente $m=\\dfrac{40-10}{40-10}=1{,}0\\,\\mathrm{g/cm^3}$. Esa pendiente es la densidad del líquido (en este caso, coherente con la densidad del agua, 1,0 g/cm³).",
+        "assets": []
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Compara dos gráficas posibles de un mismo experimento de calentamiento de agua: una con un punto claramente alejado de la tendencia de los demás, y otra sin ningún punto atípico. Justifica cuál permite detectar mejor un dato erróneo.",
+        "scaffold": "Dibuja la línea de tendencia de los puntos 'normales' y comprueba a qué distancia queda el punto sospechoso respecto a esa línea, en comparación con la dispersión típica del resto.",
+        "answer": "La gráfica con el punto alejado permite detectar mejor el dato atípico: basta comparar su distancia a la línea de tendencia con la dispersión normal de los demás puntos; en la gráfica sin puntos atípicos no hay nada que investigar.",
+        "full_solution": "Si cuatro de cinco puntos están muy cerca de una recta y el quinto se aleja mucho más que la dispersión típica de los otros cuatro, ese punto es candidato a 'atípico' y debería revisarse (posible error de medida o de anotación) antes de usarlo para calcular la pendiente. En cambio, si todos los puntos están igual de cerca de la tendencia, no hay ningún motivo para sospechar de uno en particular. Comparar gráficamente la distancia de cada punto a la línea de ajuste es, precisamente, el mismo principio que se usa para calcular un residuo (dato−predicción) y decidir si conviene investigarlo.",
+        "assets": []
+      }
+    ],
+    "exercises": [
+      {
+        "answer": "La densidad del material es $\\rho=\\dfrac{m}{V}=8,9\\,\\mathrm{g/cm^3}$.",
+        "full_solution": "En una gráfica masa (eje Y) frente a volumen (eje X), la pendiente tiene unidades de masa entre volumen, g/cm³, que son las unidades de la densidad: $\\rho=\\dfrac{m}{V}$. Por tanto, una pendiente de 8,9 g/cm³ significa que el material tiene esa densidad (un valor parecido al del cobre, que es ≈8,9 g/cm³).",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "Una gráfica de masa frente a volumen da una recta de pendiente 8,9 g/cm³. ¿Qué propiedad representa la pendiente?",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "answer": "Porque implica que los valores intermedios siguen exactamente ese camino, lo que no está justificado. La línea de mejor ajuste representa el modelo; los puntos tienen incertidumbre.",
+        "full_solution": "Unir cada punto con el siguiente mediante segmentos sugiere que se conoce exactamente el valor de Y para cualquier X intermedio siguiendo exactamente ese camino en zigzag, cuando en realidad cada punto solo representa una medida con su propia incertidumbre. La línea de mejor ajuste, en cambio, representa el modelo o la tendencia suavizada que mejor resume el conjunto de datos, sin pretender pasar exactamente por cada punto.",
+        "provenance": "GENERATED (EXERCISE)",
+        "statement": "¿Por qué no se deben unir los puntos de una gráfica con segmentos rectos entre cada par?",
+        "hints": [],
+        "reasoning": [],
+        "assets": [],
+        "difficulty": "aplicación"
+      },
+      {
+        "id": "quality-1",
+        "difficulty": "básico",
+        "statement": "Con la tabla t (s): 0, 1, 2, 3. x (m): 0,0; 2,1; 3,9; 6,2, estima la velocidad media del móvil.",
+        "answer": "v ≈ 2,1 m/s (pendiente de la recta de ajuste).",
+        "full_solution": "Se traza la recta de ajuste y se leen dos puntos de ella, por ejemplo (0 s; 0,0 m) y (3 s; 6,2 m): $v=\\dfrac{6{,}2-0{,}0}{3-0}\\approx2{,}1\\,\\mathrm{m/s}$. Los puntos intermedios (1 s;2,1 m) y (2 s;3,9 m) están muy cerca de esta recta, lo que confirma que la relación x-t es prácticamente lineal."
+      },
+      {
+        "id": "quality-2",
+        "difficulty": "aplicación",
+        "statement": "Elige entre gráfica de barras o de líneas para comparar las masas de cuatro muestras (14 g, 20 g, 11 g y 17 g) y calcula su media.",
+        "answer": "Barras, porque las muestras son categorías discretas sin orden temporal; media = (14+20+11+17)/4 = 15,5 g.",
+        "full_solution": "Como las cuatro muestras no representan instantes sucesivos de un proceso continuo, sino categorías independientes, se usa una gráfica de barras (unir con líneas sugeriría una evolución continua que no existe). La media es $(14+20+11+17)/4=62/4=15{,}5\\,\\mathrm{g}$."
+      },
+      {
+        "id": "quality-3",
+        "difficulty": "transferencia",
+        "statement": "Cinco muestras de un mismo material dan estos pares masa-volumen: (10 g, 1,1 cm³), (20 g, 2,0 cm³), (30 g, 3,2 cm³), (40 g, 4,1 cm³) y (50 g, 9,0 cm³). Representa m frente a V, calcula la pendiente (densidad) con los puntos que sigan la tendencia, e indica qué punto parece atípico.",
+        "answer": "La densidad (pendiente) es ≈ 10 g/cm³, usando los cuatro primeros puntos. El quinto punto (50 g, 9,0 cm³) es atípico: con esa densidad debería dar 90 cm³ para 50 g, no 9,0 cm³.",
+        "full_solution": "Con los cuatro primeros puntos, la razón m/V es aproximadamente constante: 10/1,1≈9,1; 20/2,0=10,0; 30/3,2≈9,4; 40/4,1≈9,8; todos cercanos a 9-10 g/cm³. El quinto punto, (50 g, 9,0 cm³), da m/V=50/9,0≈5,6 g/cm³, muy distinto del resto: es un punto atípico, probablemente por un error de medida del volumen (quizá se midieron 90 cm³ y se anotó mal como 9,0 cm³). La pendiente de la recta de ajuste con los cuatro primeros puntos, que representa la densidad del material, es de aproximadamente 10 g/cm³."
+      },
+      {
+        "id": "quality-4",
+        "difficulty": "gráfica",
+        "statement": "La tabla muestra la temperatura de un vaso de agua cada dos minutos: t (min): 0, 2, 4, 6, 8. T (°C): 80, 65, 54, 47, 43. Represéntala y describe si la relación es lineal o no.",
+        "answer": "No es lineal: la temperatura baja cada vez más despacio (80→65 son 15°C en 2 min, pero 47→43 son solo 4°C en 2 min); la gráfica es una curva que se aplana, no una recta.",
+        "full_solution": "Diferencias cada 2 minutos: 80→65 (−15 °C), 65→54 (−11 °C), 54→47 (−7 °C), 47→43 (−4 °C). Como el descenso por intervalo va disminuyendo, la gráfica T-t no es una recta: es una curva que se va aplanando, típica del enfriamiento hacia la temperatura ambiente. No se trata de una relación lineal Y=mX+b, por lo que no tiene sentido calcular una única 'pendiente' para toda la gráfica.",
+        "assets": []
+      },
+      {
+        "id": "quality-5",
+        "difficulty": "análisis crítico",
+        "statement": "Corrige la afirmación “una gráfica más alta siempre representa mayor velocidad”.",
+        "answer": "Es falsa en general: en una gráfica x-t, lo que indica la velocidad es la pendiente, no la altura (el valor de x) en un punto. Un punto alto puede corresponder a velocidad cero si la curva es horizontal en ese tramo (el móvil está parado, aunque lejos del origen).",
+        "full_solution": "En una gráfica posición-tiempo, la altura de un punto es la distancia recorrida hasta ese instante, no la velocidad. La velocidad se obtiene de la pendiente de la curva en ese punto (más inclinada = más rápido; horizontal = parado). Por ejemplo, un móvil puede estar muy lejos del origen (x grande, gráfica 'alta') pero detenido en ese tramo (pendiente cero, velocidad cero); y otro móvil cercano al origen puede tener una pendiente muy inclinada (velocidad alta). Por tanto, la afirmación es falsa: hay que mirar la inclinación de la curva, no su altura.",
+        "assets": []
+      },
+      {
+        "id": "quality-6",
+        "difficulty": "desafío",
+        "statement": "Con los datos (V, m) = (10, 21), (20, 39), (30, 62), (40, 79) en cm³ y g, ajusta a ojo una recta m = kV y calcula el residuo (diferencia entre el dato y la recta) en el punto (30, 62) si la pendiente ajustada es k=2,0 g/cm³.",
+        "answer": "Con k=2,0 g/cm³, la recta predice m=60 g en V=30 cm³; el dato real es 62 g, así que el residuo es +2 g.",
+        "full_solution": "La recta ajustada es $m=2{,}0\\cdot V$. En V=30 cm³, predice $m=2{,}0\\times30=60\\,\\mathrm{g}$. El dato real es 62 g, así que el residuo (dato−predicción) es $62-60=+2\\,\\mathrm{g}$. Un residuo pequeño (aquí, un 3 % del valor) es normal por la dispersión experimental; si un punto tuviera un residuo mucho mayor que los demás, convendría investigarlo como posible dato atípico."
+      }
+    ],
+    "exam_questions": [
+      {
+        "answer": "La pendiente ΔL/ΔT (en m/°C) indica cuánto se alarga la barra por cada grado de temperatura que aumenta; dividida entre la longitud inicial L₀ da el coeficiente de dilatación lineal del material, $\\alpha=\\dfrac{1}{L_0}\\dfrac{\\Delta L}{\\Delta T}$, en °C⁻¹.",
+        "full_solution": "En una gráfica longitud (L) frente a temperatura (T), la pendiente es $\\dfrac{\\Delta L}{\\Delta T}$, con unidades de longitud entre temperatura (p. ej. m/°C): indica cuántos metros se alarga la barra por cada grado Celsius que sube la temperatura. Esta pendiente no es directamente el coeficiente de dilatación lineal: hay que dividirla entre la longitud inicial de la barra, $L_0$, para obtener $\\alpha=\\dfrac{1}{L_0}\\dfrac{\\Delta L}{\\Delta T}$, que se expresa en °C⁻¹ (o K⁻¹) y permite comparar materiales de distinto tamaño inicial. Si en cambio la gráfica fuera longitud-tiempo (no de temperatura), la pendiente representaría una rapidez de alargamiento, en m/s, sin relación directa con la dilatación térmica.",
+        "provenance": "GENERATED (EXERCISE)",
+        "assets": [],
+        "statement": "Explica qué información aporta la pendiente de una gráfica longitud-temperatura en un experimento de dilatación de una barra metálica.",
+        "marks": 3,
+        "mark_scheme": [
+          "1 punto: identifica la pendiente como $\\Delta L/\\Delta T$.",
+          "1 punto: interpreta la pendiente como alargamiento por grado de temperatura.",
+          "1 punto: relaciona la pendiente con $\\alpha=(1/L_0)(\\Delta L/\\Delta T)$ o indica correctamente sus unidades."
+        ]
+      }
+    ],
+    "challenge_questions": [
+      {
+        "answer": "No. La correlación mide la asociación estadística, no la causalidad. Ambas podrían estar causadas por una tercera variable o ser coincidentes.",
+        "full_solution": "Que dos variables correlacionen fuertemente significa que, en los datos observados, cuando una aumenta la otra también lo hace (o disminuye) de forma consistente; esa es una relación estadística, no necesariamente una relación de causa y efecto. Un ejemplo clásico: las ventas de helados y las quemaduras solares suben juntas en verano, pero una no causa la otra; ambas están causadas por una tercera variable, la temperatura y las horas de sol. Para afirmar causalidad hace falta un experimento controlado en el que se cambie deliberadamente una variable manteniendo las demás fijas, y comprobar que la otra cambia como consecuencia.",
+        "provenance": "GENERATED (EXPLANATION)",
+        "assets": [],
+        "statement": "Dos variables A y B están fuertemente correlacionadas en un conjunto de datos (cuando una crece, la otra también, de forma consistente). ¿Puede afirmarse por eso que A causa B?"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L04-01",
+        "stem": "En una gráfica experimental, la línea de mejor ajuste:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Une cada punto con el siguiente mediante un segmento.",
+            "why_wrong": "Eso sería un gráfico de puntos unidos, no una línea de ajuste; sugeriría una precisión que los datos no tienen."
+          },
+          {
+            "key": "B",
+            "text": "Es obligatoriamente una recta.",
+            "why_wrong": "Puede ser una curva (p. ej. una hipérbola o una parábola) si los datos siguen ese tipo de relación."
+          },
+          {
+            "key": "C",
+            "text": "Minimiza la distancia a los puntos sin tener que pasar por ninguno en concreto."
+          },
+          {
+            "key": "D",
+            "text": "Siempre pasa por el origen.",
+            "why_wrong": "Solo pasa por el origen si la relación es de proporcionalidad directa (Y=kX); en general puede tener ordenada en el origen distinta de cero."
+          }
+        ],
+        "explanation": "La línea (o curva) de mejor ajuste resume la tendencia general de los datos equilibrando las distancias a cada punto; no tiene que coincidir exactamente con ninguno de ellos.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-L04-02",
+        "stem": "Una gráfica Y frente a X muestra una recta por el origen. Esto indica:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Relación lineal con intercepto Y = mX + b (b≠0).",
+            "why_wrong": "Si hubiera un intercepto distinto de cero, la recta no pasaría por el origen."
+          },
+          {
+            "key": "B",
+            "text": "Relación de proporcionalidad directa Y = kX."
+          },
+          {
+            "key": "C",
+            "text": "Sin relación entre las variables.",
+            "why_wrong": "Una recta por el origen es precisamente una relación muy clara y fuerte entre las variables."
+          },
+          {
+            "key": "D",
+            "text": "Relación proporcional inversa.",
+            "why_wrong": "Una proporcionalidad inversa se representa con una hipérbola, no con una recta por el origen."
+          }
+        ],
+        "explanation": "Una recta que pasa por el origen corresponde a $Y=kX$: proporcionalidad directa, donde k es la pendiente.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-L04-03",
+        "stem": "La pendiente de una gráfica masa-volumen tiene unidades de:",
+        "options": [
+          {
+            "key": "A",
+            "text": "cm³/g",
+            "why_wrong": "Son las unidades invertidas; corresponderían a la pendiente de volumen frente a masa, no de masa frente a volumen."
+          },
+          {
+            "key": "B",
+            "text": "sin unidades",
+            "why_wrong": "La pendiente siempre tiene las unidades del eje Y entre las del eje X; en este caso, g entre cm³."
+          },
+          {
+            "key": "C",
+            "text": "g· cm³",
+            "why_wrong": "Multiplicar las unidades no tiene sentido aquí: la pendiente es un cociente (Y entre X), no un producto."
+          },
+          {
+            "key": "D",
+            "text": "g/cm³"
+          }
+        ],
+        "explanation": "La pendiente de cualquier gráfica tiene las unidades del eje Y divididas por las del eje X; aquí, masa (g) entre volumen (cm³), es decir, g/cm³, que son las unidades de densidad.",
+        "correct": "D"
+      },
+      {
+        "id": "MC-L04-04",
+        "stem": "¿Qué concluyes si los puntos de una gráfica forman una nube sin tendencia?",
+        "options": [
+          {
+            "key": "A",
+            "text": "No se aprecia relación entre las variables en las condiciones estudiadas."
+          },
+          {
+            "key": "B",
+            "text": "Las variables están relacionadas proporcionalmente.",
+            "why_wrong": "Una relación proporcional se vería como una recta por el origen, no como una nube de puntos sin tendencia."
+          },
+          {
+            "key": "C",
+            "text": "El experimento está mal diseñado.",
+            "why_wrong": "Una nube de puntos sin tendencia no implica necesariamente un mal diseño: puede significar simplemente que, en el rango estudiado, esa variable no influye."
+          },
+          {
+            "key": "D",
+            "text": "Hay proporcionalidad inversa entre las variables.",
+            "why_wrong": "Una proporcionalidad inversa se vería como una hipérbola claramente descendente, no como una nube de puntos dispersos."
+          }
+        ],
+        "explanation": "Cuando los puntos no muestran ninguna tendencia clara (ni recta, ni curva reconocible), lo más prudente es concluir que, en las condiciones estudiadas, no se aprecia relación entre las variables; no se puede afirmar nada más fuerte con esos datos.",
+        "correct": "A"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué va en el eje X de una gráfica experimental?",
+        "back": "La variable independiente (la que controla el investigador), con nombre y unidades.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "recall"
+      },
+      {
+        "front": "¿Qué significa una gráfica V-P hiperbólica a T constante?",
+        "back": "Relación proporcional inversa: $V=\\dfrac{k}{P}$. El producto P· V es constante (Ley de Boyle).",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "definition"
+      },
+      {
+        "front": "¿Qué unidades tiene la pendiente de una gráfica Y(g) frente a X(cm³)?",
+        "back": "g/cm³ (unidades del eje Y dividido por unidades del eje X).",
+        "provenance": "GENERATED (EXPLANATION)",
+        "kind": "comparison"
+      },
+      {
+        "front": "¿Correlación implica causalidad?",
+        "back": "No. Dos variables pueden correlacionar sin que una cause la otra.",
+        "provenance": "SOURCE (DERIVED)",
+        "kind": "recall"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Unir puntos con segmentos en lugar de trazar la línea de mejor ajuste.",
+        "why": "Parece más 'fiel a los datos' conectar cada punto exactamente, sin tener en cuenta que cada medida lleva su propia dispersión experimental.",
+        "how_to_avoid": "Traza una única línea (recta o curva) que equilibre los puntos a ambos lados, y usa esa línea, no los datos originales, para leer la pendiente."
+      },
+      {
+        "mistake": "Olvidar unidades en los ejes.",
+        "why": "Al centrarse en dibujar bien la escala y los puntos, se olvida escribir qué representa cada eje y en qué unidad está expresado.",
+        "how_to_avoid": "Antes de dibujar ningún punto, escribe en cada eje el nombre de la magnitud y su unidad entre paréntesis, como 'volumen (cm³)'."
+      },
+      {
+        "mistake": "Confundir correlación con causalidad.",
+        "why": "Cuando dos variables cambian juntas de forma llamativa en una gráfica, resulta tentador afirmar que una es la causa de la otra sin haber controlado experimentalmente las demás variables.",
+        "how_to_avoid": "Antes de hablar de causa, comprueba si el experimento ha cambiado solo esa variable manteniendo las demás fijas; si no, limítate a describir que están correlacionadas."
+      },
+      {
+        "mistake": "Hacer la gráfica demasiado pequeña, desaprovechando la escala.",
+        "why": "Al no planificar la escala antes de empezar a dibujar, los puntos quedan agrupados en una esquina pequeña del papel, dificultando leer la pendiente con precisión.",
+        "how_to_avoid": "Antes de marcar el primer punto, calcula el rango de valores de cada eje y elige una escala que ocupe la mayor parte del espacio disponible."
+      }
+    ],
+    "exam_notes": [
+      "En un examen, dibuja ejes, escala, unidades y línea de mejor ajuste. Calcula la pendiente con dos puntos de la recta, no de los datos originales."
+    ],
+    "keywords": [
+      {
+        "term": "tabla de datos",
+        "definition": "Organización de los valores medidos en columnas, con la variable independiente primero y la dependiente después, cada una con su unidad."
+      },
+      {
+        "term": "gráfica",
+        "definition": "Representación visual de los datos de una tabla sobre dos ejes, que permite ver la tendencia entre dos variables."
+      },
+      {
+        "term": "escala",
+        "definition": "Relación entre la distancia sobre el papel y el valor numérico que representa en cada eje."
+      },
+      {
+        "term": "pendiente",
+        "definition": "Cociente entre la variación del eje Y y la variación del eje X entre dos puntos de la recta de ajuste; indica cuánto cambia Y por cada unidad que cambia X."
+      },
+      {
+        "term": "línea de mejor ajuste",
+        "definition": "Recta o curva que resume la tendencia general de los datos, equilibrando la distancia a todos los puntos sin tener que pasar por ninguno."
+      },
+      {
+        "term": "relación lineal",
+        "definition": "Relación entre dos variables que se representa mediante una recta, de la forma Y = mX + b."
+      },
+      {
+        "term": "proporcionalidad",
+        "definition": "Caso particular de relación lineal en que la recta pasa por el origen (Y = kX), de modo que Y y X siempre guardan el mismo cociente."
+      }
+    ],
+    "summary": {
+      "big_idea": "Una tabla y su gráfica permiten ver la relación entre dos variables de un experimento, y la pendiente de la línea de mejor ajuste traduce esa relación en una magnitud física con significado y unidades propias.",
+      "key_points": [
+        "Una tabla organiza la variable independiente en la primera columna y la dependiente en la segunda, cada una con sus unidades.",
+        "Eje X: variable independiente. Eje Y: variable dependiente. Ambos con nombre, unidades y escala uniforme.",
+        "Se traza una línea de mejor ajuste que equilibre los puntos; su pendiente tiene unidades y significado físico.",
+        "Relación lineal directa: Y = mX + b; proporcional directa: Y = kX; proporcional inversa: Y = k/X."
+      ],
+      "formulas": [
+        "$m=\\dfrac{\\Delta y}{\\Delta x}$"
+      ],
+      "what_to_remember_if_nothing_else": "Dibuja ejes con nombre, unidades y escala adecuada; traza la línea de mejor ajuste (no uniones punto a punto) y calcula su pendiente con dos puntos de esa línea, dándole las unidades del eje Y entre las del eje X."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "nebula (fisica)_quimica (eso)_1bach (curriculum)_master.json, FIS-01-03"
+    ],
+    "curriculum_refs": [
+      "LOMLOE, Física y Química 3.º ESO, saberes A: tablas y gráficas"
+    ],
+    "confidence_notes": [
+      "Contenido revisado y corregido tras una auditoría experta: corregido el error físico de exam_questions[0] (pendiente longitud-temperatura y coeficiente de dilatación), corregido el test con dos opciones correctas (mcq[3]), reescritos los datos en tabla legible y ampliada la teoría con variables, pendiente, ordenada en el origen, interpolación/extrapolación y tipos de gráfica."
+    ],
+    "internal_review": {
+      "checks": [
+        "Cada ejercicio y pregunta de test tiene ahora respuesta y resolución completa.",
+        "Las cuatro preguntas de test varían la clave correcta y explican por qué fallan los distractores.",
+        "Los keywords y prerequisitos están estructurados con definición y justificación."
+      ],
+      "fixes_applied": [
+        "Corregido exam_questions[0]: la gráfica debe ser longitud-temperatura, no longitud-tiempo, y se distingue la pendiente del coeficiente de dilatación lineal.",
+        "Corregido mcq[3], que tenía dos opciones defendibles como correctas.",
+        "Corregida la errata de misconceptions[1].correct_model ('no comienza un error sistemático' → 'no corrige un error sistemático').",
+        "Reescritos los pares (t,x) en formato de tabla, legible sin confundir comas decimales con separadores.",
+        "Sustituidos los ejercicios de plantilla y los que excedían el nivel por ejercicios con datos concretos y solución."
+      ],
+      "remaining_concerns": []
+    }
+  }
+}

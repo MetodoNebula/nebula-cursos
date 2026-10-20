@@ -1,0 +1,2204 @@
+{
+  "lesson_01.json": {
+    "id": "L01",
+    "title": "Carga eléctrica e interacciones",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Física",
+    "unit_id": "U-4F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE3,1",
+        "CE3,2"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Explicar qué es la carga eléctrica y que existen dos tipos (positiva y negativa)."
+      },
+      {
+        "statement": "Describir los tres mecanismos de electrización: frotamiento, contacto e inducción."
+      },
+      {
+        "statement": "Enunciar la ley de Coulomb de forma cualitativa y resolver problemas sencillos con ella."
+      },
+      {
+        "statement": "Diferenciar conductores de aislantes y relacionar esta propiedad con la movilidad de cargas."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Conocer las unidades del SI y operar con potencias de diez.",
+        "why_it_matters": "La carga del electrón es del orden de 10⁻¹⁹ C y las fuerzas eléctricas se expresan en notación científica; sin manejar potencias, los cálculos resultan inabordables."
+      },
+      {
+        "statement": "Saber qué es una fuerza y representarla como un vector con módulo, dirección y sentido.",
+        "why_it_matters": "La fuerza eléctrica es un vector que actúa entre cargas; necesitas saber sumar y comparar fuerzas."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Por qué un globo frotado con lana se pega a la pared?",
+        "expected_answer": "Al frotarlo se transfieren electrones de la lana al globo, que queda con carga negativa; esa carga induce una separación de cargas en la pared y aparece una fuerza de atracción."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué signo tiene la carga de un electrón?",
+        "expected_answer": "Negativa."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Al frotar un objeto se crea carga eléctrica.",
+        "correct_model": "La carga no se crea ni se destruye (conservación de la carga): al frotar se transfieren electrones de un cuerpo a otro; uno queda con exceso de electrones (negativo) y el otro con defecto (positivo)."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Solo los objetos cargados negativamente atraen cosas.",
+        "correct_model": "Ambos signos de carga pueden atraer: dos cargas de signo opuesto siempre se atraen, y una carga de cualquier signo puede atraer a un cuerpo neutro por inducción."
+      },
+      {
+        "id": "MIS-03",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Los aislantes no pueden tener carga eléctrica.",
+        "correct_model": "Los aislantes sí pueden cargarse (por ejemplo, al frotarlos); lo que no permiten es que la carga se mueva libremente por su interior."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "¿Qué es la carga eléctrica?",
+        "body": "Toda la materia está formada por átomos que contienen protones (carga positiva) y electrones (carga negativa). Normalmente un cuerpo tiene el mismo número de protones que de electrones, así que es **eléctricamente neutro**. Cuando un cuerpo gana o pierde electrones, queda cargado:\n\n- Exceso de electrones → carga neta **negativa**.\n- Defecto de electrones → carga neta **positiva**.\n\nLa unidad de carga en el SI es el **culombio** (C). La carga de un electrón es $e = 1{,}6 \\times 10^{-19}\\,\\text{C}$. La carga está **cuantizada**: solo puede tomar valores múltiplos enteros de $e$.\n\n$$Q = n \\cdot e$$\n\ndonde $n$ es un número entero (positivo o negativo).",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 280\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"28\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Cargas eléctricas: positiva y negativa</text><rect x=\"40\" y=\"50\" width=\"180\" height=\"190\" rx=\"10\" fill=\"none\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1.5\"/><text x=\"130\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Cuerpo neutro</text><circle cx=\"90\" cy=\"120\" r=\"12\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"90\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><circle cx=\"130\" cy=\"120\" r=\"12\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"130\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">−</text><circle cx=\"170\" cy=\"120\" r=\"12\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"170\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><circle cx=\"90\" cy=\"160\" r=\"12\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"90\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">−</text><circle cx=\"130\" cy=\"160\" r=\"12\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"130\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><circle cx=\"170\" cy=\"160\" r=\"12\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"170\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">−</text><text x=\"130\" y=\"225\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Mismos + que −</text><rect x=\"280\" y=\"50\" width=\"180\" height=\"190\" rx=\"10\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"370\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">Cuerpo cargado (−)</text><circle cx=\"320\" cy=\"120\" r=\"12\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"320\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><circle cx=\"360\" cy=\"120\" r=\"12\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"360\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">−</text><circle cx=\"400\" cy=\"120\" r=\"12\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"400\" y=\"125\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">−</text><circle cx=\"320\" cy=\"160\" r=\"12\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"320\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">−</text><circle cx=\"360\" cy=\"160\" r=\"12\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"360\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><circle cx=\"400\" cy=\"160\" r=\"12\" fill=\"#c17a17\" opacity=\"0.2\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"400\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#c17a17\">−</text><text x=\"370\" y=\"225\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Exceso de e⁻ → carga neta −</text></svg>",
+            "caption": "Comparación entre un cuerpo neutro (igual número de cargas positivas y negativas) y un cuerpo con carga neta negativa (exceso de electrones)."
+          }
+        ]
+      },
+      {
+        "title": "Electrización: tres mecanismos",
+        "body": "Hay tres formas de cargar un cuerpo:\n\n**1. Frotamiento:** Al frotar dos materiales distintos, los electrones pasan de uno a otro. Ejemplo: frotar vidrio con seda (el vidrio queda positivo).\n\n**2. Contacto:** Un cuerpo cargado toca a uno neutro y le transfiere parte de su carga. Ambos quedan con el mismo signo.\n\n**3. Inducción:** Un cuerpo cargado se acerca (sin tocar) a un conductor neutro. Las cargas del conductor se redistribuyen: las de signo opuesto se acercan y las del mismo signo se alejan.\n\n<svg viewBox=\"0 0 420 150\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:420px\">\n  <rect x=\"5\" y=\"5\" width=\"410\" height=\"140\" rx=\"8\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <!-- Frotamiento -->\n  <text x=\"75\" y=\"22\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Frotamiento</text>\n  <rect x=\"30\" y=\"30\" width=\"40\" height=\"30\" rx=\"4\" fill=\"#fca5a5\" stroke=\"var(--primary,#0e7a68)\"/>\n  <text x=\"50\" y=\"50\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">+ + +</text>\n  <rect x=\"80\" y=\"30\" width=\"40\" height=\"30\" rx=\"4\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--secondary,#c17a17)\"/>\n  <text x=\"100\" y=\"50\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\">− − −</text>\n  <text x=\"75\" y=\"78\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">e⁻ pasan de</text>\n  <text x=\"75\" y=\"90\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">uno a otro</text>\n  <!-- Contacto -->\n  <text x=\"215\" y=\"22\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Contacto</text>\n  <circle cx=\"190\" cy=\"55\" r=\"18\" fill=\"#fca5a5\" stroke=\"var(--primary,#0e7a68)\"/>\n  <text x=\"190\" y=\"59\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">+</text>\n  <circle cx=\"240\" cy=\"55\" r=\"18\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\"/>\n  <text x=\"240\" y=\"59\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">0</text>\n  <line x1=\"208\" y1=\"55\" x2=\"222\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\" marker-end=\"url(#arr)\"/>\n  <text x=\"215\" y=\"90\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">Carga se reparte</text>\n  <!-- Inducción -->\n  <text x=\"350\" y=\"22\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Inducción</text>\n  <circle cx=\"320\" cy=\"55\" r=\"18\" fill=\"#fca5a5\" stroke=\"var(--primary,#0e7a68)\"/>\n  <text x=\"320\" y=\"59\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">+</text>\n  <rect x=\"350\" y=\"37\" width=\"50\" height=\"36\" rx=\"4\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\"/>\n  <text x=\"362\" y=\"59\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\">−</text>\n  <text x=\"388\" y=\"59\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">+</text>\n  <text x=\"350\" y=\"90\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">Cargas se</text>\n  <text x=\"350\" y=\"102\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">redistribuyen</text>\n  <defs><marker id=\"arr\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"var(--text,#20302a)\"/></marker></defs>\n</svg>"
+      },
+      {
+        "title": "Ley de Coulomb",
+        "body": "La fuerza eléctrica entre dos cargas puntuales $q_1$ y $q_2$ separadas una distancia $r$ es:\n\n$$F = k \\frac{|q_1| \\cdot |q_2|}{r^2}$$\n\ndonde $k = 9 \\times 10^9\\,\\text{N·m}^2/\\text{C}^2$ es la constante de Coulomb.\n\n**Características de la fuerza de Coulomb:**\n- Es **proporcional** al producto de las cargas.\n- Es **inversamente proporcional** al cuadrado de la distancia.\n- Es **atractiva** si las cargas son de signo opuesto y **repulsiva** si son del mismo signo.\n- Actúa a lo largo de la recta que une las dos cargas.\n\n<svg viewBox=\"0 0 400 120\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <!-- Atracción -->\n  <text x=\"100\" y=\"15\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Atracción (signos opuestos)</text>\n  <circle cx=\"50\" cy=\"50\" r=\"15\" fill=\"#fca5a5\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <text x=\"50\" y=\"55\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--primary,#0e7a68)\">+</text>\n  <circle cx=\"150\" cy=\"50\" r=\"15\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\"/>\n  <text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--secondary,#c17a17)\">−</text>\n  <line x1=\"65\" y1=\"50\" x2=\"85\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" marker-end=\"url(#ga)\"/>\n  <line x1=\"135\" y1=\"50\" x2=\"115\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" marker-end=\"url(#ga)\"/>\n  <text x=\"100\" y=\"46\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">F</text>\n  <!-- Repulsión -->\n  <text x=\"310\" y=\"15\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Repulsión (mismo signo)</text>\n  <circle cx=\"270\" cy=\"50\" r=\"15\" fill=\"#fca5a5\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <text x=\"270\" y=\"55\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--primary,#0e7a68)\">+</text>\n  <circle cx=\"350\" cy=\"50\" r=\"15\" fill=\"#fca5a5\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <text x=\"350\" y=\"55\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--primary,#0e7a68)\">+</text>\n  <line x1=\"255\" y1=\"50\" x2=\"240\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" marker-end=\"url(#ga)\"/>\n  <line x1=\"365\" y1=\"50\" x2=\"380\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" marker-end=\"url(#ga)\"/>\n  <text x=\"247\" y=\"46\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">F</text>\n  <text x=\"373\" y=\"46\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--primary,#0e7a68)\">F</text>\n  <!-- Distance label -->\n  <line x1=\"50\" y1=\"85\" x2=\"150\" y2=\"85\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <line x1=\"50\" y1=\"80\" x2=\"50\" y2=\"90\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <line x1=\"150\" y1=\"80\" x2=\"150\" y2=\"90\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <text x=\"100\" y=\"100\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">r</text>\n  <defs><marker id=\"ga\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"currentColor\"/></marker></defs>\n</svg>",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 280\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"af\" markerWidth=\"8\" markerHeight=\"6\" refX=\"7\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#0e7a68\"/></marker><marker id=\"bf\" markerWidth=\"8\" markerHeight=\"6\" refX=\"7\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#8a3d6b\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Ley de Coulomb: atracción y repulsión</text><text x=\"145\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Cargas opuestas: ATRACCIÓN</text><circle cx=\"80\" cy=\"100\" r=\"22\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"80\" y=\"106\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><circle cx=\"210\" cy=\"100\" r=\"22\" fill=\"#c17a17\" opacity=\"0.15\" stroke=\"#c17a17\" stroke-width=\"2\"/><text x=\"210\" y=\"106\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#c17a17\">−</text><line x1=\"102\" y1=\"100\" x2=\"140\" y2=\"100\" stroke=\"#0e7a68\" stroke-width=\"2.5\" marker-end=\"url(#af)\"/><line x1=\"188\" y1=\"100\" x2=\"150\" y2=\"100\" stroke=\"#0e7a68\" stroke-width=\"2.5\" marker-end=\"url(#af)\"/><text x=\"145\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0e7a68\">F</text><line x1=\"80\" y1=\"140\" x2=\"210\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><line x1=\"80\" y1=\"135\" x2=\"80\" y2=\"145\" stroke=\"var(--axes,#24312c)\"/><line x1=\"210\" y1=\"135\" x2=\"210\" y2=\"145\" stroke=\"var(--axes,#24312c)\"/><text x=\"145\" y=\"155\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">r</text><text x=\"375\" y=\"56\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Mismo signo: REPULSIÓN</text><circle cx=\"310\" cy=\"100\" r=\"22\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"310\" y=\"106\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><circle cx=\"440\" cy=\"100\" r=\"22\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"440\" y=\"106\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"bold\" fill=\"#0e7a68\">+</text><line x1=\"288\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#8a3d6b\" stroke-width=\"2.5\" marker-end=\"url(#bf)\"/><line x1=\"462\" y1=\"100\" x2=\"490\" y2=\"100\" stroke=\"#8a3d6b\" stroke-width=\"2.5\" marker-end=\"url(#bf)\"/><text x=\"270\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#8a3d6b\">F</text><text x=\"480\" y=\"92\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#8a3d6b\">F</text><rect x=\"100\" y=\"185\" width=\"300\" height=\"75\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.5\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/><text x=\"250\" y=\"210\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">F = k · |q₁| · |q₂| / r²</text><text x=\"250\" y=\"235\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">k = 9 × 10⁹ N·m²/C²</text><text x=\"250\" y=\"252\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Inversamente proporcional al cuadrado de la distancia</text></svg>",
+            "caption": "Ley de Coulomb: cargas de signo opuesto se atraen y cargas del mismo signo se repelen, con una fuerza proporcional al producto de las cargas e inversamente proporcional al cuadrado de la distancia."
+          }
+        ]
+      },
+      {
+        "title": "Conductores y aislantes",
+        "body": "Los materiales se clasifican según permitan o no el movimiento de cargas:\n\n- **Conductores** (metales, agua salada, grafito): tienen electrones libres que se mueven con facilidad. Por eso la corriente eléctrica fluye a través de ellos.\n- **Aislantes** o dieléctricos (plástico, vidrio, goma): los electrones están fuertemente ligados a sus átomos y no se mueven libremente.\n- **Semiconductores** (silicio, germanio): conducen solo bajo ciertas condiciones (temperatura, dopaje). Son la base de la electrónica.\n\nUn **electroscopio** es un instrumento que detecta si un cuerpo está cargado: al acercar un cuerpo cargado, las láminas del electroscopio se separan porque adquieren cargas del mismo signo y se repelen."
+      },
+      {
+        "title": "Conservación de la carga",
+        "body": "La carga eléctrica se conserva: en cualquier proceso la carga total del sistema aislado no cambia. Si un cuerpo gana electrones, otro los pierde. Esto es un principio fundamental de la naturaleza.\n\n$$Q_{\\text{total, antes}} = Q_{\\text{total, después}}$$\n\n**Ejemplo:** Al frotar vidrio con seda, si el vidrio pierde una carga $Q$, la seda gana exactamente $Q$. La suma sigue siendo cero.\n\nAdemás, la carga está cuantizada: siempre es un múltiplo entero de la carga elemental $e$. No existen cargas de $0{,}5e$."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Calcular el número de electrones transferidos",
+        "statement": "Un globo se carga por frotamiento y adquiere una carga de $-3{,}2 \\times 10^{-7}$ C. ¿Cuántos electrones ha ganado?",
+        "steps": [
+          "Datos: $Q = -3{,}2 \\times 10^{-7}$ C; carga de un electrón: $e = 1{,}6 \\times 10^{-19}$ C.",
+          "Como la carga es negativa, el globo ha ganado electrones. El número de electrones es: $n = \\dfrac{|Q|}{e} = \\dfrac{3{,}2 \\times 10^{-7}}{1{,}6 \\times 10^{-19}}$.",
+          "Dividimos: $n = 2{,}0 \\times 10^{12}$ electrones.",
+          "Comprobación: $2{,}0 \\times 10^{12} \\times 1{,}6 \\times 10^{-19} = 3{,}2 \\times 10^{-7}$ C ✓"
+        ],
+        "answer": "El globo ha ganado $2{,}0 \\times 10^{12}$ electrones.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"et\" markerWidth=\"7\" markerHeight=\"5\" refX=\"6\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#c17a17\"/></marker></defs><text x=\"240\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Transferencia de electrones por frotamiento</text><ellipse cx=\"140\" cy=\"130\" rx=\"80\" ry=\"50\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"140\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Lana</text><text x=\"140\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">+ + + +</text><text x=\"140\" y=\"145\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Pierde e⁻</text><text x=\"140\" y=\"165\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">Queda (+)</text><ellipse cx=\"360\" cy=\"130\" rx=\"80\" ry=\"50\" fill=\"#c17a17\" opacity=\"0.1\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"360\" y=\"90\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Globo</text><text x=\"360\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">− − − − −</text><text x=\"360\" y=\"145\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Gana e⁻</text><text x=\"360\" y=\"165\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">Queda (−)</text><line x1=\"210\" y1=\"120\" x2=\"270\" y2=\"120\" stroke=\"#c17a17\" stroke-width=\"2\" marker-end=\"url(#et)\"/><text x=\"240\" y=\"112\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">e⁻</text><rect x=\"80\" y=\"200\" width=\"320\" height=\"40\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.5\"/><text x=\"240\" y=\"218\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Q = n · e = 2,0 × 10¹² × 1,6 × 10⁻¹⁹ C</text><text x=\"240\" y=\"234\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#0e7a68\">= 3,2 × 10⁻⁷ C</text></svg>",
+            "caption": "Transferencia de electrones del pelo/lana al globo por frotamiento: la lana queda positiva y el globo negativo."
+          }
+        ]
+      },
+      {
+        "title": "Fuerza de Coulomb entre dos cargas",
+        "statement": "Dos cargas $q_1 = +3\\,\\mu\\text{C}$ y $q_2 = -5\\,\\mu\\text{C}$ están separadas 0,2 m. Calcula la fuerza entre ellas e indica si es atractiva o repulsiva.",
+        "steps": [
+          "Datos: $q_1 = +3 \\times 10^{-6}$ C, $q_2 = -5 \\times 10^{-6}$ C, $r = 0{,}2$ m, $k = 9 \\times 10^9$ N·m²/C².",
+          "Aplicamos la ley de Coulomb: $F = k \\dfrac{|q_1| \\cdot |q_2|}{r^2} = 9 \\times 10^9 \\cdot \\dfrac{3 \\times 10^{-6} \\times 5 \\times 10^{-6}}{(0{,}2)^2}$.",
+          "Numerador: $9 \\times 10^9 \\times 15 \\times 10^{-12} = 135 \\times 10^{-3} = 0{,}135$ N·m².",
+          "Denominador: $(0{,}2)^2 = 0{,}04$ m².",
+          "Resultado: $F = \\dfrac{0{,}135}{0{,}04} = 3{,}375$ N.",
+          "Como las cargas tienen signo opuesto, la fuerza es **atractiva**."
+        ],
+        "answer": "$F = 3{,}375$ N, atractiva."
+      },
+      {
+        "title": "Efecto de duplicar la distancia",
+        "statement": "Si la distancia entre dos cargas se duplica, ¿qué le ocurre a la fuerza eléctrica entre ellas?",
+        "steps": [
+          "Fuerza original: $F = k \\dfrac{|q_1||q_2|}{r^2}$.",
+          "Nueva distancia: $r' = 2r$.",
+          "Nueva fuerza: $F' = k \\dfrac{|q_1||q_2|}{(2r)^2} = k \\dfrac{|q_1||q_2|}{4r^2} = \\dfrac{F}{4}$.",
+          "Al duplicar la distancia, la fuerza se reduce a la cuarta parte."
+        ],
+        "answer": "La fuerza se reduce a $F/4$ (un cuarto de la original)."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Tres cargas están alineadas: $q_A = +2\\,\\mu\\text{C}$ en $x = 0$, $q_B = -4\\,\\mu\\text{C}$ en $x = 0{,}3$ m, y $q_C = +1\\,\\mu\\text{C}$ en $x = 0{,}5$ m. Calcula la fuerza neta sobre $q_B$.",
+        "scaffold": "Calcula por separado la fuerza de A sobre B y la de C sobre B. Presta atención a la dirección de cada fuerza (atracción/repulsión) y luego suma vectorialmente (al estar alineadas, suma o resta según sentidos).",
+        "answer": "La fuerza de A sobre B es atractiva (hacia la izquierda): $F_{AB} = 9\\times10^9 \\cdot \\frac{2\\times10^{-6} \\cdot 4\\times10^{-6}}{0{,}3^2} = 0{,}80$ N hacia $x<0$. La fuerza de C sobre B es atractiva (hacia la derecha): $F_{CB} = 9\\times10^9 \\cdot \\frac{4\\times10^{-6} \\cdot 1\\times10^{-6}}{0{,}2^2} = 0{,}90$ N hacia $x>0$. Fuerza neta: $0{,}90 - 0{,}80 = 0{,}10$ N hacia la derecha."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Tienes dos esferas metálicas idénticas. La esfera A tiene carga $+6\\,\\mu\\text{C}$ y la esfera B está neutra. Las pones en contacto y las separas. ¿Qué carga tiene cada una después? ¿Y si B tuviera inicialmente $-2\\,\\mu\\text{C}$?",
+        "scaffold": "Al ser conductoras idénticas, al contacto la carga total se reparte a partes iguales. Suma la carga total y divide entre dos.",
+        "answer": "Caso 1: carga total = $+6 + 0 = +6\\,\\mu\\text{C}$; cada esfera queda con $+3\\,\\mu\\text{C}$. Caso 2: carga total = $+6 + (-2) = +4\\,\\mu\\text{C}$; cada esfera queda con $+2\\,\\mu\\text{C}$."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un cuerpo tiene un exceso de $5 \\times 10^{13}$ electrones. Calcula su carga neta en culombios.",
+        "answer": "$Q = -5 \\times 10^{13} \\times 1{,}6 \\times 10^{-19} = -8{,}0 \\times 10^{-6}$ C $= -8\\,\\mu$C.",
+        "full_solution": "Cada electrón tiene carga $-e = -1{,}6 \\times 10^{-19}$ C. Un exceso de $n = 5 \\times 10^{13}$ electrones implica una carga neta $Q = -n \\cdot e = -5 \\times 10^{13} \\times 1{,}6 \\times 10^{-19} = -8{,}0 \\times 10^{-6}$ C, es decir, $-8\\,\\mu$C.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Dos cargas iguales de $+4\\,\\mu$C están separadas 0,1 m. Calcula la fuerza entre ellas.",
+        "answer": "$F = 14{,}4$ N, repulsiva.",
+        "full_solution": "$F = k\\dfrac{q_1 q_2}{r^2} = 9 \\times 10^9 \\cdot \\dfrac{(4 \\times 10^{-6})^2}{(0{,}1)^2} = 9 \\times 10^9 \\cdot \\dfrac{16 \\times 10^{-12}}{0{,}01} = 9 \\times 10^9 \\times 1{,}6 \\times 10^{-9} = 14{,}4$ N. Como ambas cargas son positivas, la fuerza es repulsiva.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿A qué distancia deben situarse dos cargas de $+1\\,\\mu$C y $-1\\,\\mu$C para que la fuerza entre ellas sea 0,9 N?",
+        "answer": "$r = 0{,}1$ m $= 10$ cm.",
+        "full_solution": "De $F = k\\dfrac{|q_1||q_2|}{r^2}$ despejamos $r$: $r = \\sqrt{k\\dfrac{|q_1||q_2|}{F}} = \\sqrt{9 \\times 10^9 \\cdot \\dfrac{10^{-6} \\times 10^{-6}}{0{,}9}} = \\sqrt{\\dfrac{9 \\times 10^{-3}}{0{,}9}} = \\sqrt{0{,}01} = 0{,}1$ m.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Compara la fuerza eléctrica entre un protón y un electrón en el átomo de hidrógeno ($r = 5{,}3 \\times 10^{-11}$ m) con el peso del electrón ($m_e = 9{,}1 \\times 10^{-31}$ kg). ¿Cuántas veces es mayor la fuerza eléctrica?",
+        "answer": "La fuerza eléctrica es $\\sim 10^{39}$ veces mayor que el peso del electrón.",
+        "full_solution": "Fuerza eléctrica: $F_e = 9 \\times 10^9 \\cdot \\dfrac{(1{,}6 \\times 10^{-19})^2}{(5{,}3 \\times 10^{-11})^2} = 9 \\times 10^9 \\cdot \\dfrac{2{,}56 \\times 10^{-38}}{2{,}81 \\times 10^{-21}} \\approx 8{,}2 \\times 10^{-8}$ N.\n\nPeso del electrón: $P = m_e g = 9{,}1 \\times 10^{-31} \\times 9{,}8 \\approx 8{,}9 \\times 10^{-30}$ N.\n\nCociente: $\\dfrac{F_e}{P} = \\dfrac{8{,}2 \\times 10^{-8}}{8{,}9 \\times 10^{-30}} \\approx 9{,}2 \\times 10^{21}$. Más rigurosamente $\\sim 2 \\times 10^{39}$ comparando gravitatoria con eléctrica entre protón y electrón. La fuerza eléctrica domina aplastantemente a escala atómica.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dibuja las líneas de fuerza eléctrica entre: (a) dos cargas positivas iguales; (b) una carga positiva y una negativa. Indica en cada caso el punto donde el campo sería nulo (si existe).",
+        "answer": "(a) Las líneas salen de ambas cargas y se repelen; hay un punto de campo nulo entre ellas (punto medio). (b) Las líneas van de la positiva a la negativa; no hay punto de campo nulo entre ellas.",
+        "full_solution": "(a) Dos cargas positivas: las líneas salen radialmente de cada carga. En el punto medio de la línea que las une, el campo de una carga es igual y opuesto al de la otra → campo nulo. A los lados del punto medio las líneas se curvan alejándose.\n\n(b) Una positiva y una negativa: las líneas salen de la positiva y entran en la negativa. Entre las cargas, ambos campos apuntan en el mismo sentido (de + a −), así que no se anulan. El punto de campo nulo está fuera de las cargas, en la prolongación del segmento que las une.",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "Se frotan un bolígrafo de plástico y un paño de lana. El bolígrafo queda con carga $-2 \\times 10^{-8}$ C. ¿Qué carga tiene el paño? ¿Se ha creado carga?",
+        "answer": "El paño tiene $+2 \\times 10^{-8}$ C. No se ha creado carga, solo se han transferido electrones.",
+        "full_solution": "Por el principio de conservación de la carga, la carga total del sistema (bolígrafo + paño) debe ser la misma antes y después del frotamiento. Antes, ambos estaban neutros: $Q_{total} = 0$. Después: $Q_{boli} + Q_{paño} = 0 \\Rightarrow Q_{paño} = -Q_{boli} = +2 \\times 10^{-8}$ C. No se ha creado carga nueva; los electrones del paño han pasado al bolígrafo.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Un estudiante dice: «Si triplicamos las dos cargas y reducimos la distancia a la mitad, la fuerza se multiplica por 6». ¿Es correcto? Justifica.",
+        "answer": "No. La fuerza se multiplica por $3 \\times 3 \\times 4 = 36$.",
+        "full_solution": "Fuerza original: $F = k\\dfrac{q_1 q_2}{r^2}$. Nuevas condiciones: $q_1' = 3q_1$, $q_2' = 3q_2$, $r' = r/2$.\n\n$F' = k\\dfrac{3q_1 \\cdot 3q_2}{(r/2)^2} = k\\dfrac{9q_1 q_2}{r^2/4} = 9 \\times 4 \\times k\\dfrac{q_1 q_2}{r^2} = 36F$.\n\nEl estudiante olvidó que la distancia entra al cuadrado: reducir la distancia a la mitad cuadruplica la fuerza (no la duplica), y triplicar ambas cargas da factor 9. Total: $9 \\times 4 = 36$.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Diseña un experimento casero para demostrar la electrización por inducción usando solo un globo, un grifo con un hilo fino de agua y tu pelo. Describe qué observarías y por qué.",
+        "answer": "Al acercar el globo cargado (frotado en el pelo) al hilo de agua, el agua se curva hacia el globo por inducción.",
+        "full_solution": "Paso 1: Frotar el globo con el pelo para cargarlo negativamente (los electrones del pelo pasan al globo). Paso 2: Abrir un grifo con un hilo de agua fino y continuo. Paso 3: Acercar el globo (sin tocar el agua). Observación: el hilo de agua se desvía curvándose hacia el globo. Explicación: la carga negativa del globo repele los electrones de las moléculas de agua (inducción), dejando la cara cercana del hilo de agua con un leve exceso de carga positiva. Como la zona positiva está más cerca del globo que la negativa, la fuerza de atracción es mayor que la de repulsión → el agua se desplaza hacia el globo.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L01-1",
+        "stem": "¿Cuál es la unidad de carga eléctrica en el SI?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Voltio (V)",
+            "why_wrong": "El voltio es la unidad de diferencia de potencial, no de carga."
+          },
+          {
+            "key": "B",
+            "text": "B. Culombio (C)"
+          },
+          {
+            "key": "C",
+            "text": "C. Amperio (A)",
+            "why_wrong": "El amperio mide la intensidad de corriente (carga por unidad de tiempo), no la carga en sí."
+          },
+          {
+            "key": "D",
+            "text": "D. Ohmio (Ω)",
+            "why_wrong": "El ohmio es la unidad de resistencia eléctrica."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-2",
+        "stem": "Al frotar vidrio con seda, el vidrio queda con carga positiva. ¿Qué ha ocurrido?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se han creado protones en el vidrio",
+            "why_wrong": "Los protones están fijos en el núcleo atómico; no se crean en un proceso de frotamiento."
+          },
+          {
+            "key": "B",
+            "text": "B. Se han creado cargas positivas de la nada",
+            "why_wrong": "La carga no se crea ni se destruye; el principio de conservación lo prohíbe."
+          },
+          {
+            "key": "C",
+            "text": "C. El vidrio ha perdido electrones que han pasado a la seda"
+          },
+          {
+            "key": "D",
+            "text": "D. La seda ha perdido protones que han pasado al vidrio",
+            "why_wrong": "Los protones no se transfieren entre materiales por frotamiento; solo los electrones se mueven."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-3",
+        "stem": "Según la ley de Coulomb, si la distancia entre dos cargas se reduce a la mitad, la fuerza:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se duplica",
+            "why_wrong": "La fuerza depende de 1/r²; si r se reduce a la mitad, 1/(r/2)² = 4/r², así que la fuerza se cuadruplica, no se duplica."
+          },
+          {
+            "key": "B",
+            "text": "B. Se cuadruplica"
+          },
+          {
+            "key": "C",
+            "text": "C. Se reduce a la mitad",
+            "why_wrong": "Eso sería si F fuera proporcional a r (F ∝ 1/r), pero la dependencia es con r²."
+          },
+          {
+            "key": "D",
+            "text": "D. No cambia",
+            "why_wrong": "La fuerza depende explícitamente de la distancia según la ley de Coulomb."
+          }
+        ]
+      },
+      {
+        "id": "MC-L01-4",
+        "stem": "Un material en el que los electrones no se mueven libremente se llama:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Conductor",
+            "why_wrong": "En un conductor los electrones sí se mueven libremente; por eso conduce la corriente."
+          },
+          {
+            "key": "B",
+            "text": "B. Semiconductor",
+            "why_wrong": "Un semiconductor conduce bajo ciertas condiciones; no es la descripción de un material que no permite movimiento libre de electrones."
+          },
+          {
+            "key": "C",
+            "text": "C. Aislante"
+          },
+          {
+            "key": "D",
+            "text": "D. Superconductor",
+            "why_wrong": "Un superconductor tiene resistencia cero; es el extremo opuesto de un aislante."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Explica los tres mecanismos de electrización y pon un ejemplo de cada uno. ¿Se conserva la carga en todos los casos?",
+        "answer": "Frotamiento (vidrio con seda), contacto (tocar una esfera cargada con una neutra), inducción (acercar un globo cargado a trocitos de papel). En los tres la carga total se conserva.",
+        "full_solution": "(1) Frotamiento: al frotar dos materiales, los electrones pasan de uno a otro. Ejemplo: al frotar vidrio con seda, el vidrio pierde electrones y queda positivo; la seda los gana y queda negativa. (2) Contacto: un cuerpo cargado toca a uno neutro y le transfiere parte de su carga. Ejemplo: una esfera metálica cargada toca otra neutra; la carga se reparte entre ambas. (3) Inducción: un cuerpo cargado se acerca a un conductor neutro sin tocarlo; las cargas del conductor se redistribuyen. Ejemplo: un globo cargado acercado a trocitos de papel los atrae porque induce polarización. En todos los casos se cumple la conservación de la carga: la carga total del sistema aislado no cambia, solo se redistribuye."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Tres cargas idénticas $q$ se colocan en los vértices de un triángulo equilátero de lado $a$. Calcula la fuerza resultante sobre cada carga en función de $k$, $q$ y $a$.",
+        "answer": "$F_{res} = k\\dfrac{q^2}{a^2}\\sqrt{3}$, dirigida hacia afuera del triángulo (bisectriz del ángulo).",
+        "full_solution": "Cada carga recibe la fuerza repulsiva de las otras dos. Por simetría, las dos fuerzas tienen el mismo módulo: $F = k\\dfrac{q^2}{a^2}$. El ángulo entre las dos fuerzas es 60° (el ángulo del triángulo equilátero). La resultante de dos vectores de igual módulo $F$ que forman ángulo $\\theta$ entre sí es: $F_{res} = 2F\\cos(\\theta/2) = 2F\\cos30° = 2F \\cdot \\dfrac{\\sqrt{3}}{2} = F\\sqrt{3} = k\\dfrac{q^2}{a^2}\\sqrt{3}$. La dirección es la bisectriz del ángulo formado por las dos fuerzas, es decir, radialmente hacia afuera desde el centro del triángulo."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué es la carga eléctrica?",
+        "back": "Propiedad de la materia responsable de las interacciones eléctricas. Existen dos tipos: positiva (protones) y negativa (electrones). Su unidad es el culombio (C).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Ley de Coulomb",
+        "back": "$F = k\\dfrac{|q_1||q_2|}{r^2}$, con $k = 9 \\times 10^9$ N·m²/C². La fuerza es atractiva si las cargas son de signo opuesto y repulsiva si son del mismo signo.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Qué es un conductor eléctrico?",
+        "back": "Material que permite el movimiento libre de cargas eléctricas (electrones). Ejemplos: cobre, aluminio, agua salada.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Principio de conservación de la carga",
+        "back": "La carga eléctrica no se crea ni se destruye: la carga total de un sistema aislado permanece constante.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Decir que al frotar un objeto 'se crea carga'.",
+        "correction": "La carga se transfiere (electrones pasan de un cuerpo a otro), no se crea. Se conserva la carga total."
+      },
+      {
+        "mistake": "Olvidar elevar al cuadrado la distancia en la ley de Coulomb.",
+        "correction": "La fuerza depende de $1/r^2$. Si la distancia se duplica, la fuerza se divide por 4, no por 2."
+      },
+      {
+        "mistake": "Confundir la carga del protón (positiva) con la del electrón (negativa).",
+        "correction": "El protón tiene carga $+e$ y el electrón $-e$, con $e = 1{,}6 \\times 10^{-19}$ C."
+      }
+    ],
+    "exam_notes": [],
+    "keywords": [
+      {
+        "term": "carga eléctrica",
+        "definition": "Propiedad de la materia que causa interacciones eléctricas. Se mide en culombios (C)."
+      },
+      {
+        "term": "culombio",
+        "definition": "Unidad de carga eléctrica en el SI. Símbolo: C."
+      },
+      {
+        "term": "electrización",
+        "definition": "Proceso por el que un cuerpo adquiere carga eléctrica neta (frotamiento, contacto o inducción)."
+      },
+      {
+        "term": "ley de Coulomb",
+        "definition": "La fuerza entre dos cargas puntuales es proporcional al producto de las cargas e inversamente proporcional al cuadrado de la distancia: $F = kq_1q_2/r^2$."
+      },
+      {
+        "term": "conductor",
+        "definition": "Material que permite el movimiento libre de cargas eléctricas."
+      },
+      {
+        "term": "aislante",
+        "definition": "Material que no permite el movimiento libre de cargas eléctricas."
+      },
+      {
+        "term": "conservación de la carga",
+        "definition": "Principio que establece que la carga total de un sistema aislado no cambia."
+      }
+    ],
+    "summary": {
+      "big_idea": "Toda la materia contiene cargas eléctricas; cuando un cuerpo gana o pierde electrones queda cargado y ejerce fuerzas sobre otras cargas según la ley de Coulomb.",
+      "key_points": [
+        "Existen dos tipos de carga: positiva y negativa. Cargas iguales se repelen; opuestas se atraen.",
+        "La electrización ocurre por frotamiento, contacto o inducción; en todos los casos se conserva la carga total.",
+        "La ley de Coulomb describe la fuerza entre cargas: $F = k|q_1||q_2|/r^2$.",
+        "Los conductores permiten el movimiento libre de cargas; los aislantes no."
+      ],
+      "formulas": [
+        "$Q = ne$",
+        "$F = k\\dfrac{|q_1||q_2|}{r^2}$"
+      ],
+      "what_to_remember_if_nothing_else": "La carga se conserva, no se crea. Cargas iguales se repelen y opuestas se atraen con fuerza $F = kq_1q_2/r^2$."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 217/2022 saberes Bloque A · Interacciones"
+    ],
+    "curriculum_refs": [
+      "CE3,1 Describir fenómenos eléctricos cotidianos",
+      "CE3,2 Aplicar la ley de Coulomb"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 4.º ESO alineado con LOMLOE"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "SVGs incluidos"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_02.json": {
+    "id": "L02",
+    "title": "Corriente eléctrica y ley de Ohm",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Física",
+    "unit_id": "U-4F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE3,1",
+        "CE3,3"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Definir la corriente eléctrica como flujo de cargas y su unidad (amperio)."
+      },
+      {
+        "statement": "Explicar el concepto de diferencia de potencial (voltaje) y su papel como 'motor' de la corriente."
+      },
+      {
+        "statement": "Enunciar y aplicar la relación entre diferencia de potencial, intensidad y resistencia en circuitos sencillos."
+      },
+      {
+        "statement": "Distinguir entre resistencia eléctrica y resistividad, y nombrar factores que afectan a la resistencia de un conductor."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Saber qué son cargas eléctricas y que existen conductores y aislantes.",
+        "why_it_matters": "La corriente es un flujo de cargas a través de un conductor; si no se entiende qué son las cargas ni qué materiales las dejan pasar, la definición de corriente queda vacía."
+      },
+      {
+        "statement": "Manejar proporcionalidad directa y resolver ecuaciones del tipo $y = ax$.",
+        "why_it_matters": "La ley de Ohm es una relación de proporcionalidad directa entre voltaje e intensidad."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué hace que la corriente circule por un cable?",
+        "expected_answer": "Una diferencia de potencial (voltaje) entre los extremos del cable."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si una bombilla tiene más resistencia que otra, ¿pasa más o menos corriente por ella (al mismo voltaje)?",
+        "expected_answer": "Menos corriente, porque a mayor resistencia, menor intensidad para el mismo voltaje."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La corriente se 'gasta' al pasar por una bombilla.",
+        "correct_model": "La corriente (número de cargas por segundo) es la misma antes y después de la bombilla en un circuito en serie. Lo que se 'gasta' (transforma en calor y luz) es la energía que transportan las cargas."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El voltaje es lo mismo que la corriente.",
+        "correct_model": "El voltaje (V) es la 'presión' que empuja las cargas; la corriente (I) es el flujo de cargas que resulta. Están relacionados por $V = IR$ pero son magnitudes diferentes."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "¿Qué es la corriente eléctrica?",
+        "body": "La **corriente eléctrica** es el flujo ordenado de cargas eléctricas a través de un conductor. En los metales, las cargas que se mueven son los electrones libres.\n\nLa **intensidad de corriente** $I$ mide cuánta carga pasa por una sección del conductor en cada segundo:\n\n$$I = \\frac{Q}{t}$$\n\ndonde $Q$ es la carga en culombios y $t$ el tiempo en segundos. Su unidad es el **amperio** (A): $1\\,\\text{A} = 1\\,\\text{C/s}$.\n\n**Sentido convencional vs. real:** Históricamente se definió el sentido de la corriente como el de las cargas positivas (de + a −). En realidad, en los metales son los electrones (negativos) los que se mueven, en sentido contrario. Se usa el sentido convencional por tradición.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><defs><marker id=\"ci\" markerWidth=\"7\" markerHeight=\"5\" refX=\"6\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#0e7a68\"/></marker></defs><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Corriente eléctrica en un circuito simple</text><rect x=\"100\" y=\"60\" width=\"300\" height=\"200\" rx=\"10\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"220\" y1=\"60\" x2=\"220\" y2=\"60\" stroke=\"none\"/><rect x=\"210\" y=\"45\" width=\"80\" height=\"30\" rx=\"4\" fill=\"#c17a17\" opacity=\"0.15\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><line x1=\"235\" y1=\"52\" x2=\"235\" y2=\"68\" stroke=\"#c17a17\" stroke-width=\"2\"/><line x1=\"227\" y1=\"60\" x2=\"243\" y2=\"60\" stroke=\"#c17a17\" stroke-width=\"2\"/><line x1=\"258\" y1=\"55\" x2=\"258\" y2=\"65\" stroke=\"#c17a17\" stroke-width=\"2\"/><text x=\"250\" y=\"42\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"#c17a17\">Pila (V)</text><circle cx=\"250\" cy=\"260\" r=\"18\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"250\" y=\"265\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#0e7a68\">R</text><text x=\"250\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Resistencia</text><line x1=\"350\" y1=\"160\" x2=\"390\" y2=\"160\" stroke=\"#0e7a68\" stroke-width=\"2\" marker-end=\"url(#ci)\"/><text x=\"395\" y=\"155\" font-size=\"10\" font-weight=\"bold\" fill=\"#0e7a68\">I</text><text x=\"395\" y=\"168\" font-size=\"9\" fill=\"var(--text,#20302a)\">(corriente)</text><line x1=\"55\" y1=\"160\" x2=\"90\" y2=\"160\" stroke=\"#0e7a68\" stroke-width=\"2\" marker-end=\"url(#ci)\"/><text x=\"50\" y=\"155\" font-size=\"10\" font-weight=\"bold\" fill=\"#0e7a68\">I</text><text x=\"60\" y=\"80\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8a3d6b\">Sentido</text><text x=\"60\" y=\"92\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8a3d6b\">convencional</text><text x=\"60\" y=\"104\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8a3d6b\">(+ → −)</text></svg>",
+            "caption": "Circuito simple con pila y resistencia mostrando el sentido convencional de la corriente (del polo positivo al negativo)."
+          }
+        ]
+      },
+      {
+        "title": "Diferencia de potencial (voltaje)",
+        "body": "Para que las cargas circulen hace falta una **diferencia de potencial** (d.d.p. o voltaje) entre dos puntos del circuito. Es como la diferencia de altura en una cascada: el agua cae porque hay un desnivel.\n\n$$V = V_A - V_B$$\n\nSe mide en **voltios** (V). Una pila de 1,5 V mantiene 1,5 V entre sus bornes. El aparato que la mide es el **voltímetro**, que se conecta **en paralelo** con el elemento cuyo voltaje queremos medir.\n\n<svg viewBox=\"0 0 360 140\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:360px\">\n  <!-- Analogía cascada -->\n  <text x=\"90\" y=\"15\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Analogía hidráulica</text>\n  <rect x=\"30\" y=\"25\" width=\"120\" height=\"100\" rx=\"6\" fill=\"#eff6ff\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1\"/>\n  <!-- Tanque alto -->\n  <rect x=\"40\" y=\"35\" width=\"40\" height=\"25\" rx=\"3\" fill=\"var(--grid,#e8e3d8)\" stroke=\"var(--secondary,#c17a17)\"/>\n  <text x=\"60\" y=\"52\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--secondary,#c17a17)\">V alto</text>\n  <!-- Tanque bajo -->\n  <rect x=\"100\" y=\"75\" width=\"40\" height=\"25\" rx=\"3\" fill=\"#bfdbfe\" stroke=\"var(--secondary,#c17a17)\"/>\n  <text x=\"120\" y=\"92\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--secondary,#c17a17)\">V bajo</text>\n  <!-- Flujo -->\n  <path d=\"M70 60 Q85 55 100 75\" fill=\"none\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\" marker-end=\"url(#aw)\"/>\n  <text x=\"90\" y=\"62\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--secondary,#c17a17)\">Flujo</text>\n  <!-- Circuito -->\n  <text x=\"270\" y=\"15\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Circuito eléctrico</text>\n  <rect x=\"200\" y=\"25\" width=\"140\" height=\"100\" rx=\"6\" fill=\"#f0fdf4\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1\"/>\n  <!-- Pila -->\n  <line x1=\"230\" y1=\"50\" x2=\"230\" y2=\"80\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"3\"/>\n  <line x1=\"240\" y1=\"55\" x2=\"240\" y2=\"75\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <text x=\"235\" y=\"42\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">+ −</text>\n  <!-- Resistencia -->\n  <path d=\"M260 50 l5 0 l3 -8 l6 16 l6 -16 l6 16 l3 -8 l5 0\" fill=\"none\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <text x=\"282\" y=\"42\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">R</text>\n  <!-- Cables -->\n  <line x1=\"240\" y1=\"50\" x2=\"260\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <line x1=\"294\" y1=\"50\" x2=\"310\" y2=\"50\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <line x1=\"310\" y1=\"50\" x2=\"310\" y2=\"80\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <line x1=\"310\" y1=\"80\" x2=\"230\" y2=\"80\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <text x=\"270\" y=\"98\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">I →</text>\n  <defs><marker id=\"aw\" markerWidth=\"6\" markerHeight=\"6\" refX=\"5\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L6,3 L0,6\" fill=\"var(--secondary,#c17a17)\"/></marker></defs>\n</svg>"
+      },
+      {
+        "title": "Ley de Ohm",
+        "body": "En muchos conductores, la intensidad es directamente proporcional al voltaje aplicado. Esta relación se llama **ley de Ohm**:\n\n$$V = I \\cdot R$$\n\ndonde $V$ es el voltaje en voltios (V), $I$ la intensidad en amperios (A) y $R$ la **resistencia** en **ohmios** (Ω).\n\nFormas equivalentes:\n- $I = \\dfrac{V}{R}$ (para calcular la intensidad)\n- $R = \\dfrac{V}{I}$ (para calcular la resistencia)\n\n**Materiales óhmicos** son los que cumplen esta ley (la gráfica $V$-$I$ es una recta por el origen). Algunos componentes (diodos, LEDs) no la cumplen.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 280\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Ley de Ohm: V = I · R</text><line x1=\"80\" y1=\"240\" x2=\"280\" y2=\"240\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"240\" x2=\"80\" y2=\"50\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"180\" y=\"268\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">I (A)</text><text x=\"55\" y=\"145\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\" transform=\"rotate(-90,55,145)\">V (V)</text><line x1=\"80\" y1=\"240\" x2=\"260\" y2=\"60\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><text x=\"240\" y=\"55\" font-size=\"11\" font-weight=\"bold\" fill=\"#0e7a68\">R grande</text><line x1=\"80\" y1=\"240\" x2=\"260\" y2=\"130\" stroke=\"#c17a17\" stroke-width=\"2.5\"/><text x=\"265\" y=\"125\" font-size=\"11\" font-weight=\"bold\" fill=\"#c17a17\">R pequeña</text><text x=\"180\" y=\"200\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Pendiente = R</text><rect x=\"310\" y=\"60\" width=\"170\" height=\"120\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.5\"/><text x=\"395\" y=\"85\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">V = I · R</text><text x=\"395\" y=\"110\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">I = V / R</text><text x=\"395\" y=\"135\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">R = V / I</text><text x=\"395\" y=\"165\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">R en ohmios (Ω)</text></svg>",
+            "caption": "Gráfica V-I de la ley de Ohm: la pendiente de la recta es la resistencia. Mayor resistencia implica mayor pendiente."
+          }
+        ]
+      },
+      {
+        "title": "Resistencia y resistividad",
+        "body": "La **resistencia** $R$ de un conductor depende de su material y geometría:\n\n$$R = \\rho \\cdot \\frac{L}{S}$$\n\ndonde $\\rho$ es la **resistividad** del material (en Ω·m), $L$ la longitud del conductor y $S$ su sección transversal.\n\nFactores que aumentan la resistencia:\n- Mayor longitud → más resistencia.\n- Menor sección → más resistencia.\n- Material con mayor resistividad → más resistencia.\n- Mayor temperatura (en metales) → más resistencia.\n\n| Material | $\\rho$ (Ω·m) |\n|----------|---------------|\n| Cobre | $1{,}7 \\times 10^{-8}$ |\n| Aluminio | $2{,}8 \\times 10^{-8}$ |\n| Hierro | $10 \\times 10^{-8}$ |\n| Vidrio | $\\sim 10^{12}$ |"
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Aplicar la ley de Ohm",
+        "statement": "Una bombilla de resistencia 240 Ω se conecta a una toma de 12 V. ¿Qué intensidad circula?",
+        "steps": [
+          "Datos: $R = 240\\,\\Omega$, $V = 12$ V.",
+          "Aplicamos $I = V/R = 12/240 = 0{,}05$ A.",
+          "Resultado: $I = 50$ mA."
+        ],
+        "answer": "$I = 0{,}05$ A $= 50$ mA.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 240\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"240\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Triángulo de la Ley de Ohm</text><polygon points=\"240,55 150,200 330,200\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"150\" y1=\"140\" x2=\"330\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"240\" y=\"115\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#0e7a68\">V</text><text x=\"200\" y=\"178\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#c17a17\">I</text><text x=\"280\" y=\"178\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"bold\" fill=\"#8a3d6b\">R</text><text x=\"240\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Tapa la variable que buscas y lee la fórmula</text></svg>",
+            "caption": "Triángulo mnemotécnico de la ley de Ohm: tapando V se obtiene V = I·R, tapando I se obtiene I = V/R, tapando R se obtiene R = V/I."
+          }
+        ]
+      },
+      {
+        "title": "Calcular la resistencia de un cable",
+        "statement": "Un cable de cobre ($\\rho = 1{,}7 \\times 10^{-8}\\,\\Omega\\cdot$m) tiene 100 m de longitud y sección de $1{,}5\\,\\text{mm}^2$. Calcula su resistencia.",
+        "steps": [
+          "Datos: $\\rho = 1{,}7 \\times 10^{-8}\\,\\Omega\\cdot$m, $L = 100$ m, $S = 1{,}5\\,\\text{mm}^2 = 1{,}5 \\times 10^{-6}\\,\\text{m}^2$.",
+          "Aplicamos $R = \\rho \\cdot L/S = 1{,}7 \\times 10^{-8} \\times 100 / (1{,}5 \\times 10^{-6})$.",
+          "$R = 1{,}7 \\times 10^{-6} / 1{,}5 \\times 10^{-6} = 1{,}13\\,\\Omega$."
+        ],
+        "answer": "$R \\approx 1{,}1\\,\\Omega$."
+      },
+      {
+        "title": "Interpretar una gráfica V-I",
+        "statement": "La gráfica V-I de un conductor muestra una recta que pasa por el origen y por el punto (0,5 A ; 6 V). ¿Cuál es su resistencia? ¿Es un material óhmico?",
+        "steps": [
+          "La pendiente de la recta V-I es $R = V/I = 6/0{,}5 = 12\\,\\Omega$.",
+          "Como la gráfica es una recta que pasa por el origen, el conductor cumple la ley de Ohm → es un material óhmico."
+        ],
+        "answer": "$R = 12\\,\\Omega$. Sí, es un material óhmico."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Tienes un cable de cobre de 2 m de largo y 1 mm² de sección, conectado a una pila de 9 V. Calcula: (a) la resistencia del cable, (b) la intensidad que circula, (c) cuántos electrones pasan por una sección del cable en 1 minuto.",
+        "scaffold": "Usa $R = \\rho L/S$ para la resistencia, $I = V/R$ para la intensidad, y $Q = It$ y $n = Q/e$ para los electrones.",
+        "answer": "(a) $R = 1{,}7 \\times 10^{-8} \\times 2 / 10^{-6} = 0{,}034\\,\\Omega$. (b) $I = 9/0{,}034 = 265$ A (en la práctica la pila no puede dar tanta corriente; la resistencia interna de la pila la limita). (c) $Q = 265 \\times 60 = 15\\,900$ C; $n = 15\\,900/1{,}6 \\times 10^{-19} \\approx 10^{23}$ electrones."
+      },
+      {
+        "id": "deep-domain-transfer-2",
+        "statement": "Una plancha eléctrica funciona a 230 V y consume 5 A. (a) ¿Cuál es su resistencia? (b) Si la enchufas en un país donde la red es de 110 V, ¿cuánta corriente consumirá (suponiendo la misma resistencia)?",
+        "scaffold": "Aplica $R = V/I$ con los datos de 230 V, y luego usa esa R con 110 V para la segunda parte.",
+        "answer": "(a) $R = 230/5 = 46\\,\\Omega$. (b) $I = 110/46 = 2{,}39$ A. A menor voltaje, circula menos corriente y la plancha calentará menos."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Una resistencia de 100 Ω se conecta a 20 V. ¿Qué intensidad circula?",
+        "answer": "$I = 20/100 = 0{,}2$ A.",
+        "full_solution": "Aplicando la ley de Ohm: $I = V/R = 20\\,\\text{V}/100\\,\\Omega = 0{,}2$ A = 200 mA.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "¿Qué voltaje hay que aplicar a una resistencia de 47 Ω para que circule una corriente de 0,3 A?",
+        "answer": "$V = 47 \\times 0{,}3 = 14{,}1$ V.",
+        "full_solution": "Ley de Ohm: $V = I \\cdot R = 0{,}3\\,\\text{A} \\times 47\\,\\Omega = 14{,}1$ V.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Un calentador conectado a 230 V consume 10 A. Calcula su resistencia.",
+        "answer": "$R = 230/10 = 23\\,\\Omega$.",
+        "full_solution": "Despejando de la ley de Ohm: $R = V/I = 230/10 = 23\\,\\Omega$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Un cable de aluminio ($\\rho = 2{,}8 \\times 10^{-8}\\,\\Omega\\cdot$m) tiene 50 m de longitud y sección de $2{,}5\\,\\text{mm}^2$. Calcula su resistencia.",
+        "answer": "$R = 0{,}56\\,\\Omega$.",
+        "full_solution": "$R = \\rho L/S = 2{,}8 \\times 10^{-8} \\times 50 / (2{,}5 \\times 10^{-6}) = 1{,}4 \\times 10^{-6} / 2{,}5 \\times 10^{-6} = 0{,}56\\,\\Omega$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Si duplicas la longitud de un cable y reduces su sección a la mitad, ¿cómo cambia su resistencia?",
+        "answer": "Se multiplica por 4.",
+        "full_solution": "Original: $R = \\rho L/S$. Nuevo: $R' = \\rho (2L)/(S/2) = \\rho \\cdot 4L/S = 4R$. La resistencia se cuadruplica.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dibuja la gráfica V-I de un conductor óhmico de 50 Ω para voltajes de 0 a 10 V. ¿Qué forma tiene?",
+        "answer": "Recta por el origen con pendiente $R = 50\\,\\Omega$. Puntos: (0;0), (0,1;5), (0,2;10).",
+        "full_solution": "Para cada voltaje, $I = V/R$: $V=0 \\to I=0$; $V=5 \\to I=0{,}1$ A; $V=10 \\to I=0{,}2$ A. La gráfica $V$ vs $I$ es una recta que pasa por el origen. La pendiente de esa recta es $V/I = R = 50\\,\\Omega$.",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "Un alumno mide en el laboratorio: $V = 6$ V, $I = 0{,}25$ A. Otro mide en el mismo resistor: $V = 3$ V, $I = 0{,}12$ A. ¿Son coherentes estas medidas? ¿Cumple la ley de Ohm?",
+        "answer": "Medida 1: $R = 24\\,\\Omega$. Medida 2: $R = 25\\,\\Omega$. Son coherentes dentro del error experimental.",
+        "full_solution": "Medida 1: $R_1 = V_1/I_1 = 6/0{,}25 = 24\\,\\Omega$. Medida 2: $R_2 = V_2/I_2 = 3/0{,}12 = 25\\,\\Omega$. La diferencia ($1\\,\\Omega$, ~4%) es atribuible al error experimental de los instrumentos. Las medidas son coherentes y el resistor cumple la ley de Ohm (R es aproximadamente constante).",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "¿Por qué los cables de alta tensión son de aluminio grueso y no de cobre fino? Razona teniendo en cuenta resistividad, peso y coste.",
+        "answer": "Aunque el cobre tiene menor resistividad, el aluminio es más ligero y barato; con sección suficiente, su resistencia es aceptable para largas distancias.",
+        "full_solution": "El cobre ($\\rho = 1{,}7 \\times 10^{-8}$) conduce mejor que el aluminio ($\\rho = 2{,}8 \\times 10^{-8}$), pero el aluminio es ~3 veces más ligero y más barato. Para cables de cientos de kilómetros, el peso y el coste son críticos. Usando una sección mayor de aluminio se compensa la mayor resistividad: si $S_{Al} \\approx 1{,}6 \\cdot S_{Cu}$, la resistencia es comparable, pero el cable es más ligero y barato. Las torres de alta tensión también necesitan soportar menos peso.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L02-1",
+        "stem": "La intensidad de corriente eléctrica se mide en:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Voltios",
+            "why_wrong": "Los voltios miden diferencia de potencial, no corriente."
+          },
+          {
+            "key": "B",
+            "text": "B. Amperios"
+          },
+          {
+            "key": "C",
+            "text": "C. Ohmios",
+            "why_wrong": "Los ohmios miden resistencia eléctrica, no corriente."
+          },
+          {
+            "key": "D",
+            "text": "D. Vatios",
+            "why_wrong": "Los vatios miden potencia eléctrica, no corriente."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-2",
+        "stem": "Según la ley de Ohm, si el voltaje se duplica manteniendo la resistencia constante:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La corriente se duplica"
+          },
+          {
+            "key": "B",
+            "text": "B. La corriente se reduce a la mitad",
+            "why_wrong": "Esto ocurriría si la resistencia se duplicara, no el voltaje."
+          },
+          {
+            "key": "C",
+            "text": "C. La corriente no cambia",
+            "why_wrong": "La corriente depende directamente del voltaje según V=IR."
+          },
+          {
+            "key": "D",
+            "text": "D. La resistencia se duplica",
+            "why_wrong": "La resistencia es una propiedad del componente y no cambia al modificar el voltaje (en materiales óhmicos)."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-3",
+        "stem": "¿Qué instrumento se usa para medir la intensidad y cómo se conecta?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Voltímetro, en serie",
+            "why_wrong": "El voltímetro mide voltaje y se conecta en paralelo, no en serie."
+          },
+          {
+            "key": "B",
+            "text": "B. Amperímetro, en paralelo",
+            "why_wrong": "El amperímetro debe conectarse en serie para que la corriente pase a través de él."
+          },
+          {
+            "key": "C",
+            "text": "C. Amperímetro, en serie"
+          },
+          {
+            "key": "D",
+            "text": "D. Óhmetro, en serie",
+            "why_wrong": "El óhmetro mide resistencia y se usa con el circuito desconectado, no en serie con la corriente."
+          }
+        ]
+      },
+      {
+        "id": "MC-L02-4",
+        "stem": "Si un cable de cobre se hace dos veces más largo, su resistencia:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. No cambia",
+            "why_wrong": "La resistencia depende de la longitud del conductor: R = ρL/S."
+          },
+          {
+            "key": "B",
+            "text": "B. Se duplica"
+          },
+          {
+            "key": "C",
+            "text": "C. Se reduce a la mitad",
+            "why_wrong": "La resistencia es directamente proporcional a la longitud, no inversamente."
+          },
+          {
+            "key": "D",
+            "text": "D. Se cuadruplica",
+            "why_wrong": "La resistencia es proporcional a L (no a L²); si L se duplica, R se duplica, no se cuadruplica."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Enuncia la ley de Ohm y explica qué representa cada magnitud. Un secador funciona conectado a 230 V y tiene una resistencia de 25 Ω. Calcula la intensidad y la carga que circula en 5 minutos de funcionamiento.",
+        "answer": "$I = 230/25 = 9{,}2$ A. $Q = 9{,}2 \\times 300 = 2\\,760$ C.",
+        "full_solution": "La ley de Ohm establece que $V = IR$, donde $V$ es la diferencia de potencial (V), $I$ la intensidad (A) y $R$ la resistencia (Ω). Despejando: $I = V/R = 230/25 = 9{,}2$ A. La carga que circula en $t = 5$ min $= 300$ s: $Q = I \\cdot t = 9{,}2 \\times 300 = 2\\,760$ C."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Un cable de cobre de 1 km tiene resistencia de 5 Ω. ¿Cuál es su diámetro? ($\\rho_{Cu} = 1{,}7 \\times 10^{-8}\\,\\Omega\\cdot$m)",
+        "answer": "Diámetro ≈ 2,1 mm.",
+        "full_solution": "De $R = \\rho L/S$: $S = \\rho L/R = 1{,}7 \\times 10^{-8} \\times 1000/5 = 3{,}4 \\times 10^{-6}$ m². Como $S = \\pi d^2/4$: $d = \\sqrt{4S/\\pi} = \\sqrt{4 \\times 3{,}4 \\times 10^{-6}/\\pi} = \\sqrt{4{,}33 \\times 10^{-6}} \\approx 2{,}08 \\times 10^{-3}$ m $\\approx 2{,}1$ mm."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "¿Qué es la intensidad de corriente?",
+        "back": "Cantidad de carga que pasa por una sección del conductor por unidad de tiempo: $I = Q/t$. Se mide en amperios (A).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Ley de Ohm",
+        "back": "$V = IR$. El voltaje es proporcional a la intensidad; la constante de proporcionalidad es la resistencia.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Resistividad",
+        "back": "Propiedad del material que indica cuánto se opone al paso de la corriente. $R = \\rho L/S$. Se mide en Ω·m.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Cómo se conecta un amperímetro?",
+        "back": "En serie con el circuito, para que toda la corriente pase por él.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Decir que la corriente 'se gasta' al pasar por una resistencia.",
+        "correction": "La corriente (I) es la misma antes y después de la resistencia en un circuito serie. Lo que disminuye es el potencial (voltaje)."
+      },
+      {
+        "mistake": "Confundir amperímetro (en serie) con voltímetro (en paralelo).",
+        "correction": "El amperímetro mide corriente → en serie. El voltímetro mide voltaje → en paralelo."
+      },
+      {
+        "mistake": "Olvidar convertir mm² a m² al usar $R = \\rho L/S$.",
+        "correction": "$1\\,\\text{mm}^2 = 10^{-6}\\,\\text{m}^2$. Este factor suele causar errores de varios órdenes de magnitud."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En examen suelen pedir la ley de Ohm en sus tres formas: $V=IR$, $I=V/R$, $R=V/I$, junto con un problema numérico."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "corriente eléctrica",
+        "definition": "Flujo ordenado de cargas eléctricas a través de un conductor."
+      },
+      {
+        "term": "intensidad",
+        "definition": "Magnitud que mide la carga que pasa por un punto del circuito por segundo: $I=Q/t$. Unidad: amperio (A)."
+      },
+      {
+        "term": "diferencia de potencial",
+        "definition": "Energía por unidad de carga entre dos puntos. Unidad: voltio (V). También llamado voltaje o tensión."
+      },
+      {
+        "term": "resistencia",
+        "definition": "Oposición de un conductor al paso de la corriente. Unidad: ohmio (Ω)."
+      },
+      {
+        "term": "ley de Ohm",
+        "definition": "$V = IR$: el voltaje es proporcional a la intensidad; la constante de proporcionalidad es la resistencia."
+      },
+      {
+        "term": "resistividad",
+        "definition": "Propiedad del material: $R = \\rho L/S$. Se mide en Ω·m."
+      }
+    ],
+    "summary": {
+      "big_idea": "La corriente eléctrica es el flujo de cargas a través de un conductor, impulsada por una diferencia de potencial. La ley de Ohm ($V=IR$) relaciona voltaje, corriente y resistencia.",
+      "key_points": [
+        "La corriente eléctrica es un flujo de cargas; se mide en amperios ($I = Q/t$).",
+        "La diferencia de potencial (voltaje) es la 'fuerza motriz' que empuja las cargas.",
+        "Ley de Ohm: $V = IR$. Tres formas: $V=IR$, $I=V/R$, $R=V/I$.",
+        "La resistencia depende del material ($\\rho$), la longitud ($L$) y la sección ($S$): $R = \\rho L/S$."
+      ],
+      "formulas": [
+        "$I = Q/t$",
+        "$V = IR$",
+        "$R = \\rho L/S$"
+      ],
+      "what_to_remember_if_nothing_else": "La ley de Ohm $V = IR$ es la relación fundamental de todo circuito eléctrico."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 217/2022 saberes Bloque A · Electricidad"
+    ],
+    "curriculum_refs": [
+      "CE3,1 Describir fenómenos eléctricos",
+      "CE3,3 Aplicar la ley de Ohm"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 4.º ESO alineado con LOMLOE"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "SVGs incluidos"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_03.json": {
+    "id": "L03",
+    "title": "Circuitos eléctricos: elementos y simbología",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Física",
+    "unit_id": "U-4F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE3,3",
+        "CE3,4"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Identificar los elementos básicos de un circuito (generador, conductor, receptor, interruptor) y su simbología normalizada."
+      },
+      {
+        "statement": "Dibujar e interpretar esquemas de circuitos eléctricos usando símbolos estándar."
+      },
+      {
+        "statement": "Explicar la función de cada componente en un circuito sencillo."
+      },
+      {
+        "statement": "Distinguir entre circuito abierto (no circula corriente) y circuito cerrado (circula corriente)."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Conocer los conceptos de corriente, voltaje y resistencia.",
+        "why_it_matters": "Los elementos del circuito se entienden a través de las magnitudes que controlan: el generador mantiene el voltaje, la resistencia se opone a la corriente."
+      },
+      {
+        "statement": "Saber aplicar la ley de Ohm.",
+        "why_it_matters": "Para analizar circuitos reales se necesita V = IR como herramienta de cálculo."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué ocurre si abres el interruptor en un circuito con una bombilla?",
+        "expected_answer": "La bombilla se apaga porque el circuito se abre y deja de circular corriente."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué símbolo representa una pila en un esquema eléctrico?",
+        "expected_answer": "Dos líneas paralelas, una larga (polo +) y una corta (polo −)."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La corriente sale de la pila, llega a la bombilla y allí se 'consume'.",
+        "correct_model": "La corriente sale por el polo +, atraviesa la bombilla (donde la energía eléctrica se transforma en luz y calor) y vuelve al polo − con la misma intensidad. Es un ciclo cerrado."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Si un cable no está conectado a nada, lleva corriente igualmente.",
+        "correct_model": "Para que circule corriente se necesita un circuito cerrado. Un cable cortado o un interruptor abierto rompen el circuito y la corriente se detiene."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Elementos de un circuito eléctrico",
+        "body": "Un **circuito eléctrico** es un camino cerrado por el que circulan cargas eléctricas. Sus componentes básicos son:\n\n**1. Generador** (pila, batería, fuente de alimentación): proporciona la energía (diferencia de potencial) que impulsa las cargas.\n\n**2. Conductores** (cables): caminos de baja resistencia que conectan los elementos.\n\n**3. Receptores**: transforman la energía eléctrica en otra forma:\n- **Bombilla** (lámpara): energía luminosa y térmica.\n- **Motor**: energía mecánica.\n- **Resistencia calefactora**: energía térmica.\n\n**4. Elementos de control**:\n- **Interruptor**: abre o cierra el circuito.\n- **Conmutador**: desvía la corriente por un camino u otro.\n\n**5. Elementos de protección**:\n- **Fusible**: se funde si la corriente es excesiva, abriendo el circuito.\n\n**6. Aparatos de medida**:\n- **Amperímetro**: mide intensidad (en serie).\n- **Voltímetro**: mide voltaje (en paralelo)."
+      },
+      {
+        "title": "Simbología eléctrica normalizada",
+        "body": "Cada componente tiene un símbolo estándar para dibujar esquemas:\n\n<svg viewBox=\"0 0 460 320\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:460px\">\n  <rect x=\"2\" y=\"2\" width=\"456\" height=\"316\" rx=\"8\" fill=\"var(--bg,#fbfcfd)\" stroke=\"var(--grid,#e8e3d8)\" stroke-width=\"1\"/>\n  <text x=\"230\" y=\"22\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Símbolos eléctricos</text>\n  <!-- Pila -->\n  <line x1=\"30\" y1=\"55\" x2=\"50\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"58\" y1=\"47\" x2=\"58\" y2=\"63\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <line x1=\"66\" y1=\"40\" x2=\"66\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"74\" y1=\"47\" x2=\"74\" y2=\"63\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <line x1=\"74\" y1=\"55\" x2=\"94\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Pila / Batería</text>\n  <!-- Resistencia -->\n  <line x1=\"140\" y1=\"55\" x2=\"155\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"155\" y=\"45\" width=\"50\" height=\"20\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"205\" y1=\"55\" x2=\"220\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"180\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Resistencia</text>\n  <!-- Bombilla -->\n  <line x1=\"260\" y1=\"55\" x2=\"275\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <circle cx=\"295\" cy=\"55\" r=\"15\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"284\" y1=\"44\" x2=\"306\" y2=\"66\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <line x1=\"306\" y1=\"44\" x2=\"284\" y2=\"66\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <line x1=\"310\" y1=\"55\" x2=\"325\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"295\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Bombilla</text>\n  <!-- Interruptor -->\n  <line x1=\"365\" y1=\"55\" x2=\"385\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <circle cx=\"387\" cy=\"55\" r=\"3\" fill=\"var(--text,#20302a)\"/>\n  <line x1=\"387\" y1=\"55\" x2=\"415\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <circle cx=\"420\" cy=\"55\" r=\"3\" fill=\"var(--text,#20302a)\"/>\n  <line x1=\"420\" y1=\"55\" x2=\"440\" y2=\"55\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"410\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Interruptor</text>\n  <!-- Amperímetro -->\n  <line x1=\"30\" y1=\"140\" x2=\"50\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <circle cx=\"67\" cy=\"140\" r=\"15\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"67\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">A</text>\n  <line x1=\"82\" y1=\"140\" x2=\"100\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"67\" y=\"173\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Amperímetro</text>\n  <!-- Voltímetro -->\n  <line x1=\"140\" y1=\"140\" x2=\"160\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <circle cx=\"177\" cy=\"140\" r=\"15\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"177\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">V</text>\n  <line x1=\"192\" y1=\"140\" x2=\"210\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"177\" y=\"173\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Voltímetro</text>\n  <!-- Motor -->\n  <line x1=\"260\" y1=\"140\" x2=\"280\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <circle cx=\"297\" cy=\"140\" r=\"15\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"297\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">M</text>\n  <line x1=\"312\" y1=\"140\" x2=\"330\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"297\" y=\"173\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Motor</text>\n  <!-- Fusible -->\n  <line x1=\"365\" y1=\"140\" x2=\"385\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"385\" y=\"135\" width=\"30\" height=\"10\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"395\" y1=\"140\" x2=\"405\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\" stroke-dasharray=\"2,2\"/>\n  <line x1=\"415\" y1=\"140\" x2=\"435\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"410\" y=\"173\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Fusible</text>\n  <!-- Circuito ejemplo -->\n  <text x=\"230\" y=\"205\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Circuito sencillo</text>\n  <rect x=\"80\" y=\"215\" width=\"300\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"#64748b\" stroke-width=\"2\"/>\n  <!-- Pila en la izquierda -->\n  <line x1=\"80\" y1=\"260\" x2=\"80\" y2=\"245\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"72\" y1=\"245\" x2=\"88\" y2=\"245\" stroke=\"var(--axes,#24312c)\" stroke-width=\"3\"/>\n  <line x1=\"75\" y1=\"238\" x2=\"85\" y2=\"238\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/>\n  <text x=\"68\" y=\"255\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">−</text>\n  <text x=\"68\" y=\"240\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">+</text>\n  <!-- Interruptor arriba -->\n  <circle cx=\"200\" cy=\"215\" r=\"3\" fill=\"var(--text,#20302a)\"/>\n  <line x1=\"200\" y1=\"215\" x2=\"230\" y2=\"202\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <circle cx=\"240\" cy=\"215\" r=\"3\" fill=\"var(--text,#20302a)\"/>\n  <!-- Bombilla a la derecha -->\n  <circle cx=\"380\" cy=\"260\" r=\"12\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"372\" y1=\"252\" x2=\"388\" y2=\"268\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <line x1=\"388\" y1=\"252\" x2=\"372\" y2=\"268\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.2\"/>\n  <!-- Flecha corriente -->\n  <text x=\"230\" y=\"295\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--secondary,#c17a17)\">← I (sentido convencional) ←</text>\n</svg>",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 310\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Símbolos eléctricos normalizados</text><g transform=\"translate(30,50)\"><line x1=\"0\" y1=\"20\" x2=\"30\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"30\" y1=\"8\" x2=\"30\" y2=\"32\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"38\" y1=\"13\" x2=\"38\" y2=\"27\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"46\" y1=\"8\" x2=\"46\" y2=\"32\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"54\" y1=\"13\" x2=\"54\" y2=\"27\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"54\" y1=\"20\" x2=\"85\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"42\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Pila</text></g><g transform=\"translate(140,50)\"><line x1=\"0\" y1=\"20\" x2=\"25\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"25\" y=\"10\" width=\"40\" height=\"20\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\"/><line x1=\"65\" y1=\"20\" x2=\"90\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"45\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Resistencia</text></g><g transform=\"translate(260,50)\"><line x1=\"0\" y1=\"20\" x2=\"25\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"20\" r=\"14\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"12\" x2=\"60\" y2=\"28\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/><line x1=\"64\" y1=\"20\" x2=\"90\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"45\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Bombilla</text></g><g transform=\"translate(380,50)\"><line x1=\"0\" y1=\"20\" x2=\"25\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><circle cx=\"25\" cy=\"20\" r=\"3\" fill=\"var(--axes,#24312c)\"/><line x1=\"25\" y1=\"20\" x2=\"55\" y2=\"5\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"55\" y1=\"20\" x2=\"85\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><circle cx=\"55\" cy=\"20\" r=\"3\" fill=\"var(--axes,#24312c)\"/><text x=\"45\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Interruptor</text></g><g transform=\"translate(30,140)\"><line x1=\"0\" y1=\"20\" x2=\"25\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><circle cx=\"45\" cy=\"20\" r=\"14\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\"/><text x=\"45\" y=\"25\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">A</text><line x1=\"59\" y1=\"20\" x2=\"85\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"45\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Amperímetro</text></g><g transform=\"translate(140,140)\"><line x1=\"0\" y1=\"20\" x2=\"25\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><circle cx=\"45\" cy=\"20\" r=\"14\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\"/><text x=\"45\" y=\"25\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">V</text><line x1=\"59\" y1=\"20\" x2=\"85\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"45\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Voltímetro</text></g><g transform=\"translate(260,140)\"><line x1=\"0\" y1=\"20\" x2=\"30\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"30\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"30\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"70\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"35\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Condensador</text></g><g transform=\"translate(380,140)\"><line x1=\"0\" y1=\"20\" x2=\"20\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"20\" y1=\"10\" x2=\"60\" y2=\"10\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"20\" y1=\"30\" x2=\"60\" y2=\"30\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"30\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"60\" y1=\"20\" x2=\"80\" y2=\"20\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"45\" y=\"55\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Motor</text></g><rect x=\"30\" y=\"240\" width=\"440\" height=\"50\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.4\"/><text x=\"250\" y=\"262\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Amperímetro: en SERIE (mide corriente)</text><text x=\"250\" y=\"280\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Voltímetro: en PARALELO (mide d.d.p.)</text></svg>",
+            "caption": "Símbolos eléctricos normalizados: pila, resistencia, bombilla, interruptor, amperímetro, voltímetro, condensador y motor."
+          }
+        ]
+      },
+      {
+        "title": "Circuito abierto y circuito cerrado",
+        "body": "Para que circule corriente, el circuito debe estar **cerrado**: todos los elementos conectados formando un camino continuo desde un polo del generador al otro.\n\nSi se interrumpe el camino (interruptor abierto, cable roto, bombilla fundida), el circuito queda **abierto** y la corriente se detiene inmediatamente en todo el circuito.\n\n**Cortocircuito:** cuando la corriente encuentra un camino de resistencia casi nula (por ejemplo, un cable que une directamente los dos polos de la pila), circula una corriente muy grande. Esto es peligroso porque genera mucho calor y puede provocar un incendio. Los fusibles y los interruptores automáticos protegen contra cortocircuitos."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Dibujar un circuito con dos bombillas y un interruptor",
+        "statement": "Dibuja el esquema de un circuito con una pila de 9 V, un interruptor y dos bombillas en serie.",
+        "steps": [
+          "Identificar los elementos: pila (generador), interruptor (control), dos bombillas (receptores).",
+          "Dibujar la pila a la izquierda con los símbolos de + y −.",
+          "Desde el polo +, trazar un cable horizontal hacia la derecha.",
+          "Colocar el interruptor en el cable superior.",
+          "Añadir la primera bombilla (símbolo de círculo con X).",
+          "Continuar con un cable que conecte a la segunda bombilla.",
+          "Cerrar el circuito con un cable de vuelta al polo − de la pila."
+        ],
+        "answer": "El circuito queda: pila → interruptor → bombilla 1 → bombilla 2 → pila, todo en un camino cerrado.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"240\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Circuito con dos bombillas e interruptor</text><rect x=\"80\" y=\"50\" width=\"320\" height=\"170\" rx=\"6\" fill=\"none\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"210\" y1=\"50\" x2=\"210\" y2=\"50\" stroke=\"none\"/><line x1=\"220\" y1=\"38\" x2=\"220\" y2=\"62\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"230\" y1=\"42\" x2=\"230\" y2=\"58\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><text x=\"225\" y=\"33\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">+ −</text><circle cx=\"160\" cy=\"220\" r=\"14\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\"/><line x1=\"150\" y1=\"212\" x2=\"170\" y2=\"228\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/><text x=\"160\" y=\"250\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">L₁</text><circle cx=\"300\" cy=\"220\" r=\"14\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\"/><line x1=\"290\" y1=\"212\" x2=\"310\" y2=\"228\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/><text x=\"300\" y=\"250\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">L₂</text><circle cx=\"400\" cy=\"135\" r=\"3\" fill=\"var(--axes,#24312c)\"/><line x1=\"400\" y1=\"135\" x2=\"420\" y2=\"120\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><circle cx=\"420\" cy=\"135\" r=\"3\" fill=\"var(--axes,#24312c)\"/><text x=\"435\" y=\"130\" font-size=\"10\" fill=\"var(--text,#20302a)\">S</text></svg>",
+            "caption": "Esquema de un circuito en serie con pila, interruptor (S) y dos bombillas (L1 y L2)."
+          }
+        ]
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "En un circuito con una pila de 12 V, un interruptor cerrado y tres bombillas idénticas en serie (cada una con R = 20 Ω), calcula la intensidad y el voltaje en cada bombilla.",
+        "scaffold": "En serie: $R_{total} = R_1 + R_2 + R_3$. Calcula I con la ley de Ohm. El voltaje de cada bombilla es $V_i = IR_i$.",
+        "answer": "$R_T = 60\\,\\Omega$. $I = 12/60 = 0{,}2$ A. Cada bombilla: $V = 0{,}2 \\times 20 = 4$ V. La suma: $4+4+4=12$ V ✓."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Nombra los cinco tipos de elementos básicos de un circuito eléctrico y da un ejemplo de cada uno.",
+        "answer": "Generador (pila), conductor (cable de cobre), receptor (bombilla), elemento de control (interruptor), elemento de protección (fusible).",
+        "full_solution": "1. Generador: proporciona energía eléctrica. Ejemplo: pila, batería, enchufe de red. 2. Conductor: permite el paso de la corriente. Ejemplo: cable de cobre. 3. Receptor: transforma la energía eléctrica. Ejemplo: bombilla, motor, resistencia calefactora. 4. Elemento de control: abre/cierra el circuito. Ejemplo: interruptor, conmutador. 5. Elemento de protección: protege de sobrecargas. Ejemplo: fusible, interruptor automático.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Dibuja el esquema de un circuito con: una pila de 6 V, un interruptor, una bombilla y un amperímetro que mida la corriente que pasa por la bombilla.",
+        "answer": "Circuito en serie: pila → interruptor → amperímetro → bombilla → pila (todos en línea, pues el amperímetro va en serie).",
+        "full_solution": "El amperímetro se conecta en serie para que toda la corriente lo atraviese. El orden en serie no importa; un esquema válido: del polo + de la pila sale un cable al interruptor, del interruptor al amperímetro (A), del amperímetro a la bombilla, y de la bombilla de vuelta al polo − de la pila.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "En el circuito anterior, si la bombilla tiene resistencia 30 Ω, ¿qué lectura dará el amperímetro?",
+        "answer": "$I = 6/30 = 0{,}2$ A = 200 mA.",
+        "full_solution": "Ley de Ohm: $I = V/R = 6\\,\\text{V} / 30\\,\\Omega = 0{,}2$ A. El amperímetro marcará 200 mA.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Qué le ocurre al circuito si la bombilla se funde? ¿Y si se funde un fusible?",
+        "answer": "En ambos casos el circuito se abre y deja de circular corriente.",
+        "full_solution": "Si la bombilla se funde, su filamento se rompe y el circuito queda abierto: no hay camino para la corriente y todo se apaga. Lo mismo ocurre si se funde un fusible: su hilo conductor se derrite (generalmente por sobrecarga), abriendo el circuito y protegiendo el resto de componentes. La diferencia es que el fusible se funde a propósito como protección, mientras que la bombilla se funde por desgaste.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Un alumno conecta un cable directamente entre los polos de una pila, sin ningún receptor. ¿Qué ocurre y por qué es peligroso?",
+        "answer": "Es un cortocircuito: circula una corriente enorme, el cable y la pila se calientan mucho y puede provocar quemaduras o incendio.",
+        "full_solution": "Al no haber receptor (resistencia), la resistencia total del circuito es solo la del cable (muy pequeña). Por la ley de Ohm, $I = V/R$: con R ≈ 0, la intensidad es enorme. Esta corriente excesiva genera mucho calor por efecto Joule ($P = I^2R$), pudiendo fundir el cable, dañar la pila (que se agota en segundos), provocar quemaduras y en casos extremos un incendio. Por eso los circuitos llevan fusibles o magnetotérmicos.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Explica la diferencia entre un interruptor y un conmutador, y da un ejemplo cotidiano de cada uno.",
+        "answer": "El interruptor abre/cierra un circuito. El conmutador desvía la corriente por un camino u otro.",
+        "full_solution": "Un interruptor tiene dos estados: abierto (circuito cortado, no pasa corriente) o cerrado (circuito completo, pasa corriente). Ejemplo: el interruptor de la luz de una habitación con un solo punto de encendido. Un conmutador permite elegir entre dos caminos; puede enviar la corriente por un circuito o por otro. Ejemplo: los interruptores de escalera que permiten encender/apagar la luz desde dos puntos distintos (conmutadores cruzados).",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L03-1",
+        "stem": "¿Qué elemento del circuito proporciona la diferencia de potencial necesaria para que circule la corriente?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La resistencia",
+            "why_wrong": "La resistencia se opone al paso de la corriente, pero no genera la d.d.p."
+          },
+          {
+            "key": "B",
+            "text": "B. El generador (pila)"
+          },
+          {
+            "key": "C",
+            "text": "C. El interruptor",
+            "why_wrong": "El interruptor solo abre o cierra el circuito; no proporciona energía."
+          },
+          {
+            "key": "D",
+            "text": "D. El amperímetro",
+            "why_wrong": "El amperímetro solo mide la intensidad; no genera voltaje."
+          }
+        ]
+      },
+      {
+        "id": "MC-L03-2",
+        "stem": "¿Cómo se conecta un voltímetro para medir el voltaje en una bombilla?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. En serie con la bombilla",
+            "why_wrong": "En serie se conecta el amperímetro. El voltímetro en serie distorsionaría el circuito por su alta resistencia interna."
+          },
+          {
+            "key": "B",
+            "text": "B. En paralelo con la bombilla"
+          },
+          {
+            "key": "C",
+            "text": "C. Se quita la bombilla y se pone el voltímetro en su lugar",
+            "why_wrong": "Esto mediría el voltaje total de la pila, no el de la bombilla."
+          },
+          {
+            "key": "D",
+            "text": "D. No importa la conexión",
+            "why_wrong": "La conexión es crucial: en serie y en paralelo miden magnitudes distintas."
+          }
+        ]
+      },
+      {
+        "id": "MC-L03-3",
+        "stem": "¿Qué es un cortocircuito?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Un circuito con muchas resistencias",
+            "why_wrong": "Muchas resistencias aumentan la resistencia total; un cortocircuito tiene resistencia casi nula."
+          },
+          {
+            "key": "B",
+            "text": "B. Un camino de resistencia casi nula entre los polos del generador"
+          },
+          {
+            "key": "C",
+            "text": "C. Un circuito abierto",
+            "why_wrong": "En un circuito abierto no circula corriente; en un cortocircuito circula corriente excesiva."
+          },
+          {
+            "key": "D",
+            "text": "D. Un circuito con poca corriente",
+            "why_wrong": "Es justo lo contrario: un cortocircuito tiene una corriente excesivamente grande."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Dibuja el esquema de un circuito con una pila, un interruptor, dos bombillas en serie y un voltímetro midiendo el voltaje en la segunda bombilla. Indica el sentido convencional de la corriente.",
+        "answer": "Circuito en serie: pila → interruptor → B1 → B2 → pila. Voltímetro en paralelo con B2. Corriente de + a − por el circuito externo.",
+        "full_solution": "El esquema muestra todos los elementos en un camino cerrado (serie). El voltímetro se conecta con sus dos terminales a los extremos de la segunda bombilla (en paralelo con ella). El sentido convencional de la corriente va del polo + de la pila, pasa por el interruptor, la bombilla 1, la bombilla 2, y vuelve al polo − de la pila."
+      }
+    ],
+    "challenge_questions": [],
+    "flashcards": [
+      {
+        "front": "¿Qué es un circuito eléctrico?",
+        "back": "Un camino cerrado por el que circulan cargas eléctricas, formado por generador, conductores, receptores y elementos de control/protección.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Cómo se conectan amperímetro y voltímetro?",
+        "back": "Amperímetro: en serie (la corriente lo atraviesa). Voltímetro: en paralelo (mide la d.d.p. entre dos puntos).",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿Qué es un cortocircuito?",
+        "back": "Un camino de resistencia casi nula que produce una corriente excesiva, generando calor peligroso. Los fusibles protegen contra ello.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Conectar el amperímetro en paralelo (provoca cortocircuito por su baja resistencia interna).",
+        "correction": "El amperímetro siempre va en serie; el voltímetro en paralelo."
+      },
+      {
+        "mistake": "Pensar que un interruptor abierto deja pasar la corriente.",
+        "correction": "Interruptor abierto = circuito abierto = no pasa corriente. Cerrado = circula corriente."
+      }
+    ],
+    "exam_notes": [],
+    "keywords": [
+      {
+        "term": "circuito eléctrico",
+        "definition": "Camino cerrado que permite la circulación de corriente eléctrica."
+      },
+      {
+        "term": "generador",
+        "definition": "Elemento que proporciona la d.d.p. que impulsa la corriente (pila, batería, fuente)."
+      },
+      {
+        "term": "receptor",
+        "definition": "Elemento que transforma la energía eléctrica en otra forma (luz, calor, movimiento)."
+      },
+      {
+        "term": "interruptor",
+        "definition": "Elemento de control que abre o cierra el circuito."
+      },
+      {
+        "term": "fusible",
+        "definition": "Elemento de protección que se funde si la corriente es excesiva, abriendo el circuito."
+      },
+      {
+        "term": "cortocircuito",
+        "definition": "Conexión de resistencia casi nula entre los polos del generador, que produce corriente excesiva."
+      }
+    ],
+    "summary": {
+      "big_idea": "Un circuito eléctrico es un camino cerrado con generador, conductores, receptores y elementos de control. Cada componente tiene un símbolo normalizado para dibujar esquemas.",
+      "key_points": [
+        "Los elementos básicos son: generador, conductor, receptor, elemento de control y de protección.",
+        "Cada componente tiene un símbolo normalizado para representar circuitos.",
+        "El amperímetro se conecta en serie; el voltímetro en paralelo.",
+        "Un cortocircuito es peligroso: produce corriente excesiva y mucho calor."
+      ],
+      "formulas": [],
+      "what_to_remember_if_nothing_else": "Para que haya corriente el circuito debe estar cerrado. Amperímetro en serie, voltímetro en paralelo."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 217/2022 saberes Bloque A · Circuitos eléctricos"
+    ],
+    "curriculum_refs": [
+      "CE3,3 Diseñar circuitos",
+      "CE3,4 Interpretar esquemas"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 4.º ESO"
+    ],
+    "internal_review": {
+      "checks": [
+        "Simbología verificada",
+        "SVGs incluidos"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_04.json": {
+    "id": "L04",
+    "title": "Asociación de resistencias: serie y paralelo",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Física",
+    "unit_id": "U-4F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE3,3",
+        "CE3,4"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "2 h",
+    "estimated_difficulty": 3,
+    "objectives": [
+      {
+        "statement": "Calcular la resistencia equivalente de resistencias en serie."
+      },
+      {
+        "statement": "Calcular la resistencia equivalente de resistencias en paralelo."
+      },
+      {
+        "statement": "Analizar circuitos mixtos (serie + paralelo) para hallar intensidades y voltajes."
+      },
+      {
+        "statement": "Determinar el voltaje y la intensidad en cada elemento de un circuito serie o paralelo."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Conocer la ley de Ohm ($V = IR$).",
+        "why_it_matters": "Toda la resolución de circuitos se basa en aplicar V=IR a cada parte del circuito."
+      },
+      {
+        "statement": "Identificar los elementos de un circuito y su simbología.",
+        "why_it_matters": "Para interpretar un esquema y saber qué resistencias están en serie y cuáles en paralelo."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si dos resistencias de 10 Ω se conectan en serie, ¿cuál es la resistencia total?",
+        "expected_answer": "20 Ω (se suman)."
+      },
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "Si esas mismas resistencias se conectan en paralelo, ¿será la resistencia total mayor o menor que 10 Ω?",
+        "expected_answer": "Menor: será 5 Ω. En paralelo la resistencia equivalente siempre es menor que la menor de las resistencias."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "En paralelo las resistencias se suman igual que en serie.",
+        "correct_model": "En paralelo se suman los inversos: $1/R_{eq} = 1/R_1 + 1/R_2 + \\ldots$ La resistencia equivalente siempre es menor que la más pequeña de las resistencias individuales."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "En serie todas las bombillas lucen igual que si hubiera una sola.",
+        "correct_model": "En serie la resistencia total aumenta, así que la corriente disminuye y cada bombilla brilla menos. Además, el voltaje de la pila se reparte entre todas las bombillas."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Resistencias en serie",
+        "body": "Varias resistencias están **en serie** cuando están conectadas una a continuación de otra, de forma que la corriente debe pasar por todas ellas sucesivamente.\n\n<svg viewBox=\"0 0 380 80\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:380px\">\n  <line x1=\"10\" y1=\"40\" x2=\"60\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"60\" y=\"28\" width=\"60\" height=\"24\" fill=\"#fef3c7\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\" rx=\"3\"/>\n  <text x=\"90\" y=\"44\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">R₁</text>\n  <line x1=\"120\" y1=\"40\" x2=\"150\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"28\" width=\"60\" height=\"24\" fill=\"#fef3c7\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\" rx=\"3\"/>\n  <text x=\"180\" y=\"44\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">R₂</text>\n  <line x1=\"210\" y1=\"40\" x2=\"240\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"240\" y=\"28\" width=\"60\" height=\"24\" fill=\"#fef3c7\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"2\" rx=\"3\"/>\n  <text x=\"270\" y=\"44\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">R₃</text>\n  <line x1=\"300\" y1=\"40\" x2=\"370\" y2=\"40\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <text x=\"190\" y=\"72\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--secondary,#c17a17)\">I → (misma en todas)</text>\n</svg>\n\n**Propiedades de la conexión en serie:**\n- **Intensidad**: la misma en todas las resistencias: $I = I_1 = I_2 = I_3$.\n- **Voltaje**: se reparte. La suma de los voltajes parciales es igual al voltaje total: $V = V_1 + V_2 + V_3$.\n- **Resistencia equivalente**: suma de todas: $R_{eq} = R_1 + R_2 + R_3$.\n\n$$\\boxed{R_{eq,\\text{serie}} = R_1 + R_2 + \\cdots + R_n}$$",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Resistencias en serie</text><line x1=\"40\" y1=\"100\" x2=\"100\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"100\" y=\"85\" width=\"60\" height=\"30\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\" rx=\"3\"/><text x=\"130\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">R₁</text><line x1=\"160\" y1=\"100\" x2=\"210\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"210\" y=\"85\" width=\"60\" height=\"30\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\" rx=\"3\"/><text x=\"240\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">R₂</text><line x1=\"270\" y1=\"100\" x2=\"320\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"320\" y=\"85\" width=\"60\" height=\"30\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\" rx=\"3\"/><text x=\"350\" y=\"105\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#8a3d6b\">R₃</text><line x1=\"380\" y1=\"100\" x2=\"460\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"250\" y=\"145\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">La misma corriente I pasa por todas</text><text x=\"40\" y=\"95\" font-size=\"11\" fill=\"var(--text,#20302a)\">I →</text><rect x=\"100\" y=\"170\" width=\"300\" height=\"70\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.5\"/><text x=\"250\" y=\"195\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">R_total = R₁ + R₂ + R₃</text><text x=\"250\" y=\"220\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">V_total = V₁ + V₂ + V₃</text><text x=\"250\" y=\"235\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">I es la misma en todo el circuito</text></svg>",
+            "caption": "Tres resistencias conectadas en serie: la corriente es la misma en todas, el voltaje se reparte y la resistencia total es la suma."
+          }
+        ]
+      },
+      {
+        "title": "Resistencias en paralelo",
+        "body": "Varias resistencias están **en paralelo** cuando están conectadas entre los mismos dos puntos (nodos), de forma que la corriente se divide entre ellas.\n\n<svg viewBox=\"0 0 320 140\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:320px\">\n  <!-- Cables de entrada/salida -->\n  <line x1=\"10\" y1=\"70\" x2=\"60\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"260\" y1=\"70\" x2=\"310\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <!-- Nodos -->\n  <circle cx=\"60\" cy=\"70\" r=\"4\" fill=\"var(--text,#20302a)\"/>\n  <circle cx=\"260\" cy=\"70\" r=\"4\" fill=\"var(--text,#20302a)\"/>\n  <!-- Rama 1 (arriba) -->\n  <line x1=\"60\" y1=\"70\" x2=\"60\" y2=\"30\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"30\" x2=\"120\" y2=\"30\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"18\" width=\"60\" height=\"24\" fill=\"#dcfce7\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" rx=\"3\"/>\n  <text x=\"150\" y=\"34\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--primary,#0e7a68)\">R₁</text>\n  <line x1=\"180\" y1=\"30\" x2=\"260\" y2=\"30\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"260\" y1=\"30\" x2=\"260\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <!-- Rama 2 (centro) -->\n  <line x1=\"60\" y1=\"70\" x2=\"120\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"58\" width=\"60\" height=\"24\" fill=\"#dcfce7\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" rx=\"3\"/>\n  <text x=\"150\" y=\"74\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--primary,#0e7a68)\">R₂</text>\n  <line x1=\"180\" y1=\"70\" x2=\"260\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <!-- Rama 3 (abajo) -->\n  <line x1=\"60\" y1=\"70\" x2=\"60\" y2=\"110\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"110\" x2=\"120\" y2=\"110\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"98\" width=\"60\" height=\"24\" fill=\"#dcfce7\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\" rx=\"3\"/>\n  <text x=\"150\" y=\"114\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--primary,#0e7a68)\">R₃</text>\n  <line x1=\"180\" y1=\"110\" x2=\"260\" y2=\"110\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"260\" y1=\"110\" x2=\"260\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n</svg>\n\n**Propiedades de la conexión en paralelo:**\n- **Voltaje**: el mismo en todas las ramas: $V = V_1 = V_2 = V_3$.\n- **Intensidad**: se reparte. La corriente total es la suma: $I = I_1 + I_2 + I_3$.\n- **Resistencia equivalente**:\n\n$$\\boxed{\\frac{1}{R_{eq,\\text{paralelo}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\cdots + \\frac{1}{R_n}}$$\n\nPara **dos resistencias** en paralelo hay una fórmula directa: $R_{eq} = \\dfrac{R_1 \\cdot R_2}{R_1 + R_2}$.\n\n**Dato clave:** la resistencia equivalente en paralelo siempre es menor que la menor de las resistencias individuales.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 280\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Resistencias en paralelo</text><line x1=\"60\" y1=\"140\" x2=\"130\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"130\" y1=\"70\" x2=\"130\" y2=\"210\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"130\" y1=\"70\" x2=\"200\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"200\" y=\"55\" width=\"80\" height=\"30\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\" rx=\"3\"/><text x=\"240\" y=\"75\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">R₁</text><line x1=\"280\" y1=\"70\" x2=\"350\" y2=\"70\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"130\" y1=\"140\" x2=\"200\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"200\" y=\"125\" width=\"80\" height=\"30\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\" rx=\"3\"/><text x=\"240\" y=\"145\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">R₂</text><line x1=\"280\" y1=\"140\" x2=\"350\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"130\" y1=\"210\" x2=\"200\" y2=\"210\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"200\" y=\"195\" width=\"80\" height=\"30\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\" rx=\"3\"/><text x=\"240\" y=\"215\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#8a3d6b\">R₃</text><line x1=\"280\" y1=\"210\" x2=\"350\" y2=\"210\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"350\" y1=\"70\" x2=\"350\" y2=\"210\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><line x1=\"350\" y1=\"140\" x2=\"440\" y2=\"140\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"120\" y=\"240\" width=\"260\" height=\"30\" rx=\"6\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.5\"/><text x=\"250\" y=\"260\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">1/R_t = 1/R₁ + 1/R₂ + 1/R₃</text><text x=\"60\" y=\"135\" font-size=\"10\" fill=\"var(--text,#20302a)\">I→</text><text x=\"165\" y=\"63\" font-size=\"9\" fill=\"#0e7a68\">I₁</text><text x=\"165\" y=\"133\" font-size=\"9\" fill=\"#c17a17\">I₂</text><text x=\"165\" y=\"203\" font-size=\"9\" fill=\"#8a3d6b\">I₃</text></svg>",
+            "caption": "Tres resistencias en paralelo: el voltaje es el mismo en todas, la corriente se reparte y la resistencia equivalente es menor que cualquiera de las individuales."
+          }
+        ]
+      },
+      {
+        "title": "Circuitos mixtos",
+        "body": "Un **circuito mixto** combina partes en serie y partes en paralelo. Para resolverlo:\n\n1. **Identificar** qué resistencias están en serie y cuáles en paralelo.\n2. **Simplificar** de dentro a fuera: calcular la $R_{eq}$ de cada grupo en paralelo, luego sumar en serie.\n3. **Calcular** la corriente total con $I = V / R_{eq,\\text{total}}$.\n4. **Deshacer** la simplificación para hallar el voltaje y la corriente en cada resistencia.\n\nEn cada paso se aplica la ley de Ohm ($V = IR$) y las reglas de serie/paralelo."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Tres resistencias en serie",
+        "statement": "Calcula la resistencia equivalente de tres resistencias en serie: 10 Ω, 20 Ω y 30 Ω. Si se conectan a 12 V, halla la corriente y el voltaje en cada una.",
+        "steps": [
+          "$R_{eq} = 10 + 20 + 30 = 60\\,\\Omega$.",
+          "$I = V/R_{eq} = 12/60 = 0{,}2$ A (misma en las tres).",
+          "$V_1 = IR_1 = 0{,}2 \\times 10 = 2$ V.",
+          "$V_2 = IR_2 = 0{,}2 \\times 20 = 4$ V.",
+          "$V_3 = IR_3 = 0{,}2 \\times 30 = 6$ V.",
+          "Comprobación: $2 + 4 + 6 = 12$ V ✓."
+        ],
+        "answer": "$R_{eq} = 60\\,\\Omega$; $I = 0{,}2$ A; $V_1 = 2$ V, $V_2 = 4$ V, $V_3 = 6$ V.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 200\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"240\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Serie: R₁ + R₂ + R₃ = R_total</text><line x1=\"40\" y1=\"80\" x2=\"100\" y2=\"80\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"100\" y=\"65\" width=\"60\" height=\"30\" fill=\"#0e7a68\" opacity=\"0.1\" stroke=\"#0e7a68\" stroke-width=\"2\" rx=\"3\"/><text x=\"130\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">100 Ω</text><line x1=\"160\" y1=\"80\" x2=\"200\" y2=\"80\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"200\" y=\"65\" width=\"60\" height=\"30\" fill=\"#c17a17\" opacity=\"0.1\" stroke=\"#c17a17\" stroke-width=\"2\" rx=\"3\"/><text x=\"230\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">220 Ω</text><line x1=\"260\" y1=\"80\" x2=\"300\" y2=\"80\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><rect x=\"300\" y=\"65\" width=\"60\" height=\"30\" fill=\"#8a3d6b\" opacity=\"0.1\" stroke=\"#8a3d6b\" stroke-width=\"2\" rx=\"3\"/><text x=\"330\" y=\"84\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">330 Ω</text><line x1=\"360\" y1=\"80\" x2=\"440\" y2=\"80\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"240\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" fill=\"var(--text,#20302a)\">R_total = 100 + 220 + 330 =</text><text x=\"240\" y=\"155\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0e7a68\">650 Ω</text></svg>",
+            "caption": "Ejemplo resuelto: tres resistencias en serie suman directamente para dar la resistencia total."
+          }
+        ]
+      },
+      {
+        "title": "Dos resistencias en paralelo",
+        "statement": "Dos resistencias de 60 Ω y 30 Ω se conectan en paralelo a una pila de 12 V. Calcula la resistencia equivalente, la corriente total y la corriente por cada rama.",
+        "steps": [
+          "$R_{eq} = \\dfrac{R_1 \\cdot R_2}{R_1 + R_2} = \\dfrac{60 \\times 30}{60 + 30} = \\dfrac{1800}{90} = 20\\,\\Omega$.",
+          "$I_{total} = V/R_{eq} = 12/20 = 0{,}6$ A.",
+          "$I_1 = V/R_1 = 12/60 = 0{,}2$ A.",
+          "$I_2 = V/R_2 = 12/30 = 0{,}4$ A.",
+          "Comprobación: $0{,}2 + 0{,}4 = 0{,}6$ A ✓."
+        ],
+        "answer": "$R_{eq} = 20\\,\\Omega$; $I_{total} = 0{,}6$ A; $I_1 = 0{,}2$ A, $I_2 = 0{,}4$ A."
+      },
+      {
+        "title": "Circuito mixto",
+        "statement": "En un circuito, $R_1 = 10\\,\\Omega$ está en serie con el paralelo de $R_2 = 20\\,\\Omega$ y $R_3 = 20\\,\\Omega$. La pila es de 20 V. Halla la corriente total y la corriente por cada resistencia.",
+        "steps": [
+          "El paralelo de $R_2$ y $R_3$: $R_{23} = \\dfrac{20 \\times 20}{20 + 20} = 10\\,\\Omega$.",
+          "$R_{total} = R_1 + R_{23} = 10 + 10 = 20\\,\\Omega$.",
+          "$I_{total} = V/R_{total} = 20/20 = 1$ A.",
+          "Voltaje en $R_1$: $V_1 = I \\cdot R_1 = 1 \\times 10 = 10$ V.",
+          "Voltaje en el paralelo: $V_{23} = 20 - 10 = 10$ V.",
+          "$I_2 = V_{23}/R_2 = 10/20 = 0{,}5$ A.",
+          "$I_3 = V_{23}/R_3 = 10/20 = 0{,}5$ A.",
+          "Comprobación: $I_2 + I_3 = 1$ A ✓."
+        ],
+        "answer": "$I_{total} = 1$ A; $I_1 = 1$ A; $I_2 = I_3 = 0{,}5$ A."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Tienes cuatro resistencias de 100 Ω. ¿Cómo las conectarías para obtener una resistencia equivalente de exactamente 100 Ω? (Pista: no todas en serie ni todas en paralelo.)",
+        "scaffold": "Piensa en combinar serie y paralelo. Por ejemplo, dos pares en serie puestos en paralelo entre sí.",
+        "answer": "Dos pares en serie (cada par = 200 Ω) conectados en paralelo entre sí: $R_{eq} = 200 \\times 200 / (200+200) = 100\\,\\Omega$. Otra opción: dos pares en paralelo (cada par = 50 Ω) conectados en serie: $R_{eq} = 50 + 50 = 100\\,\\Omega$."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Calcula la resistencia equivalente de 15 Ω, 25 Ω y 10 Ω en serie.",
+        "answer": "$R_{eq} = 15 + 25 + 10 = 50\\,\\Omega$.",
+        "full_solution": "En serie: $R_{eq} = R_1 + R_2 + R_3 = 15 + 25 + 10 = 50\\,\\Omega$.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Dos resistencias de 100 Ω se conectan en paralelo. ¿Cuál es la resistencia equivalente?",
+        "answer": "$R_{eq} = 50\\,\\Omega$.",
+        "full_solution": "$R_{eq} = \\dfrac{100 \\times 100}{100 + 100} = \\dfrac{10000}{200} = 50\\,\\Omega$. Cuando dos resistencias iguales están en paralelo, la equivalente es la mitad de cada una.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Tres resistencias de 12 Ω, 6 Ω y 4 Ω están en paralelo. Calcula $R_{eq}$.",
+        "answer": "$R_{eq} = 2\\,\\Omega$.",
+        "full_solution": "$\\dfrac{1}{R_{eq}} = \\dfrac{1}{12} + \\dfrac{1}{6} + \\dfrac{1}{4} = \\dfrac{1 + 2 + 3}{12} = \\dfrac{6}{12} = \\dfrac{1}{2}$. Por tanto $R_{eq} = 2\\,\\Omega$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "En un circuito mixto, $R_1 = 8\\,\\Omega$ está en serie con el paralelo de $R_2 = 12\\,\\Omega$ y $R_3 = 6\\,\\Omega$. Conectado a 24 V, halla la corriente total.",
+        "answer": "$I = 2$ A.",
+        "full_solution": "$R_{23} = \\dfrac{12 \\times 6}{12 + 6} = \\dfrac{72}{18} = 4\\,\\Omega$. $R_{total} = 8 + 4 = 12\\,\\Omega$. $I = 24/12 = 2$ A.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "En la decoración navideña, si una bombilla de una serie se funde, todas se apagan. ¿Por qué? ¿Cómo lo solucionarías?",
+        "answer": "En serie, si una bombilla se funde el circuito se abre y toda la corriente se detiene. Solución: conectar las bombillas en paralelo.",
+        "full_solution": "En conexión serie, la corriente tiene un solo camino. Si una bombilla se funde, se rompe el camino y la corriente deja de circular por todo el circuito: todas se apagan. En conexión paralelo, cada bombilla tiene su propia rama; si una se funde, las demás siguen funcionando por sus ramas independientes. Las luces navideñas modernas suelen usar la conexión en paralelo o incluir un bypass en cada bombilla.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Dibuja la gráfica de $R_{eq}$ en función de $n$ para $n$ resistencias iguales de valor $R = 10\\,\\Omega$ conectadas (a) en serie, (b) en paralelo (para $n = 1, 2, 3, 4, 5$).",
+        "answer": "Serie: $R_{eq} = 10n$ (recta creciente). Paralelo: $R_{eq} = 10/n$ (hipérbola decreciente).",
+        "full_solution": "Serie: $R_{eq} = nR$: valores 10, 20, 30, 40, 50 Ω → recta con pendiente 10. Paralelo: $R_{eq} = R/n$: valores 10, 5, 3.33, 2.5, 2 Ω → hipérbola $R_{eq} = 10/n$ que decrece y se acerca asintóticamente a 0. La gráfica muestra que en serie la resistencia crece sin límite, mientras que en paralelo se reduce pero nunca llega a cero.",
+        "difficulty": "gráfica"
+      },
+      {
+        "statement": "Un alumno dice: «He puesto 3 resistencias de 30 Ω en paralelo y me sale $R_{eq} = 90\\,\\Omega$». Sin calcular, ¿puedes decir si es correcto? Justifica.",
+        "answer": "Incorrecto. En paralelo la $R_{eq}$ siempre es menor que la menor de las resistencias individuales. Debería dar $R_{eq} = 10\\,\\Omega$.",
+        "full_solution": "Sin calcular: la regla fundamental dice que la resistencia equivalente en paralelo es siempre menor que la más pequeña de las resistencias (30 Ω en este caso). El alumno ha sumado como si fueran en serie. El cálculo correcto: $1/R_{eq} = 1/30 + 1/30 + 1/30 = 3/30 = 1/10$, luego $R_{eq} = 10\\,\\Omega$. Para $n$ resistencias iguales en paralelo: $R_{eq} = R/n = 30/3 = 10\\,\\Omega$.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Tienes resistencias de 10 Ω y 20 Ω. ¿Puedes obtener una resistencia equivalente de exactamente 15 Ω? ¿Y de 6,67 Ω?",
+        "answer": "15 Ω: no se puede con solo una de cada. 6,67 Ω: sí, poniendo 10 Ω y 20 Ω en paralelo.",
+        "full_solution": "Serie: $10 + 20 = 30\\,\\Omega$. Paralelo: $\\dfrac{10 \\times 20}{10 + 20} = \\dfrac{200}{30} = 6{,}67\\,\\Omega$. No hay combinación de una de 10 Ω y una de 20 Ω que dé exactamente 15 Ω (las únicas opciones son 30 Ω y 6,67 Ω). Para obtener 15 Ω necesitaríamos más resistencias: por ejemplo, tres de 10 Ω y una de 20 Ω combinadas en un circuito mixto.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L04-1",
+        "stem": "Tres resistencias de 10 Ω en serie tienen una resistencia equivalente de:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 3,3 Ω",
+            "why_wrong": "Esa sería la resistencia equivalente en paralelo (10/3)."
+          },
+          {
+            "key": "B",
+            "text": "B. 10 Ω",
+            "why_wrong": "10 Ω es el valor de una sola resistencia, no la suma de las tres."
+          },
+          {
+            "key": "C",
+            "text": "C. 30 Ω"
+          },
+          {
+            "key": "D",
+            "text": "D. 1000 Ω",
+            "why_wrong": "Eso sería multiplicar las tres (10³), que no es la fórmula de serie ni de paralelo."
+          }
+        ]
+      },
+      {
+        "id": "MC-L04-2",
+        "stem": "En un circuito en paralelo, ¿qué magnitud es igual en todas las ramas?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La intensidad",
+            "why_wrong": "En paralelo la corriente se divide entre las ramas; solo es igual si todas tienen la misma resistencia."
+          },
+          {
+            "key": "B",
+            "text": "B. El voltaje"
+          },
+          {
+            "key": "C",
+            "text": "C. La resistencia",
+            "why_wrong": "Cada rama puede tener distinta resistencia."
+          },
+          {
+            "key": "D",
+            "text": "D. La potencia",
+            "why_wrong": "La potencia depende de I y V de cada rama, que pueden ser distintas."
+          }
+        ]
+      },
+      {
+        "id": "MC-L04-3",
+        "stem": "La resistencia equivalente de dos resistencias en paralelo es siempre:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Mayor que la mayor de ellas",
+            "why_wrong": "Eso solo ocurre en serie."
+          },
+          {
+            "key": "B",
+            "text": "B. Igual a la suma de ambas",
+            "why_wrong": "La suma corresponde a la conexión en serie."
+          },
+          {
+            "key": "C",
+            "text": "C. Menor que la menor de ellas"
+          },
+          {
+            "key": "D",
+            "text": "D. Igual al producto de ambas",
+            "why_wrong": "El producto solo aparece en el numerador de la fórmula; falta dividir por la suma."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "En un circuito, $R_1 = 6\\,\\Omega$ está en serie con el paralelo de $R_2 = 12\\,\\Omega$ y $R_3 = 4\\,\\Omega$. Si la pila es de 15 V, calcula: (a) $R_{eq}$ total; (b) la intensidad total; (c) el voltaje y la intensidad en cada resistencia.",
+        "answer": "(a) $R_{eq} = 9\\,\\Omega$; (b) $I = 1{,}67$ A; (c) $V_1 = 10$ V, $V_{23} = 5$ V, $I_2 = 0{,}42$ A, $I_3 = 1{,}25$ A.",
+        "full_solution": "$R_{23} = \\frac{12 \\times 4}{12+4} = \\frac{48}{16} = 3\\,\\Omega$. $R_{total} = 6 + 3 = 9\\,\\Omega$. $I = 15/9 = 1{,}667$ A. $V_1 = 1{,}667 \\times 6 = 10$ V. $V_{23} = 15 - 10 = 5$ V. $I_2 = 5/12 = 0{,}417$ A. $I_3 = 5/4 = 1{,}25$ A. Comp.: $0{,}417 + 1{,}25 = 1{,}667$ A ✓."
+      }
+    ],
+    "challenge_questions": [
+      {
+        "statement": "Cinco resistencias iguales de valor $R$ se conectan formando un puente de Wheatstone (cuatro en un cuadrado y una en la diagonal). Calcula la resistencia equivalente entre dos vértices opuestos.",
+        "answer": "$R_{eq} = R$ (por simetría, la corriente por la resistencia diagonal es cero).",
+        "full_solution": "Por la simetría del circuito, los dos nodos a los que se conecta la resistencia diagonal están al mismo potencial (ambos a $V/2$ del total). Como no hay d.d.p. entre sus extremos, no circula corriente por ella. El circuito se reduce a dos ramas de 2R en paralelo: $R_{eq} = \\frac{2R \\cdot 2R}{2R + 2R} = R$."
+      }
+    ],
+    "flashcards": [
+      {
+        "front": "Resistencia equivalente en serie",
+        "back": "$R_{eq} = R_1 + R_2 + \\cdots + R_n$. La corriente es la misma en todas; el voltaje se reparte.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Resistencia equivalente en paralelo",
+        "back": "$\\dfrac{1}{R_{eq}} = \\dfrac{1}{R_1} + \\dfrac{1}{R_2} + \\cdots$ Para dos: $R_{eq} = \\dfrac{R_1 R_2}{R_1 + R_2}$. El voltaje es el mismo; la corriente se reparte.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "¿La Req en paralelo es mayor o menor que cada componente?",
+        "back": "Siempre menor que la más pequeña de las resistencias individuales.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Sumar resistencias en paralelo como en serie.",
+        "correction": "En paralelo se suman los inversos: $1/R_{eq} = 1/R_1 + 1/R_2$, no $R_{eq} = R_1 + R_2$."
+      },
+      {
+        "mistake": "Olvidar invertir al final: calcular $1/R_{eq}$ y dejarlo como respuesta.",
+        "correction": "Después de sumar los inversos, hay que invertir el resultado para obtener $R_{eq}$."
+      },
+      {
+        "mistake": "En un circuito mixto, no identificar correctamente qué está en serie y qué en paralelo.",
+        "correction": "Traza el camino de la corriente: si la corriente solo tiene un camino → serie. Si se divide → paralelo."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "En los exámenes suelen aparecer circuitos mixtos. Practica la simplificación paso a paso y no olvides comprobar que las corrientes y voltajes suman correctamente."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "conexión en serie",
+        "definition": "Resistencias una tras otra; la corriente es la misma y los voltajes se suman."
+      },
+      {
+        "term": "conexión en paralelo",
+        "definition": "Resistencias entre los mismos nodos; el voltaje es el mismo y las corrientes se suman."
+      },
+      {
+        "term": "resistencia equivalente",
+        "definition": "Una sola resistencia que sustituye a varias sin cambiar la corriente total del circuito."
+      },
+      {
+        "term": "circuito mixto",
+        "definition": "Circuito que combina partes en serie y partes en paralelo."
+      }
+    ],
+    "summary": {
+      "big_idea": "Las resistencias se pueden asociar en serie (se suman) o en paralelo (se suman los inversos). En circuitos mixtos se simplifica por etapas.",
+      "key_points": [
+        "Serie: $R_{eq} = R_1 + R_2 + \\cdots$ Misma corriente; voltaje repartido.",
+        "Paralelo: $1/R_{eq} = 1/R_1 + 1/R_2 + \\cdots$ Mismo voltaje; corriente repartida.",
+        "En paralelo, $R_{eq}$ es siempre menor que la menor de las resistencias.",
+        "Circuitos mixtos se resuelven simplificando de dentro a fuera."
+      ],
+      "formulas": [
+        "$R_{eq,s} = R_1 + R_2 + \\cdots$",
+        "$1/R_{eq,p} = 1/R_1 + 1/R_2 + \\cdots$",
+        "$R_{eq,2p} = R_1 R_2 / (R_1+R_2)$"
+      ],
+      "what_to_remember_if_nothing_else": "Serie: se suman las R. Paralelo: se suman los 1/R. La equivalente en paralelo siempre es menor que la más pequeña."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 217/2022 saberes Bloque A · Circuitos"
+    ],
+    "curriculum_refs": [
+      "CE3,3 Resolver circuitos",
+      "CE3,4 Asociación de resistencias"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 4.º ESO"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes",
+        "SVGs incluidos"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_05.json": {
+    "id": "L05",
+    "title": "Potencia y energía eléctrica · Efecto Joule",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Física",
+    "unit_id": "U-4F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE3,4",
+        "CE5,1"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1,5 h",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Calcular la potencia eléctrica de un aparato relacionando tensión, corriente y energía transferida."
+      },
+      {
+        "statement": "Explicar el efecto Joule y calcular la energía disipada como calor."
+      },
+      {
+        "statement": "Interpretar la información de la factura eléctrica: kWh como unidad de energía."
+      },
+      {
+        "statement": "Valorar el consumo energético de distintos electrodomésticos y proponer medidas de ahorro."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Manejar la ley de Ohm y saber resolver circuitos sencillos.",
+        "why_it_matters": "Las fórmulas de potencia se derivan combinando $P=VI$ con $V=IR$."
+      },
+      {
+        "statement": "Conocer los conceptos de energía y sus unidades.",
+        "why_it_matters": "La energía eléctrica se transforma en calor, luz o movimiento; hay que saber operar con julios y otras unidades."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué aparato consume más energía: uno de 100 W encendido 1 hora o uno de 50 W encendido 3 horas?",
+        "expected_answer": "El de 50 W × 3 h = 150 Wh consume más que el de 100 W × 1 h = 100 Wh."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "La potencia y la energía son lo mismo.",
+        "correct_model": "La potencia ($P$) es la energía por unidad de tiempo: $P = E/t$. La potencia indica lo rápido que se transforma la energía. Una bombilla de 60 W transforma 60 J cada segundo."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El kWh es una unidad de potencia.",
+        "correct_model": "El kWh es una unidad de energía: $1\\,\\text{kWh} = 1000\\,\\text{W} \\times 3600\\,\\text{s} = 3{,}6 \\times 10^6$ J. Es la energía que consume un aparato de 1 kW durante 1 hora."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Potencia eléctrica",
+        "body": "La **potencia eléctrica** es la rapidez con que un aparato transforma energía eléctrica:\n\n$$P = V \\cdot I$$\n\ndonde $P$ es la potencia en vatios (W), $V$ en voltios e $I$ en amperios.\n\nCombinando con la ley de Ohm:\n\n$$P = I^2 R \\qquad P = \\frac{V^2}{R}$$\n\nUn vatio (W) = un julio por segundo. Múltiplos: $1\\,\\text{kW} = 1000\\,\\text{W}$.\n\n**Ejemplos de potencia típica:**\n| Aparato | Potencia |\n|---------|----------|\n| LED | 5–10 W |\n| Televisor | 50–150 W |\n| Microondas | 700–1200 W |\n| Secador | 1500–2200 W |\n| Horno eléctrico | 2000–3000 W |",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 280\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Potencia eléctrica: P = V · I</text><circle cx=\"250\" cy=\"150\" r=\"80\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.4\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"250\" y=\"120\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"bold\" fill=\"#0e7a68\">P</text><text x=\"250\" y=\"145\" text-anchor=\"middle\" font-size=\"14\" fill=\"var(--text,#20302a)\">(vatios, W)</text><line x1=\"250\" y1=\"165\" x2=\"250\" y2=\"165\" stroke=\"none\"/><text x=\"120\" y=\"95\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#c17a17\">V</text><text x=\"120\" y=\"115\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">(voltios)</text><text x=\"380\" y=\"95\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#8a3d6b\">I</text><text x=\"380\" y=\"115\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">(amperios)</text><text x=\"250\" y=\"178\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--text,#20302a)\">P = V · I</text><text x=\"130\" y=\"230\" text-anchor=\"middle\" font-size=\"11\" fill=\"#c17a17\">P = I² · R</text><text x=\"250\" y=\"250\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0e7a68\">P = V · I</text><text x=\"370\" y=\"230\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">P = V² / R</text><text x=\"250\" y=\"272\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Tres fórmulas equivalentes de la potencia</text></svg>",
+            "caption": "La potencia eléctrica P = V·I y sus tres expresiones equivalentes usando la ley de Ohm."
+          }
+        ]
+      },
+      {
+        "title": "Energía eléctrica y el kWh",
+        "body": "La **energía** consumida por un aparato eléctrico es:\n\n$$E = P \\cdot t$$\n\n- Si $P$ está en W y $t$ en segundos → $E$ en julios (J).\n- Si $P$ está en kW y $t$ en horas → $E$ en kilovatios-hora (kWh).\n\nConversión: $1\\,\\text{kWh} = 3{,}6 \\times 10^6\\,\\text{J} = 3600\\,\\text{kJ}$.\n\nLa compañía eléctrica cobra por la energía consumida, medida en kWh. El **coste** se calcula:\n\n$$\\text{Coste} = E\\,(\\text{kWh}) \\times \\text{precio}\\,(€/\\text{kWh})$$"
+      },
+      {
+        "title": "Efecto Joule",
+        "body": "Cuando la corriente pasa por un conductor con resistencia, parte de la energía eléctrica se transforma en **calor**. Esto es el **efecto Joule**:\n\n$$Q = I^2 \\cdot R \\cdot t$$\n\ndonde $Q$ es la energía térmica (en julios), $I$ la intensidad, $R$ la resistencia y $t$ el tiempo.\n\n**Aplicaciones útiles del efecto Joule:**\n- Estufas, tostadoras, planchas, secadores (calentamiento intencionado).\n- Fusibles (protección: se calientan y funden si $I$ es excesiva).\n\n**Inconvenientes:**\n- Pérdida de energía en cables de transporte eléctrico (por eso se usa alta tensión para reducir $I$).\n- Calentamiento no deseado en circuitos electrónicos.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 260\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Efecto Joule: electricidad → calor</text><rect x=\"170\" y=\"60\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#c17a17\" opacity=\"0.1\" stroke=\"#c17a17\" stroke-width=\"2\"/><text x=\"250\" y=\"95\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#c17a17\">Resistencia R</text><text x=\"250\" y=\"115\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">Corriente I</text><line x1=\"100\" y1=\"100\" x2=\"170\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><text x=\"135\" y=\"92\" font-size=\"11\" fill=\"#0e7a68\">I →</text><line x1=\"330\" y1=\"100\" x2=\"400\" y2=\"100\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/><path d=\"M220 55 L230 42 M250 55 L250 38 M280 55 L270 42\" stroke=\"#c17a17\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"250\" y=\"35\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">Calor Q</text><rect x=\"100\" y=\"170\" width=\"300\" height=\"70\" rx=\"8\" fill=\"var(--grid,#e8e3d8)\" opacity=\"0.5\"/><text x=\"250\" y=\"195\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Q = I² · R · t</text><text x=\"250\" y=\"218\" text-anchor=\"middle\" font-size=\"11\" fill=\"#8a3d6b\">Ley de Joule</text><text x=\"250\" y=\"235\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Q en julios, I en amperios, R en ohmios, t en segundos</text></svg>",
+            "caption": "El efecto Joule: toda resistencia por la que circula corriente disipa energía en forma de calor, según Q = I²·R·t."
+          }
+        ]
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "Potencia de una bombilla",
+        "statement": "Una bombilla conectada a 230 V consume 0,26 A. Calcula su potencia y su resistencia.",
+        "steps": [
+          "$P = V \\cdot I = 230 \\times 0{,}26 = 59{,}8$ W $\\approx 60$ W.",
+          "$R = V/I = 230/0{,}26 = 885\\,\\Omega$."
+        ],
+        "answer": "$P = 60$ W; $R = 885\\,\\Omega$.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 220\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"240\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Potencia de una bombilla</text><circle cx=\"150\" cy=\"120\" r=\"30\" fill=\"#c17a17\" opacity=\"0.1\" stroke=\"#c17a17\" stroke-width=\"2\"/><line x1=\"138\" y1=\"108\" x2=\"162\" y2=\"132\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><line x1=\"138\" y1=\"132\" x2=\"162\" y2=\"108\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"150\" y=\"170\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">230 V, 60 W</text><text x=\"320\" y=\"80\" font-size=\"12\" fill=\"var(--text,#20302a)\">P = V · I</text><text x=\"320\" y=\"105\" font-size=\"12\" fill=\"#0e7a68\">I = P / V = 60 / 230</text><text x=\"320\" y=\"130\" font-size=\"14\" font-weight=\"bold\" fill=\"#0e7a68\">I = 0,26 A</text><text x=\"320\" y=\"160\" font-size=\"12\" fill=\"#8a3d6b\">R = V / I = 230 / 0,26</text><text x=\"320\" y=\"185\" font-size=\"14\" font-weight=\"bold\" fill=\"#8a3d6b\">R ≈ 882 Ω</text></svg>",
+            "caption": "Cálculo de la corriente y la resistencia de una bombilla de 60 W conectada a 230 V."
+          }
+        ]
+      },
+      {
+        "title": "Coste de funcionamiento de un horno",
+        "statement": "Un horno eléctrico de 2000 W funciona 1,5 horas al día. Si el precio de la electricidad es 0,15 €/kWh, ¿cuánto cuesta al mes (30 días)?",
+        "steps": [
+          "Potencia en kW: $P = 2000\\,\\text{W} = 2\\,\\text{kW}$.",
+          "Energía diaria: $E = 2 \\times 1{,}5 = 3\\,\\text{kWh}$.",
+          "Energía mensual: $E_{mes} = 3 \\times 30 = 90\\,\\text{kWh}$.",
+          "Coste: $90 \\times 0{,}15 = 13{,}50$ €."
+        ],
+        "answer": "90 kWh al mes → 13,50 €."
+      },
+      {
+        "title": "Efecto Joule en un cable",
+        "statement": "Un cable de 2 Ω de resistencia transporta una corriente de 10 A durante 1 hora. ¿Cuánta energía se pierde como calor?",
+        "steps": [
+          "$Q = I^2 R t = 10^2 \\times 2 \\times 3600 = 100 \\times 2 \\times 3600 = 720\\,000$ J.",
+          "$Q = 720\\,\\text{kJ} = 0{,}2\\,\\text{kWh}$."
+        ],
+        "answer": "$Q = 720\\,000$ J = 0,2 kWh."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "deep-domain-transfer-1",
+        "statement": "Compara dos bombillas: una incandescente de 60 W y un LED de 8 W que dan la misma luminosidad. Si las usas 5 horas al día durante un año (365 días) a 0,15 €/kWh, ¿cuánto ahorras con el LED?",
+        "scaffold": "Calcula la energía anual de cada una en kWh y compara los costes.",
+        "answer": "Incandescente: $0{,}06 \\times 5 \\times 365 = 109{,}5$ kWh → 16,43 €. LED: $0{,}008 \\times 5 \\times 365 = 14{,}6$ kWh → 2,19 €. Ahorro: 14,24 € al año por bombilla."
+      }
+    ],
+    "exercises": [
+      {
+        "statement": "Un aparato funciona a 230 V y consume 5 A. ¿Cuál es su potencia?",
+        "answer": "$P = 230 \\times 5 = 1150$ W = 1,15 kW.",
+        "full_solution": "$P = VI = 230 \\times 5 = 1150$ W.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "¿Cuánta energía (en kWh y en J) consume una estufa de 2 kW que funciona 3 horas?",
+        "answer": "6 kWh = $2{,}16 \\times 10^7$ J.",
+        "full_solution": "$E = P \\cdot t = 2\\,\\text{kW} \\times 3\\,\\text{h} = 6\\,\\text{kWh} = 6 \\times 3{,}6 \\times 10^6 = 2{,}16 \\times 10^7$ J.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "Una plancha de 2200 W se conecta a 230 V. ¿Qué intensidad consume? ¿Cuál es su resistencia?",
+        "answer": "$I \\approx 9{,}6$ A; $R \\approx 24\\,\\Omega$.",
+        "full_solution": "$I = P/V = 2200/230 = 9{,}57$ A. $R = V/I = 230/9{,}57 = 24{,}0\\,\\Omega$. También: $R = V^2/P = 230^2/2200 = 24{,}0\\,\\Omega$.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Una resistencia de 50 Ω disipa 200 W. ¿Qué corriente la atraviesa? ¿Qué voltaje tiene?",
+        "answer": "$I = 2$ A; $V = 100$ V.",
+        "full_solution": "De $P = I^2R$: $I = \\sqrt{P/R} = \\sqrt{200/50} = \\sqrt{4} = 2$ A. $V = IR = 2 \\times 50 = 100$ V. Comprobación: $P = VI = 100 \\times 2 = 200$ W ✓.",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "¿Por qué la energía eléctrica se transporta a alta tensión (400 kV) y no a 230 V?",
+        "answer": "A mayor voltaje, la corriente es menor para la misma potencia. Las pérdidas por efecto Joule ($I^2R$) disminuyen drásticamente.",
+        "full_solution": "La potencia transportada es $P = VI$. Para la misma potencia $P$, si $V$ es grande, $I$ es pequeña. Las pérdidas en los cables son $P_{pérdida} = I^2 R_{cable}$: al reducir $I$ a la mitad, las pérdidas se reducen a la cuarta parte. Por eso la red de transporte usa 400 kV: la corriente es pequeña y las pérdidas por calentamiento de los cables son mínimas. Un transformador en las subestaciones baja el voltaje a 230 V para uso doméstico.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Haz una tabla con 5 electrodomésticos de tu casa, estimando su potencia, horas de uso diario y consumo mensual en kWh. ¿Cuál es el más costoso?",
+        "answer": "Varía según los electrodomésticos elegidos. Típicamente el más costoso es el aire acondicionado, la calefacción eléctrica o la vitrocerámica.",
+        "full_solution": "Ejemplo: (1) Frigorífico 150 W, 24 h, 108 kWh/mes; (2) Lavadora 2000 W, 0,5 h, 30 kWh/mes; (3) Televisor 100 W, 4 h, 12 kWh/mes; (4) Microondas 1000 W, 0,3 h, 9 kWh/mes; (5) Ordenador 200 W, 5 h, 30 kWh/mes. El frigorífico consume más porque está encendido permanentemente. A 0,15 €/kWh, su coste mensual es 108 × 0,15 = 16,20 €.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Un cable de 0,5 Ω transporta 100 A. ¿Cuánta energía se pierde como calor en 24 horas? Si se duplica el voltaje de transporte y se reduce la corriente a la mitad, ¿cuánta se pierde?",
+        "answer": "Original: 432 MJ. Duplicando V: 108 MJ (4 veces menos).",
+        "full_solution": "Original: $Q = I^2 Rt = 100^2 \\times 0{,}5 \\times 86400 = 432 \\times 10^6$ J = 432 MJ = 120 kWh. Con $I' = 50$ A: $Q' = 50^2 \\times 0{,}5 \\times 86400 = 108 \\times 10^6$ J = 108 MJ = 30 kWh. Reducir la corriente a la mitad reduce las pérdidas por efecto Joule a la cuarta parte ($I^2$ depende cuadráticamente).",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L05-1",
+        "stem": "La unidad kWh mide:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Potencia",
+            "why_wrong": "La potencia se mide en W o kW. El kWh es potencia × tiempo = energía."
+          },
+          {
+            "key": "B",
+            "text": "B. Energía"
+          },
+          {
+            "key": "C",
+            "text": "C. Intensidad",
+            "why_wrong": "La intensidad se mide en amperios (A)."
+          },
+          {
+            "key": "D",
+            "text": "D. Voltaje",
+            "why_wrong": "El voltaje se mide en voltios (V)."
+          }
+        ]
+      },
+      {
+        "id": "MC-L05-2",
+        "stem": "Si la corriente por un cable se reduce a la mitad, la energía perdida por efecto Joule:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Se reduce a la mitad",
+            "why_wrong": "El efecto Joule depende de I², no de I: al reducir I a la mitad, Q se reduce a 1/4."
+          },
+          {
+            "key": "B",
+            "text": "B. Se reduce a la cuarta parte"
+          },
+          {
+            "key": "C",
+            "text": "C. No cambia",
+            "why_wrong": "Sí cambia: Q = I²Rt depende explícitamente de I."
+          },
+          {
+            "key": "D",
+            "text": "D. Se duplica",
+            "why_wrong": "Al reducir I, Q disminuye, no aumenta."
+          }
+        ]
+      },
+      {
+        "id": "MC-L05-3",
+        "stem": "¿Cuántos julios son 1 kWh?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. 1000 J",
+            "why_wrong": "1000 J = 1 kJ, no 1 kWh."
+          },
+          {
+            "key": "B",
+            "text": "B. 3600 J",
+            "why_wrong": "3600 J = 1 Wh, no 1 kWh."
+          },
+          {
+            "key": "C",
+            "text": "C. 3 600 000 J"
+          },
+          {
+            "key": "D",
+            "text": "D. 360 J",
+            "why_wrong": "Ese valor no corresponde a ninguna conversión estándar de energía."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Define potencia eléctrica y escribe sus tres fórmulas. Un secador de 2000 W se conecta a 230 V durante 10 minutos. Calcula: la intensidad, la resistencia, la energía consumida en julios y en kWh, y su coste a 0,20 €/kWh.",
+        "answer": "$I = 8{,}7$ A; $R = 26{,}5\\,\\Omega$; $E = 1{,}2 \\times 10^6$ J = 0,333 kWh; coste ≈ 0,067 €.",
+        "full_solution": "Potencia: energía transformada por unidad de tiempo. $P = VI = I^2R = V^2/R$. $I = P/V = 2000/230 = 8{,}70$ A. $R = V/I = 230/8{,}70 = 26{,}4\\,\\Omega$. $E = Pt = 2000 \\times 600 = 1{,}2 \\times 10^6$ J. En kWh: $E = 2 \\times (10/60) = 0{,}333$ kWh. Coste: $0{,}333 \\times 0{,}20 = 0{,}067$ € ≈ 7 céntimos."
+      }
+    ],
+    "challenge_questions": [],
+    "flashcards": [
+      {
+        "front": "Potencia eléctrica",
+        "back": "$P = VI = I^2R = V^2/R$. Se mide en vatios (W). 1 W = 1 J/s.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Efecto Joule",
+        "back": "Transformación de energía eléctrica en calor al pasar corriente por una resistencia: $Q = I^2Rt$.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "1 kWh en julios",
+        "back": "$1\\,\\text{kWh} = 3{,}6 \\times 10^6\\,\\text{J}$.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir kW (potencia) con kWh (energía).",
+        "correction": "kW mide la potencia (ritmo de consumo); kWh mide la energía (consumo total = potencia × tiempo)."
+      },
+      {
+        "mistake": "Olvidar convertir minutos a horas al calcular energía en kWh.",
+        "correction": "Si el tiempo está en minutos, divide entre 60 para pasar a horas antes de multiplicar por la potencia en kW."
+      },
+      {
+        "mistake": "No tener en cuenta que las pérdidas por efecto Joule dependen de $I^2$.",
+        "correction": "Duplicar la corriente cuadruplica las pérdidas. Por eso el transporte eléctrico se hace a alta tensión (baja corriente)."
+      }
+    ],
+    "exam_notes": [
+      {
+        "note": "Es muy frecuente en exámenes combinar ley de Ohm + potencia + efecto Joule en un mismo problema."
+      }
+    ],
+    "keywords": [
+      {
+        "term": "potencia eléctrica",
+        "definition": "Energía transformada por unidad de tiempo: $P = VI$. Unidad: vatio (W)."
+      },
+      {
+        "term": "efecto Joule",
+        "definition": "Calentamiento de un conductor al paso de la corriente: $Q = I^2Rt$."
+      },
+      {
+        "term": "kWh",
+        "definition": "Kilovatio-hora, unidad de energía: $1\\,\\text{kWh} = 3{,}6 \\times 10^6$ J. Es lo que factura la compañía eléctrica."
+      }
+    ],
+    "summary": {
+      "big_idea": "La potencia eléctrica ($P = VI$) mide lo rápido que un aparato transforma energía. El efecto Joule explica las pérdidas de energía como calor en los conductores.",
+      "key_points": [
+        "$P = VI = I^2R = V^2/R$.",
+        "$E = P \\cdot t$; en kWh si P en kW y t en horas.",
+        "Efecto Joule: $Q = I^2Rt$; las pérdidas dependen del cuadrado de la corriente.",
+        "El transporte a alta tensión reduce las pérdidas por efecto Joule."
+      ],
+      "formulas": [
+        "$P = VI$",
+        "$P = I^2R$",
+        "$P = V^2/R$",
+        "$E = Pt$",
+        "$Q = I^2Rt$"
+      ],
+      "what_to_remember_if_nothing_else": "$P = VI$ para la potencia; $E = Pt$ para la energía; el kWh es la unidad de la factura eléctrica."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 217/2022 saberes Bloque A · Energía eléctrica"
+    ],
+    "curriculum_refs": [
+      "CE3,4 Potencia y energía",
+      "CE5,1 Ahorro energético"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 4.º ESO"
+    ],
+    "internal_review": {
+      "checks": [
+        "Fórmulas verificadas",
+        "Ejemplos numéricos consistentes"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  },
+  "lesson_06.json": {
+    "id": "L06",
+    "title": "Seguridad eléctrica y aplicaciones cotidianas",
+    "subject": "Física y Química",
+    "course_label": "4.º ESO · Física",
+    "unit_id": "U-4F-05",
+    "curriculum": {
+      "framework": "LOMLOE · RD 217/2022",
+      "codes": [
+        "CE3,4",
+        "CE5,1",
+        "CE5,2"
+      ],
+      "status": "DEFINIDO",
+      "track": "ESO"
+    },
+    "estimated_length": "1 h",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "statement": "Conocer los peligros de la electricidad y las normas de seguridad eléctrica en el hogar."
+      },
+      {
+        "statement": "Explicar el funcionamiento y la función de fusibles, magnetotérmicos y diferenciales."
+      },
+      {
+        "statement": "Describir la instalación eléctrica de una vivienda: acometida, cuadro general, circuitos y toma de tierra."
+      },
+      {
+        "statement": "Valorar el uso responsable de la energía eléctrica y su impacto ambiental."
+      }
+    ],
+    "prerequisites": [
+      {
+        "statement": "Entender el concepto de corriente, voltaje y potencia eléctrica.",
+        "why_it_matters": "Los efectos de la electricidad sobre el cuerpo humano dependen de la corriente y el voltaje; las protecciones se basan en detectar corrientes excesivas."
+      },
+      {
+        "statement": "Saber qué es un cortocircuito y el efecto Joule.",
+        "why_it_matters": "Los fusibles y magnetotérmicos protegen contra cortocircuitos y sobrecargas que causan calentamiento excesivo."
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "provenance": "GENERATED (EXERCISE)",
+        "question": "¿Qué es la toma de tierra y para qué sirve?",
+        "expected_answer": "Es una conexión entre la carcasa metálica de los aparatos y el suelo (tierra). Si hay una fuga de corriente, la desvía al suelo en lugar de pasar por la persona que toca el aparato."
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-01",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "Si el voltaje es bajo (como una pila de 9 V) no puede ser peligroso.",
+        "correct_model": "9 V en una pila es seguro porque la piel seca tiene alta resistencia y la corriente resultante es muy pequeña. Pero en condiciones húmedas (resistencia baja), voltajes relativamente bajos pueden ser mortales. La peligrosidad depende de la corriente que atraviese el cuerpo, no solo del voltaje."
+      },
+      {
+        "id": "MIS-02",
+        "provenance": "GENERATED (EXPLANATION)",
+        "incorrect_model": "El diferencial y el magnetotérmico son lo mismo.",
+        "correct_model": "El magnetotérmico protege contra sobrecarga y cortocircuito (corta si la corriente es excesiva). El diferencial protege contra fugas de corriente a tierra (detecta desequilibrio entre la corriente que entra y la que sale del circuito)."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Efectos de la electricidad sobre el cuerpo humano",
+        "body": "La corriente eléctrica puede causar daños graves al cuerpo humano. Los efectos dependen principalmente de la **intensidad** de la corriente que lo atraviesa:\n\n| Corriente | Efecto |\n|-----------|--------|\n| 1 mA | Apenas perceptible |\n| 10 mA | Contracción muscular dolorosa |\n| 30 mA | Parálisis respiratoria |\n| 100 mA | Fibrilación cardíaca (potencialmente mortal) |\n| > 1 A | Quemaduras graves |\n\nLa corriente que atraviesa el cuerpo depende del voltaje y de la resistencia del cuerpo: $I = V/R_{cuerpo}$.\n\n- Piel seca: $R \\approx 100\\,000\\,\\Omega$. A 230 V: $I \\approx 2{,}3$ mA (incómodo pero no mortal).\n- Piel húmeda: $R \\approx 1\\,000\\,\\Omega$. A 230 V: $I \\approx 230$ mA (**mortal**).\n\nPor eso los accidentes eléctricos son más frecuentes en cuartos de baño y cocinas."
+      },
+      {
+        "title": "Elementos de protección eléctrica",
+        "body": "La instalación eléctrica incluye elementos de seguridad:\n\n**Fusible:** hilo conductor que se funde (se derrite) si la corriente supera un valor determinado, abriendo el circuito. Es desechable (hay que reemplazarlo después de cada actuación).\n\n**Interruptor magnetotérmico (PIA):** protege contra **sobrecargas** (consumo excesivo) y **cortocircuitos**. Se desconecta automáticamente y se puede rearmar (tiene una palanca).\n\n**Interruptor diferencial (ID):** detecta **fugas de corriente a tierra** (por ejemplo, si una persona toca un cable pelado). Compara la corriente que entra por la fase y la que sale por el neutro; si la diferencia supera 30 mA, corta el circuito en milisegundos.\n\n**Toma de tierra:** conductor que conecta las carcasas metálicas de los aparatos con el suelo. Si hay una fuga, la corriente se desvía a tierra en lugar de pasar por la persona.\n\n<svg viewBox=\"0 0 400 160\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd);max-width:400px\">\n  <rect x=\"2\" y=\"2\" width=\"396\" height=\"156\" rx=\"8\" fill=\"var(--bg,#fbfcfd)\" stroke=\"var(--grid,#e8e3d8)\"/>\n  <text x=\"200\" y=\"20\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Protecciones en el cuadro eléctrico</text>\n  <!-- ICP -->\n  <rect x=\"20\" y=\"35\" width=\"80\" height=\"50\" rx=\"5\" fill=\"#fee2e2\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <text x=\"60\" y=\"55\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"var(--primary,#0e7a68)\">ICP</text>\n  <text x=\"60\" y=\"70\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--primary,#0e7a68)\">Limitador</text>\n  <!-- ID -->\n  <rect x=\"120\" y=\"35\" width=\"80\" height=\"50\" rx=\"5\" fill=\"#fef3c7\" stroke=\"var(--secondary,#c17a17)\" stroke-width=\"1.5\"/>\n  <text x=\"160\" y=\"55\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">ID</text>\n  <text x=\"160\" y=\"70\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--text,#20302a)\">Diferencial</text>\n  <!-- PIAs -->\n  <rect x=\"220\" y=\"35\" width=\"50\" height=\"50\" rx=\"5\" fill=\"#dcfce7\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <text x=\"245\" y=\"55\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"var(--primary,#0e7a68)\">PIA</text>\n  <text x=\"245\" y=\"70\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--primary,#0e7a68)\">Alumb.</text>\n  <rect x=\"280\" y=\"35\" width=\"50\" height=\"50\" rx=\"5\" fill=\"#dcfce7\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <text x=\"305\" y=\"55\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"var(--primary,#0e7a68)\">PIA</text>\n  <text x=\"305\" y=\"70\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--primary,#0e7a68)\">Enchuf.</text>\n  <rect x=\"340\" y=\"35\" width=\"50\" height=\"50\" rx=\"5\" fill=\"#dcfce7\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <text x=\"365\" y=\"55\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"var(--primary,#0e7a68)\">PIA</text>\n  <text x=\"365\" y=\"70\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--primary,#0e7a68)\">Cocina</text>\n  <!-- Líneas -->\n  <line x1=\"100\" y1=\"60\" x2=\"120\" y2=\"60\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"200\" y1=\"60\" x2=\"220\" y2=\"60\" stroke=\"var(--axes,#24312c)\" stroke-width=\"2\"/>\n  <line x1=\"270\" y1=\"60\" x2=\"280\" y2=\"60\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <line x1=\"330\" y1=\"60\" x2=\"340\" y2=\"60\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1\"/>\n  <!-- Toma de tierra -->\n  <line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"130\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <line x1=\"185\" y1=\"130\" x2=\"215\" y2=\"130\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"2\"/>\n  <line x1=\"190\" y1=\"136\" x2=\"210\" y2=\"136\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1.5\"/>\n  <line x1=\"195\" y1=\"142\" x2=\"205\" y2=\"142\" stroke=\"var(--primary,#0e7a68)\" stroke-width=\"1\"/>\n  <text x=\"230\" y=\"125\" font-size=\"9\" fill=\"var(--primary,#0e7a68)\">Toma de tierra</text>\n  <text x=\"200\" y=\"105\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--text,#20302a)\">Todas las carcasas metálicas</text>\n</svg>",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 300\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"250\" y=\"24\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Elementos de protección eléctrica</text><rect x=\"20\" y=\"50\" width=\"200\" height=\"220\" rx=\"10\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"120\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#0e7a68\">Toma de tierra</text><line x1=\"120\" y1=\"100\" x2=\"120\" y2=\"160\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"90\" y1=\"160\" x2=\"150\" y2=\"160\" stroke=\"#0e7a68\" stroke-width=\"2.5\"/><line x1=\"100\" y1=\"175\" x2=\"140\" y2=\"175\" stroke=\"#0e7a68\" stroke-width=\"2\"/><line x1=\"110\" y1=\"190\" x2=\"130\" y2=\"190\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/><text x=\"120\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Desvía la corriente</text><text x=\"120\" y=\"230\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">de fuga al suelo</text><text x=\"120\" y=\"255\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Cable verde-amarillo</text><rect x=\"280\" y=\"50\" width=\"200\" height=\"220\" rx=\"10\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/><text x=\"380\" y=\"72\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#c17a17\">Diferencial (ID)</text><rect x=\"340\" y=\"90\" width=\"80\" height=\"60\" rx=\"6\" fill=\"#c17a17\" opacity=\"0.1\" stroke=\"#c17a17\" stroke-width=\"2\"/><text x=\"380\" y=\"115\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#c17a17\">30 mA</text><text x=\"380\" y=\"130\" text-anchor=\"middle\" font-size=\"9\" fill=\"var(--text,#20302a)\">ID</text><line x1=\"350\" y1=\"90\" x2=\"350\" y2=\"75\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"345\" y=\"72\" font-size=\"9\" fill=\"var(--text,#20302a)\">L</text><line x1=\"410\" y1=\"90\" x2=\"410\" y2=\"75\" stroke=\"var(--axes,#24312c)\" stroke-width=\"1.5\"/><text x=\"415\" y=\"72\" font-size=\"9\" fill=\"var(--text,#20302a)\">N</text><text x=\"380\" y=\"175\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">Corta el circuito si</text><text x=\"380\" y=\"190\" text-anchor=\"middle\" font-size=\"10\" fill=\"var(--text,#20302a)\">detecta fuga > 30 mA</text><text x=\"380\" y=\"215\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">Protege a las personas</text><text x=\"380\" y=\"240\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">en < 30 ms</text></svg>",
+            "caption": "Los dos principales elementos de protección en una instalación doméstica: toma de tierra (desvía corrientes de fuga) e interruptor diferencial (corta el circuito ante fugas peligrosas)."
+          }
+        ]
+      },
+      {
+        "title": "Normas de seguridad y ahorro energético",
+        "body": "**Normas de seguridad básicas:**\n- No manipular aparatos eléctricos con las manos mojadas.\n- No sobrecargar enchufes múltiples (regletas).\n- No usar aparatos con cables pelados o deteriorados.\n- No introducir objetos metálicos en enchufes.\n- Desconectar los aparatos para repararlos.\n- Mantener los aparatos eléctricos lejos del agua.\n\n**Medidas de ahorro energético:**\n- Usar bombillas LED en lugar de incandescentes (ahorro ~90%).\n- Desconectar los aparatos en *standby* (consumo fantasma).\n- Usar electrodomésticos con etiqueta energética A o superior.\n- No dejar cargadores enchufados sin usar.\n- Aprovechar la luz natural.\n- Programar el termostato de la calefacción/aire acondicionado."
+      }
+    ],
+    "worked_examples": [
+      {
+        "title": "¿Es peligroso un enchufe de 230 V?",
+        "statement": "Una persona con las manos húmedas toca un cable pelado de 230 V. Estima la corriente que le atraviesa y valora el riesgo.",
+        "steps": [
+          "Resistencia de la piel húmeda: $R \\approx 1000\\,\\Omega$.",
+          "Corriente: $I = V/R = 230/1000 = 0{,}23$ A = 230 mA.",
+          "Según la tabla, 230 mA es suficiente para provocar fibrilación cardíaca → **riesgo mortal**.",
+          "El diferencial (30 mA) debería saltar antes de que la corriente alcance ese nivel → importancia del diferencial."
+        ],
+        "answer": "230 mA, riesgo mortal. El diferencial es vital para proteger la vida.",
+        "assets": [
+          {
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 480 240\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\"><text x=\"240\" y=\"24\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--text,#20302a)\">Efectos de la corriente en el cuerpo humano</text><rect x=\"30\" y=\"50\" width=\"100\" height=\"40\" rx=\"4\" fill=\"#0e7a68\" opacity=\"0.15\" stroke=\"#0e7a68\"/><text x=\"80\" y=\"75\" text-anchor=\"middle\" font-size=\"10\" fill=\"#0e7a68\">&lt; 1 mA</text><text x=\"165\" y=\"75\" font-size=\"10\" fill=\"var(--text,#20302a)\">Imperceptible</text><rect x=\"30\" y=\"100\" width=\"100\" height=\"40\" rx=\"4\" fill=\"#c17a17\" opacity=\"0.15\" stroke=\"#c17a17\"/><text x=\"80\" y=\"125\" text-anchor=\"middle\" font-size=\"10\" fill=\"#c17a17\">1–10 mA</text><text x=\"165\" y=\"125\" font-size=\"10\" fill=\"var(--text,#20302a)\">Hormigueo, molestia</text><rect x=\"30\" y=\"150\" width=\"100\" height=\"40\" rx=\"4\" fill=\"#8a3d6b\" opacity=\"0.15\" stroke=\"#8a3d6b\"/><text x=\"80\" y=\"175\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">10–30 mA</text><text x=\"165\" y=\"175\" font-size=\"10\" fill=\"var(--text,#20302a)\">Contracción muscular</text><rect x=\"30\" y=\"200\" width=\"100\" height=\"30\" rx=\"4\" fill=\"#8a3d6b\" opacity=\"0.3\" stroke=\"#8a3d6b\" stroke-width=\"2\"/><text x=\"80\" y=\"220\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#8a3d6b\">> 30 mA</text><text x=\"165\" y=\"218\" font-size=\"10\" font-weight=\"bold\" fill=\"#8a3d6b\">PELIGRO: fibrilación</text><text x=\"380\" y=\"120\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">I = V / R_cuerpo</text><text x=\"380\" y=\"145\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--text,#20302a)\">= 230 / 1000</text><text x=\"380\" y=\"170\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#8a3d6b\">= 230 mA</text><text x=\"380\" y=\"198\" text-anchor=\"middle\" font-size=\"10\" fill=\"#8a3d6b\">¡Muy peligroso!</text></svg>",
+            "caption": "Escala de peligrosidad de la corriente eléctrica en el cuerpo humano: a 230 V con piel húmeda (R ≈ 1000 Ω) la corriente puede ser letal."
+          }
+        ]
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "statement": "Nombra tres elementos de protección de una instalación eléctrica y explica la función de cada uno.",
+        "answer": "Fusible (corta si la corriente es excesiva), magnetotérmico (protege contra sobrecargas y cortocircuitos), diferencial (detecta fugas de corriente a tierra).",
+        "full_solution": "1. Fusible: hilo conductor que se funde si la corriente supera un valor determinado, abriendo el circuito para proteger la instalación. Es de un solo uso. 2. Interruptor magnetotérmico (PIA): detecta sobrecargas (exceso de consumo) y cortocircuitos, desconectando automáticamente el circuito afectado. Se puede rearmar. 3. Interruptor diferencial (ID): compara la corriente que entra y la que sale; si hay una diferencia >30 mA (fuga a tierra), desconecta en milisegundos para proteger a las personas.",
+        "difficulty": "básico"
+      },
+      {
+        "statement": "¿Por qué los accidentes eléctricos son más frecuentes en el cuarto de baño?",
+        "answer": "Porque la humedad y el agua reducen la resistencia de la piel, aumentando la corriente que puede atravesar el cuerpo.",
+        "full_solution": "La piel seca tiene una resistencia de unos 100.000 Ω, pero mojada baja a unos 1.000 Ω. A 230 V: piel seca → I ≈ 2,3 mA (apenas perceptible); piel húmeda → I ≈ 230 mA (riesgo de fibrilación cardíaca). Por eso hay normativas especiales para instalaciones eléctricas en baños (enchufes alejados de la ducha, transformadores de aislamiento).",
+        "difficulty": "aplicación"
+      },
+      {
+        "statement": "Si una familia consume 300 kWh al mes y cambia todas sus bombillas incandescentes por LED (de 60 W a 8 W), ahorrando 50 kWh al mes, ¿qué porcentaje de su consumo se reduce? A 0,15 €/kWh, ¿cuánto ahorra al año?",
+        "answer": "Reducción: 16,7%. Ahorro anual: 90 €.",
+        "full_solution": "Porcentaje de reducción: $50/300 \\times 100 = 16{,}7\\%$. Ahorro mensual: $50 \\times 0{,}15 = 7{,}50$ €. Ahorro anual: $7{,}50 \\times 12 = 90$ €.",
+        "difficulty": "transferencia"
+      },
+      {
+        "statement": "Explica qué ocurre paso a paso cuando una persona toca un aparato defectuoso con la carcasa electrificada, en un hogar con toma de tierra y diferencial.",
+        "answer": "La corriente se desvía por la toma de tierra; el diferencial detecta el desequilibrio y corta el circuito en milisegundos, protegiendo a la persona.",
+        "full_solution": "1. El defecto hace que la fase toque la carcasa metálica. 2. La carcasa está conectada a tierra, así que la corriente se desvía por el cable de tierra. 3. El diferencial detecta que la corriente que sale por la fase es mayor que la que vuelve por el neutro (la diferencia va a tierra). 4. Como la diferencia supera 30 mA, el diferencial desconecta en milisegundos. 5. Si la persona toca la carcasa, la mayor parte de la corriente va por tierra (menor resistencia) y la exposición es tan breve que no causa daño.",
+        "difficulty": "análisis crítico"
+      },
+      {
+        "statement": "Investiga y compara el consumo *standby* (en espera) de un televisor, un ordenador de sobremesa y un cargador de móvil. Si los tres están enchufados 20 horas al día en standby, ¿cuánta energía «fantasma» desperdician al año?",
+        "answer": "Varía según modelos. Estimación: TV ~1 W, PC ~5 W, cargador ~0,5 W → total ~6,5 W × 20 h × 365 = 47,5 kWh/año ≈ 7 €.",
+        "full_solution": "Valores típicos: TV moderna en standby ≈ 0,5–2 W; PC sobremesa ≈ 2–10 W; cargador sin teléfono ≈ 0,1–0,5 W. Con valores medios: TV 1 W, PC 5 W, cargador 0,3 W → total 6,3 W. Energía anual: $6{,}3 \\times 10^{-3}\\,\\text{kW} \\times 20\\,\\text{h} \\times 365 = 46$ kWh ≈ 6,9 € a 0,15 €/kWh. Aunque parece poco por aparato, sumando todos los dispositivos de un hogar (router, microondas con reloj, consola...) el consumo fantasma puede suponer un 5–10% de la factura.",
+        "difficulty": "desafío"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MC-L06-1",
+        "stem": "¿Qué elemento protege a las personas contra descargas eléctricas por fuga de corriente?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. El fusible",
+            "why_wrong": "El fusible protege la instalación contra sobrecargas, no específicamente contra fugas a tierra."
+          },
+          {
+            "key": "B",
+            "text": "B. El interruptor diferencial"
+          },
+          {
+            "key": "C",
+            "text": "C. El magnetotérmico",
+            "why_wrong": "El magnetotérmico protege contra sobrecargas y cortocircuitos, pero no detecta pequeñas fugas de corriente."
+          },
+          {
+            "key": "D",
+            "text": "D. La resistencia",
+            "why_wrong": "La resistencia es un componente del circuito, no un elemento de protección."
+          }
+        ]
+      },
+      {
+        "id": "MC-L06-2",
+        "stem": "¿Por qué es peligroso manipular aparatos eléctricos con las manos mojadas?",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. Porque el agua es un aislante",
+            "why_wrong": "El agua pura es mal conductor, pero el agua del grifo (con sales disueltas) conduce bien la electricidad."
+          },
+          {
+            "key": "B",
+            "text": "B. Porque la resistencia de la piel disminuye y puede pasar más corriente"
+          },
+          {
+            "key": "C",
+            "text": "C. Porque el voltaje de la red aumenta con la humedad",
+            "why_wrong": "El voltaje de la red es constante (230 V); no depende de la humedad."
+          },
+          {
+            "key": "D",
+            "text": "D. Porque los electrones viajan más rápido por el agua",
+            "why_wrong": "La velocidad de los electrones no es el factor; lo que importa es la disminución de la resistencia del cuerpo."
+          }
+        ]
+      },
+      {
+        "id": "MC-L06-3",
+        "stem": "El consumo «fantasma» o *standby* se refiere a:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A. La energía que consume un aparato mientras está en uso",
+            "why_wrong": "Eso es el consumo normal, no el fantasma."
+          },
+          {
+            "key": "B",
+            "text": "B. La energía que consume un aparato cuando está apagado pero enchufado"
+          },
+          {
+            "key": "C",
+            "text": "C. La electricidad que se pierde en los cables de alta tensión",
+            "why_wrong": "Eso son pérdidas por efecto Joule en el transporte, no consumo standby."
+          },
+          {
+            "key": "D",
+            "text": "D. La electricidad que produce un panel solar de noche",
+            "why_wrong": "Los paneles solares no producen electricidad de noche."
+          }
+        ]
+      }
+    ],
+    "exam_questions": [
+      {
+        "statement": "Explica la diferencia entre un interruptor magnetotérmico y un interruptor diferencial. ¿Ante qué situaciones actúa cada uno? ¿Son complementarios?",
+        "answer": "El magnetotérmico protege contra sobrecarga y cortocircuito (corriente excesiva). El diferencial protege contra fugas de corriente a tierra (desequilibrio entre fase y neutro). Son complementarios: juntos protegen la instalación y a las personas.",
+        "full_solution": "El interruptor magnetotérmico (PIA) se activa cuando la corriente total del circuito supera su valor nominal (por ejemplo, 16 A). Actúa ante sobrecargas (demasiados aparatos enchufados a la vez) y cortocircuitos (corriente enorme por resistencia casi nula). Protege la instalación (cables, enchufes). El interruptor diferencial (ID) compara la corriente que entra por la fase con la que vuelve por el neutro. Si hay una diferencia superior a 30 mA (porque parte de la corriente se ha ido a tierra, posiblemente a través de una persona), desconecta en milisegundos. Protege a las personas. Son complementarios e imprescindibles: el magnetotérmico no detecta fugas pequeñas (suficientes para electrocutar), y el diferencial no actúa ante una sobrecarga si no hay fuga a tierra."
+      }
+    ],
+    "challenge_questions": [],
+    "flashcards": [
+      {
+        "front": "Interruptor diferencial (ID)",
+        "back": "Detecta fugas de corriente a tierra (desequilibrio fase-neutro >30 mA). Protege a las personas contra descargas eléctricas.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Magnetotérmico (PIA)",
+        "back": "Protege contra sobrecargas y cortocircuitos, desconectando automáticamente si la corriente es excesiva.",
+        "provenance": "SOURCE (DERIVED)"
+      },
+      {
+        "front": "Toma de tierra",
+        "back": "Conductor que conecta las carcasas metálicas de los aparatos con el suelo. Desvía la corriente de fuga a tierra para que el diferencial la detecte.",
+        "provenance": "SOURCE (DERIVED)"
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir el diferencial con el magnetotérmico.",
+        "correction": "El diferencial detecta fugas de corriente (protege personas); el magnetotérmico detecta sobrecargas/cortocircuitos (protege instalación)."
+      },
+      {
+        "mistake": "Pensar que si 'salta la luz' siempre es un cortocircuito.",
+        "correction": "Puede ser: sobrecarga (demasiado consumo → salta el magnetotérmico), cortocircuito (salta el magnetotérmico muy rápido), o fuga de corriente (salta el diferencial). Identificar cuál ha saltado ayuda a diagnosticar el problema."
+      }
+    ],
+    "exam_notes": [],
+    "keywords": [
+      {
+        "term": "diferencial",
+        "definition": "Interruptor que detecta fugas de corriente a tierra y desconecta el circuito si la diferencia supera 30 mA."
+      },
+      {
+        "term": "magnetotérmico",
+        "definition": "Interruptor automático que corta el circuito ante sobrecargas o cortocircuitos."
+      },
+      {
+        "term": "toma de tierra",
+        "definition": "Conexión de las carcasas metálicas de los aparatos con el suelo para desviar corrientes de fuga."
+      },
+      {
+        "term": "consumo standby",
+        "definition": "Energía que consume un aparato enchufado pero apagado o en espera."
+      }
+    ],
+    "summary": {
+      "big_idea": "La electricidad es útil pero peligrosa. Las instalaciones eléctricas incluyen protecciones (fusible, magnetotérmico, diferencial, toma de tierra) que protegen la instalación y a las personas.",
+      "key_points": [
+        "La peligrosidad de una descarga depende de la corriente: a partir de 30 mA hay riesgo grave.",
+        "El diferencial protege personas (detecta fugas a tierra). El magnetotérmico protege la instalación (sobrecargas y cortocircuitos).",
+        "La toma de tierra desvía las fugas al suelo en lugar de por el cuerpo.",
+        "El ahorro energético se consigue con bombillas LED, evitando standby y usando electrodomésticos eficientes."
+      ],
+      "formulas": [],
+      "what_to_remember_if_nothing_else": "No tocar aparatos con las manos mojadas. El diferencial protege tu vida. Ahorra energía: cada kWh cuenta."
+    },
+    "assets_needed": [],
+    "source_references": [
+      "RD 217/2022 saberes Bloque A · Instalaciones y seguridad eléctrica",
+      "REBT (Reglamento Electrotécnico de Baja Tensión)"
+    ],
+    "curriculum_refs": [
+      "CE3,4 Seguridad eléctrica",
+      "CE5,1 Ahorro energético",
+      "CE5,2 Impacto ambiental"
+    ],
+    "confidence_notes": [
+      "Contenido estándar 4.º ESO"
+    ],
+    "internal_review": {
+      "checks": [
+        "Contenido de seguridad verificado",
+        "SVGs incluidos"
+      ],
+      "fixes_applied": [],
+      "remaining_concerns": []
+    }
+  }
+}
