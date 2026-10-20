@@ -650,10 +650,15 @@ const FCARD_LABEL = {
   procedure:{es:'Procedimiento',en:'Procedure'}, procedural:{es:'Procedimiento',en:'Procedure'},
   derivation:{es:'Deducción',en:'Derivation'}, equivalence:{es:'Equivalencia',en:'Equivalence'}
 };
-const TABS = [
-  ['teoria','Teoría'], ['fichas','Fichas'], ['test','Test'],
-  ['ejercicios','Ejercicios'], ['vocab','Vocabulario'], ['repaso','Repaso']
-];
+const TABS_I18N = {
+  teoria:      {es:'Teoría',      en:'Theory'},
+  fichas:      {es:'Fichas',      en:'Flashcards'},
+  test:        {es:'Test',        en:'Quiz'},
+  ejercicios:  {es:'Ejercicios',  en:'Exercises'},
+  vocab:       {es:'Vocabulario', en:'Vocabulary'},
+  repaso:      {es:'Repaso',      en:'Review'}
+};
+const TABS = Object.entries(TABS_I18N).map(([id, labels]) => [id, labels]);
 
 /* Una pestana solo debe existir si tiene contenido real: si una leccion no
    trae fichas, test, teoria, vocabulario o repaso, ese boton ni siquiera debe
@@ -682,12 +687,13 @@ async function renderLesson(i,j,k,tab){
       if (!BUNDLES[l.bundle]) BUNDLES[l.bundle] = await loadJSON(l.bundle);
       data = BUNDLES[l.bundle][l.bkey];
     }catch(e){
-      $main.innerHTML = '<div class="empty">No se pudo cargar esta lección. Comprueba la conexión y vuelve a intentarlo.</div>';
+      $main.innerHTML = '<div class="empty">' + (LANG==='en' ? 'Could not load this lesson. Check your connection and try again.' : 'No se pudo cargar esta lección. Comprueba la conexión y vuelve a intentarlo.') + '</div>';
       return;
     }
   }
-  if (!data){ $main.innerHTML = '<div class="empty">Lección no encontrada en el paquete.</div>'; return; }
+  if (!data){ $main.innerHTML = '<div class="empty">' + (LANG==='en' ? 'Lesson not found in the bundle.' : 'Lección no encontrada en el paquete.') + '</div>'; return; }
   LANG = data.lang === 'en' ? 'en' : 'es';
+  document.documentElement.lang = LANG;
 
   const flags = tabContentFlags(data);
   let availTabs = TABS.filter(([id]) => flags[id]);
@@ -697,7 +703,7 @@ async function renderLesson(i,j,k,tab){
   let out = `<h1>${esc(data.title || l.titulo)}</h1>
     <p class="sub">${esc(data.course_label || p.label)} · <span class="dots">${dots(l.dificultad)}</span> ${esc(l.duracion||'')}</p>
     <div class="tabs">` +
-    availTabs.map(([id,lab]) => `<button class="${id===effTab?'on':''}" data-go="l-${i}-${j}-${k}-${id}">${lab}</button>`).join('') +
+    availTabs.map(([id,lab]) => `<button class="${id===effTab?'on':''}" data-go="l-${i}-${j}-${k}-${id}">${lab[LANG]||lab.es}</button>`).join('') +
     `</div><div id="tabbody"></div>`;
   $main.innerHTML = out;
   bindGo();
