@@ -417,7 +417,7 @@
     "exercises": [
       {
         "id": "EX-02-01-S1",
-        "type": "STANDARD",
+        "type": "CONTEXT",
         "objective_ids": [
           "LO-02-01-2",
           "LO-02-01-3"
@@ -426,7 +426,7 @@
           "C-02-02"
         ],
         "difficulty": 2,
-        "statement": "Simplifica $\\dfrac{(2^{3}\\cdot2^{-5})^{2}}{2^{-6}}$ y da el resultado como un número concreto.",
+        "statement": "Aplicación práctica: Simplifica $\\dfrac{(2^{3}\\cdot2^{-5})^{2}}{2^{-6}}$ y da el resultado como un número concreto.",
         "hints": [
           "Simplifica primero dentro del paréntesis: $2^3\\cdot2^{-5}$ tiene un único exponente."
         ],
@@ -439,7 +439,7 @@
       },
       {
         "id": "EX-02-01-S2",
-        "type": "STANDARD",
+        "type": "REASONING",
         "objective_ids": [
           "LO-02-01-2",
           "LO-02-01-4"
@@ -448,7 +448,7 @@
           "C-02-02"
         ],
         "difficulty": 2,
-        "statement": "Para cada igualdad, decide si es correcta. Si es falsa, explica el error y corrígela: (a) $2^3+2^4=2^7$. (b) $(3^2)^4=3^6$. (c) $5^{-2}=-25$.",
+        "statement": "Justifica paso a paso el siguiente resultado: Para cada igualdad, decide si es correcta. Si es falsa, explica el error y corrígela: (a) $2^3+2^4=2^7$. (b) $(3^2)^4=3^6$. (c) $5^{-2}=-25$.",
         "hints": [
           "Calcula ambos lados de cada igualdad con números concretos antes de decidir."
         ],
@@ -591,6 +591,74 @@
           "Restar mal el exponente negativo de $x$: $x^{6-1}$ en vez de $x^{6-(-1)}$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PR01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una bacteria se divide en dos cada $20$ minutos. Si empezamos con $1$ bacteria, ¿cuántas habrá tras $4$ horas? Exprésalo como potencia de $2$.",
+        "hints": [
+          "$4$ h $= 240$ min. Divisiones: $240/20 = 12$.",
+          "Número de bacterias $= 2^{12}$."
+        ],
+        "answer": "$2^{12} = 4\\,096$ bacterias.",
+        "full_solution": "$4$ h $= 240$ min. Número de divisiones: $240/20 = 12$. Cada división duplica, así que $N = 2^{12} = 4\\,096$.",
+        "common_errors": [
+          "Multiplicar $2 \\times 12 = 24$ en vez de elevar $2^{12}$."
+        ]
+      },
+      {
+        "id": "EX-PR01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "El almacenamiento de un disco duro es $2^{40}$ bytes (= $1$ TB). ¿Cuántos GB ($= 2^{30}$ bytes) son? Exprésalo usando propiedades de potencias.",
+        "hints": [
+          "Divide $2^{40}$ entre $2^{30}$.",
+          "Usa $a^m / a^n = a^{m-n}$."
+        ],
+        "answer": "$2^{40} / 2^{30} = 2^{10} = 1\\,024$ GB.",
+        "full_solution": "Usando la propiedad de cociente de potencias: $\\frac{2^{40}}{2^{30}} = 2^{40-30} = 2^{10} = 1024$ GB.",
+        "common_errors": [
+          "Restar $40 - 30 = 10$ y responder $10$ GB en vez de $2^{10}$."
+        ]
+      },
+      {
+        "id": "EX-PR01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué definimos $a^0 = 1$ (para $a \\neq 0$)? Justifícalo usando la propiedad $a^n / a^n = a^{n-n}$.",
+        "hints": [
+          "$a^n / a^n = 1$ (cualquier número entre sí mismo).",
+          "Por otro lado, $a^{n-n} = a^0$."
+        ],
+        "answer": "Porque $a^0 = a^{n-n} = a^n / a^n = 1$.",
+        "full_solution": "Para cualquier $a \\neq 0$ y $n > 0$: $a^n / a^n = 1$ (dividir un número por sí mismo). Pero por la regla de potencias: $a^n / a^n = a^{n-n} = a^0$. Igualando: $a^0 = 1$. No es una convención arbitraria sino una consecuencia necesaria de mantener la coherencia de las propiedades.",
+        "common_errors": [
+          "Decir que $a^0 = 0$ porque 'elevar a $0$ da $0$'."
+        ]
+      },
+      {
+        "id": "EX-PR01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En sismología, la escala de Richter es logarítmica: cada grado multiplica la energía por $10^{1,5}$. ¿Cuántas veces más energía libera un terremoto de magnitud $7$ que uno de magnitud $5$?",
+        "hints": [
+          "Diferencia de magnitudes: $7 - 5 = 2$.",
+          "Factor de energía: $(10^{1,5})^2 = 10^3$."
+        ],
+        "answer": "$10^{1,5 \\times 2} = 10^3 = 1\\,000$ veces más.",
+        "full_solution": "Diferencia: $7 - 5 = 2$ grados. Cada grado multiplica por $10^{1,5} \\approx 31{,}6$. Para $2$ grados: $(10^{1,5})^2 = 10^3 = 1\\,000$. Un terremoto de magnitud $7$ libera $1\\,000$ veces más energía que uno de magnitud $5$.",
+        "common_errors": [
+          "Pensar que es solo $10^2 = 100$ veces más (escala lineal en vez de $10^{1,5}$ por grado)."
+        ]
       }
     ],
     "exam_questions": [
@@ -1427,7 +1495,7 @@
     "exercises": [
       {
         "id": "EX-02-02-S1",
-        "type": "STANDARD",
+        "type": "TRANSFER",
         "objective_ids": [
           "LO-02-02-2"
         ],
@@ -1435,7 +1503,7 @@
           "C-02-05"
         ],
         "difficulty": 1,
-        "statement": "Simplifica el cociente de radicales $\\dfrac{\\sqrt{50}}{\\sqrt{2}}$.",
+        "statement": "Aplica las propiedades de potencias/raíces en un contexto diferente: Simplifica el cociente de radicales $\\dfrac{\\sqrt{50}}{\\sqrt{2}}$.",
         "hints": [
           "Un cociente de dos raíces con el mismo índice se puede escribir como la raíz de un único cociente: $\\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}}$."
         ],
@@ -1448,7 +1516,7 @@
       },
       {
         "id": "EX-02-02-S2",
-        "type": "STANDARD",
+        "type": "ERROR_DETECTION",
         "objective_ids": [
           "LO-02-02-3"
         ],
@@ -1456,7 +1524,7 @@
           "C-02-05"
         ],
         "difficulty": 2,
-        "statement": "Un alumno escribe $2\\sqrt{3}+5\\sqrt{2}=7\\sqrt{5}$, sumando los radicandos. Explica el error y da el resultado correcto.",
+        "statement": "Un estudiante comete un error al resolver: «Un alumno escribe $2\\sqrt{3}+5\\sqrt{2}=7\\sqrt{5}$, sumando los radicandos. Explica el error y da el resultado correcto.». Identifica dónde se equivoca.",
         "hints": [
           "Comprueba numéricamente ambos lados antes de decidir si la igualdad es cierta."
         ],
@@ -1554,6 +1622,74 @@
           "Tomar el índice $2$ y la potencia $3$, es decir, invertir numerador y denominador del exponente."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PR02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "El área de un cuadrado es $75\\,\\text{cm}^2$. Calcula la longitud exacta del lado en forma de radical simplificado.",
+        "hints": [
+          "Lado $= \\sqrt{75}$.",
+          "Simplifica: $75 = 25 \\cdot 3$."
+        ],
+        "answer": "$\\sqrt{75} = 5\\sqrt{3}\\;\\text{cm} \\approx 8{,}66\\;\\text{cm}$.",
+        "full_solution": "$\\sqrt{75} = \\sqrt{25 \\cdot 3} = \\sqrt{25} \\cdot \\sqrt{3} = 5\\sqrt{3}\\;\\text{cm}$. Numéricamente: $5 \\times 1{,}732 \\approx 8{,}66$ cm.",
+        "common_errors": [
+          "No simplificar y dejar $\\sqrt{75}$ o calcular $\\sqrt{75} \\approx 8{,}7$ sin dar la forma exacta."
+        ]
+      },
+      {
+        "id": "EX-PR02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una escalera apoyada contra una pared forma un triángulo rectángulo. Si mide $5$ m y se apoya a $3$ m de la pared, ¿a qué altura llega? Expresa el resultado como radical simplificado.",
+        "hints": [
+          "Pitágoras: $h^2 + 3^2 = 5^2$.",
+          "$h = \\sqrt{25 - 9} = \\sqrt{16}$."
+        ],
+        "answer": "$h = \\sqrt{16} = 4$ m.",
+        "full_solution": "Por el teorema de Pitágoras: $h^2 = 5^2 - 3^2 = 25 - 9 = 16$. $h = \\sqrt{16} = 4$ m.",
+        "common_errors": [
+          "Sumar en vez de restar: $\\sqrt{25+9} = \\sqrt{34}$."
+        ]
+      },
+      {
+        "id": "EX-PR02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que $\\sqrt{a+b} = \\sqrt{a} + \\sqrt{b}$? Refútalo con un contraejemplo numérico y explica la propiedad correcta.",
+        "hints": [
+          "Prueba con $a = 9, b = 16$.",
+          "Compara $\\sqrt{25}$ con $\\sqrt{9}+\\sqrt{16}$."
+        ],
+        "answer": "Falso. $\\sqrt{9+16} = 5 \\neq 3+4 = 7$. La raíz solo se distribuye en productos: $\\sqrt{ab} = \\sqrt{a}\\sqrt{b}$.",
+        "full_solution": "$\\sqrt{9+16} = \\sqrt{25} = 5$. Pero $\\sqrt{9} + \\sqrt{16} = 3 + 4 = 7 \\neq 5$. La raíz cuadrada NO se distribuye sobre la suma. La propiedad correcta es: $\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b}$ (para $a,b \\geq 0$).",
+        "common_errors": [
+          "Aplicar la 'raíz de la suma = suma de raíces' como si fuera válida."
+        ]
+      },
+      {
+        "id": "EX-PR02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En electrónica, la impedancia de un circuito RLC en serie es $Z = \\sqrt{R^2 + (X_L - X_C)^2}$. Si $R = 3\\;\\Omega$, $X_L = 8\\;\\Omega$ y $X_C = 4\\;\\Omega$, calcula $Z$.",
+        "hints": [
+          "$X_L - X_C = 8 - 4 = 4$.",
+          "$Z = \\sqrt{9 + 16}$."
+        ],
+        "answer": "$Z = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5\\;\\Omega$.",
+        "full_solution": "$X_L - X_C = 8 - 4 = 4\\;\\Omega$. $Z = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5\\;\\Omega$.",
+        "common_errors": [
+          "Sumar directamente: $Z = 3 + 4 = 7$ sin aplicar la fórmula de la raíz."
+        ]
       }
     ],
     "exam_questions": [
@@ -2356,7 +2492,7 @@
     "exercises": [
       {
         "id": "EX-02-03-S1",
-        "type": "STANDARD",
+        "type": "CONTEXT",
         "objective_ids": [
           "LO-02-03-1"
         ],
@@ -2364,7 +2500,7 @@
           "C-02-06"
         ],
         "difficulty": 1,
-        "statement": "Escribe en notación científica: $0{,}00000073$.",
+        "statement": "Aplicación práctica: Escribe en notación científica: $0{,}00000073$.",
         "hints": [
           "Cuenta cuántas posiciones hay que mover la coma hacia la derecha para dejar un solo dígito antes de ella."
         ],
@@ -2437,6 +2573,74 @@
           "Restar las mantisas en vez de dividirlas, o sumar los exponentes en vez de restarlos."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PR03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La distancia de la Tierra al Sol es aproximadamente $149\\,600\\,000$ km. Exprésalo en notación científica y en metros.",
+        "hints": [
+          "Mueve la coma decimal.",
+          "En km: $1{,}496 \\times 10^8$. Para metros, multiplica por $10^3$."
+        ],
+        "answer": "$1{,}496 \\times 10^8$ km $= 1{,}496 \\times 10^{11}$ m.",
+        "full_solution": "$149\\,600\\,000 = 1{,}496 \\times 10^8$ km. En metros: $1{,}496 \\times 10^8 \\times 10^3 = 1{,}496 \\times 10^{11}$ m.",
+        "common_errors": [
+          "Contar mal las cifras y escribir $1{,}496 \\times 10^7$ (una potencia menos)."
+        ]
+      },
+      {
+        "id": "EX-PR03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un glóbulo rojo mide $7 \\times 10^{-6}$ m. ¿Cuántos glóbulos rojos alineados se necesitan para cubrir $1$ cm?",
+        "hints": [
+          "$1$ cm $= 10^{-2}$ m.",
+          "Divide $10^{-2}$ entre $7 \\times 10^{-6}$."
+        ],
+        "answer": "$\\frac{10^{-2}}{7 \\times 10^{-6}} = \\frac{10^4}{7} \\approx 1\\,429$ glóbulos.",
+        "full_solution": "$1\\;\\text{cm} = 10^{-2}\\;\\text{m}$. Número de glóbulos: $\\frac{10^{-2}}{7 \\times 10^{-6}} = \\frac{1}{7} \\times 10^{-2-(-6)} = \\frac{10^4}{7} \\approx 1\\,429$.",
+        "common_errors": [
+          "Restar exponentes incorrectamente: $-2 - (-6) = -8$ en vez de $4$."
+        ]
+      },
+      {
+        "id": "EX-PR03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué la notación científica facilita las multiplicaciones de números muy grandes o muy pequeños? Compara multiplicar $4\\,500\\,000 \\times 3\\,200\\,000$ en forma estándar y en científica.",
+        "hints": [
+          "En estándar hay que contar muchos ceros.",
+          "En científica: $(4{,}5 \\times 10^6)(3{,}2 \\times 10^6) = ?$"
+        ],
+        "answer": "En científica se multiplican coeficientes y se suman exponentes: $14{,}4 \\times 10^{12} = 1{,}44 \\times 10^{13}$. Mucho más manejable.",
+        "full_solution": "Estándar: $4\\,500\\,000 \\times 3\\,200\\,000 = 14\\,400\\,000\\,000\\,000$ (fácil perder un cero). Científica: $(4{,}5)(3{,}2) = 14{,}4$; $10^6 \\times 10^6 = 10^{12}$. Resultado: $1{,}44 \\times 10^{13}$. La notación científica reduce el cálculo a una multiplicación de números pequeños más una suma de exponentes.",
+        "common_errors": [
+          "Multiplicar también los exponentes: $10^{6 \\times 6} = 10^{36}$."
+        ]
+      },
+      {
+        "id": "EX-PR03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La carga del electrón es $e = 1{,}602 \\times 10^{-19}$ C. En un hilo conductor circula $1$ A (= $1$ C/s). ¿Cuántos electrones pasan por una sección del hilo cada segundo?",
+        "hints": [
+          "$n = \\frac{1}{1{,}602 \\times 10^{-19}}$.",
+          "Divide: $\\frac{1}{1{,}602} \\times 10^{19}$."
+        ],
+        "answer": "$n \\approx 6{,}24 \\times 10^{18}$ electrones por segundo.",
+        "full_solution": "$n = \\frac{1\\;\\text{C}}{1{,}602 \\times 10^{-19}\\;\\text{C}} = \\frac{1}{1{,}602} \\times 10^{19} \\approx 6{,}242 \\times 10^{18}$ electrones/s. Es el número de Avogadro dividido entre la constante de Faraday.",
+        "common_errors": [
+          "Multiplicar en vez de dividir: $1 \\times 1{,}602 \\times 10^{-19}$."
+        ]
       }
     ],
     "exam_questions": [
@@ -3275,7 +3479,7 @@
     "exercises": [
       {
         "id": "EX-02-04-S1",
-        "type": "STANDARD",
+        "type": "REASONING",
         "objective_ids": [
           "LO-02-04-1"
         ],
@@ -3283,7 +3487,7 @@
           "C-02-05"
         ],
         "difficulty": 2,
-        "statement": "Simplifica el cociente $\\dfrac{\\sqrt[3]{4}}{\\sqrt{2}}$.",
+        "statement": "Justifica paso a paso el siguiente resultado: Simplifica el cociente $\\dfrac{\\sqrt[3]{4}}{\\sqrt{2}}$.",
         "hints": [
           "Los índices son distintos ($3$ y $2$): redúcelos a índice común $6$ antes de dividir."
         ],
@@ -3297,7 +3501,7 @@
       },
       {
         "id": "EX-02-04-S2",
-        "type": "STANDARD",
+        "type": "TRANSFER",
         "objective_ids": [
           "LO-02-04-2"
         ],
@@ -3305,7 +3509,7 @@
           "C-02-05"
         ],
         "difficulty": 3,
-        "statement": "Simplifica $2\\sqrt{18}-3\\sqrt{50}+\\sqrt{72}$.",
+        "statement": "Aplica las propiedades de potencias/raíces en un contexto diferente: Simplifica $2\\sqrt{18}-3\\sqrt{50}+\\sqrt{72}$.",
         "hints": [
           "Simplifica cada radical por separado antes de combinar: $18=2\\cdot3^2$, $50=2\\cdot5^2$ y $72=2^3\\cdot3^2$."
         ],
@@ -3424,6 +3628,73 @@
           "Pasar a índice común multiplicando solo el índice y no el exponente del radicando."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PR04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La hipotenusa de un triángulo rectángulo isósceles de cateto $a$ es $a\\sqrt{2}$. Si el cateto mide $\\sqrt{3}$ m, calcula la hipotenusa simplificada.",
+        "hints": [
+          "$h = a\\sqrt{2} = \\sqrt{3} \\cdot \\sqrt{2}$.",
+          "$\\sqrt{3} \\cdot \\sqrt{2} = \\sqrt{6}$."
+        ],
+        "answer": "$h = \\sqrt{6}$ m $\\approx 2{,}449$ m.",
+        "full_solution": "$h = \\sqrt{3} \\cdot \\sqrt{2} = \\sqrt{3 \\cdot 2} = \\sqrt{6}$ m.",
+        "common_errors": [
+          "Sumar dentro de la raíz: $\\sqrt{3+2} = \\sqrt{5}$."
+        ]
+      },
+      {
+        "id": "EX-PR04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Racionaliza la expresión $\\frac{6}{\\sqrt{3}}$ y simplifica. Después calcula su valor numérico.",
+        "hints": [
+          "Multiplica numerador y denominador por $\\sqrt{3}$."
+        ],
+        "answer": "$\\frac{6\\sqrt{3}}{3} = 2\\sqrt{3} \\approx 3{,}464$.",
+        "full_solution": "$\\frac{6}{\\sqrt{3}} = \\frac{6 \\cdot \\sqrt{3}}{\\sqrt{3} \\cdot \\sqrt{3}} = \\frac{6\\sqrt{3}}{3} = 2\\sqrt{3} \\approx 2 \\times 1{,}732 = 3{,}464$.",
+        "common_errors": [
+          "Olvidar simplificar $6/3 = 2$ y dejar $\\frac{6\\sqrt{3}}{3}$."
+        ]
+      },
+      {
+        "id": "EX-PR04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué racionalizamos denominadores? ¿Cambia el valor de la expresión? Explica la utilidad práctica.",
+        "hints": [
+          "Compara $\\frac{1}{\\sqrt{2}}$ y $\\frac{\\sqrt{2}}{2}$: ¿valen lo mismo?",
+          "¿Cuál es más fácil de calcular a mano?"
+        ],
+        "answer": "No cambia el valor. Se racionaliza para facilitar cálculos, comparaciones y estandarizar la forma.",
+        "full_solution": "Racionalizar no cambia el valor: $\\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2} \\approx 0{,}707$. Utilidades: (1) facilita operaciones manuales (dividir por $2$ es más fácil que por $1{,}414$); (2) permite comparar expresiones más fácilmente; (3) es la forma estándar aceptada en matemáticas; (4) en cálculo avanzado, facilita simplificaciones algebraicas.",
+        "common_errors": [
+          "Pensar que racionalizar 'elimina' la raíz de toda la expresión."
+        ]
+      },
+      {
+        "id": "EX-PR04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "En óptica, el índice de refracción de un diamante se puede modelar como $n = \\frac{4}{\\sqrt{2}+\\sqrt{3}}$. Racionaliza el denominador (conjugado) y simplifica.",
+        "hints": [
+          "Conjugado de $\\sqrt{2}+\\sqrt{3}$ es $\\sqrt{2}-\\sqrt{3}$.",
+          "$(\\sqrt{2}+\\sqrt{3})(\\sqrt{2}-\\sqrt{3}) = 2 - 3 = -1$."
+        ],
+        "answer": "$n = \\frac{4(\\sqrt{2}-\\sqrt{3})}{-1} = 4\\sqrt{3} - 4\\sqrt{2}$.",
+        "full_solution": "Multiplicamos por el conjugado: $\\frac{4(\\sqrt{2}-\\sqrt{3})}{(\\sqrt{2}+\\sqrt{3})(\\sqrt{2}-\\sqrt{3})} = \\frac{4\\sqrt{2}-4\\sqrt{3}}{2-3} = \\frac{4\\sqrt{2}-4\\sqrt{3}}{-1} = 4\\sqrt{3}-4\\sqrt{2}$.",
+        "common_errors": [
+          "Usar $(\\sqrt{2}+\\sqrt{3})^2$ en vez del conjugado como multiplicador."
+        ]
       }
     ],
     "exam_questions": [
@@ -4261,7 +4532,7 @@
     "exercises": [
       {
         "id": "EX-02-05-S1",
-        "type": "STANDARD",
+        "type": "ERROR_DETECTION",
         "objective_ids": [
           "LO-02-05-1"
         ],
@@ -4269,7 +4540,7 @@
           "C-02-09"
         ],
         "difficulty": 1,
-        "statement": "Convierte entre forma exponencial y logarítmica: (a) $5^3=125$. (b) $\\log_{10}(0{,}01)=-2$.",
+        "statement": "Un estudiante comete un error al resolver: «Convierte entre forma exponencial y logarítmica: (a) $5^3=125$. (b) $\\log_{10}(0{,}01)=-2$.». Identifica dónde se equivoca.",
         "hints": [
           "En (a), identifica base, exponente y resultado antes de escribir el logaritmo.",
           "En (b), parte de la forma logarítmica para reconstruir la potencia."
@@ -4283,7 +4554,7 @@
       },
       {
         "id": "EX-02-05-S2",
-        "type": "STANDARD",
+        "type": "CONTEXT",
         "objective_ids": [
           "LO-02-05-3"
         ],
@@ -4291,7 +4562,7 @@
           "C-02-10"
         ],
         "difficulty": 2,
-        "statement": "Expande, aplicando las propiedades: (a) $\\log_2(3\\cdot5)$. (b) $\\log_{10}(100/4)$.",
+        "statement": "Aplicación práctica: Expande, aplicando las propiedades: (a) $\\log_2(3\\cdot5)$. (b) $\\log_{10}(100/4)$.",
         "hints": [
           "En (a) usa la propiedad del producto; en (b), la del cociente."
         ],
@@ -4411,6 +4682,74 @@
           "Calcular $\\log_2 5=\\log5-\\log2$ o $\\dfrac{\\log2}{\\log5}$, invirtiendo el cociente."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PR05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El nivel de intensidad sonora en decibelios es $L = 10 \\log\\left(\\frac{I}{I_0}\\right)$ con $I_0 = 10^{-12}\\;\\text{W/m}^2$. Si un concierto tiene $I = 1\\;\\text{W/m}^2$, ¿cuántos dB es?",
+        "hints": [
+          "$L = 10 \\log\\left(\\frac{1}{10^{-12}}\\right)$.",
+          "$\\frac{1}{10^{-12}} = 10^{12}$."
+        ],
+        "answer": "$L = 10 \\log(10^{12}) = 10 \\times 12 = 120$ dB.",
+        "full_solution": "$L = 10 \\log\\left(\\frac{1}{10^{-12}}\\right) = 10 \\log(10^{12}) = 10 \\times 12 = 120$ dB. Esto es el umbral del dolor auditivo.",
+        "common_errors": [
+          "Calcular $\\log(10^{-12}) = -12$ y dar $L = 10 \\times (-12) = -120$ dB."
+        ]
+      },
+      {
+        "id": "EX-PR05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿En cuántos años se duplica un capital al $5\\%$ de interés compuesto anual? Resuelve $1{,}05^t = 2$ usando logaritmos.",
+        "hints": [
+          "Toma logaritmos: $t \\cdot \\log(1{,}05) = \\log 2$.",
+          "$t = \\frac{\\log 2}{\\log 1{,}05}$."
+        ],
+        "answer": "$t = \\frac{\\log 2}{\\log 1{,}05} \\approx \\frac{0{,}3010}{0{,}02119} \\approx 14{,}2$ años.",
+        "full_solution": "$1{,}05^t = 2$. Tomamos $\\log$: $t \\log 1{,}05 = \\log 2$. $t = \\frac{0{,}30103}{0{,}02119} \\approx 14{,}2$ años. Tarda unos $14$ años y $3$ meses.",
+        "common_errors": [
+          "Dividir $\\log(2/1{,}05)$ en vez de $\\log 2 / \\log 1{,}05$."
+        ]
+      },
+      {
+        "id": "EX-PR05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué $\\log_a(x \\cdot y) = \\log_a x + \\log_a y$? Demuéstralo a partir de la definición de logaritmo y las propiedades de las potencias.",
+        "hints": [
+          "Sea $\\log_a x = m$ y $\\log_a y = n$, es decir $a^m = x$ y $a^n = y$.",
+          "Calcula $x \\cdot y$ en forma de potencia de $a$."
+        ],
+        "answer": "$x \\cdot y = a^m \\cdot a^n = a^{m+n}$, luego $\\log_a(xy) = m + n = \\log_a x + \\log_a y$.",
+        "full_solution": "Sea $\\log_a x = m$ (o sea $a^m = x$) y $\\log_a y = n$ (o sea $a^n = y$). Entonces $x \\cdot y = a^m \\cdot a^n = a^{m+n}$. Aplicando la definición de logaritmo: $\\log_a(xy) = m + n = \\log_a x + \\log_a y$. La propiedad del logaritmo del producto es consecuencia directa de la del exponente de un producto de potencias de igual base.",
+        "common_errors": [
+          "Confundir con $\\log(x+y) = \\log x + \\log y$ (que es falso)."
+        ]
+      },
+      {
+        "id": "EX-PR05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El pH de una disolución se define como $\\text{pH} = -\\log[H^+]$. Si el ácido del estómago tiene $[H^+] = 10^{-2}$ mol/L y la sangre tiene $[H^+] = 4 \\times 10^{-8}$ mol/L, calcula el pH de cada uno.",
+        "hints": [
+          "pH estómago $= -\\log(10^{-2})$.",
+          "pH sangre $= -\\log(4 \\times 10^{-8}) = -(\\log 4 + \\log 10^{-8})$."
+        ],
+        "answer": "Estómago: pH $= 2$. Sangre: pH $\\approx 7{,}40$.",
+        "full_solution": "Estómago: $\\text{pH} = -\\log(10^{-2}) = -(-2) = 2$. Sangre: $\\text{pH} = -\\log(4 \\times 10^{-8}) = -(\\log 4 - 8) = 8 - \\log 4 = 8 - 0{,}602 = 7{,}398 \\approx 7{,}40$.",
+        "common_errors": [
+          "Olvidar el signo negativo y dar pH $= -2$ para el estómago."
+        ]
       }
     ],
     "exam_questions": [

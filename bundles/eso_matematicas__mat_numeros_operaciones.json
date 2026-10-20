@@ -557,6 +557,74 @@
           "Convertir $-(-6)$ en $-6$ al quitar el paréntesis, en lugar de $+6$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-NO01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "El punto más profundo del mar Mediterráneo está a $-5\\,267$ m (fosa de Calipso) y la cima del Teide está a $3\\,718$ m. ¿Cuál es el desnivel total entre ambos puntos?",
+        "hints": [
+          "Desnivel = diferencia entre la mayor y la menor altitud.",
+          "Calcula $3718 - (-5267)$."
+        ],
+        "answer": "$3718 - (-5267) = 8\\,985$ m.",
+        "full_solution": "Desnivel $= 3718 - (-5267) = 3718 + 5267 = 8\\,985$ m. El desnivel total entre la cima del Teide y la fosa de Calipso es de $8\\,985$ metros.",
+        "common_errors": [
+          "Restar sin cambiar el signo: $3718 - 5267 = -1549$."
+        ]
+      },
+      {
+        "id": "EX-NO01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En una cuenta bancaria con saldo $-85\\,€$ se ingresa una nómina de $1\\,250\\,€$ y se paga un recibo de $340\\,€$. ¿Cuál es el saldo final?",
+        "hints": [
+          "Saldo final $= -85 + 1250 - 340$.",
+          "Opera de izquierda a derecha."
+        ],
+        "answer": "$-85 + 1250 - 340 = 825\\,€$.",
+        "full_solution": "$-85 + 1250 = 1165$. Luego $1165 - 340 = 825\\,€$. El saldo final es positivo: $825\\,€$.",
+        "common_errors": [
+          "Ignorar el saldo negativo inicial y calcular $1250 - 340 = 910$."
+        ]
+      },
+      {
+        "id": "EX-NO01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué el producto de dos números negativos es positivo? Justifícalo usando la propiedad distributiva: calcula $(-3)(4 + (-4))$ de dos formas.",
+        "hints": [
+          "$4 + (-4) = 0$, así que el producto debe ser $0$.",
+          "Desarrolla: $(-3)(4) + (-3)(-4) = 0$."
+        ],
+        "answer": "Porque $(-3)(4) + (-3)(-4) = 0$ implica $-12 + (-3)(-4) = 0$, luego $(-3)(-4) = 12 > 0$.",
+        "full_solution": "$(-3)(4+(-4)) = (-3)(0) = 0$. Distribuimos: $(-3)(4) + (-3)(-4) = -12 + (-3)(-4) = 0$. Para que la suma sea $0$, necesitamos $(-3)(-4) = 12$. Esto muestra que el producto de dos negativos es positivo.",
+        "common_errors": [
+          "Afirmar que es una regla arbitraria sin relación con otras propiedades."
+        ]
+      },
+      {
+        "id": "EX-NO01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En un juego de mesa, cada casilla verde suma $+3$ puntos y cada casilla roja resta $-2$ puntos (penalización doble anulada). Si un jugador cae en $5$ casillas verdes y $4$ rojas, calcula su puntuación usando expresiones con enteros.",
+        "hints": [
+          "Verde: $5 \\times (+3)$. Roja: $4 \\times (-(-2)) = 4 \\times 2$.",
+          "Ojo: la penalización 'resta $-2$' equivale a sumar $+2$."
+        ],
+        "answer": "$5(3) + 4(2) = 15 + 8 = 23$ puntos.",
+        "full_solution": "Casillas verdes: $5 \\times (+3) = +15$. Casillas rojas: restar $-2$ cuatro veces $= 4 \\times (-(-2)) = 4 \\times 2 = +8$. Total: $15 + 8 = 23$ puntos.",
+        "common_errors": [
+          "Interpretar 'resta $-2$' como $4 \\times (-2) = -8$ y obtener $15 - 8 = 7$."
+        ]
       }
     ],
     "exam_questions": [
@@ -1502,6 +1570,74 @@
           "Perder el signo negativo del numerador al simplificar."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-NO02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En una clase de $30$ alumnos, $\\frac{2}{5}$ practican fútbol, $\\frac{1}{3}$ practican baloncesto y el resto no hace deporte. ¿Cuántos alumnos no hacen deporte?",
+        "hints": [
+          "Suma las fracciones de deportistas.",
+          "Resta esa suma de $1$ para obtener la fracción sin deporte."
+        ],
+        "answer": "$30 \\times \\left(1 - \\frac{2}{5} - \\frac{1}{3}\\right) = 30 \\times \\frac{4}{15} = 8$ alumnos.",
+        "full_solution": "$\\frac{2}{5} + \\frac{1}{3} = \\frac{6+5}{15} = \\frac{11}{15}$. Fracción sin deporte: $1 - \\frac{11}{15} = \\frac{4}{15}$. Alumnos: $30 \\times \\frac{4}{15} = \\frac{120}{15} = 8$.",
+        "common_errors": [
+          "Sumar $\\frac{2}{5} + \\frac{1}{3} = \\frac{3}{8}$ sumando numeradores y denominadores."
+        ]
+      },
+      {
+        "id": "EX-NO02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una tubería llena un depósito en $6$ horas y otra en $4$ horas. Si abren ambas a la vez, ¿en cuánto tiempo se llena el depósito?",
+        "hints": [
+          "Ritmo de la primera: $\\frac{1}{6}$ por hora; segunda: $\\frac{1}{4}$.",
+          "Ritmo conjunto: $\\frac{1}{6}+\\frac{1}{4}$."
+        ],
+        "answer": "$\\frac{1}{\\frac{1}{6}+\\frac{1}{4}} = \\frac{1}{\\frac{5}{12}} = \\frac{12}{5} = 2{,}4$ horas ($2$ h $24$ min).",
+        "full_solution": "Ritmo conjunto: $\\frac{1}{6}+\\frac{1}{4} = \\frac{2+3}{12} = \\frac{5}{12}$ del depósito por hora. Tiempo: $\\frac{12}{5} = 2{,}4$ h = $2$ h $24$ min.",
+        "common_errors": [
+          "Sumar los tiempos: $6 + 4 = 10$ h, o promediar: $\\frac{6+4}{2} = 5$ h."
+        ]
+      },
+      {
+        "id": "EX-NO02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que entre dos fracciones cualesquiera siempre existe otra fracción. Usa $\\frac{1}{3}$ y $\\frac{1}{2}$ como ejemplo y explica el método general.",
+        "hints": [
+          "Calcula la media aritmética de las dos fracciones.",
+          "¿Puedes repetir el proceso infinitas veces?"
+        ],
+        "answer": "La media $\\frac{a/b + c/d}{2}$ siempre está entre ambas. Ejemplo: $\\frac{1/3+1/2}{2} = \\frac{5}{12}$, y $\\frac{1}{3} < \\frac{5}{12} < \\frac{1}{2}$.",
+        "full_solution": "Dadas $\\frac{a}{b} < \\frac{c}{d}$, su media aritmética $m = \\frac{a/b+c/d}{2}$ cumple $\\frac{a}{b} < m < \\frac{c}{d}$. Ejemplo: $\\frac{1/3+1/2}{2} = \\frac{2/6+3/6}{2} = \\frac{5/6}{2} = \\frac{5}{12}$. Se verifica: $\\frac{4}{12} < \\frac{5}{12} < \\frac{6}{12}$. Este proceso puede repetirse indefinitamente, lo que demuestra que entre dos racionales hay infinitos racionales (densidad de $\\mathbb{Q}$).",
+        "common_errors": [
+          "Pensar que como $\\frac{1}{3}$ y $\\frac{1}{2}$ están 'al lado', no cabe nada entre ellas."
+        ]
+      },
+      {
+        "id": "EX-NO02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En música, una negra dura $\\frac{1}{4}$ de compás, una corchea $\\frac{1}{8}$ y una semicorchea $\\frac{1}{16}$. Un compás de $\\frac{4}{4}$ dura exactamente $1$ unidad. ¿Caben $2$ negras, $1$ corchea y $3$ semicorcheas en un compás? Justifica.",
+        "hints": [
+          "Calcula $2 \\cdot \\frac{1}{4} + 1 \\cdot \\frac{1}{8} + 3 \\cdot \\frac{1}{16}$.",
+          "Comprueba si la suma es $\\leq 1$."
+        ],
+        "answer": "$\\frac{2}{4} + \\frac{1}{8} + \\frac{3}{16} = \\frac{8+2+3}{16} = \\frac{13}{16} < 1$. Sí caben; sobra $\\frac{3}{16}$.",
+        "full_solution": "$2 \\cdot \\frac{1}{4} = \\frac{2}{4} = \\frac{8}{16}$; $\\frac{1}{8} = \\frac{2}{16}$; $3 \\cdot \\frac{1}{16} = \\frac{3}{16}$. Suma: $\\frac{8+2+3}{16} = \\frac{13}{16}$. Como $\\frac{13}{16} < 1$, caben y sobra $\\frac{3}{16}$ de compás.",
+        "common_errors": [
+          "Sumar las notas sin convertir a denominador común."
+        ]
       }
     ],
     "exam_questions": [
@@ -2418,6 +2554,74 @@
           "Usar $99$ como denominador del periodo de tres cifras en lugar de $999$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-NO03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un tornillo tiene un diámetro de $0{,}3\\overline{7}$ cm. Exprésalo como fracción irreducible y calcula cuántos milímetros mide (redondeando a centésimas).",
+        "hints": [
+          "$0{,}3\\overline{7} = 0{,}3777\\ldots$ Llama $x = 0{,}3\\overline{7}$.",
+          "$10x = 3{,}\\overline{7}$ y $100x = 37{,}\\overline{7}$."
+        ],
+        "answer": "$\\frac{17}{45}$ cm $\\approx 3{,}78$ mm.",
+        "full_solution": "Sea $x = 0{,}3\\overline{7}$. $10x = 3{,}\\overline{7}$; $100x = 37{,}\\overline{7}$. Restando: $90x = 34$, $x = \\frac{34}{90} = \\frac{17}{45}$. En mm: $\\frac{17}{45} \\times 10 = \\frac{170}{45} \\approx 3{,}78$ mm.",
+        "common_errors": [
+          "Escribir $0{,}37$ como $\\frac{37}{100}$ sin tener en cuenta el período."
+        ]
+      },
+      {
+        "id": "EX-NO03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La constante $\\pi \\approx 3{,}14159\\ldots$ se aproxima a menudo como $\\frac{22}{7}$. Calcula el error absoluto y el error relativo (en %) de esta aproximación.",
+        "hints": [
+          "Error absoluto $= |\\pi - 22/7|$.",
+          "Error relativo $= \\frac{\\text{error absoluto}}{\\pi} \\times 100$."
+        ],
+        "answer": "Error absoluto $\\approx 0{,}00126$. Error relativo $\\approx 0{,}040\\%$.",
+        "full_solution": "$\\frac{22}{7} = 3{,}142857\\ldots$ Error absoluto: $|3{,}14159 - 3{,}14286| = 0{,}00126$. Error relativo: $\\frac{0{,}00126}{3{,}14159} \\times 100 \\approx 0{,}040\\%$.",
+        "common_errors": [
+          "Confundir error absoluto con error relativo."
+        ]
+      },
+      {
+        "id": "EX-NO03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Todo número decimal periódico es racional? ¿Y todo racional tiene representación decimal periódica o exacta? Justifica ambas afirmaciones.",
+        "hints": [
+          "Un periódico se puede expresar como fracción (demuéstralo con el método de ecuaciones).",
+          "Al dividir $p/q$, los restos posibles son $0, 1, \\ldots, q-1$."
+        ],
+        "answer": "Sí a ambas. Periódico → fracción (método algebraico). Racional → periódico o exacto (por el principio del palomar aplicado a los restos de la división).",
+        "full_solution": "Todo periódico es racional: se demuestra con el método $10^n x - 10^m x$ que elimina el período y da una fracción. Todo racional $p/q$ tiene decimal periódico o exacto: al dividir $p$ entre $q$, los restos posibles son $\\{0,1,\\ldots,q-1\\}$; por el principio del palomar, en a lo sumo $q$ pasos un resto se repite, generando un período. Si el resto es $0$, el decimal es exacto.",
+        "common_errors": [
+          "Pensar que $\\pi$ es periódico porque tiene muchos decimales."
+        ]
+      },
+      {
+        "id": "EX-NO03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En informática, los números en coma flotante (como `float` en Python) tienen precisión limitada. Calcula $0{,}1 + 0{,}2$ a mano y explica por qué un ordenador podría dar $0{,}30000000000000004$.",
+        "hints": [
+          "$0{,}1$ y $0{,}2$ son periódicos en base $2$.",
+          "Los ordenadores usan base $2$ con un número fijo de dígitos."
+        ],
+        "answer": "$0{,}1 + 0{,}2 = 0{,}3$ exacto en base $10$, pero en base $2$ ambos son periódicos y el redondeo produce error.",
+        "full_solution": "En base $10$: $0{,}1 + 0{,}2 = 0{,}3$. Pero $0{,}1_{10} = 0{,}0\\overline{0011}_2$ (periódico en base $2$), igual que $0{,}2_{10}$. Al almacenar un número finito de bits, se redondea. La suma de dos valores redondeados acumula error, dando $0{,}30000\\ldots04$ en vez de $0{,}3$ exacto.",
+        "common_errors": [
+          "Pensar que es un error del ordenador y no del sistema de representación."
+        ]
       }
     ],
     "exam_questions": [
@@ -3354,6 +3558,72 @@
           "En (b), dar $-14$ al tratar $-6-(-8)$ como $-6-8$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-NO04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un grupo de $4$ amigos cena en un restaurante. Piden $3$ platos de $12{,}50\\,€$, $4$ bebidas de $3{,}20\\,€$ y un postre de $6{,}90\\,€$. Dejan un $10\\%$ de propina sobre el total. ¿Cuánto paga cada uno?",
+        "hints": [
+          "Calcula el total: $3(12{,}50) + 4(3{,}20) + 6{,}90$.",
+          "Añade el $10\\%$ y divide entre $4$."
+        ],
+        "answer": "$\\frac{(37{,}50 + 12{,}80 + 6{,}90) \\times 1{,}10}{4} = \\frac{62{,}92}{4} = 15{,}73\\,€$.",
+        "full_solution": "Subtotal: $3 \\times 12{,}50 + 4 \\times 3{,}20 + 6{,}90 = 37{,}50 + 12{,}80 + 6{,}90 = 57{,}20\\,€$. Con propina: $57{,}20 \\times 1{,}10 = 62{,}92\\,€$. Por persona: $62{,}92 / 4 = 15{,}73\\,€$.",
+        "common_errors": [
+          "Calcular la propina antes de sumar todos los platos."
+        ]
+      },
+      {
+        "id": "EX-NO04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La nota final de una asignatura se calcula: $60\\%$ examen, $25\\%$ trabajos, $15\\%$ participación. Un alumno saca $7{,}5$ en el examen, $8$ en trabajos y $6$ en participación. ¿Cuál es su nota final?",
+        "hints": [
+          "Nota $= 0{,}60 \\times 7{,}5 + 0{,}25 \\times 8 + 0{,}15 \\times 6$."
+        ],
+        "answer": "$0{,}60(7{,}5) + 0{,}25(8) + 0{,}15(6) = 4{,}5 + 2 + 0{,}9 = 7{,}4$.",
+        "full_solution": "Examen: $0{,}60 \\times 7{,}5 = 4{,}50$. Trabajos: $0{,}25 \\times 8 = 2{,}00$. Participación: $0{,}15 \\times 6 = 0{,}90$. Total: $4{,}50 + 2{,}00 + 0{,}90 = 7{,}40$.",
+        "common_errors": [
+          "Sumar las notas y dividir entre $3$ (media aritmética simple en vez de ponderada)."
+        ]
+      },
+      {
+        "id": "EX-NO04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Explica por qué $a - (b - c) \\neq a - b - c$ en general. ¿Cuál es la forma correcta de quitar el paréntesis? Demuéstralo con $a=10, b=7, c=3$.",
+        "hints": [
+          "Distribuye el signo menos.",
+          "Compara $10-(7-3)$ con $10-7-3$."
+        ],
+        "answer": "$a - (b - c) = a - b + c$. Con los valores: $10 - (7-3) = 10 - 4 = 6$, pero $10 - 7 - 3 = 0$.",
+        "full_solution": "Al quitar un paréntesis precedido de signo menos, se cambian los signos internos: $a - (b - c) = a - b + c$. Ejemplo: $10 - (7 - 3) = 10 - 7 + 3 = 6$. En cambio $10 - 7 - 3 = 0 \\neq 6$. El error está en no cambiar el signo de $-c$ a $+c$.",
+        "common_errors": [
+          "Quitar el paréntesis sin cambiar signos: $a - b - c$."
+        ]
+      },
+      {
+        "id": "EX-NO04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En una hoja de cálculo, la celda A1 contiene la fórmula `= (B1*C1 + D1) / E1 - F1^2`. Si B1$=3$, C1$=4$, D1$=6$, E1$=2$, F1$=1$, calcula el resultado paso a paso, respetando la jerarquía.",
+        "hints": [
+          "Primero potencias, luego multiplicaciones, luego sumas dentro del paréntesis, luego la división."
+        ],
+        "answer": "$\\frac{3 \\times 4 + 6}{2} - 1^2 = \\frac{18}{2} - 1 = 9 - 1 = 8$.",
+        "full_solution": "Dentro del paréntesis: $B1 \\times C1 = 12$; $12 + D1 = 12 + 6 = 18$. División: $18 / E1 = 18 / 2 = 9$. Potencia: $F1^2 = 1$. Resta: $9 - 1 = 8$.",
+        "common_errors": [
+          "Calcular $3 \\times 4 + 6 / 2 - 1 = 12 + 3 - 1 = 14$ sin respetar el paréntesis."
+        ]
       }
     ],
     "exam_questions": [
@@ -4278,6 +4548,74 @@
           "En (a), olvidar sustituir las cifras eliminadas por ceros y escribir $38$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-NO05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un estadio tiene una capacidad de $48\\,350$ personas. Para un reportaje periodístico, ¿cómo se expresaría esta cifra redondeada a millares? ¿Y a decenas de millar?",
+        "hints": [
+          "A millares: mira la cifra de las centenas ($3$).",
+          "A decenas de millar: mira la cifra de los millares ($8$)."
+        ],
+        "answer": "A millares: $48\\,000$. A decenas de millar: $50\\,000$.",
+        "full_solution": "Redondeando a millares: la cifra de centenas es $3 < 5$, se redondea hacia abajo → $48\\,000$. A decenas de millar: la cifra de millares es $8 \\geq 5$, se redondea hacia arriba → $50\\,000$.",
+        "common_errors": [
+          "Redondear $48\\,350$ a millares como $49\\,000$ confundiendo el dígito a observar."
+        ]
+      },
+      {
+        "id": "EX-NO05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un arquitecto mide el largo de una fachada con una cinta métrica que aprecia hasta milímetros: obtiene $12{,}347$ m. Calcula las cifras significativas y el error absoluto máximo.",
+        "hints": [
+          "Cuenta los dígitos significativos.",
+          "Error absoluto máximo = mitad de la menor unidad de medida."
+        ],
+        "answer": "$5$ cifras significativas. Error absoluto máximo $= 0{,}0005$ m $= 0{,}5$ mm.",
+        "full_solution": "La medida $12{,}347$ m tiene $5$ cifras significativas (todos los dígitos son significativos). La mínima división es $0{,}001$ m, así que el error absoluto máximo es $\\frac{0{,}001}{2} = 0{,}0005$ m. El valor real está en $[12{,}3465;\\; 12{,}3475]$ m.",
+        "common_errors": [
+          "Contar solo los decimales como cifras significativas: $3$ en vez de $5$."
+        ]
+      },
+      {
+        "id": "EX-NO05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es lo mismo «$3{,}0$ m» que «$3$ m» desde el punto de vista de las cifras significativas? ¿Qué información adicional da el cero en $3{,}0$?",
+        "hints": [
+          "¿Cuántas cifras significativas tiene cada notación?",
+          "¿Qué implica sobre la precisión del instrumento?"
+        ],
+        "answer": "No es lo mismo. $3$ m tiene $1$ c.s. (error de $\\pm 0{,}5$ m); $3{,}0$ m tiene $2$ c.s. (error de $\\pm 0{,}05$ m).",
+        "full_solution": "$3$ m indica $1$ cifra significativa: sabemos que la medida está entre $2{,}5$ y $3{,}5$ m. $3{,}0$ m indica $2$ cifras significativas: el instrumento aprecia hasta décimas, y la medida está entre $2{,}95$ y $3{,}05$ m. El cero explícito comunica que se midió con mayor precisión.",
+        "common_errors": [
+          "Decir que $3$ y $3{,}0$ son exactamente lo mismo porque valen igual numéricamente."
+        ]
+      },
+      {
+        "id": "EX-NO05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En química, la masa molar del $\\text{NaCl}$ es $22{,}990 + 35{,}453 = 58{,}443\\;\\text{g/mol}$. Si tu balanza solo aprecia centésimas de gramo, ¿cuántas cifras significativas puedes dar al pesar $58{,}44$ g de sal? ¿Cuál es el error relativo?",
+        "hints": [
+          "Cifras significativas del número $58{,}44$.",
+          "Error relativo $= \\frac{0{,}005}{58{,}44} \\times 100$."
+        ],
+        "answer": "$4$ c.s. Error relativo $\\approx 0{,}0086\\%$.",
+        "full_solution": "$58{,}44$ g tiene $4$ cifras significativas. Error absoluto: $\\pm 0{,}005$ g. Error relativo: $\\frac{0{,}005}{58{,}44} \\times 100 \\approx 0{,}0086\\%$.",
+        "common_errors": [
+          "Confundir error absoluto con error relativo o dar el error en unidades incorrectas."
+        ]
       }
     ],
     "exam_questions": [
@@ -5178,6 +5516,74 @@
           "Calcular el MCD ($4$) en lugar del mcm, obteniendo un instante en el que ninguno de los dos faros ha completado un ciclo."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-NO06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un supermercado recibe latas de conservas en cajas de $24$ y botellas de agua en packs de $18$. ¿Cuál es el menor número de unidades de cada producto que se deben comprar para tener el mismo número de latas que de botellas?",
+        "hints": [
+          "Busca el mcm de $24$ y $18$.",
+          "$24 = 2^3 \\cdot 3$; $18 = 2 \\cdot 3^2$."
+        ],
+        "answer": "$\\text{mcm}(24,18) = 72$. Hay que comprar $72$ unidades de cada uno ($3$ cajas de latas, $4$ packs de agua).",
+        "full_solution": "$24 = 2^3 \\cdot 3$; $18 = 2 \\cdot 3^2$. $\\text{mcm} = 2^3 \\cdot 3^2 = 72$. Cajas de latas: $72/24 = 3$. Packs de agua: $72/18 = 4$.",
+        "common_errors": [
+          "Multiplicar $24 \\times 18 = 432$ en vez de calcular el mcm."
+        ]
+      },
+      {
+        "id": "EX-NO06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un florista tiene $60$ rosas rojas, $48$ blancas y $36$ amarillas. Quiere hacer ramos iguales usando todas las flores, con el mayor número posible de ramos. ¿Cuántos ramos hará y qué contendrá cada uno?",
+        "hints": [
+          "Calcula el MCD de $60$, $48$ y $36$.",
+          "Divide cada cantidad entre el MCD."
+        ],
+        "answer": "$\\text{MCD}(60,48,36) = 12$ ramos. Cada uno: $5$ rojas, $4$ blancas, $3$ amarillas.",
+        "full_solution": "$60 = 2^2 \\cdot 3 \\cdot 5$; $48 = 2^4 \\cdot 3$; $36 = 2^2 \\cdot 3^2$. MCD $= 2^2 \\cdot 3 = 12$. Ramos: $12$. Por ramo: $60/12 = 5$ rojas, $48/12 = 4$ blancas, $36/12 = 3$ amarillas.",
+        "common_errors": [
+          "Calcular el mcm en vez del MCD."
+        ]
+      },
+      {
+        "id": "EX-NO06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que si $n$ es un número natural mayor que $1$, entonces $n$ y $n+1$ son siempre coprimos (MCD $= 1$).",
+        "hints": [
+          "Supón que $d$ divide a $n$ y a $n+1$.",
+          "Entonces $d$ divide a $(n+1) - n = 1$."
+        ],
+        "answer": "Si $d | n$ y $d | (n+1)$, entonces $d | ((n+1)-n) = 1$, luego $d = 1$.",
+        "full_solution": "Sea $d = \\text{MCD}(n, n+1)$. Entonces $d | n$ y $d | (n+1)$. Por propiedades de la divisibilidad, $d | (n+1-n)$, es decir $d | 1$. Como $d > 0$, necesariamente $d = 1$. Luego $n$ y $n+1$ son coprimos.",
+        "common_errors": [
+          "Probar con ejemplos sin dar un argumento general."
+        ]
+      },
+      {
+        "id": "EX-NO06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos semáforos parpadean con periodos diferentes: el primero cada $8$ segundos y el segundo cada $12$ segundos. Si parpadean juntos en $t = 0$, ¿cuándo coincidirán por primera vez? ¿Y en el primer minuto, cuántas veces coinciden?",
+        "hints": [
+          "Tiempo de coincidencia $= \\text{mcm}(8,12)$.",
+          "En $60$ s, cuenta cuántos múltiplos del mcm caben."
+        ],
+        "answer": "Primera coincidencia a los $24$ s. En el primer minuto: $2$ coincidencias ($t=24$ y $t=48$).",
+        "full_solution": "$\\text{mcm}(8,12) = 24$ s. Primera coincidencia: $t = 24$ s. En $60$ s: $\\lfloor 60/24 \\rfloor = 2$ coincidencias (a los $24$ s y $48$ s). La siguiente sería a los $72$ s, fuera del primer minuto.",
+        "common_errors": [
+          "Multiplicar $8 \\times 12 = 96$ s (no es el mcm, es demasiado grande)."
+        ]
       }
     ],
     "exam_questions": [
@@ -6105,6 +6511,74 @@
           "Pensar que $\\pi=\\dfrac{22}{7}$ porque coinciden en las dos primeras cifras decimales."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-NO07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La diagonal de un cuadrado de lado $1$ m es $\\sqrt{2}$ m. Si necesitas cortar un listón de exactamente esa longitud, ¿a cuántos milímetros debes cortarlo (redondeando al milímetro más cercano)?",
+        "hints": [
+          "$\\sqrt{2} \\approx 1{,}41421\\ldots$",
+          "Redondea a tres decimales (milímetros)."
+        ],
+        "answer": "$\\sqrt{2} \\approx 1{,}414$ m $= 1\\,414$ mm.",
+        "full_solution": "$\\sqrt{2} = 1{,}41421356\\ldots$ Redondeando a mm: $1{,}414$ m $= 1\\,414$ mm. El error es menor que $0{,}5$ mm.",
+        "common_errors": [
+          "Usar $\\sqrt{2} \\approx 1{,}41$ y cortar a $1\\,410$ mm (error de $4$ mm)."
+        ]
+      },
+      {
+        "id": "EX-NO07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Clasifica estos números en $\\mathbb{N}$, $\\mathbb{Z}$, $\\mathbb{Q}$ o $\\mathbb{R} \\setminus \\mathbb{Q}$ (irracionales): $-7$, $\\frac{22}{7}$, $\\sqrt{9}$, $\\pi$, $0{,}\\overline{3}$, $\\sqrt{5}$.",
+        "hints": [
+          "Simplifica primero: $\\sqrt{9} = 3$; $0{,}\\overline{3} = 1/3$.",
+          "$\\pi$ y $\\sqrt{5}$ no se pueden expresar como fracción."
+        ],
+        "answer": "$\\mathbb{N}$: $\\sqrt{9}=3$. $\\mathbb{Z}$: $-7$. $\\mathbb{Q}$: $\\frac{22}{7}$, $0{,}\\overline{3}$. Irracionales: $\\pi$, $\\sqrt{5}$.",
+        "full_solution": "$-7 \\in \\mathbb{Z}$ (entero negativo). $\\frac{22}{7} \\in \\mathbb{Q}$ (fracción, no es $\\pi$). $\\sqrt{9} = 3 \\in \\mathbb{N}$. $\\pi \\in \\mathbb{R}\\setminus\\mathbb{Q}$ (irracional trascendente). $0{,}\\overline{3} = \\frac{1}{3} \\in \\mathbb{Q}$. $\\sqrt{5} \\in \\mathbb{R}\\setminus\\mathbb{Q}$ ($5$ no es cuadrado perfecto).",
+        "common_errors": [
+          "Clasificar $\\frac{22}{7}$ como irracional confundiéndolo con $\\pi$; o $\\sqrt{9}$ como irracional."
+        ]
+      },
+      {
+        "id": "EX-NO07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra por reducción al absurdo que $\\sqrt{2}$ es irracional.",
+        "hints": [
+          "Supón que $\\sqrt{2} = p/q$ con $\\text{MCD}(p,q)=1$.",
+          "Eleva al cuadrado y deduce que $p$ y $q$ son ambos pares."
+        ],
+        "answer": "Si $\\sqrt{2} = p/q$ irreducible, $2q^2 = p^2 \\Rightarrow p$ par $\\Rightarrow q$ par → contradicción con irreducibilidad.",
+        "full_solution": "Supongamos $\\sqrt{2} = \\frac{p}{q}$ con $\\text{MCD}(p,q)=1$. Entonces $2 = \\frac{p^2}{q^2}$, es decir $p^2 = 2q^2$. Luego $p^2$ es par, así que $p$ es par: $p = 2k$. Sustituyendo: $(2k)^2 = 2q^2 \\Rightarrow 4k^2 = 2q^2 \\Rightarrow q^2 = 2k^2$. Luego $q$ es par. Pero si $p$ y $q$ son ambos pares, $\\text{MCD}(p,q) \\geq 2$, contradicción. Luego $\\sqrt{2}$ es irracional.",
+        "common_errors": [
+          "Probar con la calculadora que $\\sqrt{2}$ 'no termina' y concluir que es irracional sin demostración."
+        ]
+      },
+      {
+        "id": "EX-NO07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El número áureo $\\varphi = \\frac{1+\\sqrt{5}}{2}$ aparece en arte, arquitectura y naturaleza. Calcula su valor con $4$ decimales. ¿Es racional o irracional? Justifica.",
+        "hints": [
+          "$\\sqrt{5} \\approx 2{,}2360679\\ldots$",
+          "Si $\\varphi$ fuera racional, $\\sqrt{5}$ también lo sería. ¿Lo es?"
+        ],
+        "answer": "$\\varphi \\approx 1{,}6180$. Es irracional.",
+        "full_solution": "$\\varphi = \\frac{1+\\sqrt{5}}{2} = \\frac{1+2{,}23607\\ldots}{2} = \\frac{3{,}23607\\ldots}{2} = 1{,}61803\\ldots \\approx 1{,}6180$. Es irracional: si $\\varphi = p/q$ fuera racional, $\\sqrt{5} = 2\\varphi - 1 = 2p/q - 1$ también lo sería, pero $\\sqrt{5}$ es irracional ($5$ no es cuadrado perfecto). Contradicción.",
+        "common_errors": [
+          "Decir que es racional porque se puede escribir como $\\frac{1+\\sqrt{5}}{2}$, que 'parece una fracción'."
+        ]
       }
     ],
     "exam_questions": [

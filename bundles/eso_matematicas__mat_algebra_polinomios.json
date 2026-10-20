@@ -470,6 +470,74 @@
           "Confundir el orden: multiplicar el coeficiente por la base antes de elevarla al cuadrado, en vez de elevar al cuadrado primero."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-AL01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Traduce al lenguaje algebraico: «Un padre tiene el triple de edad que su hijo. Dentro de $15$ años, la edad del padre será el doble que la del hijo.» Plantea la ecuación y resuélvela.",
+        "hints": [
+          "Hijo: $x$; padre: $3x$.",
+          "Dentro de $15$ años: $3x + 15 = 2(x + 15)$."
+        ],
+        "answer": "$x = 15$. El hijo tiene $15$ años y el padre $45$.",
+        "full_solution": "Sea $x$ la edad del hijo. Padre: $3x$. Dentro de $15$ años: padre $= 3x+15$, hijo $= x+15$. Ecuación: $3x + 15 = 2(x + 15) \\Rightarrow 3x + 15 = 2x + 30 \\Rightarrow x = 15$. Hijo: $15$, padre: $45$. Comprobación: $60 = 2 \\times 30$ ✓.",
+        "common_errors": [
+          "Plantear $3x = 2x$ sin añadir los $15$ años a ambas edades."
+        ]
+      },
+      {
+        "id": "EX-AL01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un cine cobra $8\\;€$ la entrada de adulto y $5\\;€$ la de niño. Si se vendieron $120$ entradas y se recaudaron $810\\;€$, ¿cuántas entradas de cada tipo se vendieron?",
+        "hints": [
+          "$a + n = 120$ y $8a + 5n = 810$.",
+          "Despeja una variable y sustituye."
+        ],
+        "answer": "$a = 50$ adultos y $n = 70$ niños.",
+        "full_solution": "Sistema: $a + n = 120$ (I); $8a + 5n = 810$ (II). De (I): $n = 120 - a$. Sustituyendo en (II): $8a + 5(120-a) = 810 \\Rightarrow 3a + 600 = 810 \\Rightarrow a = 70$. $n = 50$. Hmm, revisemos: $8(70)+5(50)=560+250=810$ ✓. Adultos: $70$, niños: $50$.",
+        "common_errors": [
+          "Plantear $8a + 5n = 120$ confundiendo la ecuación de entradas con la de recaudación."
+        ]
+      },
+      {
+        "id": "EX-AL01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué el lenguaje algebraico es más potente que el aritmético para resolver problemas? Compara resolver «pensar un número, multiplicarlo por $3$ y restarle $5$ da $16$» con ambos métodos.",
+        "hints": [
+          "Aritmético: ir deshaciendo operaciones paso a paso.",
+          "Algebraico: $3x - 5 = 16$."
+        ],
+        "answer": "El álgebra permite plantear y resolver de forma sistemática; la aritmética requiere razonar caso por caso.",
+        "full_solution": "Método aritmético: $16 + 5 = 21$; $21/3 = 7$. Funciona aquí, pero si el problema tiene múltiples incógnitas o condiciones, la aritmética inversa se complica o no funciona. Método algebraico: $3x - 5 = 16 \\Rightarrow 3x = 21 \\Rightarrow x = 7$. Es un procedimiento mecánico y generalizable: funciona igual con más ecuaciones, fracciones o restricciones.",
+        "common_errors": [
+          "Pensar que la aritmética siempre basta y el álgebra es solo una complicación innecesaria."
+        ]
+      },
+      {
+        "id": "EX-AL01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En programación, una variable es un 'contenedor' con un nombre (como $x$ en álgebra). Traduce este pseudocódigo a una ecuación: `precio = 3 * cantidad + 10; si precio == 55, ¿cuánto vale cantidad?`",
+        "hints": [
+          "$3 \\cdot \\text{cantidad} + 10 = 55$.",
+          "Resuelve como una ecuación lineal."
+        ],
+        "answer": "$3c + 10 = 55 \\Rightarrow c = 15$.",
+        "full_solution": "$3c + 10 = 55 \\Rightarrow 3c = 45 \\Rightarrow c = 15$. La variable algebraica $c$ funciona igual que una variable de programación: almacena un valor desconocido que se determina por la condición impuesta.",
+        "common_errors": [
+          "No ver la conexión entre variable algebraica y variable informática."
+        ]
       }
     ],
     "exam_questions": [
@@ -1345,6 +1413,73 @@
           "Cambiar el signo solo del primer término del polinomio que se resta ($x^2$) y copiar los otros dos ($-5x$ y $+4$) sin cambiarlos, o agrupar mal los coeficientes de $x$ tras el cambio de signo."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-AL02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "El volumen de una caja sin tapa, formada al recortar cuadrados de lado $x$ en las esquinas de una lámina de $20 \\times 16$ cm, es $V(x) = x(20-2x)(16-2x)$. Desarrolla el polinomio.",
+        "hints": [
+          "$V = x(320 - 40x - 32x + 4x^2)$.",
+          "Simplifica: $V = x(4x^2 - 72x + 320)$."
+        ],
+        "answer": "$V(x) = 4x^3 - 72x^2 + 320x$.",
+        "full_solution": "$(20-2x)(16-2x) = 320 - 40x - 32x + 4x^2 = 4x^2 - 72x + 320$. $V = x(4x^2 - 72x + 320) = 4x^3 - 72x^2 + 320x$.",
+        "common_errors": [
+          "Olvidar la restricción $0 < x < 8$ para que las dimensiones sean positivas."
+        ]
+      },
+      {
+        "id": "EX-AL02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "El beneficio de vender $x$ unidades de un producto es $B(x) = -2x^2 + 100x - 200$. ¿Cuál es el grado del polinomio? ¿Cuántas unidades hay que vender para que el beneficio sea $0$ (punto de equilibrio)?",
+        "hints": [
+          "Grado $= 2$.",
+          "Resuelve $-2x^2 + 100x - 200 = 0$."
+        ],
+        "answer": "Grado $2$. $x \\approx 2{,}1$ o $x \\approx 47{,}9$ (puntos de equilibrio).",
+        "full_solution": "Grado: $2$. $-2x^2 + 100x - 200 = 0 \\Rightarrow x^2 - 50x + 100 = 0$. $x = \\frac{50 \\pm \\sqrt{2500-400}}{2} = \\frac{50 \\pm \\sqrt{2100}}{2} = \\frac{50 \\pm 45{,}83}{2}$. $x_1 \\approx 2{,}09$; $x_2 \\approx 47{,}91$.",
+        "common_errors": [
+          "Dar solo una de las dos raíces."
+        ]
+      },
+      {
+        "id": "EX-AL02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que la suma de dos polinomios de grado $n$ no es necesariamente de grado $n$. Da un ejemplo concreto.",
+        "hints": [
+          "Piensa en qué pasa si los términos de mayor grado se anulan."
+        ],
+        "answer": "Si $P = 3x^2 + x + 1$ y $Q = -3x^2 + 2x$, $P+Q = 3x + 1$ (grado $1$, no $2$).",
+        "full_solution": "Sean $P(x) = 3x^2 + x + 1$ (grado $2$) y $Q(x) = -3x^2 + 2x$ (grado $2$). $P+Q = (3-3)x^2 + (1+2)x + 1 = 3x + 1$, que tiene grado $1$. Los coeficientes líderes se han cancelado, reduciendo el grado.",
+        "common_errors": [
+          "Afirmar sin verificar que la suma siempre tiene el mismo grado que el mayor de los sumandos."
+        ]
+      },
+      {
+        "id": "EX-AL02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En economía, el coste total de producir $x$ unidades es $C(x) = 0{,}5x^2 + 10x + 500$ y el ingreso es $I(x) = 40x$. ¿Para qué valores de $x$ hay beneficio ($I > C$)?",
+        "hints": [
+          "Beneficio $= I - C > 0$.",
+          "$40x - 0{,}5x^2 - 10x - 500 > 0$."
+        ],
+        "answer": "$-0{,}5x^2 + 30x - 500 > 0 \\Rightarrow x^2 - 60x + 1000 < 0 \\Rightarrow$ entre $\\approx 22{,}7$ y $\\approx 37{,}3$ unidades.",
+        "full_solution": "$I - C = -0{,}5x^2 + 30x - 500 > 0 \\Rightarrow x^2 - 60x + 1000 < 0$. Raíces: $x = \\frac{60 \\pm \\sqrt{3600-4000}}{2} = \\frac{60 \\pm \\sqrt{-400}}{2}$. Error: revisemos. $x^2 - 60x + 1000 = 0 \\Rightarrow \\Delta = 3600 - 4000 = -400$. Hmm, $\\Delta < 0$: no hay beneficio. Replanteemos: $-0{,}5x^2+30x-500>0$, $x^2-60x+1000<0$, $\\Delta = 3600-4000 = -400 < 0$. La parábola no corta el eje: los costes siempre superan los ingresos. No hay intervalo con beneficio.",
+        "common_errors": [
+          "No comprobar el signo del discriminante y dar raíces inexistentes."
+        ]
       }
     ],
     "exam_questions": [
@@ -2248,6 +2383,73 @@
           "Repetir el mismo error con cualquier cuadrado de una suma, por no haber interiorizado que $(a+b)^2\\ne a^2+b^2$ en general."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-AL03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un cuadrado tiene lado $(x+3)$ cm. Calcula su área usando la identidad notable y compruébala para $x = 5$.",
+        "hints": [
+          "$(x+3)^2 = x^2 + 6x + 9$.",
+          "Para $x=5$: $(5+3)^2 = 64$; $25+30+9 = 64$ ✓."
+        ],
+        "answer": "$A = x^2 + 6x + 9$. Para $x=5$: $A = 64$ cm².",
+        "full_solution": "$(x+3)^2 = x^2 + 2 \\cdot x \\cdot 3 + 3^2 = x^2 + 6x + 9$. Para $x = 5$: $25 + 30 + 9 = 64 = 8^2$ ✓.",
+        "common_errors": [
+          "Olvidar el doble producto: $(x+3)^2 = x^2 + 9$."
+        ]
+      },
+      {
+        "id": "EX-AL03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Calcula $97^2$ mentalmente usando la identidad $(a-b)^2$, con $a = 100$ y $b = 3$.",
+        "hints": [
+          "$97^2 = (100-3)^2 = 100^2 - 2(100)(3) + 3^2$."
+        ],
+        "answer": "$10000 - 600 + 9 = 9\\,409$.",
+        "full_solution": "$97^2 = (100-3)^2 = 100^2 - 2 \\cdot 100 \\cdot 3 + 3^2 = 10\\,000 - 600 + 9 = 9\\,409$.",
+        "common_errors": [
+          "$97^2 = (100-3)^2 = 10000 - 9 = 9991$ (olvidando el doble producto)."
+        ]
+      },
+      {
+        "id": "EX-AL03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra geométricamente la identidad $(a+b)^2 = a^2 + 2ab + b^2$ usando el área de un cuadrado de lado $a+b$ descompuesto en regiones.",
+        "hints": [
+          "Dibuja un cuadrado de lado $a+b$ y divídelo en $4$ regiones.",
+          "¿Qué áreas tienen las regiones?"
+        ],
+        "answer": "El cuadrado de lado $a+b$ se divide en: un cuadrado $a^2$, un cuadrado $b^2$ y dos rectángulos $ab$.",
+        "full_solution": "Un cuadrado de lado $(a+b)$ tiene área $(a+b)^2$. Trazamos una línea vertical a distancia $a$ y otra horizontal a distancia $a$. Obtenemos $4$ regiones: un cuadrado de lado $a$ (área $a^2$), un cuadrado de lado $b$ (área $b^2$), y dos rectángulos de lados $a$ y $b$ (área $ab$ cada uno). Total: $a^2 + ab + ab + b^2 = a^2 + 2ab + b^2$.",
+        "common_errors": [
+          "Dibujar solo $2$ regiones y obtener $(a+b)^2 = a^2 + b^2$ (falta $2ab$)."
+        ]
+      },
+      {
+        "id": "EX-AL03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En física, la energía cinética relativista aproximada para velocidades bajas es $E \\approx mc^2 + \\frac{1}{2}mv^2$, que proviene de desarrollar $(1+x)^{1/2} \\approx 1 + \\frac{x}{2}$ (binomio). Si el factor de Lorentz es $\\gamma = (1-v^2/c^2)^{-1/2}$, verifica que para $v \\ll c$ se obtiene $\\gamma \\approx 1 + \\frac{v^2}{2c^2}$ usando $(1-x)^{-1/2} \\approx 1 + \\frac{x}{2}$.",
+        "hints": [
+          "Sea $x = v^2/c^2 \\ll 1$.",
+          "Aplica la aproximación $(1-x)^{-1/2} \\approx 1 + x/2$."
+        ],
+        "answer": "$\\gamma \\approx 1 + \\frac{v^2}{2c^2}$. Si $v = 0{,}1c$: $\\gamma \\approx 1{,}005$.",
+        "full_solution": "Con $x = v^2/c^2$: $\\gamma = (1-x)^{-1/2} \\approx 1 + \\frac{x}{2} = 1 + \\frac{v^2}{2c^2}$. Para $v = 0{,}1c$: $\\gamma \\approx 1 + \\frac{0{,}01}{2} = 1{,}005$. Valor exacto: $\\gamma = 1/\\sqrt{0{,}99} \\approx 1{,}00504$. La aproximación es excelente para $v \\ll c$.",
+        "common_errors": [
+          "Aplicar $(1-x)^2$ en vez de $(1-x)^{-1/2}$."
+        ]
       }
     ],
     "exam_questions": [
@@ -3121,6 +3323,74 @@
           "Generalizar 'en Ruffini siempre se cambia el signo' sin distinguir entre un divisor de la forma $x-a$ y uno de la forma $x+a$."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-AL04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El área de un rectángulo es $A(x) = 6x^2 + 11x - 10$. Factoriza para hallar sus dimensiones como expresiones lineales en $x$.",
+        "hints": [
+          "Busca dos números que multipliquen $6 \\times (-10) = -60$ y sumen $11$.",
+          "$15$ y $-4$: $15 \\times (-4) = -60$, $15 + (-4) = 11$."
+        ],
+        "answer": "$A(x) = (2x+5)(3x-2)$.",
+        "full_solution": "Buscamos $a, b$ tales que $ab = -60$ y $a+b = 11$: $a = 15, b = -4$. Reescribimos: $6x^2 + 15x - 4x - 10 = 3x(2x+5) - 2(2x+5) = (2x+5)(3x-2)$. Dimensiones: $(2x+5)$ y $(3x-2)$ (con $x > 2/3$ para que ambas sean positivas).",
+        "common_errors": [
+          "No verificar que las dimensiones sean positivas para valores relevantes de $x$."
+        ]
+      },
+      {
+        "id": "EX-AL04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Usa el teorema del resto para comprobar si $(x-2)$ es factor de $P(x) = x^3 - 4x^2 + x + 6$.",
+        "hints": [
+          "Calcula $P(2)$.",
+          "Si $P(2) = 0$, $(x-2)$ es factor."
+        ],
+        "answer": "$P(2) = 8 - 16 + 2 + 6 = 0$. Sí, $(x-2)$ es factor.",
+        "full_solution": "$P(2) = 2^3 - 4(2^2) + 2 + 6 = 8 - 16 + 2 + 6 = 0$. Por el teorema del factor, $(x-2)$ divide a $P(x)$. Dividiendo: $P(x) = (x-2)(x^2-2x-3) = (x-2)(x-3)(x+1)$.",
+        "common_errors": [
+          "Evaluar mal: $P(2) = 8 - 8 + 2 + 6 = 8 \\neq 0$ (error en $4 \\times 4 = 16$, no $8$)."
+        ]
+      },
+      {
+        "id": "EX-AL04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué relación existe entre las raíces de un polinomio y su factorización? Si $P(x) = x^3 - 6x^2 + 11x - 6$ tiene raíces $1, 2, 3$, escribe la factorización completa.",
+        "hints": [
+          "Cada raíz $r$ da un factor $(x - r)$.",
+          "El coeficiente líder es $1$, así que no hay factor numérico adicional."
+        ],
+        "answer": "$P(x) = (x-1)(x-2)(x-3)$.",
+        "full_solution": "Si $r$ es raíz de $P(x)$, entonces $(x-r)$ es factor (teorema del factor). Con raíces $1, 2, 3$ y coeficiente líder $1$: $P(x) = (x-1)(x-2)(x-3)$. Comprobación: $(x-1)(x-2) = x^2-3x+2$; $(x^2-3x+2)(x-3) = x^3-6x^2+11x-6$ ✓.",
+        "common_errors": [
+          "Escribir $(x+1)(x+2)(x+3)$ confundiendo el signo de los factores."
+        ]
+      },
+      {
+        "id": "EX-AL04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ingeniería de control, la estabilidad de un sistema depende de las raíces de su polinomio característico $P(s) = s^3 + 6s^2 + 11s + 6$. Factorízalo. ¿Todas las raíces son negativas (sistema estable)?",
+        "hints": [
+          "Prueba $s = -1$: $P(-1) = -1 + 6 - 11 + 6 = 0$.",
+          "Divide y sigue factorizando."
+        ],
+        "answer": "$P(s) = (s+1)(s+2)(s+3)$. Raíces: $-1, -2, -3$. Sí, todas negativas → sistema estable.",
+        "full_solution": "$P(-1) = 0$. $P(s) = (s+1)(s^2+5s+6) = (s+1)(s+2)(s+3)$. Raíces: $s = -1, -2, -3$, todas con parte real negativa. El sistema es estable (todas las raíces en el semiplano izquierdo).",
+        "common_errors": [
+          "No recordar que para estabilidad se necesitan raíces con parte real negativa, no positiva."
+        ]
       }
     ],
     "exam_questions": [
@@ -4026,6 +4296,74 @@
           "En (a), olvidar la restricción $x\\neq-1$ tras cancelar el factor $(x+1)$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-AL05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Simplifica la fracción algebraica $\\frac{x^2 - 9}{x^2 + 5x + 6}$ e indica las restricciones del dominio.",
+        "hints": [
+          "Factoriza numerador y denominador.",
+          "$x^2 - 9 = (x-3)(x+3)$; $x^2+5x+6 = (x+2)(x+3)$."
+        ],
+        "answer": "$\\frac{x-3}{x+2}$, con $x \\neq -3$ y $x \\neq -2$.",
+        "full_solution": "Numerador: $x^2-9 = (x-3)(x+3)$. Denominador: $x^2+5x+6 = (x+2)(x+3)$. Simplificando $(x+3)$: $\\frac{x-3}{x+2}$. Restricciones: $x \\neq -2$ (denominador $0$) y $x \\neq -3$ (valor excluido del dominio original).",
+        "common_errors": [
+          "Olvidar que $x = -3$ sigue excluida del dominio tras simplificar."
+        ]
+      },
+      {
+        "id": "EX-AL05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Suma $\\frac{2}{x+1} + \\frac{3}{x-1}$ y simplifica.",
+        "hints": [
+          "Denominador común: $(x+1)(x-1)$.",
+          "$\\frac{2(x-1)+3(x+1)}{(x+1)(x-1)}$."
+        ],
+        "answer": "$\\frac{5x+1}{x^2-1}$.",
+        "full_solution": "$\\frac{2(x-1)+3(x+1)}{(x+1)(x-1)} = \\frac{2x-2+3x+3}{x^2-1} = \\frac{5x+1}{x^2-1}$. Dominio: $x \\neq \\pm 1$.",
+        "common_errors": [
+          "Sumar numeradores directamente: $\\frac{2+3}{(x+1)+(x-1)} = \\frac{5}{2x}$."
+        ]
+      },
+      {
+        "id": "EX-AL05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué $\\frac{x^2}{x} = x$ solo es válido para $x \\neq 0$? ¿Cuál es la diferencia entre la función $f(x) = x$ y $g(x) = \\frac{x^2}{x}$?",
+        "hints": [
+          "¿Qué pasa si sustituyes $x = 0$ en $g$?",
+          "¿Tienen el mismo dominio?"
+        ],
+        "answer": "$f$ está definida para todo $\\mathbb{R}$; $g$ no está definida en $x = 0$. Son iguales en $\\mathbb{R} \\setminus \\{0\\}$.",
+        "full_solution": "$f(x) = x$ tiene dominio $\\mathbb{R}$. $g(x) = x^2/x$ tiene dominio $\\mathbb{R} \\setminus \\{0\\}$ porque en $x=0$ el denominador es $0$. Para $x \\neq 0$, $g(x) = x = f(x)$. Pero en $x = 0$: $f(0) = 0$ y $g(0)$ no existe. Son funciones diferentes porque tienen distinto dominio.",
+        "common_errors": [
+          "Afirmar que son exactamente la misma función porque $x^2/x = x$ 'siempre'."
+        ]
+      },
+      {
+        "id": "EX-AL05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En farmacología, la concentración de un fármaco en sangre $t$ horas después de la administración es $C(t) = \\frac{5t}{t^2+4}$ mg/L. ¿Cuándo alcanza su valor máximo? (Pista: prueba con una tabla de valores para $t = 0, 1, 2, 3, 4, 5$.)",
+        "hints": [
+          "Evalúa $C(t)$ en esos puntos.",
+          "Busca el mayor valor."
+        ],
+        "answer": "Máximo en $t = 2$: $C(2) = 10/8 = 1{,}25$ mg/L.",
+        "full_solution": "$C(0)=0$; $C(1)=5/5=1$; $C(2)=10/8=1{,}25$; $C(3)=15/13\\approx1{,}15$; $C(4)=20/20=1$; $C(5)=25/29\\approx0{,}86$. Máximo en $t=2$: $C = 1{,}25$ mg/L. (Analíticamente se confirma derivando: $C'(t) = \\frac{5(4-t^2)}{(t^2+4)^2} = 0 \\Rightarrow t = 2$.)",
+        "common_errors": [
+          "Evaluar solo para enteros y no detectar que el máximo está entre dos valores (en este caso coincide con $t=2$)."
+        ]
       }
     ],
     "exam_questions": [

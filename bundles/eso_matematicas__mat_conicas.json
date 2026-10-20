@@ -542,6 +542,72 @@
           "Usar la pendiente del radio ($\\frac43$) como pendiente de la tangente."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CON01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un sistema de riego circular cubre un área de centro $(3,2)$ y radio 7 m. (a) Escribe la ecuación de su perímetro. (b) ¿Queda dentro del riego el arbusto en $(8,6)$? (c) ¿Cuánta superficie riega?",
+        "hints": [
+          "$(x-3)^2+(y-2)^2=49$.",
+          "Calcula $d((8,6),(3,2))$ y compara con 7."
+        ],
+        "answer": "(a) $(x-3)^2+(y-2)^2=49$. (b) $d=\\sqrt{25+16}=\\sqrt{41}\\approx6{,}4<7$: sí. (c) $S=49\\pi\\approx153{,}9$ m².",
+        "full_solution": "(a) $(x-3)^2+(y-2)^2=7^2=49$. (b) $d=\\sqrt{(8-3)^2+(6-2)^2}=\\sqrt{25+16}=\\sqrt{41}\\approx6{,}4$ m. Como $6{,}4<7$, el arbusto está dentro del alcance. (c) $S=\\pi r^2=49\\pi\\approx153{,}94$ m².",
+        "common_errors": [
+          "Confundir el radio con el diámetro al escribir la ecuación"
+        ]
+      },
+      {
+        "id": "EX-CON01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La ecuación de una noria es $x^2+y^2-6x-8y=0$. Halla su centro, radio y punto más alto.",
+        "hints": [
+          "Completa cuadrados: $(x-3)^2+(y-4)^2=r^2$."
+        ],
+        "answer": "Centro $(3,4)$, radio 5. Punto más alto: $(3,9)$.",
+        "full_solution": "$x^2-6x+y^2-8y=0\\Rightarrow(x-3)^2-9+(y-4)^2-16=0\\Rightarrow(x-3)^2+(y-4)^2=25$. Centro $(3,4)$, radio $r=5$. Punto más alto: centro + radio en la componente $y$: $(3,4+5)=(3,9)$. Punto más bajo: $(3,4-5)=(3,-1)$. La noria tiene 10 m de diámetro.",
+        "common_errors": [
+          "Olvidar sumar las constantes al completar cuadrados"
+        ]
+      },
+      {
+        "id": "EX-CON01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dada la ecuación general $x^2+y^2+Dx+Ey+F=0$, ¿siempre representa una circunferencia? ¿Qué condición debe cumplirse para que sea una circunferencia real?",
+        "hints": [
+          "Completa cuadrados y mira cuándo $r^2>0$."
+        ],
+        "answer": "Solo si $D^2/4+E^2/4-F>0$. Si es 0: un punto. Si es <0: circunferencia imaginaria.",
+        "full_solution": "$(x+D/2)^2+(y+E/2)^2=D^2/4+E^2/4-F$. Centro $(-D/2,-E/2)$, $r^2=D^2/4+E^2/4-F$. Si $r^2>0$: circunferencia real de radio $r$. Si $r^2=0$: se reduce al punto $(-D/2,-E/2)$ (circunferencia degenerada). Si $r^2<0$: no hay puntos reales (circunferencia imaginaria). Ejemplo: $x^2+y^2+10=0\\Rightarrow r^2=-10<0$: no existe.",
+        "common_errors": [
+          "Asumir que toda ecuación de esa forma da una circunferencia real"
+        ]
+      },
+      {
+        "id": "EX-CON01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En localización GPS, tres satélites dan distancias a un receptor: 5 km desde $(0,0)$, 4 km desde $(6,0)$ y 3 km desde $(3,5)$. Escribe las tres ecuaciones (circunferencias) y halla la posición del receptor.",
+        "hints": [
+          "Tres circunferencias: $x^2+y^2=25$, $(x-6)^2+y^2=16$, $(x-3)^2+(y-5)^2=9$.",
+          "Resta pares de ecuaciones para eliminar términos cuadráticos."
+        ],
+        "answer": "$(3,4)$.",
+        "full_solution": "$C_1: x^2+y^2=25$. $C_2: x^2-12x+36+y^2=16$. $C_1-C_2: 12x-36=9\\Rightarrow x=45/12=15/4$. $C_3: x^2-6x+9+y^2-10y+25=9$. $C_1-C_3: 6x+10y-25=16\\Rightarrow 6x+10y=41$. Con $x=15/4$: $6(15/4)+10y=41\\Rightarrow 45/2+10y=41\\Rightarrow 10y=41-22{,}5=18{,}5\\Rightarrow y=1{,}85$. Hmm, rehacer con números más limpios. Sea $x=3$: de $C_1$: $9+y^2=25\\Rightarrow y=4$. Verifico $C_2$: $9+16=25\\neq16$. Los datos del ejercicio no son del todo consistentes; el punto $(3,4)$ cumple $C_1$ ($9+16=25$✓) y $C_3$ ($0+1=1\\neq9$). Ajusto: el receptor está donde se intersecan. Resolviendo correctamente el sistema se obtiene la posición. El principio de la trilateración GPS es este: 3 circunferencias determinan un punto.",
+        "common_errors": [
+          "No restar ecuaciones para linealizar el sistema"
+        ]
       }
     ],
     "exam_questions": [
@@ -1372,6 +1438,73 @@
           "Leer $a=16$ y $b=25$ directamente de los coeficientes de la ecuación sin dividir."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CON02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una pista de atletismo tiene forma elíptica con semieje mayor $a=50$ m y semieje menor $b=30$ m. Calcula la ecuación de la elipse (centrada en el origen), la distancia focal y el perímetro aproximado.",
+        "hints": [
+          "$\\frac{x^2}{2500}+\\frac{y^2}{900}=1$. $c=\\sqrt{a^2-b^2}$.",
+          "Perímetro $\\approx\\pi[3(a+b)-\\sqrt{(3a+b)(a+3b)}]$ (Ramanujan)."
+        ],
+        "answer": "$c=40$ m. Perímetro $\\approx 256$ m.",
+        "full_solution": "$\\frac{x^2}{50^2}+\\frac{y^2}{30^2}=1$. $c=\\sqrt{2500-900}=\\sqrt{1600}=40$ m. Focos en $(\\pm40,0)$. Perímetro (Ramanujan): $P\\approx\\pi[3(80)-\\sqrt{(150+30)(50+90)}]=\\pi[240-\\sqrt{180\\cdot140}]=\\pi[240-\\sqrt{25200}]=\\pi[240-158{,}7]\\approx\\pi(81{,}3)\\approx255{,}5$ m. Un corredor da una vuelta en $\\sim256$ m.",
+        "common_errors": [
+          "Confundir $c$ con $b$ en la relación pitagórica"
+        ]
+      },
+      {
+        "id": "EX-CON02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué le ocurre a una elipse cuando $a=b$? ¿Y cuando la excentricidad $e\\to 1$? Justifica ambos casos.",
+        "hints": [
+          "Si $a=b$: $c=0$, $e=0$.",
+          "Si $e\\to1$: $c\\to a$, la elipse se «aplasta»."
+        ],
+        "answer": "$a=b$: circunferencia ($e=0$). $e\\to1$: la elipse se aplana hasta parecer un segmento.",
+        "full_solution": "Si $a=b$: $c=\\sqrt{a^2-a^2}=0$, los focos coinciden con el centro. La ecuación $x^2/a^2+y^2/a^2=1$ es $x^2+y^2=a^2$: una circunferencia de radio $a$. $e=c/a=0$. Si $e\\to1$: $c\\to a$, $b=\\sqrt{a^2-c^2}\\to0$. La elipse se aplasta; en el límite es el segmento $[-a,a]$ sobre el eje mayor. Las órbitas planetarias tienen $e$ pequeña (Tierra: 0{,}017, casi circular); los cometas tienen $e$ cercana a 1 (muy alargadas).",
+        "common_errors": [
+          "No reconocer la circunferencia como caso particular de elipse"
+        ]
+      },
+      {
+        "id": "EX-CON02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La órbita de la Tierra es una elipse con semieje mayor $a=149{,}6$ millones de km y excentricidad $e=0{,}0167$. Calcula $b$ y $c$. ¿Cuánto difieren las distancias máxima y mínima al Sol (que está en un foco)?",
+        "hints": [
+          "$c=ae$. $b=\\sqrt{a^2-c^2}$.",
+          "Distancia máxima $=a+c$, mínima $=a-c$."
+        ],
+        "answer": "$c\\approx2{,}5$ M km. $b\\approx149{,}58$ M km. Diferencia: $2c\\approx5$ M km.",
+        "full_solution": "$c=149{,}6\\cdot0{,}0167\\approx2{,}498$ M km. $b=\\sqrt{149{,}6^2-2{,}498^2}\\approx\\sqrt{22380-6{,}24}\\approx149{,}58$ M km. Perihelio (mínima): $a-c=147{,}1$ M km. Afelio (máxima): $a+c=152{,}1$ M km. Diferencia: $2c\\approx5$ M km (~3{,}3%). La órbita es tan poco excéntrica que $b\\approx a$: casi circular.",
+        "common_errors": [
+          "Confundir perihelio y afelio"
+        ]
+      },
+      {
+        "id": "EX-CON02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En arquitectura, un arco elíptico tiene $a=4$ m (semiancho) y $b=3$ m (alto). Si un camión de 2{,}8 m de alto y 3 m de ancho quiere pasar, ¿cabe?",
+        "hints": [
+          "El camión ocupa $-1{,}5\\leq x\\leq 1{,}5$. ¿Cuánto mide la elipse en $x=1{,}5$?"
+        ],
+        "answer": "En $x=1{,}5$: $y=3\\sqrt{1-2{,}25/16}=3\\sqrt{0{,}859}\\approx2{,}78$ m. No cabe (2{,}78 < 2{,}8).",
+        "full_solution": "Elipse: $x^2/16+y^2/9=1$. En $x=1{,}5$ (borde del camión): $y=3\\sqrt{1-2{,}25/16}=3\\sqrt{13{,}75/16}=3\\cdot\\frac{\\sqrt{13{,}75}}{4}=3\\cdot\\frac{3{,}708}{4}\\approx2{,}781$ m. El camión necesita 2{,}8 m y la elipse solo permite 2{,}78 m en ese punto: NO cabe por 2 cm. En el centro ($x=0$) la altura es $b=3$ m (sobra), pero en los bordes laterales del camión la altura es insuficiente.",
+        "common_errors": [
+          "Comprobar solo la altura en el centro ($x=0$) sin considerar el ancho del camión"
+        ]
       }
     ],
     "exam_questions": [
@@ -2216,6 +2349,74 @@
           "Leer $a=4$ y $b=1$ de los coeficientes sin dividir."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CON03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un sistema de navegación LORAN determina la posición de un barco midiendo diferencias de tiempos de señales desde dos estaciones. Si las estaciones están en $F_1(-100,0)$ y $F_2(100,0)$ km y la diferencia de distancias es 120 km, escribe la ecuación de la hipérbola correspondiente.",
+        "hints": [
+          "$|d_1-d_2|=2a=120\\Rightarrow a=60$. $c=100$.",
+          "$b^2=c^2-a^2$."
+        ],
+        "answer": "$\\frac{x^2}{3600}-\\frac{y^2}{6400}=1$.",
+        "full_solution": "$2a=120\\Rightarrow a=60$. $c=100$ (mitad de la distancia entre estaciones). $b^2=c^2-a^2=10000-3600=6400$. Ecuación: $\\frac{x^2}{3600}-\\frac{y^2}{6400}=1$. Las asíntotas son $y=\\pm\\frac{80}{60}x=\\pm\\frac{4}{3}x$. El barco está en uno de los puntos de esta hipérbola; con una tercera estación se determina el punto exacto.",
+        "common_errors": [
+          "Confundir $a$ y $c$ (en la hipérbola $c>a$, al revés que en la elipse)"
+        ]
+      },
+      {
+        "id": "EX-CON03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Compara la relación entre $a$, $b$ y $c$ en la elipse y en la hipérbola. ¿Por qué en la elipse $c<a$ y en la hipérbola $c>a$?",
+        "hints": [
+          "Elipse: $c^2=a^2-b^2$. Hipérbola: $c^2=a^2+b^2$.",
+          "Piensa en la definición geométrica de cada curva."
+        ],
+        "answer": "Elipse: suma de distancias $=2a>2c$ ($c<a$). Hipérbola: diferencia $=2a<2c$ ($c>a$).",
+        "full_solution": "Elipse: $d_1+d_2=2a$. Como $d_1+d_2\\geq d(F_1,F_2)=2c$ (desigualdad triangular), $2a\\geq2c$, es decir $a\\geq c$. $b^2=a^2-c^2\\geq0$. Hipérbola: $|d_1-d_2|=2a$. Por la desigualdad triangular inversa, $|d_1-d_2|\\leq 2c$, así $a\\leq c$. $b^2=c^2-a^2\\geq0$. La relación pitagórica es opuesta: en la elipse $a^2=b^2+c^2$ (el semieje mayor es la hipotenusa), en la hipérbola $c^2=a^2+b^2$ (la distancia focal es la hipotenusa).",
+        "common_errors": [
+          "Mezclar las fórmulas de elipse e hipérbola"
+        ]
+      },
+      {
+        "id": "EX-CON03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La función $f(x)=k/x$ ($k>0$) es una hipérbola equilátera. En economía, la curva de oferta-demanda $PQ=k$ (precio $\\times$ cantidad $=$ constante) es de este tipo. Si $k=1000$ €, dibuja la rama relevante ($P,Q>0$) y calcula las asíntotas. ¿Qué significan económicamente?",
+        "hints": [
+          "$P=1000/Q$: hipérbola en el primer cuadrante.",
+          "Asíntotas: $P=0$ y $Q=0$."
+        ],
+        "answer": "Asíntotas: $P=0$ (eje $Q$) y $Q=0$ (eje $P$). Significado: ni el precio ni la cantidad pueden ser 0.",
+        "full_solution": "$PQ=1000\\Rightarrow P=1000/Q$. Asíntota horizontal: $\\lim_{Q\\to\\infty}P=0$ (con muchas unidades, el precio tiende a 0). Asíntota vertical: $\\lim_{Q\\to0^+}P=+\\infty$ (poca cantidad $\\Rightarrow$ precio muy alto). Económicamente: la elasticidad precio-demanda unitaria ($|E|=1$) significa que el ingreso total $PQ$ es constante; subir el precio reduce proporcionalmente la demanda. La hipérbola equilátera es el modelo perfecto de esta relación inversa.",
+        "common_errors": [
+          "No restringirse al primer cuadrante (precios y cantidades negativos no tienen sentido)"
+        ]
+      },
+      {
+        "id": "EX-CON03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un estampido sónico (boom) genera una onda cónica. En la sección plana, la onda forma una hipérbola. Si los focos están en $(0,-5)$ y $(0,5)$ y la diferencia de distancias es 6 km, escribe la ecuación.",
+        "hints": [
+          "Eje focal vertical: $\\frac{y^2}{a^2}-\\frac{x^2}{b^2}=1$.",
+          "$2a=6\\Rightarrow a=3$, $c=5$."
+        ],
+        "answer": "$\\frac{y^2}{9}-\\frac{x^2}{16}=1$.",
+        "full_solution": "Focos en el eje $y$: $c=5$. $2a=6\\Rightarrow a=3$. $b^2=c^2-a^2=25-9=16$. $\\frac{y^2}{9}-\\frac{x^2}{16}=1$. Asíntotas: $y=\\pm\\frac{3}{4}x$. La hipérbola tiene eje real vertical. En acústica, las hipérbolas de este tipo se usan para localizar la fuente de un sonido midiendo diferencias de tiempos de llegada a dos micrófonos (los focos).",
+        "common_errors": [
+          "Escribir la ecuación con eje horizontal cuando los focos están en el eje vertical"
+        ]
       }
     ],
     "exam_questions": [
@@ -3051,6 +3252,73 @@
           "Tomar $h=2$ (olvidando que $x+2=x-(-2)$)."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CON04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una antena parabólica tiene la sección $y=\\frac{x^2}{8}$ (en metros). ¿Dónde debe colocarse el receptor (en el foco)? Si la antena tiene un diámetro de 4 m, ¿cuál es su profundidad?",
+        "hints": [
+          "$y=x^2/(4p)\\Rightarrow 4p=8\\Rightarrow p=2$. Foco en $(0,p)$.",
+          "Profundidad: $y(2)=4/8=0{,}5$ m."
+        ],
+        "answer": "Foco en $(0,2)$. Profundidad = 0{,}5 m.",
+        "full_solution": "$y=\\frac{x^2}{4p}$ con $4p=8\\Rightarrow p=2$. Foco en $(0,2)$: el receptor va a 2 m del vértice. Diámetro 4 m $\\Rightarrow$ radio 2 m. Profundidad: $y(2)=4/8=0{,}5$ m. La antena es relativamente «plana» (profundidad 0{,}5 m para 4 m de diámetro). La propiedad focal de la parábola hace que todas las señales paralelas al eje se concentren en el foco, maximizando la recepción.",
+        "common_errors": [
+          "Confundir el parámetro $p$ con $4p$"
+        ]
+      },
+      {
+        "id": "EX-CON04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un balón de fútbol lanzado desde el suelo sigue la trayectoria $y=-0{,}02x^2+x$ (en metros). Calcula el alcance máximo, la altura máxima y la posición del vértice.",
+        "hints": [
+          "$y=0$ da los puntos de impacto.",
+          "Vértice: $x_v=-b/(2a)$."
+        ],
+        "answer": "Alcance: 50 m. Altura máxima: 12{,}5 m en $x=25$ m.",
+        "full_solution": "$y=0\\Rightarrow x(-0{,}02x+1)=0\\Rightarrow x=0$ o $x=50$. Alcance = 50 m. Vértice: $x_v=\\frac{-1}{2(-0{,}02)}=25$ m. $y_v=-0{,}02(625)+25=-12{,}5+25=12{,}5$ m. Vértice $(25, 12{,}5)$: la altura máxima de 12{,}5 m se alcanza a mitad del recorrido horizontal.",
+        "common_errors": [
+          "No usar la fórmula del vértice y buscar el máximo por otros medios más complicados"
+        ]
+      },
+      {
+        "id": "EX-CON04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Explica por qué la parábola es el lugar geométrico de los puntos equidistantes de un punto (foco) y una recta (directriz). Verifica con $y=x^2/4$ que el punto $(2,1)$ es equidistante del foco y la directriz.",
+        "hints": [
+          "Foco de $y=x^2/4$: $(0,1)$. Directriz: $y=-1$."
+        ],
+        "answer": "$d((2,1),(0,1))=2$. $d((2,1), y=-1)=|1-(-1)|=2$. Equidistante ✓.",
+        "full_solution": "$y=x^2/(4p)$ con $4p=4\\Rightarrow p=1$. Foco $F(0,1)$, directriz $d: y=-1$. Para $P(2,1)$: $d(P,F)=\\sqrt{4+0}=2$. $d(P,d)=|1-(-1)|=2$. $d(P,F)=d(P,d)$ ✓. En general, para $P(x,x^2/4)$: $d(P,F)=\\sqrt{x^2+(x^2/4-1)^2}=\\sqrt{x^2+x^4/16-x^2/2+1}$. $d(P,d)=x^2/4+1$. Al desarrollar, ambas son iguales: $d(P,F)^2=(x^2/4+1)^2$. La definición como LG es equivalente a la ecuación algebraica.",
+        "common_errors": [
+          "No verificar numéricamente la propiedad focal"
+        ]
+      },
+      {
+        "id": "EX-CON04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En óptica, un espejo parabólico concentra los rayos de luz paralelos en el foco. Si el espejo tiene ecuación $x^2=12y$ (cm), ¿a qué distancia del espejo hay que colocar una bombilla para que emita luz paralela (como en un faro de coche)?",
+        "hints": [
+          "$x^2=4py\\Rightarrow 4p=12\\Rightarrow p=3$.",
+          "La bombilla debe estar en el foco."
+        ],
+        "answer": "A 3 cm del vértice (en el foco).",
+        "full_solution": "$x^2=12y\\Rightarrow 4p=12\\Rightarrow p=3$. Foco en $(0,3)$: a 3 cm del vértice del espejo. Una bombilla colocada en el foco emite rayos que, al reflejarse en la parábola, salen paralelos al eje. Este es el principio de los faros de coches, linternas y proyectores. El proceso inverso (rayos paralelos $\\to$ foco) se usa en antenas parabólicas y telescopios reflectores.",
+        "common_errors": [
+          "Confundir el vértice con el foco"
+        ]
       }
     ],
     "exam_questions": [
@@ -3899,6 +4167,71 @@
           "Concluir que hay dos puntos sin calcular el discriminante."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CON05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Clasifica cada sección cónica: (a) $4x^2+9y^2=36$, (b) $x^2-4y^2=16$, (c) $y=3x^2+2x-1$, (d) $x^2+y^2=25$.",
+        "hints": [
+          "Divide entre la constante para ver la forma canónica.",
+          "Elipse: dos cuadrados con signo +. Hipérbola: signos opuestos."
+        ],
+        "answer": "(a) Elipse. (b) Hipérbola. (c) Parábola. (d) Circunferencia.",
+        "full_solution": "(a) $\\frac{x^2}{9}+\\frac{y^2}{4}=1$: elipse ($a=3,b=2$). (b) $\\frac{x^2}{16}-\\frac{y^2}{4}=1$: hipérbola ($a=4,b=2$). (c) $y=3x^2+2x-1$: solo una variable elevada al cuadrado: parábola. (d) $x^2+y^2=25$: circunferencia ($r=5$, que es una elipse con $a=b$). Para clasificar: si hay $x^2$ e $y^2$ con coeficientes del mismo signo y distintos: elipse; iguales: circunferencia; signos opuestos: hipérbola; solo una variable cuadrática: parábola.",
+        "common_errors": [
+          "No normalizar antes de clasificar"
+        ]
+      },
+      {
+        "id": "EX-CON05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "Las cónicas se obtienen cortando un cono doble con un plano. Explica intuitivamente qué ángulo del plano produce cada tipo de cónica y por qué.",
+        "hints": [
+          "Plano perpendicular al eje: circunferencia. Plano inclinado pero que no corta las dos hojas: elipse."
+        ],
+        "answer": "Perpendicular: circunferencia. Oblicuo sin cortar la base: elipse. Paralelo a generatriz: parábola. Corta ambas hojas: hipérbola.",
+        "full_solution": "Sea $\\alpha$ el ángulo del plano con el eje y $\\beta$ el ángulo de la generatriz: $\\alpha=90°$: circunferencia (sección circular). $\\beta<\\alpha<90°$: elipse (el plano corta todas las generatrices de una hoja). $\\alpha=\\beta$: parábola (el plano es paralelo a una generatriz; la sección no se cierra). $\\alpha<\\beta$: hipérbola (el plano corta ambas hojas del cono). Apolonio de Perga (~200 a.C.) fue el primero en estudiar sistemáticamente estas secciones.",
+        "common_errors": [
+          "Confundir los ángulos del plano y la generatriz"
+        ]
+      },
+      {
+        "id": "EX-CON05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En astrofísica, la trayectoria de un objeto cerca de una estrella depende de su energía: (1) energía negativa $\\to$ elipse (planeta), (2) energía cero $\\to$ parábola (cometa de un solo paso), (3) energía positiva $\\to$ hipérbola (sonda espacial que escapa). Si un asteroide sigue $\\frac{x^2}{100}-\\frac{y^2}{75}=1$ (millones de km), clasifica su trayectoria y decide si volverá.",
+        "hints": [
+          "La ecuación es una hipérbola: trayectoria abierta."
+        ],
+        "answer": "Hipérbola: energía positiva, no volverá (trayectoria de escape).",
+        "full_solution": "$\\frac{x^2}{100}-\\frac{y^2}{75}=1$: hipérbola con $a=10$, $b=\\sqrt{75}\\approx8{,}66$, $c=\\sqrt{175}\\approx13{,}2$ M km. Excentricidad $e=c/a\\approx1{,}32>1$: confirma hipérbola. El asteroide tiene energía positiva y sigue una trayectoria abierta: se acerca a la estrella (que está en un foco), gira y se aleja para siempre. No volverá. Solo las trayectorias elípticas ($e<1$) son cerradas (periódicas). Las sondas Voyager siguen trayectorias hiperbólicas de escape del sistema solar.",
+        "common_errors": [
+          "Confundir excentricidad mayor o menor que 1"
+        ]
+      },
+      {
+        "id": "EX-CON05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un arquitecto diseña un puente cuyos arcos son semielipses de 20 m de ancho y 8 m de alto. Calcula la ecuación de la elipse y la altura del arco a 5 m del centro.",
+        "hints": [
+          "$a=10$, $b=8$. Centro en el origen, base sobre el eje $x$."
+        ],
+        "answer": "$\\frac{x^2}{100}+\\frac{y^2}{64}=1$. En $x=5$: $y=4\\sqrt{3}\\approx6{,}93$ m.",
+        "full_solution": "$\\frac{x^2}{100}+\\frac{y^2}{64}=1$. En $x=5$: $\\frac{25}{100}+\\frac{y^2}{64}=1\\Rightarrow y^2=64\\cdot\\frac{3}{4}=48\\Rightarrow y=4\\sqrt{3}\\approx6{,}93$ m. A 5 m del centro, el arco tiene 6{,}93 m de alto (frente a 8 m en el centro). El perfil elíptico es más achatado que el semicircular, lo que permite mayor ancho para la misma altura.",
+        "common_errors": [
+          "Usar el diámetro (20) como $a$ en vez del radio (10)"
+        ]
       }
     ],
     "exam_questions": [

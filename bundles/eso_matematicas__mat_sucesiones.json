@@ -450,6 +450,73 @@
           "Confundir sistemáticamente 'la posición $n$' con 'el valor $a_n$', sobre todo en sucesiones donde ambos números podrían parecerse por casualidad en algún caso concreto."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SU01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un caracol sube una pared: el primer día $3$ cm, el segundo $5$ cm, el tercero $7$ cm, etc. ¿Cuántos cm sube el día $n$? ¿Y el día $20$?",
+        "hints": [
+          "Patrón: $3, 5, 7, \\ldots$ → incremento de $2$.",
+          "Término general: $a_n = 2n + 1$."
+        ],
+        "answer": "$a_n = 2n + 1$. El día $20$: $a_{20} = 41$ cm.",
+        "full_solution": "La sucesión es $3, 5, 7, \\ldots$ con $a_1 = 3$ y diferencia $d = 2$. $a_n = a_1 + (n-1)d = 3 + 2(n-1) = 2n + 1$. $a_{20} = 2(20) + 1 = 41$ cm.",
+        "common_errors": [
+          "Empezar con $a_0 = 3$ en vez de $a_1 = 3$ y obtener $a_n = 2n + 3$."
+        ]
+      },
+      {
+        "id": "EX-SU01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una pelota rebota perdiendo la mitad de su altura en cada bote. Si se lanza desde $2$ m, ¿a qué altura llega tras el $n$-ésimo bote?",
+        "hints": [
+          "$h_1 = 1$, $h_2 = 0{,}5$, $h_3 = 0{,}25$, ...",
+          "Razón: $r = 1/2$."
+        ],
+        "answer": "$h_n = 2 \\cdot (1/2)^n = 2^{1-n}$.",
+        "full_solution": "Tras cada bote la altura se reduce a la mitad: $h_n = 2 \\cdot (1/2)^n$. Comprobación: $h_1 = 1$, $h_2 = 0{,}5$, $h_3 = 0{,}25$ ✓.",
+        "common_errors": [
+          "Confundir la altura de lanzamiento ($2$ m) con la del primer bote ($1$ m)."
+        ]
+      },
+      {
+        "id": "EX-SU01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es posible que dos sucesiones tengan los mismos primeros $10$ términos pero difieran a partir del undécimo? Justifica.",
+        "hints": [
+          "El término general $a_n$ es una fórmula que define TODOS los términos.",
+          "¿Es único el término general que ajusta $10$ datos?"
+        ],
+        "answer": "Sí. Los primeros términos no determinan unívocamente la sucesión.",
+        "full_solution": "Sí. Ejemplo: $a_n = n$ y $b_n = \\begin{cases} n & n \\leq 10 \\\\ 0 & n > 10 \\end{cases}$ coinciden para $n = 1, \\ldots, 10$ pero difieren después. También: el polinomio interpolador de grado $10$ que pasa por los puntos $(1,1), \\ldots, (10,10)$ y $(11, 0)$ da otra sucesión. Una lista finita no determina un único término general.",
+        "common_errors": [
+          "Pensar que conocer los primeros términos determina la sucesión de forma única."
+        ]
+      },
+      {
+        "id": "EX-SU01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En informática, la complejidad de un algoritmo de búsqueda binaria se describe con la sucesión $a_n = \\lfloor \\log_2 n \\rfloor + 1$ (número máximo de comparaciones para $n$ elementos). Calcula $a_{100}$, $a_{1000}$ y $a_{1\\,000\\,000}$.",
+        "hints": [
+          "$\\log_2 100 \\approx 6{,}64$; $\\log_2 1000 \\approx 9{,}97$; $\\log_2 10^6 \\approx 19{,}93$."
+        ],
+        "answer": "$a_{100} = 7$, $a_{1000} = 10$, $a_{1\\,000\\,000} = 20$.",
+        "full_solution": "$a_{100} = \\lfloor 6{,}64 \\rfloor + 1 = 7$. $a_{1000} = \\lfloor 9{,}97 \\rfloor + 1 = 10$. $a_{10^6} = \\lfloor 19{,}93 \\rfloor + 1 = 20$. Duplicar los datos solo añade una comparación más. Esto refleja la eficiencia logarítmica.",
+        "common_errors": [
+          "Calcular $\\log_{10}$ en vez de $\\log_2$."
+        ]
       }
     ],
     "exam_questions": [
@@ -1354,6 +1421,73 @@
           "Empezar en $50$ o terminar en $200$ sin comprobar que no son múltiplos de $6$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SU02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un auditorio tiene $20$ filas. La primera fila tiene $15$ butacas y cada fila tiene $2$ más que la anterior. ¿Cuántas butacas tiene la fila $20$? ¿Y el total?",
+        "hints": [
+          "PA con $a_1 = 15$, $d = 2$, $n = 20$.",
+          "$a_{20} = a_1 + 19d$; $S_{20} = 20(a_1+a_{20})/2$."
+        ],
+        "answer": "Fila $20$: $53$ butacas. Total: $680$.",
+        "full_solution": "$a_{20} = 15 + 19 \\times 2 = 53$. $S_{20} = \\frac{20(15+53)}{2} = \\frac{20 \\times 68}{2} = 680$ butacas.",
+        "common_errors": [
+          "Usar $n = 20$ en vez de $n-1 = 19$ al calcular $a_{20}$: $a_{20} = 15 + 20 \\times 2 = 55$ (incorrecto)."
+        ]
+      },
+      {
+        "id": "EX-SU02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un trabajador cobra $1\\,200$ EUR el primer mes y recibe un aumento de $50$ EUR cada mes. ¿Cuánto cobra el mes $12$? ¿Cuánto ha cobrado en total durante el año?",
+        "hints": [
+          "$a_1 = 1200$, $d = 50$, $n = 12$."
+        ],
+        "answer": "Mes $12$: $1\\,750$ EUR. Total anual: $17\\,700$ EUR.",
+        "full_solution": "$a_{12} = 1200 + 11 \\times 50 = 1200 + 550 = 1750$. $S_{12} = \\frac{12(1200+1750)}{2} = \\frac{12 \\times 2950}{2} = 17\\,700$ EUR.",
+        "common_errors": [
+          "Calcular $a_{12} = 1200 + 12 \\times 50 = 1800$ (usar $n$ en vez de $n-1$)."
+        ]
+      },
+      {
+        "id": "EX-SU02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La leyenda dice que Gauss, de niño, sumó los números del $1$ al $100$ al instante. Demuestra la fórmula $S_n = \\frac{n(n+1)}{2}$ emparejando términos.",
+        "hints": [
+          "Empareja: $1+100 = 101$, $2+99 = 101$, etc.",
+          "¿Cuántos pares hay?"
+        ],
+        "answer": "$50$ pares de suma $101$: $S_{100} = 50 \\times 101 = 5050$.",
+        "full_solution": "Escribimos la suma de dos formas: $S = 1 + 2 + \\cdots + n$ y $S = n + (n-1) + \\cdots + 1$. Sumando: $2S = (1+n) + (2+n-1) + \\cdots + (n+1) = n(n+1)$. Luego $S = n(n+1)/2$. Para $n = 100$: $S = 100 \\times 101/2 = 5050$.",
+        "common_errors": [
+          "Aplicar la fórmula solo a números pares o solo a impares."
+        ]
+      },
+      {
+        "id": "EX-SU02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En física, un objeto en caída libre recorre $4{,}9$ m en el primer segundo, $14{,}7$ m en el segundo, $24{,}5$ m en el tercero, etc. Demuestra que las distancias parciales forman una PA y calcula la distancia total en $6$ s.",
+        "hints": [
+          "$4{,}9; 14{,}7; 24{,}5; \\ldots$ → $d = 9{,}8$ m.",
+          "Fórmula: $d_n = 4{,}9 + (n-1) \\times 9{,}8$."
+        ],
+        "answer": "PA con $a_1 = 4{,}9$, $d = 9{,}8$. En $6$ s: $S_6 = 176{,}4$ m.",
+        "full_solution": "$a_1 = 4{,}9$, $a_2 = 14{,}7$, $a_3 = 24{,}5$. Diferencia: $14{,}7 - 4{,}9 = 9{,}8$; $24{,}5 - 14{,}7 = 9{,}8$. PA con $d = 9{,}8$. $a_6 = 4{,}9 + 5 \\times 9{,}8 = 53{,}9$. $S_6 = 6(4{,}9+53{,}9)/2 = 6 \\times 29{,}4 = 176{,}4$ m. (Verificación: $\\frac{1}{2}g t^2 = \\frac{1}{2}(9{,}8)(36) = 176{,}4$ ✓).",
+        "common_errors": [
+          "Sumar las distancias parciales sin usar la fórmula, cometiendo errores acumulativos."
+        ]
       }
     ],
     "exam_questions": [
@@ -2245,6 +2379,74 @@
           "Aplicar el procedimiento de la progresión aritmética (restar) a una sucesión que en realidad es geométrica."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SU03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un depósito bancario ofrece un $5\\%$ de interés anual compuesto. Si depositas $1\\,000$ EUR, ¿cuánto tendrás tras $n$ años? Calcula para $n = 10$.",
+        "hints": [
+          "$C_n = 1000 \\cdot 1{,}05^n$.",
+          "PG con $a_1 = 1050$, $r = 1{,}05$."
+        ],
+        "answer": "$C_n = 1000 \\cdot 1{,}05^n$. $C_{10} = 1000 \\cdot 1{,}05^{10} \\approx 1\\,628{,}89$ EUR.",
+        "full_solution": "$C_n = 1000 \\times 1{,}05^n$. $C_{10} = 1000 \\times 1{,}6289 \\approx 1\\,628{,}89$ EUR. El interés ganado es $628{,}89$ EUR (más que $500$ EUR del interés simple).",
+        "common_errors": [
+          "Usar interés simple: $1000 + 1000 \\times 0{,}05 \\times 10 = 1500$ (confundir con PG)."
+        ]
+      },
+      {
+        "id": "EX-SU03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una cadena de correos: una persona envía a $3$ personas, cada una envía a $3$ más. ¿Cuántas personas reciben el correo en la ronda $n$? ¿Cuántas en total tras $5$ rondas?",
+        "hints": [
+          "PG: $a_n = 3^n$.",
+          "$S_5 = 3 + 9 + 27 + 81 + 243$."
+        ],
+        "answer": "$a_n = 3^n$. Total $5$ rondas: $S_5 = \\frac{3(3^5-1)}{3-1} = \\frac{3 \\times 242}{2} = 363$.",
+        "full_solution": "Ronda $n$: $a_n = 3^n$ personas. Total: $S_5 = \\sum_{k=1}^5 3^k = \\frac{3(3^5-1)}{3-1} = \\frac{3 \\times 242}{2} = 363$ personas.",
+        "common_errors": [
+          "Olvidar que la persona original no se cuenta en las rondas."
+        ]
+      },
+      {
+        "id": "EX-SU03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué ocurre con una PG cuando $|r| > 1$? ¿Y cuando $|r| < 1$? ¿Y cuando $r = -1$? Describe el comportamiento a largo plazo.",
+        "hints": [
+          "$|r| > 1$: los términos crecen sin límite.",
+          "$|r| < 1$: los términos tienden a $0$."
+        ],
+        "answer": "$|r| > 1$: diverge. $|r| < 1$: converge a $0$. $r = -1$: oscila entre $a_1$ y $-a_1$.",
+        "full_solution": "Si $|r| > 1$: $|a_n| = |a_1| \\cdot |r|^{n-1} \\to \\infty$. Diverge. Si $|r| < 1$: $|a_n| \\to 0$. Converge a $0$. Si $r = -1$: $a_n = a_1(-1)^{n-1}$, oscila entre $a_1$ y $-a_1$ indefinidamente. Si $r = 1$: sucesión constante. Si $r < -1$: oscila con amplitud creciente.",
+        "common_errors": [
+          "Pensar que $|r| < 1$ significa que la PG llega a $0$ en algún término finito (nunca lo alcanza exactamente)."
+        ]
+      },
+      {
+        "id": "EX-SU03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En radiactividad, una sustancia pierde $10\\%$ de su masa cada hora. Si inicialmente hay $500$ g, ¿cuánto queda tras $n$ horas? ¿Cuándo queda menos de $50$ g?",
+        "hints": [
+          "PG: $m_n = 500 \\cdot 0{,}9^n$.",
+          "$500 \\cdot 0{,}9^n < 50 \\Rightarrow 0{,}9^n < 0{,}1$."
+        ],
+        "answer": "$n > \\frac{\\ln 0{,}1}{\\ln 0{,}9} \\approx 21{,}9$ horas. Tras $22$ horas.",
+        "full_solution": "$m_n = 500 \\times 0{,}9^n$. Para $m_n < 50$: $0{,}9^n < 0{,}1$. $n \\ln(0{,}9) < \\ln(0{,}1)$. $n > \\frac{\\ln(0{,}1)}{\\ln(0{,}9)} = \\frac{-2{,}3026}{-0{,}1054} \\approx 21{,}85$. A partir de $n = 22$ horas.",
+        "common_errors": [
+          "Usar $0{,}10^n$ en vez de $0{,}9^n$ (confundir lo perdido con lo que queda)."
+        ]
       }
     ],
     "exam_questions": [
@@ -3145,6 +3347,73 @@
           "Suponer que toda sucesión acotada tiene que converger."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SU04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una empresa reduce sus emisiones de CO₂ un $3\\%$ anual. Si emite $10\\,000$ t hoy, modela como sucesión y determina si es monótona y acotada.",
+        "hints": [
+          "$a_n = 10000 \\times 0{,}97^n$.",
+          "¿Es decreciente? ¿Está acotada inferiormente?"
+        ],
+        "answer": "Decreciente estricta y acotada inferiormente por $0$. Converge a $0$.",
+        "full_solution": "$a_n = 10000 \\times 0{,}97^n$. $a_{n+1}/a_n = 0{,}97 < 1$: estrictamente decreciente. $a_n > 0$ para todo $n$: acotada inferiormente por $0$. Es monótona decreciente y acotada, por lo que converge (a $0$, ya que $0{,}97^n \\to 0$).",
+        "common_errors": [
+          "Pensar que las emisiones llegan a ser negativas en algún momento."
+        ]
+      },
+      {
+        "id": "EX-SU04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Enuncia y explica el teorema de la sucesión monótona y acotada. ¿Por qué garantiza la convergencia?",
+        "hints": [
+          "Si una sucesión es creciente y acotada superiormente, ¿qué pasa?"
+        ],
+        "answer": "Toda sucesión monótona y acotada converge. Intuitivamente, los términos se 'amontonan' y deben tender a un límite.",
+        "full_solution": "Teorema: Toda sucesión monótona y acotada en $\\mathbb{R}$ es convergente. Si es creciente y acotada superiormente, converge a $\\sup\\{a_n\\}$. Si es decreciente y acotada inferiormente, converge a $\\inf\\{a_n\\}$. Intuitivamente: si los términos crecen pero no pueden superar cierta cota, deben 'acumularse' en un punto (completitud de $\\mathbb{R}$).",
+        "common_errors": [
+          "Pensar que la monotonía sola (sin acotación) garantiza convergencia: $a_n = n$ es creciente pero diverge."
+        ]
+      },
+      {
+        "id": "EX-SU04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La sucesión $a_n = \\frac{n}{n+1}$ representa la proporción de trabajo completado tras $n$ horas en un proyecto. Estudia monotonía, acotación y convergencia.",
+        "hints": [
+          "$a_n = 1 - \\frac{1}{n+1}$.",
+          "$a_{n+1} - a_n = ?$"
+        ],
+        "answer": "Creciente, acotada ($0 < a_n < 1$), converge a $1$.",
+        "full_solution": "$a_n = n/(n+1)$. Monotonía: $a_{n+1} - a_n = \\frac{n+1}{n+2} - \\frac{n}{n+1} = \\frac{(n+1)^2 - n(n+2)}{(n+2)(n+1)} = \\frac{1}{(n+2)(n+1)} > 0$. Estrictamente creciente. Acotación: $0 < a_n < 1$ para todo $n$. Convergencia: $\\lim a_n = \\lim n/(n+1) = 1$.",
+        "common_errors": [
+          "Decir que converge a $\\infty$ porque el numerador crece."
+        ]
+      },
+      {
+        "id": "EX-SU04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En aprendizaje automático, el error de un modelo suele seguir $e_n = \\frac{A}{n^\\alpha} + B$ con $A, B, \\alpha > 0$. Si $A = 10$, $\\alpha = 0{,}5$, $B = 0{,}02$, estudia monotonía, acotación y convergencia.",
+        "hints": [
+          "$e_n = 10/\\sqrt{n} + 0{,}02$.",
+          "¿Decreciente? ¿Acotada inferiormente?"
+        ],
+        "answer": "Decreciente, acotada inferiormente por $B = 0{,}02$, converge a $0{,}02$.",
+        "full_solution": "$e_n = 10n^{-0{,}5} + 0{,}02$. $e_{n+1} < e_n$ porque $10(n+1)^{-0{,}5} < 10n^{-0{,}5}$ (la función $x^{-0{,}5}$ es decreciente). Cota inferior: $e_n > 0{,}02$ siempre. $\\lim e_n = 0 + 0{,}02 = 0{,}02$. El error se reduce pero nunca baja del $2\\%$ (error irreducible $B$).",
+        "common_errors": [
+          "Pensar que el error llega a $0$ (ignorar el término constante $B$)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4030,6 +4299,74 @@
           "Aceptar un resultado numérico simplemente porque 'la fórmula ha dado un número', sin comprobar si tiene sentido en el contexto (aquí, sumar positivos y obtener negativo)."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SU05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Expresa $0{,}\\overline{36} = 0{,}363636\\ldots$ como fracción usando la suma de una serie geométrica.",
+        "hints": [
+          "$0{,}\\overline{36} = \\frac{36}{100} + \\frac{36}{10000} + \\cdots$",
+          "PG con $a = 36/100$, $r = 1/100$."
+        ],
+        "answer": "$0{,}\\overline{36} = \\frac{36/100}{1-1/100} = \\frac{36}{99} = \\frac{4}{11}$.",
+        "full_solution": "$0{,}\\overline{36} = \\sum_{k=1}^\\infty \\frac{36}{100^k} = \\frac{36/100}{1-1/100} = \\frac{36}{99} = \\frac{4}{11}$. Comprobación: $4/11 = 0{,}\\overline{36}$ ✓.",
+        "common_errors": [
+          "Usar $r = 1/10$ en vez de $r = 1/100$ (período de $2$ cifras, no $1$)."
+        ]
+      },
+      {
+        "id": "EX-SU05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un péndulo recorre $40$ cm en su primer vaivén, y cada vaivén siguiente recorre $80\\%$ del anterior. ¿Cuánta distancia total recorre hasta detenerse?",
+        "hints": [
+          "PG infinita: $a_1 = 40$, $r = 0{,}8$.",
+          "$S = a_1/(1-r)$."
+        ],
+        "answer": "$S = 40/(1-0{,}8) = 40/0{,}2 = 200$ cm.",
+        "full_solution": "$S = \\frac{a_1}{1-r} = \\frac{40}{1-0{,}8} = \\frac{40}{0{,}2} = 200$ cm. El péndulo recorre un total de $2$ m antes de detenerse (teóricamente).",
+        "common_errors": [
+          "Usar $r = 0{,}2$ (porcentaje que pierde) en vez de $r = 0{,}8$ (porcentaje que conserva)."
+        ]
+      },
+      {
+        "id": "EX-SU05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La paradoja de Zenón: Aquiles ($10$ m/s) persigue a una tortuga ($1$ m/s) que lleva $100$ m de ventaja. ¿En cuánto tiempo la alcanza? Resuélvelo con una serie geométrica.",
+        "hints": [
+          "Aquiles recorre $100$ m, pero la tortuga avanza $10$ m, luego $1$ m, etc.",
+          "Serie: $100 + 10 + 1 + 0{,}1 + \\cdots$"
+        ],
+        "answer": "$t = \\frac{100/10}{1 - 1/10} = \\frac{10}{9/10} = \\frac{100}{9} \\approx 11{,}1$ s.",
+        "full_solution": "Distancia de Aquiles: $100 + 10 + 1 + \\cdots = \\frac{100}{1-0{,}1} = \\frac{100}{0{,}9} = \\frac{1000}{9}$ m. Tiempo: $\\frac{1000/9}{10} = \\frac{100}{9} \\approx 11{,}11$ s. Verificación directa: $10t = 100 + t \\Rightarrow 9t = 100 \\Rightarrow t = 100/9$ ✓. Zenón confundía una suma infinita con un tiempo infinito.",
+        "common_errors": [
+          "Pensar que Aquiles nunca alcanza a la tortuga (no distinguir entre infinitos pasos y tiempo infinito)."
+        ]
+      },
+      {
+        "id": "EX-SU05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En economía, el multiplicador keynesiano modela el efecto de un gasto inicial $G$ con propensión marginal al consumo $c = 0{,}8$: cada euro gastado genera $0{,}8$ EUR de nuevo gasto, etc. Calcula el efecto total para $G = 1\\,000$ millones EUR.",
+        "hints": [
+          "Serie: $G + Gc + Gc^2 + \\cdots = G/(1-c)$.",
+          "Multiplicador: $k = 1/(1-c)$."
+        ],
+        "answer": "$k = 1/(1-0{,}8) = 5$. Efecto total: $5\\,000$ millones EUR.",
+        "full_solution": "Efecto total: $S = G \\sum_{n=0}^\\infty c^n = \\frac{G}{1-c} = \\frac{1000}{1-0{,}8} = \\frac{1000}{0{,}2} = 5000$ millones EUR. El multiplicador keynesiano es $k = 5$: cada euro de gasto público genera $5$ euros en la economía.",
+        "common_errors": [
+          "Aplicar solo un ciclo: $1000 + 800 = 1800$ (sin completar la serie infinita)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4920,6 +5257,73 @@
           "Aceptar una regla general ('∞−∞=0') por haber funcionado en un caso, sin comprobar si se cumple también en otro caso parecido."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SU06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un banco ofrece $100\\%$ de interés anual. Si el interés se compone $n$ veces al año, el capital tras $1$ año es $C = (1 + 1/n)^n$. Calcula $C$ para $n = 1, 12, 365$ y compara con $e$.",
+        "hints": [
+          "$n=1$: $(1+1)^1 = 2$. $n=12$: $(1+1/12)^{12}$."
+        ],
+        "answer": "$n=1$: $2$; $n=12$: $\\approx 2{,}613$; $n=365$: $\\approx 2{,}7146$; $e \\approx 2{,}7183$.",
+        "full_solution": "$n=1$: $2$. $n=12$: $(13/12)^{12} \\approx 2{,}613$. $n=365$: $(366/365)^{365} \\approx 2{,}7146$. $\\lim_{n \\to \\infty} (1+1/n)^n = e \\approx 2{,}71828$. Cuanto más frecuentemente se compone, más se acerca a $e$.",
+        "common_errors": [
+          "Pensar que el interés compuesto infinitas veces da infinito (da $e$, que es finito)."
+        ]
+      },
+      {
+        "id": "EX-SU06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Calcula $\\lim_{n \\to \\infty} \\frac{3n^2 + 5n}{2n^2 - n + 1}$ explicando la técnica.",
+        "hints": [
+          "Divide numerador y denominador por $n^2$.",
+          "$\\frac{3 + 5/n}{2 - 1/n + 1/n^2}$."
+        ],
+        "answer": "$3/2$.",
+        "full_solution": "Dividiendo por $n^2$: $\\frac{3 + 5/n}{2 - 1/n + 1/n^2} \\to \\frac{3+0}{2-0+0} = \\frac{3}{2}$ cuando $n \\to \\infty$. Regla general: si los grados del numerador y denominador son iguales, el límite es el cociente de los coeficientes principales.",
+        "common_errors": [
+          "Decir que como $n \\to \\infty$, la fracción $\\to \\infty/\\infty$ y por tanto es $1$."
+        ]
+      },
+      {
+        "id": "EX-SU06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué significa exactamente que $\\lim_{n \\to \\infty} a_n = L$? Explica la definición formal ($\\epsilon$-$N$) en tus propias palabras.",
+        "hints": [
+          "Para cualquier 'margen de error' $\\epsilon > 0$, ¿qué necesitamos?",
+          "Que a partir de cierto $N$, todos los $a_n$ estén a distancia $< \\epsilon$ de $L$."
+        ],
+        "answer": "Significa que $a_n$ se puede acercar a $L$ tanto como queramos, si tomamos $n$ suficientemente grande.",
+        "full_solution": "Definición: $\\forall \\epsilon > 0$, $\\exists N \\in \\mathbb{N}$ tal que $|a_n - L| < \\epsilon$ para todo $n > N$. En palabras: no importa qué 'tubo' de radio $\\epsilon$ pongamos alrededor de $L$: a partir de un cierto término $N$, TODOS los términos caen dentro de ese tubo. Cuanto más pequeño sea $\\epsilon$, más lejos estará el $N$, pero siempre existe.",
+        "common_errors": [
+          "Pensar que la sucesión 'llega' a $L$ en algún término finito (generalmente solo se acerca indefinidamente)."
+        ]
+      },
+      {
+        "id": "EX-SU06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ecología, el modelo de renovación de una población es $P_{n+1} = rP_n(1 - P_n/K)$ (ecuación logística discreta). Si $r = 2{,}5$, $K = 1000$ y $P_0 = 100$, calcula los primeros $5$ términos y observa si converge.",
+        "hints": [
+          "$P_1 = 2{,}5 \\times 100 \\times (1 - 100/1000) = 225$.",
+          "Repite para $P_2, P_3, P_4, P_5$."
+        ],
+        "answer": "$P_0 = 100$, $P_1 = 225$, $P_2 \\approx 436$, $P_3 \\approx 616$, $P_4 \\approx 592$, $P_5 \\approx 604$.",
+        "full_solution": "$P_1 = 2{,}5 \\times 100 \\times 0{,}9 = 225$. $P_2 = 2{,}5 \\times 225 \\times 0{,}775 = 435{,}9$. $P_3 = 2{,}5 \\times 435{,}9 \\times 0{,}5641 = 614{,}6$. $P_4 = 2{,}5 \\times 614{,}6 \\times 0{,}3854 = 592{,}2$. $P_5 = 2{,}5 \\times 592{,}2 \\times 0{,}4078 = 603{,}6$. La sucesión oscila y se estabiliza alrededor de $600$.",
+        "common_errors": [
+          "No calcular $1 - P_n/K$ correctamente en cada paso (arrastrar errores de redondeo)."
+        ]
       }
     ],
     "exam_questions": [

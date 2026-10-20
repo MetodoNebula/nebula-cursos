@@ -508,6 +508,74 @@
           "Describir una nube curva como si solo subiera o solo bajara."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EB01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Se miden las horas de estudio ($x$) y la nota ($y$) de $6$ alumnos: $(2,4), (3,5), (4,6), (5,7), (6,7), (8,9)$. Representa la nube de puntos y describe la tendencia.",
+        "hints": [
+          "Dibuja los puntos en un plano $xy$.",
+          "¿Suben ambas variables juntas?"
+        ],
+        "answer": "Tendencia creciente: a más horas, mayor nota. Correlación positiva.",
+        "full_solution": "Los puntos muestran una tendencia creciente aproximadamente lineal. A medida que $x$ (horas) crece, $y$ (nota) también crece. Correlación positiva fuerte. No es perfectamente lineal (hay dispersión), pero la tendencia es clara.",
+        "common_errors": [
+          "Unir los puntos con una línea (la nube no se une, se ajusta una recta)."
+        ]
+      },
+      {
+        "id": "EX-EB01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Puede una nube de puntos mostrar correlación fuerte sin que haya relación causal? Da un ejemplo.",
+        "hints": [
+          "Correlación no implica causalidad.",
+          "Variables confundidas o espurias."
+        ],
+        "answer": "Sí. Ejemplo: ventas de helados y ahogamientos (ambos correlacionan con la temperatura, no entre sí).",
+        "full_solution": "Correlación no implica causalidad. Ejemplo clásico: el consumo de helados y los ahogamientos tienen correlación positiva fuerte, pero uno no causa el otro. Ambos se deben a una variable oculta: la temperatura (en verano se consumen más helados Y se nada más). Esto se llama correlación espuria o variable confundida.",
+        "common_errors": [
+          "Asumir que toda correlación implica relación causa-efecto."
+        ]
+      },
+      {
+        "id": "EX-EB01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En una empresa, se recogen datos de experiencia (años) y salario (miles EUR): $(1,22), (3,25), (5,30), (7,33), (10,40), (15,45)$. ¿Qué forma tiene la nube?",
+        "hints": [
+          "Dibuja los puntos.",
+          "¿La relación parece lineal?"
+        ],
+        "answer": "Nube con tendencia creciente, aproximadamente lineal. Correlación positiva.",
+        "full_solution": "Los puntos sugieren una relación creciente: más experiencia → mayor salario. La nube es aproximadamente lineal con pendiente positiva, aunque podría curvarse ligeramente para experiencias muy altas (rendimientos decrecientes).",
+        "common_errors": [
+          "No considerar que la relación podría no ser lineal para valores extremos."
+        ]
+      },
+      {
+        "id": "EX-EB01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En epidemiología, se estudia la relación entre contaminación atmosférica (PM2.5 en $\\mu$g/m³) y tasa de enfermedades respiratorias. ¿Qué tipo de variable es cada una? ¿Qué esperarías ver en la nube de puntos?",
+        "hints": [
+          "Ambas cuantitativas continuas.",
+          "Mayor contaminación → más enfermedades."
+        ],
+        "answer": "Ambas cuantitativas continuas. Se esperaría correlación positiva (más PM2.5 → más enfermedades).",
+        "full_solution": "PM2.5: cuantitativa continua (variable explicativa). Tasa de enfermedades: cuantitativa continua (variable respuesta). Se esperaría una nube con tendencia creciente (correlación positiva). Sin embargo, correlación no implica causalidad directa: podría haber factores confundidores (nivel socioeconómico, acceso sanitario). Para establecer causalidad se necesitan estudios controlados.",
+        "common_errors": [
+          "Afirmar causalidad solo por observar correlación en datos observacionales."
+        ]
       }
     ],
     "exam_questions": [
@@ -1345,6 +1413,71 @@
           "Pasar de \"hay correlación\" a \"hay causa\" sin plantear ninguna alternativa."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EB02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Clasifica la correlación esperable (positiva/negativa, fuerte/débil): a) Altura y peso, b) Horas de TV y nota media, c) Temperatura y consumo de calefacción.",
+        "hints": [
+          "¿Las variables crecen juntas o en sentido contrario?"
+        ],
+        "answer": "a) Positiva fuerte. b) Negativa débil-moderada. c) Negativa fuerte.",
+        "full_solution": "a) Altura-peso: positiva fuerte (las personas más altas suelen pesar más). b) TV-notas: negativa débil/moderada (más TV puede asociarse a menos estudio, pero la relación no es determinista). c) Temperatura-calefacción: negativa fuerte (a mayor temperatura, menor necesidad de calefacción).",
+        "common_errors": [
+          "Confundir la intensidad (fuerte/débil) con el signo (positiva/negativa)."
+        ]
+      },
+      {
+        "id": "EX-EB02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es posible que $r = 0$ (coeficiente de correlación lineal) y sin embargo las variables estén fuertemente relacionadas? Da un ejemplo.",
+        "hints": [
+          "$r$ mide relación LINEAL, no cualquier relación."
+        ],
+        "answer": "Sí. Ejemplo: $y = x^2$ con datos simétricos ($x = -2,-1,0,1,2$): relación cuadrática perfecta pero $r = 0$.",
+        "full_solution": "Si $x = \\{-2,-1,0,1,2\\}$ e $y = x^2 = \\{4,1,0,1,4\\}$: la relación es perfectamente cuadrática, pero $r = 0$ porque la relación no es lineal (la nube es una parábola simétrica). $r$ solo detecta asociación lineal; puede ser $0$ con relaciones no lineales fuertes.",
+        "common_errors": [
+          "Pensar que $r = 0$ siempre implica independencia de las variables."
+        ]
+      },
+      {
+        "id": "EX-EB02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cuál de estas nubes tiene mayor correlación lineal? A: puntos alineados con poca dispersión. B: puntos formando una parábola. C: puntos dispersos sin patrón.",
+        "hints": [
+          "Correlación lineal mide alineación."
+        ],
+        "answer": "A tiene la mayor correlación lineal ($|r| \\approx 1$). B puede tener $r \\approx 0$ (curva). C tiene $r \\approx 0$ (aleatorio).",
+        "full_solution": "A: los puntos siguen una línea → $|r|$ cercano a $1$. B: la parábola tiene relación pero no lineal → $|r|$ bajo (puede ser $\\approx 0$ si es simétrica). C: sin patrón → $r \\approx 0$. La correlación de Pearson solo captura relación lineal.",
+        "common_errors": [
+          "Asignar alta correlación a B por tener un patrón claro (es no lineal)."
+        ]
+      },
+      {
+        "id": "EX-EB02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En psicología, el efecto de la edad ($x$) sobre el tiempo de reacción ($y$) suele ser en U: disminuye en la infancia, es mínimo en adultos jóvenes, y aumenta en ancianos. ¿Qué $r$ esperarías? ¿Qué medida de asociación sería mejor?",
+        "hints": [
+          "Relación en U → no lineal.",
+          "$r$ podría ser cercano a $0$."
+        ],
+        "answer": "$r \\approx 0$ (relación curvilínea). Mejor: correlación de Spearman o modelo cuadrático ($R^2$).",
+        "full_solution": "La relación edad-tiempo de reacción es curvilínea (U): los niños y ancianos reaccionan más lento que los adultos jóvenes. $r$ de Pearson podría ser $\\approx 0$ (la parte decreciente y creciente se cancelan). Mejor: $R^2$ de un modelo cuadrático ($y = a + bx + cx^2$), o la correlación de Spearman si se analiza solo un tramo monótono.",
+        "common_errors": [
+          "Concluir que edad y tiempo de reacción son independientes porque $r \\approx 0$."
+        ]
       }
     ],
     "exam_questions": [
@@ -2142,6 +2275,72 @@
           "Aceptar la frase como cierta porque \"matemáticamente\" siempre se puede sustituir cualquier $x$ en la fórmula."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EB03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La recta de regresión de notas ($y$) sobre horas de estudio ($x$) es $\\hat{y} = 2{,}5 + 0{,}8x$. Interpreta la pendiente y predice la nota para $x = 7$ horas.",
+        "hints": [
+          "Pendiente: incremento en $y$ por unidad de $x$.",
+          "$\\hat{y}(7) = 2{,}5 + 0{,}8 \\times 7$."
+        ],
+        "answer": "Cada hora extra → $+0{,}8$ puntos. $\\hat{y}(7) = 8{,}1$.",
+        "full_solution": "Pendiente $0{,}8$: cada hora adicional de estudio se asocia con un aumento medio de $0{,}8$ puntos en la nota. Intercepto $2{,}5$: nota esperada con $0$ horas (puede no tener sentido práctico). $\\hat{y}(7) = 2{,}5 + 5{,}6 = 8{,}1$ puntos.",
+        "common_errors": [
+          "Interpretar la pendiente como causalidad segura ('estudiar 1h más sube la nota 0,8')."
+        ]
+      },
+      {
+        "id": "EX-EB03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué no se debe usar la recta de regresión para predecir valores muy alejados del rango de los datos (extrapolación)?",
+        "hints": [
+          "La relación lineal solo se ha verificado dentro del rango de datos."
+        ],
+        "answer": "Porque fuera del rango, la relación podría no ser lineal. La extrapolación asume que la tendencia continúa indefinidamente.",
+        "full_solution": "La recta de regresión modela la relación dentro del rango observado. Fuera: 1) la relación puede curvarse, saturarse o cambiar de tendencia. 2) Ejemplo: predecir la nota para $50$ horas de estudio daría $\\hat{y} = 42{,}5$ (imposible, nota máxima $10$). 3) En biología: el crecimiento lineal se convierte en logístico. La extrapolación siempre conlleva riesgo.",
+        "common_errors": [
+          "Usar la recta para predecir valores extremos sin advertir sobre la extrapolación."
+        ]
+      },
+      {
+        "id": "EX-EB03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un comercio analiza el gasto en publicidad ($x$, miles EUR) y las ventas ($y$, miles EUR): $\\hat{y} = 50 + 3{,}2x$. Si el presupuesto de publicidad es $10\\,000$ EUR, ¿cuántas ventas se esperan? ¿Tiene sentido predecir para $x = 200$?",
+        "hints": [
+          "$\\hat{y}(10) = 50 + 32 = 82$ mil EUR.",
+          "Para $x = 200$: ¿está dentro del rango de datos?"
+        ],
+        "answer": "$\\hat{y}(10) = 82$ mil EUR. Para $x = 200$: extrapolación, probablemente no fiable.",
+        "full_solution": "$\\hat{y}(10) = 50 + 3{,}2(10) = 82$ mil EUR. Para $x = 200$: $\\hat{y} = 50 + 640 = 690$ mil EUR. Esto probablemente es extrapolación (si los datos originales solo llegaban a $x = 30$ o $50$). Los rendimientos de la publicidad suelen decrecer, así que la relación lineal se rompe.",
+        "common_errors": [
+          "Confiar ciegamente en la predicción para $x = 200$ sin cuestionar la extrapolación."
+        ]
+      },
+      {
+        "id": "EX-EB03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En climatología, si la recta de regresión de temperatura media global ($y$, °C) sobre año ($x$) desde $1900$ es $\\hat{y} = -7{,}5 + 0{,}008x$, interpreta la pendiente en el contexto del cambio climático.",
+        "hints": [
+          "$0{,}008$ °C/año = $0{,}8$ °C por siglo."
+        ],
+        "answer": "La temperatura sube $0{,}008$ °C por año ($0{,}8$ °C/siglo). Esto cuantifica el calentamiento global observado.",
+        "full_solution": "Pendiente $= 0{,}008$ °C/año: la temperatura media global ha aumentado a razón de $0{,}8$ °C por siglo (en promedio). Esto es consistente con las observaciones del IPCC. Sin embargo: 1) la tendencia no es perfectamente lineal (se acelera), 2) extrapolar linealmente subestimaría el calentamiento futuro si se aceleran las emisiones.",
+        "common_errors": [
+          "Interpretar $0{,}008$ como un valor insignificante (acumulado durante décadas es muy significativo)."
+        ]
       }
     ],
     "exam_questions": [
@@ -2927,6 +3126,72 @@
           "Convertir un resultado de independencia estadística en una afirmación general sobre la realidad."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EB04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En una encuesta a $200$ personas: $80$ hombres ($50$ aprueban una propuesta, $30$ no) y $120$ mujeres ($60$ aprueban, $60$ no). Construye la tabla de contingencia y calcula las distribuciones condicionadas por sexo.",
+        "hints": [
+          "Filas: sexo. Columnas: opinión.",
+          "Condicionada: $P(\\text{aprueba}|\\text{hombre}) = 50/80$."
+        ],
+        "answer": "Hombres: $62{,}5\\%$ aprueba. Mujeres: $50\\%$ aprueba.",
+        "full_solution": "Tabla: Hombre-Sí: $50$, Hombre-No: $30$ (Total $80$). Mujer-Sí: $60$, Mujer-No: $60$ (Total $120$). Condicionada hombres: $50/80 = 62{,}5\\%$ sí, $37{,}5\\%$ no. Condicionada mujeres: $60/120 = 50\\%$ sí, $50\\%$ no.",
+        "common_errors": [
+          "Calcular porcentajes sobre el total ($200$) en vez de sobre cada fila."
+        ]
+      },
+      {
+        "id": "EX-EB04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué diferencia hay entre la distribución marginal y la condicionada? ¿Cuándo son iguales?",
+        "hints": [
+          "Marginal: frecuencias totales. Condicionada: dentro de un subgrupo.",
+          "Son iguales si las variables son independientes."
+        ],
+        "answer": "La marginal da la proporción global; la condicionada, dentro de un grupo. Son iguales si las variables son independientes.",
+        "full_solution": "Distribución marginal: $P(\\text{aprueba}) = 110/200 = 55\\%$ (sin distinguir sexo). Distribución condicionada: $P(\\text{aprueba}|\\text{hombre}) = 62{,}5\\%$ ≠ $P(\\text{aprueba}|\\text{mujer}) = 50\\%$. Son iguales si y solo si las variables son independientes: que saber el sexo no cambia la probabilidad de aprobar. Aquí no son iguales → hay dependencia entre sexo y opinión.",
+        "common_errors": [
+          "Confundir la marginal con una de las condicionadas."
+        ]
+      },
+      {
+        "id": "EX-EB04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una empresa clasifica a sus $500$ empleados por departamento (Ventas, IT, RRHH) y formación (Universitaria, No universitaria). Ventas: $80U + 70N$; IT: $120U + 30N$; RRHH: $60U + 140N$. ¿Qué departamento tiene mayor proporción de universitarios?",
+        "hints": [
+          "Calcula el porcentaje de U en cada departamento."
+        ],
+        "answer": "Ventas: $53{,}3\\%$. IT: $80\\%$. RRHH: $30\\%$. IT tiene la mayor proporción.",
+        "full_solution": "Ventas: $80/150 = 53{,}3\\%$. IT: $120/150 = 80\\%$. RRHH: $60/200 = 30\\%$. IT tiene la mayor proporción de universitarios ($80\\%$). Marginal: $260/500 = 52\\%$ universitarios en total.",
+        "common_errors": [
+          "Comparar valores absolutos ($120$ en IT) sin relativizar por tamaño del departamento."
+        ]
+      },
+      {
+        "id": "EX-EB04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En medicina, la paradoja de Simpson ocurre cuando una tendencia presente en subgrupos se invierte al combinar los datos. Un hospital tiene mejor tasa de éxito en cirugías simples ($95\\%$ vs $90\\%$) y complejas ($30\\%$ vs $20\\%$), pero peor tasa global. Explica cómo es posible.",
+        "hints": [
+          "El hospital puede hacer más cirugías complejas (proporción diferente)."
+        ],
+        "answer": "Porque el hospital hace más cirugías complejas (que tienen menor tasa), lo que baja su media global pese a ser mejor en cada tipo.",
+        "full_solution": "Si el hospital A hace $100$ simples ($95$ éxitos) y $400$ complejas ($120$ éxitos): global = $215/500 = 43\\%$. Hospital B hace $400$ simples ($360$ éxitos) y $100$ complejas ($20$ éxitos): global = $380/500 = 76\\%$. B parece mejor globalmente, pero A es mejor en cada tipo. La paradoja surge por la diferente proporción de casos. Es crucial analizar datos condicionados, no solo marginales.",
+        "common_errors": [
+          "Elegir el hospital con mejor tasa global sin condicionar por tipo de cirugía."
+        ]
       }
     ],
     "exam_questions": [
@@ -3705,6 +3970,72 @@
           "Comparar directamente dos covarianzas sin comprobar antes si están expresadas en las mismas unidades."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EB05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dados $5$ pares: $(1,3), (2,5), (3,4), (4,8), (5,7)$. Calcula $\\bar{x}$, $\\bar{y}$, $S_{xy}$ y $r$.",
+        "hints": [
+          "$\\bar{x} = 3$, $\\bar{y} = 5{,}4$.",
+          "$S_{xy} = \\frac{\\sum x_i y_i}{n} - \\bar{x}\\bar{y}$."
+        ],
+        "answer": "$r \\approx 0{,}87$. Correlación positiva fuerte.",
+        "full_solution": "$\\bar{x} = 15/5 = 3$. $\\bar{y} = 27/5 = 5{,}4$. $\\sum x_iy_i = 3+10+12+32+35 = 92$. $S_{xy} = 92/5 - 3(5{,}4) = 18{,}4 - 16{,}2 = 2{,}2$. $S_x^2 = 55/5 - 9 = 2$. $S_y^2 = 163/5 - 29{,}16 = 3{,}44$. $r = 2{,}2/\\sqrt{2 \\times 3{,}44} = 2{,}2/2{,}624 \\approx 0{,}84$.",
+        "common_errors": [
+          "Dividir por $n-1$ inconsistentemente (usar $n$ o $n-1$ en todas las fórmulas, no mezclar)."
+        ]
+      },
+      {
+        "id": "EX-EB05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué propiedades tiene el coeficiente de correlación $r$? ¿Por qué $-1 \\leq r \\leq 1$?",
+        "hints": [
+          "$r = S_{xy}/(S_x \\cdot S_y)$.",
+          "Desigualdad de Cauchy-Schwarz."
+        ],
+        "answer": "Adimensional, $-1 \\leq r \\leq 1$. Se deduce de Cauchy-Schwarz: $|S_{xy}| \\leq S_x S_y$.",
+        "full_solution": "$r = S_{xy}/(S_x S_y)$. Por la desigualdad de Cauchy-Schwarz: $|\\sum(x_i-\\bar{x})(y_i-\\bar{y})| \\leq \\sqrt{\\sum(x_i-\\bar{x})^2} \\cdot \\sqrt{\\sum(y_i-\\bar{y})^2}$. Dividiendo: $|r| \\leq 1$. $r = 1$: relación lineal perfecta creciente. $r = -1$: perfecta decreciente. $r = 0$: sin asociación lineal. Es adimensional (no depende de las unidades).",
+        "common_errors": [
+          "Pensar que $r = 0{,}5$ significa que el $50\\%$ de los datos siguen una recta."
+        ]
+      },
+      {
+        "id": "EX-EB05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La covarianza entre las notas de Matemáticas ($X$) y Física ($Y$) es $S_{XY} = 3{,}2$, con $S_X = 2{,}0$ y $S_Y = 1{,}8$. Calcula $r$ e interpreta.",
+        "hints": [
+          "$r = S_{XY}/(S_X \\cdot S_Y)$."
+        ],
+        "answer": "$r = 3{,}2/(2 \\times 1{,}8) = 0{,}89$. Correlación positiva fuerte.",
+        "full_solution": "$r = 3{,}2/(2{,}0 \\times 1{,}8) = 3{,}2/3{,}6 = 0{,}889$. Hay una correlación positiva fuerte entre las notas de Mates y Física: los alumnos que sacan buenas notas en una tienden a sacarlas en la otra.",
+        "common_errors": [
+          "Interpretar $S_{XY} = 3{,}2$ directamente como 'correlación fuerte' sin normalizarla."
+        ]
+      },
+      {
+        "id": "EX-EB05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En finanzas, la correlación entre dos acciones determina la diversificación. Si $r_{AB} = 0{,}2$ y $r_{AC} = 0{,}9$, ¿cuál par ofrece mejor diversificación para una cartera? ¿Por qué?",
+        "hints": [
+          "Menor correlación → más diversificación."
+        ],
+        "answer": "$A$ y $B$ ($r = 0{,}2$): mejor diversificación. Si una baja, la otra no necesariamente.",
+        "full_solution": "Diversificación: combinar activos poco correlacionados reduce el riesgo total. $r_{AB} = 0{,}2$ (baja): A y B se mueven de forma bastante independiente → buena diversificación. $r_{AC} = 0{,}9$ (alta): A y C se mueven juntas → poca diversificación (cuando una cae, la otra también). Lo ideal es $r \\leq 0$ o incluso negativa.",
+        "common_errors": [
+          "Elegir la correlación alta pensando que 'van juntas, ganan juntas' (en una caída también pierden juntas)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4517,6 +4848,73 @@
           "Pasar de «la recta predice bien» a «$X$ es la causa de $Y$»."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EB06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Con los datos: $\\bar{x} = 5$, $\\bar{y} = 12$, $S_{xy} = 4{,}5$, $S_x^2 = 3$. Calcula la recta de regresión $y$ sobre $x$ y predice $y$ para $x = 8$.",
+        "hints": [
+          "$b = S_{xy}/S_x^2$; $a = \\bar{y} - b\\bar{x}$."
+        ],
+        "answer": "$\\hat{y} = 4{,}5 + 1{,}5x$. $\\hat{y}(8) = 16{,}5$.",
+        "full_solution": "$b = 4{,}5/3 = 1{,}5$. $a = 12 - 1{,}5(5) = 12 - 7{,}5 = 4{,}5$. Recta: $\\hat{y} = 4{,}5 + 1{,}5x$. $\\hat{y}(8) = 4{,}5 + 12 = 16{,}5$.",
+        "common_errors": [
+          "Usar $S_y^2$ en el denominador en vez de $S_x^2$ (eso da la recta $x$ sobre $y$)."
+        ]
+      },
+      {
+        "id": "EX-EB06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué hay dos rectas de regresión ($y$ sobre $x$ y $x$ sobre $y$) y no solo una? ¿Cuándo coinciden?",
+        "hints": [
+          "Cada recta minimiza los errores en una dirección.",
+          "Coinciden cuando $|r| = 1$."
+        ],
+        "answer": "Porque cada una minimiza los residuos en una variable diferente. Coinciden solo si $|r| = 1$ (correlación perfecta).",
+        "full_solution": "La recta $y$ sobre $x$ minimiza $\\sum(y_i - \\hat{y}_i)^2$ (errores verticales). La recta $x$ sobre $y$ minimiza $\\sum(x_i - \\hat{x}_i)^2$ (errores horizontales). Son distintas porque minimizan en direcciones diferentes. Coinciden $\\Leftrightarrow |r| = 1$: todos los puntos están exactamente en una recta, y ambos criterios dan la misma línea. Cuanto menor es $|r|$, más difieren las dos rectas.",
+        "common_errors": [
+          "Pensar que la recta $x$ sobre $y$ se obtiene simplemente despejando $x$ en la recta $y$ sobre $x$ (eso no minimiza los errores horizontales)."
+        ]
+      },
+      {
+        "id": "EX-EB06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un estudio encuentra que $r = 0{,}95$ entre el gasto en I+D ($x$) y los beneficios ($y$) de $20$ empresas. ¿Implica que aumentar el gasto en I+D causa más beneficios?",
+        "hints": [
+          "Estudio observacional vs experimental.",
+          "Variables confundidas posibles."
+        ],
+        "answer": "No necesariamente. Podría ser que las empresas más grandes tengan más I+D Y más beneficios (tamaño como variable confundida).",
+        "full_solution": "Correlación $r = 0{,}95$ indica fuerte asociación lineal, pero NO implica causalidad. Posibles explicaciones: 1) El I+D causa más beneficios (posible). 2) Los beneficios permiten gastar más en I+D (causalidad inversa). 3) El tamaño de la empresa afecta a ambas (variable confundida). Para establecer causalidad se necesitaría un experimento aleatorizado o un análisis causal más sofisticado.",
+        "common_errors": [
+          "Afirmar causalidad directa: 'invertir en I+D aumenta los beneficios' (puede ser, pero no se demuestra con correlación)."
+        ]
+      },
+      {
+        "id": "EX-EB06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ecología, se estudia la relación entre la superficie de una isla ($x$, km²) y el número de especies ($y$). La relación suele ser $y = cS^z$ (ley de biogeografía insular). ¿Cómo se puede usar regresión lineal para ajustar este modelo no lineal?",
+        "hints": [
+          "Toma logaritmos: $\\log y = \\log c + z \\log S$.",
+          "Es lineal en $\\log y$ y $\\log S$."
+        ],
+        "answer": "Se toman logaritmos: $\\log y = \\log c + z \\log S$, que es lineal. Se ajusta la recta en la escala logarítmica.",
+        "full_solution": "Tomando $\\log$: $\\log y = \\log c + z \\log S$. Si $Y' = \\log y$ y $X' = \\log S$: $Y' = a + bX'$ con $a = \\log c$ y $b = z$. Se ajusta una recta de regresión en las variables transformadas. Parámetros: $z$ (pendiente) y $c = 10^a$ (intercepto). Típicamente $z \\approx 0{,}25$ para islas oceánicas.",
+        "common_errors": [
+          "Intentar ajustar directamente una recta a los datos originales (la relación no es lineal en la escala original)."
+        ]
       }
     ],
     "exam_questions": [
@@ -5357,6 +5755,72 @@
           "Fiarse de un modelo por tener un $R^2$ alto y extrapolar sin discutirlo."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EB07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La velocidad de un coche ($y$, km/h) frente al consumo de gasolina ($x$, L/100km) muestra datos que se ajustan mejor a una parábola. Si $R^2_{\\text{lineal}} = 0{,}65$ y $R^2_{\\text{cuadrático}} = 0{,}92$, ¿cuál modelo es mejor? ¿Por qué?",
+        "hints": [
+          "$R^2$ mide la proporción de variabilidad explicada.",
+          "Mayor $R^2$ → mejor ajuste."
+        ],
+        "answer": "El cuadrático ($R^2 = 0{,}92$) explica el $92\\%$ de la variabilidad. El consumo óptimo está en un rango medio de velocidad.",
+        "full_solution": "El modelo cuadrático ($R^2 = 0{,}92$) es mejor: explica el $92\\%$ de la variabilidad del consumo frente al $65\\%$ del lineal. Esto tiene sentido físico: a velocidades bajas el motor es ineficiente, a medias es óptimo, y a altas la resistencia del aire aumenta el consumo (forma de U).",
+        "common_errors": [
+          "Elegir siempre el modelo con más parámetros sin considerar si la mejora es significativa (sobreajuste)."
+        ]
+      },
+      {
+        "id": "EX-EB07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué mide $R^2$ y por qué $0 \\leq R^2 \\leq 1$? ¿Qué significaría $R^2 = 0$ y $R^2 = 1$?",
+        "hints": [
+          "$R^2 = 1 - \\frac{\\text{variabilidad residual}}{\\text{variabilidad total}}$."
+        ],
+        "answer": "$R^2 = 0$: el modelo no explica nada (predicción = media). $R^2 = 1$: ajuste perfecto.",
+        "full_solution": "$R^2 = 1 - \\frac{SS_{res}}{SS_{tot}}$ donde $SS_{tot} = \\sum(y_i - \\bar{y})^2$ y $SS_{res} = \\sum(y_i - \\hat{y}_i)^2$. Como $0 \\leq SS_{res} \\leq SS_{tot}$: $0 \\leq R^2 \\leq 1$. $R^2 = 0$: el modelo no mejora la predicción respecto a usar siempre $\\bar{y}$. $R^2 = 1$: todos los puntos caen exactamente en la curva ajustada. En regresión lineal simple: $R^2 = r^2$.",
+        "common_errors": [
+          "Pensar que $R^2 = 0{,}5$ significa que la mitad de los datos sigue el modelo (mide variabilidad, no puntos)."
+        ]
+      },
+      {
+        "id": "EX-EB07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El rendimiento agrícola ($y$, t/ha) frente al uso de fertilizante ($x$, kg/ha) da: $(0,2), (50,4), (100,5{,}5), (150,6), (200,5{,}8), (250,5)$. ¿Lineal o cuadrático? Justifica cualitativamente.",
+        "hints": [
+          "¿Los datos crecen linealmente o se curvan?"
+        ],
+        "answer": "Cuadrático: el rendimiento crece, alcanza un máximo y luego baja. El exceso de fertilizante es contraproducente.",
+        "full_solution": "Los datos: $y$ crece con $x$ hasta $\\approx 150$ kg/ha ($y = 6$) y luego disminuye. Esto sugiere un modelo cuadrático ($y = ax^2+bx+c$ con $a < 0$): el rendimiento tiene un óptimo, y el exceso de fertilizante es perjudicial (contaminación, saturación del suelo). Un modelo lineal no capturaría la caída.",
+        "common_errors": [
+          "Ajustar una recta creciente ignorando la caída final de los datos."
+        ]
+      },
+      {
+        "id": "EX-EB07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En marketing, la relación entre gasto publicitario ($x$) y ventas ($y$) suele seguir una curva de rendimientos decrecientes. ¿Qué modelo matemático usarías: lineal, cuadrático, logarítmico?",
+        "hints": [
+          "Rendimientos decrecientes: la curva se aplana.",
+          "Logarítmico: $y = a + b\\ln x$."
+        ],
+        "answer": "Logarítmico ($y = a + b\\ln x$): crece rápido al principio y se aplana después.",
+        "full_solution": "Rendimientos decrecientes significan que cada euro adicional en publicidad genera menos ventas que el anterior. Modelos: 1) Logarítmico: $y = a + b\\ln x$ (crece sin límite, pero cada vez más lento). 2) Cuadrático ($a < 0$): $y = ax^2+bx+c$ (tiene un máximo y luego baja). 3) Raíz: $y = a\\sqrt{x}$. El logarítmico es común porque no predice caídas (las ventas no bajan por más publicidad, simplemente dejan de crecer). $R^2$ decide cuál se ajusta mejor.",
+        "common_errors": [
+          "Usar un modelo lineal que asume rendimientos constantes (irrealista para publicidad)."
+        ]
       }
     ],
     "exam_questions": [

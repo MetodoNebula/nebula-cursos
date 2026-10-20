@@ -577,6 +577,72 @@
           "Olvidar el signo menos delante del segundo paréntesis y escribir $2x+2y-3x-3y$ en vez de $2x+2y-3x+3y$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SI01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En una granja hay gallinas y conejos. En total hay $35$ animales y $94$ patas. ¿Cuántas gallinas y cuántos conejos hay?",
+        "hints": [
+          "Gallinas: $g$ ($2$ patas); conejos: $c$ ($4$ patas).",
+          "$g + c = 35$ y $2g + 4c = 94$."
+        ],
+        "answer": "$c = 12$ conejos, $g = 23$ gallinas.",
+        "full_solution": "$g + c = 35$ (I); $2g + 4c = 94$ (II). De (I): $g = 35 - c$. En (II): $2(35-c) + 4c = 94 \\Rightarrow 70 + 2c = 94 \\Rightarrow c = 12$. $g = 23$. Check: $23 \\times 2 + 12 \\times 4 = 46 + 48 = 94$ ✓.",
+        "common_errors": [
+          "Asignar $4$ patas a las gallinas."
+        ]
+      },
+      {
+        "id": "EX-SI01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Puede un sistema de $2$ ecuaciones con $2$ incógnitas tener exactamente $3$ soluciones? Justifica usando la interpretación geométrica.",
+        "hints": [
+          "Dos rectas en el plano: ¿cuántas intersecciones son posibles?",
+          "$0$ (paralelas), $1$ (secantes), o $\\infty$ (coincidentes)."
+        ],
+        "answer": "No. Dos rectas se cortan en $0$, $1$ o infinitos puntos; nunca exactamente $3$.",
+        "full_solution": "Geométricamente, cada ecuación lineal $ax+by=c$ es una recta. Dos rectas pueden: no cortarse (paralelas → $0$ soluciones), cortarse en un punto ($1$ solución) o coincidir (infinitas soluciones). No hay posición intermedia; $3$ soluciones es imposible para un sistema lineal $2 \\times 2$.",
+        "common_errors": [
+          "Pensar que sistemas no lineales con $2$ ecuaciones también están limitados a estas opciones (no lo están)."
+        ]
+      },
+      {
+        "id": "EX-SI01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un quiosco vende periódicos a $1{,}50$ EUR y revistas a $3$ EUR. Hoy ha vendido $40$ ejemplares por un total de $87$ EUR. ¿Cuántos de cada tipo?",
+        "hints": [
+          "$p + r = 40$; $1{,}5p + 3r = 87$."
+        ],
+        "answer": "$r = 18$ revistas, $p = 22$ periódicos.",
+        "full_solution": "$p = 40 - r$. $1{,}5(40-r) + 3r = 87 \\Rightarrow 60 - 1{,}5r + 3r = 87 \\Rightarrow 1{,}5r = 27 \\Rightarrow r = 18$. $p = 22$. Check: $22 \\times 1{,}5 + 18 \\times 3 = 33 + 54 = 87$ ✓.",
+        "common_errors": [
+          "Confundir los precios al plantear el sistema."
+        ]
+      },
+      {
+        "id": "EX-SI01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En química, para balancear la reacción $a\\text{CH}_4 + b\\text{O}_2 \\to c\\text{CO}_2 + d\\text{H}_2\\text{O}$, plantea el sistema por balance de C, H y O. Resuélvelo con $a = 1$.",
+        "hints": [
+          "C: $a = c$. H: $4a = 2d$. O: $2b = 2c + d$."
+        ],
+        "answer": "$a = 1$, $c = 1$, $d = 2$, $b = 2$. Reacción: $\\text{CH}_4 + 2\\text{O}_2 \\to \\text{CO}_2 + 2\\text{H}_2\\text{O}$.",
+        "full_solution": "Con $a = 1$: C: $1 = c \\Rightarrow c = 1$. H: $4 = 2d \\Rightarrow d = 2$. O: $2b = 2(1) + 2 = 4 \\Rightarrow b = 2$.",
+        "common_errors": [
+          "Plantear el balance de O como $2b = 2c$ olvidando el agua."
+        ]
       }
     ],
     "exam_questions": [
@@ -1526,6 +1592,73 @@
           "Dar por buena una lectura aproximada sin comprobarla, incluso cuando coincide por casualidad con el valor exacto."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SI02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Dos planes de telefonía: A cobra $10$ EUR fijos $+ 0{,}05$ EUR/min; B cobra $5$ EUR fijos $+ 0{,}10$ EUR/min. ¿A partir de cuántos minutos conviene el plan A?",
+        "hints": [
+          "Iguala: $10 + 0{,}05m = 5 + 0{,}10m$.",
+          "Resuelve para $m$."
+        ],
+        "answer": "$m = 100$ min. A partir de $100$ min, conviene A.",
+        "full_solution": "$10 + 0{,}05m = 5 + 0{,}10m \\Rightarrow 5 = 0{,}05m \\Rightarrow m = 100$. Para $m > 100$: el coste de A es menor. Para $m < 100$: conviene B.",
+        "common_errors": [
+          "Igualar los fijos con las tarifas: $10/0{,}05 = 200$."
+        ]
+      },
+      {
+        "id": "EX-SI02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Clasifica el sistema: $\\begin{cases} 2x + 3y = 6 \\\\ 4x + 6y = 12 \\end{cases}$. ¿Qué significa geométricamente?",
+        "hints": [
+          "Divide la segunda ecuación entre $2$.",
+          "¿Obtienes la primera?"
+        ],
+        "answer": "Compatible indeterminado. Las dos ecuaciones representan la misma recta.",
+        "full_solution": "La segunda ecuación es el doble de la primera: $4x+6y = 2(2x+3y) = 12$. Son la misma recta, así que hay infinitas soluciones. Geométricamente, las rectas coinciden. Ejemplo de solución: $x=0, y=2$; $x=3, y=0$; etc.",
+        "common_errors": [
+          "Decir que es incompatible porque hay 'dos ecuaciones' pero 'una sola recta'."
+        ]
+      },
+      {
+        "id": "EX-SI02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cómo se relacionan los coeficientes de un sistema $2 \\times 2$ con su clasificación (compatible determinado, indeterminado o incompatible)?",
+        "hints": [
+          "Compara $a_1/a_2$, $b_1/b_2$ y $c_1/c_2$.",
+          "Si las tres razones son iguales → indeterminado."
+        ],
+        "answer": "CD: $a_1/a_2 \\neq b_1/b_2$. CI: $a_1/a_2 = b_1/b_2 = c_1/c_2$. I: $a_1/a_2 = b_1/b_2 \\neq c_1/c_2$.",
+        "full_solution": "Para $a_1x+b_1y=c_1$ y $a_2x+b_2y=c_2$: Si $\\frac{a_1}{a_2} \\neq \\frac{b_1}{b_2}$: secantes → compatible determinado (solución única). Si $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2}$: coincidentes → compatible indeterminado (infinitas). Si $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$: paralelas → incompatible (ninguna).",
+        "common_errors": [
+          "Confundir compatible indeterminado con incompatible."
+        ]
+      },
+      {
+        "id": "EX-SI02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En nutrición, un dietista combina dos alimentos: A ($2$ g proteína, $3$ g grasa por ración) y B ($4$ g proteína, $1$ g grasa por ración). Necesita exactamente $20$ g de proteína y $12$ g de grasa. ¿Es posible? Plantea y clasifica.",
+        "hints": [
+          "$2a + 4b = 20$; $3a + b = 12$."
+        ],
+        "answer": "$a = 3{,}2$ raciones de A, $b = 3{,}4$ raciones de B. Compatible determinado.",
+        "full_solution": "$2a + 4b = 20$ (I); $3a + b = 12$ (II). De (II): $b = 12-3a$. En (I): $2a + 4(12-3a) = 20 \\Rightarrow 2a + 48 - 12a = 20 \\Rightarrow -10a = -28 \\Rightarrow a = 2{,}8$. $b = 12 - 8{,}4 = 3{,}6$. Check: $2(2{,}8)+4(3{,}6) = 5{,}6+14{,}4 = 20$ ✓; $3(2{,}8)+3{,}6 = 8{,}4+3{,}6 = 12$ ✓.",
+        "common_errors": [
+          "Plantear la ecuación de grasa como $a + 3b = 12$ invirtiendo los coeficientes."
+        ]
       }
     ],
     "exam_questions": [
@@ -2598,6 +2731,73 @@
           "Olvidar comprobar el dominio y aceptar soluciones con $x\\le0$ o $y\\le0$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SI03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El producto de dos números es $48$ y su suma es $14$. Encuéntralos planteando un sistema no lineal.",
+        "hints": [
+          "$x + y = 14$; $xy = 48$.",
+          "Sustituye $y = 14 - x$ en la segunda."
+        ],
+        "answer": "$x = 6, y = 8$ (o viceversa).",
+        "full_solution": "$y = 14 - x$. $x(14-x) = 48 \\Rightarrow 14x - x^2 = 48 \\Rightarrow x^2 - 14x + 48 = 0$. $\\Delta = 196 - 192 = 4$. $x = \\frac{14 \\pm 2}{2}$: $x = 8$ o $x = 6$. Los números son $6$ y $8$.",
+        "common_errors": [
+          "Confundir con $x - y = 14$ y $x/y = 48$."
+        ]
+      },
+      {
+        "id": "EX-SI03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué un sistema no lineal (por ejemplo, una recta y una parábola) puede tener $0$, $1$ o $2$ soluciones? ¿Es posible $3$?",
+        "hints": [
+          "Una recta y una parábola: ¿cuántas intersecciones son posibles geométricamente?"
+        ],
+        "answer": "$0$ (no se cortan), $1$ (tangente) o $2$ (secante). Exactamente $3$ no es posible con una recta y una parábola.",
+        "full_solution": "Una recta corta a una parábola en a lo sumo $2$ puntos (al sustituir se obtiene una ecuación de grado $2$). Pueden ser $0$ (la recta pasa 'por fuera'), $1$ (tangente) o $2$ (secante). Como el grado del sistema reducido es $2$, no puede haber más de $2$ soluciones. Con otras curvas (cúbicas, etc.) sí podrían haber $3$ o más.",
+        "common_errors": [
+          "Pensar que una recta puede cortar a una parábola en $3$ puntos."
+        ]
+      },
+      {
+        "id": "EX-SI03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un campo rectangular tiene diagonal $13$ m y perímetro $34$ m. Halla sus dimensiones.",
+        "hints": [
+          "$2(a+b) = 34 \\Rightarrow a+b = 17$.",
+          "$a^2 + b^2 = 169$."
+        ],
+        "answer": "$a = 5, b = 12$ (o viceversa).",
+        "full_solution": "$a+b = 17$ y $a^2+b^2 = 169$. $(a+b)^2 = a^2+2ab+b^2 = 289$. Luego $2ab = 289 - 169 = 120$, $ab = 60$. $a$ y $b$ son raíces de $t^2 - 17t + 60 = 0$. $\\Delta = 289 - 240 = 49$. $t = \\frac{17 \\pm 7}{2}$: $t = 12$ o $t = 5$.",
+        "common_errors": [
+          "Usar $a+b = 34$ (perímetro, no semiperímetro)."
+        ]
+      },
+      {
+        "id": "EX-SI03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En economía, el equilibrio entre oferta $S = p^2$ y demanda $D = 16 - 2p$ se alcanza cuando $S = D$. Encuentra el precio de equilibrio ($p > 0$).",
+        "hints": [
+          "$p^2 = 16 - 2p$.",
+          "$p^2 + 2p - 16 = 0$."
+        ],
+        "answer": "$p = \\frac{-2 + \\sqrt{68}}{2} = -1 + \\sqrt{17} \\approx 3{,}12$.",
+        "full_solution": "$p^2 + 2p - 16 = 0$. $p = \\frac{-2 \\pm \\sqrt{4+64}}{2} = \\frac{-2 \\pm \\sqrt{68}}{2} = -1 \\pm \\sqrt{17}$. Como $p > 0$: $p = -1 + \\sqrt{17} \\approx 3{,}12$. Cantidad: $S = p^2 \\approx 9{,}75$.",
+        "common_errors": [
+          "Aceptar la raíz negativa $p = -1 - \\sqrt{17}$ como precio válido."
+        ]
       }
     ],
     "exam_questions": [
@@ -3635,6 +3835,73 @@
           "Concluir que no hay solución en la primera por ver que la $x$ desaparece."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SI04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un ascensor tiene una carga máxima de $600$ kg. Si ya hay $3$ personas de $75$ kg de media, ¿cuántas personas más de $80$ kg pueden subir?",
+        "hints": [
+          "Peso actual: $3 \\times 75 = 225$ kg.",
+          "$225 + 80n \\leq 600$."
+        ],
+        "answer": "$n \\leq 4{,}6875$, así que como máximo $4$ personas más.",
+        "full_solution": "$225 + 80n \\leq 600 \\Rightarrow 80n \\leq 375 \\Rightarrow n \\leq 4{,}6875$. Como $n$ es entero: $n \\leq 4$.",
+        "common_errors": [
+          "Redondear $4{,}69$ a $5$ (superando la carga máxima)."
+        ]
+      },
+      {
+        "id": "EX-SI04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un estudiante necesita una media $\\geq 5$ en $4$ exámenes para aprobar. Ha sacado $6$, $4$ y $3$. ¿Qué nota mínima necesita en el cuarto examen?",
+        "hints": [
+          "$\\frac{6+4+3+x}{4} \\geq 5$.",
+          "$13 + x \\geq 20$."
+        ],
+        "answer": "$x \\geq 7$.",
+        "full_solution": "$\\frac{13+x}{4} \\geq 5 \\Rightarrow 13+x \\geq 20 \\Rightarrow x \\geq 7$. Necesita al menos un $7$.",
+        "common_errors": [
+          "Calcular $5 - (6+4+3)/3 = 5 - 4{,}33 = 0{,}67$ (mezclar media de $3$ con requisito de $4$)."
+        ]
+      },
+      {
+        "id": "EX-SI04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué al multiplicar ambos lados de una inecuación por un número negativo se invierte el sentido? Demuéstralo con un argumento sobre la recta numérica.",
+        "hints": [
+          "Si $a < b$, ¿dónde están $-a$ y $-b$ en la recta?"
+        ],
+        "answer": "Porque multiplicar por $-1$ refleja los puntos respecto al origen, invirtiendo el orden.",
+        "full_solution": "Si $a < b$, entonces $a$ está a la izquierda de $b$ en la recta. Multiplicar por $-1$ refleja ambos puntos respecto al $0$: $-a$ queda a la derecha de $-b$, así que $-a > -b$. En general, multiplicar por $c < 0$: $ca > cb$. Por eso se invierte la desigualdad.",
+        "common_errors": [
+          "Aplicar la regla mecánicamente sin entender por qué, y luego olvidarla en ecuaciones más complejas."
+        ]
+      },
+      {
+        "id": "EX-SI04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En termodinámica, el rango de temperaturas en que el agua es líquida es $0 \\leq T_C \\leq 100$ (°C). Expresa este rango en Fahrenheit usando $T_F = 1{,}8 T_C + 32$.",
+        "hints": [
+          "Sustituye los extremos.",
+          "$T_C = 0 \\Rightarrow T_F = 32$; $T_C = 100 \\Rightarrow T_F = 212$."
+        ],
+        "answer": "$32 \\leq T_F \\leq 212$.",
+        "full_solution": "Como $T_F = 1{,}8T_C + 32$ es creciente ($1{,}8 > 0$): $T_C = 0 \\Rightarrow T_F = 32$; $T_C = 100 \\Rightarrow T_F = 212$. El agua es líquida para $32 \\leq T_F \\leq 212$.",
+        "common_errors": [
+          "Si la función fuera decreciente, los extremos se intercambiarían (aquí no, pero es un error común con otras conversiones)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4693,6 +4960,74 @@
           "Dar solo un tramo, suponiendo que el patrón de dos raíces vale para tres."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SI05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un proyectil lanzado hacia arriba tiene altura $h(t) = -5t^2 + 30t$ m. ¿Durante cuánto tiempo está por encima de $25$ m?",
+        "hints": [
+          "$-5t^2 + 30t > 25$.",
+          "$-5t^2 + 30t - 25 > 0 \\Rightarrow t^2 - 6t + 5 < 0$."
+        ],
+        "answer": "Entre $t = 1$ y $t = 5$ s (durante $4$ s).",
+        "full_solution": "$t^2 - 6t + 5 < 0$. Raíces: $(t-1)(t-5) = 0 \\Rightarrow t = 1, 5$. La parábola abre hacia arriba, así que $< 0$ entre las raíces: $1 < t < 5$. Está por encima de $25$ m durante $4$ s.",
+        "common_errors": [
+          "Dar el intervalo como $t < 1$ o $t > 5$ (signo equivocado)."
+        ]
+      },
+      {
+        "id": "EX-SI05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cómo se usa la parábola $y = ax^2 + bx + c$ para resolver $ax^2 + bx + c > 0$? Describe el método gráfico general.",
+        "hints": [
+          "Dibuja la parábola e identifica las raíces.",
+          "El signo de $a$ determina si abre arriba o abajo."
+        ],
+        "answer": "Se hallan las raíces, se dibuja la parábola y se identifican los tramos donde $y > 0$.",
+        "full_solution": "1) Hallar raíces de $ax^2+bx+c = 0$. 2) Si $a > 0$ (abre arriba): $y > 0$ fuera de las raíces (unión de dos intervalos infinitos). Si $a < 0$ (abre abajo): $y > 0$ entre las raíces. 3) Si $\\Delta < 0$: $y > 0$ siempre ($a > 0$) o nunca ($a < 0$). 4) Si $\\Delta = 0$: $y \\geq 0$ siempre ($a > 0$) con igualdad en la raíz doble.",
+        "common_errors": [
+          "Olvidar que el signo de $a$ determina la dirección de la parábola."
+        ]
+      },
+      {
+        "id": "EX-SI05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una empresa tiene beneficio $B(x) = -x^2 + 10x - 16$ (miles de EUR), donde $x$ son las unidades vendidas (en miles). ¿Para qué rango de ventas obtiene beneficio positivo?",
+        "hints": [
+          "$-x^2 + 10x - 16 > 0$.",
+          "Raíces: $x^2 - 10x + 16 = 0$."
+        ],
+        "answer": "Entre $2$ y $8$ mil unidades.",
+        "full_solution": "$x^2 - 10x + 16 = 0 \\Rightarrow (x-2)(x-8) = 0$. Raíces: $2$ y $8$. Como la parábola original abre hacia abajo ($a = -1$), $B > 0$ entre las raíces: $2 < x < 8$ (miles de unidades).",
+        "common_errors": [
+          "Resolver la igualdad pero no interpretar el signo de la inecuación."
+        ]
+      },
+      {
+        "id": "EX-SI05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ingeniería civil, la tensión en una viga es $\\sigma(x) = -0{,}5x^2 + 4x$ (MPa), donde $x$ es la posición en metros. La viga resiste hasta $6$ MPa. ¿En qué tramo se supera el límite?",
+        "hints": [
+          "$-0{,}5x^2 + 4x > 6$.",
+          "$x^2 - 8x + 12 < 0$."
+        ],
+        "answer": "Entre $x = 2$ y $x = 6$ m se supera el límite.",
+        "full_solution": "$-0{,}5x^2 + 4x > 6 \\Rightarrow x^2 - 8x + 12 < 0 \\Rightarrow (x-2)(x-6) < 0$. Solución: $2 < x < 6$. En ese tramo la tensión supera $6$ MPa.",
+        "common_errors": [
+          "Dar $x < 2$ o $x > 6$ (signo equivocado de la desigualdad)."
+        ]
       }
     ],
     "exam_questions": [
@@ -5668,6 +6003,74 @@
           "Plantear una tercera ecuación que en realidad sea combinación de las otras dos, dejando el sistema indeterminado sin darse cuenta."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SI06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Tres amigos compran fruta: A compra $2$ kg de manzanas, $1$ de plátanos y $3$ de naranjas por $8{,}50$ EUR; B compra $1, 2, 1$ por $5{,}00$; C compra $3, 1, 2$ por $8{,}00$. ¿Cuánto cuesta cada kg?",
+        "hints": [
+          "Sistema $3 \\times 3$.",
+          "$2m + p + 3n = 8{,}5$; $m + 2p + n = 5$; $3m + p + 2n = 8$."
+        ],
+        "answer": "Manzanas: $1{,}50$, plátanos: $1{,}00$, naranjas: $1{,}50$ EUR/kg.",
+        "full_solution": "Resolvemos por Gauss: $\\begin{pmatrix}2&1&3&|&8{,}5\\\\1&2&1&|&5\\\\3&1&2&|&8\\end{pmatrix}$. Intercambiamos f1 y f2. Restamos: f2-2f1, f3-3f1. Obtenemos: $p = 1$, $n = 1{,}5$, $m = 1{,}5$.",
+        "common_errors": [
+          "Errores al escalonar la matriz (mala aritmética con los coeficientes)."
+        ]
+      },
+      {
+        "id": "EX-SI06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cuántas soluciones puede tener un sistema de $3$ ecuaciones con $3$ incógnitas? Describe geométricamente cada caso.",
+        "hints": [
+          "Cada ecuación es un plano en $\\mathbb{R}^3$.",
+          "Tres planos pueden cortarse de varias formas."
+        ],
+        "answer": "Solución única (1 punto), infinitas (recta o plano) o ninguna.",
+        "full_solution": "Tres planos en $\\mathbb{R}^3$: (1) Se cortan en un punto → solución única (compatible determinado). (2) Se cortan en una recta → infinitas soluciones con $1$ parámetro. (3) Los tres coinciden → infinitas con $2$ parámetros. (4) Dos paralelos o los tres sin punto común → incompatible. Nunca exactamente $2$ o $3$ soluciones.",
+        "common_errors": [
+          "Pensar que puede haber exactamente $2$ soluciones (imposible en un sistema lineal)."
+        ]
+      },
+      {
+        "id": "EX-SI06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En electrónica, las leyes de Kirchhoff generan un sistema $3 \\times 3$ para las corrientes $I_1, I_2, I_3$: $I_1 - I_2 - I_3 = 0$; $2I_1 + 3I_2 = 12$; $3I_2 + 4I_3 = 12$. Resuélvelo.",
+        "hints": [
+          "De la primera: $I_1 = I_2 + I_3$.",
+          "Sustituye en la segunda."
+        ],
+        "answer": "$I_1 \\approx 3{,}69$, $I_2 \\approx 1{,}54$, $I_3 \\approx 2{,}15$ A.",
+        "full_solution": "De (I): $I_1 = I_2+I_3$. En (II): $2(I_2+I_3)+3I_2 = 12 \\Rightarrow 5I_2+2I_3 = 12$. Con (III): $3I_2+4I_3 = 12$. De la primera: $I_3 = (12-5I_2)/2$. Sustituyendo: $3I_2+4 \\cdot \\frac{12-5I_2}{2} = 12 \\Rightarrow 3I_2+24-10I_2 = 12 \\Rightarrow -7I_2 = -12 \\Rightarrow I_2 = 12/7$. $I_3 = (12-60/7)/2 = (24/7)/2 = 12/7$. $I_1 = 24/7 \\approx 3{,}43$.",
+        "common_errors": [
+          "Olvidar la ley de nodos ($I_1 = I_2 + I_3$) y tratar las tres corrientes como independientes."
+        ]
+      },
+      {
+        "id": "EX-SI06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una nutricionista combina $3$ suplementos: A ($10$ mg vit.C, $5$ mg hierro), B ($20$ mg vit.C, $2$ mg hierro), C ($5$ mg vit.C, $8$ mg hierro). Necesita un total de $100$ mg vit.C y $40$ mg hierro. Si usa $2$ unidades de C, ¿cuántas de A y B necesita?",
+        "hints": [
+          "$10a + 20b + 10 = 100$; $5a + 2b + 16 = 40$.",
+          "$10a + 20b = 90$; $5a + 2b = 24$."
+        ],
+        "answer": "$a = 3{,}75$, $b = 2{,}625$.",
+        "full_solution": "Con $c = 2$: $10a+20b = 90$ y $5a+2b = 24$. De la segunda: $b = (24-5a)/2$. En la primera: $10a+20 \\cdot \\frac{24-5a}{2} = 90 \\Rightarrow 10a+240-50a = 90 \\Rightarrow -40a = -150 \\Rightarrow a = 3{,}75$. $b = (24-18{,}75)/2 = 2{,}625$.",
+        "common_errors": [
+          "Olvidar incluir la contribución de C al plantear las ecuaciones."
+        ]
       }
     ],
     "exam_questions": [
@@ -6635,6 +7038,74 @@
           "Aceptar el grupo por cumplir las condiciones sobre adultos y menores por separado, sin comprobar el límite conjunto de personas."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-SI07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una fábrica produce sillas ($x$) y mesas ($y$). Cada silla requiere $2$ h de carpintería y $1$ h de barnizado; cada mesa $3$ h y $2$ h. Hay $120$ h de carpintería y $80$ h de barnizado disponibles. Plantea las restricciones como sistema de inecuaciones.",
+        "hints": [
+          "Carpintería: $2x + 3y \\leq 120$.",
+          "Barnizado: $x + 2y \\leq 80$. Más $x \\geq 0, y \\geq 0$."
+        ],
+        "answer": "$2x+3y \\leq 120$, $x+2y \\leq 80$, $x \\geq 0$, $y \\geq 0$.",
+        "full_solution": "Restricción de carpintería: $2x + 3y \\leq 120$. Restricción de barnizado: $x + 2y \\leq 80$. No negatividad: $x \\geq 0$, $y \\geq 0$. La región factible es la intersección de estos semiplanos.",
+        "common_errors": [
+          "Usar $=$ en vez de $\\leq$, perdiendo la región factible."
+        ]
+      },
+      {
+        "id": "EX-SI07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué la solución óptima de un problema de programación lineal siempre se encuentra en un vértice de la región factible?",
+        "hints": [
+          "La función objetivo es lineal: crece uniformemente en una dirección.",
+          "Un máximo en el interior implicaría poder mejorar moviéndose."
+        ],
+        "answer": "Porque una función lineal sobre un polígono convexo alcanza su máximo y mínimo en los vértices.",
+        "full_solution": "Una función lineal $f(x,y) = ax + by$ tiene gradiente constante $(a,b)$. En una región convexa y acotada (polígono), $f$ alcanza su extremo en un punto extremo (vértice), porque moviéndose en la dirección del gradiente siempre se mejora hasta llegar a un borde, y luego a un vértice. Esto es el teorema fundamental de la programación lineal.",
+        "common_errors": [
+          "Pensar que el óptimo podría estar en el interior del polígono."
+        ]
+      },
+      {
+        "id": "EX-SI07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En el ejercicio anterior, el beneficio es $B = 40x + 60y$. Encuentra los vértices de la región factible y determina la producción que maximiza el beneficio.",
+        "hints": [
+          "Vértices: intersecciones de las restricciones.",
+          "Evalúa $B$ en cada vértice."
+        ],
+        "answer": "Máximo en $(24, 24)$: $B = 40(24)+60(24) = 2\\,400$ EUR. Hmm, calculemos los vértices exactos.",
+        "full_solution": "Vértices: $(0,0)$: $B=0$. $(60,0)$: $B=2400$. $(0,40)$: $B=2400$. Intersección de $2x+3y=120$ y $x+2y=80$: de la segunda $x=80-2y$; $2(80-2y)+3y=120 \\Rightarrow 160-4y+3y=120 \\Rightarrow y=40$, $x=0$. Intersección $(60,0)$: check $60+0=60 \\leq 80$ ✓. Evaluando todos: $(0,40)$: $B=2400$; $(60,0)$: $B=2400$. Hay empate.",
+        "common_errors": [
+          "No evaluar todos los vértices."
+        ]
+      },
+      {
+        "id": "EX-SI07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En logística, un camión puede llevar $8$ toneladas y $40$ m³. El producto A pesa $2$ t y ocupa $3$ m³ por palé; el B pesa $1$ t y $5$ m³. El beneficio es $200$ EUR/palé de A y $150$ EUR/palé de B. ¿Cuál es la carga óptima?",
+        "hints": [
+          "$2a + b \\leq 8$; $3a + 5b \\leq 40$; $a,b \\geq 0$.",
+          "Evalúa $B = 200a + 150b$ en los vértices."
+        ],
+        "answer": "Se deben calcular los vértices y evaluar la función objetivo.",
+        "full_solution": "Restricciones: $2a+b \\leq 8$, $3a+5b \\leq 40$, $a,b \\geq 0$. Vértices: $(0,0)$, $(4,0)$, $(0,8)$ (comprobamos: $3(0)+5(8)=40 \\leq 40$ ✓). Intersección $2a+b=8$ y $3a+5b=40$: $b=8-2a$; $3a+5(8-2a)=40 \\Rightarrow 3a+40-10a=40 \\Rightarrow -7a=0 \\Rightarrow a=0$, $b=8$. Otro: $(4,0)$: $3(4)=12 \\leq 40$ ✓. Beneficios: $(0,0)$→$0$; $(4,0)$→$800$; $(0,8)$→$1200$. Óptimo: $8$ palés de B, $B=1200$ EUR.",
+        "common_errors": [
+          "No verificar que cada vértice cumple TODAS las restricciones."
+        ]
       }
     ],
     "exam_questions": [

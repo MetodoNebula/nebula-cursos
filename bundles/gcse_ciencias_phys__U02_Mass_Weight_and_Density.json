@@ -306,6 +306,26 @@
           "Multiplying instead of dividing, $11.1\\times3.0=33.3$, which gives a field strength stronger than the Earth's for a reading smaller than the weight the same mass would have on Earth.",
           "Writing 9.8 m/s² for part (b) out of habit: the acceleration of free fall takes the local value of $g$, and this planet is not the Earth."
         ]
+      },
+      {
+        "id": "CQ-U02-01-2",
+        "statement": "An astronaut has a mass of $75\\,\\mathrm{kg}$. On Earth, $g = 9.8\\,\\mathrm{N/kg}$; on the Moon, $g = 1.6\\,\\mathrm{N/kg}$; on Jupiter, $g = 25\\,\\mathrm{N/kg}$. (a) Calculate the astronaut's weight on each body. (b) Explain why the astronaut's mass is the same everywhere but the weight changes. (c) If the astronaut can just jump $0.50\\,\\mathrm{m}$ high on Earth, estimate how high they could jump on the Moon (assume the same initial kinetic energy).",
+        "answer": "(a) Earth: $W = 75 \\times 9.8 = 735\\,\\mathrm{N}$. Moon: $W = 75 \\times 1.6 = 120\\,\\mathrm{N}$. Jupiter: $W = 75 \\times 25 = 1875\\,\\mathrm{N}$. (b) Mass is the amount of matter in the body and does not depend on location. Weight is the gravitational force on that mass ($W = mg$), which depends on the local gravitational field strength. Since $g$ varies between bodies, weight varies too. (c) On Earth: $E_k = mg\\Delta h = 75 \\times 9.8 \\times 0.50 = 367.5\\,\\mathrm{J}$. On the Moon, the same kinetic energy converts to height: $367.5 = 75 \\times 1.6 \\times \\Delta h$, so $\\Delta h = 367.5 \\div 120 = 3.1\\,\\mathrm{m}$. The astronaut could jump about $3.1\\,\\mathrm{m}$ high on the Moon — roughly $6 \\times$ higher than on Earth.",
+        "hints": [
+          "Weight $W = mg$ where $g$ is the local gravitational field strength.",
+          "Mass is a scalar property of the object; weight is a force that depends on location.",
+          "For the jump: the same legs give the same kinetic energy; set $E_k = mg_{\\text{Moon}}\\Delta h_{\\text{Moon}}$."
+        ]
+      },
+      {
+        "id": "CQ-U02-01-3",
+        "statement": "A force meter reads $4.5\\,\\mathrm{N}$ when a rock hangs from it in air. When the rock is fully submerged in water (density $1000\\,\\mathrm{kg/m^3}$), the reading drops to $2.9\\,\\mathrm{N}$. (a) Calculate the upthrust on the rock. (b) Using the fact that upthrust equals the weight of displaced water, calculate the volume of the rock. (c) Hence calculate the density of the rock. Take $g = 10\\,\\mathrm{N/kg}$.",
+        "answer": "(a) Upthrust $= 4.5 - 2.9 = 1.6\\,\\mathrm{N}$. (b) Upthrust = weight of displaced water = $\\rho_{\\text{water}} \\times V_{\\text{rock}} \\times g$. So $1.6 = 1000 \\times V \\times 10$, giving $V = 1.6 \\div 10\\,000 = 1.6 \\times 10^{-4}\\,\\mathrm{m^3} = 160\\,\\mathrm{cm^3}$. (c) Mass of rock $= W/g = 4.5 \\div 10 = 0.45\\,\\mathrm{kg}$. Density $= m/V = 0.45 \\div (1.6 \\times 10^{-4}) = 2812.5\\,\\mathrm{kg/m^3} \\approx 2800\\,\\mathrm{kg/m^3}$.",
+        "hints": [
+          "Upthrust = weight in air minus apparent weight in water.",
+          "Upthrust also equals $\\rho_{\\text{water}} \\times V_{\\text{object}} \\times g$.",
+          "Find mass from the weight in air, then density = mass ÷ volume."
+        ]
       }
     ],
     "mcq": [
@@ -932,6 +952,21 @@
         "common_errors": [
           "Averaging the two densities directly, $(8.0+2.7)/2=5.35\\,\\mathrm{g/cm^3}$, which ignores that the two metals occupy different volumes."
         ]
+      },
+      {
+        "id": "CQ-U02-02-2",
+        "statement": "A student wants to measure the density of an irregularly shaped stone. She records its mass as $126\\,\\mathrm{g}$. She fills a measuring cylinder to $50.0\\,\\mathrm{cm^3}$ with water, then lowers the stone in. The new reading is $97.0\\,\\mathrm{cm^3}$. (a) Calculate the volume of the stone. (b) Calculate the density of the stone in $\\mathrm{g/cm^3}$ and in $\\mathrm{kg/m^3}$. (c) The stone is porous and absorbs $3.0\\,\\mathrm{cm^3}$ of water when submerged. Explain how this affects the measured density and whether the true density is higher or lower than the measured value.",
+        "answer": "(a) Volume of stone $= 97.0 - 50.0 = 47.0\\,\\mathrm{cm^3}$. (b) Density $= 126 \\div 47.0 = 2.68\\,\\mathrm{g/cm^3}$. In SI: $2.68 \\times 1000 = 2680\\,\\mathrm{kg/m^3}$. (c) If the stone absorbs $3.0\\,\\mathrm{cm^3}$ of water, the water level rises by only $47.0 - 3.0 = 44.0\\,\\mathrm{cm^3}$ less than the stone's true volume (including pores). The actual total volume including pores is $47.0 + 3.0 = 50.0\\,\\mathrm{cm^3}$ (since absorbed water doesn't raise the level). Wait — actually, the displaced water ($47.0\\,\\mathrm{cm^3}$) already includes the pore space that filled with water, because the water level rose by the volume of the stone's exterior. The absorbed water reduces the rise by $3.0\\,\\mathrm{cm^3}$, so the true exterior volume is $47.0 + 3.0 = 50.0\\,\\mathrm{cm^3}$. The measured volume ($47.0\\,\\mathrm{cm^3}$) is too small, making the measured density too high. True density $= 126 \\div 50.0 = 2.52\\,\\mathrm{g/cm^3}$, which is lower.",
+        "hints": [
+          "Volume by displacement = final reading minus initial reading.",
+          "To convert $\\mathrm{g/cm^3}$ to $\\mathrm{kg/m^3}$, multiply by 1000.",
+          "If the stone absorbs water, less water is displaced than the stone's true volume."
+        ]
+      },
+      {
+        "id": "CQ-U02-02-3",
+        "statement": "A student measures the dimensions of a rectangular metal block as: length $= 8.0\\,\\mathrm{cm}$ ($\\pm 0.1\\,\\mathrm{cm}$), width $= 5.0\\,\\mathrm{cm}$ ($\\pm 0.1\\,\\mathrm{cm}$), height $= 2.0\\,\\mathrm{cm}$ ($\\pm 0.1\\,\\mathrm{cm}$). The mass is $632\\,\\mathrm{g}$ ($\\pm 1\\,\\mathrm{g}$). (a) Calculate the volume and density. (b) Calculate the percentage uncertainty in the volume. (c) Explain which measurement contributes the most to the overall uncertainty in the density, and suggest how the experiment could be improved.",
+        "answer": "(a) Volume $= 8.0 \\times 5.0 \\times 2.0 = 80\\,\\mathrm{cm^3}$. Density $= 632 \\div 80 = 7.9\\,\\mathrm{g/cm^3}$. (b) Percentage uncertainties: length $= 0.1/8.0 \\times 100 = 1.25\\%$; width $= 0.1/5.0 \\times 100 = 2.0\\%$; height $= 0.1/2.0 \\times 100 = 5.0\\%$. Total percentage uncertainty in volume $= 1.25 + 2.0 + 5.0 = 8.25\\% \\approx 8\\%$. (c) The height measurement ($5.0\\%$) contributes the most uncertainty because it is the smallest dimension relative to the ruler's precision. The mass uncertainty ($1/632 \\times 100 = 0.16\\%$) is negligible. To improve: use a micrometer or vernier caliper for the height measurement, or use a larger block so all dimensions are much larger relative to the measurement uncertainty."
       }
     ],
     "mcq": [
@@ -1479,6 +1514,21 @@
           "Assuming that an object which floats in water must float in every liquid, and so missing that the oil is less dense than the sphere.",
           "Dividing by the steel density the wrong way round in part (c), $7.9\\div950$, which gives a volume far smaller than the sphere itself."
         ]
+      },
+      {
+        "id": "CQ-U02-03-2",
+        "statement": "An ice cube of mass $50\\,\\mathrm{g}$ floats in a glass of water. The density of ice is $917\\,\\mathrm{kg/m^3}$ and the density of water is $1000\\,\\mathrm{kg/m^3}$. (a) Calculate the volume of the ice cube. (b) Calculate the volume of ice below the water surface (the submerged volume). (c) When the ice melts completely, explain whether the water level in the glass rises, falls, or stays the same. Justify your answer with a calculation.",
+        "answer": "(a) Volume of ice $= m/\\rho = 0.050 \\div 917 = 5.45 \\times 10^{-5}\\,\\mathrm{m^3} = 54.5\\,\\mathrm{cm^3}$. (b) The ice floats, so upthrust = weight: $\\rho_{\\text{water}} \\times V_{\\text{submerged}} \\times g = mg$. So $V_{\\text{submerged}} = m / \\rho_{\\text{water}} = 0.050 \\div 1000 = 5.0 \\times 10^{-5}\\,\\mathrm{m^3} = 50.0\\,\\mathrm{cm^3}$. The fraction submerged is $917/1000 = 91.7\\%$. (c) The water level stays the same. The submerged ice displaces $50.0\\,\\mathrm{cm^3}$ of water. When the ice melts, the $50\\,\\mathrm{g}$ of meltwater occupies $50/1000 = 0.050\\,\\mathrm{cm^3}$... wait: $50\\,\\mathrm{g}$ of water has volume $50.0\\,\\mathrm{cm^3}$ (since water density $= 1.0\\,\\mathrm{g/cm^3}$). This is exactly the same as the displaced volume, so the level stays the same.",
+        "hints": [
+          "Use $V = m/\\rho$ for the ice cube's total volume.",
+          "For floating objects, upthrust = weight, which gives the submerged volume.",
+          "Compare the volume of displaced water to the volume of meltwater."
+        ]
+      },
+      {
+        "id": "CQ-U02-03-3",
+        "statement": "A ship made of steel (density $7800\\,\\mathrm{kg/m^3}$) floats in seawater (density $1025\\,\\mathrm{kg/m^3}$). The ship has a total mass of $5.0 \\times 10^7\\,\\mathrm{kg}$. (a) Calculate the volume of seawater the ship must displace to float. (b) Explain why a ship made of steel floats even though steel is denser than water. (c) The ship sails from the sea into a freshwater river (density $1000\\,\\mathrm{kg/m^3}$). State and explain what happens to how deep the ship sits in the water.",
+        "answer": "(a) Upthrust = weight: $\\rho_{\\text{sea}} \\times V \\times g = mg$. So $V = m / \\rho_{\\text{sea}} = 5.0 \\times 10^7 \\div 1025 = 48\\,780\\,\\mathrm{m^3} \\approx 4.9 \\times 10^4\\,\\mathrm{m^3}$. (b) Although solid steel is denser than water, the ship is a hollow structure enclosing a large volume of air. The overall average density of the ship (steel + air) is less than the density of seawater, so it floats. The ship displaces a volume of water whose weight equals the ship's total weight. (c) In freshwater (lower density), the ship must displace a larger volume to generate the same upthrust (same weight to support). New displaced volume $= 5.0 \\times 10^7 \\div 1000 = 50\\,000\\,\\mathrm{m^3}$. The ship sits deeper in the river by about $1220\\,\\mathrm{m^3}$ more submerged volume, which is a noticeable increase in draft."
       }
     ],
     "mcq": [

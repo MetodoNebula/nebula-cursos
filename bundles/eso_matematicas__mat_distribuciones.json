@@ -577,6 +577,73 @@
           "Calcular $P(X>1)=1-P(X=1)=0{,}625$ en vez de $1-F(1)$, olvidando que el valor $X=0$ también queda fuera de «más de 1»."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-DI01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Se lanza una moneda $3$ veces. Sea $X$ = número de caras. Determina los valores de $X$, calcula $P(X=k)$ para cada $k$, y halla $E[X]$ y $\\text{Var}(X)$.",
+        "hints": [
+          "$X \\in \\{0,1,2,3\\}$.",
+          "$P(X=k) = \\binom{3}{k}(0{,}5)^3$."
+        ],
+        "answer": "$E[X] = 1{,}5$, $\\text{Var}(X) = 0{,}75$.",
+        "full_solution": "$X$: $0,1,2,3$. $P(X=0)=1/8$, $P(X=1)=3/8$, $P(X=2)=3/8$, $P(X=3)=1/8$. $E[X]=0(1/8)+1(3/8)+2(3/8)+3(1/8)=12/8=1{,}5$. $E[X^2]=0+3/8+12/8+9/8=24/8=3$. $\\text{Var}(X)=3-1{,}5^2=3-2{,}25=0{,}75$.",
+        "common_errors": [
+          "Calcular $\\text{Var}(X)$ como $E[X^2]-E[X]$ en vez de $E[X^2]-(E[X])^2$."
+        ]
+      },
+      {
+        "id": "EX-DI01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un dado trucado tiene $P(6)=1/3$ y los demás equiprobables. Calcula $P(X=k)$ para cada cara, $E[X]$ y verifica que $\\sum P(X=k)=1$.",
+        "hints": [
+          "Las $5$ caras restantes se reparten $1-1/3 = 2/3$.",
+          "Cada una: $2/15$."
+        ],
+        "answer": "$E[X] \\approx 4{,}13$. La suma es $1$.",
+        "full_solution": "$P(1)=P(2)=P(3)=P(4)=P(5)=2/15$, $P(6)=1/3=5/15$. $\\sum=10/15+5/15=1$ ✓. $E[X]=(1+2+3+4+5)(2/15)+6(5/15)=30/15+30/15=60/15=4$. Corrección: $E[X]=1(2/15)+2(2/15)+3(2/15)+4(2/15)+5(2/15)+6(5/15)=(2+4+6+8+10+30)/15=60/15=4$.",
+        "common_errors": [
+          "Olvidar que las probabilidades deben sumar $1$ al definir la distribución."
+        ]
+      },
+      {
+        "id": "EX-DI01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué $E[X]$ no tiene por qué ser un valor que $X$ pueda tomar? Ilustra con el lanzamiento de un dado.",
+        "hints": [
+          "$E[X]$ es un promedio ponderado."
+        ],
+        "answer": "Porque $E[X]$ es un promedio: para un dado justo, $E[X]=3{,}5$, pero $X$ nunca vale $3{,}5$.",
+        "full_solution": "$E[X]=\\sum k \\cdot P(X=k) = (1+2+3+4+5+6)/6 = 3{,}5$. No hay cara con valor $3{,}5$. $E[X]$ es el centro de gravedad de la distribución de probabilidad, no un resultado observable. Analogía: la media de hijos por familia puede ser $1{,}7$, aunque nadie tiene $1{,}7$ hijos.",
+        "common_errors": [
+          "Pensar que $E[X]$ debe ser uno de los valores posibles de $X$."
+        ]
+      },
+      {
+        "id": "EX-DI01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En seguros, un cliente tiene probabilidad $0{,}02$ de un siniestro de $50\\,000$ EUR y $0{,}98$ de no tener siniestro. Si la prima es $1\\,500$ EUR, ¿es rentable para la aseguradora?",
+        "hints": [
+          "$E[\\text{coste}] = 0{,}02 \\times 50\\,000 = 1\\,000$.",
+          "Beneficio esperado = prima $-$ coste esperado."
+        ],
+        "answer": "$E[\\text{coste}] = 1\\,000$ EUR. Beneficio esperado = $500$ EUR. Sí, es rentable en promedio.",
+        "full_solution": "$E[\\text{coste}] = 0{,}02(50\\,000) + 0{,}98(0) = 1\\,000$ EUR. Prima: $1\\,500$ EUR. Beneficio esperado: $1\\,500-1\\,000 = 500$ EUR por póliza. Es rentable si se tiene una cartera grande (ley de los grandes números). Pero la varianza es alta: $\\text{Var} = 0{,}02(50\\,000)^2 - 1\\,000^2 = 49\\,000\\,000$, $\\sigma = 7\\,000$ EUR.",
+        "common_errors": [
+          "No considerar que un solo siniestro puede generar pérdida de $48\\,500$ EUR (la rentabilidad es en promedio, con muchas pólizas)."
+        ]
       }
     ],
     "exam_questions": [
@@ -1519,6 +1586,73 @@
           "Calcular $\\sigma=np(1-p)=12$ directamente como si fuera la desviación típica, olvidando la raíz cuadrada final."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-DI02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En un examen tipo test de $10$ preguntas con $4$ opciones, un alumno contesta al azar. Sea $X$ = aciertos. ¿$X \\sim B(n,p)$? Calcula $P(X \\geq 5)$ y $E[X]$.",
+        "hints": [
+          "$n=10$, $p=1/4=0{,}25$.",
+          "$P(X \\geq 5) = 1 - P(X \\leq 4)$."
+        ],
+        "answer": "$X \\sim B(10; 0{,}25)$. $E[X]=2{,}5$. $P(X \\geq 5) \\approx 0{,}078$.",
+        "full_solution": "$X \\sim B(10; 0{,}25)$: $10$ pruebas independientes, $p=0{,}25$. $E[X]=np=2{,}5$. $P(X=k)=\\binom{10}{k}(0{,}25)^k(0{,}75)^{10-k}$. $P(X \\geq 5) = 1-P(X \\leq 4) \\approx 1-0{,}9219 = 0{,}0781$. Aprobar por azar ($\\geq 5$) tiene menos del $8\\%$ de probabilidad.",
+        "common_errors": [
+          "Usar $p=0{,}5$ (solo hay $1$ correcta de $4$, no $2$ de $4$)."
+        ]
+      },
+      {
+        "id": "EX-DI02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un control de calidad rechaza un lote si, de $20$ piezas, más de $2$ son defectuosas. Si la tasa de defectos es $5\\%$, ¿cuál es la probabilidad de rechazar el lote?",
+        "hints": [
+          "$X \\sim B(20; 0{,}05)$.",
+          "$P(\\text{rechazo}) = P(X > 2) = 1-P(X \\leq 2)$."
+        ],
+        "answer": "$P(\\text{rechazo}) \\approx 0{,}075 = 7{,}5\\%$.",
+        "full_solution": "$X \\sim B(20; 0{,}05)$. $P(X=0) = 0{,}95^{20} \\approx 0{,}3585$. $P(X=1) = \\binom{20}{1}(0{,}05)(0{,}95)^{19} \\approx 0{,}3774$. $P(X=2) = \\binom{20}{2}(0{,}05)^2(0{,}95)^{18} \\approx 0{,}1887$. $P(X \\leq 2) \\approx 0{,}9246$. $P(\\text{rechazo}) = 1-0{,}9246 \\approx 0{,}0754$.",
+        "common_errors": [
+          "Calcular $P(X \\geq 2)$ en vez de $P(X > 2) = P(X \\geq 3)$."
+        ]
+      },
+      {
+        "id": "EX-DI02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué condiciones debe cumplir un experimento para que la variable siga una distribución binomial? ¿Qué ocurre si los ensayos no son independientes?",
+        "hints": [
+          "$n$ fijo, $2$ resultados, $p$ constante, independencia."
+        ],
+        "answer": "Condiciones: $n$ ensayos fijos, $2$ resultados, $p$ constante, independencia. Sin independencia, la distribución no es binomial.",
+        "full_solution": "Condiciones: 1) $n$ fijo. 2) Dos resultados (éxito/fracaso). 3) $p$ constante en cada ensayo. 4) Ensayos independientes. Si no son independientes (extracciones sin reposición de urna pequeña): se usa la distribución hipergeométrica. Si $p$ varía: no es binomial. Si $n$ no es fijo (contar hasta el $k$-ésimo éxito): distribución binomial negativa.",
+        "common_errors": [
+          "Aplicar la binomial a extracciones sin reposición de una urna pequeña (las probabilidades cambian)."
+        ]
+      },
+      {
+        "id": "EX-DI02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En epidemiología, si la eficacia de una vacuna es del $90\\%$ ($p = 0{,}1$ de enfermar entre vacunados) y se exponen $100$ vacunados, ¿cuál es la probabilidad de que más de $15$ enfermen? Usa la aproximación normal.",
+        "hints": [
+          "$X \\sim B(100; 0{,}1)$. $\\mu = 10$, $\\sigma = 3$.",
+          "Normal: $P(X > 15) \\approx P(Z > (15{,}5-10)/3)$."
+        ],
+        "answer": "$P(X > 15) \\approx P(Z > 1{,}83) \\approx 3{,}4\\%$.",
+        "full_solution": "$X \\sim B(100; 0{,}1)$: $\\mu = np = 10$, $\\sigma = \\sqrt{npq} = \\sqrt{9} = 3$. Con corrección de continuidad: $P(X > 15) = P(X \\geq 16) \\approx P(Z \\geq 15{,}5-10)/3) = P(Z \\geq 1{,}83) = 1-0{,}9664 = 0{,}034$. Solo un $3{,}4\\%$ de probabilidad.",
+        "common_errors": [
+          "Olvidar la corrección de continuidad ($15$ vs $15{,}5$) al pasar de discreta a continua."
+        ]
       }
     ],
     "exam_questions": [
@@ -2394,6 +2528,74 @@
           "Usar $z_0=0{,}67$ positivo, olvidando que el percentil 25 está por debajo de la media y su Z correspondiente debe ser negativo."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-DI03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Las alturas de los alumnos de un instituto siguen $N(170; 8)$ (cm). Calcula la probabilidad de que un alumno elegido al azar mida entre $162$ y $178$ cm.",
+        "hints": [
+          "Tipificar: $Z = (X-170)/8$.",
+          "$P(162 < X < 178) = P(-1 < Z < 1)$."
+        ],
+        "answer": "$P(-1 < Z < 1) \\approx 0{,}6827 = 68{,}27\\%$.",
+        "full_solution": "$Z_1 = (162-170)/8 = -1$. $Z_2 = (178-170)/8 = 1$. $P(-1 < Z < 1) = 2\\Phi(1)-1 = 2(0{,}8413)-1 = 0{,}6827$. Es la regla empírica: el $68{,}3\\%$ está a $\\pm 1\\sigma$ de la media.",
+        "common_errors": [
+          "No tipificar y buscar directamente en la tabla $P(162 < X < 178)$."
+        ]
+      },
+      {
+        "id": "EX-DI03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En la misma distribución $N(170; 8)$, ¿qué altura mínima debe tener un alumno para estar en el $10\\%$ más alto?",
+        "hints": [
+          "El percentil $90$: $P(X \\leq x_0) = 0{,}90$.",
+          "$z_{0{,}90} \\approx 1{,}28$."
+        ],
+        "answer": "$x_0 = 170 + 1{,}28 \\times 8 = 180{,}24$ cm.",
+        "full_solution": "Buscamos $x_0$ tal que $P(X \\leq x_0) = 0{,}90$. En la tabla: $\\Phi(z) = 0{,}90 \\Rightarrow z \\approx 1{,}28$. $x_0 = \\mu + z\\sigma = 170 + 1{,}28(8) = 180{,}24$ cm. Un alumno debe medir al menos $180{,}2$ cm para estar en el top $10\\%$.",
+        "common_errors": [
+          "Usar $z = 1{,}645$ ($\\Phi(1{,}645) = 0{,}95$, que es el top $5\\%$, no el top $10\\%$)."
+        ]
+      },
+      {
+        "id": "EX-DI03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué $P(X = a) = 0$ para cualquier valor $a$ en una distribución continua? ¿Significa que es imposible obtener exactamente $a$?",
+        "hints": [
+          "La probabilidad es el área bajo la curva.",
+          "Un punto tiene ancho $0$."
+        ],
+        "answer": "Porque la probabilidad es un área, y un punto tiene ancho $0$. No es imposible, pero tiene probabilidad $0$.",
+        "full_solution": "En una distribución continua, $P(X=a) = \\int_a^a f(x)dx = 0$. Un punto tiene 'longitud cero' en la recta real. Esto no significa imposibilidad (es un resultado posible), sino que la probabilidad se asigna a intervalos, no a puntos individuales. Consecuencia práctica: $P(X < a) = P(X \\leq a)$.",
+        "common_errors": [
+          "Confundir 'probabilidad $0$' con 'imposible' (en el contexto continuo no son lo mismo)."
+        ]
+      },
+      {
+        "id": "EX-DI03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En psicometría, el CI sigue $N(100; 15)$. ¿Qué porcentaje tiene CI superior a $130$ (superdotación)? ¿Y entre $85$ y $115$?",
+        "hints": [
+          "$Z = (130-100)/15 = 2$.",
+          "$P(Z > 2) = 1 - \\Phi(2)$."
+        ],
+        "answer": "$P(X > 130) \\approx 2{,}28\\%$. $P(85 < X < 115) \\approx 68{,}27\\%$.",
+        "full_solution": "$P(X > 130)$: $Z = 2$, $P(Z > 2) = 1-0{,}9772 = 0{,}0228 = 2{,}28\\%$. $P(85 < X < 115)$: $Z_1 = -1$, $Z_2 = 1$, $P = 0{,}6827 = 68{,}27\\%$ (la mayoría está a $\\pm 1\\sigma$). Solo $\\approx 2{,}3\\%$ de la población tiene CI $> 130$.",
+        "common_errors": [
+          "Confundir $\\sigma$ con $\\sigma^2$ ($15$ es la desviación típica, no la varianza)."
+        ]
       }
     ],
     "exam_questions": [
@@ -3190,6 +3392,73 @@
           "Dar por bueno el resultado $0$ sin preguntarse si es razonable para un valor que está a un solo $\\sigma$ de la media."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-DI04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una encuesta a $400$ personas pregunta si apoyan una medida ($p = 0{,}6$). Aproxima por la normal la probabilidad de que entre $230$ y $250$ personas la apoyen.",
+        "hints": [
+          "$X \\sim B(400; 0{,}6) \\approx N(240; 9{,}8)$.",
+          "$\\mu = 240$, $\\sigma = \\sqrt{96} \\approx 9{,}8$."
+        ],
+        "answer": "$P(230 \\leq X \\leq 250) \\approx P(-1{,}02 < Z < 1{,}02) \\approx 69{,}3\\%$.",
+        "full_solution": "$\\mu = np = 240$, $\\sigma = \\sqrt{npq} = \\sqrt{400(0{,}6)(0{,}4)} = \\sqrt{96} \\approx 9{,}80$. Con corrección de continuidad: $P(229{,}5 < X < 250{,}5)$. $Z_1 = (229{,}5-240)/9{,}80 = -1{,}07$; $Z_2 = (250{,}5-240)/9{,}80 = 1{,}07$. $P = \\Phi(1{,}07)-\\Phi(-1{,}07) \\approx 0{,}8577-0{,}1423 = 0{,}7154 \\approx 71{,}5\\%$.",
+        "common_errors": [
+          "No aplicar la corrección de continuidad ($230$ vs $229{,}5$ y $250$ vs $250{,}5$)."
+        ]
+      },
+      {
+        "id": "EX-DI04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué se necesita la corrección de continuidad al aproximar una binomial (discreta) por una normal (continua)? ¿Cuándo se puede omitir?",
+        "hints": [
+          "La binomial solo toma valores enteros; la normal es continua.",
+          "$P(X = k) \\approx P(k-0{,}5 < Y < k+0{,}5)$."
+        ],
+        "answer": "Porque la binomial toma valores enteros y la normal es continua. Se puede omitir si $n$ es muy grande.",
+        "full_solution": "La binomial asigna probabilidad a enteros: $P(X=k)$ es una barra de ancho $0$. En la normal, $P(Y=k) = 0$. Para compensar, se usa $P(X=k) \\approx P(k-0{,}5 < Y < k+0{,}5)$: convertir el punto en un intervalo de ancho $1$. Se puede omitir cuando $n$ es tan grande que $0{,}5/\\sigma$ es despreciable (regla: $np > 5$ y $nq > 5$).",
+        "common_errors": [
+          "Aplicar la corrección con el signo incorrecto: $P(X \\leq k) \\approx P(Y \\leq k-0{,}5)$ en vez de $P(Y \\leq k+0{,}5)$."
+        ]
+      },
+      {
+        "id": "EX-DI04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un fabricante sabe que el $3\\%$ de sus productos son defectuosos. En un lote de $500$, ¿cuál es la probabilidad de encontrar más de $20$ defectuosos?",
+        "hints": [
+          "$X \\sim B(500; 0{,}03) \\approx N(15; 3{,}81)$."
+        ],
+        "answer": "$P(X > 20) \\approx P(Z > 1{,}44) \\approx 7{,}5\\%$.",
+        "full_solution": "$\\mu = 500(0{,}03) = 15$. $\\sigma = \\sqrt{500(0{,}03)(0{,}97)} = \\sqrt{14{,}55} \\approx 3{,}81$. $P(X > 20) = P(X \\geq 21) \\approx P(Z \\geq (20{,}5-15)/3{,}81) = P(Z \\geq 1{,}44) = 1-0{,}9251 = 0{,}0749 \\approx 7{,}5\\%$.",
+        "common_errors": [
+          "Usar $20$ en vez de $20{,}5$ en la tipificación."
+        ]
+      },
+      {
+        "id": "EX-DI04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En elecciones, una encuesta a $1\\,000$ personas da un $52\\%$ de intención de voto para un candidato. ¿Cuál es el margen de error al $95\\%$?",
+        "hints": [
+          "$\\hat{p} = 0{,}52$, $n = 1000$.",
+          "Margen: $z_{0{,}975} \\sqrt{\\hat{p}(1-\\hat{p})/n}$."
+        ],
+        "answer": "Margen $\\approx \\pm 3{,}1\\%$. El candidato estaría entre $48{,}9\\%$ y $55{,}1\\%$.",
+        "full_solution": "$\\hat{p} = 0{,}52$. Error estándar: $\\sqrt{0{,}52 \\times 0{,}48/1000} = \\sqrt{0{,}0002496} \\approx 0{,}0158$. Margen al $95\\%$: $1{,}96 \\times 0{,}0158 = 0{,}031 = 3{,}1\\%$. IC: $(48{,}9\\%; 55{,}1\\%)$. Incluye el $50\\%$, así que la victoria no es segura.",
+        "common_errors": [
+          "Interpretar $52\\%$ como victoria segura sin considerar el margen de error."
+        ]
       }
     ],
     "exam_questions": [

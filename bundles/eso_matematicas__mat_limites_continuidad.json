@@ -543,6 +543,74 @@
             "purpose": "Practicar la lectura de límites laterales, límite y valor de la función sobre una gráfica."
           }
         ]
+      },
+      {
+        "id": "EX-LIM01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La concentración de un contaminante en un río $t$ horas después de un vertido es $C(t)=\\dfrac{500}{t+10}$ mg/L. Calcula $C(100)$, $C(1000)$ y $C(10000)$. ¿A qué valor parece tender la concentración a largo plazo?",
+        "hints": [
+          "Sustituye cada valor de $t$ y observa cómo evoluciona $C$.",
+          "Si el denominador crece sin límite, ¿qué le ocurre a la fracción?"
+        ],
+        "answer": "$C(100)\\approx4{,}55$; $C(1000)\\approx0{,}50$; $C(10000)\\approx0{,}05$. Tiende a $0$ mg/L.",
+        "full_solution": "$C(100)=500/110\\approx4{,}55$. $C(1000)=500/1010\\approx0{,}495$. $C(10000)=500/10010\\approx0{,}05$. A medida que $t\\to+\\infty$ el denominador crece sin cota y la fracción se acerca a $0$. Matemáticamente, $\\lim_{t\\to+\\infty}\\dfrac{500}{t+10}=0$, lo que significa que, con el tiempo, la concentración se diluye hasta ser prácticamente nula.",
+        "common_errors": [
+          "Confundir que el límite 0 signifique que la concentración llega exactamente a 0 en un instante concreto"
+        ]
+      },
+      {
+        "id": "EX-LIM01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El coste medio de producir $x$ unidades de un producto es $\\bar{C}(x)=\\dfrac{2000+5x}{x}$ euros. Calcula $\\bar{C}(10)$, $\\bar{C}(100)$, $\\bar{C}(1000)$ y deduce a qué valor tiende el coste medio cuando la producción es muy grande.",
+        "hints": [
+          "Simplifica la fracción: $\\bar{C}(x)=\\dfrac{2000}{x}+5$.",
+          "¿Qué ocurre con la primera parte cuando $x$ crece?"
+        ],
+        "answer": "$\\bar{C}(10)=205$; $\\bar{C}(100)=25$; $\\bar{C}(1000)=7$. Tiende a $5$ €/unidad.",
+        "full_solution": "$\\bar{C}(x)=\\frac{2000}{x}+5$. Al sustituir: $\\bar{C}(10)=200+5=205$, $\\bar{C}(100)=20+5=25$, $\\bar{C}(1000)=2+5=7$. Cuando $x\\to+\\infty$, $\\frac{2000}{x}\\to 0$ y $\\bar{C}\\to 5$. El coste medio tiende al coste variable unitario: los costes fijos se reparten entre tantas unidades que se vuelven despreciables.",
+        "common_errors": [
+          "Creer que el coste medio tiende a 0 en vez de al coste variable"
+        ]
+      },
+      {
+        "id": "EX-LIM01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un compañero dice: «Si $\\lim_{x\\to a^-}f(x)=3$ y $\\lim_{x\\to a^+}f(x)=3$, entonces $f(a)=3$». ¿Es cierto? Justifica tu respuesta con un contraejemplo o una demostración.",
+        "hints": [
+          "Piensa en una función definida a trozos donde el valor en $a$ sea distinto de los límites laterales.",
+          "¿Es lo mismo el límite en un punto que el valor de la función en ese punto?"
+        ],
+        "answer": "Falso. El límite puede existir y valer 3, pero $f(a)$ puede ser otro valor o no existir.",
+        "full_solution": "Falso. Basta un contraejemplo: sea $f(x)=\\begin{cases}3 & \\text{si }x\\neq 2\\\\7 & \\text{si }x=2\\end{cases}$. Los dos límites laterales valen 3, pero $f(2)=7\\neq 3$. Que el límite exista solo significa que los valores de $f$ se acercan a 3 cuando $x$ se acerca a $a$; no dice nada del valor que la función toma en $a$. Para que $f(a)=3$ haría falta, además, la continuidad de $f$ en $a$.",
+        "common_errors": [
+          "Confundir existencia de límite con continuidad"
+        ]
+      },
+      {
+        "id": "EX-LIM01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En farmacología, la dosis plasmática de un fármaco tras una inyección intravenosa es $D(t)=80\\,e^{-0{,}3t}$ mg/L, donde $t$ se mide en horas. Calcula $\\lim_{t\\to+\\infty}D(t)$ e interpreta el resultado médicamente.",
+        "hints": [
+          "Recuerda que $e^{-k}$ con $k$ muy grande tiende a 0.",
+          "¿Qué significa físicamente que la concentración tienda a un valor?"
+        ],
+        "answer": "$\\lim_{t\\to+\\infty}D(t)=0$: el fármaco se elimina completamente del organismo.",
+        "full_solution": "$\\lim_{t\\to+\\infty}80\\,e^{-0{,}3t}=80\\cdot 0=0$, ya que $e^{-0{,}3t}\\to 0$ cuando $t\\to+\\infty$. Esto significa que, a largo plazo, el organismo metaboliza y excreta todo el fármaco y su concentración en plasma se reduce a cero. Es la razón por la que se necesitan dosis repetidas para mantener un nivel terapéutico.",
+        "common_errors": [
+          "Pensar que la exponencial decreciente puede hacerse negativa"
+        ]
       }
     ],
     "exam_questions": [
@@ -1422,6 +1490,74 @@
             "caption": "$f(x)=\\dfrac{2x}{x-1}$ se dispara a $-\\infty$ por la izquierda de $x=1$ y a $+\\infty$ por la derecha, y se acerca a la altura $2$ cuando $x\\to\\pm\\infty$.",
             "purpose": "Practicar la lectura de límites infinitos en un punto y límites en el infinito sobre una gráfica."
           }
+        ]
+      },
+      {
+        "id": "EX-LIM02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La velocidad de un paracaidista en caída libre (con rozamiento) es $v(t)=50\\left(1-e^{-0{,}2t}\\right)$ m/s. Calcula el límite de $v(t)$ cuando $t\\to+\\infty$ e interpreta qué representa esa velocidad.",
+        "hints": [
+          "Cuando $t\\to+\\infty$, ¿a qué tiende $e^{-0{,}2t}$?",
+          "La velocidad límite se llama «velocidad terminal»."
+        ],
+        "answer": "$\\lim_{t\\to+\\infty}v(t)=50$ m/s. Es la velocidad terminal del paracaidista.",
+        "full_solution": "$\\lim_{t\\to+\\infty}50(1-e^{-0{,}2t})=50(1-0)=50$ m/s. A medida que cae, la resistencia del aire crece hasta igualar el peso, momento en que la aceleración se anula y la velocidad se estabiliza. Esa velocidad constante se llama «velocidad terminal» y vale 50 m/s en este modelo.",
+        "common_errors": [
+          "Creer que la velocidad crece indefinidamente sin tener en cuenta el rozamiento"
+        ]
+      },
+      {
+        "id": "EX-LIM02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El beneficio semanal de un puesto de mercado es $B(x)=\\dfrac{200x}{x+50}-80$ euros, donde $x$ es el número de clientes. (a) ¿Cuántos clientes hacen falta para no tener pérdidas? (b) ¿Cuál es el máximo beneficio teórico si el número de clientes crece sin límite?",
+        "hints": [
+          "Para (a), resuelve $B(x)=0$.",
+          "Para (b), calcula $\\lim_{x\\to+\\infty}B(x)$."
+        ],
+        "answer": "(a) $x=200$ clientes. (b) El beneficio tiende a 120 €.",
+        "full_solution": "(a) $B(x)=0\\Rightarrow \\frac{200x}{x+50}=80\\Rightarrow 200x=80x+4000\\Rightarrow 120x=4000\\Rightarrow x\\approx 33{,}3$, así que desde 34 clientes el beneficio es positivo. (b) $\\lim_{x\\to+\\infty}\\frac{200x}{x+50}-80=\\lim\\frac{200x}{x+50}-80=200-80=120$ €. La asíntota horizontal del beneficio es 120 €; nunca se supera por mucho que crezca la clientela.",
+        "common_errors": [
+          "Olvidar restar los 80 € de costes fijos al calcular el límite"
+        ]
+      },
+      {
+        "id": "EX-LIM02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Explica, con tus propias palabras y un ejemplo, la diferencia entre que una función tenga una asíntota horizontal y que tenga una asíntota vertical. ¿Puede una función tener ambas? Si es así, da un ejemplo concreto.",
+        "hints": [
+          "La asíntota horizontal se relaciona con $\\lim_{x\\to\\pm\\infty}$, la vertical con $\\lim_{x\\to a}=\\pm\\infty$.",
+          "Piensa en funciones racionales sencillas como $f(x)=1/x$."
+        ],
+        "answer": "Sí, por ejemplo $f(x)=\\frac{1}{x}$ tiene asíntota vertical en $x=0$ y horizontal en $y=0$.",
+        "full_solution": "La asíntota horizontal es la recta $y=L$ a la que la función se acerca cuando $x\\to\\pm\\infty$ (el límite en el infinito es finito). La asíntota vertical $x=a$ indica que la función se dispara ($\\to\\pm\\infty$) al acercarse a $x=a$. Una función puede tener ambas: $f(x)=\\frac{1}{x}$ tiene asíntota vertical $x=0$ (porque $\\lim_{x\\to 0^+}f=+\\infty$) y asíntota horizontal $y=0$ (porque $\\lim_{x\\to+\\infty}f=0$). Otro ejemplo: $f(x)=\\frac{3}{x-2}$ tiene AV en $x=2$ y AH en $y=0$.",
+        "common_errors": [
+          "Confundir las dos: decir 'la función toca la asíntota vertical' o 'nunca toca la horizontal'"
+        ]
+      },
+      {
+        "id": "EX-LIM02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "En ecología, el modelo logístico de crecimiento de una población es $P(t)=\\dfrac{K}{1+\\left(\\frac{K-P_0}{P_0}\\right)e^{-rt}}$, donde $K=10\\,000$ es la capacidad de carga, $P_0=500$ y $r=0{,}1$. ¿Cuál es la población a largo plazo? ¿Y la población inicial?",
+        "hints": [
+          "Para la población a largo plazo, calcula $\\lim_{t\\to+\\infty}P(t)$.",
+          "Para la inicial, sustituye $t=0$."
+        ],
+        "answer": "$P(0)=500$. $\\lim_{t\\to+\\infty}P(t)=10\\,000$.",
+        "full_solution": "Cuando $t=0$: $P(0)=\\frac{10000}{1+\\frac{9500}{500}\\cdot 1}=\\frac{10000}{1+19}=\\frac{10000}{20}=500$. Cuando $t\\to+\\infty$: $e^{-0{,}1t}\\to 0$, luego $P\\to\\frac{10000}{1+0}=10\\,000$. Interpretación: la población parte de 500 individuos y crece hasta estabilizarse en la capacidad de carga del ecosistema (10 000 individuos). Este es un límite finito en el infinito y corresponde a la asíntota horizontal del modelo logístico.",
+        "common_errors": [
+          "Creer que la población crece sin límite como en el modelo exponencial"
         ]
       }
     ],
@@ -2399,6 +2535,75 @@
           "Dar $0$ por escribir $\\infty-\\infty=0$, cuando es una indeterminación."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-LIM03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos ciudades pactan que, tras la fusión de sus servicios de transporte, el coste por viajero sea $C(n)=\\dfrac{n^2+3n}{n^2-4}$ euros, donde $n$ es el número de viajeros (en miles). Calcula el coste cuando el servicio se extiende a un número muy grande de viajeros.",
+        "hints": [
+          "Calcula $\\lim_{n\\to+\\infty}C(n)$.",
+          "Divide numerador y denominador entre $n^2$."
+        ],
+        "answer": "$\\lim_{n\\to+\\infty}C(n)=1$ €.",
+        "full_solution": "$\\lim_{n\\to+\\infty}\\frac{n^2+3n}{n^2-4}=\\lim\\frac{1+3/n}{1-4/n^2}=\\frac{1+0}{1-0}=1$. A medida que el número de viajeros crece, el coste por viajero se estabiliza en 1 €. Las economías de escala hacen que los costes fijos se diluyan.",
+        "common_errors": [
+          "No simplificar la indeterminación $\\infty/\\infty$ dividiendo por la mayor potencia"
+        ]
+      },
+      {
+        "id": "EX-LIM03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "El rendimiento de una inversión tras $n$ meses es $R(n)=\\dfrac{3n^2-12}{n^2+n-6}$ %. Calcula el rendimiento que se obtiene a los 2 meses y el rendimiento a largo plazo. ¿Hay algún problema con $n=2$?",
+        "hints": [
+          "Sustituye $n=2$ directamente. ¿Qué ocurre?",
+          "Factoriza numerador y denominador para resolver la indeterminación $0/0$."
+        ],
+        "answer": "Indeterminación $0/0$ en $n=2$; tras simplificar, $R(2)=12/5=2{,}4$ %. A largo plazo, $R\\to 3$ %.",
+        "full_solution": "$R(2)=\\frac{3(4)-12}{4+2-6}=\\frac{0}{0}$: indeterminación. Factorizamos: $3n^2-12=3(n-2)(n+2)$; $n^2+n-6=(n-2)(n+3)$. Simplificando: $R(n)=\\frac{3(n+2)}{n+3}$ para $n\\neq 2$. Entonces $\\lim_{n\\to 2}R(n)=\\frac{3\\cdot 4}{5}=\\frac{12}{5}=2{,}4$ %. A largo plazo: $\\lim_{n\\to+\\infty}\\frac{3(n+2)}{n+3}=3$ %.",
+        "common_errors": [
+          "Sustituir directamente sin detectar la indeterminación",
+          "Olvidar que el límite existe aunque la función no esté definida en ese punto"
+        ]
+      },
+      {
+        "id": "EX-LIM03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "¿Es cierto que $\\lim_{x\\to a}[f(x)\\cdot g(x)]=\\lim_{x\\to a}f(x)\\cdot\\lim_{x\\to a}g(x)$ siempre? Justifica tu respuesta y, si es falso, da un contraejemplo.",
+        "hints": [
+          "Piensa en qué pasa si uno de los límites no existe.",
+          "Considera $f(x)=x$ y $g(x)=1/x$ cuando $x\\to 0$."
+        ],
+        "answer": "Falso si alguno de los límites no existe. Ejemplo: $\\lim_{x\\to 0}x\\cdot\\frac{1}{x}=1$ pero $\\lim_{x\\to 0}\\frac{1}{x}$ no existe.",
+        "full_solution": "La propiedad del producto de límites exige que ambos límites existan y sean finitos. Si alguno no existe o es infinito, la regla no se aplica directamente. Contraejemplo: $f(x)=x$, $g(x)=\\frac{1}{x}$. $\\lim_{x\\to 0}f(x)=0$, $\\lim_{x\\to 0}g(x)$ no existe (diverge). Sin embargo, $\\lim_{x\\to 0}f(x)\\cdot g(x)=\\lim_{x\\to 0}1=1$. Multiplicar los límites daría $0\\cdot(\\text{no existe})$, que es una indeterminación $0\\cdot\\infty$.",
+        "common_errors": [
+          "Aplicar las propiedades de límites mecánicamente sin comprobar las hipótesis"
+        ]
+      },
+      {
+        "id": "EX-LIM03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En física nuclear, la masa de una muestra radiactiva es $m(t)=m_0\\cdot 2^{-t/T}$, donde $T$ es la vida media. Si $m_0=100$ g y $T=5$ años, calcula $\\lim_{t\\to+\\infty}m(t)$ y explica su significado físico.",
+        "hints": [
+          "Cuando $t\\to+\\infty$, ¿qué le ocurre al exponente $-t/T$?",
+          "$2^{-\\infty}=0$."
+        ],
+        "answer": "$\\lim_{t\\to+\\infty}m(t)=0$. La muestra se desintegra completamente.",
+        "full_solution": "$\\lim_{t\\to+\\infty}100\\cdot 2^{-t/5}=100\\cdot\\lim_{t\\to+\\infty}2^{-t/5}=100\\cdot 0=0$. Cuando $t$ crece, el exponente $-t/5$ tiende a $-\\infty$ y $2^{-t/5}\\to 0$. Físicamente: los átomos radiactivos se desintegran gradualmente; a largo plazo (muchas vidas medias) la masa de isótopo radiactivo tiende a cero, aunque nunca llega exactamente a cero en un tiempo finito.",
+        "common_errors": [
+          "Confundir la vida media con el tiempo que tarda en desaparecer toda la masa"
+        ]
       }
     ],
     "exam_questions": [
@@ -3430,6 +3635,74 @@
             "purpose": "Practicar la lectura de asíntotas y límites laterales sobre una gráfica."
           }
         ]
+      },
+      {
+        "id": "EX-LIM04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El coste unitario de imprimir $x$ camisetas personalizadas es $C(x)=\\dfrac{300+8x}{x}$ euros. (a) Halla las asíntotas de $C(x)$. (b) Interpreta cada una en el contexto del negocio.",
+        "hints": [
+          "Reescribe como $C(x)=300/x+8$.",
+          "¿Qué ocurre cuando $x\\to 0^+$ y cuando $x\\to+\\infty$?"
+        ],
+        "answer": "AV: $x=0$ (no puedes imprimir 0 camisetas; el coste se dispara). AH: $y=8$ (con muchas unidades el coste tiende al coste variable de 8 €).",
+        "full_solution": "$C(x)=\\frac{300}{x}+8$. Asíntota vertical: $x=0$ (denominador 0). $\\lim_{x\\to 0^+}C(x)=+\\infty$: si imprimes muy pocas camisetas el coste fijo de 300 € se reparte entre pocas unidades y el precio se dispara. Asíntota horizontal: $\\lim_{x\\to+\\infty}C(x)=0+8=8$; con pedidos muy grandes, el coste unitario se acerca al coste variable puro de 8 €/camiseta. La gráfica es una hipérbola trasladada, decreciente para $x>0$.",
+        "common_errors": [
+          "Interpretar la asíntota vertical como un punto donde la función vale infinito en vez de un comportamiento límite"
+        ]
+      },
+      {
+        "id": "EX-LIM04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La eficiencia de un panel solar según el ángulo de incidencia es modelada por $E(\\theta)=\\dfrac{100\\theta}{\\theta+15}$ % para $\\theta\\geq 0$ (en grados respecto a la normal). Determina las asíntotas y el significado práctico del límite cuando $\\theta$ crece.",
+        "hints": [
+          "Calcula $\\lim_{\\theta\\to+\\infty}E(\\theta)$.",
+          "¿Tiene sentido físicamente que $\\theta$ sea muy grande?"
+        ],
+        "answer": "AH en $E=100$; la eficiencia nunca supera el 100 %. No hay AV para $\\theta\\geq 0$.",
+        "full_solution": "$\\lim_{\\theta\\to+\\infty}\\frac{100\\theta}{\\theta+15}=\\lim\\frac{100}{1+15/\\theta}=100$. La asíntota horizontal es $y=100$, lo que significa que la eficiencia máxima teórica es del 100 % pero nunca se alcanza exactamente. No hay AV porque el denominador $\\theta+15>0$ para $\\theta\\geq 0$. En la práctica, $\\theta$ no puede crecer indefinidamente, así que el modelo es una simplificación útil solo en un rango.",
+        "common_errors": [
+          "Creer que la función alcanza el valor de la asíntota horizontal en algún punto"
+        ]
+      },
+      {
+        "id": "EX-LIM04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "¿Puede la gráfica de una función cruzar una asíntota horizontal? Justifica tu respuesta con un ejemplo o una demostración de que es imposible.",
+        "hints": [
+          "Piensa en funciones que oscilan y se amortiguan, como $f(x)=\\frac{\\sin x}{x}$.",
+          "La asíntota describe el comportamiento cuando $x\\to\\pm\\infty$, no prohíbe intersecciones."
+        ],
+        "answer": "Sí, puede cruzarla. Ejemplo: $f(x)=\\frac{\\sin x}{x}$; AH en $y=0$, pero la función cruza el eje $y=0$ infinitas veces.",
+        "full_solution": "Sí. La asíntota horizontal $y=L$ solo exige que $\\lim_{x\\to+\\infty}f(x)=L$; esto no impide que $f(x)=L$ en algunos puntos ni que $f$ oscile alrededor de $L$. Ejemplo: $f(x)=\\frac{\\sin x}{x}$ tiene AH $y=0$ pero $f(k\\pi)=0$ para todo entero $k\\neq 0$: la gráfica cruza la asíntota infinitas veces. En cambio, una función no puede cruzar su asíntota vertical (donde la función no está definida).",
+        "common_errors": [
+          "Afirmar categóricamente que una función nunca toca su asíntota"
+        ]
+      },
+      {
+        "id": "EX-LIM04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En biología, la velocidad de una reacción enzimática (modelo de Michaelis-Menten) es $v=\\dfrac{V_{\\max}\\cdot[S]}{K_m+[S]}$, donde $[S]$ es la concentración de sustrato. Si $V_{\\max}=120$ y $K_m=30$, halla las asíntotas de $v$ como función de $[S]$ e interprétales biológicamente.",
+        "hints": [
+          "¿Qué pasa cuando $[S]\\to+\\infty$?",
+          "¿Tiene sentido $[S]\\to 0$?"
+        ],
+        "answer": "AH: $v=120$ (velocidad máxima). No hay AV para $[S]\\geq 0$. $v(0)=0$.",
+        "full_solution": "$\\lim_{[S]\\to+\\infty}\\frac{120[S]}{30+[S]}=\\lim\\frac{120}{30/[S]+1}=120$. La AH $v=V_{\\max}=120$ indica que, por mucho sustrato que añadamos, la velocidad no supera $V_{\\max}$: la enzima se satura. $v(0)=0$: sin sustrato no hay reacción. Para $[S]\\geq 0$ el denominador es positivo, así que no hay AV. $K_m$ es la concentración a la que $v=V_{\\max}/2=60$: $v(30)=\\frac{120\\cdot30}{60}=60$.",
+        "common_errors": [
+          "Confundir $K_m$ con la velocidad máxima"
+        ]
       }
     ],
     "exam_questions": [
@@ -4357,6 +4630,74 @@
           "Imponer la continuidad solo en uno de los dos puntos de unión."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-LIM05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una tarifa de electricidad cobra $0{,}12$ €/kWh por los primeros 200 kWh y $0{,}20$ €/kWh por cada kWh adicional. Escribe la función de coste $C(x)$ para $x$ kWh y determina si es continua en $x=200$.",
+        "hints": [
+          "Define $C(x)$ a trozos: uno para $0\\leq x\\leq 200$ y otro para $x>200$.",
+          "Comprueba si los límites laterales en $x=200$ coinciden con $C(200)$."
+        ],
+        "answer": "$C(x)$ es continua en $x=200$: ambos trozos dan $C(200)=24$ €.",
+        "full_solution": "$C(x)=\\begin{cases}0{,}12x & \\text{si }0\\leq x\\leq 200\\\\24+0{,}20(x-200) & \\text{si }x>200\\end{cases}$. En $x=200$: $\\lim_{x\\to200^-}C(x)=0{,}12\\cdot200=24$. $\\lim_{x\\to200^+}C(x)=24+0{,}20(200-200)=24$. $C(200)=24$. Los tres valores coinciden, así que $C$ es continua en $x=200$. La función es continua y tiene un cambio de pendiente (esquina), pero no un salto.",
+        "common_errors": [
+          "Confundir cambio de pendiente con discontinuidad"
+        ]
+      },
+      {
+        "id": "EX-LIM05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un aparcamiento cobra $2$ € la primera hora y $1{,}50$ € cada hora adicional empezada. Escribe la función coste $C(t)$ para $t>0$ y clasifica la discontinuidad en $t=1$, $t=2$, etc.",
+        "hints": [
+          "Se trata de una función escalonada (parte entera).",
+          "¿Hay un salto en cada hora exacta?"
+        ],
+        "answer": "$C(t)$ tiene discontinuidades de salto finito en $t=1, 2, 3, \\ldots$ (evitables de la izquierda, salto al pasar a la hora siguiente).",
+        "full_solution": "$C(t)=2$ si $0<t\\leq 1$; $C(t)=2+1{,}5\\cdot\\lceil t-1\\rceil$ si $t>1$, donde $\\lceil\\cdot\\rceil$ es la función techo. En $t=2$: $\\lim_{t\\to 2^-}C(t)=2+1{,}5\\cdot 1=3{,}5$, pero $C(2)=2+1{,}5\\cdot 1=3{,}5$ y $\\lim_{t\\to 2^+}C(t)=2+1{,}5\\cdot 2=5$. En realidad, si el aparcamiento cobra la hora empezada, el salto ocurre justo al superar cada hora exacta: es una discontinuidad de salto finito. La función es continua por la derecha en cada entero.",
+        "common_errors": [
+          "No reconocer la función techo como modelo de cobro por hora empezada"
+        ]
+      },
+      {
+        "id": "EX-LIM05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "Si $f$ es continua en $[a,b]$, $f(a)<0$ y $f(b)>0$, ¿existe necesariamente algún $c\\in(a,b)$ con $f(c)=0$? ¿Y si $f$ no es continua? Justifica ambas respuestas.",
+        "hints": [
+          "Piensa en el teorema de Bolzano.",
+          "Para el caso discontinuo, busca un contraejemplo sencillo."
+        ],
+        "answer": "Sí si $f$ es continua (Bolzano). No necesariamente si no lo es: $f(x)=-1$ para $x<0$, $f(0)=1$, $f(x)=1$ para $x>0$.",
+        "full_solution": "Si $f$ es continua en $[a,b]$: el teorema de Bolzano (caso particular del TVI) garantiza que existe al menos un $c\\in(a,b)$ con $f(c)=0$. La continuidad es imprescindible: si $f$ es discontinua, puede saltar de negativo a positivo sin pasar por cero. Contraejemplo en $[-1,1]$: $f(x)=\\begin{cases}-1&x<0\\\\1&x\\geq 0\\end{cases}$. $f(-1)=-1<0$, $f(1)=1>0$, pero $f$ nunca vale 0.",
+        "common_errors": [
+          "Aplicar Bolzano sin verificar la continuidad de la función"
+        ]
+      },
+      {
+        "id": "EX-LIM05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En informática, la función que asocia a cada número real su parte entera $f(x)=\\lfloor x\\rfloor$ se usa para redondeo y direcciones de memoria. Clasifica las discontinuidades de $f$ e indica qué tipo son.",
+        "hints": [
+          "¿Qué ocurre en los valores enteros?",
+          "Calcula los límites laterales en un entero cualquiera, por ejemplo $x=3$."
+        ],
+        "answer": "Discontinuidades de salto finito (salto = 1) en cada $x$ entero.",
+        "full_solution": "Para cualquier $n\\in\\mathbb{Z}$: $\\lim_{x\\to n^-}\\lfloor x\\rfloor=n-1$ y $\\lim_{x\\to n^+}\\lfloor x\\rfloor=n$. Como $f(n)=n$, la función es continua por la derecha. El salto es $n-(n-1)=1$. Se trata de discontinuidades de salto finito. En todo punto no entero, $f$ es continua (localmente constante). Esta función aparece en informática para asignar direcciones de bloques de memoria: el bloque donde se almacena la posición $x$ es $\\lfloor x/\\text{tamaño}\\rfloor$.",
+        "common_errors": [
+          "Confundir la función parte entera con la función redondeo"
+        ]
       }
     ],
     "exam_questions": [

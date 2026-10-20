@@ -497,6 +497,77 @@
           "Pensar que la TVM 'depende del intervalo elegido' y que por tanto no se puede afirmar nada sin un ejemplo numérico, sin ver que el argumento vale para cualquier intervalo a la vez."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-DER01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La temperatura de un horno, en °C, $t$ minutos después de encenderlo es $T(t)=20+180(1-e^{-0{,}05t})$. Calcula la tasa de variación media de la temperatura entre $t=0$ y $t=10$ min, y entre $t=10$ y $t=20$ min. ¿Por qué la segunda es menor?",
+        "hints": [
+          "TVM $=\\frac{T(b)-T(a)}{b-a}$.",
+          "Piensa en el comportamiento de la curva exponencial: ¿cómo se «frena» el calentamiento?"
+        ],
+        "answer": "TVM$_{[0,10]}\\approx 7{,}09$ °C/min; TVM$_{[10,20]}\\approx 4{,}30$ °C/min. La segunda es menor porque el horno se acerca a su temperatura máxima y el calentamiento se desacelera.",
+        "full_solution": "$T(0)=20$. $T(10)=20+180(1-e^{-0{,}5})\\approx20+180\\cdot0{,}3935=90{,}83$. $T(20)=20+180(1-e^{-1})\\approx20+180\\cdot0{,}6321=133{,}78$. TVM$_{[0,10]}=(90{,}83-20)/10=7{,}083$. TVM$_{[10,20]}=(133{,}78-90{,}83)/10=4{,}295$. La función $T(t)$ es cóncava (derivada decreciente): el horno se calienta rápido al principio y cada vez más lento al acercarse a la temperatura de equilibrio ($20+180=200$ °C).",
+        "common_errors": [
+          "Calcular $T(10)-T(0)$ sin dividir entre el intervalo",
+          "No interpretar la disminución de la TVM en contexto"
+        ]
+      },
+      {
+        "id": "EX-DER01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El número de suscriptores de una plataforma de streaming, en miles, es $S(t)=50t^2+200t+100$ donde $t$ son años desde el lanzamiento. Calcula la TVM entre los años 1 y 3, y la tasa de variación instantánea en $t=2$. Interpreta ambas.",
+        "hints": [
+          "TVM$=\\frac{S(3)-S(1)}{3-1}$.",
+          "La TVI en $t=2$ es $\\lim_{h\\to 0}\\frac{S(2+h)-S(2)}{h}$, o bien $S'(2)$."
+        ],
+        "answer": "TVM$_{[1,3]}=400$ miles/año. TVI$(2)=S'(2)=400$ miles/año.",
+        "full_solution": "$S(1)=50+200+100=350$. $S(3)=450+600+100=1150$. TVM$=\\frac{1150-350}{2}=400$. Para la TVI: $S'(t)=100t+200$, así $S'(2)=200+200=400$. Coinciden porque para un polinomio de grado 2 la TVM en un intervalo simétrico respecto al punto medio es igual a la derivada en ese punto. 400 miles/año significa que en $t=2$ la plataforma crece a un ritmo de 400 000 suscriptores por año.",
+        "common_errors": [
+          "Confundir TVM con TVI",
+          "No dar unidades a la respuesta"
+        ]
+      },
+      {
+        "id": "EX-DER01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Si la TVM de una función entre $a$ y $b$ es positiva, ¿puede la función ser decreciente en algún punto del intervalo $(a,b)$? Justifica con un razonamiento o un contraejemplo.",
+        "hints": [
+          "Piensa en una función que suba y luego baje, pero termine más arriba de donde empezó.",
+          "¿La TVM positiva solo exige que $f(b)>f(a)$?"
+        ],
+        "answer": "Sí. Ejemplo: $f(x)=x^3-3x$ en $[-1,3]$. $f(3)>f(-1)$ (TVM$>0$) pero $f$ decrece en $(-1,1)$.",
+        "full_solution": "La TVM positiva entre $a$ y $b$ solo requiere $f(b)>f(a)$; dice que el valor neto ha subido, no que la función sea creciente en todo punto. Contraejemplo: $f(x)=x^3-3x$ en $[-1,3]$. $f(-1)=-1+3=2$, $f(3)=27-9=18$. TVM$=\\frac{18-2}{4}=4>0$. Pero $f'(x)=3x^2-3=0\\Rightarrow x=\\pm1$; en $(-1,1)$ la derivada es negativa, así que $f$ decrece en esa zona.",
+        "common_errors": [
+          "Creer que TVM positiva implica función siempre creciente"
+        ]
+      },
+      {
+        "id": "EX-DER01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En medicina, la concentración plasmática de un antibiótico es $C(t)=10te^{-0{,}5t}$ mg/L, donde $t$ son horas desde la toma. Calcula la TVM entre $t=1$ y $t=3$ h. ¿Está subiendo o bajando la concentración en promedio en ese intervalo?",
+        "hints": [
+          "Calcula $C(1)$ y $C(3)$ y aplica la fórmula de TVM.",
+          "Si la TVM es negativa, la concentración baja en promedio."
+        ],
+        "answer": "$C(1)\\approx 6{,}07$; $C(3)\\approx 6{,}69$. TVM $\\approx 0{,}31$ mg/(L·h). La concentración sube en promedio.",
+        "full_solution": "$C(1)=10\\cdot1\\cdot e^{-0{,}5}\\approx10\\cdot0{,}6065=6{,}065$. $C(3)=10\\cdot3\\cdot e^{-1{,}5}\\approx30\\cdot0{,}2231=6{,}694$. TVM$=\\frac{6{,}694-6{,}065}{3-1}=\\frac{0{,}629}{2}\\approx0{,}315$ mg/(L·h). La TVM es positiva, así que en promedio la concentración sigue subiendo entre la hora 1 y la 3. Sin embargo, al ser una función con máximo en $t=2$, la concentración sube hasta $t=2$ y luego baja; la TVM promedia ambos comportamientos.",
+        "common_errors": [
+          "No evaluar correctamente la exponencial",
+          "Interpretar TVM como comportamiento puntual"
+        ]
       }
     ],
     "exam_questions": [
@@ -1378,6 +1449,76 @@
           "Rechazar una recta como tangente solo porque corta la curva en otro punto alejado del punto de estudio."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-DER02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El perfil longitudinal de una montaña rusa se modela con $h(x)=0{,}001x^3-0{,}06x^2+x+10$ metros, donde $x$ es la distancia horizontal en metros. Calcula la pendiente de la vía en $x=20$ m y en $x=40$ m. ¿Dónde es más empinada la subida?",
+        "hints": [
+          "La pendiente de la vía en cada punto es $h'(x)$.",
+          "Compara los valores de $h'(20)$ y $h'(40)$."
+        ],
+        "answer": "$h'(20)=-0{,}2$; $h'(40)=1{,}0$. En $x=40$ la pendiente es mayor en valor absoluto de la subida.",
+        "full_solution": "$h'(x)=0{,}003x^2-0{,}12x+1$. $h'(20)=0{,}003(400)-0{,}12(20)+1=1{,}2-2{,}4+1=-0{,}2$. La vía baja con pendiente $-0{,}2$ (descenso suave). $h'(40)=0{,}003(1600)-0{,}12(40)+1=4{,}8-4{,}8+1=1{,}0$. La vía sube con pendiente 1 (45°). La subida es más empinada en $x=40$ ($|h'(40)|=1>|h'(20)|=0{,}2$).",
+        "common_errors": [
+          "Evaluar la función $h$ en vez de su derivada $h'$",
+          "No interpretar el signo negativo como descenso"
+        ]
+      },
+      {
+        "id": "EX-DER02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Los beneficios de una startup, en miles de euros, son $B(t)=-2t^2+20t-30$ donde $t$ son años desde su creación. Halla la ecuación de la recta tangente a $B(t)$ en $t=3$ e interpreta su pendiente.",
+        "hints": [
+          "La recta tangente en $(a, B(a))$ es $y=B(a)+B'(a)(t-a)$.",
+          "$B'(t)=-4t+20$."
+        ],
+        "answer": "Tangente: $y=8t-6$. La pendiente 8 significa que en el año 3 los beneficios crecen a razón de 8 000 €/año.",
+        "full_solution": "$B(3)=-18+60-30=12$. $B'(t)=-4t+20$, $B'(3)=-12+20=8$. Tangente: $y-12=8(t-3)\\Rightarrow y=8t-12$. Espera, $y=12+8(t-3)=12+8t-24=8t-12$. La pendiente $8$ (miles de euros por año) indica que en $t=3$ los beneficios crecen a 8000 €/año. Como $B'$ es decreciente, este ritmo se reducirá hasta que $B'(t)=0$ en $t=5$ (máximo beneficio).",
+        "common_errors": [
+          "Confundir el valor de la función con la pendiente",
+          "No dar unidades al interpretar la pendiente"
+        ]
+      },
+      {
+        "id": "EX-DER02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es posible que la recta tangente a una función en un punto corte a la gráfica en ese mismo punto? Si es así, ¿qué tipo de punto sería? Da un ejemplo concreto.",
+        "hints": [
+          "Piensa en un punto de inflexión.",
+          "La tangente en un punto de inflexión cruza la curva."
+        ],
+        "answer": "Sí. Ejemplo: $f(x)=x^3$ en $x=0$. La tangente $y=0$ cruza la gráfica.",
+        "full_solution": "Sí. En un punto de inflexión la tangente cruza la gráfica. Ejemplo: $f(x)=x^3$ en $x=0$. $f(0)=0$, $f'(0)=0$, así la tangente es $y=0$. Pero $x^3<0$ para $x<0$ y $x^3>0$ para $x>0$, así que la tangente pasa de estar por encima a por debajo de la curva (la cruza). Un punto de inflexión es aquel donde la concavidad cambia de signo; la tangente allí siempre atraviesa la gráfica.",
+        "common_errors": [
+          "Creer que la tangente nunca puede cortar a la curva en el punto de tangencia"
+        ]
+      },
+      {
+        "id": "EX-DER02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En astronomía, la posición angular de un planeta visto desde la Tierra es $\\theta(t)=2\\sin(0{,}5t)+0{,}3t$ radianes, donde $t$ son meses. ¿Cuál es la velocidad angular aparente del planeta en $t=\\pi$ meses? Interpreta el resultado.",
+        "hints": [
+          "La velocidad angular es $\\theta'(t)$.",
+          "$\\theta'(t)=2\\cos(0{,}5t)\\cdot 0{,}5+0{,}3$."
+        ],
+        "answer": "$\\theta'(\\pi)=\\cos(\\pi/2)+0{,}3=0+0{,}3=0{,}3$ rad/mes.",
+        "full_solution": "$\\theta'(t)=2\\cdot0{,}5\\cos(0{,}5t)+0{,}3=\\cos(0{,}5t)+0{,}3$. En $t=\\pi$: $\\theta'(\\pi)=\\cos(\\pi/2)+0{,}3=0+0{,}3=0{,}3$ rad/mes. En ese instante, la velocidad angular aparente se debe solo al movimiento medio ($0{,}3$ rad/mes); la componente sinusoidal (debida a la órbita elíptica) contribuye con velocidad cero porque el coseno pasa por cero. Es un momento en que la velocidad oscilante cambia de sentido.",
+        "common_errors": [
+          "Olvidar aplicar la regla de la cadena al derivar $\\sin(0{,}5t)$"
+        ]
       }
     ],
     "exam_questions": [
@@ -2266,6 +2407,75 @@
           "Emparejar por parecido superficial entre el polinomio y su derivada (mismo número de términos) en vez de derivar y comparar de verdad."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-DER03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "El área de un charco circular que se expande es $A(r)=\\pi r^2$ cm². Si el radio aumenta con el tiempo, calcula $A'(r)$ y determina cuánto aumenta aproximadamente el área cuando $r$ pasa de 10 a 10{,}1 cm.",
+        "hints": [
+          "$A'(r)=2\\pi r$.",
+          "El incremento aproximado es $\\Delta A\\approx A'(r)\\cdot\\Delta r$."
+        ],
+        "answer": "$A'(r)=2\\pi r$. $\\Delta A\\approx 2\\pi(10)(0{,}1)=2\\pi\\approx 6{,}28$ cm².",
+        "full_solution": "$A'(r)=2\\pi r$ (derivada de $\\pi r^2$). Para $r=10$: $A'(10)=20\\pi$. Si $\\Delta r=0{,}1$: $\\Delta A\\approx A'(10)\\cdot\\Delta r=20\\pi\\cdot0{,}1=2\\pi\\approx6{,}28$ cm². El valor exacto: $A(10{,}1)-A(10)=\\pi(102{,}01-100)=2{,}01\\pi\\approx6{,}31$ cm². La aproximación lineal da un error de apenas $0{,}5\\%$.",
+        "common_errors": [
+          "Olvidar que la derivada da una aproximación, no el incremento exacto"
+        ]
+      },
+      {
+        "id": "EX-DER03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La energía cinética de un cuerpo es $E_c=\\frac{1}{2}mv^2$, donde $m=5$ kg es constante. Calcula $\\frac{dE_c}{dv}$ y evalúa en $v=10$ m/s. ¿Qué representa físicamente esta derivada?",
+        "hints": [
+          "Trata $m$ como constante y deriva respecto a $v$.",
+          "$\\frac{dE_c}{dv}$ relaciona el cambio de energía con el cambio de velocidad."
+        ],
+        "answer": "$\\frac{dE_c}{dv}=mv=50$ J·s/m en $v=10$. Es el momento lineal ($p=mv$).",
+        "full_solution": "$E_c=\\frac{1}{2}(5)v^2=2{,}5v^2$. $\\frac{dE_c}{dv}=5v$. En $v=10$: $\\frac{dE_c}{dv}=50$ J/(m/s) = 50 kg·m/s. Esta derivada es $mv$, es decir, el momento lineal del cuerpo. Físicamente: a 10 m/s, cada incremento de 1 m/s en la velocidad aumenta la energía cinética en aproximadamente 50 J. Este es un puente entre cinemática y dinámica.",
+        "common_errors": [
+          "Derivar respecto a $m$ en vez de $v$",
+          "No reconocer el resultado como el momento lineal"
+        ]
+      },
+      {
+        "id": "EX-DER03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que $(f+g)'=f'+g'$ para cualesquiera $f$ y $g$ derivables? ¿Y que $(f\\cdot g)'=f'\\cdot g'$? Justifica ambas respuestas.",
+        "hints": [
+          "La primera es la regla de la suma. ¿Y la del producto?",
+          "Prueba la segunda con $f(x)=x$ y $g(x)=x$."
+        ],
+        "answer": "La primera es verdadera (regla de la suma). La segunda es falsa: $(x\\cdot x)'=2x\\neq 1\\cdot 1=1$.",
+        "full_solution": "$(f+g)'=f'+g'$ es verdadera: es la regla de la suma de derivadas, demostrable con la definición de límite. $(fg)'=f'g'$ es FALSA. Contraejemplo: $f(x)=g(x)=x$. $(fg)'=(x^2)'=2x$, pero $f'g'=1\\cdot1=1$. Y $2x\\neq 1$. La regla correcta del producto es $(fg)'=f'g+fg'$: $(x\\cdot x)'=1\\cdot x+x\\cdot 1=2x$ ✓.",
+        "common_errors": [
+          "Aplicar la 'derivada del producto' como si fuera 'producto de derivadas'"
+        ]
+      },
+      {
+        "id": "EX-DER03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En economía, la función de demanda de un bien es $D(p)=500-3p^2$ unidades a precio $p$ euros. Calcula la «elasticidad marginal» $D'(p)$ y evalúa en $p=5$ y $p=10$. ¿En qué rango de precios es la demanda más sensible al precio?",
+        "hints": [
+          "$D'(p)=-6p$.",
+          "La sensibilidad es mayor donde $|D'(p)|$ es mayor."
+        ],
+        "answer": "$D'(5)=-30$; $D'(10)=-60$. A precios más altos la demanda es más sensible (cae más rápido).",
+        "full_solution": "$D'(p)=-6p$. En $p=5$: $D'(5)=-30$; cada euro de subida reduce la demanda en ~30 unidades. En $p=10$: $D'(10)=-60$; cada euro de subida reduce la demanda en ~60 unidades. $|D'|$ crece con $p$, así que la demanda es más sensible a precios altos. Esto tiene sentido: a precios altos, los consumidores reaccionan más ante subidas. Nota: la derivada es lineal en $p$ porque $D$ es cuadrática.",
+        "common_errors": [
+          "Ignorar el signo negativo (la demanda decrece al subir el precio)"
+        ]
       }
     ],
     "exam_questions": [
@@ -3173,6 +3383,75 @@
           "Olvidar el signo negativo que aporta la derivada de la interior $1-x$ (que es $-1$, no $1$), perdiendo un signo en todo el segundo término."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-DER04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Los ingresos de una empresa son $I(t)=t^2\\cdot e^{0{,}1t}$ miles de euros, $t$ años tras su fundación. Calcula $I'(t)$ usando la regla del producto y evalúa $I'(5)$.",
+        "hints": [
+          "$(uv)'=u'v+uv'$ con $u=t^2$ y $v=e^{0{,}1t}$.",
+          "$u'=2t$, $v'=0{,}1e^{0{,}1t}$."
+        ],
+        "answer": "$I'(t)=e^{0{,}1t}(2t+0{,}1t^2)$. $I'(5)=e^{0{,}5}(10+2{,}5)\\approx20{,}6$ miles €/año.",
+        "full_solution": "$I'(t)=2t\\cdot e^{0{,}1t}+t^2\\cdot 0{,}1e^{0{,}1t}=e^{0{,}1t}(2t+0{,}1t^2)$. En $t=5$: $I'(5)=e^{0{,}5}(10+2{,}5)=12{,}5\\cdot e^{0{,}5}\\approx12{,}5\\cdot1{,}6487=20{,}6$ miles de euros/año. Los ingresos crecen a un ritmo de 20 600 €/año en el quinto año. La fórmula muestra dos fuentes de crecimiento: el cuadrático ($2t$) y el exponencial ($0{,}1t^2$).",
+        "common_errors": [
+          "Olvidar la regla de la cadena al derivar $e^{0{,}1t}$",
+          "Multiplicar las derivadas en vez de usar la regla del producto"
+        ]
+      },
+      {
+        "id": "EX-DER04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La eficiencia de un filtro de agua es $E(t)=\\dfrac{100t}{t+5}$ %, donde $t$ son horas de funcionamiento. Usa la regla del cociente para calcular $E'(t)$ y evalúa la rapidez con que mejora la eficiencia en $t=5$ h.",
+        "hints": [
+          "$(u/v)'=\\frac{u'v-uv'}{v^2}$.",
+          "$u=100t$, $v=t+5$."
+        ],
+        "answer": "$E'(t)=\\frac{500}{(t+5)^2}$. $E'(5)=5$ %/h.",
+        "full_solution": "$E'(t)=\\frac{100(t+5)-100t\\cdot1}{(t+5)^2}=\\frac{100t+500-100t}{(t+5)^2}=\\frac{500}{(t+5)^2}$. En $t=5$: $E'(5)=\\frac{500}{100}=5$ %/h. A las 5 horas la eficiencia mejora a razón de 5 puntos porcentuales por hora. Como $E'(t)$ es decreciente (denominador crece), la mejora se frena con el tiempo.",
+        "common_errors": [
+          "Invertir numerador y denominador en la regla del cociente"
+        ]
+      },
+      {
+        "id": "EX-DER04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "Demuestra que la derivada de $f(x)=\\frac{1}{g(x)}$ es $f'(x)=-\\frac{g'(x)}{[g(x)]^2}$ usando la regla del cociente, y verifica el resultado con $g(x)=x^2+1$.",
+        "hints": [
+          "Escribe $f(x)=1/g(x)$ y aplica la regla del cociente con numerador $u=1$.",
+          "$u'=0$."
+        ],
+        "answer": "Demostración directa por regla del cociente. Verificación: $f(x)=\\frac{1}{x^2+1}$, $f'(x)=-\\frac{2x}{(x^2+1)^2}$.",
+        "full_solution": "$f(x)=\\frac{u}{v}$ con $u=1, v=g(x)$. $f'=\\frac{u'v-uv'}{v^2}=\\frac{0\\cdot g-1\\cdot g'}{g^2}=-\\frac{g'}{g^2}$. QED. Verificación: $g(x)=x^2+1$, $g'(x)=2x$. $f'(x)=-\\frac{2x}{(x^2+1)^2}$. Comprobación directa: derivada de $(x^2+1)^{-1}$ por cadena: $-1\\cdot(x^2+1)^{-2}\\cdot 2x=-\\frac{2x}{(x^2+1)^2}$ ✓.",
+        "common_errors": [
+          "Olvidar el signo negativo en la fórmula"
+        ]
+      },
+      {
+        "id": "EX-DER04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ecología, la biomasa de un bosque es $B(t)=100\\sqrt{1+0{,}2t}$ toneladas, $t$ años tras la repoblación. Calcula $B'(t)$ usando la regla de la cadena y estima la velocidad de crecimiento en $t=12$ años.",
+        "hints": [
+          "$B(t)=100(1+0{,}2t)^{1/2}$. Aplica cadena: derivada exterior por derivada interior.",
+          "$(u^{1/2})'=\\frac{1}{2}u^{-1/2}\\cdot u'$."
+        ],
+        "answer": "$B'(t)=\\frac{10}{\\sqrt{1+0{,}2t}}$. $B'(12)=\\frac{10}{\\sqrt{3{,}4}}\\approx 5{,}42$ t/año.",
+        "full_solution": "$B(t)=100(1+0{,}2t)^{1/2}$. $B'(t)=100\\cdot\\frac{1}{2}(1+0{,}2t)^{-1/2}\\cdot 0{,}2=\\frac{10}{\\sqrt{1+0{,}2t}}$. En $t=12$: $B'(12)=\\frac{10}{\\sqrt{1+2{,}4}}=\\frac{10}{\\sqrt{3{,}4}}\\approx\\frac{10}{1{,}844}=5{,}42$ t/año. El bosque crece unas 5{,}4 toneladas por año a los 12 años. La tasa de crecimiento decrece con el tiempo ($B'$ es decreciente), reflejando la maduración del bosque.",
+        "common_errors": [
+          "Olvidar derivar el interior (0{,}2) al aplicar la cadena"
+        ]
       }
     ],
     "exam_questions": [
@@ -4126,6 +4405,77 @@
           "Responder solo 'porque puede ser mínimo también', sin explicar el criterio real (el cambio de signo) que permite distinguir entre los casos."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-DER05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un agricultor quiere cercar un campo rectangular con 120 m de valla, aprovechando un río como uno de los lados. ¿Qué dimensiones maximizan el área?",
+        "hints": [
+          "Si $x$ es el lado paralelo al río: $2y+x=120$, $A=xy$.",
+          "Sustituye $y=(120-x)/2$ y maximiza $A(x)$."
+        ],
+        "answer": "$x=60$ m, $y=30$ m. Área máxima = 1800 m².",
+        "full_solution": "$A(x)=x\\cdot\\frac{120-x}{2}=60x-\\frac{x^2}{2}$. $A'(x)=60-x=0\\Rightarrow x=60$. $A''(x)=-1<0$: máximo. $y=(120-60)/2=30$. Área $=60\\cdot30=1800$ m². El rectángulo óptimo tiene el lado del río el doble de largo que los perpendiculares.",
+        "common_errors": [
+          "Plantear $2x+2y=120$ (olvidar que el río hace un lado)",
+          "No verificar que es un máximo y no un mínimo"
+        ]
+      },
+      {
+        "id": "EX-DER05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una fábrica produce $x$ unidades diarias con coste $C(x)=0{,}01x^3-0{,}6x^2+15x+200$ euros. ¿Para qué nivel de producción el coste marginal es mínimo?",
+        "hints": [
+          "El coste marginal es $C'(x)$.",
+          "Minimiza $C'(x)$ derivando otra vez: $(C')'=C''=0$."
+        ],
+        "answer": "$C'(x)=0{,}03x^2-1{,}2x+15$. $C''(x)=0{,}06x-1{,}2=0\\Rightarrow x=20$ unidades.",
+        "full_solution": "$C'(x)=0{,}03x^2-1{,}2x+15$ (coste marginal). $C''(x)=0{,}06x-1{,}2=0\\Rightarrow x=20$. $C'''(x)=0{,}06>0$: el punto $x=20$ es un mínimo de $C'$. El coste marginal mínimo es $C'(20)=0{,}03(400)-1{,}2(20)+15=12-24+15=3$ €/unidad. A 20 unidades diarias, el coste de producir una unidad adicional es el más bajo posible.",
+        "common_errors": [
+          "Confundir coste medio con coste marginal",
+          "Olvidar que hay que derivar dos veces"
+        ]
+      },
+      {
+        "id": "EX-DER05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un estudiante dice: «Si $f'(a)=0$ entonces $f$ tiene un extremo en $a$». ¿Es correcto? Justifica tu respuesta.",
+        "hints": [
+          "Piensa en $f(x)=x^3$ en $x=0$.",
+          "¿Qué condición adicional se necesita?"
+        ],
+        "answer": "Falso. $f(x)=x^3$: $f'(0)=0$ pero $x=0$ es un punto de inflexión, no un extremo.",
+        "full_solution": "Falso. $f'(a)=0$ es condición necesaria pero no suficiente para un extremo. Contraejemplo: $f(x)=x^3$. $f'(x)=3x^2$, $f'(0)=0$, pero $f$ es estrictamente creciente en $\\mathbb{R}$; $x=0$ es un punto de inflexión. Para garantizar un extremo, se necesita un cambio de signo en $f'$ alrededor de $a$ (criterio de la primera derivada) o bien $f''(a)\\neq 0$ (criterio de la segunda derivada).",
+        "common_errors": [
+          "Confundir condición necesaria con suficiente"
+        ]
+      },
+      {
+        "id": "EX-DER05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un ingeniero diseña una lata cilíndrica de 330 ml ($330$ cm³). ¿Qué radio y altura minimizan la cantidad de hojalata (superficie total)? Expresa la solución y calcula los valores numéricos.",
+        "hints": [
+          "$V=\\pi r^2h=330\\Rightarrow h=330/(\\pi r^2)$.",
+          "$S=2\\pi r^2+2\\pi rh$. Sustituye $h$ y minimiza $S(r)$."
+        ],
+        "answer": "$r=\\sqrt[3]{165/\\pi}\\approx 3{,}74$ cm, $h=2r\\approx 7{,}48$ cm.",
+        "full_solution": "$S(r)=2\\pi r^2+2\\pi r\\cdot\\frac{330}{\\pi r^2}=2\\pi r^2+\\frac{660}{r}$. $S'(r)=4\\pi r-\\frac{660}{r^2}=0\\Rightarrow 4\\pi r^3=660\\Rightarrow r^3=\\frac{660}{4\\pi}=\\frac{165}{\\pi}$. $r=\\left(\\frac{165}{\\pi}\\right)^{1/3}\\approx(52{,}52)^{1/3}\\approx3{,}745$ cm. $h=\\frac{330}{\\pi(3{,}745)^2}\\approx\\frac{330}{44{,}07}\\approx7{,}49$ cm. $S''(r)=4\\pi+1320/r^3>0$: mínimo. La lata óptima tiene $h=2r$ (altura = diámetro).",
+        "common_errors": [
+          "No sustituir $h$ en función de $r$ antes de derivar",
+          "Olvidar las dos tapas en la superficie"
+        ]
       }
     ],
     "exam_questions": [
@@ -5020,6 +5370,75 @@
           "Derivar $|x-2|$ como $1$ en todos los puntos, sin separar los dos trozos."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-DER06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un impuesto sobre la renta tiene dos tramos: $T(x)=\\begin{cases}0{,}15x&\\text{si }x\\leq 20\\\\3+0{,}25(x-20)&\\text{si }x>20\\end{cases}$ miles de euros. Comprueba si $T$ es derivable en $x=20$ e interpreta el resultado.",
+        "hints": [
+          "Calcula las derivadas laterales en $x=20$.",
+          "$T'(20^-)=0{,}15$ y $T'(20^+)=0{,}25$."
+        ],
+        "answer": "No es derivable: $T'(20^-)=0{,}15\\neq T'(20^+)=0{,}25$. Hay un cambio brusco del tipo impositivo.",
+        "full_solution": "Continuidad: $T(20^-)=0{,}15\\cdot20=3$, $T(20^+)=3+0{,}25(0)=3$, $T(20)=3$ ✓. Derivadas laterales: $T'(20^-)=0{,}15$, $T'(20^+)=0{,}25$. Como $0{,}15\\neq 0{,}25$, $T$ no es derivable en $x=20$: la gráfica tiene una esquina (punto anguloso). Interpretación: al pasar de 20 000 € de renta, el tipo marginal salta del 15% al 25%. La función es continua (no hay salto en el impuesto) pero no suave.",
+        "common_errors": [
+          "Confundir continuidad con derivabilidad",
+          "No interpretar la esquina en contexto fiscal"
+        ]
+      },
+      {
+        "id": "EX-DER06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La distancia recorrida por un ciclista es $d(t)=\\begin{cases}3t^2 & \\text{si }0\\leq t\\leq 2 \\\\ 12(t-2)+12 & \\text{si } t>2\\end{cases}$ km. ¿Es la función velocidad continua en $t=2$? ¿Y la función distancia es derivable en $t=2$?",
+        "hints": [
+          "La velocidad es $d'(t)$.",
+          "Compara $d'(2^-)$ y $d'(2^+)$."
+        ],
+        "answer": "$d'(2^-)=12=d'(2^+)=12$. Sí es derivable. La velocidad es continua en $t=2$: el ciclista pasa suavemente a velocidad constante.",
+        "full_solution": "$d'(t)=6t$ para $t<2$, $d'(t)=12$ para $t>2$. $d'(2^-)=6(2)=12$. $d'(2^+)=12$. Las derivadas laterales coinciden, así que $d$ es derivable en $t=2$ con $d'(2)=12$ km/h. La velocidad es continua: no hay cambio brusco. El ciclista acelera uniformemente hasta los 12 km/h y luego mantiene esa velocidad.",
+        "common_errors": [
+          "Confundir continuidad de $d$ con derivabilidad de $d$"
+        ]
+      },
+      {
+        "id": "EX-DER06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que si $f$ es derivable en $x=a$, entonces $f$ es continua en $x=a$. ¿Es cierto el recíproco?",
+        "hints": [
+          "Derivabilidad: $\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h}$ existe.",
+          "Multiplica y divide: $f(a+h)-f(a)=\\frac{f(a+h)-f(a)}{h}\\cdot h$."
+        ],
+        "answer": "Demostración: derivabilidad $\\Rightarrow$ continuidad. El recíproco es falso: $f(x)=|x|$ es continua pero no derivable en $x=0$.",
+        "full_solution": "Si $f$ es derivable en $a$: $\\lim_{h\\to0}[f(a+h)-f(a)]=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h}\\cdot h=f'(a)\\cdot 0=0$. Esto implica $\\lim_{h\\to0}f(a+h)=f(a)$, que es la definición de continuidad. El recíproco es falso: $f(x)=|x|$ es continua en $x=0$ (el límite es 0 y $f(0)=0$) pero no derivable ($f'(0^-)=-1\\neq f'(0^+)=1$). Derivabilidad es más fuerte que continuidad.",
+        "common_errors": [
+          "Creer que continua implica derivable"
+        ]
+      },
+      {
+        "id": "EX-DER06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En procesamiento de señales, la función rampa $R(t)=\\begin{cases}0&t<0\\\\t&t\\geq0\\end{cases}$ se usa como activación. ¿Es continua? ¿Es derivable? Compara con la función ReLU usada en inteligencia artificial.",
+        "hints": [
+          "Comprueba continuidad y derivabilidad en $t=0$.",
+          "ReLU es $\\max(0,t)$, que es exactamente la función rampa."
+        ],
+        "answer": "Continua: sí ($R(0)=0$, límites laterales = 0). No derivable: $R'(0^-)=0\\neq R'(0^+)=1$. ReLU es idéntica a la rampa.",
+        "full_solution": "$R(0)=0$, $\\lim_{t\\to0^-}R(t)=0$, $\\lim_{t\\to0^+}R(t)=0$: continua ✓. $R'(0^-)=0$ (la función es constante 0 a la izquierda), $R'(0^+)=1$ (la función es $t$ a la derecha). $0\\neq 1$: no derivable en $t=0$. La función ReLU (Rectified Linear Unit) en redes neuronales es exactamente esta función rampa. Su no derivabilidad en $t=0$ no impide su uso en aprendizaje automático: se asigna convencionalmente $R'(0)=0$ (o cualquier valor en $[0,1]$) y el entrenamiento funciona bien.",
+        "common_errors": [
+          "No reconocer la conexión entre la rampa y ReLU"
+        ]
       }
     ],
     "exam_questions": [
@@ -5828,6 +6247,75 @@
           "Interpretar una aceleración negativa como 'el objeto retrocede', confundiendo el signo de la aceleración (que habla de si la velocidad aumenta o disminuye) con el signo de la velocidad (que habla del sentido del movimiento)."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-DER07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La posición de un dron de reparto es $s(t)=t^3-6t^2+9t$ metros, $t\\geq0$ en segundos. (a) ¿Cuándo se detiene? (b) ¿Cuándo acelera? (c) ¿Cuándo retrocede?",
+        "hints": [
+          "$v(t)=s'(t)$, $a(t)=s''(t)$.",
+          "El dron se detiene cuando $v=0$, retrocede cuando $v<0$ y acelera cuando $a>0$."
+        ],
+        "answer": "(a) $t=1, 3$. (b) $t>2$. (c) $1<t<3$.",
+        "full_solution": "$v(t)=3t^2-12t+9=3(t-1)(t-3)$. $v=0$ en $t=1$ y $t=3$: se detiene en esos instantes. $v<0$ para $t\\in(1,3)$: el dron retrocede. $a(t)=6t-12=0\\Rightarrow t=2$. $a>0$ para $t>2$: el dron acelera (en sentido positivo) después de $t=2$. Nota: en $t\\in(1,2)$ el dron retrocede y desacelera (frena su retroceso); en $t\\in(2,3)$ retrocede pero con aceleración positiva (frenando hasta detenerse en $t=3$).",
+        "common_errors": [
+          "Confundir 'se detiene' con 'cambia de sentido': en ambos $v=0$ pero el cambio de sentido requiere además cambio de signo de $v$"
+        ]
+      },
+      {
+        "id": "EX-DER07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La carga eléctrica que pasa por un cable es $Q(t)=5t^2+3t$ culombios. Calcula la intensidad de corriente $I(t)$ y evalúa en $t=2$ s. ¿Qué unidades tiene?",
+        "hints": [
+          "$I(t)=Q'(t)$ (la corriente es la derivada de la carga respecto al tiempo).",
+          "Las unidades son culombios/segundo = amperios."
+        ],
+        "answer": "$I(t)=10t+3$. $I(2)=23$ A.",
+        "full_solution": "$I(t)=\\frac{dQ}{dt}=10t+3$ amperios. En $t=2$: $I(2)=20+3=23$ A. Las unidades de la derivada son $[Q]/[t]=$ C/s = A (amperios). La corriente aumenta linealmente con el tiempo, lo que indica que el flujo de carga se acelera. A $t=0$, $I(0)=3$ A (corriente inicial); la corriente nunca se anula ($I>0$ para $t\\geq 0$).",
+        "common_errors": [
+          "Confundir carga con corriente",
+          "Olvidar que la corriente es la derivada temporal de la carga"
+        ]
+      },
+      {
+        "id": "EX-DER07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Si la velocidad de un móvil es siempre positiva ($v(t)>0$ para todo $t$), ¿puede su aceleración ser negativa? ¿Qué significaría físicamente?",
+        "hints": [
+          "Piensa en un coche que frena suavemente sin llegar a detenerse.",
+          "$a<0$ no implica $v<0$; solo que $v$ disminuye."
+        ],
+        "answer": "Sí. Aceleración negativa con velocidad positiva significa que el móvil avanza pero cada vez más lento (desacelera).",
+        "full_solution": "Sí, perfectamente posible. Ejemplo: $v(t)=10e^{-t}$. $v(t)>0$ para todo $t$, pero $a(t)=v'(t)=-10e^{-t}<0$ siempre. El móvil avanza siempre hacia adelante pero cada vez más despacio; su velocidad tiende a 0 pero nunca llega a cero. Físicamente: un coche que frena suavemente en una recta. Aceleración negativa = la velocidad disminuye, no que el móvil retrocede. El móvil retrocede solo cuando $v<0$.",
+        "common_errors": [
+          "Creer que aceleración negativa implica que el móvil retrocede"
+        ]
+      },
+      {
+        "id": "EX-DER07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En demografía, la población de una ciudad es $P(t)=50000\\cdot e^{0{,}03t}$ habitantes, $t$ años desde 2000. Calcula e interpreta $P'(t)$ y el «tiempo de duplicación» (el $t$ para que $P$ se duplique).",
+        "hints": [
+          "$P'(t)=0{,}03P(t)$: la tasa de crecimiento es proporcional a la población.",
+          "Para duplicar: $e^{0{,}03t}=2\\Rightarrow t=\\ln2/0{,}03$."
+        ],
+        "answer": "$P'(t)=1500e^{0{,}03t}$. Tiempo de duplicación $\\approx 23{,}1$ años.",
+        "full_solution": "$P'(t)=50000\\cdot 0{,}03\\cdot e^{0{,}03t}=1500e^{0{,}03t}$. En $t=0$: $P'(0)=1500$ hab/año. En $t=10$: $P'(10)=1500e^{0{,}3}\\approx2024$ hab/año. La velocidad de crecimiento aumenta con el tiempo (crecimiento exponencial). Tiempo de duplicación: $P(T)=2P(0)\\Rightarrow e^{0{,}03T}=2\\Rightarrow T=\\frac{\\ln2}{0{,}03}\\approx\\frac{0{,}693}{0{,}03}=23{,}1$ años. Regla práctica: $T\\approx70/r$ con $r$ en porcentaje ($70/3=23{,}3$).",
+        "common_errors": [
+          "Confundir la tasa (3%) con la derivada (que tiene unidades de habitantes/año)"
+        ]
       }
     ],
     "exam_questions": [

@@ -581,6 +581,74 @@
           "Escribir $x=3$, que es la recta vertical por ese punto."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FF01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un fontanero cobra $40$ EUR de desplazamiento más $25$ EUR/hora. Expresa el coste como función, represéntala y calcula cuánto cuesta una reparación de $3$ h.",
+        "hints": [
+          "$C(t) = 40 + 25t$.",
+          "$C(3) = 40 + 75$."
+        ],
+        "answer": "$C(t) = 40 + 25t$. $C(3) = 115$ EUR.",
+        "full_solution": "$C(t) = 25t + 40$ es una función afín con pendiente $m = 25$ (EUR/h) y ordenada en el origen $n = 40$ (desplazamiento). $C(3) = 25(3)+40 = 115$ EUR.",
+        "common_errors": [
+          "Confundir pendiente ($25$) con ordenada en el origen ($40$)."
+        ]
+      },
+      {
+        "id": "EX-FF01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Dos pueblos están a $120$ km. Un coche A sale del primero a $60$ km/h y un coche B del segundo a $40$ km/h (en sentido contrario). ¿Cuándo y dónde se encuentran?",
+        "hints": [
+          "$d_A(t) = 60t$; $d_B(t) = 120 - 40t$.",
+          "Igualamos: $60t = 120 - 40t$."
+        ],
+        "answer": "$t = 1{,}2$ h ($1$ h $12$ min) a $72$ km del primer pueblo.",
+        "full_solution": "$60t = 120 - 40t \\Rightarrow 100t = 120 \\Rightarrow t = 1{,}2$ h. $d_A(1{,}2) = 72$ km. Se encuentran a $72$ km del pueblo A.",
+        "common_errors": [
+          "Sumar velocidades y dividir: $120/(60+40) = 1{,}2$ h (correcto aquí, pero sin entender el modelo funcional)."
+        ]
+      },
+      {
+        "id": "EX-FF01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué la pendiente de una recta es la misma entre cualesquiera dos puntos? Demuéstralo usando semejanza de triángulos.",
+        "hints": [
+          "Toma tres puntos $A$, $B$, $C$ sobre la recta.",
+          "Los triángulos rectángulos formados son semejantes."
+        ],
+        "answer": "Porque los triángulos rectángulos con catetos $\\Delta x$ y $\\Delta y$ son semejantes (ángulos iguales), así que $\\Delta y/\\Delta x$ es constante.",
+        "full_solution": "Sean $A(x_1,y_1)$, $B(x_2,y_2)$, $C(x_3,y_3)$ en la recta. Los triángulos $\\triangle ABP$ y $\\triangle ACQ$ (con $P$ y $Q$ los pies de las perpendiculares) comparten el ángulo en $A$ y tienen ángulos rectos: son semejantes. Por tanto, $\\frac{BP}{AP} = \\frac{CQ}{AQ}$, es decir, $\\frac{y_2-y_1}{x_2-x_1} = \\frac{y_3-y_1}{x_3-x_1}$. La pendiente es independiente de los puntos elegidos.",
+        "common_errors": [
+          "Pensar que la pendiente solo se calcula con dos puntos fijos (no con cualesquiera)."
+        ]
+      },
+      {
+        "id": "EX-FF01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En química, la ley de velocidad de una reacción de orden cero es $[A] = [A]_0 - kt$, donde $k$ es la constante cinética. Si $[A]_0 = 0{,}5$ M y tras $10$ min la concentración es $0{,}3$ M, halla $k$ y el tiempo para que se agote.",
+        "hints": [
+          "$0{,}3 = 0{,}5 - 10k \\Rightarrow k = 0{,}02$ M/min.",
+          "$0 = 0{,}5 - 0{,}02t$."
+        ],
+        "answer": "$k = 0{,}02$ M/min. Agotamiento en $t = 25$ min.",
+        "full_solution": "$k = (0{,}5 - 0{,}3)/10 = 0{,}02$ M/min. Agotamiento: $0 = 0{,}5 - 0{,}02t \\Rightarrow t = 25$ min. Es una función afín decreciente con pendiente $-k$.",
+        "common_errors": [
+          "Usar la ley de primer orden ($[A] = [A]_0 e^{-kt}$) en vez de la de orden cero."
+        ]
       }
     ],
     "exam_questions": [
@@ -1482,6 +1550,74 @@
           "Leer el vértice como $(-1,5)$ por el signo de dentro del paréntesis."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FF02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un campo rectangular se cierra con $60$ m de valla usando una pared como un lado. Expresa el área en función del ancho $x$ y halla las dimensiones que maximizan el área.",
+        "hints": [
+          "$2x + L = 60 \\Rightarrow L = 60-2x$.",
+          "$A(x) = x(60-2x) = -2x^2+60x$."
+        ],
+        "answer": "Ancho $15$ m, largo $30$ m, área máxima $450$ m².",
+        "full_solution": "$A(x) = -2x^2 + 60x$. Vértice: $x_v = -60/(2(-2)) = 15$. $A(15) = -2(225)+900 = 450$ m². Dimensiones: $15 \\times 30$ m.",
+        "common_errors": [
+          "Olvidar que solo se vallan $3$ lados: usar $2x + 2L = 60$."
+        ]
+      },
+      {
+        "id": "EX-FF02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El beneficio de una empresa es $B(p) = -5p^2 + 200p - 1500$ EUR, donde $p$ es el precio de venta. ¿A qué precio se maximiza? ¿Cuáles son los precios de equilibrio ($B = 0$)?",
+        "hints": [
+          "Vértice: $p_v = -200/(2 \\times (-5)) = 20$.",
+          "$B = 0$: $5p^2-200p+1500 = 0$."
+        ],
+        "answer": "Precio óptimo: $20$ EUR ($B = 500$). Equilibrio: $p = 10$ y $p = 30$ EUR.",
+        "full_solution": "$p_v = 200/10 = 20$. $B(20) = -5(400)+4000-1500 = 500$ EUR. $B=0$: $p^2-40p+300 = 0$. $\\Delta = 1600-1200 = 400$. $p = (40 \\pm 20)/2$: $p = 10$ o $p = 30$.",
+        "common_errors": [
+          "Confundir máximo con mínimo: la parábola abre hacia abajo, así que el vértice es máximo."
+        ]
+      },
+      {
+        "id": "EX-FF02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que el vértice de $f(x) = ax^2+bx+c$ se alcanza en $x = -b/(2a)$ completando el cuadrado.",
+        "hints": [
+          "$a(x^2 + b/a \\cdot x) + c$.",
+          "$a(x + b/(2a))^2 + c - b^2/(4a)$."
+        ],
+        "answer": "$f(x) = a(x+b/(2a))^2 + (4ac-b^2)/(4a)$. El extremo está en $x = -b/(2a)$.",
+        "full_solution": "$f(x) = a(x^2+\\frac{b}{a}x)+c = a(x^2+\\frac{b}{a}x+\\frac{b^2}{4a^2}-\\frac{b^2}{4a^2})+c = a(x+\\frac{b}{2a})^2-\\frac{b^2}{4a}+c = a(x+\\frac{b}{2a})^2+\\frac{4ac-b^2}{4a}$. El cuadrado perfecto es $\\geq 0$, alcanzando $0$ cuando $x = -b/(2a)$.",
+        "common_errors": [
+          "Error al completar el cuadrado: olvidar multiplicar por $a$ al sacar el término."
+        ]
+      },
+      {
+        "id": "EX-FF02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En balística, la trayectoria de un proyectil (sin resistencia) es $y = x\\tan\\theta - \\frac{gx^2}{2v_0^2\\cos^2\\theta}$. Con $\\theta = 45°$, $v_0 = 20$ m/s, $g = 9{,}8$ m/s², halla el alcance y la altura máxima.",
+        "hints": [
+          "$\\tan 45° = 1$, $\\cos^2 45° = 1/2$.",
+          "$y = x - \\frac{9{,}8x^2}{2 \\times 400 \\times 0{,}5} = x - 0{,}0245x^2$."
+        ],
+        "answer": "Alcance $\\approx 40{,}8$ m, altura máxima $\\approx 10{,}2$ m.",
+        "full_solution": "$y = x - 0{,}0245x^2$. Alcance ($y=0$): $x(1-0{,}0245x) = 0 \\Rightarrow x = 1/0{,}0245 \\approx 40{,}82$ m. Vértice: $x_v = 1/(2 \\times 0{,}0245) \\approx 20{,}41$ m. $y_{max} = 20{,}41 - 0{,}0245(20{,}41)^2 \\approx 10{,}2$ m.",
+        "common_errors": [
+          "Usar $\\cos 45° = 1$ en vez de $1/\\sqrt{2}$."
+        ]
       }
     ],
     "exam_questions": [
@@ -2330,6 +2466,74 @@
           "Dibujar la hipérbola con centro en el origen, sin trasladarla a $(2,1)$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FF03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "$6$ obreros tardan $10$ días en pintar un edificio. ¿Cuántos días tardan $15$ obreros? Modela con una función de proporcionalidad inversa.",
+        "hints": [
+          "$\\text{obreros} \\times \\text{días} = \\text{cte} = 60$.",
+          "$d(n) = 60/n$."
+        ],
+        "answer": "$d(15) = 60/15 = 4$ días.",
+        "full_solution": "Magnitudes inversamente proporcionales: $n \\cdot d = 6 \\times 10 = 60$. $d(n) = 60/n$. Para $n = 15$: $d = 60/15 = 4$ días.",
+        "common_errors": [
+          "Plantear una regla de tres directa: $15 \\times 10/6 = 25$ días (incorrecto)."
+        ]
+      },
+      {
+        "id": "EX-FF03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Halla las asíntotas de $f(x) = \\frac{2x+1}{x-3}$ y esboza la gráfica.",
+        "hints": [
+          "AV: $x = 3$ (denominador $= 0$).",
+          "AH: $\\lim_{x \\to \\infty} f(x) = 2$."
+        ],
+        "answer": "AV: $x = 3$. AH: $y = 2$. Cortes: $x = -1/2$ (eje X), $y = -1/3$ (eje Y).",
+        "full_solution": "AV: $x - 3 = 0 \\Rightarrow x = 3$. AH: $\\lim \\frac{2x}{x} = 2$: $y = 2$. Corte X: $2x+1 = 0 \\Rightarrow x = -1/2$. Corte Y: $f(0) = 1/(-3) = -1/3$. La gráfica es una hipérbola con centro en $(3, 2)$.",
+        "common_errors": [
+          "Confundir asíntota vertical ($x = 3$) con horizontal ($y = 3$) u olvidar la horizontal."
+        ]
+      },
+      {
+        "id": "EX-FF03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué una función racional $p(x)/q(x)$ puede tener a lo sumo una asíntota horizontal? ¿Es posible que tenga una asíntota oblicua?",
+        "hints": [
+          "Si $\\text{grado}(p) = \\text{grado}(q)$: AH.",
+          "Si $\\text{grado}(p) = \\text{grado}(q)+1$: AO."
+        ],
+        "answer": "Grados iguales → AH (cociente de coeficientes líderes). Grado $p$ = grado $q$ + $1$ → asíntota oblicua. Grado $p$ > grado $q$ + $1$ → ninguna de las dos.",
+        "full_solution": "La AH depende del comportamiento en $\\pm\\infty$: $\\lim_{x \\to \\pm\\infty} p(x)/q(x)$. Si $\\deg p < \\deg q$: AH $y = 0$. Si $\\deg p = \\deg q$: AH $y = a_n/b_n$. Si $\\deg p = \\deg q + 1$: al dividir, el cociente es lineal → asíntota oblicua $y = mx + b$. Si $\\deg p > \\deg q + 1$: crece más que linealmente, sin asíntotas.",
+        "common_errors": [
+          "Pensar que una función puede tener simultáneamente AH y AO (son mutuamente excluyentes)."
+        ]
+      },
+      {
+        "id": "EX-FF03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En electrónica, la resistencia total de $n$ resistencias iguales $R$ en paralelo es $R_T = R/n$. Si $R = 100\\;\\Omega$, representa $R_T(n)$ y determina cuántas se necesitan para obtener $R_T < 10\\;\\Omega$.",
+        "hints": [
+          "$R_T(n) = 100/n$.",
+          "$100/n < 10 \\Rightarrow n > 10$."
+        ],
+        "answer": "$n > 10$. Se necesitan al menos $11$ resistencias.",
+        "full_solution": "$R_T(n) = 100/n$. Es una hipérbola ($R_T \\to 0$ cuando $n \\to \\infty$). $100/n < 10 \\Rightarrow n > 10$. Como $n$ es entero: $n \\geq 11$.",
+        "common_errors": [
+          "Calcular $10/100 = 0{,}1$ y dar $n = 0{,}1$ (invertir la fracción)."
+        ]
       }
     ],
     "exam_questions": [
@@ -3195,6 +3399,74 @@
           "Calcular $\\log_3 9$ como $9/3=3$, repitiendo la confusión de logaritmo con división."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FF04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La inflación media en un país es del $3\\%$ anual. Si hoy un café cuesta $1{,}50$ EUR, ¿cuánto costará dentro de $20$ años?",
+        "hints": [
+          "$P(t) = 1{,}50 \\cdot 1{,}03^t$.",
+          "$P(20) = 1{,}50 \\cdot 1{,}03^{20}$."
+        ],
+        "answer": "$P(20) = 1{,}50 \\times 1{,}8061 \\approx 2{,}71$ EUR.",
+        "full_solution": "$P(t) = 1{,}50 \\cdot 1{,}03^t$. $P(20) = 1{,}50 \\times 1{,}03^{20} \\approx 1{,}50 \\times 1{,}8061 = 2{,}71$ EUR. El poder adquisitivo se reduce: el mismo café costará casi el doble.",
+        "common_errors": [
+          "Usar interés simple: $1{,}50 + 20 \\times 0{,}03 \\times 1{,}50 = 2{,}40$."
+        ]
+      },
+      {
+        "id": "EX-FF04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La escala Richter mide la intensidad sísmica con $M = \\log_{10}(I/I_0)$. Si un terremoto de $M = 5$ tiene intensidad $I_5$ y uno de $M = 7$ tiene $I_7$, ¿cuántas veces más intenso es el segundo?",
+        "hints": [
+          "$M_7 - M_5 = \\log(I_7/I_0) - \\log(I_5/I_0) = \\log(I_7/I_5) = 2$.",
+          "$I_7/I_5 = 10^2 = 100$."
+        ],
+        "answer": "El terremoto de magnitud $7$ es $100$ veces más intenso.",
+        "full_solution": "$\\Delta M = 7 - 5 = 2$. $\\log(I_7/I_5) = 2 \\Rightarrow I_7/I_5 = 10^2 = 100$. Cada unidad en la escala Richter multiplica la intensidad por $10$.",
+        "common_errors": [
+          "Pensar que es $2$ veces más intenso (diferencia vs cociente en escala logarítmica)."
+        ]
+      },
+      {
+        "id": "EX-FF04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué las funciones exponencial y logarítmica son inversas? Demuéstralo verificando que $\\log_a(a^x) = x$ y $a^{\\log_a x} = x$.",
+        "hints": [
+          "$f(x) = a^x$ y $g(x) = \\log_a x$.",
+          "$f(g(x)) = ?$ y $g(f(x)) = ?$"
+        ],
+        "answer": "Son inversas porque $f \\circ g = g \\circ f = \\text{id}$.",
+        "full_solution": "$g(f(x)) = \\log_a(a^x) = x$ (por definición de logaritmo: '$\\log_a$ de algo' pregunta 'a qué exponente hay que elevar $a$'). $f(g(x)) = a^{\\log_a x} = x$ (elevar $a$ al exponente que da $x$ devuelve $x$). Ambas composiciones son la identidad, así que son inversas. Geométricamente: sus gráficas son simétricas respecto a $y = x$.",
+        "common_errors": [
+          "Confundir $\\log(a \\cdot b) = \\log a + \\log b$ con $\\log(a^b) = b \\log a$ al demostrar."
+        ]
+      },
+      {
+        "id": "EX-FF04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En acústica, el nivel de decibelios es $L = 10\\log_{10}(I/I_0)$ con $I_0 = 10^{-12}$ W/m². Si el volumen de una conversación es $60$ dB y el de un concierto $110$ dB, ¿cuántas veces mayor es la intensidad del concierto?",
+        "hints": [
+          "$\\Delta L = 110 - 60 = 50$ dB.",
+          "$10\\log(I_c/I_v) = 50 \\Rightarrow \\log(I_c/I_v) = 5$."
+        ],
+        "answer": "$I_c/I_v = 10^5 = 100\\,000$. El concierto es $100\\,000$ veces más intenso.",
+        "full_solution": "$L_c - L_v = 10\\log(I_c/I_0) - 10\\log(I_v/I_0) = 10\\log(I_c/I_v) = 50$. $\\log(I_c/I_v) = 5$. $I_c/I_v = 10^5 = 100\\,000$.",
+        "common_errors": [
+          "Dividir $110/60 \\approx 1{,}83$ y dar eso como factor (la escala dB es logarítmica, no lineal)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4173,6 +4445,74 @@
           "Escribir $\\operatorname{tg}90°=0$ por ver el numerador nulo en lugar del denominador."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FF05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La altura de la marea en un puerto varía como $h(t) = 3 + 2\\sin\\left(\\frac{\\pi}{6}t\\right)$ (metros), donde $t$ son horas desde medianoche. ¿Cuál es la marea máxima y mínima? ¿Cuál es el periodo?",
+        "hints": [
+          "Amplitud: $2$. Centro: $3$.",
+          "Periodo: $T = 2\\pi/(\\pi/6) = 12$ h."
+        ],
+        "answer": "Máxima: $5$ m, mínima: $1$ m, periodo: $12$ h.",
+        "full_solution": "$h_{\\max} = 3 + 2 = 5$ m (cuando $\\sin = 1$). $h_{\\min} = 3 - 2 = 1$ m (cuando $\\sin = -1$). Periodo: $T = 2\\pi/(\\pi/6) = 12$ h. La marea tiene un ciclo semidiurno.",
+        "common_errors": [
+          "Confundir periodo ($12$ h) con frecuencia ($1/12$ ciclos/h)."
+        ]
+      },
+      {
+        "id": "EX-FF05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una noria de $20$ m de diámetro tiene su centro a $12$ m del suelo y gira con periodo $40$ s. Si empiezas en la parte más baja, expresa tu altura $h(t)$ y calcula $h(10)$.",
+        "hints": [
+          "Radio $= 10$ m. Centro a $12$ m.",
+          "$h(t) = 12 - 10\\cos(2\\pi t/40)$ (empieza abajo)."
+        ],
+        "answer": "$h(t) = 12 - 10\\cos(\\pi t/20)$. $h(10) = 12 - 10\\cos(\\pi/2) = 12$ m.",
+        "full_solution": "$h(t) = 12 - 10\\cos\\left(\\frac{\\pi t}{20}\\right)$. $h(0) = 12-10 = 2$ m (punto más bajo). $h(10) = 12 - 10\\cos(\\pi/2) = 12 - 0 = 12$ m (a la altura del centro). $h(20) = 12 - 10\\cos(\\pi) = 12+10 = 22$ m (punto más alto).",
+        "common_errors": [
+          "Usar $\\sin$ en vez de $-\\cos$ y obtener que empieza en el centro."
+        ]
+      },
+      {
+        "id": "EX-FF05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué $\\sin^2 x + \\cos^2 x = 1$ para todo $x$? Demuéstralo usando el teorema de Pitágoras en el círculo unitario.",
+        "hints": [
+          "Punto en el círculo unitario: $(\\cos x, \\sin x)$.",
+          "Distancia al origen: $\\sqrt{\\cos^2 x + \\sin^2 x} = 1$."
+        ],
+        "answer": "Porque $(\\cos x, \\sin x)$ está en el círculo unitario $x^2+y^2 = 1$.",
+        "full_solution": "Por definición, $\\cos x$ y $\\sin x$ son las coordenadas del punto en el círculo unitario que forma ángulo $x$ con el eje positivo. Ese punto satisface $x^2+y^2 = 1$ (ecuación del círculo de radio $1$). Sustituyendo: $\\cos^2 x + \\sin^2 x = 1$. Equivalentemente, por Pitágoras: en un triángulo rectángulo con hipotenusa $1$, catetos $\\cos x$ y $\\sin x$.",
+        "common_errors": [
+          "Intentar demostrarlo con valores particulares (eso verifica, no demuestra)."
+        ]
+      },
+      {
+        "id": "EX-FF05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ingeniería eléctrica, la corriente alterna doméstica es $i(t) = 325\\sin(100\\pi t)$ mA. Halla la amplitud, frecuencia y periodo.",
+        "hints": [
+          "Amplitud: coeficiente de $\\sin$.",
+          "$\\omega = 100\\pi$ rad/s. $f = \\omega/(2\\pi)$."
+        ],
+        "answer": "Amplitud: $325$ mA, $f = 50$ Hz, $T = 0{,}02$ s.",
+        "full_solution": "Amplitud: $325$ mA (o $I_0 = 325$ mA; el valor eficaz es $325/\\sqrt{2} \\approx 230$ mA). $\\omega = 100\\pi$ rad/s. $f = \\omega/(2\\pi) = 50$ Hz. $T = 1/f = 0{,}02$ s = $20$ ms. Esto corresponde a la red eléctrica europea ($50$ Hz).",
+        "common_errors": [
+          "Confundir $\\omega$ con $f$: dar $f = 100\\pi$ Hz en vez de $50$ Hz."
+        ]
       }
     ],
     "exam_questions": [
@@ -4985,6 +5325,74 @@
           "Al despejar, dividir solo uno de los términos: escribir $y=\\dfrac{x}{3}+2$ en vez de $y=\\dfrac{x+2}{3}$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FF06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un coche consume $f(d) = 0{,}07d$ litros de gasolina para recorrer $d$ km. El coste de la gasolina es $g(L) = 1{,}60L$ EUR. Expresa el coste total como composición y calcula el coste de $200$ km.",
+        "hints": [
+          "$(g \\circ f)(d) = g(f(d)) = g(0{,}07d)$.",
+          "$= 1{,}60 \\times 0{,}07d = 0{,}112d$."
+        ],
+        "answer": "$(g \\circ f)(d) = 0{,}112d$ EUR. Para $200$ km: $22{,}40$ EUR.",
+        "full_solution": "$(g \\circ f)(d) = g(f(d)) = 1{,}60 \\times 0{,}07d = 0{,}112d$. Para $d = 200$: $(g \\circ f)(200) = 0{,}112 \\times 200 = 22{,}40$ EUR.",
+        "common_errors": [
+          "Componer al revés: $f(g(d))$ no tiene sentido (precio en euros no son km)."
+        ]
+      },
+      {
+        "id": "EX-FF06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La temperatura en grados Celsius se convierte a Fahrenheit con $F(C) = 1{,}8C + 32$. Halla la función inversa y convierte $98{,}6$ °F a °C.",
+        "hints": [
+          "$F = 1{,}8C + 32 \\Rightarrow C = (F-32)/1{,}8$.",
+          "$F^{-1}(F) = (F-32)/1{,}8$."
+        ],
+        "answer": "$F^{-1}(x) = (x-32)/1{,}8$. $F^{-1}(98{,}6) = 66{,}6/1{,}8 = 37$ °C.",
+        "full_solution": "$F = 1{,}8C + 32$. Despejamos: $C = (F-32)/1{,}8$. Inversión: $F^{-1}(x) = (x-32)/1{,}8$. $F^{-1}(98{,}6) = (98{,}6-32)/1{,}8 = 66{,}6/1{,}8 = 37$ °C (temperatura corporal normal).",
+        "common_errors": [
+          "Calcular $98{,}6/1{,}8 + 32$ (aplicar la función directa en vez de la inversa)."
+        ]
+      },
+      {
+        "id": "EX-FF06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Toda función tiene inversa? ¿Qué condición debe cumplir? Justifica con $f(x) = x^2$ y $g(x) = 2x+1$.",
+        "hints": [
+          "La inversa existe si la función es biyectiva (inyectiva + suprayectiva).",
+          "$f(x) = x^2$: $f(-2) = f(2) = 4$ → no inyectiva."
+        ],
+        "answer": "No toda función tiene inversa. Necesita ser inyectiva (uno a uno). $x^2$ no la tiene en $\\mathbb{R}$; $2x+1$ sí.",
+        "full_solution": "$f(x) = x^2$: $f(-2) = f(2) = 4$, así que dos entradas dan la misma salida → no inyectiva → no tiene inversa (en todo $\\mathbb{R}$; restringida a $[0, \\infty)$ sí). $g(x) = 2x+1$: si $g(a) = g(b) \\Rightarrow 2a+1 = 2b+1 \\Rightarrow a = b$ → inyectiva → tiene inversa: $g^{-1}(x) = (x-1)/2$.",
+        "common_errors": [
+          "Pensar que $f^{-1}(x) = 1/f(x)$ (confundir inversa con recíproca)."
+        ]
+      },
+      {
+        "id": "EX-FF06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En criptografía, un cifrado César desplaza cada letra $k$ posiciones: $c(x) = (x + k) \\bmod 26$. ¿Cuál es la función de descifrado (inversa)? Verifica para $k = 3$ y la letra D ($x = 3$).",
+        "hints": [
+          "El descifrado deshace el desplazamiento.",
+          "$c^{-1}(y) = (y - k) \\bmod 26$."
+        ],
+        "answer": "$c^{-1}(y) = (y - k) \\bmod 26$. Para $k=3$: D($3$) → G($6$) → descifrado: $(6-3) \\bmod 26 = 3$ = D ✓.",
+        "full_solution": "Cifrado: $c(x) = (x+k) \\bmod 26$. Descifrado: $c^{-1}(y) = (y-k) \\bmod 26$. Con $k=3$: D es la letra $3$. $c(3) = (3+3) \\bmod 26 = 6$ = G. $c^{-1}(6) = (6-3) \\bmod 26 = 3$ = D. Se recupera la letra original.",
+        "common_errors": [
+          "Olvidar el módulo $26$ y obtener valores negativos para letras al principio del alfabeto."
+        ]
       }
     ],
     "exam_questions": [
@@ -5831,6 +6239,74 @@
           "Plantear mal el sistema y olvidar que el dato $(0,10)$ da directamente $c=10$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FF07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La población de un pueblo en $2010$ era $5\\,000$ y en $2020$ era $6\\,200$. Usando interpolación lineal, estima la población en $2015$.",
+        "hints": [
+          "Pendiente: $(6200-5000)/(2020-2010) = 120$ hab/año.",
+          "$P(2015) = 5000 + 120 \\times 5$."
+        ],
+        "answer": "$P(2015) = 5\\,600$ habitantes.",
+        "full_solution": "Tasa: $(6200-5000)/10 = 120$ hab/año. $P(2015) = 5000 + 120 \\times (2015-2010) = 5000 + 600 = 5600$.",
+        "common_errors": [
+          "Promediar simplemente: $(5000+6200)/2 = 5600$ (da lo mismo aquí, pero no entendería el método si los años no fueran equidistantes)."
+        ]
+      },
+      {
+        "id": "EX-FF07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Usando los datos $(1, 2)$, $(3, 8)$, $(5, 18)$, determina si se ajustan mejor a un modelo lineal o cuadrático. Justifica.",
+        "hints": [
+          "Diferencias primeras: $8-2 = 6$, $18-8 = 10$ (no constantes → no lineal).",
+          "Diferencias segundas: $10-6 = 4$ (constantes → cuadrático)."
+        ],
+        "answer": "Cuadrático: diferencias segundas constantes ($\\Delta^2 = 4$).",
+        "full_solution": "Diferencias primeras: $\\Delta_1 = 6$, $\\Delta_2 = 10$ (no constantes, no lineal). Diferencias segundas: $\\Delta^2 = 10-6 = 4$ (constante, cuadrático). Ajuste: $f(x) = ax^2+bx+c$. Con $(1,2)$, $(3,8)$, $(5,18)$: $a+b+c = 2$; $9a+3b+c = 8$; $25a+5b+c = 18$. Resolviendo: $a = 1$, $b = -1$, $c = 2$. $f(x) = x^2-x+2$.",
+        "common_errors": [
+          "Trazar una recta por los puntos extremos ignorando el central."
+        ]
+      },
+      {
+        "id": "EX-FF07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué extrapolar muy lejos de los datos es peligroso? Ilustra con un ejemplo donde la extrapolación lineal da un resultado absurdo.",
+        "hints": [
+          "El modelo es válido dentro del rango de datos.",
+          "Fuera, el comportamiento real puede cambiar drásticamente."
+        ],
+        "answer": "Porque el modelo solo aproxima el comportamiento local. Una recta puede predecir valores negativos (peso, población) o infinitos.",
+        "full_solution": "Ejemplo: si la temperatura a las $6$h es $10°$C y a las $12$h es $22°$C, la tasa es $2°$/h. Extrapolando: a las $24$h sería $10 + 2 \\times 18 = 46°$C (absurdo). La realidad es que la temperatura baja por la noche. El modelo lineal es válido solo localmente. En general, extrapolar asume que la tendencia continuará indefinidamente, lo cual rara vez es cierto.",
+        "common_errors": [
+          "Confiar ciegamente en la extrapolación para predicciones a largo plazo."
+        ]
+      },
+      {
+        "id": "EX-FF07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En epidemiología, los primeros días de una epidemia muestran datos $(0, 10)$, $(5, 30)$, $(10, 90)$. ¿Qué modelo es más apropiado: lineal, cuadrático o exponencial? Justifica y predice para $t = 15$.",
+        "hints": [
+          "Cocientes: $30/10 = 3$, $90/30 = 3$ (constantes → exponencial).",
+          "$N(t) = 10 \\cdot 3^{t/5}$."
+        ],
+        "answer": "Exponencial: $N(t) = 10 \\cdot 3^{t/5}$. $N(15) = 10 \\cdot 27 = 270$ casos.",
+        "full_solution": "Cocientes constantes $30/10 = 90/30 = 3$ cada $5$ días → crecimiento exponencial. $N(t) = 10 \\cdot 3^{t/5}$. Check: $N(0) = 10$, $N(5) = 30$, $N(10) = 90$ ✓. $N(15) = 10 \\cdot 3^3 = 270$. Un modelo lineal daría $N(15) = 170$ (subestimación) y uno cuadrático sería intermedio.",
+        "common_errors": [
+          "Usar modelo lineal: $N(t) = 10 + 8t$, dando $N(15) = 130$ (subestima el crecimiento exponencial)."
+        ]
       }
     ],
     "exam_questions": [

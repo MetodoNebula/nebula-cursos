@@ -506,6 +506,36 @@
           "LO-MOTION-01-3"
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "CQ-U01-01-2",
+        "statement": "A student measures the thickness of a single sheet of paper by stacking 200 sheets, which measures $18.4\\,\\mathrm{mm}$ on a ruler with $1\\,\\mathrm{mm}$ divisions. (a) Calculate the thickness of one sheet. (b) Estimate the absolute uncertainty in the thickness of one sheet. (c) Explain why measuring a stack is more accurate than measuring a single sheet directly.",
+        "answer": "(a) Thickness of one sheet $= 18.4 \\div 200 = 0.092\\,\\mathrm{mm}$. (b) The ruler has $\\pm 0.5\\,\\mathrm{mm}$ uncertainty on the stack measurement; uncertainty per sheet $= 0.5 \\div 200 = 0.0025\\,\\mathrm{mm} \\approx 0.003\\,\\mathrm{mm}$. (c) A single sheet ($\\approx 0.09\\,\\mathrm{mm}$) is much smaller than the ruler's smallest division ($1\\,\\mathrm{mm}$), making direct measurement impossible. Stacking 200 sheets amplifies the total measurement to $18.4\\,\\mathrm{mm}$, well above the ruler's precision, and divides the uncertainty by 200, giving a much smaller percentage uncertainty.",
+        "hints": [
+          "Divide the total stack height by the number of sheets for one sheet's thickness.",
+          "The ruler's smallest division is 1 mm, so the reading uncertainty is ±0.5 mm on the total stack.",
+          "Think about what percentage uncertainty means when the measurement is very small versus when it is large."
+        ]
+      },
+      {
+        "id": "CQ-U01-01-3",
+        "statement": "Two students time how long a pendulum takes to complete 20 full swings. Student A uses a digital stopwatch (resolution $0.01\\,\\mathrm{s}$) and records $32.45\\,\\mathrm{s}$. Student B uses a wall clock with $1\\,\\mathrm{s}$ divisions and records $32\\,\\mathrm{s}$. (a) Calculate the period (time for one swing) from each student's data. (b) Explain why both students timed 20 swings rather than just one. (c) Identify the largest source of uncertainty and explain whether it comes from the instrument or the experimenter.",
+        "answer": "(a) Student A: period $= 32.45 \\div 20 = 1.6225\\,\\mathrm{s} \\approx 1.62\\,\\mathrm{s}$. Student B: period $= 32 \\div 20 = 1.6\\,\\mathrm{s}$. (b) Timing 20 swings reduces the effect of human reaction time. If reaction time error is $\\pm 0.2\\,\\mathrm{s}$, timing one swing gives $\\pm 0.2\\,\\mathrm{s}$ uncertainty on a $\\sim 1.6\\,\\mathrm{s}$ measurement ($\\sim 12\\%$), but timing 20 swings gives $\\pm 0.2\\,\\mathrm{s}$ on $\\sim 32\\,\\mathrm{s}$ ($\\sim 0.6\\%$), then divided by 20 the uncertainty per swing is only $\\pm 0.01\\,\\mathrm{s}$. (c) The largest source is human reaction time ($\\sim 0.2\\,\\mathrm{s}$), which far exceeds either instrument's resolution. This is a systematic/random error from the experimenter, not the instrument.",
+        "hints": [
+          "Divide total time by number of swings for the period.",
+          "Think about how reaction time compares to the instrument's precision.",
+          "Consider: which uncertainty is larger — the stopwatch resolution or human reaction time?"
+        ]
+      },
+      {
+        "id": "CQ-U01-01-4",
+        "statement": "A student measures the diameter of a wire as $0.38\\,\\mathrm{mm}$ using a micrometer with $0.01\\,\\mathrm{mm}$ precision. She then measures the length of the wire as $1.24\\,\\mathrm{m}$ using a metre rule with $1\\,\\mathrm{mm}$ precision. (a) Calculate the percentage uncertainty in each measurement. (b) If these measurements are used to calculate the volume of the wire ($V = \\pi r^2 l$), which measurement contributes the largest percentage uncertainty to the volume? Explain your reasoning.",
+        "answer": "(a) Diameter: percentage uncertainty $= (0.01 \\div 0.38) \\times 100 = 2.6\\%$. Length: percentage uncertainty $= (1 \\div 1240) \\times 100 = 0.081\\%$. (b) Volume $V = \\pi r^2 l = \\pi (d/2)^2 l$. The diameter is squared in the formula, so its percentage uncertainty is doubled to $2 \\times 2.6\\% = 5.3\\%$. The length contributes only $0.081\\%$. The diameter measurement contributes by far the largest percentage uncertainty to the volume — about 65 times more than the length measurement.",
+        "hints": [
+          "Percentage uncertainty = (absolute uncertainty ÷ measured value) × 100%.",
+          "When a quantity is squared in a formula, its percentage uncertainty is doubled.",
+          "Compare the two percentage uncertainties after accounting for powers."
+        ]
       }
     ],
     "mcq": [
@@ -1217,6 +1247,31 @@
         "statement": "Extended: Explain how the principles covered in \"Speed, velocity and the role of direction\" apply to a real-world situation. Include relevant equations and units in your answer.",
         "answer": "A complete answer links the physics concepts from speed, velocity and the role of direction to practical scenarios, using correct equations, SI units, and scientific reasoning.",
         "full_solution": "Step 1: State the relevant physics principles from Speed, velocity and the role of direction.\nStep 2: Identify a real-world application.\nStep 3: Apply the equations with correct units.\nStep 4: Evaluate your answer for physical reasonableness."
+      },
+      {
+        "id": "CQ-U01-02-2",
+        "statement": "A bat emits an ultrasound pulse that travels at $340\\,\\mathrm{m/s}$ in air. The echo returns from a moth $0.012\\,\\mathrm{s}$ later. (a) Calculate the total distance travelled by the pulse. (b) Determine how far away the moth is. (c) If the moth is flying directly away from the bat at $5.0\\,\\mathrm{m/s}$, estimate how far it will have moved in the time between the pulse being sent and the echo returning. Comment on whether this affects the bat's accuracy.",
+        "answer": "(a) Total distance $= 340 \\times 0.012 = 4.08\\,\\mathrm{m}$. (b) The moth is half this distance away: $4.08 \\div 2 = 2.04\\,\\mathrm{m}$. (c) In $0.012\\,\\mathrm{s}$, the moth moves $5.0 \\times 0.012 = 0.060\\,\\mathrm{m} = 6.0\\,\\mathrm{cm}$. This is about $3\\%$ of the measured distance, so the echo gives a slightly outdated position, but bats emit pulses rapidly (up to 200 per second when hunting), so successive echoes quickly correct for the moth's motion.",
+        "hints": [
+          "The sound travels to the moth and back, so the total distance is twice the moth's distance.",
+          "Use $d = v \\times t$ for each calculation.",
+          "Compare the moth's movement to the total distance to judge significance."
+        ]
+      },
+      {
+        "id": "CQ-U01-02-3",
+        "statement": "A boat crosses a river that is $120\\,\\mathrm{m}$ wide. The boat's engine drives it at $4.0\\,\\mathrm{m/s}$ perpendicular to the banks, but the river current flows at $3.0\\,\\mathrm{m/s}$ parallel to the banks. (a) Calculate how long it takes the boat to cross. (b) How far downstream does the current carry the boat during the crossing? (c) Calculate the boat's resultant speed and explain why its velocity is different from its speed through the water.",
+        "answer": "(a) Time to cross $= 120 \\div 4.0 = 30\\,\\mathrm{s}$ (the current does not affect the crossing time since it acts perpendicular to the crossing direction). (b) Downstream displacement $= 3.0 \\times 30 = 90\\,\\mathrm{m}$. (c) Resultant speed $= \\sqrt{4.0^2 + 3.0^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5.0\\,\\mathrm{m/s}$. The velocity is different because velocity includes direction — the boat moves at $5.0\\,\\mathrm{m/s}$ at an angle to the bank, not straight across. The boat's speed through the water ($4.0\\,\\mathrm{m/s}$) is a scalar, but its velocity relative to the ground has both the engine's component and the river's component.",
+        "hints": [
+          "The perpendicular component of velocity determines the crossing time.",
+          "Use downstream speed × crossing time for the downstream drift.",
+          "Use Pythagoras to combine the two perpendicular velocity components."
+        ]
+      },
+      {
+        "id": "CQ-U01-02-4",
+        "statement": "A jogger runs $2.0\\,\\mathrm{km}$ north in $10\\,\\mathrm{min}$, then $1.5\\,\\mathrm{km}$ east in $8.0\\,\\mathrm{min}$, and finally $0.5\\,\\mathrm{km}$ south in $3.0\\,\\mathrm{min}$. (a) Calculate the total distance travelled. (b) Determine the jogger's displacement from the starting point. (c) Calculate the average speed and the magnitude of the average velocity. Explain why these two values differ.",
+        "answer": "(a) Total distance $= 2.0 + 1.5 + 0.5 = 4.0\\,\\mathrm{km}$. (b) Net northward displacement $= 2.0 - 0.5 = 1.5\\,\\mathrm{km}$. Net eastward displacement $= 1.5\\,\\mathrm{km}$. Resultant displacement $= \\sqrt{1.5^2 + 1.5^2} = \\sqrt{4.5} \\approx 2.1\\,\\mathrm{km}$ at $45°$ east of north. (c) Total time $= 10 + 8 + 3 = 21\\,\\mathrm{min} = 1260\\,\\mathrm{s}$. Average speed $= 4000 \\div 1260 \\approx 3.2\\,\\mathrm{m/s}$. Average velocity magnitude $= 2100 \\div 1260 \\approx 1.7\\,\\mathrm{m/s}$. They differ because average speed uses total distance (the full path), while average velocity uses displacement (straight-line distance from start to finish). The jogger's path was not straight, so the distance exceeds the displacement."
       }
     ],
     "mcq": [
@@ -1987,6 +2042,26 @@
         "statement": "Extended: Explain how the principles covered in \"Distance–time graphs as stories of motion\" apply to a real-world situation. Include relevant equations and units in your answer.",
         "answer": "A complete answer links the physics concepts from distance–time graphs as stories of motion to practical scenarios, using correct equations, SI units, and scientific reasoning.",
         "full_solution": "Step 1: State the relevant physics principles from Distance–time graphs as stories of motion.\nStep 2: Identify a real-world application.\nStep 3: Apply the equations with correct units.\nStep 4: Evaluate your answer for physical reasonableness."
+      },
+      {
+        "id": "CQ-U01-03-2",
+        "statement": "A cyclist's distance–time graph shows: 0–60 s, a straight line from $0$ to $300\\,\\mathrm{m}$; 60–120 s, a horizontal line at $300\\,\\mathrm{m}$; 120–180 s, a straight line from $300\\,\\mathrm{m}$ to $480\\,\\mathrm{m}$. (a) Calculate the speed during each moving section. (b) A second cyclist starts at $t = 0$ from the same point and travels at a constant $3.5\\,\\mathrm{m/s}$. At what time does the second cyclist overtake the first? (c) Sketch how both journeys would appear on the same distance–time graph.",
+        "answer": "(a) Section 1: speed $= 300 \\div 60 = 5.0\\,\\mathrm{m/s}$. Section 2: stationary (speed $= 0$). Section 3: speed $= (480 - 300) \\div (180 - 120) = 180 \\div 60 = 3.0\\,\\mathrm{m/s}$. (b) First cyclist at time $t$ (for $t > 120\\,\\mathrm{s}$): $d_1 = 300 + 3.0(t - 120)$. Second cyclist: $d_2 = 3.5t$. Setting equal: $300 + 3.0t - 360 = 3.5t$, so $-60 = 0.5t$, giving $t = -120\\,\\mathrm{s}$ — this is negative, meaning the second cyclist is ahead before the first cyclist restarts. Check during the rest period: at $t = 60\\,\\mathrm{s}$, $d_2 = 210\\,\\mathrm{m}$ (behind). At $t = 120\\,\\mathrm{s}$, $d_2 = 420\\,\\mathrm{m}$ (ahead of $300\\,\\mathrm{m}$). So overtaking occurs during the rest period: $3.5t = 300$ gives $t = 300 \\div 3.5 \\approx 86\\,\\mathrm{s}$. (c) The sketch should show a steeper line then flat then gentler line for cyclist 1, and a single straight line of gradient $3.5\\,\\mathrm{m/s}$ for cyclist 2, crossing cyclist 1's horizontal section at about $86\\,\\mathrm{s}$.",
+        "hints": [
+          "Speed is the gradient (rise ÷ run) of each straight section.",
+          "For the overtaking problem, write the distance equation for each cyclist and find when they are equal.",
+          "Check which section the first cyclist is in when the second catches up."
+        ]
+      },
+      {
+        "id": "CQ-U01-03-3",
+        "statement": "A delivery drone flies $800\\,\\mathrm{m}$ in a straight line from the warehouse. Its distance–time graph is a curve that gets progressively steeper for the first $40\\,\\mathrm{s}$, then becomes a straight line from $40\\,\\mathrm{s}$ to $80\\,\\mathrm{s}$. (a) Describe the drone's motion in words, referring to both sections of the graph. (b) If the drone covers $200\\,\\mathrm{m}$ in the first $40\\,\\mathrm{s}$ and the remaining $600\\,\\mathrm{m}$ in the next $40\\,\\mathrm{s}$, calculate the drone's speed during the constant-speed section. (c) Explain why the average speed for the whole journey is not equal to the speed in the straight-line section.",
+        "answer": "(a) In the first $40\\,\\mathrm{s}$ the drone is accelerating — the gradient of the curve increases, meaning the speed is increasing. From $40\\,\\mathrm{s}$ to $80\\,\\mathrm{s}$ the drone moves at constant speed — the graph is a straight line with constant gradient. (b) Constant-speed section: $v = 600 \\div 40 = 15\\,\\mathrm{m/s}$. (c) Average speed for the whole journey $= 800 \\div 80 = 10\\,\\mathrm{m/s}$, which is less than $15\\,\\mathrm{m/s}$ because during the first half the drone was slower (accelerating from rest). The average speed accounts for the entire journey including the slower acceleration phase."
+      },
+      {
+        "id": "CQ-U01-03-4",
+        "statement": "Two cars start $500\\,\\mathrm{m}$ apart and drive towards each other. Car A travels at a constant $20\\,\\mathrm{m/s}$ and Car B at a constant $30\\,\\mathrm{m/s}$. (a) On a distance–time graph where distance is measured from Car A's starting position, sketch the line for each car. (b) Calculate the time at which they meet. (c) How far from Car A's starting position do they meet?",
+        "answer": "(a) Car A: a straight line from $(0, 0)$ with gradient $+20\\,\\mathrm{m/s}$. Car B: a straight line from $(0, 500)$ with gradient $-30\\,\\mathrm{m/s}$ (distance from A's start decreases). The lines cross where the cars meet. (b) Car A's position: $d_A = 20t$. Car B's position: $d_B = 500 - 30t$. They meet when $20t = 500 - 30t$, so $50t = 500$, giving $t = 10\\,\\mathrm{s}$. (c) $d_A = 20 \\times 10 = 200\\,\\mathrm{m}$ from Car A's starting position. Check: $d_B = 500 - 30 \\times 10 = 200\\,\\mathrm{m}$ — both give the same position, confirming the answer."
       }
     ],
     "mcq": [
@@ -2753,6 +2828,21 @@
         "statement": "Extended: Explain how the principles covered in \"Speed–time graphs and distance travelled\" apply to a real-world situation. Include relevant equations and units in your answer.",
         "answer": "A complete answer links the physics concepts from speed–time graphs and distance travelled to practical scenarios, using correct equations, SI units, and scientific reasoning.",
         "full_solution": "Step 1: State the relevant physics principles from Speed–time graphs and distance travelled.\nStep 2: Identify a real-world application.\nStep 3: Apply the equations with correct units.\nStep 4: Evaluate your answer for physical reasonableness."
+      },
+      {
+        "id": "CQ-U01-04-2",
+        "statement": "A car accelerates uniformly from rest to $25\\,\\mathrm{m/s}$ in $10\\,\\mathrm{s}$, travels at $25\\,\\mathrm{m/s}$ for $20\\,\\mathrm{s}$, then decelerates uniformly to rest in $5.0\\,\\mathrm{s}$. (a) Sketch the speed–time graph. (b) Calculate the total distance by finding the area under the graph. (c) Calculate the average speed for the whole journey and explain why it is less than $25\\,\\mathrm{m/s}$.",
+        "answer": "(a) The graph has three sections: a rising straight line from $(0, 0)$ to $(10, 25)$; a horizontal line from $(10, 25)$ to $(30, 25)$; a falling straight line from $(30, 25)$ to $(35, 0)$. (b) Area = triangle + rectangle + triangle $= \\tfrac{1}{2}(10)(25) + (20)(25) + \\tfrac{1}{2}(5)(25) = 125 + 500 + 62.5 = 687.5\\,\\mathrm{m} \\approx 690\\,\\mathrm{m}$. (c) Average speed $= 687.5 \\div 35 = 19.6\\,\\mathrm{m/s} \\approx 20\\,\\mathrm{m/s}$. This is less than $25\\,\\mathrm{m/s}$ because the car was below $25\\,\\mathrm{m/s}$ during both the acceleration and deceleration phases, so the distance covered in those phases is less than if the car had been at $25\\,\\mathrm{m/s}$ throughout.",
+        "hints": [
+          "Break the area under the graph into simple shapes: triangles and rectangles.",
+          "Area under a speed–time graph gives distance.",
+          "Average speed = total distance ÷ total time."
+        ]
+      },
+      {
+        "id": "CQ-U01-04-3",
+        "statement": "Two runners start a $100\\,\\mathrm{m}$ race at the same time. Runner A accelerates uniformly from rest to $10\\,\\mathrm{m/s}$ in $4.0\\,\\mathrm{s}$, then maintains $10\\,\\mathrm{m/s}$. Runner B accelerates uniformly from rest to $12\\,\\mathrm{m/s}$ in $6.0\\,\\mathrm{s}$, then maintains $12\\,\\mathrm{m/s}$. (a) Draw both speed–time graphs on the same axes. (b) Calculate the time each runner takes to finish $100\\,\\mathrm{m}$. (c) Who wins and by how many seconds?",
+        "answer": "(a) Runner A: line from $(0, 0)$ to $(4, 10)$ then horizontal at $10\\,\\mathrm{m/s}$. Runner B: line from $(0, 0)$ to $(6, 12)$ then horizontal at $12\\,\\mathrm{m/s}$. (b) Runner A: distance during acceleration $= \\tfrac{1}{2}(4)(10) = 20\\,\\mathrm{m}$. Remaining $80\\,\\mathrm{m}$ at $10\\,\\mathrm{m/s}$ takes $80 \\div 10 = 8.0\\,\\mathrm{s}$. Total $= 4.0 + 8.0 = 12.0\\,\\mathrm{s}$. Runner B: distance during acceleration $= \\tfrac{1}{2}(6)(12) = 36\\,\\mathrm{m}$. Remaining $64\\,\\mathrm{m}$ at $12\\,\\mathrm{m/s}$ takes $64 \\div 12 = 5.33\\,\\mathrm{s}$. Total $= 6.0 + 5.33 = 11.3\\,\\mathrm{s}$. (c) Runner B wins by $12.0 - 11.3 = 0.7\\,\\mathrm{s}$, despite having a slower start, because the higher top speed more than compensates."
       }
     ],
     "mcq": [
@@ -3535,6 +3625,31 @@
           "LO-MOTION-05-4"
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "CQ-U01-05-2",
+        "statement": "A ball is dropped from rest from a bridge $45\\,\\mathrm{m}$ above a river. Taking $g = 10\\,\\mathrm{m/s^2}$ and ignoring air resistance: (a) Calculate the time the ball takes to reach the water. (b) Calculate the speed at which it hits the water. (c) A second ball is thrown downward from the same bridge at $5.0\\,\\mathrm{m/s}$. Calculate its speed when it hits the water and the time it takes. Compare the two cases.",
+        "answer": "(a) Using $s = \\tfrac{1}{2}gt^2$: $45 = \\tfrac{1}{2}(10)t^2$, so $t^2 = 9.0$ and $t = 3.0\\,\\mathrm{s}$. (b) Using $v = gt = 10 \\times 3.0 = 30\\,\\mathrm{m/s}$. (c) For the thrown ball, use $v^2 = u^2 + 2gs = 5.0^2 + 2(10)(45) = 25 + 900 = 925$, so $v = \\sqrt{925} \\approx 30.4\\,\\mathrm{m/s}$. Time: $v = u + gt$ gives $30.4 = 5.0 + 10t$, so $t = 25.4 \\div 10 = 2.54\\,\\mathrm{s} \\approx 2.5\\,\\mathrm{s}$. The thrown ball hits only slightly faster ($30.4$ vs $30\\,\\mathrm{m/s}$) but arrives $0.5\\,\\mathrm{s}$ sooner. The extra initial speed adds relatively little to the final speed because $v^2$ depends on $u^2 + 2gs$, and $2gs$ already contributes the dominant term ($900$ vs $25$).",
+        "hints": [
+          "For the dropped ball, initial velocity $u = 0$.",
+          "Use the suvat equations: $s = ut + \\tfrac{1}{2}at^2$, $v = u + at$, $v^2 = u^2 + 2as$.",
+          "Compare how much the initial speed affects the final speed versus the fall height."
+        ]
+      },
+      {
+        "id": "CQ-U01-05-3",
+        "statement": "A cyclist is travelling at $8.0\\,\\mathrm{m/s}$ when she begins to brake. She decelerates at $2.0\\,\\mathrm{m/s^2}$. (a) Calculate the time to stop. (b) Calculate the braking distance. (c) If her initial speed had been $16\\,\\mathrm{m/s}$ (double), and the deceleration remained the same, show that the braking distance is four times greater. Explain why doubling speed quadruples the stopping distance.",
+        "answer": "(a) Using $v = u + at$: $0 = 8.0 + (-2.0)t$, so $t = 4.0\\,\\mathrm{s}$. (b) $s = ut + \\tfrac{1}{2}at^2 = 8.0(4.0) + \\tfrac{1}{2}(-2.0)(4.0^2) = 32 - 16 = 16\\,\\mathrm{m}$. Or: $v^2 = u^2 + 2as$ gives $0 = 64 + 2(-2.0)s$, so $s = 16\\,\\mathrm{m}$. (c) At $16\\,\\mathrm{m/s}$: $0 = 16^2 + 2(-2.0)s$, so $s = 256 \\div 4 = 64\\,\\mathrm{m}$. This is $4 \\times 16 = 64\\,\\mathrm{m}$, confirming the factor of 4. From $v^2 = u^2 + 2as$, with $v = 0$: $s = u^2 / (2a)$. Since $s$ is proportional to $u^2$, doubling $u$ quadruples $s$. Physically, kinetic energy is $\\tfrac{1}{2}mv^2$, so doubling speed quadruples the energy the brakes must dissipate, and with constant braking force, this requires four times the distance.",
+        "hints": [
+          "Use $v = u + at$ with $v = 0$ for the stopping time.",
+          "Use $v^2 = u^2 + 2as$ to find the braking distance — it avoids needing time.",
+          "Look at how $s$ depends on $u$ in the equation when $v = 0$ and $a$ is constant."
+        ]
+      },
+      {
+        "id": "CQ-U01-05-4",
+        "statement": "A parachutist jumps from a helicopter and falls freely for $4.0\\,\\mathrm{s}$ before opening the parachute, which causes a deceleration of $15\\,\\mathrm{m/s^2}$ until she reaches a terminal speed of $5.0\\,\\mathrm{m/s}$. Take $g = 10\\,\\mathrm{m/s^2}$. (a) Calculate her speed just before opening the parachute. (b) Calculate the time from opening the parachute until she reaches $5.0\\,\\mathrm{m/s}$. (c) Sketch the speed–time graph for the entire fall and label key values.",
+        "answer": "(a) Speed after free fall: $v = gt = 10 \\times 4.0 = 40\\,\\mathrm{m/s}$. (b) After the parachute opens, the net deceleration is $15\\,\\mathrm{m/s^2}$ (upward). Using $v = u + at$: $5.0 = 40 + (-15)t$, so $15t = 35$ and $t = 2.3\\,\\mathrm{s}$. (c) The graph shows: from $t = 0$ to $t = 4.0\\,\\mathrm{s}$, a straight line rising from $0$ to $40\\,\\mathrm{m/s}$ (free fall with constant acceleration); at $t = 4.0\\,\\mathrm{s}$, the gradient changes sharply; from $t = 4.0\\,\\mathrm{s}$ to $t \\approx 6.3\\,\\mathrm{s}$, the line falls steeply from $40$ to $5.0\\,\\mathrm{m/s}$; then a horizontal line at $5.0\\,\\mathrm{m/s}$ for the remainder of the descent."
       }
     ],
     "mcq": [

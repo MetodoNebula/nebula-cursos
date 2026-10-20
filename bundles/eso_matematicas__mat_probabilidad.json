@@ -445,6 +445,73 @@
           "Corregir solo a medias, añadiendo $XC$ pero sin explicar por qué $CX$ y $XC$ son resultados distintos."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PB01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Se lanza un dado cúbico. Define: espacio muestral, suceso 'obtener par', suceso 'obtener más de $4$'. ¿Son compatibles?",
+        "hints": [
+          "$\\Omega = \\{1,2,3,4,5,6\\}$.",
+          "Par: $A = \\{2,4,6\\}$. Mayor que $4$: $B = \\{5,6\\}$."
+        ],
+        "answer": "$A \\cap B = \\{6\\} \\neq \\emptyset$: son compatibles.",
+        "full_solution": "$\\Omega = \\{1,2,3,4,5,6\\}$. $A = \\{2,4,6\\}$. $B = \\{5,6\\}$. $A \\cap B = \\{6\\}$ (obtener $6$ cumple ambos). Como $A \\cap B \\neq \\emptyset$, son compatibles (pueden ocurrir simultáneamente).",
+        "common_errors": [
+          "Decir que son incompatibles porque son sucesos 'diferentes'."
+        ]
+      },
+      {
+        "id": "EX-PB01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es lo mismo 'equiprobable' que 'equitativo'? Si un dado está trucado (el $6$ sale el doble), ¿podemos aplicar la regla de Laplace?",
+        "hints": [
+          "Laplace requiere que todos los resultados sean igualmente probables."
+        ],
+        "answer": "No. Laplace solo aplica si los resultados son equiprobables. Dado trucado → no aplicable.",
+        "full_solution": "La regla de Laplace: $P(A) = |A|/|\\Omega|$ solo es válida si todos los sucesos elementales tienen la misma probabilidad. Con un dado trucado: $P(6)$ es diferente de $P(1)$, así que Laplace no aplica. Habría que usar: $P(A) = \\sum_{\\omega \\in A} P(\\omega)$ con las probabilidades individuales corregidas.",
+        "common_errors": [
+          "Aplicar Laplace a cualquier experimento, incluso no equiprobable."
+        ]
+      },
+      {
+        "id": "EX-PB01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Se extraen $2$ cartas de una baraja de $40$ cartas sin reposición. ¿Cuántos elementos tiene el espacio muestral? ¿Es el mismo que con reposición?",
+        "hints": [
+          "Sin reposición: orden importa → variaciones.",
+          "Con reposición: $40 \\times 40$."
+        ],
+        "answer": "Sin reposición: $40 \\times 39 = 1560$ (si importa el orden). Con reposición: $40 \\times 40 = 1600$.",
+        "full_solution": "Sin reposición (orden importa): $V_{40,2} = 40 \\times 39 = 1560$ resultados. Si no importa el orden: $C_{40,2} = 780$. Con reposición (orden importa): $40^2 = 1600$. La diferencia: sin reposición no puedes sacar la misma carta dos veces.",
+        "common_errors": [
+          "Confundir variaciones con combinaciones (con o sin orden)."
+        ]
+      },
+      {
+        "id": "EX-PB01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En genética, un gen tiene $2$ alelos: A (dominante) y a (recesivo). Un cruce Aa $\\times$ Aa produce descendientes con genotipos $\\{AA, Aa, aA, aa\\}$. Identifica el espacio muestral y calcula la probabilidad de cada fenotipo.",
+        "hints": [
+          "$\\Omega = \\{AA, Aa, aA, aa\\}$.",
+          "Fenotipo dominante: AA, Aa, aA."
+        ],
+        "answer": "$P(\\text{dom}) = 3/4$, $P(\\text{rec}) = 1/4$.",
+        "full_solution": "Espacio muestral: $\\{AA, Aa, aA, aa\\}$ (cuadrado de Punnett). Equiprobables con $P = 1/4$ cada uno. Fenotipo dominante (al menos un A): $\\{AA, Aa, aA\\}$: $P = 3/4$. Fenotipo recesivo ($aa$): $P = 1/4$. Estas son las proporciones mendelianas $3:1$.",
+        "common_errors": [
+          "Contar Aa y aA como genotipos distintos fenotípicamente (ambos son heterocigotos con fenotipo dominante)."
+        ]
       }
     ],
     "exam_questions": [
@@ -1265,6 +1332,72 @@
           "Dividir entre las veces que cae hacia abajo ($\\frac{155}{95}$) en vez de entre el total de lanzamientos $250$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PB02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En una clase de $30$: $18$ aprueban Mates (M), $15$ aprueban Lengua (L), $10$ aprueban ambas. Si se elige un alumno al azar, calcula $P(M \\cup L)$, $P(\\overline{M})$ y $P(M \\cap \\overline{L})$.",
+        "hints": [
+          "$P(M \\cup L) = P(M) + P(L) - P(M \\cap L)$."
+        ],
+        "answer": "$P(M \\cup L) = 23/30$. $P(\\overline{M}) = 12/30$. $P(M \\cap \\overline{L}) = 8/30$.",
+        "full_solution": "$P(M) = 18/30$, $P(L) = 15/30$, $P(M \\cap L) = 10/30$. $P(M \\cup L) = 18/30+15/30-10/30 = 23/30$. $P(\\overline{M}) = 1-18/30 = 12/30$. $P(M \\cap \\overline{L}) = P(M)-P(M \\cap L) = 18/30-10/30 = 8/30$.",
+        "common_errors": [
+          "Sumar $P(M)+P(L)$ sin restar la intersección."
+        ]
+      },
+      {
+        "id": "EX-PB02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ usando un diagrama de Venn.",
+        "hints": [
+          "$A \\cup B$ se compone de tres regiones disjuntas."
+        ],
+        "answer": "Al sumar $P(A)+P(B)$, la intersección se cuenta dos veces, así que se resta una vez.",
+        "full_solution": "$A \\cup B = (A \\setminus B) \\cup (A \\cap B) \\cup (B \\setminus A)$ (disjuntos). $P(A) = P(A \\setminus B) + P(A \\cap B)$; $P(B) = P(B \\setminus A) + P(A \\cap B)$. Sumando: $P(A)+P(B) = P(A \\setminus B) + P(B \\setminus A) + 2P(A \\cap B)$. Pero $P(A \\cup B) = P(A \\setminus B) + P(B \\setminus A) + P(A \\cap B)$. Restando: $P(A \\cup B) = P(A)+P(B)-P(A \\cap B)$.",
+        "common_errors": [
+          "Aplicar la fórmula solo a sucesos incompatibles (cuando lo son, $P(A \\cap B) = 0$ y se simplifica)."
+        ]
+      },
+      {
+        "id": "EX-PB02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Se lanzan $2$ dados. ¿Cuál es la probabilidad de que la suma sea $7$? ¿Y de que al menos uno sea $6$?",
+        "hints": [
+          "$|\\Omega| = 36$.",
+          "Sumas de $7$: $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$."
+        ],
+        "answer": "$P(\\text{suma}=7) = 6/36 = 1/6$. $P(\\text{al menos un }6) = 11/36$.",
+        "full_solution": "Suma $= 7$: $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$ → $6$ casos. $P = 6/36 = 1/6$. Al menos un $6$: complementario de 'ningún $6$'. $P(\\text{ningún }6) = 25/36$. $P(\\text{al menos un }6) = 1-25/36 = 11/36$.",
+        "common_errors": [
+          "Para 'al menos un $6$': contar $6+6 = 12$ sin descontar el $(6,6)$ contado dos veces."
+        ]
+      },
+      {
+        "id": "EX-PB02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En informática, la probabilidad de que un servidor falle en un día es $0{,}02$. Con $2$ servidores independientes, ¿cuál es la probabilidad de que el servicio esté disponible (al menos $1$ funcione)?",
+        "hints": [
+          "$P(\\text{ambos fallen}) = 0{,}02 \\times 0{,}02$.",
+          "Complementario."
+        ],
+        "answer": "$P(\\text{al menos 1 funcione}) = 1 - 0{,}0004 = 0{,}9996 = 99{,}96\\%$.",
+        "full_solution": "$P(\\text{ambos fallen}) = 0{,}02^2 = 0{,}0004$ (independientes). $P(\\text{al menos 1 funcione}) = 1 - 0{,}0004 = 0{,}9996$. Redundancia: pasar de $98\\%$ a $99{,}96\\%$ de disponibilidad.",
+        "common_errors": [
+          "Sumar las probabilidades de que cada uno funcione: $0{,}98+0{,}98 = 1{,}96$ (no tiene sentido)."
+        ]
       }
     ],
     "exam_questions": [
@@ -2022,6 +2155,74 @@
           "Corregir multiplicando pero usando $\\frac35$ en ambas ramas ($\\frac{9}{25}$), como si hubiera reemplazamiento."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PB03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una urna tiene $3$ bolas rojas y $2$ azules. Se extraen $2$ sin reposición. Dibuja el diagrama de árbol y calcula $P(\\text{2 rojas})$.",
+        "hints": [
+          "1ª extracción: $P(R) = 3/5$, $P(A) = 2/5$.",
+          "2ª (si 1ª fue R): $P(R) = 2/4$, $P(A) = 2/4$."
+        ],
+        "answer": "$P(RR) = (3/5)(2/4) = 6/20 = 3/10$.",
+        "full_solution": "Árbol: 1ª: R($3/5$) → 2ª: R($2/4$) o A($2/4$). 1ª: A($2/5$) → 2ª: R($3/4$) o A($1/4$). $P(RR) = \\frac{3}{5} \\cdot \\frac{2}{4} = \\frac{6}{20} = \\frac{3}{10}$.",
+        "common_errors": [
+          "No actualizar las probabilidades en la 2ª extracción (usar $3/5$ de nuevo como si hubiera reposición)."
+        ]
+      },
+      {
+        "id": "EX-PB03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué cambian las probabilidades en las ramas del árbol cuando no hay reposición? ¿Qué pasaría si la urna tuviera $1\\,000\\,000$ bolas?",
+        "hints": [
+          "Sin reposición: la composición de la urna cambia.",
+          "Con muchas bolas, el cambio es despreciable."
+        ],
+        "answer": "Porque extraer cambia la composición. Con muchas bolas, la diferencia es despreciable y se puede tratar como con reposición.",
+        "full_solution": "Sin reposición, la 1ª extracción altera la urna. Con $3R, 2A$: si sacamos $R$, quedan $2R, 2A$ (la proporción cambió de $60\\%R$ a $50\\%R$). Con $1\\,000\\,000$ bolas, extraer $1$ apenas cambia la composición ($\\approx 0{,}0001\\%$), así que se aproxima a 'con reposición'. Formalmente: $\\frac{n-1}{N-1} \\approx \\frac{n}{N}$ cuando $N$ es grande.",
+        "common_errors": [
+          "Tratar siempre sin reposición como con reposición (solo vale si $N \\gg n$)."
+        ]
+      },
+      {
+        "id": "EX-PB03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una fábrica tiene $3$ máquinas: A produce el $50\\%$, B el $30\\%$, C el $20\\%$. Las tasas de defectos son $2\\%$, $3\\%$, $5\\%$. Se encuentra un producto defectuoso, ¿de qué máquina es más probable que venga?",
+        "hints": [
+          "Probabilidad total + Bayes.",
+          "$P(D) = 0{,}5(0{,}02)+0{,}3(0{,}03)+0{,}2(0{,}05)$."
+        ],
+        "answer": "$P(A|D) \\approx 0{,}345$, $P(B|D) \\approx 0{,}310$, $P(C|D) \\approx 0{,}345$. A y C igualmente probables.",
+        "full_solution": "$P(D) = 0{,}01+0{,}009+0{,}01 = 0{,}029$. $P(A|D) = 0{,}01/0{,}029 = 0{,}345$. $P(B|D) = 0{,}009/0{,}029 = 0{,}310$. $P(C|D) = 0{,}01/0{,}029 = 0{,}345$. A y C son igualmente probables (A produce mucho con pocos defectos; C produce poco con muchos defectos).",
+        "common_errors": [
+          "Elegir C directamente porque tiene la mayor tasa de defectos sin considerar la producción."
+        ]
+      },
+      {
+        "id": "EX-PB03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En medicina, un test de COVID tiene sensibilidad $95\\%$ y especificidad $99\\%$. Si la prevalencia es $1\\%$, ¿cuál es la probabilidad de estar enfermo dado un test positivo? (Valor predictivo positivo).",
+        "hints": [
+          "$P(+|E) = 0{,}95$; $P(-|\\bar{E}) = 0{,}99$; $P(E) = 0{,}01$.",
+          "Bayes: $P(E|+) = \\frac{P(+|E)P(E)}{P(+)}$."
+        ],
+        "answer": "$P(E|+) \\approx 49\\%$. ¡Más de la mitad de los positivos son falsos!",
+        "full_solution": "$P(+) = P(+|E)P(E) + P(+|\\bar{E})P(\\bar{E}) = 0{,}95(0{,}01) + 0{,}01(0{,}99) = 0{,}0095 + 0{,}0099 = 0{,}0194$. $P(E|+) = 0{,}0095/0{,}0194 \\approx 0{,}49 = 49\\%$. A pesar del test ser bueno, con prevalencia baja, un positivo solo tiene $49\\%$ de probabilidad de estar enfermo.",
+        "common_errors": [
+          "Pensar que sensibilidad $95\\%$ implica que el $95\\%$ de los positivos están enfermos (confundir $P(+|E)$ con $P(E|+)$)."
+        ]
       }
     ],
     "exam_questions": [
@@ -2776,6 +2977,72 @@
           "Corregir dividiendo entre $3$ en vez de entre $3!=6$ ($\\frac{210}{3}=70$)."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PB04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "¿De cuántas formas se pueden sentar $5$ amigos en fila en el cine? ¿Y si dos de ellos deben sentarse juntos?",
+        "hints": [
+          "En fila: $5!$.",
+          "Juntos: trátalos como un bloque de $2$."
+        ],
+        "answer": "$5! = 120$. Juntos: $4! \\times 2! = 48$.",
+        "full_solution": "Sin restricción: $5! = 120$ formas. Con dos juntos: los tratamos como un bloque → $4$ elementos a permutar: $4! = 24$. Los dos amigos pueden intercambiarse dentro del bloque: $\\times 2 = 48$.",
+        "common_errors": [
+          "Olvidar multiplicar por $2!$ (las permutaciones internas del bloque)."
+        ]
+      },
+      {
+        "id": "EX-PB04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En una lotería, se eligen $6$ números de entre $49$. ¿Cuántas combinaciones posibles hay? ¿Cuál es la probabilidad de acertar?",
+        "hints": [
+          "$\\binom{49}{6}$."
+        ],
+        "answer": "$\\binom{49}{6} = 13\\,983\\,816$. $P = 1/13\\,983\\,816 \\approx 7{,}15 \\times 10^{-8}$.",
+        "full_solution": "$\\binom{49}{6} = \\frac{49!}{6!\\cdot 43!} = \\frac{49 \\times 48 \\times 47 \\times 46 \\times 45 \\times 44}{720} = 13\\,983\\,816$. Probabilidad de acertar: $1/13\\,983\\,816 \\approx 0{,}00000715\\%$.",
+        "common_errors": [
+          "Usar variaciones ($49 \\times 48 \\times \\cdots$) sin dividir por $6!$ (el orden no importa en la lotería)."
+        ]
+      },
+      {
+        "id": "EX-PB04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que $\\binom{n}{k} = \\binom{n}{n-k}$. ¿Qué significado combinatorio tiene?",
+        "hints": [
+          "$\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$.",
+          "Elegir $k$ es lo mismo que elegir cuáles $n-k$ se quedan fuera."
+        ],
+        "answer": "Algebraicamente: ambos dan $\\frac{n!}{k!(n-k)!}$. Combinatoriamente: elegir qué incluir es lo mismo que elegir qué excluir.",
+        "full_solution": "$\\binom{n}{n-k} = \\frac{n!}{(n-k)!(n-(n-k))!} = \\frac{n!}{(n-k)!k!} = \\binom{n}{k}$. Significado: elegir $k$ objetos de $n$ para un equipo es equivalente a elegir los $n-k$ que NO entran. Por eso $\\binom{49}{6} = \\binom{49}{43}$.",
+        "common_errors": [
+          "Pensar que $\\binom{n}{k} = \\binom{k}{n}$ (eso no tiene sentido si $k < n$)."
+        ]
+      },
+      {
+        "id": "EX-PB04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En informática, ¿cuántas contraseñas de $8$ caracteres se pueden formar con $26$ letras minúsculas y $10$ dígitos (con repetición)?",
+        "hints": [
+          "$36$ caracteres posibles, $8$ posiciones, con repetición."
+        ],
+        "answer": "$36^8 = 2{,}82 \\times 10^{12}$ contraseñas.",
+        "full_solution": "Cada posición: $26+10 = 36$ opciones. Con repetición y orden: $36^8 = 2\\,821\\,109\\,907\\,456 \\approx 2{,}82 \\times 10^{12}$. Si añadimos mayúsculas ($62$ caracteres): $62^8 \\approx 2{,}18 \\times 10^{14}$ (77 veces más seguro).",
+        "common_errors": [
+          "Usar $\\binom{36}{8}$ (combinaciones sin repetición: eso es elegir $8$ caracteres distintos sin orden)."
+        ]
       }
     ],
     "exam_questions": [
@@ -3593,6 +3860,73 @@
           "Promediar sin ponderar o sumar solo una ruta, por ejemplo quedarse con $\\frac12\\cdot\\frac25=\\frac15$ y olvidar la ruta de la urna $U_2$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PB05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El $60\\%$ de los estudiantes aprueba Mates, el $70\\%$ aprueba Lengua y el $50\\%$ aprueba ambas. ¿Son independientes los sucesos 'aprobar Mates' y 'aprobar Lengua'?",
+        "hints": [
+          "Independencia: $P(M \\cap L) = P(M) \\cdot P(L)$.",
+          "$0{,}6 \\times 0{,}7 = 0{,}42 \\neq 0{,}50$."
+        ],
+        "answer": "No son independientes. $P(M)P(L) = 0{,}42 \\neq P(M \\cap L) = 0{,}50$.",
+        "full_solution": "Si fueran independientes: $P(M \\cap L) = P(M) \\cdot P(L) = 0{,}6 \\times 0{,}7 = 0{,}42$. Pero $P(M \\cap L) = 0{,}50 > 0{,}42$. No son independientes; hay dependencia positiva (aprobar Mates aumenta la probabilidad de aprobar Lengua).",
+        "common_errors": [
+          "Confundir independencia con incompatibilidad: incompatibles → $P(A \\cap B) = 0$."
+        ]
+      },
+      {
+        "id": "EX-PB05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Pueden dos sucesos ser simultáneamente independientes e incompatibles (excluyentes)? Justifica.",
+        "hints": [
+          "Incompatibles: $P(A \\cap B) = 0$.",
+          "Independientes: $P(A \\cap B) = P(A)P(B)$."
+        ],
+        "answer": "Solo si al menos uno tiene probabilidad $0$. Si ambos tienen $P > 0$, no pueden ser ambas cosas.",
+        "full_solution": "Si $A$ y $B$ son incompatibles: $P(A \\cap B) = 0$. Si además son independientes: $P(A \\cap B) = P(A)P(B) = 0$. Esto solo es posible si $P(A) = 0$ o $P(B) = 0$. Con $P(A), P(B) > 0$: incompatibilidad implica dependencia (saber que ocurrió $A$ descarta $B$).",
+        "common_errors": [
+          "Confundir independencia con incompatibilidad (son casi 'contrarios' cuando $P > 0$)."
+        ]
+      },
+      {
+        "id": "EX-PB05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un jugador lanza una moneda equilibrada $3$ veces. ¿Cuál es la probabilidad de obtener al menos una cara? Resuélvelo por complementario.",
+        "hints": [
+          "$P(\\text{todo cruces}) = (1/2)^3$."
+        ],
+        "answer": "$P(\\text{al menos 1 cara}) = 1 - 1/8 = 7/8$.",
+        "full_solution": "$P(\\text{todo cruces}) = (1/2)^3 = 1/8$. $P(\\text{al menos 1 cara}) = 1 - 1/8 = 7/8 = 87{,}5\\%$. Método directo: sumar $P(1C)+P(2C)+P(3C) = 3/8+3/8+1/8 = 7/8$ ✓.",
+        "common_errors": [
+          "Calcular $P(\\text{al menos 1}) = 3 \\times 1/2 = 3/2$ (sumar probabilidades de cada lanzamiento, que supera $1$)."
+        ]
+      },
+      {
+        "id": "EX-PB05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ingeniería de fiabilidad, un sistema tiene $3$ componentes en serie, cada uno con probabilidad de funcionar $0{,}95$ (independientes). ¿Cuál es la fiabilidad del sistema?",
+        "hints": [
+          "En serie: todos deben funcionar.",
+          "$P(\\text{sistema}) = P(A) \\times P(B) \\times P(C)$."
+        ],
+        "answer": "$0{,}95^3 = 0{,}857 = 85{,}7\\%$.",
+        "full_solution": "En serie, el sistema falla si cualquier componente falla. $P(\\text{sistema funciona}) = 0{,}95^3 = 0{,}857375 \\approx 85{,}7\\%$. La fiabilidad del sistema es menor que la de cada componente. Con $n$ componentes: $0{,}95^n$ disminuye rápidamente.",
+        "common_errors": [
+          "Sumar las probabilidades: $3 \\times 0{,}95 = 2{,}85$ (no tiene sentido, las probabilidades se multiplican para sucesos independientes en serie)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4319,6 +4653,72 @@
           "Dar $\\frac35$ como respuesta: es $P(R\\mid U_1)$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PB06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una enfermedad afecta al $1\\%$ de la población. Un test tiene $99\\%$ de acierto (tanto en enfermos como sanos). Si das positivo, ¿cuál es la probabilidad de estar enfermo?",
+        "hints": [
+          "$P(E) = 0{,}01$, $P(+|E) = 0{,}99$, $P(+|\\bar{E}) = 0{,}01$.",
+          "Bayes: $P(E|+) = \\frac{P(+|E)P(E)}{P(+)}$."
+        ],
+        "answer": "$P(E|+) = 0{,}5 = 50\\%$. Solo el $50\\%$ de los positivos están enfermos.",
+        "full_solution": "$P(+) = 0{,}99(0{,}01)+0{,}01(0{,}99) = 0{,}0099+0{,}0099 = 0{,}0198$. $P(E|+) = 0{,}0099/0{,}0198 = 0{,}50$. Solo el $50\\%$: los falsos positivos ($0{,}99\\%$ del $99\\%$ sano) son tantos como los verdaderos positivos ($99\\%$ del $1\\%$ enfermo).",
+        "common_errors": [
+          "Pensar que $99\\%$ de precisión implica $99\\%$ de estar enfermo dado positivo (confundir $P(+|E)$ con $P(E|+)$)."
+        ]
+      },
+      {
+        "id": "EX-PB06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué el Teorema de Bayes es 'contraintuitivo' cuando la prevalencia es baja? Explica con el concepto de tasa base.",
+        "hints": [
+          "Si la enfermedad es rara, hay muchos más sanos que enfermos.",
+          "Incluso con pocas falsas alarmas por sano, el total es grande."
+        ],
+        "answer": "Porque con prevalencia baja, el número de falsos positivos (de la gran masa de sanos) supera a los verdaderos positivos (de los pocos enfermos).",
+        "full_solution": "Con prevalencia $1\\%$ en $10\\,000$ personas: $100$ enfermos y $9\\,900$ sanos. Test $99\\%$: $99$ verdaderos positivos (de $100$ enfermos) y $99$ falsos positivos (del $1\\%$ de error en $9\\,900$ sanos). Total positivos: $198$, de los cuales solo $99$ ($50\\%$) están enfermos. La 'base' de sanos es tan grande que su pequeño porcentaje de error genera tantos falsos positivos como verdaderos. Esto se llama la falacia de la tasa base.",
+        "common_errors": [
+          "Ignorar la prevalencia y equiparar precisión del test con probabilidad posterior."
+        ]
+      },
+      {
+        "id": "EX-PB06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un fabricante tiene $3$ proveedores: A ($50\\%$), B ($30\\%$), C ($20\\%$). Las tasas de piezas defectuosas son $1\\%$, $2\\%$, $3\\%$. Se encuentra una pieza defectuosa. ¿De qué proveedor viene más probablemente?",
+        "hints": [
+          "$P(D) = 0{,}5(0{,}01)+0{,}3(0{,}02)+0{,}2(0{,}03)$."
+        ],
+        "answer": "$P(A|D) \\approx 29{,}4\\%$, $P(B|D) \\approx 35{,}3\\%$, $P(C|D) \\approx 35{,}3\\%$. B y C empatados.",
+        "full_solution": "$P(D) = 0{,}005+0{,}006+0{,}006 = 0{,}017$. $P(A|D) = 0{,}005/0{,}017 \\approx 29{,}4\\%$. $P(B|D) = 0{,}006/0{,}017 \\approx 35{,}3\\%$. $P(C|D) = 0{,}006/0{,}017 \\approx 35{,}3\\%$. B y C empatan (B produce más con menor tasa; C produce menos con mayor tasa).",
+        "common_errors": [
+          "Elegir C directamente por tener la mayor tasa de defectos, sin considerar el volumen de producción."
+        ]
+      },
+      {
+        "id": "EX-PB06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En un juicio, la 'falacia del fiscal' es confundir $P(\\text{evidencia}|\\text{inocente})$ con $P(\\text{inocente}|\\text{evidencia})$. Si la probabilidad de que una prueba de ADN coincida por azar es $1$ en un millón, ¿eso significa que hay solo $1$ en un millón de probabilidades de inocencia? Usa Bayes para explicar.",
+        "hints": [
+          "$P(\\text{match}|\\text{inocente}) = 10^{-6}$, pero ¿cuál es $P(\\text{culpable})$ a priori?"
+        ],
+        "answer": "No. Si hay $10\\,000\\,000$ de sospechosos posibles, habría $\\approx 10$ coincidencias por azar.",
+        "full_solution": "Sea $P(M|I) = 10^{-6}$. No es lo mismo que $P(I|M)$. Si el sospechoso fue elegido de una ciudad de $1$ millón: $P(\\text{culpable a priori}) \\approx 1/10^6$. Bayes: $P(C|M) = \\frac{P(M|C) \\cdot P(C)}{P(M|C)P(C)+P(M|I)P(I)} = \\frac{1 \\times 10^{-6}}{10^{-6}+10^{-6}(1-10^{-6})} \\approx 50\\%$. ¡Solo $50\\%$, no $99{,}9999\\%$! La falacia del fiscal ignora la tasa base.",
+        "common_errors": [
+          "Asumir que $P(\\text{coincidencia}|\\text{inocente}) = 10^{-6}$ implica $P(\\text{culpable}|\\text{coincidencia}) = 1-10^{-6}$."
+        ]
       }
     ],
     "exam_questions": [
@@ -5071,6 +5471,71 @@
           "Dividir entre $5$ o entre $10$ en lugar de entre $2^5=32$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PB07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Desarrolla $(2x - 3)^4$ usando el binomio de Newton.",
+        "hints": [
+          "$(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k$ con $a = 2x$, $b = -3$."
+        ],
+        "answer": "$16x^4 - 96x^3 + 216x^2 - 216x + 81$.",
+        "full_solution": "$(2x-3)^4 = \\sum_{k=0}^4 \\binom{4}{k}(2x)^{4-k}(-3)^k$. $k=0$: $1 \\cdot 16x^4 \\cdot 1 = 16x^4$. $k=1$: $4 \\cdot 8x^3 \\cdot (-3) = -96x^3$. $k=2$: $6 \\cdot 4x^2 \\cdot 9 = 216x^2$. $k=3$: $4 \\cdot 2x \\cdot (-27) = -216x$. $k=4$: $1 \\cdot 1 \\cdot 81 = 81$.",
+        "common_errors": [
+          "Olvidar los signos alternados ($b = -3$ produce $(-3)^k$)."
+        ]
+      },
+      {
+        "id": "EX-PB07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que $\\sum_{k=0}^{n} \\binom{n}{k} = 2^n$ usando el binomio de Newton.",
+        "hints": [
+          "Pon $a = 1$, $b = 1$ en $(a+b)^n$."
+        ],
+        "answer": "$(1+1)^n = \\sum_{k=0}^n \\binom{n}{k} = 2^n$.",
+        "full_solution": "El binomio de Newton: $(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k$. Con $a = b = 1$: $(1+1)^n = \\sum_{k=0}^n \\binom{n}{k} \\cdot 1 \\cdot 1 = \\sum_{k=0}^n \\binom{n}{k} = 2^n$. Combinatoriamente: el número total de subconjuntos de un conjunto de $n$ elementos es $2^n$.",
+        "common_errors": [
+          "Intentar sumar los coeficientes manualmente para $n$ grande en vez de usar la evaluación $a = b = 1$."
+        ]
+      },
+      {
+        "id": "EX-PB07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cuál es el coeficiente de $x^3$ en $(1+x)^{10}$?",
+        "hints": [
+          "Término general: $\\binom{10}{k}x^k$. Para $x^3$: $k = 3$."
+        ],
+        "answer": "$\\binom{10}{3} = 120$.",
+        "full_solution": "En $(1+x)^{10}$, el coeficiente de $x^k$ es $\\binom{10}{k}$. Para $x^3$: $\\binom{10}{3} = \\frac{10!}{3!7!} = \\frac{10 \\times 9 \\times 8}{6} = 120$.",
+        "common_errors": [
+          "Calcular $\\binom{10}{3}$ como $10 \\times 9 \\times 8 = 720$ sin dividir por $3! = 6$."
+        ]
+      },
+      {
+        "id": "EX-PB07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En genética, el triángulo de Pascal aparece en las proporciones fenotípicas de cruces. En un cruce $Aa \\times Aa$ con dominancia incompleta, las proporciones son $1:2:1$. ¿Qué fila del triángulo es? Para el cruce de dos heterocigotos con $2$ genes independientes ($AaBb \\times AaBb$), ¿cuántos fenotipos distintos hay y cuáles son sus proporciones?",
+        "hints": [
+          "$1:2:1$ es la fila $n = 2$: $\\binom{2}{0}:\\binom{2}{1}:\\binom{2}{2}$.",
+          "Dos genes: $(1:2:1)^2$."
+        ],
+        "answer": "Fila $n = 2$. Dos genes: $9$ fenotipos con proporciones del triángulo.",
+        "full_solution": "Con $1$ gen: fila $n = 2$ → $1:2:1$ ($\\binom{2}{0}:\\binom{2}{1}:\\binom{2}{2}$). Con $2$ genes independientes: las proporciones son el producto $(1:2:1) \\times (1:2:1) = 1:2:1:2:4:2:1:2:1$, que da $9$ genotipos y, con dominancia incompleta, $9$ fenotipos en proporciones $1:2:1:2:4:2:1:2:1$ (del total de $16$).",
+        "common_errors": [
+          "No considerar que con dominancia completa las proporciones se agrupan ($9:3:3:1$)."
+        ]
       }
     ],
     "exam_questions": [

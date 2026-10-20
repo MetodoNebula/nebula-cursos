@@ -257,6 +257,74 @@
           }
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un submarino desciende desde la superficie del mar ($0$ m) hasta $-35$ m. Después asciende $12$ m. ¿A qué profundidad se encuentra?",
+        "hints": [
+          "Descender es restar; ascender es sumar.",
+          "Suma $-35 + 12$."
+        ],
+        "answer": "$-35 + 12 = -23$ m. Está a $23$ m bajo la superficie.",
+        "full_solution": "El submarino parte de la superficie ($0$ m). Al descender $35$ m su posición es $0 - 35 = -35$ m. Al ascender $12$ m: $-35 + 12 = -23$ m. Se encuentra a $23$ m de profundidad.",
+        "common_errors": [
+          "Escribir $-35 - 12 = -47$ confundiendo ascender con descender."
+        ]
+      },
+      {
+        "id": "EX-F01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La temperatura a las 6:00 es $-4\\,°C$. A mediodía ha subido $11\\,°C$ y por la noche baja $8\\,°C$. ¿Cuál es la temperatura final?",
+        "hints": [
+          "Subir es sumar; bajar es restar.",
+          "Calcula paso a paso: $-4+11$ y después resta $8$."
+        ],
+        "answer": "$-4 + 11 - 8 = -1\\,°C$.",
+        "full_solution": "Temperatura a las 6:00: $-4\\,°C$. A mediodía: $-4 + 11 = 7\\,°C$. Por la noche: $7 - 8 = -1\\,°C$.",
+        "common_errors": [
+          "Olvidar el signo negativo inicial y calcular $4 + 11 - 8 = 7$."
+        ]
+      },
+      {
+        "id": "EX-F01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que al sumar dos números negativos siempre se obtiene un número negativo? Justifica tu respuesta con un argumento general.",
+        "hints": [
+          "Piensa en qué pasa con los signos al sumar.",
+          "Si $a < 0$ y $b < 0$, ¿qué puedes decir de $a + b$?"
+        ],
+        "answer": "Sí. Si $a < 0$ y $b < 0$, entonces $a + b < 0$.",
+        "full_solution": "Sea $a < 0$ y $b < 0$. Podemos escribir $a = -|a|$ y $b = -|b|$ con $|a|, |b| > 0$. Entonces $a + b = -(|a| + |b|)$. Como $|a| + |b| > 0$, resulta $a + b < 0$. Luego la suma de dos negativos es siempre negativa.",
+        "common_errors": [
+          "Confundir con la multiplicación de negativos, que sí da positivo."
+        ]
+      },
+      {
+        "id": "EX-F01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En un videojuego, un personaje tiene $120$ puntos de vida. Recibe un golpe de $-45$ puntos, luego se cura con una poción de $+30$ puntos, y finalmente recibe otro golpe de $-60$ puntos. ¿Cuánta vida le queda? ¿Sigue vivo (vida $> 0$)?",
+        "hints": [
+          "Opera en orden: $120 + (-45) + 30 + (-60)$.",
+          "Comprueba si el resultado es positivo."
+        ],
+        "answer": "$120 - 45 + 30 - 60 = 45$ puntos. Sí, sigue vivo.",
+        "full_solution": "Paso 1: $120 - 45 = 75$. Paso 2: $75 + 30 = 105$. Paso 3: $105 - 60 = 45$. Le quedan $45$ puntos de vida, que es mayor que $0$, así que sigue vivo.",
+        "common_errors": [
+          "Sumar todos los valores sin atender al signo."
+        ]
       }
     ],
     "exam_questions": [],
@@ -741,6 +809,74 @@
           }
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una receta para $4$ personas lleva $\\dfrac{3}{4}$ de litro de leche. ¿Cuánta leche se necesita para $6$ personas?",
+        "hints": [
+          "Calcula la leche por persona y luego multiplica por $6$.",
+          "Leche por persona: $\\dfrac{3/4}{4}$."
+        ],
+        "answer": "$\\dfrac{3}{4} \\div 4 \\times 6 = \\dfrac{9}{8} = 1{,}125$ litros.",
+        "full_solution": "Leche por persona: $\\dfrac{3/4}{4} = \\dfrac{3}{16}$ L. Para $6$ personas: $\\dfrac{3}{16} \\times 6 = \\dfrac{18}{16} = \\dfrac{9}{8} = 1{,}125$ L.",
+        "common_errors": [
+          "Multiplicar directamente $\\frac{3}{4} \\times 6$ sin dividir primero entre $4$."
+        ]
+      },
+      {
+        "id": "EX-F02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un depósito está lleno a $\\dfrac{2}{5}$ de su capacidad. Si contiene $120$ litros, ¿cuál es la capacidad total del depósito?",
+        "hints": [
+          "Si $\\frac{2}{5}$ del total es $120$, ¿cuánto es $\\frac{1}{5}$?",
+          "Multiplica $\\frac{1}{5}$ del total por $5$."
+        ],
+        "answer": "$120 \\div \\dfrac{2}{5} = 300$ litros.",
+        "full_solution": "$\\dfrac{2}{5} \\cdot C = 120 \\Rightarrow C = 120 \\cdot \\dfrac{5}{2} = 300$ litros.",
+        "common_errors": [
+          "Calcular $120 \\times \\frac{2}{5} = 48$ en lugar de dividir."
+        ]
+      },
+      {
+        "id": "EX-F02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué al dividir un número entre una fracción menor que $1$ el resultado es mayor que el número original? Explícalo con un ejemplo.",
+        "hints": [
+          "Piensa qué significa dividir por $\\frac{1}{2}$: ¿cuántas mitades caben?",
+          "Dividir por una fracción es multiplicar por su inversa."
+        ],
+        "answer": "Porque dividir por $\\frac{a}{b}$ (con $\\frac{a}{b}<1$) equivale a multiplicar por $\\frac{b}{a}>1$.",
+        "full_solution": "Dividir por una fracción $\\frac{a}{b}$ equivale a multiplicar por su inversa $\\frac{b}{a}$. Si $\\frac{a}{b} < 1$, entonces $a < b$ y $\\frac{b}{a} > 1$, así que el resultado es mayor. Ejemplo: $6 \\div \\frac{1}{2} = 6 \\times 2 = 12 > 6$; en $6$ caben $12$ mitades.",
+        "common_errors": [
+          "Pensar erróneamente que dividir siempre hace un número más pequeño."
+        ]
+      },
+      {
+        "id": "EX-F02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En biología, un cultivo de bacterias ocupa $\\dfrac{3}{8}$ de una placa de Petri por la mañana. Por la tarde ha crecido y ahora ocupa $\\dfrac{5}{6}$ de la placa. ¿Qué fracción de la placa se ha cubierto durante el día?",
+        "hints": [
+          "Resta la fracción final menos la inicial.",
+          "Busca denominador común de $8$ y $6$."
+        ],
+        "answer": "$\\dfrac{5}{6} - \\dfrac{3}{8} = \\dfrac{11}{24}$ de la placa.",
+        "full_solution": "Denominador común: $\\text{mcm}(6,8) = 24$. $\\dfrac{5}{6} = \\dfrac{20}{24}$; $\\dfrac{3}{8} = \\dfrac{9}{24}$. Diferencia: $\\dfrac{20-9}{24} = \\dfrac{11}{24}$.",
+        "common_errors": [
+          "Restar numeradores y denominadores por separado: $\\frac{5-3}{6-8}$."
+        ]
       }
     ],
     "exam_questions": [],
@@ -1169,6 +1305,74 @@
           }
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Carlos compra $3$ cuadernos a $2{,}50\\,€$ cada uno y $2$ bolígrafos a $1{,}20\\,€$ cada uno. Paga con un billete de $20\\,€$. Calcula el cambio usando una sola expresión.",
+        "hints": [
+          "Escribe la expresión: $20 - (3 \\times 2{,}50 + 2 \\times 1{,}20)$.",
+          "Resuelve primero los paréntesis."
+        ],
+        "answer": "$20 - (7{,}50 + 2{,}40) = 20 - 9{,}90 = 10{,}10\\,€$.",
+        "full_solution": "$3 \\times 2{,}50 = 7{,}50$; $2 \\times 1{,}20 = 2{,}40$; total compra $= 7{,}50 + 2{,}40 = 9{,}90$; cambio $= 20 - 9{,}90 = 10{,}10\\,€$.",
+        "common_errors": [
+          "Olvidar los paréntesis y restar solo $3 \\times 2{,}50$ antes de sumar los bolígrafos."
+        ]
+      },
+      {
+        "id": "EX-F03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un ascensor parte de la planta $-2$ (sótano). Sube $5$ plantas, baja $3$ y vuelve a subir $4$. ¿En qué planta se encuentra? Escríbelo como una operación combinada.",
+        "hints": [
+          "Expresión: $-2 + 5 - 3 + 4$.",
+          "Opera de izquierda a derecha."
+        ],
+        "answer": "$-2 + 5 - 3 + 4 = 4$. Está en la planta $4$.",
+        "full_solution": "$-2 + 5 = 3$; $3 - 3 = 0$; $0 + 4 = 4$. El ascensor está en la planta $4$.",
+        "common_errors": [
+          "No respetar la jerarquía al mezclar sumas y restas con otros operadores."
+        ]
+      },
+      {
+        "id": "EX-F03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué es necesario que exista un convenio universal de jerarquía de operaciones? ¿Qué pasaría si cada persona eligiera el orden que quisiera?",
+        "hints": [
+          "Piensa en la expresión $2 + 3 \\times 4$: ¿cuántos resultados posibles hay sin convenio?",
+          "¿Cómo afectaría a la ciencia o la ingeniería?"
+        ],
+        "answer": "Sin un convenio, una misma expresión daría resultados distintos, haciendo imposible la comunicación matemática precisa.",
+        "full_solution": "La expresión $2 + 3 \\times 4$ vale $14$ con el convenio (multiplicación primero) o $20$ (si se opera de izquierda a derecha). Sin un acuerdo único, la misma fórmula daría resultados diferentes según quién la interprete, lo que haría inviable compartir cálculos en ciencia, ingeniería, programación o contabilidad.",
+        "common_errors": [
+          "Pensar que el convenio es arbitrario y no tiene consecuencias prácticas."
+        ]
+      },
+      {
+        "id": "EX-F03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En programación, la expresión `resultado = 10 + 2 * 3 ** 2` se evalúa con la misma jerarquía que en matemáticas (`**` es potencia). Calcula el valor de `resultado` paso a paso.",
+        "hints": [
+          "Primero la potencia ($3^2$), luego la multiplicación, luego la suma.",
+          "$3^2 = 9$; $2 \\times 9 = 18$; $10 + 18 = ?$."
+        ],
+        "answer": "$\\text{resultado} = 28$.",
+        "full_solution": "Paso 1: Potencia: $3^2 = 9$. Paso 2: Multiplicación: $2 \\times 9 = 18$. Paso 3: Suma: $10 + 18 = 28$.",
+        "common_errors": [
+          "Operar de izquierda a derecha sin respetar la jerarquía: $(10+2) \\times 3^2 = 108$."
+        ]
       }
     ],
     "exam_questions": [],
@@ -1596,6 +1800,74 @@
           }
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En un aparcamiento hay coches ($c$) y motos ($m$). Cada coche tiene $4$ ruedas y cada moto $2$. Escribe una expresión algebraica para el número total de ruedas. Si hay $15$ coches y $8$ motos, ¿cuántas ruedas hay en total?",
+        "hints": [
+          "Total de ruedas: $4c + 2m$.",
+          "Sustituye $c = 15$ y $m = 8$."
+        ],
+        "answer": "Expresión: $4c + 2m$. Total: $4(15) + 2(8) = 76$ ruedas.",
+        "full_solution": "La expresión algebraica es $R = 4c + 2m$. Sustituyendo: $R = 4 \\cdot 15 + 2 \\cdot 8 = 60 + 16 = 76$ ruedas.",
+        "common_errors": [
+          "Sumar los coeficientes: $4 + 2 = 6$ y luego multiplicar por el total de vehículos."
+        ]
+      },
+      {
+        "id": "EX-F04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un fontanero cobra $30\\,€$ por la visita más $20\\,€$ por cada hora de trabajo. Escribe la expresión del coste total $C$ en función de las horas $h$. ¿Cuánto cuesta una reparación de $3{,}5$ horas?",
+        "hints": [
+          "$C = 30 + 20h$.",
+          "Sustituye $h = 3{,}5$."
+        ],
+        "answer": "$C = 30 + 20h$. Para $h = 3{,}5$: $C = 30 + 70 = 100\\,€$.",
+        "full_solution": "$C(h) = 30 + 20h$. Para $h = 3{,}5$: $C = 30 + 20 \\cdot 3{,}5 = 30 + 70 = 100\\,€$.",
+        "common_errors": [
+          "Olvidar el coste fijo de la visita y calcular solo $20 \\times 3{,}5 = 70$."
+        ]
+      },
+      {
+        "id": "EX-F04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué no se pueden sumar $3x$ y $5y$? ¿En qué se diferencian de $3x$ y $5x$? Explica usando un ejemplo concreto.",
+        "hints": [
+          "Piensa en $x$ e $y$ como objetos diferentes: manzanas y naranjas.",
+          "¿Qué pasa cuando las letras representan lo mismo?"
+        ],
+        "answer": "Porque representan cantidades de magnitudes distintas; solo se suman términos semejantes (misma parte literal).",
+        "full_solution": "$3x$ y $5y$ son monomios con parte literal diferente ($x \\neq y$), como sumar $3$ manzanas y $5$ naranjas: no puedes decir «$8$ manzaranjas». En cambio $3x + 5x = 8x$ porque ambos miden la misma magnitud, como sumar $3$ manzanas y $5$ manzanas = $8$ manzanas.",
+        "common_errors": [
+          "Sumar coeficientes y letras sin criterio: $3x + 5y = 8xy$."
+        ]
+      },
+      {
+        "id": "EX-F04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En física, la velocidad media se calcula como $v = \\dfrac{d}{t}$. Despeja $d$ y despeja $t$. Si un ciclista va a $v = 25\\,\\text{km/h}$ durante $t = 2{,}5\\,\\text{h}$, ¿qué distancia recorre?",
+        "hints": [
+          "Despeja multiplicando en cruz.",
+          "$d = v \\cdot t$."
+        ],
+        "answer": "$d = v \\cdot t = 25 \\times 2{,}5 = 62{,}5$ km. $t = d/v$.",
+        "full_solution": "De $v = d/t$ despejamos $d = v \\cdot t$ y $t = d/v$. Sustituyendo: $d = 25 \\times 2{,}5 = 62{,}5$ km.",
+        "common_errors": [
+          "Dividir en vez de multiplicar: $d = 25 / 2{,}5 = 10$."
+        ]
       }
     ],
     "exam_questions": [],
@@ -2058,6 +2330,74 @@
           }
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Ana tiene el doble de cromos que Bea. Entre las dos tienen $96$ cromos. ¿Cuántos tiene cada una? Plantea y resuelve la ecuación.",
+        "hints": [
+          "Llama $x$ a los cromos de Bea. Ana tiene $2x$.",
+          "$x + 2x = 96$."
+        ],
+        "answer": "Bea: $32$, Ana: $64$.",
+        "full_solution": "Sea $x$ = cromos de Bea, $2x$ = cromos de Ana. $x + 2x = 96 \\Rightarrow 3x = 96 \\Rightarrow x = 32$. Bea tiene $32$ y Ana tiene $64$.",
+        "common_errors": [
+          "Plantear $2x + 2x = 96$ confundiendo 'el doble' con 'ambas el doble'."
+        ]
+      },
+      {
+        "id": "EX-F05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un rectángulo tiene un perímetro de $54$ cm. El largo mide $5$ cm más que el ancho. ¿Cuáles son las dimensiones?",
+        "hints": [
+          "$P = 2(\\text{ancho} + \\text{largo})$ y largo $= x + 5$.",
+          "$2(x + x + 5) = 54$."
+        ],
+        "answer": "Ancho: $11$ cm, largo: $16$ cm.",
+        "full_solution": "Sea $x$ = ancho, $x + 5$ = largo. $2(x + x + 5) = 54 \\Rightarrow 2(2x + 5) = 54 \\Rightarrow 4x + 10 = 54 \\Rightarrow 4x = 44 \\Rightarrow x = 11$. Ancho = $11$ cm, largo = $16$ cm. Comprobación: $2(11+16) = 54$ ✓",
+        "common_errors": [
+          "Olvidar que el perímetro es el doble de la suma de los lados."
+        ]
+      },
+      {
+        "id": "EX-F05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Si al resolver una ecuación llegas a $0 = 0$, ¿qué significa? ¿Y si llegas a $0 = 5$? Justifica.",
+        "hints": [
+          "Piensa en cuántas soluciones tiene cada caso.",
+          "¿Hay algún valor de $x$ que haga verdadero $0 = 5$?"
+        ],
+        "answer": "$0 = 0$: infinitas soluciones (identidad). $0 = 5$: ninguna solución (incompatible).",
+        "full_solution": "Si al simplificar se obtiene $0 = 0$, la ecuación es una identidad: se cumple para todo valor de $x$, luego tiene infinitas soluciones. Si se obtiene $0 = 5$ (o cualquier igualdad falsa), no hay ningún valor de $x$ que la satisfaga: la ecuación es incompatible.",
+        "common_errors": [
+          "Pensar que $0 = 0$ significa que la solución es $x = 0$."
+        ]
+      },
+      {
+        "id": "EX-F05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos ciudades están a $360$ km. Un coche sale de la ciudad A a $80$ km/h y otro de la B a $100$ km/h, ambos al encuentro. ¿Cuánto tardan en encontrarse? Plantea la ecuación $80t + 100t = 360$.",
+        "hints": [
+          "La distancia total cubierta por ambos es $360$ km.",
+          "$180t = 360$."
+        ],
+        "answer": "$t = 2$ horas.",
+        "full_solution": "En $t$ horas, el coche A recorre $80t$ km y el B recorre $100t$ km. Juntos cubren la distancia total: $80t + 100t = 360 \\Rightarrow 180t = 360 \\Rightarrow t = 2$ h. Comprobación: $80(2) + 100(2) = 160 + 200 = 360$ ✓",
+        "common_errors": [
+          "Restar las velocidades en vez de sumarlas cuando van al encuentro."
+        ]
       }
     ],
     "exam_questions": [],
@@ -2505,6 +2845,74 @@
           }
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un jardín rectangular mide $12$ m de largo y $8$ m de ancho. En el centro hay una fuente circular de radio $1{,}5$ m. ¿Cuál es el área de césped (sin la fuente)?",
+        "hints": [
+          "Área del rectángulo: $12 \\times 8$.",
+          "Resta el área del círculo: $\\pi r^2$."
+        ],
+        "answer": "$96 - \\pi(1{,}5)^2 \\approx 96 - 7{,}07 \\approx 88{,}93$ m².",
+        "full_solution": "Área rectángulo: $12 \\times 8 = 96$ m². Área fuente: $\\pi \\cdot 1{,}5^2 = 2{,}25\\pi \\approx 7{,}07$ m². Área césped: $96 - 7{,}07 \\approx 88{,}93$ m².",
+        "common_errors": [
+          "Usar el diámetro en vez del radio en la fórmula del círculo."
+        ]
+      },
+      {
+        "id": "EX-F06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una habitación tiene forma de L: un rectángulo de $5 \\times 4$ m unido a otro de $3 \\times 2$ m. ¿Cuántos metros cuadrados de tarima se necesitan para cubrir el suelo?",
+        "hints": [
+          "Calcula el área de cada rectángulo por separado.",
+          "Suma las áreas."
+        ],
+        "answer": "$5 \\times 4 + 3 \\times 2 = 20 + 6 = 26$ m².",
+        "full_solution": "Descomponemos la L en dos rectángulos. Área 1: $5 \\times 4 = 20$ m². Área 2: $3 \\times 2 = 6$ m². Total: $20 + 6 = 26$ m².",
+        "common_errors": [
+          "Multiplicar las dimensiones extremas de la L como si fuera un solo rectángulo."
+        ]
+      },
+      {
+        "id": "EX-F06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué el área de un triángulo es la mitad de la de un rectángulo con la misma base y altura? Justifícalo con un dibujo o argumento.",
+        "hints": [
+          "Dibuja un rectángulo y traza su diagonal.",
+          "¿Qué relación hay entre el triángulo y el rectángulo?"
+        ],
+        "answer": "Porque la diagonal de un rectángulo lo divide en dos triángulos iguales, cada uno con área $= \\frac{bh}{2}$.",
+        "full_solution": "Si trazamos un rectángulo de base $b$ y altura $h$, su diagonal lo divide en dos triángulos congruentes. El área del rectángulo es $bh$, así que cada triángulo tiene área $\\frac{bh}{2}$. Cualquier triángulo de base $b$ y altura $h$ tiene la misma área que estos, por lo que $A_{\\triangle} = \\frac{bh}{2}$.",
+        "common_errors": [
+          "Pensar que la fórmula solo vale para triángulos rectángulos."
+        ]
+      },
+      {
+        "id": "EX-F06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un campo de fútbol tiene unas dimensiones de $100 \\times 64$ m. El círculo central tiene un radio de $9{,}15$ m. Si $1$ kg de semillas de césped cubre $30$ m², ¿cuántos kg se necesitan para sembrar todo el campo excepto el círculo central?",
+        "hints": [
+          "Calcula el área del campo y réstale el área del círculo.",
+          "Divide entre $30$ para obtener los kg."
+        ],
+        "answer": "$\\frac{6400 - 9{,}15^2\\pi}{30} \\approx \\frac{6400 - 263{,}02}{30} \\approx 204{,}6$ kg.",
+        "full_solution": "Área campo: $100 \\times 64 = 6400$ m². Área círculo: $\\pi \\cdot 9{,}15^2 \\approx 263{,}02$ m². Área a sembrar: $6400 - 263{,}02 = 6136{,}98$ m². Semillas: $6136{,}98 / 30 \\approx 204{,}6$ kg.",
+        "common_errors": [
+          "Olvidar restar el círculo o usar el diámetro en lugar del radio."
+        ]
       }
     ],
     "exam_questions": [],
@@ -2957,6 +3365,74 @@
           }
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La temperatura de una ciudad a lo largo del día es: 6h→$4°C$, 9h→$8°C$, 12h→$15°C$, 15h→$18°C$, 18h→$12°C$, 21h→$7°C$. Represéntala en un gráfico y di (a) la variación máxima entre horas consecutivas y (b) en qué intervalo baja más rápido.",
+        "hints": [
+          "Coloca las horas en el eje X y la temperatura en el Y.",
+          "Calcula las diferencias entre puntos consecutivos."
+        ],
+        "answer": "(a) Máxima subida: $7°C$ entre 9h y 12h. (b) Baja más rápido entre 15h y 18h ($-6°C$ en 3h).",
+        "full_solution": "Variaciones: 6h→9h: $+4$; 9h→12h: $+7$; 12h→15h: $+3$; 15h→18h: $-6$; 18h→21h: $-5$. (a) Máxima variación absoluta: $7°C$ (9h→12h). (b) Mayor descenso: $-6°C$ en 3h (15h→18h), es decir $-2°C/h$.",
+        "common_errors": [
+          "Confundir variación total con variación por hora."
+        ]
+      },
+      {
+        "id": "EX-F07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una tienda registra sus ventas semanales: L→$120€$, M→$95€$, X→$140€$, J→$110€$, V→$200€$, S→$250€$. ¿Cuál es la media diaria? ¿Qué día se aleja más de la media?",
+        "hints": [
+          "Media = suma total / número de días.",
+          "Calcula $|\\text{venta} - \\text{media}|$ para cada día."
+        ],
+        "answer": "Media: $152{,}50€$. El sábado se aleja más ($+97{,}50€$).",
+        "full_solution": "Suma: $120+95+140+110+200+250 = 915$. Media: $915/6 = 152{,}50€$. Desviaciones: L→$32{,}50$, M→$57{,}50$, X→$12{,}50$, J→$42{,}50$, V→$47{,}50$, S→$97{,}50$. El sábado se aleja más.",
+        "common_errors": [
+          "Dividir entre $7$ (incluyendo domingo) en vez de entre $6$."
+        ]
+      },
+      {
+        "id": "EX-F07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué un gráfico de barras no es adecuado para representar la evolución de la temperatura a lo largo del día, pero un gráfico de líneas sí? Razona tu respuesta.",
+        "hints": [
+          "Piensa en qué tipo de variable es el tiempo (continua o discreta).",
+          "¿Se puede leer un valor intermedio en un gráfico de barras?"
+        ],
+        "answer": "Porque la temperatura varía de forma continua y un gráfico de líneas permite interpolar valores intermedios.",
+        "full_solution": "El tiempo es una variable continua: entre dos mediciones, la temperatura toma valores intermedios. Un gráfico de líneas conecta los puntos, permitiendo estimar la temperatura a cualquier hora intermedia (interpolación). Un gráfico de barras sugiere valores discretos y no muestra la tendencia entre mediciones. Las barras son más adecuadas para datos categóricos (ventas por producto, votos por partido).",
+        "common_errors": [
+          "Pensar que ambos gráficos son siempre intercambiables."
+        ]
+      },
+      {
+        "id": "EX-F07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ciencias naturales se mide la altura de una planta (en cm) cada semana: semana 1→$3$, semana 2→$5$, semana 3→$8$, semana 4→$12$, semana 5→$17$. ¿El crecimiento es uniforme? Calcula las diferencias semanales y di si la planta crece cada vez más rápido o más lento.",
+        "hints": [
+          "Calcula la diferencia entre semanas consecutivas.",
+          "Observa si las diferencias aumentan, disminuyen o son constantes."
+        ],
+        "answer": "Diferencias: $2, 3, 4, 5$. La planta crece cada vez más rápido (crecimiento acelerado).",
+        "full_solution": "Diferencias: s2−s1=$2$, s3−s2=$3$, s4−s3=$4$, s5−s4=$5$. Las diferencias son crecientes ($2<3<4<5$), lo que indica un crecimiento acelerado. Si fueran constantes sería crecimiento uniforme; si decrecieran, desacelerado.",
+        "common_errors": [
+          "Mirar solo los valores absolutos sin calcular las diferencias."
+        ]
       }
     ],
     "exam_questions": [],

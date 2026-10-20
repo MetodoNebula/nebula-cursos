@@ -544,6 +544,71 @@
           "Usar directamente $3$ y $4$ como los catetos reales, ignorando que el contiguo dado es $20$, no $4$: la tangente da una proporción, no los lados exactos."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un albañil apoya una escalera de 5 m contra una pared formando 60° con el suelo. (a) ¿A qué altura de la pared llega? (b) ¿A qué distancia de la pared está la base? (c) Si la escalera resbala y forma 45°, ¿cuánto baja el punto de apoyo?",
+        "hints": [
+          "$\\sin60°=h/5$, $\\cos60°=d/5$.",
+          "Con 45°: $h'=5\\sin45°$."
+        ],
+        "answer": "(a) $h=5\\sin60°\\approx4{,}33$ m. (b) $d=5\\cos60°=2{,}5$ m. (c) Baja $4{,}33-3{,}54\\approx0{,}79$ m.",
+        "full_solution": "(a) $h=5\\sin60°=5\\cdot\\frac{\\sqrt3}{2}\\approx4{,}33$ m. (b) $d=5\\cos60°=5\\cdot0{,}5=2{,}5$ m. Verificación: $4{,}33^2+2{,}5^2\\approx18{,}75+6{,}25=25=5^2$ ✓. (c) $h'=5\\sin45°=\\frac{5\\sqrt2}{2}\\approx3{,}54$ m. Descenso: $4{,}33-3{,}54=0{,}79$ m.",
+        "common_errors": [
+          "Confundir seno y coseno al asignar catetos"
+        ]
+      },
+      {
+        "id": "EX-TRI01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Desde un barco se ve la cima de un faro bajo un ángulo de elevación de 30°. Si el faro mide 40 m, ¿a qué distancia está el barco de la base del faro?",
+        "hints": [
+          "$\\tan30°=40/d$."
+        ],
+        "answer": "$d=40/\\tan30°=40\\sqrt{3}\\approx69{,}3$ m.",
+        "full_solution": "$\\tan30°=\\frac{\\text{cateto opuesto}}{\\text{cateto adyacente}}=\\frac{40}{d}$. $d=\\frac{40}{\\tan30°}=\\frac{40}{1/\\sqrt3}=40\\sqrt3\\approx69{,}28$ m.",
+        "common_errors": [
+          "Usar seno en lugar de tangente cuando se tiene cateto opuesto y se pide cateto adyacente"
+        ]
+      },
+      {
+        "id": "EX-TRI01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que para todo ángulo agudo $\\alpha$: $\\sin^2\\alpha+\\cos^2\\alpha=1$. Usa un triángulo rectángulo de hipotenusa $c$ y catetos $a$, $b$.",
+        "hints": [
+          "$\\sin\\alpha=a/c$, $\\cos\\alpha=b/c$. Aplica Pitágoras."
+        ],
+        "answer": "$\\sin^2\\alpha+\\cos^2\\alpha=a^2/c^2+b^2/c^2=(a^2+b^2)/c^2=c^2/c^2=1$.",
+        "full_solution": "En el triángulo rectángulo: $\\sin\\alpha=a/c$, $\\cos\\alpha=b/c$. Entonces $\\sin^2\\alpha+\\cos^2\\alpha=\\frac{a^2}{c^2}+\\frac{b^2}{c^2}=\\frac{a^2+b^2}{c^2}$. Por Pitágoras, $a^2+b^2=c^2$, así que $\\frac{c^2}{c^2}=1$. Esta identidad pitagórica es la más fundamental de la trigonometría.",
+        "common_errors": [
+          "Intentar demostrar manipulando la ecuación en vez de partir de las definiciones"
+        ]
+      },
+      {
+        "id": "EX-TRI01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En topografía se mide la pendiente de un terreno en porcentaje: pendiente % $= \\tan\\alpha \\times 100$. Si una carretera tiene pendiente del 8%, calcula el ángulo y cuántos metros sube por cada kilómetro horizontal.",
+        "hints": [
+          "$\\tan\\alpha=0{,}08$. $\\alpha=\\arctan(0{,}08)$."
+        ],
+        "answer": "$\\alpha\\approx4{,}57°$. Sube 80 m por km.",
+        "full_solution": "$\\tan\\alpha=8/100=0{,}08$. $\\alpha=\\arctan(0{,}08)\\approx4{,}57°$. Por cada 1000 m horizontales: $h=1000\\cdot\\tan\\alpha=1000\\cdot0{,}08=80$ m de desnivel. En una carretera de montaña, 8% es bastante empinado (las autopistas no suelen pasar de 6%).",
+        "common_errors": [
+          "Confundir pendiente porcentual con ángulo en grados"
+        ]
       }
     ],
     "exam_questions": [
@@ -1446,6 +1511,73 @@
           "Pensar que 'más pasos' es sinónimo de 'más seguro', cuando en realidad cada paso intermedio es una oportunidad más de cometer un error de redondeo o de cálculo."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un topógrafo quiere medir el ancho de un río. Desde un punto A en la orilla ve un árbol B en la otra orilla bajo un ángulo de 90° (perpendicular a la orilla). Camina 50 m paralelo a la orilla hasta C y mide el ángulo $\\angle ACB=65°$. Calcula el ancho del río.",
+        "hints": [
+          "El triángulo ACB es rectángulo en A.",
+          "$\\tan65°=AB/AC=AB/50$."
+        ],
+        "answer": "$AB=50\\tan65°\\approx107{,}2$ m.",
+        "full_solution": "Triángulo rectángulo en A: cateto $AC=50$ m (a lo largo de la orilla), cateto $AB$ = ancho del río. $\\tan65°=AB/50\\Rightarrow AB=50\\tan65°=50\\cdot2{,}1445\\approx107{,}2$ m.",
+        "common_errors": [
+          "Usar el ángulo equivocado (usar el complementario)"
+        ]
+      },
+      {
+        "id": "EX-TRI02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un avión vuela a 10.000 m de altitud. El piloto ve el aeropuerto de destino bajo un ángulo de depresión de 3°. ¿A qué distancia horizontal está del aeropuerto? ¿Y en línea recta?",
+        "hints": [
+          "$\\tan3°=10000/d_h$.",
+          "$d=10000/\\sin3°$."
+        ],
+        "answer": "$d_h\\approx190.811$ m $\\approx 191$ km. $d\\approx190.811/\\cos3°\\approx191$ km.",
+        "full_solution": "$\\tan3°=10000/d_h\\Rightarrow d_h=10000/\\tan3°=10000/0{,}05241\\approx190.811$ m $\\approx 190{,}8$ km. Distancia en línea recta: $d=\\sqrt{d_h^2+10000^2}\\approx\\sqrt{190811^2+10000^2}\\approx190.073$ m. O bien $d=10000/\\sin3°\\approx191.073$ m $\\approx 191$ km.",
+        "common_errors": [
+          "Confundir ángulo de depresión con ángulo de elevación"
+        ]
+      },
+      {
+        "id": "EX-TRI02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es posible resolver un triángulo rectángulo conociendo solo los dos ángulos agudos? ¿Y conociendo solo las tres razones trigonométricas de un ángulo? Justifica.",
+        "hints": [
+          "Los ángulos agudos suman 90°, así que uno ya determina el otro.",
+          "Las razones son cocientes: ¿determinan las longitudes absolutas?"
+        ],
+        "answer": "No y no: falta una longitud en ambos casos. Los ángulos dan la forma, no el tamaño.",
+        "full_solution": "Conociendo los ángulos: $\\alpha+\\beta=90°$, así que solo hay un grado de libertad angular. Pero hay infinitos triángulos semejantes con esos ángulos; sin al menos un lado, no se puede determinar el tamaño. Conociendo las razones de un ángulo: las razones son cocientes de lados ($\\sin\\alpha=a/c$, etc.), no valores absolutos. Determinan el ángulo y la forma, pero no la escala. Para resolver un triángulo rectángulo se necesita: un lado + un ángulo agudo, o dos lados.",
+        "common_errors": [
+          "Pensar que las razones trigonométricas determinan los lados"
+        ]
+      },
+      {
+        "id": "EX-TRI02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En programación de videojuegos, un personaje en $(0,0)$ dispara a un enemigo en $(8,6)$. Calcula la distancia al enemigo y el ángulo de disparo respecto al eje $x$.",
+        "hints": [
+          "Distancia: Pitágoras. Ángulo: $\\alpha=\\arctan(6/8)$."
+        ],
+        "answer": "$d=\\sqrt{64+36}=10$. $\\alpha=\\arctan(0{,}75)\\approx36{,}87°$.",
+        "full_solution": "$d=\\sqrt{8^2+6^2}=\\sqrt{100}=10$ unidades. $\\tan\\alpha=6/8=0{,}75\\Rightarrow\\alpha=\\arctan(0{,}75)\\approx36{,}87°$. En código: `angle = Math.atan2(6, 8)` devuelve el ángulo en radianes ($\\approx0{,}6435$ rad). `Math.atan2(dy, dx)` es la función estándar en programación para obtener el ángulo correcto en cualquier cuadrante.",
+        "common_errors": [
+          "Usar arctan en lugar de atan2 (que maneja correctamente los cuadrantes)"
+        ]
       }
     ],
     "exam_questions": [
@@ -2344,6 +2476,72 @@
           "Usar los $20$ m del edificio vecino en algún cálculo solo porque aparecen en el enunciado."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Desde dos puntos A y B separados 200 m en el suelo, se miden los ángulos de elevación de un globo: $\\alpha=60°$ desde A y $\\beta=45°$ desde B. Calcula la altura del globo (A y B en la misma vertical que la base del globo NO; el globo está entre ambos).",
+        "hints": [
+          "Sean $d_A$ y $d_B$ las distancias horizontales. $d_A+d_B=200$.",
+          "$h=d_A\\tan60°=d_B\\tan45°$."
+        ],
+        "answer": "$h\\approx146{,}4$ m.",
+        "full_solution": "$h=d_A\\tan60°$ y $h=d_B\\tan45°=d_B$. Entonces $d_B=d_A\\tan60°=d_A\\sqrt3$. $d_A+d_B=200\\Rightarrow d_A+d_A\\sqrt3=200\\Rightarrow d_A(1+\\sqrt3)=200\\Rightarrow d_A=200/(1+\\sqrt3)=200(\\sqrt3-1)/2=100(\\sqrt3-1)\\approx73{,}2$ m. $h=73{,}2\\cdot\\tan60°=73{,}2\\cdot\\sqrt3\\approx126{,}8$ m. Recalculo: $d_A\\approx73{,}2$, $h=73{,}2\\cdot1{,}732=126{,}8$ m. $d_B=200-73{,}2=126{,}8$. $h=d_B\\tan45°=126{,}8$ ✓.",
+        "common_errors": [
+          "No plantear correctamente la suma de distancias horizontales"
+        ]
+      },
+      {
+        "id": "EX-TRI03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un satélite GPS orbita a 20.200 km de la superficie terrestre. Si el radio de la Tierra es 6.371 km, calcula el ángulo de visión (mitad del ángulo subtendido) desde el satélite hacia el borde terrestre.",
+        "hints": [
+          "Triángulo rectángulo: hipotenusa = radio + altitud, cateto = radio.",
+          "$\\sin\\alpha=R/(R+h)$."
+        ],
+        "answer": "$\\alpha=\\arcsin(6371/26571)\\approx13{,}9°$.",
+        "full_solution": "Distancia del satélite al centro: $D=6371+20200=26571$ km. En el triángulo con hipotenusa $D$ y cateto $R=6371$ (la tangente al borde terrestre): $\\sin\\alpha=R/D=6371/26571\\approx0{,}2398$. $\\alpha\\approx13{,}9°$. Ángulo de visión total: $2\\alpha\\approx27{,}8°$. El satélite «ve» un casquete esférico considerable.",
+        "common_errors": [
+          "Olvidar sumar el radio al calcular la distancia al centro de la Tierra"
+        ]
+      },
+      {
+        "id": "EX-TRI03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué para medir la altura de una montaña desde lejos se necesitan al menos dos mediciones de ángulo desde puntos distintos? ¿No basta con una?",
+        "hints": [
+          "Con un ángulo y una distancia horizontal sí bastaría. Pero ¿conoces la distancia horizontal?"
+        ],
+        "answer": "Una medición da la ecuación $h=d\\tan\\alpha$ con dos incógnitas ($h$ y $d$). Se necesita otra ecuación.",
+        "full_solution": "Con una sola medición: $h=d\\tan\\alpha$, donde $d$ es la distancia horizontal al punto bajo la cima. Pero $d$ es desconocida (no podemos medir hasta la base a través de la montaña). Con dos puntos A, B separados $\\Delta d$ conocida: $h=d_A\\tan\\alpha$ y $h=(d_A+\\Delta d)\\tan\\beta$. Son dos ecuaciones con dos incógnitas ($h$ y $d_A$), resoluble. Este método es el fundamento de la trigonometría topográfica histórica.",
+        "common_errors": [
+          "Asumir que la distancia horizontal es conocida"
+        ]
+      },
+      {
+        "id": "EX-TRI03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En robótica, un brazo articulado tiene dos segmentos de 30 cm y 20 cm. Si el primer segmento forma 45° con la horizontal y el segundo forma 30° respecto al primero, calcula la posición $(x,y)$ del extremo del brazo.",
+        "hints": [
+          "$P_1=(30\\cos45°, 30\\sin45°)$. El segundo segmento parte de $P_1$ con ángulo $45°+30°=75°$."
+        ],
+        "answer": "$(x,y)\\approx(26{,}4, 40{,}5)$ cm.",
+        "full_solution": "Extremo del primer segmento: $P_1=(30\\cos45°, 30\\sin45°)=(21{,}21, 21{,}21)$. El segundo forma ángulo total $45°+30°=75°$ con la horizontal. $P_2=P_1+(20\\cos75°, 20\\sin75°)=(21{,}21+5{,}18, 21{,}21+19{,}32)=(26{,}39, 40{,}53)$ cm. Esta es la cinemática directa: de ángulos articulares a posición. La inversa (de posición a ángulos) es más compleja y usa sistemas trigonométricos.",
+        "common_errors": [
+          "Usar 30° como ángulo absoluto del segundo segmento en vez de sumarlo al primero"
+        ]
       }
     ],
     "exam_questions": [
@@ -3284,6 +3482,71 @@
           "Tomar $-120°$ como si estuviera en el II cuadrante (como $120°$), sin tener en cuenta que el signo negativo indica giro horario."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una rueda de bicicleta de radio 35 cm gira a 120 rpm (revoluciones por minuto). (a) ¿Cuántos radianes/s gira? (b) ¿Qué arco recorre un punto del neumático en 1 s? (c) ¿A qué velocidad va la bicicleta en km/h?",
+        "hints": [
+          "1 revolución = $2\\pi$ rad.",
+          "$v=\\omega r$."
+        ],
+        "answer": "(a) $\\omega=4\\pi$ rad/s. (b) Arco = $1{,}4\\pi\\approx4{,}4$ m. (c) $\\approx15{,}8$ km/h.",
+        "full_solution": "(a) $\\omega=120\\cdot2\\pi/60=4\\pi$ rad/s $\\approx12{,}57$ rad/s. (b) $s=r\\omega t=0{,}35\\cdot4\\pi\\cdot1=1{,}4\\pi\\approx4{,}40$ m. (c) $v=r\\omega=0{,}35\\cdot4\\pi=1{,}4\\pi\\approx4{,}40$ m/s $=4{,}40\\cdot3{,}6\\approx15{,}8$ km/h.",
+        "common_errors": [
+          "Olvidar convertir minutos a segundos o cm a m"
+        ]
+      },
+      {
+        "id": "EX-TRI04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un reloj marca las 10:10. ¿Qué ángulo forman las agujas (horaria y minutera)? Exprésalo en grados y radianes.",
+        "hints": [
+          "Aguja minutera: 10 min $=60°$. Aguja horaria: 10h10m $=305°$."
+        ],
+        "answer": "$|305°-60°|=245°$ (o $360°-245°=115°$). En radianes: $115°=23\\pi/36$.",
+        "full_solution": "Aguja minutera a las 10 min: $10/60\\cdot360°=60°$ desde las 12. Aguja horaria a las 10h10m: $10\\cdot30°+10\\cdot0{,}5°=300°+5°=305°$ desde las 12. Ángulo entre ambas: $|305°-60°|=245°$. El ángulo menor es $360°-245°=115°$. En radianes: $115°\\cdot\\pi/180=23\\pi/36\\approx2{,}007$ rad.",
+        "common_errors": [
+          "Olvidar que la aguja horaria se mueve 0{,}5° por minuto"
+        ]
+      },
+      {
+        "id": "EX-TRI04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Explica por qué $\\sin(\\alpha+360°)=\\sin\\alpha$ y $\\cos(\\alpha+360°)=\\cos\\alpha$. ¿Qué significado tiene esto en la circunferencia trigonométrica?",
+        "hints": [
+          "360° es una vuelta completa."
+        ],
+        "answer": "Sumar 360° es dar una vuelta completa: el punto vuelve al mismo lugar en la circunferencia.",
+        "full_solution": "En la circunferencia trigonométrica, el ángulo $\\alpha$ determina un punto $P=(\\cos\\alpha,\\sin\\alpha)$. Sumar $360°$ (o $2\\pi$ rad) es dar una vuelta completa, regresando al mismo punto. Por tanto las coordenadas no cambian: $\\cos(\\alpha+360°)=\\cos\\alpha$, $\\sin(\\alpha+360°)=\\sin\\alpha$. Esto es la periodicidad: seno y coseno son funciones periódicas de período $360°=2\\pi$ rad. Es la razón por la que las funciones trigonométricas modelan fenómenos cíclicos: mareas, ondas, estaciones.",
+        "common_errors": [
+          "No distinguir entre período ($2\\pi$) y semiperiodo ($\\pi$) para tangente"
+        ]
+      },
+      {
+        "id": "EX-TRI04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Las coordenadas de un punto en un mapa se expresan a veces en coordenadas polares: distancia $r$ y rumbo (ángulo desde el Norte en sentido horario). Convierte a cartesianas $(x,y)$ el punto a $r=5$ km, rumbo $N30°E$.",
+        "hints": [
+          "Rumbo N30°E = 30° desde el Norte hacia el Este. Norte = eje $y$ positivo."
+        ],
+        "answer": "$x=5\\sin30°=2{,}5$ km, $y=5\\cos30°\\approx4{,}33$ km.",
+        "full_solution": "El rumbo se mide desde el Norte (eje $y$+) en sentido horario. N30°E: 30° desde el Norte hacia el Este. $x=r\\sin(\\text{rumbo})=5\\sin30°=2{,}5$ km. $y=r\\cos(\\text{rumbo})=5\\cos30°\\approx4{,}33$ km. Punto: $(2{,}5, 4{,}33)$. Nota: en navegación se usa seno para $x$ y coseno para $y$ (al revés que en matemáticas), porque el ángulo se mide desde el eje $y$ (Norte), no desde el eje $x$ (Este).",
+        "common_errors": [
+          "Aplicar la conversión estándar $x=r\\cos\\theta$ sin tener en cuenta que el rumbo se mide desde el Norte"
+        ]
       }
     ],
     "exam_questions": [
@@ -4196,6 +4459,71 @@
           "Comprobar la igualdad solo con un ángulo concreto y darla por verificada: una identidad debe valer para todos los ángulos."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En óptica, la ley de Snell dice $n_1\\sin\\theta_1=n_2\\sin\\theta_2$. Si un rayo pasa del aire ($n_1=1$) al vidrio ($n_2=1{,}5$) con $\\theta_1=45°$, calcula $\\theta_2$. Usa la identidad $\\sin^2\\theta+\\cos^2\\theta=1$ para hallar $\\cos\\theta_2$.",
+        "hints": [
+          "$\\sin\\theta_2=\\sin45°/1{,}5$."
+        ],
+        "answer": "$\\sin\\theta_2=\\sqrt2/(2\\cdot1{,}5)\\approx0{,}471$. $\\theta_2\\approx28{,}1°$. $\\cos\\theta_2\\approx0{,}882$.",
+        "full_solution": "$\\sin\\theta_2=\\frac{n_1\\sin\\theta_1}{n_2}=\\frac{1\\cdot\\sin45°}{1{,}5}=\\frac{\\sqrt2/2}{1{,}5}=\\frac{\\sqrt2}{3}\\approx0{,}4714$. $\\theta_2=\\arcsin(0{,}4714)\\approx28{,}1°$. $\\cos\\theta_2=\\sqrt{1-\\sin^2\\theta_2}=\\sqrt{1-2/9}=\\sqrt{7/9}=\\sqrt7/3\\approx0{,}8819$. El rayo se desvía hacia la normal al entrar en un medio más denso.",
+        "common_errors": [
+          "Olvidar que $\\cos\\theta$ se calcula con la identidad, no con otra medición"
+        ]
+      },
+      {
+        "id": "EX-TRI05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que $1+\\tan^2\\alpha=\\sec^2\\alpha$ partiendo de $\\sin^2\\alpha+\\cos^2\\alpha=1$.",
+        "hints": [
+          "Divide toda la identidad entre $\\cos^2\\alpha$."
+        ],
+        "answer": "$\\frac{\\sin^2\\alpha}{\\cos^2\\alpha}+\\frac{\\cos^2\\alpha}{\\cos^2\\alpha}=\\frac{1}{\\cos^2\\alpha}\\Rightarrow\\tan^2\\alpha+1=\\sec^2\\alpha$.",
+        "full_solution": "Partiendo de $\\sin^2\\alpha+\\cos^2\\alpha=1$, dividimos entre $\\cos^2\\alpha$ (con $\\cos\\alpha\\neq0$): $\\frac{\\sin^2\\alpha}{\\cos^2\\alpha}+1=\\frac{1}{\\cos^2\\alpha}$, es decir, $\\tan^2\\alpha+1=\\sec^2\\alpha$. Análogamente, dividiendo entre $\\sin^2\\alpha$: $1+\\cot^2\\alpha=\\csc^2\\alpha$. Las tres identidades pitagóricas son versiones de una sola.",
+        "common_errors": [
+          "Intentar demostrar manipulando ambos miembros simultáneamente"
+        ]
+      },
+      {
+        "id": "EX-TRI05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Si $\\sin\\alpha=3/5$ y $\\alpha$ está en el segundo cuadrante, calcula $\\cos\\alpha$, $\\tan\\alpha$ y $\\sec\\alpha$ sin usar calculadora.",
+        "hints": [
+          "$\\cos^2\\alpha=1-9/25=16/25$. En el QII: $\\cos\\alpha<0$."
+        ],
+        "answer": "$\\cos\\alpha=-4/5$, $\\tan\\alpha=-3/4$, $\\sec\\alpha=-5/4$.",
+        "full_solution": "$\\cos\\alpha=\\pm\\sqrt{1-9/25}=\\pm4/5$. En QII ($90°<\\alpha<180°$): $\\cos\\alpha<0$, así que $\\cos\\alpha=-4/5$. $\\tan\\alpha=\\frac{\\sin\\alpha}{\\cos\\alpha}=\\frac{3/5}{-4/5}=-\\frac{3}{4}$. $\\sec\\alpha=1/\\cos\\alpha=-5/4$. Las razones en QII: seno +, coseno −, tangente −.",
+        "common_errors": [
+          "No considerar el signo correcto según el cuadrante"
+        ]
+      },
+      {
+        "id": "EX-TRI05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En criptografía, las transformaciones de rotación usan la matriz $R(\\theta)=\\begin{pmatrix}\\cos\\theta & -\\sin\\theta\\\\ \\sin\\theta & \\cos\\theta\\end{pmatrix}$. Verifica que $R(\\theta)R(-\\theta)=I$ usando las identidades trigonométricas fundamentales.",
+        "hints": [
+          "$\\cos(-\\theta)=\\cos\\theta$, $\\sin(-\\theta)=-\\sin\\theta$.",
+          "Multiplica las matrices."
+        ],
+        "answer": "$R(\\theta)R(-\\theta)=\\begin{pmatrix}\\cos^2\\theta+\\sin^2\\theta & 0\\\\0 & \\cos^2\\theta+\\sin^2\\theta\\end{pmatrix}=I$.",
+        "full_solution": "$R(-\\theta)=\\begin{pmatrix}\\cos\\theta & \\sin\\theta\\\\ -\\sin\\theta & \\cos\\theta\\end{pmatrix}$. Producto: entrada $(1,1)$: $\\cos^2\\theta+\\sin^2\\theta=1$. Entrada $(1,2)$: $-\\sin\\theta\\cos\\theta+\\cos\\theta\\sin\\theta=0$ (conmutativo, se cancelan: $\\cos\\theta\\sin\\theta-\\sin\\theta\\cos\\theta=0$). Entrada $(2,1)$: $\\sin\\theta\\cos\\theta-\\cos\\theta\\sin\\theta=0$. Entrada $(2,2)$: $\\sin^2\\theta+\\cos^2\\theta=1$. Resultado: $I$. Esto demuestra que rotar $\\theta$ y luego $-\\theta$ vuelve al inicio, y que $R(\\theta)^{-1}=R(-\\theta)=R(\\theta)^T$: la rotación es ortogonal.",
+        "common_errors": [
+          "Errores al multiplicar matrices (no sumar los productos correctamente)"
+        ]
       }
     ],
     "exam_questions": [
@@ -5208,6 +5536,73 @@
           "Aplicar Pitágoras a un triángulo oblicuángulo sin comprobar el ángulo."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-TRI06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos barcos salen del mismo puerto. El barco A navega 15 km en dirección N40°E y el barco B navega 20 km en dirección N70°E. ¿A qué distancia están entre sí?",
+        "hints": [
+          "El ángulo entre las dos trayectorias es $70°-40°=30°$.",
+          "Usa el teorema del coseno."
+        ],
+        "answer": "$d=\\sqrt{225+400-2\\cdot15\\cdot20\\cdot\\cos30°}\\approx10{,}4$ km.",
+        "full_solution": "Ángulo entre trayectorias: $70°-40°=30°$. Teorema del coseno: $d^2=15^2+20^2-2\\cdot15\\cdot20\\cdot\\cos30°=225+400-600\\cdot0{,}866=625-519{,}6=105{,}4$. $d=\\sqrt{105{,}4}\\approx10{,}27$ km.",
+        "common_errors": [
+          "Calcular mal el ángulo entre los rumbos"
+        ]
+      },
+      {
+        "id": "EX-TRI06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El teorema del coseno es $c^2=a^2+b^2-2ab\\cos C$. ¿Qué pasa cuando $C=90°$? ¿Y cuando $C>90°$? Relaciona con Pitágoras.",
+        "hints": [
+          "$\\cos90°=0$, $\\cos C<0$ si $C>90°$."
+        ],
+        "answer": "$C=90°$: se reduce a Pitágoras ($c^2=a^2+b^2$). $C>90°$: $c^2>a^2+b^2$ (la hipotenusa es mayor).",
+        "full_solution": "Si $C=90°$: $\\cos90°=0$, así que $c^2=a^2+b^2$: es el teorema de Pitágoras. El teorema del coseno es la generalización de Pitágoras a triángulos no rectángulos. Si $C>90°$: $\\cos C<0$, así que $-2ab\\cos C>0$ y $c^2>a^2+b^2$: el lado opuesto al ángulo obtuso es mayor que la «hipotenusa pitagórica». Si $C<90°$: $\\cos C>0$ y $c^2<a^2+b^2$: el lado opuesto al ángulo agudo es menor.",
+        "common_errors": [
+          "No ver Pitágoras como caso particular del teorema del coseno"
+        ]
+      },
+      {
+        "id": "EX-TRI06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un terreno triangular tiene lados de 80 m, 100 m y 120 m. Calcula sus ángulos (teorema del coseno) y su área (fórmula de Herón).",
+        "hints": [
+          "$\\cos A=(b^2+c^2-a^2)/(2bc)$.",
+          "$s=(80+100+120)/2=150$."
+        ],
+        "answer": "$A\\approx41{,}4°$, $B\\approx55{,}8°$, $C\\approx82{,}8°$. Área $\\approx3{\\,}799$ m².",
+        "full_solution": "$\\cos A=\\frac{100^2+120^2-80^2}{2\\cdot100\\cdot120}=\\frac{18000}{24000}=0{,}75\\Rightarrow A\\approx41{,}4°$. $\\cos B=\\frac{80^2+120^2-100^2}{2\\cdot80\\cdot120}=\\frac{10800}{19200}=0{,}5625\\Rightarrow B\\approx55{,}8°$. $C=180°-41{,}4°-55{,}8°=82{,}8°$. Herón: $s=150$. $S=\\sqrt{150\\cdot70\\cdot50\\cdot30}=\\sqrt{15750000}\\approx3968{,}6$ m². Verificar: $S=\\frac{1}{2}\\cdot80\\cdot100\\cdot\\sin82{,}8°=4000\\cdot0{,}992=3968$ m² ✓.",
+        "common_errors": [
+          "Error aritmético al calcular $s$ o al aplicar la fórmula de Herón"
+        ]
+      },
+      {
+        "id": "EX-TRI06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En un mapa, tres ciudades forman un triángulo: A-B = 150 km, ángulo en A = 48°, ángulo en B = 67°. Calcula el ángulo en C, la distancia A-C y la distancia B-C (teorema del seno).",
+        "hints": [
+          "$C=180°-48°-67°=65°$.",
+          "$\\frac{150}{\\sin65°}=\\frac{AC}{\\sin67°}=\\frac{BC}{\\sin48°}$."
+        ],
+        "answer": "$C=65°$. $AC\\approx152{,}4$ km. $BC\\approx123{,}0$ km.",
+        "full_solution": "$C=180°-48°-67°=65°$. Teorema del seno: $\\frac{AB}{\\sin C}=\\frac{150}{\\sin65°}=\\frac{150}{0{,}9063}=165{,}5$. $AC=165{,}5\\cdot\\sin67°=165{,}5\\cdot0{,}9205\\approx152{,}3$ km. $BC=165{,}5\\cdot\\sin48°=165{,}5\\cdot0{,}7431\\approx123{,}0$ km.",
+        "common_errors": [
+          "Colocar mal los datos en el teorema del seno (cada lado con su ángulo opuesto)"
+        ]
       }
     ],
     "exam_questions": [
@@ -6255,6 +6650,71 @@
           "Usar el signo de la suma en el denominador: $1-\\tan a\\tan b$ en vez de $1+\\tan a\\tan b$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En electrónica, dos señales se combinan: $V_1=A\\sin(\\omega t)$ y $V_2=A\\cos(\\omega t)$. Exprésalas como una sola sinusoide $V=V_1+V_2$.",
+        "hints": [
+          "$\\sin\\theta+\\cos\\theta=\\sqrt2\\sin(\\theta+45°)$.",
+          "Usa $\\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta$."
+        ],
+        "answer": "$V=A\\sqrt2\\sin(\\omega t+\\pi/4)$.",
+        "full_solution": "$V=A[\\sin(\\omega t)+\\cos(\\omega t)]$. Buscamos $R$ y $\\phi$ tales que $\\sin\\theta+\\cos\\theta=R\\sin(\\theta+\\phi)$. $R=\\sqrt{1^2+1^2}=\\sqrt2$. $\\tan\\phi=1/1\\Rightarrow\\phi=\\pi/4$. Así: $V=A\\sqrt2\\sin(\\omega t+\\pi/4)$. La amplitud pasa de $A$ a $A\\sqrt2$ y se desfasa 45°. Este cálculo es esencial en el análisis de señales y circuitos de corriente alterna.",
+        "common_errors": [
+          "No calcular correctamente la amplitud resultante"
+        ]
+      },
+      {
+        "id": "EX-TRI07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra la fórmula del ángulo doble: $\\sin(2\\alpha)=2\\sin\\alpha\\cos\\alpha$, partiendo de $\\sin(\\alpha+\\beta)$.",
+        "hints": [
+          "Sustituye $\\beta=\\alpha$ en $\\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta$."
+        ],
+        "answer": "$\\sin(\\alpha+\\alpha)=\\sin\\alpha\\cos\\alpha+\\cos\\alpha\\sin\\alpha=2\\sin\\alpha\\cos\\alpha$.",
+        "full_solution": "$\\sin(2\\alpha)=\\sin(\\alpha+\\alpha)=\\sin\\alpha\\cos\\alpha+\\cos\\alpha\\sin\\alpha=2\\sin\\alpha\\cos\\alpha$ ✓. Análogamente: $\\cos(2\\alpha)=\\cos^2\\alpha-\\sin^2\\alpha=2\\cos^2\\alpha-1=1-2\\sin^2\\alpha$. Y $\\tan(2\\alpha)=\\frac{2\\tan\\alpha}{1-\\tan^2\\alpha}$. Las tres se obtienen sustituyendo $\\beta=\\alpha$ en las fórmulas de suma.",
+        "common_errors": [
+          "Escribir $\\sin(2\\alpha)=2\\sin(\\alpha)$ sin el coseno"
+        ]
+      },
+      {
+        "id": "EX-TRI07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Calcula $\\sin75°$ y $\\cos75°$ usando $75°=45°+30°$.",
+        "hints": [
+          "$\\sin(45°+30°)=\\sin45°\\cos30°+\\cos45°\\sin30°$."
+        ],
+        "answer": "$\\sin75°=\\frac{\\sqrt6+\\sqrt2}{4}\\approx0{,}9659$. $\\cos75°=\\frac{\\sqrt6-\\sqrt2}{4}\\approx0{,}2588$.",
+        "full_solution": "$\\sin75°=\\sin45°\\cos30°+\\cos45°\\sin30°=\\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2}+\\frac{\\sqrt2}{2}\\cdot\\frac{1}{2}=\\frac{\\sqrt6+\\sqrt2}{4}$. $\\cos75°=\\cos45°\\cos30°-\\sin45°\\sin30°=\\frac{\\sqrt6-\\sqrt2}{4}$. Verificación: $\\sin^2 75°+\\cos^2 75°=\\frac{6+2+2\\sqrt{12}+6+2-2\\sqrt{12}}{16}=\\frac{16}{16}=1$ ✓.",
+        "common_errors": [
+          "Error de signo en la fórmula del coseno de la suma"
+        ]
+      },
+      {
+        "id": "EX-TRI07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En programación gráfica, la rotación doble ($2\\theta$) se puede calcular sin evaluar $2\\theta$, usando las fórmulas de ángulo doble. Si $\\cos\\theta=0{,}8$ y $\\sin\\theta=0{,}6$, calcula $\\cos(2\\theta)$ y $\\sin(2\\theta)$ directamente, sin hallar $\\theta$.",
+        "hints": [
+          "$\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta$. $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$."
+        ],
+        "answer": "$\\cos(2\\theta)=0{,}64-0{,}36=0{,}28$. $\\sin(2\\theta)=2\\cdot0{,}48=0{,}96$.",
+        "full_solution": "$\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta=0{,}64-0{,}36=0{,}28$. $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta=2\\cdot0{,}6\\cdot0{,}8=0{,}96$. Verificación: $0{,}28^2+0{,}96^2=0{,}0784+0{,}9216=1$ ✓. En gráficos 3D, evitar $\\arccos$ y $\\arcsin$ (lentos) y calcular directamente con las fórmulas de ángulo doble es una optimización común. Los cuaterniones generalizan esta idea a 3D.",
+        "common_errors": [
+          "Calcular primero el ángulo con arccos y luego el doble, perdiendo precisión"
+        ]
       }
     ],
     "exam_questions": [
@@ -7181,6 +7641,70 @@
           "Olvidar el signo menos del factor $-2$ y obtener $+\\sin40^\\circ$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI08-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En acústica, dos notas cercanas producen «pulsaciones». Si $f_1=440$ Hz y $f_2=442$ Hz, expresa $\\sin(2\\pi f_1 t)+\\sin(2\\pi f_2 t)$ como producto. ¿Cuál es la frecuencia del batido?",
+        "hints": [
+          "$\\sin A+\\sin B=2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$."
+        ],
+        "answer": "$2\\sin(2\\pi\\cdot441 t)\\cos(2\\pi\\cdot1 t)$. Frecuencia de batido: $|f_1-f_2|=2$ Hz.",
+        "full_solution": "$\\sin(2\\pi\\cdot440t)+\\sin(2\\pi\\cdot442t)=2\\sin\\left(2\\pi\\cdot\\frac{440+442}{2}t\\right)\\cos\\left(2\\pi\\cdot\\frac{442-440}{2}t\\right)=2\\sin(2\\pi\\cdot441t)\\cos(2\\pi t)$. Se oye una nota de 441 Hz cuya amplitud oscila con frecuencia $|f_1-f_2|/2=1$ Hz, pero como la intensidad (proporcional al cuadrado) oscila al doble, se perciben 2 pulsaciones por segundo. Los afinadores utilizan este fenómeno.",
+        "common_errors": [
+          "Confundir la frecuencia del coseno envolvente con la frecuencia de batido"
+        ]
+      },
+      {
+        "id": "EX-TRI08-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué las fórmulas de suma a producto son útiles para resolver ecuaciones como $\\sin5x+\\sin3x=0$? Resuélvela.",
+        "hints": [
+          "$\\sin5x+\\sin3x=2\\sin4x\\cos x=0$."
+        ],
+        "answer": "$\\sin4x=0$ o $\\cos x=0$: $x=k\\pi/4$ o $x=\\pi/2+k\\pi$.",
+        "full_solution": "$2\\sin4x\\cos x=0$. Caso 1: $\\sin4x=0\\Rightarrow 4x=k\\pi\\Rightarrow x=k\\pi/4$. Caso 2: $\\cos x=0\\Rightarrow x=\\pi/2+k\\pi$. Los de caso 2 están incluidos en caso 1 (con $k$ impar), así que la solución general es $x=k\\pi/4$, $k\\in\\mathbb{Z}$. Sin las fórmulas suma-producto, la ecuación $\\sin5x+\\sin3x=0$ requeriría desarrollar senos múltiples, lo cual es mucho más laborioso.",
+        "common_errors": [
+          "Intentar resolver sin transformar, desarrollando $\\sin5x$ en potencias"
+        ]
+      },
+      {
+        "id": "EX-TRI08-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Simplifica $\\cos20°+\\cos40°+\\cos80°$ usando transformaciones suma-producto.",
+        "hints": [
+          "Agrupa: $(\\cos20°+\\cos80°)+\\cos40°$. Nota que $20°+80°=100°$."
+        ],
+        "answer": "$\\cos20°+\\cos80°=2\\cos50°\\cos30°=\\sqrt3\\cos50°$. Suma total $=\\sqrt3\\cos50°+\\cos40°$. Valor $\\approx0{,}866\\cdot0{,}6428+0{,}7660\\approx1{,}32$.",
+        "full_solution": "$\\cos20°+\\cos80°=2\\cos\\frac{20°+80°}{2}\\cos\\frac{80°-20°}{2}=2\\cos50°\\cos30°=\\sqrt3\\cos50°$. Ahora $\\sqrt3\\cos50°+\\cos40°$. Como $50°=90°-40°$: $\\cos50°=\\sin40°$. Así: $\\sqrt3\\sin40°+\\cos40°=2\\sin(40°+30°)=2\\sin70°=2\\cos20°$. Pero eso nos da $\\cos20°+\\cos40°+\\cos80°=2\\cos20°$, es decir $\\cos40°+\\cos80°=\\cos20°$. Verificación numérica: $0{,}766+0{,}174=0{,}940$ vs $\\cos20°=0{,}940$ ✓.",
+        "common_errors": [
+          "No aprovechar ángulos complementarios para simplificar"
+        ]
+      },
+      {
+        "id": "EX-TRI08-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En procesamiento de señales, un filtro elimina una frecuencia multiplicando la señal por $\\cos(\\omega t)$. Si la señal es $s(t)=\\sin(5\\omega t)$, expresa $s(t)\\cos(\\omega t)$ como suma de senos usando la fórmula producto a suma.",
+        "hints": [
+          "$\\sin A\\cos B=\\frac{1}{2}[\\sin(A+B)+\\sin(A-B)]$."
+        ],
+        "answer": "$\\frac{1}{2}[\\sin(6\\omega t)+\\sin(4\\omega t)]$.",
+        "full_solution": "$\\sin(5\\omega t)\\cos(\\omega t)=\\frac{1}{2}[\\sin(5\\omega t+\\omega t)+\\sin(5\\omega t-\\omega t)]=\\frac{1}{2}[\\sin(6\\omega t)+\\sin(4\\omega t)]$. La señal original de frecuencia $5\\omega$ se ha descompuesto en dos señales de frecuencias $6\\omega$ y $4\\omega$. Este principio es la base de la modulación AM (amplitud modulada) en telecomunicaciones: al multiplicar una señal portadora por una señal de audio, se generan bandas laterales.",
+        "common_errors": [
+          "Confundir las fórmulas de producto a suma con las de suma a producto"
+        ]
       }
     ],
     "exam_questions": [
@@ -8170,6 +8694,73 @@
           "Quedarse solo con la primera vuelta de $u=2x$ y dar dos soluciones en vez de cuatro."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-TRI09-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La posición angular de un péndulo es $\\theta(t)=\\theta_0\\cos(\\omega t)$. ¿En qué instantes el péndulo pasa por $\\theta=\\theta_0/2$ durante el primer período completo?",
+        "hints": [
+          "$\\cos(\\omega t)=1/2\\Rightarrow\\omega t=\\pm\\pi/3+2k\\pi$."
+        ],
+        "answer": "$t=\\pi/(3\\omega)$ y $t=5\\pi/(3\\omega)$ (primer período).",
+        "full_solution": "$\\cos(\\omega t)=1/2\\Rightarrow\\omega t=\\pi/3+2k\\pi$ o $\\omega t=-\\pi/3+2k\\pi=5\\pi/3+2k\\pi$. En el primer período ($0\\leq\\omega t<2\\pi$): $t_1=\\pi/(3\\omega)$ (ida) y $t_2=5\\pi/(3\\omega)$ (vuelta). Período completo: $T=2\\pi/\\omega$. Los instantes son $T/6$ y $5T/6$.",
+        "common_errors": [
+          "Olvidar la segunda solución en $[0,2\\pi)$"
+        ]
+      },
+      {
+        "id": "EX-TRI09-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La ecuación $\\sin x=2$ no tiene solución, pero $\\sin x=a$ puede tener 0, 1 o 2 soluciones en $[0,2\\pi)$. ¿Para qué valores de $a$?",
+        "hints": [
+          "$-1\\leq\\sin x\\leq1$.",
+          "Si $|a|<1$: dos soluciones. Si $|a|=1$: una."
+        ],
+        "answer": "$|a|>1$: 0 soluciones. $|a|=1$: 1 solución. $|a|<1$: 2 soluciones.",
+        "full_solution": "$\\sin x\\in[-1,1]$, así que si $|a|>1$: no hay solución ($\\emptyset$). Si $a=1$: $x=\\pi/2$ (única). Si $a=-1$: $x=3\\pi/2$ (única). Si $-1<a<1$: $x_1=\\arcsin a\\in(-\\pi/2,\\pi/2)$ y $x_2=\\pi-\\arcsin a$. En $[0,2\\pi)$, son dos valores distintos. Para $a=0$: $x=0$ y $x=\\pi$ (dos soluciones). El número de soluciones se relaciona con las intersecciones de la sinusoide con la recta $y=a$.",
+        "common_errors": [
+          "No considerar los valores frontera $a=\\pm1$ como casos especiales"
+        ]
+      },
+      {
+        "id": "EX-TRI09-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Resuelve $2\\sin^2x-3\\sin x+1=0$ en $[0°, 360°)$.",
+        "hints": [
+          "Sustituye $u=\\sin x$: $2u^2-3u+1=0$.",
+          "Factoriza: $(2u-1)(u-1)=0$."
+        ],
+        "answer": "$\\sin x=1/2$: $x=30°, 150°$. $\\sin x=1$: $x=90°$. Tres soluciones.",
+        "full_solution": "$2u^2-3u+1=0\\Rightarrow(2u-1)(u-1)=0\\Rightarrow u=1/2$ o $u=1$. $\\sin x=1/2$: $x=30°$ y $x=180°-30°=150°$. $\\sin x=1$: $x=90°$. Soluciones en $[0°,360°)$: $\\{30°, 90°, 150°\\}$.",
+        "common_errors": [
+          "Olvidar la segunda solución de $\\sin x=1/2$ en el QII"
+        ]
+      },
+      {
+        "id": "EX-TRI09-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En economía, las ventas estacionales se modelan con $V(t)=500+200\\sin\\left(\\frac{\\pi t}{6}\\right)$, donde $t$ es el mes (1-12). ¿En qué meses las ventas superan 600 unidades?",
+        "hints": [
+          "$V>600\\Rightarrow\\sin(\\pi t/6)>1/2$.",
+          "$\\sin\\theta>1/2$ cuando $\\pi/6<\\theta<5\\pi/6$."
+        ],
+        "answer": "Meses 2 a 5 (febrero a mayo).",
+        "full_solution": "$500+200\\sin(\\pi t/6)>600\\Rightarrow\\sin(\\pi t/6)>1/2$. $\\sin\\theta>1/2$ cuando $\\pi/6<\\theta<5\\pi/6$. $\\pi/6<\\pi t/6<5\\pi/6\\Rightarrow1<t<5$. Es decir, $t\\in(1,5)$: meses 2, 3, 4 (febrero-abril completos). En $t=5$: $V=500+200\\sin(5\\pi/6)=500+200\\cdot0{,}5=600$ (justo 600, no «supera»). Ventas máximas en $t=3$ (marzo): $V=500+200=700$.",
+        "common_errors": [
+          "No convertir la desigualdad trigonométrica al intervalo correcto de meses"
+        ]
       }
     ],
     "exam_questions": [

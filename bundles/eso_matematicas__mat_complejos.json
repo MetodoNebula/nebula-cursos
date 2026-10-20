@@ -505,6 +505,71 @@
           "Hacer la división pero usar el resto $1$ en vez del $3$ por un error de cálculo al dividir entre 4."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CMP01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La ecuación $x^2+1=0$ no tiene soluciones reales, pero en electrónica los ingenieros la resuelven a diario. Halla sus soluciones complejas y explica por qué se necesitan los números complejos para resolver $x^2+4=0$ y $x^2+2x+5=0$.",
+        "hints": [
+          "$x^2=-1\\Rightarrow x=\\pm i$.",
+          "Para $x^2+2x+5=0$ usa la fórmula general."
+        ],
+        "answer": "$x^2+1=0$: $x=\\pm i$. $x^2+4=0$: $x=\\pm 2i$. $x^2+2x+5=0$: $x=-1\\pm 2i$.",
+        "full_solution": "$x^2+1=0\\Rightarrow x^2=-1\\Rightarrow x=\\pm\\sqrt{-1}=\\pm i$. $x^2+4=0\\Rightarrow x=\\pm\\sqrt{-4}=\\pm 2i$. $x^2+2x+5=0$: discriminante $\\Delta=4-20=-16<0$. $x=\\frac{-2\\pm\\sqrt{-16}}{2}=\\frac{-2\\pm 4i}{2}=-1\\pm 2i$. Sin complejos, estas ecuaciones «no tienen solución»; con complejos, toda ecuación polinómica de grado $n$ tiene exactamente $n$ raíces (Teorema Fundamental del Álgebra).",
+        "common_errors": [
+          "Escribir $\\sqrt{-4}=\\sqrt4=2$ olvidando la unidad imaginaria"
+        ]
+      },
+      {
+        "id": "EX-CMP01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Calcula $i^1$, $i^2$, $i^3$, $i^4$, $i^5$, $i^{100}$ e $i^{2023}$.",
+        "hints": [
+          "Las potencias de $i$ se repiten cada 4: $i, -1, -i, 1, i, -1, \\ldots$"
+        ],
+        "answer": "$i, -1, -i, 1, i, 1, -i$.",
+        "full_solution": "$i^1=i$. $i^2=-1$. $i^3=i^2\\cdot i=-i$. $i^4=(i^2)^2=1$. Ciclo de período 4. $i^5=i^4\\cdot i=i$. $i^{100}=(i^4)^{25}=1^{25}=1$. $i^{2023}$: $2023=4\\cdot505+3$, así $i^{2023}=i^3=-i$. Regla: divide el exponente entre 4 y mira el resto ($r=0\\to1$, $r=1\\to i$, $r=2\\to-1$, $r=3\\to-i$).",
+        "common_errors": [
+          "No reducir el exponente módulo 4"
+        ]
+      },
+      {
+        "id": "EX-CMP01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es posible ordenar los números complejos (decir cuál es «mayor» y cuál «menor»)? Justifica por qué $\\mathbb{C}$ no es un cuerpo ordenado.",
+        "hints": [
+          "Supón que $i>0$. Entonces $i^2>0$, es decir $-1>0$. Contradicción."
+        ],
+        "answer": "No: cualquier definición de orden lleva a contradicción. $\\mathbb{C}$ no es ordenable.",
+        "full_solution": "Supongamos que existe un orden compatible. Caso 1: $i>0$. Entonces $i\\cdot i>0$, es decir $-1>0$. Pero $-1<0$ en todo cuerpo ordenado: contradicción. Caso 2: $i<0$. Entonces $-i>0$ y $(-i)(-i)>0$, es decir $i^2=-1>0$. Misma contradicción. Por tanto, no existe un orden en $\\mathbb{C}$ compatible con las operaciones. Podemos comparar módulos ($|z_1|>|z_2|$) pero no los complejos mismos.",
+        "common_errors": [
+          "Intentar ordenar por parte real o por módulo y creer que es un orden total compatible"
+        ]
+      },
+      {
+        "id": "EX-CMP01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ingeniería eléctrica, la impedancia de un circuito RLC es $Z=R+j(\\omega L-1/(\\omega C))$ (se usa $j$ en vez de $i$). Si $R=100\\,\\Omega$, $\\omega L=50\\,\\Omega$ y $1/(\\omega C)=200\\,\\Omega$, calcula $Z$, $|Z|$ y el ángulo de fase.",
+        "hints": [
+          "$Z=100+j(50-200)=100-150j$."
+        ],
+        "answer": "$Z=100-150j$. $|Z|=\\sqrt{10000+22500}=50\\sqrt{13}\\approx180{,}3\\,\\Omega$. Fase $\\approx-56{,}3°$.",
+        "full_solution": "$Z=100+j(50-200)=100-150j$. $|Z|=\\sqrt{100^2+150^2}=\\sqrt{32500}=50\\sqrt{13}\\approx180{,}3\\,\\Omega$. Ángulo: $\\phi=\\arctan(-150/100)=\\arctan(-1{,}5)\\approx-56{,}3°$. El ángulo negativo indica que el circuito es capacitivo (la corriente adelanta al voltaje). Si $\\omega L>1/(\\omega C)$, sería inductivo ($\\phi>0$).",
+        "common_errors": [
+          "Confundir $i$ (corriente) con $i$ (unidad imaginaria); por eso en eléctrica se usa $j$"
+        ]
       }
     ],
     "exam_questions": [
@@ -1400,6 +1465,71 @@
           "Dar por bueno un resultado con $i$ en el denominador porque 'ya es una fracción'."
         ],
         "provenance": "SOURCE_DERIVED"
+      },
+      {
+        "id": "EX-CMP02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En fractales, la iteración $z_{n+1}=z_n^2+c$ define el conjunto de Mandelbrot. Si $c=1+i$ y $z_0=0$, calcula $z_1$, $z_2$ y $z_3$. ¿Parece que la sucesión diverge?",
+        "hints": [
+          "$z_1=0^2+(1+i)=1+i$.",
+          "$z_2=(1+i)^2+(1+i)$."
+        ],
+        "answer": "$z_1=1+i$, $z_2=1+3i$, $z_3=-7+7i$. Sí diverge ($|z_3|=7\\sqrt2\\approx9{,}9$).",
+        "full_solution": "$z_1=0+c=1+i$. $z_2=(1+i)^2+1+i=1+2i-1+1+i=1+3i$. $z_3=(1+3i)^2+1+i=1+6i-9+1+i=-7+7i$. $|z_3|=\\sqrt{49+49}=7\\sqrt2\\approx9{,}9$. $|z_4|$ sería aún mayor. La sucesión diverge, así que $c=1+i$ NO pertenece al conjunto de Mandelbrot (los puntos del conjunto son aquellos para los que la sucesión no diverge).",
+        "common_errors": [
+          "Error al calcular $(1+i)^2$: no olvidar el término $2i$"
+        ]
+      },
+      {
+        "id": "EX-CMP02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Calcula $\\frac{3+4i}{1-2i}$ en forma binómica. Halla el conjugado y el módulo del resultado.",
+        "hints": [
+          "Multiplica numerador y denominador por el conjugado $1+2i$."
+        ],
+        "answer": "$\\frac{3+4i}{1-2i}=-1+2i$. Conjugado: $-1-2i$. Módulo: $\\sqrt5$.",
+        "full_solution": "$\\frac{3+4i}{1-2i}\\cdot\\frac{1+2i}{1+2i}=\\frac{(3+4i)(1+2i)}{1+4}=\\frac{3+6i+4i+8i^2}{5}=\\frac{3+10i-8}{5}=\\frac{-5+10i}{5}=-1+2i$. Conjugado: $\\overline{-1+2i}=-1-2i$. $|-1+2i|=\\sqrt{1+4}=\\sqrt5$. Verificación: $z\\cdot\\bar z=(-1+2i)(-1-2i)=1+4=5=|z|^2$ ✓.",
+        "common_errors": [
+          "Olvidar que $i^2=-1$ al multiplicar"
+        ]
+      },
+      {
+        "id": "EX-CMP02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que $\\overline{z_1\\cdot z_2}=\\bar z_1\\cdot\\bar z_2$ y que $|z_1\\cdot z_2|=|z_1|\\cdot|z_2|$, usando $z_k=a_k+b_ki$.",
+        "hints": [
+          "$z_1z_2=(a_1a_2-b_1b_2)+(a_1b_2+a_2b_1)i$."
+        ],
+        "answer": "El conjugado del producto cambia el signo de la parte imaginaria, igual que conjugar cada factor y multiplicar. El módulo del producto = producto de módulos.",
+        "full_solution": "$z_1z_2=(a_1a_2-b_1b_2)+(a_1b_2+a_2b_1)i$. $\\overline{z_1z_2}=(a_1a_2-b_1b_2)-(a_1b_2+a_2b_1)i$. $\\bar z_1\\bar z_2=(a_1-b_1i)(a_2-b_2i)=(a_1a_2-b_1b_2)-(a_1b_2+a_2b_1)i$. Iguales ✓. Para módulos: $|z_1z_2|^2=(a_1a_2-b_1b_2)^2+(a_1b_2+a_2b_1)^2$. Desarrollando: $=a_1^2a_2^2+b_1^2b_2^2+a_1^2b_2^2+a_2^2b_1^2=(a_1^2+b_1^2)(a_2^2+b_2^2)=|z_1|^2|z_2|^2$. Tomando raíz: $|z_1z_2|=|z_1||z_2|$ ✓.",
+        "common_errors": [
+          "Confundir $\\overline{z_1+z_2}$ (que es $\\bar z_1+\\bar z_2$) con el producto"
+        ]
+      },
+      {
+        "id": "EX-CMP02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En teoría de señales, los filtros se describen con funciones de transferencia complejas: $H(\\omega)=\\frac{1}{1+j\\omega/\\omega_0}$. Si $\\omega=\\omega_0$, calcula $H$ en forma binómica, $|H|$ y la fase.",
+        "hints": [
+          "$H=\\frac{1}{1+j}$. Multiplica por $\\frac{1-j}{1-j}$."
+        ],
+        "answer": "$H=\\frac{1-j}{2}=0{,}5-0{,}5j$. $|H|=\\sqrt2/2\\approx0{,}707$. Fase $=-45°$.",
+        "full_solution": "$H=\\frac{1}{1+j}\\cdot\\frac{1-j}{1-j}=\\frac{1-j}{1+1}=\\frac{1-j}{2}=0{,}5-0{,}5j$. $|H|=\\sqrt{0{,}25+0{,}25}=\\sqrt{0{,}5}=\\frac{\\sqrt2}{2}\\approx0{,}707$. Fase: $\\phi=\\arctan(-0{,}5/0{,}5)=\\arctan(-1)=-45°$. En $\\omega=\\omega_0$ (frecuencia de corte), la amplitud cae a $1/\\sqrt2\\approx0{,}707$ del máximo ($-3$ dB): esta es la definición de frecuencia de corte en un filtro paso bajo de primer orden.",
+        "common_errors": [
+          "No racionalizar el denominador complejo"
+        ]
       }
     ],
     "exam_questions": [
@@ -2320,6 +2450,70 @@
           "Quedarse con $a=-5$ además de $a=5$, sin aplicar el dato de que el afijo está en el primer cuadrante."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CMP03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Representa en el plano complejo los vértices de un cuadrado centrado en el origen cuyos vértices son $z$, $iz$, $-z$ y $-iz$, con $z=2+i$. Calcula los cuatro vértices y verifica que es un cuadrado.",
+        "hints": [
+          "Multiplicar por $i$ rota 90°."
+        ],
+        "answer": "$z=2+i$, $iz=-1+2i$, $-z=-2-i$, $-iz=1-2i$. Todos a distancia $\\sqrt5$ del origen.",
+        "full_solution": "$z=2+i$, $|z|=\\sqrt5$. $iz=i(2+i)=-1+2i$, $|iz|=\\sqrt5$. $-z=-2-i$, $|-z|=\\sqrt5$. $-iz=-i(2+i)=1-2i$, $|-iz|=\\sqrt5$. Los cuatro están a distancia $\\sqrt5$ del origen (sobre una circunferencia de radio $\\sqrt5$) y el ángulo entre consecutivos es 90° (multiplicar por $i$ rota 90°). Los lados del cuadrado miden $|z-iz|=|3-i|=\\sqrt{10}$. Perímetro: $4\\sqrt{10}$. Área: $10$.",
+        "common_errors": [
+          "No verificar que la distancia entre vértices consecutivos es constante"
+        ]
+      },
+      {
+        "id": "EX-CMP03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué significado geométrico tiene $|z-w|$ para dos complejos $z$ y $w$? ¿Y el conjunto $\\{z\\in\\mathbb{C}:|z-3|=2\\}$?",
+        "hints": [
+          "$|z-w|$ es la distancia entre $z$ y $w$ en el plano."
+        ],
+        "answer": "$|z-w|$ es la distancia euclidiana. $|z-3|=2$ es la circunferencia de centro 3 y radio 2.",
+        "full_solution": "Si $z=a+bi$ y $w=c+di$: $|z-w|=|(a-c)+(b-d)i|=\\sqrt{(a-c)^2+(b-d)^2}$, que es exactamente la distancia euclidiana entre $(a,b)$ y $(c,d)$. $|z-3|=2$: distancia de $z$ al punto $3(=3+0i)$ es 2. Es la circunferencia de centro $(3,0)$ y radio 2: $(x-3)^2+y^2=4$. Análogamente: $|z-z_0|<r$ es el disco abierto, $|z-z_0|=|z-z_1|$ es la mediatriz del segmento $z_0z_1$.",
+        "common_errors": [
+          "No interpretar geométricamente las ecuaciones con módulo"
+        ]
+      },
+      {
+        "id": "EX-CMP03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Halla el módulo y argumento de $z_1=-1+\\sqrt3 i$, $z_2=-3-3i$ y $z_3=4i$. Sitúalos en el plano.",
+        "hints": [
+          "Módulo: $|z|=\\sqrt{a^2+b^2}$. Argumento: cuidado con el cuadrante."
+        ],
+        "answer": "$z_1$: $|z_1|=2$, $\\arg=120°$. $z_2$: $|z_2|=3\\sqrt2$, $\\arg=225°$. $z_3$: $|z_3|=4$, $\\arg=90°$.",
+        "full_solution": "$z_1=-1+\\sqrt3 i$: $|z_1|=\\sqrt{1+3}=2$. $\\tan\\alpha=\\sqrt3/(-1)=-\\sqrt3$. En QII: $\\arg=180°-60°=120°=2\\pi/3$. $z_2=-3-3i$: $|z_2|=\\sqrt{9+9}=3\\sqrt2$. $\\tan\\alpha=(-3)/(-3)=1$. En QIII: $\\arg=180°+45°=225°=5\\pi/4$. $z_3=4i$: $|z_3|=4$. Parte real 0, parte imaginaria positiva: $\\arg=90°=\\pi/2$.",
+        "common_errors": [
+          "No ajustar el argumento según el cuadrante (usar arctan directo da el ángulo equivocado en QII y QIII)"
+        ]
+      },
+      {
+        "id": "EX-CMP03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En mecánica cuántica, el estado de un qubit es $|\\psi\\rangle=\\alpha|0\\rangle+\\beta|1\\rangle$ con $|\\alpha|^2+|\\beta|^2=1$. Si $\\alpha=\\frac{1}{\\sqrt2}$ y $\\beta=\\frac{i}{\\sqrt2}$, verifica la normalización y calcula $|\\alpha|^2$ y $|\\beta|^2$ (las probabilidades de medir 0 y 1).",
+        "hints": [
+          "$|\\beta|^2=\\beta\\bar\\beta$."
+        ],
+        "answer": "$|\\alpha|^2=1/2$, $|\\beta|^2=1/2$. Suma = 1 ✓. Probabilidad 50/50.",
+        "full_solution": "$|\\alpha|^2=|1/\\sqrt2|^2=1/2$. $|\\beta|^2=|i/\\sqrt2|^2=|i|^2/2=1/2$. $|\\alpha|^2+|\\beta|^2=1/2+1/2=1$ ✓. Probabilidad de medir $|0\\rangle$: 50%. Probabilidad de medir $|1\\rangle$: 50%. Aunque $\\beta$ es imaginario puro, su módulo al cuadrado es real y positivo: $|i/\\sqrt2|^2=(i/\\sqrt2)(-i/\\sqrt2)=1/2$. En cuántica, los números complejos no son un truco matemático sino la esencia del formalismo.",
+        "common_errors": [
+          "Confundir $\\beta^2$ con $|\\beta|^2$ (el primero es $-1/2$, el segundo $+1/2$)"
+        ]
       }
     ],
     "exam_questions": [
@@ -3249,6 +3443,72 @@
           "Dar por incorrecto un argumento negativo ($-60°$) o mayor que $360°$ ($400°$) en vez de reducirlo sumando o restando una vuelta completa."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CMP04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Convierte a forma trigonométrica: $z_1=1+i$ y $z_2=-\\sqrt3+i$. Calcula $z_1\\cdot z_2$ en forma trigonométrica y comprueba en binómica.",
+        "hints": [
+          "$z_1=\\sqrt2(\\cos45°+i\\sin45°)$.",
+          "Los módulos se multiplican y los argumentos se suman."
+        ],
+        "answer": "$z_1z_2=2\\sqrt2(\\cos195°+i\\sin195°)=2\\sqrt2\\angle195°$.",
+        "full_solution": "$z_1=1+i$: $|z_1|=\\sqrt2$, $\\arg=45°$. $z_1=\\sqrt2(\\cos45°+i\\sin45°)$. $z_2=-\\sqrt3+i$: $|z_2|=2$, $\\arg=150°$. $z_2=2(\\cos150°+i\\sin150°)$. Producto: $|z_1z_2|=2\\sqrt2$, $\\arg=45°+150°=195°$. $z_1z_2=2\\sqrt2(\\cos195°+i\\sin195°)$. Verificación binómica: $(1+i)(-\\sqrt3+i)=-\\sqrt3+i-\\sqrt3 i+i^2=-\\sqrt3-1+i(1-\\sqrt3)\\approx-2{,}73-0{,}73i$. $2\\sqrt2(\\cos195°+i\\sin195°)=2{,}83(-0{,}966-0{,}259i)\\approx-2{,}73-0{,}73i$ ✓.",
+        "common_errors": [
+          "Sumar los módulos en vez de multiplicarlos"
+        ]
+      },
+      {
+        "id": "EX-CMP04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué es más fácil multiplicar y dividir complejos en forma trigonométrica que en binómica? ¿Y para sumar y restar?",
+        "hints": [
+          "Multiplicar: se multiplican módulos y suman argumentos (sencillo).",
+          "Sumar en trigonométrica requiere volver a binómica."
+        ],
+        "answer": "La trigonométrica simplifica multiplicación y potencias; la binómica simplifica suma y resta.",
+        "full_solution": "Multiplicación trigonométrica: $r_1r_2[\\cos(\\theta_1+\\theta_2)+i\\sin(\\theta_1+\\theta_2)]$: un producto y una suma. En binómica: $(a_1+b_1i)(a_2+b_2i)=4$ términos. Para potencias: $z^n=r^n(\\cos n\\theta+i\\sin n\\theta)$ (De Moivre) vs desarrollar $(a+bi)^n$ con binomio de Newton. Pero para suma: $(a_1+b_1i)+(a_2+b_2i)$ es inmediato; en trigonométrica hay que convertir, sumar componentes y reconvertir. Cada forma tiene su ventaja: binómica para sumas, trigonométrica para productos y potencias.",
+        "common_errors": [
+          "Intentar sumar módulos y argumentos al sumar complejos"
+        ]
+      },
+      {
+        "id": "EX-CMP04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Calcula $z=\\frac{2(\\cos80°+i\\sin80°)}{4(\\cos50°+i\\sin50°)}$ en forma trigonométrica y convierte a binómica.",
+        "hints": [
+          "$|z|=2/4=0{,}5$. $\\arg z=80°-50°=30°$."
+        ],
+        "answer": "$z=0{,}5(\\cos30°+i\\sin30°)=\\frac{\\sqrt3}{4}+\\frac{1}{4}i$.",
+        "full_solution": "$|z|=2/4=1/2$. $\\arg z=80°-50°=30°$. $z=\\frac{1}{2}(\\cos30°+i\\sin30°)=\\frac{1}{2}\\left(\\frac{\\sqrt3}{2}+\\frac{1}{2}i\\right)=\\frac{\\sqrt3}{4}+\\frac{1}{4}i\\approx0{,}433+0{,}25i$.",
+        "common_errors": [
+          "Restar módulos en vez de dividirlos"
+        ]
+      },
+      {
+        "id": "EX-CMP04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En procesamiento digital de señales (DSP), la transformada de Fourier usa $e^{i\\theta}=\\cos\\theta+i\\sin\\theta$ (fórmula de Euler). Calcula $e^{i\\pi}$, $e^{i\\pi/2}$ y $e^{i\\pi/4}$ en forma binómica.",
+        "hints": [
+          "$e^{i\\pi}=\\cos\\pi+i\\sin\\pi$."
+        ],
+        "answer": "$e^{i\\pi}=-1$. $e^{i\\pi/2}=i$. $e^{i\\pi/4}=\\frac{\\sqrt2}{2}(1+i)$.",
+        "full_solution": "$e^{i\\pi}=\\cos\\pi+i\\sin\\pi=-1+0i=-1$. Esta es la identidad de Euler: $e^{i\\pi}+1=0$, considerada «la fórmula más bella de las matemáticas» por reunir $e$, $i$, $\\pi$, 1 y 0. $e^{i\\pi/2}=\\cos90°+i\\sin90°=i$. $e^{i\\pi/4}=\\cos45°+i\\sin45°=\\frac{\\sqrt2}{2}+\\frac{\\sqrt2}{2}i$. La forma exponencial $re^{i\\theta}$ es la más compacta para escribir complejos en forma polar, y es la notación estándar en ingeniería y física.",
+        "common_errors": [
+          "No recordar que $e^{i\\theta}$ es la forma exponencial del complejo de módulo 1 y argumento $\\theta$"
+        ]
       }
     ],
     "exam_questions": [
@@ -4178,6 +4438,70 @@
           "Responder que hay 'infinitas' raíces, confundiendo los infinitos argumentos posibles de un ángulo con el número finito de raíces distintas."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-CMP05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Calcula $(1+i)^8$ usando De Moivre.",
+        "hints": [
+          "$1+i=\\sqrt2\\angle45°$. De Moivre: $(r\\angle\\theta)^n=r^n\\angle n\\theta$."
+        ],
+        "answer": "$(\\sqrt2)^8\\angle(8\\cdot45°)=16\\angle360°=16$.",
+        "full_solution": "$1+i=\\sqrt2(\\cos45°+i\\sin45°)$. $(1+i)^8=(\\sqrt2)^8[\\cos(8\\cdot45°)+i\\sin(8\\cdot45°)]=16(\\cos360°+i\\sin360°)=16(1+0i)=16$. Verificación: $(1+i)^2=2i$. $(2i)^2=-4$. $(-4)^2=16$ ✓. Es más rápido con De Moivre que multiplicando 8 veces.",
+        "common_errors": [
+          "Calcular mal $(\\sqrt2)^8$: es $2^4=16$, no $2^8$"
+        ]
+      },
+      {
+        "id": "EX-CMP05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Halla las tres raíces cúbicas de $z=8i$. Represéntalas en el plano complejo.",
+        "hints": [
+          "$8i=8(\\cos90°+i\\sin90°)$. Raíces cúbicas: $r^{1/3}\\angle(\\theta+360°k)/3$, $k=0,1,2$."
+        ],
+        "answer": "$w_0=2\\angle30°=\\sqrt3+i$. $w_1=2\\angle150°=-\\sqrt3+i$. $w_2=2\\angle270°=-2i$.",
+        "full_solution": "$8i=8\\angle90°$. $\\sqrt[3]{8i}=\\sqrt[3]{8}\\angle\\frac{90°+360°k}{3}=2\\angle(30°+120°k)$. $k=0$: $w_0=2\\angle30°=2(\\cos30°+i\\sin30°)=\\sqrt3+i$. $k=1$: $w_1=2\\angle150°=2(-\\frac{\\sqrt3}{2}+\\frac{1}{2}i)=-\\sqrt3+i$. $k=2$: $w_2=2\\angle270°=2(0-i)=-2i$. Las tres raíces están sobre la circunferencia de radio 2, separadas 120°. Verificación: $(\\sqrt3+i)^3=(\\sqrt3+i)(2+2\\sqrt3 i)(\\ldots)=8i$ ✓.",
+        "common_errors": [
+          "Olvidar que hay $n$ raíces $n$-ésimas, no una sola"
+        ]
+      },
+      {
+        "id": "EX-CMP05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Las $n$ raíces $n$-ésimas de la unidad ($z^n=1$) forman un polígono regular inscrito en la circunferencia unidad. Halla las raíces quintas de la unidad y verifica que suman 0.",
+        "hints": [
+          "$w_k=\\cos(2\\pi k/5)+i\\sin(2\\pi k/5)$, $k=0,1,2,3,4$."
+        ],
+        "answer": "$w_k=e^{2\\pi ik/5}$, $k=0,\\ldots,4$. Pentágono regular. $\\sum w_k=0$.",
+        "full_solution": "$w_k=\\cos(72°k)+i\\sin(72°k)$. $w_0=1$. $w_1=\\cos72°+i\\sin72°\\approx0{,}309+0{,}951i$. $w_2=\\cos144°+i\\sin144°\\approx-0{,}809+0{,}588i$. $w_3=\\cos216°+i\\sin216°\\approx-0{,}809-0{,}588i=\\bar w_2$. $w_4=\\cos288°+i\\sin288°\\approx0{,}309-0{,}951i=\\bar w_1$. Suma: $1+(0{,}309+0{,}309)+(-0{,}809-0{,}809)+i(0{,}951-0{,}951+0{,}588-0{,}588)=0$. La suma de las raíces $n$-ésimas de la unidad siempre es 0 (para $n\\geq2$): $\\sum_{k=0}^{n-1}w^k=\\frac{w^n-1}{w-1}=0$.",
+        "common_errors": [
+          "No darse cuenta de que las raíces complejas vienen en pares conjugados"
+        ]
+      },
+      {
+        "id": "EX-CMP05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En criptografía (FFT), se usan las raíces primitivas $n$-ésimas de la unidad para la transformada rápida de Fourier. Si $n=4$, la raíz primitiva es $\\omega=e^{2\\pi i/4}=i$. Calcula la matriz DFT de tamaño 4: $F_{jk}=\\omega^{jk}$ para $j,k=0,1,2,3$.",
+        "hints": [
+          "$\\omega=i$. $\\omega^0=1$, $\\omega^1=i$, $\\omega^2=-1$, $\\omega^3=-i$."
+        ],
+        "answer": "$F=\\begin{pmatrix}1&1&1&1\\\\1&i&-1&-i\\\\1&-1&1&-1\\\\1&-i&-1&i\\end{pmatrix}$.",
+        "full_solution": "$\\omega=i$. $F_{jk}=i^{jk}$. $j=0$: todos 1 (fila de unos). $j=1$: $1, i, i^2=-1, i^3=-i$. $j=2$: $1, i^2=-1, i^4=1, i^6=-1$. $j=3$: $1, i^3=-i, i^6=-1, i^9=i$. $F=\\begin{pmatrix}1&1&1&1\\\\1&i&-1&-i\\\\1&-1&1&-1\\\\1&-i&-1&i\\end{pmatrix}$. La FFT es uno de los algoritmos más importantes de la informática: reduce el cálculo de la DFT de $O(n^2)$ a $O(n\\log n)$, y sus cimientos son las raíces de la unidad.",
+        "common_errors": [
+          "Error al calcular $i^{jk}$ para exponentes grandes (reducir módulo 4)"
+        ]
       }
     ],
     "exam_questions": [

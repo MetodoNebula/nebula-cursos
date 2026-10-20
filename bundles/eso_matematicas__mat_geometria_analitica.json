@@ -510,6 +510,73 @@
           "Calcular el punto medio de $AB$ y $CD$ (dos lados, no las diagonales) y concluir algo a partir de ahí."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-GEO01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un dron de reparto sale del almacén en $A(2,3)$ y debe llegar al punto $B(8,11)$. Calcula la distancia en línea recta y el punto medio del recorrido (donde podría colocar una estación de carga).",
+        "hints": [
+          "$d=\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$.",
+          "Punto medio: $M=\\left(\\frac{x_A+x_B}{2},\\frac{y_A+y_B}{2}\\right)$."
+        ],
+        "answer": "$d=10$ u. $M=(5,7)$.",
+        "full_solution": "$d=\\sqrt{(8-2)^2+(11-3)^2}=\\sqrt{36+64}=\\sqrt{100}=10$ u. $M=\\left(\\frac{2+8}{2},\\frac{3+11}{2}\\right)=(5,7)$. La estación de carga en $(5,7)$ divide el trayecto en dos tramos iguales de 5 unidades cada uno.",
+        "common_errors": [
+          "Olvidar elevar al cuadrado antes de sumar"
+        ]
+      },
+      {
+        "id": "EX-GEO01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Tres antenas de telefonía se sitúan en $A(0,0)$, $B(6,0)$ y $C(3,5)$. ¿Están formando un triángulo isósceles, equilátero o escaleno?",
+        "hints": [
+          "Calcula las tres distancias $AB$, $BC$, $AC$.",
+          "Si dos son iguales: isósceles."
+        ],
+        "answer": "$AB=6$, $AC=\\sqrt{34}\\approx5{,}83$, $BC=\\sqrt{34}\\approx5{,}83$. Isósceles ($AC=BC$).",
+        "full_solution": "$AB=6$. $AC=\\sqrt{9+25}=\\sqrt{34}\\approx5{,}83$. $BC=\\sqrt{9+25}=\\sqrt{34}\\approx5{,}83$. $AC=BC\\neq AB$: triángulo isósceles con los dos lados iguales desde $C$. El eje de simetría pasa por $C$ y el punto medio de $AB$, es decir por $(3,5)$ y $(3,0)$: la recta vertical $x=3$.",
+        "common_errors": [
+          "Calcular solo dos distancias y concluir prematuramente"
+        ]
+      },
+      {
+        "id": "EX-GEO01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que el punto medio del segmento $AB$ es siempre equidistante de $A$ y de $B$? Demuéstralo usando la fórmula de la distancia.",
+        "hints": [
+          "Sea $M=((x_A+x_B)/2,(y_A+y_B)/2)$. Calcula $d(A,M)$ y $d(B,M)$."
+        ],
+        "answer": "Sí. $d(A,M)=d(B,M)=\\frac{1}{2}d(A,B)$.",
+        "full_solution": "$M=\\left(\\frac{x_A+x_B}{2},\\frac{y_A+y_B}{2}\\right)$. $d(A,M)=\\sqrt{\\left(\\frac{x_B-x_A}{2}\\right)^2+\\left(\\frac{y_B-y_A}{2}\\right)^2}=\\frac{1}{2}\\sqrt{(x_B-x_A)^2+(y_B-y_A)^2}=\\frac{d(A,B)}{2}$. Análogamente: $d(B,M)=\\frac{1}{2}d(A,B)$. Se cumple $d(A,M)=d(B,M)$. QED.",
+        "common_errors": [
+          "No simplificar correctamente las expresiones con fracciones"
+        ]
+      },
+      {
+        "id": "EX-GEO01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En cartografía, dos ciudades están en coordenadas UTM (en km): Madrid $M(440,4474)$ y Barcelona $B(931,4580)$. Calcula la distancia en línea recta entre ambas. ¿Es razonable comparar con la distancia por carretera (~620 km)?",
+        "hints": [
+          "Aplica la fórmula de distancia con las coordenadas UTM.",
+          "La distancia por carretera es mayor que la recta (carreteras no van en línea recta)."
+        ],
+        "answer": "$d\\approx512$ km. Sí, es razonable que la carretera sea ~120 km más larga.",
+        "full_solution": "$d=\\sqrt{(931-440)^2+(4580-4474)^2}=\\sqrt{491^2+106^2}=\\sqrt{241081+11236}=\\sqrt{252317}\\approx502{,}3$ km. La distancia en carretera (~620 km) es un 23% mayor, lo cual es típico: las carreteras rodean montañas, siguen valles y conectan ciudades intermedias. El «factor de tortuosidad» suele estar entre 1{,}2 y 1{,}4.",
+        "common_errors": [
+          "Creer que la distancia cartográfica coincide exactamente con la real (la proyección UTM introduce pequeñas distorsiones)"
+        ]
       }
     ],
     "exam_questions": [
@@ -1413,6 +1480,75 @@
           "Dividir solo una componente entre el módulo, o dividir entre $|\\vec u|^2$ en vez de entre $|\\vec u|$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-GEO02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un barco navega con velocidad propia $\\vec{v}_b=(5,3)$ km/h y hay una corriente marina $\\vec{v}_c=(-2,1)$ km/h. Calcula la velocidad resultante, su módulo y la dirección real del barco.",
+        "hints": [
+          "$\\vec{v}_r=\\vec{v}_b+\\vec{v}_c$.",
+          "La dirección se obtiene con $\\tan\\alpha=v_y/v_x$."
+        ],
+        "answer": "$\\vec{v}_r=(3,4)$. $|\\vec{v}_r|=5$ km/h. $\\alpha=\\arctan(4/3)\\approx53{,}1°$.",
+        "full_solution": "$\\vec{v}_r=(5-2,3+1)=(3,4)$. $|\\vec{v}_r|=\\sqrt{9+16}=5$ km/h. $\\alpha=\\arctan(4/3)\\approx53{,}1°$ respecto al este. La corriente desvía al barco hacia el norte y reduce su componente este. Sin corriente iría a $\\arctan(3/5)\\approx31°$; la corriente lo desvía más de 20° hacia el norte.",
+        "common_errors": [
+          "Restar los vectores en vez de sumarlos",
+          "Confundir la dirección con el módulo"
+        ]
+      },
+      {
+        "id": "EX-GEO02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos amigos tiran de una cuerda atada a un trineo. Uno ejerce $\\vec{F}_1=(40,30)$ N y el otro $\\vec{F}_2=(30,-10)$ N. Calcula la fuerza resultante y su módulo. ¿En qué dirección se moverá el trineo?",
+        "hints": [
+          "$\\vec{F}_R=\\vec{F}_1+\\vec{F}_2$.",
+          "El trineo se mueve en la dirección de $\\vec{F}_R$."
+        ],
+        "answer": "$\\vec{F}_R=(70,20)$ N. $|\\vec{F}_R|=\\sqrt{4900+400}=\\sqrt{5300}\\approx72{,}8$ N. Dirección: $\\alpha\\approx15{,}9°$.",
+        "full_solution": "$\\vec{F}_R=(40+30,30-10)=(70,20)$. $|\\vec{F}_R|=\\sqrt{70^2+20^2}=\\sqrt{5300}\\approx72{,}8$ N. $\\alpha=\\arctan(20/70)\\approx15{,}9°$ respecto a la horizontal. El trineo se mueve mayoritariamente hacia la derecha con un ligero desvío hacia arriba.",
+        "common_errors": [
+          "Sumar los módulos en vez de sumar componente a componente"
+        ]
+      },
+      {
+        "id": "EX-GEO02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es siempre cierto que $|\\vec{u}+\\vec{v}|\\leq|\\vec{u}|+|\\vec{v}|$? ¿Cuándo se da la igualdad? Justifica geométricamente.",
+        "hints": [
+          "Es la desigualdad triangular.",
+          "La igualdad se da cuando los vectores tienen la misma dirección y sentido."
+        ],
+        "answer": "Sí (desigualdad triangular). Igualdad $\\Leftrightarrow$ $\\vec{u}$ y $\\vec{v}$ tienen la misma dirección y sentido.",
+        "full_solution": "$|\\vec{u}+\\vec{v}|\\leq|\\vec{u}|+|\\vec{v}|$ es la desigualdad triangular. Geométricamente: el lado de un triángulo es menor o igual que la suma de los otros dos. Si $\\vec{u}=(1,0)$ y $\\vec{v}=(0,1)$: $|\\vec{u}+\\vec{v}|=\\sqrt{2}\\approx1{,}41<2=|\\vec{u}|+|\\vec{v}|$. Igualdad cuando $\\vec{v}=k\\vec{u}$ con $k\\geq0$ (misma dirección y sentido): el triángulo degenera en un segmento.",
+        "common_errors": [
+          "Creer que siempre hay igualdad estricta"
+        ]
+      },
+      {
+        "id": "EX-GEO02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En videojuegos, el movimiento de un personaje se describe con vectores. Si un personaje se mueve $\\vec{d}_1=(3,4)$ casillas y luego $\\vec{d}_2=(-1,2)$ casillas, ¿cuál es su desplazamiento total? ¿Y si quiere volver al origen en un solo movimiento?",
+        "hints": [
+          "Desplazamiento total: $\\vec{d}_1+\\vec{d}_2$.",
+          "Para volver: vector opuesto al desplazamiento total."
+        ],
+        "answer": "$(2,6)$. Para volver: $(-2,-6)$.",
+        "full_solution": "$\\vec{d}=\\vec{d}_1+\\vec{d}_2=(3-1,4+2)=(2,6)$. Para volver al origen, necesita el vector opuesto: $-\\vec{d}=(-2,-6)$. Distancia de vuelta: $|\\vec{d}|=\\sqrt{4+36}=\\sqrt{40}=2\\sqrt{10}\\approx6{,}32$ casillas. El vector opuesto es la base de la función «deshacer» en muchas aplicaciones: para revertir una transformación, aplicas la transformación inversa.",
+        "common_errors": [
+          "Confundir el desplazamiento con la distancia recorrida"
+        ]
       }
     ],
     "exam_questions": [
@@ -2363,6 +2499,73 @@
           "Cambiar también los coeficientes $A$ y $B$ o mantener el mismo $C=4$ (eso daría la misma recta)."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-GEO03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un tren sale de la estación $A(1,2)$ en dirección $\\vec{d}=(3,4)$ y otro sale de $B(10,1)$ con dirección $\\vec{d}_2=(-3,2)$. ¿Se cruzarán las vías? Si es así, ¿en qué punto?",
+        "hints": [
+          "Escribe las ecuaciones paramétricas de cada recta e iguálalas.",
+          "$r_1: (1+3t,2+4t)$; $r_2: (10-3s,1+2s)$."
+        ],
+        "answer": "Sí: se cruzan en $(4,6)$.",
+        "full_solution": "$r_1$: $x=1+3t$, $y=2+4t$. $r_2$: $x=10-3s$, $y=1+2s$. Igualando: $1+3t=10-3s\\Rightarrow 3t+3s=9\\Rightarrow t+s=3$. $2+4t=1+2s\\Rightarrow 4t-2s=-1$. De la primera: $s=3-t$. Sustituyendo: $4t-2(3-t)=-1\\Rightarrow 6t-6=-1\\Rightarrow t=5/6$. Punto: $x=1+3(5/6)=1+5/2=7/2=3{,}5$. Hmm, recalculo: $t=5/6$, $x=1+3\\cdot5/6=1+5/2=7/2$, $y=2+4\\cdot5/6=2+10/3=16/3$. Verifico con $r_2$: $s=3-5/6=13/6$, $x=10-3\\cdot13/6=10-13/2=7/2$ ✓, $y=1+2\\cdot13/6=1+13/3=16/3$ ✓. Se cruzan en $(7/2,16/3)\\approx(3{,}5, 5{,}33)$.",
+        "common_errors": [
+          "Error de cálculo al resolver el sistema",
+          "No verificar la solución en ambas ecuaciones"
+        ]
+      },
+      {
+        "id": "EX-GEO03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una carretera sigue la recta $2x-y+3=0$ y se quiere construir una gasolinera en el punto $P(4,5)$. ¿A qué distancia está $P$ de la carretera?",
+        "hints": [
+          "$d=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}$ con $A=2, B=-1, C=3$."
+        ],
+        "answer": "$d=\\frac{|8-5+3|}{\\sqrt{5}}=\\frac{6}{\\sqrt{5}}=\\frac{6\\sqrt{5}}{5}\\approx2{,}68$ u.",
+        "full_solution": "$d(P,r)=\\frac{|2(4)+(-1)(5)+3|}{\\sqrt{4+1}}=\\frac{|8-5+3|}{\\sqrt{5}}=\\frac{6}{\\sqrt{5}}=\\frac{6\\sqrt{5}}{5}\\approx2{,}68$ unidades. La gasolinera está a unas 2{,}7 unidades de la carretera. Para que sea accesible, habría que construir un acceso perpendicular a la carretera de esa longitud.",
+        "common_errors": [
+          "Usar la fórmula con signo equivocado (olvidar el valor absoluto)"
+        ]
+      },
+      {
+        "id": "EX-GEO03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos rectas en el plano pueden ser secantes, paralelas o coincidentes. ¿Cuántas soluciones tiene el sistema formado por sus ecuaciones en cada caso? Justifica la relación entre la geometría y el álgebra.",
+        "hints": [
+          "Secantes $\\leftrightarrow$ una solución. Paralelas $\\leftrightarrow$ ninguna. Coincidentes $\\leftrightarrow$ infinitas."
+        ],
+        "answer": "Secantes: 1 solución (punto de corte). Paralelas: 0 (sistema incompatible). Coincidentes: $\\infty$ (sistema indeterminado).",
+        "full_solution": "Sea $a_1x+b_1y=c_1$ y $a_2x+b_2y=c_2$. Si $a_1/a_2\\neq b_1/b_2$: los vectores directores no son proporcionales $\\Rightarrow$ rectas secantes $\\Rightarrow$ una única solución. Si $a_1/a_2=b_1/b_2\\neq c_1/c_2$: paralelas (misma dirección, distintas) $\\Rightarrow$ sistema incompatible, 0 soluciones. Si $a_1/a_2=b_1/b_2=c_1/c_2$: coincidentes (misma recta) $\\Rightarrow$ infinitas soluciones. Esta correspondencia entre geometría y álgebra es la esencia de la geometría analítica.",
+        "common_errors": [
+          "Confundir paralelas con coincidentes"
+        ]
+      },
+      {
+        "id": "EX-GEO03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En programación de gráficos, un rayo de luz parte de $A(0,0)$ con dirección $(1,2)$ y hay un espejo en la recta $y=5$. Halla el punto de impacto y, sabiendo que el ángulo de reflexión es igual al de incidencia, determina la dirección del rayo reflejado.",
+        "hints": [
+          "Punto de impacto: intersección del rayo con $y=5$.",
+          "La reflexión respecto a una recta horizontal invierte la componente $y$."
+        ],
+        "answer": "Impacto: $(2{,}5, 5)$. Dirección reflejada: $(1,-2)$.",
+        "full_solution": "Rayo: $(t, 2t)$. $y=5\\Rightarrow 2t=5\\Rightarrow t=2{,}5$. Impacto: $(2{,}5, 5)$. Reflexión en espejo horizontal ($y=5$): la componente $x$ del vector director no cambia, la componente $y$ cambia de signo. Dirección incidente: $(1,2)$, reflejada: $(1,-2)$. Ángulo de incidencia con la normal (vertical): $\\alpha=\\arctan(1/2)\\approx26{,}6°$. Ángulo de reflexión: el mismo, al otro lado de la normal. Este principio es la base del ray-tracing en renders 3D.",
+        "common_errors": [
+          "No invertir la componente correcta en la reflexión"
+        ]
       }
     ],
     "exam_questions": [
@@ -3223,6 +3426,70 @@
           "Igualar el producto escalar a otro valor distinto de $0$, o cometer un error de signo al despejar."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-GEO04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un obrero empuja un carro con fuerza $\\vec{F}=(30,10)$ N a lo largo de un desplazamiento $\\vec{d}=(8,0)$ m. Calcula el trabajo realizado usando el producto escalar.",
+        "hints": [
+          "$W=\\vec{F}\\cdot\\vec{d}=F_xd_x+F_yd_y$."
+        ],
+        "answer": "$W=30\\cdot8+10\\cdot0=240$ J.",
+        "full_solution": "$W=\\vec{F}\\cdot\\vec{d}=30(8)+10(0)=240$ J. Solo la componente horizontal de la fuerza ($F_x=30$ N) contribuye al trabajo, ya que el desplazamiento es horizontal. La componente vertical ($F_y=10$ N) no hace trabajo útil. Si la fuerza fuera perpendicular al desplazamiento ($\\vec{F}\\perp\\vec{d}$), el trabajo sería 0.",
+        "common_errors": [
+          "Multiplicar los módulos en vez de hacer el producto escalar componente a componente"
+        ]
+      },
+      {
+        "id": "EX-GEO04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos sensores de movimiento detectan desplazamientos $\\vec{u}=(4,3)$ y $\\vec{v}=(6,-8)$. Calcula el ángulo entre ellos. ¿Son aproximadamente perpendiculares?",
+        "hints": [
+          "$\\cos\\alpha=\\frac{\\vec{u}\\cdot\\vec{v}}{|\\vec{u}||\\vec{v}|}$."
+        ],
+        "answer": "$\\cos\\alpha=0/50=0$. $\\alpha=90°$. Son exactamente perpendiculares.",
+        "full_solution": "$\\vec{u}\\cdot\\vec{v}=4(6)+3(-8)=24-24=0$. $|\\vec{u}|=5$, $|\\vec{v}|=10$. $\\cos\\alpha=0/(5\\cdot10)=0\\Rightarrow\\alpha=90°$. Los vectores son perpendiculares (ortogonales). Criterio: $\\vec{u}\\perp\\vec{v}\\Leftrightarrow\\vec{u}\\cdot\\vec{v}=0$.",
+        "common_errors": [
+          "Olvidar que producto escalar 0 implica perpendicularidad"
+        ]
+      },
+      {
+        "id": "EX-GEO04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que el producto escalar cumple $\\vec{u}\\cdot\\vec{u}=|\\vec{u}|^2$ y deduce que $\\vec{u}\\cdot\\vec{u}\\geq 0$ con igualdad solo si $\\vec{u}=\\vec{0}$.",
+        "hints": [
+          "$\\vec{u}=(u_1,u_2)$. $\\vec{u}\\cdot\\vec{u}=u_1^2+u_2^2$."
+        ],
+        "answer": "$\\vec{u}\\cdot\\vec{u}=u_1^2+u_2^2=|\\vec{u}|^2\\geq 0$. Igualdad $\\Leftrightarrow u_1=u_2=0$.",
+        "full_solution": "$\\vec{u}\\cdot\\vec{u}=u_1u_1+u_2u_2=u_1^2+u_2^2$. $|\\vec{u}|=\\sqrt{u_1^2+u_2^2}$, luego $|\\vec{u}|^2=u_1^2+u_2^2=\\vec{u}\\cdot\\vec{u}$. Como $u_1^2\\geq 0$ y $u_2^2\\geq 0$, la suma es $\\geq 0$. $u_1^2+u_2^2=0\\Leftrightarrow u_1=0$ y $u_2=0\\Leftrightarrow\\vec{u}=\\vec{0}$. Esta propiedad (definida positiva) hace del producto escalar una «norma» coherente.",
+        "common_errors": [
+          "No justificar por qué una suma de cuadrados solo se anula si cada sumando es 0"
+        ]
+      },
+      {
+        "id": "EX-GEO04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En procesamiento de lenguaje natural (NLP), dos palabras se representan como vectores: «rey» $\\vec{r}=(2,3,1)$ y «reina» $\\vec{q}=(2,3,-1)$ (simplificado a 3D). Calcula la similitud coseno entre ambos vectores e interpreta.",
+        "hints": [
+          "Similitud coseno: $\\frac{\\vec{r}\\cdot\\vec{q}}{|\\vec{r}||\\vec{q}|}$."
+        ],
+        "answer": "Similitud $=\\frac{4+9-1}{\\sqrt{14}\\cdot\\sqrt{14}}=\\frac{12}{14}\\approx0{,}857$. Alta similitud.",
+        "full_solution": "$\\vec{r}\\cdot\\vec{q}=4+9-1=12$. $|\\vec{r}|=\\sqrt{4+9+1}=\\sqrt{14}$, $|\\vec{q}|=\\sqrt{14}$. Similitud $=12/14\\approx0{,}857$. Valor cercano a 1 indica alta similitud semántica: «rey» y «reina» son conceptos relacionados. La tercera componente (que difiere en signo) podría representar género. El producto escalar y el ángulo entre vectores son la base de los sistemas de búsqueda semántica modernos.",
+        "common_errors": [
+          "Confundir similitud coseno con distancia euclidiana"
+        ]
       }
     ],
     "exam_questions": [
@@ -4170,6 +4437,73 @@
           "Dividir entre $|\\vec u|$ en vez de entre $|\\vec v|$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-GEO05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un terreno triangular tiene vértices $A(0,0)$, $B(8,0)$ y $C(3,6)$. Calcula su área. Si el metro cuadrado vale 50 €, ¿cuánto cuesta el terreno?",
+        "hints": [
+          "Área de un triángulo con vértices: $\\frac{1}{2}|x_A(y_B-y_C)+x_B(y_C-y_A)+x_C(y_A-y_B)|$."
+        ],
+        "answer": "Área = 24 u². Coste: $24\\times50=1200$ €.",
+        "full_solution": "$A=\\frac{1}{2}|0(0-6)+8(6-0)+3(0-0)|=\\frac{1}{2}|0+48+0|=24$ u². Coste: $24\\times50=1200$ €. Alternativamente: base $AB=8$, altura = coordenada $y$ de $C$ = 6. $A=\\frac{1}{2}\\cdot8\\cdot6=24$ u².",
+        "common_errors": [
+          "Olvidar el valor absoluto en la fórmula del área"
+        ]
+      },
+      {
+        "id": "EX-GEO05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que la distancia de un punto a una recta es siempre la distancia más corta entre el punto y cualquier punto de la recta? Justifícalo geométricamente.",
+        "hints": [
+          "La distancia mínima se alcanza por la perpendicular.",
+          "Usa el teorema de Pitágoras para comparar."
+        ],
+        "answer": "Sí. El segmento perpendicular es siempre el más corto (hipotenusa > cateto).",
+        "full_solution": "Sea $P$ un punto y $r$ una recta. El pie de la perpendicular desde $P$ a $r$ es $H$. Para cualquier otro punto $Q\\in r$ con $Q\\neq H$: el triángulo $PHQ$ es rectángulo en $H$ (por ser $PH\\perp r$). Por Pitágoras: $PQ^2=PH^2+HQ^2>PH^2$, luego $PQ>PH$. La distancia mínima se alcanza exactamente en la perpendicular. Esta es la razón por la que la fórmula de distancia punto-recta da la longitud de esa perpendicular.",
+        "common_errors": [
+          "No justificar por qué la perpendicular es óptima"
+        ]
+      },
+      {
+        "id": "EX-GEO05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En robótica, un brazo articulado tiene dos segmentos de longitudes 5 y 3. ¿Puede alcanzar el punto $(7,0)$ desde el origen? ¿Y el punto $(9,0)$? Justifica usando la desigualdad triangular.",
+        "hints": [
+          "El alcance máximo es $5+3=8$ y el mínimo es $|5-3|=2$.",
+          "El punto es alcanzable si su distancia al origen está entre 2 y 8."
+        ],
+        "answer": "$(7,0)$: sí (distancia 7, entre 2 y 8). $(9,0)$: no (distancia 9 > 8).",
+        "full_solution": "Distancia al origen: $d(7,0)=7$, $d(9,0)=9$. Rango del brazo: $[|5-3|, 5+3]=[2,8]$. $(7,0)$: $2\\leq 7\\leq 8$ ✓, alcanzable. $(9,0)$: $9>8$ ✗, fuera del alcance máximo. La desigualdad triangular limita el alcance: la punta nunca puede estar más lejos que la suma de los segmentos (estirados) ni más cerca que su diferencia (plegados).",
+        "common_errors": [
+          "Olvidar el alcance mínimo (diferencia de longitudes)"
+        ]
+      },
+      {
+        "id": "EX-GEO05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una zona de exclusión aérea es un círculo de centro $(5,5)$ y radio 3 km. Un avión vuela en línea recta desde $(0,0)$ hasta $(10,10)$. ¿Penetra en la zona de exclusión?",
+        "hints": [
+          "La trayectoria es la recta $y=x$, o $x-y=0$.",
+          "Calcula la distancia del centro del círculo a la recta."
+        ],
+        "answer": "Distancia $=\\frac{|5-5|}{\\sqrt{2}}=0<3$. Sí, la recta cruza la zona de exclusión.",
+        "full_solution": "Recta: $x-y=0$. $d=\\frac{|5-5|}{\\sqrt{1+1}}=\\frac{0}{\\sqrt{2}}=0$. El centro del círculo está exactamente sobre la trayectoria. Como $0<3$ (radio), la recta no solo penetra sino que pasa por el centro de la zona. El avión debe desviarse al menos 3 km lateralmente para evitarla.",
+        "common_errors": [
+          "Olvidar comparar la distancia con el radio del círculo"
+        ]
       }
     ],
     "exam_questions": [
@@ -5052,6 +5386,56 @@
           "Equivocar el signo de $b$ al despejar en la segunda ecuación."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-GEO06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un GPS utiliza la base canónica $\\{\\vec{e}_1=(1,0), \\vec{e}_2=(0,1)\\}$ para indicar posiciones. Si un barco se desplaza $3\\vec{e}_1+4\\vec{e}_2$, ¿cuánto se ha movido? ¿Cambiaría la distancia si usáramos otra base ortonormal?",
+        "hints": [
+          "$3\\vec{e}_1+4\\vec{e}_2=(3,4)$. Módulo: $\\sqrt{9+16}=5$.",
+          "En cualquier base ortonormal, el módulo se calcula igual."
+        ],
+        "answer": "5 unidades. No cambiaría: el módulo es invariante bajo cambios de base ortonormal.",
+        "full_solution": "$\\vec{v}=3(1,0)+4(0,1)=(3,4)$. $|\\vec{v}|=\\sqrt{9+16}=5$. Si usamos otra base ortonormal $\\{\\vec{u}_1,\\vec{u}_2\\}$ con $|\\vec{u}_i|=1$ y $\\vec{u}_1\\perp\\vec{u}_2$, las coordenadas de $\\vec{v}$ cambiarían pero el módulo seguiría siendo 5. Esto se debe a que las bases ortonormales preservan longitudes y ángulos (son isometrías). Es la razón por la que las distancias reales no dependen del sistema de coordenadas elegido.",
+        "common_errors": [
+          "Creer que la distancia depende de la base elegida"
+        ]
+      },
+      {
+        "id": "EX-GEO06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 3,
+        "statement": "¿Por qué la base $\\{(1,2),(2,4)\\}$ no es una base del plano? ¿Y $\\{(1,0),(0,1),(1,1)\\}$? Justifica ambas respuestas.",
+        "hints": [
+          "Dos vectores forman base si son linealmente independientes.",
+          "Tres vectores no pueden ser base de $\\mathbb{R}^2$."
+        ],
+        "answer": "$(2,4)=2(1,2)$: proporcionales, no base. Tres vectores en $\\mathbb{R}^2$: demasiados, nunca base.",
+        "full_solution": "$\\{(1,2),(2,4)\\}$: $(2,4)=2(1,2)$, los vectores son proporcionales (linealmente dependientes). No generan todo el plano; solo generan la recta $y=2x$. $\\{(1,0),(0,1),(1,1)\\}$: en $\\mathbb{R}^2$ la dimensión es 2, así que una base tiene exactamente 2 vectores. Con 3 vectores hay redundancia: $(1,1)=(1,0)+(0,1)$, linealmente dependiente de los otros dos. Conclusión: una base de $\\mathbb{R}^2$ tiene exactamente 2 vectores linealmente independientes.",
+        "common_errors": [
+          "Confundir 'sistema de generadores' con 'base'"
+        ]
+      },
+      {
+        "id": "EX-GEO06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En compresión de imágenes (JPEG), se usa una base ortonormal distinta de la canónica para representar bloques de píxeles. Si un bloque 2D se representa como $3\\vec{u}_1+4\\vec{u}_2$ en la base DCT (que es ortonormal), ¿cuál es la energía del bloque ($=$ módulo al cuadrado)?",
+        "hints": [
+          "En base ortonormal: $|\\vec{v}|^2=a_1^2+a_2^2$ (teorema de Parseval)."
+        ],
+        "answer": "Energía $=3^2+4^2=25$.",
+        "full_solution": "En cualquier base ortonormal, el cuadrado del módulo es la suma de los cuadrados de las coordenadas (teorema de Parseval): $|\\vec{v}|^2=3^2+4^2=9+16=25$. Esto es la base de la compresión JPEG: se expresan los píxeles en la base DCT, se descartan los coeficientes pequeños (poca energía) y se conservan los grandes. La ortonormalidad garantiza que la energía descartada es exactamente la suma de los cuadrados de los coeficientes eliminados.",
+        "common_errors": [
+          "No saber que Parseval se aplica solo en bases ortonormales"
+        ]
       }
     ],
     "exam_questions": [
@@ -5888,6 +6272,74 @@
           "Escribir $(x+2)^2+(y-5)^2=9$ (traslación en sentido contrario)."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-GEO07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una emisora de radio tiene alcance circular de 50 km desde su antena en $(20,30)$. Escribe la ecuación del lugar geométrico que limita la zona de cobertura. ¿Llega la señal al punto $(60,55)$?",
+        "hints": [
+          "Circunferencia: $(x-20)^2+(y-30)^2=2500$.",
+          "Calcula la distancia del punto al centro."
+        ],
+        "answer": "$(x-20)^2+(y-30)^2=2500$. $d(60,55)=\\sqrt{1600+625}=\\sqrt{2225}\\approx47{,}2<50$. Sí llega.",
+        "full_solution": "Lugar geométrico: puntos a distancia $\\leq50$ del centro $(20,30)$. Frontera: $(x-20)^2+(y-30)^2=50^2=2500$. Para $(60,55)$: $d=\\sqrt{(60-20)^2+(55-30)^2}=\\sqrt{1600+625}=\\sqrt{2225}\\approx47{,}2$ km. Como $47{,}2<50$, el punto está dentro de la zona de cobertura y la señal llega.",
+        "common_errors": [
+          "Confundir el interior del disco con la circunferencia"
+        ]
+      },
+      {
+        "id": "EX-GEO07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que la mediatriz de un segmento es el lugar geométrico de los puntos equidistantes de los extremos? Demuéstralo analíticamente para el segmento $AB$ con $A(0,0)$ y $B(6,0)$.",
+        "hints": [
+          "Un punto $P(x,y)$ equidistante de $A$ y $B$: $d(P,A)=d(P,B)$.",
+          "Desarrolla y simplifica."
+        ],
+        "answer": "Sí. $x^2+y^2=(x-6)^2+y^2\\Rightarrow x=3$: la recta vertical $x=3$ (mediatriz).",
+        "full_solution": "$d(P,A)=d(P,B)\\Rightarrow\\sqrt{x^2+y^2}=\\sqrt{(x-6)^2+y^2}$. Elevando al cuadrado: $x^2+y^2=x^2-12x+36+y^2\\Rightarrow 12x=36\\Rightarrow x=3$. El LG es la recta vertical $x=3$, que pasa por el punto medio $M(3,0)$ y es perpendicular a $AB$ (que está sobre el eje $x$). Es, por definición, la mediatriz de $AB$. QED.",
+        "common_errors": [
+          "No verificar que la recta obtenida pasa por el punto medio"
+        ]
+      },
+      {
+        "id": "EX-GEO07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En diseño gráfico, una traslación desplaza todos los puntos de una figura. Si un logotipo centrado en $(3,4)$ se traslada por $\\vec{v}=(5,-2)$, ¿dónde queda su centro? Si luego se aplica una simetría respecto al eje $x$, ¿dónde termina?",
+        "hints": [
+          "Traslación: sumar $\\vec{v}$ a cada punto.",
+          "Simetría respecto a $Ox$: $(x,y)\\to(x,-y)$."
+        ],
+        "answer": "Tras traslación: $(8,2)$. Tras simetría: $(8,-2)$.",
+        "full_solution": "Traslación: $(3,4)+(5,-2)=(8,2)$. Simetría respecto al eje $x$: $(8,2)\\to(8,-2)$. Si compusiéramos ambas: la transformación total lleva $(x,y)$ a $(x+5,-(y-2))=(x+5,-y+2)$. Nótese que el orden importa: primero trasladar y luego reflejar da resultado distinto que primero reflejar y luego trasladar. En diseño, las transformaciones se aplican en orden y no conmutan en general.",
+        "common_errors": [
+          "Aplicar las transformaciones en orden incorrecto"
+        ]
+      },
+      {
+        "id": "EX-GEO07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un perro atado a una estaca en $(0,0)$ con una cuerda de 5 m puede moverse libremente. Escribe la ecuación del lugar geométrico que describe el alcance máximo del perro. Si hay una valla en $x=3$, ¿cuál es el área accesible?",
+        "hints": [
+          "Sin valla: circunferencia $x^2+y^2=25$.",
+          "Con valla ($x\\leq3$): parte del disco."
+        ],
+        "answer": "$x^2+y^2\\leq25$, $x\\leq3$. Área $\\approx 25\\pi - \\text{segmento}\\approx 68{,}5$ m².",
+        "full_solution": "Sin restricción: el perro alcanza el disco $x^2+y^2\\leq25$, área $=25\\pi\\approx78{,}5$ m². Con la valla $x\\leq3$: hay que restar el casquete con $x>3$. En $x=3$: $y^2=25-9=16$, $y=\\pm4$. El ángulo del casquete: $\\cos\\theta=3/5\\Rightarrow\\theta\\approx53{,}1°$. Área del sector: $\\frac{2\\theta}{2\\pi}\\cdot25\\pi=25\\theta$. Área del triángulo: $3\\cdot4=12$. Área casquete $=25\\arccos(3/5)-12\\approx25(0{,}927)-12=23{,}2-12=11{,}2$ m². Área accesible $\\approx78{,}5-11{,}2=67{,}3$ m².",
+        "common_errors": [
+          "No restar correctamente el casquete circular"
+        ]
       }
     ],
     "exam_questions": [

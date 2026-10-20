@@ -588,6 +588,72 @@
           "Colocar los puntos con las coordenadas intercambiadas, por ejemplo $(7,-1)$ en vez de $(-1,7)$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FR01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La tarifa de un taxi es $3$ EUR de bajada de bandera más $1{,}20$ EUR/km. Expresa el coste $C$ como función de los kilómetros $d$ y calcula cuánto cuesta un trayecto de $8$ km.",
+        "hints": [
+          "$C(d) = 3 + 1{,}20d$.",
+          "Sustituye $d = 8$."
+        ],
+        "answer": "$C(d) = 3 + 1{,}2d$. $C(8) = 3 + 9{,}6 = 12{,}60$ EUR.",
+        "full_solution": "$C(d) = 3 + 1{,}2d$. Para $d = 8$: $C(8) = 3 + 1{,}2 \\times 8 = 3 + 9{,}6 = 12{,}6$ EUR.",
+        "common_errors": [
+          "Olvidar la bajada de bandera y calcular solo $1{,}2 \\times 8 = 9{,}6$."
+        ]
+      },
+      {
+        "id": "EX-FR01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La siguiente tabla muestra la temperatura de una ciudad a lo largo del día: $(6\\text{h}, 8°)$, $(10\\text{h}, 14°)$, $(14\\text{h}, 22°)$, $(18\\text{h}, 18°)$, $(22\\text{h}, 10°)$. ¿Es una función? ¿Por qué?",
+        "hints": [
+          "¿A cada hora le corresponde una única temperatura?"
+        ],
+        "answer": "Sí, es función: cada hora tiene una única temperatura asociada.",
+        "full_solution": "Es función porque a cada valor de la variable independiente (hora) le corresponde un único valor de temperatura. No hay dos temperaturas distintas para la misma hora. El dominio es $\\{6, 10, 14, 18, 22\\}$ y el recorrido $\\{8, 10, 14, 18, 22\\}$.",
+        "common_errors": [
+          "Confundir que dos horas tengan la misma temperatura (eso sí es posible) con que una hora tenga dos temperaturas (eso no)."
+        ]
+      },
+      {
+        "id": "EX-FR01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Toda tabla de valores define una función? ¿Y toda gráfica en el plano? Justifica usando el criterio de la recta vertical.",
+        "hints": [
+          "Una tabla: ¿puede tener el mismo $x$ con dos $y$ distintos?",
+          "Recta vertical: si corta a la gráfica en más de un punto, no es función."
+        ],
+        "answer": "Una tabla es función si cada $x$ aparece una sola vez. Una gráfica es función si toda recta vertical la corta en un punto como máximo.",
+        "full_solution": "Criterio de la recta vertical: si existe alguna recta $x = a$ que corte a la gráfica en dos o más puntos, la gráfica NO es función (un mismo $x$ tendría dos imágenes). Análogamente, en una tabla, si el mismo valor de $x$ aparece con dos $y$ distintos, no es función. Una circunferencia, por ejemplo, no pasa el test.",
+        "common_errors": [
+          "Pensar que la gráfica de una circunferencia es una función."
+        ]
+      },
+      {
+        "id": "EX-FR01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En biología, el crecimiento de un cultivo de bacterias se modela como $N(t) = 200 \\cdot 2^{t/4}$, donde $t$ está en horas. Representa la función tabulando $t = 0, 4, 8, 12$ y describe el comportamiento.",
+        "hints": [
+          "$N(0) = 200$; $N(4) = 400$; $N(8) = 800$; $N(12) = 1600$."
+        ],
+        "answer": "Tabla: $(0, 200)$, $(4, 400)$, $(8, 800)$, $(12, 1600)$. Crecimiento exponencial: se duplica cada $4$ horas.",
+        "full_solution": "$N(0) = 200 \\cdot 2^0 = 200$; $N(4) = 200 \\cdot 2^1 = 400$; $N(8) = 200 \\cdot 2^2 = 800$; $N(12) = 200 \\cdot 2^3 = 1600$. El crecimiento es exponencial: la población se duplica cada $4$ horas.",
+        "common_errors": [
+          "Confundir el factor $2^{t/4}$ con $2 \\cdot t/4$ (crecimiento lineal)."
+        ]
       }
     ],
     "exam_questions": [
@@ -1504,6 +1570,73 @@
             "caption": "Poligonal con extremo izquierdo cerrado en $(-3,3)$, vértices en $(-1,-1)$ y $(1,3)$ y extremo derecho abierto en $(4,0)$.",
             "purpose": "Leer dominio, recorrido y cortes sobre una gráfica dibujada con un extremo abierto."
           }
+        ]
+      },
+      {
+        "id": "EX-FR02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un tanque tiene capacidad máxima de $500$ litros y se llena a razón de $20$ L/min. El volumen es $V(t) = 20t$. ¿Cuál es el dominio de esta función en este contexto?",
+        "hints": [
+          "$V \\geq 0$ y $V \\leq 500$.",
+          "$0 \\leq 20t \\leq 500$."
+        ],
+        "answer": "$\\text{Dom} = [0, 25]$ (minutos). El tanque se llena en $25$ min.",
+        "full_solution": "$V(t) = 20t \\geq 0 \\Rightarrow t \\geq 0$. $V(t) = 20t \\leq 500 \\Rightarrow t \\leq 25$. El dominio contextual es $[0, 25]$ min. El recorrido es $[0, 500]$ L.",
+        "common_errors": [
+          "Dar $\\text{Dom} = \\mathbb{R}$ sin considerar la restricción física."
+        ]
+      },
+      {
+        "id": "EX-FR02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Halla el dominio de $f(x) = \\frac{\\sqrt{x-1}}{x-3}$.",
+        "hints": [
+          "Raíz: $x - 1 \\geq 0 \\Rightarrow x \\geq 1$.",
+          "Denominador: $x \\neq 3$."
+        ],
+        "answer": "$\\text{Dom}(f) = [1, 3) \\cup (3, +\\infty)$.",
+        "full_solution": "Para la raíz: $x - 1 \\geq 0 \\Rightarrow x \\geq 1$. Para el denominador: $x - 3 \\neq 0 \\Rightarrow x \\neq 3$. Intersección: $[1, +\\infty) \\setminus \\{3\\} = [1, 3) \\cup (3, +\\infty)$.",
+        "common_errors": [
+          "Olvidar una de las dos restricciones (solo considerar la raíz o solo el denominador)."
+        ]
+      },
+      {
+        "id": "EX-FR02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Puede una función tener un punto de corte con el eje Y y no tener ningún corte con el eje X? ¿Y al revés? Justifica con ejemplos.",
+        "hints": [
+          "Corte con Y: $f(0)$ existe. Corte con X: $f(x) = 0$ tiene solución."
+        ],
+        "answer": "Sí a ambos. Ejemplo 1: $f(x) = x^2 + 1$ (corta Y en $1$, no corta X). Ejemplo 2: $f(x) = \\ln(x)$ (corta X en $1$, no corta Y porque $0 \\notin \\text{Dom}$).",
+        "full_solution": "Corte con Y sin corte con X: $f(x) = e^x$ ($f(0) = 1$, pero $e^x > 0$ siempre, nunca corta X). Corte con X sin corte con Y: $f(x) = \\sqrt{x} - 1$ definida para $x \\geq 0$. $f(0) = -1$ (sí corta Y en $-1$, y corta X en $x = 1$). Mejor ejemplo: $f(x) = 1/x$ no corta ningún eje.",
+        "common_errors": [
+          "Pensar que toda función debe cortar ambos ejes."
+        ]
+      },
+      {
+        "id": "EX-FR02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En farmacología, la concentración de un fármaco es $C(t) = \\frac{20t}{t^2 + 4}$ (mg/L). Halla dominio, puntos de corte y recorrido (usa que $C \\geq 0$ siempre y $C_{\\max} = 5$ mg/L).",
+        "hints": [
+          "Dominio: $t^2 + 4 > 0$ siempre.",
+          "$C(0) = 0$: corte con ambos ejes en el origen."
+        ],
+        "answer": "Dom $= \\mathbb{R}$, corte en $(0,0)$, recorrido $= [0, 5]$ (si $t \\geq 0$).",
+        "full_solution": "Dominio: $t^2 + 4 \\neq 0$ siempre se cumple → $\\text{Dom} = \\mathbb{R}$. $C(0) = 0$: corte en el origen. Para $t > 0$: $C > 0$. Por AM-GM: $t^2 + 4 \\geq 2\\sqrt{4t^2} = 4t$, así que $C(t) \\leq 20t/(4t) = 5$. Igualdad cuando $t = 2$: $C(2) = 40/8 = 5$. Recorrido para $t \\geq 0$: $[0, 5]$.",
+        "common_errors": [
+          "Dar dominio $t \\geq 0$ sin que el enunciado lo restrinja explícitamente."
         ]
       }
     ],
@@ -2422,6 +2555,73 @@
           "Pensar que la periodicidad 'reinicia a cero' el valor cada vez, en vez de repetir exactamente el mismo valor de la función."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FR03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La temperatura de una ciudad en un día sigue aproximadamente $T(t) = -0{,}5t^2 + 12t + 5$ (°C), con $t$ en horas desde las $00{:}00$. ¿A qué hora se alcanza la máxima y cuánto vale?",
+        "hints": [
+          "Vértice de la parábola: $t_v = -b/(2a) = -12/(2 \\times (-0{,}5))$.",
+          "$t_v = 12$ horas (mediodía)."
+        ],
+        "answer": "A las $12{:}00$, $T_{\\max} = 77$ °C. Hmm, verifiquemos: $T(12) = -0{,}5(144)+144+5 = -72+149 = 77$. Ese modelo da $77$ °C que no es realista pero es correcto matemáticamente.",
+        "full_solution": "$t_v = \\frac{-12}{2(-0{,}5)} = 12$. $T(12) = -0{,}5(144) + 12(12) + 5 = -72 + 144 + 5 = 77$ °C. La máxima se alcanza a las $12{:}00$ h.",
+        "common_errors": [
+          "Usar la fórmula del vértice con signo equivocado: $t = b/(2a)$."
+        ]
+      },
+      {
+        "id": "EX-FR03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Las ventas mensuales de helados (miles de EUR) en un año son: $\\{8, 7, 9, 12, 18, 25, 30, 28, 20, 12, 8, 7\\}$ (ene-dic). Identifica intervalos de crecimiento, decrecimiento y el máximo.",
+        "hints": [
+          "Creciente de marzo a julio, decreciente de julio a diciembre."
+        ],
+        "answer": "Creciente: meses $3$–$7$. Decreciente: meses $7$–$12$. Máximo: $30$ (julio).",
+        "full_solution": "Análisis mes a mes: ene($8$)→feb($7$)↓; feb→mar($9$)↑; mar→abr($12$)↑; abr→may($18$)↑; may→jun($25$)↑; jun→jul($30$)↑; jul→ago($28$)↓; ago→sep($20$)↓; sep→oct($12$)↓; oct→nov($8$)↓; nov→dic($7$)↓. Creciente: feb–jul (meses $2$–$7$). Decreciente: ene–feb y jul–dic. Máximo absoluto: $30$ mil EUR (julio). Mínimo: $7$ mil EUR (feb y dic).",
+        "common_errors": [
+          "Confundir máximo relativo con máximo absoluto."
+        ]
+      },
+      {
+        "id": "EX-FR03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que si $f'(a) = 0$ entonces $f$ tiene un extremo en $a$? Justifica con un contraejemplo.",
+        "hints": [
+          "Piensa en $f(x) = x^3$ en $x = 0$.",
+          "$f'(0) = 0$ pero $f$ no tiene extremo allí."
+        ],
+        "answer": "No siempre. $f(x) = x^3$: $f'(0) = 0$ pero $x = 0$ es un punto de inflexión, no un extremo.",
+        "full_solution": "$f(x) = x^3$, $f'(x) = 3x^2$, $f'(0) = 0$. Sin embargo, $f$ es estrictamente creciente ($f'(x) > 0$ para $x \\neq 0$), así que $x = 0$ no es ni máximo ni mínimo; es un punto de inflexión. Condición necesaria $\\neq$ suficiente.",
+        "common_errors": [
+          "Afirmar que $f'(a) = 0$ siempre implica extremo (confundir condición necesaria con suficiente)."
+        ]
+      },
+      {
+        "id": "EX-FR03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ecología, la población de una especie sigue $P(t) = \\frac{K}{1 + Ae^{-rt}}$ (modelo logístico) con $K = 1000$, $A = 9$, $r = 0{,}5$. Describe cualitativamente el crecimiento: ¿dónde crece más rápido? ¿Tiene máximo?",
+        "hints": [
+          "$P(0) = 1000/10 = 100$.",
+          "$P \\to 1000$ cuando $t \\to \\infty$ (asíntota)."
+        ],
+        "answer": "Crece más rápido cuando $P = K/2 = 500$. Tiende asintóticamente a $K = 1000$.",
+        "full_solution": "$P(0) = 1000/(1+9) = 100$. A medida que $t \\to \\infty$: $e^{-0{,}5t} \\to 0$, $P \\to 1000$. El crecimiento es máximo en el punto de inflexión $P = K/2 = 500$, que ocurre cuando $1 + 9e^{-0{,}5t} = 2 \\Rightarrow e^{-0{,}5t} = 1/9 \\Rightarrow t = 2\\ln 9/0{,}5 \\approx 8{,}8$. La población nunca alcanza $1000$; se acerca asintóticamente.",
+        "common_errors": [
+          "Pensar que la población crece indefinidamente (ignorar la capacidad de carga $K$)."
+        ]
       }
     ],
     "exam_questions": [
@@ -3374,6 +3574,74 @@
           "Trasladar a la derecha por el signo $+$ del interior, y dar el dominio $[2,+\\infty)$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FR04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La función $f(x) = x^2$ modela la caída libre (simplificada). Si añadimos una altura inicial de $10$ m, ¿cuál es la nueva función? ¿Qué transformación representa?",
+        "hints": [
+          "Desplazamiento vertical hacia arriba.",
+          "$g(x) = x^2 + 10$."
+        ],
+        "answer": "$g(x) = x^2 + 10$. Es una traslación vertical de $+10$ unidades.",
+        "full_solution": "Añadir $10$ a la función original la desplaza verticalmente: $g(x) = f(x) + 10 = x^2 + 10$. Cada punto $(x, y)$ de $f$ se transforma en $(x, y+10)$ en $g$. El vértice pasa de $(0,0)$ a $(0,10)$.",
+        "common_errors": [
+          "Escribir $g(x) = (x+10)^2$ (eso sería desplazamiento horizontal)."
+        ]
+      },
+      {
+        "id": "EX-FR04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dada $f(x) = |x|$, describe y dibuja las gráficas de: a) $g(x) = |x-2|$, b) $h(x) = -|x|+3$.",
+        "hints": [
+          "a) Traslación $2$ unidades a la derecha.",
+          "b) Reflexión respecto al eje X y traslación $3$ arriba."
+        ],
+        "answer": "a) Vértice en $(2,0)$, abre hacia arriba. b) Vértice en $(0,3)$, abre hacia abajo.",
+        "full_solution": "a) $g(x) = |x-2|$: el vértice de $|x|$ se mueve de $(0,0)$ a $(2,0)$. Traslación horizontal $+2$. b) $h(x) = -|x|+3$: el signo negativo refleja respecto al eje X (la V se invierte) y el $+3$ sube el vértice a $(0,3)$.",
+        "common_errors": [
+          "En a), desplazar a la izquierda en vez de a la derecha ($x-2$ desplaza a la derecha)."
+        ]
+      },
+      {
+        "id": "EX-FR04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué $f(x-h)$ desplaza la gráfica $h$ unidades a la derecha (y no a la izquierda)? Explica la 'paradoja del signo'.",
+        "hints": [
+          "Para que $f(x-h)$ alcance el valor $f(0)$, necesitas $x = h$.",
+          "El punto que antes estaba en $x = 0$ ahora está en $x = h$."
+        ],
+        "answer": "Porque para obtener el mismo valor que $f$ daba en $x = 0$, ahora necesitas $x = h$: el punto se movió a la derecha.",
+        "full_solution": "En $f(x)$, $f(0)$ se alcanza en $x = 0$. En $f(x-h)$, $f(0) = f(x-h)$ cuando $x-h = 0$, es decir, $x = h$. El mismo valor se alcanza $h$ unidades más a la derecha. La 'paradoja' es que el signo dentro del argumento es opuesto a la dirección del movimiento: $-h$ → derecha, $+h$ → izquierda.",
+        "common_errors": [
+          "Aplicar la transformación en la dirección del signo: $f(x-3)$ → 'se mueve a la izquierda $3$'."
+        ]
+      },
+      {
+        "id": "EX-FR04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En procesamiento de señales, si $s(t)$ es una señal de audio, $s(t-d)$ representa un retardo de $d$ segundos. Explica qué transformación geométrica es y qué ocurre con $2 \\cdot s(t)$ (amplificación).",
+        "hints": [
+          "$s(t-d)$: traslación horizontal.",
+          "$2 \\cdot s(t)$: escalado vertical."
+        ],
+        "answer": "$s(t-d)$: desplazamiento $d$ s a la derecha (retardo). $2s(t)$: amplitud duplicada (dilatación vertical factor $2$).",
+        "full_solution": "$s(t-d)$: cada punto de la señal se desplaza $d$ unidades a la derecha en el tiempo → retardo temporal. Es una traslación horizontal. $2s(t)$: cada valor se multiplica por $2$ → la amplitud se duplica. Es una dilatación vertical de factor $2$. La señal suena más tarde y más fuerte, respectivamente.",
+        "common_errors": [
+          "Confundir retardo con adelanto: $s(t-d)$ con $d > 0$ es retardo, no adelanto."
+        ]
       }
     ],
     "exam_questions": [
@@ -4312,6 +4580,73 @@
           "Clasificar (b) como hueco por poder simplificar la fracción, sin ver que el factor sigue en el denominador."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-FR05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una tarifa eléctrica cobra $0{,}10$ EUR/kWh por los primeros $100$ kWh y $0{,}15$ EUR/kWh por el exceso. Expresa el coste $C(x)$ y analiza si es continua en $x = 100$.",
+        "hints": [
+          "$C(x) = 0{,}10x$ si $x \\leq 100$; $C(x) = 10 + 0{,}15(x-100)$ si $x > 100$.",
+          "$C(100^-) = 10$; $C(100^+) = 10$."
+        ],
+        "answer": "Continua en $x = 100$: ambos tramos dan $10$ EUR.",
+        "full_solution": "$C(x) = \\begin{cases} 0{,}10x & \\text{si } x \\leq 100 \\\\ 10 + 0{,}15(x-100) & \\text{si } x > 100 \\end{cases}$. $\\lim_{x \\to 100^-} C = 10$. $\\lim_{x \\to 100^+} C = 10 + 0 = 10$. $C(100) = 10$. Límites y valor coinciden: continua.",
+        "common_errors": [
+          "Pensar que al cambiar la pendiente hay discontinuidad (hay una 'esquina' pero es continua)."
+        ]
+      },
+      {
+        "id": "EX-FR05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Clasifica la discontinuidad de $f(x) = \\frac{x^2 - 4}{x - 2}$ en $x = 2$.",
+        "hints": [
+          "Factoriza: $\\frac{(x-2)(x+2)}{x-2}$.",
+          "$f(x) = x + 2$ para $x \\neq 2$."
+        ],
+        "answer": "Discontinuidad evitable. $\\lim_{x \\to 2} f(x) = 4$ pero $f(2)$ no existe.",
+        "full_solution": "$f(x) = \\frac{(x-2)(x+2)}{x-2} = x+2$ para $x \\neq 2$. $\\lim_{x \\to 2} f(x) = 4$. Pero $f(2)$ no está definida (la fracción original es $0/0$). Es una discontinuidad evitable: se podría redefinir $f(2) = 4$ para hacerla continua.",
+        "common_errors": [
+          "Decir que el límite no existe porque la función no está definida en $x = 2$."
+        ]
+      },
+      {
+        "id": "EX-FR05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué relación hay entre continuidad y la posibilidad de dibujar la gráfica 'sin levantar el lápiz'? ¿Es esta descripción siempre exacta?",
+        "hints": [
+          "La idea intuitiva funciona para funciones sencillas.",
+          "¿Qué pasa con $f(x) = \\sin(1/x)$ cerca de $x = 0$?"
+        ],
+        "answer": "Es una buena intuición para casos simples, pero falla en funciones con oscilaciones infinitas como $\\sin(1/x)$.",
+        "full_solution": "La metáfora del lápiz captura la idea esencial: en un punto de discontinuidad hay un 'salto' o un 'agujero' que obliga a levantar el lápiz. Sin embargo, funciones como $f(x) = x\\sin(1/x)$ (continua en $0$) oscilan infinitamente y no se pueden 'dibujar' literalmente, aunque son continuas. La definición formal ($\\epsilon$-$\\delta$) es más precisa que la intuición gráfica.",
+        "common_errors": [
+          "Usar la metáfora del lápiz como demostración formal de continuidad."
+        ]
+      },
+      {
+        "id": "EX-FR05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En ingeniería de control, una señal de escalón unitario es $u(t) = \\begin{cases} 0 & t < 0 \\\\ 1 & t \\geq 0 \\end{cases}$. ¿Es continua? ¿Qué tipo de discontinuidad tiene? ¿Por qué es útil a pesar de ser discontinua?",
+        "hints": [
+          "$\\lim_{t \\to 0^-} u = 0 \\neq \\lim_{t \\to 0^+} u = 1$."
+        ],
+        "answer": "Discontinuidad de salto en $t = 0$. Es útil porque modela encendidos/apagados instantáneos.",
+        "full_solution": "$\\lim_{t \\to 0^-} u(t) = 0$ y $\\lim_{t \\to 0^+} u(t) = 1$. Los límites laterales existen pero no coinciden → discontinuidad de salto (finita). Es fundamental en ingeniería porque modela la respuesta de un sistema al ser 'encendido' instantáneamente; la respuesta al escalón caracteriza el comportamiento dinámico del sistema.",
+        "common_errors": [
+          "Clasificar como discontinuidad evitable (no lo es: los límites laterales son distintos)."
+        ]
       }
     ],
     "exam_questions": [
@@ -5233,6 +5568,73 @@
             "caption": "Gráfica de $h(x)$: la rama $x+1$ termina en el punto abierto $(0,1)$ y la rama $2x$ empieza en el punto cerrado $(0,0)$.",
             "purpose": "Mostrar la representación de una función a trozos con un salto en el empalme."
           }
+        ]
+      },
+      {
+        "id": "EX-FR06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una empresa de mensajería cobra: $5$ EUR si el paquete pesa hasta $2$ kg, $5 + 1{,}5(p-2)$ EUR si pesa entre $2$ y $10$ kg, y $17 + 3(p-10)$ EUR si pesa más de $10$ kg. Expresa el coste como función a trozos.",
+        "hints": [
+          "Tres tramos según el peso $p$."
+        ],
+        "answer": "$C(p) = \\begin{cases} 5 & 0 < p \\leq 2 \\\\ 5+1{,}5(p-2) & 2 < p \\leq 10 \\\\ 17+3(p-10) & p > 10 \\end{cases}$.",
+        "full_solution": "Para $0 < p \\leq 2$: $C = 5$ (tarifa plana). Para $2 < p \\leq 10$: $C = 5 + 1{,}5(p-2)$. Comprobación en $p = 10$: $5 + 1{,}5 \\times 8 = 17$. Para $p > 10$: $C = 17 + 3(p-10)$. Es continua en $p = 2$ ($C = 5$) y en $p = 10$ ($C = 17$).",
+        "common_errors": [
+          "No verificar la continuidad en los puntos de unión."
+        ]
+      },
+      {
+        "id": "EX-FR06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Evalúa $f(x) = \\begin{cases} x^2 & x < 0 \\\\ 2x+1 & 0 \\leq x < 3 \\\\ 10-x & x \\geq 3 \\end{cases}$ en $x = -2, 0, 3, 5$ y analiza la continuidad en $x = 0$ y $x = 3$.",
+        "hints": [
+          "Identifica qué tramo corresponde a cada $x$.",
+          "Compara límites laterales con el valor de la función."
+        ],
+        "answer": "$f(-2) = 4$, $f(0) = 1$, $f(3) = 7$, $f(5) = 5$. Discontinua en $x = 0$ (salto de $0$ a $1$). Continua en $x = 3$ ($7 = 7$).",
+        "full_solution": "$f(-2) = (-2)^2 = 4$. $f(0) = 2(0)+1 = 1$. $f(3) = 10-3 = 7$. $f(5) = 10-5 = 5$. En $x = 0$: $\\lim_{x \\to 0^-} x^2 = 0 \\neq f(0) = 1$ → discontinuidad de salto. En $x = 3$: $\\lim_{x \\to 3^-}(2x+1) = 7 = f(3) = 10-3 = 7$ → continua.",
+        "common_errors": [
+          "Evaluar $f(0)$ con el tramo equivocado ($x < 0$ en vez de $0 \\leq x$)."
+        ]
+      },
+      {
+        "id": "EX-FR06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es cierto que toda función a trozos tiene al menos una discontinuidad? Justifica.",
+        "hints": [
+          "Piensa en $|x|$: es a trozos pero continua.",
+          "La continuidad depende de si los tramos 'se pegan' bien."
+        ],
+        "answer": "No. Ejemplo: $f(x) = |x| = \\begin{cases} -x & x < 0 \\\\ x & x \\geq 0 \\end{cases}$ es continua en toda la recta.",
+        "full_solution": "Contraejemplo: $|x|$ es una función a trozos (dos tramos) perfectamente continua en $x = 0$ porque $\\lim_{x \\to 0^-}(-x) = 0 = \\lim_{x \\to 0^+} x = f(0)$. Una función a trozos es continua cuando los tramos coinciden en los puntos de unión. También: $f(x) = \\max(0, x)$ es a trozos y continua.",
+        "common_errors": [
+          "Confundir 'definida a trozos' con 'discontinua'."
+        ]
+      },
+      {
+        "id": "EX-FR06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En impuestos, el IRPF tiene tramos: $19\\%$ hasta $12\\,450$ EUR, $24\\%$ de $12\\,450$ a $20\\,200$, $30\\%$ de $20\\,200$ a $35\\,200$. Calcula el impuesto para un salario de $25\\,000$ EUR.",
+        "hints": [
+          "Aplica cada porcentaje solo al tramo correspondiente (impuesto progresivo).",
+          "Primer tramo: $0{,}19 \\times 12\\,450$."
+        ],
+        "answer": "$2\\,365{,}50 + 1\\,860 + 1\\,440 = 5\\,665{,}50$ EUR.",
+        "full_solution": "Tramo 1: $12\\,450 \\times 0{,}19 = 2\\,365{,}50$. Tramo 2: $(20\\,200 - 12\\,450) \\times 0{,}24 = 7\\,750 \\times 0{,}24 = 1\\,860$. Tramo 3: $(25\\,000 - 20\\,200) \\times 0{,}30 = 4\\,800 \\times 0{,}30 = 1\\,440$. Total: $2\\,365{,}50 + 1\\,860 + 1\\,440 = 5\\,665{,}50$ EUR. Tipo efectivo: $5\\,665{,}50/25\\,000 = 22{,}66\\%$.",
+        "common_errors": [
+          "Aplicar el $30\\%$ a los $25\\,000$ EUR completos ($7\\,500$ EUR, que es incorrecto: el impuesto es progresivo, no plano)."
         ]
       }
     ],

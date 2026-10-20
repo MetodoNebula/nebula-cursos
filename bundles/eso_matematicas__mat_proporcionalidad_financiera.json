@@ -487,6 +487,74 @@
           "Confundir el orden de los términos de una razón al leer una frase del tipo \"X por cada Y\"."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PF01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un coche consume $6$ litros de gasolina cada $100$ km. ¿Cuántos litros necesita para un viaje de $350$ km? ¿Y cuánto costará si la gasolina está a $1{,}65\\;\\text{EUR/L}$?",
+        "hints": [
+          "Es proporcionalidad directa: más km, más litros.",
+          "$\\frac{6}{100} = \\frac{x}{350}$."
+        ],
+        "answer": "$21$ L; coste $= 21 \\times 1{,}65 = 34{,}65\\;€$.",
+        "full_solution": "$x = \\frac{6 \\times 350}{100} = 21$ L. Coste: $21 \\times 1{,}65 = 34{,}65$ EUR.",
+        "common_errors": [
+          "Dividir $350/6$ confundiendo la razón."
+        ]
+      },
+      {
+        "id": "EX-PF01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "En un mapa a escala $1:50\\,000$, la distancia entre dos pueblos es $7{,}4$ cm. ¿Cuál es la distancia real en km?",
+        "hints": [
+          "$1$ cm en el mapa $= 50\\,000$ cm reales $= 500$ m.",
+          "$7{,}4 \\times 500$ m."
+        ],
+        "answer": "$7{,}4 \\times 500 = 3\\,700$ m $= 3{,}7$ km.",
+        "full_solution": "Distancia real: $7{,}4 \\times 50\\,000 = 370\\,000$ cm $= 3\\,700$ m $= 3{,}7$ km.",
+        "common_errors": [
+          "Olvidar convertir cm a km: dar $370\\,000$ como respuesta."
+        ]
+      },
+      {
+        "id": "EX-PF01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cómo puedes comprobar si una tabla de valores representa una proporcionalidad directa sin recurrir a gráficas? Explica el criterio y aplícalo a: $x$: 2, 5, 8; $y$: 6, 15, 24.",
+        "hints": [
+          "Comprueba si $y/x$ es constante.",
+          "Si $y/x = k$ para todos los pares, es directa."
+        ],
+        "answer": "Sí es directa: $6/2 = 15/5 = 24/8 = 3$. La constante de proporcionalidad es $k=3$.",
+        "full_solution": "Criterio: una relación es de proporcionalidad directa si la razón $y/x$ es la misma para todos los pares. Comprobamos: $6/2 = 3$; $15/5 = 3$; $24/8 = 3$. La razón es constante ($k = 3$), así que es proporcionalidad directa: $y = 3x$.",
+        "common_errors": [
+          "Comprobar las diferencias ($y_2 - y_1$) en vez de las razones ($y/x$)."
+        ]
+      },
+      {
+        "id": "EX-PF01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La ley de Hooke establece que la fuerza de un muelle $F$ es directamente proporcional a su elongación $x$: $F = kx$. Si un muelle se estira $4$ cm con $6$ N, ¿qué fuerza se necesita para estirarlo $10$ cm?",
+        "hints": [
+          "Calcula $k = F/x$.",
+          "Aplica $F = k \\times 10$."
+        ],
+        "answer": "$k = 1{,}5$ N/cm; $F = 1{,}5 \\times 10 = 15$ N.",
+        "full_solution": "$k = \\frac{6}{4} = 1{,}5$ N/cm. Para $x = 10$ cm: $F = 1{,}5 \\times 10 = 15$ N.",
+        "common_errors": [
+          "Plantear una regla de tres inversa en vez de directa."
+        ]
       }
     ],
     "exam_questions": [
@@ -1475,6 +1543,74 @@
           "Invertir solo una de las dos razones, o ninguna, tratando alguna magnitud como directa."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PF02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Cuatro pintores tardan $12$ días en pintar un edificio. ¿Cuántos días tardarían $6$ pintores trabajando al mismo ritmo?",
+        "hints": [
+          "Más pintores → menos días: inversa.",
+          "$4 \\times 12 = 6 \\times x$."
+        ],
+        "answer": "$x = \\frac{4 \\times 12}{6} = 8$ días.",
+        "full_solution": "Proporcionalidad inversa: $\\text{pintores} \\times \\text{días} = k$. $k = 4 \\times 12 = 48$. Con $6$ pintores: $x = 48/6 = 8$ días.",
+        "common_errors": [
+          "Plantear regla de tres directa: $x = \\frac{6 \\times 12}{4} = 18$ días."
+        ]
+      },
+      {
+        "id": "EX-PF02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "La presión de un gas ideal a temperatura constante es inversamente proporcional a su volumen (ley de Boyle). Si a $2$ L de volumen la presión es $3$ atm, ¿cuál será la presión si se comprime a $0{,}5$ L?",
+        "hints": [
+          "$P \\cdot V = k$.",
+          "$k = 3 \\times 2 = 6$."
+        ],
+        "answer": "$P = 6/0{,}5 = 12$ atm.",
+        "full_solution": "$P_1 V_1 = P_2 V_2 \\Rightarrow 3 \\times 2 = P_2 \\times 0{,}5 \\Rightarrow P_2 = 6/0{,}5 = 12$ atm.",
+        "common_errors": [
+          "Dividir: $P_2 = 3/4 = 0{,}75$ (regla de tres directa)."
+        ]
+      },
+      {
+        "id": "EX-PF02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cómo distinguir si una situación es de proporcionalidad directa o inversa? Da un criterio claro y clasifica: (a) velocidad-tiempo para una distancia fija; (b) lado-perímetro de un cuadrado.",
+        "hints": [
+          "Directa: al multiplicar una por $k$, la otra se multiplica por $k$.",
+          "Inversa: al multiplicar una por $k$, la otra se divide por $k$."
+        ],
+        "answer": "(a) Inversa (más velocidad, menos tiempo). (b) Directa (más lado, más perímetro).",
+        "full_solution": "Criterio: si $y = kx$ (producto/cociente constante al crecer ambas), es directa. Si $xy = k$ (producto constante), es inversa. (a) $v \\cdot t = d$ (constante) → inversa. (b) $P = 4l$ → directa ($P/l = 4$).",
+        "common_errors": [
+          "Confundir ambas porque en las dos aparece una multiplicación."
+        ]
+      },
+      {
+        "id": "EX-PF02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En fotografía, la apertura del diafragma ($f$) y el tiempo de exposición ($t$) son inversamente proporcionales para obtener la misma luminosidad. Si con $f/4$ se necesitan $1/250$ s, ¿cuánto tiempo se necesita con $f/8$?",
+        "hints": [
+          "Al cerrar el diafragma (de $f/4$ a $f/8$), entra la mitad de luz por paso.",
+          "Pero $f/4$ a $f/8$ es $2$ pasos: la luz se divide por $4$."
+        ],
+        "answer": "$t = \\frac{1}{250} \\times 4 = \\frac{1}{62{,}5}$ s $\\approx 1/60$ s.",
+        "full_solution": "Cada paso de diafragma duplica/reduce a la mitad la luz. De $f/4$ a $f/8$ hay $2$ pasos, así que la luz se reduce a $1/4$. Para compensar: $t = \\frac{1}{250} \\times 4 = \\frac{4}{250} = \\frac{1}{62{,}5} \\approx 1/60$ s.",
+        "common_errors": [
+          "Pensar que de $f/4$ a $f/8$ solo cambia un factor $2$: $t = 1/125$ s."
+        ]
       }
     ],
     "exam_questions": [
@@ -2401,6 +2537,74 @@
           "Decir que ha subido un $15\\%$, confundiendo puntos porcentuales con porcentaje de variación."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PF03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una tienda rebaja un artículo de $80\\;€$ un $25\\%$. Después, por Black Friday, aplica un $10\\%$ adicional sobre el precio ya rebajado. ¿Cuál es el precio final? ¿Es equivalente a una rebaja única del $35\\%$?",
+        "hints": [
+          "Primer descuento: $80 \\times 0{,}75$.",
+          "Segundo: resultado $\\times 0{,}90$."
+        ],
+        "answer": "Precio final: $54\\;€$. No equivale al $35\\%$ ($80 \\times 0{,}65 = 52\\;€$).",
+        "full_solution": "Tras $25\\%$: $80 \\times 0{,}75 = 60\\;€$. Tras $10\\%$ adicional: $60 \\times 0{,}90 = 54\\;€$. Rebaja total: $1 - 54/80 = 1 - 0{,}675 = 32{,}5\\%$, no $35\\%$. Los porcentajes sucesivos no se suman.",
+        "common_errors": [
+          "Sumar los descuentos: $25+10 = 35\\%$ → $80 \\times 0{,}65 = 52\\;€$ (incorrecto)."
+        ]
+      },
+      {
+        "id": "EX-PF03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "El IVA en España es del $21\\%$. Si un producto cuesta $72{,}60\\;€$ con IVA incluido, ¿cuál es su precio sin IVA?",
+        "hints": [
+          "Precio con IVA $=$ precio sin IVA $\\times 1{,}21$.",
+          "Precio sin IVA $= 72{,}60 / 1{,}21$."
+        ],
+        "answer": "$72{,}60 / 1{,}21 = 60\\;€$.",
+        "full_solution": "Sea $P$ el precio sin IVA. $P \\times 1{,}21 = 72{,}60 \\Rightarrow P = 72{,}60/1{,}21 = 60\\;€$. Comprobación: $60 \\times 1{,}21 = 72{,}60$ ✓.",
+        "common_errors": [
+          "Calcular el $21\\%$ de $72{,}60$: $72{,}60 \\times 0{,}21 = 15{,}25$ y restar $72{,}60 - 15{,}25 = 57{,}35$ (incorrecto)."
+        ]
+      },
+      {
+        "id": "EX-PF03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un precio sube un $20\\%$ y luego baja un $20\\%$. ¿Vuelve al precio original? Justifica algebraicamente.",
+        "hints": [
+          "Subir $20\\%$: multiplicar por $1{,}20$.",
+          "Bajar $20\\%$: multiplicar por $0{,}80$."
+        ],
+        "answer": "No. $P \\times 1{,}20 \\times 0{,}80 = P \\times 0{,}96$. El precio final es un $4\\%$ menor que el original.",
+        "full_solution": "Sea $P$ el precio inicial. Tras subir $20\\%$: $1{,}20P$. Tras bajar $20\\%$: $1{,}20P \\times 0{,}80 = 0{,}96P$. El precio final es $0{,}96P$, un $4\\%$ menos que el original. Los porcentajes de variación NO se anulan porque se aplican sobre bases diferentes.",
+        "common_errors": [
+          "Afirmar que sube y baja lo mismo, así que vuelve al original."
+        ]
+      },
+      {
+        "id": "EX-PF03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En demografía, una ciudad de $200\\,000$ habitantes crece un $3\\%$ anual durante $5$ años. ¿Cuántos habitantes tendrá? ¿Por qué no basta multiplicar $200\\,000 \\times 1{,}15$?",
+        "hints": [
+          "Crecimiento compuesto: $P = 200\\,000 \\times 1{,}03^5$.",
+          "$1{,}03^5 \\neq 1{,}15$."
+        ],
+        "answer": "$200\\,000 \\times 1{,}03^5 \\approx 231\\,855$ hab. ($1{,}03^5 \\approx 1{,}1593$).",
+        "full_solution": "$P = 200\\,000 \\times 1{,}03^5 = 200\\,000 \\times 1{,}15927 \\approx 231\\,855$. No basta $200\\,000 \\times 1{,}15 = 230\\,000$ porque el crecimiento es compuesto (cada año se calcula sobre el total del año anterior), no lineal.",
+        "common_errors": [
+          "Usar crecimiento lineal: $200\\,000 \\times 1{,}15 = 230\\,000$."
+        ]
       }
     ],
     "exam_questions": [
@@ -3356,6 +3560,74 @@
           "Multiplicar $5000\\cdot1{,}03^4$ en vez de dividir, calculando un capital final mayor en lugar del capital inicial."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PF04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Depositas $5\\,000\\;€$ en una cuenta al $2{,}5\\%$ de interés simple anual. ¿Cuánto dinero tendrás tras $3$ años?",
+        "hints": [
+          "Interés simple: $I = C \\cdot r \\cdot t$.",
+          "Capital final $= C + I$."
+        ],
+        "answer": "$I = 5000 \\times 0{,}025 \\times 3 = 375\\;€$. Total: $5\\,375\\;€$.",
+        "full_solution": "$I = C \\cdot r \\cdot t = 5000 \\times 0{,}025 \\times 3 = 375\\;€$. Capital final: $5000 + 375 = 5\\,375\\;€$.",
+        "common_errors": [
+          "Usar interés compuesto: $5000 \\times 1{,}025^3 = 5\\,384{,}45$ (no es simple)."
+        ]
+      },
+      {
+        "id": "EX-PF04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Si depositas los mismos $5\\,000\\;€$ al $2{,}5\\%$ de interés compuesto anual durante $3$ años, ¿cuánto tendrás? Compara con el interés simple.",
+        "hints": [
+          "$C_f = C_0(1+r)^t$.",
+          "Compara con los $5\\,375$ del simple."
+        ],
+        "answer": "$C_f = 5000 \\times 1{,}025^3 \\approx 5\\,384{,}45\\;€$. Diferencia: $9{,}45\\;€$ más que con interés simple.",
+        "full_solution": "$C_f = 5000 \\times 1{,}025^3 = 5000 \\times 1{,}076891 \\approx 5\\,384{,}45\\;€$. Interés simple daba $5\\,375\\;€$. Diferencia: $5\\,384{,}45 - 5\\,375 = 9{,}45\\;€$ a favor del compuesto.",
+        "common_errors": [
+          "No distinguir las fórmulas de simple y compuesto."
+        ]
+      },
+      {
+        "id": "EX-PF04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué el interés compuesto siempre supera al simple a partir del primer período (para $r > 0$)? Explícalo con el concepto de 'intereses sobre intereses'.",
+        "hints": [
+          "En simple, el interés se calcula siempre sobre el capital inicial.",
+          "En compuesto, cada año se calcula sobre el capital acumulado."
+        ],
+        "answer": "Porque en compuesto los intereses generados se reinvierten y producen a su vez más intereses.",
+        "full_solution": "En interés simple, cada año se ganan $C_0 \\cdot r$ euros fijos. En compuesto, el primer año también se gana $C_0 \\cdot r$, pero el segundo año el capital ya es $C_0(1+r)$, así que el interés es $C_0(1+r) \\cdot r > C_0 \\cdot r$. La diferencia crece exponencialmente porque cada período se reinvierte. Es el efecto de 'intereses sobre intereses'.",
+        "common_errors": [
+          "Pensar que la diferencia solo importa a largo plazo y es despreciable a corto."
+        ]
+      },
+      {
+        "id": "EX-PF04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un préstamo hipotecario de $150\\,000\\;€$ al $3\\%$ anual compuesto a $25$ años. ¿Cuánto se habrá pagado en total solo en intereses? (Usa la fórmula de monto compuesto, sin amortización parcial.)",
+        "hints": [
+          "$M = 150000 \\times 1{,}03^{25}$.",
+          "Intereses $= M - 150000$."
+        ],
+        "answer": "$M \\approx 314\\,242\\;€$. Intereses $\\approx 164\\,242\\;€$.",
+        "full_solution": "$M = 150\\,000 \\times 1{,}03^{25} = 150\\,000 \\times 2{,}09378 \\approx 314\\,067\\;€$. Intereses: $314\\,067 - 150\\,000 = 164\\,067\\;€$ (más que el capital prestado). Nota: en la práctica se amortiza mensualmente, reduciendo los intereses totales.",
+        "common_errors": [
+          "Calcular interés simple: $150000 \\times 0{,}03 \\times 25 = 112500$ (mucho menos que el compuesto)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4259,6 +4531,73 @@
           "Calcular la cuota como un simple reparto, $8000\\div5=1600$ euros, sin tener en cuenta el interés del préstamo."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-PF05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una empresa ofrece dos opciones de pago: (A) $10\\,000\\;€$ ahora, o (B) $11\\,000\\;€$ dentro de $2$ años. Si puedes invertir al $4\\%$ anual compuesto, ¿qué opción es más ventajosa?",
+        "hints": [
+          "Calcula el valor futuro de la opción A en $2$ años.",
+          "Si $10000 \\times 1{,}04^2 > 11000$, la opción A es mejor."
+        ],
+        "answer": "$10000 \\times 1{,}04^2 = 10\\,816 < 11\\,000$. La opción B es mejor.",
+        "full_solution": "Valor futuro de A: $10\\,000 \\times 1{,}04^2 = 10\\,000 \\times 1{,}0816 = 10\\,816\\;€$. Como $10\\,816 < 11\\,000$, la opción B rinde más. Equivalentemente, valor actual de B: $11\\,000/1{,}04^2 = 10\\,170\\;€ > 10\\,000$.",
+        "common_errors": [
+          "Comparar directamente $10000$ y $11000$ sin considerar el valor temporal del dinero."
+        ]
+      },
+      {
+        "id": "EX-PF05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Calculas que dentro de $10$ años necesitarás $30\\,000\\;€$. ¿Cuánto debes depositar hoy a un $3{,}5\\%$ anual compuesto?",
+        "hints": [
+          "Valor actual: $C_0 = \\frac{C_f}{(1+r)^t}$.",
+          "$C_0 = 30000 / 1{,}035^{10}$."
+        ],
+        "answer": "$C_0 = 30000 / 1{,}035^{10} \\approx 21\\,277\\;€$.",
+        "full_solution": "$C_0 = \\frac{30\\,000}{1{,}035^{10}} = \\frac{30\\,000}{1{,}41060} \\approx 21\\,267\\;€$.",
+        "common_errors": [
+          "Restar $10$ veces el $3{,}5\\%$ linealmente: $30000 - 10 \\times 1050 = 19500$ (demasiado bajo)."
+        ]
+      },
+      {
+        "id": "EX-PF05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué un euro hoy vale más que un euro dentro de un año? Explica el concepto de 'valor temporal del dinero'.",
+        "hints": [
+          "Un euro hoy se puede invertir y generar rendimiento.",
+          "Un euro futuro tiene riesgo e inflación."
+        ],
+        "answer": "Porque un euro hoy puede invertirse y generar intereses, mientras que un euro futuro no puede aprovecharse ahora.",
+        "full_solution": "El valor temporal del dinero establece que un euro hoy vale más que un euro futuro por tres razones: (1) puede invertirse y generar rendimiento; (2) la inflación reduce su poder adquisitivo con el tiempo; (3) existe un riesgo de que el pago futuro no se materialice. Por eso se descuentan los flujos futuros para obtener su valor actual.",
+        "common_errors": [
+          "Pensar que $1\\;€$ siempre vale igual independientemente de cuándo se reciba."
+        ]
+      },
+      {
+        "id": "EX-PF05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La TAE (Tasa Anual Equivalente) de una tarjeta de crédito es del $20\\%$. Si la deuda es de $1\\,000\\;€$ y no pagas nada en $2$ años, ¿cuánto deberás?",
+        "hints": [
+          "$D = 1000 \\times 1{,}20^2$."
+        ],
+        "answer": "$D = 1000 \\times 1{,}44 = 1\\,440\\;€$.",
+        "full_solution": "$D = 1\\,000 \\times 1{,}20^2 = 1\\,000 \\times 1{,}44 = 1\\,440\\;€$. La deuda crece un $44\\%$ en $2$ años, no un $40\\%$ ($20\\%+20\\%$), por el efecto compuesto.",
+        "common_errors": [
+          "Sumar los porcentajes: $20\\% \\times 2 = 40\\%$ → $1\\,400\\;€$."
+        ]
       }
     ],
     "exam_questions": [

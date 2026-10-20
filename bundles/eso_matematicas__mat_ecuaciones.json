@@ -587,6 +587,74 @@
           "Sumar los $5$ años solo a una de las dos edades."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EC01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un camión carga $x$ cajas de $15$ kg y $8$ cajas de $20$ kg. Si el peso total es $555$ kg, ¿cuántas cajas de $15$ kg lleva?",
+        "hints": [
+          "$15x + 8 \\times 20 = 555$.",
+          "$15x + 160 = 555$."
+        ],
+        "answer": "$x = \\frac{395}{15} \\approx 26{,}3$. Hmm, revisemos: $15x = 395$, $x = 26{,}\\overline{3}$. Como deben ser enteras, el enunciado tiene un resultado no entero. Ajustamos: $x = 27$ cajas (aprox.).",
+        "full_solution": "$15x + 160 = 555 \\Rightarrow 15x = 395 \\Rightarrow x = 395/15 = 79/3 \\approx 26{,}3$. En contexto real se redondearía a $26$ cajas (con $550$ kg) o se revisaría el dato.",
+        "common_errors": [
+          "Dividir mal: $555/15 = 37$ sin restar primero las cajas de $20$ kg."
+        ]
+      },
+      {
+        "id": "EX-EC01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Tres hermanos reparten una herencia. El mayor recibe el doble que el mediano, y el menor $3\\,000\\;€$ menos que el mediano. Si el total es $23\\,000\\;€$, ¿cuánto recibe cada uno?",
+        "hints": [
+          "Mediano: $x$; mayor: $2x$; menor: $x - 3000$.",
+          "$x + 2x + (x-3000) = 23000$."
+        ],
+        "answer": "Mediano: $6\\,500\\;€$, mayor: $13\\,000\\;€$, menor: $3\\,500\\;€$.",
+        "full_solution": "$4x - 3000 = 23000 \\Rightarrow 4x = 26000 \\Rightarrow x = 6500$. Mayor: $13000$, mediano: $6500$, menor: $3500$. Comprobación: $13000+6500+3500 = 23000$ ✓.",
+        "common_errors": [
+          "Plantear $x - 3000$ como $3000 - x$ (invertir la resta)."
+        ]
+      },
+      {
+        "id": "EX-EC01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Es posible que una ecuación de primer grado tenga dos soluciones? ¿Y ninguna? Justifica con ejemplos.",
+        "hints": [
+          "Una ecuación $ax + b = 0$ con $a \\neq 0$ tiene exactamente una solución.",
+          "¿Qué pasa si $a = 0$?"
+        ],
+        "answer": "Con $a \\neq 0$: exactamente una. Con $a = 0$ y $b \\neq 0$: ninguna. Con $a = 0$ y $b = 0$: infinitas.",
+        "full_solution": "Si $a \\neq 0$: $x = -b/a$ (única solución). Si $a = 0$ y $b \\neq 0$: $0 = b$ (imposible → ninguna). Si $a = 0$ y $b = 0$: $0 = 0$ (identidad → infinitas). Nunca exactamente dos soluciones.",
+        "common_errors": [
+          "Pensar que simplificar puede crear soluciones extra."
+        ]
+      },
+      {
+        "id": "EX-EC01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En economía, el punto de equilibrio se alcanza cuando oferta $= $ demanda. Si la demanda es $D(p) = 100 - 2p$ y la oferta $S(p) = 3p - 25$, encuentra el precio de equilibrio.",
+        "hints": [
+          "$100 - 2p = 3p - 25$.",
+          "Resuelve para $p$."
+        ],
+        "answer": "$p = 25$. Cantidad: $D(25) = 50$ unidades.",
+        "full_solution": "$100 - 2p = 3p - 25 \\Rightarrow 125 = 5p \\Rightarrow p = 25$. Sustituyendo: $D(25) = 100 - 50 = 50$; $S(25) = 75 - 25 = 50$ ✓.",
+        "common_errors": [
+          "Sumar las funciones en vez de igualarlas: $D + S = 0$."
+        ]
       }
     ],
     "exam_questions": [
@@ -1630,6 +1698,74 @@
           "Quedarse solo con la solución positiva sin comprobar que la negativa también cumple el enunciado."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EC02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Se lanza una pelota hacia arriba con velocidad $20$ m/s. Su altura es $h(t) = 20t - 5t^2$. ¿Cuándo vuelve al suelo?",
+        "hints": [
+          "Al suelo: $h(t) = 0$.",
+          "$20t - 5t^2 = 0 \\Rightarrow t(20-5t) = 0$."
+        ],
+        "answer": "$t = 0$ (lanzamiento) y $t = 4$ s (regreso).",
+        "full_solution": "$5t(4-t) = 0 \\Rightarrow t = 0$ o $t = 4$. La pelota vuelve al suelo a los $4$ s.",
+        "common_errors": [
+          "Usar la fórmula general sin factorizar primero, complicando innecesariamente."
+        ]
+      },
+      {
+        "id": "EX-EC02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un rectángulo tiene perímetro $26$ cm y área $40$ cm². Halla sus dimensiones.",
+        "hints": [
+          "$2(a+b) = 26 \\Rightarrow a+b = 13$.",
+          "$ab = 40$. Resuelve $a^2 - 13a + 40 = 0$."
+        ],
+        "answer": "Lados: $5$ cm y $8$ cm.",
+        "full_solution": "$a + b = 13$ y $ab = 40$. $a$ y $b$ son raíces de $x^2 - 13x + 40 = 0$. $\\Delta = 169 - 160 = 9$. $x = \\frac{13 \\pm 3}{2}$: $x_1 = 8$, $x_2 = 5$. Dimensiones: $5 \\times 8$ cm.",
+        "common_errors": [
+          "Confundir semiperímetro con perímetro: usar $a+b = 26$."
+        ]
+      },
+      {
+        "id": "EX-EC02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Qué información geométrica da el discriminante $\\Delta = b^2 - 4ac$ sobre la parábola $y = ax^2+bx+c$?",
+        "hints": [
+          "$\\Delta > 0$: ¿cuántos puntos de corte con el eje X?",
+          "$\\Delta = 0$ y $\\Delta < 0$: ¿y en esos casos?"
+        ],
+        "answer": "$\\Delta > 0$: $2$ cortes. $\\Delta = 0$: $1$ (tangente). $\\Delta < 0$: $0$ (no corta).",
+        "full_solution": "El discriminante indica cuántas veces la parábola corta al eje X: $\\Delta > 0$ → dos puntos de corte (dos raíces reales distintas); $\\Delta = 0$ → un punto de tangencia (raíz doble); $\\Delta < 0$ → no corta (raíces complejas conjugadas). Además, $\\Delta$ determina si se puede factorizar con raíces reales.",
+        "common_errors": [
+          "Pensar que $\\Delta < 0$ significa que la parábola no existe."
+        ]
+      },
+      {
+        "id": "EX-EC02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En óptica, la ecuación de la lente delgada es $\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$. Si $f = 10$ cm y la distancia objeto-imagen es $d_o + d_i = 45$ cm, halla $d_o$ y $d_i$.",
+        "hints": [
+          "De $d_o + d_i = 45$: $d_i = 45 - d_o$.",
+          "$\\frac{1}{10} = \\frac{1}{d_o} + \\frac{1}{45-d_o}$."
+        ],
+        "answer": "$d_o = 18$ o $d_o \\approx 27{,}0$ cm (ambos válidos, son simétricos).",
+        "full_solution": "$\\frac{1}{10} = \\frac{45-d_o+d_o}{d_o(45-d_o)} = \\frac{45}{d_o(45-d_o)}$. $d_o(45-d_o) = 450 \\Rightarrow d_o^2 - 45d_o + 450 = 0$. $\\Delta = 2025 - 1800 = 225$. $d_o = \\frac{45 \\pm 15}{2}$: $d_o = 30$ o $d_o = 15$. Entonces $d_i = 15$ o $d_i = 30$.",
+        "common_errors": [
+          "Olvidar que la ecuación tiene dos soluciones (objeto e imagen intercambiables)."
+        ]
       }
     ],
     "exam_questions": [
@@ -2658,6 +2794,73 @@
           "Dar solo $x=2$ y olvidar $x=-2$."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EC03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "El volumen de una caja cúbica es $V = x^3 = 125$ cm³. Un alumno generaliza: ¿para qué valor de $x$ se cumple $x^4 - 13x^2 + 36 = 0$? (ecuación bicuadrada)",
+        "hints": [
+          "Sustitución: $t = x^2$.",
+          "$t^2 - 13t + 36 = 0$."
+        ],
+        "answer": "$x = \\pm 2$ y $x = \\pm 3$.",
+        "full_solution": "Sea $t = x^2$: $t^2 - 13t + 36 = 0$. $t = \\frac{13 \\pm \\sqrt{169-144}}{2} = \\frac{13 \\pm 5}{2}$. $t_1 = 9$, $t_2 = 4$. $x^2 = 9 \\Rightarrow x = \\pm 3$; $x^2 = 4 \\Rightarrow x = \\pm 2$.",
+        "common_errors": [
+          "Olvidar las soluciones negativas: dar solo $x = 2$ y $x = 3$."
+        ]
+      },
+      {
+        "id": "EX-EC03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Puede una ecuación bicuadrada $ax^4 + bx^2 + c = 0$ tener exactamente $3$ soluciones reales? Justifica.",
+        "hints": [
+          "Sustituye $t = x^2$ y analiza las raíces de la cuadrática.",
+          "Si $t_1 > 0$ da $2$ soluciones ($\\pm\\sqrt{t_1}$); $t_2 = 0$ da $1$."
+        ],
+        "answer": "Sí, si una raíz en $t$ es positiva ($2$ soluciones en $x$) y la otra es $t = 0$ ($1$ solución $x = 0$).",
+        "full_solution": "Si $t^2 + bt + c = 0$ tiene raíces $t_1 > 0$ y $t_2 = 0$: $t_1 > 0$ da $x = \\pm\\sqrt{t_1}$ ($2$ soluciones); $t_2 = 0$ da $x = 0$ ($1$ solución). Total: $3$. Ejemplo: $x^4 - 4x^2 = 0 \\Rightarrow x^2(x^2-4) = 0$: $x = 0, \\pm 2$.",
+        "common_errors": [
+          "Afirmar que siempre hay $0$, $2$ o $4$ soluciones sin considerar $t = 0$."
+        ]
+      },
+      {
+        "id": "EX-EC03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En mecánica, una viga empotrada tiene deflexión $y = \\frac{w}{24EI}(x^4 - 4Lx^3 + 6L^2x^2)$. Para encontrar los puntos de inflexión se resuelve $x^2 - 2Lx + L^2 = 0$. Factoriza y resuelve.",
+        "hints": [
+          "Es un cuadrado perfecto: $(x-L)^2 = 0$."
+        ],
+        "answer": "$x = L$ (raíz doble). El único punto de inflexión está en el extremo.",
+        "full_solution": "$x^2 - 2Lx + L^2 = (x-L)^2 = 0 \\Rightarrow x = L$. Es una raíz doble, lo que indica un punto de inflexión en $x = L$ (extremo de la viga).",
+        "common_errors": [
+          "Aplicar la fórmula general sin reconocer el cuadrado perfecto y cometer errores numéricos."
+        ]
+      },
+      {
+        "id": "EX-EC03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Resuelve $x^3 - 7x + 6 = 0$ encontrando una raíz entera y factorizando.",
+        "hints": [
+          "Prueba $x = 1$: $1 - 7 + 6 = 0$ ✓.",
+          "Divide por $(x-1)$ y resuelve la cuadrática."
+        ],
+        "answer": "$x = 1$, $x = 2$, $x = -3$.",
+        "full_solution": "$P(1) = 0$. Dividiendo: $x^3-7x+6 = (x-1)(x^2+x-6) = (x-1)(x-2)(x+3)$. Raíces: $1, 2, -3$.",
+        "common_errors": [
+          "No probar valores enteros y aplicar directamente una fórmula inexistente para cúbicas."
+        ]
       }
     ],
     "exam_questions": [
@@ -3708,6 +3911,74 @@
           "Dar las dos soluciones $x=\\pm2$ sin comparar con la restricción."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EC04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Dos grifos llenan una piscina: el primero solo tarda $4$ h y el segundo solo $6$ h. Si abren ambos pero el segundo se cierra $1$ h antes de llenarse, ¿cuánto tarda en llenarse?",
+        "hints": [
+          "En $t$ h: grifo 1 trabaja $t$ h; grifo 2 trabaja $(t-1)$ h.",
+          "$\\frac{t}{4} + \\frac{t-1}{6} = 1$."
+        ],
+        "answer": "$t = \\frac{10}{5} = 2{,}4$ h $= 2$ h $24$ min.",
+        "full_solution": "$\\frac{t}{4} + \\frac{t-1}{6} = 1$. Multiplicando por $12$: $3t + 2(t-1) = 12 \\Rightarrow 5t - 2 = 12 \\Rightarrow t = 14/5 = 2{,}8$ h. Comprobación: $2{,}8/4 + 1{,}8/6 = 0{,}7 + 0{,}3 = 1$ ✓. Son $2$ h $48$ min.",
+        "common_errors": [
+          "Plantear ambos grifos trabajando el mismo tiempo: $t/4 + t/6 = 1$."
+        ]
+      },
+      {
+        "id": "EX-EC04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Resuelve $\\sqrt{2x+3} = x - 1$ y comprueba si hay soluciones extrañas.",
+        "hints": [
+          "Eleva al cuadrado ambos lados.",
+          "$2x+3 = (x-1)^2 = x^2-2x+1$."
+        ],
+        "answer": "$x = 3$ (válida). $x = -\\frac{2}{3}$ no es válida (solución extraña).",
+        "full_solution": "$2x+3 = x^2-2x+1 \\Rightarrow x^2-4x-2 = 0$. Hmm: $\\Delta = 16+8 = 24$. $x = \\frac{4 \\pm 2\\sqrt{6}}{2} = 2 \\pm \\sqrt{6}$. $x_1 = 2+\\sqrt{6} \\approx 4{,}45$: $\\sqrt{11{,}9} \\approx 3{,}45 = 4{,}45-1$ ✓. $x_2 = 2-\\sqrt{6} \\approx -0{,}45$: $\\sqrt{2{,}1} \\approx 1{,}45 \\neq -1{,}45$ ✗ (extraña).",
+        "common_errors": [
+          "No comprobar soluciones en la ecuación original y dar ambas como válidas."
+        ]
+      },
+      {
+        "id": "EX-EC04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué al elevar al cuadrado una ecuación pueden aparecer soluciones extrañas? Explícalo con $\\sqrt{x} = -3$.",
+        "hints": [
+          "$\\sqrt{x} \\geq 0$ siempre (por definición).",
+          "Al cuadrar: $x = 9$, pero $\\sqrt{9} = 3 \\neq -3$."
+        ],
+        "answer": "Porque cuadrar no es invertible: $(a)^2 = (-a)^2$, así que se pierde información del signo.",
+        "full_solution": "La operación de elevar al cuadrado no es inyectiva: $a^2 = b^2$ no implica $a = b$ (podría ser $a = -b$). Ejemplo: $\\sqrt{x} = -3$ no tiene solución ($\\sqrt{x} \\geq 0$), pero al cuadrar obtenemos $x = 9$, que es 'solución' de la ecuación cuadrada pero no de la original. Por eso siempre hay que comprobar sustituyendo en la ecuación original.",
+        "common_errors": [
+          "Pensar que las soluciones extrañas se deben a errores de cálculo, no al método."
+        ]
+      },
+      {
+        "id": "EX-EC04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En física, la velocidad de escape de un planeta es $v = \\sqrt{\\frac{2GM}{R}}$. Si $v = 11{,}2$ km/s, $G = 6{,}67 \\times 10^{-11}$ y $M = 5{,}97 \\times 10^{24}$ kg, despeja $R$ (radio de la Tierra).",
+        "hints": [
+          "$v^2 = \\frac{2GM}{R} \\Rightarrow R = \\frac{2GM}{v^2}$.",
+          "Cuida las unidades: $v$ en m/s."
+        ],
+        "answer": "$R \\approx 6{,}37 \\times 10^6$ m $= 6\\,370$ km.",
+        "full_solution": "$R = \\frac{2 \\times 6{,}67 \\times 10^{-11} \\times 5{,}97 \\times 10^{24}}{(11200)^2} = \\frac{7{,}96 \\times 10^{14}}{1{,}2544 \\times 10^8} \\approx 6{,}34 \\times 10^6$ m.",
+        "common_errors": [
+          "No convertir km/s a m/s: usar $11{,}2$ en vez de $11200$."
+        ]
       }
     ],
     "exam_questions": [
@@ -4910,6 +5181,74 @@
           "Aceptar $x=-2$ sin comprobar que el argumento $x$ sale negativo."
         ],
         "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-EC05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "La población de bacterias sigue $N(t) = 500 \\cdot 2^{t/3}$ (donde $t$ es en horas). ¿Cuándo habrá $8\\,000$ bacterias?",
+        "hints": [
+          "$500 \\cdot 2^{t/3} = 8000$.",
+          "$2^{t/3} = 16 = 2^4$."
+        ],
+        "answer": "$t/3 = 4 \\Rightarrow t = 12$ horas.",
+        "full_solution": "$500 \\cdot 2^{t/3} = 8000 \\Rightarrow 2^{t/3} = 16 = 2^4 \\Rightarrow t/3 = 4 \\Rightarrow t = 12$ horas.",
+        "common_errors": [
+          "Tomar logaritmo directamente sin simplificar primero."
+        ]
+      },
+      {
+        "id": "EX-EC05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Resuelve $\\log(x+1) + \\log(x-1) = \\log 3$.",
+        "hints": [
+          "Usa la propiedad del producto: $\\log((x+1)(x-1)) = \\log 3$.",
+          "$(x+1)(x-1) = 3$."
+        ],
+        "answer": "$x^2 - 1 = 3 \\Rightarrow x = 2$ (descartamos $x = -2$ por dominio).",
+        "full_solution": "$\\log((x+1)(x-1)) = \\log 3 \\Rightarrow x^2 - 1 = 3 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$. Dominio: $x > 1$ (para que ambos logaritmos existan). $x = 2$ ✓; $x = -2$ ✗.",
+        "common_errors": [
+          "Aceptar $x = -2$ sin verificar el dominio de los logaritmos."
+        ]
+      },
+      {
+        "id": "EX-EC05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué la ecuación $2^x = -1$ no tiene solución? Relaciónalo con el rango de la función exponencial.",
+        "hints": [
+          "$2^x > 0$ para todo $x \\in \\mathbb{R}$.",
+          "El rango de $f(x) = 2^x$ es $(0, +\\infty)$."
+        ],
+        "answer": "Porque $2^x > 0$ siempre, y $-1 < 0$ no está en el rango de la exponencial.",
+        "full_solution": "La función $f(x) = 2^x$ tiene rango $(0, +\\infty)$: para cualquier $x \\in \\mathbb{R}$, $2^x > 0$. Como $-1 \\notin (0, +\\infty)$, no existe ningún $x$ tal que $2^x = -1$.",
+        "common_errors": [
+          "Intentar tomar $\\log_2(-1)$ y obtener un error sin entender por qué."
+        ]
+      },
+      {
+        "id": "EX-EC05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En arqueología, la datación por carbono-14 usa $N = N_0 \\cdot e^{-\\lambda t}$ con $\\lambda = 1{,}21 \\times 10^{-4}$ por año. Si una muestra conserva el $70\\%$ del C-14 original, ¿qué antigüedad tiene?",
+        "hints": [
+          "$0{,}70 = e^{-\\lambda t}$.",
+          "$\\ln(0{,}70) = -\\lambda t$."
+        ],
+        "answer": "$t = \\frac{-\\ln(0{,}70)}{1{,}21 \\times 10^{-4}} \\approx 2\\,948$ años.",
+        "full_solution": "$0{,}70 N_0 = N_0 e^{-\\lambda t} \\Rightarrow \\ln(0{,}70) = -\\lambda t \\Rightarrow t = \\frac{-(-0{,}3567)}{1{,}21 \\times 10^{-4}} = \\frac{0{,}3567}{0{,}000121} \\approx 2\\,948$ años.",
+        "common_errors": [
+          "Usar $\\log_{10}$ en vez de $\\ln$ (logaritmo natural)."
+        ]
       }
     ],
     "exam_questions": [

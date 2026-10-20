@@ -584,6 +584,73 @@
         "common_errors": [
           "Llamar «rectángulo» a cualquier paralelogramo, o «trapecio» a un paralelogramo por tener lados paralelos."
         ]
+      },
+      {
+        "id": "EX-GM01-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un campo de fútbol tiene forma rectangular de $100\\,\\text{m} \\times 70\\,\\text{m}$. En cada esquina hay un cuarto de circunferencia de radio $1\\,\\text{m}$ (zona de córner). Calcula el perímetro del campo y el área de las $4$ zonas de córner juntas.",
+        "hints": [
+          "Perímetro del rectángulo menos los arcos más los arcos.",
+          "Área de $4$ cuartos de círculo = $1$ círculo completo."
+        ],
+        "answer": "Perímetro: $340\\,\\text{m}$. Área córners: $\\pi \\approx 3{,}14\\,\\text{m}^2$.",
+        "full_solution": "Perímetro del rectángulo: $2(100+70) = 340\\,\\text{m}$ (los cuartos de circunferencia son tan pequeños que apenas afectan). Área de $4$ cuartos de círculo: $4 \\times \\frac{1}{4}\\pi(1)^2 = \\pi \\approx 3{,}14\\,\\text{m}^2$.",
+        "common_errors": [
+          "Calcular $4 \\times \\pi r^2$ sin dividir por $4$ cada cuarto de circunferencia."
+        ]
+      },
+      {
+        "id": "EX-GM01-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Puede un triángulo tener lados $3$, $4$ y $8$? Enuncia y demuestra la desigualdad triangular.",
+        "hints": [
+          "La suma de dos lados debe superar al tercero."
+        ],
+        "answer": "No: $3+4 = 7 < 8$. Desigualdad triangular: $a+b > c$ para todos los pares.",
+        "full_solution": "Desigualdad triangular: en todo triángulo, la suma de dos lados cualesquiera es mayor que el tercero. $a+b > c$, $a+c > b$, $b+c > a$. Con $3,4,8$: $3+4 = 7 < 8$. No se cumple → no puede existir ese triángulo. Demostración (intuitiva): si $a+b \\leq c$, los lados $a$ y $b$ no llegan a cerrarse.",
+        "common_errors": [
+          "Verificar solo una de las tres desigualdades (hay que comprobar las tres)."
+        ]
+      },
+      {
+        "id": "EX-GM01-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Clasifica los siguientes triángulos: a) lados $5,5,5$; b) lados $3,4,5$; c) ángulos $60°,60°,60°$; d) un ángulo de $120°$.",
+        "hints": [
+          "Por lados: equilátero, isósceles, escaleno.",
+          "Por ángulos: acutángulo, rectángulo, obtusángulo."
+        ],
+        "answer": "a) Equilátero, acutángulo. b) Escaleno, rectángulo. c) Equilátero, acutángulo. d) Obtusángulo.",
+        "full_solution": "a) $5,5,5$: equilátero (3 lados iguales) y acutángulo (todos los ángulos = $60°$). b) $3,4,5$: escaleno (lados distintos) y rectángulo ($3^2+4^2=5^2$). c) $60°,60°,60°$: equilátero y acutángulo. d) Tiene un ángulo $> 90°$: obtusángulo.",
+        "common_errors": [
+          "Pensar que un triángulo rectángulo no puede ser escaleno (sí puede: $3,4,5$)."
+        ]
+      },
+      {
+        "id": "EX-GM01-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En arquitectura, ¿por qué el triángulo es la figura más estable para estructuras (cerchas, puentes)? ¿Qué pasa con un cuadrilátero articulado?",
+        "hints": [
+          "El triángulo es rígido: fijos los lados, la forma no cambia.",
+          "Un cuadrilátero articulado se deforma."
+        ],
+        "answer": "El triángulo es rígido (3 lados fijan la forma). Un cuadrilátero puede deformarse (rombo → cuadrado) sin cambiar lados.",
+        "full_solution": "Un triángulo con lados fijos tiene una única forma (rigidez geométrica): no se puede deformar sin cambiar la longitud de algún lado. Un cuadrilátero articulado (bisagras en los vértices) puede colapsar: un cuadrado se deforma en rombo. Por eso las estructuras usan triangulaciones (cerchas, diagonales en marcos). Es un teorema de rigidez: un polígono convexo de $n \\geq 4$ lados articulados no es rígido.",
+        "common_errors": [
+          "Pensar que un cuadrado es tan estable como un triángulo (sin diagonal, no lo es)."
+        ]
       }
     ],
     "exam_questions": [
@@ -1528,6 +1595,73 @@
         "full_solution": "$P=6\\cdot6=36$ cm. $A=\\dfrac{P\\cdot ap}{2}=\\dfrac{36\\cdot5{,}2}{2}=\\dfrac{187{,}2}{2}=93{,}6\\text{ cm}^2$.",
         "common_errors": [
           "Usar el lado en lugar de la apotema, o olvidar dividir entre $2$."
+        ]
+      },
+      {
+        "id": "EX-GM02-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una piscina circular tiene radio $5\\,\\text{m}$. Se quiere rodear con un camino de $1\\,\\text{m}$ de ancho. Calcula el área del camino.",
+        "hints": [
+          "Corona circular: $A = \\pi(R^2-r^2)$.",
+          "$R = 6$, $r = 5$."
+        ],
+        "answer": "$A = \\pi(36-25) = 11\\pi \\approx 34{,}56\\,\\text{m}^2$.",
+        "full_solution": "Radio exterior: $R = 5+1 = 6\\,\\text{m}$. Área camino = $\\pi R^2 - \\pi r^2 = \\pi(36-25) = 11\\pi \\approx 34{,}56\\,\\text{m}^2$.",
+        "common_errors": [
+          "Calcular $\\pi(1)^2 = \\pi$ (solo el ancho, no la corona)."
+        ]
+      },
+      {
+        "id": "EX-GM02-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un trapecio tiene bases $a = 12\\,\\text{cm}$ y $b = 8\\,\\text{cm}$, y la altura entre ellas es $h = 5\\,\\text{cm}$. Si se divide en dos triángulos por una diagonal, calcula el área del trapecio y de cada triángulo.",
+        "hints": [
+          "$A_{\\text{trap}} = (a+b)h/2$.",
+          "Los triángulos comparten la misma altura."
+        ],
+        "answer": "$A_{\\text{trap}} = 50\\,\\text{cm}^2$. Triángulos: $30$ y $20\\,\\text{cm}^2$.",
+        "full_solution": "$A = (12+8)(5)/2 = 50\\,\\text{cm}^2$. La diagonal divide el trapecio en dos triángulos con la misma altura $h = 5$: $A_1 = 12(5)/2 = 30\\,\\text{cm}^2$, $A_2 = 8(5)/2 = 20\\,\\text{cm}^2$. Suma: $50$ ✓.",
+        "common_errors": [
+          "Pensar que la diagonal divide el trapecio en dos triángulos iguales (solo si $a = b$, es decir, si es un paralelogramo)."
+        ]
+      },
+      {
+        "id": "EX-GM02-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Cuál es la figura con mayor área para un perímetro dado? Compara un cuadrado y un círculo con el mismo perímetro $P = 20\\,\\text{cm}$.",
+        "hints": [
+          "Cuadrado: $l = P/4$, $A = l^2$.",
+          "Círculo: $r = P/(2\\pi)$, $A = \\pi r^2$."
+        ],
+        "answer": "Cuadrado: $A = 25\\,\\text{cm}^2$. Círculo: $A \\approx 31{,}83\\,\\text{cm}^2$. El círculo tiene más área.",
+        "full_solution": "Cuadrado: $l = 5$, $A = 25\\,\\text{cm}^2$. Círculo: $r = 20/(2\\pi) \\approx 3{,}18\\,\\text{cm}$, $A = \\pi(3{,}18)^2 \\approx 31{,}83\\,\\text{cm}^2$. El círculo encierra $\\approx 27\\%$ más área. Esto es el problema isoperimétrico: de todas las figuras con el mismo perímetro, el círculo tiene la máxima área.",
+        "common_errors": [
+          "Asumir que el cuadrado es la figura óptima (es óptimo solo entre los rectángulos)."
+        ]
+      },
+      {
+        "id": "EX-GM02-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En biología, ¿por qué las células son esféricas (o casi) y no cúbicas? Relaciona con la razón superficie/volumen.",
+        "hints": [
+          "La esfera minimiza la superficie para un volumen dado."
+        ],
+        "answer": "La esfera tiene la menor relación superficie/volumen, minimizando la pérdida de energía y material de membrana.",
+        "full_solution": "Para un volumen fijo, la esfera tiene la mínima superficie (análogo 3D del problema isoperimétrico). Menor superficie/volumen → menos material de membrana, menos pérdida de calor/agua. Ejemplo: cubo de lado $1$: $S/V = 6$. Esfera de igual volumen ($r = (3/4\\pi)^{1/3} \\approx 0{,}62$): $S/V \\approx 4{,}84$. Un $19\\%$ menos de superficie.",
+        "common_errors": [
+          "No conectar la geometría con la biología (la forma es una consecuencia de la optimización física)."
         ]
       }
     ],
@@ -2478,6 +2612,73 @@
         "full_solution": "Primero: $4^2+6^2=16+36=52>7^2=49$, luego $c^2<a^2+b^2$: acutángulo. Segundo: $5^2+6^2=25+36=61<10^2=100$, luego $c^2>a^2+b^2$: obtusángulo.",
         "common_errors": [
           "Comparar con el lado equivocado: el cuadrado que se compara es siempre el del lado mayor."
+        ]
+      },
+      {
+        "id": "EX-GM03-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Una escalera de $5\\,\\text{m}$ se apoya en una pared. Su pie está a $3\\,\\text{m}$ de la pared. ¿A qué altura llega?",
+        "hints": [
+          "Triángulo rectángulo: $h^2 + 3^2 = 5^2$."
+        ],
+        "answer": "$h = \\sqrt{25-9} = 4\\,\\text{m}$.",
+        "full_solution": "Por Pitágoras: $h^2 = 5^2 - 3^2 = 25-9 = 16$. $h = 4\\,\\text{m}$. Es la terna pitagórica $(3,4,5)$.",
+        "common_errors": [
+          "Sumar: $h^2 = 5^2 + 3^2 = 34$ (la hipotenusa es la escalera, no un cateto)."
+        ]
+      },
+      {
+        "id": "EX-GM03-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Calcula la diagonal de un rectángulo de $8\\,\\text{cm} \\times 6\\,\\text{cm}$. ¿Y la diagonal espacial de un ortoedro de $3 \\times 4 \\times 12$?",
+        "hints": [
+          "Diagonal 2D: $d = \\sqrt{a^2+b^2}$.",
+          "Diagonal 3D: $D = \\sqrt{a^2+b^2+c^2}$."
+        ],
+        "answer": "Rectángulo: $d = 10\\,\\text{cm}$. Ortoedro: $D = 13$.",
+        "full_solution": "Rectángulo: $d = \\sqrt{64+36} = \\sqrt{100} = 10\\,\\text{cm}$. Ortoedro: $D = \\sqrt{9+16+144} = \\sqrt{169} = 13$.",
+        "common_errors": [
+          "Sumar longitudes en vez de sus cuadrados: $d = 8+6 = 14$ (incorrecto)."
+        ]
+      },
+      {
+        "id": "EX-GM03-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Se puede usar el Teorema de Pitágoras para determinar si un triángulo es rectángulo, acutángulo u obtusángulo? Enuncia el criterio.",
+        "hints": [
+          "Si $c^2 = a^2+b^2$: rectángulo.",
+          "Si $c^2 < a^2+b^2$: acutángulo."
+        ],
+        "answer": "Sí. $c^2 = a^2+b^2$ → rectángulo. $c^2 < a^2+b^2$ → acutángulo. $c^2 > a^2+b^2$ → obtusángulo.",
+        "full_solution": "Sea $c$ el lado mayor. $c^2 = a^2+b^2$: rectángulo (Pitágoras). $c^2 < a^2+b^2$: acutángulo (el ángulo opuesto a $c$ es $< 90°$). $c^2 > a^2+b^2$: obtusángulo (el ángulo opuesto a $c$ es $> 90°$). Ejemplo: $5,6,7$: $49 < 25+36 = 61$ → acutángulo. $3,4,6$: $36 > 9+16 = 25$ → obtusángulo.",
+        "common_errors": [
+          "No identificar cuál es el lado mayor antes de comparar."
+        ]
+      },
+      {
+        "id": "EX-GM03-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un barco navega $30\\,\\text{km}$ al norte y luego $40\\,\\text{km}$ al este. ¿A qué distancia en línea recta está del punto de partida? ¿En qué dirección (ángulo) debe volver?",
+        "hints": [
+          "Pitágoras: $d = \\sqrt{30^2+40^2}$.",
+          "Ángulo: $\\tan\\alpha = 40/30$."
+        ],
+        "answer": "$d = 50\\,\\text{km}$. Dirección: $\\alpha = \\arctan(4/3) \\approx 53{,}1°$ al suroeste.",
+        "full_solution": "$d = \\sqrt{900+1600} = \\sqrt{2500} = 50\\,\\text{km}$. Dirección de vuelta: hacia suroeste. Ángulo respecto al sur: $\\tan\\alpha = 40/30 = 4/3$, $\\alpha \\approx 53{,}1°$ al oeste del sur (rumbo $\\approx S53°W$).",
+        "common_errors": [
+          "Sumar las distancias ($70$ km) en vez de usar Pitágoras."
         ]
       }
     ],
@@ -3489,6 +3690,73 @@
         "common_errors": [
           "Multiplicar por $2000$ en lugar de dividir al pasar de la realidad al plano."
         ]
+      },
+      {
+        "id": "EX-GM04-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Para medir la altura de un edificio, plantas un palo de $2\\,\\text{m}$ que proyecta una sombra de $1{,}5\\,\\text{m}$. La sombra del edificio mide $12\\,\\text{m}$. ¿Cuánto mide el edificio?",
+        "hints": [
+          "Triángulos semejantes: mismos ángulos (sol paralelo).",
+          "$h/12 = 2/1{,}5$."
+        ],
+        "answer": "$h = 2 \\times 12/1{,}5 = 16\\,\\text{m}$.",
+        "full_solution": "Por semejanza (los rayos del sol son paralelos): $h_{\\text{ed}}/s_{\\text{ed}} = h_{\\text{palo}}/s_{\\text{palo}}$. $h = 2 \\times 12/1{,}5 = 16\\,\\text{m}$.",
+        "common_errors": [
+          "Invertir la proporción: $h = 1{,}5 \\times 12/2 = 9$ m."
+        ]
+      },
+      {
+        "id": "EX-GM04-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un mapa tiene escala $1:50\\,000$. Dos ciudades están a $8{,}5\\,\\text{cm}$ en el mapa. ¿Cuál es la distancia real? Si la distancia real entre otras dos ciudades es $15\\,\\text{km}$, ¿cuánto miden en el mapa?",
+        "hints": [
+          "$1\\,\\text{cm}$ en mapa = $50\\,000\\,\\text{cm}$ = $500\\,\\text{m}$ real."
+        ],
+        "answer": "Real: $4{,}25\\,\\text{km}$. En mapa: $30\\,\\text{cm}$.",
+        "full_solution": "$8{,}5\\,\\text{cm} \\times 50\\,000 = 425\\,000\\,\\text{cm} = 4{,}25\\,\\text{km}$. $15\\,\\text{km} = 1\\,500\\,000\\,\\text{cm}$. En mapa: $1\\,500\\,000/50\\,000 = 30\\,\\text{cm}$.",
+        "common_errors": [
+          "Confundir la escala: multiplicar en vez de dividir (o viceversa)."
+        ]
+      },
+      {
+        "id": "EX-GM04-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Si una maqueta de un edificio tiene escala $1:100$ y usamos $50\\,\\text{g}$ de pintura para la maqueta, ¿necesitamos $5\\,000\\,\\text{g}$ ($\\times 100$) para el edificio real? ¿Por qué sí o por qué no?",
+        "hints": [
+          "La pintura cubre superficies, no longitudes.",
+          "La escala de áreas es el cuadrado de la escala lineal."
+        ],
+        "answer": "No. La superficie escala con el cuadrado: $100^2 = 10\\,000$. Se necesitan $500\\,\\text{kg}$.",
+        "full_solution": "Las escalas: longitudes $\\times 100$, superficies $\\times 100^2 = 10\\,000$, volúmenes $\\times 100^3 = 10^6$. La pintura cubre superficie: $50\\,\\text{g} \\times 10\\,000 = 500\\,000\\,\\text{g} = 500\\,\\text{kg}$, no $5\\,000\\,\\text{g}$.",
+        "common_errors": [
+          "Usar la escala lineal ($\\times 100$) para magnitudes de superficie (deben usar el cuadrado)."
+        ]
+      },
+      {
+        "id": "EX-GM04-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En biología, si un organismo crece de forma isométrica duplicando su longitud, ¿por cuánto se multiplica su masa? Explica por qué los insectos gigantes de las películas no podrían existir.",
+        "hints": [
+          "Masa $\\propto$ volumen $\\propto L^3$.",
+          "Fuerza muscular $\\propto$ sección $\\propto L^2$."
+        ],
+        "answer": "Masa $\\times 8$ ($2^3$). La fuerza solo se multiplica por $4$ ($2^2$). No podrían sostener su peso.",
+        "full_solution": "Al duplicar $L$: volumen (y masa) $\\times 2^3 = 8$, pero la sección transversal (y la fuerza muscular, y la resistencia de las patas) $\\times 2^2 = 4$. Ratio fuerza/peso: $4/8 = 1/2$. Un insecto $10$ veces mayor: peso $\\times 1000$, fuerza patas $\\times 100$. Se colapsaría bajo su propio peso. Esto es la ley del cuadrado-cubo (Galileo).",
+        "common_errors": [
+          "Pensar que triplicar el tamaño triplica la masa (se multiplica por $27$)."
+        ]
       }
     ],
     "exam_questions": [
@@ -4436,6 +4704,73 @@
         "common_errors": [
           "Sumar solo una base al área lateral."
         ]
+      },
+      {
+        "id": "EX-GM05-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un cilindro tiene radio $r = 3\\,\\text{cm}$ y altura $h = 10\\,\\text{cm}$. Calcula su volumen y su superficie total.",
+        "hints": [
+          "$V = \\pi r^2 h$.",
+          "$S = 2\\pi r h + 2\\pi r^2$."
+        ],
+        "answer": "$V = 90\\pi \\approx 282{,}7\\,\\text{cm}^3$. $S = 78\\pi \\approx 245{,}0\\,\\text{cm}^2$.",
+        "full_solution": "$V = \\pi(3)^2(10) = 90\\pi \\approx 282{,}7\\,\\text{cm}^3$. $S_{\\text{lat}} = 2\\pi(3)(10) = 60\\pi$. $S_{\\text{bases}} = 2\\pi(3)^2 = 18\\pi$. $S_{\\text{total}} = 78\\pi \\approx 245{,}0\\,\\text{cm}^2$.",
+        "common_errors": [
+          "Olvidar las dos bases en la superficie total."
+        ]
+      },
+      {
+        "id": "EX-GM05-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué el volumen de un cono es exactamente $\\frac{1}{3}$ del cilindro de igual base y altura? Intenta una justificación intuitiva.",
+        "hints": [
+          "Principio de Cavalieri o descomposición."
+        ],
+        "answer": "Porque las secciones transversales del cono van disminuyendo cuadráticamente: $\\int_0^h \\pi(r \\cdot x/h)^2 dx = \\frac{1}{3}\\pi r^2 h$.",
+        "full_solution": "A altura $x$ desde el vértice, el radio de la sección es $r(x) = rx/h$. $V = \\int_0^h \\pi(rx/h)^2 dx = \\frac{\\pi r^2}{h^2}\\int_0^h x^2 dx = \\frac{\\pi r^2}{h^2} \\cdot \\frac{h^3}{3} = \\frac{1}{3}\\pi r^2 h$. El factor $1/3$ viene de $\\int x^2 dx$. Intuitivamente: si cortas un cubo en $3$ pirámides iguales, cada una es $1/3$ del cubo.",
+        "common_errors": [
+          "Pensar que el cono es 'la mitad' del cilindro (es un tercio)."
+        ]
+      },
+      {
+        "id": "EX-GM05-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Una esfera de radio $6\\,\\text{cm}$ se inscribe en un cilindro. ¿Cuál es la relación de volúmenes $V_{\\text{esfera}}/V_{\\text{cilindro}}$?",
+        "hints": [
+          "Cilindro inscrito: $r = 6$, $h = 12$.",
+          "$V_{\\text{esf}} = \\frac{4}{3}\\pi r^3$; $V_{\\text{cil}} = \\pi r^2 h$."
+        ],
+        "answer": "$V_{\\text{esf}}/V_{\\text{cil}} = 2/3$.",
+        "full_solution": "$V_{\\text{esf}} = \\frac{4}{3}\\pi(6)^3 = 288\\pi$. Cilindro: $r = 6$, $h = 2r = 12$. $V_{\\text{cil}} = \\pi(6)^2(12) = 432\\pi$. Relación: $288\\pi/432\\pi = 2/3$. Este resultado era conocido por Arquímedes.",
+        "common_errors": [
+          "Usar $h = r$ en vez de $h = 2r$ para el cilindro circunscrito."
+        ]
+      },
+      {
+        "id": "EX-GM05-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Un recipiente esférico de $10\\,\\text{cm}$ de radio contiene agua hasta la mitad de su altura. ¿El agua ocupa la mitad del volumen? Calcula el volumen del casquete esférico de altura $10\\,\\text{cm}$ ($h = r$).",
+        "hints": [
+          "Casquete esférico: $V = \\frac{\\pi h^2}{3}(3r-h)$.",
+          "$h = 10$, $r = 10$."
+        ],
+        "answer": "No es la mitad. $V_{\\text{casquete}} = \\frac{\\pi(100)}{3}(30-10) = \\frac{2000\\pi}{3}$. Es exactamente la mitad: $2000\\pi/3$ vs $4000\\pi/3$.",
+        "full_solution": "$V_{\\text{casquete}} = \\frac{\\pi h^2}{3}(3R-h) = \\frac{\\pi(10)^2}{3}(30-10) = \\frac{2000\\pi}{3}$. $V_{\\text{esfera}} = \\frac{4}{3}\\pi(10)^3 = \\frac{4000\\pi}{3}$. $2000\\pi/3 = \\frac{1}{2} \\cdot \\frac{4000\\pi}{3}$. ¡Sí es exactamente la mitad! (Cuando $h = r$ en una esfera, el casquete es la mitad.)",
+        "common_errors": [
+          "Asumir sin calcular que 'la mitad de la altura = la mitad del volumen' (en general no, pero para la esfera completa con $h=r$ sí)."
+        ]
       }
     ],
     "exam_questions": [
@@ -5372,6 +5707,73 @@
         "full_solution": "Segundos: $50+30=80''=1'20''$. Minutos: $45+20+1=66'=1°6'$. Grados: $12+8+1=21°$. Resultado: $21°6'20''$.",
         "common_errors": [
           "Olvidar el acarreo de los segundos a los minutos y dar $21°5'80''$."
+        ]
+      },
+      {
+        "id": "EX-GM06-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Convierte: a) $2{,}5\\,\\text{ha}$ a $\\text{m}^2$. b) $3{,}7\\,\\text{dm}^3$ a litros. c) $45°15'30''$ a grados decimales.",
+        "hints": [
+          "$1\\,\\text{ha} = 10\\,000\\,\\text{m}^2$.",
+          "$1\\,\\text{dm}^3 = 1\\,\\text{L}$.",
+          "$45 + 15/60 + 30/3600$."
+        ],
+        "answer": "a) $25\\,000\\,\\text{m}^2$. b) $3{,}7\\,\\text{L}$. c) $45{,}2583°$.",
+        "full_solution": "a) $2{,}5 \\times 10\\,000 = 25\\,000\\,\\text{m}^2$. b) $3{,}7\\,\\text{dm}^3 = 3{,}7\\,\\text{L}$ (equivalencia directa). c) $45 + 15/60 + 30/3600 = 45 + 0{,}25 + 0{,}00833 = 45{,}2583°$.",
+        "common_errors": [
+          "Confundir $\\text{cm}^3$ con litros ($1\\,\\text{L} = 1\\,\\text{dm}^3 = 1000\\,\\text{cm}^3$)."
+        ]
+      },
+      {
+        "id": "EX-GM06-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué al pasar de $\\text{m}$ a $\\text{cm}$ se multiplica por $100$, pero al pasar de $\\text{m}^2$ a $\\text{cm}^2$ se multiplica por $10\\,000$? Generaliza.",
+        "hints": [
+          "$1\\,\\text{m} = 100\\,\\text{cm}$, así que $1\\,\\text{m}^2 = (100)^2\\,\\text{cm}^2$."
+        ],
+        "answer": "Porque las unidades de área llevan la escala al cuadrado: $(100)^2 = 10\\,000$.",
+        "full_solution": "Si $1\\,\\text{m} = 100\\,\\text{cm}$: $1\\,\\text{m}^2 = (100\\,\\text{cm})^2 = 10\\,000\\,\\text{cm}^2$. $1\\,\\text{m}^3 = (100)^3 = 1\\,000\\,000\\,\\text{cm}^3$. En general: si el factor lineal es $k$, el factor de área es $k^2$ y el de volumen $k^3$.",
+        "common_errors": [
+          "Usar $\\times 100$ para pasar de $\\text{m}^2$ a $\\text{cm}^2$ (debería ser $\\times 10\\,000$)."
+        ]
+      },
+      {
+        "id": "EX-GM06-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Suma los ángulos $25°47'38''$ y $34°28'45''$.",
+        "hints": [
+          "Suma las segundos, minutos y grados por separado.",
+          "Si los segundos $\\geq 60$, convierte."
+        ],
+        "answer": "$60°16'23''$.",
+        "full_solution": "Segundos: $38+45 = 83''= 1'23''$. Minutos: $47+28+1 = 76' = 1°16'$. Grados: $25+34+1 = 60°$. Total: $60°16'23''$.",
+        "common_errors": [
+          "No 'llevar' los $60$ segundos a minutos ni los $60$ minutos a grados."
+        ]
+      },
+      {
+        "id": "EX-GM06-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En navegación, $1$ milla náutica = $1$ minuto de arco de latitud en el ecuador. Si la circunferencia de la Tierra es $\\approx 40\\,000\\,\\text{km}$, calcula cuánto mide $1$ milla náutica en km.",
+        "hints": [
+          "$360° = 360 \\times 60 = 21\\,600$ minutos de arco."
+        ],
+        "answer": "$40\\,000/21\\,600 \\approx 1{,}852\\,\\text{km}$.",
+        "full_solution": "$360° = 21\\,600'$ (minutos de arco). $1\\,\\text{milla náutica} = 40\\,000/21\\,600 \\approx 1{,}852\\,\\text{km}$. Un nudo $= 1\\,\\text{mn/h} \\approx 1{,}852\\,\\text{km/h}$.",
+        "common_errors": [
+          "Dividir por $360$ en vez de por $21\\,600$ (eso daría grados, no minutos de arco)."
         ]
       }
     ],
@@ -6368,6 +6770,73 @@
         "common_errors": [
           "Medir la distancia a un lado en oblicuo en lugar de perpendicularmente."
         ]
+      },
+      {
+        "id": "EX-GM07-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Dos rectas se cortan formando ángulos. Si uno mide $65°$, ¿cuánto miden los otros tres?",
+        "hints": [
+          "Ángulos opuestos por el vértice son iguales.",
+          "Ángulos adyacentes son suplementarios."
+        ],
+        "answer": "$65°, 115°, 65°, 115°$.",
+        "full_solution": "Opuesto por el vértice: $65°$. Adyacentes: $180°-65° = 115°$ (los dos). Los $4$ ángulos: $65°, 115°, 65°, 115°$.",
+        "common_errors": [
+          "Calcular los adyacentes como $90°-65° = 25°$ (eso es complementario, no suplementario)."
+        ]
+      },
+      {
+        "id": "EX-GM07-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Demuestra que la suma de los ángulos interiores de un triángulo es $180°$.",
+        "hints": [
+          "Traza una recta paralela al lado por el vértice opuesto.",
+          "Usa ángulos alternos internos."
+        ],
+        "answer": "Al trazar la paralela, se forman ángulos alternos internos iguales a los del triángulo, que suman $180°$ en la recta.",
+        "full_solution": "Sea el triángulo $ABC$. Traza por $C$ la recta paralela a $AB$. Los ángulos $\\alpha'$ y $\\beta'$ junto a $C$ son alternos internos con $\\alpha$ y $\\beta$ (ángulos en $A$ y $B$). En la recta por $C$: $\\alpha'+\\gamma+\\beta' = 180°$. Como $\\alpha' = \\alpha$ y $\\beta' = \\beta$: $\\alpha+\\beta+\\gamma = 180°$.",
+        "common_errors": [
+          "Asumir que la propiedad es evidente sin necesidad de demostración."
+        ]
+      },
+      {
+        "id": "EX-GM07-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Tres pueblos A, B, C quieren construir un hospital equidistante a los tres. ¿Qué punto geométrico deben buscar?",
+        "hints": [
+          "Equidistante a tres puntos → circuncentro.",
+          "Intersección de las mediatrices."
+        ],
+        "answer": "El circuncentro: intersección de las mediatrices de los segmentos AB, BC, CA.",
+        "full_solution": "El circuncentro es el punto equidistante a los tres vértices del triángulo formado por A, B, C. Se obtiene como intersección de las mediatrices de dos lados cualesquiera. El circuncentro es el centro de la circunferencia circunscrita. Si el triángulo es obtusángulo, el circuncentro queda fuera del triángulo.",
+        "common_errors": [
+          "Confundir circuncentro (mediatrices) con incentro (bisectrices), que es equidistante a los lados, no a los vértices."
+        ]
+      },
+      {
+        "id": "EX-GM07-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En urbanismo, una tubería debe ir desde un punto $A$ hasta un río (recto) y luego hasta un punto $B$ al otro lado. ¿Cómo se determina el punto del río que minimiza la distancia total $AP + PB$?",
+        "hints": [
+          "Reflexión: refleja $B$ respecto al río y traza $AB'$."
+        ],
+        "answer": "Se refleja $B$ respecto a la recta del río (obteniendo $B'$) y el punto óptimo es donde $AB'$ corta al río.",
+        "full_solution": "Se refleja $B$ respecto a la línea del río para obtener $B'$. La distancia mínima $AP+PB = AP+PB' \\geq AB'$ (desigualdad triangular). El mínimo se alcanza cuando $P$ está en la línea $AB'$, es decir, donde el segmento $AB'$ corta al río. Los ángulos de incidencia y reflexión son iguales (como la luz en un espejo).",
+        "common_errors": [
+          "Elegir el punto del río más cercano a $A$ (eso no minimiza la distancia total)."
+        ]
       }
     ],
     "exam_questions": [
@@ -7293,6 +7762,73 @@
         "full_solution": "Entre dos piezas consecutivas de una fila hay un desplazamiento de $2$ unidades a la derecha y ninguno en vertical: vector $(2,0)$. Entre una fila y la siguiente hay un desplazamiento de $1{,}5$ unidades hacia arriba y ninguno en horizontal: vector $(0;\\,1{,}5)$. Todas las piezas son iguales y tienen la misma orientación, por eso basta la traslación.",
         "common_errors": [
           "Pensar que las piezas giran o se reflejan, cuando en este mosaico solo se trasladan."
+        ]
+      },
+      {
+        "id": "EX-GM08-C1",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 1,
+        "statement": "Un triángulo de vértices $A(1,2)$, $B(4,2)$, $C(2,5)$ se traslada con vector $\\vec{v} = (3,-1)$. Halla los vértices de la imagen.",
+        "hints": [
+          "$A' = A + \\vec{v} = (1+3, 2-1)$."
+        ],
+        "answer": "$A'(4,1)$, $B'(7,1)$, $C'(5,4)$.",
+        "full_solution": "$A' = (1+3, 2-1) = (4,1)$. $B' = (4+3, 2-1) = (7,1)$. $C' = (2+3, 5-1) = (5,4)$.",
+        "common_errors": [
+          "Restar las coordenadas del vector en vez de sumarlas."
+        ]
+      },
+      {
+        "id": "EX-GM08-C2",
+        "type": "CONTEXT",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "Se aplica una homotecia de centro $O(0,0)$ y razón $k = 2$ al triángulo $A(1,1)$, $B(3,1)$, $C(2,4)$. Calcula los vértices imagen y compara las áreas.",
+        "hints": [
+          "$P' = kP$.",
+          "El área se multiplica por $k^2$."
+        ],
+        "answer": "$A'(2,2)$, $B'(6,2)$, $C'(4,8)$. Área: $\\times 4$.",
+        "full_solution": "$A' = 2(1,1) = (2,2)$. $B' = 2(3,1) = (6,2)$. $C' = 2(2,4) = (4,8)$. Área original: $\\frac{1}{2}|1(1-4)+3(4-1)+2(1-1)| = \\frac{1}{2}|-3+9| = 3$. Área imagen: $3 \\times 2^2 = 12$. Se cuadruplica.",
+        "common_errors": [
+          "Multiplicar el área por $k$ en vez de $k^2$."
+        ]
+      },
+      {
+        "id": "EX-GM08-R1",
+        "type": "REASONING",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "¿Por qué la composición de dos simetrías axiales respecto a rectas paralelas equivale a una traslación? ¿Y si las rectas se cortan?",
+        "hints": [
+          "Primera simetría: refleja. Segunda: refleja de nuevo.",
+          "La distancia entre las rectas determina el vector de traslación."
+        ],
+        "answer": "Paralelas → traslación (vector = $2 \\times$ distancia entre rectas). Secantes → rotación (ángulo = $2 \\times$ ángulo entre rectas).",
+        "full_solution": "Dos simetrías respecto a rectas paralelas distantes $d$: cada punto se desplaza $2d$ en la dirección perpendicular a las rectas → traslación con $|\\vec{v}| = 2d$. Dos simetrías respecto a rectas secantes con ángulo $\\alpha$: cada punto gira $2\\alpha$ alrededor del punto de corte → rotación. Esto es fundamental en la clasificación de isometrías del plano.",
+        "common_errors": [
+          "Pensar que dos simetrías dan una simetría (dan una traslación o rotación, no otra simetría)."
+        ]
+      },
+      {
+        "id": "EX-GM08-T1",
+        "type": "TRANSFER",
+        "objective_ids": [],
+        "concept_ids": [],
+        "difficulty": 2,
+        "statement": "En diseño gráfico, un logotipo circular tiene simetría de orden $5$ (rotaciones de $72°$). ¿Cuántas simetrías en total tiene (incluyendo reflexiones) si además tiene $5$ ejes de simetría?",
+        "hints": [
+          "Grupo diédrico $D_5$.",
+          "$5$ rotaciones + $5$ reflexiones."
+        ],
+        "answer": "$10$ simetrías: $5$ rotaciones ($0°, 72°, 144°, 216°, 288°$) y $5$ reflexiones.",
+        "full_solution": "Grupo diédrico $D_5$: $5$ rotaciones ($k \\times 72°$, $k = 0,1,2,3,4$) y $5$ reflexiones respecto a los ejes de simetría. Total: $10$ simetrías. El pentágono regular y la estrella de $5$ puntas tienen este grupo de simetría. En general, un polígono regular de $n$ lados tiene $2n$ simetrías ($n$ rotaciones + $n$ reflexiones).",
+        "common_errors": [
+          "Contar solo las rotaciones (olvidar las reflexiones) o contar la identidad como extra."
         ]
       }
     ],
