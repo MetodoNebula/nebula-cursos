@@ -1,0 +1,1212 @@
+{
+  "lesson_01.json": {
+    "id": "U-ESO-00-L01",
+    "title": "Matemáticas para ciencias",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Fundamentos previos",
+    "unit_id": "U-ESO-00",
+    "curriculum": "Prerrequisitos matemáticos para Física y Química de ESO",
+    "estimated_length": "60 min",
+    "estimated_difficulty": 1,
+    "objectives": [
+      "Aplicar proporciones y regla de tres a problemas de ciencias.",
+      "Usar la notación científica para expresar cantidades muy grandes o muy pequeñas.",
+      "Operar con potencias de diez en multiplicaciones y divisiones.",
+      "Redondear resultados de forma coherente con los datos de partida."
+    ],
+    "prerequisites": [
+      "Operaciones básicas con fracciones y decimales (Matemáticas 2.º ESO)."
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-U-ESO-00-L01-01",
+        "misconception": "Confundir 'directamente proporcional' con 'la misma cantidad': si duplico los gramos de sal, necesito exactamente el doble de agua (correcto), pero algunos alumnos creen que añadir la misma cantidad absoluta mantiene la proporción.",
+        "correction": "La proporción implica mantener la razón constante, no sumar la misma cantidad."
+      },
+      {
+        "id": "MIS-U-ESO-00-L01-02",
+        "misconception": "Pensar que 10³ × 10² = 10⁶ (multiplicar exponentes en vez de sumarlos).",
+        "correction": "Al multiplicar potencias de la misma base se suman los exponentes: 10³ × 10² = 10⁵."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Proporciones: si 3 pizzas cuestan 24 €…",
+        "body": "¿Cuánto cuestan 5 pizzas si 3 cuestan 24 €? Este tipo de problema aparece constantemente en ciencias: si con 100 mL de disolución tengo 5 g de sal, ¿cuánta sal hay en 250 mL?\n\nLa herramienta es la regla de tres. Colocas los datos en una tabla de dos columnas y multiplicas en cruz:\n\n$x = \\dfrac{5 \\times 24}{3} = 40$ €\n\nEl truco es que las dos magnitudes deben ser proporcionales: si una se duplica, la otra también. Eso pasa con masa y volumen de una sustancia pura, con distancia y tiempo a velocidad constante, o con precio y cantidad.",
+        "provenance": "Matemáticas 2.º ESO — proporcionalidad",
+        "student_text": "La regla de tres sirve para encontrar un valor desconocido cuando dos magnitudes son proporcionales: se multiplica en cruz y se divide.",
+        "formula": "x = (a₂ × b₁) / a₁",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 520 260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Regla de tres: proporciones cruzadas\">\n  <rect width=\"520\" height=\"260\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"260\" y=\"28\" font-family=\"system-ui,sans-serif\" font-size=\"14\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Regla de tres: multiplica en cruz</text>\n  <!-- Table frame -->\n  <rect x=\"100\" y=\"50\" width=\"320\" height=\"120\" rx=\"10\" fill=\"none\" stroke=\"var(--grid, #e8e3d8)\" stroke-width=\"2\"/>\n  <line x1=\"260\" y1=\"50\" x2=\"260\" y2=\"170\" stroke=\"var(--grid, #e8e3d8)\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"100\" x2=\"420\" y2=\"100\" stroke=\"var(--grid, #e8e3d8)\" stroke-width=\"2\"/>\n  <!-- Headers -->\n  <text x=\"180\" y=\"82\" font-family=\"system-ui,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#0e7a68\" text-anchor=\"middle\">Pizzas</text>\n  <text x=\"340\" y=\"82\" font-family=\"system-ui,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"#c17a17\" text-anchor=\"middle\">Precio (€)</text>\n  <!-- Row 1 -->\n  <text x=\"180\" y=\"135\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#0e7a68\" text-anchor=\"middle\">3</text>\n  <text x=\"340\" y=\"135\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"700\" fill=\"#c17a17\" text-anchor=\"middle\">24 €</text>\n  <!-- Row 2 -->\n  <text x=\"180\" y=\"165\" font-family=\"system-ui,sans-serif\" font-size=\"14\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">5</text>\n  <text x=\"340\" y=\"165\" font-family=\"system-ui,sans-serif\" font-size=\"14\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">x</text>\n  <!-- Cross arrows -->\n  <path d=\"M200,125 Q260,145 320,165\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\" marker-end=\"url(#arrowT)\"/>\n  <path d=\"M320,125 Q260,145 200,165\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\" marker-end=\"url(#arrowA)\"/>\n  <defs>\n    <marker id=\"arrowT\" markerWidth=\"8\" markerHeight=\"6\" refX=\"7\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#0e7a68\"/></marker>\n    <marker id=\"arrowA\" markerWidth=\"8\" markerHeight=\"6\" refX=\"7\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#c17a17\"/></marker>\n  </defs>\n  <!-- Result -->\n  <rect x=\"120\" y=\"190\" width=\"280\" height=\"48\" rx=\"10\" fill=\"#e6f5f1\"/>\n  <text x=\"260\" y=\"220\" font-family=\"system-ui,sans-serif\" font-size=\"15\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"600\">x = (5 × 24) / 3 = 40 €</text>\n</svg>",
+            "caption": "Regla de tres: organiza los datos en una tabla y multiplica en cruz"
+          }
+        ]
+      },
+      {
+        "title": "Números enormes y diminutos",
+        "body": "En ciencias te encontrarás números absurdamente grandes (la distancia al Sol: 150 000 000 km) y absurdamente pequeños (el tamaño de un átomo: 0,000 000 000 1 m). Escribirlos enteros es un lío.\n\nLa notación científica lo resuelve: escribes un número entre 1 y 10, multiplicado por una potencia de 10.\n\n150 000 000 km → $1{,}5 \\times 10^8$ km\n0,000 000 000 1 m → $1 \\times 10^{-10}$ m\n\nSi el exponente es positivo, el número es grande. Si es negativo, es muy pequeño. Así de sencillo.",
+        "provenance": "Matemáticas ESO — potencias y notación científica",
+        "student_text": "La notación científica expresa cualquier número como a × 10ⁿ, con 1 ≤ a < 10. Exponente positivo = número grande; negativo = número pequeño.",
+        "formula": "a × 10ⁿ (con 1 ≤ a < 10)",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 580 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Escala de potencias de 10: de lo diminuto a lo enorme\">\n  <rect width=\"580\" height=\"200\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"290\" y=\"24\" font-family=\"system-ui,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Potencias de 10: del átomo a la montaña</text>\n  <!-- Main line -->\n  <line x1=\"40\" y1=\"110\" x2=\"540\" y2=\"110\" stroke=\"var(--grid, #e8e3d8)\" stroke-width=\"3\"/>\n  <!-- 10^-3  ant -->\n  <circle cx=\"80\" cy=\"110\" r=\"5\" fill=\"#8a3d6b\"/>\n  <text x=\"80\" y=\"140\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"600\">10⁻³</text>\n  <text x=\"80\" y=\"155\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">1 mm</text>\n  <text x=\"80\" y=\"90\" font-family=\"system-ui,sans-serif\" font-size=\"18\" text-anchor=\"middle\">🐜</text>\n  <!-- 10^-1  finger -->\n  <circle cx=\"180\" cy=\"110\" r=\"5\" fill=\"#8a3d6b\"/>\n  <text x=\"180\" y=\"140\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"600\">10⁻¹</text>\n  <text x=\"180\" y=\"155\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">10 cm</text>\n  <text x=\"180\" y=\"90\" font-family=\"system-ui,sans-serif\" font-size=\"18\" text-anchor=\"middle\">✋</text>\n  <!-- 10^0  person -->\n  <circle cx=\"280\" cy=\"110\" r=\"6\" fill=\"#0e7a68\"/>\n  <text x=\"280\" y=\"140\" font-family=\"system-ui,sans-serif\" font-size=\"12\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"700\">10⁰</text>\n  <text x=\"280\" y=\"155\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">1 m</text>\n  <text x=\"280\" y=\"88\" font-family=\"system-ui,sans-serif\" font-size=\"20\" text-anchor=\"middle\">🧍</text>\n  <!-- 10^3  building -->\n  <circle cx=\"380\" cy=\"110\" r=\"5\" fill=\"#c17a17\"/>\n  <text x=\"380\" y=\"140\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"600\">10³</text>\n  <text x=\"380\" y=\"155\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">1 km</text>\n  <text x=\"380\" y=\"88\" font-family=\"system-ui,sans-serif\" font-size=\"20\" text-anchor=\"middle\">🏢</text>\n  <!-- 10^6  mountain -->\n  <circle cx=\"480\" cy=\"110\" r=\"5\" fill=\"#c17a17\"/>\n  <text x=\"480\" y=\"140\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"600\">10⁶</text>\n  <text x=\"480\" y=\"155\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">1000 km</text>\n  <text x=\"480\" y=\"88\" font-family=\"system-ui,sans-serif\" font-size=\"20\" text-anchor=\"middle\">⛰️</text>\n  <!-- Arrows -->\n  <text x=\"130\" y=\"180\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\">← más pequeño</text>\n  <text x=\"430\" y=\"180\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#c17a17\" text-anchor=\"middle\">más grande →</text>\n</svg>",
+            "caption": "Potencias de 10: desde una hormiga hasta una montaña"
+          }
+        ]
+      },
+      {
+        "title": "Redondear sin pasarse",
+        "body": "Cuando haces un cálculo, el resultado no puede ser más preciso que los datos que usaste. Si mides con una regla de milímetros, no tiene sentido dar el resultado con 8 decimales.\n\nRegla práctica: tu resultado debe tener las mismas cifras significativas que el dato con menos cifras.\n\n¿Y cómo se redondea? Si la cifra que eliminas es 5 o más, sube la anterior. Si es menor que 5, la dejas igual.\n\nEjemplo: 3,4567 redondeado a 3 cifras → 3,46.",
+        "provenance": "Física ESO — tratamiento de datos",
+        "student_text": "El resultado de un cálculo se redondea al mismo número de cifras significativas que el dato menos preciso.",
+        "formula": "",
+        "assets": []
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-U-ESO-00-L01-01",
+        "statement": "Un trozo de hierro tiene una masa de 39,2 g y un volumen de 5,0 cm³. Calcula su densidad y exprésala en notación científica en kg/m³.",
+        "full_solution": "1) Densidad = masa / volumen = 39,2 g / 5,0 cm³ = 7,84 g/cm³.\n2) Redondeamos a 2 cifras significativas (el dato con menos cifras es 5,0): 7,8 g/cm³.\n3) Convertimos: 7,8 g/cm³ × (1 kg / 1000 g) × (10⁶ cm³ / 1 m³) = 7,8 × 10³ kg/m³.\n\nLa densidad del hierro es 7,8 × 10³ kg/m³.",
+        "answer": "7,8 × 10³ kg/m³"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-U-ESO-00-L01-01",
+        "statement": "Si 200 mL de aceite pesan 184 g, ¿cuánto pesan 500 mL del mismo aceite?",
+        "hints": [
+          "Identifica las magnitudes proporcionales.",
+          "Plantea la regla de tres: 200 mL → 184 g, 500 mL → x g."
+        ],
+        "answer": "460 g",
+        "full_solution": "x = (500 × 184) / 200 = 460 g"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-U-ESO-00-L01-01",
+        "statement": "Expresa en notación científica: a) 0,000 045 m; b) 378 000 kg; c) 0,001 02 s.",
+        "answer": "a) 4,5 × 10⁻⁵ m; b) 3,78 × 10⁵ kg; c) 1,02 × 10⁻³ s",
+        "full_solution": "a) Movemos la coma 5 posiciones a la derecha: 4,5 × 10⁻⁵ m.\nb) Movemos la coma 5 posiciones a la izquierda: 3,78 × 10⁵ kg.\nc) Movemos la coma 3 posiciones a la derecha: 1,02 × 10⁻³ s.",
+        "difficulty": 1,
+        "hints": [
+          "Recuerda: el coeficiente debe estar entre 1 y 10."
+        ],
+        "reasoning": "Práctica de conversión a notación científica",
+        "provenance": "Matemáticas ESO",
+        "assets": []
+      },
+      {
+        "id": "EX-U-ESO-00-L01-02",
+        "statement": "Calcula (3,0 × 10⁴) × (2,0 × 10⁻²) y expresa el resultado en notación científica.",
+        "answer": "6,0 × 10²",
+        "full_solution": "Multiplicamos coeficientes: 3,0 × 2,0 = 6,0. Sumamos exponentes: 4 + (−2) = 2. Resultado: 6,0 × 10².",
+        "difficulty": 1,
+        "hints": [
+          "Multiplica los coeficientes y suma los exponentes."
+        ],
+        "reasoning": "Operaciones con potencias de diez",
+        "provenance": "Matemáticas ESO",
+        "assets": []
+      },
+      {
+        "id": "EX-U-ESO-00-L01-03",
+        "statement": "Un recipiente de 2,5 L contiene un líquido de densidad 0,80 g/mL. ¿Cuál es la masa del líquido en kg?",
+        "answer": "2,0 kg",
+        "full_solution": "1) Convertimos 2,5 L a mL: 2,5 × 1000 = 2500 mL.\n2) masa = densidad × volumen = 0,80 g/mL × 2500 mL = 2000 g.\n3) Convertimos a kg: 2000 / 1000 = 2,0 kg.",
+        "difficulty": 2,
+        "hints": [
+          "Convierte litros a mililitros primero.",
+          "Usa m = d × V."
+        ],
+        "reasoning": "Aplicación de regla de tres y conversión de unidades",
+        "provenance": "Física ESO",
+        "assets": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MC-U-ESO-00-L01-01",
+        "stem": "¿Cuál es la forma correcta de expresar 0,00032 en notación científica?",
+        "options": [
+          {
+            "key": "A",
+            "text": "32 × 10⁻⁵",
+            "why_wrong": "El coeficiente debe estar entre 1 y 10; 32 no cumple esta condición."
+          },
+          {
+            "key": "B",
+            "text": "3,2 × 10⁻⁴"
+          },
+          {
+            "key": "C",
+            "text": "0,32 × 10⁻³",
+            "why_wrong": "El coeficiente 0,32 es menor que 1; no cumple la forma estándar."
+          },
+          {
+            "key": "D",
+            "text": "3,2 × 10⁴",
+            "why_wrong": "El exponente debería ser negativo, ya que el número original es menor que 1."
+          }
+        ],
+        "explanation": "0,00032 = 3,2 × 10⁻⁴ porque movemos la coma 4 posiciones a la derecha y el coeficiente queda entre 1 y 10.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-U-ESO-00-L01-02",
+        "stem": "Si 3 kg de manzanas cuestan 4,50 €, ¿cuánto cuestan 5 kg?",
+        "options": [
+          {
+            "key": "A",
+            "text": "6,50 €",
+            "why_wrong": "Esto sería sumar 2 € a 4,50 €, pero la relación no es aditiva sino proporcional."
+          },
+          {
+            "key": "B",
+            "text": "7,50 €"
+          },
+          {
+            "key": "C",
+            "text": "8,00 €",
+            "why_wrong": "Error de cálculo; (5 × 4,50) / 3 = 7,50 €."
+          },
+          {
+            "key": "D",
+            "text": "9,00 €",
+            "why_wrong": "Esto implicaría un precio de 1,80 €/kg en vez de 1,50 €/kg."
+          }
+        ],
+        "explanation": "Por regla de tres: x = (5 × 4,50) / 3 = 7,50 €. El precio por kg es 1,50 €/kg.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-U-ESO-00-L01-03",
+        "stem": "¿Cuántas cifras significativas tiene el número 0,0450?",
+        "options": [
+          {
+            "key": "A",
+            "text": "2",
+            "why_wrong": "Los ceros a la izquierda no cuentan, pero el cero final tras el 5 sí es significativo."
+          },
+          {
+            "key": "B",
+            "text": "4",
+            "why_wrong": "Los ceros a la izquierda del 4 no son significativos."
+          },
+          {
+            "key": "C",
+            "text": "3"
+          },
+          {
+            "key": "D",
+            "text": "5",
+            "why_wrong": "Solo se cuentan los dígitos significativos: 4, 5 y el 0 final."
+          }
+        ],
+        "explanation": "Los ceros a la izquierda (0,0...) no son significativos. Los dígitos significativos son 4, 5 y el 0 final: tres cifras significativas.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-U-ESO-00-L01-04",
+        "stem": "Al calcular (2,0 × 10³) / (4,0 × 10⁻¹), el resultado es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "5,0 × 10³"
+          },
+          {
+            "key": "B",
+            "text": "0,5 × 10⁴",
+            "why_wrong": "Aunque numéricamente es igual, no está en notación científica estándar (el coeficiente debe ser ≥ 1)."
+          },
+          {
+            "key": "C",
+            "text": "5,0 × 10²",
+            "why_wrong": "Error en la resta de exponentes: 3 − (−1) = 4, no 2."
+          },
+          {
+            "key": "D",
+            "text": "8,0 × 10²",
+            "why_wrong": "Se han multiplicado los coeficientes en vez de dividirlos."
+          }
+        ],
+        "explanation": "Dividimos coeficientes: 2,0 / 4,0 = 0,5. Restamos exponentes: 3 − (−1) = 4. Resultado: 0,5 × 10⁴ = 5,0 × 10³.",
+        "correct": "A"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FL-U-ESO-00-L01-01",
+        "front": "¿Qué es la notación científica?",
+        "back": "Una forma de expresar números como a × 10ⁿ, donde 1 ≤ a < 10 y n es un entero."
+      },
+      {
+        "id": "FL-U-ESO-00-L01-02",
+        "front": "Al multiplicar potencias de 10, ¿qué se hace con los exponentes?",
+        "back": "Se suman: 10ᵃ × 10ᵇ = 10ᵃ⁺ᵇ."
+      },
+      {
+        "id": "FL-U-ESO-00-L01-03",
+        "front": "¿Qué es una proporción directa?",
+        "back": "Dos magnitudes son directamente proporcionales cuando al multiplicar una por un factor, la otra se multiplica por el mismo factor. Su cociente es constante."
+      }
+    ],
+    "common_mistakes": [
+      "Confundir el signo del exponente al mover la coma hacia la izquierda o la derecha.",
+      "Multiplicar exponentes en vez de sumarlos al multiplicar potencias de 10.",
+      "Dar resultados con más cifras significativas que los datos de partida."
+    ],
+    "exam_notes": [],
+    "keywords": [
+      {
+        "term": "notación científica",
+        "definition": "Forma de expresar números muy grandes o muy pequeños como un producto $a \\times 10^n$ donde $1 \\le |a| < 10$."
+      },
+      {
+        "term": "potencias de diez",
+        "definition": "Expresiones de la forma $10^n$ que permiten representar órdenes de magnitud: $10^3 = 1000$, $10^{-2} = 0{,}01$."
+      },
+      {
+        "term": "cifras significativas",
+        "definition": "Dígitos de una medida que aportan información fiable. Los ceros a la izquierda no cuentan; los intermedios y finales tras la coma, sí."
+      },
+      {
+        "term": "regla de tres",
+        "definition": "Método para hallar un valor desconocido cuando dos magnitudes son proporcionales: si $a$ se relaciona con $b$, entonces $x$ con $c$ da $x = \\frac{b \\cdot c}{a}$."
+      },
+      {
+        "term": "proporción directa",
+        "definition": "Relación entre dos magnitudes en la que al aumentar una, la otra aumenta en la misma proporción ($y = kx$)."
+      },
+      {
+        "term": "redondeo",
+        "definition": "Aproximar un número a cierta cantidad de cifras: si la cifra siguiente es ≥ 5 se sube, si es < 5 se deja."
+      }
+    ],
+    "summary": "Antes de resolver un problema de Física y Química conviene dominar unas pocas herramientas: comparar magnitudes proporcionales, manejar potencias de diez y expresar los resultados con una precisión razonable.",
+    "assets_needed": [],
+    "source_references": [],
+    "curriculum_refs": [],
+    "confidence_notes": "",
+    "internal_review": "",
+    "diagnostic_items": [],
+    "schema_v2": {
+      "canonical_lesson_id": "ESOFYQ::U-ESO-00::01_mates_para_ciencias",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": false,
+        "EXCELLENCE": false,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "HEURISTIC",
+      "prerequisites_canonical": [],
+      "estimated_mastery_time_min": 45
+    }
+  },
+  "lesson_02.json": {
+    "id": "U-ESO-00-L02",
+    "title": "Observar y medir",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Fundamentos previos",
+    "unit_id": "U-ESO-00",
+    "curriculum": "Introducción a la medida y los instrumentos",
+    "estimated_length": "60 min",
+    "estimated_difficulty": 1,
+    "objectives": [
+      "Distinguir entre observación cualitativa y cuantitativa.",
+      "Identificar los instrumentos de medida cotidianos y su resolución.",
+      "Entender qué es un error de medida y por qué toda medida tiene incertidumbre.",
+      "Expresar una medida con su unidad y su incertidumbre."
+    ],
+    "prerequisites": [
+      "Operaciones básicas con decimales."
+    ],
+    "misconceptions": [
+      {
+        "id": "MIS-U-ESO-00-L02-01",
+        "misconception": "Creer que un instrumento más caro es siempre más preciso.",
+        "correction": "La precisión depende de la resolución del instrumento y de la técnica de medida, no del precio."
+      },
+      {
+        "id": "MIS-U-ESO-00-L02-02",
+        "misconception": "Pensar que medir bien significa obtener siempre el mismo valor exacto.",
+        "correction": "Toda medida tiene incertidumbre. Medir bien significa minimizar los errores sistemáticos y expresar la incertidumbre."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Mirar no es lo mismo que medir",
+        "body": "Imagina que alguien te pregunta cuánto mide un lápiz. Si lo miras de lejos dirás «unos 20 cm, más o menos». Pero si lo pones junto a una regla, dirás «18,5 cm». La diferencia está en el instrumento.\n\nEn ciencias distinguimos dos formas de recoger información:\n\nLa observación cualitativa describe sin números: «el líquido es azul», «la reacción burbujea».\n\nLa medida cuantitativa da un número con unidades: «la temperatura es 23,5 °C».\n\nAmbas son útiles, pero cuando queremos comparar, calcular o predecir, necesitamos medir.",
+        "provenance": "Física ESO — introducción a la medida",
+        "student_text": "Observar es describir con palabras; medir es dar un número con unidades usando un instrumento. Para la ciencia, necesitamos medir.",
+        "formula": "",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Mirar vs medir: adivinar no es lo mismo que usar un instrumento\">\n  <rect width=\"520\" height=\"220\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"260\" y=\"24\" font-family=\"system-ui,sans-serif\" font-size=\"14\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Observar vs. medir</text>\n  <!-- Panel 1: eye / guess -->\n  <rect x=\"20\" y=\"42\" width=\"230\" height=\"155\" rx=\"12\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <text x=\"135\" y=\"68\" font-family=\"system-ui,sans-serif\" font-size=\"12\" font-weight=\"600\" fill=\"#c17a17\" text-anchor=\"middle\">Observar (cualitativo)</text>\n  <!-- Eye icon -->\n  <ellipse cx=\"135\" cy=\"110\" rx=\"28\" ry=\"16\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n  <circle cx=\"135\" cy=\"110\" r=\"8\" fill=\"#c17a17\" opacity=\"0.3\"/>\n  <circle cx=\"135\" cy=\"110\" r=\"4\" fill=\"#c17a17\"/>\n  <!-- Pencil object -->\n  <rect x=\"70\" y=\"140\" width=\"130\" height=\"8\" rx=\"3\" fill=\"var(--grid, #e8e3d8)\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1\"/>\n  <text x=\"135\" y=\"175\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#c17a17\" text-anchor=\"middle\" font-style=\"italic\">\"Parece que mide ~20 cm\"</text>\n  <text x=\"220\" y=\"175\" font-family=\"system-ui,sans-serif\" font-size=\"14\" fill=\"#c17a17\">❓</text>\n  <!-- Panel 2: ruler / measure -->\n  <rect x=\"270\" y=\"42\" width=\"230\" height=\"155\" rx=\"12\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n  <text x=\"385\" y=\"68\" font-family=\"system-ui,sans-serif\" font-size=\"12\" font-weight=\"600\" fill=\"#0e7a68\" text-anchor=\"middle\">Medir (cuantitativo)</text>\n  <!-- Ruler -->\n  <rect x=\"300\" y=\"95\" width=\"170\" height=\"20\" rx=\"3\" fill=\"#e6f5f1\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <line x1=\"300\" y1=\"115\" x2=\"300\" y2=\"105\" stroke=\"#0e7a68\" stroke-width=\"1\"/><text x=\"300\" y=\"130\" font-family=\"system-ui,sans-serif\" font-size=\"8\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">0</text>\n  <line x1=\"340\" y1=\"115\" x2=\"340\" y2=\"108\" stroke=\"#0e7a68\" stroke-width=\"1\"/><text x=\"340\" y=\"130\" font-family=\"system-ui,sans-serif\" font-size=\"8\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">5</text>\n  <line x1=\"380\" y1=\"115\" x2=\"380\" y2=\"105\" stroke=\"#0e7a68\" stroke-width=\"1\"/><text x=\"380\" y=\"130\" font-family=\"system-ui,sans-serif\" font-size=\"8\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">10</text>\n  <line x1=\"420\" y1=\"115\" x2=\"420\" y2=\"108\" stroke=\"#0e7a68\" stroke-width=\"1\"/><text x=\"420\" y=\"130\" font-family=\"system-ui,sans-serif\" font-size=\"8\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">15</text>\n  <line x1=\"460\" y1=\"115\" x2=\"460\" y2=\"105\" stroke=\"#0e7a68\" stroke-width=\"1\"/><text x=\"460\" y=\"130\" font-family=\"system-ui,sans-serif\" font-size=\"8\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">20</text>\n  <!-- Pencil over ruler -->\n  <rect x=\"300\" y=\"85\" width=\"148\" height=\"8\" rx=\"3\" fill=\"var(--grid, #e8e3d8)\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1\"/>\n  <!-- Arrow pointing to reading -->\n  <line x1=\"448\" y1=\"85\" x2=\"448\" y2=\"100\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"385\" y=\"160\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"600\">\"Mide 18,5 cm\"</text>\n  <text x=\"460\" y=\"160\" font-family=\"system-ui,sans-serif\" font-size=\"14\" fill=\"#0e7a68\">✓</text>\n</svg>",
+            "caption": "Observar da una impresión; medir da un número con unidades"
+          }
+        ]
+      },
+      {
+        "title": "Cada instrumento tiene su límite",
+        "body": "Cada instrumento de medida tiene una resolución: la diferencia más pequeña que puede detectar.\n\nUna regla escolar tiene marcas cada milímetro: su resolución es 1 mm. No puedes medir medio milímetro con ella.\n\nUna probeta del laboratorio suele tener marcas cada mililitro: resolución 1 mL.\n\nUna balanza de cocina suele tener resolución de 1 g. Si necesitas pesar 0,5 g, necesitas una balanza mejor.\n\nAntes de medir, mira tu instrumento y pregúntate: ¿es bastante preciso para lo que necesito?",
+        "provenance": "Física ESO — instrumentos de medida",
+        "student_text": "La resolución de un instrumento es la mínima diferencia que puede detectar. Hay que elegir un instrumento adecuado para cada medida.",
+        "formula": "",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 560 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Tres instrumentos de medida con su resolución\">\n  <rect width=\"560\" height=\"200\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"280\" y=\"22\" font-family=\"system-ui,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Cada instrumento tiene su resolución</text>\n  <!-- Ruler -->\n  <rect x=\"20\" y=\"40\" width=\"160\" height=\"140\" rx=\"10\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"100\" y=\"62\" font-family=\"system-ui,sans-serif\" font-size=\"11\" font-weight=\"600\" fill=\"#0e7a68\" text-anchor=\"middle\">Regla</text>\n  <rect x=\"45\" y=\"78\" width=\"110\" height=\"16\" rx=\"3\" fill=\"#e6f5f1\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n  <line x1=\"45\" y1=\"94\" x2=\"45\" y2=\"88\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n  <line x1=\"56\" y1=\"94\" x2=\"56\" y2=\"90\" stroke=\"#0e7a68\" stroke-width=\"0.5\"/>\n  <line x1=\"67\" y1=\"94\" x2=\"67\" y2=\"88\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n  <line x1=\"78\" y1=\"94\" x2=\"78\" y2=\"90\" stroke=\"#0e7a68\" stroke-width=\"0.5\"/>\n  <line x1=\"89\" y1=\"94\" x2=\"89\" y2=\"88\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n  <line x1=\"100\" y1=\"94\" x2=\"100\" y2=\"90\" stroke=\"#0e7a68\" stroke-width=\"0.5\"/>\n  <line x1=\"111\" y1=\"94\" x2=\"111\" y2=\"88\" stroke=\"#0e7a68\" stroke-width=\"1\"/>\n  <text x=\"100\" y=\"130\" font-family=\"system-ui,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#0e7a68\" text-anchor=\"middle\">1 mm</text>\n  <text x=\"100\" y=\"150\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Resolución</text>\n  <!-- Graduated cylinder -->\n  <rect x=\"200\" y=\"40\" width=\"160\" height=\"140\" rx=\"10\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <text x=\"280\" y=\"62\" font-family=\"system-ui,sans-serif\" font-size=\"11\" font-weight=\"600\" fill=\"#c17a17\" text-anchor=\"middle\">Probeta</text>\n  <rect x=\"260\" y=\"72\" width=\"40\" height=\"60\" rx=\"2\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <rect x=\"260\" y=\"100\" width=\"40\" height=\"32\" rx=\"0\" fill=\"#c17a17\" opacity=\"0.15\"/>\n  <line x1=\"260\" y1=\"102\" x2=\"270\" y2=\"102\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n  <line x1=\"260\" y1=\"112\" x2=\"275\" y2=\"112\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n  <line x1=\"260\" y1=\"122\" x2=\"270\" y2=\"122\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n  <text x=\"280\" y=\"148\" font-family=\"system-ui,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#c17a17\" text-anchor=\"middle\">1 mL</text>\n  <text x=\"280\" y=\"168\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Resolución</text>\n  <!-- Kitchen scale -->\n  <rect x=\"380\" y=\"40\" width=\"160\" height=\"140\" rx=\"10\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"460\" y=\"62\" font-family=\"system-ui,sans-serif\" font-size=\"11\" font-weight=\"600\" fill=\"#8a3d6b\" text-anchor=\"middle\">Balanza</text>\n  <rect x=\"420\" y=\"80\" width=\"80\" height=\"15\" rx=\"4\" fill=\"var(--grid, #e8e3d8)\" stroke=\"#8a3d6b\" stroke-width=\"1\"/>\n  <rect x=\"430\" y=\"95\" width=\"60\" height=\"30\" rx=\"3\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"1\"/>\n  <text x=\"460\" y=\"116\" font-family=\"system-ui,sans-serif\" font-size=\"12\" fill=\"#8a3d6b\" text-anchor=\"middle\">125 g</text>\n  <text x=\"460\" y=\"148\" font-family=\"system-ui,sans-serif\" font-size=\"20\" font-weight=\"700\" fill=\"#8a3d6b\" text-anchor=\"middle\">1 g</text>\n  <text x=\"460\" y=\"168\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Resolución</text>\n</svg>",
+            "caption": "Cada instrumento tiene una resolución diferente"
+          }
+        ]
+      },
+      {
+        "title": "El error no es un fallo, es inevitable",
+        "body": "Por mucho cuidado que pongas, ninguna medida es perfecta. Y eso está bien: lo importante es saber cuánto te puedes equivocar.\n\nHay dos tipos de error. El error sistemático se repite siempre igual: por ejemplo, una balanza que siempre marca 2 g de más. Se corrige ajustando el instrumento.\n\nEl error aleatorio cambia cada vez: a veces mides un poco más, a veces un poco menos. Se reduce repitiendo la medida varias veces y haciendo la media.\n\nPor eso en ciencias siempre repetimos: una sola medida no basta.",
+        "provenance": "Física ESO — errores de medida",
+        "student_text": "El error sistemático se repite siempre igual (se corrige). El error aleatorio varía (se reduce repitiendo medidas y calculando la media).",
+        "formula": "",
+        "assets": []
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-U-ESO-00-L02-01",
+        "statement": "Con un termómetro de resolución 0,5 °C mides la temperatura de un vaso de agua y obtienes 23,5 °C. Expresa la medida con su incertidumbre.",
+        "full_solution": "La resolución del termómetro es 0,5 °C. Si es analógico, la incertidumbre es la mitad: ±0,25 °C. La medida se expresa como (23,5 ± 0,25) °C.",
+        "answer": "(23,5 ± 0,25) °C"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-U-ESO-00-L02-01",
+        "statement": "Has medido la masa de un objeto 5 veces con una balanza digital (resolución 0,1 g) y has obtenido: 12,3 g, 12,4 g, 12,3 g, 12,5 g, 12,3 g. Calcula el valor medio y exprésalo con incertidumbre.",
+        "hints": [
+          "Suma las 5 medidas y divide entre 5.",
+          "Para la incertidumbre, puedes usar la mitad de la diferencia entre el valor máximo y el mínimo."
+        ],
+        "answer": "(12,4 ± 0,1) g",
+        "full_solution": "Media = (12,3 + 12,4 + 12,3 + 12,5 + 12,3) / 5 = 61,8 / 5 = 12,36 ≈ 12,4 g.\nRango = 12,5 − 12,3 = 0,2 g. Incertidumbre ≈ rango/2 = 0,1 g.\nResultado: (12,4 ± 0,1) g."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-U-ESO-00-L02-01",
+        "statement": "Clasifica las siguientes observaciones en cualitativas o cuantitativas: a) 'El hielo flota en el agua.' b) 'La temperatura del agua es 4 °C.' c) 'El metal brilla.' d) 'La masa del clavo es 3,2 g.'",
+        "answer": "a) Cualitativa; b) Cuantitativa; c) Cualitativa; d) Cuantitativa.",
+        "full_solution": "Las observaciones que incluyen un número y una unidad son cuantitativas (b, d). Las que describen propiedades sin medida son cualitativas (a, c).",
+        "difficulty": 1,
+        "hints": [
+          "¿Tiene número y unidad?"
+        ],
+        "reasoning": "Distinción cualitativo/cuantitativo",
+        "provenance": "Física ESO",
+        "assets": []
+      },
+      {
+        "id": "EX-U-ESO-00-L02-02",
+        "statement": "¿Cuál es la resolución de una probeta graduada cuyas marcas van de 10 en 10 mL? ¿Cuál sería la incertidumbre de una lectura si la tratas como instrumento analógico?",
+        "answer": "Resolución: 10 mL. Incertidumbre: ±5 mL.",
+        "full_solution": "La resolución es la diferencia entre dos marcas consecutivas: 10 mL. La incertidumbre para un instrumento analógico es la mitad de la resolución: ±5 mL.",
+        "difficulty": 1,
+        "hints": [
+          "La resolución es la distancia entre marcas consecutivas."
+        ],
+        "reasoning": "Concepto de resolución e incertidumbre",
+        "provenance": "Física ESO",
+        "assets": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MC-U-ESO-00-L02-01",
+        "stem": "¿Cuál de estas es una observación cuantitativa?",
+        "options": [
+          {
+            "key": "A",
+            "text": "El agua está caliente.",
+            "why_wrong": "'Caliente' es subjetivo y no asigna un número con unidad."
+          },
+          {
+            "key": "B",
+            "text": "La temperatura del agua es 85 °C."
+          },
+          {
+            "key": "C",
+            "text": "El agua burbujea.",
+            "why_wrong": "Es una descripción cualitativa del comportamiento."
+          },
+          {
+            "key": "D",
+            "text": "El agua huele a cloro.",
+            "why_wrong": "Es una observación cualitativa basada en un sentido."
+          }
+        ],
+        "explanation": "Una observación cuantitativa asigna un número con unidad a una propiedad: 85 °C.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-U-ESO-00-L02-02",
+        "stem": "La resolución de un instrumento de medida indica:",
+        "options": [
+          {
+            "key": "A",
+            "text": "La mínima diferencia que puede detectar."
+          },
+          {
+            "key": "B",
+            "text": "El valor máximo que puede medir.",
+            "why_wrong": "Eso es el rango o alcance del instrumento, no su resolución."
+          },
+          {
+            "key": "C",
+            "text": "La velocidad con la que da la lectura.",
+            "why_wrong": "La rapidez de lectura no tiene relación con la resolución."
+          },
+          {
+            "key": "D",
+            "text": "El precio del instrumento.",
+            "why_wrong": "El precio no determina la resolución."
+          }
+        ],
+        "explanation": "La resolución es la mínima diferencia que el instrumento puede distinguir entre dos valores.",
+        "correct": "A"
+      },
+      {
+        "id": "MC-U-ESO-00-L02-03",
+        "stem": "Si al medir con una regla de 1 mm de resolución obtienes siempre 0,5 mm de más porque miras desde un ángulo, se trata de un error:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Aleatorio.",
+            "why_wrong": "Un error aleatorio varía en magnitud y sentido; este es siempre +0,5 mm."
+          },
+          {
+            "key": "B",
+            "text": "Sistemático."
+          },
+          {
+            "key": "C",
+            "text": "Inexistente.",
+            "why_wrong": "Hay un sesgo constante de +0,5 mm; el error existe."
+          },
+          {
+            "key": "D",
+            "text": "De cálculo.",
+            "why_wrong": "El error ocurre en la medida, no en un cálculo posterior."
+          }
+        ],
+        "explanation": "Un error que siempre va en el mismo sentido y magnitud es sistemático. Este caso se debe al error de paralaje.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-U-ESO-00-L02-04",
+        "stem": "¿Cómo se expresa correctamente una medida?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Solo con el número.",
+            "why_wrong": "Sin unidad, el número no tiene significado físico."
+          },
+          {
+            "key": "B",
+            "text": "Con número, unidad e incertidumbre."
+          },
+          {
+            "key": "C",
+            "text": "Con el número y la marca del instrumento.",
+            "why_wrong": "La marca del instrumento no es parte de la expresión de una medida."
+          },
+          {
+            "key": "D",
+            "text": "Solo con la unidad.",
+            "why_wrong": "Sin número, no hay medida."
+          }
+        ],
+        "explanation": "Una medida completa incluye el valor numérico, la unidad y la incertidumbre: (23,5 ± 0,25) °C.",
+        "correct": "B"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FL-U-ESO-00-L02-01",
+        "front": "¿Qué diferencia una observación cualitativa de una cuantitativa?",
+        "back": "La cualitativa describe sin números; la cuantitativa asigna un número con unidad (una medida)."
+      },
+      {
+        "id": "FL-U-ESO-00-L02-02",
+        "front": "¿Qué es la resolución de un instrumento?",
+        "back": "La mínima diferencia entre dos valores que el instrumento puede distinguir."
+      },
+      {
+        "id": "FL-U-ESO-00-L02-03",
+        "front": "¿Qué es un error sistemático?",
+        "back": "Un error que se repite siempre en el mismo sentido al medir. Se corrige identificando su causa (calibración, paralaje…)."
+      }
+    ],
+    "common_mistakes": [
+      "Olvidar la unidad al expresar una medida.",
+      "Confundir resolución con precisión.",
+      "No repetir medidas para detectar errores aleatorios."
+    ],
+    "exam_notes": [],
+    "keywords": [
+      {
+        "term": "medir",
+        "definition": "Comparar una magnitud física con una unidad patrón para asignarle un valor numérico."
+      },
+      {
+        "term": "observación cuantitativa",
+        "definition": "Observación que incluye datos numéricos obtenidos con instrumentos de medida (ej.: «la masa es 12,4 g»)."
+      },
+      {
+        "term": "observación cualitativa",
+        "definition": "Observación descriptiva basada en los sentidos, sin datos numéricos (ej.: «el líquido es azul»)."
+      },
+      {
+        "term": "resolución",
+        "definition": "El cambio más pequeño que un instrumento de medida puede detectar (la menor división de su escala)."
+      },
+      {
+        "term": "incertidumbre",
+        "definition": "Intervalo dentro del cual se estima que se encuentra el valor verdadero de una medida; indica la fiabilidad de la misma."
+      },
+      {
+        "term": "error sistemático",
+        "definition": "Error que se repite siempre en el mismo sentido (por exceso o por defecto), causado por un defecto del instrumento o del método."
+      },
+      {
+        "term": "error aleatorio",
+        "definition": "Error impredecible que varía de una medida a otra, causado por factores difíciles de controlar; se reduce promediando."
+      }
+    ],
+    "summary": "Medir es comparar una magnitud con un patrón. Por eso cada medida necesita número y unidad, y siempre conserva un margen de incertidumbre que hay que saber interpretar.",
+    "assets_needed": [],
+    "source_references": [],
+    "curriculum_refs": [],
+    "confidence_notes": "",
+    "internal_review": "",
+    "diagnostic_items": [],
+    "schema_v2": {
+      "canonical_lesson_id": "ESOFYQ::U-ESO-00::02_observar_y_medir",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": false,
+        "EXCELLENCE": false,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "DEFINITION",
+      "prerequisites_canonical": [],
+      "estimated_mastery_time_min": 40
+    }
+  },
+  "lesson_03.json": {
+    "id": "U-ESO-00-L03",
+    "title": "La materia en tu día a día",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Fundamentos previos",
+    "unit_id": "U-ESO-00",
+    "curriculum": "Introducción intuitiva a la materia y sus estados",
+    "estimated_length": "50 min",
+    "estimated_difficulty": 1,
+    "objectives": [
+      "Reconocer que todo lo que nos rodea es materia y tiene masa y volumen.",
+      "Describir las diferencias entre sólidos, líquidos y gases desde la experiencia cotidiana.",
+      "Identificar cambios de estado en situaciones de la vida diaria.",
+      "Comprender que la materia se conserva en los cambios de estado."
+    ],
+    "prerequisites": [],
+    "misconceptions": [
+      {
+        "id": "MIS-U-ESO-00-L03-01",
+        "misconception": "Creer que el vapor de agua es visible (las nubes o el 'vaho' son gotitas de agua líquida).",
+        "correction": "El vapor de agua es un gas invisible. Lo que vemos como 'vaho' o nubes son minúsculas gotas de agua líquida en suspensión."
+      },
+      {
+        "id": "MIS-U-ESO-00-L03-02",
+        "misconception": "Pensar que el aire no es materia porque no se ve ni se toca.",
+        "correction": "El aire tiene masa (se puede pesar un globo inflado vs. desinflado) y ocupa volumen (se puede atrapar en un recipiente)."
+      },
+      {
+        "id": "MIS-U-ESO-00-L03-03",
+        "misconception": "Creer que cuando el agua se evapora 'desaparece'.",
+        "correction": "El agua pasa a estado gaseoso; las moléculas siguen ahí, pero dispersas en el aire. La masa se conserva."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Todo lo que puedes tocar (y lo que no)",
+        "body": "Todo lo que tiene masa y ocupa espacio es materia. Tu mesa, el agua del vaso, el aire que respiras. Incluso cosas que no puedes ver, como el oxígeno, son materia.\n\n¿Y la luz? ¿Y el sonido? Esos no son materia: no tienen masa ni ocupan volumen. Son formas de energía.\n\nLa materia se presenta en tres estados que ya conoces: sólido, líquido y gas. La diferencia entre ellos está en cómo se mueven sus partículas y cuánto espacio dejan entre sí.",
+        "provenance": "Ciencias Naturales — materia",
+        "student_text": "Materia es todo lo que tiene masa y ocupa volumen. Se presenta en tres estados: sólido, líquido y gas.",
+        "formula": "",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 520 220\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Materia: ejemplos de sólido, líquido y gas en objetos cotidianos\">\n  <rect width=\"520\" height=\"220\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"260\" y=\"24\" font-family=\"system-ui,sans-serif\" font-size=\"14\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Todo esto es materia</text>\n  <!-- Solid: book -->\n  <rect x=\"30\" y=\"50\" width=\"140\" height=\"150\" rx=\"12\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <rect x=\"60\" y=\"80\" width=\"60\" height=\"45\" rx=\"4\" fill=\"#0e7a68\" opacity=\"0.2\"/>\n  <rect x=\"63\" y=\"83\" width=\"54\" height=\"39\" rx=\"2\" fill=\"#0e7a68\" opacity=\"0.15\"/>\n  <line x1=\"60\" y1=\"80\" x2=\"60\" y2=\"125\" stroke=\"#0e7a68\" stroke-width=\"3\"/>\n  <text x=\"90\" y=\"108\" font-family=\"system-ui,sans-serif\" font-size=\"9\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"600\">LIBRO</text>\n  <text x=\"100\" y=\"150\" font-family=\"system-ui,sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#0e7a68\" text-anchor=\"middle\">Sólido</text>\n  <text x=\"100\" y=\"168\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Forma y volumen fijos</text>\n\n  <!-- Liquid: water bottle -->\n  <rect x=\"190\" y=\"50\" width=\"140\" height=\"150\" rx=\"12\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <rect x=\"248\" y=\"72\" width=\"24\" height=\"8\" rx=\"3\" fill=\"none\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <path d=\"M245,80 L240,95 L240,130 Q240,138 248,138 L292,138 Q300,138 300,130 L300,95 L295,80\" fill=\"#c17a17\" opacity=\"0.12\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <rect x=\"240\" y=\"105\" width=\"60\" height=\"33\" rx=\"0\" fill=\"#c17a17\" opacity=\"0.2\"/>\n  <text x=\"260\" y=\"155\" font-family=\"system-ui,sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#c17a17\" text-anchor=\"middle\">Líquido</text>\n  <text x=\"260\" y=\"173\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Volumen fijo, sin forma</text>\n\n  <!-- Gas: balloon -->\n  <rect x=\"350\" y=\"50\" width=\"140\" height=\"150\" rx=\"12\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <ellipse cx=\"420\" cy=\"105\" rx=\"35\" ry=\"40\" fill=\"#8a3d6b\" opacity=\"0.12\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <line x1=\"420\" y1=\"145\" x2=\"420\" y2=\"140\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <text x=\"420\" y=\"110\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\">aire</text>\n  <text x=\"420\" y=\"165\" font-family=\"system-ui,sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#8a3d6b\" text-anchor=\"middle\">Gas</text>\n  <text x=\"420\" y=\"183\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Sin forma ni volumen fijo</text>\n</svg>",
+            "caption": "Ejemplos cotidianos de los tres estados de la materia"
+          }
+        ]
+      },
+      {
+        "title": "Sólidos, líquidos y gases en tu casa",
+        "body": "No hace falta ir al laboratorio para ver los tres estados. Mira tu cocina:\n\nEl hielo del congelador es un sólido: tiene forma propia y no se deforma si no lo calientas. Sus partículas están ordenadas y casi quietas.\n\nEl agua del grifo es un líquido: se adapta al vaso donde la eches, pero siempre ocupa el mismo volumen. Sus partículas se mueven y resbalan unas sobre otras.\n\nEl vapor que sale de una olla hirviendo es un gas: se expande y llena toda la cocina. Sus partículas se mueven rápido y están muy separadas.",
+        "provenance": "Ciencias Naturales — estados de la materia",
+        "student_text": "Sólido: forma y volumen fijos. Líquido: volumen fijo, toma la forma del recipiente. Gas: ni forma ni volumen fijos, se expande.",
+        "formula": "",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 560 280\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sólidos, líquidos y gases en la cocina de tu casa\">\n  <rect width=\"560\" height=\"280\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"280\" y=\"24\" font-family=\"system-ui,sans-serif\" font-size=\"14\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Los tres estados en tu cocina</text>\n  <!-- Kitchen outline -->\n  <rect x=\"30\" y=\"40\" width=\"500\" height=\"220\" rx=\"12\" fill=\"none\" stroke=\"var(--grid, #e8e3d8)\" stroke-width=\"2\"/>\n  <!-- Counter -->\n  <line x1=\"30\" y1=\"180\" x2=\"530\" y2=\"180\" stroke=\"var(--grid, #e8e3d8)\" stroke-width=\"2\"/>\n\n  <!-- Ice cubes (solid) -->\n  <rect x=\"60\" y=\"120\" width=\"30\" height=\"25\" rx=\"4\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <rect x=\"75\" y=\"130\" width=\"30\" height=\"25\" rx=\"4\" fill=\"#0e7a68\" opacity=\"0.3\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"82\" y=\"115\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#0e7a68\" font-weight=\"600\" text-anchor=\"middle\">Hielo</text>\n  <rect x=\"50\" y=\"190\" width=\"80\" height=\"22\" rx=\"6\" fill=\"#e6f5f1\"/>\n  <text x=\"90\" y=\"206\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"600\">SÓLIDO</text>\n\n  <!-- Water from tap (liquid) -->\n  <path d=\"M250,70 L250,75 Q250,80 255,80 L265,80 Q270,80 270,75 L270,70\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n  <path d=\"M258,80 L258,140\" stroke=\"#c17a17\" stroke-width=\"3\" opacity=\"0.5\"/>\n  <path d=\"M255,80 Q258,85 261,80\" stroke=\"#c17a17\" stroke-width=\"1.5\" fill=\"none\"/>\n  <!-- Glass of water -->\n  <path d=\"M240,120 L235,165 Q235,170 242,170 L278,170 Q285,170 285,165 L280,120\" fill=\"#c17a17\" opacity=\"0.1\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <rect x=\"237\" y=\"140\" width=\"46\" height=\"28\" rx=\"0\" fill=\"#c17a17\" opacity=\"0.15\"/>\n  <text x=\"260\" y=\"115\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#c17a17\" font-weight=\"600\" text-anchor=\"middle\">Agua</text>\n  <rect x=\"220\" y=\"190\" width=\"80\" height=\"22\" rx=\"6\" fill=\"#fdf3e3\"/>\n  <text x=\"260\" y=\"206\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"600\">LÍQUIDO</text>\n\n  <!-- Steam from pot (gas) -->\n  <rect x=\"400\" y=\"135\" width=\"80\" height=\"45\" rx=\"5\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n  <ellipse cx=\"440\" cy=\"135\" rx=\"45\" ry=\"5\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1.5\"/>\n  <!-- Steam wisps -->\n  <path d=\"M420,125 Q415,110 420,95\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\" opacity=\"0.3\"/>\n  <path d=\"M440,120 Q435,100 440,80\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\" opacity=\"0.4\"/>\n  <path d=\"M460,125 Q455,108 460,90\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\" opacity=\"0.25\"/>\n  <text x=\"440\" y=\"70\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#8a3d6b\" font-weight=\"600\" text-anchor=\"middle\">Vapor</text>\n  <rect x=\"400\" y=\"190\" width=\"80\" height=\"22\" rx=\"6\" fill=\"#f5e8f0\"/>\n  <text x=\"440\" y=\"206\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"600\">GAS</text>\n\n  <!-- Arrows showing transitions -->\n  <path d=\"M130,150 L210,150\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1\" stroke-dasharray=\"4,3\" marker-end=\"url(#arrFwd)\"/>\n  <text x=\"170\" y=\"143\" font-family=\"system-ui,sans-serif\" font-size=\"9\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">fusión</text>\n  <path d=\"M300,150 L390,150\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1\" stroke-dasharray=\"4,3\" marker-end=\"url(#arrFwd)\"/>\n  <text x=\"345\" y=\"143\" font-family=\"system-ui,sans-serif\" font-size=\"9\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">ebullición</text>\n  <defs><marker id=\"arrFwd\" markerWidth=\"6\" markerHeight=\"5\" refX=\"5\" refY=\"2.5\" orient=\"auto\"><polygon points=\"0 0, 6 2.5, 0 5\" fill=\"var(--axes, #24312c)\"/></marker></defs>\n  <text x=\"280\" y=\"252\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\" font-style=\"italic\">Al calentar: sólido → líquido → gas</text>\n</svg>",
+            "caption": "Los tres estados de la materia en tu cocina: hielo, agua y vapor"
+          }
+        ]
+      },
+      {
+        "title": "Cambios de estado en la cocina",
+        "body": "Los cambios de estado están por todas partes en tu día a día:\n\nEl hielo del congelador se derrite al sacarlo: eso es fusión (sólido → líquido).\n\nEl agua hierve en la olla: eso es ebullición (líquido → gas).\n\nEl vapor se condensa en la tapa fría de la olla: eso es condensación (gas → líquido).\n\nY si pones agua en un molde y la metes al congelador, se solidifica: solidificación (líquido → sólido).\n\nEn todos los casos, la sustancia sigue siendo agua. Lo que cambia es la energía que tienen sus partículas y cómo se organizan.",
+        "provenance": "Ciencias Naturales — cambios de estado",
+        "student_text": "Los cambios de estado son transformaciones físicas: la sustancia no cambia, solo cambia cómo se organizan sus partículas.",
+        "formula": "",
+        "assets": []
+      }
+    ],
+    "worked_examples": [],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-U-ESO-00-L03-01",
+        "statement": "Clasifica los siguientes materiales según su estado a temperatura ambiente: a) mantequilla; b) oxígeno; c) mercurio; d) sal de cocina; e) perfume en el aire.",
+        "answer": "a) Sólido (blando, pero mantiene forma); b) Gas; c) Líquido; d) Sólido; e) Gas.",
+        "full_solution": "a) La mantequilla a temperatura ambiente es sólida (aunque blanda). b) El oxígeno es un gas a temperatura ambiente. c) El mercurio es el único metal líquido a temperatura ambiente. d) La sal de cocina es un sólido cristalino. e) El perfume disperso en el aire está en estado gaseoso.",
+        "difficulty": 1,
+        "hints": [
+          "Piensa si mantiene forma propia (sólido), si adopta la del recipiente (líquido) o si se expande (gas)."
+        ],
+        "reasoning": "Clasificación de estados de la materia",
+        "provenance": "Ciencias Naturales ESO",
+        "assets": []
+      },
+      {
+        "id": "EX-U-ESO-00-L03-02",
+        "statement": "Nombra el cambio de estado que ocurre en cada caso: a) Se forma rocío en la hierba por la mañana. b) Se seca la ropa tendida. c) Se derrite un polo. d) Se forma escarcha en el parabrisas del coche.",
+        "answer": "a) Condensación; b) Evaporación; c) Fusión; d) Sublimación inversa (deposición).",
+        "full_solution": "a) Condensación: el vapor de agua del aire se enfría al contacto con la hierba fría y forma gotitas líquidas. b) Evaporación: el agua líquida de la ropa pasa a vapor. c) Fusión: el hielo del polo pasa a líquido. d) Sublimación inversa (deposición): el vapor de agua del aire pasa directamente a sólido (cristales de hielo) sin pasar por líquido.",
+        "difficulty": 1,
+        "hints": [
+          "Identifica el estado inicial y final."
+        ],
+        "reasoning": "Identificación de cambios de estado",
+        "provenance": "Ciencias Naturales ESO",
+        "assets": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MC-U-ESO-00-L03-01",
+        "stem": "¿Cuál de estas afirmaciones sobre los gases es correcta?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tienen forma y volumen propios.",
+            "why_wrong": "Eso describe a los sólidos, no a los gases."
+          },
+          {
+            "key": "B",
+            "text": "Tienen volumen fijo pero adoptan la forma del recipiente.",
+            "why_wrong": "Eso describe a los líquidos."
+          },
+          {
+            "key": "C",
+            "text": "No tienen forma ni volumen propio; se expanden hasta llenar el recipiente."
+          },
+          {
+            "key": "D",
+            "text": "No tienen masa.",
+            "why_wrong": "Los gases tienen masa; el aire pesa aproximadamente 1,2 kg/m³."
+          }
+        ],
+        "explanation": "Los gases no tienen forma ni volumen propio: se expanden para ocupar todo el espacio disponible.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-U-ESO-00-L03-02",
+        "stem": "Cuando el agua hierve en una olla, el cambio de estado que ocurre es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Condensación.",
+            "why_wrong": "La condensación es el paso de gas a líquido, no de líquido a gas."
+          },
+          {
+            "key": "B",
+            "text": "Fusión.",
+            "why_wrong": "La fusión es el paso de sólido a líquido."
+          },
+          {
+            "key": "C",
+            "text": "Ebullición (evaporación)."
+          },
+          {
+            "key": "D",
+            "text": "Sublimación.",
+            "why_wrong": "La sublimación es el paso de sólido a gas directamente."
+          }
+        ],
+        "explanation": "El agua pasa de líquido a gas (vapor) al hervir. Este proceso se llama ebullición (un tipo de evaporación que ocurre en toda la masa del líquido).",
+        "correct": "C"
+      },
+      {
+        "id": "MC-U-ESO-00-L03-03",
+        "stem": "Cuando un charco se seca al sol, ¿qué ocurre con el agua?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Desaparece.",
+            "why_wrong": "La materia no desaparece; se conserva."
+          },
+          {
+            "key": "B",
+            "text": "Se transforma en aire.",
+            "why_wrong": "El agua no se convierte en aire; pasa a vapor de agua, que es agua en estado gaseoso."
+          },
+          {
+            "key": "C",
+            "text": "Se evapora y pasa al aire como vapor de agua."
+          },
+          {
+            "key": "D",
+            "text": "La absorbe el suelo completamente.",
+            "why_wrong": "Parte puede absorberse, pero un charco que se seca al sol pierde agua por evaporación."
+          }
+        ],
+        "explanation": "El agua se evapora: pasa de líquido a gas (vapor de agua). Las moléculas de agua siguen existiendo, dispersas en el aire.",
+        "correct": "C"
+      },
+      {
+        "id": "MC-U-ESO-00-L03-04",
+        "stem": "El 'vaho' que sale de tu boca en invierno es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Vapor de agua.",
+            "why_wrong": "El vapor de agua es invisible. Lo que ves son gotitas de agua líquida."
+          },
+          {
+            "key": "B",
+            "text": "Dióxido de carbono visible.",
+            "why_wrong": "El CO₂ es un gas incoloro e invisible."
+          },
+          {
+            "key": "C",
+            "text": "Minúsculas gotas de agua líquida en suspensión."
+          },
+          {
+            "key": "D",
+            "text": "Humo.",
+            "why_wrong": "El humo contiene partículas sólidas de combustión; el vaho no proviene de combustión."
+          }
+        ],
+        "explanation": "El aire caliente y húmedo que exhalas se enfría al contacto con el aire frío exterior. El vapor de agua se condensa en minúsculas gotitas líquidas que puedes ver.",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FL-U-ESO-00-L03-01",
+        "front": "¿Qué es la materia?",
+        "back": "Todo lo que tiene masa y ocupa un volumen."
+      },
+      {
+        "id": "FL-U-ESO-00-L03-02",
+        "front": "¿Qué diferencia un sólido de un líquido?",
+        "back": "El sólido tiene forma propia y volumen fijo. El líquido tiene volumen fijo pero adopta la forma del recipiente."
+      },
+      {
+        "id": "FL-U-ESO-00-L03-03",
+        "front": "¿Qué es la fusión?",
+        "back": "El cambio de estado de sólido a líquido (ejemplo: el hielo se derrite)."
+      },
+      {
+        "id": "FL-U-ESO-00-L03-04",
+        "front": "¿El vapor de agua es visible?",
+        "back": "No. El vapor de agua es un gas invisible. Lo que vemos como 'vaho' o nubes son gotitas de agua líquida en suspensión."
+      }
+    ],
+    "common_mistakes": [
+      "Confundir vapor de agua (invisible) con las gotitas de agua líquida visibles.",
+      "Decir que el aire 'no es materia' porque no se ve.",
+      "Pensar que la materia desaparece al evaporarse."
+    ],
+    "exam_notes": [],
+    "keywords": [
+      {
+        "term": "materia",
+        "definition": "Todo aquello que tiene masa y ocupa un volumen en el espacio."
+      },
+      {
+        "term": "masa",
+        "definition": "Magnitud que mide la cantidad de materia de un cuerpo. Se mide en kilogramos (kg)."
+      },
+      {
+        "term": "volumen",
+        "definition": "Espacio que ocupa un cuerpo. Se mide en metros cúbicos ($\\text{m}^3$) o litros (L)."
+      },
+      {
+        "term": "sólido",
+        "definition": "Estado de la materia con forma y volumen fijos; sus partículas vibran en posiciones ordenadas."
+      },
+      {
+        "term": "líquido",
+        "definition": "Estado de la materia con volumen fijo pero forma variable; adopta la forma del recipiente."
+      },
+      {
+        "term": "gas",
+        "definition": "Estado de la materia sin forma ni volumen fijos; sus partículas se mueven libremente y ocupan todo el espacio disponible."
+      },
+      {
+        "term": "fusión",
+        "definition": "Cambio de estado de sólido a líquido al absorber calor."
+      },
+      {
+        "term": "evaporación",
+        "definition": "Paso de líquido a gas que ocurre en la superficie del líquido a cualquier temperatura."
+      },
+      {
+        "term": "condensación",
+        "definition": "Cambio de estado de gas a líquido al ceder calor."
+      },
+      {
+        "term": "sublimación",
+        "definition": "Paso directo de sólido a gas sin pasar por el estado líquido."
+      },
+      {
+        "term": "cambio de estado",
+        "definition": "Transformación física de una sustancia de un estado de agregación a otro, causada por variaciones de temperatura o presión."
+      }
+    ],
+    "summary": "Todo lo que tiene masa y ocupa espacio es materia. Puede presentarse como sólido, líquido o gas y cambiar de estado sin dejar de ser la misma materia.",
+    "assets_needed": [],
+    "source_references": [],
+    "curriculum_refs": [],
+    "confidence_notes": "",
+    "internal_review": "",
+    "diagnostic_items": [],
+    "schema_v2": {
+      "canonical_lesson_id": "ESOFYQ::U-ESO-00::03_materia_dia_a_dia",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": false,
+        "EXCELLENCE": false,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "DEFINITION",
+      "prerequisites_canonical": [],
+      "estimated_mastery_time_min": 35
+    }
+  },
+  "lesson_04.json": {
+    "id": "U-ESO-00-L04",
+    "title": "Seguridad básica en el laboratorio",
+    "subject": "Física y Química",
+    "course_label": "3.º ESO · Fundamentos previos",
+    "unit_id": "U-ESO-00",
+    "curriculum": "Normas de seguridad y material de laboratorio",
+    "estimated_length": "50 min",
+    "estimated_difficulty": 1,
+    "objectives": [
+      "Conocer las normas básicas de seguridad en el laboratorio escolar.",
+      "Identificar los pictogramas de peligro del sistema GHS.",
+      "Reconocer y nombrar el material básico de laboratorio.",
+      "Saber qué hacer en caso de accidente (derrame, quemadura, rotura de cristal)."
+    ],
+    "prerequisites": [],
+    "misconceptions": [
+      {
+        "id": "MIS-U-ESO-00-L04-01",
+        "misconception": "Pensar que los productos de laboratorio escolar no son peligrosos.",
+        "correction": "Incluso sustancias 'comunes' como el ácido clorhídrico diluido pueden causar quemaduras; hay que respetar siempre las normas."
+      },
+      {
+        "id": "MIS-U-ESO-00-L04-02",
+        "misconception": "Creer que oler un producto es inofensivo.",
+        "correction": "Nunca se huele directamente un producto. Se usa la técnica de abaniqueo: se acerca el vapor con la mano sin acercar la nariz al recipiente."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "title": "Antes de tocar nada: las reglas del lab",
+        "body": "El laboratorio es uno de los sitios más divertidos del instituto, pero también uno donde hay que ir con cuidado. No es difícil: solo tienes que seguir unas reglas básicas.\n\nPonte siempre la bata (protege tu ropa y tu piel), las gafas de seguridad (protegen tus ojos de salpicaduras) y, si tu profe lo dice, guantes.\n\nNo comas ni bebas en el laboratorio. No huelas directamente un producto: abanica con la mano para acercar el olor.\n\nY lo más importante: si algo sale mal, avisa a tu profesor enseguida.",
+        "provenance": "Normativa de seguridad escolar",
+        "student_text": "Reglas básicas: bata, gafas, no comer, no oler directamente, avisar al profesor ante cualquier incidencia.",
+        "formula": "",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 480 260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Equipamiento de seguridad en el laboratorio\">\n  <rect width=\"480\" height=\"260\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"240\" y=\"24\" font-family=\"system-ui,sans-serif\" font-size=\"14\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Tu equipamiento de seguridad</text>\n  <!-- Person outline -->\n  <circle cx=\"240\" cy=\"65\" r=\"22\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n  <line x1=\"240\" y1=\"87\" x2=\"240\" y2=\"170\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n  <line x1=\"240\" y1=\"105\" x2=\"200\" y2=\"140\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n  <line x1=\"240\" y1=\"105\" x2=\"280\" y2=\"140\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n  <line x1=\"240\" y1=\"170\" x2=\"215\" y2=\"220\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n  <line x1=\"240\" y1=\"170\" x2=\"265\" y2=\"220\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n\n  <!-- Goggles -->\n  <rect x=\"222\" y=\"55\" width=\"36\" height=\"14\" rx=\"5\" fill=\"#0e7a68\" opacity=\"0.2\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <line x1=\"285\" y1=\"62\" x2=\"360\" y2=\"50\" stroke=\"#0e7a68\" stroke-width=\"1\" stroke-dasharray=\"4,2\"/>\n  <rect x=\"360\" y=\"38\" width=\"100\" height=\"24\" rx=\"6\" fill=\"#e6f5f1\"/>\n  <text x=\"410\" y=\"55\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"600\">Gafas</text>\n\n  <!-- Lab coat -->\n  <rect x=\"222\" y=\"92\" width=\"36\" height=\"78\" rx=\"4\" fill=\"#c17a17\" opacity=\"0.12\" stroke=\"#c17a17\" stroke-width=\"1.5\"/>\n  <line x1=\"192\" y1=\"120\" x2=\"100\" y2=\"110\" stroke=\"#c17a17\" stroke-width=\"1\" stroke-dasharray=\"4,2\"/>\n  <rect x=\"20\" y=\"98\" width=\"100\" height=\"24\" rx=\"6\" fill=\"#fdf3e3\"/>\n  <text x=\"70\" y=\"115\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"600\">Bata</text>\n\n  <!-- Gloves -->\n  <circle cx=\"200\" cy=\"142\" r=\"8\" fill=\"#8a3d6b\" opacity=\"0.15\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <circle cx=\"280\" cy=\"142\" r=\"8\" fill=\"#8a3d6b\" opacity=\"0.15\" stroke=\"#8a3d6b\" stroke-width=\"1.5\"/>\n  <line x1=\"295\" y1=\"142\" x2=\"360\" y2=\"130\" stroke=\"#8a3d6b\" stroke-width=\"1\" stroke-dasharray=\"4,2\"/>\n  <rect x=\"360\" y=\"118\" width=\"100\" height=\"24\" rx=\"6\" fill=\"#f5e8f0\"/>\n  <text x=\"410\" y=\"135\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"600\">Guantes</text>\n\n  <!-- Closed shoes -->\n  <rect x=\"205\" y=\"218\" width=\"25\" height=\"10\" rx=\"4\" fill=\"var(--axes, #24312c)\" opacity=\"0.3\"/>\n  <rect x=\"255\" y=\"218\" width=\"25\" height=\"10\" rx=\"4\" fill=\"var(--axes, #24312c)\" opacity=\"0.3\"/>\n  <line x1=\"195\" y1=\"225\" x2=\"100\" y2=\"220\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1\" stroke-dasharray=\"4,2\"/>\n  <rect x=\"20\" y=\"208\" width=\"100\" height=\"24\" rx=\"6\" fill=\"var(--grid, #e8e3d8)\"/>\n  <text x=\"70\" y=\"225\" font-family=\"system-ui,sans-serif\" font-size=\"11\" fill=\"var(--axes, #24312c)\" text-anchor=\"middle\" font-weight=\"600\">Calzado cerrado</text>\n</svg>",
+            "caption": "El equipamiento básico de seguridad en el laboratorio"
+          }
+        ]
+      },
+      {
+        "title": "Los símbolos que salvan vidas",
+        "body": "¿Te has fijado en los rombos de los envases de productos de limpieza? Son los pictogramas GHS: dibujos que te dicen qué peligro tiene ese producto, incluso si no sabes leer la etiqueta.\n\nUna llama: inflamable, se enciende fácilmente.\nUna calavera: tóxico, puede ser muy peligroso si lo inhalas o lo tocas.\nUn signo de exclamación: irritante, puede causar molestias.\nGotas sobre una superficie: corrosivo, daña la piel o los materiales.\n\nAprenderlos no es solo para el examen: te pueden ayudar en casa también.",
+        "provenance": "Sistema Globalmente Armonizado (GHS/CLP)",
+        "student_text": "Los pictogramas GHS indican el tipo de peligro de un producto. Aparecen en rombos blancos con borde rojo.",
+        "formula": "",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 520 180\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Cuatro pictogramas GHS de seguridad: inflamable, tóxico, irritante, corrosivo\">\n  <rect width=\"520\" height=\"180\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"260\" y=\"22\" font-family=\"system-ui,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Pictogramas GHS: aprende a leerlos</text>\n  <!-- Diamond 1: Flame -->\n  <g transform=\"translate(65,90)\">\n    <polygon points=\"0,-45 45,0 0,45 -45,0\" fill=\"white\" stroke=\"#c0392b\" stroke-width=\"3\"/>\n    <path d=\"M-8,15 Q-8,-5 0,-20 Q5,-8 8,-5 Q12,-15 5,-25 Q15,-10 15,5 Q15,18 0,20 Q-15,18 -8,15Z\" fill=\"#c17a17\"/>\n    <text x=\"0\" y=\"65\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\" font-weight=\"600\">Inflamable</text>\n  </g>\n  <!-- Diamond 2: Skull -->\n  <g transform=\"translate(195,90)\">\n    <polygon points=\"0,-45 45,0 0,45 -45,0\" fill=\"white\" stroke=\"#c0392b\" stroke-width=\"3\"/>\n    <circle cx=\"0\" cy=\"-10\" r=\"12\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n    <circle cx=\"-5\" cy=\"-13\" r=\"2\" fill=\"var(--axes, #24312c)\"/>\n    <circle cx=\"5\" cy=\"-13\" r=\"2\" fill=\"var(--axes, #24312c)\"/>\n    <path d=\"M-6,-4 L-3,-2 L0,-4 L3,-2 L6,-4\" fill=\"none\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1.5\"/>\n    <line x1=\"0\" y1=\"2\" x2=\"0\" y2=\"15\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n    <line x1=\"-8\" y1=\"8\" x2=\"8\" y2=\"8\" stroke=\"var(--axes, #24312c)\" stroke-width=\"2\"/>\n    <text x=\"0\" y=\"65\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\" font-weight=\"600\">Tóxico</text>\n  </g>\n  <!-- Diamond 3: Exclamation -->\n  <g transform=\"translate(325,90)\">\n    <polygon points=\"0,-45 45,0 0,45 -45,0\" fill=\"white\" stroke=\"#c0392b\" stroke-width=\"3\"/>\n    <text x=\"0\" y=\"8\" font-family=\"system-ui,sans-serif\" font-size=\"40\" fill=\"var(--axes, #24312c)\" text-anchor=\"middle\" font-weight=\"700\">!</text>\n    <text x=\"0\" y=\"65\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\" font-weight=\"600\">Irritante</text>\n  </g>\n  <!-- Diamond 4: Corrosion -->\n  <g transform=\"translate(455,90)\">\n    <polygon points=\"0,-45 45,0 0,45 -45,0\" fill=\"white\" stroke=\"#c0392b\" stroke-width=\"3\"/>\n    <!-- Dripping drops -->\n    <path d=\"M-5,-20 L-5,-5 Q-5,5 -10,10\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n    <path d=\"M5,-20 L5,-5 Q5,5 10,10\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n    <circle cx=\"-10\" cy=\"13\" r=\"3\" fill=\"#8a3d6b\" opacity=\"0.5\"/>\n    <circle cx=\"10\" cy=\"13\" r=\"3\" fill=\"#8a3d6b\" opacity=\"0.5\"/>\n    <rect x=\"-12\" y=\"10\" width=\"24\" height=\"8\" rx=\"2\" fill=\"var(--grid, #e8e3d8)\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1\"/>\n    <text x=\"0\" y=\"65\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\" font-weight=\"600\">Corrosivo</text>\n  </g>\n</svg>",
+            "caption": "Los cuatro pictogramas GHS que debes reconocer"
+          }
+        ]
+      },
+      {
+        "title": "Tu mesa de trabajo",
+        "body": "En el laboratorio del instituto encontrarás material que parece complicado, pero en realidad cada cosa tiene una función sencilla.\n\nEl vaso de precipitados es como un vaso grande para mezclar líquidos. No sirve para medir con precisión.\n\nLa probeta sí sirve para medir volúmenes: tiene marcas graduadas. Léela con el ojo a la misma altura que el líquido.\n\nEl tubo de ensayo es para calentar pequeñas cantidades de líquido o hacer reacciones pequeñas.\n\nEl mechero Bunsen da una llama controlable para calentar sustancias. Nunca lo enciendas sin permiso.",
+        "provenance": "Física y Química ESO — material de laboratorio",
+        "student_text": "Material básico: vaso de precipitados (mezclar), probeta (medir volúmenes), tubo de ensayo (reacciones pequeñas), mechero Bunsen (calentar).",
+        "formula": "",
+        "assets": [
+          {
+            "svg": "<svg viewBox=\"0 0 560 220\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Material básico de laboratorio: vaso, probeta, tubo de ensayo, mechero\">\n  <rect width=\"560\" height=\"220\" fill=\"var(--bg, #fbfcfd)\"/>\n  <text x=\"280\" y=\"22\" font-family=\"system-ui,sans-serif\" font-size=\"13\" font-weight=\"600\" fill=\"var(--text, #20302a)\" text-anchor=\"middle\">Tu mesa de trabajo en el laboratorio</text>\n  <!-- Bench surface -->\n  <rect x=\"20\" y=\"175\" width=\"520\" height=\"8\" rx=\"3\" fill=\"var(--grid, #e8e3d8)\"/>\n  <!-- Beaker -->\n  <g transform=\"translate(70,0)\">\n    <path d=\"M10,80 L5,170 Q5,175 12,175 L88,175 Q95,175 95,170 L90,80\" fill=\"#0e7a68\" opacity=\"0.08\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n    <rect x=\"10\" y=\"120\" width=\"80\" height=\"55\" fill=\"#0e7a68\" opacity=\"0.12\"/>\n    <path d=\"M10,80 L-5,80\" stroke=\"#0e7a68\" stroke-width=\"2\"/>\n    <text x=\"50\" y=\"195\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"600\">Vaso de</text>\n    <text x=\"50\" y=\"208\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#0e7a68\" text-anchor=\"middle\" font-weight=\"600\">precipitados</text>\n  </g>\n  <!-- Graduated cylinder -->\n  <g transform=\"translate(210,0)\">\n    <rect x=\"30\" y=\"60\" width=\"30\" height=\"115\" rx=\"2\" fill=\"#c17a17\" opacity=\"0.08\" stroke=\"#c17a17\" stroke-width=\"2\"/>\n    <rect x=\"30\" y=\"100\" width=\"30\" height=\"75\" fill=\"#c17a17\" opacity=\"0.12\"/>\n    <line x1=\"30\" y1=\"100\" x2=\"38\" y2=\"100\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n    <line x1=\"30\" y1=\"115\" x2=\"42\" y2=\"115\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n    <line x1=\"30\" y1=\"130\" x2=\"38\" y2=\"130\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n    <line x1=\"30\" y1=\"145\" x2=\"42\" y2=\"145\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n    <line x1=\"30\" y1=\"160\" x2=\"38\" y2=\"160\" stroke=\"#c17a17\" stroke-width=\"0.8\"/>\n    <rect x=\"25\" y=\"173\" width=\"40\" height=\"4\" rx=\"2\" fill=\"#c17a17\" opacity=\"0.3\"/>\n    <text x=\"45\" y=\"195\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#c17a17\" text-anchor=\"middle\" font-weight=\"600\">Probeta</text>\n  </g>\n  <!-- Test tube -->\n  <g transform=\"translate(330,0)\">\n    <path d=\"M35,65 L35,155 Q35,175 50,175 Q65,175 65,155 L65,65\" fill=\"#8a3d6b\" opacity=\"0.08\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n    <rect x=\"35\" y=\"130\" width=\"30\" height=\"35\" fill=\"#8a3d6b\" opacity=\"0.12\" rx=\"0\"/>\n    <ellipse cx=\"50\" cy=\"65\" rx=\"16\" ry=\"4\" fill=\"none\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n    <text x=\"50\" y=\"195\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"600\">Tubo de</text>\n    <text x=\"50\" y=\"208\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"#8a3d6b\" text-anchor=\"middle\" font-weight=\"600\">ensayo</text>\n  </g>\n  <!-- Bunsen burner -->\n  <g transform=\"translate(455,0)\">\n    <rect x=\"30\" y=\"130\" width=\"40\" height=\"45\" rx=\"3\" fill=\"var(--axes, #24312c)\" opacity=\"0.15\" stroke=\"var(--axes, #24312c)\" stroke-width=\"1.5\"/>\n    <rect x=\"20\" y=\"168\" width=\"60\" height=\"8\" rx=\"3\" fill=\"var(--axes, #24312c)\" opacity=\"0.2\"/>\n    <rect x=\"45\" y=\"115\" width=\"10\" height=\"18\" rx=\"1\" fill=\"var(--axes, #24312c)\" opacity=\"0.2\"/>\n    <!-- Flame -->\n    <path d=\"M50,115 Q42,95 50,70 Q58,95 50,115\" fill=\"#c17a17\" opacity=\"0.4\"/>\n    <path d=\"M50,110 Q46,100 50,85 Q54,100 50,110\" fill=\"#c17a17\" opacity=\"0.6\"/>\n    <text x=\"50\" y=\"195\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--axes, #24312c)\" text-anchor=\"middle\" font-weight=\"600\">Mechero</text>\n    <text x=\"50\" y=\"208\" font-family=\"system-ui,sans-serif\" font-size=\"10\" fill=\"var(--axes, #24312c)\" text-anchor=\"middle\" font-weight=\"600\">Bunsen</text>\n  </g>\n</svg>",
+            "caption": "Los cuatro instrumentos que más usarás en el laboratorio"
+          }
+        ]
+      }
+    ],
+    "worked_examples": [],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-U-ESO-00-L04-01",
+        "statement": "Un compañero quiere oler un frasco con un líquido desconocido y acerca la nariz directamente al frasco. a) ¿Qué está haciendo mal? b) ¿Cuál es la forma correcta de oler un producto químico?",
+        "answer": "a) No se debe oler directamente. b) Se usa la técnica de abaniqueo: con la mano se dirige una pequeña cantidad de vapor hacia la nariz.",
+        "full_solution": "a) Oler directamente es peligroso porque podría inhalar vapores tóxicos o irritantes concentrados. b) La técnica de abaniqueo consiste en mantener el frasco a unos 20 cm de la nariz y mover la mano por encima del frasco hacia la nariz para dirigir solo una pequeña cantidad de vapor.",
+        "difficulty": 1,
+        "hints": [
+          "Piensa en la técnica de abaniqueo."
+        ],
+        "reasoning": "Seguridad en el laboratorio — manipulación de sustancias",
+        "provenance": "Normativa de seguridad",
+        "assets": []
+      },
+      {
+        "id": "EX-U-ESO-00-L04-02",
+        "statement": "Relaciona cada pictograma con su significado: a) Llama; b) Calavera; c) Signo de exclamación; d) Tubo de ensayo con líquido vertido sobre superficie/mano.",
+        "answer": "a) Inflamable; b) Tóxico; c) Irritante/Nocivo; d) Corrosivo.",
+        "full_solution": "a) La llama indica que la sustancia es inflamable. b) La calavera indica toxicidad (peligro grave para la salud por ingestión, inhalación o contacto). c) El signo de exclamación indica que es irritante o nocivo (peligro leve o moderado). d) El tubo vertiendo sobre una superficie o una mano indica que la sustancia es corrosiva.",
+        "difficulty": 1,
+        "hints": [
+          "Los pictogramas GHS tienen fondo blanco y borde rojo."
+        ],
+        "reasoning": "Identificación de pictogramas de seguridad",
+        "provenance": "GHS/CLP",
+        "assets": []
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MC-U-ESO-00-L04-01",
+        "stem": "¿Cuál es la forma correcta de oler un producto químico en el laboratorio?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Acercar la nariz directamente al recipiente.",
+            "why_wrong": "Esto puede provocar la inhalación de vapores concentrados y tóxicos."
+          },
+          {
+            "key": "B",
+            "text": "Usar la técnica de abaniqueo, dirigiendo vapor con la mano."
+          },
+          {
+            "key": "C",
+            "text": "Pedir a un compañero que lo huela primero.",
+            "why_wrong": "Ningún alumno debe exponerse a riesgos innecesarios; además no resuelve el problema de seguridad."
+          },
+          {
+            "key": "D",
+            "text": "No hace falta oler; se identifica por el color.",
+            "why_wrong": "Muchos productos son incoloros pero tienen olor; la pregunta es cómo oler con seguridad, no si es necesario."
+          }
+        ],
+        "explanation": "La técnica de abaniqueo consiste en mover la mano por encima del recipiente para dirigir una pequeña cantidad de vapor hacia la nariz, sin acercar la nariz al recipiente.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-U-ESO-00-L04-02",
+        "stem": "El pictograma con una llama indica que el producto es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tóxico.",
+            "why_wrong": "El pictograma de toxicidad muestra una calavera."
+          },
+          {
+            "key": "B",
+            "text": "Inflamable."
+          },
+          {
+            "key": "C",
+            "text": "Explosivo.",
+            "why_wrong": "El pictograma de explosivo muestra una bomba explotando."
+          },
+          {
+            "key": "D",
+            "text": "Radiactivo.",
+            "why_wrong": "El símbolo de radiactividad es un trébol, no forma parte del sistema GHS estándar de productos químicos."
+          }
+        ],
+        "explanation": "La llama en fondo blanco con borde rojo (GHS) indica que la sustancia es inflamable: puede arder fácilmente.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-U-ESO-00-L04-03",
+        "stem": "¿Qué instrumento se debe usar para medir con precisión 25 mL de un líquido?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Vaso de precipitados.",
+            "why_wrong": "El vaso de precipitados es útil para contener líquidos, pero sus graduaciones son aproximadas."
+          },
+          {
+            "key": "B",
+            "text": "Probeta graduada."
+          },
+          {
+            "key": "C",
+            "text": "Matraz Erlenmeyer.",
+            "why_wrong": "El matraz Erlenmeyer es para mezclar y calentar, no para medir volúmenes con precisión."
+          },
+          {
+            "key": "D",
+            "text": "Tubo de ensayo.",
+            "why_wrong": "Los tubos de ensayo no suelen tener graduación."
+          }
+        ],
+        "explanation": "La probeta graduada es el instrumento estándar para medir volúmenes con precisión en el laboratorio escolar.",
+        "correct": "B"
+      },
+      {
+        "id": "MC-U-ESO-00-L04-04",
+        "stem": "Si se rompe un vaso de vidrio en el laboratorio, debes:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Recoger los trozos con las manos rápidamente.",
+            "why_wrong": "Los bordes del vidrio roto pueden causar cortes; nunca se recogen con las manos."
+          },
+          {
+            "key": "B",
+            "text": "Dejarlo y seguir trabajando.",
+            "why_wrong": "Los cristales rotos son un peligro para todos; hay que recogerlos inmediatamente."
+          },
+          {
+            "key": "C",
+            "text": "Avisar al profesor y usar recogedor o escoba."
+          },
+          {
+            "key": "D",
+            "text": "Pisarlo para hacerlo más pequeño.",
+            "why_wrong": "Pisar cristales es peligroso y puede provocar cortes a través del calzado."
+          }
+        ],
+        "explanation": "Ante la rotura de material de vidrio, se avisa al profesor, que indicará cómo recogerlo con seguridad (recogedor, escoba, o guantes).",
+        "correct": "C"
+      }
+    ],
+    "flashcards": [
+      {
+        "id": "FL-U-ESO-00-L04-01",
+        "front": "¿Qué significa el pictograma con una llama?",
+        "back": "Inflamable: la sustancia puede arder fácilmente."
+      },
+      {
+        "id": "FL-U-ESO-00-L04-02",
+        "front": "¿Para qué sirve una probeta?",
+        "back": "Para medir volúmenes de líquidos con precisión."
+      },
+      {
+        "id": "FL-U-ESO-00-L04-03",
+        "front": "¿Qué es la técnica de abaniqueo?",
+        "back": "Mover la mano sobre el recipiente para dirigir una pequeña cantidad de vapor hacia la nariz, sin acercar la nariz directamente."
+      },
+      {
+        "id": "FL-U-ESO-00-L04-04",
+        "front": "¿Cuáles son las tres protecciones personales básicas en el laboratorio?",
+        "back": "Bata, gafas de seguridad y guantes (cuando se indique)."
+      }
+    ],
+    "common_mistakes": [
+      "Oler productos directamente en vez de usar abaniqueo.",
+      "Usar el vaso de precipitados para medir volúmenes (es para contener, no para medir).",
+      "No usar gafas de seguridad al calentar sustancias."
+    ],
+    "exam_notes": [],
+    "keywords": [
+      {
+        "term": "seguridad",
+        "definition": "Conjunto de normas y prácticas para prevenir accidentes y proteger la salud en el laboratorio."
+      },
+      {
+        "term": "laboratorio",
+        "definition": "Espacio equipado para realizar experimentos científicos de manera controlada."
+      },
+      {
+        "term": "pictograma",
+        "definition": "Símbolo gráfico estandarizado (rombo rojo GHS) que indica los peligros de una sustancia química."
+      },
+      {
+        "term": "GHS",
+        "definition": "Sistema Globalmente Armonizado de clasificación y etiquetado de productos químicos; establece los pictogramas de peligro universales."
+      },
+      {
+        "term": "probeta",
+        "definition": "Instrumento cilíndrico graduado que se usa para medir volúmenes de líquidos con precisión moderada."
+      },
+      {
+        "term": "mechero Bunsen",
+        "definition": "Quemador de gas utilizado en el laboratorio para calentar sustancias; permite regular la mezcla de gas y aire."
+      },
+      {
+        "term": "abaniqueo",
+        "definition": "Técnica segura para oler sustancias en el laboratorio: se agita la mano sobre el recipiente abierto para acercar los vapores a la nariz sin inhalar directamente."
+      },
+      {
+        "term": "bata",
+        "definition": "Prenda de protección que se lleva en el laboratorio para evitar salpicaduras de productos químicos sobre la ropa."
+      },
+      {
+        "term": "gafas de seguridad",
+        "definition": "Protección ocular obligatoria en el laboratorio para evitar salpicaduras, vapores y proyecciones."
+      }
+    ],
+    "summary": "Trabajar con seguridad en el laboratorio significa anticiparse: usar la protección adecuada, entender las señales de peligro y saber cómo actuar si algo no sale como estaba previsto.",
+    "assets_needed": [],
+    "source_references": [],
+    "curriculum_refs": [],
+    "confidence_notes": "",
+    "internal_review": "",
+    "diagnostic_items": [],
+    "schema_v2": {
+      "canonical_lesson_id": "ESOFYQ::U-ESO-00::04_seguridad_laboratorio",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": false,
+        "EXCELLENCE": false,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "HEURISTIC",
+      "prerequisites_canonical": [],
+      "estimated_mastery_time_min": 35
+    }
+  }
+}
