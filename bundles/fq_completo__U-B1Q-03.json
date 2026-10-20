@@ -1002,7 +1002,7 @@
     "theory_blocks": [
       {
         "title": "Modelo microscópico",
-        "body": "Los gases se comportan de forma diferente a los sólidos y líquidos: ocupan todo el volumen disponible, se comprimen fácilmente y se mezclan por completo.\n\nEl **modelo de gas ideal** supone:\n- Las partículas son puntuales (su tamaño es despreciable frente a la distancia entre ellas).\n- No hay fuerzas de atracción ni repulsión entre partículas.\n- Los choques son perfectamente elásticos (no pierden energía).\n- La energía cinética media es proporcional a la temperatura absoluta.\n\nEste modelo funciona bien para gases a **baja presión** y **alta temperatura** (condiciones en las que las partículas están muy separadas). Se aleja de la realidad cuando el gas está a punto de licuarse.\n\nLa ecuación que resume todo el comportamiento del gas ideal es:\n\n$$PV = nRT$$",
+        "body": "Un gas ocupa todo el recipiente, se comprime con facilidad y se mezcla con otros gases. Para describirlo usamos un modelo sencillo: las partículas tienen un volumen despreciable, no se atraen entre sí y sus choques no pierden energía.\n\nEste modelo es una buena aproximación cuando el gas está a **baja presión** y **alta temperatura**, porque las partículas están muy separadas. Cerca de la licuefacción deja de ser fiable.",
         "formula": "$pV=nRT$",
         "assets": [
           {
@@ -1014,26 +1014,28 @@
       },
       {
         "title": "Leyes particulares y la constante R",
-        "body": "Cuando una variable se mantiene constante, $PV = nRT$ se simplifica:\n\n**Ley de Boyle** ($T$, $n$ constantes): $P_1V_1 = P_2V_2$\nSi comprimes un gas (reduces V), su presión aumenta. Ejemplo: una jeringuilla tapada.\n\n**Ley de Charles** ($P$, $n$ constantes): $\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$\nSi calientas un gas, su volumen aumenta. Ejemplo: un globo que se hincha al calentarse.\n\n**Ley de Gay-Lussac** ($V$, $n$ constantes): $\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$\nSi calientas un gas en un recipiente rígido, su presión aumenta. Ejemplo: una olla a presión.\n\nEn todas, la temperatura debe estar en **kelvin**: $T(K) = T(°C) + 273$.\n\nLa constante $R$:\n- $R = 0{,}082$ atm·L/(mol·K) → si P en atm y V en L.\n- $R = 8{,}314$ J/(mol·K) → si P en Pa y V en m³.",
+        "body": "Cuando se mantiene constante una de las variables, la ecuación general se convierte en leyes más directas.\n\n- **Boyle**: al comprimir un gas a temperatura constante, su presión aumenta.\n- **Charles**: al calentar un gas a presión constante, su volumen aumenta.\n- **Gay-Lussac**: al calentar un gas en un recipiente rígido, su presión aumenta.\n\nLa temperatura se expresa siempre en **kelvin**. Elige la constante de los gases que sea compatible con las unidades de presión y volumen que estés usando.",
+        "formula": ["$p_1V_1=p_2V_2\\quad(T,n\\text{ constantes})$", "$\\dfrac{V_1}{T_1}=\\dfrac{V_2}{T_2}\\quad(p,n\\text{ constantes})$", "$\\dfrac{p_1}{T_1}=\\dfrac{p_2}{T_2}\\quad(V,n\\text{ constantes})$", "$T(\\mathrm K)=T(^{\\circ}\\mathrm C)+273{,}15$"],
         "assets": [],
         "student_text": "Boyle: P₁V₁ = P₂V₂ (T cte). Charles: V₁/T₁ = V₂/T₂ (P cte). Gay-Lussac: P₁/T₁ = P₂/T₂ (V cte). Siempre T en kelvin."
       },
       {
         "title": "Volumen molar, presión y masa molar de un gas",
-        "body": "En **condiciones normales** (CN): $T = 273$ K (0°C), $P = 1$ atm.\n\nUn dato clave: **un mol de cualquier gas ideal ocupa 22,4 L en CN**. Este es el volumen molar.\n\n$$V_m = \\frac{RT}{P} = \\frac{0{,}082 \\times 273}{1} = 22{,}4 \\text{ L/mol}$$\n\nEsto permite convertir volúmenes de gas en moles y viceversa (solo en CN):\n\n$$n = \\frac{V}{22{,}4}$$\n\nSi no estás en CN, usa $PV = nRT$ directamente.\n\n**Masa molar de un gas** a partir de datos experimentales:\n\n$$M = \\frac{mRT}{PV} = \\frac{dRT}{P}$$\n\nDonde $d$ es la densidad del gas (g/L).\n\nEjemplo: un gas tiene densidad 1,96 g/L en CN.\n$M = \\frac{1{,}96 \\times 0{,}082 \\times 273}{1} = 43{,}9$ g/mol → probablemente CO₂ (M = 44).",
-        "formula": "$\\rho=\\dfrac{pM}{RT}$",
+        "body": "En **condiciones normales** (CN), la temperatura es 273 K y la presión es 1 atm. En esas condiciones, un mol de gas ideal ocupa 22,4 L: es el volumen molar.\n\nEste atajo solo sirve en CN. En cualquier otra situación, utiliza la ecuación general del gas ideal.\n\nTambién se puede hallar la masa molar a partir de la densidad del gas. Por ejemplo, una densidad de 1,96 g/L en CN corresponde aproximadamente a 44 g/mol, como el dióxido de carbono.",
+        "formula": ["$V_\\mathrm{m}=22{,}4\\ \\mathrm{L\\,mol^{-1}}\\quad(0\\ ^{\\circ}\\mathrm C,\\ 1\\ \\mathrm{atm})$", "$n=\\dfrac{V}{22{,}4}\\quad(\\text{solo en CN})$", "$M=\\dfrac{dRT}{p}$", "$\\rho=\\dfrac{pM}{RT}$"],
         "assets": [],
         "student_text": "CN: 273 K, 1 atm → V_molar = 22,4 L/mol. n = V/22,4 solo en CN; si no, PV = nRT. M = dRT/P para hallar M de un gas."
       },
       {
         "title": "Procedimiento",
-        "body": "**Procedimiento para problemas de gases**:\n\n1. Haz una lista de datos: P, V, T, n, m (con unidades).\n2. Convierte: T a kelvin, P y V a las unidades de R que vayas a usar.\n3. Si hay un estado inicial y uno final, identifica qué cambia y qué se mantiene.\n4. Elige la ley adecuada o usa $PV = nRT$.\n5. Despeja y sustituye.\n\nEjemplo: 5 L de O₂ a 25°C y 2 atm. ¿Cuántos moles hay?\n$n = \\frac{PV}{RT} = \\frac{2 \\times 5}{0{,}082 \\times 298} = 0{,}409$ mol\n\n**Límites del modelo**:\n- Falla a alta presión (las partículas están tan juntas que su volumen importa).\n- Falla a baja temperatura (cerca de la licuefacción, las fuerzas intermoleculares dominan).\n- Gas real: se corrige con la ecuación de Van der Waals (2º Bach).",
+        "body": "Sigue siempre el mismo orden:\n\n1. Anota los datos y sus unidades.\n2. Pasa la temperatura a kelvin y adapta presión y volumen a la constante elegida.\n3. Decide si hay un único estado o un cambio entre dos estados.\n4. Elige la ley, despeja la incógnita y revisa si el resultado tiene sentido.\n\n**Ejemplo.** Para 5 L de oxígeno a 25 °C y 2 atm, primero se convierte la temperatura a 298 K y después se calcula la cantidad de sustancia.",
+        "formula": "$n=\\dfrac{pV}{RT}=\\dfrac{2\\cdot5}{0{,}082\\cdot298}=0{,}409\\ \\mathrm{mol}$",
         "assets": [],
         "student_text": "Procedimiento: listar datos, convertir a K y unidades de R, elegir ley, despejar. Límite: falla a alta P y baja T (partículas demasiado juntas)."
       },
       {
         "title": "Límites",
-        "body": "Algunos errores típicos en problemas de gases:\n\n1. **No convertir a kelvin**: 25°C no es lo mismo que 25 K. Si usas Celsius en PV = nRT, el resultado es absurdo.\n\n2. **Mezclar unidades de R**: si usas R = 0,082, la presión debe estar en atm y el volumen en litros. Si usas R = 8,314, P en Pa y V en m³.\n\n3. **Confundir CN con condiciones estándar**: CN = 0°C, 1 atm (para gases). Condiciones estándar termodinámicas = 25°C, 1 bar (para termoquímica). No es lo mismo.\n\n4. **Aplicar V = 22,4n fuera de CN**: este valor solo vale a 0°C y 1 atm.\n\n5. **Olvidar que la ecuación es para gases ideales**: si el problema dice «gas real» o da datos de Van der Waals, PV = nRT no basta.",
+        "body": "Evita estos errores frecuentes:\n\n- **Temperatura:** 25 °C no equivale a 25 K; convierte siempre antes de calcular.\n- **Unidades:** la constante debe ser compatible con la presión y el volumen.\n- **Condiciones normales:** el volumen molar de 22,4 L solo vale a 0 °C y 1 atm. No lo confundas con las condiciones estándar de termoquímica.\n- **Límites del modelo:** a presión alta o temperatura baja, las partículas están demasiado próximas y el gas ideal deja de describir bien el sistema.",
         "assets": [],
         "student_text": "Errores: no convertir a K, mezclar unidades de R, confundir CN (0°C, 1 atm) con estándar (25°C, 1 bar), usar 22,4 fuera de CN."
       }
@@ -1373,18 +1375,18 @@
       }
     ],
     "summary": {
-      "big_idea": "La ecuación de los gases ideales pV=nRT, junto con sus leyes particulares (Boyle, Charles, Gay-Lussac y Avogadro), describe el comportamiento de un gas en condiciones de baja presión y temperatura lejos de la condensación.",
+      "big_idea": "La ecuación de los gases ideales relaciona presión, volumen, cantidad de sustancia y temperatura. Describe bien muchos gases cuando están a baja presión y lejos de la condensación.",
       "key_points": [
-        "Ecuación general: $pV=nRT$, con T siempre en kelvin.",
-        "Leyes particulares: Boyle ($pV=\\text{cte}$), Charles ($V/T=\\text{cte}$), Gay-Lussac ($p/T=\\text{cte}$) y Avogadro ($V/n=\\text{cte}$).",
-        "En condiciones normales (0 °C, 1 atm), el volumen molar de cualquier gas ideal es 22,4 L; la densidad de un gas es $\\rho=\\dfrac{pM}{RT}$.",
+        "La ecuación general relaciona presión, volumen, cantidad de gas y temperatura; esta última se expresa siempre en kelvin.",
+        "Las leyes de Boyle, Charles y Gay-Lussac describen qué ocurre cuando se mantiene constante una de las variables.",
+        "En condiciones normales (0 °C y 1 atm), un mol de gas ideal ocupa 22,4 L.",
         "El modelo ideal es una aproximación que falla más cerca de la condensación o a presión muy alta."
       ],
       "formulas": [
         "$pV=nRT$",
         "$\\rho=\\dfrac{pM}{RT}$"
       ],
-      "what_to_remember_if_nothing_else": "Usa $pV=nRT$ con T en kelvin, elige la R cuyas unidades coincidan con p y V, y comprueba si las condiciones justifican el modelo ideal."
+      "what_to_remember_if_nothing_else": "Convierte siempre la temperatura a kelvin, usa unidades compatibles con la constante elegida y comprueba que el gas puede tratarse como ideal."
     },
     "source_references": [],
     "curriculum_refs": [
