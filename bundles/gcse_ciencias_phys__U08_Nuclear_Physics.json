@@ -84,7 +84,7 @@
         "type": "intuition",
         "title": "What is actually inside an atom",
         "scope": "CORE",
-        "body": "An atom is mostly empty space. Almost all of its mass is packed into a tiny central [[blue:**nucleus**]], built from two kinds of particle: **protons**, each with a relative charge of $+1$, and **neutrons**, with a relative charge of $0$ (no charge at all). Much lighter **electrons**, each with a relative charge of $-1$, exist at a relatively large distance from this nucleus.\n\nBecause a proton and an electron carry equal-sized opposite charges, a neutral atom (one with no overall charge) must have exactly as many electrons as it has protons. Nothing about the neutrons affects this balance, since neutrons carry no charge.",
+        "body": "An atom is mostly empty space. Almost all of its mass is packed into a tiny central [[blue:**nucleus**]], built from two kinds of particle: **protons**, each with a relative charge of $+1$, and **neutrons**, with a relative charge of $0$ (no charge at all).\n\nMuch lighter **electrons**, each with a relative charge of $-1$, exist at a relatively large distance from this nucleus.\n\nBecause a proton and an electron carry equal-sized opposite charges, a neutral atom (one with no overall charge) must have exactly as many electrons as it has protons. Nothing about the neutrons affects this balance, since neutrons carry no charge.",
         "concept_ids": [
           "C-P08-01"
         ],
@@ -107,7 +107,7 @@
         "type": "formalisation",
         "title": "Proton number, nucleon number and nuclide notation",
         "scope": "CORE",
-        "body": "Two counts fix exactly which nuclide (which specific type of nucleus) you are describing:\n\n- The **proton number** (also called the atomic number), symbol $Z$, is the number of protons in the nucleus. It also fixes which element the atom is, since every atom of a given element has the same $Z$.\n- The **nucleon number** (also called the mass number), symbol $A$, is the total number of protons **and** neutrons in the nucleus.\n\nSince $A$ counts protons and neutrons together, the number of neutrons is found by:\n$$N = A - Z$$\n\nA nuclide is written in **nuclide notation** as $^{A}_{Z}X$, with the nucleon number above and the proton number below, immediately to the left of the chemical symbol $X$. For carbon-14, written $^{14}_{6}\\mathrm{C}$: $Z=6$ and $A=14$, so $N = 14-6=8$ neutrons. Check: $6+8=14$, which matches $A$.",
+        "body": "Two counts fix exactly which nuclide (which specific type of nucleus) you are describing:\n\n- The **proton number** (also called the atomic number), symbol $Z$, is the number of protons in the nucleus. It also fixes which element the atom is, since every atom of a given element has the same $Z$.\n- The **nucleon number** (also called the mass number), symbol $A$, is the total number of protons **and** neutrons in the nucleus.\n\nSince $A$ counts protons and neutrons together, the number of neutrons is found by:\n$$N = A - Z$$\n\nA nuclide is written in **nuclide notation** as $^{A}_{Z}X$, with the nucleon number above and the proton number below, immediately to the left of the chemical symbol $X$.\n\nFor carbon-14, written $^{14}_{6}\\mathrm{C}$: $Z=6$ and $A=14$, so $N = 14-6=8$ neutrons. Check: $6+8=14$, which matches $A$.",
         "concept_ids": [
           "C-P08-02",
           "C-P08-03"
@@ -122,7 +122,7 @@
         "type": "worked_rule",
         "title": "Isotopes: same element, different nucleon number",
         "scope": "CORE",
-        "body": "**Isotopes** are nuclides of the same element - so they share exactly the same proton number $Z$ - that have different numbers of neutrons, and therefore different nucleon numbers $A$.\n\nCarbon-12 ($^{12}_{6}\\mathrm{C}$) and carbon-14 ($^{14}_{6}\\mathrm{C}$) are isotopes of carbon: both have $Z=6$, so both are definitely carbon, but carbon-12 has $12-6=6$ neutrons while carbon-14 has $14-6=8$ neutrons. Because the proton number is unchanged, both isotopes have identical chemical behaviour; only their mass, and in some cases their nuclear stability, differs. An element may have several isotopes, and some isotopes are **radioactive** (unstable): carbon-14 is radioactive, while carbon-12 is stable.",
+        "body": "**Isotopes** are nuclides of the same element - so they share exactly the same proton number $Z$ - that have different numbers of neutrons, and therefore different nucleon numbers $A$.\n\nCarbon-12 ($^{12}_{6}\\mathrm{C}$) and carbon-14 ($^{14}_{6}\\mathrm{C}$) are isotopes of carbon: both have $Z=6$, so both are definitely carbon, but carbon-12 has $12-6=6$ neutrons while carbon-14 has $14-6=8$ neutrons.\n\nBecause the proton number is unchanged, both isotopes have identical chemical behaviour; only their mass, and in some cases their nuclear stability, differs.\n\nAn element may have several isotopes, and some isotopes are **radioactive** (unstable): carbon-14 is radioactive, while carbon-12 is stable.",
         "concept_ids": [
           "C-P08-03"
         ],
@@ -136,7 +136,7 @@
         "type": "caveat",
         "title": "A is not the number of electrons",
         "scope": "CORE",
-        "body": "It is tempting to treat the nucleon number $A$ as a total count of 'everything in the atom', including electrons. It is not: $A$ only ever counts protons and neutrons, both of which live in the nucleus. [[blue:The number of electrons in a **neutral** atom equals $Z$, never $A$.]] For sodium-23 ($Z=11$, $A=23$): there are 11 electrons (equal to $Z$) and $23-11=12$ neutrons - and neither of those numbers is 23.",
+        "body": "It is tempting to treat the nucleon number $A$ as a total count of 'everything in the atom', including electrons. It is not: $A$ only ever counts protons and neutrons, both of which live in the nucleus.\n\n[[blue:The number of electrons in a **neutral** atom equals $Z$, never $A$.]] For sodium-23 ($Z=11$, $A=23$): there are 11 electrons (equal to $Z$) and $23-11=12$ neutrons - and neither of those numbers is 23.",
         "concept_ids": [
           "C-P08-02"
         ],
@@ -758,7 +758,7 @@
         "type": "intuition",
         "title": "A detector that 'hears' invisible events",
         "scope": "CORE",
-        "body": "Ionising radiation cannot be seen, heard or felt directly, yet a detector such as a Geiger-Muller tube can register each individual ionising event as it happens. Each time radiation passes through the tube and ionises the gas inside it, the tube produces a tiny electrical pulse, which a connected [[blue:**counter** registers as one **count**]] - often heard as a single click through a loudspeaker.\n\nThe counter does not know, and does not need to know, exactly what produced any one click. It simply adds up how many ionising events have been detected.",
+        "body": "Ionising radiation cannot be seen, heard or felt directly, yet a detector such as a Geiger-Muller tube can register each individual ionising event as it happens.\n\nEach time radiation passes through the tube and ionises the gas inside it, the tube produces a tiny electrical pulse, which a connected [[blue:**counter** registers as one **count**]] - often heard as a single click through a loudspeaker.\n\nThe counter does not know, and does not need to know, exactly what produced any one click. It simply adds up how many ionising events have been detected.",
         "concept_ids": [
           "C-P08-05"
         ],
@@ -787,7 +787,7 @@
         "type": "formalisation",
         "title": "Count rate: counts divided by time",
         "scope": "CORE",
-        "body": "A plain count on its own (for example, '30 counts') says nothing about how active a source is, because it depends on how long you measured for. The useful quantity is the **count rate**:\n$$\\text{count rate} = \\dfrac{\\text{number of counts}}{\\text{time interval}}$$\nmeasured in counts per second or counts per minute. For example, 30 counts recorded in 10 s gives a count rate of $30\\div10=3$ counts per second. Two readings can only be compared fairly once both have been converted to the same rate unit, measured over the same kind of time interval.",
+        "body": "A plain count on its own (for example, '30 counts') says nothing about how active a source is, because it depends on how long you measured for. The useful quantity is the **count rate**:\n$$\\text{count rate} = \\dfrac{\\text{number of counts}}{\\text{time interval}}$$\nmeasured in counts per second or counts per minute. For example, 30 counts recorded in 10 s gives a count rate of $30\\div10=3$ counts per second.\n\nTwo readings can only be compared fairly once both have been converted to the same rate unit, measured over the same kind of time interval.",
         "concept_ids": [
           "C-P08-07"
         ],
@@ -801,7 +801,7 @@
         "type": "worked_rule",
         "title": "Making a fair comparison, and isolating the source",
         "scope": "CORE",
-        "body": "To find the count rate due to a sample alone, two separate measurements are needed, taken under identical conditions:\n\n1. Measure the count rate with **no** sample present (the background count rate), at a fixed distance from the detector and over a chosen time interval.\n2. Measure the count rate with the sample present, at the **same** distance and over an **equal** time interval.\n3. Subtract: $\\text{count rate due to sample} = \\text{count rate with sample} - \\text{background count rate}$.\n\nKeeping the distance identical between the two measurements matters, because moving the detector closer or further away would change the count rate for reasons that have nothing to do with the sample itself. Counting for an equal time means the two raw counts can be compared directly; if the times differ, each count must first be divided by its own time to give a count rate before subtracting.",
+        "body": "To find the count rate due to a sample alone, two separate measurements are needed, taken under identical conditions:\n\n1. Measure the count rate with **no** sample present (the background count rate), at a fixed distance from the detector and over a chosen time interval.\n2. Measure the count rate with the sample present, at the **same** distance and over an **equal** time interval.\n3. Subtract: $\\text{count rate due to sample} = \\text{count rate with sample} - \\text{background count rate}$.\n\nKeeping the distance identical between the two measurements matters, because moving the detector closer or further away would change the count rate for reasons that have nothing to do with the sample itself.\n\nCounting for an equal time means the two raw counts can be compared directly; if the times differ, each count must first be divided by its own time to give a count rate before subtracting.",
         "concept_ids": [
           "C-P08-06",
           "C-P08-07"
@@ -825,7 +825,7 @@
         "type": "caveat",
         "title": "Ionising radiation is invisible, and background is never exactly zero",
         "scope": "CORE",
-        "body": "Two traps are easy to fall into together: assuming that a detector will read zero with no sample present, and assuming that every click once a sample arrives must come from that sample. Neither is correct. [[blue:A detector almost always registers some background clicks with no sample at all, and it keeps registering roughly that same background rate even once a sample is introduced]] - the sample's clicks simply add on top of it.",
+        "body": "Two traps are easy to fall into together: assuming that a detector will read zero with no sample present, and assuming that every click once a sample arrives must come from that sample.\n\nNeither is correct. [[blue:A detector almost always registers some background clicks with no sample at all, and it keeps registering roughly that same background rate even once a sample is introduced]] - the sample's clicks simply add on top of it.",
         "concept_ids": [
           "C-P08-05",
           "C-P08-06"
@@ -1398,7 +1398,7 @@
         "type": "intuition",
         "title": "Three very different things, all called 'radiation'",
         "scope": "CORE",
-        "body": "An unstable nucleus can emit radiation in three distinct forms. Although all three are grouped together as 'nuclear radiation', they differ completely in what they actually are, how strongly they ionise the matter they pass through, and how far they can travel before being absorbed. [[red:Treating 'radiation' as one single thing, rather than three genuinely different emissions]], is the single biggest source of confusion in this topic.",
+        "body": "An unstable nucleus can emit radiation in three distinct forms. Although all three are grouped together as 'nuclear radiation', they differ completely in what they actually are, how strongly they ionise the matter they pass through, and how far they can travel before being absorbed.\n\n[[red:Treating 'radiation' as one single thing, rather than three genuinely different emissions]], is the single biggest source of confusion in this topic.",
         "concept_ids": [
           "C-P08-08"
         ],
@@ -1450,7 +1450,7 @@
         "type": "worked_rule",
         "title": "Reading absorber evidence to identify an emission",
         "scope": "CORE",
-        "body": "A source's emission type can be identified experimentally by measuring the count rate with no absorber in place, then measuring it again after inserting each absorber in turn (paper, then a few millimetres of aluminium, then thick lead), keeping the distance and counting time fixed between readings:\n\n- a large drop in count rate at the **paper** stage points to alpha;\n- little change with paper, but a large drop at the **aluminium** stage, points to beta;\n- little change with either paper or aluminium, with only a partial reduction even behind **thick lead**, points to gamma.\n\nThis is exactly the same fair-comparison skill from the previous lesson (fixed distance, fixed time), now used to compare readings across different absorbers rather than against background alone.",
+        "body": "A source's emission type can be identified experimentally by measuring the count rate with no absorber in place, then measuring it again after inserting each absorber in turn (paper, then a few millimetres of aluminium, then thick lead),\n\nkeeping the distance and counting time fixed between readings:\n\n- a large drop in count rate at the **paper** stage points to alpha;\n- little change with paper, but a large drop at the **aluminium** stage, points to beta;\n- little change with either paper or aluminium, with only a partial reduction even behind **thick lead**, points to gamma.\n\nThis is exactly the same fair-comparison skill from the previous lesson (fixed distance, fixed time), now used to compare readings across different absorbers rather than against background alone.",
         "concept_ids": [
           "C-P08-10"
         ],
@@ -1464,7 +1464,7 @@
         "type": "caveat",
         "title": "Weak penetration does not mean 'always safe'",
         "scope": "CORE",
-        "body": "It is tempting to call alpha 'the safe one', since it is stopped by something as thin as paper, and to assume gamma is 'the dangerous one' because it travels furthest. From outside the body, that ranking is broadly right. But [[red:alpha's strong ionising ability makes it especially damaging if the source gets **inside** the body]] (for example, swallowed or inhaled), where there is no longer any paper or skin to stop it before it reaches living cells. Penetrating power through external materials is not the same question as overall risk, which also depends on how and where exposure happens - an idea developed further when safe use is covered.",
+        "body": "It is tempting to call alpha 'the safe one', since it is stopped by something as thin as paper, and to assume gamma is 'the dangerous one' because it travels furthest.\n\nFrom outside the body, that ranking is broadly right. But [[red:alpha's strong ionising ability makes it especially damaging if the source gets **inside** the body]] (for example, swallowed or inhaled), where there is no longer any paper or skin to stop it before it reaches living cells.\n\nPenetrating power through external materials is not the same question as overall risk, which also depends on how and where exposure happens - an idea developed further when safe use is covered.",
         "concept_ids": [
           "C-P08-09"
         ],
@@ -2064,7 +2064,7 @@
         "type": "intuition",
         "title": "Random for one nucleus, predictable for billions",
         "scope": "CORE",
-        "body": "**Radioactive decay** is a change in an unstable nucleus that results in the emission of an alpha particle or a beta particle and/or gamma radiation. It is **spontaneous**: it happens on its own, and heating, compressing or chemically reacting the material does not speed it up or slow it down. It is also **random**: whether, and exactly when, any single unstable nucleus decays cannot be predicted at all: nothing about its past, and nothing you could measure about it, lets you predict the moment it will decay. This is genuinely different from everyday randomness like a die roll, where in principle more information could improve a prediction - a nucleus's decay time cannot be predicted even in principle.\n\nYet a sample containing billions of identical unstable nuclei behaves in a completely predictable way as a whole: on average, half of however many nuclei are present right now will have decayed after one [[blue:**half-life**]], whatever that half-life happens to be. This is the same pattern that makes a huge number of random coin flips land close to half heads, even though no individual flip can be predicted. Randomness at the level of one nucleus and predictability at the level of a large population are not a contradiction - they are two different, equally true, descriptions of the same process, one of the most important ideas in this entire topic.",
+        "body": "**Radioactive decay** is a change in an unstable nucleus that results in the emission of an alpha particle or a beta particle and/or gamma radiation. It is **spontaneous**: it happens on its own, and heating, compressing or chemically reacting the material does not speed it up or slow it down. It is also **random**: whether, and exactly when, any single unstable nucleus decays cannot be predicted at all: nothing about its past, and nothing you could measure about it, lets you predict the moment it will decay. This is genuinely different from everyday randomness like a die roll, where in principle more information could improve a prediction - a nucleus's decay time cannot be predicted even in principle.\n\nYet a sample containing billions of identical unstable nuclei behaves in a completely predictable way as a whole: on average, half of however many nuclei are present right now will have decayed after one [[blue:**half-life**]], whatever that half-life happens to be.\n\nThis is the same pattern that makes a huge number of random coin flips land close to half heads, even though no individual flip can be predicted.\n\nRandomness at the level of one nucleus and predictability at the level of a large population are not a contradiction - they are two different, equally true, descriptions of the same process, one of the most important ideas in this entire topic.",
         "concept_ids": [
           "C-P08-11"
         ],
@@ -2093,7 +2093,7 @@
         "type": "formalisation",
         "title": "Half-life: the time for half of a sample to decay",
         "scope": "CORE",
-        "body": "The **half-life** of a radioactive isotope is the time taken for half of the unstable nuclei present, at any chosen starting moment, to decay. Equivalently, since activity (or a measured count rate, under fixed geometry) is proportional to how many unstable nuclei remain, the half-life is also the time for the activity or count rate to fall to half its previous value.\n\nFor a sample with an initial count rate of $80$ counts/min and a half-life of $5$ minutes: after one half-life (5 min), the count rate is $80\\div2=40$ counts/min; after two half-lives (10 min), it is $40\\div2=20$ counts/min. Each half-life halves whatever value was present at the start of that half-life - not the original starting value.",
+        "body": "The **half-life** of a radioactive isotope is the time taken for half of the unstable nuclei present, at any chosen starting moment, to decay.\n\nEquivalently, since activity (or a measured count rate, under fixed geometry) is proportional to how many unstable nuclei remain, the half-life is also the time for the activity or count rate to fall to half its previous value.\n\nFor a sample with an initial count rate of $80$ counts/min and a half-life of $5$ minutes: after one half-life (5 min), the count rate is $80\\div2=40$ counts/min;\n\nafter two half-lives (10 min), it is $40\\div2=20$ counts/min. Each half-life halves whatever value was present at the start of that half-life - not the original starting value.",
         "concept_ids": [
           "C-P08-13"
         ],
@@ -2116,7 +2116,7 @@
         "type": "derivation",
         "title": "Writing and balancing a nuclide equation",
         "scope": "ADVANCED",
-        "body": "A decay can be written as a nuclide equation, with the parent nucleus on the left and the daughter nucleus plus the emitted particle on the right. The nucleon numbers must add up to the same total on both sides, and so must the proton numbers - nothing is created or destroyed, only rearranged.\n\n**Alpha decay:** $^{A}_{Z}X \\rightarrow\\ ^{A-4}_{Z-2}Y + {}^{4}_{2}\\mathrm{He}$\n\nFor uranium-238 ($Z=92$): $^{238}_{92}\\mathrm{U}\\rightarrow\\ ^{234}_{90}\\mathrm{Th} + {}^{4}_{2}\\mathrm{He}$. Check nucleon numbers: $234+4=238$. Check proton numbers: $90+2=92$.\n\n**Beta-minus decay:** $^{A}_{Z}X \\rightarrow\\ ^{A}_{Z+1}Y + {}^{0}_{-1}e$\n\nFor carbon-14 ($Z=6$): $^{14}_{6}\\mathrm{C}\\rightarrow\\ ^{14}_{7}\\mathrm{N} + {}^{0}_{-1}e$. Check nucleon numbers: $14+0=14$. Check proton numbers: $7+(-1)=6$.\n\n**Gamma emission** (from an already-formed excited nucleus): $^{A}_{Z}X^{*} \\rightarrow\\ ^{A}_{Z}X + \\gamma$, with $A$ and $Z$ unchanged on both sides.",
+        "body": "A decay can be written as a nuclide equation, with the parent nucleus on the left and the daughter nucleus plus the emitted particle on the right.\n\nThe nucleon numbers must add up to the same total on both sides, and so must the proton numbers - nothing is created or destroyed, only rearranged.\n\n**Alpha decay:** $^{A}_{Z}X \\rightarrow\\ ^{A-4}_{Z-2}Y + {}^{4}_{2}\\mathrm{He}$\n\nFor uranium-238 ($Z=92$): $^{238}_{92}\\mathrm{U}\\rightarrow\\ ^{234}_{90}\\mathrm{Th} + {}^{4}_{2}\\mathrm{He}$. Check nucleon numbers: $234+4=238$. Check proton numbers: $90+2=92$.\n\n**Beta-minus decay:** $^{A}_{Z}X \\rightarrow\\ ^{A}_{Z+1}Y + {}^{0}_{-1}e$\n\nFor carbon-14 ($Z=6$): $^{14}_{6}\\mathrm{C}\\rightarrow\\ ^{14}_{7}\\mathrm{N} + {}^{0}_{-1}e$. Check nucleon numbers: $14+0=14$. Check proton numbers: $7+(-1)=6$.\n\n**Gamma emission** (from an already-formed excited nucleus): $^{A}_{Z}X^{*} \\rightarrow\\ ^{A}_{Z}X + \\gamma$, with $A$ and $Z$ unchanged on both sides.",
         "concept_ids": [
           "C-P08-12"
         ],
@@ -2130,7 +2130,7 @@
         "type": "caveat",
         "title": "Why beta-minus decay happens: a neutron becomes a proton",
         "scope": "ADVANCED",
-        "body": "Beta-minus decay happens because, inside the nucleus, a neutron spontaneously changes into a proton, with a fast-moving electron released as the beta particle. This explains exactly the pattern seen above: [[blue:a neutron turning into a proton leaves the total number of nucleons unchanged (a neutron is simply replaced by a proton), while the proton number rises by exactly 1.]] No proton is destroyed and no new nucleon appears from nowhere - one type of nucleon is converted into the other.",
+        "body": "Beta-minus decay happens because, inside the nucleus, a neutron spontaneously changes into a proton, with a fast-moving electron released as the beta particle.\n\nThis explains exactly the pattern seen above: [[blue:a neutron turning into a proton leaves the total number of nucleons unchanged (a neutron is simply replaced by a proton),\n\nwhile the proton number rises by exactly 1.]] No proton is destroyed and no new nucleon appears from nowhere - one type of nucleon is converted into the other.",
         "concept_ids": [
           "C-P08-11"
         ],
@@ -2317,7 +2317,7 @@
           "Read off the time at which the curve reaches that halved value: that time is the half-life.",
           "Find how many half-lives fit into 24 hours, then halve the starting activity once for each of them."
         ],
-        "solution": "At $t=0$ the curve starts at $80$ Bq, so half of this is $40$ Bq. The curve passes through $40$ Bq at $t=6$ h, so the half-life is $6$ hours. In 24 hours, $24\\div6=4$ half-lives pass, so the activity halves four times: $80\\to40\\to20\\to10\\to5$, giving $5$ Bq after 24 hours.",
+        "solution": "At $t=0$ the curve starts at $80$ Bq, so half of this is $40$ Bq. The curve passes through $40$ Bq at $t=6$ h, so the half-life is $6$ hours.\n\nIn 24 hours, $24\\div6=4$ half-lives pass, so the activity halves four times: $80\\to40\\to20\\to10\\to5$, giving $5$ Bq after 24 hours.",
         "interpretation": "Check: $80\\div2^4=80\\div16=5$ Bq, and the curve does indeed pass close to $5$ Bq at the right-hand edge of the graph. Any pair of points on the curve would give the same half-life - from $40$ Bq at 6 h to $20$ Bq at 12 h is again 6 hours.",
         "common_mistake": "Reading the time at which the curve looks as if it has reached zero and calling that the half-life, instead of the time for the activity to fall to half its value.",
         "objective_ids": [
@@ -2841,7 +2841,7 @@
         "type": "intuition",
         "title": "Choosing radiation the way you would choose a tool",
         "scope": "CORE",
-        "body": "Every practical use of radioactive sources in this lesson comes down to the same question already practised in earlier lessons: [[blue:which type of radiation has the right ionising ability and the right penetration for this particular job]]? A source that is too weakly penetrating, or too strongly ionising for the situation, is simply the wrong tool, in exactly the same way a screwdriver is the wrong tool for hammering a nail - not because it is a worse tool overall, but because it does not match the task.",
+        "body": "Every practical use of radioactive sources in this lesson comes down to the same question already practised in earlier lessons: [[blue:which type of radiation has the right ionising ability and the right penetration for this particular job]]?\n\nA source that is too weakly penetrating, or too strongly ionising for the situation, is simply the wrong tool, in exactly the same way a screwdriver is the wrong tool for hammering a nail - not because it is a worse tool overall,\n\nbut because it does not match the task.",
         "concept_ids": [
           "C-P08-14"
         ],
@@ -2869,7 +2869,7 @@
         "type": "worked_rule",
         "title": "Why a thickness gauge needs partial penetration",
         "scope": "CORE",
-        "body": "A thickness gauge only works if the detector's reading actually changes when the material's thickness changes. If the radiation were always fully stopped by the material (too weakly penetrating, like alpha through several millimetres of steel), the detector would read zero regardless of thickness, giving no useful information. If the radiation passed through almost unaffected (too penetrating, like gamma through thin paper), a small change in thickness would barely move the reading either. A source that is **partly** absorbed - enough that small thickness changes shift the detector's count rate noticeably - is what makes the gauge sensitive.",
+        "body": "A thickness gauge only works if the detector's reading actually changes when the material's thickness changes.\n\nIf the radiation were always fully stopped by the material (too weakly penetrating, like alpha through several millimetres of steel), the detector would read zero regardless of thickness, giving no useful information.\n\nIf the radiation passed through almost unaffected (too penetrating, like gamma through thin paper), a small change in thickness would barely move the reading either.\n\nA source that is **partly** absorbed - enough that small thickness changes shift the detector's count rate noticeably - is what makes the gauge sensitive.",
         "concept_ids": [
           "C-P08-14"
         ],
@@ -2892,7 +2892,7 @@
         "type": "formalisation",
         "title": "Biological harm and reducing exposure",
         "scope": "CORE",
-        "body": "Ionisation can damage the molecules inside a living cell, including its DNA. This can kill the cell outright, or cause a mutation that survives and is copied as the cell divides; enough accumulated mutation can eventually lead to cancer. The biological risk from a given exposure depends on the total dose received, which in turn depends on the source's activity, the type of radiation, and how long and how closely a person is exposed to it.\n\nExposure is reduced using three separate, complementary precautions, normally combined:\n\n- **Time**: limiting how long anyone spends near a source reduces the total dose received.\n- **Distance**: increasing the distance between a person and a source reduces their exposure.\n- **Shielding**: placing an appropriate absorbing material (matched to the radiation type, as in an earlier lesson) between the person and the source reduces the amount reaching them.\n\nIn practice, all three are used together. In a school laboratory, for example, sources are stored in lead-lined boxes (shielding), moved and used with long-handled tongs, held at arm's length and never pointed at anyone (distance), and returned to their box as soon as the experiment is finished (time).",
+        "body": "Ionisation can damage the molecules inside a living cell, including its DNA. This can kill the cell outright, or cause a mutation that survives and is copied as the cell divides;\n\nenough accumulated mutation can eventually lead to cancer. The biological risk from a given exposure depends on the total dose received, which in turn depends on the source's activity,\n\nthe type of radiation, and how long and how closely a person is exposed to it.\n\nExposure is reduced using three separate, complementary precautions, normally combined:\n\n- **Time**: limiting how long anyone spends near a source reduces the total dose received.\n- **Distance**: increasing the distance between a person and a source reduces their exposure.\n- **Shielding**: placing an appropriate absorbing material (matched to the radiation type, as in an earlier lesson) between the person and the source reduces the amount reaching them.\n\nIn practice, all three are used together. In a school laboratory, for example, sources are stored in lead-lined boxes (shielding), moved and used with long-handled tongs,\n\nheld at arm's length and never pointed at anyone (distance), and returned to their box as soon as the experiment is finished (time).",
         "concept_ids": [
           "C-P08-15",
           "C-P08-16"
@@ -2907,7 +2907,7 @@
         "type": "connection",
         "title": "Choosing a short half-life for a medical tracer",
         "scope": "CORE",
-        "body": "A medical tracer is deliberately chosen to have a short half-life, rather than one lasting years. Because activity falls away quickly for a short-half-life isotope, the patient's total radiation dose from the tracer falls away quickly too, once the scan is complete - rather than continuing to expose the patient for a long time afterwards, as a long-half-life isotope would. This links half-life directly to minimising biological risk (this lesson): a 'useful' amount of radiation for the scan itself, followed promptly by a sharply falling dose.",
+        "body": "A medical tracer is deliberately chosen to have a short half-life, rather than one lasting years.\n\nBecause activity falls away quickly for a short-half-life isotope, the patient's total radiation dose from the tracer falls away quickly too, once the scan is complete - rather than continuing to expose the patient for a long time afterwards, as a long-half-life isotope would.\n\nThis links half-life directly to minimising biological risk (this lesson): a 'useful' amount of radiation for the scan itself, followed promptly by a sharply falling dose.",
         "concept_ids": [
           "C-P08-15"
         ],
@@ -2983,7 +2983,7 @@
           "Inside the smoke chamber, alpha's very short range in air is enough to create a steady ionisation current that smoke can interrupt.",
           "Against several millimetres of steel, alpha would be completely stopped regardless of the exact thickness, giving a reading of zero whatever the thickness actually is."
         ],
-        "solution": "In the smoke alarm, alpha's short range is exactly matched to the small chamber's scale, so it works well. Against a steel sheet several millimetres thick, alpha would be absorbed before the thickness could have any further effect on the count rate, so the gauge could never detect a thickness change this way.",
+        "solution": "In the smoke alarm, alpha's short range is exactly matched to the small chamber's scale, so it works well.\n\nAgainst a steel sheet several millimetres thick, alpha would be absorbed before the thickness could have any further effect on the count rate, so the gauge could never detect a thickness change this way.",
         "interpretation": "The same property (short range) is an advantage in one context and a complete failure in the other - matching penetration to the actual distances involved is what matters, not a fixed ranking of 'better' or 'worse'.",
         "common_mistake": "Concluding that alpha must be unsuitable for any application at all, rather than recognising it depends on the distances and materials actually involved.",
         "objective_ids": [
@@ -3007,8 +3007,8 @@
           "More material absorbs more beta radiation, so a thicker sheet gives a lower count rate and a thinner sheet gives a higher count rate.",
           "Because the count rate changes in one consistent direction with thickness, any particular reading can be matched back to a particular thickness."
         ],
-        "solution": "If the count rate drops below the target value, the sheet has become too thick, and rollers can be adjusted to thin it; if the count rate rises above the target value, the sheet has become too thin, and rollers can be adjusted to thicken it. The steady, monotonic fall in count rate with thickness is exactly what makes this a reliable control signal.",
-        "interpretation": "This only works because the count rate keeps changing noticeably across the whole range of thicknesses being monitored - a gauge where the count rate had already dropped to (near) zero partway through this range would give no further useful information beyond that point.",
+        "solution": "If the count rate drops below the target value, the sheet has become too thick, and rollers can be adjusted to thin it;\n\nif the count rate rises above the target value, the sheet has become too thin, and rollers can be adjusted to thicken it. The steady, monotonic fall in count rate with thickness is exactly what makes this a reliable control signal.",
+        "interpretation": "This only works because the count rate keeps changing noticeably across the whole range of thicknesses being monitored - a gauge where the count rate had already dropped to (near)\n\nzero partway through this range would give no further useful information beyond that point.",
         "common_mistake": "Assuming the gauge simply reports the thickness as a number, rather than recognising that a falling or rising count rate is what the machine actually uses to automatically correct the rollers.",
         "objective_ids": [
           "LO-P08-05-1"
