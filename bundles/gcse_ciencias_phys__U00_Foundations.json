@@ -1,0 +1,1617 @@
+{
+  "01_Units_prefixes_and_scientific_notation.json": {
+    "id": "FOUND-01",
+    "title": "Units, prefixes and scientific notation",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "curriculum": "GCSE/IGCSE",
+    "estimated_length": "45 min",
+    "estimated_difficulty": 1,
+    "objectives": [
+      {
+        "id": "LO-FOUND-01-1",
+        "statement": "State the seven SI base quantities and their units."
+      },
+      {
+        "id": "LO-FOUND-01-2",
+        "statement": "Convert between SI prefixes (tera, giga, mega, kilo, centi, milli, micro, nano)."
+      },
+      {
+        "id": "LO-FOUND-01-3",
+        "statement": "Express numbers in standard form (scientific notation) and convert between standard form and ordinary numbers."
+      },
+      {
+        "id": "LO-FOUND-01-4",
+        "statement": "Use correct units throughout a calculation and check that the final answer has the right unit."
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-FOUND-01-1",
+        "stem": "Convert 3500 m to km.",
+        "answer": "3.5 km"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TB-FOUND-01-01",
+        "type": "concept",
+        "title": "Why units matter in physics",
+        "scope": "CORE",
+        "content": "Physics is the science of measurement. Every measurement has two parts: a **number** and a **unit**. Writing '25' by itself is meaningless in physics — you must say 25 what. Is it 25 metres, 25 seconds, 25 kilograms? The unit tells us what physical quantity we are talking about and what scale we are using.\n\nIn 1999, NASA lost the $125 million Mars Climate Orbiter because one engineering team used imperial units (pounds of force) while another used metric units (newtons). The spacecraft approached Mars at the wrong altitude and was destroyed. This real disaster shows why using correct, agreed-upon units is not just an exam requirement — it is essential for safety and accuracy.\n\nIn your GCSE Physics exam, you will **lose marks** if you leave out units or use the wrong ones. Getting into the habit of always writing units is one of the simplest ways to pick up marks.",
+        "assets": [
+          {
+            "id": "diagram_found_01_01",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-14 -14 528 328\" fill=\"#0b1f3a\" role=\"img\" data-nebula-svg=\"2026-10\" width=\"528\" height=\"328\"><rect x=\"-14\" y=\"-14\" width=\"528\" height=\"328\" fill=\"#f6f8fb\" data-nebula-background=\"true\"/><title>01_Units_prefixes_and_scientific_notation.json</title><rect x=\"0\" y=\"0\" width=\"500\" height=\"300\" fill=\"#f6f8fb\"/><text x=\"250\" y=\"30\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">SI Base Quantities and Units</text><rect x=\"30\" y=\"50\" width=\"200\" height=\"30\" fill=\"#2e7d5b\" rx=\"4\"/><text x=\"130\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" fill=\"#f6f8fb\" font-weight=\"bold\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Quantity</text><rect x=\"240\" y=\"50\" width=\"100\" height=\"30\" fill=\"#2e7d5b\" rx=\"4\"/><text x=\"290\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" fill=\"#f6f8fb\" font-weight=\"bold\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Unit</text><rect x=\"350\" y=\"50\" width=\"120\" height=\"30\" fill=\"#2e7d5b\" rx=\"4\"/><text x=\"410\" y=\"70\" text-anchor=\"middle\" font-size=\"13\" fill=\"#f6f8fb\" font-weight=\"bold\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Symbol</text><rect x=\"30\" y=\"85\" width=\"200\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"130\" y=\"103\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Length</text><rect x=\"240\" y=\"85\" width=\"100\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"290\" y=\"103\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">metre</text><rect x=\"350\" y=\"85\" width=\"120\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"410\" y=\"103\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">m</text><rect x=\"30\" y=\"115\" width=\"200\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"130\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Mass</text><rect x=\"240\" y=\"115\" width=\"100\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"290\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">kilogram</text><rect x=\"350\" y=\"115\" width=\"120\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"410\" y=\"133\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">kg</text><rect x=\"30\" y=\"145\" width=\"200\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"130\" y=\"163\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Time</text><rect x=\"240\" y=\"145\" width=\"100\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"290\" y=\"163\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">second</text><rect x=\"350\" y=\"145\" width=\"120\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"410\" y=\"163\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">s</text><rect x=\"30\" y=\"175\" width=\"200\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"130\" y=\"193\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Electric current</text><rect x=\"240\" y=\"175\" width=\"100\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"290\" y=\"193\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">ampere</text><rect x=\"350\" y=\"175\" width=\"120\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"410\" y=\"193\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">A</text><rect x=\"30\" y=\"205\" width=\"200\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"130\" y=\"223\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Temperature</text><rect x=\"240\" y=\"205\" width=\"100\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"290\" y=\"223\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">kelvin</text><rect x=\"350\" y=\"205\" width=\"120\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"410\" y=\"223\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">K</text><rect x=\"30\" y=\"235\" width=\"200\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"130\" y=\"253\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Amount of substance</text><rect x=\"240\" y=\"235\" width=\"100\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"290\" y=\"253\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">mole</text><rect x=\"350\" y=\"235\" width=\"120\" height=\"25\" fill=\"#f6f8fb\"/><text x=\"410\" y=\"253\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">mol</text><rect x=\"30\" y=\"265\" width=\"200\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"130\" y=\"283\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Luminous intensity</text><rect x=\"240\" y=\"265\" width=\"100\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"290\" y=\"283\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">candela</text><rect x=\"350\" y=\"265\" width=\"120\" height=\"25\" fill=\"#e4eaf0\"/><text x=\"410\" y=\"283\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">cd</text></svg>",
+            "caption": "The seven SI base quantities, their units and symbols. At GCSE you mainly use length (m), mass (kg), time (s), electric current (A) and temperature (K or $^{\\circ}$C).",
+            "purpose": "reference table for SI base units"
+          }
+        ]
+      },
+      {
+        "id": "TB-FOUND-01-02",
+        "type": "concept",
+        "title": "SI base units and derived units",
+        "scope": "CORE",
+        "content": "The **International System of Units (SI)** is the standard system used by scientists worldwide. It is built on seven **base quantities**, each with its own **base unit**:\n\n- **Length** — metre (m)\n- **Mass** — kilogram (kg)\n- **Time** — second (s)\n- **Electric current** — ampere (A)\n- **Temperature** — kelvin (K)\n- **Amount of substance** — mole (mol)\n- **Luminous intensity** — candela (cd)\n\nAt GCSE, you mainly use the first five. Notice that the base unit of mass is the **kilogram**, not the gram — this is the only base unit that already contains a prefix.\n\nAll other units are **derived** from these base units by combining them:\n- Speed = distance / time, so its unit is m/s (metres per second).\n- Force = mass × acceleration, so its unit is kg·m/s², which we call the **newton** (N).\n- Energy = force × distance, so its unit is kg·m²/s², which we call the **joule** (J).\n- Power = energy / time, so its unit is J/s, which we call the **watt** (W).\n- Pressure = force / area, so its unit is N/m², which we call the **pascal** (Pa).\n- Electric charge = current × time, so its unit is A·s, which we call the **coulomb** (C).\n- Potential difference = energy / charge, so its unit is J/C, which we call the **volt** (V).\n- Resistance = p.d. / current, so its unit is V/A, which we call the **ohm** (Ω).\n\n**Exam tip:** When a question asks you to show that a formula is 'homogeneous' (that units balance on both sides), substitute the base units into each side and check they match.",
+        "assets": []
+      },
+      {
+        "id": "TB-FOUND-01-03",
+        "type": "concept",
+        "title": "SI prefixes — making numbers manageable",
+        "scope": "CORE",
+        "content": "Very large and very small numbers appear constantly in physics. The distance from the Earth to the Sun is about 150 000 000 000 m. The wavelength of red light is about 0.000 000 7 m. Writing all those zeros is error-prone and hard to read, so we use **prefixes** that represent powers of ten.\n\nHere is the complete table of prefixes you may meet at GCSE, from largest to smallest:\n\n| Prefix | Symbol | Multiplier | Power of 10 | Example |\n|--------|--------|-----------|-------------|----------|\n| tera   | T      | 1 000 000 000 000 | 10¹² | 1 THz = 10¹² Hz |\n| giga   | G      | 1 000 000 000 | 10⁹ | 1 GW = 10⁹ W |\n| mega   | M      | 1 000 000 | 10⁶ | 1 MJ = 10⁶ J |\n| kilo   | k      | 1 000 | 10³ | 1 km = 1000 m |\n| (none) |        | 1 | 10⁰ | 1 m |\n| centi  | c      | 0.01 | 10⁻² | 1 cm = 0.01 m |\n| milli  | m      | 0.001 | 10⁻³ | 1 mm = 0.001 m |\n| micro  | μ      | 0.000 001 | 10⁻⁶ | 1 μm = 10⁻⁶ m |\n| nano   | n      | 0.000 000 001 | 10⁻⁹ | 1 nm = 10⁻⁹ m |\n\n**How to convert:** To convert from a prefixed unit to the base unit, **multiply** by the prefix value. To convert from the base unit to a prefixed unit, **divide** by the prefix value.\n\n**Examples of converting to base units:**\n- 5.2 km = 5.2 × 1000 = 5200 m\n- 350 mA = 350 × 0.001 = 0.350 A\n- 4.7 μm = 4.7 × 10⁻⁶ = 0.0000047 m\n- 2.1 GHz = 2.1 × 10⁹ = 2 100 000 000 Hz\n\n**Examples of converting to prefixed units:**\n- 0.045 A = 0.045 / 0.001 = 45 mA\n- 7 500 000 J = 7 500 000 / 1 000 000 = 7.5 MJ\n- 0.000 032 m = 0.000 032 / 0.000 001 = 32 μm\n\n**Common exam pitfall:** Students confuse 'milli' (m, × 10⁻³) with 'micro' (μ, × 10⁻⁶). Remember: milli means one thousandth, micro means one millionth. A millimetre is a thousand times bigger than a micrometre.\n\n**Another pitfall:** The prefix 'M' (capital) means mega (× 10⁶), but 'm' (lowercase) means milli (× 10⁻³). Case matters! MW means megawatts; mW means milliwatts. They differ by a factor of 10⁹.",
+        "assets": []
+      },
+      {
+        "id": "TB-FOUND-01-04",
+        "type": "concept",
+        "title": "Standard form (scientific notation)",
+        "scope": "CORE",
+        "content": "**Standard form** (also called scientific notation) is a way of writing very large or very small numbers as:\n\n$$a \\times 10^n$$\n\nwhere $1 \\le a < 10$ (a number with exactly **one non-zero digit** before the decimal point) and $n$ is an integer (positive, negative, or zero).\n\n**How to write a number in standard form:**\n\n1. Move the decimal point until there is exactly one non-zero digit before it.\n2. Count how many places you moved the decimal point — this gives the power $n$.\n3. If you moved the decimal point **to the left**, $n$ is **positive**.\n4. If you moved the decimal point **to the right**, $n$ is **negative**.\n\n**Examples:**\n\n- 150 000 000 000 m: move the decimal point 11 places left → $1.5 \\times 10^{11}$ m\n- 0.000 000 7 m: move the decimal point 7 places right → $7 \\times 10^{-7}$ m\n- 3 200: move 3 places left → $3.2 \\times 10^{3}$\n- 0.0052: move 3 places right → $5.2 \\times 10^{-3}$\n- 6.4: already has one digit before the point → $6.4 \\times 10^{0}$\n\n**Converting back from standard form to ordinary numbers:**\n\n- $3.0 \\times 10^{4}$: move the decimal point 4 places right → 30 000\n- $8.5 \\times 10^{-3}$: move the decimal point 3 places left → 0.0085\n\n**Multiplying and dividing in standard form:**\n\nTo multiply: multiply the number parts, then add the powers.\n$$( 3 \\times 10^{4} ) \\times ( 2 \\times 10^{3} ) = 6 \\times 10^{7}$$\n\nTo divide: divide the number parts, then subtract the powers.\n$$( 8 \\times 10^{6} ) \\div ( 4 \\times 10^{2} ) = 2 \\times 10^{4}$$\n\nIf the number part ends up outside the range 1 to 10, adjust:\n$$( 5 \\times 10^{3} ) \\times ( 4 \\times 10^{2} ) = 20 \\times 10^{5} = 2.0 \\times 10^{6}$$\n\n**On your calculator:** Use the EXP or ×10ⁿ button. To enter $3.5 \\times 10^{8}$, press: 3.5 EXP 8. Do **not** type '× 10' separately — that would multiply by 10 twice.\n\n**Exam tip:** Always give your final answer in standard form when the question asks for it, or when the answer has more than about 4 digits. Make sure there is exactly one non-zero digit before the decimal point.",
+        "assets": []
+      }
+    ],
+    "keywords": [
+      "SI units",
+      "base units",
+      "derived units",
+      "prefix",
+      "kilo",
+      "mega",
+      "giga",
+      "milli",
+      "micro",
+      "nano",
+      "standard form",
+      "scientific notation",
+      "powers of ten"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FOUND-01-1",
+        "statement": "Convert $4.7\\,\\mathrm{km}$ to metres, then express the result in standard form.",
+        "solution": "**Step 1:** Identify the prefix. 'kilo' means × 1000 (or × 10³).\n\n**Step 2:** Multiply by the prefix value.\n$$4.7\\,\\mathrm{km} = 4.7 \\times 1000 = 4700\\,\\mathrm{m}$$\n\n**Step 3:** Convert to standard form. Move the decimal point 3 places to the left.\n$$4700 = 4.7 \\times 10^{3}$$\n\n**Answer:** $4.7 \\times 10^{3}\\,\\mathrm{m}$"
+      },
+      {
+        "id": "WE-FOUND-01-2",
+        "statement": "A microchip component has a width of $25\\,\\mu\\mathrm{m}$. Express this in metres in standard form.",
+        "solution": "**Step 1:** Identify the prefix. 'micro' (μ) means × 10⁻⁶.\n\n**Step 2:** Multiply by the prefix value.\n$$25\\,\\mu\\mathrm{m} = 25 \\times 10^{-6}\\,\\mathrm{m}$$\n\n**Step 3:** Adjust to proper standard form (one digit before the decimal point).\n$$25 \\times 10^{-6} = 2.5 \\times 10^{1} \\times 10^{-6} = 2.5 \\times 10^{-5}\\,\\mathrm{m}$$\n\n**Answer:** $2.5 \\times 10^{-5}\\,\\mathrm{m}$"
+      },
+      {
+        "id": "WE-FOUND-01-3",
+        "statement": "A power station generates $850\\,\\mathrm{MW}$ of electrical power. Express this in watts.",
+        "solution": "**Step 1:** Identify the prefix. 'mega' (M) means × 10⁶ = × 1 000 000.\n\n**Step 2:** Multiply.\n$$850\\,\\mathrm{MW} = 850 \\times 10^{6}\\,\\mathrm{W}$$\n\n**Step 3:** Convert to standard form.\n$$850 \\times 10^{6} = 8.5 \\times 10^{2} \\times 10^{6} = 8.5 \\times 10^{8}\\,\\mathrm{W}$$\n\n**Answer:** $8.5 \\times 10^{8}\\,\\mathrm{W}$"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FOUND-01-1",
+        "statement": "Convert $350\\,\\mathrm{mA}$ to amperes.",
+        "hints": [
+          "What does the prefix 'milli' mean?",
+          "Multiply the value by 10⁻³ to convert to the base unit."
+        ],
+        "answer": "$0.350\\,\\mathrm{A}$",
+        "full_solution": "**Principle:** The prefix 'milli' (m) means × 10⁻³ = × 0.001.\n\n**Calculation:**\n$$350\\,\\mathrm{mA} = 350 \\times 10^{-3}\\,\\mathrm{A} = 0.350\\,\\mathrm{A}$$\n\n**Check:** 0.350 A × 1000 = 350 mA ✓\n\n**Answer:** $0.350\\,\\mathrm{A}$"
+      },
+      {
+        "id": "GE-FOUND-01-2",
+        "statement": "Write $0.000\\,045\\,\\mathrm{m}$ in standard form, then express it in micrometres.",
+        "hints": [
+          "Count how many places you move the decimal point to the right to get a number between 1 and 10.",
+          "1 μm = 10⁻⁶ m, so divide by 10⁻⁶ to convert."
+        ],
+        "answer": "$4.5 \\times 10^{-5}\\,\\mathrm{m} = 45\\,\\mu\\mathrm{m}$",
+        "full_solution": "**Standard form:**\nMove the decimal point 5 places to the right: 0.000045 → 4.5\nSo $0.000\\,045 = 4.5 \\times 10^{-5}\\,\\mathrm{m}$\n\n**Converting to micrometres:**\n$1\\,\\mu\\mathrm{m} = 10^{-6}\\,\\mathrm{m}$, so:\n$$4.5 \\times 10^{-5}\\,\\mathrm{m} = \\frac{4.5 \\times 10^{-5}}{10^{-6}}\\,\\mu\\mathrm{m} = 4.5 \\times 10^{1}\\,\\mu\\mathrm{m} = 45\\,\\mu\\mathrm{m}$$\n\n**Answer:** $4.5 \\times 10^{-5}\\,\\mathrm{m} = 45\\,\\mu\\mathrm{m}$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FOUND-01-1",
+        "statement": "Convert each of the following to the SI base unit:\n(a) 7.2 km\n(b) 500 g\n(c) 15 ms\n(d) 2.4 GHz",
+        "answer": "(a) 7200 m  (b) 0.500 kg  (c) 0.015 s  (d) 2.4 × 10⁹ Hz",
+        "full_solution": "**(a)** kilo = × 1000, so 7.2 km = 7.2 × 1000 = **7200 m**\n\n**(b)** No prefix change needed but note: the base SI unit of mass is the kilogram, not the gram. So: 500 g = 500 / 1000 = **0.500 kg**\n\n**(c)** milli = × 10⁻³, so 15 ms = 15 × 10⁻³ = **0.015 s**\n\n**(d)** giga = × 10⁹, so 2.4 GHz = 2.4 × 10⁹ = **2 400 000 000 Hz** = $2.4 \\times 10^{9}\\,\\mathrm{Hz}$"
+      },
+      {
+        "id": "EX-FOUND-01-2",
+        "statement": "Express each of the following in standard form:\n(a) 56 000 000\n(b) 0.000 39\n(c) 101 325\n(d) 0.000 000 007 8",
+        "answer": "(a) 5.6 × 10⁷  (b) 3.9 × 10⁻⁴  (c) 1.01325 × 10⁵  (d) 7.8 × 10⁻⁹",
+        "full_solution": "**(a)** Move decimal 7 places left: 56 000 000 = **$5.6 \\times 10^{7}$**\n\n**(b)** Move decimal 4 places right: 0.000 39 = **$3.9 \\times 10^{-4}$**\n\n**(c)** Move decimal 5 places left: 101 325 = **$1.01325 \\times 10^{5}$**\n\n**(d)** Move decimal 9 places right: 0.000 000 007 8 = **$7.8 \\times 10^{-9}$**"
+      },
+      {
+        "id": "EX-FOUND-01-3",
+        "statement": "Calculate $(3.0 \\times 10^{5}) \\times (4.0 \\times 10^{-2})$. Give your answer in standard form.",
+        "answer": "$1.2 \\times 10^{4}$",
+        "full_solution": "**Step 1:** Multiply the number parts: $3.0 \\times 4.0 = 12$\n\n**Step 2:** Add the powers: $10^{5} \\times 10^{-2} = 10^{5+(-2)} = 10^{3}$\n\n**Step 3:** Combine: $12 \\times 10^{3}$\n\n**Step 4:** Adjust to standard form (one digit before decimal): $12 \\times 10^{3} = 1.2 \\times 10^{1} \\times 10^{3} = 1.2 \\times 10^{4}$\n\n**Answer:** $1.2 \\times 10^{4}$"
+      },
+      {
+        "id": "EX-FOUND-01-4",
+        "statement": "The speed of light is $3.0 \\times 10^{8}\\,\\mathrm{m/s}$. How far does light travel in $5.0\\,\\mathrm{ms}$? Give your answer in km.",
+        "answer": "150 km",
+        "full_solution": "**Step 1:** Convert 5.0 ms to seconds.\n$5.0\\,\\mathrm{ms} = 5.0 \\times 10^{-3}\\,\\mathrm{s}$\n\n**Step 2:** Use distance = speed × time.\n$d = 3.0 \\times 10^{8} \\times 5.0 \\times 10^{-3}$\n$d = (3.0 \\times 5.0) \\times 10^{8+(-3)}$\n$d = 15 \\times 10^{5}$\n$d = 1.5 \\times 10^{6}\\,\\mathrm{m}$\n\n**Step 3:** Convert to km.\n$1.5 \\times 10^{6}\\,\\mathrm{m} = 1.5 \\times 10^{6} / 1000 = 1.5 \\times 10^{3}\\,\\mathrm{km} = 1500\\,\\mathrm{km}$\n\n**Wait — let me recheck.** $1.5 \\times 10^{6} / 10^{3} = 1.5 \\times 10^{3} = 1500\\,\\mathrm{km}$.\n\nActually, recalculating: $3.0 \\times 10^8 \\times 5.0 \\times 10^{-3} = 15.0 \\times 10^5 = 1.5 \\times 10^6\\,\\mathrm{m} = 1500\\,\\mathrm{km}$.\n\n**Answer:** $1500\\,\\mathrm{km}$ or $1.5 \\times 10^{3}\\,\\mathrm{km}$"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MCQ-FOUND-01-1",
+        "stem": "Which of the following correctly expresses $0.000\\,056\\,\\mathrm{m}$ in standard form?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$5.6 \\times 10^{-5}\\,\\mathrm{m}$"
+          },
+          {
+            "key": "B",
+            "text": "$56 \\times 10^{-6}\\,\\mathrm{m}$",
+            "why_wrong": "This is not in standard form because 56 is not between 1 and 10."
+          },
+          {
+            "key": "C",
+            "text": "$5.6 \\times 10^{5}\\,\\mathrm{m}$",
+            "why_wrong": "The power should be negative (the number is less than 1), not positive."
+          },
+          {
+            "key": "D",
+            "text": "$0.56 \\times 10^{-4}\\,\\mathrm{m}$",
+            "why_wrong": "This is not in standard form because 0.56 is less than 1."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Move the decimal point 5 places to the right to get 5.6, so the answer is $5.6 \\times 10^{-5}\\,\\mathrm{m}$."
+      },
+      {
+        "id": "MCQ-FOUND-01-2",
+        "stem": "A current of $250\\,\\mathrm{mA}$ flows through a lamp. What is this current in amperes?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$0.025\\,\\mathrm{A}$",
+            "why_wrong": "This divides by 10 000 instead of 1000."
+          },
+          {
+            "key": "B",
+            "text": "$0.25\\,\\mathrm{A}$"
+          },
+          {
+            "key": "C",
+            "text": "$2.5\\,\\mathrm{A}$",
+            "why_wrong": "This divides by 100 instead of 1000."
+          },
+          {
+            "key": "D",
+            "text": "$25\\,\\mathrm{A}$",
+            "why_wrong": "This divides by 10 instead of 1000."
+          }
+        ],
+        "correct": "B",
+        "explanation": "milli (m) = × 10⁻³, so 250 mA = 250 × 10⁻³ A = 0.25 A."
+      },
+      {
+        "id": "MCQ-FOUND-01-3",
+        "stem": "The SI base unit of mass is the:",
+        "options": [
+          {
+            "key": "A",
+            "text": "gram",
+            "why_wrong": "The gram is commonly used but it is not the SI base unit — the kilogram is."
+          },
+          {
+            "key": "B",
+            "text": "kilogram"
+          },
+          {
+            "key": "C",
+            "text": "newton",
+            "why_wrong": "The newton is the unit of force, not mass."
+          },
+          {
+            "key": "D",
+            "text": "tonne",
+            "why_wrong": "The tonne (1000 kg) is not an SI base unit."
+          }
+        ],
+        "correct": "B",
+        "explanation": "The kilogram (kg) is the SI base unit of mass. It is the only base unit that includes a prefix."
+      },
+      {
+        "id": "MCQ-FOUND-01-4",
+        "stem": "Calculate $(6.0 \\times 10^{3}) \\times (2.0 \\times 10^{-5})$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$1.2 \\times 10^{-1}$"
+          },
+          {
+            "key": "B",
+            "text": "$1.2 \\times 10^{-2}$",
+            "why_wrong": "The powers should be added (3 + (−5) = −2) and the number parts multiplied (6 × 2 = 12 = 1.2 × 10¹), giving 1.2 × 10⁻¹, not 10⁻²."
+          },
+          {
+            "key": "C",
+            "text": "$12 \\times 10^{-2}$",
+            "why_wrong": "Although numerically equal to option A, this is not in standard form."
+          },
+          {
+            "key": "D",
+            "text": "$1.2 \\times 10^{8}$",
+            "why_wrong": "This incorrectly multiplies the powers instead of adding them."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Multiply number parts: 6.0 × 2.0 = 12. Add powers: 3 + (−5) = −2. So 12 × 10⁻² = 1.2 × 10⁻¹."
+      },
+      {
+        "id": "MCQ-FOUND-01-5",
+        "stem": "Which prefix represents a factor of $10^{-6}$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "nano",
+            "why_wrong": "Nano represents 10⁻⁹, which is one thousand times smaller than 10⁻⁶."
+          },
+          {
+            "key": "B",
+            "text": "milli",
+            "why_wrong": "Milli represents 10⁻³, which is one thousand times larger than 10⁻⁶."
+          },
+          {
+            "key": "C",
+            "text": "micro"
+          },
+          {
+            "key": "D",
+            "text": "centi",
+            "why_wrong": "Centi represents 10⁻², which is ten thousand times larger than 10⁻⁶."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Micro (μ) represents 10⁻⁶ = 0.000 001 = one millionth."
+      }
+    ],
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::units_prefixes_scientific_notation",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 1
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": true,
+          "order": 1
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "02_Rearranging_equations.json": {
+    "id": "FOUND-02",
+    "title": "Rearranging equations",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "curriculum": "GCSE/IGCSE",
+    "estimated_length": "45 min",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "id": "LO-FOUND-02-1",
+        "statement": "Rearrange a formula to make any one of its variables the subject."
+      },
+      {
+        "id": "LO-FOUND-02-2",
+        "statement": "Use the formula-triangle method as a quick check for three-variable formulas."
+      },
+      {
+        "id": "LO-FOUND-02-3",
+        "statement": "Substitute numerical values into rearranged formulas and solve, including unit conversions."
+      }
+    ],
+    "prerequisites": [
+      {
+        "lesson_id": "FOUND-01",
+        "description": "Units and standard form"
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-FOUND-02-1",
+        "stem": "Rearrange $v = s / t$ to make $s$ the subject.",
+        "answer": "$s = v \\times t$"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TB-FOUND-02-01",
+        "type": "concept",
+        "title": "What is rearranging and why does it matter?",
+        "scope": "CORE",
+        "content": "Most GCSE Physics calculations start with a formula. Sometimes the formula is already arranged to give you the quantity you need; sometimes it is not. For example, the speed formula is:\n\n$$v = \\frac{s}{t}$$\n\nwhere $v$ = speed, $s$ = distance, $t$ = time.\n\nIf a question asks you to find the **speed**, you can use the formula directly. But what if the question asks for the **distance**? Or the **time**? You need to **rearrange** the formula so that the quantity you want is on its own on one side of the equals sign — we call this making it the **subject** of the formula.\n\n**The golden rule of rearranging:** Whatever you do to one side of the equation, you must do exactly the same to the other side. This keeps the equation balanced, just like a set of scales.\n\n**Operations and their inverses:**\n- Addition ↔ Subtraction (to undo +3, you −3 from both sides)\n- Multiplication ↔ Division (to undo ×t, you ÷t from both sides)\n- Squaring ↔ Square rooting (to undo v², you √ both sides)\n\n**Exam tip:** In GCSE Physics, you must show your rearranged formula BEFORE substituting numbers. Many mark schemes award a separate mark for writing the rearranged equation. If you skip straight to the numbers, you risk losing that mark even if your final answer is correct.",
+        "assets": [
+          {
+            "id": "diagram_found_02_01",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-14 -14 428 308\" fill=\"#0b1f3a\" role=\"img\" data-nebula-svg=\"2026-10\" width=\"428\" height=\"308\"><rect x=\"-14\" y=\"-14\" width=\"428\" height=\"308\" fill=\"#f6f8fb\" data-nebula-background=\"true\"/><title>02_Rearranging_equations.json</title><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" fill=\"#f6f8fb\"/><text x=\"200\" y=\"28\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"bold\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Formula Triangle: speed = distance / time</text><polygon points=\"200,55 80,235 320,235\" fill=\"none\" stroke=\"#0b1f3a\" stroke-width=\"2.5\"/><line x1=\"80\" y1=\"165\" x2=\"320\" y2=\"165\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><line x1=\"200\" y1=\"165\" x2=\"200\" y2=\"235\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><text x=\"200\" y=\"130\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#2e7d5b\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">s</text><text x=\"140\" y=\"210\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#b77916\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">v</text><text x=\"260\" y=\"210\" text-anchor=\"middle\" font-size=\"24\" font-weight=\"bold\" fill=\"#7952a3\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">t</text><text x=\"200\" y=\"265\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Cover the variable you want. What remains is the formula.</text></svg>",
+            "caption": "The formula triangle for $v = s/t$. Cover the variable you want to find: cover $s$ and you see $v \\times t$; cover $v$ and you see $s/t$; cover $t$ and you see $s/v$.",
+            "purpose": "visual mnemonic for the speed-distance-time formula triangle"
+          }
+        ]
+      },
+      {
+        "id": "TB-FOUND-02-02",
+        "type": "concept",
+        "title": "Step-by-step method for rearranging",
+        "scope": "CORE",
+        "content": "Follow these steps every time you need to rearrange a formula:\n\n**Step 1: Write down the original formula.**\n\n**Step 2: Identify what you want to make the subject** (the variable you need to find).\n\n**Step 3: Use inverse operations to isolate the subject.**\n- If the subject is being multiplied by something, divide both sides by that thing.\n- If the subject is being divided by something, multiply both sides by that thing.\n- If something is being added to the subject, subtract it from both sides.\n- If something is being subtracted from the subject, add it to both sides.\n- If the subject is squared, take the square root of both sides.\n\n**Example 1: Rearranging $v = s/t$ to find $s$**\n\nStart: $v = \\dfrac{s}{t}$\n\n$s$ is being divided by $t$. To undo this, multiply both sides by $t$:\n\n$$v \\times t = \\frac{s}{t} \\times t$$\n\nThe $t$'s on the right cancel:\n\n$$s = v \\times t$$\n\n**Example 2: Rearranging $v = s/t$ to find $t$**\n\nStart: $v = \\dfrac{s}{t}$\n\nFirst, multiply both sides by $t$: $v \\times t = s$\n\nNow divide both sides by $v$: $t = \\dfrac{s}{v}$\n\n**Example 3: Rearranging $E_k = \\frac{1}{2}mv^2$ to find $v$**\n\nStart: $E_k = \\frac{1}{2}mv^2$\n\nMultiply both sides by 2: $2E_k = mv^2$\n\nDivide both sides by $m$: $\\dfrac{2E_k}{m} = v^2$\n\nSquare root both sides: $v = \\sqrt{\\dfrac{2E_k}{m}}$\n\n**Example 4: Rearranging $P = \\frac{E}{t}$ to find $E$**\n\nStart: $P = \\dfrac{E}{t}$\n\nMultiply both sides by $t$: $E = P \\times t$\n\n**Example 5: Rearranging $W = mg$ to find $m$**\n\nStart: $W = mg$\n\n$m$ is multiplied by $g$. Divide both sides by $g$:\n\n$$m = \\frac{W}{g}$$",
+        "assets": []
+      },
+      {
+        "id": "TB-FOUND-02-03",
+        "type": "concept",
+        "title": "The formula triangle method",
+        "scope": "CORE",
+        "content": "For any formula with three variables where one equals the product or quotient of the other two, you can use a **formula triangle** as a quick visual aid.\n\n**How it works:**\n1. Draw a triangle and divide it into three sections: one on top and two on the bottom.\n2. Put the variable that is on top of the fraction (or by itself) at the TOP of the triangle.\n3. Put the other two variables on the BOTTOM.\n4. To find any variable, cover it with your finger:\n   - If the remaining two are side by side (both on the bottom), you **multiply** them.\n   - If one is on top and one is on the bottom, you **divide** (top ÷ bottom).\n\n**Common GCSE formula triangles:**\n\n| Formula | Top | Bottom left | Bottom right |\n|---------|-----|-------------|---------------|\n| $v = s/t$ | $s$ | $v$ | $t$ |\n| $\\rho = m/V$ | $m$ | $\\rho$ | $V$ |\n| $P = F/A$ | $F$ | $P$ | $A$ |\n| $W = Fd$ | $W$ | $F$ | $d$ |\n| $P = E/t$ | $E$ | $P$ | $t$ |\n| $V = IR$ | $V$ | $I$ | $R$ |\n| $Q = It$ | $Q$ | $I$ | $t$ |\n| $W = mg$ | $W$ | $m$ | $g$ |\n\n**Warning:** The triangle method only works for formulas of the form $A = B \\times C$ or $A = B / C$. It does NOT work for formulas with addition/subtraction (like $v = u + at$) or with squares (like $E_k = \\frac{1}{2}mv^2$). For those, use the step-by-step algebraic method.\n\n**Exam tip:** Even if you use triangles to work out the rearrangement, always write the rearranged formula explicitly. Examiners award marks for the written formula, not for a drawing of a triangle.",
+        "assets": []
+      }
+    ],
+    "keywords": [
+      "rearranging",
+      "formula",
+      "equation",
+      "subject",
+      "inverse operation",
+      "formula triangle",
+      "substitute"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FOUND-02-1",
+        "statement": "A car travels at a speed of $15\\,\\mathrm{m/s}$ for $20\\,\\mathrm{s}$. Calculate the distance it travels.",
+        "solution": "**Step 1:** Write the formula.\n$v = \\dfrac{s}{t}$\n\n**Step 2:** Rearrange to make $s$ the subject. Multiply both sides by $t$:\n$s = v \\times t$\n\n**Step 3:** Substitute the values.\n$s = 15 \\times 20$\n\n**Step 4:** Calculate.\n$s = 300\\,\\mathrm{m}$\n\n**Step 5:** Check units: m/s × s = m ✓\n\n**Answer:** The car travels $300\\,\\mathrm{m}$."
+      },
+      {
+        "id": "WE-FOUND-02-2",
+        "statement": "The kinetic energy of a ball is $20\\,\\mathrm{J}$ and its mass is $0.40\\,\\mathrm{kg}$. Calculate its speed.",
+        "solution": "**Step 1:** Write the formula.\n$E_k = \\frac{1}{2}mv^2$\n\n**Step 2:** Rearrange to make $v$ the subject.\nMultiply both sides by 2: $2E_k = mv^2$\nDivide both sides by $m$: $v^2 = \\dfrac{2E_k}{m}$\nSquare root both sides: $v = \\sqrt{\\dfrac{2E_k}{m}}$\n\n**Step 3:** Substitute.\n$v = \\sqrt{\\dfrac{2 \\times 20}{0.40}} = \\sqrt{\\dfrac{40}{0.40}} = \\sqrt{100} = 10\\,\\mathrm{m/s}$\n\n**Step 4:** Check units: $\\sqrt{\\text{J}/\\text{kg}} = \\sqrt{\\text{kg}\\cdot\\text{m}^2/\\text{s}^2 / \\text{kg}} = \\text{m/s}$ ✓\n\n**Answer:** $v = 10\\,\\mathrm{m/s}$"
+      },
+      {
+        "id": "WE-FOUND-02-3",
+        "statement": "A 60 W light bulb is left on for 5 minutes. Calculate the energy transferred.",
+        "solution": "**Step 1:** Write the formula.\n$P = \\dfrac{E}{t}$\n\n**Step 2:** Rearrange to make $E$ the subject. Multiply both sides by $t$:\n$E = P \\times t$\n\n**Step 3:** Convert units. Time must be in seconds:\n$t = 5 \\times 60 = 300\\,\\mathrm{s}$\n\n**Step 4:** Substitute.\n$E = 60 \\times 300 = 18\\,000\\,\\mathrm{J} = 18\\,\\mathrm{kJ}$\n\n**Step 5:** Check units: W × s = J ✓\n\n**Answer:** $E = 18\\,000\\,\\mathrm{J}$ (or $18\\,\\mathrm{kJ}$)"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FOUND-02-1",
+        "statement": "The density of aluminium is $2700\\,\\mathrm{kg/m^3}$. A block of aluminium has a volume of $0.0050\\,\\mathrm{m^3}$. Calculate the mass of the block.",
+        "hints": [
+          "Write down the density formula: ρ = m/V",
+          "Rearrange: multiply both sides by V to get m = ρ × V"
+        ],
+        "answer": "$13.5\\,\\mathrm{kg}$",
+        "full_solution": "**Formula:** $\\rho = \\dfrac{m}{V}$\n\n**Rearrange:** $m = \\rho \\times V$\n\n**Substitute:** $m = 2700 \\times 0.0050 = 13.5\\,\\mathrm{kg}$\n\n**Check:** kg/m³ × m³ = kg ✓\n\n**Answer:** $m = 13.5\\,\\mathrm{kg}$"
+      },
+      {
+        "id": "GE-FOUND-02-2",
+        "statement": "A wire has a resistance of $4.0\\,\\Omega$. A current of $1.5\\,\\mathrm{A}$ flows through it. Calculate the potential difference across it.",
+        "hints": [
+          "Write V = I × R or rearrange from Ohm's law",
+          "Substitute the values directly"
+        ],
+        "answer": "$6.0\\,\\mathrm{V}$",
+        "full_solution": "**Formula:** $V = I \\times R$\n\n**Substitute:** $V = 1.5 \\times 4.0 = 6.0\\,\\mathrm{V}$\n\n**Check:** A × Ω = V ✓\n\n**Answer:** $V = 6.0\\,\\mathrm{V}$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FOUND-02-1",
+        "statement": "Rearrange each formula to make the indicated variable the subject:\n(a) $F = ma$, find $a$\n(b) $P = \\dfrac{F}{A}$, find $F$\n(c) $Q = It$, find $t$\n(d) $E_p = mgh$, find $h$",
+        "answer": "(a) $a = F/m$  (b) $F = PA$  (c) $t = Q/I$  (d) $h = E_p/(mg)$",
+        "full_solution": "**(a)** $F = ma$ → divide both sides by $m$: $a = \\dfrac{F}{m}$\n\n**(b)** $P = \\dfrac{F}{A}$ → multiply both sides by $A$: $F = P \\times A$\n\n**(c)** $Q = It$ → divide both sides by $I$: $t = \\dfrac{Q}{I}$\n\n**(d)** $E_p = mgh$ → divide both sides by $mg$: $h = \\dfrac{E_p}{mg}$"
+      },
+      {
+        "id": "EX-FOUND-02-2",
+        "statement": "A force of $12\\,\\mathrm{N}$ acts on an object of mass $3.0\\,\\mathrm{kg}$. Calculate the acceleration.",
+        "answer": "$4.0\\,\\mathrm{m/s^2}$",
+        "full_solution": "**Formula:** $F = ma$\n\n**Rearrange:** $a = \\dfrac{F}{m}$\n\n**Substitute:** $a = \\dfrac{12}{3.0} = 4.0\\,\\mathrm{m/s^2}$\n\n**Answer:** $a = 4.0\\,\\mathrm{m/s^2}$"
+      },
+      {
+        "id": "EX-FOUND-02-3",
+        "statement": "An electric heater has a power of $2.0\\,\\mathrm{kW}$. It is switched on for $30\\,\\mathrm{minutes}$. Calculate the energy transferred in joules.",
+        "answer": "$3\\,600\\,000\\,\\mathrm{J}$ (or $3.6 \\times 10^{6}\\,\\mathrm{J}$ or $3.6\\,\\mathrm{MJ}$)",
+        "full_solution": "**Step 1:** Convert units.\n$P = 2.0\\,\\mathrm{kW} = 2000\\,\\mathrm{W}$\n$t = 30\\,\\mathrm{min} = 30 \\times 60 = 1800\\,\\mathrm{s}$\n\n**Step 2:** Formula and rearrangement.\n$P = \\dfrac{E}{t}$, so $E = P \\times t$\n\n**Step 3:** Substitute.\n$E = 2000 \\times 1800 = 3\\,600\\,000\\,\\mathrm{J}$\n\n**Step 4:** Express in appropriate units.\n$3\\,600\\,000\\,\\mathrm{J} = 3.6 \\times 10^{6}\\,\\mathrm{J} = 3.6\\,\\mathrm{MJ}$\n\n**Answer:** $E = 3.6 \\times 10^{6}\\,\\mathrm{J}$ (or $3.6\\,\\mathrm{MJ}$)"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MCQ-FOUND-02-1",
+        "stem": "The formula $v = s/t$ is rearranged to find $t$. Which is correct?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$t = vs$",
+            "why_wrong": "This multiplies v and s, but t should be s divided by v."
+          },
+          {
+            "key": "B",
+            "text": "$t = v/s$",
+            "why_wrong": "This divides v by s, which is the wrong way round."
+          },
+          {
+            "key": "C",
+            "text": "$t = s/v$"
+          },
+          {
+            "key": "D",
+            "text": "$t = s - v$",
+            "why_wrong": "Subtraction is not the inverse of division."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Starting from v = s/t, multiply both sides by t to get vt = s, then divide both sides by v to get t = s/v."
+      },
+      {
+        "id": "MCQ-FOUND-02-2",
+        "stem": "The formula for kinetic energy is $E_k = \\frac{1}{2}mv^2$. Which correctly gives $v$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$v = \\sqrt{2E_k / m}$"
+          },
+          {
+            "key": "B",
+            "text": "$v = 2E_k / m$",
+            "why_wrong": "This forgets to take the square root to undo the v²."
+          },
+          {
+            "key": "C",
+            "text": "$v = \\sqrt{E_k / (2m)}$",
+            "why_wrong": "The 2 should be in the numerator (multiplying Ek), not the denominator."
+          },
+          {
+            "key": "D",
+            "text": "$v = E_k / (\\frac{1}{2}m)$",
+            "why_wrong": "This does not take the square root, so you would get v² not v."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Multiply both sides by 2: 2Ek = mv². Divide by m: v² = 2Ek/m. Square root: v = √(2Ek/m)."
+      },
+      {
+        "id": "MCQ-FOUND-02-3",
+        "stem": "A formula triangle can be used for which type of formula?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Any formula with exactly three variables"
+          },
+          {
+            "key": "B",
+            "text": "Formulas of the form $A = B \\times C$ or $A = B / C$ only"
+          },
+          {
+            "key": "C",
+            "text": "Formulas with addition and subtraction",
+            "why_wrong": "The triangle method does not work for formulas involving + or −."
+          },
+          {
+            "key": "D",
+            "text": "Formulas with squared terms",
+            "why_wrong": "The triangle method does not handle squared terms correctly."
+          }
+        ],
+        "correct": "B",
+        "explanation": "The formula triangle only works for three-variable formulas in the form A = B × C (or equivalently A = B/C). For formulas with +, −, or powers, use algebraic rearrangement."
+      },
+      {
+        "id": "MCQ-FOUND-02-4",
+        "stem": "In GCSE Physics, when should you show the rearranged formula in your working?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Only when the question says 'show your working'",
+            "why_wrong": "Mark schemes typically award marks for the rearranged formula even when 'show your working' is not explicitly stated."
+          },
+          {
+            "key": "B",
+            "text": "Never — just substitute the numbers directly",
+            "why_wrong": "Skipping the rearranged formula loses marks in most mark schemes."
+          },
+          {
+            "key": "C",
+            "text": "Always, before substituting numbers"
+          },
+          {
+            "key": "D",
+            "text": "Only for 6-mark questions",
+            "why_wrong": "Even short-answer calculation questions award marks for showing the rearranged formula."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Always write: (1) the original formula, (2) the rearranged formula with the required variable as the subject, (3) the substitution, (4) the answer with units. Each step can earn marks."
+      }
+    ],
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::rearranging_equations",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 2
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": true,
+          "order": 2
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "03_Reading_and_plotting_graphs.json": {
+    "id": "FOUND-03",
+    "title": "Reading and plotting graphs",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "curriculum": "GCSE/IGCSE",
+    "estimated_length": "50 min",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "id": "LO-FOUND-03-1",
+        "statement": "Choose appropriate axes, scales and labels for a graph."
+      },
+      {
+        "id": "LO-FOUND-03-2",
+        "statement": "Plot points accurately and draw a line or curve of best fit."
+      },
+      {
+        "id": "LO-FOUND-03-3",
+        "statement": "Calculate the gradient of a straight-line graph and interpret it physically."
+      },
+      {
+        "id": "LO-FOUND-03-4",
+        "statement": "Read the y-intercept and interpret it in context."
+      },
+      {
+        "id": "LO-FOUND-03-5",
+        "statement": "Determine the gradient of a curve at a point by drawing a tangent."
+      }
+    ],
+    "prerequisites": [
+      {
+        "lesson_id": "FOUND-02",
+        "description": "Rearranging equations"
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-FOUND-03-1",
+        "stem": "What does the gradient of a distance–time graph represent?",
+        "answer": "Speed"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TB-FOUND-03-01",
+        "type": "concept",
+        "title": "Why graphs matter in physics",
+        "scope": "CORE",
+        "content": "Graphs are one of the most powerful tools in physics. They let you:\n- **See patterns** in data that are hard to spot in a table of numbers.\n- **Calculate quantities** like speed, acceleration, and energy from the shape of the graph.\n- **Predict values** that you haven't measured directly.\n- **Identify anomalous results** (outliers) that don't fit the pattern.\n\nIn your GCSE exam, graph questions are common and can carry high marks. You might be asked to:\n- Plot data on a graph (with correct axes, scales, labels, and units).\n- Draw a line or curve of best fit.\n- Calculate the gradient of a straight line.\n- Draw a tangent to a curve and find its gradient at a particular point.\n- Find the area under a graph (especially speed–time graphs).\n- Describe the pattern shown by the graph.\n\nGetting these skills right is one of the best ways to pick up marks across the entire Physics paper.",
+        "assets": [
+          {
+            "id": "diagram_found_03_01",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-14 -14 478 348\" fill=\"#0b1f3a\" role=\"img\" data-nebula-svg=\"2026-10\" width=\"478\" height=\"348\"><rect x=\"-14\" y=\"-14\" width=\"478\" height=\"348\" fill=\"#f6f8fb\" data-nebula-background=\"true\"/><title>03_Reading_and_plotting_graphs.json</title><rect x=\"0\" y=\"0\" width=\"450\" height=\"320\" fill=\"#f6f8fb\"/><text x=\"225\" y=\"22\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Anatomy of a well-drawn graph</text><line x1=\"60\" y1=\"270\" x2=\"420\" y2=\"270\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><line x1=\"60\" y1=\"270\" x2=\"60\" y2=\"40\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><line x1=\"60\" y1=\"270\" x2=\"55\" y2=\"270\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"60\" y1=\"220\" x2=\"55\" y2=\"220\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"60\" y1=\"170\" x2=\"55\" y2=\"170\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"60\" y1=\"120\" x2=\"55\" y2=\"120\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"60\" y1=\"70\" x2=\"55\" y2=\"70\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><text x=\"48\" y=\"274\" text-anchor=\"end\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">0</text><text x=\"48\" y=\"224\" text-anchor=\"end\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">10</text><text x=\"48\" y=\"174\" text-anchor=\"end\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">20</text><text x=\"48\" y=\"124\" text-anchor=\"end\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">30</text><text x=\"48\" y=\"74\" text-anchor=\"end\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">40</text><line x1=\"120\" y1=\"270\" x2=\"120\" y2=\"275\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"180\" y1=\"270\" x2=\"180\" y2=\"275\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"240\" y1=\"270\" x2=\"240\" y2=\"275\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"300\" y1=\"270\" x2=\"300\" y2=\"275\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><line x1=\"360\" y1=\"270\" x2=\"360\" y2=\"275\" stroke=\"#0b1f3a\" stroke-width=\"1\"/><text x=\"120\" y=\"290\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">1</text><text x=\"180\" y=\"290\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">2</text><text x=\"240\" y=\"290\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">3</text><text x=\"300\" y=\"290\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">4</text><text x=\"360\" y=\"290\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">5</text><text x=\"240\" y=\"310\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Time / s</text><text x=\"18\" y=\"160\" text-anchor=\"middle\" font-size=\"13\" fill=\"#0b1f3a\" transform=\"rotate(-90,18,160)\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Distance / m</text><circle cx=\"120\" cy=\"220\" r=\"4\" fill=\"#2e7d5b\" stroke=\"#2e7d5b\"/><circle cx=\"180\" cy=\"170\" r=\"4\" fill=\"#2e7d5b\" stroke=\"#2e7d5b\"/><circle cx=\"240\" cy=\"130\" r=\"4\" fill=\"#2e7d5b\" stroke=\"#2e7d5b\"/><circle cx=\"300\" cy=\"85\" r=\"4\" fill=\"#2e7d5b\" stroke=\"#2e7d5b\"/><circle cx=\"360\" cy=\"70\" r=\"4\" fill=\"#2e7d5b\" stroke=\"#2e7d5b\"/><line x1=\"80\" y1=\"252\" x2=\"390\" y2=\"52\" stroke=\"#b77916\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/><text x=\"395\" y=\"48\" font-size=\"12\" fill=\"#b77916\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">best fit</text></svg>",
+            "caption": "A well-drawn graph has: labelled axes with units (quantity / unit), evenly spaced scales using at least half the grid, neat plotted points, and a line of best fit.",
+            "purpose": "show the components of a correctly drawn graph"
+          }
+        ]
+      },
+      {
+        "id": "TB-FOUND-03-02",
+        "type": "concept",
+        "title": "How to plot a graph correctly",
+        "scope": "CORE",
+        "content": "Follow this checklist every time you plot a graph:\n\n**1. Choose which variable goes on which axis.**\n- The **independent variable** (the one you deliberately change) goes on the **x-axis** (horizontal).\n- The **dependent variable** (the one you measure) goes on the **y-axis** (vertical).\n- Example: if you change the time and measure the distance, time goes on x, distance goes on y.\n\n**2. Label each axis with the quantity and unit.**\n- Write: quantity / unit (e.g. 'Distance / m' or 'Time / s').\n- The slash (/) is the standard separator. Some mark schemes also accept brackets: 'Distance (m)'.\n\n**3. Choose a suitable scale.**\n- Your plotted points should use **at least half** of the available grid in each direction.\n- Use scales that are easy to read: go up in 1s, 2s, 5s, 10s, 20s, 50s, etc.\n- **Do not** use awkward scales like 3s or 7s — they make reading off values difficult and error-prone.\n- The scale does **not** have to start at zero, but if it does not, show a break (zig-zag) on the axis.\n\n**4. Plot each point carefully.**\n- Use a small, neat cross (×) or a dot with a circle around it (⊙). These are easier to see than a bare dot.\n- Plot to the nearest half-square on the grid.\n\n**5. Draw a line of best fit.**\n- This is a straight line **or** smooth curve that follows the general trend of the points.\n- It should pass **through or close to** as many points as possible, with roughly equal numbers of points above and below the line.\n- It does **not** have to pass through every point — outliers (anomalous results) should be ignored.\n- It does **not** have to pass through the origin unless the data justifies it.\n- Draw it in one smooth motion with a ruler (for straight lines) or freehand (for curves).\n\n**6. Identify anomalous results.**\n- These are points that do not fit the trend. Circle them but do not connect them to the line of best fit.\n- In the exam, if asked to comment, suggest the anomaly might be due to a measurement error and should be repeated.",
+        "assets": []
+      },
+      {
+        "id": "TB-FOUND-03-03",
+        "type": "concept",
+        "title": "Gradient of a straight-line graph",
+        "scope": "CORE",
+        "content": "The **gradient** (slope) of a straight-line graph tells you the rate at which the y-variable changes compared to the x-variable.\n\n$$\\text{gradient} = \\frac{\\text{change in } y}{\\text{change in } x} = \\frac{\\Delta y}{\\Delta x} = \\frac{y_2 - y_1}{x_2 - x_1}$$\n\n**How to calculate the gradient:**\n\n1. Choose **two points** on the line of best fit (NOT from the data table — use points that lie on the line itself).\n2. The two points should be **far apart** (at least half the length of the line) to minimise reading errors.\n3. Draw a large right-angled triangle between the two points.\n4. Read off the coordinates of both points.\n5. Calculate: gradient = (y₂ − y₁) / (x₂ − x₁).\n6. **Include units**: the gradient has units of (y-unit) / (x-unit).\n\n**Example:** On a distance–time graph, if the two points are (2 s, 10 m) and (8 s, 40 m):\n\n$$\\text{gradient} = \\frac{40 - 10}{8 - 2} = \\frac{30}{6} = 5\\,\\mathrm{m/s}$$\n\nThis gradient represents the speed (because distance/time = speed).\n\n**Physical meaning of gradient in common GCSE graphs:**\n\n| Graph type | Gradient represents | Units |\n|------------|-------------------|-------|\n| distance–time | speed | m/s |\n| velocity–time | acceleration | m/s² |\n| force–extension | spring constant | N/m |\n| V–I | resistance | Ω |\n| current–time (charge) | charge (area) | C |\n\n**Positive gradient:** y increases as x increases (line slopes upward left to right).\n**Negative gradient:** y decreases as x increases (line slopes downward left to right).\n**Zero gradient:** y stays constant (horizontal line).\n**Steeper line = larger gradient = faster rate of change.**",
+        "assets": []
+      },
+      {
+        "id": "TB-FOUND-03-04",
+        "type": "concept",
+        "title": "Y-intercept and area under a graph",
+        "scope": "CORE",
+        "content": "**The y-intercept** is the value of $y$ where the line crosses the y-axis (i.e. where $x = 0$). It often has a physical meaning:\n- On a velocity–time graph, the y-intercept is the **initial velocity** (velocity at time zero).\n- On a cooling curve (temperature–time), the y-intercept is the **starting temperature**.\n\n**The area under a graph** is important in some physics contexts:\n- **Area under a speed–time graph = distance travelled.**\n- **Area under a force–extension graph = work done (energy stored in a spring).**\n- **Area under a force–time graph = impulse (change in momentum).**\n\nTo find the area, break it into simple shapes (rectangles, triangles, trapeziums) and add them up:\n- Area of a rectangle = base × height\n- Area of a triangle = ½ × base × height\n- Area of a trapezium = ½ × (sum of parallel sides) × height\n\nFor curved graphs, you may need to count squares on the grid.\n\n**Finding the gradient of a curve at a point:**\n\nCurves do not have a single gradient — the gradient changes from point to point. To find the gradient at a specific point:\n\n1. Mark the point on the curve.\n2. Draw a **tangent** — a straight line that just touches the curve at that point without crossing it.\n3. Extend the tangent line so it is long enough to read coordinates from.\n4. Calculate the gradient of this tangent line using the method above.\n\nThe tangent gives the **instantaneous** rate of change at that point. On a distance–time curve, this gives the instantaneous speed at that moment.",
+        "assets": []
+      }
+    ],
+    "keywords": [
+      "graph",
+      "axis",
+      "scale",
+      "plot",
+      "line of best fit",
+      "gradient",
+      "slope",
+      "y-intercept",
+      "tangent",
+      "area under graph",
+      "anomalous result"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FOUND-03-1",
+        "statement": "A straight line of best fit on a distance–time graph passes through the points $(1.0\\,\\mathrm{s},\\, 5.0\\,\\mathrm{m})$ and $(5.0\\,\\mathrm{s},\\, 25.0\\,\\mathrm{m})$. Calculate the gradient and state what it represents.",
+        "solution": "**Step 1:** Write the gradient formula.\n$$\\text{gradient} = \\frac{y_2 - y_1}{x_2 - x_1}$$\n\n**Step 2:** Substitute the coordinates (use points from the line, not the data table).\n$$\\text{gradient} = \\frac{25.0 - 5.0}{5.0 - 1.0} = \\frac{20.0}{4.0} = 5.0\\,\\mathrm{m/s}$$\n\n**Step 3:** State the physical meaning.\nThe gradient of a distance–time graph represents the **speed**.\n\n**Answer:** Gradient = $5.0\\,\\mathrm{m/s}$. This represents the speed of the object."
+      },
+      {
+        "id": "WE-FOUND-03-2",
+        "statement": "A velocity–time graph shows a car accelerating uniformly. At $t = 0\\,\\mathrm{s}$, $v = 5\\,\\mathrm{m/s}$. At $t = 10\\,\\mathrm{s}$, $v = 25\\,\\mathrm{m/s}$. Calculate: (a) the acceleration, (b) the distance travelled in the first 10 s.",
+        "solution": "**(a) Acceleration = gradient of velocity–time graph.**\n$$a = \\frac{25 - 5}{10 - 0} = \\frac{20}{10} = 2.0\\,\\mathrm{m/s^2}$$\n\n**(b) Distance = area under velocity–time graph.**\n\nThe shape is a trapezium with parallel sides 5 and 25, and width 10.\n$$\\text{area} = \\frac{1}{2} \\times (5 + 25) \\times 10 = \\frac{1}{2} \\times 30 \\times 10 = 150\\,\\mathrm{m}$$\n\nAlternatively, split into a rectangle (5 × 10 = 50) and a triangle (½ × 10 × 20 = 100): total = 150 m.\n\n**Answer:** (a) $a = 2.0\\,\\mathrm{m/s^2}$  (b) $d = 150\\,\\mathrm{m}$"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FOUND-03-1",
+        "statement": "On a force–extension graph, the line of best fit passes through (0, 0) and (0.12 m, 6.0 N). Calculate the spring constant.",
+        "hints": [
+          "The gradient of a force–extension graph gives the spring constant k.",
+          "gradient = change in force / change in extension"
+        ],
+        "answer": "$50\\,\\mathrm{N/m}$",
+        "full_solution": "**Principle:** The gradient of a force–extension graph equals the spring constant $k$.\n\n**Calculation:**\n$$k = \\text{gradient} = \\frac{6.0 - 0}{0.12 - 0} = \\frac{6.0}{0.12} = 50\\,\\mathrm{N/m}$$\n\n**Answer:** $k = 50\\,\\mathrm{N/m}$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FOUND-03-1",
+        "statement": "A straight-line graph has a gradient of $-3.0\\,\\mathrm{m/s}$ and a y-intercept of $15\\,\\mathrm{m}$. (a) What does the negative gradient tell you about the motion? (b) What is the distance at $t = 0$? (c) At what time is the distance zero?",
+        "answer": "(a) The object is moving back towards the start (decreasing distance). (b) 15 m. (c) 5.0 s.",
+        "full_solution": "**(a)** A negative gradient on a distance–time graph means the distance is **decreasing with time** — the object is moving back towards the starting point.\n\n**(b)** The y-intercept is the value at $t = 0$, so the distance at $t = 0$ is **15 m**.\n\n**(c)** Using $y = mx + c$: $0 = -3.0t + 15$, so $3.0t = 15$, giving $t = \\dfrac{15}{3.0} = 5.0\\,\\mathrm{s}$.\n\n**Answer:** (a) Object is returning. (b) 15 m. (c) $t = 5.0\\,\\mathrm{s}$."
+      },
+      {
+        "id": "EX-FOUND-03-2",
+        "statement": "A speed–time graph shows: speed = 0 from $t = 0$ to $t = 2\\,\\mathrm{s}$; speed increases uniformly from 0 to $12\\,\\mathrm{m/s}$ between $t = 2\\,\\mathrm{s}$ and $t = 8\\,\\mathrm{s}$; speed stays at $12\\,\\mathrm{m/s}$ from $t = 8\\,\\mathrm{s}$ to $t = 14\\,\\mathrm{s}$. Calculate the total distance travelled.",
+        "answer": "$108\\,\\mathrm{m}$",
+        "full_solution": "**Distance = area under speed–time graph.**\n\n**Section 1** ($t = 0$ to $t = 2\\,\\mathrm{s}$): speed = 0, so area = 0.\n\n**Section 2** ($t = 2$ to $t = 8\\,\\mathrm{s}$): triangle with base = 6 s, height = 12 m/s.\nArea = $\\frac{1}{2} \\times 6 \\times 12 = 36\\,\\mathrm{m}$\n\n**Section 3** ($t = 8$ to $t = 14\\,\\mathrm{s}$): rectangle with base = 6 s, height = 12 m/s.\nArea = $6 \\times 12 = 72\\,\\mathrm{m}$\n\n**Total distance** = $0 + 36 + 72 = 108\\,\\mathrm{m}$\n\n**Answer:** $108\\,\\mathrm{m}$"
+      },
+      {
+        "id": "EX-FOUND-03-3",
+        "statement": "Explain why, when calculating the gradient, you should use two points that are far apart on the line rather than close together.",
+        "answer": "Using points far apart reduces the effect of reading errors on the calculated gradient.",
+        "full_solution": "When you read coordinates from a graph, there is always a small **reading error** (perhaps ± half a small square). If the two points are close together, the actual change in $y$ and change in $x$ are small, so the reading error is a **large fraction** of the measured change. This makes the calculated gradient unreliable.\n\nIf the two points are far apart, the changes in $y$ and $x$ are large, so the same reading error is a **small fraction** of the measured change. This gives a more accurate and reliable gradient.\n\n**Example:** A ±0.5 m reading error on a 2 m change gives ±25% uncertainty. The same ±0.5 m error on a 20 m change gives only ±2.5% uncertainty.\n\n**Answer:** Choosing points far apart minimises the percentage effect of reading errors on the gradient."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MCQ-FOUND-03-1",
+        "stem": "On a graph, the independent variable should be plotted on the:",
+        "options": [
+          {
+            "key": "A",
+            "text": "x-axis (horizontal)"
+          },
+          {
+            "key": "B",
+            "text": "y-axis (vertical)",
+            "why_wrong": "The y-axis is for the dependent variable (the one you measure)."
+          },
+          {
+            "key": "C",
+            "text": "either axis — it does not matter",
+            "why_wrong": "Convention requires the independent variable on the x-axis."
+          },
+          {
+            "key": "D",
+            "text": "title of the graph",
+            "why_wrong": "The title describes the graph; variables go on the axes."
+          }
+        ],
+        "correct": "A",
+        "explanation": "The independent variable (the one you deliberately change) goes on the x-axis. The dependent variable (the one you measure) goes on the y-axis."
+      },
+      {
+        "id": "MCQ-FOUND-03-2",
+        "stem": "The gradient of a velocity–time graph represents the:",
+        "options": [
+          {
+            "key": "A",
+            "text": "distance travelled",
+            "why_wrong": "Distance is found from the area under a velocity–time graph, not the gradient."
+          },
+          {
+            "key": "B",
+            "text": "speed",
+            "why_wrong": "Speed is the gradient of a distance–time graph, not a velocity–time graph."
+          },
+          {
+            "key": "C",
+            "text": "acceleration"
+          },
+          {
+            "key": "D",
+            "text": "force",
+            "why_wrong": "Force is not directly given by the gradient of a velocity–time graph."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Acceleration = change in velocity / change in time, which is exactly what the gradient of a velocity–time graph gives."
+      },
+      {
+        "id": "MCQ-FOUND-03-3",
+        "stem": "The area under a speed–time graph represents the:",
+        "options": [
+          {
+            "key": "A",
+            "text": "acceleration",
+            "why_wrong": "Acceleration is the gradient of the graph, not the area under it."
+          },
+          {
+            "key": "B",
+            "text": "distance travelled"
+          },
+          {
+            "key": "C",
+            "text": "average speed",
+            "why_wrong": "Average speed would be total distance / total time, not the area."
+          },
+          {
+            "key": "D",
+            "text": "deceleration",
+            "why_wrong": "Deceleration is a negative gradient, not an area."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Speed × time = distance. The area under the graph gives the total distance travelled."
+      },
+      {
+        "id": "MCQ-FOUND-03-4",
+        "stem": "A line of best fit should:",
+        "options": [
+          {
+            "key": "A",
+            "text": "pass through every plotted point",
+            "why_wrong": "It should follow the general trend but does not need to pass through every point, especially outliers."
+          },
+          {
+            "key": "B",
+            "text": "always pass through the origin",
+            "why_wrong": "It only passes through the origin if the data supports this — not automatically."
+          },
+          {
+            "key": "C",
+            "text": "have roughly equal numbers of points above and below it"
+          },
+          {
+            "key": "D",
+            "text": "be drawn as a series of straight lines between consecutive points",
+            "why_wrong": "This describes 'connecting the dots', which is not a line of best fit."
+          }
+        ],
+        "correct": "C",
+        "explanation": "A line of best fit follows the general trend of the data with roughly equal numbers of points scattered above and below it. It does not need to pass through every point or through the origin."
+      }
+    ],
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::reading_plotting_graphs",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 3
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": true,
+          "order": 3
+        },
+        "FAST_REVIEW": {
+          "include": true,
+          "order": 1
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "04_Proportionality_and_ratios.json": {
+    "id": "FOUND-04",
+    "title": "Proportionality and ratios",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "curriculum": "GCSE/IGCSE",
+    "estimated_length": "40 min",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "id": "LO-FOUND-04-1",
+        "statement": "Identify and interpret direct proportion from data, graphs and formulas."
+      },
+      {
+        "id": "LO-FOUND-04-2",
+        "statement": "Identify and interpret inverse proportion from data, graphs and formulas."
+      },
+      {
+        "id": "LO-FOUND-04-3",
+        "statement": "Use proportionality to predict how changing one variable affects another."
+      }
+    ],
+    "prerequisites": [
+      {
+        "lesson_id": "FOUND-03",
+        "description": "Reading and plotting graphs"
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-FOUND-04-1",
+        "stem": "If the force on a spring is doubled, what happens to the extension (within the elastic limit)?",
+        "answer": "It doubles"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TB-FOUND-04-01",
+        "type": "concept",
+        "title": "Direct proportion",
+        "scope": "CORE",
+        "content": "Two quantities are **directly proportional** if, when one doubles, the other doubles too. When one trebles, the other trebles. When one is halved, the other is halved. The ratio between them stays constant.\n\nWe write this as: $y \\propto x$ (read as 'y is proportional to x').\n\nThis means: $y = kx$, where $k$ is a constant called the **constant of proportionality**.\n\n**How to recognise direct proportion:**\n\n1. **From a table:** Calculate $y/x$ for every pair of values. If the ratio is the same (constant) for all pairs, the quantities are directly proportional.\n\n2. **From a graph:** If the graph of $y$ against $x$ is a **straight line through the origin**, the quantities are directly proportional.\n\n3. **From a formula:** If the formula is of the form $y = kx$ (with no other terms), the quantities are directly proportional.\n\n**Examples in GCSE Physics:**\n\n- **Hooke's law** (within the limit of proportionality): $F = kx$. Force is directly proportional to extension. Double the force → double the extension.\n- **Weight and mass:** $W = mg$. Weight is directly proportional to mass (with $g$ constant). Double the mass → double the weight.\n- **Ohm's law** (for ohmic conductors at constant temperature): $V = IR$. P.d. is directly proportional to current (with $R$ constant).\n- **Speed = distance / time** (at constant speed): $s = vt$. Distance is directly proportional to time.\n\n**Important:** Direct proportion requires the graph to pass through the **origin** (0, 0). A straight line that does NOT pass through the origin shows a **linear relationship** but NOT direct proportion. For example, the equation $y = 2x + 5$ is linear but not directly proportional because when $x = 0$, $y = 5$ (not zero).",
+        "assets": [
+          {
+            "id": "diagram_found_04_01",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-14 -14 508 288\" fill=\"#0b1f3a\" role=\"img\" data-nebula-svg=\"2026-10\" width=\"508\" height=\"288\"><rect x=\"-14\" y=\"-14\" width=\"508\" height=\"288\" fill=\"#f6f8fb\" data-nebula-background=\"true\"/><title>04_Proportionality_and_ratios.json</title><rect x=\"0\" y=\"0\" width=\"480\" height=\"260\" fill=\"#f6f8fb\"/><text x=\"240\" y=\"22\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Direct vs Inverse Proportion</text><line x1=\"40\" y1=\"220\" x2=\"210\" y2=\"220\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><line x1=\"40\" y1=\"220\" x2=\"40\" y2=\"40\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><text x=\"125\" y=\"250\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">x</text><text x=\"20\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" transform=\"rotate(-90,20,130)\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">y</text><line x1=\"40\" y1=\"220\" x2=\"200\" y2=\"50\" stroke=\"#2e7d5b\" stroke-width=\"2.5\"/><text x=\"125\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2e7d5b\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Direct: y = kx</text><line x1=\"270\" y1=\"220\" x2=\"440\" y2=\"220\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><line x1=\"270\" y1=\"220\" x2=\"270\" y2=\"40\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><text x=\"355\" y=\"250\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">x</text><text x=\"250\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" transform=\"rotate(-90,250,130)\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">y</text><path d=\"M285,55 Q320,120 440,200\" fill=\"none\" stroke=\"#b77916\" stroke-width=\"2.5\"/><text x=\"355\" y=\"38\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b77916\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Inverse: y = k/x</text></svg>",
+            "caption": "Left: direct proportion gives a straight line through the origin ($y = kx$). Right: inverse proportion gives a curve that approaches both axes but never touches them ($y = k/x$).",
+            "purpose": "contrast direct and inverse proportion graph shapes"
+          }
+        ]
+      },
+      {
+        "id": "TB-FOUND-04-02",
+        "type": "concept",
+        "title": "Inverse proportion",
+        "scope": "CORE",
+        "content": "Two quantities are **inversely proportional** if, when one doubles, the other halves. When one trebles, the other becomes one-third. Their product stays constant.\n\nWe write: $y \\propto \\frac{1}{x}$ (read as 'y is inversely proportional to x').\n\nThis means: $y = \\frac{k}{x}$, or equivalently, $xy = k$.\n\n**How to recognise inverse proportion:**\n\n1. **From a table:** Calculate $x \\times y$ for every pair. If the product is constant, the quantities are inversely proportional.\n\n2. **From a graph:** If the graph of $y$ against $x$ is a **curve** that gets closer to both axes but never touches them (a hyperbola), it might be inverse proportion. To confirm, plot $y$ against $1/x$ — if this gives a straight line through the origin, you have confirmed inverse proportion.\n\n3. **From a formula:** If the formula is of the form $y = k/x$.\n\n**Examples in GCSE Physics:**\n\n- **Pressure and volume** (Boyle's law, at constant temperature): $P = k/V$ or $PV = k$. Double the volume → halve the pressure.\n- **Speed and time** (for a fixed distance): $t = s/v$. If you double the speed, you halve the time to cover a fixed distance.\n- **Resistance and cross-sectional area** (for a wire of fixed length and material): Thicker wire → lower resistance.\n\n**Predicting with proportionality:**\n\nProportionality is a powerful shortcut for 'what if' questions:\n- If $F \\propto x$ and you triple the force, the extension triples.\n- If $E_k = \\frac{1}{2}mv^2$, then $E_k \\propto v^2$. If you double the speed, $E_k$ increases by $2^2 = 4$ times. If you triple the speed, $E_k$ increases by $3^2 = 9$ times.\n- If $P \\propto 1/V$ and you reduce the volume to one-quarter, the pressure increases by 4 times.\n\n**Exam tip:** When a question asks 'what happens to Y if X is doubled/tripled/halved', identify the proportionality relationship first, then apply the factor. This is faster and less error-prone than recalculating from scratch.",
+        "assets": []
+      }
+    ],
+    "keywords": [
+      "direct proportion",
+      "inverse proportion",
+      "proportional",
+      "constant of proportionality",
+      "linear",
+      "ratio"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FOUND-04-1",
+        "statement": "A spring obeys Hooke's law. When a force of $4.0\\,\\mathrm{N}$ is applied, the extension is $0.02\\,\\mathrm{m}$. What is the extension when the force is $10.0\\,\\mathrm{N}$?",
+        "solution": "**Step 1:** Identify the relationship. Hooke's law: $F = kx$, so $F \\propto x$ (direct proportion).\n\n**Step 2:** Find the constant. $k = F/x = 4.0 / 0.02 = 200\\,\\mathrm{N/m}$.\n\n**Step 3:** Use the constant to find the new extension.\n$x = F/k = 10.0 / 200 = 0.05\\,\\mathrm{m}$\n\n**Alternative (ratio method):** Force multiplied by $10.0/4.0 = 2.5$, so extension also multiplied by 2.5:\n$x = 0.02 \\times 2.5 = 0.05\\,\\mathrm{m}$\n\n**Answer:** $x = 0.05\\,\\mathrm{m}$ (or 5.0 cm)"
+      },
+      {
+        "id": "WE-FOUND-04-2",
+        "statement": "A car travelling at $20\\,\\mathrm{m/s}$ has a kinetic energy of $80\\,000\\,\\mathrm{J}$. What is its kinetic energy at $40\\,\\mathrm{m/s}$?",
+        "solution": "**Step 1:** Identify the relationship. $E_k = \\frac{1}{2}mv^2$, so $E_k \\propto v^2$ (when $m$ is constant).\n\n**Step 2:** Speed doubles from 20 to 40 m/s (factor of 2).\n\n**Step 3:** Since $E_k \\propto v^2$, $E_k$ increases by $2^2 = 4$ times.\n\n**Step 4:** $E_k = 80\\,000 \\times 4 = 320\\,000\\,\\mathrm{J}$\n\n**Answer:** $E_k = 320\\,000\\,\\mathrm{J}$ (or $320\\,\\mathrm{kJ}$)\n\n**Key point:** Doubling the speed does NOT double the kinetic energy — it quadruples it. This is why high-speed collisions are so much more destructive."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FOUND-04-1",
+        "statement": "A gas has a pressure of $100\\,\\mathrm{kPa}$ at a volume of $0.060\\,\\mathrm{m^3}$. If the temperature stays constant and the volume is reduced to $0.020\\,\\mathrm{m^3}$, what is the new pressure?",
+        "hints": [
+          "Pressure and volume are inversely proportional at constant temperature (Boyle's law).",
+          "PV = constant, so P₁V₁ = P₂V₂"
+        ],
+        "answer": "$300\\,\\mathrm{kPa}$",
+        "full_solution": "**Principle:** Boyle's law: $P \\propto 1/V$ at constant temperature, so $P_1 V_1 = P_2 V_2$.\n\n**Substitute:** $100 \\times 0.060 = P_2 \\times 0.020$\n$6.0 = 0.020 \\, P_2$\n$P_2 = 6.0 / 0.020 = 300\\,\\mathrm{kPa}$\n\n**Check:** Volume reduced by factor 3 (0.060 → 0.020), so pressure increases by factor 3 (100 → 300). ✓\n\n**Answer:** $P_2 = 300\\,\\mathrm{kPa}$"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FOUND-04-1",
+        "statement": "State whether each relationship is direct proportion, inverse proportion, or neither:\n(a) $y = 5x$\n(b) $y = 3x + 2$\n(c) $y = 12/x$\n(d) $y = x^2$",
+        "answer": "(a) Direct  (b) Neither (linear but not through origin)  (c) Inverse  (d) Neither ($y \\propto x^2$, not $y \\propto x$)",
+        "full_solution": "**(a)** $y = 5x$: This is $y = kx$ with $k = 5$. **Direct proportion.** Graph: straight line through origin.\n\n**(b)** $y = 3x + 2$: When $x = 0$, $y = 2 \\neq 0$. The graph is a straight line but does NOT pass through the origin. **Neither** direct nor inverse proportion (it is a linear relationship).\n\n**(c)** $y = 12/x$: This is $y = k/x$ with $k = 12$. **Inverse proportion.** $xy = 12$ = constant.\n\n**(d)** $y = x^2$: $y$ is proportional to $x^2$, not to $x$. This is **neither** direct proportion nor inverse proportion. (It is a power relationship.)"
+      },
+      {
+        "id": "EX-FOUND-04-2",
+        "statement": "A lamp has a resistance of $12\\,\\Omega$. If the current through it is tripled, what happens to the potential difference across it? (Assume the resistance stays constant.)",
+        "answer": "The potential difference triples (from $V = IR$, $V \\propto I$ when $R$ is constant).",
+        "full_solution": "**Formula:** $V = IR$\n\n**Relationship:** When $R$ is constant, $V \\propto I$ (direct proportion).\n\n**If $I$ triples:** $V$ also triples.\n\n**Answer:** The potential difference triples."
+      },
+      {
+        "id": "EX-FOUND-04-3",
+        "statement": "The braking distance of a car is proportional to the square of its speed. At $20\\,\\mathrm{m/s}$, the braking distance is $14\\,\\mathrm{m}$. Calculate the braking distance at $60\\,\\mathrm{m/s}$.",
+        "answer": "$126\\,\\mathrm{m}$",
+        "full_solution": "**Relationship:** $d \\propto v^2$\n\n**Speed factor:** $60/20 = 3$ (speed triples).\n\n**Distance factor:** $3^2 = 9$ (distance increases by factor of 9).\n\n**New distance:** $14 \\times 9 = 126\\,\\mathrm{m}$\n\n**Answer:** Braking distance = $126\\,\\mathrm{m}$\n\n**Note:** This shows why speeding is so dangerous — tripling your speed increases your braking distance by **nine times**, not three."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MCQ-FOUND-04-1",
+        "stem": "If $y$ is directly proportional to $x$, the graph of $y$ against $x$ is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "a straight line through the origin"
+          },
+          {
+            "key": "B",
+            "text": "a straight line that does not pass through the origin",
+            "why_wrong": "This is a linear relationship but not direct proportion."
+          },
+          {
+            "key": "C",
+            "text": "a curve",
+            "why_wrong": "Direct proportion always gives a straight-line graph."
+          },
+          {
+            "key": "D",
+            "text": "a horizontal line",
+            "why_wrong": "A horizontal line means y does not change, so y is not proportional to x."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Direct proportion ($y = kx$) gives a straight line through the origin, because when $x = 0$, $y = 0$."
+      },
+      {
+        "id": "MCQ-FOUND-04-2",
+        "stem": "Pressure and volume of a gas at constant temperature are inversely proportional. If the volume is halved, the pressure:",
+        "options": [
+          {
+            "key": "A",
+            "text": "halves",
+            "why_wrong": "Halving would happen with direct proportion, not inverse proportion."
+          },
+          {
+            "key": "B",
+            "text": "doubles"
+          },
+          {
+            "key": "C",
+            "text": "stays the same",
+            "why_wrong": "The pressure changes because volume changes."
+          },
+          {
+            "key": "D",
+            "text": "quadruples",
+            "why_wrong": "Quadrupling would occur if pressure were proportional to the square of 1/V."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Inverse proportion: when one quantity is halved (× ½), the other doubles (× 2). PV = constant."
+      },
+      {
+        "id": "MCQ-FOUND-04-3",
+        "stem": "Kinetic energy is proportional to the square of speed. If speed is tripled, kinetic energy becomes:",
+        "options": [
+          {
+            "key": "A",
+            "text": "3 times larger",
+            "why_wrong": "This would be the case for direct proportion (E ∝ v), not E ∝ v²."
+          },
+          {
+            "key": "B",
+            "text": "6 times larger",
+            "why_wrong": "This is 2 × 3, which is not how squaring works."
+          },
+          {
+            "key": "C",
+            "text": "9 times larger"
+          },
+          {
+            "key": "D",
+            "text": "27 times larger",
+            "why_wrong": "This is 3³, which would apply if E ∝ v³."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$E_k \\propto v^2$. If $v$ is tripled, $E_k$ changes by factor $3^2 = 9$."
+      },
+      {
+        "id": "MCQ-FOUND-04-4",
+        "stem": "Which of these shows inverse proportion?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$y = 3x$",
+            "why_wrong": "This is direct proportion."
+          },
+          {
+            "key": "B",
+            "text": "$y = x + 3$",
+            "why_wrong": "This is a linear relationship (not through the origin), not inverse proportion."
+          },
+          {
+            "key": "C",
+            "text": "$y = 3/x$"
+          },
+          {
+            "key": "D",
+            "text": "$y = 3x^2$",
+            "why_wrong": "This is proportional to $x^2$, not inversely proportional to $x$."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$y = 3/x$ means $xy = 3$ = constant, which is the definition of inverse proportion."
+      }
+    ],
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::proportionality_and_ratios",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 4
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": true,
+          "order": 4
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "05_Estimating_and_checking.json": {
+    "id": "FOUND-05",
+    "title": "Estimating and checking",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "curriculum": "GCSE/IGCSE",
+    "estimated_length": "35 min",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "id": "LO-FOUND-05-1",
+        "statement": "Estimate the order of magnitude of everyday physical quantities."
+      },
+      {
+        "id": "LO-FOUND-05-2",
+        "statement": "Round answers to an appropriate number of significant figures."
+      },
+      {
+        "id": "LO-FOUND-05-3",
+        "statement": "Check that a calculated answer is reasonable by estimation."
+      }
+    ],
+    "prerequisites": [
+      {
+        "lesson_id": "FOUND-01",
+        "description": "Units and standard form"
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-FOUND-05-1",
+        "stem": "Round 0.03457 to 2 significant figures.",
+        "answer": "0.035"
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TB-FOUND-05-01",
+        "type": "concept",
+        "title": "Orders of magnitude",
+        "scope": "CORE",
+        "content": "An **order of magnitude** is the power of ten closest to a quantity. It tells you roughly 'how big' something is without worrying about the exact number.\n\n- The order of magnitude of 500 is $10^3$ (because 500 is closer to $10^3 = 1000$ than to $10^2 = 100$ on a logarithmic scale).\n- Actually, the boundary is at $\\sqrt{10} \\approx 3.16$. If the leading digits give a number less than 3.16, round down; if 3.16 or more, round up. So 300 → $10^2$ but 400 → $10^3$.\n- For quick estimates at GCSE, just ask: 'Is this number closer to 100 or to 1000?' and pick the nearer power of ten.\n\n**Why orders of magnitude matter:**\n\n1. They help you **check your answers**. If you calculate the speed of a car and get 5000 m/s, that is order of magnitude $10^4$ — much higher than a typical car speed (~$10^1$ m/s). Something is wrong.\n\n2. They help you **estimate answers** when you do not know exact values.\n\n3. They help you **compare quantities**. 'The Sun is $10^{9}$ times more massive than the Earth' immediately tells you the Sun is a billion times heavier.\n\n**Useful orders of magnitude for GCSE Physics:**\n\n| Quantity | Approximate value | Order of magnitude |\n|----------|------------------|--------------------|\n| Height of a person | 1.7 m | $10^0$ m |\n| Length of a football pitch | 100 m | $10^2$ m |\n| Mass of an apple | 0.1 kg | $10^{-1}$ kg |\n| Mass of a car | 1500 kg | $10^3$ kg |\n| Speed of walking | 1.5 m/s | $10^0$ m/s |\n| Speed of a car on a motorway | 30 m/s | $10^1$ m/s |\n| Speed of sound in air | 340 m/s | $10^2$ m/s |\n| Speed of light | $3 \\times 10^8$ m/s | $10^8$ m/s |\n| Thickness of a human hair | 0.1 mm ≈ $10^{-4}$ m | $10^{-4}$ m |\n| Diameter of an atom | $10^{-10}$ m | $10^{-10}$ m |",
+        "assets": [
+          {
+            "id": "diagram_found_05_01",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-14 -14 528 228\" fill=\"#0b1f3a\" role=\"img\" data-nebula-svg=\"2026-10\" width=\"528\" height=\"228\"><rect x=\"-14\" y=\"-14\" width=\"528\" height=\"228\" fill=\"#f6f8fb\" data-nebula-background=\"true\"/><title>05_Estimating_and_checking.json</title><rect x=\"0\" y=\"0\" width=\"500\" height=\"200\" fill=\"#f6f8fb\"/><text x=\"250\" y=\"22\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Orders of Magnitude: Length Scale</text><line x1=\"30\" y1=\"100\" x2=\"470\" y2=\"100\" stroke=\"#0b1f3a\" stroke-width=\"2\"/><circle cx=\"55\" cy=\"100\" r=\"6\" fill=\"#7952a3\"/><text x=\"55\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Atom</text><text x=\"55\" y=\"125\" text-anchor=\"middle\" font-size=\"10\" fill=\"#7952a3\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">10</text><text x=\"55\" y=\"151\" text-anchor=\"middle\" font-size=\"8\" fill=\"#7952a3\" dy=\"-2\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">-10</text><text x=\"55\" y=\"140\" text-anchor=\"middle\" font-size=\"10\" fill=\"#7952a3\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\"> m</text><circle cx=\"140\" cy=\"100\" r=\"6\" fill=\"#7952a3\"/><text x=\"140\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Cell</text><text x=\"140\" y=\"130\" text-anchor=\"middle\" font-size=\"10\" fill=\"#7952a3\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">10⁻⁵ m</text><circle cx=\"225\" cy=\"100\" r=\"6\" fill=\"#2e7d5b\"/><text x=\"225\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Person</text><text x=\"225\" y=\"130\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2e7d5b\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">10⁰ m</text><circle cx=\"310\" cy=\"100\" r=\"6\" fill=\"#2e7d5b\"/><text x=\"310\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Mountain</text><text x=\"310\" y=\"130\" text-anchor=\"middle\" font-size=\"10\" fill=\"#2e7d5b\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">10³ m</text><circle cx=\"395\" cy=\"100\" r=\"6\" fill=\"#b77916\"/><text x=\"395\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Earth</text><text x=\"395\" y=\"130\" text-anchor=\"middle\" font-size=\"10\" fill=\"#b77916\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">10⁷ m</text><circle cx=\"455\" cy=\"100\" r=\"6\" fill=\"#b77916\"/><text x=\"455\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Sun</text><text x=\"455\" y=\"130\" text-anchor=\"middle\" font-size=\"10\" fill=\"#b77916\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">10⁹ m</text><text x=\"250\" y=\"170\" text-anchor=\"middle\" font-size=\"12\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Each step is roughly 10× to 100 000× the previous</text></svg>",
+            "caption": "A scale of lengths from atoms ($10^{-10}\\,\\mathrm{m}$) to the Sun ($10^{9}\\,\\mathrm{m}$), spanning 19 orders of magnitude.",
+            "purpose": "visualise the range of length scales in physics"
+          }
+        ]
+      },
+      {
+        "id": "TB-FOUND-05-02",
+        "type": "concept",
+        "title": "Significant figures",
+        "scope": "CORE",
+        "content": "**Significant figures (s.f.)** tell you how precisely a number is stated. The rules are:\n\n1. **All non-zero digits are significant.** 234 has 3 s.f.\n\n2. **Zeros between non-zero digits are significant.** 2007 has 4 s.f.\n\n3. **Leading zeros are NOT significant.** 0.0034 has 2 s.f. (the 3 and 4). The leading zeros just show the position of the decimal point.\n\n4. **Trailing zeros after a decimal point ARE significant.** 2.50 has 3 s.f. (the trailing zero tells you the measurement was precise to the hundredths place).\n\n5. **Trailing zeros in a whole number are ambiguous.** 2500 could be 2, 3, or 4 s.f. Use standard form to be clear: $2.5 \\times 10^3$ (2 s.f.) vs $2.50 \\times 10^3$ (3 s.f.).\n\n**Examples:**\n- 45.6 → 3 s.f.\n- 0.00320 → 3 s.f. (3, 2, and the trailing 0)\n- 100.0 → 4 s.f.\n- 7 → 1 s.f.\n- 0.5060 → 4 s.f.\n\n**Rounding to a given number of significant figures:**\n\n1. Count from the first non-zero digit.\n2. Keep that many digits and round the last one.\n3. Fill in with zeros if necessary to maintain the correct order of magnitude.\n\n**Examples of rounding to 2 s.f.:**\n- 3.456 → 3.5\n- 0.003456 → 0.0035\n- 2849 → 2800\n- 0.05032 → 0.050\n\n**The rule for answers in physics:**\n\nYour final answer should have the **same number of significant figures** as the least precise value given in the question (or, at GCSE, usually 2 or 3 s.f.). Giving too many significant figures implies false precision; giving too few loses information.\n\n**Example:** If $v = 25$ m/s (2 s.f.) and $t = 3.0$ s (2 s.f.), then $s = 25 \\times 3.0 = 75$ m (2 s.f.).\n\n**Exam tip:** If a question says 'Give your answer to 3 significant figures', you MUST round to exactly 3 s.f. Failing to do so loses the final answer mark.",
+        "assets": []
+      },
+      {
+        "id": "TB-FOUND-05-03",
+        "type": "concept",
+        "title": "Estimation as a checking tool",
+        "scope": "CORE",
+        "content": "Before and after every calculation, ask yourself: **'Does my answer make sense?'**\n\nA quick estimate can catch errors that would otherwise cost you marks.\n\n**How to estimate:**\n\n1. Round each value in the question to 1 significant figure.\n2. Do the calculation with the rounded values (this should be easy mental arithmetic).\n3. Compare your estimated answer with your calculated answer. They should be similar in order of magnitude.\n\n**Example:** A car of mass 1350 kg accelerates at 2.3 m/s².\n\nExact: $F = 1350 \\times 2.3 = 3105\\,\\mathrm{N}$\n\nEstimate: $F \\approx 1000 \\times 2 = 2000\\,\\mathrm{N}$\n\nThe estimate (2000 N) and the exact answer (3105 N) are the same order of magnitude ($\\sim 10^3$). ✓ If your calculator had shown 31 050 N, the estimate would flag a possible factor-of-10 error.\n\n**Common-sense checks for GCSE Physics:**\n\n| Quantity | If your answer is... | Something is probably wrong |\n|----------|---------------------|----------------------------|\n| Speed of a person | > 15 m/s | Faster than an Olympic sprinter |\n| Speed of a car | > 50 m/s | Faster than a motorway speed |\n| Mass of a person | > 150 kg or < 20 kg | Outside the normal range |\n| Acceleration due to gravity | ≠ ~10 m/s² | Wrong value of g |\n| Temperature change | > 1000 °C | Probably a unit error |\n| Wavelength of light | not between 400–700 nm | Outside the visible spectrum |",
+        "assets": []
+      }
+    ],
+    "keywords": [
+      "order of magnitude",
+      "significant figures",
+      "estimation",
+      "rounding",
+      "precision",
+      "checking"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FOUND-05-1",
+        "statement": "Round $0.004\\,567$ to (a) 1 s.f., (b) 2 s.f., (c) 3 s.f.",
+        "solution": "**Identify significant figures:** The leading zeros (0.00) are not significant. The first significant figure is 4.\n\n**(a) 1 s.f.:** Keep the 4, look at the next digit (5). Since 5 rounds up: $0.005$\n\n**(b) 2 s.f.:** Keep 4 and 5, look at the next digit (6). Since 6 ≥ 5, round up: $0.0046$\n\n**(c) 3 s.f.:** Keep 4, 5, and 6, look at the next digit (7). Since 7 ≥ 5, round up: $0.00457$"
+      },
+      {
+        "id": "WE-FOUND-05-2",
+        "statement": "Estimate the kinetic energy of a car of mass 1200 kg travelling at 13 m/s.",
+        "solution": "**Formula:** $E_k = \\frac{1}{2}mv^2$\n\n**Round to 1 s.f.:** $m \\approx 1000\\,\\mathrm{kg}$, $v \\approx 10\\,\\mathrm{m/s}$\n\n**Estimate:** $E_k \\approx \\frac{1}{2} \\times 1000 \\times 10^2 = \\frac{1}{2} \\times 1000 \\times 100 = 50\\,000\\,\\mathrm{J}$\n\n**Exact calculation:** $E_k = \\frac{1}{2} \\times 1200 \\times 13^2 = \\frac{1}{2} \\times 1200 \\times 169 = 101\\,400\\,\\mathrm{J}$\n\n**Compare:** Estimate $\\sim 5 \\times 10^4$, exact $\\sim 1 \\times 10^5$. Same order of magnitude — the answer is reasonable.\n\n**Answer (to 2 s.f.):** $E_k \\approx 100\\,000\\,\\mathrm{J} = 1.0 \\times 10^5\\,\\mathrm{J}$"
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FOUND-05-1",
+        "statement": "A rectangular block has dimensions 2.34 cm × 1.05 cm × 5.67 cm. Calculate its volume and give your answer to the appropriate number of significant figures.",
+        "hints": [
+          "Volume = length × width × height",
+          "The answer should have the same number of s.f. as the least precise measurement."
+        ],
+        "answer": "$13.9\\,\\mathrm{cm^3}$ (3 s.f.)",
+        "full_solution": "**Calculation:** $V = 2.34 \\times 1.05 \\times 5.67 = 13.924...\\,\\mathrm{cm^3}$\n\n**Significant figures:** All three measurements have 3 s.f., so the answer should be given to 3 s.f.\n\n**Round:** $13.924... \\approx 13.9\\,\\mathrm{cm^3}$\n\n**Answer:** $V = 13.9\\,\\mathrm{cm^3}$ (3 s.f.)"
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FOUND-05-1",
+        "statement": "State the number of significant figures in each value:\n(a) 5.03  (b) 0.0200  (c) 10 000  (d) 8.0 × 10³",
+        "answer": "(a) 3  (b) 3  (c) ambiguous (1 to 5)  (d) 2",
+        "full_solution": "**(a)** 5.03: The zero between 5 and 3 IS significant. **3 s.f.**\n\n**(b)** 0.0200: Leading zeros are not significant. The trailing zero after the 2 IS significant (it was deliberately written). **3 s.f.** (2, 0, 0).\n\n**(c)** 10 000: Ambiguous. Could be 1, 2, 3, 4 or 5 s.f. Without context or standard form, we cannot tell.\n\n**(d)** $8.0 \\times 10^3$: The trailing zero after the decimal point IS significant. **2 s.f.**"
+      },
+      {
+        "id": "EX-FOUND-05-2",
+        "statement": "Estimate the weight of a person with mass 75 kg on the Moon, where $g_{\\text{Moon}} \\approx 1.6\\,\\mathrm{N/kg}$.",
+        "answer": "Approximately $120\\,\\mathrm{N}$",
+        "full_solution": "**Formula:** $W = mg$\n\n**Estimation (1 s.f.):** $W \\approx 80 \\times 2 = 160\\,\\mathrm{N}$\n\n**Exact:** $W = 75 \\times 1.6 = 120\\,\\mathrm{N}$\n\n**Check:** Estimate (160 N) and exact (120 N) are same order of magnitude. ✓\n\n**Answer:** $W = 120\\,\\mathrm{N}$ (2 s.f.)"
+      },
+      {
+        "id": "EX-FOUND-05-3",
+        "statement": "A student calculates the speed of a cyclist as $340\\,\\mathrm{m/s}$. Explain why this answer must be wrong.",
+        "answer": "340 m/s is the speed of sound, far too fast for a cyclist. A typical cycling speed is about 5–10 m/s.",
+        "full_solution": "**Analysis:** $340\\,\\mathrm{m/s}$ is approximately the speed of sound in air. No cyclist can travel at the speed of sound.\n\nA typical cycling speed is about $5$–$10\\,\\mathrm{m/s}$ (order of magnitude $10^1$). The student's answer is two orders of magnitude too high ($10^2$ vs $10^1$).\n\nThe student has likely made a **unit conversion error** (e.g. not converting km to m, or hours to seconds) or a **calculator error** (e.g. multiplying instead of dividing).\n\n**Answer:** The answer is unreasonable because 340 m/s is the speed of sound — a cyclist typically travels at about 5–10 m/s."
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MCQ-FOUND-05-1",
+        "stem": "How many significant figures does $0.00450$ have?",
+        "options": [
+          {
+            "key": "A",
+            "text": "2",
+            "why_wrong": "The trailing zero (after the 5) is significant because it comes after the decimal point."
+          },
+          {
+            "key": "B",
+            "text": "3"
+          },
+          {
+            "key": "C",
+            "text": "5",
+            "why_wrong": "The leading zeros are not significant."
+          },
+          {
+            "key": "D",
+            "text": "4",
+            "why_wrong": "Only the digits 4, 5, and the trailing 0 are significant."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Leading zeros (0.00) are not significant. The significant figures are 4, 5, and the trailing 0 = 3 s.f."
+      },
+      {
+        "id": "MCQ-FOUND-05-2",
+        "stem": "The order of magnitude of 7500 is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$10^2$",
+            "why_wrong": "10² = 100, which is much smaller than 7500."
+          },
+          {
+            "key": "B",
+            "text": "$10^3$",
+            "why_wrong": "7500 is closer to 10⁴ = 10 000 than to 10³ = 1000 (since 7.5 > 3.16)."
+          },
+          {
+            "key": "C",
+            "text": "$10^4$"
+          },
+          {
+            "key": "D",
+            "text": "$10^5$",
+            "why_wrong": "10⁵ = 100 000, which is much larger than 7500."
+          }
+        ],
+        "correct": "C",
+        "explanation": "7500 ≈ 7.5 × 10³. Since 7.5 > 3.16 (≈ √10), we round up to 10⁴."
+      },
+      {
+        "id": "MCQ-FOUND-05-3",
+        "stem": "A student calculates the mass of a textbook as $25\\,\\mathrm{kg}$. Is this reasonable?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Yes, textbooks are heavy"
+          },
+          {
+            "key": "B",
+            "text": "No — 25 kg is far too heavy; a textbook typically has a mass of about 0.5–1 kg"
+          },
+          {
+            "key": "C",
+            "text": "No — 25 kg is too light",
+            "why_wrong": "25 kg is far too heavy, not too light. It is roughly the mass of a child."
+          },
+          {
+            "key": "D",
+            "text": "Impossible to say without more information",
+            "why_wrong": "Common sense about everyday objects is enough."
+          }
+        ],
+        "correct": "B",
+        "explanation": "A typical textbook has a mass of about 0.5–1 kg. 25 kg is about the mass of a 3-year-old child — far too heavy for a book."
+      },
+      {
+        "id": "MCQ-FOUND-05-4",
+        "stem": "When multiplying $3.2$ (2 s.f.) by $1.45$ (3 s.f.), the answer should be given to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "2 significant figures"
+          },
+          {
+            "key": "B",
+            "text": "3 significant figures",
+            "why_wrong": "You should use the lower of the two, which is 2 s.f."
+          },
+          {
+            "key": "C",
+            "text": "5 significant figures",
+            "why_wrong": "This adds the two counts instead of taking the lower one."
+          },
+          {
+            "key": "D",
+            "text": "1 significant figure",
+            "why_wrong": "Neither input has only 1 s.f."
+          }
+        ],
+        "correct": "A",
+        "explanation": "The answer should be given to the same number of significant figures as the least precise input. 3.2 has 2 s.f. and 1.45 has 3 s.f., so the answer should be given to 2 s.f. Answer: 3.2 × 1.45 = 4.64 → 4.6 (2 s.f.)."
+      }
+    ],
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::estimating_and_checking",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 5
+        },
+        "STANDARD": {
+          "include": false
+        },
+        "EXCELLENCE": {
+          "include": true,
+          "order": 5
+        },
+        "FAST_REVIEW": {
+          "include": false
+        }
+      },
+      "epistemic_overrides": []
+    }
+  },
+  "06_Laboratory_skills_and_safety.json": {
+    "id": "FOUND-06",
+    "title": "Laboratory skills and safety",
+    "subject": "Physics",
+    "course_label": "GCSE Physics",
+    "unit_id": "U00_Foundations",
+    "curriculum": "GCSE/IGCSE",
+    "estimated_length": "45 min",
+    "estimated_difficulty": 2,
+    "objectives": [
+      {
+        "id": "LO-FOUND-06-1",
+        "statement": "Name common laboratory equipment and state what each measures."
+      },
+      {
+        "id": "LO-FOUND-06-2",
+        "statement": "Distinguish between accuracy and precision, and between systematic and random errors."
+      },
+      {
+        "id": "LO-FOUND-06-3",
+        "statement": "Describe how to reduce errors and improve the reliability of measurements."
+      },
+      {
+        "id": "LO-FOUND-06-4",
+        "statement": "State key safety precautions for common physics experiments."
+      }
+    ],
+    "prerequisites": [
+      {
+        "lesson_id": "FOUND-05",
+        "description": "Estimating and checking"
+      }
+    ],
+    "diagnostic_items": [
+      {
+        "id": "DIAG-FOUND-06-1",
+        "stem": "What is the difference between accuracy and precision?",
+        "answer": "Accuracy is how close a measurement is to the true value. Precision is how close repeated measurements are to each other."
+      }
+    ],
+    "theory_blocks": [
+      {
+        "id": "TB-FOUND-06-01",
+        "type": "concept",
+        "title": "Common laboratory equipment",
+        "scope": "CORE",
+        "content": "Knowing which instrument to use for each measurement is essential — both for practical work and for exam questions that ask you to describe an experiment.\n\n**Length:**\n- **Ruler** (30 cm or 1 m): measures to the nearest millimetre (resolution 1 mm). Suitable for lengths from about 1 cm to 1 m.\n- **Measuring tape**: for longer lengths (e.g. the height of a room).\n- **Vernier caliper**: measures to the nearest 0.1 mm. Used for small objects like the diameter of a wire.\n- **Micrometer screw gauge**: measures to the nearest 0.01 mm. Used for very small thicknesses (e.g. wire diameter, sheet thickness).\n\n**Mass:**\n- **Electronic balance (digital scale)**: measures mass in grams or kilograms. Resolution typically 0.1 g or 0.01 g.\n\n**Time:**\n- **Stopwatch (digital)**: resolution 0.01 s. Remember: human **reaction time** adds about 0.2–0.3 s of error to each start/stop.\n- **Light gates + data logger**: more precise for fast events (e.g. measuring the speed of a trolley).\n\n**Temperature:**\n- **Thermometer** (mercury or alcohol): measures to the nearest 0.5 °C or 1 °C.\n- **Digital thermometer / thermocouple**: faster response, resolution 0.1 °C.\n\n**Volume:**\n- **Measuring cylinder**: measures liquid volume. Read at the bottom of the meniscus at eye level.\n- **Displacement can (eureka can)**: measures the volume of an irregular solid by water displacement.\n\n**Force:**\n- **Newton meter (spring balance)**: measures force in newtons.\n\n**Electrical quantities:**\n- **Ammeter**: measures current in amperes. Connected in **series**.\n- **Voltmeter**: measures potential difference in volts. Connected in **parallel**.\n- **Ohmmeter / multimeter**: measures resistance directly.\n\n**Exam tip:** When describing an experiment, always name the specific instrument (not just 'a measuring device') and state what it measures.",
+        "assets": [
+          {
+            "id": "diagram_found_06_01",
+            "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-14 -14 536.9826202392579 278.00000000000006\" fill=\"#0b1f3a\" role=\"img\" data-nebula-svg=\"2026-10\" width=\"537\" height=\"279\"><rect x=\"-14\" y=\"-14\" width=\"536.9826202392579\" height=\"278.00000000000006\" fill=\"#f6f8fb\" data-nebula-background=\"true\"/><title>06_Laboratory_skills_and_safety.json</title><rect x=\"0\" y=\"0\" width=\"500\" height=\"250\" fill=\"#f6f8fb\"/><text x=\"250\" y=\"25\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"bold\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Accuracy vs Precision</text><circle cx=\"100\" cy=\"130\" r=\"55\" fill=\"none\" stroke=\"#0b1f3a\" stroke-width=\"1.5\"/><circle cx=\"100\" cy=\"130\" r=\"35\" fill=\"none\" stroke=\"#e4eaf0\" stroke-width=\"1\"/><circle cx=\"100\" cy=\"130\" r=\"15\" fill=\"none\" stroke=\"#e4eaf0\" stroke-width=\"1\"/><circle cx=\"100\" cy=\"130\" r=\"3\" fill=\"#b77916\"/><circle cx=\"95\" cy=\"117\" r=\"4\" fill=\"#2e7d5b\"/><circle cx=\"108\" cy=\"125\" r=\"4\" fill=\"#2e7d5b\"/><circle cx=\"88\" cy=\"135\" r=\"4\" fill=\"#2e7d5b\"/><circle cx=\"103\" cy=\"140\" r=\"4\" fill=\"#2e7d5b\"/><text x=\"100\" y=\"210\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#2e7d5b\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Accurate &amp; Precise</text><text x=\"100\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Close to true, close together</text><circle cx=\"260\" cy=\"130\" r=\"55\" fill=\"none\" stroke=\"#0b1f3a\" stroke-width=\"1.5\"/><circle cx=\"260\" cy=\"130\" r=\"35\" fill=\"none\" stroke=\"#e4eaf0\" stroke-width=\"1\"/><circle cx=\"260\" cy=\"130\" r=\"15\" fill=\"none\" stroke=\"#e4eaf0\" stroke-width=\"1\"/><circle cx=\"260\" cy=\"130\" r=\"3\" fill=\"#b77916\"/><circle cx=\"290\" cy=\"100\" r=\"4\" fill=\"#7952a3\"/><circle cx=\"295\" cy=\"108\" r=\"4\" fill=\"#7952a3\"/><circle cx=\"287\" cy=\"95\" r=\"4\" fill=\"#7952a3\"/><circle cx=\"293\" cy=\"103\" r=\"4\" fill=\"#7952a3\"/><text x=\"260\" y=\"210\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#7952a3\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Precise but not Accurate</text><text x=\"260\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Close together, far from true</text><circle cx=\"420\" cy=\"130\" r=\"55\" fill=\"none\" stroke=\"#0b1f3a\" stroke-width=\"1.5\"/><circle cx=\"420\" cy=\"130\" r=\"35\" fill=\"none\" stroke=\"#e4eaf0\" stroke-width=\"1\"/><circle cx=\"420\" cy=\"130\" r=\"15\" fill=\"none\" stroke=\"#e4eaf0\" stroke-width=\"1\"/><circle cx=\"420\" cy=\"130\" r=\"3\" fill=\"#b77916\"/><circle cx=\"400\" cy=\"105\" r=\"4\" fill=\"#b77916\"/><circle cx=\"445\" cy=\"145\" r=\"4\" fill=\"#b77916\"/><circle cx=\"390\" cy=\"150\" r=\"4\" fill=\"#b77916\"/><circle cx=\"440\" cy=\"110\" r=\"4\" fill=\"#b77916\"/><text x=\"420\" y=\"194\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#b77916\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Neither Accurate nor Precise</text><text x=\"420\" y=\"228\" text-anchor=\"middle\" font-size=\"11\" fill=\"#0b1f3a\" font-family=\"Arial, Helvetica, sans-serif\" paint-order=\"stroke fill\" stroke=\"#f6f8fb\" stroke-width=\"2.5\" stroke-linejoin=\"round\">Far from true, spread out</text></svg>",
+            "caption": "The bullseye analogy for accuracy and precision. The centre (gold dot) is the true value. Green dots are accurate and precise; purple dots are precise but not accurate; orange dots are neither.",
+            "purpose": "visual explanation of accuracy vs precision"
+          }
+        ]
+      },
+      {
+        "id": "TB-FOUND-06-02",
+        "type": "concept",
+        "title": "Accuracy, precision and errors",
+        "scope": "CORE",
+        "content": "Understanding errors is crucial for practical work and for the 'planning and evaluation' questions that appear on the exam.\n\n**Accuracy** — how close a measurement is to the **true value**.\n- A measurement is accurate if it is not far from the real answer.\n- You improve accuracy by using **better equipment** (e.g. a micrometer instead of a ruler) and by eliminating **systematic errors**.\n\n**Precision** — how close repeated measurements are to **each other**.\n- A set of measurements is precise if they give very similar values each time.\n- Precision is related to the **resolution** of the instrument (the smallest change it can detect).\n- You improve precision by using an instrument with **higher resolution**.\n\n**Resolution** — the smallest change in the quantity being measured that the instrument can detect.\n- A ruler has a resolution of 1 mm.\n- A micrometer has a resolution of 0.01 mm.\n- A digital stopwatch has a resolution of 0.01 s (but human reaction time limits effective precision to about ±0.2 s).\n\n**Two types of error:**\n\n**1. Systematic errors** affect accuracy (not precision). They shift ALL readings in the same direction by the same amount.\n- **Examples:** A zero error (the instrument doesn't read zero when it should); a ruler that has expanded in heat; always reading a thermometer at an angle (parallax).\n- **How to spot:** The average of many readings is still wrong.\n- **How to reduce:** Calibrate instruments, check for zero errors, use correct technique.\n\n**2. Random errors** affect precision (not accuracy). They cause readings to scatter unpredictably above and below the true value.\n- **Examples:** Reaction time when using a stopwatch; slight variations in the position you read from; air currents affecting a balance.\n- **How to spot:** Readings vary each time you repeat the measurement.\n- **How to reduce:** Take **multiple readings** and calculate the **mean** (average). The more readings you take, the closer the mean should be to the true value.\n\n**Anomalous results (outliers):** Measurements that do not fit the pattern. They should be identified (circled on a graph), excluded from the mean, and the measurement repeated if possible.\n\n**Exam tip:** When asked 'how could you improve this experiment?', consider:\n1. Take more repeat readings and calculate the mean.\n2. Use a more precise instrument.\n3. Eliminate or reduce systematic errors (zero error, parallax).\n4. Control variables more carefully.\n5. Use a larger range of measurements.",
+        "assets": []
+      },
+      {
+        "id": "TB-FOUND-06-03",
+        "type": "concept",
+        "title": "Safety in physics experiments",
+        "scope": "CORE",
+        "content": "Safety questions appear regularly on GCSE papers. You need to identify the hazard and state the precaution clearly.\n\n**General safety rules:**\n- Wear safety goggles when there is a risk to the eyes (e.g. springs under tension, hot liquids, sparks).\n- Tie back long hair and secure loose clothing when using moving parts or heat sources.\n- Do not touch hot surfaces — use tongs or heat-resistant mats.\n- Handle electrical equipment with dry hands.\n- Report broken equipment immediately.\n\n**Experiment-specific safety:**\n\n| Experiment | Hazard | Precaution |\n|------------|--------|------------|\n| Springs/Hooke's law | Spring may snap or fly off | Wear goggles; use a clamp to secure the spring; stand back |\n| Heating water/specific heat | Burns from hot water or steam | Use a thermometer to check temperature; handle hot objects with tongs; do not overheat |\n| Radioactivity | Ionising radiation | Use tongs to handle sources; keep at a distance; limit exposure time; store sources in lead-lined containers |\n| Electricity experiments | Electric shock; overheating wires | Do not exceed voltage ratings; switch off when adjusting circuits; check for frayed wires |\n| Pendulum/free fall | Falling masses | Use a soft landing surface (sand tray); keep feet clear |\n| Light experiments (ray box) | Burns from hot ray box; eye damage from bright light | Do not stare into the beam; let ray box cool before handling |\n\n**How to write a safety answer in the exam:**\n\n1. **Name the hazard** (what could go wrong): 'The hot water could cause a burn.'\n2. **State the precaution** (what you do about it): 'Use a thermometer to check the temperature and handle the container with tongs.'\n3. **Be specific** — 'be careful' is too vague to earn marks.",
+        "assets": []
+      }
+    ],
+    "keywords": [
+      "accuracy",
+      "precision",
+      "resolution",
+      "systematic error",
+      "random error",
+      "zero error",
+      "parallax",
+      "anomalous",
+      "mean",
+      "repeat",
+      "safety",
+      "hazard",
+      "precaution"
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-FOUND-06-1",
+        "statement": "A student measures the diameter of a wire five times with a micrometer:\n0.52 mm, 0.53 mm, 0.51 mm, 0.52 mm, 0.78 mm.\nCalculate the mean diameter, explaining your reasoning.",
+        "solution": "**Step 1:** Identify anomalous results. The value 0.78 mm is much larger than the others — it is an **outlier** (probably a misreading). Exclude it.\n\n**Step 2:** Calculate the mean of the remaining four values.\n$$\\text{mean} = \\frac{0.52 + 0.53 + 0.51 + 0.52}{4} = \\frac{2.08}{4} = 0.52\\,\\mathrm{mm}$$\n\n**Step 3:** State the precision. The micrometer reads to 0.01 mm, so the answer is $0.52 \\pm 0.01\\,\\mathrm{mm}$.\n\n**Answer:** Mean diameter = $0.52\\,\\mathrm{mm}$ (after excluding the anomalous reading of 0.78 mm)."
+      },
+      {
+        "id": "WE-FOUND-06-2",
+        "statement": "Explain the difference between a systematic error and a random error. Give one example of each in a timing experiment using a stopwatch.",
+        "solution": "**Systematic error:**\n- **Definition:** An error that shifts all readings in the same direction by approximately the same amount. It affects accuracy but not precision.\n- **Example:** The stopwatch has a zero error — it starts from 0.03 s instead of 0.00 s. Every reading will be 0.03 s too high.\n\n**Random error:**\n- **Definition:** An error that causes readings to scatter unpredictably above and below the true value. It affects precision but not accuracy.\n- **Example:** The student's reaction time varies each time they start and stop the stopwatch. Some readings will be too high and some too low.\n\n**How to deal with each:**\n- Systematic: recalibrate or re-zero the stopwatch.\n- Random: take multiple readings and calculate the mean."
+      }
+    ],
+    "guided_exercises": [
+      {
+        "id": "GE-FOUND-06-1",
+        "statement": "A student uses a ruler to measure the length of a pencil and gets 14.3 cm. Another student uses the same ruler and gets 14.4 cm. A third gets 14.2 cm. Are these results accurate, precise, or both? The actual length is 14.3 cm.",
+        "hints": [
+          "Check precision: are the values close to each other?",
+          "Check accuracy: are they close to the true value (14.3 cm)?"
+        ],
+        "answer": "Both accurate and precise.",
+        "full_solution": "**Precision check:** The readings are 14.2, 14.3, 14.4 cm. The spread is only 0.2 cm, which is very small. The results are **precise** (close to each other).\n\n**Accuracy check:** The mean = (14.2 + 14.3 + 14.4) / 3 = 14.3 cm. This equals the true value. The results are **accurate** (close to the true value).\n\n**Answer:** The results are both accurate (mean matches true value) and precise (small spread)."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-FOUND-06-1",
+        "statement": "A student measures the time for a pendulum to complete 20 swings and gets: 32.4 s, 31.8 s, 32.1 s, 31.9 s, 32.0 s.\n(a) Calculate the mean time for 20 swings.\n(b) Calculate the period (time for one swing).\n(c) How does timing 20 swings instead of 1 reduce the error?",
+        "answer": "(a) 32.04 s  (b) 1.60 s  (c) The percentage effect of reaction-time error is reduced by a factor of 20.",
+        "full_solution": "**(a)** Mean = (32.4 + 31.8 + 32.1 + 31.9 + 32.0) / 5 = 160.2 / 5 = **32.04 s** (or 32.0 s to 3 s.f.)\n\n**(b)** Period = total time / number of swings = 32.04 / 20 = **1.602 s ≈ 1.60 s** (3 s.f.)\n\n**(c)** The human reaction time error (about ±0.2 s) is the same whether you time 1 swing or 20 swings. But for 1 swing taking ~1.6 s, a 0.2 s error is 12.5% of the measurement. For 20 swings taking ~32 s, a 0.2 s error is only 0.6% of the measurement. Timing more swings **dilutes** the reaction-time error, giving a much more precise period."
+      },
+      {
+        "id": "EX-FOUND-06-2",
+        "statement": "Name the most appropriate instrument to measure:\n(a) the thickness of a sheet of paper\n(b) the current through a resistor\n(c) the volume of an irregular stone\n(d) the force needed to pull a block along a surface",
+        "answer": "(a) Micrometer  (b) Ammeter  (c) Measuring cylinder (displacement method)  (d) Newton meter",
+        "full_solution": "**(a)** A **micrometer screw gauge** (resolution 0.01 mm) — a ruler is far too coarse for a sheet of paper (~0.1 mm thick).\n\n**(b)** An **ammeter**, connected in **series** with the resistor.\n\n**(c)** A **measuring cylinder** using the **displacement method**: fill the cylinder partially with water, record the level, lower the stone in, and read the new level. The difference gives the volume of the stone.\n\n**(d)** A **Newton meter (spring balance)**, pulled horizontally along the surface while reading the steady force."
+      },
+      {
+        "id": "EX-FOUND-06-3",
+        "statement": "Describe two specific safety precautions for a Hooke's law experiment using a spring and hanging masses.",
+        "answer": "1. Wear safety goggles in case the spring snaps or a mass falls. 2. Use a clamp stand to secure the spring, and place a cushion or sand tray below the masses to prevent damage if they fall.",
+        "full_solution": "**Hazard 1:** The spring could snap under high load or fly off, potentially hitting the face or eyes.\n**Precaution:** Wear **safety goggles** and do not exceed the elastic limit of the spring.\n\n**Hazard 2:** Hanging masses could fall and cause injury to feet or damage to the floor.\n**Precaution:** Place a **soft landing pad** (cushion, sand tray, or folded towel) beneath the masses, and keep feet clear of the area below.\n\n**(Additional good practice:** Clamp the spring securely to a retort stand so it does not slide off. Do not lean over the apparatus while adding masses.)"
+      }
+    ],
+    "mcq": [
+      {
+        "id": "MCQ-FOUND-06-1",
+        "stem": "A set of measurements has a small spread but the mean is far from the true value. These results are:",
+        "options": [
+          {
+            "key": "A",
+            "text": "accurate and precise",
+            "why_wrong": "The mean is far from the true value, so the results are NOT accurate."
+          },
+          {
+            "key": "B",
+            "text": "accurate but not precise",
+            "why_wrong": "The mean is far from the true value, so the results are NOT accurate."
+          },
+          {
+            "key": "C",
+            "text": "precise but not accurate"
+          },
+          {
+            "key": "D",
+            "text": "neither accurate nor precise",
+            "why_wrong": "The small spread means the results ARE precise."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Small spread = precise (close to each other). Mean far from true value = not accurate. This pattern suggests a systematic error."
+      },
+      {
+        "id": "MCQ-FOUND-06-2",
+        "stem": "Which type of error is reduced by taking the mean of several readings?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Systematic error",
+            "why_wrong": "Systematic errors shift all readings the same way, so the mean is still wrong."
+          },
+          {
+            "key": "B",
+            "text": "Random error"
+          },
+          {
+            "key": "C",
+            "text": "Both systematic and random",
+            "why_wrong": "Averaging only reduces random errors, not systematic ones."
+          },
+          {
+            "key": "D",
+            "text": "Neither",
+            "why_wrong": "Averaging is one of the main methods for reducing random errors."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Random errors scatter above and below the true value, so averaging them out brings the mean closer to the true value. Systematic errors shift all readings in the same direction, so the mean is still shifted."
+      },
+      {
+        "id": "MCQ-FOUND-06-3",
+        "stem": "An ammeter is connected in:",
+        "options": [
+          {
+            "key": "A",
+            "text": "series with the component"
+          },
+          {
+            "key": "B",
+            "text": "parallel with the component",
+            "why_wrong": "A voltmeter is connected in parallel, not an ammeter."
+          },
+          {
+            "key": "C",
+            "text": "series with the power supply only",
+            "why_wrong": "In a series circuit the ammeter is in series with everything, including the component."
+          },
+          {
+            "key": "D",
+            "text": "either series or parallel",
+            "why_wrong": "An ammeter must always be in series to measure the current flowing through."
+          }
+        ],
+        "correct": "A",
+        "explanation": "An ammeter measures the current flowing through a component, so it must be connected in series so that the same current flows through both the ammeter and the component."
+      },
+      {
+        "id": "MCQ-FOUND-06-4",
+        "stem": "Why is timing 20 oscillations of a pendulum better than timing just 1?",
+        "options": [
+          {
+            "key": "A",
+            "text": "The pendulum swings more consistently after many swings",
+            "why_wrong": "The consistency of the pendulum does not improve — it is the measurement that improves."
+          },
+          {
+            "key": "B",
+            "text": "It reduces the percentage error caused by reaction time"
+          },
+          {
+            "key": "C",
+            "text": "It eliminates systematic errors",
+            "why_wrong": "Timing more swings does not fix systematic errors like a mis-calibrated stopwatch."
+          },
+          {
+            "key": "D",
+            "text": "It makes the period longer",
+            "why_wrong": "The period (time for one swing) is a fixed property of the pendulum, not something we change."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Human reaction time (~0.2 s) is the same whether you time 1 swing or 20. For 1 swing (~2 s), 0.2 s is a 10% error. For 20 swings (~40 s), 0.2 s is only 0.5% error. The percentage error drops by a factor of 20."
+      }
+    ],
+    "schema_v2": {
+      "canonical_lesson_id": "GCSEPHYS::U00_Foundations::laboratory_skills_and_safety",
+      "recommended_routes": {
+        "DESDE_CERO": {
+          "include": true,
+          "order": 6
+        },
+        "STANDARD": {
+          "include": true,
+          "order": 1
+        },
+        "EXCELLENCE": {
+          "include": true,
+          "order": 6
+        },
+        "FAST_REVIEW": {
+          "include": true,
+          "order": 2
+        }
+      },
+      "epistemic_overrides": []
+    }
+  }
+}

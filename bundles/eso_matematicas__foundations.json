@@ -1,0 +1,2959 @@
+{
+  "01_Numeros_naturales_y_enteros.json": {
+    "id": "LFND01",
+    "title": "Números naturales y enteros",
+    "subject": "Matemáticas",
+    "course_label": "Matemáticas · ESO · Foundations",
+    "unit_id": "U-MAT-FOUNDATIONS",
+    "estimated_length": "45 min",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Nebula Matemáticas ESO (España)",
+      "codes": [
+        "MAT.1.A.1"
+      ],
+      "status": "DEFINIDO",
+      "track": [
+        "ESO"
+      ]
+    },
+    "objectives": [
+      {
+        "id": "LO-F01-1",
+        "statement": "Distinguir números naturales de enteros y representarlos en la recta numérica.",
+        "bloom": "comprender",
+        "concept_ids": [
+          "C-F01-1"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F01-2",
+        "statement": "Sumar y restar números enteros con fluidez.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F01-2"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F01-3",
+        "statement": "Calcular el valor absoluto y el opuesto de un entero.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F01-3"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "TH-F01-1",
+        "type": "definition",
+        "title": "Números naturales y enteros",
+        "scope": "CORE",
+        "body": "Los **números naturales** son los que usas para contar: 1, 2, 3, 4, 5… Si incluyes el 0, tienes todos los que necesitas para contar cosas.\n\nPero, ¿qué pasa si bajas 5 pisos en un ascensor que estaba en el 3? Necesitas los **negativos**. Los naturales con los negativos forman los **enteros**: $\\mathbb{Z}$.",
+        "concept_ids": [
+          "C-F01-1"
+        ],
+        "objective_ids": [
+          "LO-F01-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_recta_enteros",
+            "alt": "Recta numérica con enteros de -5 a 5",
+            "purpose": "Visualizar la posición de los enteros en la recta numérica."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F01-2",
+        "type": "procedure",
+        "title": "Suma y resta de enteros",
+        "scope": "CORE",
+        "body": "Con los enteros puedes sumar, restar y multiplicar sin problemas.\n\nRegla de signos para multiplicar: $(+)(+)=+$, $(-)(-)=+$, $(+)(-)=-$, $(-)(+)=-$.\n\nPara sumar: mismo signo → sumas y mantienes el signo. Distinto signo → restas y pones el del mayor.",
+        "concept_ids": [
+          "C-F01-2"
+        ],
+        "objective_ids": [
+          "LO-F01-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_suma_enteros",
+            "alt": "Ejemplo visual de suma con flechas en la recta",
+            "purpose": "Mostrar la suma de enteros como desplazamiento en la recta numérica."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F01-3",
+        "type": "definition",
+        "title": "Valor absoluto y opuesto",
+        "scope": "CORE",
+        "body": "El **valor absoluto** $|n|$ te da la distancia al 0 (siempre positiva):\n$|{-7}| = 7$, $|5| = 5$.\n\nLos enteros se ordenan en la recta numérica: más a la derecha, más grande.\n$-3 < -1 < 0 < 2 < 5$.",
+        "concept_ids": [
+          "C-F01-3"
+        ],
+        "objective_ids": [
+          "LO-F01-3"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Número natural",
+        "definition": "Número entero no negativo: $0,1,2,3,\\ldots$",
+        "concept_id": "C-F01-1"
+      },
+      {
+        "term": "Número entero",
+        "definition": "Número sin parte decimal que puede ser positivo, negativo o cero.",
+        "concept_id": "C-F01-1"
+      },
+      {
+        "term": "Valor absoluto",
+        "definition": "Distancia de un número al cero en la recta numérica.",
+        "concept_id": "C-F01-3"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-F01-1",
+        "level": "basic",
+        "statement": "Calcula $(-8)+3+(-2)$.",
+        "knowns": [
+          "Tres sumandos enteros"
+        ],
+        "unknowns": [
+          "Resultado de la suma"
+        ],
+        "reasoning": [
+          "Suma los dos primeros: $(-8)+3=-5$.",
+          "Después suma el tercero: $(-5)+(-2)=-7$."
+        ],
+        "solution": "$(-8)+3+(-2)=-7$.",
+        "interpretation": "Paso a paso, cada suma parcial simplifica el cálculo.",
+        "common_mistake": "Sumar $8+3=11$ ignorando el signo negativo del primer sumando.",
+        "objective_ids": [
+          "LO-F01-2"
+        ],
+        "concept_ids": [
+          "C-F01-2"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F01-2",
+        "level": "basic",
+        "statement": "Calcula $5-(-3)+(-1)$.",
+        "knowns": [
+          "Expresión con resta del opuesto"
+        ],
+        "unknowns": [
+          "Resultado"
+        ],
+        "reasoning": [
+          "Reescribe la resta del opuesto: $5-(-3)=5+3=8$.",
+          "Suma el último: $8+(-1)=7$."
+        ],
+        "solution": "$5-(-3)+(-1)=7$.",
+        "interpretation": "Restar un negativo equivale a sumar el positivo correspondiente.",
+        "common_mistake": "Calcular $5-3=2$ en vez de $5+3=8$.",
+        "objective_ids": [
+          "LO-F01-2"
+        ],
+        "concept_ids": [
+          "C-F01-2"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-F01-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F01-2"
+        ],
+        "concept_ids": [
+          "C-F01-2"
+        ],
+        "difficulty": 1,
+        "statement": "Calcula $(-4)+7+(-9)+2$.",
+        "hints": [
+          "Suma de izquierda a derecha: primero $(-4)+7$.",
+          "Luego suma $(-9)$ y después $2$."
+        ],
+        "answer": "$-4$",
+        "full_solution": "$(-4)+7=3$; $3+(-9)=-6$; $(-6)+2=-4$. El resultado es $-4$.",
+        "common_errors": [
+          {
+            "error": "Sumar todos los valores absolutos",
+            "correction": "Respetar los signos de cada sumando."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F01-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F01-2"
+        ],
+        "concept_ids": [
+          "C-F01-2"
+        ],
+        "difficulty": 1,
+        "statement": "Calcula $10-(-6)-3+(-8)$.",
+        "hints": [
+          "Primero reescribe $10-(-6)=10+6$.",
+          "Después opera de izquierda a derecha."
+        ],
+        "answer": "$5$",
+        "full_solution": "$10+6=16$; $16-3=13$; $13+(-8)=5$.",
+        "common_errors": [
+          {
+            "error": "Calcular $10-6=4$ en vez de $10+6=16$",
+            "correction": "Restar un negativo equivale a sumar."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F01-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F01-3"
+        ],
+        "concept_ids": [
+          "C-F01-3"
+        ],
+        "difficulty": 1,
+        "statement": "Ordena de menor a mayor: $-12,\\ 5,\\ -3,\\ 0,\\ 8,\\ -7$.",
+        "hints": [
+          "Los negativos se ordenan al revés: cuanto mayor es la cifra, menor es el número.",
+          "El cero va entre negativos y positivos."
+        ],
+        "answer": "$-12<-7<-3<0<5<8$",
+        "full_solution": "Negativos: $-12,-7,-3$ (de menor a mayor). Cero. Positivos: $5,8$.",
+        "common_errors": [
+          {
+            "error": "Poner $-3<-12$ confundiendo cifra con valor",
+            "correction": "$-12$ está más lejos de cero, por tanto es menor."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-F01-1",
+        "stem": "¿Cuál es el resultado de $(-5)+(-3)$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$-8$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$8$",
+            "misconception_id": null,
+            "why_wrong": "Sumas los valores absolutos pero olvidas el signo negativo."
+          },
+          {
+            "key": "C",
+            "text": "$-2$",
+            "misconception_id": null,
+            "why_wrong": "Has restado en vez de sumar."
+          },
+          {
+            "key": "D",
+            "text": "$2$",
+            "misconception_id": null,
+            "why_wrong": "Has restado y además cambiado el signo."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Al sumar dos negativos, sumas valores absolutos ($5+3=8$) y pones signo negativo: $-8$.",
+        "difficulty": 1,
+        "objective_id": "LO-F01-2",
+        "concept_id": "C-F01-2"
+      },
+      {
+        "id": "MCQ-F01-2",
+        "stem": "¿Cuál es el valor absoluto de $-9$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$-9$",
+            "misconception_id": null,
+            "why_wrong": "El valor absoluto nunca es negativo."
+          },
+          {
+            "key": "B",
+            "text": "$9$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$0$",
+            "misconception_id": null,
+            "why_wrong": "Confundes valor absoluto con otra operación."
+          },
+          {
+            "key": "D",
+            "text": "$1$",
+            "misconception_id": null,
+            "why_wrong": "Confundes valor absoluto con el signo."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$|-9|=9$: la distancia de $-9$ al cero es $9$.",
+        "difficulty": 1,
+        "objective_id": "LO-F01-3",
+        "concept_id": "C-F01-3"
+      },
+      {
+        "id": "MCQ-F01-3",
+        "stem": "Calcula $7-(-4)$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$3$",
+            "misconception_id": null,
+            "why_wrong": "Has restado $4$ en vez de sumar."
+          },
+          {
+            "key": "B",
+            "text": "$-3$",
+            "misconception_id": null,
+            "why_wrong": "Has restado y cambiado el signo del resultado."
+          },
+          {
+            "key": "C",
+            "text": "$11$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$-11$",
+            "misconception_id": null,
+            "why_wrong": "Restar un negativo da un resultado mayor, no menor."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$7-(-4)=7+4=11$. Restar un negativo equivale a sumar el positivo.",
+        "difficulty": 1,
+        "objective_id": "LO-F01-2",
+        "concept_id": "C-F01-2"
+      },
+      {
+        "id": "MCQ-F01-4",
+        "stem": "¿Cuál de estos números es el menor: $-1$, $-10$, $3$, $0$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$-1$",
+            "misconception_id": null,
+            "why_wrong": "$-10$ está más a la izquierda en la recta, por tanto es menor."
+          },
+          {
+            "key": "B",
+            "text": "$0$",
+            "misconception_id": null,
+            "why_wrong": "El cero es mayor que cualquier negativo."
+          },
+          {
+            "key": "C",
+            "text": "$-10$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "$3$",
+            "misconception_id": null,
+            "why_wrong": "Es el mayor de la lista, no el menor."
+          }
+        ],
+        "correct": "C",
+        "explanation": "$-10$ es el más alejado del cero por la izquierda, así que es el menor.",
+        "difficulty": 1,
+        "objective_id": "LO-F01-1",
+        "concept_id": "C-F01-1"
+      }
+    ],
+    "flashcards": [],
+    "misconceptions": [],
+    "common_mistakes": [
+      {
+        "mistake": "Sumar dos negativos y dar resultado positivo.",
+        "why": "Confunden 'menos por menos, más' (regla del producto) con la suma.",
+        "how_to_avoid": "Recordar: al sumar negativos el resultado siempre es negativo.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Calcular $a-(-b)=a-b$ en vez de $a+b$.",
+        "why": "No aplican la regla de que restar un negativo equivale a sumar.",
+        "how_to_avoid": "Reescribir siempre $-(-b)$ como $+b$ antes de operar.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Ordenar negativos por el valor de la cifra: $-3<-10$.",
+        "why": "Ignoran que entre negativos el orden se invierte.",
+        "how_to_avoid": "Dibujar los números en la recta para ver cuál queda más a la izquierda.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Los enteros amplían los naturales para expresar cantidades negativas, con reglas claras de signo.",
+      "key_points": [
+        "$\\mathbb{Z}$ incluye positivos, negativos y cero.",
+        "Al sumar, respetar signos.",
+        "Valor absoluto = distancia al cero.",
+        "Restar un negativo = sumar el positivo."
+      ],
+      "formulas": [
+        "$a-(-b)=a+b$",
+        "$|a|\\geq 0$ para todo $a\\in\\mathbb{Z}$"
+      ],
+      "what_to_remember_if_nothing_else": "Restar un negativo es sumar; entre negativos, el de mayor cifra es el menor."
+    },
+    "lang": "es",
+    "schema_v2": {
+      "canonical_lesson_id": "ESOMAT::foundations::numeros_naturales_y_enteros",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": true,
+        "EXCELLENCE": true,
+        "FAST_REVIEW": true
+      },
+      "epistemic_type": "DEFINITION",
+      "prerequisites_canonical": [],
+      "estimated_mastery_time_min": 30,
+      "is_bachillerato": false,
+      "scope_summary": {
+        "CORE": 3
+      }
+    }
+  },
+  "02_Fracciones_y_decimales.json": {
+    "id": "LFND02",
+    "title": "Fracciones y decimales",
+    "subject": "Matemáticas",
+    "course_label": "Matemáticas · ESO · Foundations",
+    "unit_id": "U-MAT-FOUNDATIONS",
+    "estimated_length": "50 min",
+    "estimated_difficulty": 2,
+    "curriculum": {
+      "framework": "Nebula Matemáticas ESO (España)",
+      "codes": [
+        "MAT.1.A.2"
+      ],
+      "status": "DEFINIDO",
+      "track": [
+        "ESO"
+      ]
+    },
+    "objectives": [
+      {
+        "id": "LO-F02-1",
+        "statement": "Simplificar fracciones y encontrar fracciones equivalentes.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F02-1"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F02-2",
+        "statement": "Sumar, restar, multiplicar y dividir fracciones.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F02-2"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F02-3",
+        "statement": "Convertir entre fracciones y decimales.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F02-3"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "TH-F02-1",
+        "type": "definition",
+        "title": "Fracciones y fracciones equivalentes",
+        "scope": "CORE",
+        "body": "Divides una pizza en 8 trozos y te comes 3. Has comido $\\frac{3}{8}$ de la pizza.\n\nUna **fracción** $\\frac{a}{b}$ significa «$a$ partes de un total de $b$». El de arriba es el numerador, el de abajo el denominador.",
+        "concept_ids": [
+          "C-F02-1"
+        ],
+        "objective_ids": [
+          "LO-F02-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_fracciones_equivalentes",
+            "alt": "Dos rectángulos que muestran 2/4 = 1/2",
+            "purpose": "Comparar fracciones equivalentes visualmente."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F02-2",
+        "type": "procedure",
+        "title": "Operaciones con fracciones",
+        "scope": "CORE",
+        "body": "Dos fracciones son **equivalentes** si representan la misma cantidad: $\\frac{1}{2} = \\frac{2}{4} = \\frac{3}{6}$.\n\nPara sumar fracciones con distinto denominador, busca el **m.c.m.** de los denominadores.\n\nPara multiplicar: numerador × numerador, denominador × denominador. Para dividir: multiplica en cruz.",
+        "concept_ids": [
+          "C-F02-2"
+        ],
+        "objective_ids": [
+          "LO-F02-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      },
+      {
+        "id": "TH-F02-3",
+        "type": "procedure",
+        "title": "Conversión fracción ↔ decimal",
+        "scope": "CORE",
+        "body": "Toda fracción se puede escribir como decimal (divide numerador entre denominador).\n\n• $\\frac{1}{4} = 0{,}25$ (decimal exacto).\n• $\\frac{1}{3} = 0{,}333\\ldots$ (decimal periódico).\n\nY al revés: un decimal exacto o periódico siempre se puede escribir como fracción.",
+        "concept_ids": [
+          "C-F02-3"
+        ],
+        "objective_ids": [
+          "LO-F02-3"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Fracción",
+        "definition": "Expresión $a/b$ que representa partes de un todo.",
+        "concept_id": "C-F02-1"
+      },
+      {
+        "term": "Fracciones equivalentes",
+        "definition": "Fracciones que representan la misma cantidad.",
+        "concept_id": "C-F02-1"
+      },
+      {
+        "term": "Decimal periódico",
+        "definition": "Decimal cuyas cifras se repiten indefinidamente.",
+        "concept_id": "C-F02-3"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-F02-1",
+        "level": "basic",
+        "statement": "Calcula $\\frac{2}{3}+\\frac{1}{4}$.",
+        "knowns": [
+          "Dos fracciones con distinto denominador"
+        ],
+        "unknowns": [
+          "Su suma"
+        ],
+        "reasoning": [
+          "mcm(3,4)=12.",
+          "$\\frac{2}{3}=\\frac{8}{12}$ y $\\frac{1}{4}=\\frac{3}{12}$.",
+          "$\\frac{8}{12}+\\frac{3}{12}=\\frac{11}{12}$."
+        ],
+        "solution": "$\\frac{2}{3}+\\frac{1}{4}=\\frac{11}{12}$.",
+        "interpretation": "Siempre hay que buscar denominador común antes de sumar.",
+        "common_mistake": "Sumar numeradores y denominadores directamente: $\\frac{2+1}{3+4}=\\frac{3}{7}$.",
+        "objective_ids": [
+          "LO-F02-2"
+        ],
+        "concept_ids": [
+          "C-F02-2"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F02-2",
+        "level": "basic",
+        "statement": "Convierte $0{,}\\overline{6}$ en fracción.",
+        "knowns": [
+          "Decimal periódico puro"
+        ],
+        "unknowns": [
+          "Fracción equivalente"
+        ],
+        "reasoning": [
+          "Sea $x=0{,}666\\ldots$",
+          "$10x=6{,}666\\ldots$",
+          "$10x-x=6 \\Rightarrow 9x=6 \\Rightarrow x=\\frac{6}{9}=\\frac{2}{3}$."
+        ],
+        "solution": "$0{,}\\overline{6}=\\frac{2}{3}$.",
+        "interpretation": "Multiplicar por potencia de 10 y restar elimina la parte periódica.",
+        "common_mistake": "Escribir $\\frac{6}{10}$ sin reconocer que las cifras se repiten.",
+        "objective_ids": [
+          "LO-F02-3"
+        ],
+        "concept_ids": [
+          "C-F02-3"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-F02-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F02-2"
+        ],
+        "concept_ids": [
+          "C-F02-2"
+        ],
+        "difficulty": 1,
+        "statement": "Calcula $\\frac{3}{5}-\\frac{1}{3}$.",
+        "hints": [
+          "mcm(5,3)=15.",
+          "Convierte ambas fracciones a denominador 15."
+        ],
+        "answer": "$\\frac{4}{15}$",
+        "full_solution": "$\\frac{3}{5}=\\frac{9}{15}$, $\\frac{1}{3}=\\frac{5}{15}$. Resta: $\\frac{9-5}{15}=\\frac{4}{15}$.",
+        "common_errors": [
+          {
+            "error": "Restar numeradores y denominadores por separado",
+            "correction": "Necesitas denominador común."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F02-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F02-2"
+        ],
+        "concept_ids": [
+          "C-F02-2"
+        ],
+        "difficulty": 2,
+        "statement": "Calcula $\\frac{4}{7}\\cdot\\frac{3}{8}$ y simplifica.",
+        "hints": [
+          "Multiplica numeradores entre sí y denominadores entre sí.",
+          "Busca factores comunes para simplificar."
+        ],
+        "answer": "$\\frac{3}{14}$",
+        "full_solution": "$\\frac{4\\cdot3}{7\\cdot8}=\\frac{12}{56}=\\frac{3}{14}$ (simplificando entre 4).",
+        "common_errors": [
+          {
+            "error": "Olvidar simplificar el resultado",
+            "correction": "Siempre divide numerador y denominador por su MCD."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F02-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F02-3"
+        ],
+        "concept_ids": [
+          "C-F02-3"
+        ],
+        "difficulty": 1,
+        "statement": "Convierte $\\frac{5}{8}$ a decimal.",
+        "hints": [
+          "Divide 5 entre 8."
+        ],
+        "answer": "$0{,}625$",
+        "full_solution": "$5\\div8=0{,}625$.",
+        "common_errors": [
+          {
+            "error": "Dividir 8 entre 5 en vez de 5 entre 8",
+            "correction": "El numerador se divide entre el denominador."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-F02-1",
+        "stem": "¿Cuál es la fracción irreducible de $\\frac{12}{18}$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$\\frac{6}{9}$",
+            "misconception_id": null,
+            "why_wrong": "Puedes seguir simplificando: ambos son divisibles entre 3."
+          },
+          {
+            "key": "B",
+            "text": "$\\frac{2}{3}$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$\\frac{4}{6}$",
+            "misconception_id": null,
+            "why_wrong": "Aún es simplificable: $\\text{MCD}(4,6)=2$."
+          },
+          {
+            "key": "D",
+            "text": "$\\frac{3}{2}$",
+            "misconception_id": null,
+            "why_wrong": "Has invertido la fracción."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$\\text{MCD}(12,18)=6$. $\\frac{12\\div6}{18\\div6}=\\frac{2}{3}$.",
+        "difficulty": 1,
+        "objective_id": "LO-F02-1",
+        "concept_id": "C-F02-1"
+      },
+      {
+        "id": "MCQ-F02-2",
+        "stem": "¿Cuánto es $\\frac{1}{2}+\\frac{1}{3}$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$\\frac{2}{5}$",
+            "misconception_id": null,
+            "why_wrong": "Has sumado numeradores y denominadores por separado."
+          },
+          {
+            "key": "B",
+            "text": "$\\frac{5}{6}$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$\\frac{1}{6}$",
+            "misconception_id": null,
+            "why_wrong": "Has multiplicado en vez de sumar."
+          },
+          {
+            "key": "D",
+            "text": "$1$",
+            "misconception_id": null,
+            "why_wrong": "$\\frac{5}{6}$ es menor que $1$."
+          }
+        ],
+        "correct": "B",
+        "explanation": "mcm(2,3)=6. $\\frac{3}{6}+\\frac{2}{6}=\\frac{5}{6}$.",
+        "difficulty": 1,
+        "objective_id": "LO-F02-2",
+        "concept_id": "C-F02-2"
+      },
+      {
+        "id": "MCQ-F02-3",
+        "stem": "¿Qué fracción equivale a $0{,}75$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$\\frac{7}{5}$",
+            "misconception_id": null,
+            "why_wrong": "$\\frac{7}{5}=1{,}4$, no $0{,}75$."
+          },
+          {
+            "key": "B",
+            "text": "$\\frac{3}{4}$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$\\frac{7}{10}$",
+            "misconception_id": null,
+            "why_wrong": "$\\frac{7}{10}=0{,}7$."
+          },
+          {
+            "key": "D",
+            "text": "$\\frac{75}{10}$",
+            "misconception_id": null,
+            "why_wrong": "Eso es $7{,}5$, no $0{,}75$."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$0{,}75=\\frac{75}{100}=\\frac{3}{4}$ tras simplificar entre 25.",
+        "difficulty": 1,
+        "objective_id": "LO-F02-3",
+        "concept_id": "C-F02-3"
+      }
+    ],
+    "flashcards": [],
+    "misconceptions": [],
+    "common_mistakes": [
+      {
+        "mistake": "Sumar fracciones sumando numeradores y denominadores.",
+        "why": "No buscan denominador común.",
+        "how_to_avoid": "Siempre igualar denominadores antes de sumar o restar.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Al dividir fracciones, invertir la primera en vez de la segunda.",
+        "why": "Confunden cuál fracción se invierte.",
+        "how_to_avoid": "Se invierte siempre la fracción que divide (la segunda).",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Las fracciones y los decimales son dos formas de expresar el mismo número racional.",
+      "key_points": [
+        "Simplificar dividiendo por el MCD.",
+        "Para sumar, igualar denominadores.",
+        "Dividir fracciones = multiplicar por la inversa.",
+        "De fracción a decimal: dividir numerador entre denominador."
+      ],
+      "formulas": [
+        "$\\frac{a}{b}+\\frac{c}{d}=\\frac{ad+bc}{bd}$",
+        "$\\frac{a}{b}\\div\\frac{c}{d}=\\frac{ad}{bc}$"
+      ],
+      "what_to_remember_if_nothing_else": "Nunca sumes fracciones sumando arriba y abajo por separado."
+    },
+    "lang": "es",
+    "schema_v2": {
+      "canonical_lesson_id": "ESOMAT::foundations::fracciones_y_decimales",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": true,
+        "EXCELLENCE": true,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "DEFINITION",
+      "prerequisites_canonical": [
+        "ESOMAT::foundations::numeros_naturales_y_enteros"
+      ],
+      "estimated_mastery_time_min": 35,
+      "is_bachillerato": false,
+      "scope_summary": {
+        "CORE": 3
+      }
+    }
+  },
+  "03_Operaciones_combinadas.json": {
+    "id": "LFND03",
+    "title": "Operaciones combinadas y jerarquía",
+    "subject": "Matemáticas",
+    "course_label": "Matemáticas · ESO · Foundations",
+    "unit_id": "U-MAT-FOUNDATIONS",
+    "estimated_length": "45 min",
+    "estimated_difficulty": 2,
+    "curriculum": {
+      "framework": "Nebula Matemáticas ESO (España)",
+      "codes": [
+        "MAT.1.A.3"
+      ],
+      "status": "DEFINIDO",
+      "track": [
+        "ESO"
+      ]
+    },
+    "objectives": [
+      {
+        "id": "LO-F03-1",
+        "statement": "Aplicar correctamente la jerarquía de operaciones (paréntesis, potencias, multiplicación/división, suma/resta).",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F03-1"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F03-2",
+        "statement": "Resolver expresiones con paréntesis anidados.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F03-2"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "TH-F03-1",
+        "type": "procedure",
+        "title": "Jerarquía de operaciones",
+        "scope": "CORE",
+        "body": "¿Qué se calcula primero en $3 + 2 \\times 5$? No es $5 \\times 5$. Es $3 + 10 = 13$, porque la multiplicación va antes que la suma.\n\nLa **jerarquía de operaciones**: 1.° paréntesis, 2.° potencias, 3.° multiplicaciones y divisiones, 4.° sumas y restas.",
+        "concept_ids": [
+          "C-F03-1"
+        ],
+        "objective_ids": [
+          "LO-F03-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_jerarquia_operaciones",
+            "alt": "Diagrama piramidal de la jerarquía de operaciones",
+            "purpose": "Visualizar el orden de prioridad de las operaciones."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F03-2",
+        "type": "procedure",
+        "title": "Paréntesis anidados",
+        "scope": "CORE",
+        "body": "Los **paréntesis** cambian el orden: $(3 + 2) \\times 5 = 25$, no 13.\n\nSi hay paréntesis dentro de paréntesis, resuelve de dentro hacia fuera.\n\nEjemplo: $2 \\times [3 + (4 - 1)] = 2 \\times [3 + 3] = 2 \\times 6 = 12$.",
+        "concept_ids": [
+          "C-F03-2"
+        ],
+        "objective_ids": [
+          "LO-F03-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      },
+      {
+        "id": "TH-F03-3",
+        "type": "intuition",
+        "title": "¿Por qué la multiplicación va antes que la suma?",
+        "scope": "CORE",
+        "body": "Con fracciones se aplican las mismas reglas de prioridad.\n\n$\\frac{1}{2} + \\frac{1}{3} \\times \\frac{3}{4} = \\frac{1}{2} + \\frac{3}{12} = \\frac{1}{2} + \\frac{1}{4} = \\frac{3}{4}$\n\nPrimero la multiplicación, luego la suma. No importa que sean fracciones.",
+        "concept_ids": [
+          "C-F03-1"
+        ],
+        "objective_ids": [
+          "LO-F03-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Jerarquía de operaciones",
+        "definition": "Orden en el que se resuelven las operaciones aritméticas.",
+        "concept_id": "C-F03-1"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-F03-1",
+        "level": "basic",
+        "statement": "Calcula $5+2\\cdot(8-3)^2$.",
+        "knowns": [
+          "Expresión con paréntesis, potencia, multiplicación y suma"
+        ],
+        "unknowns": [
+          "Resultado"
+        ],
+        "reasoning": [
+          "Paréntesis: $8-3=5$.",
+          "Potencia: $5^2=25$.",
+          "Multiplicación: $2\\cdot25=50$.",
+          "Suma: $5+50=55$."
+        ],
+        "solution": "$5+2\\cdot(8-3)^2=55$.",
+        "interpretation": "Sigues estrictamente el orden: paréntesis → potencia → producto → suma.",
+        "common_mistake": "Calcular $5+2=7$ primero, obteniendo $7\\cdot25=175$.",
+        "objective_ids": [
+          "LO-F03-1"
+        ],
+        "concept_ids": [
+          "C-F03-1"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F03-2",
+        "level": "basic",
+        "statement": "Calcula $20\\div[2\\cdot(1+4)]$.",
+        "knowns": [
+          "Expresión con paréntesis anidados y división"
+        ],
+        "unknowns": [
+          "Resultado"
+        ],
+        "reasoning": [
+          "Paréntesis interno: $1+4=5$.",
+          "Corchete: $2\\cdot5=10$.",
+          "División: $20\\div10=2$."
+        ],
+        "solution": "$20\\div[2\\cdot(1+4)]=2$.",
+        "interpretation": "Resuelve siempre desde el paréntesis más interno hacia fuera.",
+        "common_mistake": "Dividir $20\\div2=10$ antes de resolver el corchete.",
+        "objective_ids": [
+          "LO-F03-2"
+        ],
+        "concept_ids": [
+          "C-F03-2"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-F03-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F03-1"
+        ],
+        "concept_ids": [
+          "C-F03-1"
+        ],
+        "difficulty": 1,
+        "statement": "Calcula $8-2\\cdot3+1$.",
+        "hints": [
+          "Primero la multiplicación: $2\\cdot3$.",
+          "Luego sumas y restas de izquierda a derecha."
+        ],
+        "answer": "$3$",
+        "full_solution": "$2\\cdot3=6$. $8-6+1=3$.",
+        "common_errors": [
+          {
+            "error": "Calcular $8-2=6$, luego $6\\cdot3=18$",
+            "correction": "La multiplicación tiene prioridad sobre la resta."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F03-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F03-1"
+        ],
+        "concept_ids": [
+          "C-F03-1"
+        ],
+        "difficulty": 2,
+        "statement": "Calcula $3^2+4\\cdot2-10\\div5$.",
+        "hints": [
+          "Primero la potencia $3^2$, luego multiplicación y división.",
+          "Finalmente las sumas y restas."
+        ],
+        "answer": "$15$",
+        "full_solution": "$3^2=9$; $4\\cdot2=8$; $10\\div5=2$. $9+8-2=15$.",
+        "common_errors": [
+          {
+            "error": "Sumar $9+4=13$ antes de multiplicar",
+            "correction": "Multiplicación y división van antes de la suma."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F03-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F03-2"
+        ],
+        "concept_ids": [
+          "C-F03-2"
+        ],
+        "difficulty": 2,
+        "statement": "Calcula $4\\cdot[6-(2+1)]+5$.",
+        "hints": [
+          "Resuelve el paréntesis interno: $2+1$.",
+          "Luego el corchete, luego la multiplicación, y finalmente la suma."
+        ],
+        "answer": "$17$",
+        "full_solution": "$2+1=3$; $6-3=3$; $4\\cdot3=12$; $12+5=17$.",
+        "common_errors": [
+          {
+            "error": "Calcular $4\\cdot6=24$ sin resolver primero el corchete",
+            "correction": "Los paréntesis siempre van primero."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-F03-1",
+        "stem": "¿Cuánto es $3+4\\cdot2$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$14$",
+            "misconception_id": null,
+            "why_wrong": "Has sumado primero: $(3+4)\\cdot2=14$. La multiplicación va antes."
+          },
+          {
+            "key": "B",
+            "text": "$11$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$9$",
+            "misconception_id": null,
+            "why_wrong": "Has calculado algo diferente."
+          },
+          {
+            "key": "D",
+            "text": "$24$",
+            "misconception_id": null,
+            "why_wrong": "Has multiplicado todos los números."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Primero $4\\cdot2=8$, luego $3+8=11$.",
+        "difficulty": 1,
+        "objective_id": "LO-F03-1",
+        "concept_id": "C-F03-1"
+      },
+      {
+        "id": "MCQ-F03-2",
+        "stem": "¿Cuánto es $2\\cdot(3+5)-4$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$12$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$14$",
+            "misconception_id": null,
+            "why_wrong": "No has restado el 4 al final."
+          },
+          {
+            "key": "C",
+            "text": "$7$",
+            "misconception_id": null,
+            "why_wrong": "Has operado en orden incorrecto."
+          },
+          {
+            "key": "D",
+            "text": "$10$",
+            "misconception_id": null,
+            "why_wrong": "Has calculado $2\\cdot3+5-4$."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Paréntesis: $3+5=8$. Producto: $2\\cdot8=16$. Resta: $16-4=12$.",
+        "difficulty": 1,
+        "objective_id": "LO-F03-1",
+        "concept_id": "C-F03-1"
+      },
+      {
+        "id": "MCQ-F03-3",
+        "stem": "¿Qué se resuelve primero en $5+3^2\\cdot2$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "La suma $5+3$",
+            "misconception_id": null,
+            "why_wrong": "La suma es la última operación."
+          },
+          {
+            "key": "B",
+            "text": "La multiplicación $3\\cdot2$",
+            "misconception_id": null,
+            "why_wrong": "La potencia va antes que la multiplicación."
+          },
+          {
+            "key": "C",
+            "text": "La potencia $3^2$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "D",
+            "text": "Da igual el orden",
+            "misconception_id": null,
+            "why_wrong": "El orden importa: cambiarlo cambia el resultado."
+          }
+        ],
+        "correct": "C",
+        "explanation": "Las potencias van antes que multiplicaciones y sumas. Resultado: $5+9\\cdot2=5+18=23$.",
+        "difficulty": 1,
+        "objective_id": "LO-F03-1",
+        "concept_id": "C-F03-1"
+      }
+    ],
+    "flashcards": [],
+    "misconceptions": [],
+    "common_mistakes": [
+      {
+        "mistake": "Operar de izquierda a derecha sin respetar prioridades.",
+        "why": "Ignoran la jerarquía y calculan en el orden en que leen.",
+        "how_to_avoid": "Marcar primero las operaciones de mayor prioridad antes de calcular.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Resolver el paréntesis externo antes del interno.",
+        "why": "Leen de fuera a dentro.",
+        "how_to_avoid": "Siempre empezar por el paréntesis más interno.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "La jerarquía de operaciones garantiza que cada expresión tiene un único resultado.",
+      "key_points": [
+        "Paréntesis → Potencias → × ÷ → + −",
+        "De izquierda a derecha dentro del mismo nivel.",
+        "Los paréntesis internos se resuelven primero."
+      ],
+      "formulas": [],
+      "what_to_remember_if_nothing_else": "La multiplicación siempre va antes que la suma, salvo que un paréntesis diga lo contrario."
+    },
+    "lang": "es",
+    "schema_v2": {
+      "canonical_lesson_id": "ESOMAT::foundations::operaciones_combinadas",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": true,
+        "EXCELLENCE": true,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "HEURISTIC",
+      "prerequisites_canonical": [
+        "ESOMAT::foundations::numeros_naturales_y_enteros"
+      ],
+      "estimated_mastery_time_min": 30,
+      "is_bachillerato": false,
+      "scope_summary": {
+        "CORE": 3
+      }
+    }
+  },
+  "04_Introduccion_al_algebra.json": {
+    "id": "LFND04",
+    "title": "Introducción al álgebra",
+    "subject": "Matemáticas",
+    "course_label": "Matemáticas · ESO · Foundations",
+    "unit_id": "U-MAT-FOUNDATIONS",
+    "estimated_length": "50 min",
+    "estimated_difficulty": 2,
+    "curriculum": {
+      "framework": "Nebula Matemáticas ESO (España)",
+      "codes": [
+        "MAT.1.B.1"
+      ],
+      "status": "DEFINIDO",
+      "track": [
+        "ESO"
+      ]
+    },
+    "objectives": [
+      {
+        "id": "LO-F04-1",
+        "statement": "Traducir enunciados verbales a expresiones algebraicas.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F04-1"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F04-2",
+        "statement": "Evaluar expresiones algebraicas sustituyendo la variable por un valor numérico.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F04-2"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F04-3",
+        "statement": "Simplificar expresiones con términos semejantes.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F04-3"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "TH-F04-1",
+        "type": "definition",
+        "title": "Variables y expresiones algebraicas",
+        "scope": "CORE",
+        "body": "Piensa en un número, multiplícalo por 2, súmale 6 y divide entre 2. ¿Te sale tu número más 3? Siempre funciona.\n\nEl **álgebra** usa letras (como $x$) para representar números desconocidos y descubrir por qué «siempre funciona».",
+        "concept_ids": [
+          "C-F04-1",
+          "C-F04-2"
+        ],
+        "objective_ids": [
+          "LO-F04-1",
+          "LO-F04-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_expresion_algebraica",
+            "alt": "Diagrama que muestra 3x+2 con x=4 dando 14",
+            "purpose": "Visualizar la sustitución de la variable por un valor."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F04-2",
+        "type": "procedure",
+        "title": "Evaluar una expresión",
+        "scope": "CORE",
+        "body": "Una **expresión algebraica** combina números y letras con operaciones: $3x + 5$, $2a^2 - b$.\n\nUn **monomio** tiene una sola operación de multiplicación: $4x^2$, $-3ab$.\n\nSumar monomios **semejantes** (misma parte literal): $3x + 5x = 8x$. No puedes sumar $3x + 5x^2$.",
+        "concept_ids": [
+          "C-F04-2"
+        ],
+        "objective_ids": [
+          "LO-F04-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      },
+      {
+        "id": "TH-F04-3",
+        "type": "procedure",
+        "title": "Términos semejantes",
+        "scope": "CORE",
+        "body": "**Evaluar** una expresión es sustituir la letra por un número.\n\nSi $x = 3$: $2x + 1 = 2(3) + 1 = 7$.\n\n**Extraer factor común**: $6x + 9 = 3(2x + 3)$. Buscas el mayor factor que comparten todos los términos y lo sacas fuera.",
+        "concept_ids": [
+          "C-F04-3"
+        ],
+        "objective_ids": [
+          "LO-F04-3"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Variable",
+        "definition": "Letra que representa un número desconocido.",
+        "concept_id": "C-F04-1"
+      },
+      {
+        "term": "Expresión algebraica",
+        "definition": "Combinación de números, variables y operaciones.",
+        "concept_id": "C-F04-1"
+      },
+      {
+        "term": "Términos semejantes",
+        "definition": "Términos con idéntica parte literal que se pueden sumar.",
+        "concept_id": "C-F04-3"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-F04-1",
+        "level": "basic",
+        "statement": "Simplifica $4x+7-2x+3$.",
+        "knowns": [
+          "Expresión con términos semejantes"
+        ],
+        "unknowns": [
+          "Expresión simplificada"
+        ],
+        "reasoning": [
+          "Agrupa términos con $x$: $4x-2x=2x$.",
+          "Agrupa constantes: $7+3=10$."
+        ],
+        "solution": "$4x+7-2x+3=2x+10$.",
+        "interpretation": "Solo puedes sumar términos que tengan la misma parte literal.",
+        "common_mistake": "Sumar $4x+7=11x$, mezclando variable y constante.",
+        "objective_ids": [
+          "LO-F04-3"
+        ],
+        "concept_ids": [
+          "C-F04-3"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F04-2",
+        "level": "basic",
+        "statement": "Traduce a lenguaje algebraico: «el triple de un número menos cinco».",
+        "knowns": [
+          "Enunciado verbal"
+        ],
+        "unknowns": [
+          "Expresión algebraica"
+        ],
+        "reasoning": [
+          "'Un número' → $x$.",
+          "'El triple' → $3x$.",
+          "'Menos cinco' → $-5$."
+        ],
+        "solution": "$3x-5$.",
+        "interpretation": "Cada palabra clave tiene su equivalente algebraico.",
+        "common_mistake": "Escribir $3-5x$, invirtiendo la estructura del enunciado.",
+        "objective_ids": [
+          "LO-F04-1"
+        ],
+        "concept_ids": [
+          "C-F04-1"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-F04-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F04-2"
+        ],
+        "concept_ids": [
+          "C-F04-2"
+        ],
+        "difficulty": 1,
+        "statement": "Evalúa $3x-2$ para $x=5$.",
+        "hints": [
+          "Sustituye $x$ por $5$.",
+          "Calcula $3\\cdot5-2$."
+        ],
+        "answer": "$13$",
+        "full_solution": "$3\\cdot5-2=15-2=13$.",
+        "common_errors": [
+          {
+            "error": "Calcular $3\\cdot5=15$, olvidar restar 2",
+            "correction": "Completar toda la expresión tras sustituir."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F04-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F04-3"
+        ],
+        "concept_ids": [
+          "C-F04-3"
+        ],
+        "difficulty": 2,
+        "statement": "Simplifica $6x+2y-3x+5y-4$.",
+        "hints": [
+          "Agrupa los términos en $x$, los de $y$, y las constantes por separado."
+        ],
+        "answer": "$3x+7y-4$",
+        "full_solution": "$6x-3x=3x$; $2y+5y=7y$; la constante $-4$ queda sola. Resultado: $3x+7y-4$.",
+        "common_errors": [
+          {
+            "error": "Sumar $6x+2y=8xy$",
+            "correction": "$x$ e $y$ son variables distintas, no se pueden mezclar."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F04-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F04-2"
+        ],
+        "concept_ids": [
+          "C-F04-2"
+        ],
+        "difficulty": 2,
+        "statement": "Evalúa $x^2+2x-3$ para $x=-2$.",
+        "hints": [
+          "Sustituye $x$ por $(-2)$.",
+          "Recuerda: $(-2)^2=4$, no $-4$."
+        ],
+        "answer": "$-3$",
+        "full_solution": "$(-2)^2+2(-2)-3=4-4-3=-3$.",
+        "common_errors": [
+          {
+            "error": "Calcular $(-2)^2=-4$",
+            "correction": "El cuadrado de cualquier número es positivo: $(-2)^2=(-2)\\cdot(-2)=4$."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-F04-1",
+        "stem": "¿Cuánto vale $2x+1$ si $x=3$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$7$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$5$",
+            "misconception_id": null,
+            "why_wrong": "Has olvidado sumar el 1."
+          },
+          {
+            "key": "C",
+            "text": "$9$",
+            "misconception_id": null,
+            "why_wrong": "Has sumado $2+3+1=6$ o calculado otra cosa."
+          },
+          {
+            "key": "D",
+            "text": "$23$",
+            "misconception_id": null,
+            "why_wrong": "Has concatenado los dígitos en vez de operar."
+          }
+        ],
+        "correct": "A",
+        "explanation": "$2\\cdot3+1=6+1=7$.",
+        "difficulty": 1,
+        "objective_id": "LO-F04-2",
+        "concept_id": "C-F04-2"
+      },
+      {
+        "id": "MCQ-F04-2",
+        "stem": "Simplifica $5x-2x+3$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$3x+3$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$6x$",
+            "misconception_id": null,
+            "why_wrong": "Has sumado el 3 con los coeficientes de $x$."
+          },
+          {
+            "key": "C",
+            "text": "$3x^2+3$",
+            "misconception_id": null,
+            "why_wrong": "Al restar $x$'s no cambias el exponente."
+          },
+          {
+            "key": "D",
+            "text": "$10x+3$",
+            "misconception_id": null,
+            "why_wrong": "Has sumado en vez de restar $2x$."
+          }
+        ],
+        "correct": "A",
+        "explanation": "$5x-2x=3x$. El $+3$ no tiene parte literal, así que queda aparte: $3x+3$.",
+        "difficulty": 1,
+        "objective_id": "LO-F04-3",
+        "concept_id": "C-F04-3"
+      },
+      {
+        "id": "MCQ-F04-3",
+        "stem": "«El doble de un número aumentado en 4» se escribe:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$2(x+4)$",
+            "misconception_id": null,
+            "why_wrong": "Eso es 'el doble de (un número más 4)', otra cosa."
+          },
+          {
+            "key": "B",
+            "text": "$2x+4$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$x^2+4$",
+            "misconception_id": null,
+            "why_wrong": "'Doble' es multiplicar por 2, no elevar al cuadrado."
+          },
+          {
+            "key": "D",
+            "text": "$2+4x$",
+            "misconception_id": null,
+            "why_wrong": "Has intercambiado los términos."
+          }
+        ],
+        "correct": "B",
+        "explanation": "Doble de $x$ = $2x$. Aumentado en 4 = $+4$. Resultado: $2x+4$.",
+        "difficulty": 1,
+        "objective_id": "LO-F04-1",
+        "concept_id": "C-F04-1"
+      }
+    ],
+    "flashcards": [],
+    "misconceptions": [],
+    "common_mistakes": [
+      {
+        "mistake": "Sumar $3x+2=5x$.",
+        "why": "Tratan el número independiente como si tuviera variable.",
+        "how_to_avoid": "Solo sumas términos con la misma parte literal.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Calcular $(-x)^2=-x^2$.",
+        "why": "No aplican el paréntesis correctamente.",
+        "how_to_avoid": "Siempre escribir $(-x)^2=(-x)\\cdot(-x)=x^2$.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "El álgebra generaliza la aritmética usando letras para representar números desconocidos.",
+      "key_points": [
+        "Una variable es una letra que representa un número.",
+        "Evaluar = sustituir la variable por su valor.",
+        "Solo se suman términos semejantes."
+      ],
+      "formulas": [],
+      "what_to_remember_if_nothing_else": "No mezcles términos con $x$ y constantes: $3x+2\\neq5x$."
+    },
+    "lang": "es",
+    "schema_v2": {
+      "canonical_lesson_id": "ESOMAT::foundations::introduccion_al_algebra",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": true,
+        "EXCELLENCE": true,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "DEFINITION",
+      "prerequisites_canonical": [
+        "ESOMAT::foundations::operaciones_combinadas"
+      ],
+      "estimated_mastery_time_min": 35,
+      "is_bachillerato": false,
+      "scope_summary": {
+        "CORE": 3
+      }
+    }
+  },
+  "05_Ecuaciones_lineales_basicas.json": {
+    "id": "LFND05",
+    "title": "Ecuaciones lineales básicas",
+    "subject": "Matemáticas",
+    "course_label": "Matemáticas · ESO · Foundations",
+    "unit_id": "U-MAT-FOUNDATIONS",
+    "estimated_length": "50 min",
+    "estimated_difficulty": 2,
+    "curriculum": {
+      "framework": "Nebula Matemáticas ESO (España)",
+      "codes": [
+        "MAT.1.B.2"
+      ],
+      "status": "DEFINIDO",
+      "track": [
+        "ESO"
+      ]
+    },
+    "objectives": [
+      {
+        "id": "LO-F05-1",
+        "statement": "Resolver ecuaciones de la forma $ax+b=c$.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F05-1"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F05-2",
+        "statement": "Resolver ecuaciones con la incógnita en ambos miembros.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F05-2"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F05-3",
+        "statement": "Plantear ecuaciones a partir de un enunciado.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F05-3"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "TH-F05-1",
+        "type": "definition",
+        "title": "¿Qué es una ecuación?",
+        "scope": "CORE",
+        "body": "Tienes $2x + 3 = 11$. ¿Qué valor de $x$ hace que se cumpla? Si $x = 4$: $2(4)+3 = 11$. ¡Sí!\n\nUna **ecuación** es una igualdad con una incógnita. Resolverla es encontrar el valor que la cumple.",
+        "concept_ids": [
+          "C-F05-1"
+        ],
+        "objective_ids": [
+          "LO-F05-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_balanza_ecuacion",
+            "alt": "Balanza en equilibrio representando una ecuación",
+            "purpose": "Visualizar la ecuación como una balanza: lo que hagas a un lado, hazlo al otro."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F05-2",
+        "type": "procedure",
+        "title": "Resolver $ax+b=c$",
+        "scope": "CORE",
+        "body": "Para resolver, aísla la $x$:\n\n1. Pasa los términos con $x$ a un lado y los números al otro (cambiando de signo).\n2. Simplifica cada lado.\n3. Divide entre el coeficiente de $x$.\n\nEjemplo: $5x - 3 = 2x + 9$ → $3x = 12$ → $x = 4$.",
+        "concept_ids": [
+          "C-F05-1"
+        ],
+        "objective_ids": [
+          "LO-F05-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      },
+      {
+        "id": "TH-F05-3",
+        "type": "procedure",
+        "title": "Incógnita en ambos miembros",
+        "scope": "CORE",
+        "body": "Comprueba siempre tu solución sustituyendo en la ecuación original.\n\n$5(4) - 3 = 17$ y $2(4) + 9 = 17$. ✓ Ambos lados son iguales.\n\nSi la ecuación tiene paréntesis, primero desarróllalos: $3(x+2) = 3x + 6$.",
+        "concept_ids": [
+          "C-F05-2"
+        ],
+        "objective_ids": [
+          "LO-F05-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Ecuación",
+        "definition": "Igualdad que contiene una incógnita.",
+        "concept_id": "C-F05-1"
+      },
+      {
+        "term": "Solución",
+        "definition": "Valor de la incógnita que satisface la ecuación.",
+        "concept_id": "C-F05-1"
+      },
+      {
+        "term": "Transponer",
+        "definition": "Pasar un término al otro miembro cambiando su signo.",
+        "concept_id": "C-F05-2"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-F05-1",
+        "level": "basic",
+        "statement": "Resuelve $4x-7=13$.",
+        "knowns": [
+          "Ecuación lineal"
+        ],
+        "unknowns": [
+          "$x$"
+        ],
+        "reasoning": [
+          "Suma 7: $4x=13+7=20$.",
+          "Divide entre 4: $x=\\frac{20}{4}=5$."
+        ],
+        "solution": "$x=5$.",
+        "interpretation": "Comprobación: $4\\cdot5-7=20-7=13$. ✓",
+        "common_mistake": "Dividir antes de sumar: $\\frac{4x-7}{4}$ da una ecuación más complicada.",
+        "objective_ids": [
+          "LO-F05-1"
+        ],
+        "concept_ids": [
+          "C-F05-1"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F05-2",
+        "level": "basic",
+        "statement": "Resuelve $7x+3=2x+18$.",
+        "knowns": [
+          "Ecuación con $x$ en ambos miembros"
+        ],
+        "unknowns": [
+          "$x$"
+        ],
+        "reasoning": [
+          "Agrupa $x$'s: $7x-2x=18-3$.",
+          "$5x=15$.",
+          "$x=3$."
+        ],
+        "solution": "$x=3$.",
+        "interpretation": "Comprobación: $7\\cdot3+3=24$ y $2\\cdot3+18=24$. ✓",
+        "common_mistake": "Al transponer $2x$, olvidar cambiar el signo: $7x+2x$ en vez de $7x-2x$.",
+        "objective_ids": [
+          "LO-F05-2"
+        ],
+        "concept_ids": [
+          "C-F05-2"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F05-3",
+        "level": "basic",
+        "statement": "Un número más su doble es 15. ¿Cuál es?",
+        "knowns": [
+          "Relación verbal"
+        ],
+        "unknowns": [
+          "El número"
+        ],
+        "reasoning": [
+          "Sea $x$ el número.",
+          "Ecuación: $x+2x=15$.",
+          "$3x=15$, $x=5$."
+        ],
+        "solution": "El número es $5$.",
+        "interpretation": "Comprobación: $5+10=15$. ✓",
+        "common_mistake": "Plantear $x\\cdot2x=15$ confundiendo 'más' con 'por'.",
+        "objective_ids": [
+          "LO-F05-3"
+        ],
+        "concept_ids": [
+          "C-F05-3"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-F05-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F05-1"
+        ],
+        "concept_ids": [
+          "C-F05-1"
+        ],
+        "difficulty": 1,
+        "statement": "Resuelve $5x+2=27$.",
+        "hints": [
+          "Resta 2 de ambos lados.",
+          "Divide entre 5."
+        ],
+        "answer": "$x=5$",
+        "full_solution": "$5x=27-2=25$. $x=\\frac{25}{5}=5$. Comprobación: $5\\cdot5+2=27$. ✓",
+        "common_errors": [
+          {
+            "error": "Dividir primero: $\\frac{5x+2}{5}$",
+            "correction": "Primero aísla el término con $x$ restando 2."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F05-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F05-2"
+        ],
+        "concept_ids": [
+          "C-F05-2"
+        ],
+        "difficulty": 2,
+        "statement": "Resuelve $8x-5=3x+10$.",
+        "hints": [
+          "Pasa $3x$ al lado izquierdo y $-5$ al derecho.",
+          "Simplifica y despeja."
+        ],
+        "answer": "$x=3$",
+        "full_solution": "$8x-3x=10+5$. $5x=15$. $x=3$. Comprobación: $24-5=19$ y $9+10=19$. ✓",
+        "common_errors": [
+          {
+            "error": "No cambiar signo al transponer",
+            "correction": "Al mover un término, siempre cambia de signo."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F05-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F05-3"
+        ],
+        "concept_ids": [
+          "C-F05-3"
+        ],
+        "difficulty": 2,
+        "statement": "La edad de Ana es el doble de la de Bea. Juntas suman 36 años. ¿Cuántos años tiene cada una?",
+        "hints": [
+          "Sea $x$ la edad de Bea. La de Ana es $2x$.",
+          "Plantea $x+2x=36$."
+        ],
+        "answer": "Bea tiene 12 años y Ana 24.",
+        "full_solution": "$x+2x=36$. $3x=36$. $x=12$. Bea: 12, Ana: 24. Comprobación: $12+24=36$. ✓",
+        "common_errors": [
+          {
+            "error": "Plantear $2x-x=36$",
+            "correction": "'Juntas suman' indica suma, no resta."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-F05-1",
+        "stem": "¿Cuál es la solución de $3x=12$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$x=4$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$x=36$",
+            "misconception_id": null,
+            "why_wrong": "Has multiplicado en vez de dividir."
+          },
+          {
+            "key": "C",
+            "text": "$x=9$",
+            "misconception_id": null,
+            "why_wrong": "Has restado en vez de dividir."
+          },
+          {
+            "key": "D",
+            "text": "$x=15$",
+            "misconception_id": null,
+            "why_wrong": "Has sumado en vez de dividir."
+          }
+        ],
+        "correct": "A",
+        "explanation": "$x=\\frac{12}{3}=4$.",
+        "difficulty": 1,
+        "objective_id": "LO-F05-1",
+        "concept_id": "C-F05-1"
+      },
+      {
+        "id": "MCQ-F05-2",
+        "stem": "Resuelve $2x+1=9$.",
+        "options": [
+          {
+            "key": "A",
+            "text": "$x=5$",
+            "misconception_id": null,
+            "why_wrong": "Has dividido $10\\div2$ sin restar primero el 1."
+          },
+          {
+            "key": "B",
+            "text": "$x=4$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$x=4{,}5$",
+            "misconception_id": null,
+            "why_wrong": "Has dividido $9\\div2$ sin restar el 1."
+          },
+          {
+            "key": "D",
+            "text": "$x=16$",
+            "misconception_id": null,
+            "why_wrong": "Has multiplicado en vez de dividir."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$2x=9-1=8$. $x=\\frac{8}{2}=4$.",
+        "difficulty": 1,
+        "objective_id": "LO-F05-1",
+        "concept_id": "C-F05-1"
+      },
+      {
+        "id": "MCQ-F05-3",
+        "stem": "¿Qué ecuación plantea: «El triple de un número menos 4 es 11»?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$3x-4=11$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$3(x-4)=11$",
+            "misconception_id": null,
+            "why_wrong": "Eso es 'el triple de (un número menos 4)', no lo mismo."
+          },
+          {
+            "key": "C",
+            "text": "$3x=11-4$",
+            "misconception_id": null,
+            "why_wrong": "Has resuelto parcialmente en vez de plantear."
+          },
+          {
+            "key": "D",
+            "text": "$x-4=33$",
+            "misconception_id": null,
+            "why_wrong": "El triple afecta a $x$, no al 11."
+          }
+        ],
+        "correct": "A",
+        "explanation": "Triple de un número: $3x$. Menos 4: $3x-4$. Es 11: $=11$.",
+        "difficulty": 1,
+        "objective_id": "LO-F05-3",
+        "concept_id": "C-F05-3"
+      }
+    ],
+    "flashcards": [],
+    "misconceptions": [],
+    "common_mistakes": [
+      {
+        "mistake": "No cambiar el signo al transponer un término.",
+        "why": "Olvidan que mover al otro lado invierte la operación.",
+        "how_to_avoid": "Pensar en la balanza: si restas de un lado, restas del otro.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Dividir toda la ecuación antes de aislar el término con $x$.",
+        "why": "Intentan simplificar demasiado pronto.",
+        "how_to_avoid": "Primero mover constantes, luego dividir.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Confundir 'más' y 'por' al plantear ecuaciones.",
+        "why": "Lectura superficial del enunciado.",
+        "how_to_avoid": "Subrayar las palabras clave del enunciado y traducirlas una a una.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Resolver una ecuación lineal es deshacer las operaciones que envuelven a la incógnita.",
+      "key_points": [
+        "Ecuación = igualdad con incógnita.",
+        "Pasos: aislar el término con $x$, luego dividir.",
+        "Al transponer, cambiar el signo.",
+        "Siempre comprobar la solución."
+      ],
+      "formulas": [
+        "$ax+b=c \\Rightarrow x=\\frac{c-b}{a}$"
+      ],
+      "what_to_remember_if_nothing_else": "Lo que haces a un lado de la ecuación, hazlo al otro."
+    },
+    "lang": "es",
+    "schema_v2": {
+      "canonical_lesson_id": "ESOMAT::foundations::ecuaciones_lineales_basicas",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": true,
+        "EXCELLENCE": true,
+        "FAST_REVIEW": false
+      },
+      "epistemic_type": "HEURISTIC",
+      "prerequisites_canonical": [
+        "ESOMAT::foundations::introduccion_al_algebra"
+      ],
+      "estimated_mastery_time_min": 35,
+      "is_bachillerato": false,
+      "scope_summary": {
+        "CORE": 3
+      }
+    }
+  },
+  "06_Geometria_elemental.json": {
+    "id": "LFND06",
+    "title": "Geometría elemental",
+    "subject": "Matemáticas",
+    "course_label": "Matemáticas · ESO · Foundations",
+    "unit_id": "U-MAT-FOUNDATIONS",
+    "estimated_length": "50 min",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Nebula Matemáticas ESO (España)",
+      "codes": [
+        "MAT.1.C.1"
+      ],
+      "status": "DEFINIDO",
+      "track": [
+        "ESO"
+      ]
+    },
+    "objectives": [
+      {
+        "id": "LO-F06-1",
+        "statement": "Identificar y clasificar polígonos básicos (triángulo, cuadriláteros).",
+        "bloom": "comprender",
+        "concept_ids": [
+          "C-F06-1"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F06-2",
+        "statement": "Calcular perímetro y área de figuras planas elementales.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F06-2"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F06-3",
+        "statement": "Calcular la longitud de la circunferencia y el área del círculo.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F06-3"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "TH-F06-1",
+        "type": "definition",
+        "title": "Polígonos: triángulos y cuadriláteros",
+        "scope": "CORE",
+        "body": "Mira una hoja de papel: tiene 4 lados rectos y 4 ángulos de 90°. Es un **rectángulo**.\n\nLa geometría elemental estudia estas figuras planas: triángulos, cuadriláteros, círculos. Las que ves todos los días.",
+        "concept_ids": [
+          "C-F06-1"
+        ],
+        "objective_ids": [
+          "LO-F06-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_poligonos_basicos",
+            "alt": "Triángulo, cuadrado, rectángulo, rombo y trapecio con sus nombres",
+            "purpose": "Identificar visualmente las figuras planas básicas."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F06-2",
+        "type": "procedure",
+        "title": "Perímetro y área",
+        "scope": "CORE",
+        "body": "Fórmulas que conviene memorizar:\n\n• Rectángulo: $A = b \\times h$, $P = 2b + 2h$.\n• Triángulo: $A = \\frac{b \\times h}{2}$.\n• Círculo: $A = \\pi r^2$, $L = 2\\pi r$.\n\nLa $h$ siempre es la **altura**, perpendicular a la base.",
+        "concept_ids": [
+          "C-F06-2"
+        ],
+        "objective_ids": [
+          "LO-F06-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_areas_formulas",
+            "alt": "Fórmulas de área de rectángulo, triángulo y trapecio con diagramas",
+            "purpose": "Recordar las fórmulas de área con su referencia visual."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F06-3",
+        "type": "procedure",
+        "title": "Circunferencia y círculo",
+        "scope": "CORE",
+        "body": "Los ángulos de un triángulo suman **180°**.\nLos de un cuadrilátero suman **360°**.\n\nEn general, un polígono de $n$ lados: suma de ángulos = $(n-2) \\times 180°$.\n\nHexágono (6 lados): $(6-2) \\times 180 = 720°$.",
+        "concept_ids": [
+          "C-F06-3"
+        ],
+        "objective_ids": [
+          "LO-F06-3"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Perímetro",
+        "definition": "Suma de las longitudes de todos los lados de un polígono.",
+        "concept_id": "C-F06-2"
+      },
+      {
+        "term": "Área",
+        "definition": "Medida de la superficie interior de una figura plana.",
+        "concept_id": "C-F06-2"
+      },
+      {
+        "term": "Radio",
+        "definition": "Distancia del centro de la circunferencia a cualquier punto de ella.",
+        "concept_id": "C-F06-3"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-F06-1",
+        "level": "basic",
+        "statement": "Calcula el perímetro y el área de un rectángulo de $8\\,\\text{cm}$ de largo y $5\\,\\text{cm}$ de ancho.",
+        "knowns": [
+          "$a=8$ cm, $b=5$ cm"
+        ],
+        "unknowns": [
+          "Perímetro y área"
+        ],
+        "reasoning": [
+          "$P=2(8+5)=2\\cdot13=26$ cm.",
+          "$A=8\\cdot5=40$ cm²."
+        ],
+        "solution": "$P=26$ cm, $A=40$ cm².",
+        "interpretation": "El perímetro se mide en unidades lineales; el área, en unidades cuadradas.",
+        "common_mistake": "Calcular $P=8+5=13$ olvidando los dos lados restantes.",
+        "objective_ids": [
+          "LO-F06-2"
+        ],
+        "concept_ids": [
+          "C-F06-2"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F06-2",
+        "level": "basic",
+        "statement": "Halla el área de un triángulo con base $10\\,\\text{cm}$ y altura $6\\,\\text{cm}$.",
+        "knowns": [
+          "$b=10$ cm, $h=6$ cm"
+        ],
+        "unknowns": [
+          "Área"
+        ],
+        "reasoning": [
+          "$A=\\frac{b\\cdot h}{2}=\\frac{10\\cdot6}{2}=\\frac{60}{2}=30$ cm²."
+        ],
+        "solution": "$A=30$ cm².",
+        "interpretation": "El área del triángulo es la mitad del rectángulo que lo contiene.",
+        "common_mistake": "Olvidar dividir entre 2: $A=60$ cm².",
+        "objective_ids": [
+          "LO-F06-2"
+        ],
+        "concept_ids": [
+          "C-F06-2"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-F06-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F06-2"
+        ],
+        "concept_ids": [
+          "C-F06-2"
+        ],
+        "difficulty": 1,
+        "statement": "Calcula el área de un cuadrado de lado $9\\,\\text{cm}$.",
+        "hints": [
+          "$A=l^2$."
+        ],
+        "answer": "$81$ cm²",
+        "full_solution": "$A=9^2=81$ cm².",
+        "common_errors": [
+          {
+            "error": "Calcular $4\\cdot9=36$ (eso es el perímetro)",
+            "correction": "El área del cuadrado es lado al cuadrado."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F06-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F06-3"
+        ],
+        "concept_ids": [
+          "C-F06-3"
+        ],
+        "difficulty": 2,
+        "statement": "Calcula la longitud de una circunferencia de radio $7\\,\\text{cm}$. Usa $\\pi\\approx3{,}14$.",
+        "hints": [
+          "$L=2\\pi r$."
+        ],
+        "answer": "$43{,}96$ cm",
+        "full_solution": "$L=2\\cdot3{,}14\\cdot7=43{,}96$ cm.",
+        "common_errors": [
+          {
+            "error": "Usar la fórmula del área $\\pi r^2$ en vez de $2\\pi r$",
+            "correction": "La longitud es $2\\pi r$; el área es $\\pi r^2$."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F06-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F06-2"
+        ],
+        "concept_ids": [
+          "C-F06-2"
+        ],
+        "difficulty": 2,
+        "statement": "Un trapecio tiene bases $12\\,\\text{cm}$ y $8\\,\\text{cm}$ y altura $5\\,\\text{cm}$. Calcula su área.",
+        "hints": [
+          "$A=\\frac{(B+b)\\cdot h}{2}$."
+        ],
+        "answer": "$50$ cm²",
+        "full_solution": "$A=\\frac{(12+8)\\cdot5}{2}=\\frac{100}{2}=50$ cm².",
+        "common_errors": [
+          {
+            "error": "Olvidar dividir entre 2",
+            "correction": "La fórmula del trapecio siempre lleva $\\div2$."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-F06-1",
+        "stem": "¿Cuál es el área de un rectángulo de $6\\,\\text{cm}\\times4\\,\\text{cm}$?",
+        "options": [
+          {
+            "key": "A",
+            "text": "$24$ cm²",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$20$ cm²",
+            "misconception_id": null,
+            "why_wrong": "Eso es el perímetro, no el área."
+          },
+          {
+            "key": "C",
+            "text": "$10$ cm²",
+            "misconception_id": null,
+            "why_wrong": "Has sumado en vez de multiplicar."
+          },
+          {
+            "key": "D",
+            "text": "$48$ cm²",
+            "misconception_id": null,
+            "why_wrong": "Has multiplicado por un factor extra."
+          }
+        ],
+        "correct": "A",
+        "explanation": "$A=6\\cdot4=24$ cm².",
+        "difficulty": 1,
+        "objective_id": "LO-F06-2",
+        "concept_id": "C-F06-2"
+      },
+      {
+        "id": "MCQ-F06-2",
+        "stem": "El área de un círculo de radio $5\\,\\text{cm}$ es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$10\\pi$ cm²",
+            "misconception_id": null,
+            "why_wrong": "Eso es la longitud de la circunferencia dividida por algo, no el área."
+          },
+          {
+            "key": "B",
+            "text": "$25\\pi$ cm²",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$5\\pi$ cm²",
+            "misconception_id": null,
+            "why_wrong": "Falta elevar al cuadrado el radio."
+          },
+          {
+            "key": "D",
+            "text": "$50\\pi$ cm²",
+            "misconception_id": null,
+            "why_wrong": "Has multiplicado por 2 innecesariamente."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$A=\\pi r^2=\\pi\\cdot5^2=25\\pi$ cm².",
+        "difficulty": 1,
+        "objective_id": "LO-F06-3",
+        "concept_id": "C-F06-3"
+      },
+      {
+        "id": "MCQ-F06-3",
+        "stem": "¿Cuántos lados tiene un trapecio?",
+        "options": [
+          {
+            "key": "A",
+            "text": "3",
+            "misconception_id": null,
+            "why_wrong": "Eso es un triángulo."
+          },
+          {
+            "key": "B",
+            "text": "4",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "5",
+            "misconception_id": null,
+            "why_wrong": "Eso es un pentágono."
+          },
+          {
+            "key": "D",
+            "text": "6",
+            "misconception_id": null,
+            "why_wrong": "Eso es un hexágono."
+          }
+        ],
+        "correct": "B",
+        "explanation": "El trapecio es un cuadrilátero (4 lados), con un par de lados paralelos.",
+        "difficulty": 1,
+        "objective_id": "LO-F06-1",
+        "concept_id": "C-F06-1"
+      }
+    ],
+    "flashcards": [],
+    "misconceptions": [],
+    "common_mistakes": [
+      {
+        "mistake": "Confundir perímetro y área.",
+        "why": "Ambos se calculan a partir de los mismos datos (lados) pero con fórmulas distintas.",
+        "how_to_avoid": "Perímetro se mide en cm; área en cm².",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Olvidar dividir entre 2 en la fórmula del triángulo o trapecio.",
+        "why": "Memorizan solo la parte $b\\cdot h$.",
+        "how_to_avoid": "Recordar que el triángulo es medio rectángulo.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Las figuras planas se miden con el perímetro (contorno) y el área (superficie).",
+      "key_points": [
+        "Rectángulo: $A=a\\cdot b$.",
+        "Triángulo: $A=\\frac{b\\cdot h}{2}$.",
+        "Círculo: $A=\\pi r^2$, $L=2\\pi r$.",
+        "Perímetro en cm, área en cm²."
+      ],
+      "formulas": [
+        "$A_{\\text{rect}}=a\\cdot b$",
+        "$A_{\\triangle}=\\frac{b\\cdot h}{2}$",
+        "$A_{\\bigcirc}=\\pi r^2$",
+        "$L=2\\pi r$"
+      ],
+      "what_to_remember_if_nothing_else": "El área del triángulo es la mitad de base por altura; el área del círculo es $\\pi r^2$."
+    },
+    "lang": "es",
+    "schema_v2": {
+      "canonical_lesson_id": "ESOMAT::foundations::geometria_elemental",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": true,
+        "EXCELLENCE": true,
+        "FAST_REVIEW": true
+      },
+      "epistemic_type": "DEFINITION",
+      "prerequisites_canonical": [],
+      "estimated_mastery_time_min": 35,
+      "is_bachillerato": false,
+      "scope_summary": {
+        "CORE": 3
+      }
+    }
+  },
+  "07_Graficas_y_tablas.json": {
+    "id": "LFND07",
+    "title": "Gráficas y tablas",
+    "subject": "Matemáticas",
+    "course_label": "Matemáticas · ESO · Foundations",
+    "unit_id": "U-MAT-FOUNDATIONS",
+    "estimated_length": "45 min",
+    "estimated_difficulty": 1,
+    "curriculum": {
+      "framework": "Nebula Matemáticas ESO (España)",
+      "codes": [
+        "MAT.1.D.1"
+      ],
+      "status": "DEFINIDO",
+      "track": [
+        "ESO"
+      ]
+    },
+    "objectives": [
+      {
+        "id": "LO-F07-1",
+        "statement": "Leer e interpretar datos de tablas de frecuencias.",
+        "bloom": "comprender",
+        "concept_ids": [
+          "C-F07-1"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F07-2",
+        "statement": "Interpretar gráficos de barras y de líneas.",
+        "bloom": "analizar",
+        "concept_ids": [
+          "C-F07-2"
+        ],
+        "scope": "CORE"
+      },
+      {
+        "id": "LO-F07-3",
+        "statement": "Calcular la media aritmética de un conjunto de datos.",
+        "bloom": "aplicar",
+        "concept_ids": [
+          "C-F07-3"
+        ],
+        "scope": "CORE"
+      }
+    ],
+    "prerequisites": [],
+    "diagnostic_items": [],
+    "theory_blocks": [
+      {
+        "id": "TH-F07-1",
+        "type": "definition",
+        "title": "Tablas de frecuencias",
+        "scope": "CORE",
+        "body": "Un gráfico convierte números aburridos en una imagen que cuenta una historia.\n\nLos **ejes cartesianos** tienen dos rectas perpendiculares: el eje $x$ (horizontal) y el eje $y$ (vertical). Cada punto es un par $(x, y)$.",
+        "concept_ids": [
+          "C-F07-1"
+        ],
+        "objective_ids": [
+          "LO-F07-1"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_tabla_frecuencias",
+            "alt": "Tabla de frecuencias con valores, frecuencia absoluta y relativa",
+            "purpose": "Mostrar cómo se organiza una tabla de frecuencias."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F07-2",
+        "type": "definition",
+        "title": "Gráficos de barras y de líneas",
+        "scope": "CORE",
+        "body": "Una **tabla de valores** conecta cada $x$ con su $y$.\n\nEjemplo: $y = 2x + 1$. Si $x = 0$, $y = 1$. Si $x = 1$, $y = 3$. Si $x = 2$, $y = 5$.\n\nMarca los puntos $(0,1)$, $(1,3)$, $(2,5)$ y únelos: tienes una **recta**.",
+        "concept_ids": [
+          "C-F07-2"
+        ],
+        "objective_ids": [
+          "LO-F07-2"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [
+          {
+            "type": "svg",
+            "slug": "fnd_grafico_barras",
+            "alt": "Gráfico de barras de ejemplo con 5 categorías",
+            "purpose": "Ejemplo visual de un gráfico de barras."
+          }
+        ],
+        "student_text": true
+      },
+      {
+        "id": "TH-F07-3",
+        "type": "procedure",
+        "title": "Media aritmética",
+        "scope": "CORE",
+        "body": "Los gráficos más comunes:\n\n• **Diagrama de barras**: para comparar categorías.\n• **Gráfico de líneas**: para ver cómo cambia algo con el tiempo.\n• **Diagrama de sectores** (tarta): para ver proporciones.\n\nElige el tipo según lo que quieras contar. No uses un gráfico de tarta para mostrar evolución temporal.",
+        "concept_ids": [
+          "C-F07-3"
+        ],
+        "objective_ids": [
+          "LO-F07-3"
+        ],
+        "provenance": "SOURCE_DERIVED",
+        "assets": [],
+        "student_text": true
+      }
+    ],
+    "keywords": [
+      {
+        "term": "Frecuencia absoluta",
+        "definition": "Número de veces que aparece un valor.",
+        "concept_id": "C-F07-1"
+      },
+      {
+        "term": "Frecuencia relativa",
+        "definition": "Proporción que representa un valor respecto al total.",
+        "concept_id": "C-F07-1"
+      },
+      {
+        "term": "Media aritmética",
+        "definition": "Suma de valores dividida entre el número de datos.",
+        "concept_id": "C-F07-3"
+      }
+    ],
+    "worked_examples": [
+      {
+        "id": "WE-F07-1",
+        "level": "basic",
+        "statement": "Las notas de 5 alumnos son: 6, 8, 7, 5, 9. Calcula la media.",
+        "knowns": [
+          "5 notas"
+        ],
+        "unknowns": [
+          "Media"
+        ],
+        "reasoning": [
+          "Suma: $6+8+7+5+9=35$.",
+          "Media: $\\frac{35}{5}=7$."
+        ],
+        "solution": "$\\bar{x}=7$.",
+        "interpretation": "La media indica el valor «central» del conjunto de datos.",
+        "common_mistake": "Olvidar algún dato al sumar, o dividir entre un número incorrecto.",
+        "objective_ids": [
+          "LO-F07-3"
+        ],
+        "concept_ids": [
+          "C-F07-3"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      },
+      {
+        "id": "WE-F07-2",
+        "level": "basic",
+        "statement": "En una encuesta, los valores 1, 2 y 3 aparecen con frecuencias $f_1=4$, $f_2=6$, $f_3=10$. Calcula la frecuencia relativa de cada valor.",
+        "knowns": [
+          "Valores y frecuencias absolutas"
+        ],
+        "unknowns": [
+          "Frecuencias relativas"
+        ],
+        "reasoning": [
+          "$N=4+6+10=20$.",
+          "$h_1=\\frac{4}{20}=0{,}2$.",
+          "$h_2=\\frac{6}{20}=0{,}3$.",
+          "$h_3=\\frac{10}{20}=0{,}5$."
+        ],
+        "solution": "$h_1=0{,}2$; $h_2=0{,}3$; $h_3=0{,}5$.",
+        "interpretation": "Las frecuencias relativas suman 1 (o 100%).",
+        "common_mistake": "Dividir la frecuencia entre el valor en vez de entre el total de datos.",
+        "objective_ids": [
+          "LO-F07-1"
+        ],
+        "concept_ids": [
+          "C-F07-1"
+        ],
+        "provenance": "GENERATED_EXAMPLE"
+      }
+    ],
+    "guided_exercises": [],
+    "exercises": [
+      {
+        "id": "EX-F07-S1",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F07-3"
+        ],
+        "concept_ids": [
+          "C-F07-3"
+        ],
+        "difficulty": 1,
+        "statement": "Calcula la media de: $3, 7, 5, 9, 6$.",
+        "hints": [
+          "Suma los cinco valores.",
+          "Divide entre 5."
+        ],
+        "answer": "$6$",
+        "full_solution": "$3+7+5+9+6=30$. $\\bar{x}=\\frac{30}{5}=6$.",
+        "common_errors": [
+          {
+            "error": "Dividir entre un número distinto de datos",
+            "correction": "Cuenta bien cuántos valores hay."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F07-S2",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F07-1"
+        ],
+        "concept_ids": [
+          "C-F07-1"
+        ],
+        "difficulty": 1,
+        "statement": "En un dado lanzado 20 veces se obtiene: $1$ (3 veces), $2$ (4 veces), $3$ (2 veces), $4$ (5 veces), $5$ (3 veces), $6$ (3 veces). Calcula la frecuencia relativa del $4$.",
+        "hints": [
+          "$h=\\frac{f}{N}$."
+        ],
+        "answer": "$0{,}25$",
+        "full_solution": "$h_4=\\frac{5}{20}=0{,}25$, es decir, un $25\\%$ de los lanzamientos.",
+        "common_errors": [
+          {
+            "error": "Dividir entre 6 (caras del dado) en vez de 20 (lanzamientos)",
+            "correction": "$N$ es el total de datos, no de categorías."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      },
+      {
+        "id": "EX-F07-S3",
+        "type": "STANDARD",
+        "objective_ids": [
+          "LO-F07-3"
+        ],
+        "concept_ids": [
+          "C-F07-3"
+        ],
+        "difficulty": 2,
+        "statement": "Los valores $2,4,6$ tienen frecuencias $5,3,2$. Calcula la media usando la tabla de frecuencias.",
+        "hints": [
+          "$\\bar{x}=\\frac{\\sum x_i \\cdot f_i}{N}$.",
+          "N=5+3+2=10."
+        ],
+        "answer": "$3{,}4$",
+        "full_solution": "$\\sum x_i f_i=2\\cdot5+4\\cdot3+6\\cdot2=10+12+12=34$. $\\bar{x}=\\frac{34}{10}=3{,}4$.",
+        "common_errors": [
+          {
+            "error": "Sumar los valores sin multiplicar por la frecuencia: $(2+4+6)/3$",
+            "correction": "Cada valor se pondera por su frecuencia."
+          }
+        ],
+        "provenance": "GENERATED_EXERCISE"
+      }
+    ],
+    "exam_questions": [],
+    "challenge_questions": [],
+    "mcq": [
+      {
+        "id": "MCQ-F07-1",
+        "stem": "La media de $2, 4, 6, 8$ es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$4$",
+            "misconception_id": null,
+            "why_wrong": "Has dividido entre 5 o calculado mal."
+          },
+          {
+            "key": "B",
+            "text": "$5$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "$6$",
+            "misconception_id": null,
+            "why_wrong": "Has dividido entre 3 en vez de entre 4."
+          },
+          {
+            "key": "D",
+            "text": "$20$",
+            "misconception_id": null,
+            "why_wrong": "Eso es la suma, no la media."
+          }
+        ],
+        "correct": "B",
+        "explanation": "$(2+4+6+8)/4=20/4=5$.",
+        "difficulty": 1,
+        "objective_id": "LO-F07-3",
+        "concept_id": "C-F07-3"
+      },
+      {
+        "id": "MCQ-F07-2",
+        "stem": "Si un valor tiene frecuencia absoluta $8$ en un total de $40$ datos, su frecuencia relativa es:",
+        "options": [
+          {
+            "key": "A",
+            "text": "$0{,}2$",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "B",
+            "text": "$5$",
+            "misconception_id": null,
+            "why_wrong": "Has dividido $40/8$ en vez de $8/40$."
+          },
+          {
+            "key": "C",
+            "text": "$0{,}8$",
+            "misconception_id": null,
+            "why_wrong": "Has confundido el numerador y el denominador."
+          },
+          {
+            "key": "D",
+            "text": "$32$",
+            "misconception_id": null,
+            "why_wrong": "Has restado en vez de dividir."
+          }
+        ],
+        "correct": "A",
+        "explanation": "$h=\\frac{8}{40}=0{,}2$, es decir, un 20%.",
+        "difficulty": 1,
+        "objective_id": "LO-F07-1",
+        "concept_id": "C-F07-1"
+      },
+      {
+        "id": "MCQ-F07-3",
+        "stem": "¿Qué tipo de gráfico es mejor para ver cómo cambia la temperatura a lo largo de una semana?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Gráfico de barras",
+            "misconception_id": null,
+            "why_wrong": "Funciona, pero el de líneas muestra mejor la evolución temporal."
+          },
+          {
+            "key": "B",
+            "text": "Gráfico de líneas",
+            "misconception_id": null,
+            "why_wrong": null
+          },
+          {
+            "key": "C",
+            "text": "Diagrama de sectores",
+            "misconception_id": null,
+            "why_wrong": "Los sectores muestran proporciones, no evolución."
+          },
+          {
+            "key": "D",
+            "text": "Pictograma",
+            "misconception_id": null,
+            "why_wrong": "Es útil para datos sencillos, no para tendencias."
+          }
+        ],
+        "correct": "B",
+        "explanation": "El gráfico de líneas es ideal para datos que cambian con el tiempo: conecta los puntos y muestra la tendencia.",
+        "difficulty": 1,
+        "objective_id": "LO-F07-2",
+        "concept_id": "C-F07-2"
+      }
+    ],
+    "flashcards": [],
+    "misconceptions": [],
+    "common_mistakes": [
+      {
+        "mistake": "Dividir la suma entre el número de categorías en vez del total de datos.",
+        "why": "Confunden categorías con observaciones.",
+        "how_to_avoid": "$N$ es siempre el total de datos, no de valores distintos.",
+        "related_misconception": null
+      },
+      {
+        "mistake": "Leer el eje equivocado en un gráfico de barras.",
+        "why": "No identifican cuál es el eje de frecuencias.",
+        "how_to_avoid": "Mirar siempre las etiquetas de los ejes antes de leer valores.",
+        "related_misconception": null
+      }
+    ],
+    "exam_notes": [],
+    "summary": {
+      "big_idea": "Las tablas y gráficos organizan datos para detectar patrones a simple vista.",
+      "key_points": [
+        "Frecuencia absoluta = veces que aparece.",
+        "Frecuencia relativa = proporción respecto al total.",
+        "Media = suma de valores dividida entre el número de datos.",
+        "El gráfico de líneas muestra tendencias; el de barras, comparaciones."
+      ],
+      "formulas": [
+        "$\\bar{x}=\\frac{\\sum x_i}{n}$",
+        "$h_i=\\frac{f_i}{N}$"
+      ],
+      "what_to_remember_if_nothing_else": "La media es la suma total dividida entre el número de datos, no entre el número de categorías."
+    },
+    "lang": "es",
+    "schema_v2": {
+      "canonical_lesson_id": "ESOMAT::foundations::graficas_y_tablas",
+      "recommended_routes": {
+        "DESDE_CERO": true,
+        "STANDARD": true,
+        "EXCELLENCE": true,
+        "FAST_REVIEW": true
+      },
+      "epistemic_type": "DEFINITION",
+      "prerequisites_canonical": [],
+      "estimated_mastery_time_min": 30,
+      "is_bachillerato": false,
+      "scope_summary": {
+        "CORE": 3
+      }
+    }
+  }
+}
