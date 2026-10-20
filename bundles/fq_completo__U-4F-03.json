@@ -1546,9 +1546,9 @@
       {
         "title": "Qué significa el empuje",
         "body": "Cuando sumerges un objeto en agua, parece que pesa menos. Intenta levantar una piedra grande bajo el agua y notarás que es sorprendentemente fácil. ¿Qué fuerza «ayuda» a sostenerla?\n\nEsa fuerza se llama **empuje** ($E$) y fue descubierta por Arquímedes. Aparece porque la presión hidrostática empuja más por debajo del objeto (donde hay más profundidad) que por arriba. La diferencia neta es una fuerza ascendente:\n\n$$E = \\rho_f \\cdot g \\cdot V_{\\text{desplazado}}$$\n\ndonde $\\rho_f$ es la densidad del fluido, $g$ la gravedad y $V_{\\text{desplazado}}$ el volumen de fluido que el objeto «aparta» al sumergirse.\n\nDicho de forma más intuitiva: **el empuje es igual al peso del fluido desplazado**. Si sumerges un bloque de 1 litro en agua, el empuje será el peso de 1 litro de agua ($\\approx 9{,}8\\,\\text{N}$).\n\nEl empuje no depende del material del objeto, solo de su volumen sumergido y de la densidad del fluido. Un bloque de plomo y otro de madera del mismo tamaño reciben exactamente el mismo empuje.",
-        "formula": "$E=\\rho_f gV_{\\mathrm{desplazado}}$",
+        "formula": "E=\\rho_f\\,g\\,V_{\\mathrm{desp}}",
         "provenance": "SOURCE_DERIVED",
-        "student_text": "El empuje es la fuerza ascendente que un fluido ejerce sobre un objeto sumergido: E = ρ_fluido · g · V_desplazado. Es igual al peso del fluido desplazado.",
+        "student_text": "El empuje es la fuerza ascendente que un fluido ejerce sobre un objeto sumergido. En la fórmula, V_desp representa el volumen de fluido desplazado.",
         "assets": [
           {
             "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 300\" role=\"img\" aria-label=\"Empuje de Arquímedes: fuerza ascendente igual al peso del fluido desplazado\" style=\"font-family:system-ui,sans-serif;background:var(--bg,#fbfcfd)\">\n  <text x=\"300\" y=\"22\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"14\" font-weight=\"bold\">Principio de Arquímedes: el empuje</text>\n  <defs>\n    <marker id=\"arrowE\" markerWidth=\"8\" markerHeight=\"6\" refX=\"4\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,6 L4,0 L8,6\" fill=\"#0e7a68\"/>\n    </marker>\n    <marker id=\"arrowW\" markerWidth=\"8\" markerHeight=\"6\" refX=\"4\" refY=\"3\" orient=\"auto\">\n      <path d=\"M0,0 L4,6 L8,0\" fill=\"#c17a17\"/>\n    </marker>\n  </defs>\n  <!-- Water container -->\n  <rect x=\"50\" y=\"60\" width=\"280\" height=\"230\" fill=\"#0e7a68\" opacity=\"0.12\" stroke=\"#24312c\" stroke-width=\"2\" rx=\"4\"/>\n  <!-- Water surface -->\n  <line x1=\"52\" y1=\"80\" x2=\"328\" y2=\"80\" stroke=\"#0e7a68\" stroke-width=\"1.5\" stroke-dasharray=\"6\"/>\n  <text x=\"310\" y=\"74\" fill=\"#0e7a68\" font-size=\"9\">Superficie</text>\n  <!-- Submerged block -->\n  <rect x=\"120\" y=\"140\" width=\"80\" height=\"80\" rx=\"6\" fill=\"#8a3d6b\" opacity=\"0.5\" stroke=\"#8a3d6b\" stroke-width=\"2\"/>\n  <text x=\"160\" y=\"185\" text-anchor=\"middle\" fill=\"white\" font-size=\"12\" font-weight=\"bold\">V</text>\n  <!-- Weight arrow (down) -->\n  <line x1=\"160\" y1=\"222\" x2=\"160\" y2=\"270\" stroke=\"#c17a17\" stroke-width=\"3\" marker-end=\"url(#arrowW)\"/>\n  <text x=\"175\" y=\"265\" fill=\"#c17a17\" font-size=\"12\" font-weight=\"bold\">W = mg</text>\n  <!-- Buoyancy arrow (up) -->\n  <line x1=\"160\" y1=\"138\" x2=\"160\" y2=\"90\" stroke=\"#0e7a68\" stroke-width=\"3\" marker-end=\"url(#arrowE)\"/>\n  <text x=\"175\" y=\"100\" fill=\"#0e7a68\" font-size=\"12\" font-weight=\"bold\">E = ρ꜀gV</text>\n  <!-- Overflow container -->\n  <rect x=\"340\" y=\"150\" width=\"80\" height=\"100\" fill=\"none\" stroke=\"#24312c\" stroke-width=\"1.5\" rx=\"4\"/>\n  <rect x=\"342\" y=\"180\" width=\"76\" height=\"68\" fill=\"#0e7a68\" opacity=\"0.2\"/>\n  <!-- Overflow arrow -->\n  <path d=\"M330,160 Q360,120 370,148\" fill=\"none\" stroke=\"#0e7a68\" stroke-width=\"1.5\" stroke-dasharray=\"4\"/>\n  <text x=\"380\" y=\"265\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"10\">Agua desplazada</text>\n  <!-- Formula box -->\n  <rect x=\"370\" y=\"50\" width=\"210\" height=\"70\" rx=\"8\" fill=\"var(--bg,#fbfcfd)\" stroke=\"#0e7a68\" stroke-width=\"1.5\"/>\n  <text x=\"475\" y=\"72\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"11\" font-weight=\"bold\">Principio de Arquímedes</text>\n  <text x=\"475\" y=\"92\" text-anchor=\"middle\" fill=\"#0e7a68\" font-size=\"13\" font-weight=\"bold\">E = ρ꜀ · g · V_desp</text>\n  <text x=\"475\" y=\"110\" text-anchor=\"middle\" fill=\"var(--text,#20302a)\" font-size=\"10\">E = peso del fluido desplazado</text>\n</svg>",
@@ -1928,15 +1928,15 @@
       "big_idea": "El empuje conecta una causa —la diferencia de presiones entre la cara inferior y la superior de un cuerpo sumergido— con una medida observable —la disminución del peso aparente—.",
       "key_points": [
         "El empuje siempre apunta verticalmente hacia arriba.",
-        "Su valor es el peso del fluido desplazado: $E=\\rho_f gV_{\\mathrm{desplazado}}$.",
+        "Su valor es el peso del fluido desplazado: $E=\\rho_f\\,g\\,V_{\\mathrm{desp}}$, donde $V_{\\mathrm{desp}}$ es el volumen desplazado.",
         "El peso aparente disminuye en una cantidad igual al empuje: $P_{\\mathrm{aparente}}=P_{\\mathrm{real}}-E$.",
         "Para decidir si flota o se hunde hay que comparar empuje y peso, no memorizar una regla aislada."
       ],
       "formulas": [
-        "$E=\\rho_f gV_{\\mathrm{desplazado}}$",
+        "E=\\rho_f\\,g\\,V_{\\mathrm{desp}}",
         "$P_{\\mathrm{aparente}}=P_{\\mathrm{real}}-E$"
       ],
-      "what_to_remember_if_nothing_else": "Usa $E=\\rho_f gV_{\\mathrm{desplazado}}$, define el sistema y comprueba unidades, signos, conservación y límites del modelo."
+      "what_to_remember_if_nothing_else": "Usa $E=\\rho_f\\,g\\,V_{\\mathrm{desp}}$; V_desp es el volumen de fluido desplazado. Comprueba unidades y signos."
     }
   },
   "lesson_05.json": {
