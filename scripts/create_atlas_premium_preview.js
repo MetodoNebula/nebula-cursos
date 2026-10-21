@@ -1,0 +1,51 @@
+/* Review-only premium refinement of the Atlas direction. */
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const root = path.resolve(__dirname, '..');
+const outDir = path.join(root, '_audit_scratch', 'atlas_premium');
+fs.mkdirSync(outDir, { recursive: true });
+
+const verticalGrid = [150, 215, 280, 345, 410, 475, 540, 605].map((x) => `<line x1="${x}" y1="174" x2="${x}" y2="390"/>`).join('');
+const horizontalGrid = [194, 260, 326, 390].map((y) => `<line x1="118" y1="${y}" x2="642" y2="${y}"/>`).join('');
+
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480" role="img" aria-labelledby="atlas-title atlas-description">
+  <title id="atlas-title">Atlas premium: lectura de una función cuadrática</title>
+  <desc id="atlas-description">Un gráfico editorial y minimalista de una parábola. Los ejes oscuros, la curva cobalto, el vértice coral y el eje de simetría dorado permiten leer la forma, el mínimo y los intervalos sin etiquetas superpuestas.</desc>
+  <rect width="760" height="480" rx="24" fill="#f6f8fc"/>
+  <rect x="24" y="22" width="712" height="436" rx="18" fill="#ffffff"/>
+  <text x="72" y="72" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="850" letter-spacing="2.6" fill="#155eef">ATLAS / 01</text>
+  <text x="72" y="112" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="850" letter-spacing="-.6" fill="#101828">Función cuadrática</text>
+  <text x="72" y="140" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="650" fill="#667085">La forma revela el mínimo antes del cálculo.</text>
+  <path d="M72 158H164" stroke="#155eef" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="180" cy="158" r="4" fill="#d97706"/>
+  <text x="688" y="76" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="800" letter-spacing="1.4" fill="#667085">LECTURA VISUAL · ESO</text>
+  <text x="688" y="108" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="800" fill="#101828">f(x) = (x − 1)² − 2</text>
+  <g fill="none" stroke="#dbe4f0" stroke-width="1">${verticalGrid}${horizontalGrid}</g>
+  <g fill="none" stroke="#101828" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 326H656l-12-8M656 326l-12 8"/>
+    <path d="M260 404V162l-8 13M260 162l8 13"/>
+  </g>
+  <path d="M138 186 C206 308 284 364 350 364 C416 364 494 308 584 186" fill="none" stroke="#155eef" stroke-width="6" stroke-linecap="round"/>
+  <path d="M350 180V390" fill="none" stroke="#d97706" stroke-width="2.25" stroke-dasharray="7 8"/>
+  <circle cx="350" cy="364" r="8" fill="#e23d2f" stroke="#ffffff" stroke-width="3"/>
+  <path d="M357 359L385 341" fill="none" stroke="#e23d2f" stroke-width="2.25" stroke-linecap="round"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <text x="393" y="338" font-size="16" font-weight="850" fill="#e23d2f">V</text>
+    <text x="408" y="338" font-size="16" font-weight="700" fill="#101828">(1, −2)</text>
+    <text x="498" y="213" font-size="19" font-weight="850" fill="#155eef">f(x)</text>
+    <text x="365" y="192" font-size="13" font-weight="800" letter-spacing=".8" fill="#a85f00">EJE DE SIMETRÍA</text>
+    <text x="365" y="212" font-size="15" font-weight="850" fill="#a85f00">x = 1</text>
+    <text x="130" y="236" font-size="14" font-weight="850" letter-spacing="1.1" fill="#e23d2f">↓ DECRECE</text>
+    <text x="531" y="381" font-size="14" font-weight="850" letter-spacing="1.1" fill="#155eef">↑ CRECE</text>
+    <text x="667" y="335" font-size="20" font-weight="850" fill="#101828">x</text>
+    <text x="273" y="183" font-size="20" font-weight="850" fill="#101828">y</text>
+  </g>
+  <path d="M72 420H688" stroke="#e6ebf3" stroke-width="1"/>
+  <text x="72" y="442" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="750" fill="#475467">VÉRTICE · EJE DE SIMETRÍA · INTERVALOS DE VARIACIÓN</text>
+</svg>`;
+
+fs.writeFileSync(path.join(outDir, 'atlas-premium.svg'), svg, 'utf8');
+fs.writeFileSync(path.join(root, '_audit_scratch', 'atlas_premium.html'), `<!doctype html><html lang="es"><meta charset="utf-8"><title>Atlas premium</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#eaf0f7;font-family:Inter,Segoe UI,Arial,sans-serif}main{width:min(920px,94vw)}h1{margin:0 0 8px;color:#101828;font-size:28px}p{margin:0 0 22px;color:#475467}img{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 18px 45px rgba(16,24,40,.12)}</style><main><h1>Atlas — refinamiento premium</h1><p>Más espacio, menos interfaz, mejor jerarquía y un sistema visual limitado a tinta, cobalto, oro y coral.</p><img src="atlas_premium/atlas-premium.svg" alt="Atlas premium: función cuadrática"></main></html>`, 'utf8');
+console.log(path.join(outDir, 'atlas-premium.svg'));

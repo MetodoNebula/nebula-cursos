@@ -1,0 +1,10 @@
+<!doctype html><html><meta charset="utf-8"><body><div id="host"></div><script>
+fetch('../bundles/eso_matematicas__mat_funciones_representacion.json').then(r=>r.json()).then(data=>{
+  let first; const walk=x=>{if(first)return;if(x&&typeof x==='object'){if(typeof x.svg==='string'&&x.svg.includes('<svg'))first=x.svg;else Object.values(x).forEach(walk)}}; walk(data);
+  document.querySelector('#host').innerHTML=first;
+  const labels=[...document.querySelectorAll('svg text')].map(el=>{const b=el.getBBox();return {text:el.textContent.trim(),x:b.x,y:b.y,w:b.width,h:b.height};});
+  const overlaps=[];
+  for(let i=0;i<labels.length;i+=1)for(let j=i+1;j<labels.length;j+=1){const a=labels[i],b=labels[j],w=Math.max(0,Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x)),h=Math.max(0,Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y));if(w*h>.5)overlaps.push({a:a.text,b:b.text,area:+(w*h).toFixed(2)});}
+  const pre=document.createElement('pre');pre.textContent=JSON.stringify({labels:labels.length,overlaps});document.body.replaceChildren(pre);
+});
+</script></body></html>

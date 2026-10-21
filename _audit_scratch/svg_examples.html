@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<title>Dos ejemplos SVG Nebula</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 34px; background: #edf2f7; color: #0b1f3a; font: 16px Inter, "Segoe UI", Arial, sans-serif; }
+  h1 { margin: 0 0 8px; font-size: 25px; }
+  p { margin: 0 0 26px; color: #526273; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  figure { margin: 0; padding: 18px; background: white; border: 1px solid #d8e2ec; border-radius: 18px; box-shadow: 0 14px 35px rgba(11,31,58,.09); }
+  figcaption { margin-bottom: 12px; font-weight: 700; }
+  .svg-host svg { display: block; width: 100%; height: auto; }
+  .status { color: #d65d4b; }
+</style>
+<h1>Propuesta SVG Nebula — dos ejemplos</h1>
+<p>Marco editorial, jerarquía cromática, semántica accesible y ticks discretos solo donde el gráfico ya tiene ejes cartesianos.</p>
+<main class="grid">
+  <figure><figcaption>Funciones · concepto y representación</figcaption><div class="svg-host" id="function"></div></figure>
+  <figure><figcaption>Derivadas · tasa de variación</figcaption><div class="svg-host" id="derivative"></div></figure>
+</main>
+<script>
+  async function loadSvg(bundle, ordinal, target) {
+    const data = await (await fetch('../bundles/' + bundle)).json();
+    let count = 0, selected;
+    (function walk(value) {
+      if (typeof value === 'string' && value.includes('<svg')) { if (++count === ordinal) selected = value; return; }
+      if (value && typeof value === 'object') Object.values(value).forEach(walk);
+    })(data);
+    document.getElementById(target).innerHTML = selected || '<p class="status">No se encontró el SVG.</p>';
+  }
+  Promise.all([
+    loadSvg('eso_matematicas__mat_funciones_representacion.json', 1, 'function'),
+    loadSvg('eso_matematicas__mat_derivadas.json', 2, 'derivative')
+  ]);
+</script>
+</html>
