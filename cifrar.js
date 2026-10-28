@@ -29,6 +29,11 @@ const META = path.join(OUT, 'meta.json');
 const CACHE = path.join(ROOT, '.cifrado_cache.json');
 const ITER = 310000;
 const CHECK_TEXT = '{"ok":true}';
+// Sube este número cada vez que cambie CÓMO se cifra (p.ej. al pasar a clave
+// por curso): si no, la caché de "solo recifra lo que cambió" se salta
+// archivos cuyo contenido no cambió, dejándolos con el cifrado antiguo sin
+// que nadie se entere (ese fue el bug que dejó varios cursos mal cifrados).
+const SCHEME = 2;
 
 function encrypt(key, buf){
   const iv = crypto.randomBytes(12);
@@ -130,9 +135,10 @@ async function main(){
   }
 
   // Solo se recifran los archivos que cambiaron (si no, cada push subiría todo de nuevo).
+  // Si cambia el salt (nueva contraseña) o el esquema de cifrado, se recifra todo.
   let cache = {};
   try { cache = JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch {}
-  if (cache.salt !== meta.salt) cache = { salt: meta.salt, files: {} };
+  if (cache.salt !== meta.salt || cache.scheme !== SCHEME) cache = { salt: meta.salt, scheme: SCHEME, files: {} };
 
   const sources = ['catalog.json', ...fs.readdirSync(path.join(ROOT, 'bundles'))
     .filter(f => f.endsWith('.json')).sort().map(f => 'bundles/' + f)];
