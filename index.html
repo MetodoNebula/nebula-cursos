@@ -687,7 +687,7 @@ async function renderLesson(i,j,k,tab){
   if (!data){
     $main.innerHTML = '<div class="loading">Cargando lección…</div>';
     try{
-      if (!BUNDLES[l.bundle]) BUNDLES[l.bundle] = await loadJSON(l.bundle);
+      if (!BUNDLES[l.bundle]) BUNDLES[l.bundle] = await loadJSON(l.bundle, p.key);
       data = BUNDLES[l.bundle][l.bkey];
     }catch(e){
       $main.innerHTML = '<div class="empty">' + (LANG==='en' ? 'Could not load this lesson. Check your connection and try again.' : 'No se pudo cargar esta lección. Comprueba la conexión y vuelve a intentarlo.') + '</div>';
@@ -2616,11 +2616,32 @@ async function decryptJSON(buf, key){
   const stream = new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'));
   return JSON.parse(await new Response(stream).text());
 }
-async function loadJSON(file){
+/* Cada curso se cifra (en cifrar.js) con su propia clave, para que tener
+   acceso a un curso no permita descifrar los de otros. Esa clave se obtiene
+   de Supabase (tabla course_secrets), que solo la entrega si el alumno tiene
+   ese curso en student_access (lo exige la política RLS, no la app). */
+const COURSE_KEYS = {};
+async function getCourseKey(course){
+  if (COURSE_KEYS[course]) return COURSE_KEYS[course];
+  if (!SB_CLIENT) return null;
+  try {
+    const { data, error } = await SB_CLIENT.from('course_secrets').select('value').eq('course_key', course).maybeSingle();
+    if (error || !data) return null;
+    const key = await crypto.subtle.importKey('raw', b64(data.value), 'AES-GCM', true, ['decrypt']);
+    COURSE_KEYS[course] = key;
+    return key;
+  } catch(e){ return null; }
+}
+async function loadJSON(file, course){
   if (PLAIN) return (await fetch(file + '?v=' + Date.now())).json();
   const r = await fetch('cifrado/' + file.replace(/\.json$/, '.bin') + '?v=' + Date.now());
   if (!r.ok) throw new Error(r.status);
-  return decryptJSON(await r.arrayBuffer(), KEY);
+  let useKey = KEY;
+  if (course){
+    useKey = await getCourseKey(course);
+    if (!useKey) throw new Error('sin acceso a este curso');
+  }
+  return decryptJSON(await r.arrayBuffer(), useKey);
 }
 function readStoredKey(){
   try { return sessionStorage.getItem(KEY_STORE) || localStorage.getItem(KEY_STORE); } catch(e){ return null; }

@@ -2,9 +2,21 @@
 // el contenido legible. Formato de cada .bin: IV (12 bytes) + AES-256-GCM(gzip(json)).
 // La clave se deriva de la contraseña con PBKDF2-SHA256 (sal e iteraciones en cifrado/meta.json).
 //
+// catalog.json se cifra con esa clave maestra (es solo navegación: títulos y
+// recuentos, no el contenido real). Cada bundles/<curso>__*.json se cifra con
+// una clave propia de ese curso, derivada de la maestra por HKDF — así un
+// alumno con acceso a un curso no puede usar esa clave para descifrar los
+// bundles de otro curso al que no tiene acceso (la restricción por curso deja
+// de ser solo visual y pasa a ser también criptográfica).
+//
 // Uso:  node cifrar.js                 (pide la contraseña)
 //       node cifrar.js --nueva-clave   (cambia la contraseña: genera sal nueva y lo recifra todo)
 // También acepta la contraseña en la variable de entorno NEBULA_PASS.
+//
+// Al terminar, escribe cifrado/course_keys_SECRETO_NO_SUBIR.sql con el INSERT
+// para la tabla course_secrets de Supabase. Ese archivo NUNCA se sube a git
+// (está en .gitignore): pega su contenido en el SQL Editor de Supabase y
+// luego puedes borrarlo.
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -28,6 +40,19 @@ function decrypt(key, buf){
   const d = crypto.createDecipheriv('aes-256-gcm', key, buf.subarray(0, 12));
   d.setAuthTag(buf.subarray(buf.length - 16));
   return zlib.gunzipSync(Buffer.concat([d.update(buf.subarray(12, buf.length - 16)), d.final()]));
+}
+
+// Clave propia de un curso, derivada de la clave maestra por HKDF (el "info"
+// es el key del curso, p.ej. "gcse_mates"): independiente y no reversible
+// hacia la clave maestra ni hacia la de otro curso.
+function courseKey(masterKey, course){
+  return Buffer.from(crypto.hkdfSync('sha256', masterKey, Buffer.alloc(0), Buffer.from(course), 32));
+}
+// bundles/<course>__resto.json -> "<course>". null si el nombre no sigue ese patrón.
+function courseOfBundle(rel){
+  const base = path.basename(rel, '.json');
+  const m = base.match(/^(.+?)__/);
+  return m ? m[1] : null;
 }
 
 // Escapa los caracteres de control sueltos dentro de cadenas (p. ej. un salto de línea literal),
@@ -113,16 +138,39 @@ async function main(){
     .filter(f => f.endsWith('.json')).sort().map(f => 'bundles/' + f)];
   let done = 0, skipped = 0;
   const repaired = [];
+  const courseKeys = new Map(); // course -> Buffer, para todos los cursos vistos (se usen o no bundles sin cambios)
   for (const rel of sources){
+    let useKey = key;
+    if (rel !== 'catalog.json'){
+      const course = courseOfBundle(rel);
+      if (course){
+        if (!courseKeys.has(course)) courseKeys.set(course, courseKey(key, course));
+        useKey = courseKeys.get(course);
+      } else {
+        console.warn(`AVISO: ${rel} no sigue el patrón "<curso>__..."; se cifra con la clave maestra (sin aislar por curso).`);
+      }
+    }
     const src = fs.readFileSync(path.join(ROOT, rel));
     const hash = crypto.createHash('sha256').update(src).digest('hex');
     const dst = path.join(OUT, rel.replace(/\.json$/, '.bin'));
     if (cache.files[rel] === hash && fs.existsSync(dst)){ skipped++; continue; }
-    fs.writeFileSync(dst, encrypt(key, normalizeJSON(rel, src, repaired)));
+    fs.writeFileSync(dst, encrypt(useKey, normalizeJSON(rel, src, repaired)));
     cache.files[rel] = hash; done++;
   }
   for (const rel of repaired)
     console.warn(`AVISO: ${rel} tenía saltos de línea sueltos dentro de textos (JSON inválido); se ha corregido en la copia cifrada, el original no se toca.`);
+
+  if (courseKeys.size){
+    const rows = [...courseKeys.entries()].sort(([a],[b]) => a.localeCompare(b))
+      .map(([course, buf]) => `  ('${course.replace(/'/g, "''")}', '${buf.toString('base64')}')`).join(',\n');
+    const sql = `-- Generado por cifrar.js. Pega esto en Supabase (SQL Editor) y luego borra\n`
+      + `-- este archivo: son las claves reales de descifrado de cada curso.\n`
+      + `insert into public.course_secrets (course_key, value) values\n${rows}\n`
+      + `on conflict (course_key) do update set value = excluded.value;\n`;
+    fs.writeFileSync(path.join(OUT, 'course_keys_SECRETO_NO_SUBIR.sql'), sql);
+    console.log(`\nClaves por curso listas: ${courseKeys.size} cursos. Pega el contenido de`);
+    console.log(`cifrado/course_keys_SECRETO_NO_SUBIR.sql en el SQL Editor de Supabase (y luego bórralo).`);
+  }
 
   // Borra los .bin cuyo bundle ya no existe.
   const wanted = new Set(sources.map(r => r.replace(/\.json$/, '.bin')));
