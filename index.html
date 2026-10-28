@@ -1,0 +1,2712 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nebula Cursos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: una sola columna (max 960px), navegación por niveles curso→unidad→lección, pestañas por tipo de contenido */
+:root{
+  --bg:#f6f7f6;
+  --panel:#ffffff;
+  --ink:#1c2422;
+  --muted:#5c6b67;
+  --line:#dde3e0;
+  --accent:#0e6e64;
+  --accent-soft:#e2efed;
+  --info:#2f74b5;
+  --info-soft:#e3edf7;
+  --amber:#b46a0a;
+  --good:#1b7d3d;
+  --good-soft:#e2f2e7;
+  --bad:#b03030;
+  --bad-soft:#f9e7e7;
+  --hl-purple:#7e3fb4;
+  --sans:'Albert Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'Cascadia Code',monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10100f; --panel:#1a1d1c; --ink:#e8ecea; --muted:#9fa8a3; --line:#31403c;
+    --accent:#4fb3a6; --accent-soft:#17332f; --info:#6badec; --info-soft:#152636; --amber:#d79a43;
+    --good:#5cc083; --good-soft:#1b3324; --bad:#e08484; --bad-soft:#3a2020; --hl-purple:#c9a3f0;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141716; --panel:#1a1d1c; --ink:#e8ecea; --muted:#9fa8a3; --line:#2a312e;
+  --accent:#4fb3a6; --accent-soft:#17332f; --info:#6badec; --info-soft:#152636; --amber:#d79a43;
+  --good:#5cc083; --good-soft:#1b3324; --bad:#e08484; --bad-soft:#3a2020; --hl-purple:#c9a3f0;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding-block:0 48px;padding-inline:16px}
+header.app{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.appbar{max-width:960px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:17px;letter-spacing:.2px;color:var(--accent);cursor:pointer;white-space:nowrap}
+.crumbs{display:flex;align-items:center;gap:6px;min-width:0;flex:1;font-size:13.5px;color:var(--muted);overflow:hidden}
+.crumbs a{color:var(--muted);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:34vw}
+.crumbs a:hover{color:var(--accent)}
+.crumbs .sep{opacity:.5}
+h1{font-size:26px;line-height:1.2;margin:26px 0 6px;text-wrap:balance}
+h2{font-size:19px;margin:30px 0 10px;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px}
+.grouplabel{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:28px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;cursor:pointer;transition:border-color .15s}
+.card:hover{border-color:var(--accent)}
+.card .t{font-weight:700;font-size:16.5px;margin:0 0 4px}
+.card .m{color:var(--muted);font-size:13px}
+.list{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:baseline;cursor:pointer}
+.row:hover{border-color:var(--accent)}
+.row .n{font-family:var(--mono);font-size:13px;color:var(--accent);min-width:26px;font-weight:600}
+.row .t{flex:1;min-width:0;font-weight:600;font-size:15.5px}
+.row .meta{display:flex;gap:10px;align-items:baseline;color:var(--muted);font-size:12.5px;white-space:nowrap}
+.nav-group{margin-top:18px}
+.nav-group:first-child{margin-top:0}
+.nav-group-hdr{display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 0;user-select:none}
+.nav-group-hdr:hover .nav-group-label{color:var(--accent)}
+.nav-group-arrow{font-size:11px;color:var(--muted);transition:transform .2s;width:14px;text-align:center}
+.nav-group-label{font-family:var(--mono);font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:600}
+.nav-group-count{font-size:11px;color:var(--muted);margin-left:auto}
+.nav-group-items{display:flex;flex-direction:column;gap:8px;margin-top:6px;overflow:hidden}
+.nav-group.collapsed .nav-group-items{display:none}
+.nav-group.collapsed .nav-group-arrow{transform:rotate(-90deg)}
+.dots{letter-spacing:2px;font-size:11px;color:var(--amber)}
+.chip{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:99px;background:var(--accent-soft);color:var(--accent);font-weight:600;letter-spacing:.3px}
+.chip.ext{background:#eee5f5;color:#7952a3;margin-bottom:6px}
+.tabs{position:sticky;top:calc(env(safe-area-inset-top,0px) + 45px);z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 0;background:var(--bg);border-bottom:1px solid var(--line);-webkit-overflow-scrolling:touch}
+.tabs button{flex-shrink:0;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-family:var(--sans);font-size:13.5px;font-weight:600;padding:7px 14px;border-radius:99px;cursor:pointer}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.ejbatchbar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 16px}
+.ejbatchbar button{border:1px solid var(--line);background:var(--panel);color:var(--ink);font-family:var(--mono);font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:7px;cursor:pointer}
+.ejbatchbar button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.ejbatchbar button:hover{border-color:var(--accent);color:var(--accent)}
+.ejbatchbar button.on:hover{color:#fff}
+.tabs button:focus-visible,.row:focus-visible,.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.block{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px 18px 26px;margin:14px 0}
+.block h3{margin:0 0 8px;font-size:16.5px}
+.block .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+.block p{margin:.62em 0;max-width:68ch;line-height:1.58}
+.block p + p{margin-top:1.05em}
+.block mjx-container[display="true"]{margin:1em 0!important}
+.theory-formula{margin:.9rem 0 1.1rem;padding:.65rem .9rem;border-left:3px solid #2563eb;background:#f8fafc;color:#1c2422;border-radius:0 .45rem .45rem 0;overflow-x:auto}
+.theory-formula mjx-container[display="true"]{margin:.15rem 0!important}
+.theory-formula .formula-line + .formula-line{border-top:1px solid var(--line);margin-top:.55rem;padding-top:.55rem}
+.block ul,.block ol{margin:.5em 0;padding-left:1.3em;max-width:70ch}
+.block li{margin:.3em 0}
+.block{border-left:4px solid transparent}
+.block.t-intuition{border-left-color:var(--info)}
+.block.t-intuition .tag{color:var(--info)}
+.block.t-caveat{border-left-color:var(--bad)}
+.block.t-caveat .tag{color:var(--bad)}
+.block.t-worked_rule{background:var(--accent-soft);border-left-color:var(--accent)}
+.block.t-worked_rule .tag{color:var(--accent)}
+.block.t-connection{border-left-color:var(--amber)}
+.block.t-connection .tag{color:var(--amber)}
+.block.t-enrichment{border-left-color:var(--hl-purple)}
+.block.t-enrichment .tag{color:var(--hl-purple)}
+.overview{background:var(--info-soft);border:1px solid var(--info);border-radius:10px;padding:18px 20px;margin:14px 0}
+.overview .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--info);display:block;margin-bottom:6px}
+.overview p{margin:.4em 0;max-width:72ch}
+.callout{border-radius:8px;padding:10px 13px;margin:.7em 0 0;font-size:14px;max-width:72ch}
+.callout.warn{background:var(--bad-soft)}
+.callout.warn strong{color:var(--bad)}
+.callout.info{background:var(--accent-soft)}
+.callout.info strong{color:var(--accent)}
+.concept-hint{line-height:1.5}
+.sol-flow{margin:.6em 0 .8em;max-width:76ch;padding:2px 0 2px 16px;border-left:3px solid var(--info);font-size:15px;line-height:1.65}
+.sol-flow p{margin:0 0 .55em}
+.sol-flow p:last-child{margin-bottom:0}
+.sol-part + .sol-part{margin-top:.75em;padding-top:.75em;border-top:1px dashed var(--line)}
+.sol-steps{display:flex;flex-direction:column;gap:.6em}
+.sol-step{display:flex;gap:10px;align-items:flex-start}
+.sol-step > div{flex:1;min-width:0}
+.sol-step p{margin:0 0 .4em}
+.sol-n{flex:none;width:22px;height:22px;border-radius:50%;background:var(--info-soft);color:var(--info);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.sol-lbl{color:var(--info)}
+.sol-sub{margin:.9em 0 .2em;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.sol-answer p{margin:.15em 0}
+.sol-answer{margin:.8em 0;max-width:76ch;padding:.6rem .85rem;background:var(--good-soft);border-left:4px solid var(--good);border-radius:0 8px 8px 0;font-size:15px}
+.adg-venn-a{fill:#0e7a68;fill-opacity:.32;stroke:#0e7a68;stroke-width:2}
+.adg-venn-b{fill:#c17a17;fill-opacity:.32;stroke:#c17a17;stroke-width:2}
+.adg-vlabel{font-size:12.5px;font-weight:700;fill:#20302a;font-family:var(--sans)}
+.adg-vcount{font-size:15px;font-weight:700;fill:#20302a;font-family:var(--mono)}
+.adg-vcount-neither{font-size:11.5px;fill:#5c6b67;font-family:var(--mono)}
+.adg-venn-box{stroke:#c7d0cb;stroke-width:1.2}
+.adg-bar{fill:#0e7a68;fill-opacity:.88}
+.adg-bar2{fill:#c17a17;fill-opacity:.88}
+.adg-bar-val{font-size:10.5px;fill:#20302a;font-family:var(--mono)}
+.adg-bar-label{font-size:9.5px;fill:#5c6b67;font-family:var(--sans)}
+.adg-normal-curve{stroke:#0e7a68;stroke-width:2.2}
+.adg-normal-shade{fill:#c17a17;fill-opacity:.35}
+.adg-legend-text{font-size:10.5px;fill:#20302a;font-family:var(--sans)}
+.formula-row{margin:.75em 0;padding:.65rem .9rem;background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow-x:auto}
+.qtitle{margin:0 0 8px;font-size:16px;color:var(--accent)}
+details{border:1px solid var(--line);border-radius:8px;margin:10px 0;background:var(--bg)}
+details summary{cursor:pointer;padding:9px 13px;font-weight:600;font-size:14px;color:var(--accent);list-style-position:inside}
+details[open] summary{border-bottom:1px solid var(--line)}
+details .inner{padding:10px 14px}
+.kwtable{width:100%;border-collapse:collapse;font-size:14.5px}
+.kwtable td{border-top:1px solid var(--line);padding:9px 10px 9px 0;vertical-align:top}
+.kwtable td:first-child{font-weight:700;white-space:nowrap;padding-right:16px;color:var(--accent)}
+.kwwrap{overflow-x:auto}
+.mdtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:.6em 0}
+.mdtable th{border-bottom:2px solid var(--line);padding:7px 10px;text-align:left;font-weight:700;color:var(--accent);white-space:nowrap}
+.mdtable td{border-top:1px solid var(--line);padding:7px 10px}
+/* flashcards */
+.fcstage{display:flex;flex-direction:column;align-items:center;gap:14px;margin:18px 0}
+.fcounter{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.fcard{width:100%;max-width:560px;min-height:240px;perspective:1200px;cursor:pointer}
+.fcin{position:relative;width:100%;min-height:240px;transform-style:preserve-3d;transition:transform .45s}
+@media (prefers-reduced-motion: reduce){.fcin{transition:none}}
+.fcard.flip .fcin{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-size:17px;overflow:auto}
+.face.back{transform:rotateY(180deg);background:var(--accent-soft)}
+.face .lbl{position:absolute;top:10px;left:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.fbtns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);font-family:var(--sans);font-weight:600;font-size:14px;padding:8px 16px;border-radius:8px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+/* mcq */
+.q{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.q .stem{font-weight:600;margin-bottom:10px}
+.kw-setup{color:var(--muted);font-size:14px;margin:0 0 10px;padding:8px 12px;background:var(--bg);border-radius:8px}
+.kw-setup p{margin:.25em 0}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{display:flex;gap:10px;align-items:baseline;text-align:left;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:9px 12px;cursor:pointer;font-family:var(--sans);font-size:14.5px;line-height:1.45}
+.opt .k{font-family:var(--mono);font-weight:600;color:var(--accent)}
+.opt:hover{border-color:var(--accent)}
+.opt.ok{background:var(--good-soft);border-color:var(--good)}
+.opt.ko{background:var(--bad-soft);border-color:var(--bad)}
+.opt:disabled{cursor:default;opacity:1}
+.verdict{margin-top:10px;font-size:14px;border-radius:8px;padding:10px 12px}
+.verdict.ok{background:var(--good-soft);color:var(--ink)}
+.verdict.ko{background:var(--bad-soft);color:var(--ink)}
+.marks{font-family:var(--mono);font-size:12px;color:var(--amber);font-weight:600}
+.empty{color:var(--muted);font-size:14px;padding:18px 0}
+.loading{color:var(--muted);padding:40px 0;text-align:center;font-size:15px}
+.fig{--bg:#f6f7f6;--panel:#ffffff;--ink:#1c2422;--muted:#5c6b67;--line:#dde3e0;--accent:#0e6e64;background:#fbfcfd;border:1px solid #dde3e0;border-radius:8px;padding:12px;margin:14px 0;overflow-x:auto}
+/* resaltado de color: [[blue:texto]] en markdown y \color{blue}{...}/\color{red}{...}/etc en LaTeX
+   usan la MISMA paleta, consciente del tema claro/oscuro, para que una variable destaque igual
+   en la prosa que dentro de una formula. Los nombres validos en LaTeX (los unicos que el paquete
+   color de MathJax reconoce sin su propio hex) son: blue, red, green, orange, purple, teal. */
+.hl-blue{color:var(--info);font-weight:600}
+.hl-red{color:var(--bad);font-weight:600}
+.hl-green{color:var(--good);font-weight:600}
+.hl-orange{color:var(--amber);font-weight:600}
+.hl-purple{color:var(--hl-purple);font-weight:600}
+.hl-teal{color:var(--accent);font-weight:600}
+mjx-container svg [fill="blue"]{fill:var(--info)!important;stroke:var(--info)!important}
+mjx-container svg [fill="red"]{fill:var(--bad)!important;stroke:var(--bad)!important}
+mjx-container svg [fill="green"]{fill:var(--good)!important;stroke:var(--good)!important}
+mjx-container svg [fill="orange"]{fill:var(--amber)!important;stroke:var(--amber)!important}
+mjx-container svg [fill="purple"]{fill:var(--hl-purple)!important;stroke:var(--hl-purple)!important}
+mjx-container svg [fill="teal"]{fill:var(--accent)!important;stroke:var(--accent)!important}
+.fig > svg{display:block;margin:0 auto;width:min(100%, 520px);height:auto;max-height:300px}
+.fig figcaption{font-size:13px;color:#44515e;margin-top:9px;text-align:center;max-width:520px;margin-inline:auto}
+/* autodiagramas generados cuando el ejercicio no trae figura propia */
+/* Paleta fija para los autodiagramas: el recuadro ".fig" es siempre casi blanco
+   (TikZ exportado asi), independientemente del tema claro/oscuro del sitio, asi que
+   estos colores se fijan en vez de usar las variables --accent/--muted/--line (que en
+   modo oscuro se vuelven grises claros y casi desaparecen sobre fondo blanco: eso era
+   el motivo de que la cuadricula de coordenadas se viera "lavada"/fea).
+   Familia teal + ambar (segura para daltonismo, tipo azul/naranja de Okabe-Ito),
+   con un tercer acento ciruela solo para una 3a serie si hiciera falta. */
+.adg-grid{stroke:#e8e3d8;stroke-width:1}
+.adg-axis{stroke:#24312c;stroke-width:1.6}
+.adg-axislabel{fill:#5c6b67;font-size:12.5px;font-style:italic;font-family:var(--sans)}
+.adg-tick{fill:#6b7b74;font-size:10.5px;font-family:var(--mono)}
+.adg-pt{fill:#0e7a68;stroke:#fbfcfd;stroke-width:2}
+.adg-pt2{fill:#c17a17;stroke:#fbfcfd;stroke-width:2}
+.adg-ptlabel{fill:#20302a;font-size:12px;font-weight:600;font-family:var(--mono);paint-order:stroke;stroke:#fbfcfd;stroke-width:3px;stroke-linejoin:round}
+.adg-line{stroke:#0e7a68;stroke-width:1.6;stroke-linecap:round}
+.adg-line2{stroke:#c17a17;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:7,4}
+.adg-tri{fill:#d9efe8;stroke:#0e7a68;stroke-width:1.8}
+.adg-tri2{fill:#fbe8cf;stroke:#c17a17;stroke-width:1.8}
+.adg-vlabel{fill:#20302a;font-size:14px;font-weight:700;font-family:var(--sans)}
+.adg-sidelabel{fill:#5c6b67;font-size:11.5px;font-weight:600;font-family:var(--mono);paint-order:stroke;stroke:#fbfcfd;stroke-width:3px;stroke-linejoin:round}
+.adg-rightangle{fill:none;stroke:#0e7a68;stroke-width:1.6}
+mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+mjx-container svg{max-width:100%}
+.mdquote{margin:14px 0;padding:10px 14px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+.mdquote p{margin:6px 0}
+.mdh{margin:14px 0 6px;font-size:16px}
+.mdquote .mdh{margin-top:4px}
+.footnote{color:var(--muted);font-size:12.5px;margin-top:34px;border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:480px){ h1{font-size:22px} .face{font-size:15.5px;padding:20px} }
+/* Pantalla de contraseña (contenido cifrado en cifrado/) */
+.lock{max-width:380px;margin:56px auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px 24px}
+.lock h1{margin:0 0 6px}
+.lock p{color:var(--muted);font-size:14px;margin:0 0 18px}
+.lock input[type=password],.lock input[type=text]{width:100%;box-sizing:border-box;font:inherit;font-size:15px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);margin-bottom:12px}
+.lock input[type=password]:focus,.lock input[type=text]:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.lock label{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);margin:12px 0 16px;cursor:pointer}
+.lock .btn{width:100%;background:var(--accent);border-color:var(--accent);color:#fff}
+.lock .btn:hover{color:#fff;filter:brightness(1.08)}
+.lock .btn:disabled{opacity:.6;cursor:wait}
+.lock-err{color:var(--bad);font-size:13.5px;min-height:1.2em;margin-top:10px}
+.lockout{margin-left:auto;background:none;border:0;color:var(--muted);font:inherit;font-size:13px;cursor:pointer;padding:4px 0}
+.lockout:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+
+
+<header class="app"><div class="appbar">
+  <span class="brand" id="brand" tabindex="0" role="link">Nebula Cursos</span>
+  <nav class="crumbs" id="crumbs"></nav>
+</div></header>
+<main class="wrap" id="main"><div class="loading">Cargando catálogo…</div></main>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']], processEscapes: true,
+    /* \pounds no esta en los paquetes base/ams de MathJax: sin esto aparece en rojo como texto literal */
+    macros: { pounds: '\\text{£}' }
+  },
+  svg: { fontCache: 'global' },
+  /* extensiones que MathJax carga bajo demanda (\cancel, \boldsymbol, \ce...): van en mathjax-ext/.
+     Sin esto, una sola de esas macros hace fallar el renderizado de TODA la pestaña. */
+  loader: { paths: { tex: './mathjax-ext' } },
+  options: { enableMenu: false }
+};
+</script>
+<script src="mathjax-tex-svg.min.js"></script>
+<script src="supabase-js.js"></script>
+<script src="supabase-config.js"></script>
+<script>
+'use strict';
+const $main = document.getElementById('main');
+const $crumbs = document.getElementById('crumbs');
+let CAT = null;
+let LANG = 'es';
+const BUNDLES = {};
+
+/* ---------- utilidades ---------- */
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+/* markdown ligero que respeta $...$ */
+function mdTable(lines){
+  const sep = lines[1].trim().replace(/^\|/,'').replace(/\|$/,'');
+  if (!/^[\s:|-]+$/.test(sep)) return null;
+  const cells = l => l.trim().replace(/^\|/,'').replace(/\|$/,'').split('|').map(c => c.trim());
+  const head = cells(lines[0]);
+  const rows = lines.slice(2).map(cells);
+  return '<div class="kwwrap"><table class="mdtable"><thead><tr>' + head.map(c => `<th>${c}</th>`).join('') +
+    '</tr></thead><tbody>' + rows.map(r => '<tr>' + r.map(c => `<td>${c}</td>`).join('') + '</tr>').join('') + '</tbody></table></div>';
+}
+/* algun contenido trae tablas en LaTeX crudo (\begin{tabular}...\end{tabular},
+   a veces envueltas en \begin{center}...\end{center}) en vez de markdown: eran para
+   el PDF, pero en la web, sin esto, MathJax las intenta "leer" como formula y falla
+   con "Unknown environment 'center'" (visible en pantalla como error en rojo). Aqui
+   se detectan y se convierten a una tabla HTML normal, con el mismo estilo que las
+   tablas en markdown (mdTable), ANTES de que el texto llegue a la proteccion de $...$. */
+function texTableToHtml(body){
+  let rows = body.replace(/\\(?:top|mid|bottom)rule|\\hline/g, '').split('\\\\').map(r => r.trim()).filter(Boolean);
+  if (rows.length < 2) return null;
+  const cellsOf = r => r.split('&').map(c => c.trim());
+  const head = cellsOf(rows[0]);
+  const bodyRows = rows.slice(1).map(cellsOf);
+  if (bodyRows.some(r => r.length !== head.length)) return null;
+  return '<div class="kwwrap"><table class="mdtable"><thead><tr>' +
+    head.map(c => `<th>${mdi(c)}</th>`).join('') +
+    '</tr></thead><tbody>' +
+    bodyRows.map(r => '<tr>' + r.map(c => `<td>${mdi(c)}</td>`).join('') + '</tr>').join('') +
+    '</tbody></table></div>';
+}
+function stripLatexTables(s){
+  const tables = [];
+  const stash = html => { tables.push(html); return '\u0003' + (tables.length-1) + '\u0003'; };
+  s = s.replace(/\\begin\{center\}\s*\\begin\{tabular\}\{[^}]*\}([\s\S]*?)\\end\{tabular\}\s*\\end\{center\}/g,
+    (full, body) => { const t = texTableToHtml(body); return t ? stash(t) : full; });
+  s = s.replace(/\\begin\{tabular\}\{[^}]*\}([\s\S]*?)\\end\{tabular\}/g,
+    (full, body) => { const t = texTableToHtml(body); return t ? stash(t) : full; });
+  return { s, tables };
+}
+/* separa en parrafos/listas texto largo que llega del JSON como un unico bloque sin saltos de linea */
+function autosplit(s){
+  if (s == null) return s;
+  s = String(s);
+  if (s.indexOf('\n') !== -1) return s;
+  if (s.length < 260) return s;
+  const math = [];
+  let t = s.replace(/\$\$(?:\\.|[\s\S])+?\$\$|\$(?:\\.|[^$\n])+\$/g, m => { math.push(m); return '\u0002' + (math.length-1) + '\u0002'; });
+  if (/^\s*1[.)]\s/.test(t)){
+    const parts = t.split(/\s+(?=\d{1,2}[.)]\s)/);
+    if (parts.length >= 2) t = parts.join('\n');
+  } else {
+    const abbrRe = /\b(e\.g|i\.e|etc|vs|approx|fig|eq|no|cf)\.$/i;
+    const boundary = /[.?!]+(?=\s+[A-ZÁÉÍÓÚÑ0-9\u0002])/g;
+    const sentences = [];
+    let last = 0, m;
+    while ((m = boundary.exec(t))){
+      const end = m.index + m[0].length;
+      const piece = t.slice(last, end).trim();
+      if (abbrRe.test(piece)) continue;
+      if (piece) sentences.push(piece);
+      last = end;
+    }
+    const tail = t.slice(last).trim();
+    if (tail) sentences.push(tail);
+    if (sentences.length > 1){
+      const paras = [];
+      let cur = '';
+      for (const sent of sentences){
+        if (cur && (cur.length + sent.length + 1 > 200)){ paras.push(cur); cur = sent; }
+        else cur = cur ? cur + ' ' + sent : sent;
+      }
+      if (cur) paras.push(cur);
+      t = paras.join('\n\n');
+    }
+  }
+  t = t.replace(/\u0002(\d+)\u0002/g, (_,i) => math[+i]);
+  return t;
+}
+/* separa en parrafos cada apartado (a)/(b)/(c)... o (i)/(ii)/(iii)... de un
+   enunciado o respuesta que los trae todos pegados en una sola frase sin
+   saltos de linea; nunca parte dentro de una formula $...$. Si el texto ya
+   trae sus propios parrafos (doble salto de linea), no se toca. */
+/* "\$" (barra+dolar) es la forma de LaTeX de imprimir un simbolo $ literal
+   (p.ej. precios: "$-\$35$" o fuera de modo matematico "A\$37.50"). El
+   regex que empareja pares $...$/$$...$$ no sabe que esa barra la protege,
+   asi que puede emparejar por error ese $ con el de OTRO precio/formula mas
+   adelante en el mismo texto y tragarse frases enteras como si fueran una
+   sola formula (eso es lo que se ve como "codigo LaTeX colandose"). Por eso
+   se protege "\$" ANTES de cualquier busqueda de $...$, y se restaura al
+   final como un simple caracter $. */
+function protectDollarEscape(s){
+  if (s == null) return s;
+  return String(s).replace(/\\\$/g, '\u0006');
+}
+function restoreDollarEscape(s){
+  if (s == null) return s;
+  /* se devuelve como "\$" y no como "$" pelado: dentro de una formula ("$\$35$") es el comando TeX
+     del simbolo dolar, y fuera de ella MathJax (processEscapes) lo muestra como "$" sin riesgo de que
+     dos precios de la misma frase se emparejen como si fueran los delimitadores de una formula. */
+  return String(s).replace(/\u0006/g, '\\$');
+}
+/* apartados "a ... b ... c ..." sin parentesis (estilo libro, banco de ejercicios GCSE): se convierten en
+   "(a) ... (b) ..." para que se separen como cualquier otro apartado. Solo si aparecen EN SECUENCIA a, b, c...
+   (al menos a y b) y seguidos de una formula, numero o mayuscula, para no confundirlos con el articulo "a".
+   El texto llega con las formulas ya protegidas por marcadores (\u0002n\u0002 o \u0005n\u0005). */
+function labelBareParts(t){
+  const RE = /(^|[\s.;:,])(?:\*\*)?([a-h])(?:\*\*)?(?=\s+\S)/g;
+  const STRICT = /^\s+(?:[\u0002\u0005]|[A-Z0-9(−\-√])/;
+  const found = []; let m;
+  while ((m = RE.exec(t))) found.push({ at: m.index + m[1].length, end: RE.lastIndex, letter: m[2], strict: STRICT.test(t.slice(RE.lastIndex)) });
+  /* la "a" inicial debe ir seguida de formula/numero/mayuscula; las siguientes (b, c...) basta con que sigan el orden */
+  const seq = []; let want = 'a';
+  for (const f of found){ if (f.letter === want && (want !== 'a' || f.strict)){ seq.push(f); want = String.fromCharCode(want.charCodeAt(0) + 1); } }
+  if (seq.length < 2) return t;
+  for (let i = seq.length - 1; i >= 0; i--) t = t.slice(0, seq[i].at) + '(' + seq[i].letter + ')' + t.slice(seq[i].end);
+  return t;
+}
+function splitLetteredParts(s){
+  if (s == null) return s;
+  s = String(s);
+  if (/\n\s*\n/.test(s)) return s;
+  const math = [];
+  let t = s.replace(/\$\$(?:\\.|[\s\S])+?\$\$|\$(?:\\.|[^$\n])+\$/g, m => { math.push(m); return '\u0005' + (math.length-1) + '\u0005'; });
+  t = labelBareParts(t);
+  const MARK_RE = /\(([a-j]|i{1,3}|iv|vi{0,3}|ix|x)\)/g;
+  const idxs = [];
+  let m;
+  while ((m = MARK_RE.exec(t))) idxs.push(m.index);
+  if (idxs.length >= 2){
+    let out = '', last = 0;
+    for (const idx of idxs){
+      out += t.slice(last, idx);
+      if (idx > 0) out += '\n\n';
+      last = idx;
+    }
+    out += t.slice(last);
+    t = out;
+  }
+  return t.replace(/\u0005(\d+)\u0005/g, (_,i) => math[+i]);
+}
+function md(s){
+  if (s == null) return '';
+  s = protectDollarEscape(s);
+  s = splitLetteredParts(s);
+  s = autosplit(s);
+  s = String(s);
+  const latexTables = stripLatexTables(s);
+  s = latexTables.s;
+  const math = [];
+  s = s.replace(/\$\$(?:\\.|[\s\S])+?\$\$|\$(?:\\.|[^$\n])+\$/g, m => { math.push(m); return '\u0001' + (math.length-1) + '\u0001'; });
+  /* comandos de espaciado/escape de LaTeX (\,  \;  \!  \:  \%  \&  \_  \#) que el contenido deja
+     fuera de los $...$ por error: sin esto aparecen como texto crudo tipo "6\,cm" */
+  s = s.replace(/\\([,;!:%&_#])/g, (_, c) => (',;!:'.includes(c) ? ' ' : c));
+  s = esc(s);
+  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  s = s.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+  s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+  /* resaltado de color en prosa: [[blue:texto]] -> <span class="hl-blue">texto</span>; misma paleta que \color{} en LaTeX */
+  s = s.replace(/\[\[(blue|red|green|orange|purple|teal):([^\]]+)\]\]/g, '<span class="hl-$1">$2</span>');
+  /* un parrafo: tabla, lista, titulo (### ...) o texto normal */
+  function para(p){
+    const lines = p.split('\n').filter(l => l.trim().length);
+    if (!lines.length) return '';
+    if (lines.length >= 2 && lines.every(l => /^\s*\|.*\|\s*$/.test(l))){
+      const t = mdTable(lines);
+      if (t) return t;
+    }
+    if (lines.length > 1 && lines.every(l => /^\s*[-•]\s+/.test(l)))
+      return '<ul>' + lines.map(l => '<li>' + l.replace(/^\s*[-•]\s+/,'') + '</li>').join('') + '</ul>';
+    if (lines.length > 1 && lines.every(l => /^\s*\d+[.)]\s+/.test(l)))
+      return '<ol>' + lines.map(l => '<li>' + l.replace(/^\s*\d+[.)]\s+/,'') + '</li>').join('') + '</ol>';
+    /* titulos markdown (#, ##, ###): antes se veian como "###" literal */
+    if (/^\s*#{1,4}\s+/.test(lines[0])){
+      const head = '<h4 class="mdh">' + lines[0].replace(/^\s*#{1,4}\s+/,'') + '</h4>';
+      return lines.length > 1 ? head + para(lines.slice(1).join('\n')) : head;
+    }
+    return '<p>' + lines.join('<br>') + '</p>';
+  }
+  const paras = s.split(/\n{2,}/).map(p => {
+    /* citas markdown ("> texto"): antes se veia el ">" literal; ahora es un recuadro destacado */
+    const ls = p.split('\n').filter(l => l.trim().length);
+    if (ls.length && ls.every(l => /^\s*&gt;/.test(l)))
+      return '<blockquote class="mdquote">' + para(ls.map(l => l.replace(/^\s*&gt;\s?/,'')).join('\n')) + '</blockquote>';
+    return para(p);
+  });
+  s = paras.join('').replace(/<\/blockquote><blockquote class="mdquote">/g, '');
+  s = s.replace(/\u0001(\d+)\u0001/g, (_,i) => esc(math[+i]).replace(/&amp;/g,'&'));
+  s = s.replace(/\u0003(\d+)\u0003/g, (_,i) => latexTables.tables[+i]);
+  s = restoreDollarEscape(s);
+  return s;
+}
+function mdi(s){
+  return md(s).replace(/<\/p>\s*<p>/g,'<br><br>').replace(/^<p>/,'').replace(/<\/p>$/,'');
+} /* inline */
+function typeset(){ if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([$main]).catch(()=>{}); }
+function dots(d){ return d ? '●'.repeat(d) + '○'.repeat(Math.max(0,5-d)) : ''; }
+function h(html){ const t = document.createElement('template'); t.innerHTML = html; return t.content; }
+
+/* ---------- textos segun idioma de la leccion (el chrome del sitio sigue en espanol; esto es solo para las etiquetas pegadas al contenido) ---------- */
+const STR = {
+  objetivos: {es:'Objetivos', en:'Objectives'},
+  vistazo: {es:'De un vistazo', en:'At a glance'},
+  resumen: {es:'Resumen', en:'Summary'},
+  formulas: {es:'Fórmulas.', en:'Formulas.'},
+  solo_recuerda: {es:'Si solo recuerdas una cosa:', en:'If you remember only one thing:'},
+  comprueba: {es:'Comprueba que lo has entendido:', en:'Check your understanding:'},
+  datos: {es:'Datos.', en:'Given.'},
+  incognita: {es:'Incógnita.', en:'Find.'},
+  pistas: {es:'Pistas', en:'Hints'},
+  guia: {es:'Cómo abordarlo:', en:'How to approach it:'},
+  resolucion: {es:'Resolución', en:'Working'},
+  ver_solucion: {es:'Ver solución', en:'Show solution'},
+  respuesta: {es:'Respuesta.', en:'Answer.'},
+  por_que_funciona: {es:'Por qué funciona.', en:'Why this works.'},
+  idea_clave: {es:'Idea clave.', en:'Key idea.'},
+  ninguno: {es:'Ninguno de los dos', en:'Neither'},
+  error_tipico: {es:'Error típico.', en:'Common mistake.'},
+  errores_tipicos: {es:'Errores típicos.', en:'Common mistakes.'},
+  criterios: {es:'Criterios de corrección.', en:'Mark scheme.'},
+  ejemplos_resueltos: {es:'Ejemplos resueltos', en:'Worked examples'},
+  ejercicios_guiados: {es:'Ejercicios guiados', en:'Guided exercises'},
+  ejercicios: {es:'Ejercicios', en:'Exercises'},
+  preguntas_examen: {es:'Preguntas de examen', en:'Exam questions'},
+  desafios: {es:'Desafíos', en:'Challenge questions'},
+  puntos: {es:'puntos', en:'marks'},
+  palabras_clave: {es:'Palabras clave', en:'Key words'},
+  sin_vocab: {es:'Sin vocabulario.', en:'No vocabulary for this lesson.'},
+  notas_examen: {es:'Notas de examen', en:'Exam notes'},
+  conceptos_erroneos: {es:'Conceptos erróneos frecuentes', en:'Common misconceptions'},
+  modelo_erroneo: {es:'Modelo erróneo.', en:'Incorrect model.'},
+  modelo_correcto: {es:'Modelo correcto.', en:'Correct model.'},
+  por_que_aparece: {es:'¿Por qué aparece?', en:'Why it happens'},
+  como_detectarlo: {es:'Cómo detectarlo', en:'How to spot it'},
+  como_corregirlo: {es:'Cómo corregirlo', en:'How to fix it'},
+  errores_comunes: {es:'Errores comunes', en:'Common errors'},
+  como_evitarlo: {es:'Cómo evitarlo.', en:'How to avoid it.'},
+  requisitos_previos: {es:'Requisitos previos', en:'Prerequisites'},
+  diagnostico_previo: {es:'Diagnóstico previo', en:'Quick diagnostic'},
+  respuesta_esperada: {es:'Respuesta esperada.', en:'Expected answer.'},
+  ver_respuesta: {es:'Ver respuesta', en:'Show answer'},
+  que_comprueba: {es:'Qué comprueba esta pregunta.', en:'What this checks.'},
+  si_fallas: {es:'Si fallas, repasa esto.', en:'If you got this wrong, review this.'},
+  correcto: {es:'Correcto.', en:'Correct.'},
+  no: {es:'No.', en:'Not quite.'},
+  respuesta_colon: {es:'Respuesta:', en:'Answer:'},
+  sin_ejercicios: {es:'Sin ejercicios en esta lección.', en:'No exercises in this lesson.'},
+  sin_teoria: {es:'Esta lección no tiene bloques de teoría.', en:'This lesson has no theory blocks.'},
+  sin_repaso: {es:'Sin material de repaso.', en:'No review material for this lesson.'},
+  sin_fichas: {es:'Sin fichas en esta lección.', en:'No flashcards in this lesson.'},
+  sin_test: {es:'Sin preguntas tipo test.', en:'No test questions in this lesson.'},
+  respuesta_lbl: {es:'respuesta', en:'answer'},
+  diagrama_no_escala: {es:'Diagrama esquemático, no a escala.', en:'Schematic diagram, not to scale.'},
+  ejemplo_ilustrativo: {es:'Ejemplo ilustrativo con datos de muestra (no son los del texto).', en:'Illustrative example with sample data (not from the text above).'},
+};
+function t(k){ return STR[k] ? (STR[k][LANG] || STR[k].es) : k; }
+
+/* ---------- navegación por hash: home | c-<i> | u-<i>-<j> | l-<i>-<j>-<k>[-tab] ---------- */
+function go(hash){ location.hash = hash; }
+window.addEventListener('hashchange', render);
+document.getElementById('brand').addEventListener('click', () => go(''));
+document.getElementById('brand').addEventListener('keydown', e => { if (e.key==='Enter') go(''); });
+
+function setCrumbs(parts){
+  $crumbs.innerHTML = parts.map((p,i) =>
+    (i ? '<span class="sep">›</span>' : '') +
+    (p.href != null ? `<a href="#${p.href}">${esc(p.label)}</a>` : `<a>${esc(p.label)}</a>`)
+  ).join('');
+}
+
+function parseHash(){
+  const m = (location.hash || '').replace(/^#/,'');
+  const p = m.split('-');
+  if (p[0]==='c' && CAT.projects[+p[1]]) return {v:'course', i:+p[1]};
+  if (p[0]==='u' && CAT.projects[+p[1]]?.units[+p[2]]) return {v:'unit', i:+p[1], j:+p[2]};
+  if (p[0]==='l' && CAT.projects[+p[1]]?.units[+p[2]]?.lecciones[+p[3]]) return {v:'lesson', i:+p[1], j:+p[2], k:+p[3], tab:p[4]||'teoria'};
+  return {v:'home'};
+}
+
+function render(){
+  if (!CAT) return;
+  const st = parseHash();
+  window.scrollTo(0,0);
+  if (st.v==='home') return renderHome();
+  if (st.v==='course') return renderCourse(st.i);
+  if (st.v==='unit') return renderUnit(st.i, st.j);
+  return renderLesson(st.i, st.j, st.k, st.tab);
+}
+
+/* ---------- vistas ---------- */
+function renderHome(){
+  setCrumbs([]);
+  const groups = {};
+  CAT.projects.forEach((p,i) => { (groups[p.group] = groups[p.group] || []).push([p,i]); });
+  let out = `<h1>Nebula Cursos</h1><p class="sub">${CAT.projects.length} cursos · ${CAT.projects.reduce((a,p)=>a+(p.total?.lecciones||0),0)} lecciones. Teoría, fichas, test y ejercicios de cada lección.</p>`;
+  for (const g of Object.keys(groups)){
+    out += `<div class="grouplabel">${esc(g)}</div><div class="grid">`;
+    for (const [p,i] of groups[g]){
+      out += `<div class="card" tabindex="0" data-go="c-${i}">
+        <p class="t">${esc(p.label)}</p>
+        <p class="m">${p.units.length} unidades · ${p.total?.lecciones ?? ''} lecciones</p></div>`;
+    }
+    out += '</div>';
+  }
+
+  $main.innerHTML = out;
+  bindGo();
+  typeset();
+}
+
+function renderCourse(i){
+  const p = CAT.projects[i];
+  setCrumbs([{label:'Inicio', href:''},{label:p.label}]);
+  let out = `<h1>${esc(p.label)}</h1><p class="sub">${p.units.length} unidades · ${p.total?.lecciones ?? ''} lecciones</p><div class="list">`;
+  p.units.forEach((u,j) => {
+    out += `<div class="row" tabindex="0" data-go="u-${i}-${j}">
+      <span class="n">${String(j+1).padStart(2,'0')}</span>
+      <span class="t">${esc(pretty(u.titulo || u.id))}</span>
+      <span class="meta">${u.lecciones.length} lecciones${u.itinerario?' · '+esc(u.itinerario):''}</span></div>`;
+  });
+  $main.innerHTML = out + '</div>';
+  bindGo();
+  typeset();
+}
+
+function renderUnit(i,j){
+  const p = CAT.projects[i], u = p.units[j];
+  setCrumbs([{label:'Inicio', href:''},{label:p.label, href:`c-${i}`},{label:pretty(u.titulo||u.id)}]);
+  let out = `<h1>${esc(pretty(u.titulo || u.id))}</h1><p class="sub">${esc(p.label)}${u.itinerario?' · '+esc(u.itinerario):''}</p><div class="list">`;
+
+  const lessonRow = (l,k) => `<div class="row" tabindex="0" data-go="l-${i}-${j}-${k}">
+      <span class="n">${String(l.n).padStart(2,'0')}</span>
+      <span class="t">${esc(l.titulo)}</span>
+      <span class="meta"><span class="dots" title="dificultad">${dots(l.dificultad)}</span><span>${esc(l.duracion||'')}</span></span></div>`;
+
+  if (u.nav_groups && u.nav_groups.length) {
+    u.nav_groups.forEach(g => {
+      const items = u.lecciones.filter(l => l.n >= g.from && l.n <= g.to);
+      out += `<div class="nav-group">
+        <div class="nav-group-hdr" onclick="this.parentElement.classList.toggle('collapsed')">
+          <span class="nav-group-arrow">▼</span>
+          <span class="nav-group-label">${esc(g.label)}</span>
+          <span class="nav-group-count">${items.length}</span>
+        </div><div class="nav-group-items">`;
+      items.forEach(l => {
+        const k = u.lecciones.indexOf(l);
+        out += lessonRow(l, k);
+      });
+      out += `</div></div>`;
+    });
+  } else {
+    u.lecciones.forEach((l,k) => { out += lessonRow(l, k); });
+  }
+
+  $main.innerHTML = out + '</div>';
+  bindGo();
+  typeset();
+}
+
+const FCARD_LABEL = {
+  misconception:{es:'Error común',en:'Misconception'}, application:{es:'Aplicación',en:'Application'},
+  formula:{es:'Fórmula',en:'Formula'}, 'fórmula':{es:'Fórmula',en:'Formula'}, recall:{es:'Recuerda',en:'Recall'}, comparison:{es:'Comparación',en:'Comparison'},
+  transfer:{es:'Transferencia',en:'Transfer'}, condition:{es:'Condición',en:'Condition'}, conceptual:{es:'Concepto',en:'Concept'},
+  definition:{es:'Definición',en:'Definition'}, worked_rule:{es:'Para recordar',en:'Key rule'},
+  practice:{es:'Práctica',en:'Practice'}, property:{es:'Propiedad',en:'Property'}, criterion:{es:'Criterio',en:'Criterion'},
+  procedure:{es:'Procedimiento',en:'Procedure'}, procedural:{es:'Procedimiento',en:'Procedure'},
+  derivation:{es:'Deducción',en:'Derivation'}, equivalence:{es:'Equivalencia',en:'Equivalence'}
+};
+const TABS_I18N = {
+  teoria:      {es:'Teoría',      en:'Theory'},
+  fichas:      {es:'Fichas',      en:'Flashcards'},
+  test:        {es:'Test',        en:'Quiz'},
+  ejercicios:  {es:'Ejercicios',  en:'Exercises'},
+  vocab:       {es:'Vocabulario', en:'Vocabulary'},
+  repaso:      {es:'Repaso',      en:'Review'}
+};
+const TABS = Object.entries(TABS_I18N).map(([id, labels]) => [id, labels]);
+
+/* Una pestana solo debe existir si tiene contenido real: si una leccion no
+   trae fichas, test, teoria, vocabulario o repaso, ese boton ni siquiera debe
+   aparecer (en vez de aparecer y mostrar "vacio"). */
+function tabContentFlags(d){
+  return {
+    teoria: !!(d.objectives?.length || d.theory_blocks?.length || d.summary?.big_idea ||
+      d.summary?.key_points?.length || d.summary?.formulas?.length || d.summary?.what_to_remember_if_nothing_else),
+    fichas: !!(d.flashcards?.length),
+    test: !!(d.mcq?.length),
+    ejercicios: !!(d.worked_examples?.length || d.guided_exercises?.length || d.exercises?.length ||
+      d.exam_questions?.length || d.challenge_questions?.length),
+    vocab: !!(d.keywords?.length),
+    repaso: !!(d.exam_notes?.length || d.misconceptions?.length || d.common_mistakes?.length ||
+      d.prerequisites?.length || d.diagnostic_items?.length),
+  };
+}
+
+async function renderLesson(i,j,k,tab){
+  const p = CAT.projects[i], u = p.units[j], l = u.lecciones[k];
+  setCrumbs([{label:'Inicio', href:''},{label:p.label, href:`c-${i}`},{label:pretty(u.titulo||u.id), href:`u-${i}-${j}`},{label:l.titulo}]);
+  let data = BUNDLES[l.bundle]?.[l.bkey];
+  if (!data){
+    $main.innerHTML = '<div class="loading">Cargando lección…</div>';
+    try{
+      if (!BUNDLES[l.bundle]) BUNDLES[l.bundle] = await loadJSON(l.bundle);
+      data = BUNDLES[l.bundle][l.bkey];
+    }catch(e){
+      $main.innerHTML = '<div class="empty">' + (LANG==='en' ? 'Could not load this lesson. Check your connection and try again.' : 'No se pudo cargar esta lección. Comprueba la conexión y vuelve a intentarlo.') + '</div>';
+      return;
+    }
+  }
+  if (!data){ $main.innerHTML = '<div class="empty">' + (LANG==='en' ? 'Lesson not found in the bundle.' : 'Lección no encontrada en el paquete.') + '</div>'; return; }
+  LANG = data.lang === 'en' ? 'en' : 'es';
+  document.documentElement.lang = LANG;
+
+  const flags = tabContentFlags(data);
+  let availTabs = TABS.filter(([id]) => flags[id]);
+  if (!availTabs.length) availTabs = [TABS[0]]; // salvaguarda: nunca dejar la vista totalmente en blanco
+  const effTab = flags[tab] ? tab : availTabs[0][0];
+
+  let out = `<h1>${esc(data.title || l.titulo)}</h1>
+    <p class="sub">${esc(data.course_label || p.label)} · <span class="dots">${dots(l.dificultad)}</span> ${esc(l.duracion||'')}</p>
+    <div class="tabs">` +
+    availTabs.map(([id,lab]) => `<button class="${id===effTab?'on':''}" data-go="l-${i}-${j}-${k}-${id}">${lab[LANG]||lab.es}</button>`).join('') +
+    `</div><div id="tabbody"></div>`;
+  $main.innerHTML = out;
+  bindGo();
+  const body = document.getElementById('tabbody');
+  if (effTab==='fichas') viewFichas(body, data);
+  else if (effTab==='test') viewTest(body, data);
+  else if (effTab==='ejercicios') viewEjercicios(body, data);
+  else if (effTab==='vocab') body.innerHTML = viewVocab(data);
+  else if (effTab==='repaso') body.innerHTML = viewRepaso(data);
+  else body.innerHTML = viewTeoria(data);
+  typeset();
+}
+
+/* --- Teoría --- */
+const BLOCK_LABEL = {
+  intuition:{es:'Intuición',en:'Intuition'}, formalisation:{es:'Formalización',en:'Formalisation'},
+  caveat:{es:'Atención',en:'Watch out'}, worked_rule:{es:'Para recordar',en:'Key rule'}, connection:{es:'Conexión',en:'Connection'},
+  derivation:{es:'Derivación',en:'Derivation'}, self_explanation:{es:'Autoexplicación',en:'Self-explanation'},
+  procedure:{es:'Procedimiento',en:'Procedure'}, foundation:{es:'Base',en:'Foundation'},
+  method_selection:{es:'Elegir el método',en:'Choosing a method'}, strategy:{es:'Estrategia',en:'Strategy'}, example:{es:'Ejemplo',en:'Example'},
+  enrichment:{es:'Para ir más lejos',en:'Going further'},
+  formalization:{es:'Formalización',en:'Formalization'}, definition:{es:'Definición',en:'Definition'}, concept:{es:'Concepto',en:'Concept'}, application:{es:'Aplicación',en:'Application'}
+};
+/* envuelve una fórmula LaTeX "pelada" (sin $...$) en modo display para que MathJax la procese */
+function texDisplay(x){ const s = str(x); return s.includes('$') ? s : ('$$' + s + '$$'); }
+function theoryFormula(x){
+  const items = (Array.isArray(x) ? x : [x]).filter(v => str(v).trim());
+  return `<div class="theory-formula">${items.map(v => `<div class="formula-line">${mdi(texDisplay(v))}</div>`).join('')}</div>`;
+}
+function viewTeoria(d){
+  let out = '';
+  const uid = d.unit_id;
+  if (d.objectives?.length){
+    out += `<div class="block"><span class="tag">${t('objetivos')}</span><ul>` +
+      d.objectives.map(o => `<li>${mdi(o.statement)}</li>`).join('') + '</ul></div>';
+  }
+  const s = d.summary;
+  if (s?.big_idea){
+    out += `<div class="overview"><span class="tag">${t('vistazo')}</span><p>${mdi(s.big_idea)}</p></div>`;
+  }
+  const seenChartKinds = new Set();
+  (d.theory_blocks||[]).forEach(b => {
+    const type = b.type || '';
+    const label = (BLOCK_LABEL[type] && (BLOCK_LABEL[type][LANG]||BLOCK_LABEL[type].es)) || esc(type || 'teoría');
+    const formula = b.formula ? theoryFormula(b.formula) : '';
+    out += `<div class="block t-${esc(type)}"><span class="tag">${label}${b.scope && b.scope!=='CORE' ? ' · '+esc(b.scope):''}</span>
+      <h3>${mdi(b.title||'')}</h3>${md(b.body || b.content)}${formula}${assetsHtml(b.assets)}${conceptIllustration(b, uid, seenChartKinds)}${geometryIllustration(b, uid)}${mensurationIllustration(b, uid, seenChartKinds)}${geoTrigIllustration(b, uid, seenChartKinds)}${algebraGraphIllustration(b, uid, seenChartKinds)}${transformVectorIllustration(b, uid, seenChartKinds)}</div>`;
+  });
+  if (s){
+    out += `<div class="block"><span class="tag">${t('resumen')}</span>`;
+    if (s.key_points?.length) out += `<ul>` + s.key_points.map(x => `<li>${mdi(str(x))}</li>`).join('') + '</ul>';
+    if (s.formulas?.length) out += `<p><strong>${t('formulas')}</strong></p>` + s.formulas.map(x => `<div class="formula-row">${mdi(texDisplay(x))}</div>`).join('');
+    if (s.what_to_remember_if_nothing_else) out += `<p><strong>${t('solo_recuerda')}</strong> ${mdi(str(s.what_to_remember_if_nothing_else))}</p>`;
+    if (s.exit_check?.question) out += `<div class="q"><div class="stem"><strong>${t('comprueba')}</strong> ${mdi(s.exit_check.question)}</div>` + (s.exit_check.answer ? det(t('ver_respuesta'), md(s.exit_check.answer)) : '') + '</div>';
+    out += '</div>';
+  }
+  return out || `<div class="empty">${t('sin_teoria')}</div>`;
+}
+/* algunos campos llegan como texto suelto en vez de lista: se normalizan para no romper la pestaña */
+function asList(x){ return Array.isArray(x) ? x : (x == null || x === '' ? [] : [x]); }
+function str(x){ if (x==null) return ''; if (typeof x==='string') return x; if (Array.isArray(x)) return x.map(str).join(' · '); if (typeof x==='object') return Object.values(x).map(str).join(' — '); return String(x); }
+
+/* --- Fichas (flashcards) --- */
+function viewFichas(el, d){
+  const cards = d.flashcards || [];
+  if (!cards.length){ el.innerHTML = `<div class="empty">${t('sin_fichas')}</div>`; return; }
+  let order = cards.map((_,x)=>x), pos = 0, flipped = false;
+  el.innerHTML = `<div class="fcstage">
+    <div class="fcounter" id="fcount"></div>
+    <div class="fcard" id="fcard" tabindex="0" role="button" aria-label="Pulsar para girar la ficha">
+      <div class="fcin">
+        <div class="face front"><span class="lbl" id="fkind"></span><div id="ffront"></div></div>
+        <div class="face back"><span class="lbl" id="fbacklbl"></span><div id="fback"></div></div>
+      </div></div>
+    <div class="fbtns">
+      <button class="btn" id="fprev">← Anterior</button>
+      <button class="btn" id="fflip">Girar</button>
+      <button class="btn" id="fnext">Siguiente →</button>
+      <button class="btn" id="fshuf">Barajar</button>
+    </div></div>`;
+  const $c = el.querySelector('#fcard');
+  function paint(){
+    const c = cards[order[pos]];
+    flipped = false; $c.classList.remove('flip');
+    el.querySelector('#fcount').textContent = (pos+1) + ' / ' + cards.length;
+    el.querySelector('#fkind').textContent = (FCARD_LABEL[c.kind] && (FCARD_LABEL[c.kind][LANG]||FCARD_LABEL[c.kind].es)) || c.kind || 'ficha';
+    el.querySelector('#fbacklbl').textContent = t('respuesta_lbl');
+    el.querySelector('#ffront').innerHTML = md(c.front);
+    el.querySelector('#fback').innerHTML = md(c.back);
+    typeset();
+  }
+  function flip(){ flipped = !flipped; $c.classList.toggle('flip', flipped); }
+  $c.addEventListener('click', flip);
+  $c.addEventListener('keydown', e => { if (e.key===' '||e.key==='Enter'){ e.preventDefault(); flip(); } });
+  el.querySelector('#fflip').addEventListener('click', flip);
+  el.querySelector('#fnext').addEventListener('click', () => { pos = (pos+1)%order.length; paint(); });
+  el.querySelector('#fprev').addEventListener('click', () => { pos = (pos-1+order.length)%order.length; paint(); });
+  el.querySelector('#fshuf').addEventListener('click', () => {
+    for (let x=order.length-1;x>0;x--){ const y = Math.floor(Math.random()*(x+1)); [order[x],order[y]]=[order[y],order[x]]; }
+    pos = 0; paint();
+  });
+  paint();
+}
+
+/* --- Test (MCQ) --- */
+function viewTest(el, d){
+  /* Opciones barajadas al renderizar y reetiquetadas A,B,C,D: evita que la respuesta correcta
+     caiga siempre en la misma posicion (sesgo de posicion). La clave correcta se remapea. */
+  const qs = (d.mcq || []).map(q => {
+    const opts = (q.options || []).slice();
+    for (let i = opts.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [opts[i], opts[j]] = [opts[j], opts[i]]; }
+    const LT = 'ABCDEFGH';
+    const ci = opts.findIndex(o => o.key === q.correct);
+    const options = opts.map((o, i) => ({ ...o, key: LT[i] }));
+    return { ...q, options, correct: ci >= 0 ? LT[ci] : q.correct };
+  });
+  if (!qs.length){ el.innerHTML = `<div class="empty">${t('sin_test')}</div>`; return; }
+  el.innerHTML = qs.map((q,qi) => `<div class="q" data-q="${qi}">
+      <div class="stem">${qi+1}. ${mdi(q.stem)}</div>
+      <div class="opts">` +
+      (q.options||[]).map(o => `<button class="opt" data-k="${esc(o.key)}"><span class="k">${esc(o.key)})</span><span>${mdi(o.text)}</span></button>`).join('') +
+      `</div><div class="vslot"></div></div>`).join('');
+  el.querySelectorAll('.q').forEach(qel => {
+    const q = qs[+qel.dataset.q];
+    qel.querySelectorAll('.opt').forEach(btn => btn.addEventListener('click', () => {
+      if (qel.dataset.done) return;
+      qel.dataset.done = '1';
+      const pick = btn.dataset.k, ok = pick === q.correct;
+      qel.querySelectorAll('.opt').forEach(b => {
+        b.disabled = true;
+        if (b.dataset.k === q.correct) b.classList.add('ok');
+        else if (b === btn) b.classList.add('ko');
+      });
+      const opt = (q.options||[]).find(o => o.key === pick);
+      const vs = qel.querySelector('.vslot');
+      vs.innerHTML = ok
+        ? `<div class="verdict ok"><strong>${t('correcto')}</strong> ${mdi(q.explanation||'')}</div>`
+        : `<div class="verdict ko"><strong>${t('no')}</strong> ${mdi(opt?.why_wrong||'')}<br><strong>${t('respuesta_colon')} ${esc(q.correct)}.</strong> ${mdi(q.explanation||'')}</div>`;
+      typeset();
+    }));
+  });
+}
+
+/* --- Ejercicios --- */
+function buildConceptMap(keywords){
+  const map = {};
+  (keywords||[]).forEach(k => {
+    if (!k || !k.concept_id) return;
+    (map[k.concept_id] = map[k.concept_id] || []).push(k);
+  });
+  return map;
+}
+function conceptHint(conceptMap, conceptIds){
+  if (!conceptMap || !conceptIds || !conceptIds.length) return '';
+  const seen = new Set(); const items = [];
+  for (const cid of conceptIds){
+    const arr = conceptMap[cid];
+    if (!arr || !arr.length) continue;
+    const k = arr[0];
+    if (!k.term || seen.has(k.term)) continue;
+    seen.add(k.term);
+    items.push(k);
+    if (items.length >= 2) break;
+  }
+  if (!items.length) return '';
+  const body = items.map(k => `${mdi(k.term)}: ${mdi(k.definition||'')}`).join(' &middot; ');
+  return `<div class="callout info concept-hint"><strong>${t('idea_clave')}</strong> ${body}</div>`;
+}
+/* --- pasos de solucion: separa un full_solution denso en micro-pasos numerados
+   para que el alumno pueda seguir el razonamiento en vez de recibir un bloque
+   unico de operaciones encadenadas. Protege los tramos de matematicas ($...$)
+   para no partir nunca dentro de una formula. --- */
+/* Solucion desarrollada (full_solution). Antes se partia en CADA punto o punto y coma y cada trozo iba en
+   su propio recuadro: una misma solucion parecia un monton de cajas independientes. Ahora:
+   - si el texto ya trae parrafos, listas o tablas, se respeta tal cual (markdown normal);
+   - si llega como un unico bloque, se separa por apartados (a), (b)... y, dentro de cada apartado, se
+     agrupan las frases en parrafos cortos. Todo va en UN solo bloque continuo con una linea guia a la
+     izquierda; los apartados se separan con una linea fina. Nunca se parte dentro de una formula. */
+function splitSolutionSteps(text){
+  if (!text) return [];
+  text = protectDollarEscape(String(text));
+  const MATH_RE = /\$\$(?:\\.|[\s\S])+?\$\$|\$(?:\\.|[^$\n])+\$/g;
+  const ph = [];
+  let t = text.replace(MATH_RE, m => { ph.push(m); return `\u0002${ph.length-1}\u0002`; });
+  t = labelBareParts(t);
+  const restore = x => restoreDollarEscape(x.replace(/\u0002(\d+)\u0002/g, (_, n) => ph[+n]));
+  /* apartados: "(a) ...", "**(a)** ...", "a) ..." al inicio o tras espacio */
+  const PART_RE = /(?:^|\s)(?=(?:\*\*)?\(?(?:[a-h]|i{1,3}|iv|v|vi{1,3})\)(?:\*\*)?\s)/g;
+  let parts = t.split(PART_RE).map(x => x.trim()).filter(Boolean);
+  if (parts.length < 2) parts = [t.trim()];
+  const ABBR_RE = /\b(e\.g|i\.e|etc|vs|approx|fig|eq|no|cf|dr|sr|sra|p\.ej)\.$/i;
+  return parts.map(part => {
+    /* frases -> parrafos de hasta ~240 caracteres */
+    const sents = []; let last = 0; const B = /[.?!](?=\s+(?:[A-ZÁÉÍÓÚÑ¿¡0-9(\u0002*]))/g; let m;
+    while ((m = B.exec(part))){
+      const piece = part.slice(last, m.index + 1).trim();
+      if (ABBR_RE.test(piece)) continue;
+      if (piece) sents.push(piece); last = m.index + 1;
+    }
+    const tail = part.slice(last).trim(); if (tail) sents.push(tail);
+    const paras = []; let cur = '';
+    for (const x of sents){
+      if (cur && cur.length + x.length > 240){ paras.push(cur); cur = x; }
+      else cur = cur ? cur + ' ' + x : x;
+    }
+    if (cur) paras.push(cur);
+    return paras.map(restore);
+  });
+}
+function renderSolutionSteps(text){
+  if (!text) return '';
+  /* el texto ya viene maquetado (parrafos, listas, tablas, formulas en bloque): se respeta */
+  if (/\n/.test(text)) return `<div class="sol-flow">${md(text)}</div>`;
+  const parts = splitSolutionSteps(text);
+  return `<div class="sol-flow">` + parts.map(paras =>
+    `<div class="sol-part">${paras.map(x => `<p>${mdi(x).replace(/^(?:<strong>)?(\(?(?:[a-h]|i{1,3}|iv|v|vi{1,3})\))(?:<\/strong>)?(?=\s)/, '<strong class="sol-lbl">$1</strong>')}</p>`).join('')}</div>`).join('') + `</div>`;
+}
+function exBlock(e, extra, unitId, conceptMap){
+  let out = `<div class="q">`;
+  if (e.scope === 'ADVANCED') out += '<span class="chip ext">Extended</span>';
+  if (extra) out += extra(e);
+  if (e.title) out += `<h3 class="qtitle">${mdi(e.title)}</h3>`;
+  out += `<div class="stem">${md(e.statement)}</div>`;
+  if (e.knowns?.length || e.unknowns?.length){
+    out += '<div class="kw-setup">';
+    if (e.knowns?.length) out += `<p><strong>${t('datos')}</strong> ${e.knowns.map(x=>mdi(str(x))).join('; ')}</p>`;
+    if (e.unknowns?.length) out += `<p><strong>${t('incognita')}</strong> ${e.unknowns.map(x=>mdi(str(x))).join('; ')}</p>`;
+    out += '</div>';
+  }
+  out += assetsHtml(e.assets) || autoDiagram(e, unitId) || autoChart(e, unitId);
+  /* andamiaje de los ejercicios guiados: los pasos a seguir, visibles antes de las pistas */
+  if (e.scaffold) out += `<div class="callout info"><strong>${t('guia')}</strong> ${md(str(e.scaffold))}</div>`;
+  if (e.hints?.length) out += det(t('pistas'), '<ul>'+e.hints.map(x=>`<li>${mdi(x)}</li>`).join('')+'</ul>');
+  let sol = '';
+  if (!e.reasoning?.length && !e.steps?.length) sol += conceptHint(conceptMap, e.concept_ids);
+  if (e.reasoning?.length) sol += '<div class="sol-flow">'+e.reasoning.map(x=>`<div class="sol-part">${md(str(x))}</div>`).join('')+'</div>';
+  if (e.steps?.length) sol += '<div class="sol-flow sol-steps">'+e.steps.map((x,i)=>`<div class="sol-step"><span class="sol-n">${i+1}</span><div>${md(str(x))}</div></div>`).join('')+'</div>';
+  /* antes, si habia reasoning (el planteamiento) se ocultaba solution (la resolucion con los numeros):
+     ~2.500 ejemplos resueltos mostraban solo el "que hacer" sin el calculo. Ahora se muestran los dos,
+     salvo que la resolucion ya este contenida en el razonamiento. */
+  if (e.solution){
+    const solTxt = str(e.solution), rsn = (e.reasoning||[]).map(str).join(' ');
+    const norm = x => x.replace(/\s+/g,' ').trim();
+    if (!rsn || !norm(rsn).includes(norm(solTxt).slice(0, 120)))
+      sol += (rsn ? `<p class="sol-sub">${t('resolucion')}</p>` : '') + `<div class="sol-flow">${md(solTxt)}</div>`;
+  }
+  if (e.full_solution && !e.steps?.length) sol += renderSolutionSteps(e.full_solution);
+  /* la respuesta va al final, como conclusion del desarrollo (antes salia antes de la resolucion) */
+  if (e.answer){
+    const ah = md(str(e.answer)), lbl = `<strong>${t('respuesta')}</strong> `;
+    sol += `<div class="sol-answer">${ah.startsWith('<p>') ? '<p>' + lbl + ah.slice(3) : '<p>' + lbl + '</p>' + ah}</div>`;
+  }
+  if (e.verification) sol += `<div class="callout info"><strong>Comprobación.</strong> ${mdi(e.verification)}</div>`;
+  if (e.interpretation) sol += `<div class="callout info"><strong>${t('por_que_funciona')}</strong> ${mdi(e.interpretation)}</div>`;
+  if (e.common_mistake) sol += `<div class="callout warn"><strong>${t('error_tipico')}</strong> ${mdi(e.common_mistake)}</div>`;
+  if (e.common_errors?.length) sol += `<div class="callout warn"><strong>${t('errores_tipicos')}</strong><ul>` + e.common_errors.map(x=>`<li>${mdi(str(x))}</li>`).join('') + '</ul></div>';
+  if (e.mark_scheme) sol += `<p><strong>${t('criterios')}</strong></p>` + (Array.isArray(e.mark_scheme) ? '<ul>'+e.mark_scheme.map(x=>`<li>${mdi(str(x))}</li>`).join('')+'</ul>' : md(str(e.mark_scheme)));
+  if (sol) out += det(t('ver_solucion'), sol);
+  return out + '</div>';
+}
+function det(label, inner){ return `<details><summary>${label}</summary><div class="inner">${inner}</div></details>`; }
+/* Los SVG compilados desde TikZ (dvisvgm) usan ids de glifo genericos
+   (glyph-0-0, glyph-1-0...) que NO son unicos entre figuras distintas. Si dos
+   de estas figuras se insertan en la misma pagina, el navegador resuelve cada
+   <use href="#glyph-0-0"> contra el PRIMER elemento con ese id en todo el
+   documento, mezclando los glifos de una figura con los de otra y produciendo
+   texto ilegible/solapado. Se renombra cada id con un sufijo unico por figura
+   antes de insertarla, y se actualizan sus referencias (href="#id", url(#id)). */
+let __svgAssetSeq = 0;
+function namespaceSvgIds(svg){
+  if (!svg || typeof svg !== 'string') return svg;
+  const uid = 'a' + (__svgAssetSeq++);
+  const ids = [];
+  svg = svg.replace(/\bid="([^"]+)"/g, (m, id) => { ids.push(id); return `id="${id}-${uid}"`; });
+  if (!ids.length) return svg;
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const idPattern = new RegExp('#(' + ids.map(esc).join('|') + ')(?=["\\)])', 'g');
+  return svg.replace(idPattern, (m, id) => `#${id}-${uid}`);
+}
+function assetsHtml(assets){
+  if (!assets || !assets.length) return '';
+  let out = '';
+  for (const a of assets){
+    if (!a || typeof a !== 'object' || !a.svg) continue;
+    out += `<figure class="fig">${namespaceSvgIds(a.svg)}${a.caption ? `<figcaption>${mdi(a.caption)}</figcaption>` : ''}</figure>`;
+  }
+  return out;
+}
+
+/* --- autodiagramas: cuando un ejercicio no trae figura propia pero el enunciado
+   describe algo dibujable (puntos/rectas en el plano, un triangulo concreto), se
+   genera un esquema simple en SVG. Nunca rompe el render: cualquier fallo se ignora. --- */
+function wrapFig(svg, caption){
+  if (!svg) return '';
+  return `<figure class="fig">${svg}${caption ? `<figcaption>${esc(caption)}</figcaption>` : ''}</figure>`;
+}
+function numToStr(v){ const r = Math.round(v*100)/100; return (Object.is(r,-0)?0:r).toString(); }
+function niceStep(span){
+  /* paso de cuadricula "bonito" pero nunca menor que 1: los ejercicios usan
+     coordenadas enteras, asi que una cuadricula de 0.5 confundiria al alumno */
+  if (!isFinite(span) || span <= 0) return 1;
+  const candidates = [1,2,5,10,20,25,50,100,200,500];
+  const target = span / 6;
+  for (const c of candidates) if (c >= target) return c;
+  return candidates[candidates.length - 1];
+}
+function svgCoordPlane(pts, lines, xMin, xMax, yMin, yMax, xStep, yStep, xDom, connect){
+  const size = 320, pad = 32;
+  const spanX = size - 2*pad, spanY = size - 2*pad;
+  const sx = v => pad + (v-xMin)/(xMax-xMin)*spanX;
+  const sy = v => pad + (yMax-v)/(yMax-yMin)*spanY;
+  const axisX = (xMin <= 0 && 0 <= xMax) ? sx(0) : (xMin > 0 ? pad : size-pad);
+  const axisY = (yMin <= 0 && 0 <= yMax) ? sy(0) : (yMin > 0 ? size-pad : pad);
+  const defs = `<defs>
+    <marker id="adg-ax-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#24312c"/></marker>
+    <marker id="adg-l1-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#0e7a68"/></marker>
+    <marker id="adg-l1-arrow-s" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto-start-reverse"><path d="M0,0 L7,3.5 L0,7 Z" fill="#0e7a68"/></marker>
+    <marker id="adg-l2-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#c17a17"/></marker>
+    <marker id="adg-l2-arrow-s" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto-start-reverse"><path d="M0,0 L7,3.5 L0,7 Z" fill="#c17a17"/></marker>
+  </defs>`;
+  let grid = '', ticks = '';
+  const xStart = Math.ceil(xMin/xStep)*xStep, yStart = Math.ceil(yMin/yStep)*yStep;
+  for (let k = xStart; k <= xMax + 1e-9; k += xStep){
+    const kk = Math.abs(k) < xStep*1e-6 ? 0 : k;
+    grid += `<line x1="${sx(kk)}" y1="${pad}" x2="${sx(kk)}" y2="${size-pad}" class="adg-grid"/>`;
+    if (kk !== 0) ticks += `<text x="${sx(kk)}" y="${Math.min(axisY+16, size-6)}" class="adg-tick" text-anchor="middle">${numToStr(kk)}</text>`;
+  }
+  for (let k = yStart; k <= yMax + 1e-9; k += yStep){
+    const kk = Math.abs(k) < yStep*1e-6 ? 0 : k;
+    grid += `<line x1="${pad}" y1="${sy(kk)}" x2="${size-pad}" y2="${sy(kk)}" class="adg-grid"/>`;
+    if (kk !== 0) ticks += `<text x="${Math.max(axisX-7, pad+14)}" y="${sy(kk)+3}" class="adg-tick" text-anchor="end">${numToStr(kk)}</text>`;
+  }
+  let axes = `<line x1="${pad}" y1="${axisY}" x2="${size-pad}" y2="${axisY}" class="adg-axis" marker-end="url(#adg-ax-arrow)"/>`;
+  axes += `<line x1="${axisX}" y1="${size-pad}" x2="${axisX}" y2="${pad}" class="adg-axis" marker-end="url(#adg-ax-arrow)"/>`;
+  axes += `<text x="${size-pad-6}" y="${axisY-8}" class="adg-axislabel">x</text>`;
+  axes += `<text x="${axisX+8}" y="${pad+6}" class="adg-axislabel">y</text>`;
+  /* el dominio en x de una recta puede llevar su y fuera de [yMin,yMax] (p.ej.
+     una recta con pendiente grande): se recorta al tramo donde la recta cae
+     dentro del rectangulo visible para que nunca se salga del grafico. */
+  function clippedLineDom(m, c, x1, x2){
+    if (x2 <= x1) return null;
+    if (!isFinite(m) || !isFinite(c)) return null;
+    if (m === 0) return (c >= yMin && c <= yMax) ? [x1, x2] : null;
+    const xAtYMin = (yMin - c) / m, xAtYMax = (yMax - c) / m;
+    const loX = Math.min(xAtYMin, xAtYMax), hiX = Math.max(xAtYMin, xAtYMax);
+    const lo = Math.max(x1, loX), hi = Math.min(x2, hiX);
+    return (hi > lo) ? [lo, hi] : null;
+  }
+  let lineSvg = '';
+  (lines||[]).forEach((L,i) => {
+    const ownDom = L.dom ? [Math.max(xMin, L.dom[0]), Math.min(xMax, L.dom[1])] : null;
+    const dom = ownDom || (xDom ? [Math.max(xMin, xDom[0]), Math.min(xMax, xDom[1])] : [xMin, xMax]);
+    const clipped = clippedLineDom(L.m, L.c, dom[0], dom[1]);
+    if (!clipped) return;
+    const x1 = clipped[0], x2 = clipped[1];
+    const y1 = L.m*x1+L.c, y2 = L.m*x2+L.c;
+    const cls = i===0 ? 'adg-line' : 'adg-line2';
+    /* las flechas solo corresponden a los ejes: una recta/segmento dibujado
+       nunca lleva punta de flecha, la pida o no el llamador. */
+    if (isFinite(y1) && isFinite(y2) && x2 > x1) lineSvg += `<line x1="${sx(x1)}" y1="${sy(y1)}" x2="${sx(x2)}" y2="${sy(y2)}" class="${cls}"/>`;
+  });
+  let curveSvg = '';
+  if (connect && pts.length >= 3){
+    const d = pts.map(([x,y], i) => `${i===0?'M':'L'}${sx(x).toFixed(1)},${sy(y).toFixed(1)}`).join(' ');
+    curveSvg = `<path d="${d}" fill="none" class="adg-line"/>`;
+  }
+  /* con muchas curvas de puntos unidos (frecuencia acumulada) las etiquetas
+     "(x, y)" en cada punto solo sobrecargan el dibujo: con 5+ puntos se omiten
+     y basta la cuadricula para leer el valor. */
+  const showLabels = !(connect && pts.length >= 5);
+  /* evita que las etiquetas "(x, y)" se solapen cuando dos puntos quedan cerca:
+     se prueban varias posiciones (arriba, abajo, mas arriba, mas abajo) y se
+     elige la primera que no choque con ninguna etiqueta ya colocada; si ninguna
+     es perfecta, se usa la menos mala (la que menos se solapa) en vez de romper
+     el dibujo. Estimacion de ancho en caracteres (fuente monoespaciada). */
+  const CHAR_W = 7.1, LABEL_H = 13;
+  const placedBoxes = [];
+  function boxOverlap(a, b){
+    const padBx = 1.5;
+    return a.x0 < b.x1+padBx && a.x1 > b.x0-padBx && a.y0 < b.y1+padBx && a.y1 > b.y0-padBx;
+  }
+  function overlapArea(a, b){
+    const ox = Math.max(0, Math.min(a.x1,b.x1) - Math.max(a.x0,b.x0));
+    const oy = Math.max(0, Math.min(a.y1,b.y1) - Math.max(a.y0,b.y0));
+    return ox*oy;
+  }
+  function placeLabel(cx, cy, text, preferAbove){
+    const w = text.length * CHAR_W;
+    /* ademas de arriba/abajo centrado, se prueban variantes desplazadas en
+       diagonal (arriba-derecha, arriba-izquierda, abajo-derecha, abajo-izquierda)
+       con el texto alineado al lado correspondiente: con puntos muy juntos en
+       linea (p.ej. varios puntos de un diagrama de dispersion casi alineados)
+       el desplazamiento solo vertical no basta para separar las etiquetas. */
+    const vCandidates = preferAbove ? [-10,18,-24,32] : [18,-10,32,-24];
+    const candidates = [];
+    for (const dy of vCandidates) candidates.push([0, dy, 'middle']);
+    for (const dy of vCandidates) candidates.push([9, dy, 'start']);
+    for (const dy of vCandidates) candidates.push([-9, dy, 'end']);
+    let best = null, bestScore = Infinity;
+    for (const [dx, dy, anchor] of candidates){
+      const tx = cx + dx, ty = cy + dy;
+      let box;
+      if (anchor === 'middle') box = { x0: tx - w/2, x1: tx + w/2, y0: ty - LABEL_H, y1: ty + 2 };
+      else if (anchor === 'start') box = { x0: tx, x1: tx + w, y0: ty - LABEL_H, y1: ty + 2 };
+      else box = { x0: tx - w, x1: tx, y0: ty - LABEL_H, y1: ty + 2 };
+      let score = 0;
+      for (const pb of placedBoxes) score += overlapArea(box, pb);
+      if (score === 0) { best = { tx, ty, anchor, box }; break; }
+      if (score < bestScore){ bestScore = score; best = { tx, ty, anchor, box }; }
+    }
+    /* si ni siquiera la mejor opcion queda libre de choques (puntos muy
+       apretados, por ejemplo 7-8 datos casi alineados en un espacio de
+       320x320), es mejor omitir esa etiqueta que mostrar texto solapado e
+       ilegible: la cuadricula sigue permitiendo leer el valor aproximado. */
+    if (bestScore > 6) return null;
+    placedBoxes.push(best.box);
+    return best;
+  }
+  let ptsSvg = '';
+  pts.forEach(([x,y], i) => {
+    const ptCls = connect ? 'adg-pt' : ((i % 2 === 0) ? 'adg-pt' : 'adg-pt2');
+    const cx = sx(x), cy = sy(y);
+    const preferAbove = cy > pad + spanY*0.18;
+    ptsSvg += `<circle cx="${cx}" cy="${cy}" r="4" class="${ptCls}"/>`;
+    if (showLabels){
+      const text = `(${numToStr(x)}, ${numToStr(y)})`;
+      const pos = placeLabel(cx, cy, text, preferAbove);
+      if (pos) ptsSvg += `<text x="${pos.tx}" y="${pos.ty}" class="adg-ptlabel" text-anchor="${pos.anchor}">${text}</text>`;
+    }
+  });
+  return `<svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">${defs}${grid}${axes}${lineSvg}${curveSvg}${ticks}${ptsSvg}</svg>`;
+}
+function coordPlaneFromText(txt){
+  const ptRe = /\(\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)/g;
+  const pts = []; let m;
+  while ((m = ptRe.exec(txt)) && pts.length < 8) pts.push([parseFloat(m[1]), parseFloat(m[2])]);
+  const lines = [];
+  const siRe = /y\s*=\s*(-)?(\d+(?:\.\d+)?)?\s*x\s*([+-]\s*\d+(?:\.\d+)?)?/g;
+  while ((m = siRe.exec(txt)) && lines.length < 2){
+    const sign = m[1] ? -1 : 1;
+    const coef = m[2] !== undefined ? parseFloat(m[2]) : 1;
+    const c = m[3] ? parseFloat(m[3].replace(/\s+/g,'')) : 0;
+    lines.push({m: sign*coef, c});
+  }
+  if (!lines.length){
+    /* forma "y = c + m x" / "y = c - m x" (la constante va antes que el termino en x) */
+    const revRe = /y\s*=\s*(-?\d+(?:\.\d+)?)\s*([+-])\s*(\d+(?:\.\d+)?)?\s*x\b/g;
+    while ((m = revRe.exec(txt)) && lines.length < 2){
+      const c = parseFloat(m[1]);
+      const coef = m[3] !== undefined ? parseFloat(m[3]) : 1;
+      lines.push({m: (m[2]==='-'?-1:1)*coef, c});
+    }
+  }
+  if (!lines.length){
+    const stdRe = /(-?\d*)\s*x\s*([+-]\s*\d*)\s*y\s*=\s*(-?\d+(?:\.\d+)?)/g;
+    while ((m = stdRe.exec(txt)) && lines.length < 2){
+      const aStr = m[1], bStr = m[2].replace(/\s+/g,'');
+      const a = (aStr===''||aStr==='-') ? (aStr==='-'?-1:1) : parseFloat(aStr);
+      const b = (bStr===''||bStr==='+') ? 1 : (bStr==='-' ? -1 : parseFloat(bStr));
+      const c = parseFloat(m[3]);
+      if (b !== 0 && isFinite(a) && isFinite(c)) lines.push({m: -a/b, c: c/b});
+    }
+  }
+  /* con varios apartados (a)(b)(c) las rectas suelen ser enunciados independientes:
+     mostrar solo la primera para no mezclar ecuaciones sin relacion en un mismo plano */
+  const subparts = (txt.match(/\([a-d]\)/gi)||[]).length;
+  if (subparts >= 2 && lines.length > 1) lines.length = 1;
+  /* sobre un conjunto real de puntos de dispersion, si se detectan 2+ ecuaciones
+     de recta a la vez, casi siempre es una pregunta de "cual de estas es la
+     mejor recta de ajuste: y=..., y=... o y=...?": son candidatas entre las que
+     el alumno tiene que elegir, no una recta ya decidida. Dibujar 2 de las 3 al
+     azar (segun cuales capte la regex) daria a entender una respuesta sin
+     fundamento, o incluso una incorrecta. En ese caso se muestran solo los
+     puntos, sin ninguna recta. */
+  if (pts.length >= 3 && lines.length >= 2) lines.length = 0;
+  if (!pts.length && !lines.length) return null;
+  /* dominio explicito tipo "-1 \le x \le 3" si el enunciado lo da */
+  const domRe = /(-?\d+(?:\.\d+)?)\s*(?:\\le|\\leq|≤|<=)\s*x\s*(?:\\le|\\leq|≤|<=)\s*(-?\d+(?:\.\d+)?)/;
+  const domMatch = txt.match(domRe);
+  const xDom = domMatch ? [parseFloat(domMatch[1]), parseFloat(domMatch[2])] : null;
+  /* limites independientes en x e y: cada eje usa solo el rango que necesita,
+     en vez de forzar un unico cuadrado simetrico (eso dejaba mucho hueco vacio
+     en rectas inclinadas con un dominio de x estrecho) */
+  let xMin = 0, xMax = 0, yMin = 0, yMax = 0;
+  pts.forEach(p => {
+    xMin = Math.min(xMin, p[0]); xMax = Math.max(xMax, p[0]);
+    yMin = Math.min(yMin, p[1]); yMax = Math.max(yMax, p[1]);
+  });
+  if (xDom){ xMin = Math.min(xMin, xDom[0]); xMax = Math.max(xMax, xDom[1]); }
+  /* una recta de tendencia/ajuste dibujada sobre un conjunto real de puntos de
+     dispersion (3+) NO debe fijar el rango de ejes ni dibujarse mas alla de los
+     propios datos: forzar el eje a un rango generico (-8 a 8) deja casi todo el
+     dibujo vacio cuando los datos reales caben en, por ejemplo, x de 1 a 5; y
+     dibujarla con flechas mas alla del rango de datos sugiere al alumno que la
+     relacion sigue extrapolandose, un error muy comun. Aqui la recta se ancla al
+     propio rango de puntos y se marca sin flechas; solo cuando NO hay un conjunto
+     de puntos real (una recta abstracta tipo "dibuja y=2x-1") se usa el muestreo
+     generico de siempre. */
+  const isScatterTrend = pts.length >= 3 && lines.length >= 1 && !xDom;
+  if (isScatterTrend){
+    const ptXMin = xMin, ptXMax = xMax;
+    lines.forEach(L => {
+      const y1 = L.m*ptXMin+L.c, y2 = L.m*ptXMax+L.c;
+      if (isFinite(y1)) { yMin = Math.min(yMin, y1); yMax = Math.max(yMax, y1); }
+      if (isFinite(y2)) { yMin = Math.min(yMin, y2); yMax = Math.max(yMax, y2); }
+      L.dom = [ptXMin, ptXMax];
+      L.noArrow = true;
+    });
+  } else {
+    /* sin dominio explicito, el muestreo generico debe encogerse para
+       pendientes grandes: con y=5x+1 muestrear hasta x=8 da y=41 y dispara
+       el rango de ambos ejes a numeros enormes para una recta que en
+       realidad solo interesa cerca del origen. */
+    const maxSlope = lines.length ? Math.max(...lines.map(L => Math.abs(L.m) || 0)) : 0;
+    const halfSpan = maxSlope > 4 ? 2 : maxSlope > 2 ? 3 : maxSlope > 1 ? 5 : 8;
+    const xSample = xDom ? [xDom[0], (xDom[0]+xDom[1])/2, xDom[1]] : [-halfSpan, -halfSpan/2, 0, halfSpan/2, halfSpan];
+    lines.forEach(L => {
+      xSample.forEach(x => {
+        const y = L.m*x+L.c;
+        if (isFinite(y)){
+          yMin = Math.min(yMin, y); yMax = Math.max(yMax, y);
+          if (!xDom){ xMin = Math.min(xMin, x); xMax = Math.max(xMax, x); }
+        }
+      });
+    });
+  }
+  /* evita rangos degenerados o absurdamente grandes */
+  if (xMax - xMin < 2){ const mid=(xMax+xMin)/2; xMin = mid-2; xMax = mid+2; }
+  if (yMax - yMin < 2){ const mid=(yMax+yMin)/2; yMin = mid-2; yMax = mid+2; }
+  const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+  xMin = clamp(xMin, -30, 30); xMax = clamp(xMax, -30, 30);
+  yMin = clamp(yMin, -30, 30); yMax = clamp(yMax, -30, 30);
+  /* margen de aire alrededor de los datos */
+  const padFrac = 0.18;
+  const xSpan0 = xMax - xMin, ySpan0 = yMax - yMin;
+  xMin -= xSpan0*padFrac; xMax += xSpan0*padFrac;
+  yMin -= ySpan0*padFrac; yMax += ySpan0*padFrac;
+  /* redondea a marcas "bonitas" (1/2/5 x 10^n) para que la cuadricula sea legible */
+  const xStep = niceStep(xMax - xMin), yStep = niceStep(yMax - yMin);
+  xMin = Math.floor(xMin/xStep)*xStep; xMax = Math.ceil(xMax/xStep)*xStep;
+  yMin = Math.floor(yMin/yStep)*yStep; yMax = Math.ceil(yMax/yStep)*yStep;
+  const connect = /cumulative/i.test(txt) && !lines.length;
+  return svgCoordPlane(pts, lines, xMin, xMax, yMin, yMax, xStep, yStep, xDom, connect);
+}
+function triLayout(letters, rv, ox, oy, scale){
+  const BL=[40,210], BR=[230,210], TOP=[155,30], TL=[40,30];
+  let base = {};
+  if (rv){
+    const others = letters.filter(k => k !== rv);
+    base[rv]=BL; base[others[0]]=BR; base[others[1]]=TL;
+  } else {
+    base[letters[0]]=BL; base[letters[1]]=BR; base[letters[2]]=TOP;
+  }
+  const out = {};
+  for (const k in base) out[k] = [ox + base[k][0]*scale, oy + base[k][1]*scale];
+  return out;
+}
+function pickRightVertex(letters, angleVal, rightAngle, txt){
+  let rv = null;
+  letters.forEach(k => { if (angleVal[k] && Math.abs(parseFloat(angleVal[k])-90) < 0.5) rv = k; });
+  if (!rv && txt){
+    const am = txt.match(/right[\s-]?angled?\s+at\s+\$?([A-Z])\$?|right\s+angle\s+(?:is\s+)?at\s+\$?([A-Z])\$?/i);
+    if (am){
+      const letter = (am[1]||am[2]||'').toUpperCase();
+      if (letters.includes(letter)) rv = letter;
+    }
+  }
+  if (!rv && rightAngle) rv = letters[0];
+  return rv;
+}
+function labelTriangle(letters, p, sideVal, angleVal, rv, variant){
+  const pts = letters.map(k => p[k]);
+  const cx = (pts[0][0]+pts[1][0]+pts[2][0])/3, cy = (pts[0][1]+pts[1][1]+pts[2][1])/3;
+  const mid = (a,b) => [(a[0]+b[0])/2,(a[1]+b[1])/2];
+  const triCls = variant ? 'adg-tri2' : 'adg-tri';
+  let sideSvg='', angleSvg='', vlabels='', rightMark='';
+  [[letters[0],letters[1]],[letters[1],letters[2]],[letters[2],letters[0]]].forEach(([u,v]) => {
+    const key = [u,v].sort().join('');
+    const val = sideVal[key];
+    if (val){
+      const mp = mid(p[u],p[v]);
+      const dx = mp[0]-cx, dy = mp[1]-cy, len = Math.hypot(dx,dy)||1;
+      sideSvg += `<text x="${mp[0]+dx/len*14}" y="${mp[1]+dy/len*14}" class="adg-sidelabel" text-anchor="middle">${u}${v}=${val}</text>`;
+    }
+  });
+  letters.forEach(k => {
+    const dx = p[k][0]-cx, dy = p[k][1]-cy, len = Math.hypot(dx,dy)||1;
+    vlabels += `<text x="${p[k][0]+dx/len*16}" y="${p[k][1]+dy/len*16}" class="adg-vlabel" text-anchor="middle">${k}</text>`;
+    if (angleVal[k]) angleSvg += `<text x="${p[k][0]-dx/len*20}" y="${p[k][1]-dy/len*20}" class="adg-sidelabel" text-anchor="middle">${angleVal[k]}°</text>`;
+  });
+  if (rv){
+    const o = p[rv];
+    rightMark = `<polyline points="${o[0]},${o[1]-14} ${o[0]+14},${o[1]-14} ${o[0]+14},${o[1]}" class="adg-rightangle"/>`;
+  }
+  const poly = `<polygon points="${pts.map(pp=>pp.join(',')).join(' ')}" class="${triCls}"/>`;
+  return poly+rightMark+sideSvg+angleSvg+vlabels;
+}
+function collectSideAngle(letters, txt){
+  const sideVal = {}, angleVal = {};
+  letters.forEach(a => letters.forEach(b => {
+    if (a >= b) return;
+    const key = a+b;
+    let mm = txt.match(new RegExp(`\\b${a}${b}\\s*=\\s*(\\d+(?:\\.\\d+)?)`));
+    if (!mm) mm = txt.match(new RegExp(`\\b${b}${a}\\s*=\\s*(\\d+(?:\\.\\d+)?)`));
+    if (mm) sideVal[key] = mm[1];
+  }));
+  letters.forEach(a => {
+    const mm = txt.match(new RegExp(`(?:angle\\s+)?\\b${a}\\s*=\\s*(\\d+(?:\\.\\d+)?)\\s*(?:\\^\\{?\\\\circ\\}?|°|\\\\circ)`));
+    if (mm) angleVal[a] = mm[1];
+  });
+  return {sideVal, angleVal};
+}
+function triangleFromText(txt){
+  const subparts = (txt.match(/\([a-d]\)/gi)||[]).length;
+  if (subparts >= 2) return null;
+  const nameRe = /[Tt]riangle\s*\$?\s*([A-Z]{3})\s*\$?/g;
+  const names = []; let m;
+  while ((m = nameRe.exec(txt)) && names.length < 2) if (!names.includes(m[1])) names.push(m[1]);
+  if (!names.length) return null;
+  const rightAngle = /right[\s-]?angled?|right angle/i.test(txt);
+  const pairMode = names.length >= 2 && /similar|congruent/i.test(txt);
+  if (pairMode){
+    const L1 = names[0].split(''), L2 = names[1].split('');
+    const allLetters = [...new Set([...L1, ...L2])];
+    const {sideVal, angleVal} = collectSideAngle(allLetters, txt);
+    if (!Object.keys(sideVal).length && !Object.keys(angleVal).length) return null;
+    const rv1 = pickRightVertex(L1, angleVal, rightAngle, txt), rv2 = pickRightVertex(L2, angleVal, rightAngle, txt);
+    const p1 = triLayout(L1, rv1, 10, 20, 0.75), p2 = triLayout(L2, rv2, 250, 20, 0.85);
+    const inner = labelTriangle(L1, p1, sideVal, angleVal, rv1, 0) +
+      `<text x="205" y="130" class="adg-vlabel" text-anchor="middle">~</text>` +
+      labelTriangle(L2, p2, sideVal, angleVal, rv2, 1);
+    return `<svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+  }
+  const letters = names[0].split('');
+  const subs = subPointsFromText(letters, txt);
+  const allLetters = [...new Set([...letters, ...subs.map(s=>s.p)])];
+  const {sideVal, angleVal} = collectSideAngle(allLetters, txt);
+  if (!Object.keys(sideVal).length && !Object.keys(angleVal).length) return null;
+  const rv = pickRightVertex(letters, angleVal, rightAngle, txt);
+  const p = triLayout(letters, rv, 10, 20, 1);
+  let extra = '';
+  const subCoords = {};
+  subs.forEach(s => {
+    if (!p[s.u] || !p[s.v]) return;
+    const coord = placeSubPoint(s.u, s.v, s.p, sideVal, p);
+    subCoords[s.p] = coord;
+    extra += `<circle cx="${coord[0]}" cy="${coord[1]}" r="3" class="adg-pt"/><text x="${coord[0]+8}" y="${coord[1]-6}" class="adg-vlabel" font-size="12">${s.p}</text>`;
+  });
+  if (subs.length === 2 && subCoords[subs[0].p] && subCoords[subs[1].p]){
+    const a = subCoords[subs[0].p], b = subCoords[subs[1].p];
+    extra = `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" class="adg-line" stroke-dasharray="4,3"/>` + extra;
+    const key = [subs[0].p, subs[1].p].sort().join('');
+    if (sideVal[key]){
+      const mx=(a[0]+b[0])/2, my=(a[1]+b[1])/2;
+      extra += `<text x="${mx}" y="${my-8}" class="adg-sidelabel" text-anchor="middle">${subs[0].p}${subs[1].p}=${sideVal[key]}</text>`;
+    }
+  }
+  const inner = labelTriangle(letters, p, sideVal, angleVal, rv) + extra;
+  return `<svg viewBox="0 0 270 240" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+}
+/* puntos auxiliares del tipo "D esta en AB" (teorema de la paralela media / intercept theorem) */
+function subPointsFromText(letters, txt){
+  const pts = [];
+  const re = /\$?([A-Z])\$?\s+(?:is\s+)?on\s+\$?([A-Z])([A-Z])\$?/gi;
+  let m;
+  while ((m = re.exec(txt)) && pts.length < 2){
+    const p = m[1].toUpperCase(), u = m[2].toUpperCase(), v = m[3].toUpperCase();
+    if (letters.includes(u) && letters.includes(v) && !letters.includes(p)) pts.push({p,u,v});
+  }
+  return pts;
+}
+function placeSubPoint(u, v, pLetter, sideVal, pcoords){
+  const keyUP = [u,pLetter].sort().join(''), keyPV = [pLetter,v].sort().join('');
+  let frac = 0.42;
+  const dup = sideVal[keyUP] ? parseFloat(sideVal[keyUP]) : null;
+  const dpv = sideVal[keyPV] ? parseFloat(sideVal[keyPV]) : null;
+  if (dup != null && dpv != null && (dup+dpv) > 0) frac = dup/(dup+dpv);
+  const pu = pcoords[u], pv = pcoords[v];
+  return [pu[0]+(pv[0]-pu[0])*frac, pu[1]+(pv[1]-pu[1])*frac];
+}
+function circleFromText(txt){
+  let radius = null, isDiameter = false;
+  let m = txt.match(/radius\s*\$?(\d+(?:\.\d+)?)/i);
+  if (m) radius = parseFloat(m[1]);
+  else {
+    m = txt.match(/diameter\s*\$?(\d+(?:\.\d+)?)/i);
+    if (m) { radius = parseFloat(m[1]); isDiameter = true; }
+  }
+  if (radius == null) return null;
+  const isSector = /sector/i.test(txt);
+  const isSemicircle = /semicircle/i.test(txt);
+  const isQuarter = /quarter[\s-]?circle/i.test(txt);
+  let angle = null;
+  if (isSector){
+    const am = txt.match(/angle\s*\$?(\d+(?:\.\d+)?)/i) || txt.match(/\$?(\d+(?:\.\d+)?)\s*\^\{?\\circ\}?\$?/);
+    if (am) angle = parseFloat(am[1]);
+  } else if (isSemicircle) angle = 180;
+  else if (isQuarter) angle = 90;
+
+  const cx = 135, cy = 125, r = 85;
+  let shape;
+  if (angle != null && angle > 0 && angle < 360){
+    const rad = angle * Math.PI/180;
+    const x1 = cx, y1 = cy - r;
+    const x2 = cx + r*Math.sin(rad), y2 = cy - r*Math.cos(rad);
+    const largeArc = angle > 180 ? 1 : 0;
+    shape = `<path d="M${cx},${cy} L${x1},${y1} A${r},${r} 0 ${largeArc} 1 ${x2},${y2} Z" class="adg-tri"/>`;
+  } else {
+    shape = `<circle cx="${cx}" cy="${cy}" r="${r}" class="adg-tri"/>`;
+  }
+  const radiusLine = `<line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy-r}" class="adg-axis"/><circle cx="${cx}" cy="${cy}" r="2.5" class="adg-pt"/>`;
+  const label = `<text x="${cx+10}" y="${cy-r/2}" class="adg-sidelabel">${isDiameter?'d':'r'}=${radius}</text>`;
+  const angleLabel = (angle != null && isSector) ? `<text x="${cx+22}" y="${cy-22}" class="adg-sidelabel">${angle}°</text>` : '';
+  return `<svg viewBox="0 0 270 240" xmlns="http://www.w3.org/2000/svg">${shape}${radiusLine}${label}${angleLabel}</svg>`;
+}
+/* --- graficas estadisticas: diagramas de Venn, barras, tarta, histograma y
+   curva normal, generados a partir del enunciado cuando el ejercicio no trae
+   figura propia. Mismo criterio que autoDiagram: nunca rompe el render. --- */
+function parseNumLatex(s){
+  if (s == null) return NaN;
+  return parseFloat(String(s).replace(/\{,\}/g,'.').replace(/,/g,'.'));
+}
+function statsUnitMatch(unitId){
+  return /STATISTIC|PROBABIL|DISTRIBUCION|MUESTREO/i.test(unitId||'');
+}
+
+/* --- Venn de dos conjuntos --- */
+function parseVennData(txt){
+  if (!txt) return null;
+  let m = txt.match(/\$?(\d+)\$?\s+(?:\w+\s+)?([A-Za-zÀ-ÿ\s]{2,20}?)\s+only.*?\$?(\d+)\$?\s+(?:\w+\s+)?both.*?\$?(\d+)\$?\s+(?:\w+\s+)?([A-Za-zÀ-ÿ\s]{2,20}?)\s+only.*?\$?(\d+)\$?\s+(?:\w+\s+)?neither/i);
+  if (m){
+    const [, aOnly, aLabel, both, bOnly, bLabel, neither] = m;
+    return { aLabel: aLabel.trim(), bLabel: bLabel.trim(), aOnly: +aOnly, bOnly: +bOnly, both: +both, neither: +neither };
+  }
+  m = txt.match(/(?:of|in a (?:class|group) of)\s+\$?(\d+)\$?[^.]*?\$?(\d+)\$?\s+([a-zà-ÿ][a-zà-ÿ\s]{1,20}?),?\s+(?:and\s+)?\$?(\d+)\$?\s+([a-zà-ÿ][a-zà-ÿ\s]{1,20}?)\s+and\s+\$?(\d+)\$?\s+(?:[a-zà-ÿ]+\s+)?(both|neither)(?:\s+[a-zà-ÿ]+)?/i);
+  if (!m) return parseVennDataEs(txt);
+  const [, totalS, aNumS, aLabel, bNumS, bLabel, cNumS, kind] = m;
+  const total = +totalS, aNum = +aNumS, bNum = +bNumS, cNum = +cNumS;
+  let both, neither;
+  if (/neither/i.test(kind)){ neither = cNum; both = aNum + bNum - (total - neither); }
+  else { both = cNum; neither = total - aNum - bNum + both; }
+  const aOnly = aNum - both, bOnly = bNum - both;
+  if ([aOnly, bOnly, both, neither].some(v => !isFinite(v) || v < 0)) return null;
+  return { aLabel: aLabel.trim(), bLabel: bLabel.trim(), aOnly, bOnly, both, neither };
+}
+function parseVennDataEs(txt){
+  /* variante en espanol: "De N personas, A piden/estudian X, B piden/estudian Y
+     y C piden/tienen las dos cosas" (frecuente en Selectividad) */
+  const m = txt.match(/(?:de|en (?:una|un) (?:clase|grupo|encuesta))\s+(?:de\s+)?\$?(\d+)\$?[^.]*?\$?(\d+)\$?\s+([a-zà-ÿ][a-zà-ÿ\s]{1,20}?),?\s+(?:y\s+)?\$?(\d+)\$?\s+([a-zà-ÿ][a-zà-ÿ\s]{1,20}?)\s+y\s+\$?(\d+)\$?\s+(?:[a-zà-ÿ]+\s+)?(las dos cosas|ambas cosas|a la vez)/i);
+  if (!m) return null;
+  const [, totalS, aNumS, aLabel, bNumS, bLabel, bothS] = m;
+  const total = +totalS, aNum = +aNumS, bNum = +bNumS, both = +bothS;
+  const aOnly = aNum - both, bOnly = bNum - both, neither = total - aNum - bNum + both;
+  if ([aOnly, bOnly, both, neither].some(v => !isFinite(v) || v < 0)) return null;
+  return { aLabel: aLabel.trim(), bLabel: bLabel.trim(), aOnly, bOnly, both, neither };
+}
+function svgVenn(d){
+  const size = 320, r = 78, cx1 = 120, cx2 = 200, cy = 150;
+  return `<svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
+    <rect x="18" y="44" width="${size-36}" height="${r*2+52}" fill="none" class="adg-venn-box"/>
+    <circle cx="${cx1}" cy="${cy}" r="${r}" class="adg-venn-a"/>
+    <circle cx="${cx2}" cy="${cy}" r="${r}" class="adg-venn-b"/>
+    <text x="${cx1-34}" y="${cy-r-12}" class="adg-vlabel" text-anchor="middle">${esc(d.aLabel)}</text>
+    <text x="${cx2+34}" y="${cy-r-12}" class="adg-vlabel" text-anchor="middle">${esc(d.bLabel)}</text>
+    <text x="${cx1-36}" y="${cy+5}" class="adg-vcount" text-anchor="middle">${numToStr(d.aOnly)}</text>
+    <text x="${(cx1+cx2)/2}" y="${cy+5}" class="adg-vcount" text-anchor="middle">${numToStr(d.both)}</text>
+    <text x="${cx2+36}" y="${cy+5}" class="adg-vcount" text-anchor="middle">${numToStr(d.bOnly)}</text>
+    <text x="${size/2}" y="${cy+r+34}" class="adg-vcount-neither" text-anchor="middle">${t('ninguno')}: ${numToStr(d.neither)}</text>
+  </svg>`;
+}
+
+/* --- barras y tarta: datos categoricos "etiqueta numero" o "x=.. con frecuencias f=.." --- */
+const STAT_WORDS_RE = /\b(median|mean|mode|range|iqr|variance|deviation|frequency density|quartile|mediana|media|moda|rango|desviacion|varianza|cuartil)\b/i;
+function parseBarData(txt){
+  if (!txt || parseVennData(txt)) return null;
+  let m = txt.match(/(\d+(?:\s*,\s*\d+)+)\s*(?:\$\s*)?with\s+frequenc\w*\s*(?:\$)?\s*f?\s*=?\s*\$?\s*(\d+(?:\s*,\s*\d+)+)/i);
+  if (m){
+    const labels = m[1].split(',').map(s => s.trim());
+    const values = m[2].split(',').map(s => +s.trim());
+    if (labels.length === values.length && labels.length >= 3) return { labels, values };
+  }
+  let seg = txt;
+  if (seg.includes(':')) seg = seg.split(':').slice(1).join(':');
+  seg = seg.split(/\.\s[A-Z(]/)[0];
+  const chunks = seg.split(/,|\band\b|;/).map(c => c.trim().replace(/^\$|\$$|\.$/g,'').trim()).filter(Boolean);
+  const pairsWN = [], pairsNW = [];
+  for (const c of chunks){
+    if (STAT_WORDS_RE.test(c)) continue;
+    let mm = c.match(/^([A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s\-]{1,20}?)\s+\$?(\d+(?:\.\d+)?)\$?$/);
+    if (mm) pairsWN.push([mm[1].trim(), +mm[2]]);
+    mm = c.match(/^\$?(\d+(?:\.\d+)?)\$?\s+([A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s\-]{1,20}?)$/);
+    if (mm) pairsNW.push([mm[2].trim(), +mm[1]]);
+  }
+  const uniq = arr => new Set(arr.map(p => p[0])).size === arr.length;
+  if (pairsWN.length >= 3 && uniq(pairsWN)) return { labels: pairsWN.map(p=>p[0]), values: pairsWN.map(p=>p[1]) };
+  if (pairsNW.length >= 3 && uniq(pairsNW)) return { labels: pairsNW.map(p=>p[0]), values: pairsNW.map(p=>p[1]) };
+  return null;
+}
+function svgBarChart(labels, values){
+  const W = 340, H = 260, padL = 38, padB = 46, padT = 18, padR = 14;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  const maxV = Math.max(...values) * 1.18 || 1;
+  const n = labels.length, gap = plotW / n, bw = gap * 0.6;
+  let bars = '', xlabels = '';
+  values.forEach((v,i) => {
+    const h = (v / maxV) * plotH;
+    const x = padL + gap*i + (gap-bw)/2, y = padT + plotH - h;
+    bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" class="${i%2===0?'adg-bar':'adg-bar2'}"/>`;
+    bars += `<text x="${(x+bw/2).toFixed(1)}" y="${(y-5).toFixed(1)}" class="adg-bar-val" text-anchor="middle">${numToStr(v)}</text>`;
+    xlabels += `<text x="${(x+bw/2).toFixed(1)}" y="${(padT+plotH+14).toFixed(1)}" class="adg-bar-label" text-anchor="middle">${esc(String(labels[i]).slice(0,12))}</text>`;
+  });
+  let axes = `<line x1="${padL}" y1="${padT+plotH}" x2="${padL+plotW}" y2="${padT+plotH}" class="adg-axis"/>`;
+  axes += `<line x1="${padL}" y1="${padT}" x2="${padL}" y2="${padT+plotH}" class="adg-axis"/>`;
+  const yStep = niceStep(maxV);
+  let yticks = '';
+  for (let k=0; k<=maxV; k+=yStep){
+    const y = padT+plotH-(k/maxV)*plotH;
+    yticks += `<text x="${padL-6}" y="${(y+3).toFixed(1)}" class="adg-tick" text-anchor="end">${numToStr(k)}</text>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">${axes}${yticks}${bars}${xlabels}</svg>`;
+}
+function svgPieChart(labels, values){
+  const size = 320, cx = 118, cy = 150, r = 92;
+  const total = values.reduce((a,b)=>a+b,0) || 1;
+  const colors = ['#0e7a68','#c17a17','#2f6fb3','#a24f8f','#5c8a3a','#b3462f'];
+  let angle = -90, slices = '', legend = '';
+  const toRad = d => d*Math.PI/180;
+  values.forEach((v,i) => {
+    const frac = v/total, a0 = angle, a1 = angle + frac*360;
+    angle = a1;
+    const large = (a1-a0) > 180 ? 1 : 0;
+    const x0 = cx+r*Math.cos(toRad(a0)), y0 = cy+r*Math.sin(toRad(a0));
+    const x1 = cx+r*Math.cos(toRad(a1)), y1 = cy+r*Math.sin(toRad(a1));
+    const color = colors[i % colors.length];
+    slices += `<path d="M${cx},${cy} L${x0.toFixed(2)},${y0.toFixed(2)} A${r},${r} 0 ${large} 1 ${x1.toFixed(2)},${y1.toFixed(2)} Z" fill="${color}" fill-opacity="0.82" stroke="#fbfcfd" stroke-width="1.5"/>`;
+    legend += `<rect x="236" y="${26+i*23}" width="11" height="11" fill="${color}"/><text x="251" y="${35+i*23}" class="adg-legend-text">${esc(String(labels[i]).slice(0,14))} (${numToStr(v)})</text>`;
+  });
+  return `<svg viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">${slices}${legend}</svg>`;
+}
+
+/* --- histograma: clases "a<x<=b freq N" o densidades de frecuencia directas --- */
+function parseHistogramData(txt){
+  if (!txt) return null;
+  const isDensity = /densit/i.test(txt);
+  const pat = isDensity
+    ? /\$?\s*(-?\d+(?:\.\d+)?)\s*(?:<|\\le|\\leq|≤)\s*[a-zA-Zℓ]\s*(?:<|\\le|\\leq|≤)\s*(-?\d+(?:\.\d+)?)\s*\$?\s*[,:]?\s*\$?\s*(\d+(?:\.\d+)?)\$?/gi
+    : /\$?\s*(-?\d+(?:\.\d+)?)\s*(?:<|\\le|\\leq|≤)\s*[a-zA-Zℓ]\s*(?:<|\\le|\\leq|≤)\s*(-?\d+(?:\.\d+)?)\s*\$?[,:]?\s*(?:freq\.?|frequency)\s*\$?\s*(\d+(?:\.\d+)?)\$?/gi;
+  const matches = [...txt.matchAll(pat)];
+  if (matches.length < 3) return null;
+  const classes = matches.map(m => {
+    const lo = +m[1], hi = +m[2], val = +m[3];
+    const width = hi - lo;
+    if (!(width > 0)) return null;
+    return { lo, hi, density: isDensity ? val : val/width, freq: isDensity ? val*width : val };
+  });
+  if (classes.some(c => !c)) return null;
+  for (let i=1;i<classes.length;i++) if (classes[i].lo < classes[i-1].hi - 1e-9) return null;
+  return classes;
+}
+function svgHistogram(classes){
+  const W = 340, H = 260, padL = 40, padB = 40, padT = 18, padR = 14;
+  const plotW = W-padL-padR, plotH = H-padT-padB;
+  const x0 = classes[0].lo, x1 = classes[classes.length-1].hi;
+  const totalWidth = x1-x0 || 1;
+  const maxDensity = Math.max(...classes.map(c=>c.density)) * 1.18 || 1;
+  const sx = v => padL + (v-x0)/totalWidth*plotW;
+  const sy = v => padT + plotH - (v/maxDensity)*plotH;
+  let bars = '', xticks = '';
+  classes.forEach((c,i) => {
+    const bx = sx(c.lo), bx2 = sx(c.hi), by = sy(c.density);
+    bars += `<rect x="${bx.toFixed(1)}" y="${by.toFixed(1)}" width="${(bx2-bx).toFixed(1)}" height="${(padT+plotH-by).toFixed(1)}" class="${i%2===0?'adg-bar':'adg-bar2'}"/>`;
+    xticks += `<text x="${bx.toFixed(1)}" y="${(padT+plotH+14).toFixed(1)}" class="adg-tick" text-anchor="middle">${numToStr(c.lo)}</text>`;
+  });
+  xticks += `<text x="${sx(x1).toFixed(1)}" y="${(padT+plotH+14).toFixed(1)}" class="adg-tick" text-anchor="middle">${numToStr(x1)}</text>`;
+  let axes = `<line x1="${padL}" y1="${padT+plotH}" x2="${padL+plotW}" y2="${padT+plotH}" class="adg-axis"/>`;
+  axes += `<line x1="${padL}" y1="${padT}" x2="${padL}" y2="${padT+plotH}" class="adg-axis"/>`;
+  const yStep = niceStep(maxDensity);
+  let yticks = '';
+  for (let k=0; k<=maxDensity; k+=yStep){
+    const y = sy(k);
+    yticks += `<text x="${padL-6}" y="${(y+3).toFixed(1)}" class="adg-tick" text-anchor="end">${numToStr(k)}</text>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">${axes}${yticks}${bars}${xticks}</svg>`;
+}
+
+/* --- curva normal: mu/sigma explicitos, sombreada si el enunciado pide P(a<X<b) --- */
+function parseNormalData(txt){
+  if (!txt) return null;
+  const muM = txt.match(/\\mu\s*=\s*(-?\d+(?:\{,\}\d+|\.\d+)?)/);
+  const sigM = txt.match(/\\sigma\s*=\s*(\d+(?:\{,\}\d+|\.\d+)?)/);
+  if (!muM || !sigM) return null;
+  const mu = parseNumLatex(muM[1]), sigma = parseNumLatex(sigM[1]);
+  if (!isFinite(mu) || !isFinite(sigma) || sigma <= 0) return null;
+  let a = null, b = null;
+  const rangeM = txt.match(/P\s*\(\s*(-?\d+(?:\{,\}\d+|\.\d+)?)\s*<\s*X\s*<\s*(-?\d+(?:\{,\}\d+|\.\d+)?)\s*\)/);
+  if (rangeM){ a = parseNumLatex(rangeM[1]); b = parseNumLatex(rangeM[2]); }
+  return { mu, sigma, a, b };
+}
+function svgNormalCurve(mu, sigma, a, b){
+  const W = 340, H = 220, padL = 32, padB = 32, padT = 16, padR = 14;
+  const plotW = W-padL-padR, plotH = H-padT-padB;
+  const xMin = mu-3.5*sigma, xMax = mu+3.5*sigma;
+  const sx = x => padL + (x-xMin)/(xMax-xMin)*plotW;
+  const pdf = x => Math.exp(-0.5*Math.pow((x-mu)/sigma,2));
+  const N = 60, pts = [];
+  for (let i=0;i<=N;i++){ const x = xMin+(xMax-xMin)*i/N; pts.push([x, pdf(x)]); }
+  const sy = y => padT + plotH - y*plotH*0.92;
+  const pathD = pts.map((p,i) => `${i===0?'M':'L'}${sx(p[0]).toFixed(1)},${sy(p[1]).toFixed(1)}`).join(' ');
+  let shade = '';
+  if (a != null && b != null && isFinite(a) && isFinite(b)){
+    const lo = Math.max(a, xMin), hi = Math.min(b, xMax);
+    if (hi > lo){
+      const M = 30, sp = [];
+      for (let i=0;i<=M;i++){ const x = lo+(hi-lo)*i/M; sp.push([x, pdf(x)]); }
+      let d = `M${sx(lo).toFixed(1)},${sy(0).toFixed(1)} ` + sp.map(p => `L${sx(p[0]).toFixed(1)},${sy(p[1]).toFixed(1)}`).join(' ') + ` L${sx(hi).toFixed(1)},${sy(0).toFixed(1)} Z`;
+      shade = `<path d="${d}" class="adg-normal-shade"/>`;
+    }
+  }
+  let axis = `<line x1="${padL}" y1="${padT+plotH}" x2="${padL+plotW}" y2="${padT+plotH}" class="adg-axis"/>`;
+  let muLine = `<line x1="${sx(mu).toFixed(1)}" y1="${padT}" x2="${sx(mu).toFixed(1)}" y2="${padT+plotH}" class="adg-grid"/>`;
+  let muLabel = `<text x="${sx(mu).toFixed(1)}" y="${(padT+plotH+15).toFixed(1)}" class="adg-tick" text-anchor="middle">&#956;=${numToStr(mu)}</text>`;
+  let abLabel = '';
+  if (a != null) abLabel += `<text x="${sx(Math.max(a,xMin)).toFixed(1)}" y="${padT-4}" class="adg-tick" text-anchor="middle">${numToStr(a)}</text>`;
+  if (b != null) abLabel += `<text x="${sx(Math.min(b,xMax)).toFixed(1)}" y="${padT-4}" class="adg-tick" text-anchor="middle">${numToStr(b)}</text>`;
+  const curve = `<path d="${pathD}" class="adg-normal-curve" fill="none"/>`;
+  return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">${axis}${muLine}${shade}${curve}${abLabel}${muLabel}</svg>`;
+}
+
+function autoChart(e, unitId){
+  if (e.assets && e.assets.length) return '';
+  if (!statsUnitMatch(unitId)) return '';
+  const txt = str(e.statement||'');
+  if (!txt) return '';
+  try {
+    const venn = parseVennData(txt);
+    if (venn){ const svg = svgVenn(venn); if (svg) return wrapFig(svg, t('diagrama_no_escala')); }
+  } catch (err) {}
+  try {
+    /* un enunciado con mu y sigma no siempre describe la variable como normal:
+       - la desigualdad de Chebyshev usa mu/sigma SIN suponer normalidad (ese es
+         precisamente el punto de la leccion): dibujar una campana ahi contradice
+         lo que se esta enseñando.
+       - el teorema central del limite / distribucion muestral habla de una
+         muestra de tamaño n: la distribucion relevante tiene desviacion tipica
+         sigma/sqrt(n), no sigma. Dibujar la campana con el sigma de la poblacion
+         (el unico que el parser sabe leer) seria una campana demasiado ancha y
+         enseñaria al alumno una forma incorrecta.
+       Por eso solo se genera cuando el enunciado dice explicitamente que la
+       variable es normal/gaussiana Y no hay de por medio ni Chebyshev ni una
+       muestra/teorema central del limite. */
+    const mentionsNormal = /normal distribution|distribuci[oó]n normal|campana de gauss|gaussian|\bN\(/i.test(txt);
+    const mentionsChebyshev = /chebyshev|chebichev|tchebychev/i.test(txt);
+    const mentionsSampling = /muestra|muestral|teorema central del l[ií]mite|central limit|tama[ñn]o de (la )?muestra|\bsample\b/i.test(txt);
+    if (mentionsNormal && !mentionsChebyshev && !mentionsSampling){
+      const nd = parseNormalData(txt);
+      if (nd){ const svg = svgNormalCurve(nd.mu, nd.sigma, nd.a, nd.b); if (svg) return wrapFig(svg, t('diagrama_no_escala')); }
+    }
+  } catch (err) {}
+  try {
+    /* el patron "a<x<=b freq N" tambien aparece en ejercicios de frecuencia
+       acumulada, de medidas de dispersion o de tabulacion que NO piden un
+       histograma: dibujar ahi un histograma de frecuencia/anchura no ayuda al
+       alumno con lo que se le pide y puede confundirlo. Solo se genera cuando
+       el enunciado habla explicitamente de histograma o densidad de frecuencia. */
+    if (/histogram|frequency density|histograma|densidad de frecuencia/i.test(txt)){
+      const hist = parseHistogramData(txt);
+      if (hist){ const svg = svgHistogram(hist); if (svg) return wrapFig(svg, t('diagrama_no_escala')); }
+    }
+  } catch (err) {}
+  try {
+    const bar = parseBarData(txt);
+    if (bar){
+      const isPie = /pie chart|sector|angle of each/i.test(txt);
+      const svg = isPie ? svgPieChart(bar.labels, bar.values) : svgBarChart(bar.labels, bar.values);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+  } catch (err) {}
+  return '';
+}
+
+/* --- Ilustraciones conceptuales para Teoria ---
+   Muchos bloques de teoria de Estadistica/Probabilidad EXPLICAN un tipo de grafico
+   concreto (barras, tarta, histograma, dispersion, frecuencia acumulada, normal, Venn)
+   pero no traen su propio recurso visual (el autor del bloque escribio la explicacion
+   en prosa). Aqui, cuando el titulo o el cuerpo del bloque nombra claramente ese tipo
+   de grafico y el bloque no tiene ya un asset propio, se genera un ejemplo ilustrativo
+   generico (datos de muestra, nunca inventados a partir del enunciado real) para que el
+   alumno vea el tipo de grafico mientras lee la teoria, en vez de solo texto. Reutiliza
+   los mismos generadores SVG y la misma paleta que los autodiagramas de Ejercicios. */
+const CONCEPT_CHART_PATTERNS = [
+  ['venn', /venn|diagrama de venn|\bconjuntos\b/i],
+  ['cumulative', /cumulative frequency|frecuencia acumulada|\bojiva\b/i],
+  ['histogram', /histogram|histograma/i],
+  ['scatter', /scatter diagram|scatter graph|diagrama de dispersi[oó]n|nube de puntos|\bcorrelaci[oó]n/i],
+  ['pie', /pie chart|diagrama circular|gr[aá]fico circular/i],
+  ['bar', /bar chart|diagrama(?:s)? de barras|gr[aá]fico(?:s)? de barras/i],
+  ['normal', /normal distribution|distribuci[oó]n normal|curva normal|campana de gauss/i],
+  ['twoway', /two-way tables?|tabla(?:s)? de doble entrada/i],
+];
+function conceptChartKind(text){
+  /* una introduccion que compara varios diagramas a la vez (ej. "sample space,
+     Venn y tree diagram son tres formas de...") no pertenece a NINGUNO en
+     particular: si se deja, roba el hueco (seenKinds) al bloque que de verdad
+     explica ese diagrama. Se excluye ese caso muy especifico antes de buscar
+     coincidencia normal. */
+  if (/sample space diagram/i.test(text) && /tree diagram/i.test(text) && /venn/i.test(text)) return null;
+  for (const [kind, re] of CONCEPT_CHART_PATTERNS) if (re.test(text)) return kind;
+  return null;
+}
+function svgConceptBar(){ return svgBarChart(['A','B','C','D','E'], [4,7,3,9,5]); }
+function svgConceptPie(){ return svgPieChart(['A','B','C','D'], [35,25,20,20]); }
+function svgConceptHistogram(){
+  return svgHistogram([
+    {lo:0, hi:10, density:1.2, freq:12},
+    {lo:10, hi:20, density:2.6, freq:26},
+    {lo:20, hi:30, density:1.8, freq:18},
+    {lo:30, hi:50, density:0.7, freq:14},
+  ]);
+}
+function svgConceptScatter(){
+  const pts = [[1,2],[2,3],[3,3.5],[4,5],[5,5.5],[6,7],[7,6.5],[8,8]];
+  return svgCoordPlane(pts, [], 0, 9, 0, 9, 1, 1, null, false);
+}
+function svgConceptCumulative(){
+  const pts = [[0,0],[10,4],[20,14],[30,28],[40,38],[50,44],[60,46]];
+  return svgCoordPlane(pts, [], 0, 60, 0, 48, 10, 8, null, true);
+}
+function svgConceptNormal(){ return svgNormalCurve(0, 1, -1, 1); }
+function svgConceptVenn(){ return svgVenn({ aLabel:'A', bLabel:'B', aOnly:12, bOnly:9, both:5, neither:4 }); }
+function svgConceptTwoWayTable(){
+  const cols = ['', 'Tea', 'Coffee', 'Total'];
+  const rows = [
+    ['Male', '12', '18', '30'],
+    ['Female', '15', '15', '30'],
+    ['Total', '27', '33', '60'],
+  ];
+  const x0=10, y0=15, colW=[70,55,55,55], rowH=30;
+  const colX = [x0]; for (const w of colW) colX.push(colX[colX.length-1]+w);
+  const totalW = colX[colX.length-1]-x0, totalH = rowH*4;
+  let cells = '';
+  cols.forEach((c,i) => { cells += `<text x="${(colX[i]+colW[i]/2).toFixed(1)}" y="${(y0+rowH/2+5).toFixed(1)}" class="adg-vlabel" text-anchor="middle">${esc(c)}</text>`; });
+  rows.forEach((r,ri) => {
+    const y = y0+rowH*(ri+1);
+    r.forEach((val,ci) => { cells += `<text x="${(colX[ci]+colW[ci]/2).toFixed(1)}" y="${(y+rowH/2+5).toFixed(1)}" class="adg-vlabel" text-anchor="middle">${esc(val)}</text>`; });
+  });
+  let gridLines = '';
+  for (let i=0;i<=4;i++){ const y=y0+rowH*i; gridLines += `<line x1="${x0}" y1="${y}" x2="${x0+totalW}" y2="${y}" class="adg-axis"/>`; }
+  colX.forEach(x => { gridLines += `<line x1="${x}" y1="${y0}" x2="${x}" y2="${y0+totalH}" class="adg-axis"/>`; });
+  return `<svg viewBox="0 0 270 160" xmlns="http://www.w3.org/2000/svg">${gridLines}${cells}</svg>`;
+}
+const MENS_SHAPE_PATTERNS = [
+  ['mens_cuboid', /\bcuboids?\b|\bprisms?\b/i],
+  ['mens_cylinder', /\bcylinders?\b/i],
+  ['mens_cone', /\bcones?\b|\bpyramids?\b/i],
+  ['mens_sphere', /\bspheres?\b/i],
+  ['mens_sector', /\bsectors?\b|\barc length\b/i],
+  ['mens_circle', /\bcircumference\b|\barea of a circle\b|\bparts of a circle\b/i],
+  ['mens_trapezium', /\btrapezi?um/i],
+  ['mens_parallelogram', /\bparallelogram/i],
+  ['mens_triangle', /\btriangle\b.*\b(base|height|perpendicular)\b|\b(base|height)\b.*\btriangle\b/i],
+  ['mens_rectangle', /\brectangles?\b/i],
+  ['mens_compound', /\bcompound (plane )?shapes?\b|\bcompound solids?\b/i],
+];
+function mensShapeKind(text){
+  for (const [kind, re] of MENS_SHAPE_PATTERNS) if (re.test(text)) return kind;
+  return null;
+}
+function adgRightAngle(ox, oy){ return `<polyline points="${ox},${oy-14} ${ox+14},${oy-14} ${ox+14},${oy}" class="adg-rightangle"/>`; }
+function svgConceptMensRectangle(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="60" y="50" width="150" height="90" class="adg-tri"/>
+    <text x="135" y="158" class="adg-sidelabel" text-anchor="middle">l</text>
+    <text x="42" y="99" class="adg-sidelabel" text-anchor="middle">w</text></svg>`;
+}
+function svgConceptMensTriangle(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="50,170 230,170 140,40" class="adg-tri"/>
+    <line x1="140" y1="40" x2="140" y2="170" class="adg-line2"/>
+    ${adgRightAngle(130,170)}
+    <text x="140" y="186" class="adg-sidelabel" text-anchor="middle">b</text>
+    <text x="153" y="107" class="adg-sidelabel" text-anchor="middle">h</text></svg>`;
+}
+function svgConceptMensParallelogram(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="70,170 230,170 200,50 40,50" class="adg-tri"/>
+    <line x1="40" y1="50" x2="40" y2="170" class="adg-line2"/>
+    ${adgRightAngle(40,170)}
+    <text x="150" y="186" class="adg-sidelabel" text-anchor="middle">b</text>
+    <text x="24" y="112" class="adg-sidelabel" text-anchor="middle">h</text></svg>`;
+}
+function svgConceptMensTrapezium(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="50,170 230,170 180,50 90,50" class="adg-tri"/>
+    <line x1="90" y1="50" x2="90" y2="170" class="adg-line2"/>
+    ${adgRightAngle(90,170)}
+    <text x="135" y="40" class="adg-sidelabel" text-anchor="middle">a</text>
+    <text x="140" y="186" class="adg-sidelabel" text-anchor="middle">b</text>
+    <text x="74" y="112" class="adg-sidelabel" text-anchor="middle">h</text></svg>`;
+}
+function svgConceptMensCircle(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="135" cy="105" r="70" class="adg-tri"/>
+    <line x1="135" y1="105" x2="135" y2="35" class="adg-axis"/>
+    <circle cx="135" cy="105" r="2.5" class="adg-pt"/>
+    <text x="150" y="68" class="adg-sidelabel" text-anchor="middle">r</text></svg>`;
+}
+function svgConceptMensSector(){
+  const cx=135, cy=125, r=85, angle=72, rad=angle*Math.PI/180;
+  const x1=cx, y1=cy-r, x2=cx+r*Math.sin(rad), y2=cy-r*Math.cos(rad);
+  return `<svg viewBox="0 0 270 240" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#c7d0cb" stroke-width="1.2"/>
+    <path d="M${cx},${cy} L${x1},${y1} A${r},${r} 0 0 1 ${x2},${y2} Z" class="adg-tri"/>
+    <circle cx="${cx}" cy="${cy}" r="2.5" class="adg-pt"/>
+    <text x="${cx+8}" y="${cy-r/2}" class="adg-sidelabel">r</text>
+    <text x="${cx+26}" y="${cy-26}" class="adg-sidelabel">θ</text></svg>`;
+}
+function svgConceptMensCuboid(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="170,90 210,60 210,140 170,170" class="adg-tri2"/>
+    <polygon points="60,90 100,60 210,60 170,90" class="adg-tri2"/>
+    <rect x="60" y="90" width="110" height="80" class="adg-tri"/>
+    <text x="115" y="186" class="adg-sidelabel" text-anchor="middle">l</text>
+    <text x="42" y="134" class="adg-sidelabel" text-anchor="middle">h</text>
+    <text x="197" y="72" class="adg-sidelabel" text-anchor="middle">w</text></svg>`;
+}
+function svgConceptMensCylinder(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M85,60 L85,170 A55,16 0 0 0 195,170 L195,60" class="adg-tri"/>
+    <ellipse cx="140" cy="60" rx="55" ry="16" class="adg-tri"/>
+    <line x1="140" y1="60" x2="195" y2="60" class="adg-axis"/>
+    <line x1="68" y1="60" x2="68" y2="170" class="adg-axis"/>
+    <text x="172" y="52" class="adg-sidelabel" text-anchor="middle">r</text>
+    <text x="52" y="118" class="adg-sidelabel" text-anchor="middle">h</text></svg>`;
+}
+function svgConceptMensCone(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <path d="M140,40 L85,170 A55,16 0 0 0 195,170 Z" class="adg-tri"/>
+    <line x1="140" y1="40" x2="140" y2="170" class="adg-line2"/>
+    ${adgRightAngle(130,170)}
+    <line x1="140" y1="170" x2="195" y2="170" class="adg-axis"/>
+    <text x="153" y="107" class="adg-sidelabel" text-anchor="middle">h</text>
+    <text x="172" y="184" class="adg-sidelabel" text-anchor="middle">r</text>
+    <text x="178" y="100" class="adg-sidelabel" text-anchor="middle">l</text></svg>`;
+}
+function svgConceptMensSphere(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="135" cy="105" r="70" class="adg-tri"/>
+    <ellipse cx="135" cy="105" rx="70" ry="18" fill="none" stroke="#0e7a68" stroke-width="1.4" stroke-dasharray="6,4"/>
+    <line x1="135" y1="105" x2="135" y2="35" class="adg-axis"/>
+    <circle cx="135" cy="105" r="2.5" class="adg-pt"/>
+    <text x="150" y="68" class="adg-sidelabel" text-anchor="middle">r</text></svg>`;
+}
+function svgConceptMensCompound(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="50,50 150,50 150,110 220,110 220,170 50,170" class="adg-tri"/>
+    <line x1="150" y1="110" x2="150" y2="170" class="adg-line2"/></svg>`;
+}
+const GEOTRIG_SHAPE_PATTERNS = [
+  ['gt_isosceles_radii', /OA\s*=\s*OB|OB\s*=\s*OA/],
+  ['gt_bearings', /\bbearings?\b/i],
+];
+function transformVectorShapeKind(title){
+  const t = str(title||'');
+  if (/diagonal mirror lines?/i.test(t)) return 'tv_diagonal_reflection';
+  if (/negative scale factor/i.test(t)) return 'tv_negative_enlargement';
+  return null;
+}
+function svgConceptDiagonalReflection(){
+  const ox=70, oy=150, unit=20;
+  const map = (gx,gy) => `${ox+gx*unit},${oy-gy*unit}`;
+  const obj = [[1,1],[4,1],[4,3]];
+  const img = obj.map(([gx,gy]) => [gy,gx]);
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="10" y1="${oy}" x2="250" y2="${oy}" class="adg-axis"/>
+    <line x1="${ox}" y1="10" x2="${ox}" y2="190" class="adg-axis"/>
+    <line x1="${map(-1,-1)}" x2="${map(6,6)}" class="adg-line2"/>
+    <polygon points="${obj.map(p=>map(...p)).join(' ')}" class="adg-tri"/>
+    <polygon points="${img.map(p=>map(...p)).join(' ')}" class="adg-tri2"/>
+    <text x="${ox+6*unit-10}" y="${oy-6*unit+14}" class="adg-axislabel">y=x</text></svg>`;
+}
+function svgConceptNegativeEnlargement(){
+  const O = [135,100];
+  const obj = [[160,80],[180,80],[180,92]];
+  const k = -2;
+  const img = obj.map(([x,y]) => [O[0]+k*(x-O[0]), O[1]+k*(y-O[1])]);
+  const lines = obj.map((p,i) => `<line x1="${p[0]}" y1="${p[1]}" x2="${img[i][0]}" y2="${img[i][1]}" class="adg-line2"/>`).join('');
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    ${lines}
+    <polygon points="${obj.map(p=>p.join(',')).join(' ')}" class="adg-tri"/>
+    <polygon points="${img.map(p=>p.join(',')).join(' ')}" class="adg-tri2"/>
+    <circle cx="${O[0]}" cy="${O[1]}" r="2.8" class="adg-pt"/>
+    <text x="${O[0]+6}" y="${O[1]-6}" class="adg-vlabel">O</text>
+    <text x="${O[0]-34}" y="${O[1]+5}" class="adg-axislabel">k = -2</text></svg>`;
+}
+function transformVectorIllustration(block, unitId, seenKinds){
+  if (!block || (block.assets && block.assets.length)) return '';
+  if (!/TRANSFORMATIONS|VECTORS/.test(unitId||'')) return '';
+  const kind = transformVectorShapeKind(block.title);
+  if (!kind) return '';
+  if (seenKinds){
+    if (seenKinds.has(kind)) return '';
+    seenKinds.add(kind);
+  }
+  try{
+    let svg = '';
+    if (kind === 'tv_diagonal_reflection') svg = svgConceptDiagonalReflection();
+    else if (kind === 'tv_negative_enlargement') svg = svgConceptNegativeEnlargement();
+    if (svg) return wrapFig(svg, t('ejemplo_ilustrativo'));
+  } catch (err) { /* un fallo aqui nunca debe romper el render de la teoria */ }
+  return '';
+}
+function algGraphShapeKind(title){
+  const t = str(title||'');
+  if (/quadratic/i.test(t) && /graph|sketch/i.test(t)) return 'alg_quadratic';
+  if (/\bcubic/i.test(t) && !/sequence/i.test(t)) return 'alg_cubic';
+  if (/reciprocal/i.test(t) && /graph|curve/i.test(t)) return 'alg_reciprocal';
+  if (/exponential/i.test(t) && /graph|curve/i.test(t)) return 'alg_exponential';
+  if (/distance-time/i.test(t)) return 'alg_distance_time';
+  if (/speed-time/i.test(t)) return 'alg_speed_time';
+  if (/chord to tangent/i.test(t)) return 'alg_tangent';
+  if (/graph of the inverse/i.test(t)) return 'alg_inverse';
+  return null;
+}
+function svgConceptAlgQuadratic(){
+  const x0=135, yBase=170, xScale=35, yScale=15;
+  let pts=[];
+  for (let x=-3; x<=3; x+=0.25){
+    pts.push(`${(x0+x*xScale).toFixed(1)},${(yBase-x*x*yScale).toFixed(1)}`);
+  }
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="10" y1="${yBase}" x2="260" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="190" class="adg-axis"/>
+    <polyline points="${pts.join(' ')}" fill="none" class="adg-line"/>
+    <text x="255" y="${yBase-8}" class="adg-axislabel">x</text>
+    <text x="${x0+8}" y="20" class="adg-axislabel">y</text></svg>`;
+}
+function svgConceptAlgCubic(){
+  const x0=135, yBase=100, xScale=45, yScale=7;
+  let pts=[];
+  for (let x=-2.2; x<=2.2; x+=0.2){
+    const y = x*x*x;
+    pts.push(`${(x0+x*xScale).toFixed(1)},${(yBase-y*yScale).toFixed(1)}`);
+  }
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="10" y1="${yBase}" x2="260" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="190" class="adg-axis"/>
+    <polyline points="${pts.join(' ')}" fill="none" class="adg-line"/>
+    <text x="255" y="${yBase-8}" class="adg-axislabel">x</text>
+    <text x="${x0+8}" y="20" class="adg-axislabel">y</text></svg>`;
+}
+function svgConceptAlgReciprocal(){
+  const x0=135, yBase=100, xScale=35, yScale=20, clamp=4;
+  function branch(a,b,step){
+    let pts=[];
+    for (let x=a; (step>0? x<=b : x>=b); x+=step){
+      let y = 1/x; if (y>clamp) y=clamp; if (y<-clamp) y=-clamp;
+      pts.push(`${(x0+x*xScale).toFixed(1)},${(yBase-y*yScale).toFixed(1)}`);
+    }
+    return `<polyline points="${pts.join(' ')}" fill="none" class="adg-line"/>`;
+  }
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="10" y1="${yBase}" x2="260" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="190" class="adg-axis"/>
+    ${branch(0.25,3,0.1)}${branch(-0.25,-3,-0.1)}
+    <text x="255" y="${yBase-8}" class="adg-axislabel">x</text>
+    <text x="${x0+8}" y="20" class="adg-axislabel">y</text></svg>`;
+}
+function svgConceptAlgExponential(){
+  const x0=40, yBase=170, xScale=30, yScale=18, clamp=8;
+  let pts=[];
+  for (let x=-3; x<=4; x+=0.2){
+    let y = Math.pow(2,x); if (y>clamp) y=clamp;
+    pts.push(`${(x0+(x+3)*xScale).toFixed(1)},${(yBase-y*yScale).toFixed(1)}`);
+  }
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="10" y1="${yBase}" x2="260" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="190" class="adg-axis"/>
+    <polyline points="${pts.join(' ')}" fill="none" class="adg-line"/>
+    <text x="255" y="${yBase-8}" class="adg-axislabel">x</text>
+    <text x="${x0+8}" y="20" class="adg-axislabel">y</text></svg>`;
+}
+function svgConceptAlgDistanceTime(){
+  const pts = [[0,0],[2,6],[4,6],[7,0]];
+  const x0=30, yBase=170, xScale=(250-30)/7, yScale=(170-20)/6;
+  const mapped = pts.map(([t,d]) => `${(x0+t*xScale).toFixed(1)},${(yBase-d*yScale).toFixed(1)}`).join(' ');
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="20" y1="${yBase}" x2="256" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="${yBase+8}" class="adg-axis"/>
+    <polyline points="${mapped}" fill="none" class="adg-line"/>
+    <text x="250" y="${yBase+18}" class="adg-axislabel">time</text>
+    <text x="4" y="22" class="adg-axislabel">distance</text></svg>`;
+}
+function svgConceptAlgSpeedTime(){
+  const pts = [[0,0],[2,8],[5,8],[7,0]];
+  const x0=30, yBase=170, xScale=(250-30)/7, yScale=(170-20)/8;
+  const mapped = pts.map(([t,s]) => `${(x0+t*xScale).toFixed(1)},${(yBase-s*yScale).toFixed(1)}`);
+  const area = [`${x0},${yBase}`].concat(mapped).concat([`${(x0+7*xScale).toFixed(1)},${yBase}`]).join(' ');
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="20" y1="${yBase}" x2="256" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="${yBase+8}" class="adg-axis"/>
+    <polygon points="${area}" fill="#2f6f5e" fill-opacity="0.12" stroke="none"/>
+    <polyline points="${mapped.join(' ')}" fill="none" class="adg-line"/>
+    <text x="250" y="${yBase+18}" class="adg-axislabel">time</text>
+    <text x="4" y="22" class="adg-axislabel">speed</text></svg>`;
+}
+function svgConceptAlgTangent(){
+  const x0=135, yBase=170, xScale=35, yScale=15;
+  let pts=[];
+  for (let x=-3; x<=3; x+=0.25){
+    pts.push(`${(x0+x*xScale).toFixed(1)},${(yBase-x*x*yScale).toFixed(1)}`);
+  }
+  const tx = 1.5, ty = tx*tx, slope = 2*tx;
+  const px = x0+tx*xScale, py = yBase-ty*yScale;
+  const pxSlope = -(yScale/xScale)*slope;
+  const t1x = px-45, t1y = py - pxSlope*(-45);
+  const t2x = px+45, t2y = py - pxSlope*(45);
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="10" y1="${yBase}" x2="260" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="190" class="adg-axis"/>
+    <polyline points="${pts.join(' ')}" fill="none" class="adg-line"/>
+    <line x1="${t1x.toFixed(1)}" y1="${t1y.toFixed(1)}" x2="${t2x.toFixed(1)}" y2="${t2y.toFixed(1)}" class="adg-line2"/>
+    <circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="2.8" class="adg-pt"/>
+    <text x="255" y="${yBase-8}" class="adg-axislabel">x</text>
+    <text x="${x0+8}" y="20" class="adg-axislabel">y</text></svg>`;
+}
+function svgConceptAlgInverse(){
+  const x0=40, yBase=180, scale=25;
+  let fpts=[], gpts=[];
+  for (let x=0; x<=2.3; x+=0.15){
+    const y = x*x;
+    fpts.push(`${(x0+x*scale).toFixed(1)},${(yBase-y*scale).toFixed(1)}`);
+    gpts.push(`${(x0+y*scale).toFixed(1)},${(yBase-x*scale).toFixed(1)}`);
+  }
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="15" y1="${yBase}" x2="240" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="190" class="adg-axis"/>
+    <line x1="${x0}" y1="${yBase}" x2="${x0+150}" y2="${yBase-150}" class="adg-line2"/>
+    <polyline points="${fpts.join(' ')}" fill="none" class="adg-line"/>
+    <polyline points="${gpts.join(' ')}" fill="none" stroke="#c17a17" stroke-width="2.4" fill-opacity="0"/>
+    <text x="${(x0+2.3*scale+6).toFixed(1)}" y="${(yBase-2.3*2.3*scale).toFixed(1)}" class="adg-axislabel">f</text>
+    <text x="${(x0+2.3*2.3*scale).toFixed(1)}" y="${(yBase-2.3*scale-8).toFixed(1)}" class="adg-axislabel">f⁻¹</text></svg>`;
+}
+function algebraGraphIllustration(block, unitId, seenKinds){
+  if (!block || (block.assets && block.assets.length)) return '';
+  if (!/ALGEBRA/.test(unitId||'')) return '';
+  const kind = algGraphShapeKind(block.title);
+  if (!kind) return '';
+  if (seenKinds){
+    if (seenKinds.has(kind)) return '';
+    seenKinds.add(kind);
+  }
+  try{
+    let svg = '';
+    if (kind === 'alg_quadratic') svg = svgConceptAlgQuadratic();
+    else if (kind === 'alg_cubic') svg = svgConceptAlgCubic();
+    else if (kind === 'alg_reciprocal') svg = svgConceptAlgReciprocal();
+    else if (kind === 'alg_exponential') svg = svgConceptAlgExponential();
+    else if (kind === 'alg_distance_time') svg = svgConceptAlgDistanceTime();
+    else if (kind === 'alg_speed_time') svg = svgConceptAlgSpeedTime();
+    else if (kind === 'alg_tangent') svg = svgConceptAlgTangent();
+    else if (kind === 'alg_inverse') svg = svgConceptAlgInverse();
+    if (svg) return wrapFig(svg, t('ejemplo_ilustrativo'));
+  } catch (err) { /* un fallo aqui nunca debe romper el render de la teoria */ }
+  return '';
+}
+function geoTrigShapeKind(title, body, unitId){
+  if (/OA\s*=\s*OB|OB\s*=\s*OA/.test(body)) return 'gt_isosceles_radii';
+  if (/\bbearings?\b/i.test(title)) return 'gt_bearings';
+  if (/TRIGONOMETRY/.test(unitId||'') && /\bpyramids?\b/i.test(title)) return 'gt_pyramid';
+  if (/\bnets?\b/i.test(title) && /\bcube\b/i.test(title)) return 'gt_net_cube';
+  if (/\bnets?\b/i.test(title) && /curved/i.test(title)) return 'gt_net_cylinder';
+  if (/equal angles alone/i.test(title)) return 'gt_rect_compare';
+  if (/graph of \$y=\\cos x\$/i.test(title) || /graph of \$y\s*=\s*\\cos/i.test(title)) return 'gt_cos_graph';
+  if (/graph of \$y=\\tan x\$/i.test(title) || /graph of \$y\s*=\s*\\tan/i.test(title)) return 'gt_tan_graph';
+  return null;
+}
+function svgConceptIsoscelesRadii(){
+  return `<svg viewBox="0 0 270 220" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="135" cy="115" r="80" fill="none" stroke="#c7d0cb" stroke-width="1.2"/>
+    <polygon points="135,115 59.8,142.2 210.2,142.2" class="adg-tri"/>
+    <circle cx="135" cy="115" r="2.5" class="adg-pt"/>
+    <text x="146" y="110" class="adg-vlabel">O</text>
+    <text x="80" y="118" class="adg-sidelabel" text-anchor="middle">r</text>
+    <text x="190" y="118" class="adg-sidelabel" text-anchor="middle">r</text>
+    <text x="52" y="156" class="adg-vlabel">A</text>
+    <text x="206" y="156" class="adg-vlabel">B</text></svg>`;
+}
+function svgConceptCubeNet(){
+  const s = 40, x0 = 20, y0 = 40;
+  const cells = [[0,1],[1,0],[1,1],[1,2],[2,1],[3,1]];
+  let rects = '';
+  cells.forEach(([cx,cy]) => {
+    rects += `<rect x="${x0+cx*s}" y="${y0+cy*s}" width="${s}" height="${s}" class="adg-tri"/>`;
+  });
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">${rects}</svg>`;
+}
+function svgConceptCylinderNet(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="70" y="70" width="130" height="60" class="adg-tri"/>
+    <ellipse cx="135" cy="44" rx="40" ry="18" class="adg-tri2"/>
+    <ellipse cx="135" cy="156" rx="40" ry="18" class="adg-tri2"/></svg>`;
+}
+function svgConceptSquarePyramid(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="55,160 195,160 230,100 90,100" class="adg-tri" fill-opacity="0.5"/>
+    <line x1="90" y1="100" x2="230" y2="100" class="adg-line2"/>
+    <line x1="142.5" y1="35" x2="230" y2="100" class="adg-line2"/>
+    <line x1="142.5" y1="35" x2="90" y2="100" class="adg-line2"/>
+    <line x1="142.5" y1="35" x2="55" y2="160" class="adg-line"/>
+    <line x1="142.5" y1="35" x2="195" y2="160" class="adg-line"/>
+    <line x1="142.5" y1="35" x2="142.5" y2="130" class="adg-line2"/>
+    <line x1="142.5" y1="130" x2="55" y2="160" class="adg-line2"/>
+    <line x1="142.5" y1="130" x2="125" y2="160" class="adg-line"/>
+    <circle cx="142.5" cy="130" r="2.5" class="adg-pt"/>
+    <circle cx="125" cy="160" r="2.5" class="adg-pt"/>
+    <text x="142.5" y="24" class="adg-vlabel" text-anchor="middle">V</text>
+    <text x="150" y="124" class="adg-vlabel">M</text>
+    <text x="40" y="172" class="adg-vlabel">A</text>
+    <text x="118" y="180" class="adg-vlabel">N</text>
+    <text x="152" y="85" class="adg-sidelabel">h</text></svg>`;
+}
+function svgConceptCosGraph(){
+  const x0 = 30, xScale = (250-30)/360, yBase = 100, yScale = 65;
+  let pts = [];
+  for (let d = 0; d <= 360; d += 5){
+    const x = x0 + d*xScale;
+    const y = yBase - yScale*Math.cos(d*Math.PI/180);
+    pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+  }
+  const ticks = [0,90,180,270,360].map(d => {
+    const x = x0 + d*xScale;
+    return `<line x1="${x}" y1="${yBase-3}" x2="${x}" y2="${yBase+3}" class="adg-axis"/><text x="${x}" y="${yBase+18}" class="adg-axislabel" text-anchor="middle">${d}°</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 270 150" xmlns="http://www.w3.org/2000/svg">
+    <line x1="${x0}" y1="${yBase}" x2="256" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="20" x2="${x0}" y2="${yBase+30}" class="adg-axis"/>
+    ${ticks}
+    <text x="${x0-6}" y="38" class="adg-axislabel" text-anchor="end">1</text>
+    <text x="${x0-6}" y="${yBase+65-3}" class="adg-axislabel" text-anchor="end">-1</text>
+    <polyline points="${pts.join(' ')}" fill="none" class="adg-line"/>
+    <text x="252" y="${yBase-8}" class="adg-axislabel">x</text>
+    <text x="${x0+4}" y="24" class="adg-axislabel">y</text></svg>`;
+}
+function svgConceptTanGraph(){
+  const x0 = 30, xScale = (250-30)/360, yBase = 75, yScale = 18, clampDeg = [[0,85],[95,265],[275,360]];
+  const branches = clampDeg.map(([a,b]) => {
+    let pts = [];
+    for (let d = a; d <= b; d += 2){
+      const x = x0 + d*xScale;
+      let v = Math.tan(d*Math.PI/180);
+      if (v > 4) v = 4; if (v < -4) v = -4;
+      const y = yBase - yScale*v;
+      pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+    }
+    return `<polyline points="${pts.join(' ')}" fill="none" class="adg-line"/>`;
+  }).join('');
+  const asym = [90,270].map(d => {
+    const x = x0 + d*xScale;
+    return `<line x1="${x}" y1="2" x2="${x}" y2="148" class="adg-line2"/>`;
+  }).join('');
+  const ticks = [0,90,180,270,360].map(d => {
+    const x = x0 + d*xScale;
+    return `<line x1="${x}" y1="${yBase-3}" x2="${x}" y2="${yBase+3}" class="adg-axis"/><text x="${x}" y="${yBase+18}" class="adg-axislabel" text-anchor="middle">${d}°</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 270 150" xmlns="http://www.w3.org/2000/svg">
+    <line x1="${x0}" y1="${yBase}" x2="256" y2="${yBase}" class="adg-axis"/>
+    <line x1="${x0}" y1="10" x2="${x0}" y2="140" class="adg-axis"/>
+    ${asym}${ticks}${branches}
+    <text x="252" y="${yBase-8}" class="adg-axislabel">x</text>
+    <text x="${x0+4}" y="18" class="adg-axislabel">y</text></svg>`;
+}
+function svgConceptRectCompare(){
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="35" width="40" height="120" class="adg-tri"/>
+    <rect x="140" y="35" width="80" height="120" class="adg-tri2"/>
+    <text x="60" y="172" class="adg-sidelabel" text-anchor="middle">2</text>
+    <text x="24" y="99" class="adg-sidelabel" text-anchor="middle">6</text>
+    <text x="180" y="172" class="adg-sidelabel" text-anchor="middle">4</text>
+    <text x="236" y="99" class="adg-sidelabel" text-anchor="middle">6</text>
+    <text x="60" y="26" class="adg-vlabel" text-anchor="middle">90°</text>
+    <text x="180" y="26" class="adg-vlabel" text-anchor="middle">90°</text></svg>`;
+}
+function svgConceptBearings(){
+  const ax=90, ay=150, bx=186, by=81.9;
+  return `<svg viewBox="0 0 270 200" xmlns="http://www.w3.org/2000/svg">
+    <line x1="${ax}" y1="${ay}" x2="${ax}" y2="35" class="adg-line2"/>
+    <text x="${ax}" y="28" class="adg-vlabel" text-anchor="middle">N</text>
+    <line x1="${ax}" y1="${ay}" x2="${bx}" y2="${by}" class="adg-line"/>
+    <path d="M${ax},${ay-32} A32,32 0 0 1 ${ax+32*Math.sin(65*Math.PI/180)},${ay-32*Math.cos(65*Math.PI/180)}" fill="none" stroke="#c17a17" stroke-width="1.6"/>
+    <text x="${ax+34}" y="${ay-26}" class="adg-sidelabel">θ</text>
+    <circle cx="${ax}" cy="${ay}" r="2.5" class="adg-pt"/>
+    <circle cx="${bx}" cy="${by}" r="2.5" class="adg-pt"/>
+    <text x="${ax-14}" y="${ay+14}" class="adg-vlabel">A</text>
+    <text x="${bx+8}" y="${by-6}" class="adg-vlabel">B</text></svg>`;
+}
+function geoTrigIllustration(block, unitId, seenKinds){
+  if (!block || (block.assets && block.assets.length)) return '';
+  if (!/GEOMETRY|TRIGONOMETRY/.test(unitId||'')) return '';
+  const kind = geoTrigShapeKind(str(block.title||''), str(block.body||''), unitId);
+  if (!kind) return '';
+  if (seenKinds){
+    if (seenKinds.has(kind)) return '';
+    seenKinds.add(kind);
+  }
+  try{
+    let svg = '';
+    if (kind === 'gt_isosceles_radii') svg = svgConceptIsoscelesRadii();
+    else if (kind === 'gt_bearings') svg = svgConceptBearings();
+    else if (kind === 'gt_pyramid') svg = svgConceptSquarePyramid();
+    else if (kind === 'gt_net_cube') svg = svgConceptCubeNet();
+    else if (kind === 'gt_net_cylinder') svg = svgConceptCylinderNet();
+    else if (kind === 'gt_rect_compare') svg = svgConceptRectCompare();
+    else if (kind === 'gt_cos_graph') svg = svgConceptCosGraph();
+    else if (kind === 'gt_tan_graph') svg = svgConceptTanGraph();
+    if (svg) return wrapFig(svg, t('ejemplo_ilustrativo'));
+  } catch (err) { /* un fallo aqui nunca debe romper el render de la teoria */ }
+  return '';
+}
+function mensurationIllustration(block, unitId, seenKinds){
+  if (!block || (block.assets && block.assets.length)) return '';
+  if (!/MENSURATION/.test(unitId||'')) return '';
+  const text = str(block.title||'') + ' ' + str(block.body||'');
+  const kind = mensShapeKind(text);
+  if (!kind) return '';
+  if (seenKinds){
+    if (seenKinds.has(kind)) return '';
+    seenKinds.add(kind);
+  }
+  try{
+    let svg = '';
+    if (kind === 'mens_rectangle') svg = svgConceptMensRectangle();
+    else if (kind === 'mens_triangle') svg = svgConceptMensTriangle();
+    else if (kind === 'mens_parallelogram') svg = svgConceptMensParallelogram();
+    else if (kind === 'mens_trapezium') svg = svgConceptMensTrapezium();
+    else if (kind === 'mens_circle') svg = svgConceptMensCircle();
+    else if (kind === 'mens_sector') svg = svgConceptMensSector();
+    else if (kind === 'mens_cuboid') svg = svgConceptMensCuboid();
+    else if (kind === 'mens_cylinder') svg = svgConceptMensCylinder();
+    else if (kind === 'mens_cone') svg = svgConceptMensCone();
+    else if (kind === 'mens_sphere') svg = svgConceptMensSphere();
+    else if (kind === 'mens_compound') svg = svgConceptMensCompound();
+    if (svg) return wrapFig(svg, t('ejemplo_ilustrativo'));
+  } catch (err) { /* un fallo aqui nunca debe romper el render de la teoria */ }
+  return '';
+}
+function conceptIllustration(block, unitId, seenKinds){
+  if (!block || (block.assets && block.assets.length)) return '';
+  if (!statsUnitMatch(unitId)) return '';
+  const text = str(block.title||'') + ' ' + str(block.body||'');
+  const kind = conceptChartKind(text);
+  if (!kind) return '';
+  if (seenKinds){
+    if (seenKinds.has(kind)) return '';
+    seenKinds.add(kind);
+  }
+  try{
+    let svg = '';
+    if (kind === 'venn') svg = svgConceptVenn();
+    else if (kind === 'pie') svg = svgConceptPie();
+    else if (kind === 'bar') svg = svgConceptBar();
+    else if (kind === 'histogram') svg = svgConceptHistogram();
+    else if (kind === 'scatter') svg = svgConceptScatter();
+    else if (kind === 'cumulative') svg = svgConceptCumulative();
+    else if (kind === 'normal') svg = svgConceptNormal();
+    else if (kind === 'twoway') svg = svgConceptTwoWayTable();
+    if (svg) return wrapFig(svg, t('ejemplo_ilustrativo'));
+  } catch (err) { /* un fallo aqui nunca debe romper el render de la teoria */ }
+  return '';
+}
+
+/* --- volumen de un solido de revolucion: gira f(x) alrededor del eje OX entre
+   x=a y x=b. Se dibuja el perfil f(x) y su reflejo -f(x) (silueta del solido
+   visto de lado), con el eje OX y los limites de integracion marcados. Solo
+   se genera cuando la expresion de f(x) es una de un conjunto reducido y
+   seguro de formas (constante, lineal, x^2, x^3, raiz de x, raiz de R^2-x^2):
+   si la expresion no se reconoce con certeza, no se dibuja nada en vez de
+   arriesgarse a mostrar una curva que no es la del enunciado. Nunca se
+   intenta con giros alrededor de OY (requeriria intercambiar los ejes). */
+function parseRevolutionFn(expr, Rval){
+  expr = String(expr||'').replace(/\\text\{[^}]*\}/g,'').replace(/\\,/g,'').replace(/\s+/g,'');
+  if (/^-?\d+(\.\d+)?$/.test(expr)){ const c = parseFloat(expr); return x=>c; }
+  if (expr === 'x') return x=>x;
+  if (expr === '-x') return x=>-x;
+  let m = expr.match(/^(-?\d+(?:\.\d+)?)x$/);
+  if (m){ const k = parseFloat(m[1]); return x=>k*x; }
+  m = expr.match(/^x\^\{?(\d)\}?$/);
+  if (m){ const n = parseInt(m[1],10); return x=>Math.pow(x,n); }
+  if (/^\\?sqrt\{?x\}?$/.test(expr)) return x => x>=0?Math.sqrt(x):NaN;
+  if (/^\\?sqrt\{?R\^\{?2\}?-x\^\{?2\}?\}?$/.test(expr)){
+    return x => { const v = Rval*Rval-x*x; return v>=0?Math.sqrt(v):NaN; };
+  }
+  return null;
+}
+function parseBoundVal(s, Rval){
+  s = String(s||'').trim();
+  if (s === 'R') return Rval;
+  if (s === '-R') return -Rval;
+  const v = parseFloat(s);
+  return isNaN(v) ? null : v;
+}
+function revolutionFromText(txt){
+  if (!txt) return null;
+  if (!/\bOX\b/.test(txt)) return null;
+  if (!/girar|girando/i.test(txt)) return null;
+  const fm = txt.match(/\$\s*(?:f\(x\)|y)\s*=\s*([^$]+?)\s*\$/);
+  if (!fm) return null;
+  const im = txt.match(/entre\s*\$\s*x\s*=\s*(-?[\w.]+)\s*\$\s*y\s*\$\s*x\s*=\s*(-?[\w.]+)\s*\$/i);
+  if (!im) return null;
+  const Rval = 3;
+  const fn = parseRevolutionFn(fm[1], Rval);
+  if (!fn) return null;
+  const a = parseBoundVal(im[1], Rval), b = parseBoundVal(im[2], Rval);
+  if (a == null || b == null || !(b > a)) return null;
+  const N = 48;
+  const samples = [];
+  for (let i=0;i<=N;i++){
+    const x = a + (b-a)*i/N;
+    const y = fn(x);
+    if (!isFinite(y)) return null;
+    samples.push([x,y]);
+  }
+  const yMax = Math.max(0.5, ...samples.map(s=>Math.abs(s[1])));
+  return svgRevolution({ samples, a, b, yMax });
+}
+function svgRevolution(data){
+  const { samples, a, b, yMax } = data;
+  const width = 300, padSide = 30, padTop = 18, padBottom = 38, plotH = 160;
+  const height = padTop + plotH + padBottom;
+  const plotW = width - 2*padSide;
+  const sx = v => padSide + (v-a)/(b-a)*plotW;
+  const yRange = yMax * 1.25;
+  const sy = v => padTop + plotH/2 - (v/yRange)*(plotH/2);
+  const axisY = sy(0);
+  const defs = `<defs><marker id="adg-rev-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#24312c"/></marker></defs>`;
+  const upperPts = samples.map(([x,y]) => `${sx(x).toFixed(1)},${sy(y).toFixed(1)}`).join(' ');
+  const lowerPts = samples.map(([x,y]) => `${sx(x).toFixed(1)},${sy(-y).toFixed(1)}`).join(' ');
+  const lowerPtsRev = samples.slice().reverse().map(([x,y]) => `${sx(x).toFixed(1)},${sy(-y).toFixed(1)}`).join(' ');
+  const shade = `<polygon points="${upperPts} ${lowerPtsRev}" class="adg-tri" fill-opacity="0.55" stroke="none"/>`;
+  const curveUpper = `<polyline points="${upperPts}" fill="none" class="adg-line"/>`;
+  const curveLower = `<polyline points="${lowerPts}" fill="none" stroke="#8a978f" stroke-width="2" stroke-dasharray="5,3" stroke-linecap="round"/>`;
+  const axis = `<line x1="${padSide-6}" y1="${axisY}" x2="${width-padSide+8}" y2="${axisY}" class="adg-axis" marker-end="url(#adg-rev-arrow)"/>` +
+    `<text x="${width-padSide+2}" y="${axisY-8}" class="adg-axislabel">OX</text>`;
+  const boundA = `<line x1="${sx(a)}" y1="${padTop-4}" x2="${sx(a)}" y2="${padTop+plotH+4}" stroke="#9aa39d" stroke-width="1.3"/>` +
+    `<text x="${sx(a)}" y="${padTop+plotH+18}" class="adg-tick" text-anchor="middle">x=${numToStr(a)}</text>`;
+  const boundB = `<line x1="${sx(b)}" y1="${padTop-4}" x2="${sx(b)}" y2="${padTop+plotH+4}" stroke="#9aa39d" stroke-width="1.3"/>` +
+    `<text x="${sx(b)}" y="${padTop+plotH+18}" class="adg-tick" text-anchor="middle">x=${numToStr(b)}</text>`;
+  return `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">${defs}${shade}${curveUpper}${curveLower}${axis}${boundA}${boundB}</svg>`;
+}
+function geometryIllustration(block, unitId){
+  if (!block || (block.assets && block.assets.length)) return '';
+  const uid = unitId || '';
+  const txt = str(block.title||'') + ' ' + str(block.body||'');
+  if (!txt.trim()) return '';
+  try {
+    if (/COORD/.test(uid) && /coordinate|gradient|quadrant/i.test(txt)){
+      const svg = coordPlaneFromText(txt);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+    if (/GEOMETRY|TRIGONOMETRY/.test(uid) && /triangle/i.test(txt)){
+      const svg = triangleFromText(txt);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+    if (/MENSURATION|GEOMETRY/.test(uid) && /circle|sector|semicircle/i.test(txt)){
+      const svg = circleFromText(txt);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+  } catch (err) { /* un fallo al generar el diagrama nunca debe romper el render */ }
+  return '';
+}
+function autoDiagram(e, unitId){
+  if (e.assets && e.assets.length) return '';
+  const txt = str(e.statement||'');
+  if (!txt) return '';
+  try {
+    const uid = unitId || '';
+    if (/COORD|STATISTIC/.test(uid) || /coordinate|gradient|quadrant/i.test(txt)){
+      const svg = coordPlaneFromText(txt);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+    if ((/GEOMETRY|TRIGONOMETRY/.test(uid)) && /triangle/i.test(txt)){
+      const svg = triangleFromText(txt);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+    if ((/MENSURATION|GEOMETRY/.test(uid)) && /circle|sector|semicircle/i.test(txt)){
+      const svg = circleFromText(txt);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+    if (/INTEGRAL/.test(uid) && /girar|girando/i.test(txt)){
+      const svg = revolutionFromText(txt);
+      if (svg) return wrapFig(svg, t('diagrama_no_escala'));
+    }
+  } catch (err) { /* un fallo al generar el diagrama nunca debe romper el render */ }
+  return '';
+}
+
+/* bancos de 100-500+ ejercicios no deben renderizarse de una sola vez (eso
+   es lo que deja la pestana "pillada" mientras el navegador monta cientos de
+   bloques): cada seccion grande se reparte en tandas con un selector, y solo
+   se monta en el DOM la tanda activa. */
+const EJ_BATCH = 50;
+function viewEjercicios(el, d){
+  const uid = d.unit_id;
+  const conceptMap = buildConceptMap(d.keywords);
+  const sections = [
+    [t('ejemplos_resueltos'), d.worked_examples, null, 'we'],
+    [t('ejercicios_guiados'), d.guided_exercises, null, 'ge'],
+    [t('ejercicios'), d.exercises, null, 'ex'],
+    [t('preguntas_examen'), d.exam_questions, e => e.marks ? `<div class="marks">[${e.marks} ${t('puntos')}]</div>` : '', 'eq'],
+    [t('desafios'), d.challenge_questions, null, 'cq'],
+  ];
+  let html = '';
+  const batched = [];
+  sections.forEach(([title, arr, extra, key]) => {
+    if (!arr?.length) return;
+    html += `<h2>${title} <span class="chip">${arr.length}</span></h2>`;
+    if (arr.length > EJ_BATCH){
+      const nChunks = Math.ceil(arr.length / EJ_BATCH);
+      let bar = `<div class="ejbatchbar" data-batchbar="${key}">`;
+      for (let c = 0; c < nChunks; c++){
+        const from = c*EJ_BATCH+1, to = Math.min(arr.length, (c+1)*EJ_BATCH);
+        bar += `<button class="${c===0?'on':''}" data-batch="${key}:${c}">${from}–${to}</button>`;
+      }
+      html += bar + '</div>' + `<div data-ejcontent="${key}"></div>`;
+      batched.push({key, arr, extra});
+    } else {
+      html += arr.map(e => exBlock(e, extra, uid, conceptMap)).join('');
+    }
+  });
+  el.innerHTML = html || `<div class="empty">${t('sin_ejercicios')}</div>`;
+  function renderChunk(b, chunkIdx){
+    const target = el.querySelector(`[data-ejcontent="${b.key}"]`);
+    if (!target) return;
+    const from = chunkIdx*EJ_BATCH, to = Math.min(b.arr.length, from+EJ_BATCH);
+    target.innerHTML = b.arr.slice(from, to).map(e => exBlock(e, b.extra, uid, conceptMap)).join('');
+    typeset();
+  }
+  batched.forEach(b => renderChunk(b, 0));
+  el.querySelectorAll('[data-batch]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const [key, idxStr] = btn.dataset.batch.split(':');
+      const b = batched.find(x => x.key === key);
+      if (!b) return;
+      el.querySelectorAll(`[data-batchbar="${key}"] button`).forEach(x => x.classList.remove('on'));
+      btn.classList.add('on');
+      renderChunk(b, +idxStr);
+      try {
+        const target = el.querySelector(`[data-ejcontent="${key}"]`);
+        if (target && target.scrollIntoView) target.scrollIntoView({block:'start', behavior:'smooth'});
+      } catch(err) { /* el scroll nunca debe romper el cambio de tanda */ }
+    });
+  });
+}
+
+/* --- Vocabulario --- */
+function viewVocab(d){
+  const ks = d.keywords || [];
+  if (!ks.length) return `<div class="empty">${t('sin_vocab')}</div>`;
+  return `<div class="block kwwrap"><span class="tag">${t('palabras_clave')}</span><table class="kwtable">` +
+    ks.map(k => typeof k === 'string' ? `<tr><td>${mdi(k)}</td><td></td></tr>` : `<tr><td>${mdi(k.term)}</td><td>${mdi(k.definition||'')}</td></tr>`).join('') + '</table></div>';
+}
+
+/* --- Repaso --- */
+function viewRepaso(d){
+  let out = '';
+  const examNotes = asList(d.exam_notes), miscs = asList(d.misconceptions);
+  if (examNotes.length)
+    out += `<div class="block"><span class="tag">${t('notas_examen')}</span><ul>` +
+      examNotes.map(x => `<li>${mdi(str(x))}</li>`).join('') + '</ul></div>';
+  if (miscs.length){
+    out += `<h2>${t('conceptos_erroneos')}</h2>`;
+    miscs.forEach(m => {
+      if (typeof m === 'string') m = { incorrect_model: m };
+      out += `<div class="block"><p><strong>${t('modelo_erroneo')}</strong> ${mdi(m.incorrect_model)}</p>`;
+      if (m.correct_model) out += `<p><strong>${t('modelo_correcto')}</strong> ${mdi(m.correct_model)}</p>`;
+      if (m.why_it_appears) out += det(t('por_que_aparece'), md(m.why_it_appears));
+      if (m.diagnostic_signal) out += det(t('como_detectarlo'), md(m.diagnostic_signal));
+      if (m.remediation) out += det(t('como_corregirlo'), md(str(m.remediation)));
+      out += '</div>';
+    });
+  }
+  if (d.common_mistakes?.length){
+    out += `<h2>${t('errores_comunes')}</h2>`;
+    d.common_mistakes.forEach(m => {
+      out += `<div class="block"><p><strong>${mdi(m.mistake)}</strong></p>`;
+      if (m.why) out += `<p>${mdi(m.why)}</p>`;
+      if (m.how_to_avoid) out += `<p><strong>${t('como_evitarlo')}</strong> ${mdi(m.how_to_avoid)}</p>`;
+      out += '</div>';
+    });
+  }
+  if (d.prerequisites?.length)
+    out += `<h2>${t('requisitos_previos')}</h2>` + d.prerequisites.map(p => typeof p === 'string' ? `<div class="block"><p><strong>${mdi(p)}</strong></p></div>` :
+      `<div class="block"><p><strong>${mdi(p.statement)}</strong></p>${p.why_it_matters ? `<p>${mdi(p.why_it_matters)}</p>`:''}</div>`).join('');
+  if (d.diagnostic_items?.length){
+    out += `<h2>${t('diagnostico_previo')}</h2>`;
+    d.diagnostic_items.forEach((q,i2) => {
+      let inner = `<p><strong>${t('respuesta_esperada')}</strong> ${mdi(q.expected_answer)}</p>`;
+      (q.common_wrong_answers||[]).forEach(w => {
+        inner += `<p>✗ <em>${mdi(str(w.answer||w))}</em>${w.interpretation? ' — '+mdi(w.interpretation):''}</p>`;
+      });
+      if (q.interpretation) inner += `<p><strong>${t('que_comprueba')}</strong> ${mdi(q.interpretation)}</p>`;
+      if (q.remediation_action) inner += `<div class="callout info"><strong>${t('si_fallas')}</strong> ${mdi(q.remediation_action)}</div>`;
+      out += `<div class="q"><div class="stem">${i2+1}. ${mdi(q.question)}</div>${det(t('ver_respuesta'), inner)}</div>`;
+    });
+  }
+  return out || `<div class="empty">${t('sin_repaso')}</div>`;
+}
+
+/* ---------- helpers ---------- */
+function pretty(s){
+  return String(s).replace(/^U\d+_/,'').replace(/^mat_/,'').replace(/_/g,' ')
+    .replace(/^./, c => c.toUpperCase());
+}
+function bindGo(){
+  $main.querySelectorAll('[data-go]').forEach(el => {
+    el.addEventListener('click', () => go(el.dataset.go));
+    el.addEventListener('keydown', e => { if (e.key==='Enter') go(el.dataset.go); });
+  });
+}
+
+/* ---------- login (Supabase, email + contraseña) ----------
+   Cada alumno tiene su propia cuenta en Supabase. El usuario que se teclea
+   (p.ej. "lucas_es01") se traduce a un email interno (no hace falta que exista
+   de verdad: Supabase no envía nada, solo comprueba usuario+contraseña). */
+const AUTH_EMAIL_DOMAIN = 'nebulacursos.local';
+let SB_CLIENT = null;
+function usernameToEmail(u){ return u.trim().toLowerCase().replace(/\s+/g, '') + '@' + AUTH_EMAIL_DOMAIN; }
+function getSupabase(){
+  const cfg = window.NEBULA_SUPABASE || {};
+  if (!cfg.url || !cfg.anonKey || /^TU_SUPABASE/.test(cfg.url)) return null;
+  return window.supabase.createClient(cfg.url, cfg.anonKey);
+}
+async function supabaseLogin(){
+  const client = getSupabase();
+  if (!client) return; // supabase-config.js sin rellenar: no bloquea (desarrollo local)
+  SB_CLIENT = client;
+  const { data: { session } } = await client.auth.getSession();
+  if (session) return;
+
+  setCrumbs([]);
+  $main.innerHTML = `<form class="lock" id="authForm">
+    <h1>Nebula Cursos</h1>
+    <p>Inicia sesión para acceder a los cursos.</p>
+    <input type="text" id="authUser" autocomplete="username" aria-label="Usuario" placeholder="Usuario" required>
+    <input type="password" id="authPass" autocomplete="current-password" aria-label="Contraseña" placeholder="Contraseña" required>
+    <button class="btn" type="submit">Entrar</button>
+    <div class="lock-err" id="authErr" role="alert"></div>
+  </form>`;
+  const $form = document.getElementById('authForm'), $user = document.getElementById('authUser');
+  const $pass = document.getElementById('authPass'), $err = document.getElementById('authErr'), $btn = $form.querySelector('button');
+  $user.focus();
+  return new Promise(resolve => {
+    $form.addEventListener('submit', async e => {
+      e.preventDefault();
+      $btn.disabled = true; $err.textContent = '';
+      const { error } = await client.auth.signInWithPassword({ email: usernameToEmail($user.value), password: $pass.value });
+      if (error){
+        $btn.disabled = false; $err.textContent = 'Usuario o contraseña incorrectos.'; $pass.select(); return;
+      }
+      resolve();
+    });
+  });
+}
+
+/* ---------- control de acceso por alumno ----------
+   Qué cursos ve cada alumno se guarda en Supabase, en una tabla "student_access"
+   (una fila por alumno, con la lista de "key" de curso permitidos). La fila la
+   gestiona el profesor desde el SQL Editor de Supabase, no la app: aquí solo se
+   lee la propia fila (RLS limita cada alumno a ver únicamente la suya). */
+async function loadAllowedCourses(){
+  if (!SB_CLIENT) return null; // sin Supabase configurado: no se restringe nada
+  try {
+    const { data: { user } } = await SB_CLIENT.auth.getUser();
+    if (!user) return null;
+    const { data, error } = await SB_CLIENT.from('student_access').select('allowed_courses').eq('user_id', user.id).maybeSingle();
+    if (error) return null; // tabla todavía sin crear o fallo de red: no bloquea la web
+    return data ? data.allowed_courses : []; // sin fila para este alumno -> sin cursos
+  } catch(e){ return null; }
+}
+function applyAccessControl(allowed){
+  if (allowed == null || allowed.includes('*')) return; // null = sin restricción; '*' = acceso a todo (admin)
+  const set = new Set(allowed);
+  CAT.projects = CAT.projects.filter(p => set.has(p.key));
+}
+/* Aplica el control de acceso; si al alumno no le queda ningún curso, muestra
+   un aviso en vez del catálogo. Devuelve false cuando no hay que seguir (ya se
+   ha pintado el aviso), true cuando sí hay que renderizar el catálogo. */
+async function showCatalogOrEmpty(){
+  applyAccessControl(await loadAllowedCourses());
+  if (CAT.projects.length === 0){
+    $main.innerHTML = '<div class="empty">Tu cuenta todavía no tiene cursos asignados. Contacta con el profesor.</div>';
+    return false;
+  }
+  return true;
+}
+
+/* ---------- datos cifrados ----------
+   En la web publicada catalog.json y bundles/ no existen: se sirven cifrados en cifrado/*.bin
+   (generados con cifrar.js). En localhost se usan los JSON en claro si están; ?cifrado fuerza el modo cifrado. */
+const KEY_STORE = 'nebula_key';
+let PLAIN = ['localhost', '127.0.0.1'].includes(location.hostname) && !/[?&]cifrado\b/.test(location.search);
+let KEY = null;
+
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function decryptJSON(buf, key){
+  const bytes = new Uint8Array(buf);
+  const gz = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: bytes.subarray(0, 12) }, key, bytes.subarray(12));
+  const stream = new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'));
+  return JSON.parse(await new Response(stream).text());
+}
+async function loadJSON(file){
+  if (PLAIN) return (await fetch(file + '?v=' + Date.now())).json();
+  const r = await fetch('cifrado/' + file.replace(/\.json$/, '.bin') + '?v=' + Date.now());
+  if (!r.ok) throw new Error(r.status);
+  return decryptJSON(await r.arrayBuffer(), KEY);
+}
+function readStoredKey(){
+  try { return sessionStorage.getItem(KEY_STORE) || localStorage.getItem(KEY_STORE); } catch(e){ return null; }
+}
+function forgetKey(){
+  try { sessionStorage.removeItem(KEY_STORE); localStorage.removeItem(KEY_STORE); } catch(e){}
+}
+async function keyIsValid(key, meta){
+  try { return (await decryptJSON(b64(meta.check), key)).ok === true; } catch(e){ return false; }
+}
+
+async function unlock(){
+  const meta = await (await fetch('cifrado/meta.json?v=' + Date.now())).json();
+  const stored = readStoredKey();
+  if (stored){
+    const key = await crypto.subtle.importKey('raw', b64(stored), 'AES-GCM', true, ['decrypt']);
+    if (await keyIsValid(key, meta)) return key;
+    forgetKey();
+  }
+  setCrumbs([]);
+  $main.innerHTML = `<form class="lock" id="lockForm">
+    <h1>Nebula Cursos</h1>
+    <p>Introduce la contraseña para acceder a los cursos.</p>
+    <input type="password" id="lockPass" autocomplete="current-password" aria-label="Contraseña" required>
+    <label><input type="checkbox" id="lockRemember"> Recordar en este dispositivo</label>
+    <button class="btn" type="submit">Entrar</button>
+    <div class="lock-err" id="lockErr" role="alert"></div>
+  </form>`;
+  const $form = document.getElementById('lockForm'), $pass = document.getElementById('lockPass');
+  const $err = document.getElementById('lockErr'), $btn = $form.querySelector('button');
+  $pass.focus();
+  return new Promise(resolve => {
+    $form.addEventListener('submit', async e => {
+      e.preventDefault();
+      $btn.disabled = true; $err.textContent = '';
+      const base = await crypto.subtle.importKey('raw', new TextEncoder().encode($pass.value), 'PBKDF2', false, ['deriveKey']);
+      const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(meta.salt), iterations: meta.iter, hash: 'SHA-256' },
+        base, { name: 'AES-GCM', length: 256 }, true, ['decrypt']);
+      if (!(await keyIsValid(key, meta))){
+        $btn.disabled = false; $err.textContent = 'Contraseña incorrecta.'; $pass.select(); return;
+      }
+      const raw = btoa(String.fromCharCode(...new Uint8Array(await crypto.subtle.exportKey('raw', key))));
+      try { (document.getElementById('lockRemember').checked ? localStorage : sessionStorage).setItem(KEY_STORE, raw); } catch(e){}
+      resolve(key);
+    });
+  });
+}
+
+/* ---------- arranque ---------- */
+function addLogoutButton(){
+  const out = document.createElement('button');
+  out.className = 'lockout'; out.type = 'button'; out.textContent = 'Salir';
+  out.addEventListener('click', async () => {
+    forgetKey();
+    if (SB_CLIENT) await SB_CLIENT.auth.signOut();
+    location.hash = ''; location.reload();
+  });
+  document.querySelector('.appbar').appendChild(out);
+}
+async function start(){
+  await supabaseLogin();
+  if (SB_CLIENT) addLogoutButton();
+  if (PLAIN){
+    try {
+      const r = await fetch('catalog.json?v=' + Date.now());
+      if (r.ok){
+        CAT = await r.json();
+        if (!await showCatalogOrEmpty()) return;
+        render(); return;
+      }
+    } catch(e){}
+    PLAIN = false;
+  }
+  try { KEY = await unlock(); }
+  catch(e){ $main.innerHTML = '<div class="empty">No se pudo cargar la web. Comprueba la conexión y vuelve a intentarlo.</div>'; return; }
+  if (!SB_CLIENT) addLogoutButton();
+  $main.innerHTML = '<div class="loading">Cargando catálogo…</div>';
+  try {
+    CAT = await loadJSON('catalog.json');
+    if (!await showCatalogOrEmpty()) return;
+    render();
+  }
+  catch(e){ $main.innerHTML = '<div class="empty">No se pudo cargar el catálogo.</div>'; }
+}
+start();
+</script>
+
+</body>
+</html>
