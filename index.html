@@ -2631,6 +2631,22 @@ function forgetKey(){
 async function keyIsValid(key, meta){
   try { return (await decryptJSON(b64(meta.check), key)).ok === true; } catch(e){ return false; }
 }
+async function deriveKey(pass, meta){
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pass), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(meta.salt), iterations: meta.iter, hash: 'SHA-256' },
+    base, { name: 'AES-GCM', length: 256 }, true, ['decrypt']);
+}
+/* Contraseña del contenido guardada en Supabase (tabla app_secrets), legible
+   solo por usuarios ya logueados. Así, con el login de Supabase hecho, no
+   hace falta pedir también la contraseña de cifrado: se obtiene sola. */
+async function getContentPassword(){
+  if (!SB_CLIENT) return null;
+  try {
+    const { data, error } = await SB_CLIENT.from('app_secrets').select('value').eq('id', 'content_key').maybeSingle();
+    if (error || !data) return null;
+    return data.value;
+  } catch(e){ return null; }
+}
 
 async function unlock(){
   const meta = await (await fetch('cifrado/meta.json?v=' + Date.now())).json();
@@ -2639,6 +2655,11 @@ async function unlock(){
     const key = await crypto.subtle.importKey('raw', b64(stored), 'AES-GCM', true, ['decrypt']);
     if (await keyIsValid(key, meta)) return key;
     forgetKey();
+  }
+  const autoPass = await getContentPassword();
+  if (autoPass){
+    const key = await deriveKey(autoPass, meta);
+    if (await keyIsValid(key, meta)) return key;
   }
   setCrumbs([]);
   $main.innerHTML = `<form class="lock" id="lockForm">
@@ -2656,9 +2677,7 @@ async function unlock(){
     $form.addEventListener('submit', async e => {
       e.preventDefault();
       $btn.disabled = true; $err.textContent = '';
-      const base = await crypto.subtle.importKey('raw', new TextEncoder().encode($pass.value), 'PBKDF2', false, ['deriveKey']);
-      const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: b64(meta.salt), iterations: meta.iter, hash: 'SHA-256' },
-        base, { name: 'AES-GCM', length: 256 }, true, ['decrypt']);
+      const key = await deriveKey($pass.value, meta);
       if (!(await keyIsValid(key, meta))){
         $btn.disabled = false; $err.textContent = 'Contraseña incorrecta.'; $pass.select(); return;
       }
