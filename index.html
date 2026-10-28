@@ -690,6 +690,7 @@ async function renderLesson(i,j,k,tab){
       if (!BUNDLES[l.bundle]) BUNDLES[l.bundle] = await loadJSON(l.bundle, p.key);
       data = BUNDLES[l.bundle][l.bkey];
     }catch(e){
+      console.error('No se pudo cargar la lección', {bundle: l.bundle, course: p.key, bkey: l.bkey, error: e});
       $main.innerHTML = '<div class="empty">' + (LANG==='en' ? 'Could not load this lesson. Check your connection and try again.' : 'No se pudo cargar esta lección. Comprueba la conexión y vuelve a intentarlo.') + '</div>';
       return;
     }
@@ -2626,11 +2627,11 @@ async function getCourseKey(course){
   if (!SB_CLIENT) return null;
   try {
     const { data, error } = await SB_CLIENT.from('course_secrets').select('value').eq('course_key', course).maybeSingle();
-    if (error || !data) return null;
+    if (error || !data){ console.error('course_secrets sin fila para', course, error); return null; }
     const key = await crypto.subtle.importKey('raw', b64(data.value), 'AES-GCM', true, ['decrypt']);
     COURSE_KEYS[course] = key;
     return key;
-  } catch(e){ return null; }
+  } catch(e){ console.error('fallo obteniendo la clave de', course, e); return null; }
 }
 async function loadJSON(file, course){
   if (PLAIN) return (await fetch(file + '?v=' + Date.now())).json();
