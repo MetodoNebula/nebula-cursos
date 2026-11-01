@@ -111,7 +111,27 @@ function askPassword(prompt){
   });
 }
 
+function assertCatalogOk(){
+  const fp = path.join(ROOT, 'catalog.json');
+  let cat;
+  try { cat = JSON.parse(fs.readFileSync(fp, 'utf8')); }
+  catch (e){ throw new Error('catalog.json no es JSON valido (' + e.message + '). Aborto para no publicar un catalogo roto.'); }
+  if (!cat || !Array.isArray(cat.projects) || cat.projects.length === 0){
+    const found = cat && typeof cat === 'object' ? Object.keys(cat).join(', ') : typeof cat;
+    throw new Error('catalog.json NO tiene el formato esperado {projects:[...]} (claves: ' + found + '). '
+      + 'Probablemente otro proceso lo sobrescribio con un resumen de un solo curso. '
+      + 'Restauralo con  python3 scripts/rebuild_catalog.py  antes de cifrar. Aborto sin tocar cifrado/.');
+  }
+  const bad = cat.projects.filter(p => !p || !p.key || !Array.isArray(p.units) || p.units.length === 0);
+  if (bad.length){
+    throw new Error('catalog.json incompleto: ' + bad.length + ' proyecto(s) sin "key" o sin "units". '
+      + 'Ejecuta  python3 scripts/rebuild_catalog.py  y reintenta. Aborto sin tocar cifrado/.');
+  }
+  console.log('catalog.json OK: ' + cat.projects.length + ' cursos (' + cat.projects.map(p => p.key).join(', ') + ').');
+}
+
 async function main(){
+  assertCatalogOk();
   const newKey = process.argv.includes('--nueva-clave');
   fs.mkdirSync(path.join(OUT, 'bundles'), { recursive: true });
 
