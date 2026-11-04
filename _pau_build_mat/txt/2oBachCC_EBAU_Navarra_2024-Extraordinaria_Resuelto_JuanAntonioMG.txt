@@ -1,0 +1,790 @@
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                          Juan Antonio Martínez García
+
+      Evaluación del Bachillerato para el Acceso a la Universidad
+      Curso: 2023-2024
+      Asignatura: MATEMÁTICAS II
+
+
+
+                     Realiza cuatro preguntas de las ocho que se presentan
+
+      P1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real a y
+        resuélvelo en los casos en que sea compatible:
+                                           x + ( a2 + a ) z = 0
+                                          
+                                          
+                                           x + ( 2a − 1) y + ( a + 1) z = a
+                                          
+                                          
+                                          
+                                           ( 2a − 1) y + ( a + 1) z = 0
+          Menciona el resultado teórico empleado y justifica su uso.
+                                                                                               (2.5 puntos)
+
+
+      P2) Sean A, P y Q tres matrices cuadradas regulares tales que Q · A· P = I , donde I es la matriz
+        identidad de la misma dimensión.
+        a) Demuestra que A· P·Q· A = Q−1 · P−1
+                                                                                             (1,5 puntos)
+        b) Calcula la matriz A para el caso en que P y Q sean las siguientes:
+                                              −1 1            1 0 
+                                         P=          y Q=          
+                                              2 −1            1 2 
+                                                                                                 (1 punto)
+
+
+                                                                             x + 2z + 3 = 0
+      P3) Se consideran el plano   2 x + y − z − 5 = 0 , la recta r                           y los puntos
+                                                                             − x − y + z + 4 = 0
+      A ( 3, 2, −1) y B (1,1, −1) . Sea C la intersección entre la recta y el plano.
+          a) Demuestra que los puntos A, B y C no están alineados.                             (1.25 puntos)
+          b) Calcula el área del triángulo que conforman los tres puntos.                      (1,25 puntos)
+
+
+
+      P4) El punto P ( 4,5, 0 ) es el punto medio de un lado de un cuadrado. El lado paralelo al anterior
+                                                     2 x + 2 y + z = 0
+          está contenido en la recta de ecuación r                    . Calcula los dos vértices que
+                                                     2 x − z − 2 = 0
+          determinan este segundo lado.
+                                                                                                 (2,5 puntos)
+
+
+
+
+1 de 13                                                                        www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                       Juan Antonio Martínez García
+
+      P5) Calcula los siguientes límites:
+                 ( ln x )
+                              2
+
+          a) lim                                                                            (1.25 puntos)
+             x →+        x
+                     2x
+          b) lim x x −1                                                                     (1.25 puntos)
+              x →1
+
+
+
+
+      P6) Se considera la función f ( x ) = cos ( x ) + sin ( x ) .
+          a) Estudia la continuidad de la función en el intervalo [0, 1].                 (0,5 puntos)
+          b) Halla sus extremos relativos y absolutos en ese mismo intervalo. Enuncia el/los
+             resultado(s) teórico(s) utilizado(s), y justifica su uso.
+                                                                                               (2 puntos)
+
+      P7) Se considera la función f ( x) = 2 x 2 + 2 x + 3 .
+          a) Demuestra que la función es continua en el intervalo  −1,3 y derivable en ( −1,3) .
+                                                                                              (1.25 puntos)
+                                                                            3
+          b) Comprueba que existe un valor   ( −1,3) tal que f ´( ) =      . Enuncia el/los resultado(s)
+                                                                           2
+             teórico(s) utilizado(s), y justifica su uso.                                   (1.25 puntos)
+
+
+      P8) Encuentra los dos puntos en los que se cortan las gráficas de estas dos funciones:
+                                                                 x −1
+                                      f ( x ) = ln x y g ( x ) =
+                                                                 e −1
+        Calcula el área de la región del plano encerrada entre ambas gráficas.
+                                                                                               (2.5 puntos)
+
+
+
+
+2 de 13                                                                     www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                          Juan Antonio Martínez García
+
+
+                                             SOLUCIONES
+      P1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real a y
+        resuélvelo en los casos en que sea compatible:
+                                           x + ( a2 + a ) z = 0
+                                          
+                                          
+                                           x + ( 2a − 1) y + ( a + 1) z = a
+                                          
+                                          
+                                          
+                                           ( 2a − 1) y + ( a + 1) z = 0
+      Menciona el resultado teórico empleado y justifica su uso.                               (2.5 puntos)
+
+                                       1    0    a2 + a 
+                                                        
+      La matriz de coeficientes es A =  1 2a − 1 a + 1  y la matriz ampliada es
+                                        0 2a − 1 a + 1 
+                                                        
+              1    0      a + a 0
+                            2
+
+                                   
+      A / B =  1 2a − 1 a + 1 a 
+               0 2a − 1 a + 1 0 
+                                   
+      Utilizamos el método de Gauss para obtener un sistema triangular equivalente más sencillo.
+
+                                               Fila 2ª − Fila 1ª                   
+                        1    0    a2 + a 0                                       
+                                             1 2a − 1 a + 1 a                    
+                A / B =  1 2a − 1 a + 1 a                                       
+                                                 −1    0      − a 2
+                                                                    − a 0
+                         0 2a − 1 a + 1 0                                        
+                                             0 2a − 1 −a 2 + 1 a → Nueva fila 2ª 
+                                                                                   
+
+                                          Fila 3ª − Fila 2ª                          
+                 1    0    a2 + a 0                                                
+                                      0 2 a − 1 a + 1 0                            
+                 0 2a − 1 − a + 1 a   
+                               2
+                                                                                      
+                                            0  −2 a + 1   a 2
+                                                              − 1 − a
+                  0 2a − 1 a + 1 0                                                 
+                                      0        0       a 2
+                                                              + a − a → Nueva fila 3ª 
+                                                                                     
+
+                 1    0    a2 + a 0 
+                                       
+                 0 2a − 1 − a 2 + 1 a 
+                 0    0    a 2 + a −a 
+                 
+      Averiguamos cuando se anula la matriz de coeficientes del sistema equivalente obtenido.
+
+                                                                                      1
+       1     0     a2 + a                                2a − 1 = 0 → 2a = 1 → a =
+                                                                                      2
+        0 2a − 1 −a 2 + 1 = ( 2a − 1) ( a 2 + a ) = 0  
+                   a2 + a                               a 2 + a = 0 → a ( a + 1) = 0 →  a = 0
+        0    0
+                                                                                        
+                                                                                        a + 1 = 0 → a = −1
+                                                       1
+      Se anula cuando a = –1, a = 0 y cuando a = .
+                                                       2
+      Nos surgen 4 situaciones distintas que analizamos por separado.
+
+
+3 de 13                                                                        www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                         Juan Antonio Martínez García
+
+                                    1
+      CASO 1. a  −1, a  0 y a 
+                                    2
+          El determinante de A es no nulo, por lo cual su rango es 3, al igual que el rango de la matriz
+          ampliada y el número de incógnitas. Aplicando el teorema de Rouché el sistema es compatible
+          determinado (tiene solución única).
+          Resolvemos el sistema equivalente obtenido aplicando el método de Gauss.
+
+
+                 1    0    a2 + a 0  x +               ( a 2 + a ) z = 0 a  −1
+                                                                                   
+                  0 2a − 1 − a + 1 a  
+                               2
+                                           ( 2a − 1) y + (1 − a 2 ) z = a   a  0  
+                 0         a 2 + a −a                                            
+                      0
+                                                       ( a 2 + a ) z = −a  a  1 
+                                                                                   2 
+
+
+                                                      
+                                                      
+                   x+               ( a2 + a ) z = 0  x +             ( a2 + a )
+                                                                                   −1
+                                                                                       =0 
+                                                                                           
+                                                                                 a +1     
+                     ( 2a − 1) y + (1 − a 2 ) z = a                                      
+                                                                                    −1
+                          −a           −a
+                                                      
+                                                   −1     ( 2a − 1) y + (1 − a )
+                                                                               2
+                                                                                        = a
+                                                                                           
+                    z= 2         =             =                                   a +1
+                         a + a a ( a + 1) a + 1       
+                                                      
+
+
+                                    −a 2 − a                  −a ( a + 1)             
+                     x+                      =0  x+                       =0          
+                                      a +1                       a +1
+                                                                                     
+                                        a2 −1                     ( a − 1)( a + 1)
+                                                                                    = a
+                          ( 2a − 1) y +       =a
+                                                    ( 2a − 1) y +
+                                        a +1                            a +1          
+
+
+                                                                x=a        
+                     x−a =0                 x − a = 0                  
+                                                                      
+                   ( 2a − 1) y + a − 1 = a  ( 2a − 1) y = 1 y =   1
+                                                                           
+                                                                    2a − 1 
+
+                                        1          −1
+          La solución es x = a, y =          , z=      .
+                                      2a − 1      a +1
+      CASO 2. a = −1
+                                                                          A/ B
+                                                                                   
+                                                                   1 0 0 0 
+                                                                                  
+          La matriz ampliada equivalente obtenida queda A / B =  0 −3 0 −1
+                                                                   0 0 0 1 
+                                                                                  
+                                                                        A         
+          Por lo que el rango de A es 2 y el de la ampliada es 3. Al tener rangos distintos por el teorema
+          de Rouché el sistema es incompatible (sin solución).
+          OTRA FORMA DE RAZONAR LA INCOMPATIBLIDAD DEL SISTEMA
+          El sistema equivalente triangular queda:
+
+
+
+
+4 de 13                                                                       www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                       Juan Antonio Martínez García
+
+
+                                                   x = 0
+                                                         
+                                               −3 y = −1 ¡IMPOSIBLE!
+                                                    0 = 1
+
+          El sistema es incompatible (no tiene solución)
+      CASO 3. a = 0
+        La matriz ampliada queda:
+                                                               A/ B
+                                                                     
+                                                         1 0 0 0
+                                                                    
+                                                 A / B =  0 −1 1 0 
+                                                         0 0 0 0
+                                                                    
+                                                             A      
+          Por lo que el rango de A es 2, al igual que el de la ampliada A/B. Los rangos son iguales, pero
+          menores que el número de incógnitas (3). Por el teorema de Rouché el sistema es compatible
+          indeterminado (infinitas soluciones).
+          Resolvemos el sistema a partir del sistema triangular equivalente obtenido.
+
+                                                             x = 0
+                                      x=0         x = 0 
+                                                         y = ;  
+                                      − y + z = 0 z = y  
+                                                             z = 
+                     1
+      CASO 4. a =
+                     2
+          La matriz ampliada queda:
+
+                                       Fila 3ª − Fila 2ª                                        
+                                                                                         A/ B
+
+                  1 0 3/ 4    0                                               1 0   3 /  4 0  
+                                    0 0 3 / 4 −1/ 2                                           
+          A / B =  0 0 3 / 4 1/ 2                                           0 0 3 / 4 1/ 2 
+                   0 0 3 / 4 −1/ 2  0 0 −3 / 4 −1/ 2                       0 0 0           −1 
+                                    0 0        0       −1 → Nueva fila 3ª                     
+                                                                                    A           
+          Por lo que el rango de A es 2 y el de la ampliada es 3. Al tener rangos distintos por el teorema
+          de Rouché el sistema es incompatible (sin solución).
+                                            1
+      Resumiendo: Si a  −1, a  0 y a       el sistema es compatible determinado siendo su solución
+                                            2
+                   1          −1                     1
+      x = a, y =        , z=      , si a = −1 o a = el sistema es incompatible y si a = 0 el sistema
+                 2a − 1      a +1                    2
+                                                            x = 0
+                                                            
+      es compatible indeterminado siendo sus soluciones  y =  ;   .
+                                                            z = 
+                                                            
+
+
+
+
+5 de 13                                                                     www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                            Juan Antonio Martínez García
+
+      P2) Sean A, P y Q tres matrices cuadradas regulares tales que Q · A· P = I , donde I es la matriz
+         identidad de la misma dimensión.
+      a) Demuestra que A· P·Q· A = Q−1 · P−1                                              (1,5 puntos)
+      b) Calcula la matriz A para el caso en que P y Q sean las siguientes:
+                  −1 1             1 0 
+             P=           y Q=                                                       (1 punto)
+                  2 −1             1 2 
+
+      a) Partimos de la igualdad Q · A· P = I .
+
+                             Q · A· P = I  Q −1 ·Q · A· P = Q −1· I = Q −1  A· P = Q −1 
+                                                                                             
+                             Q · A· P = I  Q · A· P · P −1 = I · P −1 = P −1  Q · A = P −1 
+
+
+                              A· P ·Q · A = Q −1 · P −1
+
+      b) La matriz A debe ser una matriz cuadrada de orden 2 que cumple Q · A· P = I .
+
+                                        a b   1 0  a b  −1 1   1 0 
+                   Q · A· P = I   A =                      =     
+                                        c d   1 2  c d  2 −1  0 1 
+
+
+                     a         b  −1 1   1 0 
+                                       =     
+                     a + 2c b + 2d  2 −1  0 1 
+
+                                                                       − a + 2b = 1
+                           − a + 2b               a −b                 
+                                                              1 0  a − b = 0
+                                                           =                           
+                     −a − 2c + 2b + 4d      a + 2c − b − 2d   0 1  −a + 2b − 2c + 4d = 0
+                                                                       a − b + 2c − 2d = 1
+
+
+                    −a + 2b = 1
+                    a = b                  −b + 2b = 1 → b = 1 → a = 1
+                                           
+                                         −b + 2b − 2c + 4d = 0       
+                    −a + 2b − 2c + 4d = 0 b − b + 2c − 2d = 1
+                    a − b + 2c − 2d = 1   
+
+
+                    1 − 2c + 4d = 0 −2c + 4d = −1
+                                                 −1 − 2 d + 4 d = −1  2 d = 0 
+                     2c − 2 d = 1    2c = 1 + 2 d
+
+
+                                                    1      1 1
+                    d = 0  2c − 0 = 1  c =          A=       
+                                                    2     1/ 2 0 
+
+                                              1 1
+          La matriz A tiene la expresión A =        .
+                                             1/ 2 0 
+
+
+
+6 de 13                                                                          www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                                Juan Antonio Martínez García
+
+
+                                                                             x + 2z + 3 = 0
+      P3) Se consideran el plano   2 x + y − z − 5 = 0 , la recta r                           y los puntos
+                                                                             − x − y + z + 4 = 0
+      A ( 3, 2, −1) y B (1,1, −1) . Sea C la intersección entre la recta y el plano.
+      a) Demuestra que los puntos A, B y C no están alineados.                                       (1.25 puntos)
+      b) Calcula el área del triángulo que conforman los tres puntos.                                (1,25 puntos)
+
+      a) Hallamos las coordenadas del punto C.
+
+                          x + 2z + 3 = 0       x + 2z + 3 = 0         x + 2z + 3 = 0 
+                       r                                                                 
+                          − x − y + z + 4 = 0   − x − y + z + 4 = 0   − x + z + 4 = y  
+                         2 x + y − z − 5 = 0  2 x + y − z − 5 = 0  2 x + y − z − 5 = 0 
+
+
+                           x + 2z + 3 = 0               x + 2z + 3 = 0    
+                                                                           1+ 2z + 3 = 0 
+                           2 x − x + z + 4 − z − 5 = 0  x − 1 = 0 → x = 1 
+
+
+                                                −4
+                        2 z = −4  z =            = −2  y = −1 − 2 + 4 = 1  C (1,1, −2 )
+                                                 2
+
+          Las coordenadas del punto C son C (1,1, −2 ) .
+          Si los puntos A, B y C están alineados los vectores AB y AC deben tener coordenadas
+          proporcionales.
+
+                     A ( 3, 2, −1) 
+                                     AC = (1,1, −2 ) − ( 3, 2, −1) = ( −2, −1, −1) −2 −1 −1
+                     B (1,1, −1)                                                     =  
+                                     AB = (1,1, −1) − ( 3, 2, −1) = ( −2, −1, 0 )   −2 −1 0
+                     C (1,1, −2 ) 
+
+          Como los vectores no tienen coordenadas proporcionales los tres puntos no están alineados.
+
+      b) El área del triángulo ABC es la mitad del módulo del producto vectorial de los vectores AB y
+         AC .
+
+                                                        i  j k
+                     AB = ( −2, −1, 0 ) 
+                                           AB  AC = −2 −1 0 = i + 0 + 2k − 2k − 2 j − 0 =
+                     AC = ( −2, −1, −1) 
+                                                       −2 −1 −1
+
+
+                     = i − 2 j = (1, −2, 0 )
+
+
+                                       AB  AC         12 + ( −2 ) + 02
+                                                                 2
+                                                                               5 2
+                     Área ABC =                    =                      =     u
+                                            2                2                2
+
+                                                 5
+          El área del triángulo ABC es             unidades cuadradas.
+                                                2
+
+
+7 de 13                                                                              www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                            Juan Antonio Martínez García
+
+
+      P4) El punto P ( 4,5, 0 ) es el punto medio de un lado de un cuadrado. El lado paralelo al anterior
+                                                     2 x + 2 y + z = 0
+          está contenido en la recta de ecuación r                    . Calcula los dos vértices que
+                                                     2 x − z − 2 = 0
+          determinan este segundo lado.                                                       (2,5 puntos)
+
+      La situación planteada es la del dibujo.
+
+
+
+
+      Nos piden hallar las coordenadas de los puntos A y B.
+      Hallamos las ecuaciones paramétricas de la recta r
+
+                         2 x + 2 y + z = 0  z = −2 x − 2 y
+                       r                                  2x + 2x + 2 y − 2 = 0 
+                         2 x − z − 2 = 0   2 x − z − 2 = 0
+
+                        4x + 2 y − 2 = 0  2x + y −1 = 0  y = 1− 2x 
+
+
+                                                                                   x = 
+                                                                                   
+                        z = −2 x − 2 (1 − 2 x ) = −2 x − 2 + 4 x = −2 + 2 x  r :  y = 1 − 2
+                                                                                    z = −2 + 2
+                                                                                   
+
+      Hallamos la proyección ortogonal del punto P sobre la recta r.
+
+
+
+
+      El punto P´ pertenece a la recta y tiene coordenadas P ´(  ,1 − 2 , −2 + 2 ) . El vector PP ´ es
+      perpendicular al vector director de la recta vr = (1, −2, 2 ) y su producto escalar debe ser nulo.
+
+
+8 de 13                                                                         www.ebaumatematicas.com
+   EvAU 2024 Extraordinaria Matemáticas II en Navarra                                  Juan Antonio Martínez García
+
+
+                  PP ´ = (  ,1 − 2 , −2 + 2 ) − ( 4,5, 0 ) = (  − 4, −4 − 2 , −2 + 2 )
+
+
+                  PP ´ = (  − 4, −4 − 2 , −2 + 2 ) 
+                                                      
+                  vr = (1, −2, 2 )                       (  − 4, −4 − 2 , −2 + 2 )(1, −2, 2 ) = 0 
+                                                       
+                  PP ´ ⊥ vr  PP ´·vr = 0              
+
+
+                    − 4 + 8 + 4 − 4 + 4 = 0  9 = 0   = 0  P ´ ( 0,1, −2 )
+
+
+      Hallamos la longitud del lado del cuadrado obteniendo el módulo del vector PP ´ .
+
+                                    PP ´ = ( 0,1, −2 ) − ( 4,5, 0 ) = ( −4, −4, −2 )
+
+
+                                    Lado =      ( −4 ) + ( −4 ) + ( −2 ) = 6 unidades
+                                                     2         2         2
+
+
+
+
+      Si A es uno de los vértices del cuadrado pertenece a la recta tiene coordenadas
+      A ( ,1 − 2 , −2 + 2 ) . Además, la distancia de A a P ´ es la mitad de la longitud del lado (3).
+
+                               AP ´ = ( 0,1, −2 ) − ( ,1 − 2 , −2 + 2 ) = ( − , 2 , 2 )
+
+
+                                                                                   3 
+                               AP ´ =    ( − ) + ( 2 ) + ( 2 ) = 9 2 = 
+                                                2         2         2
+                                                                                        
+                                                                                   −3  
+                              d ( A, P ´) = 3                                           
+                                                                                        
+
+
+                               3 = 3 →  = 1 → A (1,1 − 2, −2 + 2 ) → A (1, −1, 0 )
+                              
+                                −3 = 3 →  = −1 → B ( −1,3, −4 )
+
+      Los vértices del cuadrado situados en la recta son A(1,–1,0) y B(–1,3,–4).
+      Comprobamos que P´ es el punto medio del segmento AB.
+
+                                         (1, –1,0) + ( –1,3, –4) = 0,1, −2 = P´
+                                                                  (       )
+                                                    2
+
+
+
+
+9 de 13                                                                                www.ebaumatematicas.com
+  EvAU 2024 Extraordinaria Matemáticas II en Navarra                                                       Juan Antonio Martínez García
+
+     P5) Calcula los siguientes límites:
+            ( ln x )
+                              2
+
+     a) lim                                                                                                                   (1.25 puntos)
+           x →+          x
+                   2x
+                   x −1
+     b) lim x                                                                                                                 (1.25 puntos)
+           x →1
+
+
+
+     a) Utilizamos la regla de L´Hôpital.
+                                                                                                            1
+                         ( ln x )                                       2 ln x ·
+                                       2
+                                                                                x = lim 4 x ln x =
+                     lim          = = Indeterminación (L´Hôpital) = lim
+                    x →+         x                                                          x →+    1        x →+     x
+                                                                                                      2 x
+
+                                                                            1
+                                                                          4
+                            4 ln x                                                8 x
+                    = lim         = = Indeterminación (L´Hôpital) = lim x = lim        =
+                      x →+    x                                   x →+  1  x →+ x
+
+                                                                          2 x
+
+                                8  8
+                    = lim         = = 0
+                          x →+  x 
+
+     b) Tomamos logaritmo neperiano.
+
+                                              2x                        2x
+                                                                                             2x
+                                  lim x x −1 = L  lim ln x x −1 = ln L  lim                    ln x = ln L  ...
+                                  x →1                       x →1                    x →1   x −1
+
+
+                                              2x               2 x ln x 0
+                                  lim             ln x = lim           = = Indeterminación (L´Hôpital) =
+                                      x →1   x −1         x →1  x −1    0
+
+                                                                 1
+                                                  2 ln x + 2 x
+                                  = lim                          x = lim 2 ln x + 2 = 2 ln1 + 2 = 2
+                                           x →1         1             x →1
+
+
+
+
+                                  ...  2 = ln L  L = e 2
+
+                                                                              2x
+           Hemos obtenido el valor del límite: lim x x −1 = e2
+                                                                       x →1
+
+
+
+
+10 de 13                                                                                                   www.ebaumatematicas.com
+  EvAU 2024 Extraordinaria Matemáticas II en Navarra                                    Juan Antonio Martínez García
+
+
+     P6) Se considera la función f ( x ) = cos ( x ) + sin ( x ) .
+     a) Estudia la continuidad de la función en el intervalo [0, 1].                    (0,5 puntos)
+     b) Halla sus extremos relativos y absolutos en ese mismo intervalo. Enuncia el/los resultado(s)
+        teórico(s) utilizado(s), y justifica su uso.                                    (2 puntos)
+
+     a) La función es suma de funciones continuas y es una función continua en el intervalo [0, 1].
+
+     b) La función f(x) es continua y derivable en el intervalo [0, 1].
+           Podemos aplicar el teorema de Weierstrass que nos dice que si la función es continua en un intervalo
+           existen puntos dentro del intervalo donde la función alcanza su máximo y mínimo absolutos.
+           También podemos aplicar el teorema de Fermat que nos dice que si una función derivable tiene un
+           extremo relativo en un intervalo en dicho punto la derivada se anula.
+
+           Utilizamos la derivada para encontrar los puntos críticos de la función.
+
+                       f ( x ) = cos ( x ) + sin ( x )  f ´ ( x ) = − sin ( x ) +  cos ( x )
+
+
+                       f ´ ( x ) = 0  − sin ( x ) +  cos ( x ) = 0  − sin ( x ) + cos ( x ) = 0 
+
+
+                                                   0  x  1              1
+                        cos ( x ) = sin ( x )              x =  x =
+                                                   0   x        4      4
+
+           Averiguamos si el punto crítico hallado es máximo o mínimo relativo sustituyendo su valor en
+           la segunda derivada.
+
+                      f ´ ( x ) = − sin ( x ) +  cos ( x )  f ´´ ( x ) = − 2 cos ( x ) −  2 sin ( x ) 
+
+
+                            1                                2       2
+                      f ´´   = − 2 cos   −  2 sin   = − 2    − 2    = − 2 2  0
+                            4            4           4        2       2
+
+                                                                   1
+           Al ser la segunda derivada negativa sabemos que en x =      hay un máximo relativo.
+                                                                   4
+           Valoramos la función en los extremos del intervalo y en el punto crítico.
+
+                                        f ( 0 ) = cos ( 0 ) + sin ( 0 ) = 1
+
+
+                                          1                 2    2
+                                        f   = cos   + sin   =   +    = 2
+                                          4       4       4 2     2
+
+
+                                        f () = cos ( ) + sin ( ) = −1 + 0 = −1
+
+                                                           1    
+           La función tiene un máximo absoluto en el punto  , 2  y un mínimo absoluto en (1, −1) .
+                                                           4    
+
+
+
+
+11 de 13                                                                                www.ebaumatematicas.com
+  EvAU 2024 Extraordinaria Matemáticas II en Navarra                                Juan Antonio Martínez García
+
+
+     P7) Se considera la función f ( x) = 2 x 2 + 2 x + 3 .
+     a) Demuestra que la función es continua en el intervalo  −1,3 y derivable en ( −1,3) .
+                                                                                                         (1.25 puntos)
+                                                                                   3
+     b) Comprueba que existe un valor   ( −1,3) tal que f ´( ) =                  . Enuncia el/los resultado(s)
+                                                                                  2
+           teórico(s) utilizado(s), y justifica su uso.                             (1.25 puntos)
+
+     a) Comprobamos que el radicando es positivo en el intervalo  −1,3 .
+
+
+                                                      −2  22 − 4 ( 2 )( 3)
+                                                                      −2  −20
+                            2 x2 + 2x + 3 = 0  x =                           == No existe
+                                                       4                  4
+           El polinomio no cambia de signo en el intervalo  −1,3 . Tomamos 0   −1,3 y la expresión
+           del radicando toma el valor 3 > 0.
+           El radicando es positivo en el intervalo  −1,3 .
+           La función es suma de funciones continuas y composición de funciones continuas.
+           La función es continua en  −1,3 . La función es derivable en el intervalo ( −1,3) por ser
+           composición de funciones derivables.
+
+     b) Utilizamos el teorema del valor medio.
+        Sea f continua en  a, b  y derivable en ( a, b ) entonces existe un valor c  ( a, b ) tal que
+                        f (b) − f ( a )
+           f ´( c ) =                   .
+                            b−a
+
+           La función f ( x) = 2 x 2 + 2 x + 3 en el intervalo  −1,3 cumple las condiciones del teorema
+                                                                                  f ( 3) − f ( −1)
+           del valor medio, por lo que existe   ( −1,3) tal que f ´ ( ) =                       .
+                                                                                      3 − ( −1)
+
+
+                              f ( 3) − f ( −1)   2·32 + 2·3 + 3 − 2 ( −1) + 2 ( −1) + 3 3 3 − 3
+                                                                              2
+                                                                                                   3
+                   f ´ ( ) =                  =                                       =        =
+                                  3 − ( −1)                       4                        4      2
+
+                                                                                                        3
+           Por lo que queda demostrado que existe un valor   ( −1,3) tal que f ´( ) =                  .
+                                                                                                       2
+
+
+
+
+12 de 13                                                                           www.ebaumatematicas.com
+  EvAU 2024 Extraordinaria Matemáticas II en Navarra                             Juan Antonio Martínez García
+
+     P8) Encuentra los dos puntos en los que se cortan las gráficas de estas dos funciones:
+                                                                    x −1
+                                         f ( x ) = ln x y g ( x ) =
+                                                                    e −1
+     Calcula el área de la región del plano encerrada entre ambas gráficas.             (2.5 puntos)
+
+     Hallamos los puntos de corte de ambas gráficas.
+
+                                                                       x −1
+                                                                ln x =      = 0 → x =1
+                                                          x −1         e −1
+                               f ( x ) = g ( x )  ln x =     
+                                                          e −1         x −1
+                                                                 ln x =      =1→ x = e
+                                                               
+                                                                       e −1
+
+     El área se encuentra entre x = 1 y x = e.
+                                                                                             2 −1
+     Tomando un valor x = 2 entre 1 y e tenemos que f ( 2 ) = ln 2 0.69 y g ( 2 ) =               0.58 .
+                                                                                             e −1
+     Tenemos que f ( x )  g ( x ) en el intervalo (1, e).
+     El valor del área es la integral definida entre 1 y e de f(x) – g(x).
+                     e
+                            x −1
+             Área =
+                                        e          1 e
+                                 dx =  ln xdx −
+                                                 e − 1 1
+                    ln x −                               x − 1dx = ...
+                   1       e −1       1
+
+
+
+
+                         Integración por partes 
+                                                 
+                                            1                1
+               ln xdx =  u  = ln x → du  =
+                                             x
+                                               dx  = x ln x −  xdx = x ln x −  dx = x ln x − x + C
+                                                               x
+                                                 
+                          dv = dx  → v = x      
+
+                                                     e
+                                       1  x2    
+             ... =  x ln x − x 1 −          − x =
+                               e
+                                          
+                                     e −1  2    1
+
+
+                                                  1   e2      12              1  e2  1
+             =  e ln e − e  − 1·ln1 − 1 −            − e  −  − 1  = 1 −       −e+  =
+                                                e −1   2       2            e −1  2  2
+
+
+                                          1 ( e − 1)
+                                                           2
+                    1 e 2 − 2e + 1                        e −1 3 − e
+             = 1−      ·           = 1−      ·       = 1−     =                 0.14 u 2
+                  e −1      2           e −1    2           2    2
+
+                                                                                             3−e
+     El área de la región del plano encerrada entre ambas gráficas tiene un valor de                 0.14
+                                                                                              2
+     unidades cuadradas.
+
+
+
+
+13 de 13                                                                         www.ebaumatematicas.com
+

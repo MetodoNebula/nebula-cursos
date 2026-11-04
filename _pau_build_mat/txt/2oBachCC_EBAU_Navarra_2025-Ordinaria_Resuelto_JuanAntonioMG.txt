@@ -1,0 +1,914 @@
+   PAU 2025 Ordinaria Matemáticas II en Navarra                              Juan Antonio Martínez García
+
+      Prueba de Acceso a la Universidad
+      Curso: 2024-2025
+      Asignatura: MATEMÁTICAS II
+
+
+
+                 Elige una pregunta de cada bloque P, A, B y C y respóndelas.
+      P1) Para la realización de un trabajo se precisan de 80 horas haciendo uso de una sola máquina.
+        Cada máquina en funcionamiento genera unos gastos de 10 euros por puesta en marcha y de
+        otros 5 euros por cada hora de uso. Sabiendo además que por cada hora que dure el trabajo hay
+        que pagar 18 euros a un único operario que supervisa la tarea, calcula el número de máquinas
+        a usar para que el gasto sea mínimo. Justifica su condición de mínimo. (Observación: el tiempo
+        necesario para realizar el trabajo es inversamente proporcional al número de máquinas
+        empleadas). (2,5 puntos)
+
+
+
+                                                 
+      P2) Siendo p ( t ) = 0.15 + sin 2  ·t ·cos  ·t  el precio del kilowatio/hora de la luz doméstica
+                                        2        2 
+      entre los instantes t0 = 0 y t1 = 1 :
+      (a) Calcula los instantes en los que el precio ha sido máximo y en los que ha sido mínimo.
+          (1,25 puntos)
+      (b) Calcula el precio medio p de la luz entre los instantes t0 = 0 y t1 = 1 , sabiendo que el valor
+         medio de una función continua f en el intervalo [a, b] (a < b) es:                   (1.25 puntos)
+                                                            b
+                                                       1
+                                                              f ( x ) dx
+                                                     b − a a
+                                                 f =
+
+
+      Observación: Recuerda la necesidad de trabajar en radianes.
+
+
+
+      A1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real m y
+        resuélvelo en los casos en que sea compatible:
+                                       ( m2 − 3m ) x − my + 2mz = 3
+                                       
+                                        2
+                                       ( m − 3m ) x + 3 y + 3mz = m + 9
+                                       
+                                       ( 3m − m ) x + my − mz = 0
+                                                 2
+
+
+        Menciona el resultado teórico empleado y justifica su uso. (2,5 puntos)
+
+                                                                     1
+      A2) Sean A y B dos matrices cuadradas 3×3 tales que A =          y B = 2 . Calcula |C| sabiendo que
+                                                                     4
+          C = 2·( A· Bt ) ·( Bt )
+                         2          −1
+
+
+                                                                                                (2,5 puntos)
+
+
+
+
+1 de 16                                                                      www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                            Juan Antonio Martínez García
+
+      B1) Calcula la ecuación continua de la recta t que pasa por el punto P(2, 0,−1) y corta a las
+        siguientes rectas:                                                                (2,5 puntos)
+                             2 x + y − 3z − 6 = 0                   x +1 y z + 2
+                          s                                   r       = =
+                             2 x − 3z − 8 = 0                         2   1      1
+
+
+
+      B2) Un cuadrado tiene dos vértices consecutivos A(1, 0,−1) y B(1, 4, 2) y los otros dos vértices
+        están contenidos en la recta que pasa por el punto P(6,−4,−4).
+        (a) Calcula la ecuación de dicha recta.                                            (0,5 puntos)
+        (b) Calcula la ecuación del plano perpendicular al segmento AB que pasa por A. (0,75
+        puntos)
+        (c) Calcula los otros dos vértices del cuadrado.                                  (1,25 puntos)
+
+
+                              
+      C1) Sea f ( x ) = cos  · x ·ln ( x 2 + x − 5) .
+                             2 
+      a) Demuestra que f es continua en [2, 3].                                            (0,75 puntos)
+      b) Demuestra que existe un punto c en (2, 3) tal que f ′(c) = 0. Enuncia el resultado teórico
+         utilizado, y justifica su uso.                                                    (1,75 puntos)
+
+
+                                            3x3
+      C2) Se considera la función f ( x ) = 2   . Estudia sus asíntotas y simetrías.
+                                           x −4
+         Estudia la aproximación de la función a sus asíntotas verticales.                 (2,5 puntos)
+
+
+
+
+2 de 16                                                                    www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                                      Juan Antonio Martínez García
+
+
+                                                 SOLUCIONES
+
+      P1) Para la realización de un trabajo se precisan de 80 horas haciendo uso de una sola máquina.
+        Cada máquina en funcionamiento genera unos gastos de 10 euros por puesta en marcha y de
+        otros 5 euros por cada hora de uso. Sabiendo además que por cada hora que dure el trabajo hay
+        que pagar 18 euros a un único operario que supervisa la tarea, calcula el número de máquinas
+        a usar para que el gasto sea mínimo. Justifica su condición de mínimo. (Observación: el tiempo
+        necesario para realizar el trabajo es inversamente proporcional al número de máquinas
+        empleadas). (2,5 puntos)
+
+      Llamamos “x” al número de máquinas que se usan.
+                                                                            90
+      Como 1 máquina tarda 80 horas, con 2 máquinas tardaremos                 = 45 horas y si utilizamos “x”
+                                                                             2
+                             90
+      máquinas tardaremos       horas en realizar el trabajo.
+                              x
+      Hallamos la expresión de la función gasto G(x) que depende del número de máquinas en uso.
+      Cada máquina en funcionamiento genera unos gastos de 10 euros por puesta en marcha y de
+                                                              80
+      otros 5 euros por cada hora de uso → G ( x ) = 10 x + 5 x = 10 x + 400 .
+                                                               x
+      Hay que sumarle el gasto del operario que cobra 18 euros por hora.
+                                                         80 1440
+                                G ( x ) = 10 x + 400 + 18 =        + 10 x + 400
+                                                          x      x
+
+      Hallamos la derivada de la función y vemos cuando se anula.
+
+                                        1440                            −1440
+                             G ( x) =        + 10 x + 400  G ´ ( x ) =       + 10
+                                          x                               x2
+
+                                              −1440           1440
+                             G ´( x ) = 0        2
+                                                    + 10 = 0  2 = 10  1440 = 10 x 2 
+                                                x              x
+
+                                        1440
+                              x2 =          = 144  x = 144 = 12
+                                         10
+
+      Como estamos hablando de número de máquinas no nos sirve el valor negativo de la raíz.
+      Sustituimos x = 12 en la segunda derivada para decidir si es máximo o mínimo.
+
+                        −1440                                                  2880              2880
+           G ´( x ) =       2
+                              + 10 = −1440 x −2 + 10  G ´´ ( x ) = 2880 x −3 = 3  G ´´ (12 ) =      0
+                          x                                                     x                 123
+
+      Como la segunda derivada toma valor positivo podemos afirmar que en x = 12 hay un mínimo
+      relativo de la función gasto.
+      Con 12 máquinas se consigue un mínimo gasto.
+
+
+
+
+3 de 16                                                                              www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                                     Juan Antonio Martínez García
+
+
+                                                 
+      P2) Siendo p ( t ) = 0.15 + sin 2  ·t ·cos  ·t  el precio del kilowatio/hora de la luz doméstica
+                                        2        2 
+      entre los instantes t0 = 0 y t1 = 1 :
+      (a) Calcula los instantes en los que el precio ha sido máximo y en los que ha sido mínimo.
+          (1,25 puntos)
+      (b) Calcula el precio medio p de la luz entre los instantes t0 = 0 y t1 = 1 , sabiendo que el valor
+         medio de una función continua f en el intervalo [a, b] (a < b) es:                   (1.25 puntos)
+                                                            b
+                                                       1
+                                                              f ( x ) dx
+                                                     b − a a
+                                                 f =
+
+
+      Observación: Recuerda la necesidad de trabajar en radianes.
+
+      a) Derivamos la función y averiguamos cuando se anula.
+
+                                               
+              p ( t ) = 0.15 + sin 2  ·t  ·cos  ·t  
+                                     2         2 
+
+                                                                      
+              p ´ ( t ) = 2sin  ·t  cos  ·t  ·cos  ·t  − sin 2  ·t  ·sin  ·t  
+                                2        2 2       2            2         2 2
+
+                                                                                         
+              p ´( t ) =     sin  ·t   2 cos 2  ·t  − sin 2  ·t    sin 2  ·t  = 1 − cos 2  ·t   
+                            2      2            2             2            2                 2 
+
+
+                                                                                     
+              p ´( t ) =     sin  ·t   2 cos 2  ·t  − 1 + cos 2  ·t   = sin  ·t  3cos 2  ·t  − 1
+                            2      2            2                 2  2        2          2  
+
+
+                                                  
+              p ´( t ) = 0       sin  ·t  3cos 2  ·t  − 1 = 0 
+                                2      2          2  
+
+
+                                  
+                                2 ·t = 0 → t = 0
+               sin  ·t  = 0 → 
+                2                  ·t =  → t = 2
+                                    2
+               
+                                                              1              1
+              3cos 2  ·t  − 1 = 0 → 3cos 2  ·t  = 1 → cos 2  ·t  = → cos  ·t  =
+                      2                       2               2  3        2      3
+               
+               →  ·t = cos −1  1  → t = 2 cos −1  1  = 0.60817
+                2                3                   3
+                                                         
+               
+               
+
+          Tenemos dos extremos relativos. Valoramos la función en los extremos del intervalo y en
+          estos dos valores y determinamos los valores máximo y mínimo del precio.
+
+
+
+4 de 16                                                                             www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                                     Juan Antonio Martínez García
+
+
+                                                                                 
+                                       p ( 0 ) = 0.15 + sin 2  ·0  ·cos  ·0  = 0.15
+                                                              2         2          
+                                                                 1 1                 
+                                       p ( 0.60817 ) = 0.15 + 1 −  ·      = 0.5349 
+                                                                 3 3                  
+                                                                                  
+                                       p (1) = 0.15 + sin 2  ·1 ·cos  ·1 = 0.15 
+                                                             2        2             
+
+                                                   2         1
+          El valor máximo se produce en t =          cos −1    = 0.60817 y el mínimo se produce en t0 = 0
+                                                             3
+          y t1 = 1 .
+
+      b) Calculamos lo pedido.
+
+                                                                                  
+                                                          1
+                                                          
+                                            1
+                                       1
+                                   p=       p ( t ) dt =  0.15 + sin 2  ·t ·cos  ·t  dt
+                                      1− 0 0              0             2        2 
+
+          Calculamos primero la integral indefinida.
+
+                                    2                           2            
+                          0.15 + sin  ·t  ·cos  ·t  dt = 0.15t +  sin  ·t ·cos  ·t  dt =
+                                      2        2                      2        2 
+
+
+                           Cambio de variable                                                 
+                                                                                              
+                         =                                                     2 =
+                           sin  2 ·t  = x → dx = 2 cos  2 ·t  dt → cos  2 ·t  dt =  dx 
+                                                                                        
+
+
+                                    2 2            2 x3            2        
+                         = 0.15t +  x dx = 0.15t +      = 0.15t +    sin 3  ·t  + C
+                                                   3            3       2 
+
+          Lo aplicamos al cálculo de la integral definida.
+
+                                                                                             1
+                                                                               
+                             1
+                                                                           2
+                       p =  0.15 + sin 2  ·t  ·cos  ·t  dt = 0.15t +    sin 3  ·t   =
+                           0             2         2                 3        2 0
+
+
+                                   2                       2                      2
+                       = 0.15·1 +    sin 3  ·1  − 0.15·0 +    sin 3  ·0   = 0.15 +         0.3622
+                                  3        2              3        2             3
+
+          El precio medio p de la luz entre los instantes t0 = 0 y t1 = 1 es de 0.3622 por kilowatio/hora
+
+
+
+
+5 de 16                                                                             www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                                  Juan Antonio Martínez García
+
+    A1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real m y
+        resuélvelo en los casos en que sea compatible:
+                                      ( m2 − 3m ) x − my + 2mz = 3
+                                      
+                                       2
+                                      ( m − 3m ) x + 3 y + 3mz = m + 9
+                                      
+                                      ( 3m − m ) x + my − mz = 0
+                                                2
+
+
+    Menciona el resultado teórico empleado y justifica su uso. (2,5 puntos)
+
+                                        m2 − 3m −m 2m 
+                                                      
+      La matriz de coeficientes es A =  m2 − 3m 3 3m  y la matriz ampliada es
+                                        3m − m2 m −m 
+                                                      
+               m − 3m −m 2m 3 
+                 2
+
+                                         
+      A / B =  m2 − 3m 3 3m m + 9 
+               3m − m2 m −m 0 
+                                         
+      Utilizamos el método de Gauss para obtener un sistema triangular equivalente más sencillo.
+
+                                          Fila 2ª − Fila 1ª                          
+                   m 2 − 3m −m 2m 3   2                                            
+                   2                   m − 3m          3    3m m + 9               
+          A / B =  m − 3m 3 3m m + 9    2                                         
+                                           −m + 3m       m   −2m −3                  
+                   3m − m 2
+                             m −m 0 
+                                             0        3 + m m m + 6 → Nueva fila 2ª 
+                                          
+
+
+          Fila 3ª + Fila 1ª                     
+                                                  m − 3m −m 2m 3 
+                                                      2
+
+          3m − m      m −m 0
+                   2
+                                                                      
+           2                                     0      3+ m m m + 6
+          m − 3m −m 2m 3                          0       0   m  3 
+           0           0    m 3 → Nueva fila 3ª  
+                                                
+      Averiguamos cuando se anula la matriz de coeficientes del sistema equivalente obtenido.
+
+                     m2 − 3m     −m      2m
+                         0      3+ m     m = m ( 3 + m ) ( m 2 − 3m ) = m ( 3 + m ) m ( m − 3) =
+                         0         0     m
+
+
+                                                m=0
+                                                
+                   = m2 ( 3 + m )( m − 3) = 0  3 + m = 0 → m = −3
+                                                 
+                                                 m − 3 = 0 → m = 3
+      Se anula cuando m = –3, m = 0 y cuando m = 3.
+
+      Nos surgen 4 situaciones distintas que analizamos por separado.
+
+      CASO 1. m  −3, m  0 y m  3
+        El determinante de A es no nulo, por lo cual su rango es 3, al igual que el rango de la matriz
+        ampliada y el número de incógnitas. Aplicando el teorema de Rouché el sistema es compatible
+        determinado (tiene solución única).
+
+6 de 16                                                                          www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                                 Juan Antonio Martínez García
+
+
+          Resolvemos el sistema equivalente obtenido aplicando el método de Gauss.
+
+              m 2 − 3m −m 2m 3  ( m − 3m ) x − my + 2mz = 3         
+                                          2
+
+                                                                    
+                  0    3 + m m m + 6      ( 3 + m ) y + mz = m + 6    m  0 
+              0          0   m   3                      mz = 3      
+                                                                      
+
+
+                                                  
+               ( m − 3m ) x − my + 2mz = 3  ( m2 − 3m ) x − my + 2m 3 = 3 
+                   2
+
+                                                                                 
+                         ( 3 + m ) y + mz = m + 6                    m
+                                                                                  
+                                                                         3
+                                            3      
+                                                          ( 3 + m ) y + m = m + 6
+                                        z=                                m      
+                                            m      
+
+
+
+             
+               ( m − 3m ) x − my + 6 = 3
+                   2
+                                                    ( m 2 − 3m ) x − my = −3
+                                                      
+                                                                                      
+                                                                                      
+                           ( 3 + m ) y + 3 = m + 6               ( 3 + m ) y = m + 3
+
+                                ( m − 3m ) x − my = −3 
+                                   2
+
+
+              m + 3  0                             ( m − 3m ) x − m = −3 
+                                                                  2
+                                               m+3
+                                            y=     =1 
+                                               m+3    
+
+
+                                                                  m−3     m−3
+              ( m 2 − 3m ) x = m − 3  m 2 − 3m  0  x =
+                                                                                    1
+                                                                       =          =
+                                                                 m − 3m m ( m − 3) m
+                                                                  2
+
+
+
+
+                               1              3
+          La solución es x =     , y = 1, z =
+                               m              m
+      CASO 2. m = 0
+                                                                         A/ B
+                                                                                
+                                                                   0 0 0 3
+                                                                               
+          La matriz ampliada equivalente obtenida queda A / B =  0 3 0 6 
+                                                                   0 0 0 3
+                                                                               
+                                                                       A       
+          Por lo que el rango de A es 1 y el de la ampliada es 2. Al tener rangos distintos por el teorema
+          de Rouché el sistema es incompatible.
+
+      CASO 3. m = 3
+                                                 A/ B
+                                                       
+                                            0 −3 6 3 
+                                                      
+          La matriz ampliada queda A / B =  0 6 3 9 
+                                            0 0 3 3
+                                                      
+                                               A      
+
+
+
+7 de 16                                                                        www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                               Juan Antonio Martínez García
+
+          Por lo que el rango de A es 2, al igual que el de la ampliada A/B. Los rangos son iguales, pero
+          menores que el número de incógnitas (3). Por el teorema de Rouché el sistema es compatible
+          indeterminado (infinitas soluciones).
+          Resolvemos el sistema a partir del sistema triangular equivalente obtenido.
+
+                                       A/ B
+                                             
+                                   0 −3 6 3  −3 y + 6 z = 3 −3 y + 6 z = 3
+                                                                           
+                          A / B =  0 6 3 9   6 y + 3z = 9   6 y + 3z = 9  
+                                   0 0 3 3  3z = 3                         
+                                                               z =1        
+                                      A     
+
+
+                                                                 x = 
+                            −3 y + 6 = 3    −3 y = −3          
+                                                    y =1  y =1 ;  
+                            6y + 3 = 9      6y = 6             z = 1
+                                                                 
+                                         x = 
+                                         
+          Las soluciones del sistema son  y = 1 ;      .
+                                         z = 1
+                                         
+
+      CASO 4. m = −3
+        La matriz ampliada queda
+                     A/ B
+                               Fila 3ª − Fila 2ª         
+                                                                     A/ B
+                                                                              
+                18 3 −6 3                                  18 3     −6 3 
+                              0 0 −3 3                                   
+        A / B =  0 0 −3 3                                0 0 −3 0 
+                                  0 0 3 −3
+                 0 0 −3 3                                0 0 0 0
+                              0 0 0 0 → Nueva fila 3ª                  
+                    A                                           A          
+          Por lo que el rango de A es 2, al igual que el de la ampliada A/B. Los rangos son iguales, pero
+          menores que el número de incógnitas (3). Por el teorema de Rouché el sistema es compatible
+          indeterminado (infinitas soluciones).
+          Resolvemos el sistema a partir del sistema triangular equivalente obtenido.
+
+                               A/ B
+                                      
+                           18 3 −6 3  18 x + 3 y − 6 z = 3
+                                                           18 x + 3 y − 6 z = 3
+                   A / B =  0 0 −3 3            −3 z = 3                      
+                                                                         − 3 z = 3 
+                            0 0 −3 3             −3 z = 3
+                                     
+                              A      
+
+                    18 x + 3 y − 6 z = 3
+                                        
+                              3          18 x + 3 y + 6 = 3  18 x + 3 y = −3  6 x + y = −1 
+                         z=       = −1 
+                              −3        
+
+
+                                   x = 
+                                   
+                   y = −1 − 6 x   y = −1 − 6 ;  
+                                    z = −1
+                                   
+
+8 de 16                                                                      www.ebaumatematicas.com
+   PAU 2025 Ordinaria Matemáticas II en Navarra                              Juan Antonio Martínez García
+
+
+                                         x = 
+                                         
+          Las soluciones del sistema son  y = −1 − 6 ;     .
+                                          z = −1
+                                         
+
+      Resumiendo: Si m  −3, m  0 y m  3 el sistema es compatible determinado siendo su solución
+            1             3
+         x = , y = 1, z =    , si m = −3 el sistema es compatible indeterminado siendo sus
+            m             m
+                   x = 
+                   
+        soluciones  y = −1 − 6 ;   , si m = 0 el sistema es incompatible y si m = 3 el sistema es
+                    z = −1
+                   
+                                                         x = 
+                                                         
+          compatible indeterminado siendo sus soluciones  y = 1 ;     .
+                                                         z = 1
+                                                         
+
+
+
+
+9 de 16                                                                  www.ebaumatematicas.com
+  PAU 2025 Ordinaria Matemáticas II en Navarra                                         Juan Antonio Martínez García
+
+
+                                                                              1
+     A2) Sean A y B dos matrices cuadradas 3×3 tales que A =                    y B = 2 . Calcula |C| sabiendo que
+                                                                              4
+           C = 2·( A· Bt ) ·( Bt )
+                          2          −1
+
+
+                                                                                                          (2,5 puntos)
+
+
+     Simplificamos la matriz C.
+
+                                C = 2·( A· B t ) ·( B t ) = 2·( A· B t )( A· B t )·( B t ) =
+                                                  2       −1                           −1
+
+
+
+
+                                                                               
+                                = 2· A· B t · A· B t ·( B t ) = B t ·( B t ) = Id = 2· A· B t · A
+                                                           −1           −1
+
+
+
+
+     Calculamos el determinante de C.
+
+                                                   A· B t · A es        3
+                                C = 2· A· B · A = 
+                                              t
+                                                                         = 2 A· B · A =
+                                                                                  t
+
+                                                   una matriz    3  3 
+
+
+                                  Determinante de un               
+                                                                   
+                                = producto de matrices es igual al  =
+                                  producto de sus determinantes 
+                                                                   
+
+
+                                                             1
+                                                              4
+                                                                    
+                                                                    1
+                                                                    4
+                                                                         1 1
+                                = 8· A · B t · A = B t = B = 8 · B · = 8· ·2· = 1
+                                                                         4 4
+
+
+
+
+10 de 16                                                                               www.ebaumatematicas.com
+  PAU 2025 Ordinaria Matemáticas II en Navarra                                     Juan Antonio Martínez García
+
+     B1) Calcula la ecuación continua de la recta t que pasa por el punto P(2, 0,−1) y corta a las
+       siguientes rectas:                                                                (2,5 puntos)
+                            2 x + y − 3z − 6 = 0                   x +1 y z + 2
+                         s                                   r       = =
+                            2 x − 3z − 8 = 0                         2   1      1
+
+     Debemos buscar un punto A de la recta r y un punto B de la recta s tales que los puntos A, B y P
+     estén alineados.
+     Hallamos las ecuaciones paramétricas de las dos rectas.
+
+                                                          x = −1 + 2
+                x + 1 y z + 2 ur = ( 2,1,1)            
+             r      = =                          r : y =          A ( −1 + 2 ,  , −2 +  )
+                  2   1   1     Pr ( −1, 0, −2 )        z = −2 + 
+                                                         
+
+
+               2 x + y − 3z − 6 = 0 2 x + y − 3z − 6 = 0
+             s                                          3z + 8 + y − 3z − 6 = 0 
+               2 x − 3z − 8 = 0     2 x = 3z + 8
+
+
+                                     3
+                             x = 4 + 2 
+                                                  3         
+             y = −2  s   y = − 2       B  4 +  , −2,  
+                             z =                 2         
+                             
+                             
+     Para que los puntos A, B y P estén alineados los vectores AP y BP deben tener coordenadas
+     proporcionales.
+
+           A ( −1 + 2 ,  , −2 +  ) 
+                                       AP = P ( 2, 0, −1) − ( −1 + 2 ,  , −2 +  ) = ( 3 − 2 , − ,1 −  ) 
+                   3                                                                                        
+           B  4 +  , −2,                                    3                     3                  
+                   2                 BP = P ( 2, 0, −1) −  4 +  , −2,   =  −2 −  , 2, −1 −   
+                                                                  2                     2               
+           P ( 2, 0, −1)              
+                                      
+
+
+                                            3 − 2     −                   3
+                                                     =     → 6 − 4 = 2 + 
+                                                  3       2                  2
+                    3 − 2   − 1 −        −2 − 
+           AP BP          =    =               2                            
+                   −2 − 
+                         3    2   − 1 −    − 1 − 
+                         2                      =         →  +  = 2 − 2
+                                            2     −1 − 
+
+
+                     3
+            6 − 6 =  12 − 12 = 3 4 − 4 = 
+                    2                             3 + 4 − 4 = 2 
+            3 +  = 2  3 +  = 2  3 +   = 2
+
+
+                                A ( 3, 2, 0 )
+            − = −2   = 2  
+                                6 + 2 = 2 → 2 = −4 →  = −2 → B (1, −2, −2 )
+
+     Hallamos la recta que pasa por A, B y P.
+
+11 de 16                                                                           www.ebaumatematicas.com
+  PAU 2025 Ordinaria Matemáticas II en Navarra                                     Juan Antonio Martínez García
+
+
+
+                        A ( 3, 2, 0 )  t  
+                                            AB = (1, −2, −2 ) − ( 3, 2, 0 ) = ( −2, −4, −2 ) 
+                        B (1, −2, −2 )  t                                                    
+                                            P ( 2, 0, −1)  t                                 
+                        P ( 2, 0, −1)  t 
+
+
+                               −1         −1                      
+                        wt =       AB = ( −2, −4, −2 ) = (1, 2,1)      x − 2 y z +1
+                               2          2                        t:      = =
+                        P ( 2, 0, −1)  t                                1   2   1
+                                                                  
+
+     La ecuación continua de la recta t que pasa por el punto P y corta a las rectas r y s es
+        x − 2 y z +1
+     t:      = =        .
+          1    2    1
+
+
+
+
+12 de 16                                                                           www.ebaumatematicas.com
+  PAU 2025 Ordinaria Matemáticas II en Navarra                                      Juan Antonio Martínez García
+
+     B2) Un cuadrado tiene dos vértices consecutivos A(1, 0,−1) y B(1, 4, 2) y los otros dos vértices
+        están contenidos en la recta que pasa por el punto P(6,−4,−4).
+     (a) Calcula la ecuación de dicha recta.                                              (0,5 puntos)
+     (b) Calcula la ecuación del plano perpendicular al segmento AB que pasa por A. (0,75 puntos)
+     (c) Calcula los otros dos vértices del cuadrado.                                    (1,25 puntos)
+
+
+
+
+     (a) Hallamos el vector AB que será el vector director de la recta r que contiene los puntos C y
+        D.
+                              A (1, 0, −1) 
+                                              AB = (1, 4, 2 ) − (1, 0, −1) = ( 0, 4,3)
+                              B (1, 4, 2 ) 
+
+           Hallamos la ecuación de la recta que contiene los puntos C y D.
+
+                                                                      x = 6
+                                         vr = AB = ( 0, 4,3)        
+                                                                r :  y = −4 + 4
+                                         P ( 6, −4, −4 )  r         z = −4 + 3
+                                                                      
+
+     (b) El plano perpendicular al segmento AB que pasa por A tiene como vector normal AB .
+             n = AB = ( 0, 4,3)   : 4 y + 3 z + D = 0 
+                                                          −3 + D = 0  D = 3   : 4 y + 3 z + 3 = 0
+             A (1, 0, −1)    A (1, 0, −1)          
+
+     (c) El punto de corte de la recta y el plano es el vértice D del cuadrado.
+                 x = 6             
+                                  
+             r :  y = −4 + 4 
+                  z = −4 + 3   4 ( −4 + 4 ) + 3 ( −4 + 3 ) + 3 = 0  −16 + 16 − 12 + 9 + 3 = 0 
+                                  
+              : 4 y + 3 z + 3 = 0 
+                                          x = 6
+                                          
+              25 − 25 = 0   = 1   y = −4 + 4 = 0  D ( 6, 0, −1)
+                                           z = −4 + 3 = −1
+                                          
+
+           Tenemos que D ( 6, 0, −1) . El vértice C lo hallamos sumando al punto D el vector AB .
+                             AB = ( 0, 4,3) 
+                                               C = D + AB = ( 6, 0, −1) + ( 0, 4,3 ) = ( 6, 4, 2 )
+                             D ( 6, 0, −1) 
+
+           El cuarto vértice del cuadrado es C ( 6, 4, 2 ) .
+
+13 de 16                                                                            www.ebaumatematicas.com
+  PAU 2025 Ordinaria Matemáticas II en Navarra                                    Juan Antonio Martínez García
+
+
+                             
+     C1) Sea f ( x ) = cos  · x ·ln ( x 2 + x − 5) .
+                            2 
+     a) Demuestra que f es continua en [2, 3].                                            (0,75 puntos)
+     b) Demuestra que existe un punto c en (2, 3) tal que f ′(c) = 0. Enuncia el resultado teórico
+        utilizado, y justifica su uso.                                                    (1,75 puntos)
+
+     a) Para que sea continua debe ser x 2 + x − 5  0 .
+
+                           x   2,3  2  x  3  22  x 2  32  22 + 2  x 2 + x  32 + 3 
+
+
+                            22 + 2 − 5  x 2 + x − 5  32 + 3 − 5  1  x 2 + x − 5  7
+
+           Por lo que existe el logaritmo neperiano y la función es un producto de funciones continuas en
+           el intervalo  2,3 y por tanto continua en dicho intervalo.
+
+     b) Vamos a comprobar si se cumple las condiciones del teorema de Rolle.
+        La función es continua en  2,3 .
+                                          
+           Tenemos que f ( 2 ) = cos  ·2 ·ln ( 22 + 2 − 5) = cos ( ) ln1 = −1·0 = 0 y
+                                         2 
+                                                      3 
+            f ( 3) = cos  ·3 ·ln ( 32 + 3 − 5) = cos   ln 7 = 0·ln 7 = 0 , por lo que f ( 2 ) = f ( 3) .
+                          2                            2 
+           La función es derivable, siendo su derivada
+                                                             2x +1
+            f ´ ( x ) = − sen  · x ·ln ( x 2 + x − 5) + cos  · x · 2       . Esta derivada no plantea
+                         2    2                              2  x + x −5
+           ningún problema en el intervalo (2, 3) pues x 2 + x − 5  0 .
+                                                                                
+           Podemos aplicar el teorema de Rolle a la función f ( x ) = cos  · x ·ln ( x 2 + x − 5) en el
+                                                                               2 
+           intervalo  2,3 y afirmar que existe un punto c en (2, 3) tal que f ′(c) = 0.
+
+
+
+
+14 de 16                                                                          www.ebaumatematicas.com
+  PAU 2025 Ordinaria Matemáticas II en Navarra                                         Juan Antonio Martínez García
+
+
+                                              3x3
+     C2) Se considera la función f ( x ) =          . Estudia sus asíntotas y simetrías.
+                                             x2 − 4
+            Estudia la aproximación de la función a sus asíntotas verticales.                          (2,5 puntos)
+
+     Estudiamos la simetría.
+                                               3( −x)
+                                                        3
+                                                                −3x3        3x3
+                                    f (−x) =                =          = −        = − f ( x)
+                                               (−x) − 4         x2 − 4     x2 − 4
+                                                   2
+
+
+
+
+     La función es impar.
+     Estudiamos sus asíntotas.
+     El dominio de la función son todos los números reales menos los que anulan el denominador.
+
+                                          x 2 − 4 = 0  x 2 = 4  x = 4 = 2
+
+     El dominio de la función es         − −2, 2 .
+
+     Asíntotas verticales. x = a
+     ¿ x = −2 es asíntota vertical?
+                                       3 ( −2 )
+                                          3
+                              3x3                 −24
+      lim f ( x ) = lim            =            =     =
+                       x →−2 x − 4
+                                     ( −2 ) − 4 0
+      x →−2                   2             2
+
+
+      x = −2 es asíntota vertical.
+
+     ¿ x = 2 es asíntota vertical?
+                         3x3    3·23   24
+     lim f ( x ) = lim 2      = 2    =    =
+      x →2         x →2 x − 4  2 −4 0
+     x = 2 es asíntota vertical.
+
+     Asíntota horizontal. y = b
+                          3x3          3x3
+      b = lim f ( x ) = lim      = lim      = lim3x = 
+         x →       x → x 2 − 4   x → x 2   x→
+
+     La función no tiene asíntota horizontal.
+
+     Asíntota oblicua. y = mx + n
+                             3x3
+              f ( x)        x 2
+                                − 4         3x3          3x3
+     m = lim         = lim          = lim 3        = lim 3 = 3
+         x →   x      x →     x     x → x − 4 x   x → x
+
+
+
+
+                                      3x3              3 x3 − 3x3 + 12 x
+      n = lim ( f ( x ) − mx ) = lim  2    − 3x  = lim                   =
+          x →                   x → x − 4                    x2 − 4
+                                                 x →
+
+                   12 x        12 x      12 12
+      = lim             = lim 2 = lim = = 0
+           x →   x −4
+                   2      x →  x   x →  x 
+
+     La recta y = 3 x es asíntota oblicua de la función.
+
+     Estudiamos la aproximación de la función a sus asíntotas verticales.
+
+15 de 16                                                                               www.ebaumatematicas.com
+  PAU 2025 Ordinaria Matemáticas II en Navarra            Juan Antonio Martínez García
+
+      x = −2 es asíntota vertical.
+                                      3 ( −2 )
+                                          3
+                             3x3                −24
+       lim− f ( x ) = lim− 2      =            = + = −
+                      x →−2 x − 4
+                                    ( −2 ) − 4 0
+                                           2
+      x →−2
+
+
+                                      3 ( −2 )
+                                          3
+                             3x3                −24
+       lim+ f ( x ) = lim+ 2      =            = − = +
+                      x →−2 x − 4
+                                    ( −2 ) − 4 0
+                                           2
+      x →−2
+
+
+
+
+      x = 2 es asíntota vertical.
+                           3x3    3·23  24
+      lim− f ( x ) = lim− 2     = 2    = − = −
+      x →2           x →2 x − 4  2 −4 0
+                              3
+                           3x     3·23  24
+      lim+ f ( x ) = lim+ 2     = 2    = + = +
+      x →2           x →2 x − 4  2 −4 0
+
+
+
+
+16 de 16                                                  www.ebaumatematicas.com
+

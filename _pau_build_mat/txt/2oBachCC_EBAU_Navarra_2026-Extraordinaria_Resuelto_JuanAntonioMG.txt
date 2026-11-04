@@ -1,0 +1,694 @@
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                              Juan Antonio Martínez García
+
+      Prueba de Acceso a la Universidad
+      Curso: 2025-2026
+      Asignatura: MATEMÁTICAS II
+
+
+
+          Responde P1, P2 y P3, una de entre P4.1 y P4.2 y otra entre P5.1 y P5.2.
+      P1) En Navarra, aproximadamente un 1.4% de la población es intolerante al gluten. Un test de
+        intolerancia al gluten tiene una sensibilidad del 97% (es decir, si se aplicase a 100 personas
+        intolerantes al gluten, se espera que 97 darían positivo y 3 negativo). El mismo test tiene una
+        especificidad del 96% (aplicando el test a 100 personas sin intolerancia, 96 darían negativo y 4
+        positivo). Elegimos una persona al azar:
+        (i) ¿Cuál es la probabilidad de que el test le dé positivo?
+        (ii) ¿Cuál es la probabilidad de que le dé negativo?
+        (iii) ¿Cuál es la probabilidad de que, si le da positivo el test, sea intolerante al gluten?
+
+
+      P2) Sea y = f ( x ) la función positiva que cumple la ecuación ( x − 1) + y 2 = 1
+                                                                              2
+
+
+        (i) Expresa y en función de x y demuestra que existe un punto c en su dominio tal que
+             f ´ ( c ) = −1 . Enuncia el resultado teórico utilizado, y justifica su uso.
+          (ii) ¿Cuánto vale el área comprendida entre la curva y = f ( x ) y el eje OX?
+
+
+
+
+      P3) Encuentra la ecuación continua de la recta t que pasa por el punto A ( 2, 4, −2 ) y corta a las
+        rectas
+                                                              x = −1 + 
+                               x − 2 y +1 z                  
+                            s       =      =       y r   y = −2        
+                                −1      2     1               z = 1 + 3
+                                                             
+
+
+
+      P4.1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real a y
+        resuélvelo en los casos en que sea compatible indeterminado:
+                                          ( a 2 − 4 ) x + ( a + 2 ) y + 2 z = 4
+                                          
+                                          
+                                          ( 4 − a ) x + z = 2
+                                                   2
+
+                                           2
+                                          ( a − 4 ) x + ( a + 2 ) y + az = −4
+            Menciona el resultado teórico empleado y justifica su uso
+
+
+      P4.2) Dadas las siguientes matrices A y B, calcula A· B −1 en función del parámetro t. ¿Para qué
+          valores de t no existe A· B −1 ?
+
+
+
+
+1 de 13                                                                     www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                                    Juan Antonio Martínez García
+
+
+                                   t +1    t2       2                  t 3t t 2 − 1
+                                                                                   
+                              A =  t +1 t + t − 2 2 − t  ;
+                                          2
+                                                                    B = 0 t 2−t 
+                                   t +1    t2       4                 t 4t    t 2 
+                                                                       
+
+      P5.1) Calcula la siguiente integral indefinida y el límite:
+                           e 2 ·e tan ( x )                                          2x − 2
+                           4·cos 2 x dx                  ;                  lim
+                                     ( )                                    x →−     x−2
+                                                                                     4 2 x +1 − 1
+
+                                                                        3x 2 + 2
+      P5.2) Estudia las asíntotas y simetrías de la función f ( x ) =            .
+                                                                         x−2
+
+                                                   AYUDA
+                                       4
+            • Volumen de una esfera:  R3
+                                       3
+            • Área de una esfera: 4 R 2
+            • Ecuación de circunferencia de radio R centrada en (a, b): ( x − a ) + ( y − b ) = R 2
+                                                                                           2         2
+
+
+
+
+2 de 13                                                                         www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra      Juan Antonio Martínez García
+
+
+
+
+3 de 13                                                www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                              Juan Antonio Martínez García
+
+
+                                              SOLUCIONES
+      P1) En Navarra, aproximadamente un 1.4% de la población es intolerante al gluten. Un test de
+          intolerancia al gluten tiene una sensibilidad del 97% (es decir, si se aplicase a 100 personas
+          intolerantes al gluten, se espera que 97 darían positivo y 3 negativo). El mismo test tiene una
+          especificidad del 96% (aplicando el test a 100 personas sin intolerancia, 96 darían negativo y 4
+          positivo). Elegimos una persona al azar:
+      (i) ¿Cuál es la probabilidad de que el test le dé positivo?
+      (ii) ¿Cuál es la probabilidad de que le dé negativo?
+      (iii) ¿Cuál es la probabilidad de que, si le da positivo el test, sea intolerante al gluten?
+
+      Llamamos I al suceso “la persona es intolerante al gluten”, T+ a “el test da positivo” y T– a “el
+      test da negativo”.
+      Por la información proporcionada tenemos las siguientes probabilidades:
+                                                                (      )          (        )
+       P ( I ) = 0.014; P (T + / I ) = 0.97; P (T − / I ) = 0.03 ; P T − / I = 0.96; P T + / I = 0.04 .
+
+      (i) Debemos calcular P (T + ) . Aplicamos el teorema de la probabilidad total.
+
+
+                                             () (        )
+            P (T + ) = P ( I ) P (T + / I ) + P I P T + / I = 0.014·0.97 + 0.986·0.04 =
+                                                                                           2651
+                                                                                          50000
+                                                                                                = 0.05302
+
+
+          La probabilidad de que a una persona elegida al azar el test le dé positivo vale 0.05302.
+
+      (ii) Debemos calcular P (T − ) . Utilizamos la probabilidad del suceso contrario T + que ya hemos
+          calculado.
+                                 P (T − ) = 1 − P (T + ) = 1 − 0.05302 = 0.94698
+
+          La probabilidad de que a una persona elegida al azar el test le dé negativo vale 0.94698
+
+      (iii) Debemos calcular P ( I / T + ) . Es una probabilidad a posteriori. Aplicamos el teorema de
+          Bayes.
+
+                                     P ( I  T + ) P ( I ) P (T + / I ) 0.014·0.97   679
+                    P ( I / T +) =                =                    =           =      0.2561
+                                       P (T + )         P (T + )         0.05302     2651
+
+          La probabilidad de que una persona que ha dado positivo en el test sea intolerante al gluten es
+          de 0.2561.
+
+
+
+
+4 de 13                                                                       www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                                      Juan Antonio Martínez García
+
+
+      P2) Sea y = f ( x ) la función positiva que cumple la ecuación ( x − 1) + y 2 = 1
+                                                                                      2
+
+
+      (i) Expresa y en función de x y demuestra que existe un punto c en su dominio tal que
+           f ´ ( c ) = −1 . Enuncia el resultado teórico utilizado, y justifica su uso.
+      (ii) ¿Cuánto vale el área comprendida entre la curva y = f ( x ) y el eje OX?
+
+      (i) Despejamos y de la expresión.
+
+                  ( x − 1) + y 2 = 1  y 2 = 1 − ( x − 1) = 1 − ( x 2 − 2 x + 1) = 2 x − x 2  y = + 2 x − x 2
+                         2                              2
+
+
+
+
+          La función es y = + 2 x − x 2 .
+          El dominio de la función es  0, 2 .
+                                                                         x = 0
+                                        2 x − x2 = 0  x ( 2 − x ) = 0  
+                                                                         x = 2
+
+
+                                       1  0, 2  2·1 − 12 = 1  0  Existe 2 x − x 2
+
+
+          La función y = + 2 x − x 2 es continua en 1, 2 y derivable en (1, 2 ) . Aplicando el teorema
+                                                                                  f ( 2 ) − f (1)
+          del valor medio tenemos que existe c  (1, 2 ) tal que f ´ ( c ) =                      .
+                                                                                       2 −1
+
+                                     f ( 2 ) − f (1)              2·2 − 22 − 2·1 − 12
+                        f ´( c ) =                    f ´( c ) =                     = 0 − 1 = −1
+                                          2 −1                            1
+
+      (ii) La ecuación ( x − 1) + y 2 = 1 es la ecuación de una circunferencia de radio 1 y centro en
+                                 2
+
+
+
+          C (1,0 ) . La función y = + 2 x − x 2 es la parte positiva de la circunferencia.
+          El área contenida en la circunferencia es  R2 =  ·12 =  unidades cuadradas.
+          El área comprendida entre la curva y = f ( x ) y el eje OX es la mitad del área del círculo y
+                 
+          vale     unidades cuadradas.
+                 2
+
+
+
+
+5 de 13                                                                             www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                                        Juan Antonio Martínez García
+
+
+      P3) Encuentra la ecuación continua de la recta t que pasa por el punto A ( 2, 4, −2 ) y corta a las
+        rectas
+                                                               x = −1 + 
+                                x − 2 y +1 z                  
+                            s        =      =       y r   y = −2        
+                                 −1      2      1              z = 1 + 3
+                                                              
+
+          Determinamos la posición relativa de ambas rectas. Para ello obtenemos un vector director y
+          un punto de cada una de ellas.
+                                         x − 2 y +1 z       us = ( −1, 2,1)
+                                     s       =     = 
+                                          −1     2    1       Ps ( 2, −1, 0 )
+
+
+                                              x = −1 + 
+                                                                     vr = (1, 0,3)
+                                         r   y = −2              
+                                              z = 1 + 3             Qr ( −1, −2,1)
+                                             
+
+          Las coordenadas de los vectores directores no son proporcionales. Las rectas no son
+          coincidentes ni paralelas.
+                                      us = ( −1, 2,1) 
+                                                       −1 2 1
+                                                         
+                                      vr = (1, 0,3)  
+                                                         1 0 3
+
+
+          Las rectas se cortan o cruzan. Determinamos el valor del producto mixto us , vr , PQ  
+                                                                                               s r.
+
+
+
+                 Ps ( 2, −1, 0 ) 
+                                    Ps Qr = ( −1, −2,1) − ( 2, −1, 0 ) = ( −3, −1,1)
+                 Qr ( −1, −2,1) 
+
+
+                 us = ( −1, 2,1)                                −1 2 1
+                                     
+                 vr = (1, 0,3)          us , vr , Ps Qr  = 1 0 3 = 0 − 18 − 1 − 0 − 2 − 3 = −24  0
+                                                                −3 −1 1
+                 Ps Qr = ( −3, −1,1) 
+
+          Como el producto mixto es distinto de cero las rectas se cruzan.
+          Hallamos las coordenadas de un punto genérico de cada recta.
+
+                                                         x = 2 −
+                   x − 2 y +1 z us = ( −1, 2,1)        
+                s      =    =                    s   y = −1 + 2  B ( 2 −  , −1 + 2 ,  )
+                    −1     2  1  Ps ( 2, −1, 0 )       z = 
+                                                         
+
+                     x = −1 + 
+                    
+                r   y = −2      C ( −1 +  , −2,1 + 3 )
+                     z = 1 + 3
+                    
+
+
+
+6 de 13                                                                                  www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                                         Juan Antonio Martínez García
+
+          La recta t debe contener los puntos A, B y C. Para ello los puntos deben estar alineados y para
+          ello los vectores AB y AC deben tener coordenadas proporcionales. Hallamos los valores de
+          α y  para que esto ocurra.
+
+              A ( 2, 4, −2 )            
+                                           AB = ( 2 −  , −1 + 2 ,  ) − ( 2, 4, −2 ) = ( − , −5 + 2 ,  + 2 )
+              B ( 2 −  , −1 + 2 ,  ) 
+
+
+              A ( 2, 4, −2 )          
+                                         AC = ( −1 +  , −2,1 + 3 ) − ( 2, 4, −2 ) = ( −3 +  , −6,3 + 3 )
+             C ( −1 +  , −2,1 + 3 ) 
+
+
+                                −      −5 + 2  + 2
+              AB AC                  =        =        
+                               −3 +      −6     3 + 3
+
+               −      −5 + 2
+               −3 +  = −6 → 6 = 15 − 6 − 5 + 2 → 12 + 5 − 2 = 15
+              
+                                                                                       
+               −5 + 2  + 2
+                       =         −15 + 6 − 15 + 6 = −6 − 12 → 12 − 15 + 6 = 3
+               −6        3 + 3
+
+
+              12 + 5 − 2 = 15 → (3) 36 + 15 − 6 = 45
+                                        
+               12 − 15 + 6 = 3       12 − 15 + 6 = 3
+                                                          48                   = 48   = 1  AB = ( −1, −3,3)
+
+          La recta t buscada es la recta que pasa por el punto A y que tiene como vector director
+          AB = ( −1, −3,3) .
+                                     wt = AB = ( −1, −3,3)      x −2 y −4 z −3
+                                                            t      =    =
+                                     A ( 2, 4, −2 )  t          −1   −3    3
+
+
+
+
+7 de 13                                                                                 www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                                         Juan Antonio Martínez García
+
+      P4.1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real a y
+        resuélvelo en los casos en que sea compatible indeterminado:
+                                       ( a 2 − 4 ) x + ( a + 2 ) y + 2 z = 4
+                                       
+                                       
+                                       ( 4 − a ) x + z = 2
+                                                2
+
+                                        2
+                                       ( a − 4 ) x + ( a + 2 ) y + az = −4
+      Menciona el resultado teórico empleado y justifica su uso
+
+                                                                                    a2 − 4 a + 2 2 
+                                                                                                   
+          El sistema de ecuaciones planteado tiene como matriz de coeficientes A =  4 − a 2  0   1
+                                                                                    a2 − 4 a + 2 a 
+                                                                                                   
+                                          a −4 a + 2 2 4 
+                                              2
+
+                                                               
+          y como matriz ampliada A / B =  4 − a 2    0   1 2 .
+                                           a 2 − 4 a + 2 a −4 
+                                                               
+          Usamos el método de Gauss para obtener un sistema triangular equivalente al dado pero más
+          fácil de estudiar.
+
+                                                     Fila 2ª + Fila 1ª                    
+                           a2 − 4 a + 2 2      4                                        
+                                                    4 − a
+                                                            2
+                                                                0     1 2                 
+                  A / B =  4 − a2   0   1      2  2                                    
+                                                      a −4 a+2 2 4                        
+                          a −4 a + 2 a
+                             2                     
+                                                −4 
+                                                     0       a + 2   3 6 → Nueva Fila 2ª 
+                                                                                          
+                  Fila 3ª − Fila 1ª                            2                                                    
+                                                                       A
+
+                   2                                          a −4 a + 2     2                                   4
+                   a −4     a+2       a   −4                                                                        
+                   2                                          0   a+2       3                                   6
+                   − a + 4 − a − 2 −2 −4                       0     0      a−2                                  −8 
+                   0          0     a − 2 −8 → Nueva Fila 3ª                                                        
+                                                                       A/ B                                         
+
+          Averiguamos cuando se anula el determinante de la matriz de coeficientes A.
+
+                             a2 − 4 a + 2       2
+                        A=            a+2              = ( a 2 − 4 ) ( a + 2 )( a − 2 ) = ( a + 2 ) ( a − 2 )
+                                                                                                  2             2
+                                0               3
+                                0       0     a−2
+
+
+                                                         a = −2
+                        A = 0  ( a + 2) ( a − 2) = 0  
+                                        2        2
+
+                                                          a = 2
+
+          Analizamos tres situaciones diferentes.
+
+          CASO 1. a  −2 y a  2
+            En este caso el determinante de A es distinto de cero y su rango es 3, al igual que el rango
+            de la matriz ampliada y el número de incógnitas. Aplicando el teorema de Rouché-Frobenius
+            el sistema tiene una única solución.
+
+          CASO 2. a = −2
+8 de 13                                                                                 www.ebaumatematicas.com
+   PAU 2026 Extraordinaria Matemáticas II en Navarra                          Juan Antonio Martínez García
+
+            En este caso el determinante de A es nulo y su rango es menor de 3. La matriz ampliada
+                        A
+                                   
+                   0 0 2        4
+                                  
+            queda  0 0 3        6  . La columna tercera es el doble de la columna segunda. El rango
+                    0 0 −4 −8 
+                                  
+                          A/ B    
+            de la matriz A y A/B es 1, menor que el número de incógnitas. Aplicando el teorema de
+            Rouché-Frobenius el sistema tiene infinitas soluciones. Determinamos la expresión de
+            estas soluciones.
+
+                               A
+                                             
+                           0 0 2         4  2 z = 4             x = 
+                                                                
+                           0 0 3         6   3 z = 6  z = 2   y =  ;  ,  
+                            0 0 −4       −8  −4 z = −8         z = 2
+                                                                   
+                                            
+                                 A/ B       
+
+
+          CASO 3. a = 2
+            En este caso el determinante de A es nulo y su rango es menor de 3. La matriz ampliada
+                       A
+                                  
+                   0 4 2 4 
+                                 
+            queda  0 4 3 6  .
+                    0 0 0 −8 
+                                 
+                         A/ B    
+
+          El rango de A es 2 y el de A/B es 3. Los rangos son distintos y aplicando el teorema de
+          Rouché-Frobenius el sistema no tiene solución.
+
+
+
+
+9 de 13                                                                   www.ebaumatematicas.com
+  PAU 2026 Extraordinaria Matemáticas II en Navarra                                      Juan Antonio Martínez García
+
+
+     P4.2) Dadas las siguientes matrices A y B, calcula A· B −1 en función del parámetro t. ¿Para qué
+           valores de t no existe A· B −1 ?
+                                   t +1    t2       2                         t 3t t 2 − 1
+                                                                                          
+                              A =  t +1 t + t − 2 2 − t  ;
+                                          2
+                                                                           B = 0 t 2−t 
+                                   t +1    t2       4                        t 4t    t 2 
+                                                                              
+
+           Para que exista la inversa de B su determinante debe ser distinto de cero.
+
+                                                            Fila 3ª − Fila 1ª 
+                                        t       3t   t 2 −1                  2    t 3t t − 1
+                                                                                          2
+
+                                                           t      4t       t 
+                               B =0             t    2−t =                        = 0 t 2−t =
+                                                        2   − t  − 3t  − t 2
+                                                                               + 1 0 t
+                                        t       4t    t                                     1
+                                                           0      t        1     
+                                                                                 
+
+
+                                 Fila 3ª − Fila 2ª 
+                                                     t 3t t − 1
+                                                            2
+                                0 t
+                                            1      
+                               =                    = 0 t 2 − t = t ( t − 1)
+                                                                     2
+
+                                 0  − t   t − 2     0 0 t −1
+                                0 0 t − 1 
+                                                   
+
+           El determinante de B se anula para t = 0 y para t = 1.
+           La expresión A· B −1 solo existe para valores de t distintos de 0 y de 1.
+           Calculamos el determinante de la matriz A.
+
+                                                 Fila 2ª − Fila 1ª       Fila 3ª − Fila 1ª 
+                            t +1        t2            2                                     
+                                                 t +1 t + t − 2 2 − t   t +1 t
+                                                           2                          2
+                                                                                            4
+                     A = t +1 t + t − 2 2 − t = 
+                               2
+                                                                                             =
+                                                 −t + 1      −t 2  −2  −t + 1 −t 2 −2 
+                         t +1    t 2
+                                          4
+                                                 0          t −2   −t   0        0     2 
+                                                
+
+
+                       t +1        t2       2
+                     = 0       t − 2 −t = 2 ( t + 1)( t − 2 )
+                        0          0        2
+                                                                                                       1
+           Sabemos que A = 2 ( t + 1)( t − 2 ) y B = t 2 ( t − 1) . También sabemos que B −1 =           .
+                                                                                                       B
+           Calculamos la expresión de A· B −1 para valores de t distintos de 0 y 1.
+
+                                                                   1   A 2 ( t + 1)( t − 2 )
+                                        A· B −1 = A · B −1 = A ·     =   =
+                                                                   B   B      t 2 ( t − 1)
+
+
+
+
+10 de 13                                                                             www.ebaumatematicas.com
+  PAU 2026 Extraordinaria Matemáticas II en Navarra                                                                               Juan Antonio Martínez García
+
+     P5.1) Calcula la siguiente integral indefinida y el límite:
+                          e 2 ·e tan ( x )                                                                                  2x − 2
+                          4·cos 2 x dx                  ;                                                           lim
+                                    (      )                                                                        x →−
+                                                                                                                             4
+                                                                                                                                 x−2
+                                                                                                                                 2 x +1
+                                                                                                                                          −1
+
+     Calculamos la integral indefinida usando un cambio de variable.
+
+                                                     Cambio de variable                 
+                               tan ( x )                            tan ( x )           
+                    e ·e2
+                                    e  e            
+                                                         2
+                                                                          1              
+                    4·cos 2 x dx = 4  cos 2 x dx =  tan ( x ) = t → cos 2 x dx = dt →  =
+                           ( )             ( )                                        
+                                                     → dx = cos 2 ( x ) dt             
+
+
+                       e2  et                         e2 t       e 2 t e 2 tan ( x )
+                                            (   )
+                                                       4 
+                   =                      2
+                                                     =          =    e =              +K
+                       4
+                                      cos     x   dt       e dt            e
+                           cos ( x )
+                               2
+                                                                  4      4
+
+     Calculamos el límite.
+
+                                           2x − 2                         2x − 2                   2x − 2
+                             lim           x−2
+                                                         = lim              x−2
+                                                                                          = lim        2 x−4
+                                                                                                                     = ...
+                                                                     (2 )
+                             x →−                           x →−                         x →−
+                                      4    2 x +1
+                                                    −1                    2 2 x +1
+                                                                                     −1            2   2 x +1
+                                                                                                                −1
+
+
+                                                   2x 4             4       4
+                                                       −         2−     2−
+                                   2x − 4                                  − = 2 + 0 = 1
+                             lim           = lim x x = lim          x =
+                             x →− 2 x + 1   x →− 2 x   1 x →−    1       1   2+0
+                                                       +         2+     2+
+                                                    x x             x      −
+
+
+                                           1
+                                              −2
+                                  2− − 2 2+       1
+                             ... = 1     =       =    − 2 = 0 − 2 = −2
+                                   2 −1      1     +
+
+
+
+
+11 de 13                                                                                                                www.ebaumatematicas.com
+  PAU 2026 Extraordinaria Matemáticas II en Navarra                                      Juan Antonio Martínez García
+
+
+                                                                            3x 2 + 2
+     P5.2) Estudia las asíntotas y simetrías de la función f ( x ) =                 .
+                                                                             x−2
+
+     Estudiamos la simetría de la función.
+
+                                                       3x 2 + 2
+                                              f ( x) =
+                                                        x−2
+
+
+                                                       3 ( − x ) + 2 3x 2 + 2
+                                                                  2
+
+                                              f (−x) =              =
+                                                          −x − 2      −x − 2
+
+                                                            3x 2 + 2 3x 2 + 2
+                                             − f ( x) = −           =
+                                                             x−2      −x + 2
+
+     La función no presenta ningún tipo de simetría, ni par ni impar.
+
+     El dominio de la función son todos los números reales menos los valores que anulan el
+     denominador. El dominio de la función es − 2 .
+     Asíntota vertical. x = a
+      ¿ x = 2 es asíntota vertical?
+                        3x2 + 2 3·22 + 2 14
+      lim f ( x ) = lim        =        = =
+       x →2         x →2 x − 2     2−2    0
+      x = 2 es asíntota vertical.
+
+     Asíntota horizontal. y = b
+                                                3x 2 2             2      2
+                                                     + 2        3+ 2   3+
+                                 3x 2 + 2                                  = 3+ 0 = 
+           b = lim f ( x ) = lim
+                                                   2
+                                          = lim x      x = lim     x =
+               x →          x → x − 2     x → x     2   x → 1   2  1 2 0−0
+                                                     − 2          − 2   −
+                                                 x 2
+                                                      x         x x     
+                La función no tiene asíntota horizontal.
+
+       Asíntota oblicua. y = mx + n
+
+                                  3x 2 + 2                       3x 2 2            2     2
+                    f ( x)                                            + 2     3+ 2 3+
+                                                    2
+                                                      +                                   = 3+ 0 = 3
+                           = lim x − 2 = lim 2
+                                                3 x     2           2
+           m = lim                                        = lim x2 x = lim         x =
+               x →   x      x →     x    x → x − 2 x     x → x     2 x x→ 1 − 2 1 − 2 1 − 0
+                                                                      − 2
+                                                                  x 2
+                                                                       x           x     
+
+
+                                         3x 2 + 2             3x 2 + 2 − 3x 2 + 6 x       6x + 2
+           n = lim ( f ( x ) − mx ) = lim         − 3x = lim                        = lim        =
+               x →                  x → x − 2          x →         x−2             x → x − 2
+
+
+
+
+                 6x 2           2      2
+                    +        6+     6+
+           = lim x x = lim      x =     = 6+0 = 6
+             x → x   2 x →    2      2 1− 0
+                    −        1−     1−
+                  x x           x      
+
+
+
+12 de 13                                                                            www.ebaumatematicas.com
+  PAU 2026 Extraordinaria Matemáticas II en Navarra                          Juan Antonio Martínez García
+
+     La recta y = 3x + 6 es asíntota oblicua de la función.
+
+
+
+
+     La gráfica es simétrica respecto del punto (2, 12).
+
+                                            3·12 + 2
+     Para x = 2 −1 = 1 tenemos que f (1) =           = −5 .
+                                              1− 2
+                                             3·32 + 2
+     Para x = 2 + 1 = 3 tenemos que f ( 3) =          = 29 .
+                                               3− 2
+                      −5 + 24
+     Se cumple que            = 12 .
+                         2
+
+                                             3·02 + 2
+     Para x = 2 − 2 = 0 tenemos que f ( 0 ) =         = −1 .
+                                              0−2
+                                             3·42 + 2
+     Para x = 2 + 2 = 4 tenemos que f ( 3) =          = 25 .
+                                               4−2
+                     −1 + 25
+     Se cumple que           = 12 .
+                        2
+
+     Y así se cumple para cualquier par de valores simétricos respecto de x = 2 .
+
+
+
+
+13 de 13                                                                 www.ebaumatematicas.com
+

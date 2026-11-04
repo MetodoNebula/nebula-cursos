@@ -1,0 +1,477 @@
+% ============================================================
+%  nebula_waves.tex - biblioteca de figuras de VIBRACIONES Y ONDAS
+% ------------------------------------------------------------
+%  Se escribe ANTES de la unidad, no durante.
+%
+%  Motivo medido: en el proyecto, una figura dibujada a mano cuesta 4,2
+%  veces mas de escribir que una llamada a macro (433 frente a 104
+%  tokens de mediana sobre 449 figuras) y los agentes informan de DOS
+%  ciclos de compilar-mirar-corregir por figura a mano, a ~3 100 tokens
+%  cada uno. En una unidad de ~30 lecciones con ~5 figuras por leccion,
+%  cada figura que pasa de mano a macro ahorra del orden de 6 500
+%  tokens. Esta biblioteca es la diferencia entre ~150 figuras a mano y
+%  ~45.
+%
+%  Regla de oro de RULE-017: la figura NO PUEDE MENTIR. Todas estas
+%  macros calculan sus marcas (lambda, T, nodos, angulos) a partir de
+%  los mismos parametros con que dibujan la curva, de modo que la marca
+%  siempre cae donde debe. Ninguna posicion va estimada a ojo.
+% ============================================================
+
+% ---------- 1. ONDA EN EL ESPACIO: y(x) con lambda y A marcadas -------
+%  \nbwavex{A}{lambda}{nciclos}{fase}{rotulo-x}
+%  La marca de lambda se dibuja entre dos crestas CALCULADAS, no puestas
+%  a mano: por eso no puede quedar descuadrada si se cambia lambda.
+\newcommand{\nbwavex}[6][y]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\xmax}{#3*#4}
+  \pgfmathsetmacro{\sx}{11/\xmax}
+  \pgfmathsetmacro{\sy}{2.2/#2}
+  \begin{scope}[xscale=\sx,yscale=\sy]
+    \draw[nbaxis] (-0.3/\sx,0) -- (\xmax+0.6/\sx,0) node[right,nblabel]{#6};
+    \draw[nbaxis] (0,-#2-0.45/\sy) -- (0,#2+0.55/\sy) node[above,nblabel]{$#1$};
+    \draw[nbline,smooth,samples=200,domain=0:\xmax]
+      plot(\x,{#2*sin(360*(\x/#3)+#5)});
+    % cresta n-esima y la siguiente: de ahi sale la cota de lambda, que
+    % por tanto NO puede quedar descuadrada si se cambia lambda.
+    \pgfmathsetmacro{\xa}{#3*(0.25-#5/360)}
+    \pgfmathsetmacro{\xb}{\xa+#3}
+    \draw[nbdash] (\xa,0) -- (\xa,#2);
+    \draw[nbdash] (\xb,0) -- (\xb,#2);
+    \draw[<->,NebulaGold,thick] (\xa,#2+0.22/\sy) -- (\xb,#2+0.22/\sy)
+      node[midway,above,nblabel,NebulaGold]{$\lambda$};
+    \draw[<->,NebulaError,thick] (\xmax*0.97,0) -- (\xmax*0.97,#2)
+      node[midway,right,nblabel,NebulaError]{$A$};
+  \end{scope}
+\end{tikzpicture}}
+
+% ---------- 2. ONDA EN EL TIEMPO: y(t) con T y A ----------------------
+%  \nbwavet[rotulo-y]{A}{T}{nciclos}{fase}{rotulo-t}
+%  Identica en forma a \nbwavex y DISTINTA en significado: es la pareja
+%  que el alumno confunde, y confundirla es la idea equivocada numero
+%  uno de toda la unidad de ondas. Se mantienen deliberadamente
+%  parecidas para que la UNICA diferencia visible sea el eje y la cota
+%  (T frente a lambda), que es justo lo que hay que aprender a mirar.
+\newcommand{\nbwavet}[6][y]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\tmax}{#3*#4}
+  \pgfmathsetmacro{\sx}{11/\tmax}
+  \pgfmathsetmacro{\sy}{2.2/#2}
+  \begin{scope}[xscale=\sx,yscale=\sy]
+    \draw[nbaxis] (-0.3/\sx,0) -- (\tmax+0.6/\sx,0) node[right,nblabel]{#6};
+    \draw[nbaxis] (0,-#2-0.45/\sy) -- (0,#2+0.55/\sy) node[above,nblabel]{$#1$};
+    \draw[NebulaCyan,thick,smooth,samples=200,domain=0:\tmax]
+      plot(\x,{#2*sin(360*(\x/#3)+#5)});
+    \pgfmathsetmacro{\ta}{#3*(0.25-#5/360)}
+    \pgfmathsetmacro{\tb}{\ta+#3}
+    \draw[nbdash] (\ta,0) -- (\ta,#2);
+    \draw[nbdash] (\tb,0) -- (\tb,#2);
+    \draw[<->,NebulaGold,thick] (\ta,#2+0.22/\sy) -- (\tb,#2+0.22/\sy)
+      node[midway,above,nblabel,NebulaGold]{$T$};
+    \draw[<->,NebulaError,thick] (\tmax*0.97,0) -- (\tmax*0.97,#2)
+      node[midway,right,nblabel,NebulaError]{$A$};
+  \end{scope}
+\end{tikzpicture}}
+
+% ---------- 3. DOS ONDAS SUPERPUESTAS --------------------------------
+%  \nbwavepair{A}{lambda}{nciclos}{desfase-grados}{etiq1}{etiq2}
+%  Dibuja las dos componentes y su SUMA calculada punto a punto. Con
+%  desfase 0 sale la interferencia constructiva y con 180 la
+%  destructiva, sin tener que dibujar dos figuras distintas.
+\newcommand{\nbwavepair}[6]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\xmax}{#2*#3}
+  \pgfmathsetmacro{\sx}{11/\xmax}
+  \pgfmathsetmacro{\sy}{1.5/#1}
+  \begin{scope}[xscale=\sx,yscale=\sy]
+    \draw[nbaxis] (-0.3/\sx,0) -- (\xmax+0.5/\sx,0) node[right,nblabel]{$x$};
+    \draw[nbaxis] (0,-2*#1-0.3/\sy) -- (0,2*#1+0.4/\sy) node[above,nblabel]{$y$};
+    \draw[NebulaCyan,thick,smooth,samples=200,domain=0:\xmax]
+      plot(\x,{#1*sin(360*\x/#2)});
+    % dash largo: con desfase 0 las dos componentes coinciden y, sin
+    % esto, la de arriba oculta por completo a la de abajo.
+    \draw[NebulaGold,thick,dash pattern=on 7pt off 5pt,smooth,samples=200,
+      domain=0:\xmax] plot(\x,{#1*sin(360*\x/#2+#4)});
+    \draw[NebulaNavy,ultra thick,smooth,samples=200,domain=0:\xmax]
+      plot(\x,{#1*sin(360*\x/#2)+#1*sin(360*\x/#2+#4)});
+    \node[nblabel,NebulaCyan,anchor=west] at (\xmax+0.1/\sx,1.55*#1){#5};
+    \node[nblabel,NebulaGold,anchor=west] at (\xmax+0.1/\sx,1.0*#1){#6};
+    \node[nblabel,NebulaNavy,anchor=west] at (\xmax+0.1/\sx,0.45*#1){suma};
+  \end{scope}
+\end{tikzpicture}}
+
+% ---------- 4. LA MISMA ONDA EN DOS INSTANTES -------------------------
+%  \nbwavetravel{A}{lambda}{nciclos}{avance-fraccion-de-lambda}
+%  Muestra el AVANCE del perfil, que es lo que hace a una onda viajera.
+%  La flecha mide exactamente el desplazamiento dibujado.
+\newcommand{\nbwavetravel}[4]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\xmax}{#2*#3}
+  \pgfmathsetmacro{\sx}{11/\xmax}
+  \pgfmathsetmacro{\sy}{1.9/#1}
+  \pgfmathsetmacro{\d}{#2*#4}
+  \begin{scope}[xscale=\sx,yscale=\sy]
+    \draw[nbaxis] (-0.3/\sx,0) -- (\xmax+0.5/\sx,0) node[right,nblabel]{$x$};
+    \draw[nbaxis] (0,-#1-0.3/\sy) -- (0,#1+0.6/\sy) node[above,nblabel]{$y$};
+    \draw[NebulaMuted,thick,dashed,smooth,samples=200,domain=0:\xmax]
+      plot(\x,{#1*sin(360*\x/#2)});
+    \draw[nbline,smooth,samples=200,domain=0:\xmax]
+      plot(\x,{#1*sin(360*(\x-\d)/#2)});
+    \pgfmathsetmacro{\ca}{#2*0.25}
+    \pgfmathsetmacro{\cb}{\ca+\d}
+    \draw[->,NebulaError,very thick] (\ca,#1*1.18) -- (\cb,#1*1.18)
+      node[midway,above,nblabel,NebulaError]{$v\,\Delta t$};
+    \node[nblabel,NebulaMuted,anchor=west] at (\xmax+0.1/\sx,1.15*#1){$t$};
+    \node[nblabel,NebulaNavy,anchor=west] at (\xmax+0.1/\sx,0.72*#1){$t+\Delta t$};
+  \end{scope}
+\end{tikzpicture}}
+
+% ---------- 5. ONDA ESTACIONARIA: nodos y vientres --------------------
+%  \nbstanding{armonico n}{L}{A}
+%  Dibuja el modo n con su envolvente, y marca TODOS los nodos y
+%  vientres en su posicion calculada. Un nodo mal puesto ensena lo
+%  contrario de lo que dice el pie, asi que aqui se calculan.
+\newcommand{\nbstanding}[3]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\sx}{10/#2}
+  \pgfmathsetmacro{\sy}{1.5/#3}
+  \begin{scope}[xscale=\sx,yscale=\sy]
+    \draw[NebulaMuted,thin] (0,0) -- (#2,0);
+    % envolvente: el limite que la cuerda nunca pasa
+    \draw[NebulaGold!75,thick,dashed,smooth,samples=200,domain=0:#2]
+      plot(\x,{#3*sin(180*#1*\x/#2)});
+    \draw[NebulaGold!75,thick,dashed,smooth,samples=200,domain=0:#2]
+      plot(\x,{-#3*sin(180*#1*\x/#2)});
+    % DOS instantaneas, no cuatro: con mas, la figura deja de leerse y
+    % los nodos se pierden entre trazos.
+    \draw[nbline,smooth,samples=200,domain=0:#2]
+      plot(\x,{#3*sin(180*#1*\x/#2)});
+    \draw[NebulaNavy!45,thick,smooth,samples=200,domain=0:#2]
+      plot(\x,{0.45*#3*sin(180*#1*\x/#2)});
+    % vientres: amplitud maxima, en (n-1/2)L/n
+    \foreach \n in {1,...,#1}{
+      \pgfmathsetmacro{\xv}{#2*(\n-0.5)/#1}
+      \pgfmathsetmacro{\sg}{sin(180*#1*\xv/#2)}
+      \draw[NebulaCheck,thick,dotted] (\xv,{#3*\sg}) -- (\xv,{-#3*\sg});
+      % el rotulo va SIEMPRE arriba: con sin() negativo caia debajo en
+      % los vientres impares y la figura se leia a saltos.
+      \node[nblabel,font=\footnotesize,NebulaCheck]
+        at (\xv,{#3+0.3/\sy}){V};}
+    % nodos: siempre quietos, en kL/n
+    \foreach \n in {0,...,#1}{
+      \pgfmathsetmacro{\xn}{#2*\n/#1}
+      \node[circle,fill=NebulaError,inner sep=1.7pt] at (\xn,0){};
+      \node[nblabel,font=\footnotesize,NebulaError]
+        at (\xn,{-0.33/\sy}){N};}
+    \draw[|<->|,NebulaNavy!70,thick] (0,{-#3-0.75/\sy}) -- (#2,{-#3-0.75/\sy})
+      node[midway,below,nblabel,NebulaNavy]{$L$};
+    \node[nblabel,anchor=west] at (#2+0.3/\sx,0)
+      {$n=#1$,\; $\lambda=\dfrac{2L}{#1}$};
+  \end{scope}
+\end{tikzpicture}}
+
+% ---------- 6. FRENTES DE ONDA Y RAYOS --------------------------------
+%  \nbwavefront{n frentes}{paso}{abre-grados}{etiquetas 0/1}
+%  Para atenuacion (I ~ 1/r^2) y para el principio de Huygens.
+\newcommand{\nbwavefront}[4]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[NebulaError] (0,0) circle (2.4pt);
+  \node[nblabel,below left=1pt and 0pt,NebulaError] at (0,0){foco};
+  \foreach \n in {1,...,#1}{
+    \pgfmathsetmacro{\r}{#2*\n}
+    \draw[nbline,opacity={1-0.09*\n}] (-#3:\r) arc (-#3:#3:\r);
+    \ifnum#4=1\relax
+      \node[nblabel,anchor=west,NebulaNavy] at ({#3-4}:\r){$r_{\n}$};
+    \fi}
+  \foreach \a in {-#3,0,#3}{
+    \pgfmathsetmacro{\rr}{#2*#1+0.5}
+    \draw[->,>=Stealth,NebulaGold,thick] (0,0) -- (\a:\rr);}
+\end{tikzpicture}}
+
+% ---------- 7. CINEMATICA DEL MAS: x(t), v(t), a(t) -------------------
+%  \nbshm{A}{T}{nciclos}
+%  Las tres graficas ALINEADAS en el mismo eje de tiempos, que es lo que
+%  hace visible el desfase de un cuarto de periodo entre cada una.
+% ERR-0141: la firma pedia una amplitud que el cuerpo nunca usaba. Las
+%   tres curvas van normalizadas a 1 a proposito --lo que se compara es
+%   la FASE, no el tamano-- asi que el argumento sobraba y confundia.
+\newcommand{\nbshm}[2]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\tmax}{#1*#2}
+  \pgfmathsetmacro{\sx}{9.4/\tmax}
+  \foreach \i/\lbl/\col/\ph in {0/{$x$}/NebulaNavy/0, 1/{$v$}/NebulaCheck/90,
+                                2/{$a$}/NebulaError/180}{
+    \begin{scope}[yshift={-\i*2.6cm}]
+      % el rotulo del eje va FUERA del escalado horizontal: dentro se
+      % desplazaba con el y quedaba cortado contra el margen.
+      \node[nblabel,\col,anchor=east] at (-0.55,0.95){\lbl};
+      \begin{scope}[xscale=\sx]
+        \draw[nbaxis] (-0.25/\sx,0) -- (\tmax+0.5/\sx,0)
+          node[right,nblabel]{$t$};
+        \draw[nbaxis] (0,-1.4) -- (0,1.5);
+        \draw[\col,thick,smooth,samples=200,domain=0:\tmax]
+          plot(\x,{sin(360*\x/#1+\ph)});
+        \foreach \k in {1,...,#2}{
+          \pgfmathsetmacro{\tk}{#1*\k}
+          \draw[NebulaMuted,dotted] (\tk,-1.35) -- (\tk,1.35);}
+      \end{scope}
+    \end{scope}}
+  \node[nblabel,NebulaMuted,anchor=north] at (4.7,-6.4)
+    {cada gráfica adelanta un cuarto de periodo a la anterior};
+\end{tikzpicture}}
+
+% ---------- 8. FASOR: circulo y su proyeccion -------------------------
+%  \nbphasor{angulo}{R}
+%  El puente entre el movimiento circular y el MAS, que es como la
+%  fuente introduce la ecuacion. La proyeccion se dibuja, no se sugiere.
+% \nbphasor[eje]{angulo}{R}  -  eje = y (por defecto) o x
+%
+%   ERR-0139: proyectaba siempre sobre OX y rotulaba "x = A cos(phi)".
+%   La unidad de MAS instala x = A sen(wt+phi0), que es la proyeccion
+%   sobre OY: la macro ensenaba EL CONVENIO CONTRARIO al del temario.
+%   Lo senalo el agente que planifico la unidad, al usarla.
+\newcommand{\nbphasor}[3][y]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[nbaxis] (-#3-0.5,0) -- (#3+0.7,0) node[right,nblabel]{};
+  \draw[nbaxis] (0,-#3-0.5) -- (0,#3+0.7) node[above,nblabel]{};
+  \draw[NebulaMuted,thick] (0,0) circle (#3);
+  \draw[nbvec] (0,0) -- (#2:#3);
+  \pgfmathsetmacro{\px}{#3*cos(#2)}
+  \pgfmathsetmacro{\py}{#3*sin(#2)}
+  \fill[NebulaError] (\px,\py) circle (2.2pt);
+  \draw[nbangle,->] (0.7,0) arc (0:#2:0.7);
+  \node[nblabel,NebulaGold] at ({#2/2}:1.05){$\varphi$};
+  \node[nblabel,anchor=west,NebulaError] at (#2:{#3+0.14}){$A$};
+  \if #1y
+    % proyeccion sobre OY: el convenio del seno
+    \draw[nbdash] (\px,\py) -- (0,\py);
+    \fill[NebulaNavy] (0,\py) circle (2.6pt);
+    \draw[NebulaNavy,very thick] (0,0) -- (0,\py);
+    \node[nblabel,anchor=west,NebulaNavy,align=left]
+      at (0.18,{\py/2}){$x=A\operatorname{sen}\varphi$};
+  \else
+    % proyeccion sobre OX: el convenio del coseno
+    \draw[nbdash] (\px,\py) -- (\px,0);
+    \fill[NebulaNavy] (\px,0) circle (2.6pt);
+    \draw[NebulaNavy,very thick] (0,0) -- (\px,0);
+    \node[nblabel,below=5pt,NebulaNavy] at ({\px/2},0){$x=A\cos\varphi$};
+  \fi
+\end{tikzpicture}}
+
+% ---------- 9. REFLEXION Y REFRACCION ---------------------------------
+%  \nbrefract{inc}{refr}{etiq medio 1}{etiq medio 2}
+%  Los dos angulos se dibujan con los valores que se le pasan, de modo
+%  que una figura con 30 y 19 grados es realmente 30 y 19 grados: la
+%  ley de Snell se puede MEDIR sobre el dibujo.
+\newcommand{\nbrefract}[4]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[NebulaNavy!7] (-4,0) rectangle (4,-3);
+  \draw[NebulaNavy,very thick] (-4,0) -- (4,0);
+  \draw[nbdash] (0,-3) -- (0,3);
+  \draw[->,>=Stealth,NebulaError,very thick] ({-3*sin(#1)},{3*cos(#1)}) -- (0,0);
+  \draw[->,>=Stealth,NebulaGold,very thick] (0,0) -- ({3*sin(#1)},{3*cos(#1)});
+  \draw[->,>=Stealth,NebulaCheck,very thick] (0,0) -- ({3*sin(#2)},{-3*cos(#2)});
+  \draw[nbangle] (0,1.5) arc (90:{90+#1}:1.5);
+  \node[nblabel] at ({90+#1/2}:1.75){$\hat\imath$};
+  \draw[nbangle] (0,-1.5) arc (-90:{-90+#2}:1.5);
+  \node[nblabel] at ({-90+#2/2}:1.78){$\hat r$};
+  \node[nblabel,anchor=west] at (-3.9,1.6){#3};
+  \node[nblabel,anchor=west] at (-3.9,-2.6){#4};
+\end{tikzpicture}}
+
+% ---------- 10. ONDA LONGITUDINAL: compresiones y dilataciones --------
+%  \nblongitudinal{nciclos}{densidad}
+%  Lo que una sinusoide NO ensena: en una onda longitudinal las
+%  particulas se mueven en la direccion de avance.
+\newcommand{\nblongitudinal}[2]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\N}{#1*#2}
+  \foreach \k in {0,...,\N}{
+    \pgfmathsetmacro{\u}{10*\k/\N}
+    \pgfmathsetmacro{\dx}{0.30*sin(360*\u/(10/#1))}
+    \fill[NebulaNavy] ({\u+\dx},0) circle (1.5pt);}
+  \draw[nbaxis] (0,-0.75) -- (10.4,-0.75) node[right,nblabel]{avance};
+  \foreach \k in {1,...,#1}{
+    \pgfmathsetmacro{\xc}{(10/#1)*(\k-0.75)}
+    \pgfmathsetmacro{\xd}{(10/#1)*(\k-0.25)}
+    \node[nblabel,NebulaError,font=\footnotesize] at (\xc,0.62){compresión};
+    \node[nblabel,NebulaCheck,font=\footnotesize] at (\xd,-0.38){dilatación};}
+\end{tikzpicture}}
+
+% ---------- 11. MUELLE Y PENDULO --------------------------------------
+%  \nbspring{elongacion}   -   \nbpendulum{angulo}{L}
+\newcommand{\nbspring}[1]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[pattern=north east lines,draw=NebulaMuted] (-0.3,-1.1) rectangle (0,1.1);
+  \draw[NebulaMuted,very thick] (0,-1.1) -- (0,1.1);
+  \draw[NebulaNavy,thick,decorate,
+    decoration={coil,amplitude=4pt,segment length=5pt}] (0,0) -- ({3+#1},0);
+  \node[draw=NebulaNavy,fill=NebulaNavy!15,thick,minimum size=15pt]
+    (m) at ({3.45+#1},0){$m$};
+  \draw[nbdash] (3,-1.0) -- (3,1.0);
+  \node[nblabel,below,NebulaMuted] at (3,-1.0){equilibrio};
+  \ifdim#1pt=0pt\else
+    \draw[<->,NebulaError,thick] (3,0.75) -- ({3+#1},0.75)
+      node[midway,above,nblabel,NebulaError]{$x$};
+  \fi
+\end{tikzpicture}}
+
+\newcommand{\nbpendulum}[2]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[pattern=north east lines,draw=NebulaMuted] (-1.1,0) rectangle (1.1,0.28);
+  \draw[NebulaMuted,very thick] (-1.1,0) -- (1.1,0);
+  \draw[nbdash] (0,0) -- (0,-#2-0.6);
+  \draw[NebulaNavy,thick] (0,0) -- ({-#2*sin(#1)},{-#2*cos(#1)});
+  \node[nbmass,minimum size=11pt] (b) at ({-#2*sin(#1)},{-#2*cos(#1)}){};
+  \draw[nbangle] (0,-1) arc (-90:{-90-#1}:1);
+  \node[nblabel,NebulaGold] at ({-90-#1/2}:1.3){$\theta$};
+  \node[nblabel,anchor=east,NebulaNavy] at ({-#2*sin(#1)/2-0.1},{-#2*cos(#1)/2}){$L$};
+  \draw[nbvec] (b) -- ++(0,-1.05) node[below,nblabel,NebulaError]{$mg$};
+\end{tikzpicture}}
+
+% ---------- 12. EFECTO DOPPLER ----------------------------------------
+%  \nbdoppler{n frentes}{paso}{desplazamiento del foco por frente}
+%  Los centros de los frentes se desplazan, que es EL mecanismo: la
+%  figura no apreta las ondas a mano, las dibuja desde focos distintos.
+\newcommand{\nbdoppler}[3]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \foreach \n in {1,...,#1}{
+    \pgfmathsetmacro{\r}{#2*\n}
+    \pgfmathsetmacro{\cx}{-#3*\n}
+    \draw[nbline,opacity={1-0.1*\n}] (\cx,0) circle (\r);}
+  \pgfmathsetmacro{\fx}{0}
+  \fill[NebulaError] (\fx,0) circle (2.6pt);
+  \draw[->,>=Stealth,NebulaError,very thick] (\fx,0) -- ++(1.1,0)
+    node[right,nblabel,NebulaError]{$v_f$};
+  % anclados al borde real de los frentes, no a una posicion fija
+  \pgfmathsetmacro{\bder}{#2*#1-#3*#1}
+  \pgfmathsetmacro{\bizq}{-#2*#1-#3*#1}
+  \node[nblabel,NebulaCheck,align=center,anchor=south]
+    at (\bder,{#2*#1*0.42}){delante:\\$\lambda$ menor};
+  \node[nblabel,NebulaGold,align=center,anchor=south]
+    at (\bizq,{#2*#1*0.42}){detrás:\\$\lambda$ mayor};
+\end{tikzpicture}}
+
+% ---------- 13. INTERFERENCIA DE DOS FOCOS ----------------------------
+%  \nbinterf{separacion}{lambda}{n frentes}
+\newcommand{\nbinterf}[3]{%
+% Las lineas de maximos NO se estiman: para |r1-r2| = k*lambda el lugar
+% geometrico es la hiperbola x^2/a^2 - y^2/b^2 = 1 con a = k*lambda/2 y
+% b^2 = (d/2)^2 - a^2. Se dibujan con esa formula, de modo que la figura
+% es verdadera y el alumno puede comprobarla midiendo (RULE-017).
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\hd}{#1/2}
+  \pgfmathsetmacro{\ymx}{#2*#3*0.92}
+  \foreach \sgn in {-1,1}{
+    \foreach \n in {1,...,#3}{
+      \draw[NebulaNavy!35,thin] ({\sgn*\hd},0) circle ({#2*\n});}}
+  % maximo central: equidistante de los dos focos
+  \draw[NebulaCheck,very thick] (0,-\ymx) -- (0,\ymx);
+  % ramas de orden k mientras la hiperbola exista (a < d/2)
+  \foreach \k in {1,2,3}{
+    \pgfmathsetmacro{\aa}{\k*#2/2}
+    \ifdim \aa pt < \hd pt
+      \pgfmathsetmacro{\bb}{sqrt(\hd*\hd-\aa*\aa)}
+      % pgfmath no trae asinh: asinh(u) = ln(u + sqrt(u^2+1))
+      \pgfmathsetmacro{\uu}{\ymx/\bb}
+      \pgfmathsetmacro{\tmx}{ln(\uu+sqrt(\uu*\uu+1))}
+      \foreach \sgn in {-1,1}{
+        \draw[NebulaCheck,thick,dashed,smooth,samples=60,
+          domain=-\tmx:\tmx,variable=\t]
+          plot({\sgn*\aa*cosh(\t)},{\bb*sinh(\t)});}
+    \fi}
+  \foreach \sgn in {-1,1}{
+    \fill[NebulaError] ({\sgn*\hd},0) circle (2.6pt);}
+  \node[nblabel,below=4pt,NebulaError] at (-\hd,0){$F_1$};
+  \node[nblabel,below=4pt,NebulaError] at (\hd,0){$F_2$};
+  \node[nblabel,NebulaCheck,anchor=south] at (0,\ymx){máximos};
+\end{tikzpicture}}
+
+% ---------- 14. ESTACIONARIA EN CUERDA FIJA-LIBRE ---------------------
+%  \nbstandingopen{n}{L}{A}   con n = 0,1,2,...  ->  lambda = 4L/(2n+1)
+%
+%  `\nbstanding` solo hace fija-fija. El tubo abierto por un extremo y
+%  la cuerda con un extremo libre son media leccion del temario y tienen
+%  OTRA familia de armonicos: solo los impares. Dibujarla con la macro
+%  de fija-fija ensenaria lo contrario.
+\newcommand{\nbstandingopen}[3]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\sx}{10/#2}
+  \pgfmathsetmacro{\sy}{1.5/#3}
+  \pgfmathtruncatemacro{\m}{2*#1+1}       % orden impar del armonico (entero)
+  \begin{scope}[xscale=\sx,yscale=\sy]
+    \draw[NebulaMuted,thin] (0,0) -- (#2,0);
+    % cuarto de onda impar: nodo en 0, vientre en L
+    \draw[NebulaGold!75,thick,dashed,smooth,samples=200,domain=0:#2]
+      plot(\x,{#3*sin(90*\m*\x/#2)});
+    \draw[NebulaGold!75,thick,dashed,smooth,samples=200,domain=0:#2]
+      plot(\x,{-#3*sin(90*\m*\x/#2)});
+    \draw[nbline,smooth,samples=200,domain=0:#2]
+      plot(\x,{#3*sin(90*\m*\x/#2)});
+    \draw[NebulaNavy!45,thick,smooth,samples=200,domain=0:#2]
+      plot(\x,{0.45*#3*sin(90*\m*\x/#2)});
+    % nodos en x = 2kL/m ; vientres en x = (2k+1)L/m
+    \foreach \k in {0,...,#1}{
+      \pgfmathsetmacro{\xn}{2*\k*#2/\m}
+      \node[circle,fill=NebulaError,inner sep=1.7pt] at (\xn,0){};
+      \node[nblabel,font=\footnotesize,NebulaError] at (\xn,{-0.33/\sy}){N};}
+    \foreach \k in {0,...,#1}{
+      \pgfmathsetmacro{\xv}{(2*\k+1)*#2/\m}
+      \pgfmathsetmacro{\sg}{sin(90*\m*\xv/#2)}
+      \draw[NebulaCheck,thick,dotted] (\xv,{#3*\sg}) -- (\xv,{-#3*\sg});
+      \node[nblabel,font=\footnotesize,NebulaCheck] at (\xv,{#3+0.3/\sy}){V};}
+    \draw[|<->|,NebulaNavy!70,thick] (0,{-#3-0.75/\sy}) -- (#2,{-#3-0.75/\sy})
+      node[midway,below,nblabel,NebulaNavy]{$L$};
+    \node[nblabel,anchor=west] at (#2+0.3/\sx,0)
+      {$\lambda=\dfrac{4L}{\m}$};
+  \end{scope}
+\end{tikzpicture}}
+
+% ---------- 15. PRINCIPIO DE HUYGENS ---------------------------------
+%  \nbhuygens{n focos}{radio del frente}{radio de la ondita}
+%  El frente nuevo es la ENVOLVENTE de las onditas, y aqui se dibuja
+%  como tal: se traza a radio R+r desde el mismo centro, que es
+%  exactamente donde las onditas son tangentes.
+\newcommand{\nbhuygens}[3]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[nbline,very thick] (-42:#2) arc (-42:42:#2);
+  \node[nblabel,NebulaNavy,anchor=east] at (-42:#2){frente en $t$};
+  % solo la mitad DELANTERA de cada ondita: la circunferencia completa
+  % tapaba la envolvente, que es lo unico que hay que ver aqui.
+  \foreach \i in {1,...,#1}{
+    \pgfmathsetmacro{\a}{-36+72*(\i-1)/(#1-1)}
+    \fill[NebulaError] (\a:#2) circle (1.7pt);
+    \draw[NebulaCheck!70,thin] ([shift=(\a:#2)]0,0)
+      ++({\a-90}:#3) arc ({\a-90}:{\a+90}:#3);}
+  \draw[NebulaGold,very thick,dashed] (-42:{#2+#3}) arc (-42:42:{#2+#3});
+  \node[nblabel,NebulaGold,anchor=west] at (42:{#2+#3}){frente en $t+\Delta t$};
+  \node[nblabel,NebulaCheck,anchor=west] at (8:{#2+#3+0.15}){envolvente};
+\end{tikzpicture}}
+
+% ---------- 16. DIFRACCION POR UNA RENDIJA ---------------------------
+%  \nbdiffract{abertura}{lambda}{n frentes}
+%  La abertura se dibuja a la escala que se le pasa frente a lambda, de
+%  modo que una rendija estrecha SE VE estrecha y la figura no miente
+%  sobre cuando hay difraccion apreciable.
+\newcommand{\nbdiffract}[3]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \pgfmathsetmacro{\ha}{#1/2}
+  % frentes planos que llegan
+  \foreach \n in {1,...,#3}{
+    \draw[nbline,opacity=0.75] ({-0.85*\n-0.55},-2.6) -- ({-0.85*\n-0.55},2.6);}
+  \draw[->,>=Stealth,NebulaError,thick] (-3.6,0) -- (-0.5,0);
+  % frentes circulares de salida, RECORTADOS al semiplano de la derecha:
+  % sin el recorte atravesaban la pantalla y la figura decia que la onda
+  % sale tambien hacia atras, que es justo lo contrario del fenomeno.
+  \begin{scope}
+    \clip (0.12,-3) rectangle (5.2,3);
+    \foreach \n in {1,...,#3}{
+      \draw[NebulaCheck,opacity={1-0.11*\n}] (0,0) circle ({0.85*\n+#2*0.45});}
+  \end{scope}
+  % pantalla con la rendija (se dibuja DESPUES, para taparlo todo)
+  \fill[NebulaNavy] (-0.12,\ha) rectangle (0.12,2.9);
+  \fill[NebulaNavy] (-0.12,-\ha) rectangle (0.12,-2.9);
+  \draw[|<->|,NebulaGold,thick] (-0.55,-\ha) -- (-0.55,\ha)
+    node[midway,left,nblabel,NebulaGold]{$a$};
+  \node[nblabel,NebulaCheck,anchor=west] at (1.1,2.6){la rendija es un foco};
+\end{tikzpicture}}

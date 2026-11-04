@@ -1,0 +1,30 @@
+[
+ {
+  "id": "PAU-FIS-OPT-011",
+  "severity": "WARNING",
+  "field": "full_solution",
+  "issue": "El apartado (b.ii) pide \"el mayor ángulo α posible\" pero la solución no da un valor numérico de α; depende de la geometría del prisma (caras AB, AC y ángulo del vértice) que no se describe (no hay fig_caption). Solo se calcula θL=41,8°, correcto, y se enuncia la condición de reflexión total.",
+  "correct_value": "θL=41,8°; α numérico indeterminado sin la geometría del prisma"
+ },
+ {
+  "id": "PAU-FIS-OPT-015",
+  "severity": "WARNING",
+  "field": "statement",
+  "issue": "Incoherencia geométrica: el enunciado dice \"5 cm de espesor (horizontal)\" y \"el rayo interior forma 62° con la horizontal\". Si la normal fuera horizontal, θr=62° (contradice Snell, pues la luz entra a un medio más denso y debe acercarse a la normal). La solución asume θr=90-62=28° respecto a la normal, interpretación física correcta y con resultados autoconsistentes (n=1,51; λ=664 nm; t=2,84e-10 s), pero la descripción \"horizontal\" es ambigua/errónea.",
+  "correct_value": "θr=28° (respecto a la normal); resultados correctos"
+ },
+ {
+  "id": "PAU-FIS-OPT-030",
+  "severity": "WARNING",
+  "field": "full_solution",
+  "issue": "Redacción defectuosa en (b): \"La imagen es real (misma lado contrario), invertida...\"; frase gramaticalmente rota. El resultado (M=-50, real, invertida, 50x) es correcto.",
+  "correct_value": "imagen real, invertida y 50x (al otro lado de la lente)"
+ },
+ {
+  "id": "PAU-FIS-OPT-037",
+  "severity": "ERROR",
+  "field": "statement",
+  "issue": "El enunciado remite a una figura para las posiciones de O y O-prima pero no se proporcionan valores numéricos ni hay fig_caption, por lo que el problema no puede resolverse: la full_solution y la answer quedan solo simbólicas (f'=(1/s'-1/s)^-1, y'=(s'/s)*2 cm). No es autocontenido (compárese con OPT-036, mismo tipo y origen, que sí aporta los datos de la figura).",
+  "correct_value": "Faltan las posiciones s y s' de la figura; no resoluble numéricamente tal como está"
+ }
+]

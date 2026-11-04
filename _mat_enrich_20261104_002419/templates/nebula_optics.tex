@@ -1,0 +1,180 @@
+% ============================================================
+%  nebula_optics.tex - diagramas de rayos y campos vectoriales
+% ------------------------------------------------------------
+%  POR QUE EXISTE
+%
+%  No es por ahorro. Esta medido que subir la cobertura de macro 32
+%  puntos cambio el coste por leccion un 0,4 %. Existe porque **un
+%  diagrama de rayos dibujado a mano puede mentir**: si los rayos no se
+%  cortan exactamente donde `1/s' - 1/s = 1/f'` dice, la figura ensena
+%  lo contrario del texto que la acompana, y ninguna puerta lo detecta.
+%
+%  Aqui la posicion de la imagen NO se dibuja: se CALCULA con la misma
+%  ecuacion que el alumno va a aplicar, y los rayos se trazan hasta
+%  ella. La figura no puede desmentir a la teoria porque sale de ella.
+%
+%  Convenio DIN, el de la unidad: luz de izquierda a derecha, origen en
+%  el centro optico, positivo a la derecha y hacia arriba. Un objeto
+%  real tiene s < 0.
+% ============================================================
+
+% ---------- 1. LENTE DELGADA ----------------------------------------
+%  \nblens{conv|div}{f'}{s}{y}
+%     f' distancia focal imagen (cm, >0 convergente, <0 divergente)
+%     s  distancia objeto (cm, NEGATIVA para un objeto real)
+%     y  altura del objeto (cm, >0)
+\newcommand{\nblens}[4]{%
+\begin{tikzpicture}[x=0.19cm,y=0.19cm,>=Stealth]
+  % --- la imagen se CALCULA, no se coloca a ojo
+  \pgfmathsetmacro{\fp}{#2}
+  \pgfmathsetmacro{\so}{#3}
+  \pgfmathsetmacro{\yo}{#4}
+  \pgfmathsetmacro{\si}{1/(1/\fp + 1/\so)}      % 1/s' = 1/f' + 1/s
+  \pgfmathsetmacro{\mm}{\si/\so}                % aumento lateral
+  \pgfmathsetmacro{\yi}{\mm*\yo}
+  \pgfmathsetmacro{\xmin}{min(\so,\si)-10}
+  \pgfmathsetmacro{\xmax}{max(\si,abs(\fp))+12}
+  \pgfmathsetmacro{\ymx}{max(abs(\yo),abs(\yi))+6}
+  % --- eje optico y lente
+  \draw[nbaxis] (\xmin,0) -- (\xmax,0) node[right,nblabel]{eje óptico};
+  % simbolo de lente: barra con las puntas hacia fuera (convergente) o
+  % hacia dentro (divergente), EN LOS DOS EXTREMOS. Con las puntas solo
+  % arriba la figura no se lee como lente.
+  \pgfmathsetmacro{\lh}{\ymx*0.72}
+  \draw[NebulaNavy!30,line width=2.2pt] (0,-\lh) -- (0,\lh);
+  \ifdim #2pt>0pt
+    \foreach \s in {1,-1}{
+      \draw[NebulaNavy,thick,->] (0,{\s*\lh}) -- ++(-1.6,{\s*1.6});
+      \draw[NebulaNavy,thick,->] (0,{\s*\lh}) -- ++(1.6,{\s*1.6});}
+  \else
+    \foreach \s in {1,-1}{
+      \draw[NebulaNavy,thick,->] (-1.6,{\s*(\lh+1.6)}) -- (0,{\s*\lh});
+      \draw[NebulaNavy,thick,->] (1.6,{\s*(\lh+1.6)}) -- (0,{\s*\lh});}
+  \fi
+  % --- focos, en su posicion real
+  \foreach \s/\lbl in {1/{$F'$},-1/{$F$}}{
+    \pgfmathsetmacro{\xf}{\s*abs(\fp)}
+    \fill[NebulaNavy] (\xf,0) circle (1.6pt);
+    \node[nblabel,font=\footnotesize,below=3pt,NebulaNavy] at (\xf,0){\lbl};}
+  % --- objeto
+  \draw[NebulaError,very thick,->] (\so,0) -- (\so,\yo);
+  \node[nblabel,font=\footnotesize,NebulaError,above] at (\so,\yo){$y$};
+  % --- rayo 1: paralelo al eje, sale por F'
+  \draw[NebulaCheck,thick] (\so,\yo) -- (0,\yo);
+  \ifdim #2pt>0pt
+    \ifdim \si pt<0pt
+      % imagen virtual: el rayo refractado NO va hacia atras. Sigue
+      % hacia la derecha pasando por F'; lo que se corta en la imagen
+      % es su PROLONGACION, que va en discontinua.
+      \pgfmathsetmacro{\xv}{abs(\fp)*2.2}
+      \pgfmathsetmacro{\yv}{\yo*(1-\xv/\fp)}
+      \draw[NebulaCheck,thick,->] (0,\yo) -- (\xv,\yv);
+      \draw[NebulaCheck,dashed] (\si,\yi) -- (0,\yo);
+    \else
+      \draw[NebulaCheck,thick,->] (0,\yo) -- (\si,\yi);
+    \fi
+  \else
+    \pgfmathsetmacro{\xe}{\xmax}
+    \pgfmathsetmacro{\ye}{\yo*(1-\xe/\fp)}
+    \draw[NebulaCheck,thick,->] (0,\yo) -- (\xe,\ye);
+    \draw[NebulaCheck,dashed] (\fp,0) -- (0,\yo);
+  \fi
+  % --- rayo 2: por el centro optico, no se desvia
+  \draw[NebulaGold,thick] (\so,\yo) -- (0,0);
+  \pgfmathsetmacro{\xg}{\ifdim \si pt<0pt min(\xmax,abs(\fp)*2.2)\else \xmax\fi}
+  \pgfmathsetmacro{\yg}{-\yo*\xg/abs(\so)}
+  \draw[NebulaGold,thick,->] (0,0) -- (\xg,\yg);
+  \ifdim \si pt<0pt
+    \draw[NebulaGold,dashed] (0,0) -- (\si,\yi);
+  \fi
+  % --- imagen, EN EL PUNTO QUE DA LA ECUACION
+  \draw[NebulaNavy,very thick,->] (\si,0) -- (\si,\yi);
+  \node[nblabel,font=\footnotesize,NebulaNavy,
+    anchor={\ifdim\yi pt>0pt south\else north\fi}] at (\si,\yi){$y'$};
+  \node[nblabel,font=\footnotesize,anchor=north west]
+    at (\xmin,{-\ymx*0.72-3})
+    {$s=\pgfmathprintnumber{\so}$, $f'=\pgfmathprintnumber{\fp}$
+     $\Rightarrow$ $s'=\pgfmathprintnumber[precision=1]{\si}$,
+     $m=\pgfmathprintnumber[precision=2]{\mm}$};
+\end{tikzpicture}}
+
+% ---------- 2. CAMPO RADIAL DE UNA CARGA PUNTUAL --------------------
+%  \nbfieldradial{+|-}{n lineas}
+\newcommand{\nbfieldradial}[2]{%
+\begin{tikzpicture}[>=Stealth]
+  \pgfmathsetmacro{\sg}{\ifx+#1 1\else -1\fi}
+  \foreach \k in {1,...,#2}{
+    \pgfmathsetmacro{\a}{360*(\k-1)/#2}
+    \if#1+
+      \draw[NebulaError,thick,->] (\a:0.5) -- (\a:2.6);
+    \else
+      \draw[NebulaCheck,thick,->] (\a:2.6) -- (\a:0.6);
+    \fi}
+  \node[circle,draw=NebulaNavy,fill=NebulaNavy!12,thick,minimum size=15pt]
+    at (0,0){$#1q$};
+  \node[nblabel,font=\footnotesize,below=3pt] at (0,-2.8)
+    {\if#1+ el campo sale de la carga positiva\else
+             el campo entra en la carga negativa\fi};
+\end{tikzpicture}}
+
+% ---------- 3. REJILLA DE CAMPO ENTRANTE / SALIENTE ------------------
+%  \nbfieldgrid{in|out}{filas}{cols}{cuerpo extra}
+\newcommand{\nbfieldgrid}[4]{%
+\begin{tikzpicture}[>=Stealth]
+  \foreach \i in {1,...,#3}{\foreach \j in {1,...,#2}{
+    \pgfmathsetmacro{\x}{\i*0.62}\pgfmathsetmacro{\y}{\j*0.62}
+    \ifnum\pdfstrcmp{#1}{in}=0
+      \node[NebulaNavy!70,font=\footnotesize] at (\x,\y){$\otimes$};
+    \else
+      \node[NebulaNavy!70,font=\footnotesize] at (\x,\y){$\odot$};
+    \fi}}
+  \node[nblabel,font=\footnotesize,below=4pt,NebulaNavy]
+    at ({(#3+1)*0.31},0.2)
+    {$\vec B$ \ifnum\pdfstrcmp{#1}{in}=0 entrante ($\otimes$)\else
+                 saliente ($\odot$)\fi};
+  #4
+\end{tikzpicture}}
+
+% ---------- 4. TRAYECTORIA CIRCULAR EN UN CAMPO MAGNETICO ------------
+%  \nbcirctraj{R}{angulo de la particula}{+|-}
+%  La fuerza se dibuja SIEMPRE hacia el centro y la velocidad SIEMPRE
+%  tangente: son perpendiculares por construccion, no por buen pulso.
+\newcommand{\nbcirctraj}[3]{%
+\begin{tikzpicture}[>=Stealth]
+  \foreach \i in {0,...,5}{\foreach \j in {0,...,5}{
+    \node[NebulaNavy!35,font=\scriptsize] at ({\i*0.95-2.4},{\j*0.95-2.4}){$\otimes$};}}
+  \draw[NebulaMuted,thick,dashed] (0,0) circle (#1);
+  \pgfmathsetmacro{\px}{#1*cos(#2)}\pgfmathsetmacro{\py}{#1*sin(#2)}
+  \fill[NebulaNavy] (\px,\py) circle (2.6pt);
+  \node[nblabel,font=\footnotesize,NebulaNavy,above right=0pt and 2pt]
+    at (\px,\py){$#3q$};
+  % velocidad: tangente (perpendicular al radio)
+  \draw[NebulaCheck,very thick,->] (\px,\py) -- ++({#2+90}:1.25)
+    node[above,nblabel,font=\footnotesize,NebulaCheck]{$\vec v$};
+  % fuerza: hacia el centro, por definicion de centripeta
+  \draw[NebulaError,very thick,->] (\px,\py) -- ++({#2+180}:1.05)
+    node[pos=1.18,nblabel,font=\footnotesize,NebulaError]{$\vec F$};
+  % el radio se rotula al otro lado del centro, para no pisar a F
+  \draw[NebulaMuted,thin] (0,0) -- (\px,\py)
+    node[pos=0.42,below right=0pt and 1pt,nblabel,font=\footnotesize]{$R$};
+  \fill[NebulaMuted] (0,0) circle (1.2pt);
+\end{tikzpicture}}
+
+% ---------- 5. SOLENOIDE EN CORTE ------------------------------------
+%  \nbsolenoid{n espiras}
+\newcommand{\nbsolenoid}[1]{%
+\begin{tikzpicture}[>=Stealth]
+  \pgfmathsetmacro{\L}{#1*0.44}
+  \draw[NebulaNavy,very thick,->] (0.1,0) -- ({\L+0.9},0)
+    node[right,nblabel,font=\footnotesize,NebulaNavy]{$\vec B$};
+  \foreach \k in {1,...,#1}{
+    \pgfmathsetmacro{\x}{\k*0.44}
+    \node[NebulaError,font=\footnotesize] at (\x,0.78){$\odot$};
+    \node[NebulaError,font=\footnotesize] at (\x,-0.78){$\otimes$};}
+  \draw[NebulaMuted,thin] (0.2,0.78) -- ({\L+0.2},0.78);
+  \draw[NebulaMuted,thin] (0.2,-0.78) -- ({\L+0.2},-0.78);
+  \draw[|<->|,NebulaNavy!70,thick] (0.44,-1.3) -- (\L,-1.3)
+    node[midway,below,nblabel,font=\footnotesize,NebulaNavy]{$L$, $N=#1$ espiras};
+  \node[nblabel,font=\footnotesize,above,NebulaMuted] at ({\L/2},0.95)
+    {dentro, el campo es uniforme};
+\end{tikzpicture}}

@@ -1,0 +1,182 @@
+[
+ {
+  "block": "campo_gravitatorio",
+  "source": "Madrid · Modelo 2007",
+  "title": "Órbita circular y energía mecánica a partir de $E_p$ · Madrid · Modelo 2007",
+  "statement": "Un objeto de $5\\ \\text{kg}$ de masa posee una energía potencial gravitatoria $E_p=-2\\cdot10^{8}\\ \\text{J}$ cuando se encuentra a cierta distancia de la Tierra.\n\n**a)** Si a esa distancia describiera una órbita circular, ¿cuál sería su velocidad?\n\n**b)** Si su velocidad a esa distancia fuese de $9\\ \\text{km/s}$, ¿cuál sería su energía mecánica? ¿Podría describir una órbita elíptica?",
+  "knowns": [
+   "$m=5\\ \\text{kg}$",
+   "$E_p=-2\\cdot10^{8}\\ \\text{J}$"
+  ],
+  "full_solution": "**(a)** En una órbita circular la energía cinética cumple $E_c=-\\dfrac{E_p}{2}$ (teorema del virial), porque $E_c=\\dfrac{GMm}{2r}$ y $E_p=-\\dfrac{GMm}{r}$.\n$$E_c=-\\dfrac{-2\\cdot10^{8}}{2}=1\\cdot10^{8}\\ \\text{J}.$$\nComo $E_c=\\tfrac12 m v^2$:\n$$v=\\sqrt{\\dfrac{2E_c}{m}}=\\sqrt{\\dfrac{2\\cdot10^{8}}{5}}=6{,}32\\cdot10^{3}\\ \\text{m/s}\\approx6{,}3\\ \\text{km/s}.$$\n\n**(b)** Con $v=9\\ \\text{km/s}=9\\cdot10^{3}\\ \\text{m/s}$:\n$$E_c=\\tfrac12 m v^2=\\tfrac12\\cdot5\\cdot(9\\cdot10^{3})^2=2{,}025\\cdot10^{8}\\ \\text{J}.$$\n$$E_m=E_c+E_p=2{,}025\\cdot10^{8}-2\\cdot10^{8}=2{,}5\\cdot10^{6}\\ \\text{J}.$$\nComo $E_m>0$, el objeto NO está ligado: su trayectoria es abierta (hiperbólica), así que **no** puede describir una órbita elíptica (que exige $E_m<0$).",
+  "answer": "**a)** $v\\approx6{,}3\\ \\text{km/s}$. **b)** $E_m=2{,}5\\cdot10^{6}\\ \\text{J}>0$; al ser positiva, la órbita no puede ser elíptica (trayectoria no ligada).",
+  "common_errors": [
+   "Usar $E_c=-E_p$ en vez de $E_c=-E_p/2$ para la órbita circular.",
+   "Creer que con cualquier velocidad la órbita es elíptica: solo lo es si $E_m<0$.",
+   "Olvidar que $E_p$ ya es negativa al sumar $E_m=E_c+E_p$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Modelo 2007",
+  "title": "Intensidad y nivel de intensidad sonora de una fuente puntual · Madrid · Modelo 2007",
+  "statement": "Una fuente sonora puntual emite con una potencia de $80\\ \\text{W}$. Calcula:\n\n**a)** La intensidad sonora en los puntos situados a $10\\ \\text{m}$ de la fuente.\n\n**b)** ¿A qué distancia de la fuente el nivel de intensidad sonora es de $130\\ \\text{dB}$?",
+  "knowns": [
+   "$P=80\\ \\text{W}$",
+   "$I_0=10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "**(a)** La fuente es puntual, así que la potencia se reparte sobre una esfera de radio $r$:\n$$I=\\dfrac{P}{4\\pi r^2}=\\dfrac{80}{4\\pi(10)^2}=6{,}37\\cdot10^{-2}\\ \\text{W·m}^{-2}.$$\n\n**(b)** El nivel de intensidad es $\\beta=10\\log\\dfrac{I}{I_0}$. Para $\\beta=130\\ \\text{dB}$:\n$$\\dfrac{I}{I_0}=10^{13}\\ \\Rightarrow\\ I=10^{-12}\\cdot10^{13}=10\\ \\text{W·m}^{-2}.$$\nDespejando $r$ de $I=\\dfrac{P}{4\\pi r^2}$:\n$$r=\\sqrt{\\dfrac{P}{4\\pi I}}=\\sqrt{\\dfrac{80}{4\\pi\\cdot10}}=0{,}80\\ \\text{m}.$$",
+  "answer": "**a)** $I=6{,}37\\cdot10^{-2}\\ \\text{W·m}^{-2}$. **b)** $r\\approx0{,}80\\ \\text{m}$.",
+  "common_errors": [
+   "Usar $2\\pi r^2$ o $4\\pi r$ en lugar de la superficie esférica $4\\pi r^2$.",
+   "Confundir intensidad $I$ con nivel $\\beta$ (en dB).",
+   "Olvidar que $130\\ \\text{dB}$ equivale a $I/I_0=10^{13}$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Modelo 2007",
+  "title": "Trayectoria de una carga positiva en campos E y B · Madrid · Modelo 2007",
+  "statement": "Indica el tipo de trayectoria que describe una partícula con carga positiva que posee inicialmente una velocidad $\\vec{v}=v\\,\\vec{\\imath}$ al penetrar en cada una de las siguientes regiones:\n\n**a)** Campo magnético uniforme $\\vec{B}=B\\,\\vec{\\imath}$.\n\n**b)** Campo eléctrico uniforme $\\vec{E}=E\\,\\vec{\\imath}$.\n\n**c)** Campo magnético uniforme $\\vec{B}=B\\,\\vec{\\jmath}$.\n\n**d)** Campo eléctrico uniforme $\\vec{E}=E\\,\\vec{\\jmath}$.",
+  "knowns": [
+   "$\\vec{v}=v\\,\\vec{\\imath}$ (inicial)"
+  ],
+  "full_solution": "La fuerza magnética es $\\vec{F}=q\\,\\vec{v}\\times\\vec{B}$ y la eléctrica $\\vec{F}=q\\,\\vec{E}$.\n\n**(a)** $\\vec{v}\\parallel\\vec{B}$ $\\Rightarrow$ $\\vec{v}\\times\\vec{B}=\\vec{0}$: no hay fuerza. **Trayectoria rectilínea y uniforme.**\n\n**(b)** $\\vec{E}\\parallel\\vec{v}$: fuerza $q\\vec{E}$ en la dirección del movimiento. **Trayectoria rectilínea uniformemente acelerada.**\n\n**(c)** $\\vec{v}\\perp\\vec{B}$ (con $\\vec{B}$ en $y$): $\\vec{F}=qvB(\\vec{\\imath}\\times\\vec{\\jmath})=qvB\\,\\vec{k}$, fuerza perpendicular a $\\vec{v}$ y constante en módulo. **Trayectoria circular uniforme** (en el plano $xz$).\n\n**(d)** $\\vec{E}\\perp\\vec{v}$: movimiento compuesto (uniforme en $x$, acelerado en $y$). **Trayectoria parabólica.**",
+  "answer": "**a)** recta uniforme. **b)** recta acelerada. **c)** circular uniforme. **d)** parabólica.",
+  "common_errors": [
+   "Decir que un campo magnético paralelo a $\\vec v$ curva la trayectoria: si $\\vec v\\parallel\\vec B$ la fuerza es nula.",
+   "Confundir la trayectoria parabólica (campo $E$ transversal) con la circular (campo $B$ transversal).",
+   "Olvidar que la fuerza magnética no realiza trabajo (no cambia la rapidez)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Madrid · Modelo 2007",
+  "title": "Imagen y aumento de una lente divergente · Madrid · Modelo 2007",
+  "statement": "Determina el tipo de imagen y el aumento lateral que produce una **lente divergente** de distancia focal $|f|$ al situar un objeto:\n\n**a)** a una distancia igual al doble de la distancia focal.\n\n**b)** a una distancia igual a la mitad de la distancia focal.\n\nEfectúa además la construcción geométrica en ambos casos.",
+  "knowns": [
+   "Lente divergente: $f'=-|f|$ (potencia negativa)"
+  ],
+  "full_solution": "Convenio de signos (origen en la lente, luz de izquierda a derecha; objeto real $s<0$). Lente divergente: $f'=-|f|$. Ecuación: $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$ y aumento $\\beta=\\dfrac{s'}{s}$.\n\n**(a)** Objeto a $2|f|$: $s=-2|f|$.\n$$\\dfrac{1}{s'}=\\dfrac{1}{f'}+\\dfrac{1}{s}=\\dfrac{1}{-|f|}+\\dfrac{1}{-2|f|}=-\\dfrac{3}{2|f|}\\ \\Rightarrow\\ s'=-\\dfrac{2|f|}{3}.$$\n$$\\beta=\\dfrac{s'}{s}=\\dfrac{-2|f|/3}{-2|f|}=+\\dfrac{1}{3}.$$\nImagen **virtual, derecha y menor** ($\\beta=+1/3$).\n\n**(b)** Objeto a $|f|/2$: $s=-|f|/2$.\n$$\\dfrac{1}{s'}=\\dfrac{1}{-|f|}+\\dfrac{1}{-|f|/2}=-\\dfrac{3}{|f|}\\ \\Rightarrow\\ s'=-\\dfrac{|f|}{3}.$$\n$$\\beta=\\dfrac{s'}{s}=\\dfrac{-|f|/3}{-|f|/2}=+\\dfrac{2}{3}.$$\nImagen **virtual, derecha y menor** ($\\beta=+2/3$).\n\nEn ambos casos la lente divergente da una imagen virtual, derecha y de menor tamaño, situada entre el objeto y la lente, del mismo lado que el objeto.",
+  "answer": "**a)** virtual, derecha, menor, $\\beta=+1/3$. **b)** virtual, derecha, menor, $\\beta=+2/3$. La lente divergente siempre da imagen virtual, derecha y reducida.",
+  "common_errors": [
+   "Esperar imagen real con una lente divergente: siempre es virtual y derecha.",
+   "Equivocar el signo de $f'$ (negativo para divergentes).",
+   "Interpretar $\\beta>0$ como invertida: $\\beta>0$ indica imagen derecha."
+  ],
+  "figure_suggestion": "Dos diagramas de rayos de lente divergente (f negativo): objeto a 2|f| y a |f|/2; rayo paralelo que al refractarse parece venir del foco imagen, rayo por el centro óptico; imagen virtual, derecha y menor del lado del objeto.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Madrid · Modelo 2007",
+  "title": "Fotón emitido en una transición y su longitud de onda en el agua · Madrid · Modelo 2007",
+  "statement": "Un electrón de un átomo salta desde un nivel de energía de $5\\ \\text{eV}$ a otro inferior de $3\\ \\text{eV}$, emitiéndose un fotón. Calcula la frecuencia y la longitud de onda de la radiación emitida si esta se propaga en el agua.",
+  "knowns": [
+   "$\\Delta E=5-3=2\\ \\text{eV}$",
+   "$n_{\\text{agua}}=1{,}33$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**Energía del fotón:** $\\Delta E=2\\ \\text{eV}=2\\cdot1{,}6\\cdot10^{-19}=3{,}2\\cdot10^{-19}\\ \\text{J}.$\n\n**Frecuencia** (es la misma en cualquier medio, porque la fija la fuente):\n$$f=\\dfrac{\\Delta E}{h}=\\dfrac{3{,}2\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=4{,}83\\cdot10^{14}\\ \\text{Hz}.$$\n\n**Longitud de onda en el agua:** la velocidad en el agua es $v=\\dfrac{c}{n}=\\dfrac{3\\cdot10^{8}}{1{,}33}=2{,}26\\cdot10^{8}\\ \\text{m/s}$, luego\n$$\\lambda_{\\text{agua}}=\\dfrac{v}{f}=\\dfrac{2{,}26\\cdot10^{8}}{4{,}83\\cdot10^{14}}=4{,}67\\cdot10^{-7}\\ \\text{m}=467\\ \\text{nm}.$$\n(En el vacío sería $\\lambda_0=c/f\\approx622\\ \\text{nm}$; en el agua se acorta en el factor $n$.)",
+  "answer": "$f=4{,}83\\cdot10^{14}\\ \\text{Hz}$ (igual en todo medio) y $\\lambda_{\\text{agua}}\\approx4{,}67\\cdot10^{-7}\\ \\text{m}=467\\ \\text{nm}$.",
+  "common_errors": [
+   "Cambiar la frecuencia al pasar al agua: la frecuencia no cambia, cambia $\\lambda$.",
+   "Usar $c$ en vez de $v=c/n$ para la longitud de onda en el agua.",
+   "No convertir los eV a julios antes de dividir por $h$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Modelo 2007",
+  "title": "Onda armónica en una cuerda: sentido, parámetros y velocidades máximas · Madrid · Modelo 2007",
+  "statement": "La expresión de una onda armónica que se propaga por una cuerda tensa es $y(x,t)=0{,}01\\,\\operatorname{sen}(10\\pi t+2\\pi x+\\pi)$, con $x$ e $y$ en metros y $t$ en segundos. Determina:\n\n**a)** El sentido y la velocidad de propagación.\n\n**b)** La frecuencia y la longitud de onda.\n\n**c)** La diferencia de fase de oscilación entre dos puntos separados $20\\ \\text{cm}$.\n\n**d)** La velocidad y la aceleración de oscilación máximas.",
+  "knowns": [
+   "$A=0{,}01\\ \\text{m}$",
+   "$\\omega=10\\pi\\ \\text{rad/s}$",
+   "$k=2\\pi\\ \\text{rad/m}$"
+  ],
+  "full_solution": "**(a)** Los términos en $t$ y en $x$ tienen el **mismo signo** ($+$), luego la onda viaja en el **sentido negativo del eje $x$**. Su velocidad de propagación es\n$$v=\\dfrac{\\omega}{k}=\\dfrac{10\\pi}{2\\pi}=5\\ \\text{m/s}.$$\n\n**(b)** $f=\\dfrac{\\omega}{2\\pi}=\\dfrac{10\\pi}{2\\pi}=5\\ \\text{Hz}$;  $\\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{2\\pi}=1\\ \\text{m}.$\n\n**(c)** $\\Delta\\varphi=k\\,\\Delta x=2\\pi\\cdot0{,}20=0{,}4\\pi\\ \\text{rad}\\approx1{,}26\\ \\text{rad}\\;(=72^\\circ).$\n\n**(d)** $v_{\\max}=A\\,\\omega=0{,}01\\cdot10\\pi=0{,}314\\ \\text{m/s}$;\n$$a_{\\max}=A\\,\\omega^2=0{,}01\\cdot(10\\pi)^2=\\pi^2\\approx9{,}87\\ \\text{m/s}^2.$$",
+  "answer": "**a)** sentido $-x$, $v=5\\ \\text{m/s}$. **b)** $f=5\\ \\text{Hz}$, $\\lambda=1\\ \\text{m}$. **c)** $\\Delta\\varphi=0{,}4\\pi\\ \\text{rad}\\approx72^\\circ$. **d)** $v_{\\max}=0{,}314\\ \\text{m/s}$, $a_{\\max}=9{,}87\\ \\text{m/s}^2$.",
+  "common_errors": [
+   "Deducir el sentido al revés: signos iguales en $t$ y $x$ $\\Rightarrow$ avanza hacia $-x$.",
+   "Confundir la velocidad de propagación $v=\\omega/k$ con la de oscilación $v_{\\max}=A\\omega$.",
+   "Usar grados en vez de radianes (o al revés) en la diferencia de fase."
+  ],
+  "figure_suggestion": "Instantánea de la onda y(x) en t=0: senoide de amplitud 0,01 m y longitud de onda 1 m, con una flecha indicando propagación hacia -x.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Modelo 2007",
+  "title": "Varilla deslizante: fem inducida y su variación al frenar · Madrid · Modelo 2007",
+  "statement": "En un circuito, la varilla MN se mueve con velocidad constante de $2\\ \\text{m/s}$ en dirección perpendicular a un campo magnético uniforme de $0{,}4\\ \\text{T}$. La resistencia del circuito es $R=60\\ \\Omega$ y la longitud de la varilla es $L=1{,}2\\ \\text{m}$.\n\n**a)** Determina la fuerza electromotriz inducida y la intensidad de la corriente.\n\n**b)** Si a partir de $t=0$ la varilla se frena con aceleración constante hasta pararse en $2\\ \\text{s}$, obtén la expresión de la fem inducida en función del tiempo en el intervalo de $0$ a $2\\ \\text{s}$.",
+  "knowns": [
+   "$v=2\\ \\text{m/s}$",
+   "$B=0{,}4\\ \\text{T}$",
+   "$R=60\\ \\Omega$",
+   "$L=1{,}2\\ \\text{m}$"
+  ],
+  "full_solution": "**(a)** La fem de una varilla que corta líneas de campo es $\\varepsilon=BLv$:\n$$\\varepsilon=0{,}4\\cdot1{,}2\\cdot2=0{,}96\\ \\text{V}.$$\n$$I=\\dfrac{\\varepsilon}{R}=\\dfrac{0{,}96}{60}=0{,}016\\ \\text{A}=16\\ \\text{mA}.$$\n\n**(b)** La varilla pasa de $2\\ \\text{m/s}$ a $0$ en $2\\ \\text{s}$ con aceleración constante:\n$$a=\\dfrac{0-2}{2}=-1\\ \\text{m/s}^2\\ \\Rightarrow\\ v(t)=2-t\\ \\ (\\text{m/s}).$$\nComo $\\varepsilon(t)=B L\\,v(t)=0{,}4\\cdot1{,}2\\cdot(2-t)$:\n$$\\boxed{\\varepsilon(t)=0{,}96-0{,}48\\,t\\ \\ \\text{(V)},\\quad 0\\le t\\le2\\ \\text{s}.}$$\nEn $t=2\\ \\text{s}$, $\\varepsilon=0$, coherente con la varilla parada.",
+  "answer": "**a)** $\\varepsilon=0{,}96\\ \\text{V}$, $I=16\\ \\text{mA}$. **b)** $\\varepsilon(t)=0{,}96-0{,}48\\,t\\ \\text{V}$ para $0\\le t\\le2\\ \\text{s}$.",
+  "common_errors": [
+   "Olvidar que al frenar $v$ depende de $t$, luego $\\varepsilon$ también.",
+   "Equivocar el signo de la aceleración de frenado.",
+   "Usar $\\varepsilon=BL$ sin multiplicar por la velocidad."
+  ],
+  "figure_suggestion": "Varilla MN sobre dos raíles horizontales conectados por R, con el campo B entrando en el plano (cruces) y la velocidad v hacia la derecha; indicar L y el sentido de la corriente inducida.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Modelo 2007",
+  "title": "Campo, potencial y dinámica de un protón frente a una carga fija · Madrid · Modelo 2007",
+  "statement": "Una carga positiva de $2\\ \\mu\\text{C}$ está fija en el origen. Un protón que se mueve por el semieje positivo de las $X$ se dirige hacia el origen; en el punto $A$ ($x=10\\ \\text{m}$) lleva una velocidad de $1000\\ \\text{m/s}$. Calcula:\n\n**a)** El campo eléctrico que crea la carga del origen en $A$.\n\n**b)** El potencial y la energía potencial del protón en $A$.\n\n**c)** La energía cinética del protón en $A$.\n\n**d)** El cambio de momento lineal del protón desde que parte de $A$ hasta que, por la repulsión, vuelve al mismo punto $A$.",
+  "knowns": [
+   "$Q=2\\ \\mu\\text{C}=2\\cdot10^{-6}\\ \\text{C}$",
+   "$x_A=10\\ \\text{m}$",
+   "$v_A=1000\\ \\text{m/s}$",
+   "$K=9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$",
+   "$m_p=1{,}67\\cdot10^{-27}\\ \\text{kg}$",
+   "$q_p=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** $E=\\dfrac{KQ}{r^2}=\\dfrac{9\\cdot10^{9}\\cdot2\\cdot10^{-6}}{10^{2}}=180\\ \\text{N/C}$, dirigido en $+x$ (alejándose de la carga positiva).\n\n**(b)** $V=\\dfrac{KQ}{r}=\\dfrac{9\\cdot10^{9}\\cdot2\\cdot10^{-6}}{10}=1800\\ \\text{V}.$\n$$E_p=q_p V=1{,}6\\cdot10^{-19}\\cdot1800=2{,}88\\cdot10^{-16}\\ \\text{J}.$$\n\n**(c)** $E_c=\\tfrac12 m_p v_A^2=\\tfrac12\\cdot1{,}67\\cdot10^{-27}\\cdot(1000)^2=8{,}35\\cdot10^{-22}\\ \\text{J}.$\n\n**(d)** La fuerza eléctrica es conservativa: cuando el protón regresa a $A$ tiene la misma rapidez ($1000\\ \\text{m/s}$) pero sentido opuesto. Por tanto\n$$\\Delta p=m_p(-v_A)-m_p(v_A)=-2m_p v_A,$$\n$$|\\Delta p|=2\\cdot1{,}67\\cdot10^{-27}\\cdot1000=3{,}34\\cdot10^{-24}\\ \\text{kg·m/s},$$\ndirigido en $+x$ (sentido de salida).",
+  "answer": "**a)** $E=180\\ \\text{N/C}$ ($+x$). **b)** $V=1800\\ \\text{V}$, $E_p=2{,}88\\cdot10^{-16}\\ \\text{J}$. **c)** $E_c=8{,}35\\cdot10^{-22}\\ \\text{J}$. **d)** $|\\Delta p|=3{,}34\\cdot10^{-24}\\ \\text{kg·m/s}$.",
+  "common_errors": [
+   "Confundir campo $E$ (N/C) con potencial $V$ (V): $E\\propto1/r^2$, $V\\propto1/r$.",
+   "En $\\Delta p$ olvidar que el vector cambia de sentido: $|\\Delta p|=2mv$, no $0$.",
+   "No distinguir energía potencial $E_p=qV$ de potencial $V$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Madrid · Modelo 2007",
+  "title": "Desintegración radiactiva: constante, actividad y evolución a 50 años · Madrid · Modelo 2007",
+  "statement": "Una muestra contiene inicialmente $10^{24}$ átomos, de los cuales el $20\\%$ son de un material radiactivo con período de semidesintegración de $13$ años. Calcula:\n\n**a)** La constante de desintegración.\n\n**b)** El número de átomos radiactivos iniciales y la actividad inicial.\n\n**c)** El número de átomos radiactivos al cabo de $50$ años.\n\n**d)** La actividad de la muestra al cabo de $50$ años.",
+  "knowns": [
+   "$N_{\\text{total}}=10^{24}$ átomos",
+   "radiactivos: $20\\%$",
+   "$T_{1/2}=13\\ \\text{años}$"
+  ],
+  "full_solution": "**(a)** $\\lambda=\\dfrac{\\ln 2}{T_{1/2}}$. En segundos, $T_{1/2}=13\\cdot3{,}156\\cdot10^{7}=4{,}10\\cdot10^{8}\\ \\text{s}$:\n$$\\lambda=\\dfrac{0{,}693}{4{,}10\\cdot10^{8}}=1{,}69\\cdot10^{-9}\\ \\text{s}^{-1}\\quad(=5{,}33\\cdot10^{-2}\\ \\text{año}^{-1}).$$\n\n**(b)** $N_0=0{,}20\\cdot10^{24}=2\\cdot10^{23}$ átomos.\n$$A_0=\\lambda N_0=1{,}69\\cdot10^{-9}\\cdot2\\cdot10^{23}=3{,}38\\cdot10^{14}\\ \\text{Bq}.$$\n\n**(c)** $N(t)=N_0 e^{-\\lambda t}$ con $\\lambda t=5{,}33\\cdot10^{-2}\\cdot50=2{,}67$:\n$$N(50)=2\\cdot10^{23}\\,e^{-2{,}67}=1{,}39\\cdot10^{22}\\ \\text{átomos}.$$\n\n**(d)** $A(50)=\\lambda N(50)=1{,}69\\cdot10^{-9}\\cdot1{,}39\\cdot10^{22}=2{,}35\\cdot10^{13}\\ \\text{Bq}.$",
+  "answer": "**a)** $\\lambda=1{,}69\\cdot10^{-9}\\ \\text{s}^{-1}$. **b)** $N_0=2\\cdot10^{23}$, $A_0=3{,}38\\cdot10^{14}\\ \\text{Bq}$. **c)** $N(50)=1{,}39\\cdot10^{22}$. **d)** $A(50)=2{,}35\\cdot10^{13}\\ \\text{Bq}$.",
+  "common_errors": [
+   "Tomar $N_0=10^{24}$ sin aplicar el $20\\%$.",
+   "Mezclar unidades: $\\lambda$ en $\\text{s}^{-1}$ exige $T_{1/2}$ en segundos para la actividad en Bq.",
+   "Usar $N=N_0/2^{t/T}$ y $N=N_0e^{-\\lambda t}$ incoherentemente (son equivalentes)."
+  ],
+  "figure_suggestion": "Curva de desintegración N(t): exponencial decreciente desde N0 con el punto (T1/2, N0/2) marcado y líneas discontinuas; eje t en años, eje N en átomos.",
+  "provenance": "PAU"
+ }
+]

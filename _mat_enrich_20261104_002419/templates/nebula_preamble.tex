@@ -1,0 +1,355 @@
+% =====================================================================
+%  nebula_preamble.tex  ·  Nebula Courses · plantilla fija v3
+%  Portada Nebula + sistema fijo de cajas semanticas + footer obligatorio.
+%  El documento que incluye este fichero define antes:
+%     \def\nebulalang{es}   o   \def\nebulalang{en}
+% =====================================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% RULE-013: la carga condicional de paquetes se hace con \ifx de TeX puro.
+\providecommand{\nebulalang}{es}
+\def\nb@es{es}
+\ifx\nebulalang\nb@es
+  \usepackage[spanish,es-noquoting,es-noshorthands]{babel}
+\else
+  \usepackage[english]{babel}
+\fi
+
+\usepackage{ifthen}
+\newcommand{\nbIfES}[2]{\ifthenelse{\equal{\nebulalang}{es}}{#1}{#2}}
+
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{cancel}
+\usepackage{siunitx}
+\ifx\nebulalang\nb@es
+  \sisetup{group-separator={\,},group-minimum-digits=4,output-decimal-marker={,}}
+\else
+  \sisetup{group-separator={\,},group-minimum-digits=4,output-decimal-marker={.}}
+\fi
+\usepackage{array,booktabs,tabularx,longtable}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning,decorations.pathmorphing,patterns,
+  angles,quotes,shapes.geometric,intersections,through,3d,decorations.markings}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+
+\geometry{top=2.4cm,bottom=2.8cm,left=2.2cm,right=2.2cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlist[itemize]{topsep=3pt,itemsep=2pt,leftmargin=1.2em}
+\setlist[enumerate]{topsep=3pt,itemsep=2pt,leftmargin=1.4em}
+\renewcommand{\arraystretch}{1.2}
+
+% =====================================================================
+%  REGLAS DE SEGURIDAD DE MAQUETACION
+% =====================================================================
+% RULE-001/022: ninguna tabla excede el area de texto.
+\newcommand{\nbtable}[1]{%
+  \par\medskip
+  \noindent\resizebox{\ifdim\width>\linewidth \linewidth\else \width\fi}{!}{#1}%
+  \par\medskip}
+% RULE-002: una ecuacion larga se encoge en vez de salirse del margen.
+\newcommand{\nbeq}[1]{%
+  \begin{equation*}\resizebox{\ifdim\width>\linewidth \linewidth\else \width\fi}{!}{$\displaystyle #1$}\end{equation*}}
+% RULE-004: ningun encabezado huerfano al pie de pagina.
+\pretocmd{\section}{\Needspace{7\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+% RULE-006: tolerancia tipografica.
+\tolerance=2000 \emergencystretch=3em \hbadness=4000 \vbadness=4000
+% RULE-011: todo TikZ centrado y encogido si excede el ancho util.
+% ERR-0168: el salto de linea entre la figura y su pie era un punto de
+%   corte valido, asi que la figura podia quedar al pie de una pagina y
+%   su pie al principio de la siguiente --visto en md/lesson_02--. Una
+%   figura sin pie no se entiende y un pie sin figura no dice nada, asi
+%   que van juntos o van los dos a la pagina siguiente. `\Needspace*`
+%   pide el hueco y `\nopagebreak[4]` prohibe el corte de dentro; no se
+%   usa un `minipage` para que una figura muy alta no desborde en
+%   silencio.
+\newcommand{\nbtikz}[2]{%
+  \par\medskip\Needspace*{6\baselineskip}\begin{center}
+    \resizebox{\ifdim\width>\linewidth \linewidth\else \width\fi}{!}{#1}\\[4pt]
+    \nopagebreak[4]{\small\itshape #2}
+  \end{center}\par\medskip}
+
+% =====================================================================
+%  COLORES CORPORATIVOS NEBULA
+% =====================================================================
+\definecolor{NebulaDark}{HTML}{050B14}
+\definecolor{NebulaNavy}{HTML}{0B1F3A}
+\definecolor{NebulaNavyTwo}{HTML}{102A4C}
+\definecolor{NebulaGold}{HTML}{C9A646}
+\definecolor{NebulaCyan}{HTML}{45D6E8}
+\definecolor{NebulaWhite}{HTML}{F5F7FA}
+\definecolor{NebulaMuted}{HTML}{B8C4D6}
+\definecolor{NebulaLight}{HTML}{F6F8FB}
+\definecolor{NebulaSoft}{HTML}{EEF3F8}
+
+\definecolor{NebulaDefinition}{HTML}{0B1F3A}
+\definecolor{NebulaDefinitionBack}{HTML}{EEF3F8}
+\definecolor{NebulaIdea}{HTML}{00AFCB}
+\definecolor{NebulaIdeaBack}{HTML}{EAFBFD}
+\definecolor{NebulaNote}{HTML}{6B7A90}
+\definecolor{NebulaNoteBack}{HTML}{F2F5F8}
+\definecolor{NebulaExample}{HTML}{2563A8}
+\definecolor{NebulaExampleBack}{HTML}{EEF6FF}
+\definecolor{NebulaStrategy}{HTML}{5B5FC7}
+\definecolor{NebulaStrategyBack}{HTML}{F1F1FF}
+\definecolor{NebulaWarning}{HTML}{C9A646}
+\definecolor{NebulaWarningBack}{HTML}{FFF8E3}
+\definecolor{NebulaError}{HTML}{B23A48}
+\definecolor{NebulaErrorBack}{HTML}{FFF0F2}
+\definecolor{NebulaCheck}{HTML}{2E7D5B}
+\definecolor{NebulaCheckBack}{HTML}{EEF8F1}
+
+\newcommand{\NebulaCoverSectionStyle}{\sffamily\bfseries\large}
+\newcommand{\NebulaCoverBodyStyle}{\sffamily\small}
+\newcommand{\NebulaCoverBoxStyle}{\sffamily\fontsize{8.2}{9.8}\selectfont}
+\newcommand{\NebulaCoverProgramStyle}{\sffamily\fontsize{8.2}{9.8}\selectfont}
+\newcommand{\NebulaCoverProgramTitleStyle}{\sffamily\bfseries\fontsize{8.2}{9.8}\selectfont}
+
+% =====================================================================
+%  FOOTER OBLIGATORIO
+% =====================================================================
+\pagestyle{fancy}
+\fancyhf{}
+% ---------------------------------------------------------------------
+% ERR-0125 - LOS TEXTOS FIJOS DE LA PORTADA ESTABAN SOLO EN CASTELLANO.
+%   Las 69 lecciones inglesas llevaban impresa la portada en espanol
+%   ("Tutoria personalizada", "Acompanamiento adaptado al nivel...").
+%   Ningun control lo veia: no esta en ningun JSON de leccion, esta en
+%   la plantilla, y los controles de idioma miran el contenido. Ahora
+%   cada cadena fija tiene sus dos versiones y manda \nebulalang.
+% ---------------------------------------------------------------------
+\newcommand{\nbL}[2]{\ifdefstring{\nebulalang}{en}{#2}{#1}}
+\fancyfoot[C]{\footnotesize \nbL{Propiedad de Nebula.}{Property of Nebula.} Instagram: nebula.lambda. Web: https://metodonebula.es/}
+\fancyfoot[R]{\footnotesize \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+\titleformat{\section}{\sffamily\Large\bfseries\color{NebulaNavy}}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries\color{NebulaNavyTwo}}{\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries\color{NebulaNavyTwo}}{\thesubsubsection}{0.7em}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.7em}
+
+% =====================================================================
+%  SISTEMA FIJO DE CAJAS SEMANTICAS
+% =====================================================================
+\tcbset{
+  nebulaBase/.style={
+    enhanced, breakable, arc=2mm, boxrule=0.65pt,
+    left=9pt, right=9pt, top=9pt, bottom=9pt,
+    before skip=10pt, after skip=10pt,
+    fonttitle=\sffamily\bfseries, coltitle=NebulaNavy,
+    attach boxed title to top left={xshift=7pt,yshift=-2mm},
+    boxed title style={enhanced,arc=1.5mm,boxrule=0pt,left=5pt,right=5pt,top=2pt,bottom=2pt}
+  }
+}
+\newtcolorbox{definitionBox}[1][]{nebulaBase,colback=NebulaDefinitionBack,colframe=NebulaDefinition,
+  colbacktitle=NebulaDefinitionBack,title=\textbf{\nbIfES{Definición}{Definition}},#1}
+\newtcolorbox{ideaBox}[1][]{nebulaBase,colback=NebulaIdeaBack,colframe=NebulaIdea,
+  colbacktitle=NebulaIdeaBack,title=\textbf{\nbIfES{Idea clave}{Key idea}},#1}
+\newtcolorbox{noteBox}[1][]{nebulaBase,colback=NebulaNoteBack,colframe=NebulaNote,
+  colbacktitle=NebulaNoteBack,title=\textbf{\nbIfES{Nota}{Note}},#1}
+\newtcolorbox{exampleBox}[1][]{nebulaBase,colback=NebulaExampleBack,colframe=NebulaExample,
+  colbacktitle=NebulaExampleBack,title=\textbf{\nbIfES{Ejemplo guiado}{Worked example}},#1}
+\newtcolorbox{strategyBox}[1][]{nebulaBase,colback=NebulaStrategyBack,colframe=NebulaStrategy,
+  colbacktitle=NebulaStrategyBack,title=\textbf{\nbIfES{Estrategia}{Strategy}},#1}
+\newtcolorbox{warningBox}[1][]{nebulaBase,colback=NebulaWarningBack,colframe=NebulaWarning,
+  colbacktitle=NebulaWarningBack,title=\textbf{\nbIfES{Cuidado}{Take care}},#1}
+\newtcolorbox{errorBox}[1][]{nebulaBase,colback=NebulaErrorBack,colframe=NebulaError,
+  colbacktitle=NebulaErrorBack,title=\textbf{\nbIfES{Error frecuente}{Common mistake}},#1}
+\newtcolorbox{checkBox}[1][]{nebulaBase,colback=NebulaCheckBack,colframe=NebulaCheck,
+  colbacktitle=NebulaCheckBack,title=\textbf{\nbIfES{Comprobación}{Check}},#1}
+
+% Subtitulo interno dentro de una caja (sustituye al titulo variable).
+\newcommand{\nbboxhead}[1]{{\sffamily\bfseries\color{NebulaNavyTwo}#1}\par\smallskip}
+\newcommand{\nbwhy}[1]{{\small\itshape\color{NebulaNote}#1}}
+\newcommand{\solution}{\par\smallskip\textbf{\nbIfES{Solución}{Solution}.}\ }
+
+% Listas de ejercicios
+\newlist{ex}{enumerate}{2}
+\setlist[ex,1]{label=\textbf{\arabic*.},leftmargin=1.9em,itemsep=0.55em}
+\setlist[ex,2]{label=\textbf{(\alph*)},leftmargin=2em,itemsep=0.15em}
+\newlist{ans}{enumerate}{2}
+\setlist[ans,1]{label=\textbf{\arabic*.},leftmargin=1.9em,itemsep=0.3em}
+\setlist[ans,2]{label=\textbf{(\alph*)},leftmargin=2em,itemsep=0.05em}
+\newlist{steps}{enumerate}{1}
+% RULE-039: itemsep/topsep subidos (antes 0.2em/0.2em). El razonamiento de
+% un ejemplo resuelto es la parte que más queja de "carga visual" recibía:
+% los pasos iban pegados unos a otros como un bloque único. Más espacio
+% entre pasos = más páginas, pero cada paso se lee como una idea aparte.
+\setlist[steps]{label=\textbf{\arabic*.},leftmargin=1.7em,itemsep=0.55em,topsep=0.4em}
+\newcommand{\exlevel}[1]{\subsection*{#1}}
+
+% RULE-023: las tarjetas van en una lista PARTIBLE, nunca en una tabla.
+\newenvironment{flashlist}
+  {\begin{list}{}{\setlength{\leftmargin}{0pt}\setlength{\itemindent}{0pt}%
+     \setlength{\labelwidth}{0pt}\setlength{\labelsep}{0pt}%
+     \setlength{\itemsep}{0.65em}\setlength{\parsep}{0pt}\setlength{\topsep}{0.3em}}}
+  {\end{list}}
+% ERR-0155: `\leftskip` sangra el texto pero NO estrecha las cajas. El
+%   ancho util dentro de la tarjeta es `\linewidth-1.2em`, mientras que
+%   `\linewidth` seguia valiendo lo de fuera, asi que `\nbtable` --que
+%   encoge "hasta \linewidth" por RULE-001/022-- dejaba la tabla
+%   exactamente 1.2em fuera del margen (13.14pt a \small, medido igual
+%   en cuatro lecciones de tres unidades distintas). Se corrige
+%   `\linewidth`, no la regla: asi tablas, ecuaciones y figuras dentro
+%   de una tarjeta se calculan todas contra el ancho que de verdad hay.
+%   `\leftskip` se mantiene --y no un minipage-- para que una respuesta
+%   larga siga pudiendo partir de pagina.
+\newcommand{\flashcard}[2]{\item\relax{\textbf{#1}}\par\nopagebreak
+  {\leftskip=1.2em\relax\advance\linewidth by -1.2em\relax\small #2\par}}
+
+\newcommand{\mcqopts}[1]{\par\nopagebreak\smallskip
+  \begin{minipage}{\linewidth}
+  \begin{enumerate}[label=\textbf{\Alph*)},leftmargin=2.2em,itemsep=0.1em,topsep=0.1em,nosep]
+  #1
+  \end{enumerate}\end{minipage}\par\smallskip}
+
+% RULE-007: marcador que siempre compila cuando falta una figura.
+\newcommand{\assetplaceholder}[2]{\par\medskip\begin{center}
+  \fcolorbox{NebulaNote}{NebulaNoteBack}{\parbox{0.86\linewidth}{\centering\small
+  \textbf{\nbIfES{Figura}{Figure}}\\[2pt]\itshape #2}}\end{center}\par\medskip}
+\newcommand{\nbfigure}[3]{\par\medskip\begin{center}
+  \includegraphics[width=#2\linewidth,max height=0.42\textheight,keepaspectratio]{#1}\\[3pt]
+  {\small\itshape #3}\end{center}\par\medskip}
+
+% Estilos TikZ comunes
+\tikzset{
+  nbaxis/.style={->,>=Stealth,gray!70,thick},
+  nbline/.style={NebulaNavy,thick},
+  nbdash/.style={NebulaNavy!60,dashed,thick},
+  nbvec/.style={->,>=Stealth,NebulaError,very thick},
+  nbvecb/.style={->,>=Stealth,NebulaCheck,very thick},
+  nbmass/.style={circle,fill=NebulaNavy,inner sep=2pt},
+  nbpoint/.style={circle,fill=black,inner sep=1.2pt},
+  nblabel/.style={font=\small},
+  nbangle/.style={draw=NebulaGold,thick,angle radius=8mm},
+  nbfill/.style={fill=NebulaNavy!10},
+}
+
+% ERR-0110 / RULE-024 - ALIAS DE PALETA.
+%   Al cambiar la plantilla a la paleta Nebula, dos lecciones dejaron de
+%   compilar porque su TikZ usaba nombres de color de la version anterior.
+%   La correccion no es editar las lecciones: es que la plantilla MANTENGA
+%   los alias. Cambiar la paleta nunca debe romper contenido ya escrito.
+\colorlet{warnR}{NebulaErrorBack}
+\colorlet{tipG}{NebulaCheckBack}
+\colorlet{exY}{NebulaWarningBack}
+\colorlet{intuO}{NebulaWarningBack}
+\colorlet{diagT}{NebulaIdeaBack}
+\colorlet{chalPB}{NebulaStrategyBack}
+\definecolor{navy}{HTML}{0B1F3A}
+\definecolor{extR}{HTML}{B23A48}
+\definecolor{coreG}{HTML}{2E7D5B}
+\definecolor{greyL}{HTML}{F2F5F8}
+\definecolor{defB}{HTML}{EEF3F8}
+\definecolor{chalP}{HTML}{F1F1FF}
+
+% =====================================================================
+%  PORTADA FIJA NEBULA
+%  \NebulaCoverFixed{tema}{titulo}{subtitulo}{tipo de documento}
+% =====================================================================
+\newcommand{\NebulaCoverFixed}[4]{%
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\fill[NebulaDark] (current page.south west) rectangle (current page.north east);
+\fill[NebulaNavy]
+  (current page.north west) -- ($(current page.north east)+(0,-2.10cm)$) --
+  (current page.north east) -- (current page.north west) -- cycle;
+\fill[NebulaNavyTwo, opacity=0.34]
+  ($(current page.north west)+(0,-4.15cm)$) -- ($(current page.north west)+(7.7cm,0)$) --
+  ($(current page.north west)+(10.6cm,-4.85cm)$) -- ($(current page.north west)+(0,-6.35cm)$) -- cycle;
+\fill[NebulaNavyTwo, opacity=0.26]
+  ($(current page.south east)+(0,0)$) -- ($(current page.south west)+(7.5cm,0)$) --
+  ($(current page.south east)+(-0.5cm,1.65cm)$) -- cycle;
+\draw[NebulaCyan, opacity=0.18, line width=0.35pt]
+  ($(current page.south west)+(2.00cm,0)$) -- ($(current page.north east)+(-0.9cm,-5.25cm)$);
+\draw[NebulaGold, opacity=0.14, line width=0.30pt]
+  ($(current page.south west)+(5.25cm,0)$) -- ($(current page.north east)+(-3.00cm,0)$);
+\node[anchor=north west, text=NebulaWhite, font=\sffamily\bfseries\small]
+  at ($(current page.north west)+(1.65cm,-1.35cm)$) {\nbL{METODO NEBULA}{NEBULA METHOD}};
+\node[anchor=north east, text=NebulaMuted, font=\sffamily\small]
+  at ($(current page.north east)+(-1.65cm,-1.35cm)$) {\nbL{Formación · Ciencias · Tecnología}{Education · Science · Technology}};
+\draw[NebulaGold, line width=0.55pt]
+  ($(current page.north west)+(1.65cm,-2.20cm)$) -- ($(current page.north west)+(7.25cm,-2.20cm)$);
+\node[anchor=north west, rounded corners=4pt, draw=NebulaGold, line width=0.55pt,
+  fill=NebulaDark, inner xsep=14pt, inner ysep=7pt, text=NebulaGold, font=\sffamily\bfseries\small]
+  at ($(current page.north west)+(1.65cm,-4.85cm)$) {#4};
+\node[anchor=north west, text=NebulaCyan, font=\sffamily\bfseries\Large]
+  at ($(current page.north west)+(1.65cm,-6.45cm)$) {#1};
+\node[anchor=north west, text=NebulaWhite,
+  font=\sffamily\bfseries\fontsize{30}{43}\selectfont, text width=16.0cm, align=left]
+  at ($(current page.north west)+(1.65cm,-7.55cm)$) {#2};
+\node[anchor=north west, text=NebulaGold, font=\sffamily\normalsize, text width=15.8cm, align=left]
+  at ($(current page.north west)+(1.70cm,-12.25cm)$) {#3};
+\draw[NebulaCyan, line width=0.65pt]
+  ($(current page.north west)+(1.70cm,-13.10cm)$) -- ($(current page.north west)+(8.70cm,-13.10cm)$);
+\node[anchor=north west, text=NebulaWhite, font=\sffamily\normalsize, text width=15.6cm, align=left]
+  at ($(current page.north west)+(1.70cm,-13.75cm)$)
+  {\nbL{Material claro y estructurado para dominar el razonamiento del tema: conceptos esenciales, ejemplos guiados, estrategias de resolución y errores frecuentes.}{Clear, structured material for mastering the reasoning behind the topic: core concepts, worked examples, problem-solving strategies and the mistakes to watch for.}};
+\node[anchor=north west, text=NebulaGold, font=\NebulaCoverSectionStyle]
+  at ($(current page.north west)+(1.65cm,-15.85cm)$) {\nbL{Método Nebula}{The Nebula Method}};
+\node[anchor=north west, text=NebulaWhite, font=\NebulaCoverBodyStyle, text width=15.6cm, align=left]
+  at ($(current page.north west)+(1.65cm,-16.60cm)$)
+  {\nbL{Acompañamiento académico y técnico para estudiar con estructura, comprender de verdad y avanzar con un plan claro.}{Academic and technical support: study with structure, understand in depth, and move forward with a clear plan.}};
+\node[anchor=north west, rounded corners=5pt, draw=NebulaCyan, line width=0.45pt, fill=NebulaNavy,
+  fill opacity=0.20, text opacity=1, inner xsep=6pt, inner ysep=7pt, text=NebulaWhite,
+  font=\NebulaCoverBoxStyle, text width=4.00cm, align=center]
+  at ($(current page.north west)+(1.65cm,-17.95cm)$) {\nbL{Entender conceptos clave.}{Understand the key ideas.}};
+\node[anchor=north west, rounded corners=5pt, draw=NebulaGold, line width=0.45pt, fill=NebulaNavy,
+  fill opacity=0.20, text opacity=1, inner xsep=6pt, inner ysep=7pt, text=NebulaWhite,
+  font=\NebulaCoverBoxStyle, text width=4.60cm, align=center]
+  at ($(current page.north west)+(6.45cm,-17.95cm)$) {\mbox{\nbL{Preparar pruebas con estrategia.}{Prepare for exams with a strategy.}}};
+\node[anchor=north west, rounded corners=5pt, draw=NebulaCyan, line width=0.45pt, fill=NebulaNavy,
+  fill opacity=0.20, text opacity=1, inner xsep=6pt, inner ysep=7pt, text=NebulaWhite,
+  font=\NebulaCoverBoxStyle, text width=4.00cm, align=center]
+  at ($(current page.north west)+(11.85cm,-17.95cm)$) {\nbL{Avanzar con ruta definida.}{Progress along a clear path.}};
+\node[anchor=north west, text=NebulaGold, font=\NebulaCoverSectionStyle]
+  at ($(current page.north west)+(1.65cm,-19.55cm)$) {\nbL{Programas}{Programmes}};
+\node[anchor=north west, rounded corners=5pt, draw=NebulaCyan, line width=0.45pt, fill=NebulaNavy,
+  fill opacity=0.22, text opacity=1, inner xsep=7pt, inner ysep=7pt, text=NebulaWhite,
+  font=\NebulaCoverProgramStyle, text width=4.60cm, minimum height=1.30cm, align=left]
+  at ($(current page.north west)+(1.65cm,-20.35cm)$)
+  {{\NebulaCoverProgramTitleStyle \nbL{Tutoría personalizada}{One-to-one tutoring}}\\\nbL{Acompañamiento adaptado al nivel\\y ritmo del alumno.}{Support matched to each\\student's level and pace.}};
+\node[anchor=north west, rounded corners=5pt, draw=NebulaGold, line width=0.45pt, fill=NebulaNavy,
+  fill opacity=0.22, text opacity=1, inner xsep=7pt, inner ysep=7pt, text=NebulaWhite,
+  font=\NebulaCoverProgramStyle, text width=4.60cm, minimum height=1.30cm, align=left]
+  at ($(current page.north west)+(7.05cm,-20.35cm)$)
+  {{\NebulaCoverProgramTitleStyle \nbL{Preparación por objetivos}{Goal-driven preparation}}\\\nbL{Plan enfocado en exámenes,\\entregas y pruebas.}{A plan built around exams,\\deadlines and assessments.}};
+\node[anchor=north west, rounded corners=5pt, draw=NebulaCyan, line width=0.45pt, fill=NebulaNavy,
+  fill opacity=0.22, text opacity=1, inner xsep=7pt, inner ysep=7pt, text=NebulaWhite,
+  font=\NebulaCoverProgramStyle, text width=4.60cm, minimum height=1.30cm, align=left]
+  at ($(current page.north west)+(12.45cm,-20.35cm)$)
+  {{\NebulaCoverProgramTitleStyle \nbL{Mejora y transición IT}{IT upskilling and transition}}\\\nbL{Ruta de progreso en programación,\\datos e IA.}{A route through coding,\\data and AI.}};
+\node[anchor=south west, text=NebulaMuted, font=\sffamily\small, text width=17.7cm, align=left]
+  at ($(current page.south west)+(1.65cm,2.05cm)$)
+  {\nbL{Más información en}{More at} https://metodonebula.es/ \textcolor{NebulaGold}{|} Instagram: nebula.lambda};
+\end{tikzpicture}
+\vspace*{\fill}
+\end{titlepage}}
+
+%% B-02 / RULE-028 - biblioteca de figuras parametrizadas
+\providecommand{\nbtpl}{}
+\input{\nbtpl nebula_figures}
+\input{\nbtpl nebula_waves}
+\input{\nbtpl nebula_optics}

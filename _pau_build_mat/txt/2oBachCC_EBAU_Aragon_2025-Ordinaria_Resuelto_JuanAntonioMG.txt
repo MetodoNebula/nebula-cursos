@@ -1,0 +1,821 @@
+PAU 2025 Ordinaria Matemáticas II en Aragón                          Juan Antonio Martínez García
+
+                                    PRUEBA DE ACCESO A LA UNIVERSIDAD
+                                    CONVOCATORIA ORDINARIA DE 2025
+                                    EJERCICIO DE: MATEMÁTICAS II
+                                    TIEMPO DISPONIBLE: 1 hora 30 minutos
+
+
+PUNTUACIÓN QUE SE OTORGARÁ A ESTE EJERCICIO: (véanse las distintas partes del examen)
+
+El examen consta de cuatro preguntas. Cada pregunta tiene una valoración de 2,5 puntos.
+La primera pregunta es obligatoria, mientras que en las tres últimas se deberá elegir entre
+Opción 1 y Opción 2, respondiendo únicamente a una de las dos. En caso de contestar
+cuestiones de ambas opciones, solo se corregirá la opción que aparezca en primer lugar
+en el tríptico.
+El/la estudiante debe indicar claramente, en la primera página del tríptico, cuáles han
+sido las opciones elegidas en las preguntas 2, 3 y 4. (Si no se indica, y se han respondido
+dos opciones de una misma pregunta, sólo se corregirá la opción que se haya respondido
+en primer lugar).
+              Justifica los pasos realizados para llegar a la solución obtenida.
+
+1. Queremos encriptar el mensaje “HOLA” con un sistema de encriptado que consta de los
+   siguientes pasos:
+Paso 1: Convertimos cada carácter del mensaje a encriptar (en nuestro caso la palabra
+“HOLA”) en un número según la tabla siguiente:
+
+
+Paso 2: Construimos una matriz columna, Mc, con los cuatro números obtenidos en el paso
+   anterior.
+                                                        1 1 1 1
+                                                                         
+                                                         −1 0 −1 −1
+Paso 3: Multiplicamos la matriz de encriptado, M E =                        , por la matriz Mc
+                                                         −1 −1 0 −1
+                                                                         
+                                                         −1 −1 −1 0 
+obtenida en el paso anterior.
+El resultado del último paso, Mfinal, es el mensaje encriptado.
+a) (0,5 puntos) Obtén el mensaje encriptado al que se llega a partir del mensaje “HOLA”
+   inicial.
+b) (0,5 puntos) Explica cómo podríamos realizar el proceso de desencriptado para recuperar
+un mensaje a partir de un mensaje encriptado recibido.
+                                                                 30 
+                                                                     
+                                                                 −21 
+c) (1 punto) Si hemos obtenido el mensaje encriptado M final =          con el proceso descrito
+                                                                 −25 
+                                                                     
+                                                                 −16 
+   arriba, ¿cuál es el mensaje original?
+d) (0,5 puntos) Si quisiéramos utilizar otra matriz de encriptado, del mismo tamaño que M E,
+   ¿qué condición debería cumplir dicha matriz para poder realizar el proceso completo de
+   encriptado y desencriptado sin problemas?
+
+2. Elige entre 2.1 y 2.2, respondiendo únicamente uno de los dos.
+   2.1 (2,5 puntos) Sean u y v dos vectores no nulos de R3 perpendiculares entre sí y
+      w = u × v su producto vectorial. Se definen a = (u × v) + w, b = v × (v × w) y
+      c = u · (v × w). Indica si a, b y c son vectores o escalares (números). Para aquellos que
+      sean vectores, justifica si son paralelos o perpendiculares a cada uno de los vectores u, v
+      y w.
+1 de 15                                                           www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                    Juan Antonio Martínez García
+
+   2.2 a) (1 punto) Halla las ecuaciones paramétricas de la recta s que pasa por el punto
+      P ( 4, −3, 0 ) y es perpendicular al plano π ≡ x − 2y + z − 1 = 0.
+      b) (1,5 puntos) Halla la ecuación del plano que contiene al punto Q(1, 2, 3) y a la recta
+                                                x + y + z = 1
+                                             r
+                                                x − 2 y = 0
+
+3. Elige entre 3.1 y 3.2, respondiendo únicamente uno de los dos.
+   3.1 Queremos aproximar la función f ( x ) = e x , con x en el intervalo [0, 1], por otra función
+       g m ( x ) = mx con m un parámetro en R. Definimos como error de la aproximación la
+      expresión
+                                  err ( m ) =  ( f ( x ) − g m ( x ) ) dx
+                                                  1                   2
+
+                                                  0
+
+                                                e2 1         m2
+      a) (1,5 puntos) Comprueba que err ( m ) =   − − 2m +        con m ∈ R.
+                                                2 2           3
+      b) (1 punto) ¿Cuál es el valor de m ∈ R que minimiza el error? ¿Cuál será el valor
+         mínimo del error?
+
+3.2 a) (1,25 puntos) Calcula
+                                                  x 2 − sen ( x 2 )
+                                           lim
+                                           x →0 1 − cos ( x )
+   b) (1,25 puntos) Calcula el área de la región limitada por la gráfica de la función
+                              f ( x ) = cos2 ( x ) sen ( x ) , x  0,  
+      y el eje de abscisas.
+
+4. Elige entre 4.1 y 4.2, respondiendo únicamente uno de los dos.
+   4.1 En un juego se cuenta con el siguiente tablero, de manera que una ficha puede desplazarse
+      de la casilla 1 a la 2; de la 2 puede desplazarse a las casillas 1 y 3; y de la casilla 3 a la
+      casilla 2.
+
+
+
+
+      Para decidir el movimiento a realizar en cada turno, se lanza una moneda equilibrada
+      (misma probabilidad de cara y cruz). Si sale cara, se intenta desplazar la ficha a la
+      izquierda; si sale cruz, a la derecha. En caso de no poder realizar el desplazamiento
+      correspondiente, la ficha se queda en la casilla en la que está durante ese turno.
+      a) (0,5 puntos) Construye un árbol (o una tabla) que muestre las probabilidades de pasar
+         de una casilla a otra en un turno.
+      b) (1 punto) Si la ficha se encuentra en la casilla 1, ¿cuál es la probabilidad de que tras
+         tres turnos se encuentre de nuevo en la casilla 1?
+      c) (1 punto) Para comenzar el juego, se procede a un sorteo para ver dónde comienza la
+         ficha. Si la probabilidad de empezar en la casilla 1 es 1/2 y la probabilidad de empezar
+         en la casilla 2 y en la 3 es de 1/4 para cada una, ¿cuál es la probabilidad de que la ficha
+         esté en cada una de las tres casillas dos turnos después de empezar?
+
+ 4.2 Dados dos sucesos aleatorios de los que se sabe que P(A|B) = 2/3 y P(B|A) = 3/4.
+    a) (1 punto) Si A y B fueran independientes, ¿cuánto valdría P(A∪B)?
+    b) (1,5 puntos) Si P(A∪B) = 5/6, ¿cuáles son las probabilidades P(A), P(B) y P( A  B) ?
+
+2 de 15                                                                      www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                         Juan Antonio Martínez García
+
+                                     SOLUCIONES
+
+1. Queremos encriptar el mensaje “HOLA” con un sistema de encriptado que consta de los
+   siguientes pasos:
+Paso 1: Convertimos cada carácter del mensaje a encriptar (en nuestro caso la palabra “HOLA”)
+en un número según la tabla siguiente:
+
+
+Paso 2: Construimos una matriz columna, Mc, con los cuatro números obtenidos en el paso
+   anterior.
+                                                        1 1 1 1
+                                                                         
+                                                         −1 0 −1 −1
+Paso 3: Multiplicamos la matriz de encriptado, M E =                        , por la matriz Mc
+                                                         −1 −1 0 −1
+                                                                         
+                                                         −1 −1 −1 0 
+obtenida en el paso anterior.
+El resultado del último paso, Mfinal, es el mensaje encriptado.
+a) (0,5 puntos) Obtén el mensaje encriptado al que se llega a partir del mensaje “HOLA”
+   inicial.
+b) (0,5 puntos) Explica cómo podríamos realizar el proceso de desencriptado para recuperar
+un mensaje a partir de un mensaje encriptado recibido.
+                                                                 30 
+                                                                     
+                                                                 −21 
+c) (1 punto) Si hemos obtenido el mensaje encriptado M final =          con el proceso descrito
+                                                                 −25 
+                                                                     
+                                                                 −16 
+   arriba, ¿cuál es el mensaje original?
+d) (0,5 puntos) Si quisiéramos utilizar otra matriz de encriptado, del mismo tamaño que M E,
+   ¿qué condición debería cumplir dicha matriz para poder realizar el proceso completo de
+   encriptado y desencriptado sin problemas?
+
+                                                                                 8
+                                                                                  
+                                                                                  16
+a) Las correspondencias son H – 8, O – 16, L – 12, A – 1 y la matriz queda M C =   .
+                                                                                 12 
+                                                                                  
+                                                                                 1
+   Multiplicamos por la matriz ME.
+                                  1 1 1 1  8   8 + 16 + 12 + 1   37 
+                                                                           
+                                  −1 0 −1 −116   −8 + 0 − 12 − 1   −21 
+             M final = M E M C =                       =                   =
+                                  −1 −1 0 −112   −8 − 16 + 0 − 1   −25 
+                                                                           
+                                  −1 −1 −1 0  1   −8 − 16 − 12 + 0   −36 
+                                       4 4        · 4 1 ⎯⎯
+                                                           → 4 1
+
+                                       37 
+                                           
+                                       −21 
+   El mensaje encriptado es M final =         .
+                                       −25 
+                                           
+                                       −36 
+
+
+
+
+3 de 15                                                          www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                               Juan Antonio Martínez García
+
+b) Como M final = M E M C entonces ( M E ) · M final = M C . Después miramos la
+                                               −1
+
+
+   correspondencia de cada número con la letra según la tabla y obtenemos el mensaje
+   descifrado.
+   Calculamos la matriz inversa usando del método de Gauss-Jordan.
+
+              1 1 1 1 1 0                    0 0
+                                                   Fila 2ª + Fila 1ª 
+               −1 0 −1 −1 0 1                0 0                       
+                                                      Fila 3ª + Fila 1ª  
+               −1 −1 0 −1 0 0                1 0 
+                                                  Fila 4ª + Fila 1ª 
+                −1 −1 −1 0 0 0               0 1  
+
+
+               1      1 1 1 1 0 0 0
+                                    
+                  0    1 0 0 1 1 0 0
+                                        Fila 1ª − Fila 2ª − Fila 3ª − Fila 4ª 
+               0      0 1 0 1 0 1 0
+                                   
+                0     0 0 1 1 0 0 1 
+
+
+               1      0 0 0 −2 −1 −1 −1             −2 −1 −1 −1
+                                                               
+                  0    1 0 0 1 1 0 0                  1 1 0 0
+                                          (ME ) = 
+                                                  −1
+
+               0      0 1 0 1 0 1 0                1 0 1 0
+                                                             
+                0     0 0 1 1 0 0 1                1 0 0 1
+
+                                                             30 
+                                                                 
+                                                             −21 
+c) Aplicamos el desencriptado a la matriz cifrada M final =         .
+                                                             −25 
+                                                                 
+                                                             −16 
+                                    −2 −1 −1 −1  30   −60 + 21 + 25 + 16   2 
+                                                                           
+                                    1 1 0 0   −21   30 − 21 + 0 + 0   9 
+         M C = ( M E ) · M final =
+                      −1
+                                                             =                 =
+                                    1 0 1 0   −25   30 + 0 − 25 + 0   5 
+                                                                           
+                                    1 0 0 1   −16   30 + 0 + 0 − 16  14 
+
+   Buscando la correspondencia en la tabla: 2 – B, 9 – I, 5 – E, 14 – N.
+   La palabra que se ha enviado es BIEN.
+
+d) La matriz de encriptado debe tener inversa (matriz de desencriptado), por lo que su
+   determinante debe ser distinto de cero.
+
+
+
+
+4 de 15                                                                www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                       Juan Antonio Martínez García
+
+2.1 (2,5 puntos) Sean u y v dos vectores no nulos de R3 perpendiculares entre sí y
+   w = u × v su producto vectorial. Se definen a = (u × v) + w, b = v × (v × w) y
+   c = u · (v × w). Indica si a, b y c son vectores o escalares (números). Para aquellos que sean
+   vectores, justifica si son paralelos o perpendiculares a cada uno de los vectores u, v y w.
+
+ a = (u × v) + w es un vector pues u × v es un vector (w) y al sumarle w obtenemos un vector
+que es igual a 2w.
+
+b = v × (v × w) es un vector pues los productos vectoriales siempre dan como resultado un
+vector.
+
+c = u · (v × w) es un escalar, de hecho, es el producto mixto de los vectores u, v y w que se usa
+para determinar el volumen del paralelepípedo determinado por dichos vectores.
+
+
+
+
+El vector a = (u × v) + w hemos visto que es igual a 2w, por lo que es paralelo a w y
+perpendicular a u y v pues a = 2(u × v) y con el producto vectorial u × v obtenemos un vector
+perpendicular a u y v.
+El vector b = v × (v × w) es perpendicular a u y v, paralelo a w. Con v × w obtenemos un vector
+paralelo a u y con v × (v × w) obtenemos un vector perpendicular a u y v, por lo tanto, paralelo
+a w.
+
+Otra forma de razonarlo. Situamos el vector u sobre el eje X, así seria u = (m, 0, 0). Situamos
+el vector v sobre el eje Y, así seria v = (0, n, 0).
+Al realizar el producto vectorial u × v tendríamos un vector w situado en el eje Z, así seria w =
+(0, 0, mn).
+                                           i j k
+                             w = u  v = m 0 0 = mnk = ( 0, 0, mn )
+                                          0 n 0
+
+El vector v × w estaría sobre el eje X y seria v × w = (mn2, 0, 0).
+
+                                      i       j       k
+                              vw = 0 n               0 = mn3i = ( mn3 , 0, 0 )
+                                      0 0 mn 2
+
+El vector b = v × (v × w) estaría sobre el eje Z y seria paralelo a w y perpendicular a u y v.
+
+                                                  i       j k
+                        b = v  ( v  w) = 0              n 0 = mn 4 k = ( 0, 0, mn 4 )
+                                          mn3             0 0
+
+
+
+5 de 15                                                                        www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                    Juan Antonio Martínez García
+
+2.2 a) (1 punto) Halla las ecuaciones paramétricas de la recta s que pasa por el punto
+    P ( 4, −3, 0 ) y es perpendicular al plano π ≡ x − 2y + z − 1 = 0.
+b) (1,5 puntos) Halla la ecuación del plano que contiene al punto Q(1, 2, 3) y a la recta
+                                              x + y + z = 1
+                                           r
+                                              x − 2 y = 0
+
+a) Si la recta debe ser perpendicular al plano π entonces debe tener como vector director el
+   vector normal del plano.
+
+                               x − 2 y + z − 1 = 0  n = (1, −2,1)
+
+
+                                                         x = 4 + 
+                             vs = n = (1, −2,1)        
+                                                   s   y = −3 − 2 ;  
+                             P ( 4, −3, 0 )  s        z = 
+                                                         
+
+b) Hallamos dos puntos de la recta r.
+
+                      x= y=0         
+                                      0 + 0 + z = 1  z = 1
+                       x + y + z = 1                     Ar ( 0, 0,1)
+                                       0 − 2·0 = 0  0 = 0
+                      x − 2 y = 0 
+
+
+                      x = 4, y = 2 
+                                      4 + 2 + z = 1  z = −5
+                       x + y + z = 1                      Br ( 4, 2, −5 )
+                                       4 − 2·2 = 0  0 = 0
+                      x − 2 y = 0 
+
+   El plano que contiene el punto Q y la recta r es el plano que contiene los puntos Q, Ar y Br.
+
+               Q (1, 2,3)         u = Ar Br = ( 4, 2, −5 ) − ( 0, 0,1) = ( 4, 2, −6 ) 
+                                                                                        
+               Ar ( 0, 0,1)     v = Ar Q = (1, 2,3) − ( 0, 0,1) = (1, 2, 2 )         
+                                                                                        
+               Br ( 4, 2, −5 )    Ar ( 0, 0,1)                                       
+
+
+                    x y         z −1
+                : 4 2          −6 = 0  4 x − 6 y + 8 ( z − 1) − 2 ( z − 1) − 8 y + 12 x = 0 
+                      1 2        2
+
+
+                4 x − 6 y + 8 z − 8 − 2 z + 2 − 8 y + 12 x = 0  1
+
+
+                16 x − 14 y + 6 z − 6 = 0   : 8 x − 7 y + 3z − 3 = 0
+
+   La ecuación del plano que contiene al punto Q y a la recta r es  : 8 x − 7 y + 3z − 3 = 0 .
+
+
+
+
+6 de 15                                                                    www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                         Juan Antonio Martínez García
+
+3.1 Queremos aproximar la función f ( x ) = e x , con x en el intervalo [0, 1], por otra función
+gm ( x ) = mx con m un parámetro en R. Definimos como error de la aproximación la expresión
+
+                                      err ( m ) =  ( f ( x ) − g m ( x ) ) dx
+                                                          1              2
+
+                                                       0
+
+                                          e2 1         m2
+a) (1,5 puntos) Comprueba que err ( m ) =   − − 2m +        con m ∈ R.
+                                          2 2           3
+b) (1 punto) ¿Cuál es el valor de m ∈ R que minimiza el error? ¿Cuál será el valor mínimo del
+   error?
+
+a) Determinamos la expresión de la función err(m).
+
+       err ( m ) =  ( f ( x ) − g m ( x ) ) dx =  ( e x − mx ) dx =  e 2 x + m 2 x 2 − 2mxe x dx = ...
+                    1                    2            1        2         1
+
+                    0                              0                     0
+
+
+
+
+                      Integración por partes      
+                      
+                                                  
+                   =     =   →    =                 = xe −  e dx = xe − e + C
+               x                                          x     x       x   x
+            xe   dx    u   x   du   dx
+                                                 x
+                      dv = e dx → v =  e dx = e 
+                              x            x
+
+
+
+
+                                                  1
+             1        m2 x3                     
+       ... =  e 2 x +       − 2m ( xe x − e x )  =
+             2         3                        0
+
+
+         1     m 2 ·13                   1       m 2 ·03                     e2 m2 1
+       =  e2 +         − 2m ( e1 − e1 )  −  e0 +         − 2m ( 0·e0 − e0 )  =   +  − − 2m
+         2       3                       2          3                          2   3 2
+
+                                               e2 1       m2
+   Queda comprobado que err ( m ) =              − − 2m +    .
+                                               2 2        3
+
+b) Derivamos la función y buscamos cuando se anula.
+
+                                   e2 1      m2                      2m
+                        err ( m ) = − − 2m +     err ´ ( m ) = −2 +
+                                   2 2       3                        3
+
+                                                 2m     2m
+                        err ´ ( m ) = 0  −2 +      =0    = 2  2m = 6  m = 3
+                                                  3      3
+
+   Sustituimos m = 3 en la segunda derivada.
+
+                                               2m                 2               2
+                          err ´ ( m ) = −2 +       err ´´ ( m ) =  err ´´ ( 3) =  0
+                                                3                 3               3
+
+   Al tomar la segunda derivada valor positivo la función presenta un mínimo relativo en m = 3
+   . El error se minimiza para m = 3 . Hallamos el valor del error para m = 3 .
+
+                                         e2 1      32 e 2 7
+                               err ( 3) = − − 2·3 + =    −                       0.1945
+                                         2 2       3  2 2
+
+
+7 de 15                                                                          www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                                             Juan Antonio Martínez García
+
+3.2 a) (1,25 puntos) Calcula
+                                                                   x 2 − sen ( x 2 )
+                                                          lim
+                                                  1 − cos ( x )
+                                                          x →0
+
+b) (1,25 puntos) Calcula el área de la región limitada por la gráfica de la función
+                             f ( x ) = cos2 ( x ) sen ( x ) ,   x  0,  
+  y el eje de abscisas.
+
+a) Calculamos el límite pedido.
+
+                   x 2 − sen ( x 2 )       02 − sen ( 02 )              0
+           lim                         =                           =      = In det er min ación( L´Hôpital ) =
+            x →0    1 − cos ( x )              1 − cos ( 0 )            0
+
+
+                      2 x − 2 x cos ( x 2 )            0−0      0
+           = lim                                  =            = = In det er min ación( L´Hôpital ) =
+               x →0      0 + sen ( x )                sen ( 0 ) 0
+
+
+
+           = lim
+                                                      (
+                      2 − 2 cos ( x 2 ) − 2 x −2 xsen ( x 2 )              ) = lim 2 − 2 cos ( x ) + 4 x sen ( x ) =
+                                                                                                    2          2    2
+
+
+               x →0                    cos ( x )                                x →0               cos ( x )
+
+
+               2 − 2 cos ( 02 ) + 4·02 sen ( 02 )                  2−2 0
+           =                                                   =      = = 0
+                                cos ( 0 )                           1  1
+
+b) Estudiamos si la gráfica de la función corta el eje de abscisas en el intervalo  0,   .
+
+                                                                                                      
+                                                                                cos ( x ) = 0 → x =
+              f ( x ) = cos 2 ( x ) sen ( x )                                                        2
+                                                 cos 2
+                                                         ( x ) sen ( x ) = 0  
+              Eje abscisas → y = 0                                            sen ( x ) = 0 →  x = 0
+                                                                                                 
+                                                                                                  x = 
+
+                                                                                   
+   Como la gráfica corta el eje de abscisas en x =       la región la dividimos en dos partes.
+                                                      2
+   Calculamos el área de esta región como el valor absoluto de la integral definida de la función
+                                                                                                                                  
+   entre x = 0 y x =             más el valor absoluto de la integral definida de la función entre x =
+                            2                                                                                                      2
+   y x = .
+                                            /2                      /2
+                                                 f ( x ) dx =            cos 2 ( x ) sen ( x ) dx = ...
+                                           0                        0
+
+
+
+
+8 de 15                                                                                            www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                        Juan Antonio Martínez García
+
+                               Cambio de variable                 
+                                                                  
+     cos ( x ) sen ( x ) dx = cos ( x ) = t → −sen ( x ) dx = dt  =  t ( −dt ) = −  t dt =
+         2                                                                2               2
+
+                                                                  
+                                sen ( x ) dx = −dt                
+
+
+          t3    cos ( x )
+                    3
+
+    =−       =−           +C
+          3        3
+                                                      3  
+                               cos3 ( x ) 
+                                              /2
+                                                   cos  2    cos3 ( 0 )  1
+                                                           − −
+                        ... =  −           = −                           =
+                                  3       0          3          3        3
+                                                            
+
+   El área de la primera parte de la región vale 1/3 unidades cuadradas.
+
+                                                                                        
+                                                                          cos3 ( x ) 
+                         /2 f ( x ) dx =  /2 cos ( x ) sen ( x ) dx = − 3  =
+                                                  2
+
+                                                                                           /2
+
+
+
+                                                 
+                                           cos3   
+                           cos ( ) 
+                                  3
+                                                  2  = 1 + 0 = 1
+                        = −          − −
+                              3              3      3         3
+                                                    
+
+   El área de la segunda parte de la región vale 1/3 unidades cuadradas.
+   El área de la región limitada por la gráfica de la función f ( x ) = cos2 ( x ) sen ( x ) y el eje de
+   abscisas en el intervalo  0,   vale 2/3 unidades cuadradas.
+
+
+
+
+9 de 15                                                                        www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                Juan Antonio Martínez García
+
+4.1 En un juego se cuenta con el siguiente tablero, de manera que una ficha puede desplazarse
+   de la casilla 1 a la 2; de la 2 puede desplazarse a las casillas 1 y 3; y de la casilla 3 a la casilla
+   2.
+
+
+
+
+Para decidir el movimiento a realizar en cada turno, se lanza una moneda equilibrada (misma
+probabilidad de cara y cruz). Si sale cara, se intenta desplazar la ficha a la izquierda; si sale
+cruz, a la derecha. En caso de no poder realizar el desplazamiento correspondiente, la ficha se
+queda en la casilla en la que está durante ese turno.
+a) (0,5 puntos) Construye un árbol (o una tabla) que muestre las probabilidades de pasar de una
+   casilla a otra en un turno.
+b) (1 punto) Si la ficha se encuentra en la casilla 1, ¿cuál es la probabilidad de que tras tres
+   turnos se encuentre de nuevo en la casilla 1?
+c) (1 punto) Para comenzar el juego, se procede a un sorteo para ver dónde comienza la ficha.
+   Si la probabilidad de empezar en la casilla 1 es 1/2 y la probabilidad de empezar en la casilla
+   2 y en la 3 es de 1/4 para cada una, ¿cuál es la probabilidad de que la ficha esté en cada una
+   de las tres casillas dos turnos después de empezar?
+
+ a) Construimos el diagrama de probabilidades de los movimientos. Consideramos igual de
+    probable estar situado en cualquiera de las 3 casillas.
+
+                                                                                       Cara
+                                                                                  no se mueve
+                                                Casilla 1                         P(Cara) = 1/2
+                                              P(C1) = 1/3                              Cruz
+                                                                              se mueve a casilla 2
+                                                                                  P(Cruz) = 1/2
+
+                                                                                       Cara
+                                                                              se mueve a casilla 1
+                                                Casilla 2                         P(Cara) = 1/2
+           3 casillas
+                                              P(C2) = 1/3                              Cruz
+                                                                              se mueve a casilla 3
+                                                                                  P(Cruz) = 1/2
+
+                                                                                       Cara
+                                                                              se mueve a casilla 2
+                                                Casilla 3                         P(Cara) = 1/2
+                                              P(C3) = 1/3                              Cruz
+                                                                                  no se mueve
+                                                                                  P(Cruz) = 1/2
+
+
+10 de 15                                                               www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                               Juan Antonio Martínez García
+
+ b) Realizamos un diagrama de árbol con los 3 lanzamientos.
+
+                                                                                          Cara 3
+                                                                                  No se mueve (casilla 1)
+                                                       Cara 2                         P(Cara3) = 1/2
+                                                No se mueve (casilla 1)
+                                                    P(Cara2) = 1/2                        Cruz 3
+                                                                                    Se mueve a casilla 2
+                              Cara 1                                                  P(Cruz3) = 1/2
+                           No se mueve
+                          P(Cara1) = 1/2                                                  Cara 3
+                                                                                    Se mueve a casilla 1
+                                                        Cruz 2                        P(Cara3) = 1/2
+                                                 Se mueve a casilla 2
+                                                    P(Cruz2) = 1/2                        Cruz 3
+                                                                                    Se mueve a casilla 3
+                                                                                      P(Cruz3) = 1/2
+    Casilla 1
+                                                                                         Cara 3
+                                                                                  No se mueve (casilla 1)
+                                                       Cara 2                         P(Cara3) = 1/2
+                                                 Se mueve a casilla 1
+                                                    P(Cara2) = 1/2                        Cruz 3
+                                                                                    Se mueve a casilla 2
+                              Cruz 1                                                  P(Cruz3) = 1/2
+                        Se mueve a casilla 2
+                          P(Cruz1) = 1/2                                                  Cara 3
+                                                                                    Se mueve a casilla 2
+                                                       Cruz 2                         P(Cara3) = 1/2
+                                                 Se mueve a casilla 3
+                                                    P(Cruz2) = 1/2                       Cruz 3
+                                                                                  No se mueve (casilla 3)
+                                                                                      P(Cruz3) = 1/2
+
+
+   Vemos en el diagrama de árbol que vuelve a la casilla 1 sacando Cara 1, Cara 2 y Cara 3,
+   también con Cara 1, Cruz 2 y Cara 3, también con Cruz 1, Cara 2 y Cara 3.
+   Como cualquiera de los movimientos son equiprobables tenemos que 3 movimientos
+   favorecen a quedarse en casilla 1 y los restantes 8 – 3 = 5 movimientos te desplazan de la
+                                                                         3
+   casilla 1, por lo que la probabilidad de quedarte en la casilla 1 vale = 0.375 .
+                                                                         8
+
+c) Realizamos un diagrama de árbol descriptivo de lo que ocurre en las dos tiradas partiendo
+   de cada una de las casillas del tablero.
+
+
+
+
+11 de 15                                                                www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                               Juan Antonio Martínez García
+
+                                                                                       Cara 2
+                                                                                no se mueve (casilla 1)
+                                                       Cara 1                       P(Cara2) = 1/2
+                                                no se mueve (casilla 1)
+                                                    P(Cara1) = 1/2                      Cruz 2
+                                                                                  Se mueve a casilla 2
+                                                                                    P(Cruz2) = 1/2
+                            Casilla 1
+                           P(C1) = 1/2
+                                                                                        Cara 2
+                                                                                  Se mueve a casilla 1
+                                                        Cruz 1                      P(Cara2) = 1/2
+                                                 se mueve a casilla 2
+                                                    P(Cruz1) = 1/2                      Cruz 2
+                                                                                  Se mueve a casilla 3
+                                                                                    P(Cruz2) = 1/2
+
+                                                                                       Cara 2
+                                                                                No se mueve (casilla 1)
+                                                       Cara 1                       P(Cara2) = 1/2
+                                                 se mueve a casilla 1
+                                                    P(Cara1) = 1/2                      Cruz 2
+                                                                                  Se mueve a casilla 2
+                                                                                    P(Cruz2) = 1/2
+                            Casilla 2
+    3 casillas
+                           P(C2) = 1/4
+                                                                                       Cara 2
+                                                                                  Se mueve a casilla 2
+                                                       Cruz 1                       P(Cara2) = 1/2
+                                                 se mueve a casilla 3
+                                                    P(Cruz1) = 1/2                     Cruz 2
+                                                                                No se mueve (casilla 3)
+                                                                                    P(Cruz2) = 1/2
+
+                                                                                        Cara 2
+                                                                                  Se mueve a casilla 1
+                                                       Cara 1                       P(Cara2) = 1/2
+                                                 se mueve a casilla 2
+                                                    P(Cara1) = 1/2                      Cruz 2
+                                                                                  Se mueve a casilla 3
+                                                                                    P(Cruz2) = 1/2
+                             Casilla 3
+                           P(C3) = 1/4
+                                                                                        Cara 2
+                                                                                  Se mueve a casilla 2
+                                                        Cruz 1                      P(Cara2) = 1/2
+                                                no se mueve (casilla 3)
+                                                    P(Cruz3) = 1/2                     Cruz 2
+                                                                                No se mueve (casilla 3)
+                                                                                    P(Cruz2) = 1/2
+
+
+   Calculamos la probabilidad de acabar en la casilla 1 sumando el producto de las
+   probabilidades de cada rama que acaba en casilla 1.
+
+                                 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1   3
+                 P ( Casilla 1) = · · + · · + · · + · · = + + + =
+                                 2 2 2 2 2 2 4 2 2 4 2 2 8 8 16 16 8
+
+   Calculamos la probabilidad de acabar en la casilla 2.
+
+12 de 15                                                                www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                  Juan Antonio Martínez García
+
+                             1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1     5
+            P ( Casilla 2 ) = · · + · · + · · + · · = + + + =
+                             2 2 2 4 2 2 4 2 2 4 2 2 8 16 16 16 16
+
+   Calculamos la probabilidad de acabar en la casilla 3.
+
+                            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1     5
+            P ( Casilla 3) = · · + · · + · · + · · = + + + =
+                            2 2 2 4 2 2 4 2 2 4 2 2 8 16 16 16 16
+
+
+
+
+13 de 15                                                   www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                    Juan Antonio Martínez García
+
+4.2 Dados dos sucesos aleatorios de los que se sabe que P(A|B) = 2/3 y P(B|A) = 3/4.
+a) (1 punto) Si A y B fueran independientes, ¿cuánto valdría P(A∪B)?
+b) (1,5 puntos) Si P(A∪B) = 5/6, ¿cuáles son las probabilidades P(A), P(B) y P( A  B) ?
+
+a) Determinamos las probabilidades de los sucesos A y B.
+
+                                2   P ( A  B ) 2  A y B son independientes 
+                 P ( A / B) =                 =                                 
+                                3     P ( B)    3  P ( A  B ) = P ( A ) P ( B ) 
+
+
+                     P ( A) P ( B )       2            2
+                                     =      P ( A) =
+                        P ( B)            3            3
+
+
+                                3   P ( A  B ) 3  A y B son independientes 
+                 P ( B / A) =                 =                                 
+                                4     P ( A)    4  P ( A  B ) = P ( A ) P ( B ) 
+
+
+                     P ( A) P ( B )       3            3
+                                     =      P ( B) =
+                        P ( A)            4            4
+
+   Calculamos la probabilidad de la unión de los dos sucesos usando la fórmula.
+
+                                                                                          2 3 2 3 11
+     P ( A  B ) = P ( A) + P ( B ) − P ( A  B ) = P ( A) + P ( B ) − P ( A) P ( B ) =    + − · =
+                                                                                          3 4 3 4 12
+
+b) Sin considerar los sucesos A y B independientes calculamos sus probabilidades.
+
+                   2     P ( A  B) 2                   2                       3      
+      P ( A / B) =                   =  P ( A  B ) = P ( B )  P ( B ) = P ( A  B )
+                   3       P ( B)       3               3                       2      
+                   3     P ( A  B) 3                   3                       4      
+      P ( B / A) =                   =  P ( A  B ) = P ( A)  P ( A) = P ( A  B ) 
+                   4       P ( A)       4               4                       3       
+                                                    5                                   
+      P ( A  B ) = P ( A) + P ( B ) − P ( A  B )  = P ( A) + P ( B ) − P ( A  B )   
+                                                    6                                   
+
+
+           5 3             4                           5 3 4 
+           = P ( A  B ) + P ( A  B ) − P ( A  B )  =  + − 1 P ( A  B ) 
+           6 2             3                           6 2 3 
+
+
+                                                 3            3 5 15
+                                         P ( B) = P ( A  B) = · =
+       5 11                          5           2            2 11 22
+       = P ( A  B)  P ( A  B) =    
+       6 6                          11   P A = 4 P A  B = 4 · 5 = 20
+                                         ( ) 3 (           )
+                                                              3 11 33
+
+                                             20            15
+   Hemos determinado que P ( A) =               y P ( B) =    .
+                                             33            22
+
+14 de 15                                                                    www.ebaumatematicas.com
+PAU 2025 Ordinaria Matemáticas II en Aragón                                Juan Antonio Martínez García
+
+   Calculamos P( A  B) .
+
+
+                               ( ) (           )
+       P( A  B) = P ( A) + P B − P A  B = P ( A ) + 1 − P ( B ) −  P ( A ) − P ( A  B )  =
+
+
+           20    15  20 5  17
+       =      +1− −  −  =
+           33    22  33 11  22
+
+
+
+
+15 de 15                                                               www.ebaumatematicas.com
+

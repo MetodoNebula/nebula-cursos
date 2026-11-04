@@ -1,0 +1,463 @@
+              UNIBERTSITATEAN SARTZEKO             PRUEBA DE ACCCESO A LA
+                          PROBA                            UNIVERSIDAD
+                       2026ko OHIKOA                      ORDINARIA 2026
+               EBAZPENA ETA IRIZPIDEAK             SOLUCIONARIO Y CRITERIOS
+
+                   MATEMATIKA II                     MATEMÁTICAS II
+
+
+PRIMER EJERCICIO.
+La primera componente de la velocidad de las moléculas de nitrógeno a una temperatura de
+300 K, que denotamos por X, sigue una distribución N (0, 298). Sea Z una variable aleatoria
+que sigue una distribución N (0, 1).
+
+(a) Se tiene que
+                                               (                       )
+                                                300         300
+     P (|X| < 300) =P (−300 < X < 300) = P −         <Z<          = P (−1, 01 < Z < 1, 01)
+                                                298         298     (                  )
+                   =P (Z < 1, 01) − P (Z < −1, 01) = P (Z < 1, 01) − 1 − P (Z < 1, 01)
+
+
+
+(b) Se tiene que
+
+
+
+
+                       U
+                   =2P (Z < 1, 01) − 1 = 2 · 0, 8438 − 1 = 0, 6876.
+
+
+
+
+       P (−600 < X < −300) =P −
+                                  (
+                                     600
+                                     298
+                                         <Z<−
+                                                  300
+                                                  298
+                                                          )
+                                                       = P (−2, 01 < Z < −1, 01)
+                               =P (Z < −1, 01) − P (Z < −2, 01)
+                                                      (                       )
+EH
+                               =1 − P (Z < 1, 01) − 1 − P (Z < 2, 01)
+                               =P (Z < 2, 01) − P (Z < 1, 01) = 0, 9778 − 0, 8438 = 0, 134.
+
+(c) Sean mN la masa de una molécula de nitrógeno, σN = kB T /mN , mA la masa de una
+    molécula de argón y σA = kB T /mA . Como se sabe que mN < mA , entonces σN > σA .
+    Si X N es la primera componente de la velocidad de las moléculas de nitrógeno y X A es
+                                                                                300    300
+    la primera componente de la velocidad de las moléculas de argón, entonces       >
+                                                                                σA     σN
+    y la probabilidad de un intervalo que contiene a otro es mayor que la probabilidad del
+    intervalo al que contiene, por lo tanto
+                                  (            )      (            )
+                                       300           300
+              P (|X | < 300) = P |Z| <
+                   A
+                                           > P |Z| <     = P (|X N | < 300).
+                                       σA            σN
+
+
+SEGUNDO EJERCICIO.
+Sea A la matriz de coeficientes del sistema,
+                                                           
+                                       1  a  0
+                                    
+                                  A= 1   a  1 
+                                               .
+                                      a−2 a a−1
+
+                                                                EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+              UNIBERTSITATEAN SARTZEKO              PRUEBA DE ACCCESO A LA
+                         PROBA                            UNIVERSIDAD
+                     2026ko OHIKOA                       ORDINARIA 2026
+               EBAZPENA ETA IRIZPIDEAK              SOLUCIONARIO Y CRITERIOS
+
+                  MATEMATIKA II                       MATEMÁTICAS II
+
+(a) Tenemos que
+
+                     det A = a(a − 1) + a(a − 2) − a(a − 1) − a = a(a − 3).
+
+   Como a ̸= 0, la única posibilidad de que el sistema tenga más de una solución es que
+   sea a = 3. En este caso,                            
+                                           1 3 0 | 1
+                                                       
+                                   A|B = 1 3 1 | 3 .
+                                           1 3 2 | 5
+   El rango de la matriz de coeficientes y el de la matriz ampliada es 2, luego el sistema es
+   compatible indeterminado y tiene infinitas soluciones.
+
+
+
+
+                     U
+(b) Se tiene el sistema equivalente
+
+
+
+
+   Las soluciones son x = t, y =
+                                     1−t
+                                      3
+                                          
+                                          x + 3y = 1,
+                                          z = 2.
+
+
+                                         , z = 2, con t cualquier número real.
+EH
+TERCER EJERCICIO.
+
+(a) La parábola de ecuación y = x(2x − 3) corta el eje OX cuando x = 0 y x = 3/2 y tiene
+    el vértice en el punto (3/4, −9/8). La parábola de ecuación y = x(2 − x) corta el eje OX
+    cuando x = 0 y x = 2 y tiene el vértice en el punto (1, 1). Además, las parábolas se
+    cortan cuando
+                           x(2x − 3) = x(2 − x) ⇐⇒ x = 0, x = 5/3.
+
+
+
+                                                       y = x(2x − 3)
+
+
+
+                                          3/4
+                                 0              1     5/3 2
+
+                                                          y = x(2 − x)
+
+
+
+
+                                                               EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+               UNIBERTSITATEAN SARTZEKO                 PRUEBA DE ACCCESO A LA
+                            PROBA                              UNIVERSIDAD
+                         2026ko OHIKOA                       ORDINARIA 2026
+                EBAZPENA ETA IRIZPIDEAK              SOLUCIONARIO Y CRITERIOS
+
+                      MATEMATIKA II                       MATEMÁTICAS II
+
+(b) El área entre las dos parábolas se calcula mediante la siguiente integral:
+          ∫ 5/3 (                        )      ∫ 5/3                      (              ) 5/3
+                                                                               5x2                    125
+                    x(2 − x) − x(2x − 3) dx =           (5x − 3x2 ) dx =           − x3           =       .
+           0                                     0                              2            0
+                                                                                                       54
+
+                                             125 2
+    Por tanto, el área del recinto es A =        u , siendo u la unidad de longitud.
+                                              54
+
+
+CUARTO EJERCICIO.
+
+(4A)
+
+
+
+
+                         U
+(a) El vector director de la recta r es ⃗vr = (1, 1, −1) y P (0, 1, 0) es un punto de la recta. El
+    vector normal al plano π es ⃗n = (−1, 2, 1). Esos dos vectores son perpendiculares ya
+    que su producto escalar es ⃗vr · ⃗n = 0. Dependiendo del parámetro A, puede ser que el
+    plano contenga a la recta o que la recta y el plano sean paralelos. Sustituimos el punto
+    P (0, 1, 0) en la ecuación del plano, y obtenemos 2 + A = 0. Concluimos que si A = −2,
+    el plano contiene a la recta y si A ̸= −2, la recta y el plano son paralelos.
+EH
+    Otra forma de resolver este apartado es la siguiente: los puntos de la recta son de la
+    forma (t, t + 1, −t), siendo t ∈ R. Sustituyendo ese punto en la ecuación del plano, se
+    tiene que A + 2 = 0 para cualquier t ∈ R. Por tanto, si A = −2, todos los puntos de la
+    recta están en el plano, y si A ̸= −2, ningún punto de la recta está en el plano, es decir,
+    la recta es paralela al plano.
+(b) Si A = −2, la recta está contenida en el plano. En consecuencia, la distancia entre la
+                                                    |A + 2|
+    recta y el plano es 0. Si A ̸= −2, dist (r, π) = √      u, siendo u la unidad de longitud.
+                                                        6
+
+(4B)
+
+(a) El plano π debe ser perpendicular al vector que une los puntos A y B, es decir, a AB ⃗ =
+    (−2, −1, 1). Tomamos, por ejemplo, ⃗n = (2, 1, −1) y la ecuación del plano es de la forma
+    2x + y − z + d = 0. Además, el punto medio de A y B, P = (0, 1/2, 5/2), debe estar en el
+    plano. Sustituyendo, d = 2 y la ecuación del plano es 2x + y − z + 2 = 0.
+    Otra posibilidad es pedir que la distancia de A a π y la distancia de B a π sean iguales:
+
+                             |2 + 1 − 2 + d|   | − 2 + 0 − 3 + d|
+       d(A, π) = d(B, π) ⇐⇒ √                 =√                  ⇐⇒ |d + 1| = |d − 5|.
+                              22 + 12 + (−1)2    22 + 12 + (−1)2
+
+    Necesariamente, d = 2.
+
+
+                                                                    EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+              UNIBERTSITATEAN SARTZEKO           PRUEBA DE ACCCESO A LA
+                         PROBA                           UNIVERSIDAD
+                     2026ko OHIKOA                     ORDINARIA 2026
+               EBAZPENA ETA IRIZPIDEAK          SOLUCIONARIO Y CRITERIOS
+
+                  MATEMATIKA II                    MATEMÁTICAS II
+                                                                                     √
+                                            |2 + 1 − 2 + 2|3           3
+(b) La distancia de A a π es d(A, π) = √                u= √ u=          u, siendo u la
+                                        22 + 12 + (−1)2     6          2
+                                                                                 √
+                                                                     1             6
+   unidad de longitud. También se puede tener en cuenta que d(A, π) = d(A, B) =      .
+                                                                     2            2
+
+
+QUINTO EJERCICIO.
+
+(5A) Suponemos que la base del montículo de hormigón está en el eje OX y el eje de simetría
+es el eje OY. El problema se reduce a calcular el punto de corte con el eje OX de la recta
+tangente a la parábola que describe el montículo y que pasa por el punto (0, 15).
+
+
+
+
+                     U
+La ecuación de la parábola que tiene el vértice en el punto (0, 12) y pasa por los puntos
+                            4
+(−3, 0) y (3, 0) es y = 12 − x2 = f (x).
+                            3
+La ecuación de la recta tangente a la parábola que pasa por el punto (a, f (a)) es
+
+                                  y = f (a) + f ′ (a)(x − a).
+                                                                                            8
+Esa recta tiene que pasar por el punto (0, 15), es decir, teniendo en cuenta que f ′ (x) = − x
+EH
+                                                                                            3
+y a > 0,                                    (    )
+                                     4         8            4                 3
+              f (a) − af ′ (a) = 12 − a2 − a − a = 12 + a2 = 15 =⇒ a = .
+                                     3         3            3                 2
+La recta tangente buscada es y = 15 − 4x, y corta al eje OX cuando x = 15/4. La distancia
+de este punto a x = 3, que es el extremo de la base del montículo, es d = 3/4 = 0, 75 m.
+
+(5B) Se tiene una sala rectangular con paredes más largas que la barra que se quiere utilizar
+para acotar una zona, así que la barra deberá colocarse en una de las esquinas y acotará
+una zona triangular:
+
+
+
+
+                                   y     4m
+
+                                        x
+
+
+Sea x la distancia del extremo de la barra colocado en el lado horizontal de la sala a la
+esquina que quedará en la zona acotada, y sea y la distancia del otro extremo de la barra
+                                                       xy
+a la misma esquina. El área de la zona acotada es A =     . Como x e y son los catetos de
+                                                        2
+                                                                EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+              UNIBERTSITATEAN SARTZEKO           PRUEBA DE ACCCESO A LA
+                           PROBA                       UNIVERSIDAD
+                        2026ko OHIKOA                 ORDINARIA 2026
+                EBAZPENA ETA IRIZPIDEAK         SOLUCIONARIO Y CRITERIOS
+
+                       MATEMATIKA II              MATEMÁTICAS II
+
+un triángulo rectángulo de hipotenusa 4, tenemos que x2 + y 2 = 16. Queremos encontrar el
+máximo de la función
+                                     1 √
+                              f (x) = x 16 − x2 , x ∈ [0, 4].
+                                     2
+Se tiene que
+                   (                         )
+                 1 √                −2x           8 − x2                   √
+           f ′ (x) =  16 − x2 + x √            = √         = 0 =⇒  x = ±2    2.
+                 2                2 16 − x2        16 − x2
+                                                √
+Como x es una
+            √distancia, debe ser positiva, x = 2 2. Para comprobar que el área es máxima
+cuando x = 2 2, se puede usar la segunda derivada de la función:
+                                √
+
+
+
+
+                        U
+                                                       −2x
+                             −2x 16 − x2 − (8 − x2 ) √                   √
+                                                    2 16 − x2
+                  f ′′ (x) =                                   =⇒ f ′′ (2 2) < 0
+                                         16 − x 2
+
+                                            √
+y, por tanto, f tiene un máximo en x = 2 2. Como f no tiene√más puntos críticos positivos,
+el área máxima se obtiene√     cuando la barra se coloca a x = 2 2 m de la esquina en la pared
+horizontal y a y = 2 2 m de la esquina en la pared vertical.
+Es posible también tomar h(x) = (2f (x))2 = 16x2 − x4 ya que los extremos de las funciones
+EH
+f y h se encuentran en los mismos valores de x. De esta manera,
+                                                                        √
+                  h′ (x) = 32x − 4x3 = 4x(8 − x2 ) = 0 =⇒ x = 0 o x = ±2 2.
+                                                      √
+Como x es una distancia, debe ser positiva, x = 2 2. Finalmente,
+                                                            √
+                               h′′ (x) = 32 − 12x2 =⇒ h′′ (2 2) < 0
+                                             √
+y, por tanto, h tiene un máximo en x = 2 2.
+
+
+
+
+                                                            EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+               UNIBERTSITATEAN SARTZEKO           PRUEBA DE ACCCESO A LA
+                          PROBA                          UNIVERSIDAD
+                      2026ko OHIKOA                    ORDINARIA 2026
+                EBAZPENA ETA IRIZPIDEAK          SOLUCIONARIO Y CRITERIOS
+
+                    MATEMATIKA II                   MATEMÁTICAS II
+
+ CRITERIOS GENERALES DE CORRECCIÓN
+
+ 1. El examen se valorará con una puntuación entre 0 y 10 puntos.
+ 2. Todos los problemas tienen el mismo valor: hasta 2 puntos.
+ 3. Si no se demanda una técnica particular de resolución, cualquier desarrollo que conduzca
+    a la solución será válido.
+ 4. Si el ejercicio está correcto (siguiendo la técnica indicada, en su caso), se dará por bueno
+    íntegramente. Sólo en el caso de no ser completamente correcto, se aplicarán las pun-
+    tuaciones indicadas para cada paso en los criterios de corrección.
+
+
+
+
+                       U
+ 5. Se valorará el planteamiento correcto, tanto global como de cada una de las partes, si
+    las hubiere.
+ 6. La mera descripción del planteamiento, sin que se lleve a cabo la resolución de manera
+    efectiva, no es suficiente para obtener una valoración completa del ejercicio.
+ 7. En los ejercicios en los que se pida expresamente una deducción razonada, la mera
+    aplicación de una fórmula no será suficiente para obtener una valoración completa de los
+    mismos.
+EH
+ 8. Los errores cometidos en un apartado, por ejemplo, en el cálculo del valor de un cierto
+    parámetro, no se tendrán en cuenta en la calificación de los desarrollos posteriores que
+    puedan verse afectados, siempre que resulten de una complejidad equivalente.
+ 9. No se tomarán en consideración errores numéricos, de cálculo, etc, siempre que no sean
+    de tipo conceptual.
+10. Las ideas, gráficos, presentaciones, esquemas, etc, que ayuden a visualizar mejor el
+    problema y su solución se valorarán positivamente.
+11. Se valorará la buena presentación del examen.
+12. Se valorarán negativamente los planteamientos incorrectos, la confusión de conceptos y
+    la abundancia de errores de cálculo.
+13. Los errores aislados se valorarán negativamente cuando indiquen falta de reflexión crítica
+    o de sentido común.
+14. Se valorará negativamente la falta de rigor matemático en las explicaciones y la incorrecta
+    utilización de los símbolos matemáticos, con una penalización de hasta 0,2 puntos en
+    cada ejercicio.
+15. Las respuestas deben estar escritas con bolígrafo azul o negro. No pueden usarse ni
+    lápiz, ni bolígrafo borrable, ni bolígrafo de otro color.
+
+
+                                                              EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+            UNIBERTSITATEAN SARTZEKO          PRUEBA DE ACCCESO A LA
+                      PROBA                         UNIVERSIDAD
+                   2026ko OHIKOA                   ORDINARIA 2026
+             EBAZPENA ETA IRIZPIDEAK         SOLUCIONARIO Y CRITERIOS
+
+                MATEMATIKA II                  MATEMÁTICAS II
+
+CRITERIOS DE CALIFICACIÓN de cada uno de los problemas
+
+
+PRIMER EJERCICIO
+     (a)    Tipificar correctamente la distribución de probabilidad (0,25 puntos).
+            Reescribir la probabilidad a calcular en términos de probabilidades de la forma
+            P (Z < α) siendo Z la variable tipificada y α > 0 (0,25 puntos).
+            Encontrar la probabilidad buscada utilizando la tabla de la distribución normal
+            (0,25 puntos).
+     (b)    Tipificar correctamente la distribución de probabilidad (0,25 puntos).
+
+
+
+
+                   U
+            Reescribir la probabilidad a calcular en términos de probabilidades de la forma
+            P (Z < α) siendo Z la variable tipificada y α > 0 (0,25 puntos).
+            Encontrar la probabilidad buscada utilizando la tabla de la distribución normal
+            (0,25 puntos).
+     (c) Responder correctamente y de forma razonada a la pregunta (0,5 puntos).
+EH
+SEGUNDO EJERCICIO
+
+     (a)    Calcular el determinante de la matriz de coeficientes (0,5 puntos).
+            Comprobar que cuando a = 3 el sistema es compatible indeterminado (0,5
+            puntos).
+     (b) Resolver el sistema cuando a = 3 (1 punto).
+
+
+TERCER EJERCICIO
+
+     (a)    Calcular los vértices y los puntos de corte de las parábolas con el eje OX (0,5
+            puntos).
+            Encontrar los puntos de corte de las parábolas (0,25 puntos).
+            Dibujar correctamente el recinto (0,25 puntos).
+     (b)    Escribir correctamente la integral que proporciona el área del recinto (0,25
+            puntos).
+            Calcular correctamente la primitiva del integrando y aplicar correctamente la
+            regla de Barrow (0,5 puntos).
+            Dar la solución como una fracción, sin aproximar mediante decimales (0,25
+            puntos).
+
+
+
+                                                         EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+               UNIBERTSITATEAN SARTZEKO         PRUEBA DE ACCCESO A LA
+                         PROBA                        UNIVERSIDAD
+                     2026ko OHIKOA                   ORDINARIA 2026
+               EBAZPENA ETA IRIZPIDEAK         SOLUCIONARIO Y CRITERIOS
+
+                  MATEMATIKA II                   MATEMÁTICAS II
+
+CUARTO EJERCICIO
+
+    4A
+         (a)    Calcular el vector director de la recta y el vector normal al plano (0,5 pun-
+                tos).
+                Comprobar que el vector director de la recta y el vector normal al plano
+                son perpendiculares (0,5 puntos).
+                Deducir la posición relativa de la recta y el plano en función de A (0,5
+                puntos).
+         (b) Calcular la distancia de la recta al plano (0,5 puntos).
+    4B
+         (a)
+
+
+
+
+                     U
+                Encontrar el vector normal al plano π (0,5 puntos).
+                Determinar la ecuación del plano π (1 punto).
+         (b) Calcular la distancia del punto A al plano π (0,5 puntos).
+
+
+QUINTO EJERCICIO
+EH
+    5A
+               Encontrar la ecuación de la parábola que describe el montículo (0,5 puntos).
+               Encontrar la ecuación general de una recta tangente a la parábola (0,5 pun-
+               tos).
+               Encontrar la abscisa del punto de tangencia (0,5 puntos).
+               Calcular la distancia pedida (0,5 puntos).
+    5B
+               Encontrar la expresión del área de la zona acotada (0,25 puntos).
+               Encontrar la relación entre los lados del triángulo (0,25 puntos).
+               Encontrar la función que se debe maximizar (0,25 puntos).
+               Calcular el punto donde se anula la derivada (0,5 puntos).
+               Deducir que la función tiene un máximo en el punto donde se anula la derivada
+               (0,5 puntos).
+               Explicar dónde se debe colocar la barra (0,25 puntos).
+
+
+
+
+                                                           EBAZPENA ETA IRIZPIDEAK / SOLUCIONARIO Y CRITERIOS
+

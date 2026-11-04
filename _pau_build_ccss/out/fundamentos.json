@@ -1,0 +1,53 @@
+[
+ {
+  "block": "fundamentos",
+  "source": "Asturias · Extraordinaria 2026",
+  "title": "Patrón de cuadrados grises y fórmula general · Asturias · Extraordinaria 2026",
+  "statement": "En una sucesión de figuras, el número de cuadrados grises crece según un patrón: la Figura 1 tiene $8$ cuadrados grises, la Figura 2 tiene $12$ y la Figura 3 tiene $16$.\n\n**(a)** Determine el número de cuadrados grises de la Figura $17$ y obtenga una fórmula general $C(n)$ que relacione el número de cuadrados grises con el número de figura $n$.\n\n**(b)** ¿Existen dos figuras cuyo número de cuadrados grises se diferencie exactamente en $9$? Justifíquelo.",
+  "knowns": [
+   "$C(1)=8$, $C(2)=12$, $C(3)=16$"
+  ],
+  "full_solution": "**(a)** Se observa que de una figura a la siguiente el número de cuadrados aumenta en $4$, y que en cada figura hay cuatro grupos de tamaño $n+1$. Por tanto\n$$C(n)=4(n+1).$$\nComprobación: $C(1)=8$, $C(2)=12$, $C(3)=16$. Para la Figura $17$:\n$$C(17)=4(17+1)=72\\ \\text{cuadrados grises.}$$\n\n**(b)** Buscamos figuras $n$ y $m$ con $C(m)-C(n)=9$:\n$$4(m+1)-4(n+1)=9\\iff 4(m-n)=9\\iff m-n=\\tfrac{9}{4}=2{,}25.$$\nComo $n$ y $m$ son números enteros, su diferencia también debe ser entera. Al no serlo $2{,}25$, **no es posible** que dos figuras difieran en exactamente $9$ cuadrados grises (la diferencia es siempre múltiplo de $4$).",
+  "answer": "**(a)** $C(17)=72$ y $C(n)=4(n+1)$. **(b)** No es posible: exigiría $m-n=2{,}25$, que no es entero (toda diferencia es múltiplo de $4$).",
+  "common_errors": [
+   "Deducir mal la fórmula general (p. ej. $4n$ en vez de $4(n+1)$).",
+   "No usar que $n,m$ son enteros para descartar la diferencia $9$.",
+   "Confundir término de la sucesión con la diferencia entre términos."
+  ],
+  "mark_scheme": [
+   "(a) Número de cuadrados de la figura 17: 1 punto. Fórmula general y justificación: 1 punto.",
+   "(b) Responder justificada y correctamente: 0,5 puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Asturias_2026-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-FUND-001"
+ },
+ {
+  "block": "fundamentos",
+  "source": "Asturias · Ordinaria 2026",
+  "title": "Patrón geométrico de hexágonos: progresión aritmética de palitos y vértices · Asturias · Ordinaria 2026",
+  "statement": "Se construye una sucesión de figuras encadenando hexágonos, de modo que cada hexágono nuevo comparte un lado con el anterior. Contando palitos $p$ (lados) y vértices $v$ se observa: Figura 1: $6$ palitos y $6$ vértices; Figura 2: $11$ palitos y $10$ vértices; Figura 3: $16$ palitos y $14$ vértices.\n\n**(a)** Determine el número de palitos y de vértices de la figura $16$, y obtenga una fórmula general para el número de palitos.\n\n**(b)** ¿Existe alguna figura con $206$ palitos? En caso afirmativo, indique su número y cuántos vértices tiene.",
+  "knowns": [
+   "$p_1=6$, diferencia $+5$ palitos por figura",
+   "$v_1=6$, diferencia $+4$ vértices por figura"
+  ],
+  "full_solution": "**(a)** Los palitos forman una progresión aritmética de primer término $6$ y diferencia $5$:\n$$p=6+5(n-1)=5n+1.$$\nPara $n=16$: $p=5\\cdot16+1=81$ palitos. Los vértices siguen $v=4n+2$, luego para $n=16$: $v=4\\cdot16+2=66$ vértices. (También $v=\\dfrac{4p+6}{5}=\\dfrac{4\\cdot81+6}{5}=66$.)\n\n**(b)** Como $p=5n+1$, un número de palitos válido debe ser un múltiplo de $5$ más $1$; $206=5\\cdot41+1$ lo cumple:\n$$5n+1=206\\ \\Rightarrow\\ n=\\frac{205}{5}=41.$$\nEs la figura $41$. Sus vértices son $v=4\\cdot41+2=166$ (o $v=\\dfrac{4\\cdot206+6}{5}=166$).",
+  "answer": "Figura 16: $p=81$ palitos y $v=66$ vértices; fórmula $p=5n+1$. Sí existe figura con $206$ palitos: es la figura $41$, con $166$ vértices.",
+  "common_errors": [
+   "Tomar $p=6n$ (olvidar que los hexágonos comparten un lado, por lo que la diferencia es $5$ y no $6$).",
+   "Equivocar el término inicial de la progresión ($p_1=6$) usando $p=5n$ en vez de $p=5n+1$.",
+   "Contar dos veces los vértices compartidos entre hexágonos consecutivos."
+  ],
+  "mark_scheme": [
+   "(a) Palitos y vértices de la figura 16: $1$ punto; fórmula general de palitos justificada: $1$ punto.",
+   "(b) Responder justificada y correctamente: $0{,}5$ puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "Secuencia de hexágonos encadenados (figuras 1, 2 y 3) con los lados compartidos resaltados, y tabla $n\\,|\\,p\\,|\\,v$: $(1,6,6),(2,11,10),(3,16,14)$.",
+  "origin_file": "2oBachCCSS_EBAU_Asturias_2026-Ordinaria_Resuelto_Oficial.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-FUND-002"
+ }
+]

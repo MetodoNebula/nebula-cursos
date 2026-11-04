@@ -1,0 +1,148 @@
+[
+ {
+  "id": "PAU-FIS-OPT-005",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2024",
+  "block": "optica",
+  "title": "Refracción y espesor de una lámina de caras planoparalelas · Andalucía · Ordinaria 2024",
+  "statement": "**(a)** Un rayo monocromático duplica su longitud de onda al pasar del medio 1 al 2. i) Determine la relación entre los índices de refracción. ii) ¿El rayo se acerca o se aleja de la normal? ¿Puede haber reflexión total?\n\n**(b)** Sobre una lámina planoparalela rodeada de aire incide un rayo con $80^\\circ$ respecto a la normal. En la lámina su longitud de onda es $3\\lambda_0/4$ ($\\lambda_0$ en el aire). i) Índice de refracción de la lámina. ii) Ángulo de refracción en la lámina (con esquema). iii) Espesor de la lámina si el rayo tarda $5{,}28\\cdot10^{-10}\\ \\text{s}$ en atravesarla.",
+  "knowns": [
+   "$\\lambda_2=2\\lambda_1$ (apartado a)",
+   "$\\theta_i=80^\\circ$",
+   "$\\lambda_{\\text{lámina}}=\\tfrac{3}{4}\\lambda_0$",
+   "$t=5{,}28\\cdot10^{-10}\\ \\text{s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$, $n_{\\text{aire}}=1$"
+  ],
+  "full_solution": "**(a)** i) Como $n=c/v$ y $v=\\lambda f$ (misma $f$), $\\dfrac{n_1}{n_2}=\\dfrac{\\lambda_2}{\\lambda_1}=2$, es decir $n_1=2n_2$. ii) Al pasar a un medio de **menor índice** ($n_2<n_1$) el rayo se **aleja de la normal**; además puede darse **reflexión total** si el ángulo supera el ángulo límite.\n\n**(b)** i) Como la frecuencia no cambia, $n_{\\text{lámina}}=\\dfrac{\\lambda_0}{\\lambda_{\\text{lámina}}}=\\dfrac{\\lambda_0}{3\\lambda_0/4}=\\dfrac{4}{3}=1{,}33$.\n\nii) Ley de Snell $n_{\\text{aire}}\\sin80^\\circ=n_{\\text{lámina}}\\sin\\theta_r$:\n$$\\sin\\theta_r=\\dfrac{\\sin80^\\circ}{4/3}=0{,}739\\ \\Rightarrow\\ \\theta_r=47{,}6^\\circ$$\n\niii) La velocidad en la lámina es $v=\\dfrac{c}{n}=\\dfrac{3\\cdot10^{8}}{4/3}=2{,}25\\cdot10^{8}\\ \\text{m·s}^{-1}$. El camino recorrido dentro es $L=v t=2{,}25\\cdot10^{8}\\cdot5{,}28\\cdot10^{-10}=0{,}119\\ \\text{m}$. El espesor (perpendicular) es:\n$$d=L\\cos\\theta_r=0{,}119\\cdot\\cos47{,}6^\\circ=0{,}080\\ \\text{m}=8{,}0\\ \\text{cm}$$",
+  "answer": "**(a)** $n_1=2n_2$; el rayo se aleja de la normal y puede haber reflexión total.  **(b)** i) $n=4/3\\approx1{,}33$; ii) $\\theta_r\\approx47{,}6^\\circ$; iii) $d\\approx8{,}0\\ \\text{cm}$.",
+  "figure_suggestion": "Esquema de refracción en lámina planoparalela: rayo incide a 80° desde el aire, se refracta a 47,6° en la lámina (n=4/3) y emerge paralelo al incidente; marcar el espesor d."
+ },
+ {
+  "id": "PAU-FIS-OPT-006",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2025",
+  "block": "optica",
+  "title": "Lente para imagen virtual aumentada, onda en cuerda y refracción aire-aceite-agua · Andalucía · Ordinaria 2025",
+  "statement": "**(a)** Se quiere una imagen virtual y mayor que el objeto con una lente delgada. Justifique con trazado de rayos qué lente usar y dónde colocar el objeto.\n\n**(b1)** Por una cuerda se propaga, en sentido negativo de $OX$, una onda transversal de amplitud $0{,}1\\ \\text{m}$, frecuencia $5\\ \\text{Hz}$ y velocidad $0{,}5\\ \\text{m·s}^{-1}$. Para $t=0$, $x=0$ está en la posición más alta. Determine: i) la ecuación de la onda; ii) la diferencia de fase entre dos puntos separados $10\\ \\text{cm}$; iii) la distancia mínima entre dos puntos en oposición de fase.\n\n**(b2)** Desde el aire incide un haz a $50^\\circ$ sobre una capa de aceite que flota sobre agua. i) Esquema de la trayectoria. ii) Ángulos de refracción en el aceite y en el agua. iii) Velocidad de la luz en el agua.",
+  "knowns": [
+   "onda: $A=0{,}1\\ \\text{m}$, $f=5\\ \\text{Hz}$, $v=0{,}5\\ \\text{m·s}^{-1}$ (sentido $-x$)",
+   "$\\theta_i=50^\\circ$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$, $n_{\\text{agua}}=1{,}33$, $n_{\\text{aceite}}=1{,}47$, $n_{\\text{aire}}=1$"
+  ],
+  "full_solution": "**(a)** Se usa una **lente convergente** con el objeto situado **entre el foco y la lente** ($|s|<f$): produce una imagen **virtual, derecha y mayor** (modo lupa). (Una lente divergente da siempre imagen virtual, derecha pero menor.)\n\n**(b1)** $\\omega=2\\pi f=10\\pi\\ \\text{rad·s}^{-1}$; $k=\\dfrac{\\omega}{v}=\\dfrac{10\\pi}{0{,}5}=20\\pi\\ \\text{rad·m}^{-1}$; $\\lambda=\\dfrac{v}{f}=0{,}1\\ \\text{m}$.\nOnda hacia $-x$ con máximo en $t=0,x=0$ ($\\varphi=0$):\n$$y(x,t)=0{,}1\\cos(10\\pi t+20\\pi x)\\ \\text{m}$$\nii) $\\Delta\\phi=k\\,\\Delta x=20\\pi\\cdot0{,}1=2\\pi\\ \\text{rad}$ (los puntos están en fase).\niii) Oposición de fase: $\\Delta\\phi=\\pi\\Rightarrow \\Delta x_{\\min}=\\dfrac{\\pi}{k}=\\dfrac{\\pi}{20\\pi}=0{,}05\\ \\text{m}=5\\ \\text{cm}$ (media longitud de onda).\n\n**(b2)** En interfases planoparalelas, $n_{\\text{aire}}\\sin50^\\circ=n_{\\text{aceite}}\\sin\\theta_{ac}=n_{\\text{agua}}\\sin\\theta_{ag}$.\n$$\\sin\\theta_{ac}=\\dfrac{\\sin50^\\circ}{1{,}47}=0{,}521\\ \\Rightarrow\\ \\theta_{ac}=31{,}4^\\circ$$\n$$\\sin\\theta_{ag}=\\dfrac{\\sin50^\\circ}{1{,}33}=0{,}576\\ \\Rightarrow\\ \\theta_{ag}=35{,}2^\\circ$$\niii) $v_{\\text{agua}}=\\dfrac{c}{n_{\\text{agua}}}=\\dfrac{3\\cdot10^{8}}{1{,}33}=2{,}26\\cdot10^{8}\\ \\text{m·s}^{-1}$.",
+  "answer": "**(a)** Lente convergente con el objeto entre el foco y la lente.  **(b1)** $y=0{,}1\\cos(10\\pi t+20\\pi x)\\ \\text{m}$; $\\Delta\\phi=2\\pi$ (en fase); $\\Delta x_{\\min}=5\\ \\text{cm}$.  **(b2)** $\\theta_{ac}\\approx31{,}4^\\circ$, $\\theta_{ag}\\approx35{,}2^\\circ$; $v_{\\text{agua}}\\approx2{,}26\\cdot10^{8}\\ \\text{m·s}^{-1}$.",
+  "figure_suggestion": "Diagrama de rayos de lente convergente con objeto dentro del foco (imagen virtual, derecha y mayor); y esquema de refracción aire→aceite(n=1,47)→agua(n=1,33) con ángulos 50°, 31,4° y 35,2°."
+ },
+ {
+  "id": "PAU-FIS-OPT-009",
+  "flagged": true,
+  "source": "Andalucía · Reserva A 2019",
+  "block": "optica",
+  "title": "Dispersión en prisma e índice de una lámina de vidrio · Andalucía · Reserva A 2019",
+  "statement": "**(a)** Explique, con un esquema, la dispersión de la luz blanca en un prisma. ¿Ocurriría si la luz blanca incide perpendicularmente sobre una lámina de caras plano-paralelas?\n\n**(b)** Sobre una lámina de vidrio de $0{,}03\\ \\text{m}$ de espesor (en el aire) incide luz monocromática con ángulo de $35^\\circ$; la velocidad del rayo en el vidrio es $2\\cdot10^{8}\\ \\text{m·s}^{-1}$. Determine: i) el índice de refracción; ii) el ángulo de emergencia; iii) el tiempo en atravesar la lámina.",
+  "knowns": [
+   "$e=0{,}03\\ \\text{m}$, $\\theta_1=35^\\circ$",
+   "$v_{vidrio}=2\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$c=3\\cdot10^{8}\\ \\text{m·s}^{-1}$, $n_{aire}=1$"
+  ],
+  "full_solution": "**(a)** La luz blanca es mezcla de colores; el índice de refracción del vidrio depende de la longitud de onda ($n$ mayor para el violeta que para el rojo). En el prisma, las dos caras **no son paralelas**, de modo que cada color se desvía un ángulo distinto y a la salida quedan separados: **dispersión**. En una lámina de caras **plano-paralelas** con incidencia **perpendicular** ($\\theta_1=0$), ningún rayo se desvía (todos entran y salen sin cambiar de dirección), por lo que **no hay dispersión** apreciable: los colores salen superpuestos.\n\n**(b)** i) Índice de refracción:\n$$n=\\dfrac{c}{v}=\\dfrac{3\\cdot10^{8}}{2\\cdot10^{8}}=1{,}5$$\nii) El ángulo de refracción dentro: $\\text{sen}\\,\\theta_2=\\dfrac{\\text{sen}\\,35^\\circ}{1{,}5}\\Rightarrow\\theta_2=22{,}5^\\circ$. Como las caras son paralelas, el **ángulo de emergencia es $35^\\circ$** (igual al de incidencia).\niii) Camino dentro de la lámina $L=\\dfrac{e}{\\cos\\theta_2}=\\dfrac{0{,}03}{\\cos22{,}5^\\circ}=3{,}25\\cdot10^{-2}\\ \\text{m}$; tiempo:\n$$t=\\dfrac{L}{v}=\\dfrac{3{,}25\\cdot10^{-2}}{2\\cdot10^{8}}=1{,}62\\cdot10^{-10}\\ \\text{s}$$",
+  "answer": "**(a)** En el prisma cada color se desvía distinto (dispersión); con incidencia perpendicular en lámina plano-paralela no hay desviación ni dispersión. **(b)** i) $n=1{,}5$; ii) emergencia $35^\\circ$; iii) $t\\approx1{,}62\\cdot10^{-10}\\ \\text{s}$.",
+  "figure_suggestion": "Prisma con luz blanca que se separa en colores; junto a él, lámina plano-paralela con rayo a $35^\\circ$ que se refracta a $22{,}5^\\circ$ y emerge a $35^\\circ$."
+ },
+ {
+  "id": "PAU-FIS-OPT-013",
+  "flagged": true,
+  "source": "Cantabria · Extraordinaria 2023",
+  "block": "optica",
+  "title": "Lámina de vidrio de caras paralelas: refracción y reflexión total · Cantabria · Extraordinaria 2023",
+  "statement": "Un rayo de luz monocromática, de $550\\ \\text{nm}$ de longitud de onda, se propaga por el aire e incide sobre una lámina de vidrio de caras planas y paralelas, con ángulo de incidencia $\\theta = 30^\\circ$ respecto a la normal. El rayo atraviesa la lámina y sale nuevamente al aire.\n\n**(a)** Calcular los ángulos de refracción a la entrada y a la salida de la lámina, dibujando un esquema de la trayectoria.\n\n**(b)** Calcular la velocidad, longitud de onda y frecuencia de la luz en el aire y en el vidrio.\n\n**(c)** Si el rayo se dirigiera desde el vidrio hacia el aire, ¿a partir de qué ángulo de incidencia se produciría la reflexión total?\n\n*Datos:* $n_{\\text{aire}} = 1$; $n_{\\text{vidrio}} = 1{,}5$.",
+  "knowns": [
+   "$\\lambda_{\\text{aire}} = 550\\ \\text{nm}$",
+   "$\\theta_i = 30^\\circ$",
+   "$n_{\\text{aire}} = 1$",
+   "$n_{\\text{vidrio}} = 1{,}5$",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** Entrada (aire→vidrio), ley de Snell:\n$$n_{\\text{aire}}\\,\\mathrm{sen}\\,30^\\circ = n_{\\text{vidrio}}\\,\\mathrm{sen}\\,\\theta_t\\ \\Rightarrow\\ \\mathrm{sen}\\,\\theta_t = \\dfrac{0{,}5}{1{,}5} = 0{,}333,$$\n$$\\theta_t = 19{,}5^\\circ.$$\nSalida (vidrio→aire): por tener caras paralelas, el ángulo de salida es igual al de incidencia, $\\theta_s = 30^\\circ$ (el rayo emerge paralelo al incidente, desplazado lateralmente).\n\n**(b)** En el aire: $v_{\\text{aire}} = c = 3\\cdot10^{8}\\ \\text{m/s}$, $\\lambda_{\\text{aire}} = 550\\ \\text{nm}$, y\n$$f = \\dfrac{c}{\\lambda} = \\dfrac{3\\cdot10^{8}}{550\\cdot10^{-9}} = 5{,}45\\cdot10^{14}\\ \\text{Hz}.$$\nEn el vidrio (la frecuencia **no cambia**):\n$$v_{\\text{vidrio}} = \\dfrac{c}{n} = \\dfrac{3\\cdot10^{8}}{1{,}5} = 2{,}0\\cdot10^{8}\\ \\text{m/s},\\qquad \\lambda_{\\text{vidrio}} = \\dfrac{\\lambda_{\\text{aire}}}{n} = \\dfrac{550}{1{,}5} = 367\\ \\text{nm}.$$\n\n**(c)** Ángulo límite vidrio→aire:\n$$\\mathrm{sen}\\,\\theta_L = \\dfrac{n_{\\text{aire}}}{n_{\\text{vidrio}}} = \\dfrac{1}{1{,}5} = 0{,}667\\ \\Rightarrow\\ \\theta_L = 41{,}8^\\circ.$$\nPara ángulos de incidencia mayores que $41{,}8^\\circ$ se produce reflexión total.",
+  "answer": "**(a)** $\\theta_t = 19{,}5^\\circ$ (entrada), $\\theta_s = 30^\\circ$ (salida). **(b)** Aire: $v=3\\cdot10^8\\ \\text{m/s}$, $\\lambda=550\\ \\text{nm}$, $f=5{,}45\\cdot10^{14}\\ \\text{Hz}$; vidrio: $v=2\\cdot10^8\\ \\text{m/s}$, $\\lambda=367\\ \\text{nm}$, mismo $f$. **(c)** $\\theta_L = 41{,}8^\\circ$.",
+  "figure_suggestion": "Lámina de vidrio de caras paralelas; rayo incidente a 30°, refractado a 19,5° dentro, y emergente a 30° paralelo al incidente con desplazamiento lateral."
+ },
+ {
+  "id": "PAU-FIS-OPT-017",
+  "flagged": true,
+  "source": "Cantabria · Ordinaria 2024",
+  "block": "optica",
+  "title": "Lámina de vidrio entre líquido y aire: índices y tiempo · Cantabria · Ordinaria 2024",
+  "statement": "Una lámina de vidrio (índice $n_v$) está entre un líquido ($n_l$) y aire ($n_a$). La longitud de onda de la luz en el vidrio es dos tercios de la del aire. Al emitir luz desde el líquido, los rayos con incidencia superior a $36^\\circ$ en la cara inferior no se refractan al aire por la cara superior.\n\n**(a)** Calcule $n_v$.\n\n**(b)** Calcule $n_l$.\n\n**(c)** Calcule el tiempo que tarda un rayo, incidiendo normalmente, en recorrer la distancia $d$ de la figura.\n\n*(Nota del corrector: el valor de $d$ no se conservó; se toma el espesor del vidrio $d=2\\ \\text{cm}$ para el cálculo numérico.)*",
+  "knowns": [
+   "$\\lambda_v=\\tfrac23\\lambda_a$",
+   "Ángulo crítico efectivo desde el líquido $=36^\\circ$",
+   "$n_a=1$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$d=2\\ \\text{cm}$ (reconstruido)"
+  ],
+  "full_solution": "**(a)** Como $\\lambda_v=\\dfrac{\\lambda_a}{n_v}$ y $\\lambda_v=\\dfrac23\\lambda_a$:\n\n$$n_v=\\dfrac{1}{2/3}=\\dfrac32=1{,}5$$\n\n**(b)** A $36^\\circ$ de incidencia desde el líquido, el rayo emerge rasante ($90^\\circ$) al aire por la cara superior. Aplicando Snell en cadena líquido $\\to$ vidrio $\\to$ aire, el vidrio se cancela:\n\n$$n_l\\,\\text{sen}\\,36^\\circ=n_a\\,\\text{sen}\\,90^\\circ\\Rightarrow n_l=\\dfrac{1}{\\text{sen}\\,36^\\circ}=1{,}70$$\n\n**(c)** Con incidencia normal el rayo no se desvía; en el vidrio su velocidad es $v=\\dfrac{c}{n_v}$. Recorriendo un espesor $d=2\\ \\text{cm}$:\n\n$$t=\\dfrac{d}{v}=\\dfrac{n_v\\,d}{c}=\\dfrac{1{,}5\\cdot0{,}02}{3\\cdot10^{8}}=1{,}0\\cdot10^{-10}\\ \\text{s}$$",
+  "answer": "**(a)** $n_v=1/(2/3)=1{,}5$. **(b)** $n_l=1/\\text{sen}\\,36^\\circ\\approx1{,}70$. **(c)** $t=\\dfrac{n_v d}{c}\\approx1{,}0\\cdot10^{-10}\\ \\text{s}$ (para $d=2\\ \\text{cm}$).",
+  "figure_suggestion": "Tres capas horizontales (líquido abajo, vidrio en medio, aire arriba); rayo oblicuo desde el líquido a $36^\\circ$ que emerge rasante al aire, y un rayo normal que atraviesa el espesor $d$ del vidrio."
+ },
+ {
+  "id": "PAU-FIS-OPT-021",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Julio 2019",
+  "block": "optica",
+  "title": "Características de la imagen de una lente por trazado de rayos · Comunidad Valenciana · Julio 2019",
+  "statement": "El esquema representa una lente, un objeto y dos rayos (1 y 2) que, procedentes del extremo del objeto, salen de la lente. A partir del trazado de rayos, determine la posición y el tamaño de la imagen, el aumento, la posición de los focos y la potencia de la lente, e indique si la imagen es real o virtual. (Enunciado dependiente de un esquema no digitalizado; se resuelve el caso representativo de una lente convergente con el objeto a $30\\ \\text{cm}$ y $f' = 10\\ \\text{cm}$.)",
+  "knowns": [
+   "lente convergente (ejemplo representativo)",
+   "$s = -30\\ \\text{cm}$",
+   "$f' = 10\\ \\text{cm}$"
+  ],
+  "full_solution": "Procedimiento general con el trazado de rayos: el rayo paralelo al eje emerge pasando por el foco imagen $F'$, y el rayo que pasa por el centro óptico no se desvía; su intersección localiza la imagen. La escala del dibujo da las distancias focales y la posición del objeto.\n\nResolvemos el caso representativo (lente convergente, objeto a $s=-30\\ \\text{cm}$, $f'=+10\\ \\text{cm}$):\n$$\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{s'} = \\dfrac{1}{10} + \\dfrac{1}{-30} = \\dfrac{2}{30} \\;\\Rightarrow\\; s' = 15\\ \\text{cm}$$\nAumento y carácter:\n$$m = \\dfrac{s'}{s} = \\dfrac{15}{-30} = -0{,}5$$\nImagen REAL (al otro lado de la lente, $s'>0$), invertida ($m<0$) y reducida a la mitad.\n\nFocos y potencia: $F$ y $F'$ están a $\\pm f' = \\pm10\\ \\text{cm} = \\pm0{,}10\\ \\text{m}$ del centro; la potencia es\n$$P = \\dfrac{1}{f'} = \\dfrac{1}{0{,}10} = +10\\ \\text{dioptrías}$$",
+  "answer": "Para el caso representativo: imagen real, invertida y reducida, a $s'=15\\ \\text{cm}$, con $m=-0{,}5$; focos a $\\pm10\\ \\text{cm}$ y potencia $P=+10\\ \\text{D}$. (Los valores exactos se leen del esquema del examen.)",
+  "figure_suggestion": "Trazado de rayos de lente convergente ($f'=10\\ \\text{cm}$), objeto a $30\\ \\text{cm}$: rayo paralelo que pasa por $F'$ y rayo por el centro óptico; imagen real invertida a $15\\ \\text{cm}$, de la mitad de tamaño."
+ },
+ {
+  "id": "PAU-FIS-OPT-029",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2018",
+  "block": "optica",
+  "title": "Corrección de la miopía con lente divergente · C. Valenciana · Junio 2018",
+  "statement": "Utiliza un esquema de trazado de rayos para describir el problema de visión de una persona miope y explica razonadamente el fenómeno. ¿Con qué tipo de lente debe corregirse y por qué?",
+  "knowns": [],
+  "full_solution": "En un ojo miope, el globo ocular es demasiado largo (o el cristalino converge en exceso), de modo que los rayos procedentes de un objeto lejano (que llegan paralelos) convergen **antes** de la retina, formando la imagen delante de ella. El resultado es visión borrosa de lejos; el punto remoto del miope está a distancia finita, no en el infinito.\n\nPara corregirlo se usa una **lente divergente** (potencia negativa): hace diverger ligeramente los rayos paralelos de modo que, al atravesar después el ojo, la imagen se forme justo sobre la retina. Equivale a formar de un objeto en el infinito una imagen virtual en el punto remoto del miope, que el ojo ya puede enfocar.",
+  "answer": "La miopía se corrige con una **lente divergente** (negativa), porque adelanta el foco a la retina al hacer diverger los rayos que en el ojo miope convergían antes de ella.",
+  "figure_suggestion": "Esquema de trazado de rayos: ojo miope con rayos paralelos que convergen delante de la retina; al añadir una lente divergente, los rayos se corrigen y convergen sobre la retina."
+ },
+ {
+  "id": "PAU-FIS-OPT-033",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2019",
+  "block": "optica",
+  "title": "Refracción en un bloque de policarbonato · Comunidad Valenciana · Junio 2019",
+  "statement": "Un rayo de luz monocromática incide (punto $A$) sobre un bloque de policarbonato rodeado de aire.\n\n**(a)** Calcule el ángulo de refracción $\\varphi$ y el índice de refracción $n_p$ del policarbonato.\n\n**(b)** ¿Cuál es la velocidad del rayo en el policarbonato? Al llegar al punto $B$ (cara lateral), ¿se refracta o se refleja?\n\n*(Nota del corrector: los ángulos de la figura no se conservaron; se reconstruye con incidencia $45^\\circ$ desde el aire y refracción medida $\\varphi=28^\\circ$, caras perpendiculares.)*",
+  "knowns": [
+   "Incidencia en $A$: $\\theta_1=45^\\circ$ (reconstruido)",
+   "Refracción medida: $\\varphi=28^\\circ$ (reconstruido)",
+   "$n_{aire}=1$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** Ley de Snell en la cara de entrada $A$ (aire $\\to$ policarbonato):\n\n$$n_{aire}\\,\\text{sen}\\,\\theta_1=n_p\\,\\text{sen}\\,\\varphi\\Rightarrow n_p=\\dfrac{\\text{sen}\\,45^\\circ}{\\text{sen}\\,28^\\circ}=\\dfrac{0{,}707}{0{,}469}=1{,}51$$\n\nEl ángulo de refracción es $\\varphi=28^\\circ$.\n\n**(b)** Velocidad en el policarbonato:\n\n$$v=\\dfrac{c}{n_p}=\\dfrac{3\\cdot10^{8}}{1{,}51}=1{,}99\\cdot10^{8}\\ \\text{m/s}$$\n\nEn la cara lateral $B$ (perpendicular a la de entrada), el rayo incide con ángulo $90^\\circ-\\varphi=62^\\circ$. El ángulo crítico policarbonato $\\to$ aire es:\n\n$$\\text{sen}\\,\\theta_c=\\dfrac{n_{aire}}{n_p}=\\dfrac{1}{1{,}51}=0{,}662\\Rightarrow\\theta_c=41{,}5^\\circ$$\n\nComo $62^\\circ>\\theta_c$, **se produce reflexión total** en $B$: el rayo no se refracta al aire, se refleja.",
+  "answer": "**(a)** $\\varphi=28^\\circ$, $n_p=\\dfrac{\\text{sen}\\,45^\\circ}{\\text{sen}\\,28^\\circ}\\approx1{,}51$. **(b)** $v=c/n_p\\approx1{,}99\\cdot10^{8}\\ \\text{m/s}$; en $B$ incide a $62^\\circ>\\theta_c=41{,}5^\\circ$, hay **reflexión total**.",
+  "figure_suggestion": "Bloque rectangular de policarbonato en aire; rayo que entra por la cara superior en $A$ con $45^\\circ$, se refracta a $28^\\circ$, llega a la cara lateral $B$ con $62^\\circ$ y sufre reflexión total (ángulo crítico $41{,}5^\\circ$)."
+ },
+ {
+  "id": "PAU-FIS-OPT-036",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2022",
+  "block": "optica",
+  "title": "Distancia focal, potencia y tamaño de imagen a partir de la figura · Comunidad Valenciana · Junio 2022",
+  "statement": "En la figura se muestran una lente, la posición de un objeto $O$ y la de la imagen $O'$ que la lente forma. Determine la distancia focal imagen de la lente, su potencia en dioptrías y el tamaño de la imagen si el objeto mide $2\\ \\text{cm}$.\n\n*(Nota: las posiciones de $O$ y $O'$ respecto a la lente las da la figura; aquí se desarrolla el método con $s$ y $s'$.)*",
+  "knowns": [
+   "posición del objeto $s$ y de la imagen $s'$ (de la figura)",
+   "$y=2\\ \\text{cm}$"
+  ],
+  "full_solution": "A partir de la figura se leen la distancia objeto $s$ (negativa, a la izquierda) y la distancia imagen $s'$. Con la ecuación de la lente delgada:\n$$\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}\\ \\Rightarrow\\ f'=\\left(\\dfrac{1}{s'}-\\dfrac{1}{s}\\right)^{-1}$$\nLa potencia es $P=\\dfrac{1}{f'}$ (en dioptrías, con $f'$ en metros).\n\nEl tamaño de la imagen se obtiene del aumento lateral:\n$$A=\\dfrac{y'}{y}=\\dfrac{s'}{s}\\ \\Rightarrow\\ y'=A\\cdot y=\\dfrac{s'}{s}\\cdot 2\\ \\text{cm}$$\nEl signo de $A$ indica si la imagen es derecha ($A>0$) o invertida ($A<0$).",
+  "answer": "$f'=\\left(\\dfrac{1}{s'}-\\dfrac{1}{s}\\right)^{-1}$, $P=1/f'$ (D) y $y'=\\dfrac{s'}{s}\\cdot 2\\ \\text{cm}$, con $s$ y $s'$ leídos en la figura.",
+  "figure_suggestion": "Lente delgada con el objeto $O$ (flecha de 2 cm) a la izquierda a distancia $s$ y la imagen $O'$ a distancia $s'$; marcar focos y los rayos principales."
+ }
+]

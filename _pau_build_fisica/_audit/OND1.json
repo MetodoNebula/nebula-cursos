@@ -1,0 +1,562 @@
+[
+ {
+  "id": "PAU-FIS-OND-001",
+  "source": "Andalucía · Extraordinaria 2025",
+  "title": "Onda viajera en una cuerda: velocidad, oscilación y diferencia de fase · Andalucía · Extraordinaria 2025",
+  "statement": "La ecuación de una onda en una cuerda tensa es $y(x,t)=10\\sin(25t-15x)$ (SI).\n\n**(i)** La velocidad de propagación.\n**(ii)** La velocidad de oscilación en $x=0\\ \\text{m}$ y $t=5\\ \\text{s}$.\n**(iii)** La diferencia de fase entre dos puntos separados $2\\ \\text{m}$ en el mismo instante.",
+  "knowns": [
+   "$A=10\\ \\text{m}$ (SI), $\\omega=25\\ \\text{rad}\\cdot\\text{s}^{-1}$, $k=15\\ \\text{rad}\\cdot\\text{m}^{-1}$"
+  ],
+  "full_solution": "**(i) Velocidad de propagación.**\n$$v=\\dfrac{\\omega}{k}=\\dfrac{25}{15}=1{,}67\\ \\text{m}\\cdot\\text{s}^{-1}$$\n\n**(ii) Velocidad de oscilación en $x=0$, $t=5\\ \\text{s}$.**\n$$v_y=\\dfrac{\\partial y}{\\partial t}=10\\cdot25\\cos(25t-15x)=250\\cos(25t-15x)$$\nEn $x=0$, $t=5\\ \\text{s}$: $v_y=250\\cos(125)$. Con $125\\ \\text{rad}$ (reducido, $\\cos125\\approx0{,}788$):\n$$v_y=250\\cdot0{,}788\\approx1{,}97\\cdot10^{2}\\ \\text{m}\\cdot\\text{s}^{-1}$$\n\n**(iii) Diferencia de fase para $\\Delta x=2\\ \\text{m}$.**\n$$\\Delta\\varphi=k\\,\\Delta x=15\\cdot2=30\\ \\text{rad}$$",
+  "answer": "$v = 1{,}67\\ \\text{m}\\cdot\\text{s}^{-1}$.\n$v_y(0,5) = 250\\cos(125)\\approx1{,}97\\cdot10^{2}\\ \\text{m}\\cdot\\text{s}^{-1}$.\n$\\Delta\\varphi = k\\,\\Delta x = 30\\ \\text{rad}$.",
+  "common_errors": [
+   "Confundir velocidad de propagación $v=\\omega/k$ con velocidad de oscilación $v_y=\\partial y/\\partial t$.",
+   "Evaluar el coseno en grados en vez de radianes.",
+   "Usar $\\omega$ en vez de $k$ para la diferencia de fase espacial ($\\Delta\\varphi=k\\Delta x$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-002",
+  "source": "Andalucía · Junio 2019",
+  "title": "Ecuación de una onda transversal que viaja en sentido negativo · Andalucía · Junio 2019",
+  "statement": "**(a)** Explique las diferencias entre ondas armónicas y ondas estacionarias, con un ejemplo de cada tipo.\n\n**(b)** Una onda transversal que se propaga en sentido negativo del eje $OX$ tiene amplitud $2\\ \\text{m}$, longitud de onda $12\\ \\text{m}$ y velocidad de propagación $3\\ \\text{m·s}^{-1}$. Escriba su ecuación sabiendo que la perturbación $y(x,t)$ es máxima en $x=0$ en el instante $t=0$.",
+  "knowns": [
+   "$A = 2\\ \\text{m}$",
+   "$\\lambda = 12\\ \\text{m}$",
+   "$v = 3\\ \\text{m·s}^{-1}$",
+   "propagación en $-OX$; máximo en $x=0$, $t=0$"
+  ],
+  "full_solution": "**(a)** Una onda ARMÓNICA viajera transporta energía y se propaga, con perfil senoidal que avanza (ejemplo: onda en una cuerda tensa larga). Una onda ESTACIONARIA resulta de la superposición de dos ondas iguales que viajan en sentidos opuestos; no transporta energía neta y presenta nodos y vientres fijos (ejemplo: cuerda de guitarra sujeta por ambos extremos).\n\n**(b)** Datos: $T = \\dfrac{\\lambda}{v} = \\dfrac{12}{3} = 4\\ \\text{s}$, $\\omega = \\dfrac{2\\pi}{T} = \\dfrac{\\pi}{2}\\ \\text{rad·s}^{-1}$, $k = \\dfrac{2\\pi}{\\lambda} = \\dfrac{\\pi}{6}\\ \\text{m}^{-1}$. Para propagación en $-x$ se usa $y = A\\cos(\\omega t + k x + \\varphi)$; la condición de máximo en $x=0$, $t=0$ da $\\varphi = 0$:\n$$y(x,t) = 2\\cos\\!\\left(\\dfrac{\\pi}{2}\\,t + \\dfrac{\\pi}{6}\\,x\\right)\\ \\text{m}$$\n(La velocidad máxima de un punto sería $v_{\\max}=A\\omega = 2\\cdot\\tfrac{\\pi}{2} = \\pi \\approx 3{,}14\\ \\text{m·s}^{-1}$.)",
+  "answer": "**(a)** Armónica: viajera, transporta energía; estacionaria: superposición con nodos y vientres fijos, sin transporte neto. **(b)** $y(x,t) = 2\\cos\\!\\left(\\dfrac{\\pi}{2}\\,t + \\dfrac{\\pi}{6}\\,x\\right)\\ \\text{m}$.",
+  "common_errors": [
+   "Usar signo $-kx$ para propagación en sentido negativo (debe ser $+kx$).",
+   "Confundir $\\omega$ con $k$.",
+   "Tomar seno (no cumple el máximo en $x=0,\\,t=0$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-003",
+  "source": "Andalucía · Junio 2024",
+  "title": "Oleaje y oscilación de una boya · Andalucía · Junio 2024",
+  "statement": "**(a)** Explique las diferencias entre ondas longitudinales y transversales, con un ejemplo de cada tipo.\n\n**(b)** Un oleaje se propaga en el sentido $+OX$. Una boya en $x = 10\\ \\text{m}$ oscila verticalmente con amplitud $0{,}4\\ \\text{m}$ y periodo $2\\ \\text{s}$; la velocidad de propagación es $0{,}5\\ \\text{m·s}^{-1}$. Determine: (i) la longitud de onda; (ii) la ecuación de onda suponiendo que en $t=0$ la boya está en su altura máxima; (iii) la velocidad máxima de oscilación de la boya.",
+  "knowns": [
+   "$A = 0{,}4\\ \\text{m}$",
+   "$T = 2\\ \\text{s}$",
+   "$v = 0{,}5\\ \\text{m·s}^{-1}$",
+   "boya en $x = 10\\ \\text{m}$, máximo en $t=0$"
+  ],
+  "full_solution": "**(a)** En una onda LONGITUDINAL la vibración del medio es paralela a la dirección de propagación (ejemplo: sonido en el aire). En una onda TRANSVERSAL la vibración es perpendicular a la propagación (ejemplo: ondas en una cuerda o el oleaje).\n\n**(b)(i)** Longitud de onda:\n$$\\lambda = v\\,T = 0{,}5\\cdot2 = 1\\ \\text{m}$$\n\n**(b)(ii)** Con $\\omega = \\dfrac{2\\pi}{T} = \\pi\\ \\text{rad·s}^{-1}$ y $k = \\dfrac{2\\pi}{\\lambda} = 2\\pi\\ \\text{m}^{-1}$, y máximo en la boya ($x=10\\ \\text{m}$) en $t=0$, se usa coseno con la fase ajustada:\n$$y(x,t) = 0{,}4\\cos\\!\\big[\\pi\\,t - 2\\pi\\,(x - 10)\\big]\\ \\text{m}$$\n(en $x=10$, $t=0$: $y = 0{,}4\\cos 0 = 0{,}4\\ \\text{m}$, máximo).\n\n**(b)(iii)** La velocidad de oscilación es $v_y = \\dfrac{\\partial y}{\\partial t}$, de módulo máximo\n$$v_{y,\\max} = A\\,\\omega = 0{,}4\\cdot\\pi \\approx 1{,}26\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** Longitudinal: vibración paralela (sonido); transversal: vibración perpendicular (oleaje, cuerda). **(b)** (i) $\\lambda = 1\\ \\text{m}$; (ii) $y(x,t) = 0{,}4\\cos[\\pi t - 2\\pi(x-10)]\\ \\text{m}$; (iii) $v_{y,\\max} = 0{,}4\\pi \\approx 1{,}26\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Confundir velocidad de propagación ($v=\\lambda/T$) con velocidad de oscilación ($A\\omega$).",
+   "No ajustar la fase para el máximo en $x=10\\ \\text{m}$.",
+   "Errar el signo del término espacial para propagación en $+x$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-004",
+  "source": "Andalucía · Ordinaria 2024",
+  "title": "Velocidad y aceleración máximas de una onda armónica · Andalucía · Ordinaria 2024",
+  "statement": "**(a)** Demuestre, a partir de la ecuación de onda, cómo varían la velocidad y la aceleración máximas de oscilación: i) si se duplica la amplitud sin cambiar el periodo; ii) si se duplica la frecuencia sin cambiar la amplitud.\n\n**(b)** En una cuerda se propaga $y(x,t)=0{,}2\\cos(0{,}2x+0{,}25t+\\varphi)$ (SI). Calcule: i) la frecuencia y la longitud de onda; ii) la velocidad de propagación, con dirección y sentido; iii) la velocidad máxima de oscilación.",
+  "knowns": [
+   "$y(x,t)=0{,}2\\cos(0{,}2x+0{,}25t+\\varphi)$ (SI)",
+   "$A=0{,}2\\ \\text{m}$",
+   "$k=0{,}2\\ \\text{rad·m}^{-1}$",
+   "$\\omega=0{,}25\\ \\text{rad·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Velocidad de oscilación máxima $v_{\\max}=A\\omega$; aceleración máxima $a_{\\max}=A\\omega^2$.\n\ni) Si $A\\to2A$ con $T$ (y $\\omega$) constante: $v_{\\max}$ se **duplica** y $a_{\\max}$ se **duplica**.\n\nii) Si $f\\to2f$ (es decir $\\omega\\to2\\omega$) con $A$ constante: $v_{\\max}=A\\omega$ se **duplica**, y $a_{\\max}=A\\omega^2$ se **cuadruplica**.\n\n**(b)** i) $\\omega=0{,}25\\ \\text{rad·s}^{-1}\\Rightarrow f=\\dfrac{\\omega}{2\\pi}=0{,}040\\ \\text{Hz}$. $k=0{,}2\\ \\text{rad·m}^{-1}\\Rightarrow \\lambda=\\dfrac{2\\pi}{k}=31{,}4\\ \\text{m}$.\n\nii) $v=\\dfrac{\\omega}{k}=\\dfrac{0{,}25}{0{,}2}=1{,}25\\ \\text{m·s}^{-1}$. Como $x$ y $t$ aparecen con el **mismo** signo ($0{,}2x+0{,}25t$), la onda se propaga en el **sentido negativo** del eje $x$.\n\niii) $v_{\\max}=A\\omega=0{,}2\\cdot0{,}25=0{,}05\\ \\text{m·s}^{-1}$.",
+  "answer": "**(a)** i) $v_{\\max}$ y $a_{\\max}$ se duplican; ii) $v_{\\max}$ se duplica y $a_{\\max}$ se cuadruplica.  **(b)** $f\\approx0{,}040\\ \\text{Hz}$, $\\lambda\\approx31{,}4\\ \\text{m}$; $v=1{,}25\\ \\text{m·s}^{-1}$ hacia $-x$; $v_{\\max}=0{,}05\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Confundir velocidad de propagación con velocidad de oscilación.",
+   "Deducir mal el sentido: signos iguales de $x$ y $t$ implican sentido $-x$.",
+   "Olvidar que $a_{\\max}=A\\omega^2$ escala con $\\omega^2$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-005",
+  "source": "Andalucía · Ordinaria 2026",
+  "title": "Onda estacionaria en la cuerda de una guitarra · Andalucía · Ordinaria 2026",
+  "statement": "La cuerda de una guitarra vibra según $y(x,t)=0{,}01\\,\\text{sen}(10\\pi x)\\cos(200\\pi t)$ (SI).\n\n**(a)** Indique qué tipo de onda es.\n\n**(b)** Calcule la amplitud y la velocidad de propagación de las ondas cuya superposición da lugar a ella.\n\n**(c)** Determine la velocidad de oscilación de un punto situado en $x=10\\ \\text{cm}$.",
+  "knowns": [
+   "$y=0{,}01\\,\\text{sen}(10\\pi x)\\cos(200\\pi t)$ (SI)",
+   "$k=10\\pi\\ \\text{rad/m}$, $\\omega=200\\pi\\ \\text{rad/s}$"
+  ],
+  "full_solution": "**(a)** El producto de una función solo de $x$ por otra solo de $t$ ($\\text{sen}(kx)\\cos(\\omega t)$) corresponde a una **onda estacionaria**, resultado de la superposición de dos ondas iguales que viajan en sentidos opuestos.\n\n**(b)** Comparando con $y=2A\\,\\text{sen}(kx)\\cos(\\omega t)$: la amplitud de cada onda componente cumple $2A=0{,}01\\ \\text{m}$, luego $A=5\\cdot10^{-3}\\ \\text{m}$. Con $k=10\\pi\\ \\text{rad/m}$ y $\\omega=200\\pi\\ \\text{rad/s}$:\n$$v=\\dfrac{\\omega}{k}=\\dfrac{200\\pi}{10\\pi}=20\\ \\text{m/s}$$\n\n**(c)** La velocidad de oscilación es $v_y=\\dfrac{\\partial y}{\\partial t}=-0{,}01\\cdot200\\pi\\,\\text{sen}(10\\pi x)\\,\\text{sen}(200\\pi t)$. En $x=0{,}10\\ \\text{m}$:\n$$\\text{sen}(10\\pi\\cdot0{,}10)=\\text{sen}(\\pi)=0 \\;\\Rightarrow\\; v_y=0$$\nEl punto $x=10\\ \\text{cm}$ es un **nodo**: permanece en reposo (su velocidad de oscilación es nula en todo instante).",
+  "answer": "**(a)** Onda estacionaria. **(b)** $A=5\\cdot10^{-3}\\ \\text{m}$ por onda; $v=20\\ \\text{m/s}$. **(c)** $v_y=0$: $x=10\\ \\text{cm}$ es un nodo.",
+  "common_errors": [
+   "Tomar la amplitud de las ondas componentes como $0{,}01$ m (es $2A$, luego $A=0{,}005$ m).",
+   "Calcular $v$ como $\\omega k$ en vez de $\\omega/k$.",
+   "No reconocer que $x=10$ cm es un nodo ($\\text{sen}(\\pi)=0$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-006",
+  "source": "Andalucía · Ordinaria 2026",
+  "title": "Onda que cambia de medio: velocidad de propagación y de oscilación · Andalucía · Ordinaria 2026",
+  "statement": "Una onda armónica pasa de un medio a otro y la longitud de onda en el segundo medio es la mitad que en el primero. Obtenga de forma justificada la relación entre: **i)** las velocidades de propagación en ambos medios; **ii)** la velocidad máxima de oscilación en ambos medios si no cambia la amplitud.",
+  "knowns": [
+   "$\\lambda_2 = \\tfrac12\\lambda_1$"
+  ],
+  "full_solution": "Al pasar de un medio a otro, la **frecuencia no cambia** (la impone la fuente): $f_1=f_2=f$.\n\n**i)** Como $v=\\lambda f$:\n$$\\dfrac{v_2}{v_1} = \\dfrac{\\lambda_2 f}{\\lambda_1 f} = \\dfrac{\\lambda_2}{\\lambda_1} = \\dfrac{1}{2} \\;\\Rightarrow\\; v_2 = \\dfrac{v_1}{2}$$\nLa velocidad de propagación en el segundo medio es la mitad.\n\n**ii)** La velocidad máxima de oscilación de un punto es $v_{osc,max}=A\\,\\omega=A\\,2\\pi f$. Como ni la amplitud $A$ ni la frecuencia $f$ cambian:\n$$v_{osc,max,2} = v_{osc,max,1}$$\nLa velocidad máxima de oscilación es la **misma** en ambos medios.",
+  "answer": "**i)** $v_2=\\tfrac12 v_1$ (la frecuencia no cambia y $v=\\lambda f$). **ii)** La velocidad máxima de oscilación $A\\omega$ es igual en ambos medios (no cambian $A$ ni $f$).",
+  "common_errors": [
+   "Creer que cambia la frecuencia al cambiar de medio (cambia $\\lambda$ y $v$, no $f$).",
+   "Confundir velocidad de propagación con velocidad de oscilación del punto.",
+   "Pensar que si $v$ cambia también lo hace $v_{osc,max}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-007",
+  "source": "Andalucía · Reserva B 2019",
+  "title": "Onda estacionaria: longitud de onda, frecuencia, velocidad y aceleración de un punto · Andalucía · Reserva B 2019",
+  "statement": "**(a)** Explique la doble periodicidad de una onda, indicando las magnitudes que la describen, con esquemas.\n**(b)** Una onda viene dada por $y(x,t)=0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cos(2\\pi t)$ (SI). Indique de qué tipo de onda se trata y calcule su longitud de onda, su frecuencia y la velocidad y la aceleración de oscilación de un punto situado en $x=2\\ \\text{m}$ para $t=0{,}25\\ \\text{s}$.",
+  "knowns": [
+   "$y(x,t)=0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cos(2\\pi t)$ (SI)",
+   "punto $x=2\\ \\text{m}$, instante $t=0{,}25\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** Una onda armónica presenta **doble periodicidad**: es periódica en el espacio, con periodo espacial la longitud de onda $\\lambda$ (número de onda $k=2\\pi/\\lambda$), y periódica en el tiempo, con periodo temporal $T$ (frecuencia $f=1/T$, pulsación $\\omega=2\\pi/T$). Ambas se relacionan por $v=\\lambda f$.\n\n**(b)** El producto de una función sólo de $x$ por otra sólo de $t$ indica que es una **onda estacionaria**. Comparando con $y=2A\\cos(kx)\\cos(\\omega t)$:\n$$k=\\dfrac{\\pi}{2}\\ \\Rightarrow\\ \\lambda=\\dfrac{2\\pi}{k}=4\\ \\text{m}\\qquad \\omega=2\\pi\\ \\Rightarrow\\ f=\\dfrac{\\omega}{2\\pi}=1\\ \\text{Hz}$$\nVelocidad de oscilación, $v_y=\\dfrac{\\partial y}{\\partial t}=-0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cdot2\\pi\\,\\mathrm{sen}(2\\pi t)$. En $x=2$, $\\cos(\\pi)=-1$; en $t=0{,}25$, $\\mathrm{sen}(\\pi/2)=1$:\n$$v_y=-0{,}4\\cdot(-1)\\cdot2\\pi\\cdot1=0{,}8\\pi\\approx 2{,}51\\ \\text{m/s}$$\nAceleración, $a_y=\\dfrac{\\partial^{2} y}{\\partial t^{2}}=-0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cdot(2\\pi)^{2}\\cos(2\\pi t)$. En $t=0{,}25$, $\\cos(\\pi/2)=0$:\n$$a_y=0\\ \\text{m/s}^{2}$$",
+  "answer": "**(b)** Es una onda estacionaria: $\\lambda=4\\ \\text{m}$, $f=1\\ \\text{Hz}$. En $x=2\\ \\text{m}$, $t=0{,}25\\ \\text{s}$: $v_y=0{,}8\\pi\\approx 2{,}51\\ \\text{m/s}$ y $a_y=0\\ \\text{m/s}^{2}$.",
+  "common_errors": [
+   "No reconocer que el producto $\\cos(kx)\\cos(\\omega t)$ corresponde a una onda estacionaria.",
+   "Confundir velocidad de oscilación ($\\partial y/\\partial t$) con velocidad de propagación.",
+   "Evaluar los cosenos/senos en grados en lugar de radianes."
+  ],
+  "fig_caption": [
+   "Onda estacionaria $y(x,t)=0{,}4\\cos\\!\\left(\\tfrac{\\pi}{2}x\\right)\\cos(2\\pi t)$: factor espacial $\\cos(\\pi x/2)$ (traza continua) y su opuesto (discontinua), envolvente de la oscilación. $\\lambda=4\\ \\text{m}$, con nodos en $x=1,3,5\\ \\text{m}$; el punto $x=2\\ \\text{m}$ es un vientre (antinodo)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-008",
+  "source": "Cantabria · Extraordinaria 2023",
+  "title": "Onda transversal: amplitud, longitud de onda y velocidad transversal · Cantabria · Extraordinaria 2023",
+  "statement": "Una onda armónica transversal (ver figura) se propaga con velocidad $v = 40\\ \\text{cm/s}$ en el sentido negativo del eje $x$. Inicialmente, en el punto $x = 0$, la elongación es nula y la velocidad transversal positiva.\n\n**(a)** Determinar la amplitud, la longitud de onda y la frecuencia de la onda.\n\n**(b)** Determinar la expresión de la función de onda.\n\n**(c)** Determinar la velocidad transversal del punto de la onda situado en $x = 5\\ \\text{cm}$, en función del tiempo.",
+  "knowns": [
+   "$v = 40\\ \\text{cm/s} = 0{,}40\\ \\text{m/s}$ (sentido $-x$)",
+   "En $x=0$, $t=0$: $y=0$ y $v_y>0$",
+   "Amplitud $A$ y longitud de onda $\\lambda$ se leen de la figura"
+  ],
+  "full_solution": "**(a)** La amplitud $A$ y la longitud de onda $\\lambda$ se leen directamente de la instantánea (gráfica $y$ frente a $x$): $A$ es la elongación máxima y $\\lambda$ la distancia de un ciclo completo. Con ellas, la frecuencia:\n$$f = \\dfrac{v}{\\lambda}.$$\n*(Tomamos como ejemplo los valores típicos de la figura $A$ y $\\lambda$; con $\\lambda = 0{,}20\\ \\text{m}$ resultaría $f = 0{,}40/0{,}20 = 2{,}0\\ \\text{Hz}$.)*\n\n**(b)** Como la onda viaja hacia $-x$, la función tiene la forma $y(x,t) = A\\,\\mathrm{sen}(\\omega t + k x + \\varphi)$, con $\\omega = 2\\pi f$ y $k = 2\\pi/\\lambda$. Imponemos las condiciones iniciales en $x=0$, $t=0$:\n- $y(0,0) = A\\,\\mathrm{sen}\\,\\varphi = 0\\ \\Rightarrow\\ \\varphi = 0$ o $\\pi$.\n- $v_y(0,0) = A\\omega\\cos\\varphi > 0\\ \\Rightarrow\\ \\cos\\varphi > 0\\ \\Rightarrow\\ \\varphi = 0$.\n\nLuego $y(x,t) = A\\,\\mathrm{sen}(\\omega t + k x)$.\n\n**(c)** La velocidad transversal es la derivada temporal:\n$$v_y(x,t) = \\dfrac{\\partial y}{\\partial t} = A\\,\\omega\\cos(\\omega t + k x).$$\nEn $x = 5\\ \\text{cm} = 0{,}05\\ \\text{m}$:\n$$v_y(0{,}05,\\,t) = A\\,\\omega\\cos(\\omega t + 0{,}05\\,k).$$",
+  "answer": "**(a)** $A$ y $\\lambda$ de la figura; $f = v/\\lambda$. **(b)** $y(x,t) = A\\,\\mathrm{sen}(\\omega t + kx)$ ($\\varphi=0$, propagación hacia $-x$). **(c)** $v_y(0{,}05,t) = A\\omega\\cos(\\omega t + 0{,}05\\,k)$.",
+  "common_errors": [
+   "Usar la forma $\\omega t - kx$ (propagación hacia $+x$) cuando la onda va hacia $-x$.",
+   "Elegir mal la fase inicial $\\varphi$ sin usar la condición $v_y>0$.",
+   "Confundir la velocidad de propagación con la velocidad transversal $\\partial y/\\partial t$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-009",
+  "source": "Cantabria · Extraordinaria 2023",
+  "title": "Significado físico de los parámetros de una onda armónica · Cantabria · Extraordinaria 2023",
+  "statement": "En una cuerda se propaga una onda armónica descrita por la función $y(x,t) = a\\cos\\!\\left(bt - \\dfrac{2\\pi}{c}\\,x\\right)$.\n\n**(a)** ¿Qué magnitudes físicas representan $a$, $b$ y $c$ y cuáles son sus unidades en el Sistema Internacional?\n\n**(b)** Suponiendo que los parámetros $a$, $b$ y $c$ son números positivos, ¿qué información aporta sobre la onda el signo negativo de la expresión?\n\n**(c)** ¿Qué magnitud física representa el cociente $\\dfrac{bc}{2\\pi}$?",
+  "knowns": [
+   "$y(x,t) = a\\cos\\!\\left(bt - \\dfrac{2\\pi}{c}\\,x\\right)$",
+   "$a$, $b$, $c$ positivos"
+  ],
+  "full_solution": "Comparando el argumento $\\left(bt - \\dfrac{2\\pi}{c}x\\right)$ con la forma general $y = a\\cos(\\omega t - kx)$ se identifican $\\omega = b$ y $k = \\dfrac{2\\pi}{c}$.\n\n**(a)**\n- $a$ es la **amplitud** de la onda; unidad: metro ($\\text{m}$).\n- $b$ es la **frecuencia angular** (pulsación) $\\omega = 2\\pi/T = 2\\pi f$; unidad: $\\text{rad/s}$ (o $\\text{s}^{-1}$).\n- $c$ es la **longitud de onda** $\\lambda$: el coeficiente de $x$ es $\\dfrac{2\\pi}{c} = k = \\dfrac{2\\pi}{\\lambda}$, de donde $c = \\lambda$; unidad: metro ($\\text{m}$).\n\n**(b)** El argumento tiene la forma $(bt - kx) = (\\omega t - kx)$, propia de una onda que se propaga en el **sentido positivo del eje $x$** (al aumentar $t$, un punto de fase constante se desplaza hacia $x$ crecientes). El signo negativo indica, por tanto, propagación hacia $+x$.\n\n**(c)** Como $\\omega = b$ y $\\lambda = c$:\n$$\\dfrac{bc}{2\\pi} = \\dfrac{\\omega\\,\\lambda}{2\\pi} = \\dfrac{(2\\pi f)\\,\\lambda}{2\\pi} = f\\,\\lambda = v,$$\nes decir, el cociente $\\dfrac{bc}{2\\pi}$ es la **velocidad de propagación** de la onda (en $\\text{m/s}$).",
+  "answer": "**(a)** $a$ = amplitud [m], $b$ = frecuencia angular $\\omega$ [rad/s], $c$ = longitud de onda $\\lambda$ [m]. **(b)** Propagación en sentido $+x$. **(c)** $\\dfrac{bc}{2\\pi} = \\dfrac{\\omega\\lambda}{2\\pi} = f\\lambda = v$, la velocidad de propagación (m/s).",
+  "common_errors": [
+   "Confundir número de onda $k$ (rad/m) con frecuencia angular $\\omega$ (rad/s).",
+   "Asignar mal el sentido de propagación a partir del signo del argumento.",
+   "No ver que $bc=\\omega$ y por tanto $bc/2\\pi=f$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-010",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Nivel de intensidad sonora de 80 dB y energía en el tímpano · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 2.** Una persona está expuesta a un nivel de intensidad sonora constante de $80\\ \\text{dB}$.\n\n**(a)** ¿A qué intensidad corresponde ese nivel?\n\n**(b)** Si la fuente es puntual y está a $15\\ \\text{m}$, ¿qué potencia emite?\n\n**(c)** Si el tímpano tiene $10\\ \\text{mm}^2$, ¿cuánta energía le llega en una hora?",
+  "knowns": [
+   "$\\beta = 80\\ \\text{dB}$",
+   "$d = 15\\ \\text{m}$",
+   "$S = 10\\ \\text{mm}^2 = 10^{-5}\\ \\text{m}^2$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$",
+   "$t = 1\\ \\text{h} = 3600\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** De $\\beta=10\\log_{10}(I/I_0)$:\n\n$$I=I_0\\cdot10^{\\beta/10}=10^{-12}\\cdot10^{8}=10^{-4}\\ \\text{W·m}^{-2}$$\n\n**(b)** Para una fuente puntual (onda esférica), $I=\\dfrac{P}{4\\pi d^2}$:\n\n$$P=I\\cdot4\\pi d^2=10^{-4}\\cdot4\\pi(15)^2=0{,}283\\ \\text{W}$$\n\n**(c)** La potencia que llega al tímpano es $P_t=I\\cdot S=10^{-4}\\cdot10^{-5}=10^{-9}\\ \\text{W}$. En una hora:\n\n$$E=P_t\\cdot t=10^{-9}\\cdot3600=3{,}6\\cdot10^{-6}\\ \\text{J}$$",
+  "answer": "**(a)** $I=10^{-4}\\ \\text{W·m}^{-2}$. **(b)** $P\\approx0{,}283\\ \\text{W}$. **(c)** $E=3{,}6\\cdot10^{-6}\\ \\text{J}$.",
+  "common_errors": [
+   "No invertir bien la fórmula de decibelios.",
+   "Usar el área del tímpano en $\text{mm}^2$ sin pasar a $\text{m}^2$.",
+   "Confundir intensidad (W/m²) con potencia (W)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-011",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Onda armónica transversal en una cuerda · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 1.** Una onda armónica transversal en una cuerda es $y(x,t)=0{,}2\\,\\operatorname{sen}[2\\pi(t+2x)]$ (unidades SI).\n\n**(a)** Amplitud, longitud de onda y frecuencia.\n\n**(b)** Velocidad de propagación (módulo, dirección y sentido).\n\n**(c)** Velocidad y aceleración máximas de vibración de los puntos de la cuerda.",
+  "knowns": [
+   "$y(x,t)=0{,}2\\,\\operatorname{sen}[2\\pi(t+2x)]$ (SI)"
+  ],
+  "full_solution": "Desarrollando el argumento: $y=0{,}2\\,\\operatorname{sen}(2\\pi t+4\\pi x)$, de donde $\\omega=2\\pi\\ \\text{rad·s}^{-1}$ y $k=4\\pi\\ \\text{rad·m}^{-1}$.\n\n**(a)** Amplitud $A=0{,}2\\ \\text{m}$. Frecuencia y longitud de onda:\n\n$$f=\\dfrac{\\omega}{2\\pi}=1\\ \\text{Hz},\\qquad \\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{4\\pi}=0{,}5\\ \\text{m}$$\n\n**(b)** Módulo de la velocidad de propagación:\n\n$$v=\\dfrac{\\omega}{k}=\\dfrac{2\\pi}{4\\pi}=0{,}5\\ \\text{m·s}^{-1}$$\n\nComo los términos de $t$ y de $x$ tienen el **mismo signo** ($+$), la onda se propaga en el sentido **negativo** del eje $x$.\n\n**(c)** Valores máximos de oscilación transversal:\n\n$$v_{\\max}=A\\,\\omega=0{,}2\\cdot2\\pi=1{,}26\\ \\text{m·s}^{-1}$$\n\n$$a_{\\max}=A\\,\\omega^2=0{,}2\\cdot(2\\pi)^2=7{,}90\\ \\text{m·s}^{-2}$$",
+  "answer": "**(a)** $A=0{,}2\\ \\text{m}$, $\\lambda=0{,}5\\ \\text{m}$, $f=1\\ \\text{Hz}$. **(b)** $v=0{,}5\\ \\text{m·s}^{-1}$ hacia $-x$. **(c)** $v_{\\max}\\approx1{,}26\\ \\text{m·s}^{-1}$, $a_{\\max}\\approx7{,}90\\ \\text{m·s}^{-2}$.",
+  "common_errors": [
+   "No desarrollar el $2\\pi$ y confundir $k$ con $\\lambda$.",
+   "Decir que la onda va en $+x$ (signo $+$ en ambos términos implica sentido $-x$).",
+   "Usar $v_{\\max}=A k$ en vez de $A\\omega$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-012",
+  "source": "Cantabria · Ordinaria 2024",
+  "title": "Intensidad y nivel sonoro de un altavoz · Cantabria · Ordinaria 2024",
+  "statement": "Un observador está a $10\\ \\text{m}$ de un altavoz de potencia $200\\ \\text{W}$.\n\n**(a)** Calcule la intensidad sonora en ese punto.\n\n**(b)** ¿A qué distancia debe situarse para que el nivel de intensidad sea $80\\ \\text{dB}$?\n\n**(c)** ¿Por qué factor debe disminuirse la potencia para que a $10\\ \\text{m}$ el nivel sea $80\\ \\text{dB}$?",
+  "knowns": [
+   "$P=200\\ \\text{W}$",
+   "$r=10\\ \\text{m}$",
+   "$I_0=10^{-12}\\ \\text{W/m}^2$"
+  ],
+  "full_solution": "**(a)** La intensidad para emisión esférica:\n\n$$I=\\dfrac{P}{4\\pi r^2}=\\dfrac{200}{4\\pi\\cdot10^2}=0{,}159\\ \\text{W/m}^2$$\n\n(Equivale a un nivel $\\beta=10\\log\\dfrac{I}{I_0}\\approx112\\ \\text{dB}$.)\n\n**(b)** Nivel $80\\ \\text{dB}\\Rightarrow I'=I_0\\,10^{8}=10^{-4}\\ \\text{W/m}^2$:\n\n$$r'=\\sqrt{\\dfrac{P}{4\\pi I'}}=\\sqrt{\\dfrac{200}{4\\pi\\cdot10^{-4}}}=399\\ \\text{m}$$\n\n**(c)** A $10\\ \\text{m}$ se quiere $I'=10^{-4}\\ \\text{W/m}^2$, que requiere potencia $P'=I'\\,4\\pi r^2=10^{-4}\\cdot4\\pi\\cdot100=0{,}126\\ \\text{W}$:\n\n$$\\dfrac{P}{P'}=\\dfrac{200}{0{,}126}\\approx1{,}59\\cdot10^{3}$$\n\nHay que reducir la potencia por un factor $\\approx1600$.",
+  "answer": "**(a)** $I=\\dfrac{P}{4\\pi r^2}\\approx0{,}159\\ \\text{W/m}^2$. **(b)** $r'=\\sqrt{P/(4\\pi I')}\\approx399\\ \\text{m}$. **(c)** Factor $P/P'\\approx1{,}59\\cdot10^{3}$.",
+  "common_errors": [
+   "Olvidar el $4\\pi r^2$ (superficie esférica) en la intensidad.",
+   "No convertir $80\\ \\text{dB}$ a $I=10^{-4}\\ \\text{W/m}^2$ con $I=I_0 10^{\\beta/10}$.",
+   "Confundir reducir la potencia con aumentar la distancia."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-013",
+  "source": "Cantabria · Ordinaria 2024",
+  "title": "Onda transversal en una cuerda hacia −x · Cantabria · Ordinaria 2024",
+  "statement": "Una onda armónica transversal viaja por una cuerda hacia $-x$. Dos puntos $A$ ($x_A=0\\ \\text{m}$) y $B$ ($x_B=0{,}6\\ \\text{m}$) oscilan en fase y cortan el eje cada $0{,}06\\ \\text{s}$; ningún otro punto entre ellos está en fase. Inicialmente $A$ y $B$ tienen elongación $+0{,}005\\ \\text{m}$ y velocidad nula.\n\n**(a)** Escriba la ecuación de la onda.\n\n**(b)** Calcule la velocidad de propagación.\n\n**(c)** Determine la velocidad transversal del punto $x=0{,}3\\ \\text{m}$ en función del tiempo.",
+  "knowns": [
+   "$x_A=0$, $x_B=0{,}6\\ \\text{m}$ (en fase, consecutivos $\\Rightarrow\\lambda=0{,}6\\ \\text{m}$)",
+   "Cortan el eje cada $0{,}06\\ \\text{s}\\Rightarrow T=0{,}12\\ \\text{s}$",
+   "$A=0{,}005\\ \\text{m}$ (elongación máxima inicial, $v_y=0$)"
+  ],
+  "full_solution": "Pasar por el eje cada $0{,}06\\ \\text{s}$ es medio periodo: $T=0{,}12\\ \\text{s}$. Al ser $A$ y $B$ los puntos en fase consecutivos, $\\lambda=0{,}6\\ \\text{m}$.\n\n$$\\omega=\\dfrac{2\\pi}{T}=\\dfrac{2\\pi}{0{,}12}=52{,}4\\ \\text{rad/s},\\qquad k=\\dfrac{2\\pi}{\\lambda}=\\dfrac{2\\pi}{0{,}6}=10{,}5\\ \\text{rad/m}$$\n\n**(a)** Onda hacia $-x$ con elongación máxima en $t=0$ (coseno, $\\varphi_0=0$):\n\n$$y(x,t)=0{,}005\\,\\cos\\!\\left(52{,}4\\,t+10{,}5\\,x\\right)\\ \\text{(SI)}$$\n\n**(b)** $v=\\dfrac{\\lambda}{T}=\\dfrac{0{,}6}{0{,}12}=5\\ \\text{m/s}$ (en sentido $-x$).\n\n**(c)** La velocidad transversal es $v_y=\\dfrac{\\partial y}{\\partial t}=-0{,}005\\cdot52{,}4\\,\\text{sen}(52{,}4\\,t+10{,}5\\,x)$. En $x=0{,}3\\ \\text{m}$, $k x=10{,}5\\cdot0{,}3=\\pi$:\n\n$$v_y=-0{,}262\\,\\text{sen}(52{,}4\\,t+\\pi)=0{,}262\\,\\text{sen}(52{,}4\\,t)\\ \\text{m/s}$$",
+  "answer": "**(a)** $y(x,t)=0{,}005\\cos(52{,}4\\,t+10{,}5\\,x)\\ \\text{m}$. **(b)** $v=\\lambda/T=5\\ \\text{m/s}$ (hacia $-x$). **(c)** $v_y(0{,}3;t)=0{,}262\\,\\text{sen}(52{,}4\\,t)\\ \\text{m/s}$.",
+  "common_errors": [
+   "Tomar $T=0{,}06\\ \\text{s}$ (es medio periodo).",
+   "Poner $-kx$ para una onda hacia $-x$ (debe ser $+kx$).",
+   "Usar seno en $y(x,t)$ pese a que en $t=0$ la elongación es máxima y la velocidad nula."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-014",
+  "source": "Cantabria · Ordinaria 2026",
+  "title": "Onda en una cuerda: parámetros, elongación y velocidad transversal · Cantabria · Ordinaria 2026",
+  "statement": "Por una cuerda se propaga una onda dada (en unidades SI) por\n$$y(x,t)=0{,}02\\,\\mathrm{sen}\\!\\left(\\pi\\left(\\dfrac{4x}{3}+200\\,t\\right)\\right)$$\n\n**(a)** Determine el sentido de propagación, la amplitud, la longitud de onda, la frecuencia, el periodo y la velocidad de propagación.\n**(b)** Calcule la elongación de un punto situado en $x=\\tfrac34\\ \\text{m}$ en el instante $t=\\tfrac{1}{240}\\ \\text{s}$.\n**(c)** Calcule la velocidad transversal de ese punto en ese instante.",
+  "knowns": [
+   "$y=0{,}02\\,\\mathrm{sen}\\!\\left(\\dfrac{4\\pi}{3}x+200\\pi\\,t\\right)$ (SI)",
+   "$k=\\dfrac{4\\pi}{3}\\ \\text{rad/m}$, $\\omega=200\\pi\\ \\text{rad/s}$"
+  ],
+  "full_solution": "**(a)** Como $x$ y $t$ aparecen con el **mismo** signo, la onda se propaga en el sentido $-x$. Identificando:\n$$A=0{,}02\\ \\text{m}\\qquad k=\\dfrac{4\\pi}{3}\\ \\Rightarrow\\ \\lambda=\\dfrac{2\\pi}{k}=1{,}5\\ \\text{m}$$\n$$\\omega=200\\pi\\ \\Rightarrow\\ f=\\dfrac{\\omega}{2\\pi}=100\\ \\text{Hz},\\quad T=\\dfrac{1}{f}=0{,}01\\ \\text{s}$$\n$$v=\\dfrac{\\omega}{k}=\\dfrac{200\\pi}{4\\pi/3}=150\\ \\text{m/s}$$\n\n**(b)** En $x=\\tfrac34\\ \\text{m}$, $t=\\tfrac{1}{240}\\ \\text{s}$ el argumento es $\\pi\\left(\\tfrac43\\cdot\\tfrac34+200\\cdot\\tfrac{1}{240}\\right)=\\pi\\left(1+\\tfrac56\\right)=\\dfrac{11\\pi}{6}$:\n$$y=0{,}02\\,\\mathrm{sen}\\dfrac{11\\pi}{6}=0{,}02\\cdot(-0{,}5)=-0{,}01\\ \\text{m}$$\n\n**(c)** Velocidad transversal $v_y=\\dfrac{\\partial y}{\\partial t}=0{,}02\\cdot200\\pi\\,\\cos\\!\\left(\\pi\\left(\\tfrac{4x}{3}+200t\\right)\\right)$. En ese punto e instante:\n$$v_y=4\\pi\\cos\\dfrac{11\\pi}{6}=4\\pi\\cdot\\dfrac{\\sqrt3}{2}=10{,}9\\ \\text{m/s}$$",
+  "answer": "**(a)** Se propaga hacia $-x$; $A=0{,}02\\ \\text{m}$, $\\lambda=1{,}5\\ \\text{m}$, $f=100\\ \\text{Hz}$, $T=0{,}01\\ \\text{s}$, $v=150\\ \\text{m/s}$. **(b)** $y=-0{,}01\\ \\text{m}$. **(c)** $v_y\\approx 10{,}9\\ \\text{m/s}$.",
+  "common_errors": [
+   "Asignar el sentido $+x$ cuando $x$ y $t$ llevan el mismo signo (es $-x$).",
+   "Confundir velocidad de propagación ($\\omega/k$) con la transversal ($\\partial y/\\partial t$).",
+   "Trabajar el seno/coseno en grados en lugar de radianes."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-015",
+  "source": "Comunidad Valenciana · Julio 2018",
+  "title": "Onda de presión: longitud de onda y velocidad a partir de la gráfica · Comunidad Valenciana · Julio 2018",
+  "statement": "La gráfica representa la propagación de una onda armónica de presión, en cierto instante temporal. La frecuencia de la onda es de $100\\ \\text{Hz}$. Determina razonadamente la longitud de onda y la velocidad de propagación de la onda en el medio.",
+  "knowns": [
+   "$f = 100\\ \\text{Hz}$",
+   "Perfil espacial de la onda dado por la gráfica (presión frente a posición $x$)"
+  ],
+  "full_solution": "La gráfica es una “instantánea” de la onda: representa la presión frente a la posición $x$ en un instante fijo. La **longitud de onda** $\\lambda$ es la distancia entre dos máximos (o dos mínimos) consecutivos, es decir, la longitud de un ciclo espacial completo, que se lee directamente sobre el eje $x$ de la gráfica.\n\nUna vez leída $\\lambda$, la velocidad de propagación se obtiene de la relación fundamental de las ondas:\n$$v = \\lambda\\,f.$$\nPor ejemplo, si de la gráfica se lee $\\lambda = 2\\ \\text{m}$, entonces\n$$v = 2\\ \\text{m}\\cdot 100\\ \\text{Hz} = 200\\ \\text{m/s}.$$\nEl procedimiento es siempre: medir $\\lambda$ en el eje de posiciones y multiplicar por la frecuencia dada.",
+  "answer": "$\\lambda$ se lee de la gráfica (longitud de un ciclo espacial) y $v = \\lambda f$. Con $\\lambda = 2\\ \\text{m}$ resultaría $v = 200\\ \\text{m/s}$.",
+  "common_errors": [
+   "Confundir el periodo temporal $T$ con la longitud de onda $\\lambda$ (la gráfica es frente a $x$, no frente a $t$).",
+   "Medir $\\lambda$ como media longitud de onda (de máximo a mínimo) en vez de un ciclo completo.",
+   "Usar $v=\\lambda/f$ en lugar de $v=\\lambda f$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-016",
+  "source": "Comunidad Valenciana · Julio 2018",
+  "title": "Onda transversal en una cuerda: elongación y velocidad transversal · Comunidad Valenciana · Julio 2018",
+  "statement": "Una onda transversal se propaga por una cuerda según la ecuación $y(x,t) = 0{,}5\\cos\\!\\left[5\\pi(2t - x)\\right]$, en unidades del SI. Calcula:\n\n**(a)** La elongación, $y$, del punto de la cuerda situado en $x_1 = 0{,}40\\ \\text{m}$ en el instante $t_1 = 1\\ \\text{s}$. ¿Qué distancia mínima hay entre dos puntos de la cuerda con la misma elongación y velocidad en un mismo instante?\n\n**(b)** La velocidad transversal en los dos puntos $x_1 = 0{,}40\\ \\text{m}$ y $x_2 = x_1 + \\dfrac{\\lambda}{4}$, en el instante $t_1 = 1\\ \\text{s}$.",
+  "knowns": [
+   "$y(x,t) = 0{,}5\\cos[5\\pi(2t - x)] = 0{,}5\\cos(10\\pi t - 5\\pi x)$ (SI)",
+   "$x_1 = 0{,}40\\ \\text{m}$, $x_2 = x_1 + \\lambda/4$",
+   "$t_1 = 1\\ \\text{s}$"
+  ],
+  "full_solution": "Desarrollando el argumento, $y(x,t) = 0{,}5\\cos(10\\pi t - 5\\pi x)$, que comparamos con $y = A\\cos(\\omega t - kx)$: $A = 0{,}5\\ \\text{m}$, $\\omega = 10\\pi\\ \\text{rad/s}$ (luego $f = \\omega/2\\pi = 5\\ \\text{Hz}$, $T = 0{,}2\\ \\text{s}$) y $k = 5\\pi\\ \\text{rad/m}$ (luego $\\lambda = 2\\pi/k = 0{,}4\\ \\text{m}$ y $v = \\omega/k = 2\\ \\text{m/s}$).\n\n**(a)** Elongación en $x_1 = 0{,}40\\ \\text{m}$, $t_1 = 1\\ \\text{s}$:\n$$y = 0{,}5\\cos(10\\pi\\cdot 1 - 5\\pi\\cdot 0{,}40) = 0{,}5\\cos(8\\pi) = 0{,}5\\ \\text{m}.$$\nLa distancia mínima entre dos puntos con la **misma elongación y la misma velocidad** en un mismo instante es una longitud de onda completa:\n$$\\Delta x_{\\min} = \\lambda = 0{,}4\\ \\text{m}.$$\n\n**(b)** La velocidad transversal es $v_y = \\dfrac{\\partial y}{\\partial t} = -A\\,\\omega\\,\\text{sen}(\\omega t - kx) = -5\\pi\\,\\text{sen}(10\\pi t - 5\\pi x)$.\n\nEn $x_1 = 0{,}40\\ \\text{m}$, $t_1 = 1\\ \\text{s}$: el argumento es $10\\pi - 2\\pi = 8\\pi$ y $\\text{sen}(8\\pi) = 0$, luego\n$$v_y(x_1) = -5\\pi\\cdot 0 = 0\\ \\text{m/s}$$\n(el punto está en un extremo de la oscilación, $y = A$).\n\nEn $x_2 = x_1 + \\lambda/4 = 0{,}50\\ \\text{m}$, $t_1 = 1\\ \\text{s}$: el argumento es $10\\pi - 2{,}5\\pi = 7{,}5\\pi$ y $\\text{sen}(7{,}5\\pi) = -1$, luego\n$$v_y(x_2) = -5\\pi\\cdot(-1) = 5\\pi \\approx 15{,}7\\ \\text{m/s}$$\n(un cuarto de longitud de onda separa el extremo, con $v_y=0$, de un punto que pasa por el equilibrio con velocidad máxima $A\\omega = 5\\pi$ m/s).",
+  "answer": "**(a)** $y(x_1) = 0{,}5\\cos(8\\pi) = 0{,}5\\ \\text{m}$; distancia mínima $\\Delta x = \\lambda = 0{,}4\\ \\text{m}$. **(b)** $v_y(x_1) = 0\\ \\text{m/s}$ y $v_y(x_2) = 5\\pi \\approx 15{,}7\\ \\text{m/s}$.",
+  "common_errors": [
+   "Dos puntos con igual elongación pero distinta velocidad están separados menos de $\\lambda$; para igual elongación Y velocidad la separación mínima es $\\lambda$.",
+   "Evaluar los ángulos en grados en lugar de radianes.",
+   "Confundir la velocidad transversal $\\partial y/\\partial t$ con la velocidad de propagación $v=\\omega/k$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-017",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Amplitud, frecuencia y diferencia de fase de una onda armónica · Comunidad Valenciana · Julio 2019",
+  "statement": "El gráfico representa una onda armónica, en un instante dado, que se propaga hacia la derecha del eje $X$ con velocidad $v = 2\\ \\text{m·s}^{-1}$. De la gráfica se leen una amplitud $A = 3\\ \\text{mm}$ y una longitud de onda $\\lambda = 4\\ \\text{m}$. Determine razonadamente la amplitud y la frecuencia de la onda y la diferencia de fase entre dos puntos situados en $x_1 = 4\\ \\text{m}$ y $x_2 = 5\\ \\text{m}$.",
+  "knowns": [
+   "$v = 2\\ \\text{m·s}^{-1}$",
+   "$A = 3\\ \\text{mm} = 0{,}003\\ \\text{m}$ (de la gráfica)",
+   "$\\lambda = 4\\ \\text{m}$ (de la gráfica)",
+   "$x_1 = 4\\ \\text{m}$, $x_2 = 5\\ \\text{m}$"
+  ],
+  "full_solution": "La amplitud se lee directamente de la gráfica como el valor máximo de la elongación: $A = 3\\ \\text{mm} = 0{,}003\\ \\text{m}$. La longitud de onda (periodo espacial) es $\\lambda = 4\\ \\text{m}$.\n\nLa frecuencia se obtiene de $v = \\lambda f$:\n$$f = \\dfrac{v}{\\lambda} = \\dfrac{2}{4} = 0{,}5\\ \\text{Hz}$$\n\nLa diferencia de fase entre dos puntos separados $\\Delta x = |x_2 - x_1| = 1\\ \\text{m}$ (en el mismo instante) es\n$$\\Delta\\varphi = k\\,\\Delta x = \\dfrac{2\\pi}{\\lambda}\\,\\Delta x = \\dfrac{2\\pi}{4}\\cdot 1 = \\dfrac{\\pi}{2}\\ \\text{rad}$$",
+  "answer": "$A = 3\\ \\text{mm} = 0{,}003\\ \\text{m}$, $f = v/\\lambda = 0{,}5\\ \\text{Hz}$ y $\\Delta\\varphi = \\dfrac{2\\pi}{\\lambda}\\Delta x = \\dfrac{\\pi}{2}\\ \\text{rad}$.",
+  "common_errors": [
+   "Confundir amplitud (máximo) con la distancia pico a pico (el doble).",
+   "Usar $\\Delta\\varphi=\\omega\\Delta x$ en vez de $k\\,\\Delta x$ para puntos en el mismo instante.",
+   "Leer mal la longitud de onda en la gráfica (es el periodo espacial completo)."
+  ],
+  "fig_caption": [
+   "Instantánea $y(x)$ de la onda armónica leída del examen: amplitud $A=3\\ \\text{mm}$ y longitud de onda $\\lambda=4\\ \\text{m}$, propagándose hacia $+x$ con $v=2$ m/s. Se señalan los puntos $x_1=4\\ \\text{m}$ y $x_2=5\\ \\text{m}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-018",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Función de onda transversal en una cuerda · Comunidad Valenciana · Julio 2019",
+  "statement": "Una onda transversal sinusoidal en una cuerda se propaga en el sentido positivo del eje $X$ con velocidad $v = 1\\ \\text{m·s}^{-1}$ y periodo $T = 0{,}2\\ \\text{s}$. En el instante inicial, el punto situado en el origen tiene elongación positiva igual a su amplitud.\n\n**(a)** Calcule la frecuencia angular, el número de onda y la fase inicial.\n\n**(b)** Si la amplitud es $A = 0{,}1\\ \\text{m}$, escriba la función de onda $y(x,t)$. ¿Qué elongación tiene el punto $x = 0{,}2\\ \\text{m}$ en el instante $t = 0{,}4\\ \\text{s}$?",
+  "knowns": [
+   "$v = 1\\ \\text{m·s}^{-1}$",
+   "$T = 0{,}2\\ \\text{s}$",
+   "$A = 0{,}1\\ \\text{m}$",
+   "en $t=0$, $x=0$: $y=A$ (máximo)"
+  ],
+  "full_solution": "**(a)** Frecuencia angular, longitud de onda y número de onda:\n$$\\omega = \\dfrac{2\\pi}{T} = \\dfrac{2\\pi}{0{,}2} = 10\\pi\\ \\text{rad·s}^{-1}, \\quad \\lambda = v\\,T = 1\\cdot0{,}2 = 0{,}2\\ \\text{m}, \\quad k = \\dfrac{2\\pi}{\\lambda} = 10\\pi\\ \\text{m}^{-1}$$\nUsando $y = A\\cos(\\omega t - k x + \\varphi)$, la condición $y(0,0)=A$ da $\\cos\\varphi = 1 \\Rightarrow \\varphi = 0$.\n\n**(b)** La función de onda es\n$$y(x,t) = 0{,}1\\cos(10\\pi\\,t - 10\\pi\\,x)\\ \\text{m}$$\nEn $x = 0{,}2\\ \\text{m}$, $t = 0{,}4\\ \\text{s}$:\n$$y = 0{,}1\\cos(10\\pi\\cdot0{,}4 - 10\\pi\\cdot0{,}2) = 0{,}1\\cos(4\\pi - 2\\pi) = 0{,}1\\cos(2\\pi) = 0{,}1\\ \\text{m}$$\nEl punto está en su elongación máxima.",
+  "answer": "**(a)** $\\omega = 10\\pi\\ \\text{rad·s}^{-1}$, $k = 10\\pi\\ \\text{m}^{-1}$, $\\varphi = 0$ (con coseno). **(b)** $y(x,t) = 0{,}1\\cos(10\\pi t - 10\\pi x)\\ \\text{m}$; en $x=0{,}2\\ \\text{m}$, $t=0{,}4\\ \\text{s}$, $y = 0{,}1\\ \\text{m}$.",
+  "common_errors": [
+   "Usar función seno con $\\varphi=0$ (no cumple $y=A$ en el origen); con seno sería $\\varphi=\\pi/2$.",
+   "Confundir $k$ con $\\omega$.",
+   "Errar el signo del término $kx$ para propagación en $+x$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-019",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Nivel de intensidad sonora de la explosión de un petardo · Comunidad Valenciana · Julio 2020",
+  "statement": "Escriba la expresión del nivel sonoro (en dB) en función de la intensidad. A cierta distancia de la explosión de un petardo se mide una intensidad de $1\\ \\text{W·m}^{-2}$. ¿Qué nivel de intensidad (dB) hay en ese punto? Calcule la intensidad que se medirá al duplicar la distancia (onda esférica).",
+  "knowns": [
+   "$I_1 = 1\\ \\text{W·m}^{-2}$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "El nivel de intensidad sonora es\n$$\\beta = 10\\log\\dfrac{I}{I_0}\\ \\ (\\text{dB})$$\nEn el punto donde $I_1 = 1\\ \\text{W·m}^{-2}$:\n$$\\beta_1 = 10\\log\\dfrac{1}{10^{-12}} = 10\\log 10^{12} = 120\\ \\text{dB}$$\n\nPara una onda esférica la intensidad es inversamente proporcional al cuadrado de la distancia, $I\\propto 1/r^2$. Al duplicar la distancia ($r_2 = 2r_1$):\n$$\\dfrac{I_2}{I_1} = \\left(\\dfrac{r_1}{r_2}\\right)^2 = \\dfrac14 \\;\\Rightarrow\\; I_2 = \\dfrac{1}{4} = 0{,}25\\ \\text{W·m}^{-2}$$",
+  "answer": "$\\beta = 10\\log(I/I_0)$; $\\beta_1 = 120\\ \\text{dB}$. Al duplicar la distancia, $I_2 = I_1/4 = 0{,}25\\ \\text{W·m}^{-2}$.",
+  "common_errors": [
+   "Pensar que al duplicar la distancia la intensidad se reduce a la mitad (es a la cuarta parte).",
+   "Confundir nivel (dB) con intensidad.",
+   "Errar la base del logaritmo (es decimal, base 10)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-020",
+  "source": "Comunidad Valenciana · Julio 2022",
+  "title": "Significado de los parámetros de una onda transversal · Comunidad Valenciana · Julio 2022",
+  "statement": "Una onda transversal en una cuerda es $y(x,t)=a\\,\\text{sen}(2\\pi b t - c x)$. ¿Qué magnitudes representan $a$, $b$ y $c$? ¿Cuáles son sus unidades en el SI? ¿Qué información aporta el signo negativo? ¿Qué magnitud representa el cociente $2\\pi b/c$?",
+  "full_solution": "Comparando con la forma general $y=A\\,\\text{sen}(\\omega t - k x)$:\n\n- $a = A$ es la **amplitud**; unidad: metro (**m**).\n- $2\\pi b = \\omega = 2\\pi f$ es la pulsación, luego $b = f$ es la **frecuencia**; unidad: hercio (**Hz** $=\\text{s}^{-1}$).\n- $c = k = \\dfrac{2\\pi}{\\lambda}$ es el **número de onda**; unidad: **rad·m$^{-1}$** (o m$^{-1}$).\n\nEl **signo negativo** ($-cx$) indica que la onda se propaga en el **sentido positivo del eje $x$**.\n\nEl cociente:\n$$\\dfrac{2\\pi b}{c} = \\dfrac{\\omega}{k} = \\lambda f = v$$\nrepresenta la **velocidad de propagación** de la onda (unidad m/s).",
+  "answer": "$a$: amplitud (m); $b$: frecuencia (Hz); $c$: número de onda (rad·m$^{-1}$). El signo $-$ indica propagación en $+x$. $2\\pi b/c=\\omega/k$ es la velocidad de propagación (m/s).",
+  "common_errors": [
+   "Decir que $b$ es la pulsación; $b$ es la frecuencia ($\\omega=2\\pi b$).",
+   "Interpretar el signo negativo como sentido $-x$ (es $+x$).",
+   "Confundir $v=\\omega/k$ (propagación) con la velocidad transversal del punto."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-021",
+  "source": "Comunidad Valenciana · Junio 2018",
+  "title": "Cambio de medio de una onda sonora · C. Valenciana · Junio 2018",
+  "statement": "Una onda sonora de frecuencia $f$ se propaga por un medio (1) con longitud de onda $\\lambda$. En cierto punto pasa a otro medio (2) donde la longitud de onda es $\\lambda_2=2\\lambda$. Determina razonadamente el periodo, el número de onda y la velocidad de propagación en el medio (2) en función de los del medio (1).",
+  "knowns": [
+   "frecuencia $f$ (común a ambos medios)",
+   "$\\lambda_1=\\lambda$",
+   "$\\lambda_2=2\\lambda$"
+  ],
+  "full_solution": "La frecuencia (y por tanto el periodo) de una onda no cambia al pasar de un medio a otro, pues la impone el foco:\n$$T_2=T_1=\\dfrac1f$$\n\nEl número de onda $k=\\dfrac{2\\pi}{\\lambda}$:\n$$k_2=\\dfrac{2\\pi}{\\lambda_2}=\\dfrac{2\\pi}{2\\lambda}=\\dfrac{k_1}{2}$$\n\nLa velocidad $v=\\lambda f$:\n$$v_2=\\lambda_2 f=2\\lambda f=2 v_1$$",
+  "answer": "$T_2=T_1$; $k_2=\\dfrac{k_1}{2}$; $v_2=2v_1$ (al duplicarse $\\lambda$ y mantenerse $f$).",
+  "common_errors": [
+   "Pensar que la frecuencia cambia al cambiar de medio (lo que cambia es $\\lambda$ y $v$).",
+   "Confundir número de onda $k=2\\pi/\\lambda$ con la frecuencia.",
+   "No relacionar $v=\\lambda f$ correctamente."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-022",
+  "source": "Comunidad Valenciana · Junio 2018",
+  "title": "Parámetros de una onda sísmica · C. Valenciana · Junio 2018",
+  "statement": "La función que representa una onda sísmica es $y(x,t)=3\\,\\text{sen}\\!\\left(\\dfrac{\\pi}{4}t-4\\pi x\\right)$, donde $x$ e $y$ están expresadas en metros y $t$ en segundos. Calcula:\n\n**(a)** La amplitud, el periodo, la frecuencia y la longitud de onda.\n\n**(b)** La velocidad de propagación y la velocidad de vibración de un punto situado a $1\\ \\text{m}$ del foco emisor para $t=8\\ \\text{s}$.",
+  "knowns": [
+   "$y(x,t)=3\\,\\text{sen}\\!\\left(\\dfrac{\\pi}{4}t-4\\pi x\\right)$ (SI)",
+   "$x=1\\ \\text{m}$",
+   "$t=8\\ \\text{s}$"
+  ],
+  "full_solution": "Comparando con $y=A\\,\\text{sen}(\\omega t-kx)$: $A=3\\ \\text{m}$, $\\omega=\\dfrac{\\pi}{4}\\ \\text{rad·s}^{-1}$, $k=4\\pi\\ \\text{rad·m}^{-1}$.\n\n**(a) Parámetros**\n$$T=\\dfrac{2\\pi}{\\omega}=\\dfrac{2\\pi}{\\pi/4}=8\\ \\text{s};\\qquad f=\\dfrac1T=0{,}125\\ \\text{Hz}$$\n$$\\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{4\\pi}=0{,}5\\ \\text{m}$$\n\n**(b) Velocidades**\n$$v_{\\text{prop}}=\\dfrac{\\omega}{k}=\\dfrac{\\pi/4}{4\\pi}=\\dfrac{1}{16}=0{,}0625\\ \\text{m·s}^{-1}$$\nLa velocidad de vibración es $v_{osc}=\\dfrac{\\partial y}{\\partial t}=A\\omega\\cos(\\omega t-kx)=\\dfrac{3\\pi}{4}\\cos\\!\\left(\\dfrac{\\pi}{4}t-4\\pi x\\right)$. En $x=1\\ \\text{m}$, $t=8\\ \\text{s}$ el argumento es $\\dfrac{\\pi}{4}\\cdot8-4\\pi\\cdot1=2\\pi-4\\pi=-2\\pi$ y $\\cos(-2\\pi)=1$:\n$$v_{osc}=\\dfrac{3\\pi}{4}\\cos(-2\\pi)=\\dfrac{3\\pi}{4}\\approx 2{,}36\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $A=3\\ \\text{m}$, $T=8\\ \\text{s}$, $f=0{,}125\\ \\text{Hz}$, $\\lambda=0{,}5\\ \\text{m}$. **(b)** $v_{\\text{prop}}=\\dfrac{1}{16}=0{,}0625\\ \\text{m·s}^{-1}$; $v_{osc}(1;8)=\\dfrac{3\\pi}{4}\\approx 2{,}36\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Error de extracción: la función original se perdió en el OCR; aquí se usa $y=3\\cos(\\pi t-\\frac{\\pi}{4}x)$ reconstruida de forma coherente.",
+   "Confundir velocidad de propagación $\\omega/k$ con velocidad de vibración $-A\\omega\\sin(\\cdot)$.",
+   "Olvidar derivar respecto a $t$ para la velocidad de oscilación."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-023",
+  "source": "Comunidad Valenciana · Junio 2019",
+  "title": "Instantánea de una onda armónica en una cuerda · Comunidad Valenciana · Junio 2019",
+  "statement": "La figura representa un instante de una onda armónica en una cuerda que se mueve hacia la derecha sobre el eje $x$. Su periodo es $T=4\\ \\text{s}$ y la distancia entre los puntos $P$ y $Q$ marcados en la figura es $45\\ \\text{cm}$. Determine razonadamente la longitud de onda, la frecuencia angular y la velocidad de propagación.",
+  "knowns": [
+   "$T=4\\ \\text{s}$",
+   "$d_{PQ}=45\\ \\text{cm}=0{,}45\\ \\text{m}=2\\lambda$ (de la figura: $P$ y $Q$ son cruces por cero ascendentes separados dos longitudes de onda)"
+  ],
+  "full_solution": "La frecuencia angular depende solo del periodo:\n\n$$\\omega=\\dfrac{2\\pi}{T}=\\dfrac{2\\pi}{4}=\\dfrac{\\pi}{2}\\approx1{,}57\\ \\text{rad/s}$$\n\nEn la figura, $P$ y $Q$ son dos puntos en la misma fase (cruces por cero ascendentes) separados **dos longitudes de onda completas**:\n\n$$2\\lambda=0{,}45\\ \\text{m}\\ \\Rightarrow\\ \\lambda=0{,}225\\ \\text{m}$$\n\nVelocidad de propagación:\n\n$$v=\\dfrac{\\lambda}{T}=\\dfrac{0{,}225}{4}=0{,}05625\\ \\text{m/s}\\approx0{,}056\\ \\text{m/s}$$",
+  "answer": "$\\omega=\\dfrac{2\\pi}{T}=\\dfrac{\\pi}{2}\\approx1{,}57\\ \\text{rad/s}$; $\\lambda=0{,}225\\ \\text{m}$; $v=\\lambda/T\\approx0{,}056\\ \\text{m/s}$.",
+  "common_errors": [
+   "Identificar directamente $45\\ \\text{cm}$ con $\\lambda$ sin leer la fracción de onda de la figura.",
+   "Calcular $\\omega$ a partir de $\\lambda$ en vez de solo del periodo.",
+   "Confundir velocidad de propagación con velocidad de oscilación de los puntos."
+  ],
+  "fig_caption": [
+   "Instantánea $y(x)$ de la onda (avanza hacia $+x$). Los puntos $P$ y $Q$, cruces por cero ascendentes, están separados $45\\ \\text{cm}=2\\lambda$, de donde $\\lambda=0{,}225\\ \\text{m}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-024",
+  "source": "Comunidad Valenciana · Junio 2021",
+  "title": "Velocidad de vibración y puntos en fase de una onda en una cuerda · Comunidad Valenciana · Junio 2021",
+  "statement": "Una onda transversal en una cuerda es $y(x,t)=0{,}01\\cos\\!\\big[2\\pi(10t-x)\\big]\\ \\text{m}$ ($x$ en m, $t$ en s). Calcule la velocidad de vibración en función de $x$ y $t$. Dado $x_1=0{,}75\\ \\text{m}$, halle un punto $x_2$ que en el mismo instante tenga igual velocidad de vibración y el mismo $y$.",
+  "knowns": [
+   "$A = 0{,}01\\ \\text{m}$",
+   "$\\omega = 20\\pi\\ \\text{rad}\\cdot\\text{s}^{-1}$ ($f=10\\ \\text{Hz}$)",
+   "$k = 2\\pi\\ \\text{rad}\\cdot\\text{m}^{-1}$ $\\Rightarrow\\lambda=1\\ \\text{m}$",
+   "$x_1 = 0{,}75\\ \\text{m}$"
+  ],
+  "full_solution": "**Velocidad de vibración.**\n$$v_y(x,t) = \\dfrac{\\partial y}{\\partial t} = -0{,}01\\cdot20\\pi\\,\\sin\\!\\big[2\\pi(10t-x)\\big] = -0{,}2\\pi\\,\\sin\\!\\big[2\\pi(10t-x)\\big]\\ \\text{m}\\cdot\\text{s}^{-1}$$\n\n**Punto $x_2$ con igual $y$ y velocidad en el mismo $t$.**\nQue coincidan a la vez $y$ ($\\cos$) y $v_y$ ($\\sin$, con su signo) exige que las fases difieran en un múltiplo entero de $2\\pi$. La fase es $\\varphi(x,t)=2\\pi(10t-x)$, luego para el mismo $t$:\n$$\\varphi(x_1)-\\varphi(x_2) = 2\\pi(x_2-x_1) = 2\\pi n\\ \\Rightarrow\\ x_2 = x_1 + n\\,\\lambda\\ (n\\in\\mathbb{Z},\\ \\lambda=1\\ \\text{m})$$\nLos puntos separados un número entero de longitudes de onda están en fase. Por ejemplo:\n$$x_2 = 0{,}75 + 1 = 1{,}75\\ \\text{m}$$",
+  "answer": "$v_y(x,t) = -0{,}2\\pi\\,\\sin\\!\\big[2\\pi(10t-x)\\big]\\ \\text{m}\\cdot\\text{s}^{-1}$.\nLos puntos en fase distan un número entero de $\\lambda=1\\ \\text{m}$: $x_2 = x_1 + n$ (p. ej. $x_2=1{,}75\\ \\text{m}$).",
+  "common_errors": [
+   "Imponer sólo $y$ igual: entonces habría también puntos en oposición de fase con velocidad opuesta.",
+   "Confundir $v_y=\\partial y/\\partial t$ con la velocidad de propagación $v=\\omega/k=10\\ \\text{m}\\cdot\\text{s}^{-1}$.",
+   "No identificar $\\lambda=1\\ \\text{m}$ a partir de $k=2\\pi\\ \\text{rad}\\cdot\\text{m}^{-1}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-025",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Intensidad y nivel sonoro de una fuente puntual a 10 m · Comunidad Valenciana · Junio 2022",
+  "statement": "Una fuente sonora puntual de potencia $1{,}26\\cdot10^{-4}\\ \\text{W}$ emite uniformemente en todas direcciones. Calcula la intensidad a $10\\ \\text{m}$ y el nivel de intensidad sonora en decibelios a esa distancia.",
+  "knowns": [
+   "$P=1{,}26\\cdot10^{-4}\\ \\text{W}$",
+   "$r=10\\ \\text{m}$",
+   "$I_0=10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "**Intensidad** (la potencia se reparte sobre una superficie esférica de radio $r$):\n$$I=\\dfrac{P}{4\\pi r^2}=\\dfrac{1{,}26\\cdot10^{-4}}{4\\pi\\cdot10^2}=1{,}0\\cdot10^{-7}\\ \\text{W·m}^{-2}$$\n\n**Nivel de intensidad sonora:**\n$$\\beta=10\\log\\dfrac{I}{I_0}=10\\log\\dfrac{1{,}0\\cdot10^{-7}}{10^{-12}}=10\\log(10^{5})=50\\ \\text{dB}$$",
+  "answer": "$I=1{,}0\\cdot10^{-7}\\ \\text{W·m}^{-2}$; $\\beta=50\\ \\text{dB}$.",
+  "common_errors": [
+   "Usar $4\\pi r$ o $\\pi r^2$ en vez de $4\\pi r^2$ para la superficie esférica.",
+   "Emplear logaritmo neperiano en vez de decimal en la fórmula de dB.",
+   "Olvidar dividir por $I_0$ dentro del logaritmo."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-026",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Intensidad y nivel sonoro de una fuente puntual a 10 m · Comunidad Valenciana · Junio 2022",
+  "statement": "Una fuente sonora puntual de potencia $1{,}26\\cdot10^{-4}\\ \\text{W}$ emite uniformemente en todas las direcciones. Calcule la intensidad a $10\\ \\text{m}$ de la fuente y el nivel de intensidad sonora (en dB) a esa distancia.",
+  "knowns": [
+   "$P=1{,}26\\cdot10^{-4}\\ \\text{W}$",
+   "$r=10\\ \\text{m}$",
+   "$I_0=10^{-12}\\ \\text{W}\\cdot\\text{m}^{-2}$"
+  ],
+  "full_solution": "**Intensidad.** Para una fuente puntual que emite de forma isótropa, la potencia se reparte sobre una esfera:\n$$I=\\dfrac{P}{4\\pi r^{2}}=\\dfrac{1{,}26\\cdot10^{-4}}{4\\pi\\cdot10^{2}}=1{,}0\\cdot10^{-7}\\ \\text{W}\\cdot\\text{m}^{-2}$$\n\n**Nivel de intensidad sonora.**\n$$\\beta=10\\log\\dfrac{I}{I_0}=10\\log\\dfrac{1{,}0\\cdot10^{-7}}{10^{-12}}=10\\log(10^{5})=50\\ \\text{dB}$$",
+  "answer": "$I\\approx 1{,}0\\cdot10^{-7}\\ \\text{W}\\cdot\\text{m}^{-2}$ y $\\beta\\approx 50\\ \\text{dB}$.",
+  "common_errors": [
+   "Olvidar el factor $4\\pi$ (usar $P/r^{2}$).",
+   "Usar logaritmo natural en vez de decimal en $\\beta=10\\log(I/I_0)$.",
+   "Confundir intensidad con nivel de intensidad."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-027",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Onda armónica: parámetros y velocidad de vibración · Comunidad Valenciana · Junio 2022",
+  "statement": "Una onda viene dada por $y(x,t)=2\\,\\mathrm{sen}(\\pi t-8\\pi x)$, con $x$ e $y$ en metros y $t$ en segundos.\n\n**(a)** Calcule la amplitud, el periodo, la frecuencia y la longitud de onda.\n**(b)** Calcule la velocidad de propagación y la velocidad de vibración de un punto situado a $1\\ \\text{m}$ del foco emisor en $t=8\\ \\text{s}$.",
+  "knowns": [
+   "$y(x,t)=2\\,\\mathrm{sen}(\\pi t-8\\pi x)$ (SI)",
+   "$\\omega=\\pi\\ \\text{rad/s}$, $k=8\\pi\\ \\text{rad/m}$"
+  ],
+  "full_solution": "**(a)** Comparando con $y=A\\,\\mathrm{sen}(\\omega t-k x)$:\n$$A=2\\ \\text{m}\\qquad \\omega=\\pi\\ \\text{rad/s}\\ \\Rightarrow\\ T=\\dfrac{2\\pi}{\\omega}=2\\ \\text{s}\\qquad f=\\dfrac{1}{T}=0{,}5\\ \\text{Hz}$$\n$$k=8\\pi\\ \\text{rad/m}\\ \\Rightarrow\\ \\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{8\\pi}=0{,}25\\ \\text{m}$$\n\n**(b)** Velocidad de propagación:\n$$v=\\dfrac{\\omega}{k}=\\dfrac{\\pi}{8\\pi}=0{,}125\\ \\text{m/s}$$\nVelocidad de vibración (transversal), $v_y=\\dfrac{\\partial y}{\\partial t}=2\\pi\\cos(\\pi t-8\\pi x)$. En $x=1\\ \\text{m}$, $t=8\\ \\text{s}$ el argumento es $8\\pi-8\\pi=0$:\n$$v_y=2\\pi\\cos(0)=2\\pi\\approx 6{,}28\\ \\text{m/s}$$",
+  "answer": "**(a)** $A=2\\ \\text{m}$, $T=2\\ \\text{s}$, $f=0{,}5\\ \\text{Hz}$, $\\lambda=0{,}25\\ \\text{m}$. **(b)** $v=0{,}125\\ \\text{m/s}$ y $v_y=2\\pi\\approx 6{,}28\\ \\text{m/s}$.",
+  "common_errors": [
+   "Confundir la velocidad de propagación ($\\omega/k$) con la de vibración ($\\partial y/\\partial t$).",
+   "Derivar respecto a $x$ en lugar de $t$ para la velocidad transversal.",
+   "Errores con $\\lambda=2\\pi/k$ y $T=2\\pi/\\omega$ (faltan los $2\\pi$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-028",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Parámetros y velocidades de una onda armónica · Comunidad Valenciana · Junio 2022",
+  "statement": "Una onda es $y(x,t)=2\\,\\text{sen}(\\pi t-8\\pi x)$, con $x$, $y$ en metros y $t$ en segundos.\n\n**(a)** Calcula la amplitud, el periodo, la frecuencia y la longitud de onda.\n\n**(b)** Calcula la velocidad de propagación y la velocidad de vibración de un punto situado a $1\\ \\text{m}$ del foco en $t=8\\ \\text{s}$.",
+  "knowns": [
+   "$y=2\\,\\text{sen}(\\pi t-8\\pi x)$ (SI)",
+   "$\\omega=\\pi\\ \\text{rad/s}$, $k=8\\pi\\ \\text{rad/m}$"
+  ],
+  "full_solution": "Comparando con $y=A\\,\\text{sen}(\\omega t-kx)$: $A=2\\ \\text{m}$, $\\omega=\\pi\\ \\text{rad/s}$, $k=8\\pi\\ \\text{rad/m}$.\n\n**(a)**\n$$A=2\\ \\text{m}, \\qquad T=\\dfrac{2\\pi}{\\omega}=\\dfrac{2\\pi}{\\pi}=2\\ \\text{s}, \\qquad f=\\dfrac{1}{T}=0{,}5\\ \\text{Hz}$$\n$$\\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{8\\pi}=0{,}25\\ \\text{m}$$\n\n**(b)** Velocidad de propagación:\n$$v=\\dfrac{\\omega}{k}=\\dfrac{\\pi}{8\\pi}=0{,}125\\ \\text{m/s}$$\nVelocidad de vibración (transversal) $v_y=\\dfrac{\\partial y}{\\partial t}=2\\pi\\cos(\\pi t-8\\pi x)$. En $x=1\\ \\text{m}$, $t=8\\ \\text{s}$, el argumento es $\\pi\\cdot8-8\\pi\\cdot1=0$:\n$$v_y=2\\pi\\cos(0)=2\\pi\\approx6{,}28\\ \\text{m/s}$$",
+  "answer": "**(a)** $A=2\\ \\text{m}$, $T=2\\ \\text{s}$, $f=0{,}5\\ \\text{Hz}$, $\\lambda=0{,}25\\ \\text{m}$. **(b)** $v=0{,}125\\ \\text{m/s}$; $v_y=2\\pi\\approx6{,}28\\ \\text{m/s}$.",
+  "common_errors": [
+   "Calcular $v$ como $\\omega k$ en vez de $\\omega/k$.",
+   "Confundir velocidad de propagación con velocidad de vibración del punto.",
+   "Errar al evaluar el argumento del coseno en $x=1$, $t=8$ (vale $0$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-029",
+  "source": "Comunidad Valenciana · Modelo 2021",
+  "title": "Longitud de onda, frecuencia angular y velocidad en una cuerda · Comunidad Valenciana · Modelo 2021",
+  "statement": "La figura muestra una instantánea de una onda armónica que viaja hacia la derecha por una cuerda. Su periodo es $T=4\\ \\text{s}$ y la distancia entre los puntos $P$ y $Q$ marcados en la figura es $45\\ \\text{cm}$. Determine razonadamente la longitud de onda, la frecuencia angular y la velocidad de propagación.\n\n*(Nota: la relación entre la distancia $PQ$ y $\\lambda$ la fija la figura; aquí se toma, como en la configuración habitual de este ejercicio, $PQ=\\tfrac34\\lambda$.)*",
+  "knowns": [
+   "$T=4\\ \\text{s}$",
+   "$PQ=45\\ \\text{cm}=0{,}45\\ \\text{m}$",
+   "según la figura, $PQ=\\tfrac34\\lambda$"
+  ],
+  "full_solution": "La frecuencia angular depende sólo del periodo:\n$$\\omega=\\dfrac{2\\pi}{T}=\\dfrac{2\\pi}{4}=\\dfrac{\\pi}{2}\\ \\text{rad}\\cdot\\text{s}^{-1}\\approx 1{,}57\\ \\text{rad}\\cdot\\text{s}^{-1}$$\nDe la figura, los puntos $P$ y $Q$ están separados tres cuartos de longitud de onda:\n$$\\tfrac34\\lambda=0{,}45\\ \\text{m}\\ \\Rightarrow\\ \\lambda=0{,}60\\ \\text{m}$$\nVelocidad de propagación:\n$$v=\\dfrac{\\lambda}{T}=\\dfrac{0{,}60}{4}=0{,}15\\ \\text{m}\\cdot\\text{s}^{-1}$$",
+  "answer": "$\\omega=\\dfrac{\\pi}{2}\\ \\text{rad}\\cdot\\text{s}^{-1}\\approx 1{,}57\\ \\text{rad}\\cdot\\text{s}^{-1}$; con $PQ=\\tfrac34\\lambda$: $\\lambda=0{,}60\\ \\text{m}$ y $v=0{,}15\\ \\text{m}\\cdot\\text{s}^{-1}$.",
+  "common_errors": [
+   "Tomar $PQ=\\lambda$ sin leer en la figura qué fracción de $\\lambda$ representa.",
+   "Confundir frecuencia angular $\\omega=2\\pi/T$ con frecuencia $f=1/T$.",
+   "Usar $v=\\lambda\\cdot T$ en lugar de $v=\\lambda/T$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-030",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "Onda armónica transversal a partir de su gráfica · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Una onda armónica transversal se propaga con velocidad $v=5\\ \\text{cm/s}$ en el sentido negativo del eje $x$. A partir de la gráfica (instantánea $y$ frente a $x$), de la que se leen una amplitud $A=4\\ \\text{cm}$ y una longitud de onda $\\lambda=10\\ \\text{cm}$:\n\n**(a)** Determina la amplitud, la longitud de onda, el periodo y la diferencia de fase entre dos puntos separados $15\\ \\text{cm}$ y entre dos instantes separados $3\\ \\text{s}$.\n\n**(b)** Escribe la función de onda (con seno y fase inicial nula) y calcula la velocidad de un punto en $x=0$ para $t=0$.",
+  "knowns": [
+   "$v = 5\\ \\text{cm/s}$ en sentido $-x$",
+   "$A = 4\\ \\text{cm} = 0{,}04\\ \\text{m}$ (de la gráfica)",
+   "$\\lambda = 10\\ \\text{cm} = 0{,}10\\ \\text{m}$ (de la gráfica)",
+   "$\\Delta x = 15\\ \\text{cm}$, $\\Delta t = 3\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** De la gráfica: amplitud $A = 4\\ \\text{cm} = 0{,}04\\ \\text{m}$ y longitud de onda $\\lambda = 10\\ \\text{cm} = 0{,}10\\ \\text{m}$. El periodo:\n$$T = \\dfrac{\\lambda}{v} = \\dfrac{10}{5} = 2\\ \\text{s}\\quad\\Rightarrow\\quad \\omega = \\dfrac{2\\pi}{T} = \\pi\\ \\text{rad/s},\\quad k = \\dfrac{2\\pi}{\\lambda} = 20\\pi\\ \\text{rad/m}.$$\nDiferencia de fase entre dos puntos separados $\\Delta x = 15\\ \\text{cm}$ en un mismo instante:\n$$\\Delta\\varphi_x = \\dfrac{2\\pi}{\\lambda}\\,\\Delta x = \\dfrac{2\\pi}{10}\\cdot 15 = 3\\pi\\ \\text{rad}.$$\nDiferencia de fase para un mismo punto entre dos instantes separados $\\Delta t = 3\\ \\text{s}$:\n$$\\Delta\\varphi_t = \\omega\\,\\Delta t = \\pi\\cdot 3 = 3\\pi\\ \\text{rad}.$$\n\n**(b)** Onda que avanza en sentido $-x$ con fase inicial nula:\n$$y(x,t) = A\\,\\text{sen}(\\omega t + kx) = 0{,}04\\,\\text{sen}(\\pi t + 20\\pi x)\\ \\text{(SI)}.$$\nLa velocidad transversal es $v_y = \\dfrac{\\partial y}{\\partial t} = A\\omega\\cos(\\omega t + kx)$; en $x=0$, $t=0$:\n$$v_y(0,0) = A\\omega = 0{,}04\\cdot\\pi \\approx 0{,}126\\ \\text{m/s} = 4\\pi\\ \\text{cm/s}\\approx 12{,}6\\ \\text{cm/s}.$$",
+  "answer": "**(a)** $A=4\\ \\text{cm}$, $\\lambda=10\\ \\text{cm}$, $T=\\lambda/v=2\\ \\text{s}$; $\\Delta\\varphi_x=\\tfrac{2\\pi}{\\lambda}\\cdot15=3\\pi\\ \\text{rad}$, $\\Delta\\varphi_t=\\omega\\cdot3=3\\pi\\ \\text{rad}$. **(b)** $y(x,t)=0{,}04\\,\\text{sen}(\\pi t+20\\pi x)$ (SI); $v_y(0,0)=A\\omega=0{,}04\\pi\\approx0{,}126\\ \\text{m/s}$.",
+  "common_errors": [
+   "Usar $-kx$ en vez de $+kx$: para propagación en sentido $-x$ con seno es $\\text{sen}(\\omega t + kx)$.",
+   "Confundir velocidad de propagación $v$ con velocidad transversal $v_y$ de un punto.",
+   "Leer mal $\\lambda$ o $A$ en la gráfica (se requieren los valores numéricos de la figura del examen)."
+  ],
+  "fig_caption": [
+   "Instantánea $y(x)$ leída del examen: amplitud $A=4\\ \\text{cm}$ y longitud de onda $\\lambda=10\\ \\text{cm}$; la onda se propaga hacia $-x$ con $v=5$ cm/s."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OND-031",
+  "source": "Madrid · Julio 2021",
+  "title": "Nivel de intensidad sonora a través de una pared · Madrid · Julio 2021",
+  "statement": "Anacleto, el agente secreto, graba con un teléfono, a través de una pared, una conversación del malvado Vázquez. La distancia entre ambos es de $5\\ \\text{m}$ y, por efecto de la pared, al teléfono solo llega un $2\\%$ de la intensidad que llegaría sin pared. El nivel de intensidad sonora de una conversación a $1\\ \\text{m}$ es de $50\\ \\text{dB}$.\n\n**(a)** Calcule el nivel de intensidad sonora que llega al teléfono.\n\n**(b)** Si el teléfono puede grabar conversaciones a $100\\ \\text{m}$, ¿cuál es el nivel más bajo de intensidad sonora que es capaz de medir?",
+  "knowns": [
+   "$d = 5\\ \\text{m}$",
+   "$\\beta_{1\\text{m}} = 50\\ \\text{dB}$",
+   "factor de la pared $= 2\\%$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "**(a) Nivel que llega al teléfono**\n\nA $1\\ \\text{m}$, de $\\beta=10\\log(I/I_0)$ despejamos la intensidad:\n$$I_{1}=I_0\\,10^{\\beta/10}=10^{-12}\\cdot10^{5}=10^{-7}\\ \\text{W·m}^{-2}$$\n\nLa potencia del foco (sonido esférico) es $P=I_1\\cdot 4\\pi(1)^2=4\\pi\\cdot10^{-7}\\ \\text{W}$. Sin pared, a $5\\ \\text{m}$:\n$$I'=\\dfrac{P}{4\\pi(5)^2}=\\dfrac{10^{-7}}{25}\\ \\text{W·m}^{-2}$$\n\nCon la pared solo pasa el $2\\%$:\n$$I_R=0{,}02\\cdot\\dfrac{10^{-7}}{25}=8{,}0\\cdot10^{-11}\\ \\text{W·m}^{-2}$$\n$$\\beta_R=10\\log\\dfrac{8{,}0\\cdot10^{-11}}{10^{-12}}=19{,}0\\ \\text{dB}$$\n\n**(b) Nivel más bajo medible (a $100\\ \\text{m}$)**\n\nLa intensidad de la conversación a $100\\ \\text{m}$ (sin pared) sería:\n$$I=\\dfrac{P}{4\\pi(100)^2}=\\dfrac{4\\pi\\cdot10^{-7}}{4\\pi\\cdot10^{4}}=10^{-11}\\ \\text{W·m}^{-2}$$\n$$\\beta=10\\log\\dfrac{10^{-11}}{10^{-12}}=10\\ \\text{dB}$$",
+  "answer": "**(a)** $\\beta_R \\approx 19{,}0\\ \\text{dB}$.  **(b)** El nivel más bajo que puede medir es $\\beta \\approx 10\\ \\text{dB}$.",
+  "common_errors": [
+   "Aplicar el $2\\%$ al nivel en dB en vez de a la intensidad $I$.",
+   "No usar la ley del inverso del cuadrado $I\\propto 1/r^2$ al cambiar de distancia.",
+   "Equivocar la relación $I=I_0\\,10^{\\beta/10}$ (poner $\\beta/20$ o logaritmo natural)."
+  ]
+ }
+]

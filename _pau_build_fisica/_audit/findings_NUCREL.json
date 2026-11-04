@@ -1,0 +1,23 @@
+[
+ {
+  "id": "PAU-FIS-NUC-013",
+  "severity": "WARNING",
+  "field": "statement",
+  "issue": "El enunciado pide determinar Z y el elemento X, pero no da el nucleido de partida (depende de una figura que solo indica la trayectoria). Con los datos aportados solo puede identificarse el tipo de desintegracion (beta-), no valores concretos de Z ni el simbolo X; el apartado queda sin resolver numericamente.",
+  "correct_value": ""
+ },
+ {
+  "id": "PAU-FIS-NUC-015",
+  "severity": "ERROR",
+  "field": "full_solution",
+  "issue": "Conversion de unidades erronea en el apartado (b): m = 5,0e-18 kg se escribe como 5,0e-6 pg. Como 1 pg = 1e-15 kg (coherente con 0,02 pg = 2e-17 kg usado en el apartado a), 5,0e-18 kg = 5,0e-3 pg, no 5,0e-6 pg (error de factor 1000). El valor en kg y la respuesta final son correctos.",
+  "correct_value": "m = 5,0e-18 kg = 5,0e-3 pg (0,005 pg)"
+ },
+ {
+  "id": "PAU-FIS-NUC-024",
+  "severity": "ERROR",
+  "field": "full_solution",
+  "issue": "Valor de lambda mal escrito: lambda=ln2/(6,5e11 anos*3,156e7 s) = 3,38e-20 s^-1, no 3,38e-23 s^-1 (error de factor 1000). La actividad posterior A=lambda*N=11,6 Bq es coherente con el valor correcto 3,38e-20, por lo que solo el exponente impreso de lambda esta equivocado.",
+  "correct_value": "lambda = 3,38e-20 s^-1"
+ }
+]

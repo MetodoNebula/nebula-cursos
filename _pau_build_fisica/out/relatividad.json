@@ -1,0 +1,323 @@
+[
+ {
+  "id": "PAU-FIS-REL-001",
+  "title": "Electrón relativista: energía total y velocidad · Comunidad Valenciana · Julio 2018",
+  "statement": "La energía cinética relativista de un electrón es el doble de su energía en reposo. Calcula su energía total y su velocidad en unidades del SI.\n\n*Datos:* velocidad de la luz en el vacío, $c = 3\\cdot10^{8}\\ \\text{m/s}$; masa del electrón, $m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$.",
+  "knowns": [
+   "$E_c = 2\\,E_0$ (energía en reposo $E_0 = m_e c^2$)",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "La energía en reposo es $E_0 = m_e c^2$ y la energía total $E = E_0 + E_c$. Con $E_c = 2E_0$:\n$$E = E_0 + 2E_0 = 3E_0 = 3 m_e c^2.$$\n$$E = 3\\cdot 9{,}1\\cdot10^{-31}\\cdot(3\\cdot10^{8})^2 = 2{,}46\\cdot10^{-13}\\ \\text{J}\\ (\\approx 1{,}54\\ \\text{MeV}).$$\n\nLa velocidad se obtiene del factor de Lorentz. Como $E = \\gamma\\,m_e c^2 = 3 m_e c^2$, resulta $\\gamma = 3$:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-\\beta^2}} = 3\\ \\Rightarrow\\ \\beta = \\sqrt{1-\\dfrac{1}{9}} = \\sqrt{\\dfrac{8}{9}} = 0{,}943.$$\n$$v = 0{,}943\\,c = 2{,}83\\cdot10^{8}\\ \\text{m/s}.$$",
+  "answer": "$E = 3m_ec^2 = 2{,}46\\cdot10^{-13}\\ \\text{J}$ y $v = 0{,}943\\,c = 2{,}83\\cdot10^{8}\\ \\text{m/s}$.",
+  "common_errors": [
+   "Confundir energía total ($E=\\gamma mc^2$) con energía cinética ($E_c=(\\gamma-1)mc^2$).",
+   "Usar la expresión clásica $E_c=\\tfrac12 mv^2$ en un problema relativista.",
+   "Olvidar que $E_c=2E_0$ implica $\\gamma=3$."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Julio 2018"
+ },
+ {
+  "id": "PAU-FIS-REL-002",
+  "title": "Energía relativista y velocidad de una partícula · Comunidad Valenciana · Julio 2020",
+  "statement": "La energía relativista (total) de una partícula es $\\dfrac{3}{\\sqrt{8}}$ veces su energía en reposo. Calcule su velocidad en función de $c$. Si se duplica dicha velocidad, ¿se duplica su energía? Responda razonadamente.",
+  "knowns": [
+   "$E = \\dfrac{3}{\\sqrt{8}}\\,E_0$, con $E_0 = m c^2$"
+  ],
+  "full_solution": "La energía total es $E = \\gamma\\,m c^2 = \\gamma\\,E_0$, con $\\gamma = \\dfrac{1}{\\sqrt{1-v^2/c^2}}$. Por tanto $\\gamma = \\dfrac{3}{\\sqrt8} = 1{,}0607$.\n$$\\gamma = \\dfrac{1}{\\sqrt{1-v^2/c^2}} \\;\\Rightarrow\\; 1-\\dfrac{v^2}{c^2} = \\dfrac{1}{\\gamma^2} = \\dfrac{8}{9} \\;\\Rightarrow\\; \\dfrac{v^2}{c^2} = \\dfrac19$$\n$$v = \\dfrac{c}{3} \\approx 0{,}33\\,c$$\n\nSi se duplica la velocidad, $v' = \\dfrac{2c}{3}$, el nuevo factor de Lorentz es\n$$\\gamma' = \\dfrac{1}{\\sqrt{1-(2/3)^2}} = \\dfrac{1}{\\sqrt{5/9}} = \\dfrac{3}{\\sqrt5} = 1{,}342$$\nLa energía NO se duplica: $\\dfrac{E'}{E} = \\dfrac{\\gamma'}{\\gamma} = \\dfrac{1{,}342}{1{,}061} \\approx 1{,}26$. La energía relativista no es proporcional a la velocidad (crece más deprisa a medida que $v\\to c$).",
+  "answer": "$v = c/3 \\approx 0{,}33\\,c$. Al duplicar la velocidad la energía NO se duplica: pasa a $\\gamma'=3/\\sqrt5=1{,}34$ veces $E_0$, solo un $\\approx 1{,}26$ veces la energía anterior.",
+  "common_errors": [
+   "Suponer que $E\\propto v$ (relación clásica), no válida en relatividad.",
+   "Confundir energía total ($\\gamma m c^2$) con energía cinética ($(\\gamma-1)mc^2$).",
+   "Errores algebraicos al despejar $v$ de $\\gamma$."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Julio 2020"
+ },
+ {
+  "id": "PAU-FIS-REL-003",
+  "title": "Velocidad para que la energía relativista duplique la de reposo · Comunidad Valenciana · Julio 2022",
+  "statement": "Calcula la velocidad que debe tener una partícula para que su energía relativista sea el doble de su energía en reposo. ¿Sería posible que su velocidad fuera el doble de la calculada? Razónalo.",
+  "knowns": [
+   "$E = 2E_0$",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La energía total relativista es $E=\\gamma m_0 c^2$ y la de reposo $E_0=m_0 c^2$. La condición $E=2E_0$ implica $\\gamma=2$:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-\\dfrac{v^2}{c^2}}} = 2 \\;\\Rightarrow\\; 1-\\dfrac{v^2}{c^2}=\\dfrac{1}{4} \\;\\Rightarrow\\; v = c\\sqrt{1-\\dfrac{1}{4}} = \\dfrac{\\sqrt{3}}{2}c$$\n$$v = 0{,}866\\,c = 2{,}60\\cdot10^{8}\\ \\text{m/s}$$\n\nEl doble de esa velocidad sería $2v=\\sqrt{3}\\,c \\approx 1{,}73\\,c > c$, lo cual **es imposible**: ninguna partícula con masa puede alcanzar o superar la velocidad de la luz en el vacío.",
+  "answer": "$v = \\dfrac{\\sqrt3}{2}c \\approx 0{,}866c = 2{,}60\\cdot10^{8}\\ \\text{m/s}$. No es posible el doble ($\\sqrt3\\,c>c$), pues ninguna partícula con masa puede alcanzar $c$.",
+  "common_errors": [
+   "Igualar la energía cinética (no la total) al doble de la de reposo.",
+   "Usar la energía cinética clásica en lugar de $\\gamma m_0 c^2$.",
+   "No advertir que $2v$ superaría $c$ y es imposible."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Julio 2022"
+ },
+ {
+  "id": "PAU-FIS-REL-004",
+  "title": "Energía total y velocidad de una partícula relativista · C. Valenciana · Junio 2018",
+  "statement": "La energía cinética de una partícula es el $50\\%$ de su energía en reposo. Calcula su energía relativista total en función de su energía en reposo y la velocidad de la partícula.",
+  "knowns": [
+   "$E_c=0{,}5\\,E_0$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La energía total es la suma de la energía en reposo y la cinética:\n$$E=E_0+E_c=E_0+0{,}5\\,E_0=1{,}5\\,E_0$$\n\nComo $E=\\gamma E_0$, se tiene $\\gamma=1{,}5$. De $\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}$:\n$$1-\\dfrac{v^2}{c^2}=\\dfrac{1}{\\gamma^2}=\\dfrac{1}{2{,}25}=0{,}444\\ \\Rightarrow\\ \\dfrac{v}{c}=\\sqrt{0{,}556}=0{,}745$$\n$$v=0{,}745\\,c=2{,}24\\cdot10^{8}\\ \\text{m·s}^{-1}$$",
+  "answer": "$E=1{,}5\\,E_0$ (con $\\gamma=1{,}5$); $v=0{,}745\\,c\\approx2{,}24\\cdot10^{8}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Confundir energía total con energía cinética.",
+   "Usar $E_c=\\tfrac12 mv^2$ en vez de $E_c=(\\gamma-1)E_0$.",
+   "Despejar mal $\\gamma$ de la relación energética."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Junio 2018"
+ },
+ {
+  "id": "PAU-FIS-REL-005",
+  "title": "Fusión de dos partículas relativistas (conservación de energía) · Comunidad Valenciana · Junio 2019",
+  "statement": "Una partícula de masa en reposo $m$ y energía igual a tres veces su energía en reposo se une a otra idéntica (igual masa y energía) para formar una única partícula en reposo, con energía en reposo $M c^2$. Si se conserva la energía, calcule el valor de $M$ en función de $m$ y la velocidad de las partículas iniciales en función de $c$.",
+  "knowns": [
+   "Energía de cada partícula: $E=3\\,m c^2$",
+   "Partícula final en reposo, energía $M c^2$",
+   "Se conserva la energía"
+  ],
+  "full_solution": "**Masa de la partícula final.** La energía total inicial es la suma de las dos partículas; por conservación de energía se iguala a la energía en reposo de la final:\n\n$$E_{total}=3mc^2+3mc^2=6mc^2=Mc^2\\Rightarrow M=6m$$\n\n**Velocidad de las partículas iniciales.** La energía relativista es $E=\\gamma\\,mc^2=3mc^2\\Rightarrow\\gamma=3$:\n\n$$\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}=3\\Rightarrow v=c\\sqrt{1-\\dfrac{1}{\\gamma^2}}=c\\sqrt{1-\\dfrac19}=\\dfrac{2\\sqrt2}{3}\\,c\\approx0{,}943\\,c$$\n\n(El resultado $M=6m>2m$ es coherente: la energía cinética de las partículas se transforma en masa en reposo de la partícula final.)",
+  "answer": "$M=6m$ (de $6mc^2=Mc^2$). Velocidad inicial: $\\gamma=3\\Rightarrow v=\\dfrac{2\\sqrt2}{3}\\,c\\approx0{,}943\\,c$.",
+  "common_errors": [
+   "Tomar $M=2m$ sumando solo las masas en reposo e ignorando la energía cinética.",
+   "Usar $E=\\tfrac12 mv^2$ en lugar de $E=\\gamma mc^2$.",
+   "Despejar mal $v$ de $\\gamma=3$ (olvidar la raíz $v=c\\sqrt{1-1/\\gamma^2}$)."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Junio 2019"
+ },
+ {
+  "id": "PAU-FIS-REL-006",
+  "title": "Dilatación del tiempo: sueño de una astronauta a 0,5c · Comunidad Valenciana · Junio 2021",
+  "statement": "Una astronauta viaja a $v=0{,}5\\,c$ respecto a la Tierra. Comunica que dormirá de las $13$ h a las $19$ h según los relojes de la nave (todos sincronizados a las $13$ h). ¿A qué hora se despertará según los relojes de la Tierra?",
+  "knowns": [
+   "$v = 0{,}5\\,c$",
+   "Intervalo propio (en la nave) $\\Delta t_0 = 6\\ \\text{h}$",
+   "relojes sincronizados a las $13$ h"
+  ],
+  "full_solution": "**Dilatación del tiempo.**\nEl intervalo de sueño es un tiempo **propio** $\\Delta t_0=6\\ \\text{h}$ (ocurre en el mismo lugar de la nave). Desde la Tierra el intervalo se dilata con $\\gamma$:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-(v/c)^2}} = \\dfrac{1}{\\sqrt{1-0{,}25}} = 1{,}155$$\n$$\\Delta t = \\gamma\\,\\Delta t_0 = 1{,}155\\cdot6 = 6{,}93\\ \\text{h} \\approx 6\\ \\text{h}\\ 56\\ \\text{min}$$\n\n**Hora de despertar en la Tierra.**\n$$t = 13\\ \\text{h} + 6{,}93\\ \\text{h} = 19{,}93\\ \\text{h} \\approx 19{:}56$$",
+  "answer": "$\\Delta t=\\gamma\\,\\Delta t_0=6{,}93\\ \\text{h}$; se despertará hacia las $19{:}56$ según los relojes de la Tierra.",
+  "common_errors": [
+   "Identificar mal el tiempo propio: lo mide el reloj de la nave ($6\\ \\text{h}$).",
+   "Dividir por $\\gamma$ en vez de multiplicar: en la Tierra el intervalo es mayor.",
+   "Convertir mal $0{,}93\\ \\text{h}$ a minutos ($\\approx56\\ \\text{min}$)."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Junio 2021"
+ },
+ {
+  "id": "PAU-FIS-REL-007",
+  "title": "Mesón J/psi: velocidad relativista y energías en dos sistemas · Comunidad Valenciana · Junio 2022",
+  "statement": "El mesón $J/\\psi$ tiene una vida media de $7{,}2\\cdot10^{-21}\\ \\text{s}$ en su sistema de referencia propio y de $1{,}1\\cdot10^{-20}\\ \\text{s}$ medida en el laboratorio, respecto al cual se mueve a velocidad relativista.\n\n**(a)** Calcule la velocidad del mesón respecto al laboratorio.\n**(b)** Calcule la energía cinética y la energía total, en MeV, en ambos sistemas de referencia.",
+  "knowns": [
+   "$\\tau_0=7{,}2\\cdot10^{-21}\\ \\text{s}$ (propio), $\\tau=1{,}1\\cdot10^{-20}\\ \\text{s}$ (laboratorio)",
+   "$m_0=5{,}52\\cdot10^{-27}\\ \\text{kg}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$, $q=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** Dilatación temporal: $\\tau=\\gamma\\,\\tau_0$, luego\n$$\\gamma=\\dfrac{\\tau}{\\tau_0}=\\dfrac{1{,}1\\cdot10^{-20}}{7{,}2\\cdot10^{-21}}=1{,}528$$\n$$v=c\\sqrt{1-\\dfrac{1}{\\gamma^{2}}}=3\\cdot10^{8}\\sqrt{1-\\dfrac{1}{1{,}528^{2}}}=2{,}27\\cdot10^{8}\\ \\text{m/s}\\approx 0{,}756\\,c$$\n\n**(b)** Energía en reposo:\n$$E_0=m_0c^{2}=5{,}52\\cdot10^{-27}\\cdot(3\\cdot10^{8})^{2}=4{,}97\\cdot10^{-10}\\ \\text{J}=3105\\ \\text{MeV}$$\n**Sistema del laboratorio** (en movimiento, $\\gamma=1{,}528$):\n$$E=\\gamma E_0=1{,}528\\cdot3105=4744\\ \\text{MeV}\\qquad E_c=(\\gamma-1)E_0=1639\\ \\text{MeV}$$\n**Sistema propio** (en reposo, $\\gamma=1$): $E_c=0$ y $E=E_0=3105\\ \\text{MeV}$.",
+  "answer": "**(a)** $\\gamma=1{,}528$, $v\\approx 2{,}27\\cdot10^{8}\\ \\text{m/s}\\approx 0{,}756\\,c$. **(b)** Laboratorio: $E\\approx 4744\\ \\text{MeV}$, $E_c\\approx 1639\\ \\text{MeV}$; sistema propio: $E=E_0\\approx 3105\\ \\text{MeV}$, $E_c=0$.",
+  "common_errors": [
+   "Invertir la relación de dilatación ($\\tau_0=\\gamma\\tau$) y obtener $\\gamma<1$.",
+   "Calcular $E_c$ como $\\tfrac12 m v^2$ en lugar de $(\\gamma-1)m_0c^2$.",
+   "No convertir julios a MeV ($1\\ \\text{MeV}=1{,}6\\cdot10^{-13}\\ \\text{J}$)."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Junio 2022"
+ },
+ {
+  "id": "PAU-FIS-REL-008",
+  "title": "Fusión de dos partículas relativistas en una sola en reposo · Comunidad Valenciana · Modelo 2021",
+  "statement": "Una partícula de masa en reposo $m$ tiene una energía igual a tres veces su energía en reposo. Se une a otra idéntica (misma masa y energía) y forman una única partícula en reposo (velocidad nula) de energía en reposo $Mc^{2}$. Si en el proceso se conserva la energía, calcule $M$ en función de $m$ y la velocidad de las partículas iniciales en función de $c$.",
+  "knowns": [
+   "energía de cada partícula inicial $E=3\\,m c^{2}$",
+   "partícula final en reposo, energía $Mc^{2}$",
+   "se conserva la energía total"
+  ],
+  "full_solution": "**Masa final.** Conservación de la energía: la energía total antes (dos partículas) iguala a la energía en reposo de la partícula final:\n$$E_{total}=2\\cdot(3\\,m c^{2})=6\\,m c^{2}=M c^{2}\\ \\Rightarrow\\ M=6\\,m$$\n\n**Velocidad inicial.** La energía total relativista de cada partícula es $E=\\gamma\\,m c^{2}=3\\,m c^{2}$, luego $\\gamma=3$:\n$$\\gamma=\\dfrac{1}{\\sqrt{1-(v/c)^{2}}}=3\\ \\Rightarrow\\ 1-\\dfrac{v^{2}}{c^{2}}=\\dfrac{1}{9}\\ \\Rightarrow\\ \\dfrac{v}{c}=\\sqrt{\\dfrac{8}{9}}=\\dfrac{2\\sqrt2}{3}\\approx 0{,}943$$\n$$v\\approx 0{,}943\\,c$$\nLa masa final $6m$ supera a $2m$ porque la energía cinética inicial se transforma en masa en reposo.",
+  "answer": "$M=6\\,m$ y $v=\\dfrac{2\\sqrt2}{3}\\,c\\approx 0{,}943\\,c$.",
+  "common_errors": [
+   "Aplicar conservación de la masa en reposo ($2m=M$) en vez de conservación de la energía.",
+   "Confundir energía total $\\gamma mc^2$ con energía cinética $(\\gamma-1)mc^2$.",
+   "Errores al despejar $v/c$ de $\\gamma=3$."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Modelo 2021"
+ },
+ {
+  "id": "PAU-FIS-REL-009",
+  "title": "Dilatación temporal y contracción de longitudes de un muon · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Un muon generado a $10\\ \\text{km}$ de altura viaja hacia el suelo con velocidad constante $v=0{,}98c$. Calcula la duración del vuelo según una observadora en el suelo y según otra que viaja con el muon. Determina la altura (distancia recorrida) según la observadora que viaja con el muon.",
+  "knowns": [
+   "$d = 10\\ \\text{km} = 10^{4}\\ \\text{m}$ (marco del suelo)",
+   "$v = 0{,}98c$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "Factor de Lorentz:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-0{,}98^2}} = 5{,}03$$\n\n**Tiempo según el suelo** (recorre $10^4\\ \\text{m}$ a $0{,}98c$):\n$$t = \\dfrac{d}{v} = \\dfrac{10^{4}}{0{,}98\\cdot 3\\cdot10^{8}} = 3{,}40\\cdot10^{-5}\\ \\text{s}$$\nEs un tiempo **impropio** (los dos sucesos —creación y llegada— ocurren en lugares distintos para el suelo).\n\n**Tiempo según el muon** (tiempo propio, los dos sucesos ocurren en su misma posición):\n$$t_0 = \\dfrac{t}{\\gamma} = \\dfrac{3{,}40\\cdot10^{-5}}{5{,}03} = 6{,}77\\cdot10^{-6}\\ \\text{s}$$\n\n**Altura según el muon** (longitud contraída):\n$$d_0 = \\dfrac{d}{\\gamma} = \\dfrac{10^{4}}{5{,}03} = 1{,}99\\cdot10^{3}\\ \\text{m} \\approx 2{,}0\\ \\text{km}$$\n(Comprobación: $d_0 = v\\,t_0 = 0{,}98\\cdot3\\cdot10^{8}\\cdot 6{,}77\\cdot10^{-6} \\approx 1{,}99\\cdot10^{3}\\ \\text{m}$.)",
+  "answer": "$t_{suelo} = 3{,}40\\cdot10^{-5}\\ \\text{s}$; $t_{muon} = 6{,}77\\cdot10^{-6}\\ \\text{s}$; altura según el muon $d_0 \\approx 1{,}99\\cdot10^{3}\\ \\text{m} \\approx 2{,}0\\ \\text{km}$.",
+  "common_errors": [
+   "Intercambiar tiempo propio e impropio: el propio lo mide quien viaja con el muon.",
+   "Aplicar la dilatación al revés (dividir en vez de multiplicar por $\\gamma$).",
+   "Olvidar que la longitud se contrae en el marco del muon."
+  ],
+  "provenance": "PAU",
+  "source": "Comunidad Valenciana · Septiembre 2020"
+ },
+ {
+  "id": "PAU-FIS-REL-010",
+  "title": "Electrón relativista a 0,75c y fotón de 15 MeV · Madrid · Julio 2021",
+  "statement": "En un acelerador se originan un electrón relativista de velocidad $0{,}75c$ y un fotón de $15\\ \\text{MeV}$ de energía.\n\n**(a)** Calcule la masa relativista y la energía cinética del electrón.\n\n**(b)** Determine la longitud de onda del fotón y la longitud de onda de de Broglie del electrón.",
+  "knowns": [
+   "$v=0{,}75c$",
+   "$E_{\\text{fotón}}=15\\ \\text{MeV}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a) Masa relativista y energía cinética**\n\n$$m=\\dfrac{m_0}{\\sqrt{1-v^2/c^2}}=\\dfrac{9{,}1\\cdot10^{-31}}{\\sqrt{1-0{,}75^2}}=1{,}38\\cdot10^{-30}\\ \\text{kg}$$\n\n$$E_c=mc^2-m_0c^2=(1{,}38\\cdot10^{-30}-9{,}1\\cdot10^{-31})(3\\cdot10^{8})^2=4{,}19\\cdot10^{-14}\\ \\text{J}$$\n\n**(b) Longitudes de onda**\n\nFotón: de $E=\\dfrac{hc}{\\lambda}$,\n$$\\lambda_f=\\dfrac{hc}{E}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{15\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}}=8{,}29\\cdot10^{-14}\\ \\text{m}$$\n\nElectrón (de Broglie, con la masa relativista):\n$$\\lambda_e=\\dfrac{h}{mv}=\\dfrac{6{,}63\\cdot10^{-34}}{1{,}38\\cdot10^{-30}\\cdot0{,}75\\cdot3\\cdot10^{8}}=2{,}14\\cdot10^{-12}\\ \\text{m}$$",
+  "answer": "**(a)** $m\\approx1{,}38\\cdot10^{-30}\\ \\text{kg}$; $E_c\\approx4{,}19\\cdot10^{-14}\\ \\text{J}$.  **(b)** $\\lambda_f\\approx8{,}29\\cdot10^{-14}\\ \\text{m}$; $\\lambda_e\\approx2{,}14\\cdot10^{-12}\\ \\text{m}$.",
+  "common_errors": [
+   "Usar $E_c=\\tfrac12 mv^2$ (no es válido a velocidades relativistas).",
+   "Olvidar convertir $15\\ \\text{MeV}$ a julios ($\\times1{,}6\\cdot10^{-13}$).",
+   "Usar la masa en reposo en vez de la relativista en $\\lambda_e=h/(mv)$."
+  ],
+  "provenance": "PAU",
+  "source": "Madrid · Julio 2021"
+ },
+ {
+  "id": "PAU-FIS-REL-011",
+  "title": "Masa y energía relativistas de un electrón rápido · Madrid · Junio 2013",
+  "statement": "**(a)** Determine la masa de un electrón que se mueve a $2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$.\n**(b)** Calcule la energía de un electrón que se mueve a $0{,}8\\,c$.",
+  "knowns": [
+   "$m_e = 9{,}11\\cdot10^{-31}\\ \\text{kg}$ (masa en reposo)",
+   "$c = 3{,}00\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$",
+   "(a) $v=2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$; (b) $v=0{,}8\\,c$"
+  ],
+  "full_solution": "**(a) Masa relativista a $v=2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$.**\n$$\\gamma = \\dfrac{1}{\\sqrt{1-(v/c)^2}} = \\dfrac{1}{\\sqrt{1-(2/3)^2}} = \\dfrac{1}{\\sqrt{5/9}} = 1{,}34$$\n$$m = \\gamma\\,m_e = 1{,}34\\cdot9{,}11\\cdot10^{-31} = 1{,}22\\cdot10^{-30}\\ \\text{kg}$$\n\n**(b) Energía (total) a $v=0{,}8\\,c$.**\n$$\\gamma = \\dfrac{1}{\\sqrt{1-0{,}8^2}} = \\dfrac{1}{\\sqrt{0{,}36}} = 1{,}67$$\n$$E = \\gamma\\,m_e c^2 = 1{,}67\\cdot9{,}11\\cdot10^{-31}\\cdot(3\\cdot10^{8})^2 = 1{,}37\\cdot10^{-13}\\ \\text{J}\\ (\\approx 0{,}85\\ \\text{MeV})$$",
+  "answer": "$m = 1{,}22\\cdot10^{-30}\\ \\text{kg}$ (a $2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$).\n$E = \\gamma m_e c^2 = 1{,}37\\cdot10^{-13}\\ \\text{J}\\approx0{,}85\\ \\text{MeV}$ (a $0{,}8\\,c$).",
+  "common_errors": [
+   "Usar la masa en reposo sin el factor $\\gamma$ a velocidades relativistas.",
+   "Confundir energía total $\\gamma m c^2$ con energía cinética $(\\gamma-1)m c^2$.",
+   "Evaluar mal $\\gamma$: $(v/c)^2$, no $v/c$."
+  ],
+  "provenance": "PAU",
+  "source": "Madrid · Junio 2013"
+ },
+ {
+  "id": "PAU-FIS-REL-012",
+  "title": "Electrón relativista con energía de un fotón · Madrid · Junio 2022",
+  "statement": "Un electrón relativista adquiere una energía cinética igual a la energía de un fotón de $5\\cdot10^{-12}\\ \\text{m}$ de longitud de onda en el vacío. Calcule:\n\n**(a)** La energía cinética del electrón, en eV.\n\n**(b)** La velocidad del electrón.",
+  "knowns": [
+   "$\\lambda=5\\cdot10^{-12}\\ \\text{m}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** La energía cinética del electrón iguala la del fotón:\n\n$$E_c=\\dfrac{hc}{\\lambda}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{5\\cdot10^{-12}}=3{,}98\\cdot10^{-14}\\ \\text{J}$$\n\n$$E_c=\\dfrac{3{,}98\\cdot10^{-14}}{1{,}6\\cdot10^{-19}}=2{,}49\\cdot10^{5}\\ \\text{eV}$$\n\n**(b)** De la energía cinética relativista $E_c=(\\gamma-1)m_e c^2$, con $m_e c^2=8{,}19\\cdot10^{-14}\\ \\text{J}$, se obtiene $\\gamma=1+\\dfrac{E_c}{m_e c^2}=1{,}486$:\n\n$$v=c\\sqrt{1-\\dfrac{1}{\\gamma^2}}=c\\sqrt{1-\\dfrac{1}{1{,}486^2}}=0{,}740\\,c=2{,}22\\cdot10^{8}\\ \\text{m/s}$$",
+  "answer": "**(a)** $E_c=\\dfrac{hc}{\\lambda}\\approx2{,}49\\cdot10^{5}\\ \\text{eV}$. **(b)** $v\\approx2{,}22\\cdot10^{8}\\ \\text{m/s}\\ (\\approx0{,}74\\,c)$.",
+  "common_errors": [
+   "Usar la energía cinética clásica $\\tfrac12 m v^2$: a esta energía el electrón es muy relativista.",
+   "Olvidar restar el $1$ en $(\\gamma-1)$ al relacionar $E_c$ con $\\gamma$.",
+   "No convertir julios a eV dividiendo entre $e$."
+  ],
+  "provenance": "PAU",
+  "source": "Madrid · Junio 2022"
+ },
+ {
+  "id": "PAU-FIS-REL-013",
+  "title": "Protón relativista al 75% de la velocidad de la luz · Madrid · Modelo 2025",
+  "statement": "Un protón tiene una masa en reposo equivalente a una energía de $938{,}2\\ \\text{MeV}$. Se acelera hasta alcanzar una velocidad igual al $75\\%$ de la de la luz.\n\n**(a)** Determine la masa en reposo del protón.\n**(b)** Determine su energía cinética.",
+  "knowns": [
+   "$E_0 = 938{,}2\\ \\text{MeV}$",
+   "$v = 0{,}75\\,c$",
+   "$c = 3\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** De $E_0=m_0c^{2}$, pasando la energía a julios ($1\\ \\text{MeV}=10^{6}\\cdot1{,}6\\cdot10^{-19}\\ \\text{J}$):\n$$m_0=\\dfrac{E_0}{c^{2}}=\\dfrac{938{,}2\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}}{(3\\cdot10^{8})^{2}}=1{,}67\\cdot10^{-27}\\ \\text{kg}$$\n\n**(b)** La energía cinética relativista es $E_c=(\\gamma-1)\\,m_0c^{2}$, con\n$$\\gamma=\\dfrac{1}{\\sqrt{1-(v/c)^{2}}}=\\dfrac{1}{\\sqrt{1-0{,}75^{2}}}=\\dfrac{1}{\\sqrt{0{,}4375}}=1{,}512$$\n$$E_c=(1{,}512-1)\\cdot938{,}2\\ \\text{MeV}=480\\ \\text{MeV}=7{,}68\\cdot10^{-11}\\ \\text{J}$$",
+  "answer": "**(a)** $m_0=1{,}67\\cdot10^{-27}\\ \\text{kg}$. **(b)** $E_c\\approx 4{,}8\\cdot10^{2}\\ \\text{MeV}\\approx 7{,}7\\cdot10^{-11}\\ \\text{J}$.",
+  "common_errors": [
+   "Calcular la energía cinética como $\\tfrac12 m_0 v^2$ (clásica) en lugar de $(\\gamma-1)m_0c^2$.",
+   "Olvidar el \"$-1$\" y dar la energía total $\\gamma m_0c^2$ como cinética.",
+   "No convertir los MeV a julios (o viceversa) de forma coherente."
+  ],
+  "provenance": "PAU",
+  "source": "Madrid · Modelo 2025"
+ },
+ {
+  "id": "PAU-FIS-REL-014",
+  "title": "Protones de 1,4 GeV en el PS Booster del LHC · Madrid · Modelo 2026",
+  "statement": "En el PS Booster del complejo del LHC se aceleran protones hasta una energía cinética de $1{,}4\\ \\text{GeV}$. Determine:\n\n**(a)** La masa relativista de los protones con esa energía cinética.\n\n**(b)** La velocidad de dichos protones.",
+  "knowns": [
+   "$E_c=1{,}4\\ \\text{GeV}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_p=1{,}67\\cdot10^{-27}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** En julios: $E_c=1{,}4\\cdot10^{9}\\cdot1{,}6\\cdot10^{-19}=2{,}24\\cdot10^{-10}\\ \\text{J}$.\n\nDe $m c^2=m_0 c^2+E_c$:\n\n$$m=m_0+\\dfrac{E_c}{c^2}=1{,}67\\cdot10^{-27}+\\dfrac{2{,}24\\cdot10^{-10}}{(3\\cdot10^{8})^2}=4{,}16\\cdot10^{-27}\\ \\text{kg}$$\n\n**(b)** De $m=\\dfrac{m_0}{\\sqrt{1-v^2/c^2}}$:\n\n$$v=c\\sqrt{1-\\left(\\dfrac{m_0}{m}\\right)^2}=c\\sqrt{1-\\left(\\dfrac{1{,}67}{4{,}16}\\right)^2}=0{,}916\\,c=2{,}75\\cdot10^{8}\\ \\text{m/s}$$",
+  "answer": "**(a)** $m=m_0+E_c/c^2\\approx4{,}16\\cdot10^{-27}\\ \\text{kg}$. **(b)** $v\\approx0{,}916\\,c\\approx2{,}75\\cdot10^{8}\\ \\text{m/s}$.",
+  "common_errors": [
+   "No convertir GeV a julios ($1\\ \\text{eV}=1{,}6\\cdot10^{-19}\\ \\text{J}$).",
+   "Calcular la velocidad con cinemática clásica $E_c=\\tfrac12 m v^2$.",
+   "Confundir masa relativista $m$ con masa en reposo $m_0$ en la fórmula de $v$."
+  ],
+  "provenance": "PAU",
+  "source": "Madrid · Modelo 2026"
+ },
+ {
+  "id": "PAU-FIS-REL-015",
+  "title": "Protón relativista: De Broglie, energía cinética y tiempo propio · Murcia · Modelo 2026",
+  "statement": "Un protón tarda $4{,}2\\cdot10^{-9}\\ \\text{s}$ en recorrer un tubo de vacío de $1\\ \\text{m}$ (sistema del laboratorio).\n\n**(a)** Calcule la longitud de onda de De Broglie asociada al protón.\n\n**(b)** Determine su energía cinética relativista en el laboratorio y el tiempo que tarda en recorrer el tubo en el sistema de referencia del protón.",
+  "knowns": [
+   "$L=1\\ \\text{m}$, $\\Delta t=4{,}2\\cdot10^{-9}\\ \\text{s}\\Rightarrow v=2{,}38\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_p=1{,}67\\cdot10^{-27}\\ \\text{kg}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La velocidad del protón es $v=\\dfrac{L}{\\Delta t}=\\dfrac{1}{4{,}2\\cdot10^{-9}}=2{,}38\\cdot10^{8}\\ \\text{m/s}$, es decir $\\beta=0{,}794$, con factor:\n\n$$\\gamma=\\dfrac{1}{\\sqrt{1-\\beta^2}}=\\dfrac{1}{\\sqrt{1-0{,}794^2}}=1{,}64$$\n\n**(a)** Con el momento lineal relativista $p=\\gamma m_p v$:\n\n$$\\lambda=\\dfrac{h}{\\gamma m_p v}=\\dfrac{6{,}63\\cdot10^{-34}}{1{,}64\\cdot1{,}67\\cdot10^{-27}\\cdot2{,}38\\cdot10^{8}}=1{,}0\\cdot10^{-15}\\ \\text{m}$$\n\n(Con momento clásico $p=m_p v$ saldría $1{,}7\\cdot10^{-15}\\ \\text{m}$; a $0{,}79c$ debe usarse el relativista.)\n\n**(b)** Energía cinética relativista:\n\n$$E_c=(\\gamma-1)m_p c^2=0{,}64\\cdot1{,}67\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2=9{,}7\\cdot10^{-11}\\ \\text{J}\\approx605\\ \\text{MeV}$$\n\nEl tiempo propio (en el sistema del protón) se dilata menos; $\\Delta t'=\\dfrac{\\Delta t}{\\gamma}$:\n\n$$\\Delta t'=\\dfrac{4{,}2\\cdot10^{-9}}{1{,}64}=2{,}6\\cdot10^{-9}\\ \\text{s}$$",
+  "answer": "**(a)** $\\lambda=\\dfrac{h}{\\gamma m_p v}\\approx1{,}0\\cdot10^{-15}\\ \\text{m}$ (momento relativista). **(b)** $E_c=(\\gamma-1)m_pc^2\\approx9{,}7\\cdot10^{-11}\\ \\text{J}\\approx605\\ \\text{MeV}$; $\\Delta t'=\\Delta t/\\gamma\\approx2{,}6\\cdot10^{-9}\\ \\text{s}$.",
+  "common_errors": [
+   "Usar momento clásico $p=m_p v$ pese a que $v\\approx0{,}79c$.",
+   "Calcular $E_c=\\tfrac12 m v^2$ en vez de $(\\gamma-1)m c^2$.",
+   "Dilatar el tiempo multiplicando por $\\gamma$ en lugar de dividir (el tiempo propio es el menor)."
+  ],
+  "provenance": "PAU",
+  "source": "Murcia · Modelo 2026"
+ },
+ {
+  "id": "PAU-FIS-REL-016",
+  "title": "Relatividad especial: postulados y repercusiones (teoría) · Murcia · Ordinaria 2024",
+  "statement": "**Teoría T4.** Enuncie los postulados de la relatividad especial y sus principales repercusiones.",
+  "full_solution": "**Postulados de Einstein (1905):**\n1. *Principio de relatividad*: las leyes de la física son las mismas en todos los sistemas de referencia inerciales.\n2. *Constancia de la velocidad de la luz*: la velocidad de la luz en el vacío $c$ es la misma para todos los observadores inerciales, independientemente del movimiento de la fuente o del observador.\n\n**Repercusiones principales** (con $\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}$):\n\n- *Dilatación del tiempo*: un intervalo propio $\\Delta t_0$ se mide dilatado por otro observador, $\\Delta t=\\gamma\\,\\Delta t_0$.\n- *Contracción de la longitud*: una longitud propia $L_0$ se mide contraída en la dirección del movimiento, $L=\\dfrac{L_0}{\\gamma}$.\n- *Relatividad de la simultaneidad*: sucesos simultáneos en un sistema no lo son en otro.\n- *Equivalencia masa-energía*: $E=mc^2$; la energía total es $E=\\gamma m c^2$ y el momento $p=\\gamma m v$.\n- Ningún cuerpo con masa puede alcanzar la velocidad $c$.",
+  "answer": "Postulados: relatividad de las leyes físicas y constancia de $c$. Repercusiones: dilatación del tiempo ($\\Delta t=\\gamma\\Delta t_0$), contracción de longitudes ($L=L_0/\\gamma$), relatividad de la simultaneidad y $E=mc^2$.",
+  "common_errors": [
+   "Invertir la dilatación/contracción ($t$ se dilata, $L$ se contrae).",
+   "Creer que la masa cambia la velocidad de la luz.",
+   "Olvidar que $c$ es un límite inalcanzable para cuerpos con masa."
+  ],
+  "provenance": "PAU",
+  "source": "Murcia · Ordinaria 2024"
+ },
+ {
+  "id": "PAU-FIS-REL-017",
+  "title": "Longitud de onda de De Broglie y viaje relativista · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Enuncie la hipótesis de De Broglie y calcule la longitud de onda asociada a un electrón con energía cinética $E_c = 100\\ \\text{eV}$.\n\n**(b)** Un astronauta de masa $m_0 = 70\\ \\text{kg}$ viaja a una estrella situada a $4$ años-luz a velocidad $v = 0{,}8\\,c$. Calcule el tiempo de viaje medido en la Tierra, el tiempo propio del astronauta y su energía cinética relativista.",
+  "knowns": [
+   "$E_c = 100\\ \\text{eV}$, $m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$, $h = 6{,}6\\cdot10^{-34}\\ \\text{J·s}$",
+   "$L = 4\\ \\text{a.l.}$, $v = 0{,}8\\,c$, $m_0 = 70\\ \\text{kg}$, $c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Según De Broglie, toda partícula material lleva asociada una onda de longitud $\\lambda = \\dfrac{h}{p}$. Como $E_c = \\tfrac12 m_e v^2$, el momento es $p = \\sqrt{2 m_e E_c}$. Con $E_c = 100\\cdot1{,}6\\cdot10^{-19}\\ \\text{J}$:\n$$\\lambda = \\dfrac{h}{\\sqrt{2 m_e E_c}} = \\dfrac{6{,}6\\cdot10^{-34}}{\\sqrt{2\\cdot9{,}1\\cdot10^{-31}\\cdot100\\cdot1{,}6\\cdot10^{-19}}} \\approx 1{,}2\\cdot10^{-10}\\ \\text{m}$$\n\n**(b)** Tiempo medido en la Tierra:\n$$\\Delta t = \\dfrac{L}{v} = \\dfrac{4\\ \\text{a.l.}}{0{,}8\\,c} = 5\\ \\text{años}$$\nFactor de Lorentz $\\gamma = \\dfrac{1}{\\sqrt{1-0{,}8^2}} = 1{,}667$. Tiempo propio del astronauta:\n$$\\Delta t' = \\Delta t\\sqrt{1-v^2/c^2} = 5\\cdot0{,}6 = 3\\ \\text{años}$$\nEnergía cinética relativista:\n$$E_c = (\\gamma-1)\\,m_0\\,c^2 = (1{,}667-1)\\cdot70\\cdot(3\\cdot10^{8})^2 \\approx 4{,}2\\cdot10^{18}\\ \\text{J}$$",
+  "answer": "**(a)** $\\lambda \\approx 1{,}2\\cdot10^{-10}\\ \\text{m}$. **(b)** $\\Delta t = 5\\ \\text{años}$, $\\Delta t' = 3\\ \\text{años}$, $E_c \\approx 4{,}2\\cdot10^{18}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la energía cinética clásica $\\tfrac12 mv^2$ para el astronauta relativista.",
+   "Olvidar convertir los 100 eV a julios.",
+   "Confundir tiempo propio ($\\Delta t'$, el menor) con el tiempo terrestre."
+  ],
+  "provenance": "PAU",
+  "source": "Murcia · Ordinaria 2026"
+ }
+]

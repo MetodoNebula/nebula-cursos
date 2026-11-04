@@ -1,0 +1,839 @@
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                             Juan Antonio Martínez García
+
+      Evaluación del Bachillerato para el Acceso a la Universidad
+      Curso: 2023-2024
+      Asignatura: MATEMÁTICAS II
+
+
+
+                    Realiza cuatro preguntas de las ocho que se presentan
+
+      P1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real a y
+        resuélvelo en los casos en que sea compatible:
+                                            ( 2 − a ) x − ay + 2 z = −4
+                                            
+                                            
+                                            ( a − 2 ) x + ( a + 1) y = 5
+                                            
+                                             y + (a − a) z = 3 − a
+                                                     2
+                                            
+          Menciona el resultado teórico empleado y justifica su uso.
+                                                                                             (2.5 puntos)
+
+
+      P2) Halla el rango de la matriz M según el valor de m, siendo
+                                             m −1     3     0
+                                                              
+                                              −1      m     1
+                                       M=
+                                             m       −1 −1
+                                                              
+                                             −2 m + 1 2 
+                                                                                                (2.5 puntos)
+
+
+      P3) Los puntos A ( 4, −2, −3) , B ( 2, −1,1) y C ( 0, −3, −1) son vértices de un rombo.
+        a) Encuentra el cuarto vértice del rombo.                                             (1.75 puntos)
+        b) Calcula el área del rombo.                                                         (0,75 puntos)
+
+
+
+      P4) Queremos construir un tetraedro de volumen 3 u3, siendo tres de los vértices los puntos de
+        corte del plano  : 2 x − y − 2 z − 2 = 0 con los ejes de coordenadas.
+        a) A qué distancia de π tiene que estar el cuarto vértice del tetraedro?       (1,5 puntos)
+        b) Encuentra dos puntos que sirvan como cuarto vértice de tetraedros con la base dada y el
+           volumen señalado.                                                           (1 punto)
+
+
+
+
+1 de 15                                                                      www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                              Juan Antonio Martínez García
+
+      P5) Calcula las derivadas de las siguientes funciones:
+                           cos x
+                       1
+          a) f ( x ) =                                                                      (1.25 puntos)
+                        x
+                       x2 + 4 x + 1
+          b) g ( x ) =                                                                        (1.25 puntos)
+                         ( x + 2)
+                                  2
+
+
+
+
+      P6) Halla los máximos y mínimos (relativos y absolutos), los puntos de inflexión y las asíntotas
+        de la función f ( x ) = e − x . Representa, de manera aproximada, la gráfica de f. (2.5 puntos)
+                                     2
+
+
+
+
+                                                   x
+      P7) Se considera la función f ( x) = x 2 + e 4 .
+        a) Demuestra que la función es continua en el intervalo  −2, 4 .                    (1.25 puntos)
+          b) Comprueba que existen dos valores reales α y β en ( −2, 4 ) tales que f ( ) = 2 = f (  ) .
+             Enuncia el/los resultado(s) teórico(s) utilizado(s), y justifica su uso.         (1.25 puntos)
+
+
+      P8) Calcula los puntos del plano en los que se cortan las gráficas de estas dos funciones:
+                                              9
+                                     f ( x) =   y g ( x ) = 10 x − x3
+                                              x
+        Tomando los dos puntos de corte con x  0 , calcula el área de la región del plano encerrada
+        entre ambas gráficas en el semiplano de abcisa positiva.                          (2.5 puntos)
+
+
+
+
+2 de 15                                                                       www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                                   Juan Antonio Martínez García
+
+
+                                              SOLUCIONES
+      P1) Estudia el siguiente sistema de ecuaciones lineales dependiente del parámetro real a y
+      resuélvelo en los casos en que sea compatible:
+                                              ( 2 − a ) x − ay + 2 z = −4
+                                              
+                                              
+                                              ( a − 2 ) x + ( a + 1) y = 5
+                                              
+                                               y + (a − a) z = 3 − a
+                                                       2
+                                              
+      Menciona el resultado teórico empleado y justifica su uso.                                     (2.5 puntos)
+
+                                        2 − a −a       2 
+                                                            
+      La matriz de coeficientes es A =  a − 2 a + 1    0  y la matriz ampliada es
+                                        0           a 2 − a 
+                                                1
+               2 − a −a        2     −4 
+                                          
+      A / B =  a − 2 a +1      0      5 
+               0            a 2 − a 3 − a 
+                       1
+      Utilizamos el método de Gauss para obtener un sistema triangular equivalente más sencillo.
+
+                                                  Fila 2ª + Fila 1ª                    
+                       2 − a −a      2   −4                                          
+                                               a − 2 a + 1 0 5                       
+              A / B =  a − 2 a +1    0    5                                         
+                                                    2 − a   − a   2  −4
+                       0
+                               1  a − a 3 − a  
+                                    2                                                   
+                                                   0        1    2  1  → Nueva fila 2ª 
+                                                                                       
+
+
+                                        Fila 3ª − Fila 2ª                     
+                2 − a −a   2   −4                                           
+                                     0 1         a −a
+                                                      2
+                                                           3− a                
+               0     1    2    1                                          
+                                          0  −1       − 2   −1
+                0
+                      1 a − a 3 − a  
+                          2                                                    
+                                        0 0 a 2 − a − 2 2 − a → Nueva fila 3ª 
+                                                                              
+
+
+                2 − a −a      2       −4 
+                                           
+               0     1       2        1 
+                0      0 a 2 − a − 2 2 − a 
+               
+
+      Averiguamos cuando se anula la matriz de coeficientes del sistema equivalente obtenido.
+
+                   2 − a −a         2
+                    0      1        2        = ( 2 − a ) ( a2 − a − 2) = 0 
+                    0      0    a2 − a − 2
+
+
+                   2 − a = 0 → a = 2
+                   
+                                                                                 1 + 3
+                                                                                          = 2=a
+                   2                   1         ( −1) − 4 (1)( −2 )     1  3  2
+                                                         2
+
+                    a − a − 2 = 0 → a =                                  =      =
+                                                            2                2    1 − 3 = −1 = a
+                                                                                  2
+
+3 de 15                                                                            www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                             Juan Antonio Martínez García
+
+      Se anula cuando a = –1 y cuando a = 2.
+
+      Nos surgen 3 situaciones distintas que analizamos por separado.
+
+      CASO 1. a  −1 y a  2
+        El determinante de A es no nulo, por lo cual su rango es 3, al igual que el rango de la matriz
+        ampliada y el número de incógnitas. Aplicando el teorema de Rouché el sistema es compatible
+        determinado (tiene solución única).
+          Resolvemos el sistema equivalente obtenido aplicando el método de Gauss.
+
+              2 − a −a    2     −4  ( 2 − a ) x − ay + 2 z = −4        
+                                                                        a  −1
+                0   1     2     1                y + 2 z = 1                 
+              0                                                            a2 
+                     0 a −a −2 2−a
+                         2
+                                                 ( a − a − 2 ) z = 2 − a 
+                                                    2
+
+
+
+
+                                                         
+                                                         
+               ( 2 − a ) x − ay + 2 z = −4                ( 2 − a ) x − ay + 2 −1 = −4 
+                                                                              a +1     
+                   y + 2z = 1                                                        
+                                                                       −1              
+                          2−a             2−a       −1         y+2         =1
+                  z= 2             =              =                    a +1              
+                       a − a − 2 ( a − 2 )( a + 1) a + 1 
+                                                         
+
+                                       2    −4a − 4 + 2 −4a − 2 
+                 ( 2 − a ) x − ay = −4 +  =            =
+                                     a +1      a +1      a + 1 
+                                                               
+                              2    a +1+ 2 a + 3                
+                     y = 1+      =         =
+                            a +1     a +1    a +1               
+
+
+                               a + 3 −4 a − 2               −4 a − 2 a ( a + 3 )
+              (2 − a) x − a        =          (2 − a) x =         +            
+                               a +1   a +1                   a +1      a +1
+
+
+                           −4a − 2 + a 2 + 3a               a 2 − a − 2 ( a + 1) ( a − 2 )
+              (2 − a) x =                     (2 − a) x =            =                   = a−2
+                                 a +1                           a +1          a +1
+
+
+                      a−2
+              x=         = −1
+                      2−a
+
+                                           a+3        −1
+          La solución es x = −1, y =            , z=
+                                           a +1      a +1
+      CASO 2. a = −1
+                                                                     A/ B
+                                                                           
+                                                                 3 1 2 −4 
+                                                                          
+          La matriz ampliada equivalente obtenida queda A / B =  0 1 2 1 
+                                                                0 0 0 3 
+                                                                          
+                                                                   A      
+
+4 de 15                                                                      www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                              Juan Antonio Martínez García
+
+          Por lo que el rango de A es 2 y el de la ampliada es 3. Al tener rangos distintos por el teorema
+          de Rouché el sistema es incompatible.
+          OTRA FORMA DE RAZONAR LA INCOMPATIBLIDAD DEL SISTEMA
+          El sistema equivalente triangular queda:
+
+                                           3x + y + 2 z = −4 
+                                                              
+                                                  y + 2 z = 1 ¡IMPOSIBLE!
+                                                        0 = 3
+
+          El sistema es incompatible (no tiene solución)
+      CASO 3. a = 2
+        La matriz ampliada queda:
+                                                                A/ B
+                                                                      
+                                                           0 −2 2 −4 
+                                                                     
+                                                   A/ B = 0 1 2 1 
+                                                          0 0 0 0 
+                                                                     
+                                                              A      
+          Por lo que el rango de A es 2, al igual que el de la ampliada A/B. Los rangos son iguales, pero
+          menores que el número de incógnitas (3). Por el teorema de Rouché el sistema es compatible
+          indeterminado (infinitas soluciones).
+          Resolvemos el sistema a partir del sistema triangular equivalente obtenido.
+
+                          −2 y + 2 z = −4  −2 y + 2 z = −4 
+                                                            −2 (1 − 2 z ) + 2 z = −4 
+                          y + 2z = 1       y = 1− 2z       
+
+
+                                                                   −2 −1
+                           −2 + 4 z + 2 z = −4  6 z = −2  z =     =   
+                                                                   6   3
+
+
+                                              
+                                              x = 
+                                              
+                                    −1   2 5        5
+                           y = 1− 2 = 1+ =   y = ;  
+                                    3    3 3        3
+                                                    −1
+                                               z = 3
+
+      Resumiendo: Si a  −1 y a  2 el sistema es compatible determinado siendo su solución
+                  a+3        −1
+      x = −1, y =      , z=      , si a = −1 el sistema es incompatible y si a = 2 el sistema es
+                  a +1      a +1
+                                                                 5      −1
+      compatible indeterminado siendo sus soluciones x =  ; y = ; z = ; para cualquier                .
+                                                                 3       3
+
+
+
+
+5 de 15                                                                       www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                                 Juan Antonio Martínez García
+
+      P2) Halla el rango de la matriz M según el valor de m, siendo
+                                                m −1     3     0
+                                                                 
+                                                 −1      m     1
+                                          M=
+                                                m       −1 −1
+                                                                 
+                                                −2 m + 1 2 
+                                                                                                    (2.5 puntos)
+
+      La matriz M tiene 4 filas y 3 columnas. Su rango puede ser 3, 2 o 1.
+      Hacemos transformaciones en la matriz para obtener otra matriz M´ con su mismo rango, pero
+      que el estudio del mismo sea más sencillo.
+
+                             m −1  3    0  Fila 4ª − 2·Fila 2ª               
+                                           −2 m + 1 2                        
+                               − 1  m    1                                     
+                         M =                                                
+                             m     −1 −1    2    −2 m  − 2                   
+                                                                             
+                              −2  m + 1 2   0   1 − m   0  →   Nueva Fila 4ª 
+
+                         Fila 3ª − Fila 1ª                   m −1  3   0
+                          m       −1 −1                                   
+                                                             −1    m   1
+                         −m + 1 −3 0                                        
+                                                              1    −4  −1 
+                          1       −4    −1 → Nueva Fila 3ª   0   1− m 0 
+                                                                             
+                                                           
+
+                         Fila 3ª + Fila 2ª            m −1  3                     0
+                         1      −4 −1                                              
+                                                      −1    m                     1
+                         −1                          
+                                m      1              0    m−4                    0
+                                                         
+                          0 m − 4 0 → Nueva Fila 3ª   0                            
+                                                            1− m                   0
+
+      Consideramos el menor de orden 3 que resulta de quitar la tercera fila y calculamos su
+      determinante:
+
+                           m −1     3     0
+                             −1           1 = 0 + 0 + 0 − 0 − 0 − ( m − 1)(1 − m ) = ( m − 1)
+                                                                                                2
+                                    m
+                             0    1− m 0
+
+      Este determinante se anula para m = 1.
+      Analizamos dos situaciones diferentes.
+
+      1ª situación. m  1.
+         En esta situación el determinante del menor de orden 3 anterior es no nulo y el rango de la
+         matriz M es 3.
+
+      2ª situación. m = 1.
+
+
+
+
+6 de 15                                                                          www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                            Juan Antonio Martínez García
+
+          En esta situación el determinante del menor de orden 3 anterior es nulo. Seguimos estudiando
+                                                                                  0 3 0
+                                                                                             
+                                                                                   −1 1 1 
+          el rango de M partiendo de la matriz equivalente obtenida que queda                  .
+                                                                                  0 −3 0 
+                                                                                             
+                                                                                  0 0 0
+          Observamos que la fila cuarta es nula y que la fila primera y tercera son proporcionales, por lo
+          que el rango de M no puede ser 3.
+          Tomamos el menor de orden 2 que resulta de quitar las filas tercera y cuarta, y la columna
+          cuarta y calculamos su determinante.
+
+                                                   0    3
+                                                            =30
+                                                   −1 1
+          Al ser no nulo el rango de M es 2.
+
+      Resumiendo: Si m  1 el rango de M es 3 y si m = 1 el rango de M es 2.
+
+
+
+
+7 de 15                                                                    www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                                       Juan Antonio Martínez García
+
+
+      P3) Los puntos A ( 4, −2, −3) , B ( 2, −1,1) y C ( 0, −3, −1) son vértices de un rombo.
+      a) Encuentra el cuarto vértice del rombo.                                               (1.75 puntos)
+      b) Calcula el área del rombo.                                                           (0,75 puntos)
+
+      a) La situación planteada es la del dibujo.
+
+
+
+
+          El vértice se obtiene sumando al vértice B el vector AC .
+
+                                    AC = ( 0, −3, −1) − ( 4, −2, −3) = ( −4, −1, 2 )
+
+
+                                    D = B + AC = ( 2, −1,1) + ( −4, −1, 2 ) = ( −2, −2,3)
+
+          El cuarto vértice del rombo tiene coordenadas D ( −2, −2,3) .
+
+      b) El rombo lo podemos dividir en dos triángulos: CBD y CBA. Los dos tienen el mismo valor
+         de área. El área del rombo es el doble del área del triángulo CBD. El área del triángulo CBD
+         es la mitad del módulo del producto vectorial de los vectores CB y CD .
+
+                                                                                       i j k
+                        CB = ( 2, −1,1) − ( 0, −3, −1) = ( 2, 2, 2 )   
+                                                                          CB  CD = 2 2 2 =
+                        CD = ( −2, −2,3) − ( 0, −3, −1) = ( −2,1, 4 ) 
+                                                                                      −2 1 4
+
+
+                        = 8i − 4 j + 2k + 4k − 8 j − 2i = 6i − 12 j + 6k = ( 6, −12, 6 )
+
+
+                                         CB  CD         62 + ( −12 ) + 62
+                                                                       2
+
+                        Área CBD =                   =                       = 3 6 u2
+                                             2                   2
+
+          El área del rombo es 6 6 14.7 unidades cuadradas.
+
+
+8 de 15                                                                                www.ebaumatematicas.com
+   EvAU 2024 Ordinaria Matemáticas II en Navarra                                         Juan Antonio Martínez García
+
+      P4) Queremos construir un tetraedro de volumen 3 u3, siendo tres de los vértices los puntos de
+      corte del plano  : 2 x − y − 2 z − 2 = 0 con los ejes de coordenadas.
+      a) A qué distancia de π tiene que estar el cuarto vértice del tetraedro?          (1,5 puntos)
+      b) Encuentra dos puntos que sirvan como cuarto vértice de tetraedros con la base dada y el
+      volumen señalado.                                                                 (1 punto)
+
+       La base del tetraedro es el triángulo ABC del dibujo.
+
+
+
+
+      a) Hallamos las coordenadas de los puntos A, B y C.
+
+                         : 2 x − y − 2 z − 2 = 0
+                                                   
+                                 y = 0              2 x − 2 = 0  2 x = 2  x = 1  A (1, 0, 0 )
+                        eje OX →                  
+                                 z = 0            
+
+                             : 2 x − y − 2 z − 2 = 0
+                                                       
+                                     x = 0              − y − 2 = 0  y = −2  B ( 0, −2, 0 )
+                            eje OY →                  
+                                     z = 0            
+
+                      : 2 x − y − 2 z − 2 = 0
+                                               
+                              x = 0             −2 z − 2 = 0  2 z = −2  z = −1  C ( 0, 0, −1)
+                     eje OZ →                 
+                              y = 0           
+
+       Hallamos el área del triángulo ABC (base del tetraedro).
+
+                                                                                      i  j k
+                       AB = ( 0, −2, 0 ) − (1, 0, 0 ) = ( −1, −2, 0 ) 
+                                                                         AB  AC = −1 −2 0 =
+                       AC = ( 0, 0, −1) − (1, 0, 0 ) = ( −1, 0, −1) 
+                                                                                     −1 0 −1
+
+
+                       = 2i + 0 + 0 − 2k − j − 0 = 2i − j − 2k = ( 2, −1, −2 )
+
+
+                                      AB  AC            22 + ( −1) + ( −2 )
+                                                                     2         2
+                                                                                       3 2
+                       Área ABC =                  =                               =     u
+                                           2                     2                     2
+
+       El volumen del tetraedro es la tercera parte del producto del área de la base por la altura.
+
+9 de 15                                                                                  www.ebaumatematicas.com
+  EvAU 2024 Ordinaria Matemáticas II en Navarra                                    Juan Antonio Martínez García
+
+
+
+                                       Área base·altura     1.5·h    9
+                          Volumen =                     3=            =h h=6
+                                              3               3     1.5
+
+           El cuarto vértice del tetraedro debe estar a una distancia de 6 unidades del plano π que
+           contiene la base.
+
+     b) Hallamos un plano π´ paralelo al plano π a distancia 6.
+        Al ser paralelo a  : 2 x − y − 2 z − 2 = 0 su ecuación es  ´: 2 x − y − 2 z + K = 0 . Hacemos que
+        la distancia de A a π´ sea 6 para hallar el valor de K.
+
+                        A (1, 0, 0 )               
+                                                           2·1 − 0 − 0 + K         2+ K
+                         ´: 2 x − y − 2 z + K = 0   6 =                      6=      
+                                                          2 + ( −1) + ( −2 )        3
+                                                            2        2        2
+                        d ( A,  ´) = 6            
+
+
+                                       2 + K = 8 → K = 6 →  ´: 2 x − y − 2 z + 6 = 0
+                         2 + K = 18  
+                                       2 + K = −8 → K = −10 →  ´´: 2 x − y − 2 z − 8 = 0
+
+           De los dos planos elegimos uno de ellos, por ejemplo  ´: 2 x − y − 2 z + 6 = 0 .
+           Cualquier punto del plano π´ junto con los puntos A, B y C forman un tetraedro de volumen 3
+           unidades cúbicas. Elegimos dos puntos cualesquiera del plano.
+
+                        x=0 e y=0                  
+                                                     −2 z + 6 = 0  2 z = 6  z = 3  D ( 0, 0,3)
+                         ´: 2 x − y − 2 z + 6 = 0 
+
+                             x=0 y z=0                  
+                                                          − y + 6 = 0  y = 6  D ´ ( 0, 6, 0 )
+                              ´: 2 x − y − 2 z + 6 = 0 
+
+           Dos puntos que sirven como cuarto vértice de tetraedros con la base dada y el volumen
+           señalado son D(0,0,3) y D´(0,6,0).
+
+
+
+
+10 de 15                                                                           www.ebaumatematicas.com
+  EvAU 2024 Ordinaria Matemáticas II en Navarra                                                             Juan Antonio Martínez García
+
+     P5) Calcula las derivadas de las siguientes funciones:
+                         cos x
+                  1
+     a) f ( x ) =                                                                                                             (1.25 puntos)
+                   x
+                  x2 + 4 x + 1
+     b) g ( x ) =                                                                                                               (1.25 puntos)
+                    ( x + 2)
+                             2
+
+
+
+
+     a) Antes de derivar simplificamos la expresión de la función en busca de una derivación más
+        cómoda. Después aplicamos logaritmo neperiano a la expresión de la función y derivamos.
+
+                            cos x
+                     1
+            f ( x) =              = ( x −1 )           = x − cos x  ln ( f ( x ) ) = ln ( x − cos x )  ln ( f ( x ) ) = − cos x ·ln ( x ) 
+                                                 cos x
+
+                      x
+
+                                          f ´( x )                       1                                    cos x 
+              Derivamos                        = senx ·ln x − cos x ·  f ´ ( x ) = f ( x )  senx ·ln x −       
+                                           f ( x)                        x                                      x 
+
+
+                                                  cos x 
+             f ´ ( x ) = x − cos x  senx ·ln x −       
+                                                    x 
+
+                                                                      cos x 
+           La derivada de f(x) es f ´ ( x ) = x − cos x  senx ·ln x −       .
+                                                                        x 
+
+     b) Aplicamos la regla de derivación de un cociente.
+
+                                                   ( 2 x + 4 )( x + 2 ) − ( x 2 + 4 x + 1) 2 ( x + 2 )
+                                                                                         2
+                             x2 + 4 x + 1
+                  g ( x) =             g ´( x ) =                                                     =
+                           ( x + 2)                                    (       )
+                                    2
+                                                                           +
+                                                                                 43
+                                                                         x   2
+
+
+                    ( 2 x + 4 )( x + 2 ) − ( x 2 + 4 x + 1) 2 2 x 2 + 4 x + 4 x + 8 − 2x 2 − 8x − 2       6
+                  =                                          =                                      =
+                                   ( x + 2)                                  ( x + 2)                 ( x + 2)
+                                             3                                        3                        3
+
+
+
+
+                                                                    6
+           La derivada de g(x) es g ´ ( x ) =                                 .
+                                                               ( x + 2)
+                                                                          3
+
+
+
+
+11 de 15                                                                                                    www.ebaumatematicas.com
+  EvAU 2024 Ordinaria Matemáticas II en Navarra                                                    Juan Antonio Martínez García
+
+     P6) Halla los máximos y mínimos (relativos y absolutos), los puntos de inflexión y las asíntotas
+     de la función f ( x ) = e − x . Representa, de manera aproximada, la gráfica de f.
+                                  2
+                                                                                        (2.5 puntos)
+
+           Utilizamos la derivada para encontrar los puntos críticos de la función.
+
+                          f ( x ) = e− x  f ´ ( x ) = −2 xe− x 
+                                         2                         2
+
+                                                                          − x2    − x2
+                                                                                              
+                                                                    −2 xe = 0  e  0  x = 0
+                                                     f ´( x ) = 0 
+                                                                                                           
+                                                                  
+
+           Averiguamos si el punto crítico hallado es máximo o mínimo relativo sustituyendo su valor en
+           la segunda derivada.
+
+             f ´( x ) = −2xe− x  f ´´( x ) = −2e− x − 2 x ( −2 x ) e− x = e− x ( −2 + 4x2 )  f ´´( 0) = e0 ( −2)  0
+                                 2                       2                    2       2
+
+
+
+
+           Al ser la segunda derivada negativa sabemos que en x = 0 hay un máximo relativo.
+           Este máximo relativo es absoluto pues antes de x = 0 crece y después decrece sin ningún
+           cambio de tendencia ni antes ni después.
+           Como la función vale f ( 0 ) = e −0 = 1 el máximo absoluto tiene coordenadas (0, 1).
+                                              2
+
+
+
+
+           Para hallar los posibles puntos de inflexión de la función averiguamos cuando se anula la
+           derivada segunda.
+
+                    f ´´ ( x ) = e − x ( −2 + 4 x 2 ) 
+                                     2
+
+
+
+
+                    f ´´ ( x ) = 0                     
+                                                                       2         − x2
+                                                                                               2
+                                                                                                     
+                                                         e ( −2 + 4 x ) = 0  e  0  −2 + 4 x = 0 
+                                                            − x2
+
+
+
+
+                                             2 1     1     2
+                    4x2 = 2  x2 =           =  x=   =
+                                             4 2     2    2
+
+           Comprobamos que la derivada tercera no se anula para estos dos valores.
+
+              f ´´ ( x ) = e − x ( −2 + 4 x 2 )  f ´´´ ( x ) = −2 xe − x ( −2 + 4 x 2 ) + e − x (8 x ) = e − x ( −2 + 8 x + 4 x 2 )
+                             2                                          2                      2               2
+
+
+
+
+                        2  −1/2              2     1      −1/2
+                                                                       2
+              f ´´´      = e  −2 + 8     + 4  = 8e        0
+                      2                    2       2            2 
+
+                                        2  −1/2
+           Como la función vale f        = e los puntos de inflexión tienen coordenadas
+                                       2   
+            2 −1/2          2 −1/2 
+              , e  y  −   , e  .
+             2             2       
+
+           Asíntota vertical. x = a
+             El dominio de la función son todos los números reales y la función no puede tener asíntotas
+             verticales.
+
+
+12 de 15                                                                                           www.ebaumatematicas.com
+  EvAU 2024 Ordinaria Matemáticas II en Navarra                                         Juan Antonio Martínez García
+
+
+
+           Asíntota horizontal. y = b
+                                                      1            1
+                 b = lim f ( x ) = lim e − x = lim             =     =0
+                                          2
+
+
+                                                                   
+                                                           2
+                     x →+        x →+       x →+
+                                                      ex
+                 .
+
+                                                      1            1
+                 b = lim f ( x ) = lim e − x = lim             =     =0
+                                          2
+
+
+                                                                   
+                                                           2
+                     x →−        x →−       x →+
+                                                      ex
+
+           La recta y = 0 es asíntota horizontal.
+
+           Asíntota oblicua. y = mx + n
+           No existe pues la función tiene asíntota horizontal.
+
+           Realizamos una tabla de valores y representamos la gráfica de la función.
+
+                                                                   f ( x ) = e− x
+                                                                                    2
+                                                           x
+                                                       −2          e −4     0.02
+                                                       −1          1/ e     0.37
+                                                           0       1 máximo
+                                                           1       1/ e     0.37
+                                                                       −4
+                                                           2       e        0.02
+
+
+
+
+13 de 15                                                                                www.ebaumatematicas.com
+  EvAU 2024 Ordinaria Matemáticas II en Navarra                                   Juan Antonio Martínez García
+
+                                                     x
+     P7) Se considera la función f ( x) = x + e .
+                                                2    4
+
+
+     a) Demuestra que la función es continua en el intervalo  −2, 4 .                           (1.25 puntos)
+     b) Comprueba que existen dos valores reales α y β en ( −2, 4 ) tales que f ( ) = 2 = f (  ) . Enuncia
+     el/los resultado(s) teórico(s) utilizado(s), y justifica su uso.                             (1.25 puntos)
+
+     a) La función es suma de funciones continuas y composición de funciones continuas.
+        La función es continua en .
+
+     b) Utilizamos el teorema de Bolzano:
+        Sea f continua en  a, b  y se cumple que f ( a )· f ( b )  0 entonces existe un valor c  ( a, b )
+        tal que f(c) = 0.
+
+                                                                  x
+           Consideramos la función g ( x ) = f ( x) − 2 = x + e − 2 , que es continua en  −2, 0
+                                                             2    4
+
+
+
+                                      −2                                           0
+           Como f (−2) = ( −2) + e 4 − 2 = 2 + e−1/2      2.6  0 y f (0) = 02 + e 4 − 2 = 1 − 2 = −1  0 .
+                                 2
+
+
+
+
+           Aplicando el teorema de Bolzano existe   ( −2, 0 ) tal que g ( ) = 0 , es decir f ( ) = 2 .
+
+                                                                  x
+           Consideramos la función g ( x ) = f ( x) − 2 = x 2 + e 4 − 2 , que es continua en  0, 4
+
+                                 0                                        4
+           Como f (0) = 0 + e − 2 = 1 − 2 = −1  0 y f (4) = 4 + e − 2 = 14 + e 16.7  0 .
+                            2    4                                    2   4
+
+
+
+
+           Aplicando el teorema de Bolzano existe   ( 0, 4 ) tal que g (  ) = 0 , es decir f (  ) = 2 .
+
+           Queda demostrado haciendo uso del teorema de Bolzano en intervalos distintos que existen
+           dos valores reales α y β en ( −2, 4 ) tales que f ( ) = 2 = f (  ) .
+
+
+
+
+14 de 15                                                                          www.ebaumatematicas.com
+  EvAU 2024 Ordinaria Matemáticas II en Navarra                                   Juan Antonio Martínez García
+
+     P8) Calcula los puntos del plano en los que se cortan las gráficas de estas dos funciones:
+                                                9
+                                       f ( x) =   y g ( x ) = 10 x − x3
+                                                x
+     Tomando los dos puntos de corte con x  0 , calcula el área de la región del plano encerrada
+     entre ambas gráficas en el semiplano de abscisa positiva.                            (2.5 puntos)
+
+     Hallamos los puntos de corte de ambas gráficas.
+                                       9
+                   f ( x) = g ( x)      = 10 x − x3  9 = 10 x 2 − x 4  x 4 − 10 x 2 + 9 = 0 
+                                       x
+
+                                                                  10 + 8
+                                                                           = 9 = x 2 → x = 9 = 3
+                           10    ( −10 ) − 4 (1)( 9 )     10  8  2
+                                          2
+
+                   x2 =                                 =       =
+                                         2                   2     10 − 8 = 1 = x 2 → x = 1 = 1
+                                                                    2
+
+     El área se encuentra entre x = 1 y x = 3.
+                                                                       9
+     Tomando un valor x = 2 entre 1 y 3 tenemos que f ( 2 ) =            = 4.5 y g ( 2 ) = 20 − 23 = 12 .
+                                                                       2
+     Tenemos que g ( x )  f ( x ) en el intervalo (1, 3).
+     El valor del área es la integral definida entre 1 y 3 de g(x) – f(x).
+                                                                                     3
+                                             3
+                                                                    2 x4           
+           Área =  g ( x ) – f ( x ) dx = 
+                    3                                       9
+                                              10 x − x 3
+                                                          −   dx =  5 x − − 9 ln x  =
+                   1                       1               x            4         1
+
+
+              2 34           2 14                 81             1
+           = 5·3 − − 9 ln 3 − 5·1 − − 9 ln1 = 45 − − 9 ln 3 − 5 + = 20 − 9 ln 3 10.11 u 2
+                  4                4              4              4
+
+     El área tiene un valor de 20 − 9ln3 10.11 unidades cuadradas.
+
+
+
+
+15 de 15                                                                          www.ebaumatematicas.com
+

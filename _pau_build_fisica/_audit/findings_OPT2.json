@@ -1,0 +1,16 @@
+[
+ {
+  "id": "PAU-FIS-OPT-040",
+  "severity": "WARNING",
+  "field": "statement",
+  "issue": "El enunciado depende de una figura que no se adjunta (ni fig_caption) y no da valores numericos de los angulos de incidencia/refraccion en A. El apartado (a) pide calcular alpha y n_p, pero la solucion no obtiene ningun valor numerico de alpha y solo cita n_p approx 1,5 de forma generica (policarbonato real approx 1,58). El apartado (b) tampoco concluye si hay reflexion total. Metodo correcto, pero problema no autocontenido/no resuelto numericamente.",
+  "correct_value": "n_policarbonato real approx 1,58-1,59; sin la figura (a) y (b) no tienen solucion numerica"
+ },
+ {
+  "id": "PAU-FIS-OPT-059",
+  "severity": "WARNING",
+  "field": "statement",
+  "issue": "El enunciado remite a una figura que no se adjunta (sin fig_caption). El apartado (b) obtiene el angulo de incidencia interno en la cara posterior (7,92 grados) \"por geometria\" sin justificarlo de forma reproducible sin la figura; equivale a usar la relacion de prisma theta_t + theta_i = A con A=30 grados (22,08+7,92=30). Los numeros son correctos y consistentes, pero no derivables sin la figura.",
+  "correct_value": "theta_t=22,1 grados, theta_i_interno=7,92 grados, theta_salida=10,6 grados (todos correctos)"
+ }
+]

@@ -1,0 +1,21 @@
+[
+ {
+  "id": "PAU-FIS-FUND-001",
+  "title": "Análisis dimensional de la energía relativista · Murcia · Ordinaria 2020",
+  "statement": "En la expresión de la energía de una partícula relativista\n$$E=\\dfrac{m\\,c^{a}}{\\sqrt{\\,1-\\dfrac{v^{2}}{c^{b}}\\,}}$$\ndonde $m$ es masa, $v$ y $c$ velocidades y $E$ energía, determine, mediante análisis dimensional, los valores de los exponentes $a$ y $b$ para que la expresión sea dimensionalmente homogénea.",
+  "knowns": [
+   "$[E]=\\text{M}\\cdot\\text{L}^{2}\\cdot\\text{T}^{-2}$",
+   "$[m]=\\text{M}$",
+   "$[v]=[c]=\\text{L}\\cdot\\text{T}^{-1}$"
+  ],
+  "full_solution": "El radicando contiene la suma $1-\\dfrac{v^{2}}{c^{b}}$. Como el $1$ es adimensional y en una suma todos los términos deben tener las mismas dimensiones, el cociente $\\dfrac{v^{2}}{c^{b}}$ ha de ser adimensional:\n$$\\left[\\dfrac{v^{2}}{c^{b}}\\right]=\\dfrac{(\\text{L}\\,\\text{T}^{-1})^{2}}{(\\text{L}\\,\\text{T}^{-1})^{b}}=(\\text{L}\\,\\text{T}^{-1})^{2-b}=1\\ \\Rightarrow\\ b=2$$\nLa raíz del denominador es, por tanto, adimensional, así que $[E]=[m\\,c^{a}]$:\n$$\\text{M}\\cdot\\text{L}^{2}\\cdot\\text{T}^{-2}=\\text{M}\\cdot(\\text{L}\\,\\text{T}^{-1})^{a}=\\text{M}\\cdot\\text{L}^{a}\\cdot\\text{T}^{-a}\\ \\Rightarrow\\ a=2$$\nEn consecuencia la expresión correcta es la energía relativista $E=\\dfrac{m\\,c^{2}}{\\sqrt{1-v^{2}/c^{2}}}$.",
+  "answer": "$a=2$ y $b=2$: la expresión es $E=\\dfrac{m\\,c^{2}}{\\sqrt{1-v^{2}/c^{2}}}$.",
+  "common_errors": [
+   "No exigir que $v^{2}/c^{b}$ sea adimensional por aparecer sumado a un número puro.",
+   "Olvidar que la raíz es adimensional y buscar dimensiones en el denominador.",
+   "Confundir las dimensiones de energía ($\\text{M}\\,\\text{L}^2\\,\\text{T}^{-2}$)."
+  ],
+  "provenance": "PAU",
+  "source": "Murcia · Ordinaria 2020"
+ }
+]

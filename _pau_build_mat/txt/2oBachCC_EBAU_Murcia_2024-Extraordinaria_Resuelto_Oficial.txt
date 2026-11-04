@@ -1,0 +1,747 @@
+           RESOLUCIÓN DEL EXAMEN EBAU JULIO 2024
+                                   Matemáticas II
+
+    El objeto de este documento es doble. Por una parte, proporcionar a los profesores y alum-
+nos de Bachillerato de la Región de Murcia la resolución del examen de Matemáticas II de
+la convocatoria EBAU 2024-JULIO. Por otra parte, agilizar las posibles reclamaciones
+a la corrección del examen, toda vez que, habiendo hecho pública la resolución de las cues-
+tiones, pueda ser más fácil identificar posibles errores en la corrección. Evidentemente, por
+la propia naturaleza de la disciplina, una misma cuestión admite múltiples soluciones
+válidas y correctas y resulta prácticamente imposible recoger aquı́ toda esa variedad de
+soluciones. Por supuesto, cualquier otra solución a cualquiera de las cuestiones del examen
+que sea correcta y esté bien argumentada deberá ser considerada como válida en el proceso
+de corrección, aunque no esté incluida en este documento.
+
+   Como es bien sabido, el examen consta de un total de ocho cuestiones y se debe responder
+a un máximo de cuatro de ellas, elegidas libremente por el alumno. Las ocho cuestiones
+se pueden agrupar por bloques temáticos de la siguiente manera, pero insistimos en que se
+pueden escoger libremente un máximo de cuatro y en cualquier orden, independientemente
+de que pertenezcan o no al mismo bloque temático:
+
+Cuestiones 1 y 2: Del bloque de Números y Álgebra (2,5 puntos cada una).
+
+Cuestiones 3 y 4: Del bloque de Análisis (2,5 puntos cada una).
+
+Cuestiones 5 y 6: Del bloque de Geometrı́a (2,5 puntos cada una).
+
+Cuestiones 7 y 8: Del bloque de Estadı́stica y Probabilidad (2,5 puntos una).
+
+Si se responde a más de cuatro cuestiones, sólo se corrigen las cuatro primeras, en el orden que
+haya respondido el estudiante. Solo se pueden usar las tablas estadı́sticas que se proporcionan
+con el examen y, según la normativa vigente, no se pueden usar calculadoras gráficas ni
+programables.
+
+
+                               En Murcia, a 4 de julio de 2024.
+
+                                    Luis J. Alı́as Linares
+                                 Coordinador Matemáticas II
+                                Departamento de Matemáticas
+                                   Universidad de Murcia
+                                               2
+
+
+Bloque 1: Números y Álgebra (2,5 puntos cada una)
+
+     Cuestión 1.
+
+    (2,5 p.) Taylor Swift tiene un total de 435 millones de seguidores en las tres si-
+    guientes redes sociales: Instagram, X (antiguo Twitter) y YouTube. Si ganara en
+    Instagram tantos seguidores como la mitad de los que tiene en YouTube, el número
+    de sus seguidores en Instagram serı́a el doble de la suma de los que tiene en X y en
+    YouTube.
+    Además, si Taylor recibiera cada mes 10 dólares por cada millón de seguidores en
+    Instagram, 20 dólares por cada millón de seguidores en X y 30 dólares por cada
+    millón de seguidores en YouTube, tendrı́a unos ingresos mensuales de 6.500 dólares.
+    Calcule cuántos seguidores tiene Taylor Swift en cada una de estas redes sociales.
+
+
+Solución: Se trata de un sistema de tres ecuaciones con tres incógnitas, en donde las incógni-
+tas son el número de seguidores que Taylor Swift tiene en cada una de las tres siguientes redes
+sociales: Instagram, X (antiguo Twitter) y YouTube. Denotemos por x el número de seguido-
+res que tiene en Instagram, por y el número de seguidores que tiene en X y por z el número
+de seguidores que tiene en YouTube, todos ellos expresados en “millones de seguidores”.
+    El primer dato del ejercicio es que “Taylor Swift tiene un total de 435 millones de segui-
+dores”, que da lugar a la primera ecuación:
+                                       x + y + z = 435.
+El segundo dato del ejercicio es que “si ganara en Instagram tantos seguidores como la mitad
+de los que tiene en YouTube, el número de sus seguidores en Instagram serı́a el doble de la
+suma de los que tiene en X y en YouTube”, que da lugar a la segunda ecuación:
+                                 z
+                            x + = 2(y + z) =⇒ 2x − 4y − 3z = 0.
+                                 2
+El tercer dato del ejercicio es que “si Taylor recibiera cada mes 10 dólares por cada millón de
+seguidores en Instagram, 20 dólares por cada millón de seguidores en X y 30 dólares por cada
+millón de seguidores en YouTube, tendrı́a unos ingresos mensuales de 6.500 dólares”, que da
+lugar a la tercera ecuación:
+                       10x + 20y + 30z = 6.500 =⇒ x + 2y + 3z = 650.
+   Por lo tanto, hay que resolver el siguiente sistema lineal de ecuaciones:
+                                 
+                                  x+y+z            = 435
+                                     2x − 4y − 3z = 0
+                                      x + 2y + 3z = 650
+                                 
+
+El sistema se puede resolver por el método que se desee. En este caso optamos por el que pen-
+samos que mejor se adapta al sistema, el método de Gauss, pero cualquier método utilizado,
+siendo correcto, es válido:
+                                                                        
+                     1 1      1     435               1 1      1      435
+                                            F2 −2F1
+                   2 −4 −3          0  −−    −−→  0 −6 −5 −870 
+                                            F3 −F1
+                     1 2      3     650               0 1      2      215
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                 3
+
+                                                                          
+                         1 1  1             435              1 1 1       435
+               −−−−→    0 1  2             215   −−−−→    0 1 2       215 
+                F2 ↔F3                             F3 +6F2
+                         0 −6 −5            −870             0 0 7       420
+                                                                            420
+Resolvemos entonces escalonadamente. De la tercera ecuación tenemos z =        = 60. Usando
+                                                                             7
+este valor de z en la segunda ecuación tenemos y = 215 − 120 = 95. Finalmente, sustituyendo
+los valores de y y de z en la primera ecuación se tiene x = 435 − 95 − 60 = 280.
+
+   Por lo tanto, Taylor Swift tiene 280 millones de seguidores en Instagram, 95 millones en
+X y 60 millones en YouTube.
+
+    Por supuesto, también se puede resolver por el método de Cramer. Para ello, escribimos
+el sistema en forma matricial, de manera que la matriz ampliada del sistema es
+                                                              
+                                            1 1      1    435
+                           A∗ = (A|b) =  2 −4 −3          0 .
+                                            1 2      3    650
+
+El determinante de A es
+                             1 1  1
+                 |A| =       2 −4 −3       = −12 + 4 − 3 + 4 + 6 − 6 = −7 6= 0
+                             1 2  3
+
+y la solución del sistema por Cramer es
+
+                    435 1 1
+                1                          −5220 − 1950 + 2600 + 2610   −1960
+       x =           0 −4 −3           =                              =       = 280,
+               −7                                     −7                 −7
+                    650 2 3
+                    1 435 1
+                1                      1300 − 1305 + 1950 − 2610   −665
+       y =          2 0 −3         =                             =      = 95,
+               −7                                 −7                −7
+                    1 650 3
+                    1 1 435
+            1                          −2600 + 1740 + 1740 − 1300   −420
+       z =          2 −4 0         =                              =      = 60.
+           −7                                     −7                 −7
+                    1 2 650
+
+
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                     4
+
+
+     Cuestión 2.
+
+    Se dice que una matriz cuadrada A de orden 2 es una matriz ortogonal si cumple
+    que A · At = I, donde At denota la matriz traspuesta de A e I denota la matriz
+    identidad de orden 2.
+       a) (1 p.) Estudie si las siguientes matrices son ortogonales o no:
+                            √              !           √               !
+                              3/2     1/2                3/2      1/2
+                                    √          y                √         .
+                            −1/2      3/2              −1/2 − 3/2
+
+       b) (0,75 p.) Si A es una matriz ortogonal cualquiera de orden 2, calcule razona-
+          damente su determinante.
+
+       c) (0,75 p.) Justifique que si A y B son dos matrices ortogonales cualesquiera
+          de orden 2, entonces el producto C = A · B también lo es.
+
+
+
+Solución: a) Para determinar cuál de ellas es o no ortogonal basta con comprobar si cumplen
+la identidad A · At = I. En el primer caso, un sencillo cálculo nos muestra que
+        √             !     √              !                             √       √     !
+          3/2     1/2         3/2 −1/2                      3/4 + 1/4 − 3/4 + 3/4
+               √        ·          √           =        √        √
+        −1/2      3/2         1/2    3/2              − 3/4 + 3/4            1/4 + 3/4
+                                                          
+                                                      1 0
+                                               =              = I,
+                                                      0 1
+
+                           √              !
+                            3/2     1/2
+por lo que la matriz              √           sı́ es ortogonal. En el segundo caso, resulta
+                           −1/2    3/2
+      √                !       √                 !                            √      √
+          3/21/2                3/2    −1/2
+                                                                                          
+            √              ·           √                 =              √1/4 − 3/4 − 3/4
+                                                                  √ 3/4 +
+      −1/2 − 3/2                  1/2 − 3/2                      − 3/4 − 3/4     1/4 + 3/4
+                                                                       √     
+                                                                  √1   −  3/2
+                                                         =                      6= I,
+                                                                 − 3/2   1
+                           √              !
+                            3/2   1/2
+por lo que la matriz             √             no es ortogonal.
+                           −1/2 − 3/2
+b) Si A es una matriz ortogonal cualquiera de orden 2, sabemos que A · At = I. Tomando
+determinantes en esta igualdad y utilizando propiedades básicas de los determinantes, se tiene
+                                                                   √
+                |A · At | = |A| · |At | = |A|2 = |I| = 1 =⇒ |A| = ± 1 = ±1.
+
+
+
+
+          Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                               5
+
+
+c) Vamos a justificar que la matriz C = A · B es ortogonal comprobando que cumple la
+condición C · C t = I. Para ello, debemos tener en cuenta que
+
+                                   C t = (A · B)t = B t · At .
+
+Por lo tanto, haciendo uso de esto y de la propiedad asociativa del producto de matrices, se
+tiene
+           C · C t = (A · B) · (B t · At ) = A · (B · B t ) · At = A · I · At = A · At = I,
+ya que B · B t = I y A · At = I, por ser A y B ortogonales. Con ello se concluye que C también
+es ortogonal.
+
+
+Bloque 2: Cuestiones 3 y 4. Análisis (2,5 puntos cada una)
+
+     Cuestión 3.
+
+                                    2x2     , definida para todo valor de x ∈ R.
+    Considere la función f (x) = 2
+                                 x − 2x + 3
+       a) (0,5 p.) Calcule lı́m f (x) y lı́m f (x).
+                            x→−∞          x→+∞
+
+       b) (1,5 p.) Determine los intervalos de crecimiento y/o decrecimiento de la fun-
+          ción f (x) y calcule sus extremos relativos (máximos y mı́nimos relativos).
+
+       c) (0,5 p.) Justifique que la función alcanza sus extremos absolutos (máximo y
+          mı́nimo absolutos) y calcule el valor de dichos extremos absolutos.
+
+
+
+Solución: a) Un primer cálculo nos da que
+
+                         2x2       +∞                       2x2       +∞
+                  lı́m 2
+                                 =             y     lı́m 2
+                                                                    =    .
+                 x→+∞ x − 2x + 3   +∞               x→−∞ x − 2x + 3   +∞
+Para resolver estas indeterminaciones, podemos manipular algebraicamente la fracción racio-
+nal y observar que
+                                            2x2
+                              2x2           x2           2        ,
+                                      =   2
+                                         x −2x+3
+                                                 =
+                          x2 − 2x + 3       x 2
+                                                   1 − 2/x + 3/x2
+
+
+   Tenemos entonces que
+
+                         2x2                 2            2
+                  lı́m 2
+                                 = lı́m             2
+                                                      =       = 2.
+                 x→±∞ x − 2x + 3  x→±∞ 1 − 2/x + 3/x    1+0+0
+b) Tal y como se dice en el enunciado, la función está definida para todo x ∈ R, por lo que no
+es necesario calcular el dominio de la misma. Si lo quisiéramos calcular, deberı́amos resolver
+la ecuación x2 − 2x + 3 = 0, que conduce a los valores
+                                  p                           √
+                              2 ± (−2)2 − 4 · 1 · 3 2 ± −8
+                          x=                          =            6∈ R
+                                       2·1                   2·1
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                 6
+
+
+Es decir, la ecuación no tiene soluciones reales y por tanto Dom(f ) = R
+   Ahora debemos derivar la función para estudiar los intervalos de crecimiento y decreci-
+miento.
+         0
+                4x · (x2 − 2x + 3) − 2x2 · (2x − 2))      12x − 4x2       4x(3 − x)
+       f (x) =                                       =                =               .
+                           (x2 − 2x + 3)2               (x2 − 2x + 3)2 (x2 − 2x + 3)2
+Para estudiar el signo de f 0 (x) basta, pues, estudiar el signo de la parábola 12x − 4x2 =
+4x(3 − x), ya que el denominador de la derivada es siempre positivo. La parábola se anula
+en x = 0 y x = 3. Además, como el término lı́der es −4 < 0, ya sabemos que f 0 (x) < 0 para
+x < 0 y para x > 3, mientras que es positivo en el intervalo (0, 3). Es decir, f decrece en
+(−∞, 0) ∪ (3, ∞) y crece en (0, 3). Además, alcanza un único mı́nimo relativo, en x = 0 (que
+vale f (0) = 0) y un único máximo relativo en x = 3 (que vale f (3) = 18/6 = 3).
+
+c) Gracias a lo obtenido en el apartado a) sabemos que f tiende a 2 tanto en +∞ como en
+−∞, por lo que sabemos que está acotada. Además, también es claro que f ≥ 0 en toda la
+recta real porque el denominador no se anula nunca (y por tanto, al valer 3 para x = 0, es
+siempre positivo) y el numerador es 2x2 ≥ 0 siempre. Esto, unido a que el mı́nimo relativo se
+alcanzaba en el punto (0, 0) y el máximo relativo en el punto (3, 3), nos permite afirmar que
+ambos extremos son de hecho el mı́nimo y el máximo absoluto.
+    También podemos observar lo anterior si dibujamos la gráfica de la función (aunque no es
+necesario hacerlo):
+
+
+
+
+     Cuestión 4.
+
+                                  ln x
+    Considere la función f (x) = √ , definida para todo valor de x > 0.
+                                     x
+       a) (0,5 p.) Calcule lı́m f (x).
+                                   x→+∞
+                                                     Z
+       b) (1,5 p.) Calcule la integral indefinida        f (x) dx.
+
+       c) Z
+          (0,5 p.) Determine el valor de a > 0 para el cual se cumple que
+               a
+                   f (x) dx = 4.
+           1
+
+
+
+
+Solución: a) Un primer cálculo nos indica que
+                                               ln x +∞
+                                          lı́m √ =     .
+                                          x→+∞    x +∞
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                7
+
+
+Podemos resolver esta indeterminación aplicando la regla de L’Hôpital y se tiene
+                                  1             √
+                    ln x          x            2 x            2       2
+               lı́m √ = lı́m 1 = lı́m               = lı́m √ =            = 0.
+              x→+∞     x x→+∞ 2√x       x→+∞ x         x→+∞    x    +∞
+                                                               √
+                                                              2 x
+En este último paso, también se podrı́a argumentar que lı́m     = 0 por la “regla de los
+                                                        x→+∞ x
+grados”.
+
+b) Esta integral puede resolverse por partes tomando u = ln x, dv = √dxx , lo que nos conduce
+                 √
+a du = dx
+        x
+          , v = 2 x y, en consecuencia,
+                                √             √ 1
+                 Z                        Z
+                   ln x
+                   √ dx = 2 x ln x − 2 x dx
+                      x                           x
+                                √                      √           √
+                                            Z
+                                                1
+                           = 2 x ln x − 2 √ dx = 2 x ln x − 4 x + C
+                                                 x
+                                √
+                           = 2 x(ln x − 2) + C.
+
+
+
+c) Planteamos la ecuación:
+        Z a
+                     √           a    √               √               √
+    4=      f (x) = 2 x(ln x − 2) 1 = 2 a(ln a − 2) − 2 1(ln 1 − 2) = 2 a(ln a − 2) + 4
+         1
+
+Es decir, debemos resolver la ecuación
+                                        √
+                                       2 a(ln a − 2) = 0
+
+que arroja los valores a = 0 y ln a = 2, es decir, a = e2 . Como a > 0 por hipótesis, descartamos
+el valor a = 0 y damos como válido a = e2 .
+
+
+Bloque 3: Cuestiones 5 y 6. Geometrı́a (2,5 puntos cada una)
+
+     Cuestión 5.
+
+    Considere los planos x − y + z = 0 y x + y − z = 2 y los puntos P (1, 2, 3) y Q(1, 1, 3).
+
+       a) (0,75 p.) Compruebe que ambos planos se cortan en una recta r y calcule la
+          ecuación continua de dicha recta.
+
+       b) (1 p.) Compruebe que el punto P no está en ninguno de los dos planos y
+          calcule la ecuación de la recta que pasa por P y no corta a ninguno de los dos
+          planos.
+
+       c) (0,75 p.) Determine el punto de la recta r que equidista de P y de Q.
+
+
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                 8
+
+
+Solución: a) Para comprobar que los dos planos se cortan en una recta, basta verificar que
+los vectores normales a los dos planos no son proporcionales, cosa que resulta evidente ya que
+si llamamos ~n1 = (1, −1, 1) al vector normal del primer plano y ~n2 = (1, 1, −1) al del segundo
+plano, es evidente que
+                                         1    −1      1
+                                           6=     =
+                                         1    1      −1
+por lo que los planos no son paralelos ni coincidentes y se cortan en una recta.
+
+La intersección de los planos se obtiene resolviendo el sistema de ecuaciones
+                                      
+                                         x−y+z = 0
+                                         x+y−z = 2
+
+Aplicamos el método de Gauss:
+                                                            
+                         1 −1 1    0    F2 −F1      1 −1 1   0
+                                       −−−−→
+                         1 1 −1 2                   0 2 −2 2
+                                                              
+                   F2 /2    1 −1 1    0      F1 +F2    1 0 0   0
+                   −−→                      −−−−→
+                            0 1 −1 1                   0 1 −1 1
+    Se trata obviamente de un sistema compatible indeterminado (rango[A|b] = rango(A) =
+2 < 3) y por tanto la solución es una recta r. Además, la ecuación paramétrica de la recta r
+es:                                    
+                                        x =       1
+                                          y = 1+λ
+                                          z =      λ
+                                       
+
+y la ecuación continua (que es la que se pide) es:
+                                       x−1   y−1   z
+                                           =     =
+                                        0     1    1
+
+    Obviamente también se puede obtener la ecuación continua obteniendo dos puntos de la
+recta, por ejemplo P1 (1, 0, −1) y P2 (1, 1, 0) y con ellos calcular un vector director de la misma,
+−−→
+P1 P2 = (0, 1, 1), obteniendo finalmente que la ecuación continua es
+                                       x−1  y  z+1
+                                           = =
+                                        0   1   1
+o bien
+                                      x−1     y−1      z
+                                           =        =
+                                        0      1       1
+b) Veamos que P (1, 2, 3) no está en ninguno de los planos. En efecto, basta sustituir en las
+ecuaciones de los planos:
+
+                   1 − 2 + 3 = 2 6= 0 por lo que no está en el primer plano.
+
+                  1 + 2 − 3 = 0 6= 2 por lo que no está en el segundo plano.
+
+
+         Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                               9
+
+
+Si queremos construir una recta que pase por P y no corte a ninguno de los planos, podemos
+tomar como su vector director el de la recta r que acabamos de calcular. Por tanto, la ecuación
+de la recta es:                        
+                                        x =        1
+                                           y = 2+λ
+                                           z = 3+λ
+                                       
+
+Obviamente también vale la ecuación
+                                    x−1   y−2   z−3
+                                        =     =
+                                     0     1     1
+    Otro modo: si el alumno no se da cuenta de que ya dispone del vector director de la recta
+que le piden, puede calcularlo del siguiente modo: Dicho vector debe ser paralelo a ambos
+planos a la vez, lo cual se consigue forzando que sea perpendicular a la normal de cada uno de
+los planos. Un vector normal al primer plano es ~n1 = (1, −1, 1). Un vector normal al segundo
+plano es ~n2 = (1, 1, −1). Su producto vectorial es el vector director de nuestra recta:
+
+                              ~i ~j ~k
+             ~v = ~n1 × ~n2 = 1 −1 1        = 0~i + 2~j + 2~k = (0, 2, 2) ∼
+                                                                          = (0, 1, 1)
+                              1 1 −1
+                                                                  −−→ −→
+Tomamos ~v = (0, 1, 1) por comodidad. La ecuación de la recta es OX = OP + λ~v :
+                                     
+                                      x =       1
+                                        y = 2+λ
+                                        z = 3+λ
+                                     
+
+Obviamente también vale la ecuación
+                                    x−1   y−2   z−3
+                                        =     =
+                                     0     1     1
+
+c) Buscamos el valor λ para el que el punto genérico de la recta r, R(1, 1 + λ, λ) equidista
+                                                    −→       −→
+de P (1, 2, 3) y Q(1, 1, 3). Es decir, queremos que P R = QR , lo que nos conduce a la
+ecuación:
+
+            (1 − 1)2 + (1 + λ − 2)2 + (λ − 3)2 = (1 − 1)2 + (1 + λ − 1)2 + (λ − 3)2
+
+Es decir:
+                             (λ − 1)2 + (λ − 3)2 = λ2 + (λ − 3)2
+                      0 = (λ − 1)2 − λ2 = λ2 − 2λ + 1 − λ2 = −2λ + 1
+De aquı́ se obtiene que λ = 1/2 y nuestro punto es R = (1, 1 + 1/2, 1/2) = (1, 3/2, 1/2).
+
+
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                  10
+
+
+     Cuestión 6.
+
+                                                                         x−1   y+1  z
+    Considere los planos x + y + z = −3 y x + y − z = 3 y la recta r :       =     = .
+                                                                          2     1   3
+       a) (0,75 p.) Compruebe que ambos planos se cortan y calcule el ángulo que
+          forman.
+
+       b) (0,75 p.) Estudie la posición relativa de la recta r con el plano x + y − z = 3.
+
+       c) (1 p.) Determine los puntos de la recta r que equidistan de ambos planos.
+
+
+
+Solución: a)Para saber si los planos se cortan basta estudiar el sistema de ecuaciones cuya
+matriz ampliada es                                       
+                                          1 1 1        −3
+                                [A|b] =
+                                          1 1 −1        3
+                  1 1
+   Ahora bien,             = −2 6= 0, por lo que el rango de A es 2, que coincide con el rango
+                  1 −1
+de [A|b], que es menor que 3 (número de incógnitas). Se sigue que el sistema tiene infinitas
+soluciones (de hecho, se trata de una recta).
+
+   El ángulo formado por los planos es el que forman sus vectores normales. Por tanto,
+
+                                                   |~n1 · ~n2 |
+                                        cos θ =
+                                                  k~n1 kk~n2 k
+
+donde ~n1 = (1, 1, 1) y ~n2 = (1, 1, −1). Entonces
+
+                                             |1 + 1 − 1|
+                                   cos θ =      √ √      = 1/3
+                                                 3 3
+
+               θ = arccos(1/3) = 1,23095941734077 radianes
+                 = 1,23095941734077 · 360/(2π) = 70,5287793655091 grados.
+
+
+
+b) Usamos la ecuación de la recta para pasar a paramétricas. Entonces un punto genérico de
+la recta tendrá coordenadas X(1 + 2λ, −1 + λ, 3λ). Por tanto, basta comprobar si este punto
+pertenece al plano x + y − z = 3 para algún valor de λ. Sustituyendo en la ecuación del plano,
+tendremos:
+                        x + y − z = (1 + 2λ) + (−1 + λ) − 3λ = 0 6= 3
+Es decir, ningún punto de la recta corta al plano por lo que la recta es paralela al plano.
+
+    Otro modo: un vector director de la recta es ~v = (2, 1, 3) y un vector normal al plano es
+~n = (1, 1, −1). Ahora el producto escalar ~n · ~v = 1 · 2 + 1 · 1 + (−1) · 3 = 0. Por tanto, el
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                               11
+
+
+vector director de la recta es paralelo al plano. Además, el punto P (1, −1, 0) pertenece a la
+recta pero no al plano (pues 1 − 1 − 0 = 0 6= 3). Por tanto, la recta es paralela al plano que
+nos dan.
+
+c) Sabemos que un punto genérico de la recta viene dado por X(1 + 2λ, −1 + λ, 3λ). Su
+distancia a cada uno de los planos (π1 ≡ x + y + z + 3 = 0, π2 ≡ x + y − z − 3 = 0) es, pues:
+
+                                  |(1 + 2λ) + (−1 + λ) + 3λ + 3|  |6λ + 3|
+                    d(X, π1 ) =             √                    = √
+                                              1+1+1                   3
+                                |(1 + 2λ) + (−1 + λ) − 3λ − 3|  | − 3|
+                     d(X, π2 ) =          √                    = √
+                                            1+1+1                  3
+Por tanto, buscamos los valores λ que resuelven
+
+                                          |6λ + 3| = 3
+
+    Obtenemos dos posibles ecuaciones
+
+                                       6λ + 3 = 3 ⇒ λ = 0
+
+y
+                                     6λ + 3 = −3 ⇒ λ = −1
+
+    Los puntos pedidos son, por tanto: A(1, −1, 0) y B(−1, −2, −3).
+
+
+Cuestiones 7 y 8. Estadı́stica y Probabilidad (2,5 puntos cada una)
+
+     Cuestión 7.
+
+     El 60 % de los habitantes de una población consume pan integral, el 40 % consume
+     pan blanco y el 20 % consume ambos tipos de pan.
+
+       a) (0,5 p.) ¿Son independientes los sucesos “consumir pan integral” y “consumir
+          pan blanco”?
+
+       b) (0,5 p.) Sabiendo que un habitante consume pan integral, ¿cuál es la proba-
+          bilidad de que consuma pan blanco?
+
+       c) (0,75 p.) Calcule el porcentaje de la población que no consume ninguno de
+          los dos tipos de pan.
+
+       d) (0,75 p.) Sabiendo que un habitante no consume pan integral, ¿cuál es la
+          probabilidad de que consuma pan blanco?
+
+
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                 12
+
+
+Solución: a) Sea I =“comer pan integral” y B =”comer pan blanco”. Entonces P (I) = 0,6,
+P (B) = 0,4, P (I ∩ B) = 0,2 6= 0,4 · 0,6 = 0,24. Por tanto, no son sucesos independientes.
+
+b) Es un cálculo directo:
+
+                                         P (B ∩ I)   0,2  1
+                             P (B|I) =             =     = = 0,333...
+                                           P (I)     0,6  3
+
+c) De nuevo es un cálculo sencillo:
+
+P (B ∩ I) = P (B ∪ C) = 1 − P (B ∪ I) = 1 − P (B) − P (I) + P (B ∩ I) = 1 − 0,4 − 0,6 + 0,2 = 0,2
+
+Es decir, un 20 % de la población no consume ninguno de los dos tipos de pan.
+
+d) Sabemos calcular
+                                            P (B ∩ I)   0,2
+                                P (B|I) =             =     = 0,5.
+                                              P (I)     0,4
+Por tanto:
+                              P (B|I) = 1 − P (B|I) = 1 − 0,5 = 0,5
+
+Otra forma un poco más compleja de llegar al mismo resultado es la siguiente:
+
+   Primero observamos que
+
+                                        P (B ∩ I)   P (B ∩ I)
+                                P (B|I) =         =
+                                           P (I)       0,4
+                                       
+Ahora usamos que I = B ∩ I ∪ B ∩ I es una partición de I (es decir, hemos expresado I
+como unión de dos sucesos disjuntos), por lo que
+
+                    0,4 = P (I) = P (B ∩ I) + P (B ∩ I) = P (B ∩ I) + 0,2
+
+de modo que P (B ∩ I) = 0,4 − 0,2 = 0,2 y
+
+                                            P (B ∩ I)   0,2
+                                P (B|I) =             =     = 0,5.
+                                              P (I)     0,4
+
+
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                                 13
+
+
+     Cuestión 8.
+
+    Trabaje con 4 cifras decimales para las probabilidades y con 2 para los porcentajes.
+    Una fábrica de componentes de ordenador produce 2500 microprocesadores al dı́a.
+    Sabiendo que el porcentaje de microprocesadores defectuosos fabricados es del 2 %,
+    responda razonadamente a las siguientes cuestiones:
+       a) (0,5 p.) ¿Qué distribución sigue la variable aleatoria que cuenta el número de
+          microprocesadores defectuosos fabricados al dı́a?
+
+       b) (0,5 p.) Calcule la media y la desviación tı́pica de esta distribución.
+
+       c) (0,75 p.) ¿Cuál es la probabilidad de que en un dı́a el número de micropro-
+          cesadores defectuosos fabricados sea menor o igual que 57?
+
+       d) (0,75 p.) ¿Cuál es la probabilidad de que en un dı́a el número de micropro-
+          cesadores defectuosos fabricados sea exactamente 50?
+
+
+Solución: a) La probabilidad de ser defectuoso es, por hipótesis, P (D) = 0,02. Como se pro-
+ducen 2500 microprocesadores al dı́a, la variable que cuenta cuántos de estos son defectuosos
+es X ∼ B(2500; 0,02). Es decir, es una binomial de parámetros n = 2500, p = 0,02 (y por
+tanto q = 1 − 0,02 = 0,98).
+                                                       √           √                          √
+b) Sabemos que µ = np = 2500 · 0,02 = 50 y σ =             npq =       2500 · 0,02 · 0,98 =    49 = 7.
+
+c) Nos piden
+                                        57     
+                                        X   2500
+                         P (X ≤ 57) =                  (0,02)k (0,98)2500−k
+                                        k=0
+                                                  k
+Claramente, este valor no lo podemos obtener con un cálculo directo. Por tanto, debemos
+aproximarlo. Esto se hace aproximando la variable binomial con una normal. Para que ello sea
+posible necesitamos que se cumplan las condiciones para poder aplicar el Teorema de Moivre.
+Estas son: n ≥ 30 (que se da), np = 2500 · 0,02 = 50 ≥ 5 (se da) y nq = 2500 · 0,98 = 2450 ≥ 5
+(se da).
+                              √
+   Entonces X ' X 0 ∼ N (np, npq) = N (50, 7). Aplicando la corrección por continuidad de
+Yates, se tiene
+                                                        !
+                                               57,5 − 50
+       P (X ≤ 57) ≈ P (X 0 ≤ 57,5) = P Z ≤
+                                                   7
+                                      = P (Z ≤ 1,071428 . . .) ≈ P (Z ≤ 1,07) = 0,8577
+
+
+d) Ahora la solución exacta serı́a
+                                                 
+                                              2500
+                           P (X = 50) =             · 0, 0250 · 0, 982450 ,
+                                               50
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+                                              14
+
+
+cuyo cálculo numérico no se puede hacer con la calculadora. Por ello, aproximamos de nuevo
+la binomial por la normal y aplicamos la corrección por continuidad de Yates para observar
+que
+                                                                         
+                           0                 49,5 − 50         50,5 − 50
+P (X = 50) ≈ P (49,5 ≤ X ≤ 50,5) = P                    ≤Z≤
+                                                  7                7
+                                     = P (−0,071428 . . . ≤ Z ≤ 0,071428 . . .)
+                                     ≈ P (−0,07 ≤ Z ≤ 0,07) = P (Z ≤ 0,07) − P (Z ≤ −0,07)
+                                     = P (Z ≤ 0,07) − (1 − P (Z ≤ 0,07))
+                                     = 2P (Z ≤ 0,07) − 1 = 2 · 0,5279 − 1
+                                     = 0,0558.
+
+   En todo el ejercicio es claro que estamos denotando por Z a la variable aleatoria tipificada
+que sigue una distribución N (0, 1).
+
+
+
+
+        Resolución EBAU Julio 2024. Luis J. Alı́as Linares, Coordinador Matemáticas II
+

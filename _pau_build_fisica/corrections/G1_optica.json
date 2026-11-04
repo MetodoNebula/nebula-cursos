@@ -1,0 +1,64 @@
+{
+ "PAU-FIS-OPT-005": {
+  "caption": "Rayo que incide a 80° desde el aire sobre una lámina de caras planoparalelas ($n=4/3$): se refracta a 47,6° y emerge paralelo al incidente; $d$ es el espesor."
+ },
+ "PAU-FIS-OPT-006": {
+  "caption": "Refracción de un haz que pasa del aire al aceite ($n=1,47$) y al agua ($n=1,33$): ángulos de 50°, 31,4° y 35,2° con la normal."
+ },
+ "PAU-FIS-OPT-009": {
+  "caption": "Dispersión de la luz blanca en un prisma: cada color se desvía un ángulo distinto (el violeta más que el rojo) y emergen separados."
+ },
+ "PAU-FIS-OPT-013": {
+  "caption": "Lámina de vidrio de caras paralelas ($n=1,5$): el rayo incide a 30°, se refracta a 19,5° y emerge a 30° paralelo al incidente con desplazamiento lateral; $e$ es el espesor."
+ },
+ "PAU-FIS-OPT-029": {
+  "caption": "Esquema del ojo miope: los rayos de un objeto lejano convergen delante de la retina; con una lente divergente la imagen pasa a formarse sobre la retina."
+ },
+ "PAU-FIS-OPT-017": {
+  "caption": "Lámina de vidrio ($n_v$) entre líquido ($n_l$) y aire ($n_a$): el rayo que incide a 36° desde el líquido emerge rasante al aire; el rayo normal recorre $d=2\\ \\text{cm}$ (1 cm de líquido + 1 cm de vidrio).",
+  "statement": "Una lámina de vidrio (índice $n_v$) está entre un líquido ($n_l$) y aire ($n_a$). La longitud de onda de la luz en el vidrio es dos tercios de la del aire. Al emitir luz desde el líquido, los rayos con incidencia superior a $36^\\circ$ en la cara inferior no se refractan al aire por la cara superior.\n\n**(a)** Calcule $n_v$.\n\n**(b)** Calcule $n_l$.\n\n**(c)** Calcule el tiempo que tarda un rayo, incidiendo normalmente, en recorrer la distancia $d$ de la figura, que comprende $1\\ \\text{cm}$ de líquido y $1\\ \\text{cm}$ de vidrio ($d=2\\ \\text{cm}$).",
+  "knowns": [
+   "$\\lambda_v=\\tfrac23\\lambda_a$",
+   "Ángulo crítico efectivo desde el líquido $=36^\\circ$",
+   "$n_a=1$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$d=2\\ \\text{cm}$ (= 1 cm de líquido + 1 cm de vidrio, de la figura)"
+  ],
+  "full_solution": "**(a)** Como $\\lambda_v=\\dfrac{\\lambda_a}{n_v}$ y $\\lambda_v=\\dfrac23\\lambda_a$:\n\n$$n_v=\\dfrac{1}{2/3}=\\dfrac32=1{,}5$$\n\n**(b)** A $36^\\circ$ de incidencia desde el líquido, el rayo emerge rasante ($90^\\circ$) al aire por la cara superior. Aplicando Snell en cadena líquido $\\to$ vidrio $\\to$ aire, el vidrio se cancela:\n\n$$n_l\\,\\text{sen}\\,36^\\circ=n_a\\,\\text{sen}\\,90^\\circ\\Rightarrow n_l=\\dfrac{1}{\\text{sen}\\,36^\\circ}=1{,}70$$\n\n**(c)** Con incidencia normal el rayo no se desvía. El trayecto $d$ consta de $1\\ \\text{cm}$ de líquido ($v_l=c/n_l$) y $1\\ \\text{cm}$ de vidrio ($v_v=c/n_v$):\n\n$$t=\\dfrac{0{,}01}{c/n_l}+\\dfrac{0{,}01}{c/n_v}=\\dfrac{(n_l+n_v)\\,(0{,}01)}{c}=\\dfrac{(1{,}70+1{,}50)\\cdot0{,}01}{3\\cdot10^{8}}=1{,}07\\cdot10^{-10}\\ \\text{s}$$",
+  "answer": "**(a)** $n_v=1{,}5$. **(b)** $n_l=1/\\text{sen}\\,36^\\circ\\approx1{,}70$. **(c)** $t=\\dfrac{(n_l+n_v)\\,(1\\ \\text{cm})}{c}\\approx1{,}07\\cdot10^{-10}\\ \\text{s}$ (1 cm de líquido + 1 cm de vidrio)."
+ },
+ "PAU-FIS-OPT-021": {
+  "caption": "Trazado de rayos de una lente divergente con el objeto a 8 cm (en el foco): la imagen es virtual, derecha y de la mitad de tamaño, a 4 cm de la lente.",
+  "statement": "El esquema representa una lente delgada, un objeto (flecha) situado a $8\\ \\text{cm}$ de la lente y dos rayos (1 y 2) que, procedentes del extremo del objeto, salen de la lente como se muestra. A partir del trazado de rayos, determine la posición y el tamaño de la imagen, el aumento, la posición de los focos, la potencia de la lente e indique si la imagen es real o virtual. *(La escala del esquema es de $2\\ \\text{cm}$ por cuadrícula.)*",
+  "knowns": [
+   "lente delgada (del esquema)",
+   "objeto a $s=-8\\ \\text{cm}$",
+   "escala: $2\\ \\text{cm}$ por cuadrícula"
+  ],
+  "full_solution": "Del trazado de rayos: el rayo que incide paralelo al eje emerge **divergiendo**, de modo que su prolongación hacia atrás pasa por el foco de la lente (que en este esquema coincide con la posición del objeto, a $8\\ \\text{cm}$); el rayo que pasa por el centro óptico no se desvía. Las prolongaciones de los rayos emergentes se cortan en el mismo lado que el objeto, a $4\\ \\text{cm}$ de la lente y a la mitad de altura: la imagen es **virtual**. Como los rayos emergentes divergen, la lente es **divergente**.\n\nCon $s=-8\\ \\text{cm}$ y $s'=-4\\ \\text{cm}$ (imagen virtual leída en el esquema), la ecuación de la lente delgada da la distancia focal:\n$$\\dfrac{1}{f'}=\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{-4}-\\dfrac{1}{-8}=-\\dfrac{1}{8}\\ \\Rightarrow\\ f'=-8\\ \\text{cm}=-0{,}08\\ \\text{m}$$\nLos focos están a $\\pm f'=\\pm8\\ \\text{cm}$ del centro. El aumento lateral es\n$$m=\\dfrac{s'}{s}=\\dfrac{-4}{-8}=+0{,}5$$\nluego la imagen es **derecha** ($m>0$) y de **la mitad de tamaño**. La potencia:\n$$P=\\dfrac{1}{f'}=\\dfrac{1}{-0{,}08}=-12{,}5\\ \\text{dioptrías}$$",
+  "answer": "Lente **divergente**: $f'=-8\\ \\text{cm}$, $P=-12{,}5\\ \\text{D}$; imagen **virtual, derecha y de la mitad de tamaño** a $s'=-4\\ \\text{cm}$, con $m=+0{,}5$; focos a $\\pm8\\ \\text{cm}$."
+ },
+ "PAU-FIS-OPT-033": {
+  "caption": "Bloque de policarbonato: el rayo entra en $A$ a 45°, se refracta a $\\alpha$ ($\\tan\\alpha=d/2d=1/2$, $\\alpha\\approx26,6°$) y en $B$ incide a 63,4° $>\\theta_c$, produciéndose reflexión total.",
+  "statement": "Un rayo de luz monocromática incide (punto $A$) sobre la cara lateral de un bloque de policarbonato rodeado de aire, con un ángulo de $45^\\circ$ respecto a la normal a esa cara. El rayo refractado alcanza el punto $B$ de la cara superior tras avanzar una distancia horizontal $2d$ y una vertical $d$ (ver figura).\n\n**(a)** Calcule el ángulo de refracción $\\varphi$ y el índice de refracción $n_p$ del policarbonato.\n\n**(b)** ¿Cuál es la velocidad del rayo en el policarbonato? Al llegar al punto $B$, ¿se refracta o se refleja?",
+  "knowns": [
+   "Incidencia en $A$: $\\theta_1=45^\\circ$",
+   "Rayo refractado: $\\tan\\varphi=\\dfrac{d}{2d}=\\dfrac12$ (de la figura)",
+   "$n_{aire}=1$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** El rayo refractado avanza $2d$ en horizontal y $d$ en vertical, luego forma con la normal (horizontal a la cara de entrada) el ángulo\n\n$$\\varphi=\\arctan\\dfrac{d}{2d}=\\arctan\\dfrac12=26{,}6^\\circ$$\n\nLey de Snell en $A$ (aire $\\to$ policarbonato):\n\n$$n_p=\\dfrac{\\text{sen}\\,45^\\circ}{\\text{sen}\\,26{,}6^\\circ}=\\dfrac{0{,}707}{0{,}447}=1{,}58$$\n\n**(b)** Velocidad en el policarbonato:\n\n$$v=\\dfrac{c}{n_p}=\\dfrac{3\\cdot10^{8}}{1{,}58}=1{,}90\\cdot10^{8}\\ \\text{m/s}$$\n\nEn $B$ (cara superior, perpendicular a la de entrada) el rayo incide respecto a la normal vertical con un ángulo $90^\\circ-\\varphi=63{,}4^\\circ$. El ángulo crítico policarbonato $\\to$ aire es\n\n$$\\text{sen}\\,\\theta_c=\\dfrac{1}{n_p}=\\dfrac{1}{1{,}58}=0{,}633\\Rightarrow\\theta_c=39{,}2^\\circ$$\n\nComo $63{,}4^\\circ>\\theta_c$, en $B$ se produce **reflexión total**: el rayo no sale al aire, se refleja.",
+  "answer": "**(a)** $\\varphi=\\arctan\\tfrac12\\approx26{,}6^\\circ$, $n_p=\\dfrac{\\text{sen}\\,45^\\circ}{\\text{sen}\\,26{,}6^\\circ}\\approx1{,}58$. **(b)** $v=c/n_p\\approx1{,}90\\cdot10^{8}\\ \\text{m/s}$; en $B$ incide a $63{,}4^\\circ>\\theta_c=39{,}2^\\circ$: **reflexión total**."
+ },
+ "PAU-FIS-OPT-036": {
+  "caption": "Lente convergente con el objeto $O$ dentro del foco (a 10 cm): la imagen $O'$ es virtual, derecha y mayor (×5), a 50 cm de la lente.",
+  "statement": "En la figura se muestran una lente, la posición de un objeto $O$ (a $10\\ \\text{cm}$ de la lente) y la de la imagen $O'$ (a $50\\ \\text{cm}$ de la lente, al mismo lado que el objeto), que la lente forma de dicho objeto. Determine la distancia focal imagen de la lente, su potencia en dioptrías y el tamaño de la imagen si el objeto mide $2\\ \\text{cm}$. *(Cada cuadrícula de la figura equivale a $10\\ \\text{cm}$.)*",
+  "knowns": [
+   "$s=-10\\ \\text{cm}$ (objeto)",
+   "$s'=-50\\ \\text{cm}$ (imagen, al mismo lado $\\Rightarrow$ virtual)",
+   "$y=2\\ \\text{cm}$"
+  ],
+  "full_solution": "De la figura, el objeto está a $s=-10\\ \\text{cm}$ y la imagen a $s'=-50\\ \\text{cm}$ (al mismo lado que el objeto, luego **virtual**). Con la ecuación de la lente delgada:\n$$\\dfrac{1}{f'}=\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{-50}-\\dfrac{1}{-10}=\\dfrac{4}{50}\\ \\Rightarrow\\ f'=12{,}5\\ \\text{cm}=0{,}125\\ \\text{m}$$\nLa lente es **convergente** ($f'>0$) y el objeto está dentro del foco. La potencia:\n$$P=\\dfrac{1}{f'}=\\dfrac{1}{0{,}125}=+8\\ \\text{dioptrías}$$\nAumento lateral y tamaño de la imagen:\n$$A=\\dfrac{s'}{s}=\\dfrac{-50}{-10}=+5\\ \\Rightarrow\\ y'=A\\,y=5\\cdot2=10\\ \\text{cm}$$\nLa imagen es **virtual, derecha y cinco veces mayor** que el objeto.",
+  "answer": "$f'=+12{,}5\\ \\text{cm}$, $P=+8\\ \\text{D}$; imagen **virtual, derecha y mayor**: $A=+5$ y $y'=10\\ \\text{cm}$ (objeto de $2\\ \\text{cm}$)."
+ }
+}

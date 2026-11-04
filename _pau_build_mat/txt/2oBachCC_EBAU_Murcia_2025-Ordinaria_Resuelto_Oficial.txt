@@ -1,0 +1,586 @@
+             RESOLUCIÓN DEL EXAMEN PAU JUNIO 2025
+                                   Matemáticas II
+
+    El objeto de este documento es doble. Por una parte, proporcionar a los profesores y
+alumnos de Bachillerato de la Región de Murcia la resolución del examen de Matemáticas II
+de la convocatoria PAU2025-JUNIO. Por otra parte, agilizar las posibles reclamaciones a
+la corrección del examen, toda vez que, habiendo hecho pública la resolución de las cuestiones,
+pueda ser más fácil indentificar posibles errores en la corrección. Evidentemente, por la propia
+naturaleza de la disciplina, una misma cuestión admite múltiples soluciones válidas y
+correctas y resulta prácticamente imposible recoger aquı́ toda esa variedad de soluciones. Por
+supuesto, cualquier otra solución de cualquiera de las cuestiones del examen que sea correcta
+y esté bien argumentada deberá ser considerada como válida en el proceso de corrección,
+aunque no esté incluida en este documento.
+
+   Como es bien sabido, el examen consta de un total de cuatro cuestiones con dos opciones (A
+y B) cada una. En cada cuestión se debe hacer solo la opción A o la opción B. Las cuestiones
+se pueden hacer en cualquier orden. La elección de A o B puede cambiar de una cuestión
+a otra. Si se responden las 2 opciones de una cuestión, solo se corregirá la primera opción
+contestada. La puntuación máxima de cada cuestión es 2,5 puntos. Las cuatro cuestiones son:
+
+Cuestión 1 (opciones 1A y 1B): Sentido numérico y algebraico (2,5 puntos cada una).
+
+Cuestión 2 (opciones 2A y 2B): Sentido de la medida (2,5 puntos cada una).
+
+Cuestión 3 (opciones 3A y 3B): Sentido espacial (2,5 puntos cada una).
+
+Cuestión 4 (opciones 4A y 4B): Sentido estocástico (2,5 puntos una).
+
+Solo se pueden usar las tablas estadı́sticas que se proporcionan con el examen y, según la
+normativa vigente, no se puden usar calculadoras gráficas ni programables.
+
+
+                               En Murcia, a 4 de junio de 2025.
+
+                                Pedro Nicolás Zaragoza
+                              Coordinador Matemáticas II
+               Departamento de Didáctica de las CC. Matemáticas y Sociales
+                                Universidad de Murcia
+                                              2
+
+
+Cuestión 1: Sentido numérico y algebraico (2,5 puntos cada una)
+Opción 1A (2,5 p.):
+Daniel quiere contratar a los músicos Darı́o, Hugo y José. El sueldo de Darı́o es el de Hugo
+multiplicado por un parámetro m > 0. El sueldo de Hugo es el doble del de José. La suma
+del sueldo de José multiplicado por m más el sueldo de Darı́o (sin multiplicar por m) más el
+sueldo de Hugo (sin multiplicar por m) es 600 e .
+
+  a) (0,75 p.) Denotando por x el sueldo de Darı́o, por y el sueldo de Hugo y por z el sueldo
+     de José, plantee un sistema de 3 ecuaciones con 3 incógnitas que represente los datos
+     del ejercicio.
+
+  b) (0,25 p.) Justifique que con estos datos se puede conocer el sueldo de cada uno (que
+     solo dependerá de m).
+
+  c) (1,5 p.) Calcule la expresión general de cada sueldo (en función de m), y lo que cobra
+     cada uno para m = 2.
+
+Solución:
+a) El sistema es              
+                               x − my      = 0
+                                     y − 2z = 0
+                                x + y + mz = 600
+                              
+
+b) Hay que ver que el sistema es compatible determinado para m > 0. La correspondiente
+matriz de coeficientes es                        
+                                     1 −m 0
+                                    0 1 −2  .
+                                     1 1      m
+Su determinante es 3m + 2, que solo se anula cuando m = − 32 , de modo que para m > 0 el
+determinante no se anula y el sistema es compatible determinado.
+c) Usando el método de Cramer, o simplemente despejando, se llega a que
+                                1200m        1200        600
+                           x=          , y=        , z=        .
+                                3m + 2      3m + 2      3m + 2
+Para m = 2 tenemos x = 300 e , y = 150 e , z = 75 e .
+
+
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                   3
+
+
+Opción 1B (2,5 p.):                                                                      
+                                  2 1                  1 0                             5 0
+Considere las matrices A =                  , B=                      y       C=                .
+                                  1 3                  2 1                             5 0
+
+  a) (1,25 p.) Compruebe que las matrices A y B son regulares (o invertibles) y calcule sus
+     matrices inversas.
+
+  b) (1,25 p.) Resuelva la ecuación At XB = C, donde At es la transpuesta de A.
+
+Solución: a) Las matrices son regulares porque los determinantes son
+
+                      2 1                                         1 0
+              |A| =          = 6 − 1 = 5 6= 0 y |B| =                         = 1 − 0 = 1 6= 0.
+                      1 3                                         2 1
+
+Haciendo
+                                                                                                      
+                    3 −1                    t                1 −2                          t         1 0
+     adj(A) =                    = adj(A) , adj(B) =                          y adj(B) =
+                    −1 2                                     0 1                                    −2 1
+
+tenemos que                                                                     
+                        −1           3/5 −1/5                −1            1 0
+                       A     =                         yB         =                    .
+                                     −1/5 2/5                             −2 1
+b) Como At = A, la ecuación es AXB = C, y tenemos X = A−1 CB −1 . De modo que
+                                                             
+                      3/5 −1/5         5 0        1 0         2 0
+             X=                     ·         ·          =            .
+                     −1/5 2/5          5 0       −2 1         1 0
+
+
+
+
+      Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                 4
+
+
+Cuestión 2: sentido de la medida (2,5 puntos cada una)
+Opción 2A (2,5 p.):                                                       √
+Considere un triángulo rectángulo de catetos x e y cuya hipotenusa mide 7 2 cm.
+
+  a) (0,5 p.) Demuestre que su área viene dada por la expresión
+                                                 1 √
+                                          f (x) = x 98 − x2 .
+                                                 2
+
+  b) (2 p.) Calcule las dimensiones que debe tener dicho triángulo para que su área sea la
+     mayor posible. ¿Cuál es el valor de dicha área máxima?
+
+Solución: a) El área de un triángulo rectángulo es el producto √ 2de los catetos dividido por 2.
+                                                      2     2
+Gracias
+    √   al Teorema   de  Pitágoras    sabemos  que x   + y   = (7   2) = 49 · 2 = 98, de modo que
+            2
+y = 98 − x , y el área viene dada por la función del enunciado.
+b) Tenemos que
+                                     1√                x2          98 − 2x2
+                        f 0 (x) =       98 − x2 − √            = √          .
+                                     2            2 98 − x2      2 98 − x2
+De modo que
+                             f 0 (x) = 0 ⇔ 2x2 = 98 ⇔ x2 = 49 ⇔ x = 7.
+No consideramos la posibilidad x = −7     porque
+                                            √ √estamos      buscando una longitud.
+   El dominio de la función f (x) es −7 2, 7 2 , pero el único dominio realista según los
+                            √
+datos del problema es (0, 7 2). Evaluando f 0 (x) en (0, 7), por ejemplo f 0 (1) = 2√98−2  > 0,
+                                                                     √                98−1
+vemos que f (x) es creciente en (0, 7). Evaluando f 0 (x) entre 7 y√7 2 tenemos que 98−2x2 < 0,
+de modo que f 0 (x) será negativa y f (x) decreciente en (7, 7 2). Por lo tanto, x = 7 es un
+máximo de f (x). El valor máximo del área será entonces
+                                    1 √          49
+                             f (7) = 7 98 − 72 =    = 24, 5 cm2 .
+                                    2            2
+
+
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                       5
+
+
+Opción 2B (2,5 p.):
+Considere la función f (x) = ln( x+1
+                                   x
+                                      ).
+                                                      Z
+  a) (1,5 p.) Calcule la integral indefinida               f (x)dx.
+
+  b) (1 p.) Compruebe que el área de la región delimitada por la gráfica de la función f (x)
+                                                        27
+     y el eje OX entre los valores x = 1 y x = 2 es ln( 16 ).
+                                                                                       −1
+Solución: a) Integrando por partes, tomando u = ln( x+1
+                                                      x
+                                                         ) y dv = dx, tenemos du = (x+1)x dx
+y v = x, de modo que
+    Z                             Z                             
+            x+1                x+1           x                  x+1
+       ln          dx = x ln          +            dx = x ln            + ln (x + 1) + C.
+             x                  x         (x + 1)x               x
+
+b) La función logaritmo es no negativa en [1, +∞), (tı́picamente se comprueba si se anula, y
+no se anula en (1, 2)), de modo que el área pedida se obtiene simplemente calculando
+
+ Z 2                                                    2     
+                x+1                      x+1                         3
+       ln                 dx = x ln           + ln (x + 1) = 2 ln        + ln(3) − (ln(2) + ln(2)) =
+   1             x                        x                1         2
+                                                              = 2 ln(3) − 2 ln(2) + ln(3) − 2 ln(2) =
+                                                                                               
+                                                          3        4                            27
+                                = 3 ln(3) − 4 ln(2) = ln(3 ) − ln(2 ) = ln(27) − ln(16) = ln         .
+                                                                                                16
+
+
+
+
+        Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                               6
+
+
+Cuestión 3: sentido espacial (2,5 puntos cada una)
+Opción 3A (2,5 p.):
+Considere las rectas                               
+                                 x=1                x = 7 + 3µ
+                           r:   y =5+λ         y s:   y = −5 + µ
+                                  z=λ                    z=7
+                                                   
+
+  a) (0,5 p.) Compruebe que se cruzan.
+
+  b) (1,5 p.) Halle la ecuación de la recta perpendicular a ambas.
+
+  c) (0,5 p.) Calcule la distancia entre r y s.
+Solución: a) Modo 1 (con sistema de ecuaciones sin solución): Como los vectores
+                           →               →
+directores de las rectas, dr = (0, 1, 1) y ds = (3, 1, 0), no son proporcionales, las rectas se
+cruzan o se cortan. Para comprobar que no se cortan se puede ver que el sistema
+                                        
+                                        
+                                             x=1
+                                            y = 5+λ
+                                        
+                                        
+                                        
+                                        
+                                              z=λ
+                                        
+                                        
+                                          x  = 7 + 3µ
+                                           y = −5 + µ
+                                        
+                                        
+                                        
+                                        
+                                              z=7
+                                        
+
+no tiene solución. En efecto, partiendo de ese sistema deducimos que
+                                      
+                                       1 = 7 + 3µ
+                                         5 + λ = −5 + µ
+                                              λ=7
+                                      
+
+y de aquı́ deducimos que                  
+                                              µ = −2
+                                              µ = 17
+que es imposible.
+
+Modo 2 (estudiando rango): Podemos tomar puntos, R(1, 5, 0) ∈ r y S(7, −5, 7) ∈ s, y
+                               → →   →
+comprobar que los vectores {dr , ds , RS} son linealmente independientes. Esto se puede hacer
+viendo que la matriz                                 
+                                           6 −10 7
+                                         0 1 1 
+                                           3 1 0
+tiene rango 3, porque su determinante es −57 6= 0.
+b) Modo 0 (atención): El ejercicio está pensado con la siguiente definición en mente: “dos
+rectas son perpendiculares si se intersecan en ángulo recto”. Ası́, va implı́cito que una recta
+perpendicular a r y s cortará a ambas. Sin embargo, puede haber alguien que tenga la siguiente
+definición en mente: “dos rectas son perpendiculares si los correspondientes vectores directores
+son ortogonales”. Esto admite la posibilidad de que dos rectas perpendiculares se crucen. Por
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                   7
+
+
+si acaso alguien lo hubiera estudiado ası́, daremos por buena una solución que consista en
+                                      →       →
+tomar un vector perpendicular a dr y ds ,
+
+                    →       →   →      i j k
+                    dt = dr ∧ ds =     0 1 1      = −i + 3j − 3k = (−1, 3, −3),
+                                       3 1 0
+y considerar una recta cualquiera con ese vector:
+
+                                t : (x, y, z) = (a, b, c) + γ(−1, 3, −3),
+
+donde (a, b, c) puede ser un punto de r, de s o de ninguna de las dos, o incluso se puede dejar
+ası́, (a, b, c), como un punto genérico con tres grados de libertad.
+
+Modo 1 (tomando puntos genéricos): Podemos tomar un vector que vaya de un punto
+genérico P (1, 5 + λ, λ) de r a un punto genérico Q(7 + 3µ, −5 + µ, 7) de s, y luego, imponiendo
+ →    →             →       →
+P Q · dr = 0 = P Q · ds , concretar ese vector, que será vector director de la recta pedida.
+               →                                                       →    →
+Tenemos que P Q = (6 + 3µ, −10 + µ − λ, 7 − λ). La condición P Q · dr = 0 nos da µ = 3 + 2λ,
+                →       →
+y la condición P Q · ds = 0 nos da λ = 8 + 10µ. Resolviendo el sistema
+                                       
+                                           µ = 3 + 2λ
+                                          λ = 8 + 10µ
+                                                    →
+obtenemos λ = −2 y µ = −1, de modo que P Q = (3, −9, 9). Este vector es proporcional a
+(1, −3, 3), que lo tomamos como director de la perpendicular a r y s. Para λ = −2 tenemos
+P (1, 3, −2), que pertenecerá a la perpendicular. Ası́, la recta pedida es:
+
+                                t : (x, y, z) = (1, 3, −2) + γ(1, −3, 3).
+
+(Por supuesto, el parámetro de esta recta puede ser otro. Aquı́ tomamos γ solo para no
+confundirlo con los parámetros λ y µ ya usados).
+
+Modo 2 (como intersección de planos): es encontrar la recta pedida, t, como intersección
+del plano que contiene a r y a t y el plano que contiene a s y a t. Para eso calculamos un
+                →                                                           →   →
+vector director dt de t sabiendo que tiene que ser perpendicular a dr y a ds , de modo que:
+
+                    →       →   →      i j k
+                    dt = dr ∧ ds =     0 1 1      = −i + 3j − 3k = (−1, 3, −3),
+                                       3 1 0
+                                       →
+que es proporcional a (1, −3, 3) =: dt .
+   Para calcular la ecuación del plano que contiene a r y a t usamos que, como R(1, 5, 0) ∈ r,
+                                          →                                                  →
+si T (x, y, z) ∈ t entonces el vector T R = (x − 1, y − 5, z) es linealmente dependiente de dr y
+→
+dt , de modo que
+                                x−1 y−5 z
+                                 0   1  1          = 6x + y − z − 11 = 0
+                                 1   −3 3
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                8
+
+
+es la ecuación del plano determinado por r y t. Análogamente, para calcular la ecuación del
+plano que contiene a s y a t usamos que, como S(7, −5, 7) ∈ s, si T (x, y, z) ∈ t entonces el
+        →                                                         →       →
+vector T R = (x − 7, y + 5, z − 7) es linealmente dependiente de ds y dt , de modo que
+                         x−7 y+5 z−7
+                          3   1   0              = 3x − 9y − 10z + 4 = 0
+                          1   −3  3
+es la ecuación del plano determinado por s y t. Finalmente, la recta perpendicular a r y s
+viene dada por el sistema          
+                                      6x + y − z − 11 = 0
+                                t:
+                                     3x − 9y − 10z + 4 = 0
+c) Modo 1 (como módulo de un vector que une perpendicularmente): En el apartado
+                                                                      →
+(b) vimos que el vector que ‘unı́a’ perpendicularmente r y s era P Q = (3, −9, 9), de modo
+que la distancia entre r y s será su módulo:
+                            →                   √             √       √
+                d(r, s) = |P Q| = |(3, −9, 9)| = 9 + 81 + 81 = 171 = 3 19.
+
+Modo 2 (usando puntos de corte de la perpendicular común): Si en el apartado
+(b) no se ha calculado este vector, tenemos que encontrar los puntos de intersección de la
+perpendicular t con r, y de t con s, y medir la distancia entre ellos. Ası́, si tenemos la
+perpendicular t dada como         
+                                      6x + y − z − 11 = 0
+                               t:
+                                     3x − 9y − 10z + 4 = 0
+hacemos ahı́ las sustituciones x = 1, y = 5 + λ, z = λ, y obtenemos λ = −2, concluyendo ası́
+que P (1, 5 − 2, −2) = (1, 3, −2) es el punto de intersección de t y r. Análogamente, hacemos
+las sustituciones x = 7 + 3µ, y = −5 + µ, z = 7 en el sistema de ecuaciones que define t
+y obtenemos µ = −1, concluyendo ası́ que Q(4, −6, 7) es el punto de intersección de t y s.
+Ahora,
+                                 →                    √                 √        √
+           d(r, s) = d(P, Q) = |P Q| = |(3, −9, 9)| = 9 + 81 + 81 = 171 = 3 19.
+
+Modo 3 (usando la distancia a un plano): Sea π el plano que contiene a s y es paralelo
+a r. Entonces tendremos
+                            d(r, s) = d(r, π) = d(R, π),
+donde R es cualquier punto de r, por ejemplo, R(1, 5, 0). Observemos que podemos tomar
+→               →
+dr = (0, 1, 1) y ds = (3, 1, 0) como vectores del plano, y S(7, −5, 7) ∈ s como punto del plano.
+Entonces la ecuación de π vendrá dada por
+                         x−7 y+5 z−7
+                          3   1   0              = x − 3y + 3z − 43 = 0.
+                          0   1   1
+Ahora
+                                         |1 − 3 · 5 + 3 · 0 − 43|  57  3 · 19    √
+         d(r, s) = d(r, π) = d(R, π) =      p                     =√ = √      = 3 19.
+                                              1 + (−3)2 + 32        19    19
+
+
+        Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                    9
+
+
+
+
+Modo 4 (método del producto mixto o volumen del paralelepı́pedo): Tomamos
+                                                   →
+R(1, 5, 0) ∈ r y S(7, −5, 7), de modo que RS = (6, −10, 7). Ahora el volumen del parale-
+                             →                     →              →
+lepı́pedo determinado por RS = (6, −10, 7), dr = (0, 1, 1) y ds = (3, 1, 0) viene dado por
+
+                                   6 −10 7
+                                 | 0 1 1 | = | − 57| = 57.
+                                   3 1 0
+
+El área de la base de ese paralelepı́pedo viene dada por
+                         →       →                        √            √
+                        |dr ∧ ds | = |(−1, 3, −3)| =          1+9+9=    19.
+
+Finalmente, la distancia entre r y s vendrá dada por la altura del paralelepı́pedo, que se
+calcula dividiendo el volumen por el área de la base:
+                                        →   → →
+                                 | det(RS, dr , ds )|    57  3 · 19    √
+                     d(r, s) =         →    →           =√ = √      = 3 19.
+                                      |dr ∧ ds |          19    19
+
+
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                 10
+
+
+Opción 3B (2,5 p.):
+Considere los planos π1 : x − y + z = 0 y π2 : x + y − z = 2
+
+  a) (1 p.) Calcule la ecuación paramétrica de la recta en la que se cortan π1 y π2 .
+
+  b) (0,75 p.) Halle la ecuación de la recta que pasa por P (1, 2, 3) y no corta ni a π1 ni a
+     π2 .
+
+  c) (0,75 p.) Calcule la proyección ortogonal de P en π1 .
+
+Solución: a) Resolviendo el sistema
+                                        
+                                            x−y+z =0
+                                            x+y−z =2
+
+obtenemos x = 1, y = 1 + z, de modo que la recta intersección es:
+                                     
+                                      x=1
+                                        y =1+λ
+                                          z=λ
+                                     
+
+b) La recta pedida pasa por el punto P (1, 2, 3) y tiene como vector director el de la recta de
+intersección de π1 y π2 , que es (0, 1, 1). Ası́, la ecuación de la recta pedida es:
+
+                       (x, y, z) = (1, 2, 3) + λ(0, 1, 1) = (1, 2 + λ, 3 + λ).
+
+No hace falta comprobar que no corta ni a π1 ni a π2 . Pero serı́a fácil hacerlo. En efecto, no
+corta a π1 porque si sustituimos (x, y, z) = (1, 2 + λ, 3 + λ) en x − y + z = 0 obtenemos una
+contradicción:
+                                0 = 1 − (2 + λ) + 3 + λ = 2.
+Análogamente, no corta a π2 porque si sustituimos (x, y, z) = (1, 2 + λ, 3 + λ) en x + y − z = 2
+obtenemos una contradicción:
+
+                                  2 = 1 + 2 + λ − (3 + λ) = 0.
+
+c) La proyección ortogonal, P 0 , de P en π1 es la intersección con π1 de la recta perpendicular
+a π1 que pasa por P , que es:
+
+                    (x, y, z) = (1, 2, 3) + λ(1, −1, 1) = (1 + λ, 2 − λ, 3 + λ).
+
+Para calcular su intersección con π1 sustituimos (x, y, z) = (1 + λ, 2 − λ, 3 + λ) en x − y + z = 0
+y obtenemos:
+                              0 = 1 + λ − (2 − λ) + 3 + λ = 2 + 3λ
+de modo que con λ = − 32 obtenemos la proyección ortogonal
+                                                          
+                           0     2      2      2       1 8 7
+                         P 1 − ,2 + ,3 −           =    , ,    .
+                                 3      3      3       3 3 3
+
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                    11
+
+
+Opción 4: sentido estocástico (2,5 puntos cada una)
+Opción 4A (2,5 p.): Considere dos urnas, U1 y U2 , tales que en U1 hay 2 bolas rojas y 3
+verdes, y en U2 hay 6 bolas rojas y 3 verdes. El experimento aleatorio consiste en sacar una
+bola de U1 , depositarla en U2 y, a continuación, sacar una bola de U2 . Calcule la probabilidad
+de que:
+
+  a) (0,5 p.) Salga una bola roja en U2 sabiendo que ha salido roja en U1 .
+
+  b) (0,5 p.) Salga una bola verde en U2 sabiendo que ha salido roja en U1 .
+
+  c) (0,75 p.) Salga una bola verde en U2 .
+
+  d) (0,75 p.) Haya salido roja en U1 sabiendo que ha salido roja en U2 .
+
+Solución: Llamamos Ri (respectivamente, Vi ) al suceso “salir roja (respectivamente, verde)
+en la urna Ui ”. Con los datos del problema, y usando la fórmula de Laplace que calcula
+la probabilidad dividiendo el número de casos favorables entre el número de casos posibles,
+tenemos que:
+         2           3                7                3                6                4
+P (R1 ) = , P (V1 ) = , P (R2 | R1 ) = , P (V2 | R1 ) = , P (R2 | V1 ) = , P (V2 | V1 ) = .
+         5           5                10               10               10               10
+
+
+
+
+                                                                       7
+a) La probabilidad pedida es ya una de las calculadas: P (R2 | R1 ) = 10 = 0, 7.
+                                                                      3
+b) La probabilidad pedida es ya una de las calculadas: P (V2 | R1 ) = 10 = 0, 3.
+c) Usando el Teorema de la Probabilidad Total, tenemos que
+                                                                 3 2   4 3  18   9
+   P (V2 ) = P (V2 | R1 ) · P (R1 ) + P (V2 | V1 ) · P (V1 ) =     · +  · =    =    = 0, 36.
+                                                                 10 5 10 5  50   25
+d) Para calcular la probabilidad a posteriori pedida aplicamos la fórmula de Bayes:
+
+                                         P (R1 ∩ R2 )   P (R2 | R1 ) · P (R1 )
+                        P (R1 | R2 ) =                =                        .
+                                            P (R2 )           P (R2 )
+
+Calculamos P (R2 ) como sigue:
+                                                                     7 2   6 3  32  16
+       P (R2 ) = P (R2 | R1 ) · P (R1 ) + P (R2 | V1 ) · P (V1 ) =     · +  · =    = .
+                                                                     10 5 10 5  50  25
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                12
+
+
+También se puede usar el trabajo de (c) y hacer:
+                                                             9   16
+                               P (R2 ) = 1 − P (V2 ) = 1 −      = .
+                                                             25  25
+Sea como fuere, una vez calculada P (R2 ) hacemos
+                                                        7
+                               P (R2 | R1 ) · P (R1 )      ·2    7
+                                                                      7
+              P (R1 | R2 ) =                          = 1016 5 = 25
+                                                                 16 =    = 0, 4375.
+                                     P (R2 )              25     25
+                                                                      16
+
+
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                              13
+
+
+Opción 4B (2,5 p.): El 2 % de las piezas fabricadas por una máquina son defectuosas.
+
+  a) (1 p.) Considere el número de piezas en buen estado de un lote de 10 piezas. Diga
+     qué tipo de distribución de probabilidad es, indicando la media y la desviación tı́pica.
+     Calcule la probabilidad de que haya exactamente 1 pieza defectuosa.
+
+  b) (1,5 p.) Considere el número de piezas en buen estado de un lote de 2000 piezas. Diga
+     qué tipo de distribución de probabilidad es, indicando la media y la desviación tı́pica.
+     Calcule la probabilidad de que haya menos de 50 piezas defectuosas.
+
+Solución:
+a) Es una binomial con p n = 10 y p = √     0,98. Su media es µ = n · p = 10 · 0,98 = 9,8, y su
+desviación tı́pica σ = n · p · (1 − p) = 10 · 0,02 · 0,98 = 0,4427. Tenemos que n·p = 9,8 > 5
+es grande, pero n · q = 0,2 no es grande. Es mejor, por lo tanto, no hacer la aproximación
+mediante la normal, y usar en su lugar la fórmula de la distribución binomial. Como nos piden
+la probabilidad de que exactamente 1 pieza sea defectuosa, y nuestra variable X cuenta las
+piezas en buen estado, tenemos que calcular:
+                         
+                         10
+           P (X = 9) =         · 0,989 · 0,021 = 10 · 0,989 · 0,02 = 0,2 · 0,989 = 0,1667.
+                         9
+
+b) Es una binomial con n =  p2000 y p = 0,98.√Su media es µ = n · p = 2000 · 0,98 = 1960,
+y su desviación tı́pica σ = n · p · (1 − p) = 2000 · 0,02 · 0,98 = 6,26. Tenemos que tanto
+n · p = 1960 como n · q = 2000 · 0,02 = 40 son grandes. Es mejor, por lo tanto, hacer la
+aproximación mediante la normal para calcular la probabilidad pedida, que es P (X ≥ 1951).
+Para eso consideramos la variable X 0 del tipo N (1960, 6,26), y la correspondiente normalizada
+Z de tipo N (0, 1). Tenemos entonces:
+
+                   P (X ≥ 1951) = P (X 0 ≥ 1951 − 0,5) = P (X 0 ≥ 1950,5) =
+                              
+                 1950,5 − 1960
+           =P Z≥                 ' P (Z ≥ −1,52) = P (Z ≤ 1,52) = 0,9357
+                      6,26
+
+donde la igualdad P (Z > −1,52) = P (Z ≤ 1,52) se obtiene por simetrı́a de la distribución
+N (0, 1).
+
+
+
+
+       Resolución PAU Junio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+

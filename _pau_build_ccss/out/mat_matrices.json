@@ -1,0 +1,1025 @@
+[
+ {
+  "block": "mat_matrices",
+  "source": "País Vasco · Ordinaria 2023",
+  "title": "Ecuación matricial y dimensiones de productos · País Vasco · Ordinaria 2023",
+  "statement": "Sean las matrices $A=\\begin{pmatrix} -1 & 2 \\\\ -3 & 4 \\end{pmatrix}$, $B=\\begin{pmatrix} -1 & 2 & 1 \\\\ 3 & -1 & -1 \\end{pmatrix}$ y $C=\\begin{pmatrix} 3 & 0 & 1 \\\\ 2 & -1 & -1 \\end{pmatrix}$.\n\n**(a)** Razona qué dimensión deben tener las matrices $P$ y $Q$ para que los productos $A\\cdot P\\cdot B^{t}$ y $Q\\cdot A\\cdot C$ den como resultado una matriz cuadrada.\n\n**(b)** Resuelve la ecuación matricial $A\\cdot X-2B\\cdot C^{t}=A^{t}$.",
+  "knowns": [
+   "$A\\in\\mathcal{M}_{2\\times 2}$",
+   "$B,\\,C\\in\\mathcal{M}_{2\\times 3}$",
+   "$|A|=2$"
+  ],
+  "full_solution": "**(a)** Dimensiones.\nComo $A\\in\\mathcal{M}_{2\\times2}$, $B,C\\in\\mathcal{M}_{2\\times3}$ y $B^{t}\\in\\mathcal{M}_{3\\times2}$.\n\n$\\bullet$ En $A\\cdot P\\cdot B^{t}$: para que exista $A\\cdot P$ con $A_{2\\times2}$, $P$ debe tener $2$ filas; para que $(A\\cdot P)\\cdot B^{t}$ exista y sea $2\\times2$, $A\\cdot P$ debe ser $2\\times3$, luego $P\\in\\mathcal{M}_{2\\times3}$.\n\n$\\bullet$ En $Q\\cdot A\\cdot C$: $A\\cdot C$ no existe ($2\\times2$ por $2\\times3$ sí: $A\\cdot C\\in\\mathcal{M}_{2\\times3}$). Para que $Q\\cdot(A\\cdot C)$ sea cuadrada $3\\times3$, $Q$ debe ser $3\\times2$, es decir $Q\\in\\mathcal{M}_{3\\times2}$ y el resultado es $3\\times3$.\n\n**(b)** Despejamos $X$:\n$$A\\cdot X-2B\\cdot C^{t}=A^{t}\\ \\Rightarrow\\ A\\cdot X=A^{t}+2B\\cdot C^{t}\\ \\Rightarrow\\ X=A^{-1}\\left(A^{t}+2B\\cdot C^{t}\\right).$$\nInversa: $|A|=-1\\cdot4-2\\cdot(-3)=2$, y $A^{-1}=\\dfrac{1}{2}\\begin{pmatrix} 4 & -2 \\\\ 3 & -1 \\end{pmatrix}$.\n\n$C^{t}=\\begin{pmatrix} 3 & 2 \\\\ 0 & -1 \\\\ 1 & -1 \\end{pmatrix}$, $\\ B\\cdot C^{t}=\\begin{pmatrix} -2 & -5 \\\\ 8 & 8 \\end{pmatrix}$, $\\ 2B\\cdot C^{t}=\\begin{pmatrix} -4 & -10 \\\\ 16 & 16 \\end{pmatrix}$.\n\n$A^{t}+2B\\cdot C^{t}=\\begin{pmatrix} -1 & -3 \\\\ 2 & 4 \\end{pmatrix}+\\begin{pmatrix} -4 & -10 \\\\ 16 & 16 \\end{pmatrix}=\\begin{pmatrix} -5 & -13 \\\\ 18 & 20 \\end{pmatrix}$.\n\n$$X=\\frac{1}{2}\\begin{pmatrix} 4 & -2 \\\\ 3 & -1 \\end{pmatrix}\\begin{pmatrix} -5 & -13 \\\\ 18 & 20 \\end{pmatrix}=\\frac{1}{2}\\begin{pmatrix} -56 & -92 \\\\ -33 & -59 \\end{pmatrix}=\\begin{pmatrix} -28 & -46 \\\\ -\\tfrac{33}{2} & -\\tfrac{59}{2} \\end{pmatrix}.$$",
+  "answer": "**(a)** $P\\in\\mathcal{M}_{2\\times3}$ (resultado $2\\times2$); $Q\\in\\mathcal{M}_{3\\times2}$ (resultado $3\\times3$).\n**(b)** $X=\\begin{pmatrix} -28 & -46 \\\\ -\\tfrac{33}{2} & -\\tfrac{59}{2} \\end{pmatrix}$.",
+  "common_errors": [
+   "Multiplicar en orden incorrecto al despejar: $X=A^{-1}(\\dots)$, no $(\\dots)A^{-1}$.",
+   "Olvidar transponer $B$ o $C$, o equivocar la dimensión del producto.",
+   "Errores de signo al calcular la adjunta/inversa de $A$."
+  ],
+  "mark_scheme": [
+   "Dimensiones de $A,B,C,P,Q$: 0,2 p; dimensión de $A\\cdot P\\cdot B^{t}$: 0,4 p; de $Q\\cdot A\\cdot C$: 0,4 p.",
+   "Despeje de $X$: 0,3 p.",
+   "Cálculo de $A^{-1}$ (det, adjunta, inversa): 0,55 p.",
+   "Cálculo de $2B\\cdot C^{t}$, $A^{t}+2B\\cdot C^{t}$ y $X$: 0,65 p."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Pais-vasco_2023-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-MAT-001"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "La Rioja · Ordinaria 2024",
+  "title": "Ecuación matricial $AX=M$ y determinantes · La Rioja · Ordinaria 2024",
+  "statement": "Sea la matriz $M=\\begin{pmatrix} 0 & 2 \\\\ 2 & 0 \\end{pmatrix}$. Elige una matriz $A$ cuadrada de orden $2$ tal que, de sus cuatro componentes, tres valgan $1$ y la otra valga $-1$. Escribe explícitamente tu matriz $A$ y halla la matriz $X$ que cumple $AX=M$. ¿Cuánto valen los determinantes de $A$ y de $X$?",
+  "knowns": [
+   "$M=\\begin{pmatrix} 0 & 2 \\\\ 2 & 0 \\end{pmatrix}$",
+   "$A$ con tres unos y un $-1$",
+   "$AX=M$"
+  ],
+  "full_solution": "Tomamos $A=\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$, con $|A|=-1-1=-2\\neq0$, luego existe $A^{-1}$.\n$$A^{-1}=\\frac{1}{-2}\\begin{pmatrix} -1 & -1 \\\\ -1 & 1 \\end{pmatrix}=\\begin{pmatrix} \\tfrac12 & \\tfrac12 \\\\ \\tfrac12 & -\\tfrac12 \\end{pmatrix}.$$\nDe $AX=M$ se obtiene $X=A^{-1}M$:\n$$X=\\begin{pmatrix} \\tfrac12 & \\tfrac12 \\\\ \\tfrac12 & -\\tfrac12 \\end{pmatrix}\\begin{pmatrix} 0 & 2 \\\\ 2 & 0 \\end{pmatrix}=\\begin{pmatrix} 1 & 1 \\\\ -1 & 1 \\end{pmatrix}.$$\nComprobación: $AX=\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}\\begin{pmatrix} 1 & 1 \\\\ -1 & 1 \\end{pmatrix}=\\begin{pmatrix} 0 & 2 \\\\ 2 & 0 \\end{pmatrix}=M$.\nDeterminantes: $|A|=-2$ y $|X|=1\\cdot1-1\\cdot(-1)=2$.",
+  "answer": "Con $A=\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$: $X=\\begin{pmatrix} 1 & 1 \\\\ -1 & 1 \\end{pmatrix}$, $|A|=-2$, $|X|=2$.",
+  "common_errors": [
+   "Elegir una $A$ con determinante nulo (sin inversa).",
+   "Despejar $X=MA^{-1}$ en lugar de $X=A^{-1}M$.",
+   "Errores de signo en la inversa de $A$."
+  ],
+  "mark_scheme": [
+   "Elección válida de $A$, cálculo de $A^{-1}$, obtención de $X$ y de los determinantes: 2,5 p."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_La-Rioja_2024-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-002"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Navarra · Ordinaria 2022",
+  "title": "Producto $A\\cdot B^{t}$ y sistema matricial $2X-3Y=A,\\ 3X-2Y=B$ · Navarra · Ordinaria 2022",
+  "statement": "Considera las matrices $A=\\begin{pmatrix} 2 & -1 & 0 \\\\ -3 & 1 & -1 \\end{pmatrix}$ y $B=\\begin{pmatrix} 3 & 1 & 5 \\\\ -2 & 4 & 1 \\end{pmatrix}$.\n\n**(i)** Calcula $A\\cdot B^{t}$ y explica razonadamente si la matriz resultante tiene inversa.\n**(ii)** Determina las matrices $X$ e $Y$ que verifican el sistema $\\begin{cases} 2X-3Y=A \\\\ 3X-2Y=B \\end{cases}$.",
+  "knowns": [
+   "$A,B\\in\\mathcal{M}_{2\\times3}$",
+   "$2X-3Y=A,\\ 3X-2Y=B$"
+  ],
+  "full_solution": "**(i)** $B^{t}=\\begin{pmatrix} 3 & -2 \\\\ 1 & 4 \\\\ 5 & 1 \\end{pmatrix}$, y\n$$A\\cdot B^{t}=\\begin{pmatrix} 2 & -1 & 0 \\\\ -3 & 1 & -1 \\end{pmatrix}\\begin{pmatrix} 3 & -2 \\\\ 1 & 4 \\\\ 5 & 1 \\end{pmatrix}=\\begin{pmatrix} 5 & -8 \\\\ -13 & 9 \\end{pmatrix}.$$\nComo $|A\\cdot B^{t}|=5\\cdot9-(-8)(-13)=45-104=-59\\neq0$, la matriz **tiene inversa**.\n\n**(ii)** Combinamos las ecuaciones.\nMultiplicando la $1.ª$ por $3$ y la $2.ª$ por $-2$ y sumando: $-5Y=3A-2B\\Rightarrow Y=\\dfrac{1}{5}(-3A+2B)$.\nMultiplicando la $1.ª$ por $2$ y la $2.ª$ por $-3$ y sumando: $-5X=2A-3B\\Rightarrow X=\\dfrac{1}{5}(-2A+3B)$.\n$$Y=\\frac15\\begin{pmatrix} 0 & 5 & 10 \\\\ 5 & 5 & 5 \\end{pmatrix}=\\begin{pmatrix} 0 & 1 & 2 \\\\ 1 & 1 & 1 \\end{pmatrix},\\qquad X=\\frac15\\begin{pmatrix} 5 & 5 & 15 \\\\ 0 & 10 & 5 \\end{pmatrix}=\\begin{pmatrix} 1 & 1 & 3 \\\\ 0 & 2 & 1 \\end{pmatrix}.$$",
+  "answer": "**(i)** $A\\cdot B^{t}=\\begin{pmatrix} 5 & -8 \\\\ -13 & 9 \\end{pmatrix}$, con determinante $-59\\neq0$: tiene inversa.\n**(ii)** $X=\\begin{pmatrix} 1 & 1 & 3 \\\\ 0 & 2 & 1 \\end{pmatrix}$, $Y=\\begin{pmatrix} 0 & 1 & 2 \\\\ 1 & 1 & 1 \\end{pmatrix}$.",
+  "common_errors": [
+   "Multiplicar $A\\cdot B$ sin transponer (dimensiones incompatibles).",
+   "Equivocar los multiplicadores al eliminar $X$ o $Y$.",
+   "Errores aritméticos en $-2A+3B$ y $-3A+2B$."
+  ],
+  "mark_scheme": [
+   "(i) Producto $A\\cdot B^{t}$ y justificación por el determinante: 3 p.",
+   "(ii) Despeje y cálculo de $X$ e $Y$: 7 p."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Navarra_2022-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-003"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Comunidad Valenciana · Junio 2024",
+  "title": "Tres ecuaciones matriciales (X, Y, Z) · Comunidad Valenciana · Junio 2024",
+  "statement": "Sean $A=\\begin{pmatrix} 1 & 0 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$ y $B=\\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix}$, e $I$ la identidad de orden $3$.\n\n**(a)** Resuelve $X^{-1}A+A=B$ y obtén $X$.\n**(b)** Resuelve $(A-B)Y-AY=I$ y obtén $Y$.\n**(c)** Resuelve $AZA^{-1}=I$ y obtén $Z$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 0 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$",
+   "$B=\\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $X^{-1}A+A=B\\Rightarrow X^{-1}A=B-A\\Rightarrow X^{-1}=(B-A)A^{-1}\\Rightarrow X=A\\,(B-A)^{-1}$.\n$B-A=\\begin{pmatrix} 0 & 1 & 1 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{pmatrix}$, con $(B-A)^{-1}=\\begin{pmatrix} 0 & 0 & 1 \\\\ 1 & -1 & 0 \\\\ 0 & 1 & 0 \\end{pmatrix}$. Entonces\n$$X=A\\,(B-A)^{-1}=\\begin{pmatrix} 0 & -1 & 1 \\\\ 1 & -1 & 0 \\\\ 0 & 1 & 0 \\end{pmatrix}.$$\n\n**(b)** $(A-B)Y-AY=(A-B-A)Y=-BY=I\\Rightarrow Y=-B^{-1}$. Como $|B|=2$ y $B^{-1}=\\dfrac12\\begin{pmatrix} 1 & -1 & 1 \\\\ 1 & 1 & -1 \\\\ -1 & 1 & 1 \\end{pmatrix}$,\n$$Y=-B^{-1}=-\\frac12\\begin{pmatrix} 1 & -1 & 1 \\\\ 1 & 1 & -1 \\\\ -1 & 1 & 1 \\end{pmatrix}.$$\n\n**(c)** $AZA^{-1}=I\\Rightarrow Z=A^{-1}IA=A^{-1}A=I$.",
+  "answer": "**(a)** $X=\\begin{pmatrix} 0 & -1 & 1 \\\\ 1 & -1 & 0 \\\\ 0 & 1 & 0 \\end{pmatrix}$.\n**(b)** $Y=-\\dfrac12\\begin{pmatrix} 1 & -1 & 1 \\\\ 1 & 1 & -1 \\\\ -1 & 1 & 1 \\end{pmatrix}$.\n**(c)** $Z=I$.",
+  "common_errors": [
+   "No respetar el orden de los factores al despejar ($X=A(B-A)^{-1}$).",
+   "Errores al calcular $(B-A)^{-1}$ o $B^{-1}$.",
+   "No simplificar $(A-B)Y-AY=-BY$."
+  ],
+  "mark_scheme": [
+   "(a) Planteamiento y obtención de $X$: 4 p.",
+   "(b) Planteamiento y obtención de $Y$: 4 p.",
+   "(c) Planteamiento y obtención de $Z=I$: 2 p."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2024-Ordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-MAT-004"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "País Vasco · Extraordinaria 2023",
+  "title": "Matriz inversa y ecuación matricial $A\\cdot X=B$ · País Vasco · Extraordinaria 2023",
+  "statement": "Sean las matrices $A=\\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}$ y $B=\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}$.\n\n**(a)** Comprueba que la matriz $B$ es la inversa de la matriz $A$.\n\n**(b)** Calcula la matriz $(A-2I_2)^2$, donde $I_2=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$.\n\n**(c)** Calcula la matriz $X$ tal que $A\\cdot X=B$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}$",
+   "$B=\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $B=A^{-1}$ si y solo si $B\\cdot A=I_2$ y $A\\cdot B=I_2$.\n$$B\\cdot A=\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}\\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix},\\quad A\\cdot B=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}.$$\nComo ambos productos dan $I_2$, se confirma que $B=A^{-1}$.\n\n**(b)** Primero $A-2I_2=\\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}-\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}=\\begin{pmatrix} 0 & 1 \\\\ 3 & 0 \\end{pmatrix}$.\n$$(A-2I_2)^2=\\begin{pmatrix} 0 & 1 \\\\ 3 & 0 \\end{pmatrix}\\begin{pmatrix} 0 & 1 \\\\ 3 & 0 \\end{pmatrix}=\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}=3I_2.$$\n\n**(c)** De $A\\cdot X=B$ se despeja $X=A^{-1}\\cdot B$. Como por el apartado (a) $A^{-1}=B$, resulta $X=B\\cdot B=B^2$:\n$$X=\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\end{pmatrix}=\\begin{pmatrix} 7 & -4 \\\\ -12 & 7 \\end{pmatrix}.$$",
+  "answer": "**(a)** $B\\cdot A=A\\cdot B=I_2$, luego $B=A^{-1}$. **(b)** $(A-2I_2)^2=\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}=3I_2$. **(c)** $X=B^2=\\begin{pmatrix} 7 & -4 \\\\ -12 & 7 \\end{pmatrix}$.",
+  "common_errors": [
+   "Multiplicar las matrices en orden incorrecto al comprobar la inversa o al calcular $A^{-1}\\cdot B$.",
+   "Restar $2$ solo a un elemento en vez de restar $2I_2$ a la diagonal.",
+   "Despejar $X=B\\cdot A^{-1}$ (por la derecha) en lugar de $X=A^{-1}\\cdot B$ (por la izquierda)."
+  ],
+  "mark_scheme": [
+   "(a) Definición de inversa y comprobación de $B\\cdot A$ y $A\\cdot B$: 0,75 puntos.",
+   "(b) Cálculo de $A-2I_2$ y de su cuadrado: 0,75 puntos.",
+   "(c) Despeje de $X$ y cálculo de $B^2$ (o de $A^{-1}\\cdot B$): 1 punto."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Pais-vasco_2023-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-MAT-005"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Aragón · Extraordinaria 2024",
+  "title": "Ecuación matricial $AX-IX=B$ y sistema resuelto con matrices · Aragón · Extraordinaria 2024",
+  "statement": "**(a)** Dadas las matrices $A=\\begin{pmatrix} 2 & 1 \\\\ -1 & -1 \\end{pmatrix}$, $B=\\begin{pmatrix} 0 & 1 \\\\ 1 & 2 \\end{pmatrix}$, $I=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ y la ecuación matricial $AX-IX=B$, despeja la matriz $X$ y resuelve dicha ecuación.\n\n**(b)** Un producto «TechGadget» se vende por tres canales: tienda física ($10$ €), tienda online ($6$ €) y segunda mano ($5$ €). Este mes se registraron $1\\,600$ € en ventas. El número de unidades vendidas online es $5$ veces el de la tienda física, y por las ventas de segunda mano se obtuvieron $800$ € más que por las de la tienda física. Plantea un sistema de ecuaciones para obtener el número de unidades vendidas por cada canal y resuélvelo con técnicas matriciales.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 2 & 1 \\\\ -1 & -1 \\end{pmatrix}$, $B=\\begin{pmatrix} 0 & 1 \\\\ 1 & 2 \\end{pmatrix}$",
+   "Precios: $10$, $6$, $5$ €; recaudación $1\\,600$ €"
+  ],
+  "full_solution": "**(a)** Sacando factor común $X$ por la izquierda: $AX-IX=(A-I)X=B\\Rightarrow X=(A-I)^{-1}B$.\n$$A-I=\\begin{pmatrix} 1 & 1 \\\\ -1 & -2 \\end{pmatrix},\\quad |A-I|=-2+1=-1\\neq 0.$$\n$$(A-I)^{-1}=\\frac{1}{-1}\\begin{pmatrix} -2 & -1 \\\\ 1 & 1 \\end{pmatrix}=\\begin{pmatrix} 2 & 1 \\\\ -1 & -1 \\end{pmatrix}.$$\n$$X=(A-I)^{-1}B=\\begin{pmatrix} 2 & 1 \\\\ -1 & -1 \\end{pmatrix}\\begin{pmatrix} 0 & 1 \\\\ 1 & 2 \\end{pmatrix}=\\begin{pmatrix} 1 & 4 \\\\ -1 & -3 \\end{pmatrix}.$$\n\n**(b)** Sean $x$ (tienda física), $y$ (online), $z$ (segunda mano). Las condiciones dan:\n$$\\begin{cases} 10x+6y+5z=1600 \\\\ y=5x \\\\ 5z=10x+800 \\end{cases}\\Rightarrow\\begin{cases} 10x+6y+5z=1600 \\\\ -5x+y=0 \\\\ -2x+z=160 \\end{cases}$$\nEn forma matricial $M\\cdot\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix}=\\begin{pmatrix}1600\\\\0\\\\160\\end{pmatrix}$ con $M=\\begin{pmatrix} 10 & 6 & 5 \\\\ -5 & 1 & 0 \\\\ -2 & 0 & 1 \\end{pmatrix}$, $|M|=50\\neq0$. Resolviendo con $M^{-1}$:\n$$\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix}=M^{-1}\\begin{pmatrix}1600\\\\0\\\\160\\end{pmatrix}=\\begin{pmatrix}16\\\\80\\\\192\\end{pmatrix}.$$\nSe vendieron $16$ unidades en tienda física, $80$ online y $192$ de segunda mano.",
+  "answer": "**(a)** $X=(A-I)^{-1}B=\\begin{pmatrix} 1 & 4 \\\\ -1 & -3 \\end{pmatrix}$. **(b)** $x=16$ (física), $y=80$ (online), $z=192$ (segunda mano).",
+  "common_errors": [
+   "Escribir $X=B(A-I)^{-1}$ (producto por la derecha) en lugar de $(A-I)^{-1}B$.",
+   "Equivocar la condición «$800$ € más» ($5z=10x+800$) o «$5$ veces» ($y=5x$).",
+   "Errores de signo al calcular la inversa de $A-I$."
+  ],
+  "mark_scheme": [
+   "(a) Despeje, existencia de $(A-I)^{-1}$ y cálculo de $X$: 5 puntos.",
+   "(b) Planteamiento del sistema y resolución con la inversa: 5 puntos."
+  ],
+  "marks": 10.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Aragon_2024-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-006"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Galicia · Ordinaria 2022",
+  "title": "Operaciones, inversa y ecuación matricial $X\\cdot A+B=A^2+X$ · Galicia · Ordinaria 2022",
+  "statement": "Dadas las matrices $A=\\begin{pmatrix} 0 & 1 & 2 \\\\ 1 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix}$ y $B=\\begin{pmatrix} 0 & 2 & 3 \\\\ 1 & 2 & 3 \\\\ -3 & 3 & 6 \\end{pmatrix}$:\n\n**(a)** Calcula las matrices $A^2-B$ y $A-I$, donde $I$ es la identidad de orden $3$.\n\n**(b)** Calcula, si es posible, la inversa de $A-I$.\n\n**(c)** Despeja $X$ en la ecuación matricial $X\\cdot A+B=A^2+X$ y calcula su valor.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 0 & 1 & 2 \\\\ 1 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix}$",
+   "$B=\\begin{pmatrix} 0 & 2 & 3 \\\\ 1 & 2 & 3 \\\\ -3 & 3 & 6 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $A^2=\\begin{pmatrix} 3 & 1 & 3 \\\\ 2 & 2 & 4 \\\\ 1 & 1 & 3 \\end{pmatrix}$, luego\n$$A^2-B=\\begin{pmatrix} 3 & -1 & 0 \\\\ 1 & 0 & 1 \\\\ 4 & -2 & -3 \\end{pmatrix},\\qquad A-I=\\begin{pmatrix} -1 & 1 & 2 \\\\ 1 & 0 & 1 \\\\ 1 & 0 & 0 \\end{pmatrix}.$$\n\n**(b)** $\\det(A-I)=1\\neq0$, así que existe la inversa:\n$$(A-I)^{-1}=\\begin{pmatrix} 0 & 0 & 1 \\\\ 1 & -2 & 3 \\\\ 0 & 1 & -1 \\end{pmatrix}.$$\n\n**(c)** $X\\cdot A+B=A^2+X\\Rightarrow X\\cdot A-X=A^2-B\\Rightarrow X(A-I)=A^2-B\\Rightarrow X=(A^2-B)(A-I)^{-1}.$\n$$X=\\begin{pmatrix} 3 & -1 & 0 \\\\ 1 & 0 & 1 \\\\ 4 & -2 & -3 \\end{pmatrix}\\begin{pmatrix} 0 & 0 & 1 \\\\ 1 & -2 & 3 \\\\ 0 & 1 & -1 \\end{pmatrix}=\\begin{pmatrix} -1 & 2 & 0 \\\\ 0 & 1 & 0 \\\\ -2 & 1 & 1 \\end{pmatrix}.$$",
+  "answer": "**(a)** $A^2-B=\\begin{pmatrix} 3 & -1 & 0 \\\\ 1 & 0 & 1 \\\\ 4 & -2 & -3 \\end{pmatrix}$, $A-I=\\begin{pmatrix} -1 & 1 & 2 \\\\ 1 & 0 & 1 \\\\ 1 & 0 & 0 \\end{pmatrix}$. **(b)** $(A-I)^{-1}=\\begin{pmatrix} 0 & 0 & 1 \\\\ 1 & -2 & 3 \\\\ 0 & 1 & -1 \\end{pmatrix}$. **(c)** $X=(A^2-B)(A-I)^{-1}=\\begin{pmatrix} -1 & 2 & 0 \\\\ 0 & 1 & 0 \\\\ -2 & 1 & 1 \\end{pmatrix}$.",
+  "common_errors": [
+   "Multiplicar por la inversa por el lado equivocado: como $X$ está a la izquierda de $A$, hay que posmultiplicar por $(A-I)^{-1}$: $X=(A^2-B)(A-I)^{-1}$.",
+   "Errores al calcular $A^2$ (producto fila por columna).",
+   "Equivocarse en los adjuntos al obtener la inversa."
+  ],
+  "mark_scheme": [
+   "(a) $A^2-B$ y $A-I$: 1 punto.",
+   "(b) Inversa de $A-I$: 1 punto.",
+   "(c) Despeje y cálculo de $X$: 1,33 puntos."
+  ],
+  "marks": 3.33,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Galicia_2022-Ordinaria_Resuelto_CiUG.txt",
+  "id": "PAU-MCS-MAT-007"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Comunidad Valenciana · Junio 2023",
+  "title": "Matriz normal $2\\times 2$ · Comunidad Valenciana · Junio 2023",
+  "statement": "Se dice que una matriz cuadrada $A$ es *normal* si $A^{t}A=AA^{t}$, donde $A^{t}$ es su traspuesta.\n\nHalla el valor de $x$ para que la matriz $A=\\begin{pmatrix} 2 & 1 \\\\ -1 & x \\end{pmatrix}$ sea normal.",
+  "knowns": [
+   "$A$ es normal si $A^{t}A=AA^{t}$",
+   "$A=\\begin{pmatrix} 2 & 1 \\\\ -1 & x \\end{pmatrix}$"
+  ],
+  "full_solution": "Sea $A=\\begin{pmatrix} 2 & 1 \\\\ -1 & x \\end{pmatrix}$, con traspuesta $A^{t}=\\begin{pmatrix} 2 & -1 \\\\ 1 & x \\end{pmatrix}$.\n\nCalculamos los dos productos:\n$$AA^{t}=\\begin{pmatrix} 5 & x-2 \\\\ x-2 & 1+x^2 \\end{pmatrix},\\qquad A^{t}A=\\begin{pmatrix} 5 & 2-x \\\\ 2-x & 1+x^2 \\end{pmatrix}.$$\nImponiendo $A^{t}A=AA^{t}$, los elementos de la diagonal ya coinciden; basta igualar el elemento no diagonal:\n$$x-2=2-x\\ \\Rightarrow\\ 2x=4\\ \\Rightarrow\\ x=2.$$\nPara $x=2$ la matriz $A=\\begin{pmatrix} 2 & 1 \\\\ -1 & 2 \\end{pmatrix}$ es normal.",
+  "answer": "$x=2$ (única solución de $x-2=2-x$).",
+  "common_errors": [
+   "Calcular mal la traspuesta o los productos $A^tA$ y $AA^t$.",
+   "Imponer la igualdad en la diagonal (que se cumple siempre) en lugar de en el elemento no diagonal.",
+   "Al resolver la ecuación matricial, multiplicar por la inversa por el lado equivocado."
+  ],
+  "mark_scheme": [
+   "(a) Planteamiento y valor $x=2$: hasta 4 puntos.",
+   "(b) Planteamiento y obtención de $X$: hasta 6 puntos."
+  ],
+  "marks": 10.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2023-Ordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-MAT-008"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Galicia · Extraordinaria 2022",
+  "title": "Cálculo de matrices y ecuación matricial · Galicia · Extraordinaria 2022",
+  "statement": "Para dos matrices $A$ y $B$ se verifica que\n$$A-B=\\begin{pmatrix} 1 & 1 \\\\ -5 & 2 \\end{pmatrix},\\qquad 2A+B=\\begin{pmatrix} 5 & 2 \\\\ 2 & 7 \\end{pmatrix}$$\n\n**(a)** Calcule las matrices $A$ y $B$.\n**(b)** Despeje la matriz $X$ en la ecuación matricial $A\\cdot X-B=X$ y calcule su valor.",
+  "knowns": [
+   "$A-B=\\begin{pmatrix} 1 & 1 \\\\ -5 & 2 \\end{pmatrix}$",
+   "$2A+B=\\begin{pmatrix} 5 & 2 \\\\ 2 & 7 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** Sumando las dos igualdades, $B$ se cancela: $(2A+B)+(A-B)=3A$.\n$$3A=\\begin{pmatrix} 5 & 2 \\\\ 2 & 7 \\end{pmatrix}+\\begin{pmatrix} 1 & 1 \\\\ -5 & 2 \\end{pmatrix}=\\begin{pmatrix} 6 & 3 \\\\ -3 & 9 \\end{pmatrix}\\Rightarrow A=\\begin{pmatrix} 2 & 1 \\\\ -1 & 3 \\end{pmatrix}$$\nY $B=A-\\begin{pmatrix} 1 & 1 \\\\ -5 & 2 \\end{pmatrix}=\\begin{pmatrix} 2 & 1 \\\\ -1 & 3 \\end{pmatrix}-\\begin{pmatrix} 1 & 1 \\\\ -5 & 2 \\end{pmatrix}=\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$.\n\n**(b)** $A\\cdot X-B=X\\Rightarrow A\\cdot X-X=B\\Rightarrow (A-I)\\,X=B\\Rightarrow X=(A-I)^{-1}B$.\n$$A-I=\\begin{pmatrix} 1 & 1 \\\\ -1 & 2 \\end{pmatrix},\\quad \\det(A-I)=2+1=3,\\quad (A-I)^{-1}=\\frac13\\begin{pmatrix} 2 & -1 \\\\ 1 & 1 \\end{pmatrix}$$\n$$X=\\frac13\\begin{pmatrix} 2 & -1 \\\\ 1 & 1 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}=\\begin{pmatrix} -2/3 & -1/3 \\\\ 5/3 & 1/3 \\end{pmatrix}$$",
+  "answer": "**(a)** $A=\\begin{pmatrix} 2 & 1 \\\\ -1 & 3 \\end{pmatrix}$, $B=\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$. **(b)** $X=\\begin{pmatrix} -2/3 & -1/3 \\\\ 5/3 & 1/3 \\end{pmatrix}$.",
+  "common_errors": [
+   "Multiplicar por $(A-I)^{-1}$ por la derecha en vez de por la izquierda",
+   "Equivocar la inversa de una matriz $2\\times2$ (cambio de signos y división por el determinante)",
+   "Despejar $X$ sin sacar factor común $(A-I)$"
+  ],
+  "mark_scheme": [
+   "(a) 1,5 puntos",
+   "(b) 1,83 puntos"
+  ],
+  "marks": 3.33,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Galicia_2022-Extraordinaria_Resuelto_CiUG.txt",
+  "id": "PAU-MCS-MAT-009"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Castilla-La Mancha · Ordinaria 2022",
+  "title": "Propiedades del producto de matrices y ecuación matricial · Castilla-La Mancha · Ordinaria 2022",
+  "statement": "**(a)** Dadas dos matrices cuadradas $A$ y $B$, ¿se obtendría el mismo resultado al resolver $A\\cdot X=B$ y $X\\cdot A=B$? ¿De qué propiedad se trata?\n**(b)** Si $M$ es $3\\times m$, $N$ es $2\\times5$ y $P$ es cuadrada de orden $p$, ¿qué valores deben tomar $m$ y $p$ para poder realizar $M\\cdot N\\cdot P$? ¿Qué dimensión tendría el resultado?\n**(c)** Para $C=\\begin{pmatrix} -4 & 11 \\\\ 1 & -3 \\end{pmatrix}$, $D=\\begin{pmatrix} 5 & 0 \\\\ -1 & 2 \\end{pmatrix}$ y $E=\\begin{pmatrix} 9 & -3 \\\\ -9 & 3 \\end{pmatrix}$, resuelva $X\\cdot C-D^2=\\tfrac13 E^T$.",
+  "knowns": [
+   "$C=\\begin{pmatrix} -4 & 11 \\\\ 1 & -3 \\end{pmatrix}$",
+   "$D=\\begin{pmatrix} 5 & 0 \\\\ -1 & 2 \\end{pmatrix}$",
+   "$E=\\begin{pmatrix} 9 & -3 \\\\ -9 & 3 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** Al despejar: en $A\\cdot X=B$ se obtiene $X=A^{-1}B$ (producto por la izquierda) y en $X\\cdot A=B$ se obtiene $X=B\\,A^{-1}$ (por la derecha). En general **no coinciden**, porque el producto de matrices **no es conmutativo**.\n\n**(b)** Para $M\\cdot N$ el nº de columnas de $M$ debe igualar al de filas de $N$: $m=2$. Para $(M\\cdot N)\\cdot P$, como $M\\cdot N$ es $3\\times5$, $P$ debe ser $5\\times5$, luego $p=5$. La matriz resultante es $3\\times5$.\n\n**(c)** $X\\cdot C=\\tfrac13 E^T+D^2\\Rightarrow X=\\left(\\tfrac13 E^T+D^2\\right)C^{-1}$. Con $E^T=\\begin{pmatrix} 9 & -9 \\\\ -3 & 3 \\end{pmatrix}$, $\\tfrac13 E^T=\\begin{pmatrix} 3 & -3 \\\\ -1 & 1 \\end{pmatrix}$ y $D^2=\\begin{pmatrix} 25 & 0 \\\\ -7 & 4 \\end{pmatrix}$, se tiene $\\tfrac13 E^T+D^2=\\begin{pmatrix} 28 & -3 \\\\ -8 & 5 \\end{pmatrix}$. Además $\\det C=12-11=1$ y $C^{-1}=\\begin{pmatrix} -3 & -11 \\\\ -1 & -4 \\end{pmatrix}$. Por tanto\n$$X=\\begin{pmatrix} 28 & -3 \\\\ -8 & 5 \\end{pmatrix}\\begin{pmatrix} -3 & -11 \\\\ -1 & -4 \\end{pmatrix}=\\begin{pmatrix} -81 & -296 \\\\ 19 & 68 \\end{pmatrix}$$",
+  "answer": "**(a)** No, por la no conmutatividad del producto. **(b)** $m=2$, $p=5$; resultado $3\\times5$. **(c)** $X=\\begin{pmatrix} -81 & -296 \\\\ 19 & 68 \\end{pmatrix}$.",
+  "common_errors": [
+   "Multiplicar por $C^{-1}$ por la izquierda en lugar de por la derecha",
+   "Calcular $D^2$ como el cuadrado elemento a elemento",
+   "Equivocar $E^T$ o la inversa de $C$"
+  ],
+  "mark_scheme": [
+   "(a) 0,5 puntos",
+   "(b) 0,5 puntos",
+   "(c) 1 punto (inversa 0,5)"
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-la-Mancha_2022-Ordinaria_Resuelto_Universidad.txt",
+  "id": "PAU-MCS-MAT-010"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "País Vasco · Extraordinaria 2022",
+  "title": "Ecuaciones matriciales con un parámetro · País Vasco · Extraordinaria 2022",
+  "statement": "Sean las matrices $A=\\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}$, $B=\\begin{pmatrix} 1 & x \\\\ x & 0 \\end{pmatrix}$ y $C=\\begin{pmatrix} 0 & -1 \\\\ -1 & 2 \\end{pmatrix}$.\n\n**(a)** Halla el valor o valores de $x$ para que $B^2=A$.\n\n**(b)** Igualmente, para que $B+C=A^{-1}$.\n\n**(c)** Determina el valor de $x$ para que $A+B+C=3\\,I_2$, con $I_2=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 2 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
+   "$B=\\begin{pmatrix} 1 & x \\\\ x & 0 \\end{pmatrix}$",
+   "$C=\\begin{pmatrix} 0 & -1 \\\\ -1 & 2 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $B^2=\\begin{pmatrix} 1 & x \\\\ x & 0 \\end{pmatrix}\\begin{pmatrix} 1 & x \\\\ x & 0 \\end{pmatrix}=\\begin{pmatrix} 1+x^2 & x \\\\ x & x^2 \\end{pmatrix}$. Igualando a $A$:\n$$1+x^2=2,\\;\\; x=1,\\;\\; x^2=1\\;\\Longrightarrow\\; x=1.$$\n\n**(b)** Como $\\det A=1$, $A^{-1}=\\begin{pmatrix} 1 & -1 \\\\ -1 & 2 \\end{pmatrix}$. Además $B+C=\\begin{pmatrix} 1 & x-1 \\\\ x-1 & 2 \\end{pmatrix}$. Igualando:\n$$x-1=-1\\;\\Longrightarrow\\; x=0.$$\n\n**(c)** $A+B+C=\\begin{pmatrix} 3 & x \\\\ x & 3 \\end{pmatrix}$. Igualando a $3I_2=\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}$ se obtiene $x=0$.",
+  "answer": "**(a)** $x=1$. **(b)** $x=0$. **(c)** $x=0$.",
+  "common_errors": [
+   "Calcular $B^2$ como el cuadrado elemento a elemento en vez del producto matricial.",
+   "Equivocar la inversa de $A$ (recordar $\\det A=1$).",
+   "No imponer que TODAS las entradas coincidan al igualar matrices."
+  ],
+  "mark_scheme": [
+   "(a) $B^2=A$: $0{,}75$ puntos.",
+   "(b) $B+C=A^{-1}$: $1$ punto.",
+   "(c) $A+B+C=3I_2$: $0{,}75$ puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Pais-vasco_2022-Extraordinaria_Resuelto_JuanAntonioMG-1.txt",
+  "id": "PAU-MCS-MAT-011"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Cataluña · Ordinaria 2026",
+  "title": "Matrícula universitaria (Opción A): probabilidad y producto de matrices · Cataluña · Ordinaria 2026",
+  "statement": "La tabla recoge los estudiantes de grado (G), máster (M) y doctorado (D) en las facultades de Ciencias (C), Ingeniería (I) y Letras (L):\n\n| Facultad | G | M | D | Total |\n|---|---|---|---|---|\n| Ciencias | 450 | 172 | 41 | 663 |\n| Ingeniería | 445 | 178 | 45 | 668 |\n| Letras | 438 | 183 | 48 | 669 |\n| Total | 1333 | 533 | 134 | 2000 |\n\n**(4.1)** Si se escoge un estudiante al azar, ¿probabilidad de que sea de doctorado de Letras? Si se escoge al azar un estudiante de máster, ¿probabilidad de que estudie en Ingeniería?\n\n**(4.2)** Expresa la tabla (sin totales) como matriz $3\\times 3$ y calcula, con un producto de matrices, el vector con el total de estudiantes de grado, máster y doctorado. Si grado paga $1000$ €, máster $1500$ € y doctorado $500$ €, calcula mediante producto de matrices el importe total de matrículas.",
+  "knowns": [
+   "Total estudiantes: $2000$",
+   "Doctorado de Letras: $48$",
+   "Máster total: $533$; máster de Ingeniería: $178$",
+   "Matrículas: grado $1000$ €, máster $1500$ €, doctorado $500$ €"
+  ],
+  "full_solution": "**(4.1)** Por la regla de Laplace:\n$$P(D\\cap L)=\\dfrac{48}{2000}=0{,}024.$$\n$$P(I\\mid M)=\\dfrac{178}{533}\\approx 0{,}334.$$\n\n**(4.2)** Matriz de la tabla (filas = facultades, columnas = G, M, D):\n$$T=\\begin{pmatrix} 450 & 172 & 41 \\\\ 445 & 178 & 45 \\\\ 438 & 183 & 48 \\end{pmatrix}.$$\nMultiplicando por la fila $(1\\;1\\;1)$ se obtiene el total por nivel:\n$$(1\\;\\;1\\;\\;1)\\cdot T=(1333\\;\\;533\\;\\;134).$$\nMultiplicando este vector por la columna de precios:\n$$(1333\\;\\;533\\;\\;134)\\begin{pmatrix} 1000 \\\\ 1500 \\\\ 500 \\end{pmatrix}=1333\\cdot 1000+533\\cdot 1500+134\\cdot 500=2199500\\ \\text{€}.$$",
+  "answer": "**(4.1)** $P(D\\cap L)=0{,}024$ y $P(I\\mid M)=\\dfrac{178}{533}\\approx 0{,}334$. **(4.2)** Totales por nivel $(1333,\\,533,\\,134)$ e importe total de matrículas $2\\,199\\,500$ €.",
+  "common_errors": [
+   "Confundir $P(D\\cap L)$ (sobre el total $2000$) con una probabilidad condicionada.",
+   "Para $P(I\\mid M)$ dividir entre el total $2000$ en vez de entre los $533$ de máster.",
+   "Equivocar el orden del producto de matrices fila por matriz o matriz por columna."
+  ],
+  "mark_scheme": [
+   "(4.1) las dos probabilidades: $1{,}25$ puntos.",
+   "(4.2) matriz, vector de totales e importe de matrículas: $1{,}25$ puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Cataluna_2026-Ordinaria_Resuelto_JuanAntonioMG_1.txt",
+  "id": "PAU-MCS-MAT-012"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "La Rioja · Extraordinaria 2022",
+  "title": "Matrices idempotentes $2\\times2$ · La Rioja · Extraordinaria 2022",
+  "statement": "Una matriz cuadrada $A$ es idempotente si $A^{2}=A$.\n\n**(a)** Estudie si existen matrices idempotentes $2\\times2$ de la forma $\\begin{pmatrix}2 & 1\\\\ a & b\\end{pmatrix}$ o de la forma $\\begin{pmatrix}2 & b\\\\ a & 1\\end{pmatrix}$, indicando en su caso los valores de $a$ y $b$.\n\n**(b)** Si $A$ es idempotente, calcule $A^{2022}$.",
+  "knowns": [
+   "$A^{2}=A$"
+  ],
+  "full_solution": "**(a) Primera forma** $A=\\begin{pmatrix}2&1\\\\a&b\\end{pmatrix}$. Imponiendo $A^2=A$:\n$$A^2=\\begin{pmatrix}4+a & 2+b\\\\ 2a+ab & a+b^2\\end{pmatrix}=\\begin{pmatrix}2&1\\\\a&b\\end{pmatrix}.$$\nDe $4+a=2\\Rightarrow a=-2$ y $2+b=1\\Rightarrow b=-1$. Se comprueba que $2a+ab=-4+2=-2=a$ y $a+b^2=-2+1=-1=b$. **Sí existe**, con $a=-2$, $b=-1$:\n$$A=\\begin{pmatrix}2&1\\\\-2&-1\\end{pmatrix}.$$\n**Segunda forma** $\\begin{pmatrix}2&b\\\\a&1\\end{pmatrix}$: de $A^2=A$ sale $4+ab=2$ y $2b=b\\Rightarrow b=0$, $2a=a\\Rightarrow a=0$, lo que da $4+0=2$, **imposible**. No existe.\n\n**(b)** Por inducción, si $A^2=A$ entonces $A^{3}=A^2A=A\\cdot A=A$, y así sucesivamente $A^{n}=A$ para todo $n\\ge1$. Por tanto\n$$A^{2022}=A.$$",
+  "answer": "**(a)** Solo la primera forma es idempotente, con $a=-2$, $b=-1$. **(b)** $A^{2022}=A$.",
+  "common_errors": [
+   "Equivocar el producto $A^2$ (sobre todo las entradas $2a+ab$ y $a+b^2$).",
+   "Olvidar comprobar todas las ecuaciones del sistema que impone $A^2=A$.",
+   "No justificar por inducción que $A^n=A$."
+  ],
+  "mark_scheme": [
+   "(a) Estudio de ambas formas: 2 puntos.",
+   "(b) Cálculo de $A^{2022}$: 0,5 puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_La-Rioja_2022-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-013"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Aragón · Extraordinaria 2026",
+  "title": "Ecuación matricial $AX+B=C$ · Aragón · Extraordinaria 2026",
+  "statement": "Resuelva, despejando previamente $X$, la ecuación matricial $AX+B=C$, siendo\n$$A=\\begin{pmatrix}4&3\\\\5&4\\end{pmatrix},\\quad B=\\begin{pmatrix}4&-2\\\\1&0\\end{pmatrix},\\quad C=\\begin{pmatrix}1&1\\\\2&3\\end{pmatrix}.$$",
+  "knowns": [
+   "$A=\\begin{pmatrix}4&3\\\\5&4\\end{pmatrix}$",
+   "$B=\\begin{pmatrix}4&-2\\\\1&0\\end{pmatrix}$",
+   "$C=\\begin{pmatrix}1&1\\\\2&3\\end{pmatrix}$"
+  ],
+  "full_solution": "Despejamos: $AX+B=C\\Rightarrow AX=C-B\\Rightarrow X=A^{-1}(C-B)$.\n\n**Inversa de $A$:** $|A|=4\\cdot4-3\\cdot5=16-15=1\\neq0$, luego existe $A^{-1}$:\n$$A^{-1}=\\frac{1}{|A|}\\begin{pmatrix}4&-3\\\\-5&4\\end{pmatrix}=\\begin{pmatrix}4&-3\\\\-5&4\\end{pmatrix}.$$\n\n**Cálculo de $C-B$:**\n$$C-B=\\begin{pmatrix}1&1\\\\2&3\\end{pmatrix}-\\begin{pmatrix}4&-2\\\\1&0\\end{pmatrix}=\\begin{pmatrix}-3&3\\\\1&3\\end{pmatrix}.$$\n\n**Producto:**\n$$X=\\begin{pmatrix}4&-3\\\\-5&4\\end{pmatrix}\\begin{pmatrix}-3&3\\\\1&3\\end{pmatrix}=\\begin{pmatrix}-12-3 & 12-9\\\\ 15+4 & -15+12\\end{pmatrix}=\\begin{pmatrix}-15&3\\\\19&-3\\end{pmatrix}.$$",
+  "answer": "$X=\\begin{pmatrix}-15&3\\\\19&-3\\end{pmatrix}$.",
+  "common_errors": [
+   "Multiplicar por $A^{-1}$ por el lado equivocado (debe ser por la izquierda).",
+   "Equivocar la adjunta/transpuesta al calcular $A^{-1}$.",
+   "Errores de signo en $C-B$ o en el producto final."
+  ],
+  "mark_scheme": [
+   "Despejar y resolver correctamente la ecuación matricial: 5 puntos."
+  ],
+  "marks": 5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Aragon_2026-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-014"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Aragón · Ordinaria 2024",
+  "title": "Ecuación matricial $AX+3B=C$ y sistema de participaciones por técnicas matriciales · Aragón · Ordinaria 2024",
+  "statement": "**(a)** Dadas $A=\\begin{pmatrix}1&1\\\\2&1\\end{pmatrix}$, $B=\\begin{pmatrix}-1&1&0\\\\1&0&-1\\end{pmatrix}$ y $C=\\begin{pmatrix}2&0&2\\\\-1&-1&1\\end{pmatrix}$, determine el orden de la matriz $X$ para que $AX+3B=C$ esté bien planteada y resuélvala despejando $X$.\n\n**(b)** Un pueblo vende participaciones de lotería de $10$ €, $25$ € y $5$ €. Vendieron la mitad de participaciones de $10$ € que de $25$ €, recaudaron $7\\,100$ € y vendieron $430$ participaciones en total. Con técnicas matriciales, halle cuántas participaciones de cada tipo se vendieron. Si la ganancia es de $2{,}50$ € por cada participación de $10$ €, $5$ € por cada una de $25$ € y $1$ € por cada una de $5$ €, ¿cuál es la ganancia total?",
+  "knowns": [
+   "$A=\\begin{pmatrix}1&1\\\\2&1\\end{pmatrix}$",
+   "$B,\\ C$ de orden $2\\times3$",
+   "$x=\\tfrac{y}{2}$, $10x+25y+5z=7100$, $x+y+z=430$"
+  ],
+  "full_solution": "**(a)** Para que $AX$ exista con $A$ de orden $2\\times2$, $X$ debe tener $2$ filas; y para sumar $3B$ (orden $2\\times3$) e igualar a $C$ ($2\\times3$), $X$ debe ser de orden $\\mathbf{2\\times3}$. Despejando:\n$$AX+3B=C\\Rightarrow X=A^{-1}(C-3B).$$\nComo $|A|=1-2=-1$, $A^{-1}=\\begin{pmatrix}-1&1\\\\2&-1\\end{pmatrix}$. Además\n$$C-3B=\\begin{pmatrix}2&0&2\\\\-1&-1&1\\end{pmatrix}-3\\begin{pmatrix}-1&1&0\\\\1&0&-1\\end{pmatrix}=\\begin{pmatrix}5&-3&2\\\\-4&-1&4\\end{pmatrix}.$$\n$$X=\\begin{pmatrix}-1&1\\\\2&-1\\end{pmatrix}\\begin{pmatrix}5&-3&2\\\\-4&-1&4\\end{pmatrix}=\\begin{pmatrix}-9&2&2\\\\14&-5&0\\end{pmatrix}.$$\n\n**(b)** Sean $x,y,z$ las participaciones de $10$, $25$ y $5$ €. El sistema $x+y+z=430$, $2x-y=0$, $2x+5y+z=1420$ (la última al dividir $10x+25y+5z=7100$ entre $5$) se escribe $\\begin{pmatrix}1&1&1\\\\2&-1&0\\\\2&5&1\\end{pmatrix}\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix}=\\begin{pmatrix}430\\\\0\\\\1420\\end{pmatrix}$, con $|A|=9\\neq0$. Resolviendo (por la inversa):\n$$x=110,\\quad y=220,\\quad z=100.$$\nGanancia total: $110\\cdot2{,}5+220\\cdot5+100\\cdot1=275+1100+100=1\\,475$ €.",
+  "answer": "$X$ es $2\\times3$ y $X=\\begin{pmatrix}-9&2&2\\\\14&-5&0\\end{pmatrix}$. Se vendieron $110$ participaciones de $10$ €, $220$ de $25$ € y $100$ de $5$ €; la ganancia total es $1\\,475$ €.",
+  "common_errors": [
+   "Multiplicar como $X=(C-3B)A^{-1}$ en vez de $A^{-1}(C-3B)$ (el orden importa).",
+   "Plantear mal la condición \\\"la mitad de 10 € que de 25 €\\\" como $y=x/2$ en vez de $x=y/2$.",
+   "Equivocar el orden de $X$ al no comprobar la compatibilidad de las dimensiones."
+  ],
+  "mark_scheme": [
+   "(a) Determinar el orden de $X$ y resolver la ecuación matricial: $5$ puntos.",
+   "(b) Plantear y resolver el sistema con técnicas matriciales y hallar la ganancia: $5$ puntos."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "origin_file": "2oBachCCSS_EBAU_Aragon_2024-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-MAT-015"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Extraordinaria 2024",
+  "title": "Parámetros de una matriz y uso de $M^2=M+2I$ para $M^{-1}$ y $M^3$ · Madrid · Extraordinaria 2024",
+  "statement": "Sean $M=\\begin{pmatrix}a&b\\\\ c&1\\end{pmatrix}$, $P=\\begin{pmatrix}-1\\\\ -3\\end{pmatrix}$ y $N=\\begin{pmatrix}-1\\\\ 2\\end{pmatrix}$.\n\n**(a)** Determine $a,b,c\\in\\mathbb{R}$ tales que $M\\cdot N=2N$ y $(N^t\\cdot M)^t+M\\cdot P=N$.\n\n**(b)** Para $a=0$, $b=-1$, $c=-2$, compruebe que $M^2=M+2I$ (con $I$ la identidad $2\\times2$) y use esa igualdad para calcular $M^{-1}$ y $M^3$.",
+  "knowns": [
+   "$M=\\begin{pmatrix}a&b\\\\ c&1\\end{pmatrix}$",
+   "$P=\\begin{pmatrix}-1\\\\ -3\\end{pmatrix}$, $N=\\begin{pmatrix}-1\\\\ 2\\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** De $M\\cdot N=2N$:\n$$\\begin{pmatrix}-a+2b\\\\ -c+2\\end{pmatrix}=\\begin{pmatrix}-2\\\\ 4\\end{pmatrix}\\Rightarrow\\begin{cases}-a+2b=-2\\\\ -c+2=4\\Rightarrow c=-2.\\end{cases}$$\nComo $(N^t M)^t=M^t N$, la segunda ecuación $M^t N+M P=N$ da\n$$\\begin{pmatrix}-2a-3b+2c\\\\ -b-c-1\\end{pmatrix}=\\begin{pmatrix}-1\\\\ 2\\end{pmatrix}\\Rightarrow -b-c-1=2\\Rightarrow b+c=-3\\Rightarrow b=-1,$$\ny entonces $-a+2(-1)=-2\\Rightarrow a=0$. Así $a=0,\\ b=-1,\\ c=-2$.\n\n**(b)** $M=\\begin{pmatrix}0&-1\\\\ -2&1\\end{pmatrix}$ y\n$$M^2=\\begin{pmatrix}2&-1\\\\ -2&3\\end{pmatrix}=M+2I.\\ \\checkmark$$\nDe $M^2=M+2I$: $M^2-M=2I\\Rightarrow M(M-I)=2I\\Rightarrow M^{-1}=\\tfrac12(M-I)=\\begin{pmatrix}-\\tfrac12&-\\tfrac12\\\\ -1&0\\end{pmatrix}.$\n$$M^3=M\\cdot M^2=M(M+2I)=M^2+2M=3M+2I=\\begin{pmatrix}2&-3\\\\ -6&5\\end{pmatrix}.$$",
+  "answer": "$a=0$, $b=-1$, $c=-2$. $M^2=M+2I$; $M^{-1}=\\begin{pmatrix}-\\tfrac12&-\\tfrac12\\\\ -1&0\\end{pmatrix}$ y $M^3=3M+2I=\\begin{pmatrix}2&-3\\\\ -6&5\\end{pmatrix}$.",
+  "common_errors": [
+   "No usar $(N^tM)^t=M^tN$ y multiplicar en orden equivocado.",
+   "Al despejar $M^{-1}$ de $M(M-I)=2I$, olvidar el factor $\\tfrac12$.",
+   "Calcular $M^3$ a mano sin aprovechar $M^2=M+2I$, con errores de producto."
+  ],
+  "mark_scheme": [
+   "(a) Operar las dos ecuaciones y obtener los parámetros: $1$ punto.",
+   "(b) Comprobar $M^2=M+2I$ y calcular $M^{-1}$ y $M^3$: $1$ punto."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2024-Extraordinaria_Resuelto_UCM.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-MAT-016"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Murcia · Ordinaria 2025",
+  "title": "Operaciones matriciales, ecuación matricial y sistema $3\times3$ · Murcia · Ordinaria 2025",
+  "statement": "Dadas $A=\\begin{pmatrix}2&-1\\\\ 1&0\\end{pmatrix}$, $B=\\begin{pmatrix}1&0\\\\ -1&1\\end{pmatrix}$ y $C=\\begin{pmatrix}1&2\\\\ 0&-1\\end{pmatrix}$:\n\n**(a)** Calcule $C^2$. **(b)** Halle $A+B+C^2$. **(c)** Encuentre $(A-B)^{-1}$. **(d)** Resuelva la ecuación matricial $AX-BX=A+B+C^2$.\n\nAdemás, discuta y resuelva el sistema $\\begin{cases}3x+2y-z=3\\\\ x-y+2z=4\\\\ 2x+3y-z=3\\end{cases}$.",
+  "knowns": [
+   "$A=\\begin{pmatrix}2&-1\\\\ 1&0\\end{pmatrix}$",
+   "$B=\\begin{pmatrix}1&0\\\\ -1&1\\end{pmatrix}$",
+   "$C=\\begin{pmatrix}1&2\\\\ 0&-1\\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $C^2=\\begin{pmatrix}1&2\\\\ 0&-1\\end{pmatrix}\\begin{pmatrix}1&2\\\\ 0&-1\\end{pmatrix}=\\begin{pmatrix}1&0\\\\ 0&1\\end{pmatrix}=I.$\n\n**(b)** $A+B+C^2=\\begin{pmatrix}2&-1\\\\ 1&0\\end{pmatrix}+\\begin{pmatrix}1&0\\\\ -1&1\\end{pmatrix}+\\begin{pmatrix}1&0\\\\ 0&1\\end{pmatrix}=\\begin{pmatrix}4&-1\\\\ 0&2\\end{pmatrix}.$\n\n**(c)** $A-B=\\begin{pmatrix}1&-1\\\\ 2&-1\\end{pmatrix}$, con $|A-B|=1$, luego $(A-B)^{-1}=\\begin{pmatrix}-1&1\\\\ -2&1\\end{pmatrix}.$\n\n**(d)** $AX-BX=(A-B)X=A+B+C^2\\Rightarrow X=(A-B)^{-1}(A+B+C^2)$:\n$$X=\\begin{pmatrix}-1&1\\\\ -2&1\\end{pmatrix}\\begin{pmatrix}4&-1\\\\ 0&2\\end{pmatrix}=\\begin{pmatrix}-4&3\\\\ -8&4\\end{pmatrix}.$$\n\n**Sistema:** con $\\begin{pmatrix}1&-1&2\\\\ 3&2&-1\\\\ 2&3&-1\\end{pmatrix}$, $|A|=-10\\neq0$, así que $\\operatorname{rg}(A)=3=\\operatorname{rg}(A|b)=n$: **compatible determinado**. La solución es $x=1,\\ y=1,\\ z=2$.",
+  "answer": "$C^2=I$; $A+B+C^2=\\begin{pmatrix}4&-1\\\\ 0&2\\end{pmatrix}$; $(A-B)^{-1}=\\begin{pmatrix}-1&1\\\\ -2&1\\end{pmatrix}$; $X=\\begin{pmatrix}-4&3\\\\ -8&4\\end{pmatrix}$. Sistema SCD con $(x,y,z)=(1,1,2)$.",
+  "common_errors": [
+   "En $(d)$, escribir $X=(A+B+C^2)(A-B)^{-1}$ (orden incorrecto del producto).",
+   "No factorizar $AX-BX=(A-B)X$ antes de despejar $X$.",
+   "Equivocar un signo al calcular el determinante $3\\times3$."
+  ],
+  "mark_scheme": [
+   "(a) $C^2$: $0{,}25$; (b) $A+B+C^2$: $0{,}25$; (c) $(A-B)^{-1}$: $0{,}25$; (d) expresión y solución: $0{,}5+0{,}25$ puntos.",
+   "Sistema: determinante y comparación de rangos ($0{,}25+0{,}25$) y solución ($0{,}5$ puntos)."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "origin_file": "2oBachCCSS_EBAU_Murcia_2025-Ordinaria_Resuelto_Oficial.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-MAT-017"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Andalucía · Ordinaria 2024",
+  "title": "Inversa, ecuación matricial y dimensión de una matriz · Andalucía · Ordinaria 2024",
+  "statement": "Se consideran las matrices\n$$A=\\begin{pmatrix} 1 & 1 & -2 \\\\ a-3 & a-1 & 1 \\\\ 0 & 2 & a \\end{pmatrix},\\quad B=\\begin{pmatrix} -1 & 3 & 2 \\end{pmatrix},\\quad C=\\begin{pmatrix} -2 & 1 & 4 \\end{pmatrix},$$\nsiendo $a$ un número real.\n\n**(a)** $(0{,}75$ puntos$)$ Obtenga los valores de $a$ para los que la matriz $A$ tenga inversa.\n\n**(b)** $(1{,}25$ puntos$)$ Para $a=1$, resuelva la ecuación matricial $X\\cdot A-B=C\\cdot A$.\n\n**(c)** $(0{,}5$ puntos$)$ Determine razonadamente la dimensión de la matriz $D$ que permita realizar la operación $B\\cdot A+D\\cdot C^{t}\\cdot B$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 1 & -2 \\\\ a-3 & a-1 & 1 \\\\ 0 & 2 & a \\end{pmatrix}$",
+   "$B=\\begin{pmatrix} -1 & 3 & 2 \\end{pmatrix}$, $C=\\begin{pmatrix} -2 & 1 & 4 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $A$ tiene inversa cuando $\\det(A)\\neq 0$. Desarrollando el determinante:\n$$\\det(A)=a(a-1)-4(a-3)-a(a-3)-2=a^{2}-a-4a+12-a^{2}+3a-2=-2a+10.$$\n$$\\det(A)=0\\iff -2a+10=0\\iff a=5.$$\nPor tanto, $A$ tiene inversa para todo $a\\neq 5$.\n\n**(b)** Para $a=1$: $A=\\begin{pmatrix} 1 & 1 & -2 \\\\ -2 & 0 & 1 \\\\ 0 & 2 & 1 \\end{pmatrix}$, con $\\det(A)=8\\neq 0$, luego existe $A^{-1}$:\n$$A^{-1}=\\dfrac{1}{8}\\begin{pmatrix} -2 & -5 & 1 \\\\ 2 & 1 & 3 \\\\ -4 & -2 & 2 \\end{pmatrix}.$$\nDespejamos $X$ de $X\\cdot A-B=C\\cdot A$:\n$$X\\cdot A=C\\cdot A+B\\;\\Rightarrow\\; X=(C\\cdot A+B)\\,A^{-1}.$$\nCalculamos $C\\cdot A=\\begin{pmatrix} -2 & 1 & 4 \\end{pmatrix}A=\\begin{pmatrix} -4 & 6 & 9 \\end{pmatrix}$, y\n$$C\\cdot A+B=\\begin{pmatrix} -4 & 6 & 9 \\end{pmatrix}+\\begin{pmatrix} -1 & 3 & 2 \\end{pmatrix}=\\begin{pmatrix} -5 & 9 & 11 \\end{pmatrix}.$$\n$$X=\\begin{pmatrix} -5 & 9 & 11 \\end{pmatrix}\\cdot\\dfrac{1}{8}\\begin{pmatrix} -2 & -5 & 1 \\\\ 2 & 1 & 3 \\\\ -4 & -2 & 2 \\end{pmatrix}=\\dfrac{1}{8}\\begin{pmatrix} -16 & 12 & 44 \\end{pmatrix}=\\begin{pmatrix} -2 & \\tfrac{3}{2} & \\tfrac{11}{2} \\end{pmatrix}.$$\n\n**(c)** $B\\cdot A$ es $(1\\times 3)\\cdot(3\\times 3)=(1\\times 3)$. Si $D$ es $(m\\times n)$, en $D\\cdot C^{t}\\cdot B$ el producto $C^{t}\\cdot B$ es $(3\\times 1)\\cdot(1\\times 3)=(3\\times 3)$; para que $D\\cdot C^{t}\\cdot B$ exista hace falta $n=3$, y el resultado es $(m\\times 3)$. Para poder sumarlo con $B\\cdot A$, que es $(1\\times 3)$, debe ser $m=1$.\nLuego la dimensión de $D$ es $1\\times 3$.",
+  "answer": "**(a)** $A$ invertible $\\iff a\\neq 5$. **(b)** $X=\\begin{pmatrix} -2 & \\tfrac{3}{2} & \\tfrac{11}{2} \\end{pmatrix}$. **(c)** $D$ es de dimensión $1\\times 3$.",
+  "common_errors": [
+   "Equivocar signos al desarrollar $\\det(A)$ y obtener mal la condición $a\\neq 5$.",
+   "Despejar $X=A^{-1}(C\\cdot A+B)$ (multiplicar por la izquierda) en vez de por la derecha.",
+   "Confundir las dimensiones al encadenar los productos $D\\cdot C^{t}\\cdot B$."
+  ],
+  "mark_scheme": [
+   "(a) 0,75 puntos",
+   "(b) 1,25 puntos",
+   "(c) 0,5 puntos"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Andalucia_2024-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-018"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Comunidad Valenciana · Extraordinaria 2025",
+  "title": "Ecuación matricial con matriz identidad · Comunidad Valenciana · Extraordinaria 2025",
+  "statement": "Se consideran las matrices\n$$A=\\begin{pmatrix} 1 & 0 & 2 \\\\ 0 & 1 & -2 \\\\ 0 & 3 & 0 \\end{pmatrix},\\quad B=\\begin{pmatrix} -3 & -1 & 0 \\\\ 1 & 0 & -1 \\end{pmatrix},\\quad C=\\begin{pmatrix} 1 & 0 & -1 \\\\ 4 & 2 & 0 \\end{pmatrix}.$$\nResuelva la ecuación matricial\n$$2\\,X\\cdot A+B^{t}\\cdot C=I_{3},$$\ndonde $I_{3}$ es la matriz identidad de orden $3$ y $B^{t}$ la traspuesta de $B$, obteniendo la matriz $X$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 0 & 2 \\\\ 0 & 1 & -2 \\\\ 0 & 3 & 0 \\end{pmatrix}$",
+   "$B=\\begin{pmatrix} -3 & -1 & 0 \\\\ 1 & 0 & -1 \\end{pmatrix}$, $C=\\begin{pmatrix} 1 & 0 & -1 \\\\ 4 & 2 & 0 \\end{pmatrix}$",
+   "Ecuación $2XA+B^{t}C=I_{3}$"
+  ],
+  "full_solution": "Despejamos $X$. De $2XA+B^{t}C=I_{3}$ se obtiene $2XA=I_{3}-B^{t}C$, es decir\n$$X=\\tfrac{1}{2}\\,(I_{3}-B^{t}C)\\,A^{-1}.$$\nCalculamos $B^{t}C$ (con $B^{t}$ de orden $3\\times 2$ y $C$ de orden $2\\times 3$):\n$$B^{t}C=\\begin{pmatrix} 1 & 2 & 3 \\\\ -1 & 0 & 1 \\\\ -4 & -2 & 0 \\end{pmatrix}.$$\nComo $\\det(A)=6\\neq 0$, existe la inversa:\n$$A^{-1}=\\begin{pmatrix} 1 & 1 & -\\tfrac{1}{3} \\\\ 0 & 0 & \\tfrac{1}{3} \\\\ 0 & -\\tfrac{1}{2} & \\tfrac{1}{6} \\end{pmatrix}.$$\nEntonces $I_{3}-B^{t}C=\\begin{pmatrix} 0 & -2 & -3 \\\\ 1 & 1 & -1 \\\\ 4 & 2 & 1 \\end{pmatrix}$ y\n$$X=\\tfrac{1}{2}(I_{3}-B^{t}C)\\,A^{-1}=\\begin{pmatrix} 0 & \\tfrac{3}{4} & -\\tfrac{7}{12} \\\\ \\tfrac{1}{2} & \\tfrac{3}{4} & -\\tfrac{1}{12} \\\\ 2 & \\tfrac{7}{4} & -\\tfrac{1}{4} \\end{pmatrix}.$$",
+  "answer": "$X=\\begin{pmatrix} 0 & \\tfrac{3}{4} & -\\tfrac{7}{12} \\\\ \\tfrac{1}{2} & \\tfrac{3}{4} & -\\tfrac{1}{12} \\\\ 2 & \\tfrac{7}{4} & -\\tfrac{1}{4} \\end{pmatrix}$.",
+  "common_errors": [
+   "Despejar $X$ multiplicando por $A^{-1}$ por la izquierda en vez de por la derecha.",
+   "Olvidar el factor $\\tfrac{1}{2}$ al despejar de $2XA$.",
+   "Equivocar las dimensiones de $B^{t}C$ ($3\\times 3$) o calcular mal $A^{-1}$."
+  ],
+  "mark_scheme": [
+   "Expresión de $X=\\tfrac12(I_3-B^{t}C)A^{-1}$: hasta 1 punto",
+   "Cálculo de $B^{t}C$: 0,25 puntos",
+   "Cálculo de $A^{-1}$: hasta 1 punto",
+   "Cálculo de $X$: 0,25 puntos"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2025-Extraordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-MAT-019"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Andalucía · Extraordinaria 2024",
+  "title": "Ecuación matricial $A^2X+A^4=A$ · Andalucía · Extraordinaria 2024",
+  "statement": "Dada la matriz\n$$A=\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & -1 & 2 \\\\ -2 & 0 & 1 \\end{pmatrix},$$\nresuelva la ecuación matricial $A^2\\cdot X+A^4=A$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & -1 & 2 \\\\ -2 & 0 & 1 \\end{pmatrix}$"
+  ],
+  "full_solution": "**Despeje de $X$.** Partimos de $A^2X+A^4=A$ y despejamos:\n$$A^2X=A-A^4.$$\nComo $\\det(A)\\neq 0$, existe $A^{-1}$. Multiplicando por $A^{-2}=(A^{-1})^2$ por la izquierda:\n$$X=A^{-2}(A-A^4)=A^{-1}-A^2.$$\n\n**Determinante e inversa.** Desarrollando,\n$$\\det(A)=-1-8=-9\\neq 0,$$\npor lo que $A$ es invertible. Calculando la inversa (traspuesta de la adjunta dividida por el determinante):\n$$A^{-1}=\\dfrac{1}{9}\\begin{pmatrix} 1 & 2 & -4 \\\\ 4 & -1 & 2 \\\\ 2 & 4 & 1 \\end{pmatrix}.$$\n\n**Cuadrado de $A$.**\n$$A^2=\\begin{pmatrix} 1 & 0 & 4 \\\\ -4 & 1 & 0 \\\\ -4 & -4 & 1 \\end{pmatrix}.$$\n\n**Matriz $X$.**\n$$X=A^{-1}-A^2=\\dfrac{1}{9}\\begin{pmatrix} -8 & 2 & -40 \\\\ 40 & -10 & 2 \\\\ 38 & 40 & -8 \\end{pmatrix}.$$\nSe comprueba que $A^2X+A^4=A$.",
+  "answer": "$$X=A^{-1}-A^2=\\dfrac{1}{9}\\begin{pmatrix} -8 & 2 & -40 \\\\ 40 & -10 & 2 \\\\ 38 & 40 & -8 \\end{pmatrix}.$$",
+  "common_errors": [
+   "Despejar mal la ecuación y escribir $X=A-A^4$ sin multiplicar por $A^{-2}$.",
+   "Confundir $A^{-2}=(A^{-1})^2$ con $(A^2)$ u olvidar que el producto de matrices no es conmutativo.",
+   "Equivocar el cálculo de la adjunta/traspuesta al invertir $A$."
+  ],
+  "mark_scheme": [],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Andalucia_2024-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-020"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Andalucía · Extraordinaria 2026",
+  "title": "Rango, ecuación matricial y producto de matrices · Andalucía · Extraordinaria 2026",
+  "statement": "Se consideran las matrices\n$$A=\\begin{pmatrix} 2 & m & 0 \\\\ -1 & m & 2 \\\\ 0 & m & 1 \\end{pmatrix},\\quad B=\\begin{pmatrix} 1 & 0 & 2 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix},\\quad C=\\begin{pmatrix} 3 \\\\ 1 \\\\ -1 \\end{pmatrix}.$$\n**a)** $(0{,}75$ puntos$)$ Calcule los valores de $m$ para que el rango de $A$ sea $3$.\n**b)** $(1{,}75$ puntos$)$ Para $m=1$, resuelva la ecuación matricial $A^{t}\\cdot X-B^2=2\\cdot X$.\n**c)** $(0{,}5$ puntos$)$ ¿Es posible encontrar una matriz $D$ que satisfaga $C^{t}\\cdot A=B\\cdot D$?",
+  "knowns": [
+   "$A=\\begin{pmatrix} 2 & m & 0 \\\\ -1 & m & 2 \\\\ 0 & m & 1 \\end{pmatrix}$",
+   "$B=\\begin{pmatrix} 1 & 0 & 2 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{pmatrix}$",
+   "$C=\\begin{pmatrix} 3 \\\\ 1 \\\\ -1 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a) Rango $3$.** El rango de una matriz cuadrada de orden $3$ es $3$ si y solo si su determinante es no nulo. Desarrollando,\n$$\\det(A)=-m.$$\nPor tanto, $\\text{rg}(A)=3\\iff m\\neq 0$.\n\n**(b) Ecuación matricial ($m=1$).** Agrupamos:\n$$A^{t}X-2X=B^2\\Rightarrow (A^{t}-2I)X=B^2\\Rightarrow X=(A^{t}-2I)^{-1}B^2.$$\nPara $m=1$, $A=\\begin{pmatrix} 2 & 1 & 0 \\\\ -1 & 1 & 2 \\\\ 0 & 1 & 1 \\end{pmatrix}$ y\n$$A^{t}-2I=\\begin{pmatrix} 0 & -1 & 0 \\\\ 1 & -1 & 1 \\\\ 0 & 2 & -1 \\end{pmatrix},\\qquad \\det(A^{t}-2I)=-1.$$\nSu inversa es\n$$(A^{t}-2I)^{-1}=\\begin{pmatrix} 1 & 1 & 1 \\\\ -1 & 0 & 0 \\\\ -2 & 0 & -1 \\end{pmatrix}.$$\nAdemás\n$$B^2=\\begin{pmatrix} 3 & 0 & 4 \\\\ 1 & 1 & 2 \\\\ 2 & 0 & 3 \\end{pmatrix},$$\nde modo que\n$$X=(A^{t}-2I)^{-1}B^2=\\begin{pmatrix} 6 & 1 & 9 \\\\ -3 & 0 & -4 \\\\ -8 & 0 & -11 \\end{pmatrix}.$$\n\n**(c) Producto $C^{t}A=BD$.** $C^{t}A$ es $1\\times 3$ (una fila), mientras que $B\\cdot D$ tiene $3$ filas. Al tener distinto número de filas, **no existe** ninguna matriz $D$ que verifique la igualdad.",
+  "answer": "**(a)** $\\text{rg}(A)=3\\iff m\\neq 0$. **(b)** $X=\\begin{pmatrix} 6 & 1 & 9 \\\\ -3 & 0 & -4 \\\\ -8 & 0 & -11 \\end{pmatrix}$. **(c)** No es posible: $C^{t}A$ es $1\\times 3$ y $BD$ tiene $3$ filas.",
+  "common_errors": [
+   "Calcular mal $\\det(A)$ y perder la dependencia en $m$.",
+   "Despejar $X$ sin factorizar $(A^{t}-2I)$ o invertir la matriz equivocada.",
+   "No comparar las dimensiones de $C^{t}A$ y $BD$ en el apartado (c)."
+  ],
+  "mark_scheme": [],
+  "marks": 3.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Andalucia_2026-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-021"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Ordinaria 2022",
+  "title": "Matriz invertible según parámetro e inversa · Madrid · Ordinaria 2022",
+  "statement": "Se considera la matriz\n$$A=\\begin{pmatrix} 2 & 0 & 1 \\\\ a & -1 & 1 \\\\ 0 & a & 1 \\end{pmatrix}.$$\n**a)** Determine los valores del parámetro real $a$ para los cuales la matriz $A$ es invertible.\n**b)** Calcule $A^{-1}$ para $a=1$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 2 & 0 & 1 \\\\ a & -1 & 1 \\\\ 0 & a & 1 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $A$ es invertible si y solo si $\\det(A)\\neq 0$. Desarrollando:\n$$\\det(A)=a^2-2a-2.$$\nLas raíces son $a=1\\pm\\sqrt{3}$. Por tanto, $A$ es invertible para todo $a\\neq 1-\\sqrt{3}$ y $a\\neq 1+\\sqrt{3}$.\n\n**(b)** Para $a=1$, $\\det(A)=1-2-2=-3\\neq 0$ y $A=\\begin{pmatrix} 2 & 0 & 1 \\\\ 1 & -1 & 1 \\\\ 0 & 1 & 1 \\end{pmatrix}$. Calculando la inversa:\n$$A^{-1}=\\dfrac{1}{3}\\begin{pmatrix} 2 & -1 & -1 \\\\ 1 & -2 & 1 \\\\ -1 & 2 & 2 \\end{pmatrix}.$$",
+  "answer": "**(a)** Invertible si $a\\neq 1-\\sqrt{3}$ y $a\\neq 1+\\sqrt{3}$. **(b)** $A^{-1}=\\dfrac{1}{3}\\begin{pmatrix} 2 & -1 & -1 \\\\ 1 & -2 & 1 \\\\ -1 & 2 & 2 \\end{pmatrix}$.",
+  "common_errors": [
+   "Equivocar el desarrollo del determinante y obtener mal $a^2-2a-2$.",
+   "No resolver correctamente la ecuación $a^2-2a-2=0$ (raíces $1\\pm\\sqrt{3}$).",
+   "Olvidar dividir la adjunta traspuesta por $\\det(A)=-3$."
+  ],
+  "mark_scheme": [
+   "Expresar la condición de existencia de inversa: 0,25 p.",
+   "Cálculo correcto del determinante: 0,25 p.",
+   "Obtención de los valores del parámetro: 0,50 p.",
+   "Planteamiento de la inversa: 0,50 p.",
+   "Cálculo correcto de la inversa: 0,50 p."
+  ],
+  "marks": 2.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2022-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-MAT-022"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Andalucía · Extraordinaria 2023",
+  "title": "Inversa mediante polinomio matricial y ecuación matricial · Andalucía · Extraordinaria 2023",
+  "statement": "Se considera la matriz\n$$A=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & -1 & 1 \\end{pmatrix}$$\n\n**(a)** ($1{,}5$ puntos) Pruebe que se verifica que $A^{-1}=\\dfrac{1}{2}\\left(A^2-4A+5I_3\\right)$.\n\n**(b)** ($1$ punto) Dada la ecuación matricial $X^{t}A=\\begin{pmatrix} 1 & 2 & 0 \\\\ 3 & -1 & 1 \\end{pmatrix}$, determine la dimensión de $X$ y resuelva la ecuación.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & -1 & 1 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** Calculamos $A^2$:\n$$A^2=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & -3 & 1 \\end{pmatrix}$$\nEntonces\n$$A^2-4A+5I_3=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 4 & 0 \\\\ 0 & -3 & 1 \\end{pmatrix}-4\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & -1 & 1 \\end{pmatrix}+5I_3=\\begin{pmatrix} 2 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 1 & 2 \\end{pmatrix}$$\nLuego\n$$\\tfrac{1}{2}\\left(A^2-4A+5I_3\\right)=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1/2 & 0 \\\\ 0 & 1/2 & 1 \\end{pmatrix}$$\nComprobamos que $A\\cdot \\tfrac{1}{2}\\left(A^2-4A+5I_3\\right)=I_3$, por lo que esa matriz es $A^{-1}$.\n\n**(b)** Si $X$ es de dimensión $m\\times n$, entonces $X^{t}$ es $n\\times m$. Para que $X^{t}A$ (con $A$ de orden $3$) tenga sentido debe ser $m=3$, y el resultado $n\\times 3$ debe coincidir con la matriz $2\\times 3$ dada, luego $n=2$. Así $X$ es de dimensión $3\\times 2$.\n\nEscribiendo $X=\\begin{pmatrix} a & b \\\\ c & d \\\\ e & f \\end{pmatrix}$, se tiene $X^{t}A=\\begin{pmatrix} a & 2c-e & e \\\\ b & 2d-f & f \\end{pmatrix}=\\begin{pmatrix} 1 & 2 & 0 \\\\ 3 & -1 & 1 \\end{pmatrix}$.\n\nDe aquí $a=1,\\ e=0,\\ 2c-e=2\\Rightarrow c=1$; $b=3,\\ f=1,\\ 2d-f=-1\\Rightarrow d=0$.\n$$X=\\begin{pmatrix} 1 & 3 \\\\ 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$$",
+  "answer": "**(a)** $\\tfrac{1}{2}(A^2-4A+5I_3)=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1/2 & 0 \\\\ 0 & 1/2 & 1 \\end{pmatrix}=A^{-1}$.  **(b)** $X$ es $3\\times 2$ y $X=\\begin{pmatrix} 1 & 3 \\\\ 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+  "common_errors": [
+   "Equivocar el orden del producto $X^{t}A$ al deducir las dimensiones de $X$.",
+   "Errar algún elemento al calcular $A^2$ (sobre todo el término $-3$ de la tercera fila).",
+   "Confundir $\\tfrac12(A^2-4A+5I_3)$ con $A^{-1}$ sin comprobar que el producto da $I_3$."
+  ],
+  "mark_scheme": [
+   "Apartado (a): $1{,}5$ puntos.",
+   "Apartado (b): $1$ punto."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Andalucia_2023-Extraordinaria_Resuelto_JuanAntonioMG-1.txt",
+  "id": "PAU-MCS-MAT-023"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Aragón · Ordinaria 2023",
+  "title": "Ecuación matricial ABX y sistema homogéneo con parámetro · Aragón · Ordinaria 2023",
+  "statement": "($10$ puntos) Responda a las siguientes cuestiones:\n\n**(a)** ($5$ puntos) Determine el orden de la matriz $X$ para que la ecuación matricial $ABX=\\begin{pmatrix} 2 \\\\ -4 \\end{pmatrix}$ esté bien planteada, siendo $A=\\begin{pmatrix} 1 & 0 & 1 \\\\ -12 & -8 & 1 \\end{pmatrix}$ y $B=\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\\\ 1 & 6 \\end{pmatrix}$. Calcule $X$.\n\n**(b)** ($5$ puntos) Determine el valor o valores del parámetro $m$ para que el sistema sea compatible y calcule su solución para $m=3$:\n$$\\begin{cases} 2x-5y+3z=0 \\\\ x-y+z=0 \\\\ 3x+my+z=0 \\end{cases}$$",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 0 & 1 \\\\ -12 & -8 & 1 \\end{pmatrix}$ ($2\\times3$)",
+   "$B=\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\\\ 1 & 6 \\end{pmatrix}$ ($3\\times2$)",
+   "Sistema lineal homogéneo con parámetro $m$"
+  ],
+  "full_solution": "**(a)** $AB$ es $2\\times2$:\n$$AB=\\begin{pmatrix} 1 & 0 & 1 \\\\ -12 & -8 & 1 \\end{pmatrix}\\begin{pmatrix} 2 & -1 \\\\ -3 & 2 \\\\ 1 & 6 \\end{pmatrix}=\\begin{pmatrix} 3 & 5 \\\\ 1 & 2 \\end{pmatrix}$$\nComo $(AB)X$ debe dar una matriz $2\\times1$, $X$ es de orden $2\\times1$: $X=\\begin{pmatrix} a \\\\ b \\end{pmatrix}$.\n$$\\begin{pmatrix} 3 & 5 \\\\ 1 & 2 \\end{pmatrix}\\begin{pmatrix} a \\\\ b \\end{pmatrix}=\\begin{pmatrix} 2 \\\\ -4 \\end{pmatrix}\\Rightarrow\\begin{cases} 3a+5b=2 \\\\ a+2b=-4 \\end{cases}$$\nDe la segunda $a=-4-2b$; sustituyendo: $3(-4-2b)+5b=2\\Rightarrow -b=14\\Rightarrow b=-14$, $a=24$.\n$$X=\\begin{pmatrix} 24 \\\\ -14 \\end{pmatrix}$$\n\n**(b)** El sistema es **homogéneo**, así que es compatible para **cualquier valor de $m$** (siempre admite la solución trivial). Para $m=3$ lo resolvemos por reducción:\n$$\\begin{cases} x-y+z=0 \\\\ 2x-5y+3z=0 \\\\ 3x+3y+z=0 \\end{cases}$$\nRestando adecuadamente se llega a $-3y+z=0\\Rightarrow z=3y$ y a una ecuación dependiente, luego el sistema es compatible indeterminado. Con $z=3y$ y $x-y+z=0\\Rightarrow x=-2y$:\n$$x=-2\\lambda,\\quad y=\\lambda,\\quad z=3\\lambda,\\quad \\lambda\\in\\mathbb{R}$$",
+  "answer": "**(a)** $X$ es $2\\times1$ y $X=\\begin{pmatrix} 24 \\\\ -14 \\end{pmatrix}$.  **(b)** Compatible para todo $m$; para $m=3$ es compatible indeterminado con $x=-2\\lambda,\\ y=\\lambda,\\ z=3\\lambda$.",
+  "common_errors": [
+   "Deducir mal el orden de $X$ olvidando que $AB$ es $2\\times2$.",
+   "No reconocer que un sistema homogéneo siempre es compatible.",
+   "Dar solo la solución trivial para $m=3$ sin ver que es compatible indeterminado."
+  ],
+  "mark_scheme": [
+   "Apartado (a): $5$ puntos.",
+   "Apartado (b): $5$ puntos.",
+   "Puntuación del ejercicio sobre $10$; la nota final promedia tres ejercicios."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Aragon_2023-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-024"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Existencia de inversa con parámetro y cálculo de la inversa · Madrid · Ordinaria 2024",
+  "statement": "($2$ puntos) Se considera la matriz $A=\\begin{pmatrix} 1-a & -2 & -1 \\\\ 1 & a & 1 \\\\ 2 & -2 & a \\end{pmatrix}$.\n\n**(a)** Determine los valores del parámetro $a\\in\\mathbb{R}$ para los que existe la inversa de $A$.\n\n**(b)** Para $a=-2$, calcule $A^{-1}$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1-a & -2 & -1 \\\\ 1 & a & 1 \\\\ 2 & -2 & a \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** La inversa existe si $\\det(A)\\neq0$.\n$$\\det(A)=-a^3+a^2+2a=-a(a+1)(a-2)$$\n$\\det(A)=0\\Leftrightarrow a=0,\\ a=-1,\\ a=2$. Por tanto $A$ tiene inversa para todo $a\\neq-1,\\ 0,\\ 2$.\n\n**(b)** Para $a=-2$: $A=\\begin{pmatrix} 3 & -2 & -1 \\\\ 1 & -2 & 1 \\\\ 2 & -2 & -2 \\end{pmatrix}$, con $\\det(A)=-(-2)(-1)(-4)=8\\neq0$. Su inversa es\n$$A^{-1}=\\begin{pmatrix} 3/4 & -1/4 & -1/2 \\\\ 1/2 & -1/2 & -1/2 \\\\ 1/4 & 1/4 & -1/2 \\end{pmatrix}$$",
+  "answer": "**(a)** Existe $A^{-1}$ si $a\\neq-1,\\ 0,\\ 2$.  **(b)** $A^{-1}=\\begin{pmatrix} 3/4 & -1/4 & -1/2 \\\\ 1/2 & -1/2 & -1/2 \\\\ 1/4 & 1/4 & -1/2 \\end{pmatrix}$.",
+  "common_errors": [
+   "Errar el desarrollo del determinante con el parámetro $a$ y, por tanto, los valores críticos.",
+   "Olvidar alguno de los tres valores que anulan el determinante.",
+   "Equivocar la traspuesta de la matriz adjunta al calcular la inversa."
+  ],
+  "mark_scheme": [
+   "Apartado (a): $1$ punto (planteamiento $0{,}25$, determinante $0{,}25$, valores $0{,}5$).",
+   "Apartado (b): $1$ punto (procedimiento $0{,}25$, inversa $0{,}75$)."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2024-Ordinaria_Resuelto_UCM.txt",
+  "id": "PAU-MCS-MAT-025"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Extraordinaria 2023",
+  "title": "Potencia A^2023 e inversa de una matriz cíclica · Madrid · Extraordinaria 2023",
+  "statement": "($2$ puntos) Se considera la matriz $A=\\begin{pmatrix} 0 & 0 & 6 \\\\ 1/2 & 0 & 0 \\\\ 0 & 1/3 & 0 \\end{pmatrix}$.\n\n**(a)** Calcule $A^{2023}$.\n\n**(b)** Calcule la inversa $A^{-1}$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 0 & 0 & 6 \\\\ 1/2 & 0 & 0 \\\\ 0 & 1/3 & 0 \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** Calculamos las potencias:\n$$A^2=\\begin{pmatrix} 0 & 2 & 0 \\\\ 0 & 0 & 3 \\\\ 1/6 & 0 & 0 \\end{pmatrix},\\qquad A^3=I_3$$\nComo $A^3=I$ y $2023=3\\cdot674+1$:\n$$A^{2023}=(A^3)^{674}\\cdot A=I^{674}\\cdot A=A=\\begin{pmatrix} 0 & 0 & 6 \\\\ 1/2 & 0 & 0 \\\\ 0 & 1/3 & 0 \\end{pmatrix}$$\n\n**(b)** Como $A^3=I$, se tiene $A\\cdot A^2=I$, luego $A^{-1}=A^2$:\n$$A^{-1}=A^2=\\begin{pmatrix} 0 & 2 & 0 \\\\ 0 & 0 & 3 \\\\ 1/6 & 0 & 0 \\end{pmatrix}$$\n(Además $\\det(A)=1\\neq0$, lo que confirma que es invertible.)",
+  "answer": "**(a)** $A^{2023}=A=\\begin{pmatrix} 0 & 0 & 6 \\\\ 1/2 & 0 & 0 \\\\ 0 & 1/3 & 0 \\end{pmatrix}$.  **(b)** $A^{-1}=A^2=\\begin{pmatrix} 0 & 2 & 0 \\\\ 0 & 0 & 3 \\\\ 1/6 & 0 & 0 \\end{pmatrix}$.",
+  "common_errors": [
+   "No detectar la periodicidad $A^3=I$ e intentar multiplicar la matriz $2023$ veces.",
+   "Equivocar el resto de $2023$ entre $3$ (es $1$, no $0$ ni $2$).",
+   "Calcular la inversa por adjuntos con errores en vez de aprovechar $A^{-1}=A^2$."
+  ],
+  "mark_scheme": [
+   "Apartado (a): $1$ punto (cálculo de $A^3$ $0{,}5$; cálculo de $A^{2023}$ $0{,}5$).",
+   "Apartado (b): $1$ punto (existencia de inversa $0{,}25$; inversa $0{,}75$)."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2023-Extraordinaria_Resuelto_UAH.txt",
+  "id": "PAU-MCS-MAT-026"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "La Rioja · Ordinaria 2022",
+  "title": "Matriz regular e inversa 3×3 · La Rioja · Ordinaria 2022",
+  "statement": "Justifica que la siguiente matriz es regular y calcula su matriz inversa:\n$$A=\\begin{pmatrix} 1&-1&-1\\\\ -1&1&-1\\\\ -1&-1&1\\end{pmatrix}$$",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1&-1&-1\\\\ -1&1&-1\\\\ -1&-1&1\\end{pmatrix}$"
+  ],
+  "full_solution": "**Regularidad.** Calculamos el determinante:\n$$|A|=\\begin{vmatrix} 1&-1&-1\\\\ -1&1&-1\\\\ -1&-1&1\\end{vmatrix}=(1-1-1)-(1+1+1)=-1-3=-4\\neq 0.$$\nComo $|A|\\neq 0$, la matriz es **regular** (invertible).\n\n**Inversa.** Usamos $A^{-1}=\\dfrac{1}{|A|}\\,(\\operatorname{Adj}(A))^{T}$. La matriz adjunta traspuesta es\n$$(\\operatorname{Adj}(A))^{T}=\\begin{pmatrix} 0&2&2\\\\ 2&0&2\\\\ 2&2&0\\end{pmatrix},$$\nde modo que\n$$A^{-1}=\\frac{1}{-4}\\begin{pmatrix} 0&2&2\\\\ 2&0&2\\\\ 2&2&0\\end{pmatrix}=\\begin{pmatrix} 0&-\\tfrac12&-\\tfrac12\\\\ -\\tfrac12&0&-\\tfrac12\\\\ -\\tfrac12&-\\tfrac12&0\\end{pmatrix}.$$\nComprobación: $A\\cdot A^{-1}=I$.",
+  "answer": "$|A|=-4\\neq0$ (regular) y $A^{-1}=\\begin{pmatrix} 0&-\\tfrac12&-\\tfrac12\\\\ -\\tfrac12&0&-\\tfrac12\\\\ -\\tfrac12&-\\tfrac12&0\\end{pmatrix}$.",
+  "common_errors": [
+   "No trasponer la matriz de adjuntos (o hacerlo al final en vez de sobre los cofactores).",
+   "Equivocar algún signo de los cofactores por no aplicar el tablero de signos.",
+   "Olvidar dividir por el determinante al formar la inversa."
+  ],
+  "mark_scheme": [
+   "Justificación de que es regular y cálculo de la inversa: 2,5 puntos"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_La-Rioja_2022-Ordinaria_Resuelto_JuanAntonioMG-1.txt",
+  "id": "PAU-MCS-MAT-027"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Navarra · Extraordinaria 2022",
+  "title": "Inversa y potencia de matrices con parámetro · Navarra · Extraordinaria 2022",
+  "statement": "Se considera la matriz dependiente del parámetro real $k$:\n$$A=\\begin{pmatrix} -1&2&0\\\\ 3&-1&k\\\\ k&1&k\\end{pmatrix}.$$\n**(a)** Determina los valores de $k$ para los que $A$ tiene inversa.\n**(b)** Para $k=1$, calcula $A^{-1}$.\n**(c)** Para $k=0$, calcula $(A-2A^{t})^{2}$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} -1&2&0\\\\ 3&-1&k\\\\ k&1&k\\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $|A|=2k^2-4k=2k(k-2)$. Tiene inversa cuando $|A|\\neq0$, es decir, para $k\\neq0$ y $k\\neq2$.\n\n**(b)** Para $k=1$: $|A|=2\\cdot1-4=-2\\neq0$. Calculando $A^{-1}=\\dfrac{1}{|A|}(\\operatorname{Adj}(A))^{T}$ se obtiene\n$$A^{-1}=\\begin{pmatrix} 1&1&-1\\\\ 1&\\tfrac12&-\\tfrac12\\\\ -2&-\\tfrac32&\\tfrac52\\end{pmatrix}.$$\n\n**(c)** Para $k=0$: $A=\\begin{pmatrix} -1&2&0\\\\ 3&-1&0\\\\ 0&1&0\\end{pmatrix}$, $A^{t}=\\begin{pmatrix} -1&3&0\\\\ 2&-1&1\\\\ 0&0&0\\end{pmatrix}$.\n$$A-2A^{t}=\\begin{pmatrix} 1&-4&0\\\\ -1&1&-2\\\\ 0&1&0\\end{pmatrix},\\qquad (A-2A^{t})^{2}=\\begin{pmatrix} 5&-8&8\\\\ -2&3&-2\\\\ -1&1&-2\\end{pmatrix}.$$",
+  "answer": "**(a)** $A$ invertible $\\iff k\\neq0$ y $k\\neq2$. **(b)** $A^{-1}=\\begin{pmatrix} 1&1&-1\\\\ 1&\\tfrac12&-\\tfrac12\\\\ -2&-\\tfrac32&\\tfrac52\\end{pmatrix}$. **(c)** $(A-2A^{t})^{2}=\\begin{pmatrix} 5&-8&8\\\\ -2&3&-2\\\\ -1&1&-2\\end{pmatrix}$.",
+  "common_errors": [
+   "Equivocar el determinante $|A|=2k^2-4k$ y por tanto los valores excluidos.",
+   "Confundir $A^{t}$ (traspuesta) con la inversa o con la adjunta.",
+   "Hacer $(A-2A^t)^2$ como producto elemento a elemento en lugar de producto matricial."
+  ],
+  "mark_scheme": [
+   "Valores de $k$ con inversa: 2 puntos",
+   "Inversa para $k=1$: 5 puntos",
+   "Cálculo de $(A-2A^t)^2$ para $k=0$: 3 puntos"
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Navarra_2022-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-028"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Ordinaria 2023",
+  "title": "Inversa y ecuación matricial A·X=b · Madrid · Ordinaria 2023",
+  "statement": "Se considera la matriz\n$$A=\\begin{pmatrix} 1&-1&1\\\\ 2&1&0\\\\ 1&0&1\\end{pmatrix}.$$\n**(a)** Justifica que $A$ tiene inversa y calcúlala.\n**(b)** Resuelve la ecuación matricial $A\\cdot X=\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix}$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1&-1&1\\\\ 2&1&0\\\\ 1&0&1\\end{pmatrix}$",
+   "$A\\cdot X=(1,1,1)^{t}$"
+  ],
+  "full_solution": "**(a)** $|A|=2\\neq0$, luego $A$ es invertible. Calculando $A^{-1}=\\dfrac{1}{|A|}(\\operatorname{Adj}(A))^{T}$:\n$$A^{-1}=\\begin{pmatrix} \\tfrac12&\\tfrac12&-\\tfrac12\\\\ -1&0&1\\\\ -\\tfrac12&-\\tfrac12&\\tfrac32\\end{pmatrix}.$$\n\n**(b)** Despejando $X=A^{-1}\\cdot\\begin{pmatrix}1\\\\1\\\\1\\end{pmatrix}$:\n$$X=\\begin{pmatrix} \\tfrac12+\\tfrac12-\\tfrac12\\\\ -1+0+1\\\\ -\\tfrac12-\\tfrac12+\\tfrac32\\end{pmatrix}=\\begin{pmatrix} \\tfrac12\\\\ 0\\\\ \\tfrac12\\end{pmatrix}.$$",
+  "answer": "**(a)** $|A|=2\\neq0$ y $A^{-1}=\\begin{pmatrix} \\tfrac12&\\tfrac12&-\\tfrac12\\\\ -1&0&1\\\\ -\\tfrac12&-\\tfrac12&\\tfrac32\\end{pmatrix}$. **(b)** $X=\\left(\\tfrac12,\\,0,\\,\\tfrac12\\right)^{t}$.",
+  "common_errors": [
+   "No comprobar $|A|\\neq0$ antes de invertir.",
+   "Equivocar la posición de las $X$ al despejar: $A X=b\\Rightarrow X=A^{-1}b$ (no $bA^{-1}$).",
+   "Errores de signo en los cofactores de la adjunta."
+  ],
+  "mark_scheme": [
+   "Apartado (a): justificación de la inversa y cálculo: 1 punto",
+   "Apartado (b): despeje y resolución de la ecuación matricial: 1 punto"
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2023-Ordinaria_Resuelto_UAH.txt",
+  "id": "PAU-MCS-MAT-029"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Andalucía · Ordinaria 2023",
+  "title": "Parámetro para inversa y ecuación $A\\cdot X\\cdot B=C$ · Andalucía · Ordinaria 2023",
+  "statement": "Dadas las matrices\n$$A=\\begin{pmatrix} a & 1 & 0 \\\\ 0 & a & 2 \\\\ 0 & 1 & 1 \\end{pmatrix},\\quad B=\\begin{pmatrix} 2 & -1 \\\\ a & -1 \\end{pmatrix},\\quad C=\\begin{pmatrix} 2 & -1 \\\\ 1 & -1 \\\\ 2 & 0 \\end{pmatrix}.$$\n\n**(a)** (1 punto) Calcule los valores del parámetro $a$ para los que tanto $A$ como $B$ admiten inversa.\n\n**(b)** (1,5 puntos) Para $a=1$, halle una matriz $X$ que satisfaga $A\\cdot X\\cdot B=C$.",
+  "knowns": [
+   "$A\\in\\mathcal{M}_{3\\times3}$, $B\\in\\mathcal{M}_{2\\times2}$, $C\\in\\mathcal{M}_{3\\times2}$",
+   "Parámetro real $a$"
+  ],
+  "full_solution": "**(a) Condición de invertibilidad.**\nUna matriz cuadrada es invertible si y solo si su determinante es no nulo.\n$$|A|=\\begin{vmatrix} a & 1 & 0 \\\\ 0 & a & 2 \\\\ 0 & 1 & 1 \\end{vmatrix}=a(a\\cdot1-2\\cdot1)=a^2-2a=a(a-2).$$\n$|A|=0\\iff a=0$ o $a=2$.\n$$|B|=\\begin{vmatrix} 2 & -1 \\\\ a & -1 \\end{vmatrix}=-2+a.$$\n$|B|=0\\iff a=2$.\nAmbas admiten inversa cuando $a\\neq 0$ y $a\\neq 2$.\n\n**(b) Resolución para $a=1$.**\nComo $A\\cdot X\\cdot B=C$ y ambas son invertibles, despejamos $X=A^{-1}\\cdot C\\cdot B^{-1}$.\nPara $a=1$:\n$$A=\\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 1 & 1 \\end{pmatrix},\\quad A^{-1}=\\begin{pmatrix} 1 & 1 & -2 \\\\ 0 & -1 & 2 \\\\ 0 & 1 & -1 \\end{pmatrix},$$\n$$B=\\begin{pmatrix} 2 & -1 \\\\ 1 & -1 \\end{pmatrix},\\quad |B|=-1,\\quad B^{-1}=\\begin{pmatrix} 1 & -1 \\\\ 1 & -2 \\end{pmatrix}.$$\nPrimero $A^{-1}\\cdot C$:\n$$A^{-1}\\cdot C=\\begin{pmatrix} 1 & 1 & -2 \\\\ 0 & -1 & 2 \\\\ 0 & 1 & -1 \\end{pmatrix}\\begin{pmatrix} 2 & -1 \\\\ 1 & -1 \\\\ 2 & 0 \\end{pmatrix}=\\begin{pmatrix} -1 & -2 \\\\ 3 & 1 \\\\ -1 & -1 \\end{pmatrix}.$$\nY ahora $(A^{-1}C)\\cdot B^{-1}$:\n$$X=\\begin{pmatrix} -1 & -2 \\\\ 3 & 1 \\\\ -1 & -1 \\end{pmatrix}\\begin{pmatrix} 1 & -1 \\\\ 1 & -2 \\end{pmatrix}=\\begin{pmatrix} -3 & 5 \\\\ 4 & -5 \\\\ -2 & 3 \\end{pmatrix}.$$",
+  "answer": "**(a)** $A$ y $B$ admiten inversa si $a\\neq 0$ y $a\\neq 2$. **(b)** $X=A^{-1}CB^{-1}=\\begin{pmatrix} -3 & 5 \\\\ 4 & -5 \\\\ -2 & 3 \\end{pmatrix}$.",
+  "common_errors": [
+   "Despejar $X$ multiplicando por el lado equivocado: debe ser $X=A^{-1}CB^{-1}$ (con $A^{-1}$ por la izquierda y $B^{-1}$ por la derecha).",
+   "Equivocar el orden de los productos matriciales (no es conmutativo).",
+   "Olvidar que $A$ no es invertible también para $a=0$, no solo $a=2$."
+  ],
+  "mark_scheme": [
+   "(a) 1 punto: cálculo de $|A|$ y $|B|$ y valores de $a$.",
+   "(b) 1,5 puntos: despeje de $X$, cálculo de inversas y producto final."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Andalucia_2023-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-030"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Aragón · Extraordinaria 2023",
+  "title": "Ecuación matricial $XB+A=C$ y sistema por técnicas matriciales · Aragón · Extraordinaria 2023",
+  "statement": "Dadas las matrices\n$$A=\\begin{pmatrix} -2 & 0 & 1 \\\\ 5 & -1 & 1 \\end{pmatrix},\\quad B=\\begin{pmatrix} 1 & 2 & 0 \\\\ 2 & -1 & 1 \\\\ 0 & 1 & 0 \\end{pmatrix},\\quad C=\\begin{pmatrix} 1 & 0 & 2 \\\\ 4 & -1 & 3 \\end{pmatrix}.$$\n\n**(a)** (5 puntos) Determine razonadamente el orden (dimensión) de la matriz $X$ para que la ecuación matricial $XB+A=C$ esté bien planteada; despeje $X$ y resuelva la ecuación.\n\n**(b)** (5 puntos) Calcule, utilizando técnicas matriciales, la solución del sistema\n$$\\begin{cases} 2x-5y+3z=1 \\\\ x-y+z=1 \\\\ 3x+3y+z=5 \\end{cases}.$$",
+  "knowns": [
+   "$A\\in\\mathcal{M}_{2\\times3}$, $B\\in\\mathcal{M}_{3\\times3}$, $C\\in\\mathcal{M}_{2\\times3}$",
+   "Sistema de 3 ecuaciones con 3 incógnitas"
+  ],
+  "full_solution": "**(a) Dimensión y resolución.**\nEn $XB+A=C$, si $X\\in\\mathcal{M}_{m\\times n}$, el producto $XB$ con $B\\in\\mathcal{M}_{3\\times3}$ exige $n=3$ y da $\\mathcal{M}_{m\\times3}$; para sumar $A\\in\\mathcal{M}_{2\\times3}$ debe ser $m=2$. Luego $X\\in\\mathcal{M}_{2\\times3}$.\nDespejamos: $XB=C-A\\Rightarrow X=(C-A)B^{-1}$. Como $|B|=-1\\neq0$,\n$$B^{-1}=\\begin{pmatrix} 1 & 0 & -2 \\\\ 0 & 0 & 1 \\\\ -2 & 1 & 5 \\end{pmatrix}.$$\nCon $C-A=\\begin{pmatrix} 3 & 0 & 1 \\\\ -1 & 0 & 2 \\end{pmatrix}$:\n$$X=(C-A)B^{-1}=\\begin{pmatrix} 3 & 0 & 1 \\\\ -1 & 0 & 2 \\end{pmatrix}\\begin{pmatrix} 1 & 0 & -2 \\\\ 0 & 0 & 1 \\\\ -2 & 1 & 5 \\end{pmatrix}=\\begin{pmatrix} 1 & 1 & -1 \\\\ -5 & 2 & 12 \\end{pmatrix}.$$\n\n**(b) Sistema.**\nEn forma matricial $M\\mathbf{x}=\\mathbf{b}$ con $M=\\begin{pmatrix} 2 & -5 & 3 \\\\ 1 & -1 & 1 \\\\ 3 & 3 & 1 \\end{pmatrix}$. Su determinante es $|M|=0$, luego $M$ no es invertible: no es compatible determinado. Aplicamos Gauss y se obtiene el sistema equivalente\n$$\\begin{cases} x-y+z=1 \\\\ -3y+z=-1 \\end{cases}$$\nque es compatible indeterminado. Tomando $y$ como parámetro: $z=3y-1$ y $x=1+y-z=2-2y$. La solución es\n$$x=2-2y,\\quad z=3y-1,\\quad y\\in\\mathbb{R}.$$",
+  "answer": "**(a)** $X\\in\\mathcal{M}_{2\\times3}$, $X=(C-A)B^{-1}=\\begin{pmatrix} 1 & 1 & -1 \\\\ -5 & 2 & 12 \\end{pmatrix}$. **(b)** Sistema compatible indeterminado: $x=2-2y$, $z=3y-1$, con $y\\in\\mathbb{R}$.",
+  "common_errors": [
+   "Multiplicar por $B^{-1}$ por el lado equivocado: como $B$ está a la derecha de $X$, debe ser $X=(C-A)B^{-1}$.",
+   "Concluir que el sistema no tiene solución al obtener $|M|=0$, en vez de estudiar si es indeterminado.",
+   "No parametrizar la solución del sistema compatible indeterminado."
+  ],
+  "mark_scheme": [
+   "(a) 5 puntos: dimensión de $X$, despeje, inversa de $B$ y producto.",
+   "(b) 5 puntos: planteamiento matricial, $|M|=0$ y resolución por Gauss."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Aragon_2023-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-031"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Ordinaria 2026",
+  "title": "Ecuación matricial $AXB=A+B$ y determinante $|C^2B|$ · Madrid · Ordinaria 2026",
+  "statement": "Considere las matrices\n$$A=\\begin{pmatrix} 1/2 & 1 & 3/2 \\\\ 1 & 1/2 & 1 \\\\ 3/2 & 1 & 1/2 \\end{pmatrix},\\qquad B=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1/2 & 0 \\\\ 0 & 0 & 1/4 \\end{pmatrix}.$$\n\n**(a)** (1,5 puntos) Calcule la matriz $X$ en la ecuación matricial $AXB=A+B$.\n\n**(b)** (1 punto) Calcule el determinante $|C^2B|$, siendo $C=2(A^{-1})^t$. (Nota: $M^t$ denota la traspuesta de $M$.)",
+  "knowns": [
+   "$A$ simétrica con $|A|=1$; $B$ diagonal",
+   "$C=2(A^{-1})^t$"
+  ],
+  "full_solution": "**(a) Despeje de $X$.**\nComo $|A|=1\\neq0$ y $B$ es diagonal invertible, de $AXB=A+B$ multiplicamos por $A^{-1}$ a la izquierda y por $B^{-1}$ a la derecha:\n$$X=A^{-1}(A+B)B^{-1}=A^{-1}AB^{-1}+A^{-1}BB^{-1}=B^{-1}+A^{-1}.$$\nCon $A^{-1}=\\begin{pmatrix} -3/4 & 1 & 1/4 \\\\ 1 & -2 & 1 \\\\ 1/4 & 1 & -3/4 \\end{pmatrix}$ y $B^{-1}=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 4 \\end{pmatrix}$:\n$$X=B^{-1}+A^{-1}=\\begin{pmatrix} 1/4 & 1 & 1/4 \\\\ 1 & 0 & 1 \\\\ 1/4 & 1 & 13/4 \\end{pmatrix}.$$\n\n**(b) Determinante $|C^2B|$.**\nPor propiedades: $|C^2B|=|C|^2\\,|B|$. Como $B$ es diagonal, $|B|=1\\cdot\\tfrac12\\cdot\\tfrac14=\\tfrac18$. Además\n$$|C|=|2(A^{-1})^t|=2^3\\,|(A^{-1})^t|=8\\,|A^{-1}|=\\dfrac{8}{|A|}=8.$$\nPor tanto $|C^2B|=|C|^2|B|=8^2\\cdot\\dfrac18=\\dfrac{64}{8}=8.$",
+  "answer": "**(a)** $X=B^{-1}+A^{-1}=\\begin{pmatrix} 1/4 & 1 & 1/4 \\\\ 1 & 0 & 1 \\\\ 1/4 & 1 & 13/4 \\end{pmatrix}$. **(b)** $|C^2B|=8$.",
+  "common_errors": [
+   "Despejar $X$ sin respetar el orden ($X=A^{-1}(A+B)B^{-1}$, no $(A+B)A^{-1}B^{-1}$).",
+   "Olvidar que $|kM|=k^{\\,n}|M|$ con $n=3$ al calcular $|C|=|2(A^{-1})^t|=8|A^{-1}|$.",
+   "Calcular $|C^2B|$ como $|C|\\,|B|$ en vez de $|C|^2|B|$."
+  ],
+  "mark_scheme": [
+   "(3.1.a) 1,5 puntos: $A^{-1}$ (0,4), $B^{-1}$ (0,1), despeje (0,5) y $X$ (0,5).",
+   "(3.1.b) 1 punto: planteamiento (0,5) y cálculo (0,5)."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2026-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-MAT-032"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Comunidad Valenciana · Extraordinaria 2024",
+  "title": "Invertibilidad de la matriz $AB-2I_3$ · Comunidad Valenciana · Extraordinaria 2024",
+  "statement": "Se consideran tres matrices $A$ (de orden $3\\times2$), $B$ (de orden $2\\times3$) y $C$ (de orden $2\\times2$). Se sabe que\n$$AB-2I_3=\\begin{pmatrix} -3 & 4 & 0 \\\\ 0 & 0 & 3 \\\\ 1 & 2 & 7 \\end{pmatrix}.$$\nEstudia si la matriz $AB-2I_3$ es invertible.",
+  "knowns": [
+   "$AB-2I_3=\\begin{pmatrix} -3 & 4 & 0 \\\\ 0 & 0 & 3 \\\\ 1 & 2 & 7 \\end{pmatrix}$ (dato del criterio oficial)",
+   "$A\\in\\mathcal{M}_{3\\times2}$, $B\\in\\mathcal{M}_{2\\times3}$, $C\\in\\mathcal{M}_{2\\times2}$"
+  ],
+  "full_solution": "Una matriz cuadrada es invertible si y solo si su determinante es distinto de cero. Desarrollamos el determinante por la segunda fila (que tiene dos ceros):\n$$\\left|\\,AB-2I_3\\,\\right|=\\begin{vmatrix} -3 & 4 & 0 \\\\ 0 & 0 & 3 \\\\ 1 & 2 & 7 \\end{vmatrix}=-3\\cdot\\begin{vmatrix} -3 & 4 \\\\ 1 & 2 \\end{vmatrix}=-3\\,(-6-4)=30\\neq0.$$\nComo el determinante es $30\\neq0$, la matriz $AB-2I_3$ **es invertible**.",
+  "answer": "$\\left|AB-2I_3\\right|=30\\neq0$, luego $AB-2I_3$ es invertible.",
+  "common_errors": [
+   "Al despejar $X$, multiplicar por $C^{-1}$ por el lado equivocado: como $C$ está a la derecha de $X$, es $X=\\tfrac12(B^{t}-A)C^{-1}$.",
+   "Olvidar el factor $\\tfrac12$ al despejar.",
+   "En la conmutación, no igualar todas las entradas de $CD$ y $DC$."
+  ],
+  "mark_scheme": [
+   "(a) 3 puntos: cálculo del determinante y conclusión de invertibilidad (det $=30$).",
+   "(b) 4 puntos: despeje (3) y cálculo de $X$ (1).",
+   "(c) 3 puntos: condición $CD=DC$ y $z=4$."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2024-Extraordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-MAT-033"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Extraordinaria 2026",
+  "title": "Inversa de $AB+I$ y ecuación matricial con transpuestas · Madrid · Extraordinaria 2026",
+  "statement": "Dadas las matrices\n$$A=\\begin{pmatrix} 1 & 3 & 1 \\\\ 2 & 0 & 1 \\end{pmatrix},\\quad B=\\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\ 0 & 1 \\end{pmatrix},\\quad C=\\begin{pmatrix} 5 & 0 \\\\ 0 & -1 \\end{pmatrix}.$$\n\n**(a)** Calcula, si existe, $D=(AB+I)^{-1}$, donde $I$ es la identidad. **(b)** Obtén, si existe, el valor de $k$ para que $AA^{t}-kB^{t}B=C$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 3 & 1 \\\\ 2 & 0 & 1\\end{pmatrix}$",
+   "$B=\\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\ 0 & 1\\end{pmatrix}$",
+   "$C=\\begin{pmatrix} 5 & 0 \\\\ 0 & -1\\end{pmatrix}$"
+  ],
+  "full_solution": "**(a) Cálculo de $D=(AB+I)^{-1}$.**\n$$AB=\\begin{pmatrix} 1 & 3 & 1 \\\\ 2 & 0 & 1 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\ 0 & 1 \\end{pmatrix}=\\begin{pmatrix} 4 & 4 \\\\ 2 & 1 \\end{pmatrix},\\qquad AB+I=\\begin{pmatrix} 5 & 4 \\\\ 2 & 2 \\end{pmatrix}.$$\n$\\det(AB+I)=5\\cdot 2-4\\cdot 2=2\\neq 0$, luego existe la inversa:\n$$D=(AB+I)^{-1}=\\frac{1}{2}\\begin{pmatrix} 2 & -4 \\\\ -2 & 5 \\end{pmatrix}=\\begin{pmatrix} 1 & -2 \\\\ -1 & 2{,}5 \\end{pmatrix}.$$\n\n**(b) Valor de $k$.**\n$$AA^{t}=\\begin{pmatrix} 11 & 3 \\\\ 3 & 5 \\end{pmatrix},\\qquad B^{t}B=\\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}.$$\n$$AA^{t}-kB^{t}B=\\begin{pmatrix} 11-2k & 3-k \\\\ 3-k & 5-2k \\end{pmatrix}=\\begin{pmatrix} 5 & 0 \\\\ 0 & -1 \\end{pmatrix}=C.$$\nDe $11-2k=5$ se obtiene $k=3$; de $3-k=0$, $k=3$; de $5-2k=-1$, $k=3$. Todas las ecuaciones son compatibles:\n$$k=3.$$",
+  "answer": "(a) $D=\\begin{pmatrix} 1 & -2 \\\\ -1 & 2{,}5 \\end{pmatrix}$. (b) $k=3$.",
+  "common_errors": [
+   "Multiplicar matrices en orden incorrecto u olvidar sumar la identidad antes de invertir.",
+   "Errores en la transpuesta: $AA^{t}$ es $2\\times2$ y $B^{t}B$ también.",
+   "Resolver solo una de las ecuaciones para $k$ sin comprobar que todas dan el mismo valor."
+  ],
+  "mark_scheme": [
+   "(2.1.a) $AB$: $0{,}4$; $AB+I$: $0{,}1$; cálculo de $D$: $0{,}5$.",
+   "(2.1.b) $AA^{t}$: $0{,}5$; $B^{t}B$: $0{,}5$; $C$: $0{,}2$; valor de $k$: $0{,}3$."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2026-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-MAT-034"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Comunidad Valenciana · Julio 2023",
+  "title": "Potencia e inversa de una matriz y ecuación matricial · Comunidad Valenciana · Julio 2023",
+  "statement": "Dadas las matrices\n$$A=\\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 2 & -2 \\\\ -1 & 0 & 1 \\end{pmatrix},\\qquad B=\\begin{pmatrix} 3 & -2 & 1 \\\\ -1 & 4 & 2 \\\\ 0 & 0 & 1 \\end{pmatrix}.$$\n\n**(a)** Calcula $A^{2}$ y su inversa $(A^{2})^{-1}$. **(b)** Resuelve la ecuación matricial $2A^{2}X=4B$, hallando la matriz $X$.",
+  "knowns": [
+   "$A=\\begin{pmatrix} 1 & 1 & 0 \\\\ 0 & 2 & -2 \\\\ -1 & 0 & 1\\end{pmatrix}$",
+   "$B=\\begin{pmatrix} 3 & -2 & 1 \\\\ -1 & 4 & 2 \\\\ 0 & 0 & 1\\end{pmatrix}$"
+  ],
+  "full_solution": "**(a) Cálculo de $A^{2}$ y su inversa.**\n$$A^{2}=A\\cdot A=\\begin{pmatrix} 1 & 3 & -2 \\\\ 2 & 4 & -6 \\\\ -2 & -1 & 1 \\end{pmatrix}.$$\nSu determinante es $\\det(A^{2})=16\\neq 0$, por lo que es invertible:\n$$(A^{2})^{-1}=\\frac{1}{16}\\begin{pmatrix} -2 & -1 & -10 \\\\ 10 & -3 & 2 \\\\ 6 & -5 & -2 \\end{pmatrix}.$$\n\n**(b) Ecuación matricial $2A^{2}X=4B$.**\nDespejamos: $X=(2A^{2})^{-1}(4B)=2\\,(A^{2})^{-1}B$. Operando:\n$$X=\\frac{1}{8}\\begin{pmatrix} -5 & 0 & -14 \\\\ 33 & -32 & 6 \\\\ 23 & -32 & -6 \\end{pmatrix}.$$",
+  "answer": "(a) $A^{2}=\\begin{pmatrix} 1 & 3 & -2 \\\\ 2 & 4 & -6 \\\\ -2 & -1 & 1\\end{pmatrix}$, $(A^{2})^{-1}=\\frac{1}{16}\\begin{pmatrix} -2 & -1 & -10 \\\\ 10 & -3 & 2 \\\\ 6 & -5 & -2\\end{pmatrix}$. (b) $X=\\frac{1}{8}\\begin{pmatrix} -5 & 0 & -14 \\\\ 33 & -32 & 6 \\\\ 23 & -32 & -6\\end{pmatrix}$.",
+  "common_errors": [
+   "Calcular $A^{2}$ elevando al cuadrado cada elemento en vez de multiplicar $A\\cdot A$.",
+   "Despejar $X$ como $4B\\,(2A^{2})^{-1}$ (orden incorrecto; la inversa va a la izquierda).",
+   "Olvidar el factor $2$ al simplificar $(2A^{2})^{-1}\\cdot 4B=2(A^{2})^{-1}B$."
+  ],
+  "mark_scheme": [
+   "(a) Cálculo de $A^{2}$: $0$ a $2$ puntos; cálculo de $(A^{2})^{-1}$: $0$ a $3$ puntos.",
+   "(b) Planteamiento: $0$ a $3$ puntos; cálculo de $X$: $0$ a $2$ puntos."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2023-Extraordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-MAT-035"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Andalucía · Ordinaria 2022",
+  "title": "Inversa y ecuación matricial $X A + I_3 = B^tC$ · Andalucía · Ordinaria 2022",
+  "statement": "Se consideran $A=\\begin{pmatrix}a&1&0\\\\ 0&a&1\\\\ 3&4&1\\end{pmatrix}$, $B=(2\\ -1\\ 0)$, $C=(1\\ 3\\ -1)$.\n\n**(a)** Halle los valores de $a$ para que $A$ tenga inversa.\n\n**(b)** Para $a=2$, calcule $A^{-1}$.\n\n**(c)** Para $a=2$, resuelva la ecuación matricial $X\\cdot A+I_3=B^t\\cdot C$.",
+  "knowns": [
+   "$A=\\begin{pmatrix}a&1&0\\\\ 0&a&1\\\\ 3&4&1\\end{pmatrix}$",
+   "$B=(2\\ -1\\ 0)$, $C=(1\\ 3\\ -1)$"
+  ],
+  "full_solution": "**(a)** $A$ tiene inversa si $|A|\\neq 0$:\n$$|A|=a(a\\cdot1-1\\cdot4)-1(0-3)+0=a^2-4a+3=(a-1)(a-3).$$\nLuego $A$ es invertible para todo $a\\neq 1$ y $a\\neq 3$.\n\n**(b)** Para $a=2$, $|A|=4-8+3=-1$. Calculando la adjunta y transponiendo:\n$$A^{-1}=\\begin{pmatrix}2&1&-1\\\\ -3&-2&2\\\\ 6&5&-4\\end{pmatrix}.$$\n\n**(c)** Despejamos: $X A=B^tC-I_3\\Rightarrow X=(B^tC-I_3)A^{-1}$. Con $B^t=\\begin{pmatrix}2\\\\ -1\\\\ 0\\end{pmatrix}$:\n$$B^tC=\\begin{pmatrix}2&6&-2\\\\ -1&-3&1\\\\ 0&0&0\\end{pmatrix},\\qquad B^tC-I_3=\\begin{pmatrix}1&6&-2\\\\ -1&-4&1\\\\ 0&0&-1\\end{pmatrix}.$$\n$$X=\\begin{pmatrix}1&6&-2\\\\ -1&-4&1\\\\ 0&0&-1\\end{pmatrix}\\begin{pmatrix}2&1&-1\\\\ -3&-2&2\\\\ 6&5&-4\\end{pmatrix}=\\begin{pmatrix}-28&-21&19\\\\ 16&12&-11\\\\ -6&-5&4\\end{pmatrix}.$$",
+  "answer": "**(a)** $a\\neq 1$ y $a\\neq 3$.\n**(b)** $A^{-1}=\\begin{pmatrix}2&1&-1\\\\ -3&-2&2\\\\ 6&5&-4\\end{pmatrix}$.\n**(c)** $X=\\begin{pmatrix}-28&-21&19\\\\ 16&12&-11\\\\ -6&-5&4\\end{pmatrix}$.",
+  "common_errors": [
+   "Equivocar el desarrollo del determinante $a^2-4a+3$",
+   "Despejar $X$ multiplicando por $A^{-1}$ por el lado incorrecto (debe ir por la derecha: $X=(B^tC-I_3)A^{-1}$)",
+   "Calcular mal $B^tC$ ($3\\times1$ por $1\\times3$ da una matriz $3\\times3$)"
+  ],
+  "mark_scheme": [
+   "Apartado (a): 0,75 puntos",
+   "Apartado (b): 0,75 puntos",
+   "Apartado (c): 0,75 puntos"
+  ],
+  "marks": 2.25,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Andalucia_2022-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-036"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Madrid · Extraordinaria 2022",
+  "title": "Inversa según parámetro y sistema matricial · Madrid · Extraordinaria 2022",
+  "statement": "Sean las matrices $A=\\begin{pmatrix}-a&1&1\\\\ 0&-1&1\\\\ a&1&1\\end{pmatrix}$, $B=\\begin{pmatrix}1&1&1\\\\ -1&1&0\\\\ 1&1&2\\end{pmatrix}$, $X=\\begin{pmatrix}x\\\\ y\\\\ z\\end{pmatrix}$, $Y=\\begin{pmatrix}1\\\\ 0\\\\ 2\\end{pmatrix}$.\n\n**(a)** Determine los valores de $a$ para que $A$ tenga inversa.\n\n**(b)** Calcule, para $a=1$, la solución del sistema $(A-B)X=Y$.",
+  "knowns": [
+   "$A$ depende del parámetro $a\\in\\mathbb{R}$",
+   "$Y=(1,0,2)^t$"
+  ],
+  "full_solution": "**(a)** $|A|=4a$. Por tanto $A$ tiene inversa si y solo si $a\\neq 0$.\n\n**(b)** Para $a=1$, $A=\\begin{pmatrix}-1&1&1\\\\ 0&-1&1\\\\ 1&1&1\\end{pmatrix}$ y\n$$A-B=\\begin{pmatrix}-2&0&0\\\\ 1&-2&1\\\\ 0&0&-1\\end{pmatrix}.$$\nResolviendo $(A-B)X=Y$ con $Y=(1,0,2)^t$:\n$$-2x=1\\Rightarrow x=-\\tfrac12;\\quad -z=2\\Rightarrow z=-2;\\quad x-2y+z=0\\Rightarrow -\\tfrac12-2y-2=0\\Rightarrow y=-\\tfrac54.$$\n$$X=\\left(-\\tfrac12,\\ -\\tfrac54,\\ -2\\right)^t.$$",
+  "answer": "**(a)** $A$ invertible $\\iff a\\neq 0$.\n**(b)** $X=\\left(-\\tfrac12,\\ -\\tfrac54,\\ -2\\right)^t$.",
+  "common_errors": [
+   "Equivocar el signo al calcular $|A|=4a$",
+   "Restar mal las matrices $A-B$ componente a componente",
+   "Despejar las incógnitas en orden incorrecto en el sistema triangular resultante"
+  ],
+  "mark_scheme": [
+   "Apartado (a): 1 punto",
+   "Apartado (b): 1 punto"
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2022-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-MAT-037"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Castilla y León · Ordinaria 2022",
+  "title": "Productos de matrices y ecuación matricial X·B=D · Castilla y León · Ordinaria 2022",
+  "statement": "Dadas $A=\\begin{pmatrix} 2 & -1 \\\\ 0 & 2 \\\\ -1 & 3 \\end{pmatrix}$, $B=\\begin{pmatrix} 1 & 2 \\\\ -2 & 3 \\end{pmatrix}$, $C=\\begin{pmatrix} 4 & -1 \\end{pmatrix}$ y $D=\\begin{pmatrix} -1 & 5 \\\\ 6 & -2 \\end{pmatrix}$.\n\n**(a)** Indicar razonadamente cuáles de los productos $A\\cdot B$, $B\\cdot A^{T}$, $C\\cdot D$ y $D\\cdot A$ se pueden calcular, y las dimensiones del resultado.\n**(b)** Hallar la matriz $X$ solución de $X\\cdot B=D$.",
+  "knowns": [
+   "$A$ es $3\\times2$, $B$ es $2\\times2$, $C$ es $1\\times2$, $D$ es $2\\times2$"
+  ],
+  "full_solution": "**(a)** Un producto $M\\cdot N$ existe si el nº de columnas de $M$ coincide con el nº de filas de $N$.\n- $A\\cdot B$: $(3\\times2)(2\\times2)\\Rightarrow$ posible, resultado $3\\times2$.\n- $B\\cdot A^{T}$: $(2\\times2)(2\\times3)\\Rightarrow$ posible, resultado $2\\times3$.\n- $C\\cdot D$: $(1\\times2)(2\\times2)\\Rightarrow$ posible, resultado $1\\times2$.\n- $D\\cdot A$: $(2\\times2)(3\\times2)\\Rightarrow$ **no** posible ($2\\neq3$).\n\n**(b)** Como $\\det B=1\\cdot3-2\\cdot(-2)=7\\neq0$, existe $B^{-1}$. De $X\\cdot B=D$ se despeja $X=D\\cdot B^{-1}$, con\n$$B^{-1}=\\frac{1}{7}\\begin{pmatrix} 3 & -2 \\\\ 2 & 1 \\end{pmatrix}.$$\nEntonces\n$$X=\\begin{pmatrix} -1 & 5 \\\\ 6 & -2 \\end{pmatrix}\\cdot\\frac{1}{7}\\begin{pmatrix} 3 & -2 \\\\ 2 & 1 \\end{pmatrix}=\\frac{1}{7}\\begin{pmatrix} 7 & 7 \\\\ 14 & -14 \\end{pmatrix}=\\begin{pmatrix} 1 & 1 \\\\ 2 & -2 \\end{pmatrix}.$$",
+  "answer": "**(a)** Son posibles $A\\cdot B$ ($3\\times2$), $B\\cdot A^{T}$ ($2\\times3$) y $C\\cdot D$ ($1\\times2$); $D\\cdot A$ no es posible. **(b)** $X=\\begin{pmatrix} 1 & 1 \\\\ 2 & -2 \\end{pmatrix}$.",
+  "common_errors": [
+   "Despejar $X=B^{-1}\\cdot D$ en lugar de $X=D\\cdot B^{-1}$ (el producto no es conmutativo).",
+   "Equivocar la regla de compatibilidad de dimensiones.",
+   "Errar el signo en la adjunta/inversa de $B$."
+  ],
+  "mark_scheme": [
+   "Problema valorado sobre 3 puntos; apartados equipuntuables"
+  ],
+  "marks": 3,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-Leon_2022-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-038"
+ },
+ {
+  "block": "mat_matrices",
+  "source": "Castilla y León · Ordinaria 2022",
+  "title": "Matrices que conmutan: hallar a y b · Castilla y León · Ordinaria 2022",
+  "statement": "Sean $A=\\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix}$ y $B=\\begin{pmatrix} a & b \\\\ 1 & 1 \\end{pmatrix}$. Hallar $a$ y $b$ para que $A$ conmute con $B$ ($A\\cdot B=B\\cdot A$).",
+  "knowns": [
+   "$A\\cdot B=B\\cdot A$"
+  ],
+  "full_solution": "Calculamos ambos productos:\n$$A\\cdot B=\\begin{pmatrix} a+1 & b+1 \\\\ a & b \\end{pmatrix},\\qquad B\\cdot A=\\begin{pmatrix} a+b & a \\\\ 2 & 1 \\end{pmatrix}.$$\nIgualando término a término:\n$$a+1=a+b\\Rightarrow b=1;\\qquad b+1=a\\Rightarrow a=2;\\qquad a=2\\ (\\checkmark);\\qquad b=1\\ (\\checkmark).$$",
+  "answer": "$a=2$ y $b=1$.",
+  "common_errors": [
+   "Suponer que el producto de matrices es siempre conmutativo y no plantear las ecuaciones.",
+   "Equivocar alguna entrada al multiplicar $A\\cdot B$ o $B\\cdot A$.",
+   "No comprobar que la solución satisface las cuatro igualdades."
+  ],
+  "mark_scheme": [
+   "Cuestión valorada sobre 1 punto"
+  ],
+  "marks": 1,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-Leon_2022-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-MAT-039"
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "PAU-FIS-EM-002",
+  "flagged": true,
+  "source": "Andalucía · Extraordinaria 2025",
+  "block": "electromagnetismo",
+  "title": "Campo magnético de dos hilos paralelos y fuerza por unidad de longitud · Andalucía · Extraordinaria 2025",
+  "statement": "Dos conductores rectilíneos muy largos son paralelos al eje $OZ$. El primero pasa por $A(0,1)\\ \\text{m}$ con $1\\ \\text{A}$ y el segundo por $B(0,4)\\ \\text{m}$ con $2\\ \\text{A}$, ambos hacia $+z$.\n\n**(i)** El campo magnético total en $C(0,3)\\ \\text{m}$ (con esquema).\n**(ii)** La fuerza por unidad de longitud sobre el conductor de $2\\ \\text{A}$.",
+  "knowns": [
+   "Hilo 1: $A(0,1)$, $I_1=1\\ \\text{A}$ ($+z$)",
+   "Hilo 2: $B(0,4)$, $I_2=2\\ \\text{A}$ ($+z$)",
+   "$C=(0,3)\\ \\text{m}$; $\\mu_0=4\\pi\\cdot10^{-7}\\ \\text{T}\\cdot\\text{m}\\cdot\\text{A}^{-1}$"
+  ],
+  "full_solution": "**(i) Campo en $C(0,3)$.**\nHilo 1 dista $r_1=|3-1|=2\\ \\text{m}$; $C$ está en $+y$ respecto al hilo. Con $\\vec I\\parallel+z$, el campo en $C$ apunta en $-x$:\n$$B_1=\\dfrac{\\mu_0 I_1}{2\\pi r_1}=\\dfrac{4\\pi\\cdot10^{-7}\\cdot1}{2\\pi\\cdot2}=1{,}0\\cdot10^{-7}\\ \\text{T}\\ \\Rightarrow\\ \\vec B_1=-1{,}0\\cdot10^{-7}\\,\\vec i\\ \\text{T}$$\nHilo 2 dista $r_2=|3-4|=1\\ \\text{m}$; $C$ está en $-y$ respecto al hilo. El campo en $C$ apunta en $+x$:\n$$B_2=\\dfrac{\\mu_0 I_2}{2\\pi r_2}=\\dfrac{4\\pi\\cdot10^{-7}\\cdot2}{2\\pi\\cdot1}=4{,}0\\cdot10^{-7}\\ \\text{T}\\ \\Rightarrow\\ \\vec B_2=+4{,}0\\cdot10^{-7}\\,\\vec i\\ \\text{T}$$\n$$\\vec B_C=(-1{,}0+4{,}0)\\cdot10^{-7}\\,\\vec i=3{,}0\\cdot10^{-7}\\,\\vec i\\ \\text{T}$$\n\n**(ii) Fuerza por unidad de longitud sobre el hilo de $2\\ \\text{A}$.**\nDistancia entre hilos $d=|4-1|=3\\ \\text{m}$. Corrientes paralelas (mismo sentido) $\\Rightarrow$ atracción:\n$$\\dfrac{F}{\\ell}=\\dfrac{\\mu_0 I_1 I_2}{2\\pi d}=\\dfrac{4\\pi\\cdot10^{-7}\\cdot1\\cdot2}{2\\pi\\cdot3}=1{,}33\\cdot10^{-7}\\ \\text{N}\\cdot\\text{m}^{-1}$$\ndirigida hacia el hilo 1 (sentido $-y$).",
+  "answer": "$\\vec B_C = 3{,}0\\cdot10^{-7}\\,\\vec i\\ \\text{T}$.\n$F/\\ell = 1{,}33\\cdot10^{-7}\\ \\text{N}\\cdot\\text{m}^{-1}$, atractiva (hacia el hilo 1, $-y$).",
+  "figure_suggestion": "Eje y con hilo 1 en y=1 (1 A, saliente) e hilo 2 en y=4 (2 A, saliente); punto C en y=3; vectores B1 (-x) y B2 (+x) y su suma (+x)."
+ },
+ {
+  "id": "PAU-FIS-EM-004",
+  "flagged": true,
+  "source": "Andalucía · Junio 2019",
+  "block": "electromagnetismo",
+  "title": "Corriente inducida y varilla móvil en un campo magnético · Andalucía · Junio 2019",
+  "statement": "**(a)** Razone el sentido de la corriente inducida en una espira cuando: (i) se acerca perpendicularmente el polo norte de un imán; (ii) se aleja el plano de la espira del polo norte. Haga esquemas.\n\n**(b)** Una espira rectangular tiene un lado móvil, de longitud $L$, que se desplaza con velocidad constante $v = 0{,}12\\ \\text{m·s}^{-1}$ dentro de un campo magnético uniforme de $0{,}8\\ \\text{T}$ perpendicular al plano. (i) Calcule la f.e.m. inducida. (ii) Calcule la intensidad y el sentido de la corriente si la resistencia es $0{,}2\\ \\Omega$. (Tómese $L = 0{,}2\\ \\text{m}$ de la figura.)",
+  "knowns": [
+   "$B = 0{,}8\\ \\text{T}$",
+   "$v = 0{,}12\\ \\text{m·s}^{-1}$",
+   "$R = 0{,}2\\ \\Omega$",
+   "$L = 0{,}2\\ \\text{m}$ (longitud del lado móvil, de la figura)"
+  ],
+  "full_solution": "**(a)(i)** Al acercar el polo norte, el flujo entrante en la espira aumenta; por la ley de Lenz la corriente inducida se opone creando un polo norte enfrentado (campo saliente hacia el imán): la corriente circula en sentido antihorario visto desde el imán.\n\n**(a)(ii)** Al alejarse, el flujo disminuye; la corriente inducida intenta mantenerlo, generando un polo sur hacia el imán (campo entrante): sentido horario visto desde el imán. En ambos casos la corriente se opone a la variación del flujo.\n\n**(b)(i)** El lado móvil barre área; la f.e.m. de movimiento es (constante mientras $v$ y $B$ lo sean):\n$$\\varepsilon = B\\,L\\,v = 0{,}8\\cdot0{,}2\\cdot0{,}12 = 1{,}92\\cdot10^{-2}\\ \\text{V}$$\n\n**(b)(ii)** La intensidad:\n$$I = \\dfrac{\\varepsilon}{R} = \\dfrac{1{,}92\\cdot10^{-2}}{0{,}2} = 9{,}6\\cdot10^{-2}\\ \\text{A}$$\nEl sentido es el que, por la ley de Lenz, se opone a la variación de flujo (crea una fuerza magnética sobre el lado móvil que frena su movimiento).",
+  "answer": "**(a)** Al acercar el imán, corriente que se opone (crea polo N hacia el imán); al alejar, la contraria. **(b)** $\\varepsilon = B L v = 1{,}92\\cdot10^{-2}\\ \\text{V}$ e $I = 9{,}6\\cdot10^{-2}\\ \\text{A}$ (sentido que se opone a la variación del flujo).",
+  "figure_suggestion": "Espira rectangular con un lado móvil de longitud $L=0{,}2\\ \\text{m}$ que se desplaza a $v=0{,}12\\ \\text{m·s}^{-1}$ en un campo $\\vec{B}=0{,}8\\ \\text{T}$ entrante; indicar el sentido de la corriente inducida."
+ },
+ {
+  "id": "PAU-FIS-EM-009",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2024",
+  "block": "electromagnetismo",
+  "title": "Fuerza y trabajo eléctrico sobre una carga con dos cargas iguales · Andalucía · Ordinaria 2024",
+  "statement": "**(a)** Explique qué es una superficie equipotencial y qué forma tienen las del campo de una carga puntual. Razone el trabajo de la fuerza eléctrica sobre una carga que se mueve por una equipotencial.\n\n**(b)** Dos cargas iguales de $-1{,}2\\cdot10^{-6}\\ \\text{C}$ están en $A(0,8)\\ \\text{m}$ y $B(6,0)\\ \\text{m}$. Una tercera carga de $-1{,}5\\cdot10^{-6}\\ \\text{C}$ está en $P(3,4)\\ \\text{m}$. Calcule: i) la fuerza eléctrica total sobre la carga en $P$ (con esquema); ii) el trabajo del campo para traer la tercera carga desde el infinito hasta $P$.",
+  "knowns": [
+   "$q_A=q_B=-1{,}2\\cdot10^{-6}\\ \\text{C}$ en $A(0,8)$ y $B(6,0)$",
+   "$q_P=-1{,}5\\cdot10^{-6}\\ \\text{C}$ en $P(3,4)$",
+   "$K=9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$"
+  ],
+  "full_solution": "**(a)** Una **superficie equipotencial** es el lugar geométrico de puntos con el mismo potencial. Para una carga puntual son **esferas concéntricas** centradas en la carga. El trabajo de la fuerza eléctrica sobre una carga que se mueve por una equipotencial es **nulo**, porque $W=q(V_i-V_f)=0$ si $V_i=V_f$ (la fuerza es perpendicular al desplazamiento).\n\n**(b)** Las distancias $A\\!\\to\\!P$ y $B\\!\\to\\!P$ son iguales: $\\sqrt{3^2+4^2}=5\\ \\text{m}$.\n\ni) Cada carga ejerce (ambas negativas, como $q_P$: repulsión):\n$$F=\\dfrac{K|q_A q_P|}{r^2}=\\dfrac{9\\cdot10^{9}\\cdot1{,}2\\cdot10^{-6}\\cdot1{,}5\\cdot10^{-6}}{5^2}=6{,}48\\cdot10^{-4}\\ \\text{N}$$\n$\\vec F_A$ va de $A$ a $P$: dirección $(3,-4)/5$; $\\vec F_B$ va de $B$ a $P$: dirección $(-3,4)/5$. Al sumar:\n$$\\vec F_{\\text{total}}=\\vec F_A+\\vec F_B=\\vec 0$$\nLas componentes se cancelan por simetría: la fuerza total sobre $P$ es nula.\n\nii) Potencial en $P$ creado por $q_A$ y $q_B$:\n$$V_P=2\\cdot\\dfrac{K q_A}{5}=2\\cdot\\dfrac{9\\cdot10^{9}\\cdot(-1{,}2\\cdot10^{-6})}{5}=-4320\\ \\text{V}$$\nTrabajo del campo al traer $q_P$ desde el infinito:\n$$W=q_P(V_\\infty-V_P)=(-1{,}5\\cdot10^{-6})(0-(-4320))=-6{,}48\\cdot10^{-3}\\ \\text{J}$$",
+  "answer": "**(a)** Equipotenciales = esferas concéntricas; el trabajo sobre una equipotencial es nulo.  **(b)** i) $\\vec F_{\\text{total}}=\\vec 0$ (por simetría); ii) $W\\approx-6{,}48\\cdot10^{-3}\\ \\text{J}$.",
+  "figure_suggestion": "Esquema: cargas negativas iguales en A(0,8) y B(6,0); carga negativa en P(3,4); vectores de fuerza F_A (dirección A→P) y F_B (dirección B→P) que se cancelan."
+ },
+ {
+  "id": "PAU-FIS-EM-010",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2025",
+  "block": "electromagnetismo",
+  "title": "Partículas en campo magnético, espira móvil y potencial de dos cargas · Andalucía · Ordinaria 2025",
+  "statement": "**(a)** Dos partículas cargadas se mueven perpendicularmente a un campo $\\vec B$ uniforme con igual velocidad. i) Deduzca el radio de la trayectoria. ii) Si la masa de la primera es $20$ veces mayor y su carga la mitad de la segunda, halle la razón entre los periodos.\n\n**(b1)** El lado móvil de una espira rectangular ($a=0{,}15\\ \\text{m}$) se mueve a $0{,}2\\ \\text{m·s}^{-1}$ dentro de un campo de $2\\ \\text{T}$ (saliente); la resistencia es $50\\ \\Omega$. Determine: i) la f.e.m.; ii) la intensidad; iii) el sentido de la corriente inducida.\n\n**(b2)** Dos cargas de $+10^{-6}\\ \\text{C}$ y $-10^{-6}\\ \\text{C}$ están en $A(0,-4)$ y $B(0,4)\\ \\text{m}$. i) Potencial en $C(6,0)$ y $D(0,8)\\ \\text{m}$. ii) Trabajo del campo al llevar $+4\\cdot10^{-4}\\ \\text{C}$ de $C$ a $D$.",
+  "knowns": [
+   "$a=0{,}15\\ \\text{m}$, $v=0{,}2\\ \\text{m·s}^{-1}$, $B=2\\ \\text{T}$, $R=50\\ \\Omega$",
+   "$q_A=+10^{-6}\\ \\text{C}$ en $A(0,-4)$, $q_B=-10^{-6}\\ \\text{C}$ en $B(0,4)$",
+   "$K=9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$"
+  ],
+  "full_solution": "**(a)** i) La fuerza magnética es centrípeta: $qvB=\\dfrac{mv^2}{r}\\Rightarrow r=\\dfrac{mv}{qB}$. ii) El periodo es $T=\\dfrac{2\\pi m}{qB}$, independiente de $v$. Con $m_1=20m_2$ y $q_1=q_2/2$:\n$$\\dfrac{T_1}{T_2}=\\dfrac{m_1/q_1}{m_2/q_2}=\\dfrac{20}{1/2}=40$$\n\n**(b1)** i) $\\varepsilon=Bav=2\\cdot0{,}15\\cdot0{,}2=0{,}06\\ \\text{V}$.\nii) $I=\\dfrac{\\varepsilon}{R}=\\dfrac{0{,}06}{50}=1{,}2\\cdot10^{-3}\\ \\text{A}=1{,}2\\ \\text{mA}$.\niii) Por la ley de Lenz, la corriente inducida se opone a la variación de flujo: circula en el sentido que crea un campo que compensa el cambio (sentido horario u antihorario según si el flujo saliente aumenta o disminuye; el campo inducido dentro de la espira se opone a dicha variación).\n\n**(b2)** i) $C(6,0)$ dista $\\sqrt{36+16}=\\sqrt{52}$ de ambas cargas:\n$$V_C=K\\!\\left(\\dfrac{+10^{-6}}{\\sqrt{52}}+\\dfrac{-10^{-6}}{\\sqrt{52}}\\right)=0\\ \\text{V}$$\n$D(0,8)$ dista $12\\ \\text{m}$ de $A$ y $4\\ \\text{m}$ de $B$:\n$$V_D=9\\cdot10^{9}\\!\\left(\\dfrac{10^{-6}}{12}+\\dfrac{-10^{-6}}{4}\\right)=-1500\\ \\text{V}$$\nii) $W=q(V_C-V_D)=4\\cdot10^{-4}\\,(0-(-1500))=+0{,}6\\ \\text{J}$. Positivo: el campo realiza trabajo a favor del movimiento de la carga positiva.",
+  "answer": "**(a)** $r=\\dfrac{mv}{qB}$; $T_1/T_2=40$.  **(b1)** $\\varepsilon=0{,}06\\ \\text{V}$, $I=1{,}2\\ \\text{mA}$ (sentido por Lenz).  **(b2)** $V_C=0$, $V_D=-1500\\ \\text{V}$; $W=+0{,}6\\ \\text{J}$.",
+  "figure_suggestion": "Esquema: espira rectangular con lado móvil de longitud a=0,15 m en campo B=2 T saliente, velocidad 0,2 m/s; y cargas +q en (0,−4) y −q en (0,4) con puntos C(6,0) y D(0,8)."
+ },
+ {
+  "id": "PAU-FIS-EM-017",
+  "flagged": true,
+  "source": "Andalucía · Reserva B 2019",
+  "block": "electromagnetismo",
+  "title": "Electrón en campos E y B cruzados; equilibrio de hilos y fuerza sobre un electrón · Andalucía · Reserva B 2019",
+  "statement": "**(a)** Un electrón atraviesa en línea recta una región con campos eléctrico y magnético uniformes. Discuta, con esquemas, la relación entre $\\vec{v}$, $\\vec{B}$ y $\\vec{E}$ si: **(i)** el electrón mantiene constante su velocidad; **(ii)** el electrón describe un movimiento rectilíneo uniformemente acelerado.\n**(b)** Por el hilo $A$ circula $I_A=10\\ \\text{A}$. **(i)** Determine el valor y el sentido de $I_B$ para que el campo magnético total sea cero en el punto $P$, situado a $0{,}25\\ \\text{m}$ a la derecha de $A$. **(ii)** Calcule la fuerza magnética que ejercen los dos hilos sobre un electrón que se mueve en el plano $XY$ a $5\\cdot10^{3}\\ \\text{m/s}$ verticalmente hacia arriba, situado a $0{,}05\\ \\text{m}$ a la derecha del hilo $B$.\n\n*(Nota: la separación entre los hilos $A$ y $B$ la fija la figura; aquí se desarrolla el método.)*",
+  "knowns": [
+   "$I_A=10\\ \\text{A}$",
+   "$P$ a $d_{AP}=0{,}25\\ \\text{m}$ de $A$; electrón a $0{,}05\\ \\text{m}$ de $B$",
+   "$v=5\\cdot10^{3}\\ \\text{m/s}$",
+   "$\\mu_0=4\\pi\\cdot10^{-7}\\ \\text{T}\\cdot\\text{m}\\cdot\\text{A}^{-1}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a.i)** Velocidad constante $\\Rightarrow$ fuerza neta nula: la fuerza eléctrica y la magnética se equilibran (selector de velocidades). Se necesita $q\\vec{E}+q\\,\\vec{v}\\times\\vec{B}=0$, es decir $\\vec{E}=-\\vec{v}\\times\\vec{B}$, con $\\vec{E}$, $\\vec{v}$ y $\\vec{B}$ mutuamente perpendiculares y $v=E/B$.\n\n**(a.ii)** Movimiento rectilíneo uniformemente acelerado $\\Rightarrow$ fuerza neta constante en la dirección de $\\vec{v}$. La fuerza magnética debe ser nula ($\\vec{v}\\parallel\\vec{B}$), y el campo eléctrico, paralelo a $\\vec{v}$, proporciona la aceleración constante. Así $\\vec{v}\\parallel\\vec{B}\\parallel\\vec{E}$.\n\n**(b.i)** El campo de un hilo es $B=\\dfrac{\\mu_0 I}{2\\pi d}$. Para que $\\vec{B}=0$ en $P$ los dos campos deben ser opuestos e iguales en módulo:\n$$\\dfrac{\\mu_0 I_A}{2\\pi\\,d_{AP}}=\\dfrac{\\mu_0 I_B}{2\\pi\\,d_{BP}}\\ \\Rightarrow\\ I_B=I_A\\,\\dfrac{d_{BP}}{d_{AP}}$$\ncon $I_B$ en sentido opuesto a $I_A$ (para que en $P$, exterior a ambos hilos, los campos se cancelen). Con la geometría de la figura ($d_{BP}=0{,}05\\ \\text{m}$, $d_{AP}=0{,}25\\ \\text{m}$): $I_B=10\\cdot\\dfrac{0{,}05}{0{,}25}=2\\ \\text{A}$, de sentido contrario a $I_A$.\n\n**(b.ii)** En la posición del electrón, el campo total $\\vec{B}_{tot}=\\vec{B}_A+\\vec{B}_B$ es perpendicular al plano $XY$. La fuerza es $\\vec{F}=-e\\,\\vec{v}\\times\\vec{B}_{tot}$, de módulo $F=e\\,v\\,B_{tot}$ (con $\\vec{v}$ vertical y $\\vec{B}_{tot}$ saliente/entrante al plano), contenida en el plano $XY$ y perpendicular a $\\vec{v}$. Sustituyendo $B_{tot}$ (calculado con las distancias de la figura) se obtiene el valor numérico.",
+  "answer": "**(a)** (i) selector de velocidades: $\\vec{E}\\perp\\vec{v}\\perp\\vec{B}$ con $v=E/B$; (ii) $\\vec{v}\\parallel\\vec{B}$ (fuerza magnética nula) y $\\vec{E}$ paralelo a $\\vec{v}$. **(b.i)** $I_B=I_A\\,d_{BP}/d_{AP}$, sentido opuesto a $I_A$ (con la figura, $I_B=2\\ \\text{A}$). **(b.ii)** $F=e\\,v\\,B_{tot}$, en el plano $XY$, perpendicular a $\\vec{v}$.",
+  "figure_suggestion": "Dos hilos verticales paralelos $A$ y $B$ perpendiculares al plano, con $I_A=10$ A; punto $P$ a 0,25 m de $A$; electrón a 0,05 m de $B$ moviéndose hacia arriba; dibujar $\\vec{B}_A$ y $\\vec{B}_B$ y la fuerza sobre el electrón."
+ },
+ {
+  "id": "PAU-FIS-EM-024",
+  "flagged": true,
+  "source": "Cantabria · Ordinaria 2024",
+  "block": "electromagnetismo",
+  "title": "Dos hilos paralelos: anulación del campo y campo en C · Cantabria · Ordinaria 2024",
+  "statement": "Dos hilos conductores rectilíneos, paralelos e infinitos, están en el plano $XY$; uno sobre el eje $OX$ con $I_1=200\\ \\text{mA}$ (sentido $+x$) y el segundo paralelo a $20\\ \\text{cm}$.\n\n**(a)** Intensidad (valor y sentido) del segundo hilo para anular el campo en el punto $A$ (equidistante, a $10\\ \\text{cm}$ de cada hilo).\n\n**(b)** Intensidad para anular el campo en el punto $B$ (fuera, a $10\\ \\text{cm}$ del primer hilo por el lado opuesto al segundo).\n\n**(c)** Si $I_2=I_1$ pero de sentido opuesto, campo magnético resultante en el punto $C$, equidistante de ambos.\n\n*(Nota del corrector: las posiciones exactas de $A$, $B$ y $C$ de la figura no se conservaron; se reconstruyen de forma coherente con el enunciado.)*",
+  "knowns": [
+   "$I_1=200\\ \\text{mA}=0{,}2\\ \\text{A}$, sentido $+x$",
+   "Separación entre hilos $=20\\ \\text{cm}=0{,}2\\ \\text{m}$",
+   "$\\mu_0=4\\pi\\cdot10^{-7}\\ \\text{T·m/A}$ ($\\mu_0/2\\pi=2\\cdot10^{-7}$)"
+  ],
+  "full_solution": "El módulo del campo de un hilo recto a distancia $d$ es $B=\\dfrac{\\mu_0 I}{2\\pi d}$.\n\n**(a)** En $A$ (punto medio, $d_1=d_2=0{,}10\\ \\text{m}$), para dos hilos **paralelos con corrientes del mismo sentido** los campos en el punto medio son opuestos. Se anulan si son de igual módulo:\n\n$$\\dfrac{\\mu_0 I_1}{2\\pi d_1}=\\dfrac{\\mu_0 I_2}{2\\pi d_2}\\Rightarrow I_2=I_1=200\\ \\text{mA}\\ (\\text{mismo sentido},\\ +x)$$\n\n**(b)** En $B$ (fuera de ambos, a $0{,}10\\ \\text{m}$ del hilo 1 y a $0{,}30\\ \\text{m}$ del hilo 2). Fuera, los campos se anulan si las corrientes son de **sentidos opuestos** y:\n\n$$\\dfrac{I_1}{0{,}10}=\\dfrac{I_2}{0{,}30}\\Rightarrow I_2=3I_1=600\\ \\text{mA}\\ (\\text{sentido opuesto},\\ -x)$$\n\n**(c)** En $C$ (punto medio, $0{,}10\\ \\text{m}$ de cada hilo) con $I_2=I_1$ de **sentido opuesto**, los campos se suman:\n\n$$B_C=2\\cdot\\dfrac{\\mu_0 I_1}{2\\pi d}=2\\cdot\\dfrac{2\\cdot10^{-7}\\cdot0{,}2}{0{,}10}=8\\cdot10^{-7}\\ \\text{T}$$\n\nperpendicular al plano que contiene los hilos (dirección $\\pm\\vec{k}$ según los sentidos).",
+  "answer": "**(a)** $I_2=200\\ \\text{mA}$, mismo sentido. **(b)** $I_2=600\\ \\text{mA}$, sentido opuesto. **(c)** $B_C=2\\cdot\\dfrac{\\mu_0 I_1}{2\\pi d}=8\\cdot10^{-7}\\ \\text{T}$, perpendicular al plano.",
+  "figure_suggestion": "Hilo 1 sobre el eje $OX$ ($I_1$ hacia $+x$) y hilo 2 paralelo a 20 cm; marcar $A$ en el punto medio, $B$ fuera a 10 cm del hilo 1, y $C$ equidistante; vectores $\\vec{B}_1$ y $\\vec{B}_2$ (saliente/entrante) en cada punto."
+ },
+ {
+  "id": "PAU-FIS-EM-030",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Julio 2019",
+  "block": "electromagnetismo",
+  "title": "Carga en el origen en equilibrio de fuerzas de dos cargas · Comunidad Valenciana · Julio 2019",
+  "statement": "Dos cargas $q_1 = 4\\ \\mu\\text{C}$ y $q_2 = 6\\ \\mu\\text{C}$ se sitúan sobre el eje $X$ en $x = +3\\ \\text{m}$ y $x = -3\\ \\text{m}$, respectivamente. Calcule el valor de una carga $q$ situada en el origen si la fuerza eléctrica total que actúa sobre ella tiene módulo $F = 2\\cdot10^{-3}\\ \\text{N}$. (Nota: valores reconstruidos a partir de un enunciado degradado en la digitalización.)",
+  "knowns": [
+   "$q_1 = 4\\ \\mu\\text{C}$ en $(3,0)\\ \\text{m}$",
+   "$q_2 = 6\\ \\mu\\text{C}$ en $(-3,0)\\ \\text{m}$",
+   "$k = 9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$",
+   "$F = 2\\cdot10^{-3}\\ \\text{N}$"
+  ],
+  "full_solution": "La carga $q$ en el origen dista $d = 3\\ \\text{m}$ de cada una. Las fuerzas que ejercen $q_1$ y $q_2$ sobre $q$ están dirigidas a lo largo del eje $X$ y, por ser las dos cargas del mismo signo (positivas), tienen sentidos opuestos sobre $q$. La fuerza neta (en módulo) es la diferencia:\n$$F = \\dfrac{k\\,q}{d^2}\\,|q_2 - q_1| = \\dfrac{k\\,q\\,(q_2 - q_1)}{d^2}$$\nDespejando $q$:\n$$q = \\dfrac{F\\,d^2}{k\\,(q_2 - q_1)} = \\dfrac{2\\cdot10^{-3}\\cdot3^2}{9\\cdot10^{9}\\,(6\\cdot10^{-6}-4\\cdot10^{-6})} = 1\\cdot10^{-6}\\ \\text{C} = 1\\ \\mu\\text{C}$$",
+  "answer": "$q = 1\\ \\mu\\text{C}$ (el sentido neto de la fuerza es el de la carga mayor, $q_2$).",
+  "figure_suggestion": "Eje X con $q_2=6\\ \\mu\\text{C}$ en $x=-3\\ \\text{m}$, $q$ en el origen y $q_1=4\\ \\mu\\text{C}$ en $x=+3\\ \\text{m}$; dibujar las dos fuerzas sobre $q$ en sentidos opuestos."
+ },
+ {
+  "id": "PAU-FIS-EM-040",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2018",
+  "block": "electromagnetismo",
+  "title": "Campo eléctrico y trabajo de dos cargas puntuales · C. Valenciana · Junio 2018",
+  "statement": "Dadas dos cargas puntuales $q_1=-4\\ \\mu\\text{C}$ (en el origen) y $q_2=+2\\ \\mu\\text{C}$, calcula:\n\n**(a)** El vector campo eléctrico creado por cada carga y el total en el punto $P$, y dibuja los vectores.\n\n**(b)** El trabajo mínimo necesario para trasladar una carga $q=+1\\ \\mu\\text{C}$ desde el infinito hasta el punto $P$ (potencial nulo en el infinito).\n\n*(Geometría reconstruida del enunciado original: $q_1$ en $(0,0)$, $P$ a $4\\ \\text{m}$ justo encima de $q_1$ en $(0,4)\\ \\text{m}$, y $q_2$ sobre el eje $x$ de modo que el segmento $q_2\\!-\\!P$ forma $30^\\circ$ con el eje.)",
+  "knowns": [
+   "$q_1=-4\\ \\mu\\text{C}$ en $(0,0)$",
+   "$q_2=+2\\ \\mu\\text{C}$ en $(6{,}93;0)\\ \\text{m}$",
+   "$P=(0,4)\\ \\text{m}$",
+   "$q=+1\\ \\mu\\text{C}$ (a trasladar)",
+   "$K=9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$"
+  ],
+  "full_solution": "Con la geometría reconstruida, $q_2$ está en $x=4/\\tan30^\\circ=6{,}93\\ \\text{m}$; la distancia $q_2\\!-\\!P$ es $\\sqrt{6{,}93^2+4^2}=8\\ \\text{m}$ y $q_1\\!-\\!P$ es $4\\ \\text{m}$.\n\n**(a) Campo en $P$**\n\nCampo de $q_1$ (negativa, apunta hacia $q_1$, es decir $-\\vec j$):\n$$E_1=\\dfrac{K|q_1|}{4^2}=\\dfrac{9\\cdot10^{9}\\cdot4\\cdot10^{-6}}{16}=2250\\ \\text{N·C}^{-1}\\ \\Rightarrow\\ \\vec E_1=-2250\\,\\vec j$$\nCampo de $q_2$ (positiva, se aleja de $q_2$ hacia $P$, dirección $(-0{,}866;\\,0{,}5)$):\n$$E_2=\\dfrac{K|q_2|}{8^2}=\\dfrac{9\\cdot10^{9}\\cdot2\\cdot10^{-6}}{64}=281\\ \\text{N·C}^{-1}\\ \\Rightarrow\\ \\vec E_2=(-243;\\,141)\\ \\text{N·C}^{-1}$$\nTotal:\n$$\\vec E=(-243;\\,-2109)\\ \\text{N·C}^{-1};\\qquad |\\vec E|\\approx2{,}1\\cdot10^{3}\\ \\text{N·C}^{-1}$$\n\n**(b) Trabajo mínimo**\n\nPotencial en $P$:\n$$V_P=K\\dfrac{q_1}{4}+K\\dfrac{q_2}{8}=9\\cdot10^{9}\\!\\left(\\dfrac{-4\\cdot10^{-6}}{4}+\\dfrac{2\\cdot10^{-6}}{8}\\right)=-6750\\ \\text{V}$$\nEl trabajo mínimo del agente externo (traer la carga desde el infinito) es $W=q\\,V_P$:\n$$W=1\\cdot10^{-6}\\cdot(-6750)=-6{,}75\\cdot10^{-3}\\ \\text{J}$$\nEs negativo: el campo realiza trabajo positivo y atrae la carga hacia $P$.",
+  "answer": "**(a)** $\\vec E\\approx(-243;\\,-2109)\\ \\text{N·C}^{-1}$, $|\\vec E|\\approx2{,}1\\cdot10^{3}\\ \\text{N·C}^{-1}$.  **(b)** $W=q\\,V_P\\approx-6{,}75\\cdot10^{-3}\\ \\text{J}$.",
+  "figure_suggestion": "Distribución de cargas: q1=-4 µC en (0,0), q2=+2 µC en (6,93;0) m, punto P(0,4) m; dibujar E1 (hacia q1), E2 (desde q2) y la resultante."
+ },
+ {
+  "id": "PAU-FIS-EM-041",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2018",
+  "block": "electromagnetismo",
+  "title": "Campo magnético de un hilo y fuerza sobre un conductor paralelo · C. Valenciana · Junio 2018",
+  "statement": "Un conductor rectilíneo muy largo lleva una corriente continua $I_1=2\\ \\text{A}$. Calcula y dibuja el vector campo magnético en un punto $P$ situado a una distancia $d=1\\ \\text{m}$ a la derecha del conductor. En $P$ se coloca otro conductor rectilíneo paralelo recorrido por una corriente $I_2$ en sentido opuesto; representa el vector fuerza que actúa sobre el segundo conductor.",
+  "knowns": [
+   "$I_1=2\\ \\text{A}$",
+   "$d=1\\ \\text{m}$",
+   "$\\mu_0=4\\pi\\cdot10^{-7}\\ \\text{T·m·A}^{-1}$",
+   "corrientes en sentidos opuestos"
+  ],
+  "full_solution": "**Campo en $P$**\n\nEl módulo del campo de un hilo indefinido a distancia $d$ es:\n$$B=\\dfrac{\\mu_0 I_1}{2\\pi d}=\\dfrac{4\\pi\\cdot10^{-7}\\cdot2}{2\\pi\\cdot1}=4\\cdot10^{-7}\\ \\text{T}$$\nPor la regla de la mano derecha, a la derecha del hilo $\\vec B$ es perpendicular al plano (si la corriente sube, $\\vec B$ en $P$ entra en el plano del papel).\n\n**Fuerza sobre el segundo conductor**\n\nDos conductores paralelos con corrientes de **sentidos opuestos se repelen**. La fuerza por unidad de longitud sobre el segundo conductor es:\n$$\\dfrac{F}{L}=\\dfrac{\\mu_0 I_1 I_2}{2\\pi d}$$\ndirigida alejándose del primer hilo (hacia la derecha, en sentido contrario a la posición del hilo $I_1$).",
+  "answer": "$B=\\dfrac{\\mu_0 I_1}{2\\pi d}=4\\cdot10^{-7}\\ \\text{T}$ en $P$; el segundo conductor (corriente opuesta) sufre una fuerza **repulsiva**, $\\dfrac{F}{L}=\\dfrac{\\mu_0 I_1 I_2}{2\\pi d}$.",
+  "figure_suggestion": "Esquema: hilo vertical con I1=2 A; punto P a 1 m a la derecha con vector B perpendicular al plano; segundo hilo paralelo en P con I2 opuesta y vector fuerza de repulsión alejándose del primero."
+ }
+]

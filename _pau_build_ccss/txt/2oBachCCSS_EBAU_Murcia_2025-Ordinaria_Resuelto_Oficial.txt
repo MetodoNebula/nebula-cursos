@@ -1,0 +1,315 @@
+NOTA IMPORTANTE: Se debe responder a un máximo de 4 cuestiones, una de cada apartado. Las cuestiones se pueden
+hacer en cualquier orden. En cada APARTADO se debe hacer sólo la CUESTIÓN 1 o la CUESTIÓN 2. La elección de
+CUESTIÓN 1 o CUESTIÓN 2 puede cambiar de un apartado a otro. Si se responden las 2 CUESTIONES de un apartado,
+solo se corregirá la primera CUESTIÓN contestada. Cada cuestión tiene una puntuación entre 2 y 3 puntos. Solo se
+podrán usar las tablas estadísticas que se adjuntan. No se podrán usar calculadoras gráficas ni programables.
+
+
+
+Como criterios de evaluación generales, las respuestas a las preguntas deben realizarse expresando de forma razonada
+el proceso seguido en su resolución, con el rigor y la precisión necesarios, usando el lenguaje, la notación y los símbolos
+matemáticos adecuados, y utilizando argumentos, justificaciones, explicaciones y razonamientos explícitos y coherentes.
+La mera descripción del planteamiento, sin que se lleve a cabo la resolución de manera efectiva, no es suficiente para
+obtener una valoración completa de la pregunta.
+
+
+
+APARTADO 1 (a elegir una cuestión):
+
+CUESTIÓN 1: [2,5 puntos]
+
+[1,5 puntos] Dadas las matrices A, B y C:
+                                                                                             
+                         2 −1                 1 0                                          1  2
+                   A=                 , B=                                y       C=                  .
+                         1     0             −1 1                                          0 −1
+
+  a) Calcula C2 . [0,25 puntos]
+                                                                     
+                                         2       1  2        1  2     1 0
+                                       C =                ·        =
+                                                 0 −1        0 −1     0 1
+
+  b) Halla A + B +C2 . [0,25 puntos]
+                                                             
+                               2     2 −1      1 0     1 0     4 −1
+                       A + B +C =          +        +       =
+                                     1  0     −1 1     0 1     0  2
+
+  c) Encuentra (A − B)−1 . [0,25 puntos]
+                                                                             
+                                                          −1           −1 1
+                                                  (A − B)      =
+                                                                       −2 1
+
+  d) Resuelve la ecuación matricial AX − BX = A + B +C2 .
+     Expresión correcta y solución: [0,5 puntos] +[0,25 puntos]
+                                                                        
+                               −1            2      −1 1       4 −1     −4 3
+                    X = (A − B) · (A + B +C ) =             ·        =
+                                                    −2 1       0  2     −8 4
+[1 punto] Discute y resuelve, si es posible, el siguiente sistema lineal:
+                                           
+                                            3x + 2y − z = 3
+                                              x − y + 2z = 4
+                                              2x + 3y − z = 3
+                                           
+
+
+La matriz ampliada es                                   
+                                                1 −1 2 4
+                                      (A|b) =  3 2 −1 3 
+                                                2 3 −1 3
+
+Determinante de A [0,25 puntos] + [0,25 puntos] comparación de rangos.
+
+                           1 −1 2
+                     |A| = 3 2 −1 = −10 ̸= 0 ⇒ rg(A) = 3 = rg(A|b) = n ⇒ SCD
+                           2 3 −1
+
+La solución del sistema es: [0,50 puntos]
+
+                                                            
+                                    3x + 2y − z = 3   x = 1 
+                                     x − y + 2z = 4   ⇒  y=1
+                                    2x + 3y − z = 3   z = 2 
+CUESTIÓN 2:
+[2,5 puntos] Una empresa del sector informático produce dos tipos de ordenadores portátiles: note-
+books y gaming. La empresa obtiene 400 euros de beneficio por cada notebook y 500 euros por cada
+gaming.El proceso de fabricación es complejo y tiene tres fases: (1) selección y fabricación de compo-
+nentes; (2) ensamblaje y (3) control de calidad. Los notebooks necesitan 2, 1 y 1 horas en cada fase,
+respectivamente, mientras que los gaming necesitan 1, 4 y 2 horas. En cada fase hay un límite de 14,
+16 y 10 horas diarias. Se pide:
+
+ a) Si la empresa quiere maximizar el beneficio diario, formula el problema, identificando la función
+    objetivo y las restricciones.
+    Las variables son:
+        x : número de portátiles tipo notebooks.
+        y : número de portátiles tipo gaming.
+    La función objetivo es: f (x, y) = 400x + 500y. [0,25 puntos] Las restricciones de acuerdo con el
+    enunciado son: [0,25 puntos]               
+                                               
+                                                2x + y ≤ 14
+                                               x + 4y ≤ 16
+                                               
+                                               
+                                               
+                                                 x + 2y ≤ 10
+                                               
+                                               
+                                               
+                                               
+                                                x≥0
+                                                 y≥0
+                                               
+
+ b) Representa la región factible. [0,25 puntos]+ [0,25 puntos]+ [0,25 puntos] por representar co-
+    rrectamente cada inecuación (sin contar x ≥ 0 e y ≥ 0).
+
+
+
+
+ c) Encuentra los vértices de esta región.
+    Los vértices son: (0, 4), (4, 3), (6, 2), (7, 0), (0, 0). [0,1 puntos] por cada vértice correctamente
+    calculado.
+ d) ¿Cuántos ordenadores portátiles de cada tipo hay que producir para maximizar los beneficios
+    diarios?
+    En los vértices, la función objetivo vale: [0,25 puntos]
+         f (0, 4) = 2000.
+         f (4, 3) = 3100.
+         f (6, 2) = 3400.
+         f (7, 0) = 2800.
+         f (0, 0) = 0
+    El valor máximo es 3400 que corresponde al punto (6,2). En consecuencia, hay que producir 6
+    portátiles tipo notebook y 2 portátiles tipo gaming. [0,25 puntos]
+ e) Calcula el beneficio máximo diario posible. [0,25 puntos]
+
+    El beneficio máximo diario es 3400 euros.
+APARTADO 2 (a elegir una cuestión):
+
+
+CUESTIÓN 1:
+
+[3 puntos] Dada la función:
+                                                        x2 + 3
+                                              f (x) =
+                                                        1−x
+
+ a) Determina su dominio. [0,5 puntos]
+    Dominio: R − {1}.
+ b) Estudia sus asíntotas.
+    Asíntota vertical: x = 1 [0,25 puntos]
+    Asíntota oblicua: cálculo de m = −1 [0,25 puntos]. y = −x − 1 [0,25 puntos]
+ c) Calcula los intervalos de crecimiento y decrecimiento.
+    Cálculo de la derivada:
+                                                      −x2 + 2x + 3
+                                            f ′ (x) =
+                                                        (1 − x)2
+    [0,25 puntos]
+    Cálculo de las raíces de f ′ (x) = 0: x = −1 y x = 3. [0,25 puntos]
+    Decrece en (−∞, −1) ∪ (3, +∞).[0,25 puntos]
+    Crece en (−1, 1) ∪ (1, 3).[0,25 puntos]
+ d) Calcula los máximos y mínimos locales.
+    Mínimo local en (-1,2) y máximo local en (3,-6).
+    Identificar x = −1 y x = 3 como valores donde hay un mínimo y un máximo locales. [0,25 puntos]
+    + [0,25 puntos]
+    Calcular f (−1) y f (3). [0,25 puntos]
+CUESTIÓN 2:
+[3 puntos] El famoso rapero Myke Towers ofrecerá un concierto en Murcia el próximo 6 de junio en el
+Espacio Norte, que durará 5 horas. La asistencia al evento, medida en miles de personas, viene dada
+por la siguiente función:
+                                                     20t
+                                           N(t) =
+                                                  (t + 1)2
+donde 0 ≤ t ≤ 5 y N es el número de miles de asistentes t horas después del comienzo. Se pide:
+
+ a) Estudia el crecimiento y decrecimiento de la función N(t).
+                                                         −20t + 20
+                                             N ′ (t) =
+                                                          (t + 1)3
+    Cálculo de la derivada [0,25 puntos]
+    N ′ (t) = 0; t = 1 [0,25 puntos]
+    Crece en (0,1)[0,25 puntos]
+    Decrece en (1,5) [0,25 puntos]
+
+ b) Calcula en qué hora se produce el máximo número de asistentes y a cuánto ascienden.
+    El análisis del crecimiento y decrecimiento de la función realizado en el apartado (a) indica que el
+    máximo se alcanzará cuando t = 1. [0,75 puntos]
+    En ese momento, el número máximo de asistentes será N(1) = 5. Es decir, 5000 personas. [0,50
+    puntos]
+
+ c) Evalúa e interpreta la derivada de la función N(t) en t = 2. [0,25 puntos]
+    N ′ (2) = −0, 74. Es decir, N(3) − N(2) ≈ N ′ (2) = −0, 74. Entre la segunda y la tercera hora se van
+    aproximadamente 740 personas. (Después de dos horas, se van aproximadamente 740 perso-
+    nas del concierto).
+ c) Halla cuántos asistentes hay una vez han transcurrido 3 horas desde el comienzo del concierto.
+    [0,5 puntos]
+    N(3) = 3, 75. Es decir, una vez transcurridas 3 horas desde el comienzo hay 3750 personas.
+APARTADO 3 (a elegir una cuestión):
+
+
+CUESTIÓN 1:
+
+[2 puntos] Realiza:
+
+         R2                            R2
+ a) Si   0 f (x)dx = 4, ¿a qué es igual 0 [ f (x) + 3]dx? [0,25 puntos]
+                                   Z 2                      Z 2                 Z 2
+                                         [ f (x) + 3]dx =         f (x)dx + 3         dx = 10
+                                    0                        0                   0
+    .
+ b) Representa gráficamente el recinto del plano limitado por f (x) = x2 y g(x) = 2x + 3. Calcula su área.
+
+
+
+
+    Representación gráfica. [0,75 puntos]
+                                                                   3
+                                                                x3
+                                 Z 3                  
+                                                   2    2              32
+                                     (2x + 3 − x )dx = x + 3x −       = u2
+                                  −1                            3 −1    3
+
+    Definir bien el área, aplicación correcta de regla de Barrow y solución. [0,25 puntos]+[0,25 pun-
+    tos]+[0,25 puntos]+[0,25 puntos]
+CUESTIÓN 2:
+[2 puntos] Realiza:
+
+                                                                                             R1
+ a) Calcula los valores de los límites de integración a y b de manera que se cumpla          −2 f (x)dx +
+    R5          Rb
+     1 f (x)dx = a f (x)dx. [0,25 puntos]
+                                        Z 1               Z 5               Z 5
+                                              f (x)dx +         f (x)dx =         f (x)dx.
+                                         −2                1                 −2
+
+
+
+
+ b) Dada la función f (x) = 12 ex/2 :
+   b.1) Escribe la integral que describe el área de la región sombreada. [0,5 puntos]
+                                                               Z 4
+                                                                  1 x/2
+                                                                    e dx
+                                                                0 2
+   b.2) Calcula el área.
+
+
+
+
+                                          Z 4                 i4
+                                                1 x/2   h
+                                                  e dx = ex/2
+                                                                 = e2 − 1u2 .
+                                              0 2              0
+
+    Cálculo correcto de la primitiva, aplicación correcta de regla de Barrow y solución. [0,75 pun-
+    tos]+[0,25 puntos]+[0,25 puntos]
+APARTADO 4 (a elegir una cuestión):
+
+
+CUESTIÓN 1:
+
+[2,5 puntos] Un grupo de investigadores de la Universidad de Murcia realizó una encuesta en la que
+se preguntó a 1000 personas adultas su opinión sobre establecer una edad legal para que los niños
+tengan teléfono móvil. Según los resultados, 560 personas, de las que 390 eran mujeres, opinaron a
+favor de esta medida. De las 440 personas que opinaron en contra, 280 eran hombres. Si se selecciona
+una persona al azar:
+
+ a) ¿Cuál es la probabilidad de que esté a favor de esta medida? [0,25 puntos]
+
+                                                  P(F) = 0, 56
+
+ b) ¿Cuál es la probabilidad de que la persona encuestada sea mujer?
+               P(M) = P(M|F) · P(F) + P(M|C) · P(C) = 0, 56 · 0, 6964 + 0, 44 · 0, 3636 = 0, 5499.
+
+
+    Planteamiento correcto de la probabilidad y cálculo correcto de la probabilidad [0,25 puntos]+[0,25
+    puntos]+[0,25 puntos]
+ c) ¿Cuál es la probabilidad de que la persona sea mujer o esté a favor de esta medida?
+               P(M ∪ F) = P(M) + P(F) − P(M ∩ F) = 0, 5499 + 0, 56 − 0, 56 · 0, 6964 = 0, 7199.
+
+    Planteamiento correcto de la probabilidad y cálculo correcto de la probabilidad [0,25 puntos]+[0,25
+    puntos]+[0,25 puntos]
+ d) Si esa persona seleccionada al azar es hombre, ¿cuál es la probabilidad de que esté a favor de
+    esta medida?
+                                 P(F ∩ H) P(F ∩ H) 0, 56 · 0, 304
+                       P(F|H) =           =          =             = 0, 37824.
+                                   P(H)     1 − P(M) 1 − 0, 54992
+    Planteamiento correcto de la probabilidad y cálculo correcto de la probabilidad [0,25 puntos]+[0,25
+    puntos]+[0,25 puntos]
+CUESTIÓN 2:
+[2,5 puntos] El peso, en kg, de los jugadores de fútbol de la Liga Nacional juvenil de la Región de
+Murcia sigue una distribución normal con media µ y desviación típica igual a 12 kg.
+
+ a) Si en una muestra de 64 jugadores el peso medio ha sido de 70 kg, calcula un intervalo de con-
+    fianza con un 95 % de confianza para la media de los pesos de los jugadores de fútbol de la Liga
+    Nacional juvenil de la Región de Murcia.
+                                                                      
+                                                      σ             σ
+                                   IC95 % = x̄ − zα/2 √ , x̄ + zα/2 √
+                                                       n             n
+    Expresión correcta [0,50 puntos]
+                                                                 
+                                             12               12
+                       IC95 % = 70 − 1, 96 · √ , 70 + 1, 96 · √     = (67, 06, 72, 94)
+                                              64               64
+    Cálculo correcto de IC95 % [0,50 puntos]
+
+
+ b) Determina el tamaño mínimo que debe tener una muestra de jugadores para que el error máximo
+    cometido en la estimación de µ sea menor que 4 kg con un nivel de confianza del 98 %.
+                                                     12
+                                         4 > 2, 34 · √ ↣ n > 49, 28
+                                                      n
+    El tamaño mínimo es 50.
+    Cálculo correcto de zα/2 para un nivel de confianza del 98 % (2,33 ó 2,34) y cálculo del tamaño
+    mínimo [0,25 puntos]+[0,50 puntos]
+ c) Si µ = 71 y se elige a un jugador al azar, ¿cuál es la probabilidad de que pese más de 75 kg?
+                      75 − 71
+                P(Z ≥         ) = P(Z ≥ 0, 3333) = 1 − P(Z ≤ 0, 3333) = 1 − 0, 6293 = 0, 3707.
+                        12
+    Expresión correcta de la probabilidad y cálculo correcto [0,25 puntos]+[0,25 puntos]+[0,25 pun-
+    tos].
+

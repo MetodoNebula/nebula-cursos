@@ -1,0 +1,76 @@
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{cancel}
+\usepackage{ifthen}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning,decorations.pathmorphing,patterns,angles,quotes,shapes.geometric,intersections,through,3d,decorations.markings,fit,backgrounds}
+\usepackage{pgfplots}\pgfplotsset{compat=1.18}
+\def\nebulalang{es}\def\nb@es{es}
+\providecommand{\nbL}[2]{#1}
+\providecommand{\nbIfES}[2]{#1}
+\providecommand{\si}[1]{#1}\providecommand{\SI}[2]{#1\,#2}\providecommand{\num}[1]{#1}\providecommand{\ang}[1]{#1^{\circ}}
+% ---- Paleta Nebula (unión motor + _fig_build + huérfanos) ----
+\definecolor{NebulaDark}{HTML}{050B14}
+\definecolor{NebulaNavy}{HTML}{0B1F3A}
+\definecolor{NebulaNavyTwo}{HTML}{102A4C}
+\definecolor{NebulaGold}{HTML}{C9A646}
+\definecolor{NebulaCyan}{HTML}{45D6E8}
+\definecolor{NebulaWhite}{HTML}{F5F7FA}
+\definecolor{NebulaMuted}{HTML}{B8C4D6}
+\definecolor{NebulaLight}{HTML}{F6F8FB}
+\definecolor{NebulaSoft}{HTML}{EEF3F8}
+\definecolor{NebulaWarning}{HTML}{C9A646}
+\definecolor{NebulaError}{HTML}{B23A48}
+\definecolor{NebulaCheck}{HTML}{2E7D5B}
+\definecolor{NebulaPurple}{HTML}{7952A3}
+\definecolor{NebulaViolet}{HTML}{7952A3}
+\definecolor{NebulaAmber}{HTML}{B77916}
+\definecolor{NebulaGreen}{HTML}{1E7F5C}
+% ---- tikzset del motor ----
+\tikzset{
+  nbaxis/.style={->,>=Stealth,gray!70,thick},
+  nbline/.style={NebulaNavy,thick},
+  nbdash/.style={NebulaNavy!60,dashed,thick},
+  nbvec/.style={->,>=Stealth,NebulaError,very thick},
+  nbvecb/.style={->,>=Stealth,NebulaCheck,very thick},
+  nbmass/.style={circle,fill=NebulaNavy,inner sep=2pt},
+  nbpoint/.style={circle,fill=black,inner sep=1.2pt},
+  nblabel/.style={font=\small},
+  nbangle/.style={draw=NebulaGold,thick,angle radius=8mm},
+  nbfill/.style={fill=NebulaNavy!10},
+}
+% ---- estilos _fig_build (diagramas) ----
+\tikzset{
+  box/.style={draw=NebulaNavy,line width=0.6pt,rounded corners=2.5pt,fill=NebulaSoft,inner sep=6pt,text=NebulaNavy,align=center,font=\small},
+  plain/.style={text=NebulaNavy,align=center,font=\small,inner sep=3pt},
+  lab/.style={NebulaPurple,font=\scriptsize,align=center},
+  elab/.style={NebulaPurple,font=\scriptsize,fill=NebulaLight,inner sep=1.5pt},
+  ln/.style={NebulaNavy,line width=0.5pt},
+  ar/.style={->,NebulaNavy,line width=0.7pt},
+}
+% ---- estilos huérfanos reconstruidos (geometría fiel p/validación) ----
+\tikzset{
+  nbdotA/.style={circle,fill=NebulaNavy,inner sep=0pt,minimum size=3.6pt},
+  nbdotV/.style={circle,fill=NebulaViolet,inner sep=0pt,minimum size=3.6pt},
+  nbopendot/.style={circle,draw=NebulaNavy,fill=white,very thick,inner sep=0pt,minimum size=3.6pt},
+  nbaux/.style={dashed,semithick},
+  nbsym/.style={NebulaViolet,dashed,thick},
+  nbtangent/.style={NebulaAmber,very thick},
+  nbcurve/.style={smooth,NebulaNavy,very thick},
+}
+\pgfplotsset{
+  nbcurve/.style={smooth},
+  nbaxisbase/.style={
+    axis line style={gray!70,thick,-{Stealth[length=2.2mm]}},
+    tick label style={font=\footnotesize,fill=none,inner sep=1pt},
+    label style={font=\small},
+    major grid style={line width=.3pt,draw=gray!35},
+    minor grid style={line width=.2pt,draw=gray!18},
+    every axis plot/.append style={NebulaNavy,very thick,sharp plot},
+    clip mode=individual,
+  },
+}
+\input{nebula_figures.tex}

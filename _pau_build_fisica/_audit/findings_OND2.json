@@ -1,0 +1,9 @@
+[
+ {
+  "id": "PAU-FIS-MAS-005",
+  "severity": "ERROR",
+  "field": "full_solution",
+  "issue": "Apartado (b): la lamina (n_v=1,5) esta rodeada de AGUA (n_a=1,33), luego el rayo incide en la cara superior desde el agua. La ley de Snell en la cara superior debe ser n_a*sin(alpha)=n_v*sin(r), pero la solucion escribe sin(alpha)=n_v*cos(beta) (omite el factor n_a del medio incidente, como si entrase desde aire/vacio). Es incoherente, ademas, con el angulo limite de la cara lateral, que SI usa sin(beta)=n_a/n_v. El resultado correcto es sin(alpha)=sqrt(n_v^2-n_a^2)/n_a=0,522 => alpha=31,4 grados, no 43,9 grados.",
+  "correct_value": "alpha ~= 31,4 grados (sin(alpha)=sqrt(1,5^2-1,33^2)/1,33=0,522)"
+ }
+]

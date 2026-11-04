@@ -1,0 +1,706 @@
+[
+ {
+  "id": "PAU-FIS-CUAN-001",
+  "source": "Andalucía · Extraordinaria 2025",
+  "title": "De Broglie: relación de velocidades y energías de un mesón y un electrón · Andalucía · Extraordinaria 2025",
+  "statement": "Un mesón tiene masa $274$ veces la del electrón. Si ambas partículas tienen la misma longitud de onda de De Broglie, determine:\n\n**(i)** La relación entre sus velocidades.\n**(ii)** La relación entre sus energías cinéticas.",
+  "knowns": [
+   "$m_{mes}=274\\,m_e$",
+   "$\\lambda_{mes}=\\lambda_e$ (misma longitud de onda de De Broglie)",
+   "$\\lambda=h/p$, $p=mv$, $E_c=p^2/2m$"
+  ],
+  "full_solution": "**(i) Relación de velocidades.**\nLa longitud de onda de De Broglie es $\\lambda=h/(mv)$. Si $\\lambda_{mes}=\\lambda_e$, entonces $m_{mes}v_{mes}=m_e v_e$ (igual cantidad de movimiento):\n$$\\dfrac{v_e}{v_{mes}}=\\dfrac{m_{mes}}{m_e}=274$$\nEl electrón se mueve $274$ veces más rápido que el mesón.\n\n**(ii) Relación de energías cinéticas.**\nCon el mismo momento $p$, $E_c=\\dfrac{p^2}{2m}$, luego $E_c\\propto1/m$:\n$$\\dfrac{E_{c,e}}{E_{c,mes}}=\\dfrac{m_{mes}}{m_e}=274$$\nLa energía cinética del electrón es $274$ veces la del mesón.",
+  "answer": "$v_e/v_{mes}=274$ (el electrón, más rápido).\n$E_{c,e}/E_{c,mes}=274$ (misma cantidad de movimiento, $E_c\\propto1/m$).",
+  "common_errors": [
+   "Igualar velocidades en vez de momentos: igual $\\lambda$ implica igual $p=mv$.",
+   "Usar $E_c=\\tfrac12 mv^2$ sin notar que, con $p$ igual, $E_c\\propto1/m$.",
+   "Invertir las relaciones (el más masivo es el más lento y con menos $E_c$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-002",
+  "source": "Andalucía · Junio 2019",
+  "title": "Efecto fotoeléctrico en el silicio: frecuencia umbral y energía cinética · Andalucía · Junio 2019",
+  "statement": "**(a)** Sobre un metal incide radiación y se emiten electrones. (i) Explique el balance energético. Justifique qué cambia si: (ii) se aumenta la frecuencia de la radiación; (iii) se aumenta la intensidad.\n\n**(b)** Al iluminar una lámina de silicio con luz de longitud de onda superior a $1{,}09\\cdot10^{-6}\\ \\text{m}$ deja de producirse el efecto fotoeléctrico. Calcule la frecuencia umbral, el trabajo de extracción y la energía cinética máxima de los electrones emitidos al iluminar con luz ultravioleta de $2{,}5\\cdot10^{-7}\\ \\text{m}$.",
+  "knowns": [
+   "$\\lambda_0 = 1{,}09\\cdot10^{-6}\\ \\text{m}$ (umbral)",
+   "$\\lambda = 2{,}5\\cdot10^{-7}\\ \\text{m}$ (UV)",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$, $c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)(i)** La energía del fotón se reparte en el trabajo de extracción $\\phi$ (energía mínima para arrancar el electrón) y la energía cinética del fotoelectrón: $h f = \\phi + E_{c,\\max}$.\n\n(ii) Al aumentar la frecuencia, aumenta la energía del fotón y, por tanto, la energía cinética máxima (el número de electrones no cambia).\n\n(iii) Al aumentar la intensidad (misma frecuencia), aumenta el número de fotones y de electrones emitidos (más corriente), pero NO su energía cinética máxima.\n\n**(b)** Frecuencia umbral:\n$$f_0 = \\dfrac{c}{\\lambda_0} = \\dfrac{3\\cdot10^{8}}{1{,}09\\cdot10^{-6}} = 2{,}75\\cdot10^{14}\\ \\text{Hz}$$\nTrabajo de extracción:\n$$\\phi = h f_0 = 6{,}63\\cdot10^{-34}\\cdot2{,}75\\cdot10^{14} = 1{,}82\\cdot10^{-19}\\ \\text{J} \\approx 1{,}14\\ \\text{eV}$$\nCon luz UV de $\\lambda = 2{,}5\\cdot10^{-7}\\ \\text{m}$, la energía del fotón es $E = \\dfrac{hc}{\\lambda} = 7{,}96\\cdot10^{-19}\\ \\text{J}$, y\n$$E_{c,\\max} = E - \\phi = 7{,}96\\cdot10^{-19} - 1{,}82\\cdot10^{-19} = 6{,}13\\cdot10^{-19}\\ \\text{J} \\approx 3{,}83\\ \\text{eV}$$",
+  "answer": "**(b)** $f_0 = 2{,}75\\cdot10^{14}\\ \\text{Hz}$; $\\phi = 1{,}82\\cdot10^{-19}\\ \\text{J} \\approx 1{,}14\\ \\text{eV}$; $E_{c,\\max} = 6{,}13\\cdot10^{-19}\\ \\text{J} \\approx 3{,}83\\ \\text{eV}$.",
+  "common_errors": [
+   "Confundir la longitud de onda umbral con la de la luz incidente.",
+   "Creer que aumentar la intensidad aumenta la energía cinética (solo aumenta el número de electrones).",
+   "No restar el trabajo de extracción a la energía del fotón."
+  ],
+  "fig_caption": [
+   "Energía cinética máxima de los fotoelectrones frente a la frecuencia de la radiación: recta de pendiente $h$ que corta el eje de frecuencias en la frecuencia umbral $f_0=2{,}75\\cdot10^{14}\\ \\text{Hz}$ (por debajo de ella no hay emisión)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-003",
+  "source": "Andalucía · Junio 2024",
+  "title": "Efecto fotoeléctrico: constante de Planck y trabajo de extracción · Andalucía · Junio 2024",
+  "statement": "**(a)** Razone: (i) La energía de los fotoelectrones es la misma que la de los fotones absorbidos. (ii) Al irradiar un metal con luz blanca (con efecto fotoeléctrico en todo el rango), la mayor energía cinética corresponde a los fotoelectrones de la región del rojo.\n\n**(b)** Al iluminar un metal con luz de frecuencia $2{,}5\\cdot10^{15}\\ \\text{Hz}$ el potencial de frenado es $7{,}20\\ \\text{V}$; con luz de longitud de onda $1{,}8\\cdot10^{-7}\\ \\text{m}$ el potencial baja a $3{,}75\\ \\text{V}$. Determine: (i) la constante de Planck; (ii) el trabajo de extracción del metal.",
+  "knowns": [
+   "$f_1 = 2{,}5\\cdot10^{15}\\ \\text{Hz}$, $V_1 = 7{,}20\\ \\text{V}$",
+   "$\\lambda_2 = 1{,}8\\cdot10^{-7}\\ \\text{m}$, $V_2 = 3{,}75\\ \\text{V}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$, $e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)(i)** FALSO: parte de la energía del fotón se invierte en extraer el electrón (trabajo de extracción $\\phi$); la energía cinética máxima es $E_{c,\\max} = h f - \\phi < h f$.\n\n**(a)(ii)** FALSO: la energía cinética máxima crece con la frecuencia. En la luz blanca la mayor frecuencia (y mayor $E_c$) corresponde al VIOLETA, no al rojo.\n\n**(b)(i)** Con $E_{c,\\max}=eV$: $h f = \\phi + eV$. Para las dos luces ($f_2 = c/\\lambda_2 = 1{,}667\\cdot10^{15}\\ \\text{Hz}$) y restando:\n$$h(f_1 - f_2) = e(V_1 - V_2) \\;\\Rightarrow\\; h = \\dfrac{e(V_1 - V_2)}{f_1 - f_2} = \\dfrac{1{,}6\\cdot10^{-19}(7{,}20-3{,}75)}{2{,}5\\cdot10^{15}-1{,}667\\cdot10^{15}}$$\n$$h = 6{,}62\\cdot10^{-34}\\ \\text{J·s}$$\n\n**(b)(ii)** Trabajo de extracción:\n$$\\phi = h f_1 - e V_1 = 6{,}62\\cdot10^{-34}\\cdot2{,}5\\cdot10^{15} - 1{,}6\\cdot10^{-19}\\cdot7{,}20 = 5{,}04\\cdot10^{-19}\\ \\text{J} \\approx 3{,}15\\ \\text{eV}$$",
+  "answer": "**(a)** Ambas falsas. **(b)** (i) $h \\approx 6{,}62\\cdot10^{-34}\\ \\text{J·s}$; (ii) $\\phi \\approx 5{,}04\\cdot10^{-19}\\ \\text{J} = 3{,}15\\ \\text{eV}$.",
+  "common_errors": [
+   "Olvidar pasar la longitud de onda a frecuencia ($f_2=c/\\lambda_2$).",
+   "Igualar energía del fotón con energía cinética (falta $\\phi$).",
+   "Asociar mayor energía cinética al rojo (es al violeta)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-004",
+  "source": "Andalucía · Ordinaria 2024",
+  "title": "Longitud de onda de De Broglie de protón y electrón · Andalucía · Ordinaria 2024",
+  "statement": "**(a)** Dos partículas tienen la misma energía cinética. Deduzca la relación entre sus longitudes de onda de De Broglie si la masa de la primera es un tercio de la de la segunda.\n\n**(b)** Un protón se mueve a $3{,}8\\cdot10^{3}\\ \\text{m·s}^{-1}$. Determine: i) su longitud de onda de De Broglie; ii) la energía cinética de un electrón con el mismo momento lineal que el protón; iii) la velocidad de ese electrón.",
+  "knowns": [
+   "$v_p=3{,}8\\cdot10^{3}\\ \\text{m·s}^{-1}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$",
+   "$m_p=1{,}67\\cdot10^{-27}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** $\\lambda=\\dfrac{h}{p}=\\dfrac{h}{\\sqrt{2mE_c}}$. Con la misma $E_c$ y $m_1=\\dfrac{m_2}{3}$:\n$$\\dfrac{\\lambda_1}{\\lambda_2}=\\sqrt{\\dfrac{m_2}{m_1}}=\\sqrt{3}\\ \\Rightarrow\\ \\lambda_1=\\sqrt3\\,\\lambda_2$$\nLa partícula más ligera tiene mayor longitud de onda.\n\n**(b)** i) $\\lambda_p=\\dfrac{h}{m_p v_p}=\\dfrac{6{,}63\\cdot10^{-34}}{1{,}67\\cdot10^{-27}\\cdot3{,}8\\cdot10^{3}}=1{,}04\\cdot10^{-10}\\ \\text{m}$.\n\nii) Mismo momento $p=m_p v_p=6{,}35\\cdot10^{-24}\\ \\text{kg·m·s}^{-1}$. Para el electrón:\n$$E_c=\\dfrac{p^2}{2m_e}=\\dfrac{(6{,}35\\cdot10^{-24})^2}{2\\cdot9{,}1\\cdot10^{-31}}=2{,}21\\cdot10^{-17}\\ \\text{J}$$\n\niii) $v_e=\\dfrac{p}{m_e}=\\dfrac{6{,}35\\cdot10^{-24}}{9{,}1\\cdot10^{-31}}=6{,}97\\cdot10^{6}\\ \\text{m·s}^{-1}$.",
+  "answer": "**(a)** $\\lambda_1=\\sqrt3\\,\\lambda_2$.  **(b)** i) $\\lambda_p\\approx1{,}04\\cdot10^{-10}\\ \\text{m}$; ii) $E_c\\approx2{,}21\\cdot10^{-17}\\ \\text{J}$; iii) $v_e\\approx6{,}97\\cdot10^{6}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Usar $\\lambda\\propto\\sqrt{m}$ en vez de $\\lambda\\propto1/\\sqrt{m}$ a igual $E_c$.",
+   "Olvidar que 'mismo momento lineal' no es 'misma energía cinética'.",
+   "Mezclar las masas del protón y del electrón al calcular $E_c=p^2/2m_e$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-005",
+  "source": "Andalucía · Ordinaria 2025",
+  "title": "Potencial de frenado, fisión del boro-10 y De Broglie de protón y electrón · Andalucía · Ordinaria 2025",
+  "statement": "**(a)** El potencial de frenado de los electrones en una célula fotoeléctrica es $V_f$. Deduzca: i) la velocidad máxima de los electrones; ii) la relación entre velocidades máximas si $V_f$ se reduce a la mitad.\n\n**(b1)** Se produce la fisión de $^{10}_{5}\\text{B}$ por bombardeo con neutrones, dando una partícula $\\alpha$ y $^{7}_{3}\\text{Li}$. i) Escriba la reacción. ii) Calcule la energía liberada al formarse $1{,}5$ millones de núcleos de $^{7}\\text{Li}$.\n\n**(b2)** Un protón y un electrón tienen la misma energía cinética de $7{,}2\\cdot10^{-16}\\ \\text{J}$. Calcule: i) la longitud de onda de De Broglie de cada uno; ii) la diferencia de potencial necesaria para detener cada uno.",
+  "knowns": [
+   "$m(^{10}\\text{B})=10{,}012937\\ \\text{u}$, $m(^{7}\\text{Li})=7{,}016003\\ \\text{u}$, $m(^{4}\\text{He})=4{,}002603\\ \\text{u}$, $m_n=1{,}008665\\ \\text{u}$",
+   "$1\\ \\text{u}=1{,}66\\cdot10^{-27}\\ \\text{kg}$",
+   "$E_c=7{,}2\\cdot10^{-16}\\ \\text{J}$",
+   "$h=6{,}63\\cdot10^{-34}$, $e=1{,}6\\cdot10^{-19}$, $m_e=9{,}1\\cdot10^{-31}$, $m_p=1{,}7\\cdot10^{-27}$"
+  ],
+  "full_solution": "**(a)** i) El potencial de frenado detiene a los electrones más rápidos: $eV_f=\\dfrac12 m_e v_{\\max}^2\\Rightarrow v_{\\max}=\\sqrt{\\dfrac{2eV_f}{m_e}}$. ii) Si $V_f\\to V_f/2$: $\\dfrac{v'_{\\max}}{v_{\\max}}=\\sqrt{\\dfrac{1}{2}}=\\dfrac{1}{\\sqrt2}\\approx0{,}71$.\n\n**(b1)** i) $^{10}_{5}\\text{B}+^{1}_{0}n\\rightarrow\\,^{4}_{2}\\text{He}+^{7}_{3}\\text{Li}$ (se conservan $A$: $11=11$ y $Z$: $5=5$).\nii) Defecto de masa:\n$$\\Delta m=m(^{10}\\text{B})+m_n-m(^{4}\\text{He})-m(^{7}\\text{Li})=10{,}012937+1{,}008665-4{,}002603-7{,}016003=2{,}996\\cdot10^{-3}\\ \\text{u}$$\nEnergía por reacción: $E_1=\\Delta m\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2=4{,}48\\cdot10^{-13}\\ \\text{J}$.\nPara $1{,}5\\cdot10^{6}$ núcleos:\n$$E=1{,}5\\cdot10^{6}\\cdot4{,}48\\cdot10^{-13}=6{,}71\\cdot10^{-7}\\ \\text{J}$$\n\n**(b2)** i) $\\lambda=\\dfrac{h}{\\sqrt{2mE_c}}$:\n$$\\lambda_p=\\dfrac{6{,}63\\cdot10^{-34}}{\\sqrt{2\\cdot1{,}7\\cdot10^{-27}\\cdot7{,}2\\cdot10^{-16}}}=4{,}24\\cdot10^{-13}\\ \\text{m}$$\n$$\\lambda_e=\\dfrac{6{,}63\\cdot10^{-34}}{\\sqrt{2\\cdot9{,}1\\cdot10^{-31}\\cdot7{,}2\\cdot10^{-16}}}=1{,}83\\cdot10^{-11}\\ \\text{m}$$\nii) El potencial de frenado cumple $eV=E_c$ (igual para ambos, pues tienen la misma $E_c$):\n$$V=\\dfrac{E_c}{e}=\\dfrac{7{,}2\\cdot10^{-16}}{1{,}6\\cdot10^{-19}}=4500\\ \\text{V}$$\nEl protón (carga $+$) se frena con un potencial que aumenta en el sentido del movimiento; el electrón (carga $-$), con un potencial de signo contrario; el módulo es $4500\\ \\text{V}$ en ambos.",
+  "answer": "**(a)** $v_{\\max}=\\sqrt{2eV_f/m_e}$; al reducir $V_f$ a la mitad, $v'_{\\max}=v_{\\max}/\\sqrt2$.  **(b1)** $^{10}_{5}\\text{B}+n\\rightarrow\\,^{4}_{2}\\text{He}+^{7}_{3}\\text{Li}$; $E\\approx6{,}71\\cdot10^{-7}\\ \\text{J}$.  **(b2)** $\\lambda_p\\approx4{,}24\\cdot10^{-13}\\ \\text{m}$, $\\lambda_e\\approx1{,}83\\cdot10^{-11}\\ \\text{m}$; $V=4500\\ \\text{V}$ (módulo) para ambos.",
+  "common_errors": [
+   "Creer que $v_{\\max}$ es proporcional a $V_f$ (lo es a $\\sqrt{V_f}$).",
+   "A igual $E_c$, el protón tiene menor $\\lambda$ por ser más masivo (no confundir).",
+   "Olvidar que el potencial de frenado solo depende de $E_c$, igual para ambas partículas."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-006",
+  "source": "Andalucía · Ordinaria 2026",
+  "title": "De Broglie: comparación entre un protón y un mesón K · Andalucía · Ordinaria 2026",
+  "statement": "Un protón tiene una masa $1{,}9$ veces mayor que la de un mesón K. Razone: **i)** si tuviesen la misma longitud de onda de De Broglie, ¿cuál tendría menor velocidad? **ii)** si tuviesen la misma velocidad, ¿cuál tendría menor longitud de onda?",
+  "knowns": [
+   "$m_p = 1{,}9\\,m_K$"
+  ],
+  "full_solution": "La longitud de onda de De Broglie es $\\lambda=\\dfrac{h}{p}=\\dfrac{h}{m v}$.\n\n**i) Misma $\\lambda$:** entonces $m v$ es igual para ambos: $m_p v_p = m_K v_K$. Como $m_p=1{,}9\\,m_K$:\n$$v_p = \\dfrac{m_K}{m_p}v_K = \\dfrac{v_K}{1{,}9} < v_K$$\nEl **protón** (más masivo) tiene **menor velocidad**.\n\n**ii) Misma $v$:** $\\lambda=\\dfrac{h}{m v}$, luego $\\lambda\\propto\\dfrac{1}{m}$. El de mayor masa tiene menor $\\lambda$:\n$$\\lambda_p = \\dfrac{\\lambda_K}{1{,}9} < \\lambda_K$$\nEl **protón** tiene **menor longitud de onda**.",
+  "answer": "**i)** El protón (más masivo) tiene menor velocidad. **ii)** Con igual velocidad, el protón tiene menor $\\lambda$ ($\\lambda\\propto 1/m$).",
+  "common_errors": [
+   "Olvidar que $\\lambda=h/(mv)$ y razonar solo con la masa o solo con la velocidad.",
+   "Invertir la proporcionalidad $\\lambda\\propto 1/m$.",
+   "Confundir mayor masa con mayor longitud de onda."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-007",
+  "source": "Andalucía · Ordinaria 2026",
+  "title": "Efecto fotoeléctrico: luz roja y aumento de intensidad · Andalucía · Ordinaria 2026",
+  "statement": "Se produce emisión de fotoelectrones en un metal cuando la frecuencia mínima de la radiación corresponde a luz amarilla. Razone: **i)** ¿qué sucede si se irradia con luz roja? **ii)** ¿y si se aumenta la intensidad de la radiación amarilla?",
+  "full_solution": "La condición del efecto fotoeléctrico es $h f \\ge W = h f_0$, con $f_0$ la frecuencia umbral. Aquí el umbral es la luz **amarilla**.\n\n**i) Luz roja:** la luz roja tiene **menor frecuencia** que la amarilla ($f_{rojo}<f_{amarillo}=f_0$). Entonces cada fotón tiene energía $hf<W$ y **no hay emisión** de fotoelectrones, por intensa que sea la luz roja.\n\n**ii) Más intensidad de luz amarilla:** aumentar la intensidad significa más **fotones por segundo**, pero cada fotón mantiene la misma energía $hf_0$. Por tanto se emiten **más fotoelectrones por unidad de tiempo** (mayor corriente), pero su **energía cinética máxima no cambia** (sigue siendo $E_{c,max}=hf_0-W=0$ en el umbral).",
+  "answer": "**i)** Con luz roja ($f<f_0$) no hay emisión, sea cual sea la intensidad. **ii)** Más intensidad de luz amarilla emite más electrones por segundo, pero con la misma energía cinética máxima.",
+  "common_errors": [
+   "Pensar que mucha intensidad de luz roja produciría emisión (depende de la frecuencia, no de la intensidad).",
+   "Creer que más intensidad aumenta la energía de cada electrón (aumenta su número).",
+   "Confundir frecuencia con intensidad."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-008",
+  "source": "Andalucía · Ordinaria 2026",
+  "title": "Fotocélula de cobre iluminada con dos frecuencias · Andalucía · Ordinaria 2026",
+  "statement": "Una fotocélula de cobre se ilumina con dos radiaciones de frecuencias $f_1=9{,}6\\cdot10^{14}\\ \\text{Hz}$ y $f_2=5{,}5\\cdot10^{15}\\ \\text{Hz}$; el trabajo de extracción del cobre es $4{,}7\\ \\text{eV}$.\n\n**(a)** ¿Cuál de las dos radiaciones produce efecto fotoeléctrico?\n\n**(b)** Calcule la velocidad máxima de los fotoelectrones emitidos por la que lo produce.",
+  "knowns": [
+   "$f_1=9{,}6\\cdot10^{14}\\ \\text{Hz}$, $f_2=5{,}5\\cdot10^{15}\\ \\text{Hz}$",
+   "$W=4{,}7\\ \\text{eV}=7{,}52\\cdot10^{-19}\\ \\text{J}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$, $m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "La frecuencia umbral es $f_0=\\dfrac{W}{h}=\\dfrac{4{,}7\\cdot1{,}6\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=1{,}13\\cdot10^{15}\\ \\text{Hz}$.\n\n**(a)** Comparando:\n- $f_1=9{,}6\\cdot10^{14}\\ \\text{Hz} < f_0$: **no** produce efecto fotoeléctrico.\n- $f_2=5{,}5\\cdot10^{15}\\ \\text{Hz} > f_0$: **sí** produce efecto fotoeléctrico.\n\n**(b)** Para $f_2$, energía cinética máxima $E_c=hf_2-W$:\n$$E_c = 6{,}63\\cdot10^{-34}\\cdot5{,}5\\cdot10^{15}-7{,}52\\cdot10^{-19} = 2{,}89\\cdot10^{-18}\\ \\text{J}$$\n$$v_{max} = \\sqrt{\\dfrac{2E_c}{m_e}} = \\sqrt{\\dfrac{2\\cdot2{,}89\\cdot10^{-18}}{9{,}1\\cdot10^{-31}}} = 2{,}52\\cdot10^{6}\\ \\text{m/s}$$",
+  "answer": "**(a)** Solo $f_2$ ($>f_0=1{,}13\\cdot10^{15}\\ \\text{Hz}$) produce efecto fotoeléctrico. **(b)** $v_{max}\\approx 2{,}52\\cdot10^{6}\\ \\text{m/s}$.",
+  "common_errors": [
+   "No convertir el trabajo de extracción de eV a J.",
+   "Aplicar la ecuación fotoeléctrica a $f_1$, que no supera el umbral.",
+   "Confundir energía del fotón con energía cinética (hay que restar $W$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-009",
+  "source": "Andalucía · Ordinaria 2026",
+  "title": "Protón y electrón acelerados: energía cinética y De Broglie · Andalucía · Ordinaria 2026",
+  "statement": "Un protón y un electrón se aceleran mediante una diferencia de potencial de $0{,}075\\ \\text{V}$.\n\n**(a)** Determine la energía cinética de ambas partículas.\n\n**(b)** Determine, razonadamente, las longitudes de onda de De Broglie de ambas partículas.",
+  "knowns": [
+   "$\\Delta V=0{,}075\\ \\text{V}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$, $m_p=1{,}67\\cdot10^{-27}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** Ambas partículas tienen la misma carga en módulo ($e$), así que adquieren la **misma energía cinética**:\n$$E_c = e\\,\\Delta V = 1{,}6\\cdot10^{-19}\\cdot0{,}075 = 1{,}2\\cdot10^{-20}\\ \\text{J} = 0{,}075\\ \\text{eV}$$\n\n**(b)** Con $E_c=\\dfrac{p^2}{2m}$, el momento es $p=\\sqrt{2mE_c}$ y la longitud de onda $\\lambda=\\dfrac{h}{\\sqrt{2mE_c}}$. Como $E_c$ es igual, $\\lambda\\propto\\dfrac{1}{\\sqrt{m}}$; la partícula más ligera (electrón) tiene mayor $\\lambda$:\n$$\\lambda_e = \\dfrac{6{,}63\\cdot10^{-34}}{\\sqrt{2\\cdot9{,}1\\cdot10^{-31}\\cdot1{,}2\\cdot10^{-20}}} = 4{,}49\\cdot10^{-9}\\ \\text{m} = 4{,}49\\ \\text{nm}$$\n$$\\lambda_p = \\dfrac{6{,}63\\cdot10^{-34}}{\\sqrt{2\\cdot1{,}67\\cdot10^{-27}\\cdot1{,}2\\cdot10^{-20}}} = 1{,}05\\cdot10^{-10}\\ \\text{m} = 0{,}105\\ \\text{nm}$$",
+  "answer": "**(a)** $E_c = e\\Delta V = 1{,}2\\cdot10^{-20}\\ \\text{J} = 0{,}075\\ \\text{eV}$ (igual para ambas). **(b)** $\\lambda_e\\approx4{,}49\\ \\text{nm}$, $\\lambda_p\\approx0{,}105\\ \\text{nm}$ ($\\lambda\\propto 1/\\sqrt{m}$).",
+  "common_errors": [
+   "Creer que tienen distinta energía cinética (la misma, al tener igual carga y $\\Delta V$).",
+   "Usar $\\lambda=h/(mv)$ sin obtener $v$ o $p$ correctamente a partir de $E_c$.",
+   "Olvidar que $\\lambda\\propto 1/\\sqrt{m}$: el electrón tiene mayor longitud de onda."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-010",
+  "source": "Andalucía · Reserva A 2019",
+  "title": "Dualidad onda-corpúsculo, trabajo de extracción y De Broglie · Andalucía · Reserva A 2019",
+  "statement": "**(a)** Enuncie el principio de dualidad onda-corpúsculo y explique por qué no se aprecia en fenómenos macroscópicos.\n\n**(b)** Al incidir luz de $\\lambda=2{,}7625\\cdot10^{-7}\\ \\text{m}$ sobre un material, los electrones emitidos con energía cinética máxima se frenan con una diferencia de potencial de $2\\ \\text{V}$. Calcule el trabajo de extracción y la longitud de onda de De Broglie de esos electrones.",
+  "knowns": [
+   "$\\lambda=2{,}7625\\cdot10^{-7}\\ \\text{m}$",
+   "$V_0=2\\ \\text{V}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$, $c=3\\cdot10^{8}\\ \\text{m·s}^{-1}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$, $m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** El principio de dualidad (De Broglie) afirma que toda partícula de momento $p$ lleva asociada una onda de longitud $\\lambda=\\dfrac{h}{p}$, y que la radiación tiene también carácter corpuscular (fotones). En objetos **macroscópicos** el momento $p=mv$ es enorme frente a $h$ ($6{,}63\\cdot10^{-34}$ J·s), de modo que $\\lambda$ es inimaginablemente pequeña y los efectos ondulatorios (difracción, interferencia) son indetectables.\n\n**(b)** Energía cinética máxima: $E_{c,max}=eV_0=1{,}6\\cdot10^{-19}\\cdot2=3{,}2\\cdot10^{-19}\\ \\text{J}$. Por Einstein:\n$$W=\\dfrac{hc}{\\lambda}-E_{c,max}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{2{,}7625\\cdot10^{-7}}-3{,}2\\cdot10^{-19}=4{,}0\\cdot10^{-19}\\ \\text{J}=2{,}5\\ \\text{eV}$$\nLongitud de onda de De Broglie ($p=\\sqrt{2m_e E_{c,max}}$):\n$$\\lambda_{dB}=\\dfrac{h}{\\sqrt{2m_e E_{c,max}}}=\\dfrac{6{,}63\\cdot10^{-34}}{\\sqrt{2\\cdot9{,}1\\cdot10^{-31}\\cdot3{,}2\\cdot10^{-19}}}=8{,}69\\cdot10^{-10}\\ \\text{m}\\approx0{,}87\\ \\text{nm}$$",
+  "answer": "**(a)** $\\lambda=h/p$ para toda partícula; macroscópicamente $p\\gg h$ y $\\lambda$ es indetectable. **(b)** $W=4{,}0\\cdot10^{-19}\\ \\text{J}=2{,}5\\ \\text{eV}$; $\\lambda_{dB}\\approx8{,}69\\cdot10^{-10}\\ \\text{m}=0{,}87\\ \\text{nm}$.",
+  "common_errors": [
+   "No usar $E_{c,max}=eV_0$ al relacionar potencial de frenado y energía cinética.",
+   "Confundir la longitud de onda de la luz con la de De Broglie del electrón.",
+   "Usar $\\lambda_{dB}=h/(m v^2)$ en lugar de $h/p$ con $p=\\sqrt{2mE_c}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-011",
+  "source": "Andalucía · Reserva B 2019",
+  "title": "Efecto fotoeléctrico en sodio con dos longitudes de onda · Andalucía · Reserva B 2019",
+  "statement": "**(a)** Explique los términos frecuencia umbral y trabajo de extracción y la relación entre ellos. ¿Cómo cambiarían al disminuir la longitud de onda de la radiación incidente?\n**(b)** Una lámina de sodio, de trabajo de extracción $2{,}3\\ \\text{eV}$, se ilumina con radiación de longitud de onda $4\\cdot10^{-7}\\ \\text{m}$. ¿Cuál es la velocidad de los electrones emitidos? ¿Y si se ilumina con $6\\cdot10^{-7}\\ \\text{m}$?",
+  "knowns": [
+   "$W_e=2{,}3\\ \\text{eV}=3{,}68\\cdot10^{-19}\\ \\text{J}$",
+   "$\\lambda_1=4\\cdot10^{-7}\\ \\text{m}$, $\\lambda_2=6\\cdot10^{-7}\\ \\text{m}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J}\\cdot\\text{s}$, $c=3\\cdot10^{8}\\ \\text{m/s}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$, $m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** El **trabajo de extracción** $W_e$ es la energía mínima para arrancar un electrón del metal; la **frecuencia umbral** $f_0$ es la frecuencia mínima de la luz capaz de hacerlo, con $W_e=h f_0$. Al **disminuir** la longitud de onda aumenta la frecuencia ($f=c/\\lambda$) y, por tanto, la energía de cada fotón; $W_e$ y $f_0$ son propiedades del metal y **no cambian**, pero los electrones salen con mayor energía cinética.\n\n**(b)** Con $\\lambda_1=4\\cdot10^{-7}\\ \\text{m}$: energía del fotón\n$$E=\\dfrac{hc}{\\lambda_1}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{4\\cdot10^{-7}}=4{,}97\\cdot10^{-19}\\ \\text{J}=3{,}11\\ \\text{eV}$$\n$$E_c=E-W_e=(3{,}11-2{,}3)\\ \\text{eV}=0{,}81\\ \\text{eV}=1{,}29\\cdot10^{-19}\\ \\text{J}$$\n$$v=\\sqrt{\\dfrac{2E_c}{m_e}}=\\sqrt{\\dfrac{2\\cdot1{,}29\\cdot10^{-19}}{9{,}1\\cdot10^{-31}}}=5{,}3\\cdot10^{5}\\ \\text{m/s}$$\nCon $\\lambda_2=6\\cdot10^{-7}\\ \\text{m}$: $E=\\dfrac{hc}{\\lambda_2}=3{,}32\\cdot10^{-19}\\ \\text{J}=2{,}07\\ \\text{eV}$, menor que $W_e=2{,}3\\ \\text{eV}$. No se produce efecto fotoeléctrico y **no se emiten electrones**.",
+  "answer": "**(b)** Con $4\\cdot10^{-7}\\ \\text{m}$: $v\\approx 5{,}3\\cdot10^{5}\\ \\text{m/s}$. Con $6\\cdot10^{-7}\\ \\text{m}$: $E_\\gamma=2{,}07\\ \\text{eV}<W_e$, no hay emisión.",
+  "common_errors": [
+   "Pensar que $W_e$ o $f_0$ cambian con la longitud de onda incidente (son del metal).",
+   "Dar velocidad no nula con $\\lambda_2$ pese a que el fotón no alcanza el trabajo de extracción.",
+   "Mezclar eV y J sin convertir al calcular la energía cinética y la velocidad."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-012",
+  "source": "Cantabria · Extraordinaria 2023",
+  "title": "Efecto fotoeléctrico en el zinc: frecuencia umbral y potencial de frenado · Cantabria · Extraordinaria 2023",
+  "statement": "La energía de extracción (función de trabajo) del zinc es de $4{,}3\\ \\text{eV}$. Si se ilumina la superficie con luz de longitud de onda $\\lambda = 200\\ \\text{nm}$, calcular:\n\n**(a)** La frecuencia umbral del metal.\n\n**(b)** El potencial de frenado de los electrones emitidos.\n\n*Dato:* $1\\ \\text{eV} = 1{,}6\\cdot10^{-19}\\ \\text{J}$.",
+  "knowns": [
+   "$W = 4{,}3\\ \\text{eV} = 6{,}88\\cdot10^{-19}\\ \\text{J}$",
+   "$\\lambda = 200\\ \\text{nm}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J s}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** La frecuencia umbral cumple $W = h\\,f_0$:\n$$f_0 = \\dfrac{W}{h} = \\dfrac{4{,}3\\cdot 1{,}6\\cdot10^{-19}}{6{,}63\\cdot10^{-34}} = 1{,}04\\cdot10^{15}\\ \\text{Hz}.$$\n\n**(b)** Energía del fotón incidente:\n$$E_{\\text{fot}} = \\dfrac{hc}{\\lambda} = \\dfrac{6{,}63\\cdot10^{-34}\\cdot 3\\cdot10^{8}}{200\\cdot10^{-9}} = 9{,}95\\cdot10^{-19}\\ \\text{J} = 6{,}22\\ \\text{eV}.$$\nEnergía cinética máxima de los electrones:\n$$E_{c,\\max} = E_{\\text{fot}} - W = 6{,}22 - 4{,}3 = 1{,}92\\ \\text{eV}.$$\nEl potencial de frenado cumple $e\\,V_0 = E_{c,\\max}$:\n$$V_0 = 1{,}92\\ \\text{V}.$$",
+  "answer": "**(a)** $f_0 = 1{,}04\\cdot10^{15}\\ \\text{Hz}$. **(b)** $V_0 = 1{,}92\\ \\text{V}$.",
+  "common_errors": [
+   "No pasar la función de trabajo de eV a julios al calcular $f_0$.",
+   "Confundir frecuencia umbral $f_0$ con la frecuencia de la luz incidente.",
+   "Olvidar restar la función de trabajo para obtener $E_{c,\\max}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-013",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Efecto fotoeléctrico: trabajo de extracción y energía cinética · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 9.** Al incidir luz de $\\lambda=550\\ \\text{nm}$ sobre un material se liberan electrones con potencial de frenado $0{,}4\\ \\text{V}$.\n\n**(a)** Trabajo de extracción del metal.\n\n**(b)** Rango de longitudes de onda en que se produce efecto fotoeléctrico.\n\n**(c)** Energía cinética máxima de los electrones al incidir con $\\lambda=214\\ \\text{nm}$.",
+  "knowns": [
+   "$\\lambda = 550\\ \\text{nm}$",
+   "$V_f = 0{,}4\\ \\text{V}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$1\\ \\text{eV} = 1{,}6\\cdot10^{-19}\\ \\text{J}$"
+  ],
+  "full_solution": "**(a)** Ecuación de Einstein $\\dfrac{hc}{\\lambda}=W+eV_f$, de donde:\n\n$$W=\\dfrac{hc}{\\lambda}-eV_f=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{550\\cdot10^{-9}}-1{,}6\\cdot10^{-19}\\cdot0{,}4$$\n\n$$W=3{,}62\\cdot10^{-19}-0{,}64\\cdot10^{-19}=2{,}98\\cdot10^{-19}\\ \\text{J}=1{,}86\\ \\text{eV}$$\n\n**(b)** El efecto se produce si $\\dfrac{hc}{\\lambda}\\ge W$, es decir $\\lambda\\le\\lambda_0$:\n\n$$\\lambda_0=\\dfrac{hc}{W}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{2{,}98\\cdot10^{-19}}=6{,}68\\cdot10^{-7}\\ \\text{m}=668\\ \\text{nm}$$\n\nLuego hay efecto fotoeléctrico para $\\lambda\\le668\\ \\text{nm}$.\n\n**(c)** Con $\\lambda=214\\ \\text{nm}$:\n\n$$E_{c,\\max}=\\dfrac{hc}{\\lambda}-W=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{214\\cdot10^{-9}}-2{,}98\\cdot10^{-19}=6{,}32\\cdot10^{-19}\\ \\text{J}=3{,}95\\ \\text{eV}$$",
+  "answer": "**(a)** $W\\approx2{,}98\\cdot10^{-19}\\ \\text{J}\\approx1{,}86\\ \\text{eV}$. **(b)** $\\lambda\\le668\\ \\text{nm}$. **(c)** $E_{c,\\max}\\approx6{,}32\\cdot10^{-19}\\ \\text{J}\\approx3{,}95\\ \\text{eV}$.",
+  "common_errors": [
+   "Sumar $eV_f$ en vez de restarlo al calcular $W$.",
+   "Dar el rango como $\\lambda\\ge\\lambda_0$ (es al revés: $\\lambda\\le\\lambda_0$).",
+   "Olvidar convertir el potencial de frenado a energía ($eV_f$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-014",
+  "source": "Cantabria · Ordinaria 2024",
+  "title": "Efecto fotoeléctrico: trabajo de extracción y energía cinética · Cantabria · Ordinaria 2024",
+  "statement": "Al incidir sobre un material luz de $520\\ \\text{nm}$ se liberan electrones con potencial de frenado $0{,}5\\ \\text{V}$. Calcule:\n\n**(a)** El trabajo de extracción.\n\n**(b)** La máxima longitud de onda que provoca efecto fotoeléctrico.\n\n**(c)** La energía cinética máxima de los electrones con $\\lambda=280\\ \\text{nm}$.",
+  "knowns": [
+   "$\\lambda=520\\ \\text{nm}$",
+   "$V_{frenado}=0{,}5\\ \\text{V}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** La ecuación de Einstein es $\\dfrac{hc}{\\lambda}=W+E_{c,\\max}$, con $E_{c,\\max}=eV_{frenado}$:\n\n$$W=\\dfrac{hc}{\\lambda}-eV=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{520\\cdot10^{-9}}-1{,}6\\cdot10^{-19}\\cdot0{,}5$$\n\n$$W=3{,}83\\cdot10^{-19}-0{,}80\\cdot10^{-19}=3{,}03\\cdot10^{-19}\\ \\text{J}=1{,}89\\ \\text{eV}$$\n\n**(b)** La longitud de onda umbral cumple $W=\\dfrac{hc}{\\lambda_{\\max}}$:\n\n$$\\lambda_{\\max}=\\dfrac{hc}{W}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{3{,}03\\cdot10^{-19}}=6{,}58\\cdot10^{-7}\\ \\text{m}=658\\ \\text{nm}$$\n\n**(c)** Con $\\lambda=280\\ \\text{nm}$:\n\n$$E_{c,\\max}=\\dfrac{hc}{\\lambda}-W=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{280\\cdot10^{-9}}-3{,}03\\cdot10^{-19}=4{,}08\\cdot10^{-19}\\ \\text{J}=2{,}55\\ \\text{eV}$$",
+  "answer": "**(a)** $W=\\dfrac{hc}{\\lambda}-eV\\approx3{,}03\\cdot10^{-19}\\ \\text{J}\\approx1{,}89\\ \\text{eV}$. **(b)** $\\lambda_{\\max}=hc/W\\approx658\\ \\text{nm}$. **(c)** $E_{c,\\max}\\approx4{,}08\\cdot10^{-19}\\ \\text{J}\\approx2{,}55\\ \\text{eV}$.",
+  "common_errors": [
+   "Confundir el trabajo de extracción con la energía del fotón incidente.",
+   "No usar $E_{c,\\max}=eV_{frenado}$ para la energía cinética.",
+   "Olvidar pasar nm a metros en $hc/\\lambda$."
+  ],
+  "fig_caption": [
+   "Energía cinética máxima frente a la frecuencia: recta de pendiente $h$ que se anula en la frecuencia umbral $\\nu_0$; su prolongación corta el eje de energías en $-W$ (trabajo de extracción)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-015",
+  "source": "Comunidad Valenciana · Julio 2018",
+  "title": "Longitud de onda de De Broglie: muón y electrón · Comunidad Valenciana · Julio 2018",
+  "statement": "Razona cuál debe ser la velocidad $v_\\mu$ de un muón para que su longitud de onda asociada (de De Broglie) sea igual que la de un electrón que se mueve a una velocidad $v_e = 0{,}025\\,c$. La masa del muón es $207$ veces la del electrón. Considera que las velocidades son no relativistas. Deja el resultado en función de la velocidad de la luz en el vacío $c$.",
+  "knowns": [
+   "$v_e = 0{,}025\\,c$",
+   "$m_\\mu = 207\\,m_e$",
+   "Velocidades no relativistas",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La longitud de onda de De Broglie es $\\lambda = \\dfrac{h}{p} = \\dfrac{h}{m v}$. Para que coincidan las de muón y electrón:\n$$\\dfrac{h}{m_\\mu v_\\mu} = \\dfrac{h}{m_e v_e}\\ \\Rightarrow\\ m_\\mu v_\\mu = m_e v_e.$$\nDespejando la velocidad del muón:\n$$v_\\mu = \\dfrac{m_e}{m_\\mu}\\,v_e = \\dfrac{1}{207}\\cdot 0{,}025\\,c = 1{,}21\\cdot10^{-4}\\,c.$$\nEn unidades del SI:\n$$v_\\mu = 1{,}21\\cdot10^{-4}\\cdot 3\\cdot10^{8} \\approx 3{,}6\\cdot10^{4}\\ \\text{m/s}.$$",
+  "answer": "$v_\\mu = \\dfrac{v_e}{207} = 1{,}21\\cdot10^{-4}\\,c \\approx 3{,}6\\cdot10^{4}\\ \\text{m/s}$.",
+  "common_errors": [
+   "Igualar velocidades en vez de cantidades de movimiento $p=mv$.",
+   "Multiplicar por 207 en lugar de dividir (el muón, más masivo, va más lento).",
+   "No dejar el resultado en función de $c$ como pide el enunciado."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-016",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Longitud de onda de De Broglie de una bacteria · Comunidad Valenciana · Julio 2019",
+  "statement": "Escriba la expresión de la longitud de onda de De Broglie y explique su significado. Calcule la longitud de onda de De Broglie de una bacteria que se mueve a $v = 66\\ \\mu\\text{m·s}^{-1}$, sabiendo que la masa de un millón de bacterias es $1\\ \\text{g}$.",
+  "knowns": [
+   "$v = 66\\ \\mu\\text{m·s}^{-1} = 6{,}6\\cdot10^{-5}\\ \\text{m·s}^{-1}$",
+   "$10^{6}$ bacterias $= 1\\ \\text{g}$",
+   "$h = 6{,}6\\cdot10^{-34}\\ \\text{J·s}$"
+  ],
+  "full_solution": "La hipótesis de De Broglie asocia a toda partícula material una onda de longitud\n$$\\lambda = \\dfrac{h}{p} = \\dfrac{h}{m\\,v}$$\nque expresa la dualidad onda-corpúsculo: cuanto mayor es el momento lineal, menor es la longitud de onda asociada.\n\nLa masa de una bacteria es $m = \\dfrac{1\\ \\text{g}}{10^{6}} = \\dfrac{10^{-3}\\ \\text{kg}}{10^{6}} = 10^{-9}\\ \\text{kg}$. Entonces\n$$\\lambda = \\dfrac{h}{m\\,v} = \\dfrac{6{,}6\\cdot10^{-34}}{10^{-9}\\cdot6{,}6\\cdot10^{-5}} = 1{,}0\\cdot10^{-20}\\ \\text{m}$$\n\nEs una longitud de onda inimaginablemente pequeña (mucho menor que un núcleo atómico), lo que explica que el comportamiento ondulatorio sea totalmente inapreciable en objetos macroscópicos.",
+  "answer": "$\\lambda = \\dfrac{h}{mv} \\approx 1{,}0\\cdot10^{-20}\\ \\text{m}$, longitud de onda despreciable (dualidad onda-corpúsculo sin efecto observable a escala macroscópica).",
+  "common_errors": [
+   "No obtener la masa de una sola bacteria ($1\\ \\text{g}/10^6$).",
+   "No convertir $\\mu$m/s a m/s ni g a kg.",
+   "Confundir $\\lambda=h/(mv)$ con $\\lambda=h/E$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-017",
+  "source": "Comunidad Valenciana · Julio 2022",
+  "title": "Efecto fotoeléctrico: trabajo de extracción y longitud de onda de De Broglie · Comunidad Valenciana · Julio 2022",
+  "statement": "Al incidir luz de $\\lambda_1=550\\ \\text{nm}$ se obtiene una velocidad máxima de los electrones $v=296\\ \\text{km/s}$.\n\n**(a)** Calcula el trabajo de extracción del metal (en eV) y la longitud de onda umbral.\n\n**(b)** Calcula el momento lineal y la longitud de onda de De Broglie (en nm) de esos electrones.",
+  "knowns": [
+   "$\\lambda_1=550\\ \\text{nm}=5{,}5\\cdot10^{-7}\\ \\text{m}$",
+   "$v=296\\ \\text{km/s}=2{,}96\\cdot10^{5}\\ \\text{m/s}$",
+   "$q=1{,}6\\cdot10^{-19}\\ \\text{C}$, $c=3\\cdot10^{8}\\ \\text{m/s}$, $h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$, $m=9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** Energía cinética máxima:\n$$E_c = \\tfrac12 m v^2 = \\tfrac12\\cdot 9{,}1\\cdot10^{-31}\\cdot(2{,}96\\cdot10^{5})^2 = 3{,}99\\cdot10^{-20}\\ \\text{J} = 0{,}25\\ \\text{eV}$$\nPor Einstein $\\dfrac{hc}{\\lambda_1}=W+E_c$:\n$$W = \\dfrac{hc}{\\lambda_1}-E_c = \\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{5{,}5\\cdot10^{-7}}-3{,}99\\cdot10^{-20} = 3{,}22\\cdot10^{-19}\\ \\text{J} = 2{,}01\\ \\text{eV}$$\nLongitud de onda umbral:\n$$\\lambda_0 = \\dfrac{hc}{W} = \\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{3{,}22\\cdot10^{-19}} = 6{,}18\\cdot10^{-7}\\ \\text{m} = 618\\ \\text{nm}$$\n\n**(b)** Momento lineal:\n$$p = m v = 9{,}1\\cdot10^{-31}\\cdot2{,}96\\cdot10^{5} = 2{,}69\\cdot10^{-25}\\ \\text{kg·m/s}$$\nLongitud de onda de De Broglie:\n$$\\lambda_{dB} = \\dfrac{h}{p} = \\dfrac{6{,}63\\cdot10^{-34}}{2{,}69\\cdot10^{-25}} = 2{,}46\\cdot10^{-9}\\ \\text{m} = 2{,}46\\ \\text{nm}$$",
+  "answer": "**(a)** $W = 3{,}22\\cdot10^{-19}\\ \\text{J} = 2{,}01\\ \\text{eV}$; $\\lambda_0 = 618\\ \\text{nm}$. **(b)** $p = 2{,}69\\cdot10^{-25}\\ \\text{kg·m/s}$; $\\lambda_{dB} = 2{,}46\\ \\text{nm}$.",
+  "common_errors": [
+   "No pasar la velocidad de km/s a m/s.",
+   "Confundir longitud de onda umbral $\\lambda_0$ con la incidente $\\lambda_1$.",
+   "Usar $\\lambda_{dB}=h/(mv^2)$ en vez de $h/(mv)$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-018",
+  "source": "Comunidad Valenciana · Junio 2018",
+  "title": "Longitud de onda máxima en el efecto fotoeléctrico · C. Valenciana · Junio 2018",
+  "statement": "Se ilumina un metal con luz monocromática de $500\\ \\text{nm}$ y se observa que hace falta aplicar un potencial de frenado de $0{,}2\\ \\text{V}$ para anular la fotocorriente. Calcula la longitud de onda máxima de la radiación incidente para que se produzca efecto fotoeléctrico en el metal.",
+  "knowns": [
+   "$\\lambda=500\\ \\text{nm}$",
+   "$V_f=0{,}2\\ \\text{V}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La ecuación de Einstein es $hf=W+eV_f$, luego el trabajo de extracción es:\n$$W=\\dfrac{hc}{\\lambda}-eV_f=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{500\\cdot10^{-9}}-1{,}6\\cdot10^{-19}\\cdot0{,}2$$\n$$W=3{,}978\\cdot10^{-19}-0{,}32\\cdot10^{-19}=3{,}658\\cdot10^{-19}\\ \\text{J}$$\n\nLa longitud de onda máxima corresponde a la frecuencia umbral ($E_c=0$), es decir $\\dfrac{hc}{\\lambda_{\\max}}=W$:\n$$\\lambda_{\\max}=\\dfrac{hc}{W}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{3{,}658\\cdot10^{-19}}=5{,}44\\cdot10^{-7}\\ \\text{m}=544\\ \\text{nm}$$",
+  "answer": "$W\\approx3{,}66\\cdot10^{-19}\\ \\text{J}$; $\\lambda_{\\max}=\\dfrac{hc}{W}\\approx544\\ \\text{nm}$.",
+  "common_errors": [
+   "Confundir el potencial de frenado con el trabajo de extracción.",
+   "Olvidar sumar $eV_f$ a $W$ en la ecuación de Einstein.",
+   "No pasar $500\\ \\text{nm}$ a metros."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-019",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Efecto fotoeléctrico: frecuencia umbral e identificación del metal · Comunidad Valenciana · Junio 2022",
+  "statement": "Al iluminar un cátodo con radiación monocromática de frecuencia $f=6{,}1\\cdot10^{14}\\ \\text{Hz}$ se produce efecto fotoeléctrico, con un potencial de frenado $\\Delta V=0{,}23\\ \\text{V}$. Calcule la frecuencia umbral $f_0$ y determine el metal del cátodo.",
+  "knowns": [
+   "$f=6{,}1\\cdot10^{14}\\ \\text{Hz}$",
+   "$\\Delta V=0{,}23\\ \\text{V}$",
+   "$q=1{,}6\\cdot10^{-19}\\ \\text{C}$, $h=6{,}6\\cdot10^{-34}\\ \\text{J}\\cdot\\text{s}$",
+   "$W_e$: potasio $2{,}3\\ \\text{eV}$, aluminio $4{,}3\\ \\text{eV}$, cobre $4{,}7\\ \\text{eV}$"
+  ],
+  "full_solution": "El balance fotoeléctrico es $h f = W_e + E_{c,\\max}$, con $E_{c,\\max}=q\\,\\Delta V$. El trabajo de extracción:\n$$W_e=h f-q\\,\\Delta V=6{,}6\\cdot10^{-34}\\cdot6{,}1\\cdot10^{14}-1{,}6\\cdot10^{-19}\\cdot0{,}23$$\n$$W_e=4{,}026\\cdot10^{-19}-3{,}68\\cdot10^{-20}=3{,}66\\cdot10^{-19}\\ \\text{J}=2{,}3\\ \\text{eV}$$\nEl trabajo de extracción es $2{,}3\\ \\text{eV}$, por lo que el metal es el **potasio**.\n\nFrecuencia umbral:\n$$f_0=\\dfrac{W_e}{h}=\\dfrac{3{,}66\\cdot10^{-19}}{6{,}6\\cdot10^{-34}}=5{,}5\\cdot10^{14}\\ \\text{Hz}$$",
+  "answer": "$W_e\\approx 2{,}3\\ \\text{eV}\\Rightarrow$ el metal es el potasio; $f_0\\approx 5{,}5\\cdot10^{14}\\ \\text{Hz}$.",
+  "common_errors": [
+   "No convertir $W_e$ de julios a eV para compararlo con la tabla.",
+   "Olvidar que $E_{c,\\max}=q\\,\\Delta V$ (relación con el potencial de frenado).",
+   "Confundir $f_0$ con la frecuencia incidente $f$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-020",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Frecuencia umbral e identificación del metal por efecto fotoeléctrico · Comunidad Valenciana · Junio 2022",
+  "statement": "Al iluminar un cátodo con radiación de frecuencia $f=6{,}1\\cdot10^{14}\\ \\text{Hz}$ se produce efecto fotoeléctrico con potencial de frenado $\\Delta V=0{,}23\\ \\text{V}$. Calcula la frecuencia umbral $f_0$ y determina el metal del cátodo.",
+  "knowns": [
+   "$f=6{,}1\\cdot10^{14}\\ \\text{Hz}$, $\\Delta V=0{,}23\\ \\text{V}$",
+   "$q=1{,}6\\cdot10^{-19}\\ \\text{C}$, $h=6{,}6\\cdot10^{-34}\\ \\text{J·s}$",
+   "$W$: potasio $2{,}3$ eV, aluminio $4{,}3$ eV, cobre $4{,}7$ eV"
+  ],
+  "full_solution": "La ecuación fotoeléctrica es $hf=W+eV_0$, con $W=hf_0$. El trabajo de extracción:\n$$W=hf-eV_0=6{,}6\\cdot10^{-34}\\cdot6{,}1\\cdot10^{14}-1{,}6\\cdot10^{-19}\\cdot0{,}23=3{,}66\\cdot10^{-19}\\ \\text{J}$$\nEn electronvoltios:\n$$W=\\dfrac{3{,}66\\cdot10^{-19}}{1{,}6\\cdot10^{-19}}=2{,}29\\ \\text{eV}\\approx2{,}3\\ \\text{eV}$$\nEste valor corresponde al **potasio** ($W_e=2{,}3\\ \\text{eV}$).\n\nLa frecuencia umbral:\n$$f_0=\\dfrac{W}{h}=\\dfrac{3{,}66\\cdot10^{-19}}{6{,}6\\cdot10^{-34}}=5{,}54\\cdot10^{14}\\ \\text{Hz}$$",
+  "answer": "$f_0=5{,}54\\cdot10^{14}\\ \\text{Hz}$; $W\\approx2{,}3\\ \\text{eV}$: el metal es el **potasio**.",
+  "common_errors": [
+   "No convertir el trabajo de extracción de J a eV para compararlo con la tabla.",
+   "Confundir frecuencia incidente $f$ con frecuencia umbral $f_0$.",
+   "Olvidar el término $eV_0$ (energía cinética máxima) en la ecuación de Einstein."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-021",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "Efecto fotoeléctrico en una fotocélula de cesio · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Una radiación monocromática de $\\lambda=500\\ \\text{nm}$ incide sobre una fotocélula de cesio de trabajo de extracción $2\\ \\text{eV}$.\n\n**(a)** Calcula la frecuencia umbral y la longitud de onda umbral.\n\n**(b)** Calcula la energía cinética máxima de los electrones y el potencial de frenado (en eV). Explica qué es el potencial de frenado.",
+  "knowns": [
+   "$\\lambda = 500\\ \\text{nm} = 5\\cdot10^{-7}\\ \\text{m}$",
+   "$W = 2\\ \\text{eV} = 3{,}2\\cdot10^{-19}\\ \\text{J}$",
+   "$q=1{,}6\\cdot10^{-19}\\ \\text{C}$, $c=3\\cdot10^{8}\\ \\text{m/s}$, $h=6{,}6\\cdot10^{-34}\\ \\text{J·s}$"
+  ],
+  "full_solution": "**(a)** La frecuencia umbral cumple $W=h f_0$:\n$$f_0 = \\dfrac{W}{h} = \\dfrac{3{,}2\\cdot10^{-19}}{6{,}6\\cdot10^{-34}} = 4{,}85\\cdot10^{14}\\ \\text{Hz}$$\n$$\\lambda_0 = \\dfrac{c}{f_0} = \\dfrac{3\\cdot10^{8}}{4{,}85\\cdot10^{14}} = 6{,}19\\cdot10^{-7}\\ \\text{m} = 619\\ \\text{nm}$$\n\n**(b)** Energía del fotón incidente: $E=\\dfrac{hc}{\\lambda}=\\dfrac{6{,}6\\cdot10^{-34}\\cdot3\\cdot10^{8}}{5\\cdot10^{-7}}=3{,}96\\cdot10^{-19}\\ \\text{J}=2{,}475\\ \\text{eV}$. Por Einstein:\n$$E_{c,max} = E - W = 2{,}475 - 2 = 0{,}475\\ \\text{eV} = 7{,}6\\cdot10^{-20}\\ \\text{J}$$\nEl potencial de frenado es $V_0 = \\dfrac{E_{c,max}}{e} = 0{,}475\\ \\text{V}$.\n**Potencial de frenado:** diferencia de potencial que hay que aplicar para detener a los electrones más energéticos ($eV_0 = E_{c,max}$); anula su energía cinética y hace nula la fotocorriente.",
+  "answer": "**(a)** $f_0 = 4{,}85\\cdot10^{14}\\ \\text{Hz}$, $\\lambda_0 = 619\\ \\text{nm}$. **(b)** $E_{c,max}=0{,}475\\ \\text{eV}$, $V_0 = 0{,}475\\ \\text{V}$.",
+  "common_errors": [
+   "No convertir el trabajo de extracción de eV a J (o viceversa) de forma coherente.",
+   "Confundir energía del fotón incidente con la energía umbral.",
+   "Olvidar que $eV_0=E_{c,max}$ al pasar a potencial de frenado."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-022",
+  "source": "Madrid · Junio 2013",
+  "title": "Efecto fotoeléctrico: energía cinética máxima y potencial de frenado · Madrid · Junio 2013",
+  "statement": "Una radiación de $\\lambda=0{,}2\\ \\mu\\text{m}$ (en el vacío) incide sobre un metal de frecuencia umbral $3\\cdot10^{14}\\ \\text{Hz}$.\n\n**(a)** La energía cinética máxima de los electrones emitidos.\n**(b)** El potencial de frenado necesario.",
+  "knowns": [
+   "$\\lambda = 0{,}2\\ \\mu\\text{m} = 2\\cdot10^{-7}\\ \\text{m}$",
+   "$f_0 = 3\\cdot10^{14}\\ \\text{Hz}$",
+   "$c = 3{,}00\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$, $h = 6{,}63\\cdot10^{-34}\\ \\text{J}\\cdot\\text{s}$, $e = 1{,}60\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a) Energía cinética máxima.**\nFrecuencia incidente: $f = c/\\lambda = 3\\cdot10^{8}/2\\cdot10^{-7} = 1{,}5\\cdot10^{15}\\ \\text{Hz}$. Por la ecuación de Einstein $E_{c}=h(f-f_0)$:\n$$E_{c,máx} = 6{,}63\\cdot10^{-34}\\,(1{,}5\\cdot10^{15}-3\\cdot10^{14}) = 7{,}96\\cdot10^{-19}\\ \\text{J}\\ (\\approx 4{,}97\\ \\text{eV})$$\n\n**(b) Potencial de frenado.**\nEl potencial de frenado detiene a los electrones más rápidos, $eV_0=E_{c,máx}$:\n$$V_0 = \\dfrac{E_{c,máx}}{e} = \\dfrac{7{,}96\\cdot10^{-19}}{1{,}60\\cdot10^{-19}} = 4{,}97\\ \\text{V}$$",
+  "answer": "$E_{c,máx} = 7{,}96\\cdot10^{-19}\\ \\text{J}\\approx4{,}97\\ \\text{eV}$.\n$V_0 = 4{,}97\\ \\text{V}$.",
+  "common_errors": [
+   "No convertir $\\lambda=0{,}2\\ \\mu\\text{m}=2\\cdot10^{-7}\\ \\text{m}$ antes de hallar $f$.",
+   "Usar $E_c=hf$ olvidando restar el trabajo de extracción $h f_0$.",
+   "Confundir el potencial de frenado con la diferencia de potencial aceleradora."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-023",
+  "source": "Madrid · Junio 2013",
+  "title": "Efecto fotoeléctrico: trabajo de extracción y potencial de frenado · Madrid · Junio 2013",
+  "statement": "Los electrones emitidos por una superficie metálica tienen una energía cinética máxima de $2{,}5\\ \\text{eV}$ para una radiación incidente de $350\\ \\text{nm}$ de longitud de onda. Calcule:\n\n**(a)** El trabajo de extracción de un mol de electrones en julios.\n\n**(b)** La diferencia de potencial mínima (potencial de frenado) requerida para frenar los electrones emitidos.",
+  "knowns": [
+   "$E_{c,\\max} = 2{,}5\\ \\text{eV}$",
+   "$\\lambda = 350\\ \\text{nm} = 350\\cdot10^{-9}\\ \\text{m}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J s}$",
+   "$N_A = 6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$",
+   "$e = 1{,}60\\cdot10^{-19}\\ \\text{C}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** La energía del fotón incidente:\n$$E_{\\text{fot}} = \\dfrac{hc}{\\lambda} = \\dfrac{6{,}63\\cdot10^{-34}\\cdot 3\\cdot10^{8}}{350\\cdot10^{-9}} = 5{,}68\\cdot10^{-19}\\ \\text{J} = 3{,}55\\ \\text{eV}.$$\nPor la ecuación de Einstein $E_{\\text{fot}} = W + E_{c,\\max}$, el trabajo de extracción por electrón:\n$$W = E_{\\text{fot}} - E_{c,\\max} = 3{,}55 - 2{,}5 = 1{,}05\\ \\text{eV} = 1{,}68\\cdot10^{-19}\\ \\text{J}.$$\nPara un mol de electrones:\n$$W_{\\text{mol}} = W\\cdot N_A = 1{,}68\\cdot10^{-19}\\cdot 6{,}02\\cdot10^{23} \\approx 1{,}01\\cdot10^{5}\\ \\text{J/mol}.$$\n\n**(b)** El potencial de frenado cumple $e\\,V_0 = E_{c,\\max}$:\n$$V_0 = \\dfrac{E_{c,\\max}}{e} = \\dfrac{2{,}5\\ \\text{eV}}{e} = 2{,}5\\ \\text{V}.$$",
+  "answer": "**(a)** $W_{\\text{mol}} \\approx 1{,}01\\cdot10^{5}\\ \\text{J/mol}$ ($W\\approx 1{,}05\\ \\text{eV}$ por electrón). **(b)** $V_0 = 2{,}5\\ \\text{V}$.",
+  "common_errors": [
+   "No multiplicar el trabajo por electrón por $N_A$ para obtener el valor por mol.",
+   "Olvidar pasar eV a julios ($1\\ \\text{eV}=1{,}6\\cdot10^{-19}\\ \\text{J}$).",
+   "Sumar en vez de restar la energía cinética al calcular $W$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-024",
+  "source": "Madrid · Junio 2021",
+  "title": "Transiciones en un sistema de tres niveles · Madrid · Junio 2021",
+  "statement": "Un material de tres niveles absorbe $450\\ \\text{nm}$ para pasar del fundamental al segundo nivel, y emite $600\\ \\text{nm}$ al decaer el primer nivel al fundamental.\n\n**(a)** Diferencias de energía entre el primer nivel y el fundamental, y entre el segundo y el fundamental, en eV.\n\n**(b)** Energía por unidad de tiempo emitida si el material emite $4\\cdot10^{15}$ fotones por segundo.",
+  "knowns": [
+   "$\\lambda_{02} = 450\\ \\text{nm}$",
+   "$\\lambda_{10} = 600\\ \\text{nm}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Con $\\Delta E=h\\dfrac{c}{\\lambda}$. Para la absorción $(0)\\to(2)$ a $450\\ \\text{nm}$:\n\n$$E_2-E_0=\\dfrac{hc}{\\lambda_{02}}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{450\\cdot10^{-9}}=4{,}42\\cdot10^{-19}\\ \\text{J}=2{,}76\\ \\text{eV}$$\n\nPara la emisión $(1)\\to(0)$ a $600\\ \\text{nm}$:\n\n$$E_1-E_0=\\dfrac{hc}{\\lambda_{10}}=3{,}31\\cdot10^{-19}\\ \\text{J}=2{,}07\\ \\text{eV}$$\n\n**(b)** La potencia emitida es el flujo de fotones por la energía de cada fotón ($600\\ \\text{nm}$):\n\n$$P=N\\cdot E_{\\text{fotón}}=4\\cdot10^{15}\\cdot3{,}31\\cdot10^{-19}=1{,}33\\cdot10^{-3}\\ \\text{W}$$",
+  "answer": "**(a)** $E_1-E_0=2{,}07\\ \\text{eV}$, $E_2-E_0=2{,}76\\ \\text{eV}$. **(b)** $P\\approx1{,}33\\cdot10^{-3}\\ \\text{W}$.",
+  "common_errors": [
+   "Asociar los $450\\ \text{nm}$ a la emisión en lugar de a la absorción.",
+   "No convertir julios a eV.",
+   "Usar la longitud de onda equivocada ($450$ vs $600\\ \text{nm}$) en la potencia emitida."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-025",
+  "source": "Madrid · Junio 2022",
+  "title": "Niveles energéticos del láser de rubí · Madrid · Junio 2022",
+  "statement": "El láser de rubí presenta un sistema de tres niveles. Tras absorber luz de $550\\ \\text{nm}$ (transición $(0)\\to(2)$) emite rojo a $694\\ \\text{nm}$ (transición $(1)\\to(0)$).\n\n**(a)** Frecuencia de los fotones absorbidos y de los emitidos.\n\n**(b)** Diferencia de energía entre los niveles $(2)$ y $(1)$ en electrón-voltios.",
+  "knowns": [
+   "$\\lambda_{02} = 550\\ \\text{nm}$",
+   "$\\lambda_{10} = 694\\ \\text{nm}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$"
+  ],
+  "full_solution": "**(a)** Con $f=\\dfrac{c}{\\lambda}$:\n\n$$f_{02}=\\dfrac{3\\cdot10^{8}}{550\\cdot10^{-9}}=5{,}45\\cdot10^{14}\\ \\text{Hz}$$\n\n$$f_{10}=\\dfrac{3\\cdot10^{8}}{694\\cdot10^{-9}}=4{,}32\\cdot10^{14}\\ \\text{Hz}$$\n\n**(b)** Las energías de los niveles respecto al fundamental son $E=h f$:\n\n$$E_{02}=h f_{02}=6{,}63\\cdot10^{-34}\\cdot5{,}45\\cdot10^{14}=3{,}62\\cdot10^{-19}\\ \\text{J}=2{,}26\\ \\text{eV}$$\n\n$$E_{10}=h f_{10}=2{,}87\\cdot10^{-19}\\ \\text{J}=1{,}79\\ \\text{eV}$$\n\nLa diferencia entre los niveles $(2)$ y $(1)$ es:\n\n$$E_{21}=E_{02}-E_{10}=2{,}26-1{,}79=0{,}47\\ \\text{eV}$$",
+  "answer": "**(a)** $f_{02}=5{,}45\\cdot10^{14}\\ \\text{Hz}$, $f_{10}=4{,}32\\cdot10^{14}\\ \\text{Hz}$. **(b)** $E_{21}=0{,}47\\ \\text{eV}$.",
+  "common_errors": [
+   "No convertir julios a electrón-voltios dividiendo por $e=1{,}6\\cdot10^{-19}$.",
+   "Confundir qué transición corresponde a absorción (550 nm) y cuál a emisión (694 nm).",
+   "Restar longitudes de onda en vez de energías para hallar $E_{21}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-026",
+  "source": "Madrid · Junio 2023",
+  "title": "Efecto fotoeléctrico y constante de Planck · Madrid · Junio 2023",
+  "statement": "Para estudiar el efecto fotoeléctrico se ilumina un metal con luz de $379\\ \\text{nm}$ y de $544\\ \\text{nm}$, observándose potenciales de frenado de $2{,}5\\ \\text{V}$ y $1{,}5\\ \\text{V}$, respectivamente.\n\n**(a)** A partir de los potenciales de frenado, obtenga el valor de la constante de Planck.\n\n**(b)** Indique los valores del potencial de frenado y de la intensidad de corriente máxima para la luz de $379\\ \\text{nm}$ si se disminuye a la mitad la intensidad del haz (la corriente máxima con el haz completo era $10\\ \\text{pA}$).",
+  "knowns": [
+   "$\\lambda_1 = 379\\ \\text{nm}$, $V_1 = 2{,}5\\ \\text{V}$",
+   "$\\lambda_2 = 544\\ \\text{nm}$, $V_2 = 1{,}5\\ \\text{V}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** La ecuación del efecto fotoeléctrico, con $E_{c,\\max} = e\\,V$ (potencial de frenado), es $\\dfrac{hc}{\\lambda} = \\phi + e\\,V$. Escribiéndola para ambas longitudes de onda y restando se elimina el trabajo de extracción $\\phi$:\n$$\\dfrac{hc}{\\lambda_1} - \\dfrac{hc}{\\lambda_2} = e(V_1 - V_2)$$\n$$h = \\dfrac{e(V_1 - V_2)}{c\\left(\\dfrac{1}{\\lambda_1} - \\dfrac{1}{\\lambda_2}\\right)} = \\dfrac{1{,}6\\cdot10^{-19}(2{,}5-1{,}5)}{3\\cdot10^{8}\\left(\\dfrac{1}{379\\cdot10^{-9}}-\\dfrac{1}{544\\cdot10^{-9}}\\right)} = 6{,}66\\cdot10^{-34}\\ \\text{J·s}$$\n\n**(b)** El potencial de frenado depende solo de la frecuencia de la luz y del trabajo de extracción, no de la intensidad del haz; por tanto sigue siendo $V = 2{,}5\\ \\text{V}$. En cambio, el número de fotoelectrones (y la corriente máxima) es proporcional a la intensidad: al reducirla a la mitad, la corriente máxima pasa a $5\\ \\text{pA}$.",
+  "answer": "**(a)** $h \\approx 6{,}66\\cdot10^{-34}\\ \\text{J·s}$. **(b)** El potencial de frenado no cambia ($2{,}5\\ \\text{V}$); la intensidad de corriente máxima se reduce a la mitad, $5\\ \\text{pA}$.",
+  "common_errors": [
+   "Creer que al bajar la intensidad del haz disminuye el potencial de frenado (depende solo de la frecuencia).",
+   "No convertir las longitudes de onda a metros.",
+   "Confundir energía del fotón con energía cinética del electrón (falta restar $\\phi$)."
+  ],
+  "fig_caption": [
+   "Intensidad de corriente fotoeléctrica frente al potencial aplicado para $379\\ \\text{nm}$ y $544\\ \\text{nm}$: cada curva se anula en su potencial de frenado ($-2{,}5\\ \\text{V}$ y $-1{,}5\\ \\text{V}$) y alcanza la misma corriente de saturación (igual intensidad del haz)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-027",
+  "source": "Madrid · Junio 2023 (Coincidentes)",
+  "title": "Célula fotoeléctrica de magnesio: energía y De Broglie · Madrid · Junio 2023 (Coincidentes)",
+  "statement": "Una célula fotoeléctrica de magnesio, cuya longitud de onda umbral es de $339\\ \\text{nm}$, se ilumina con un haz de luz de frecuencia $1{,}0\\cdot10^{15}\\ \\text{Hz}$.\n\n**(a)** Calcule la energía cinética máxima de los electrones emitidos expresada en eV.\n\n**(b)** A continuación, la célula se ilumina con un haz de frecuencia desconocida, de manera que los electrones emitidos con la energía cinética máxima tienen una longitud de onda de De Broglie de $0{,}87\\ \\text{nm}$. Halle la frecuencia de este segundo haz.",
+  "knowns": [
+   "$\\lambda_{\\text{umbral}} = 339\\ \\text{nm}$",
+   "$f = 1{,}0\\cdot10^{15}\\ \\text{Hz}$",
+   "$\\lambda_{\\text{dB}} = 0{,}87\\ \\text{nm}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$; $e = 1{,}6\\cdot10^{-19}\\ \\text{C}$; $h = 6{,}63\\cdot10^{-34}\\ \\text{J s}$; $m = 9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** Energía umbral (trabajo de extracción):\n$$W = \\dfrac{hc}{\\lambda_{\\text{umbral}}} = \\dfrac{6{,}63\\cdot10^{-34}\\cdot 3\\cdot10^{8}}{339\\cdot10^{-9}} = 5{,}87\\cdot10^{-19}\\ \\text{J} = 3{,}67\\ \\text{eV}.$$\nEnergía del fotón incidente:\n$$E_{\\text{fot}} = h f = 6{,}63\\cdot10^{-34}\\cdot 1{,}0\\cdot10^{15} = 6{,}63\\cdot10^{-19}\\ \\text{J} = 4{,}14\\ \\text{eV}.$$\nComo $E_{\\text{fot}} > W$, hay emisión y:\n$$E_{c,\\max} = E_{\\text{fot}} - W = 4{,}14 - 3{,}67 = 0{,}47\\ \\text{eV}.$$\n\n**(b)** De la longitud de onda de De Broglie $\\lambda_{\\text{dB}} = \\dfrac{h}{mv}$ obtenemos la velocidad:\n$$v = \\dfrac{h}{m\\,\\lambda_{\\text{dB}}} = \\dfrac{6{,}63\\cdot10^{-34}}{9{,}1\\cdot10^{-31}\\cdot 0{,}87\\cdot10^{-9}} = 8{,}37\\cdot10^{5}\\ \\text{m/s}.$$\nLa energía cinética de estos electrones:\n$$E_c = \\tfrac{1}{2}mv^2 = \\tfrac{1}{2}\\cdot 9{,}1\\cdot10^{-31}\\cdot(8{,}37\\cdot10^{5})^2 = 3{,}19\\cdot10^{-19}\\ \\text{J} = 2{,}0\\ \\text{eV}.$$\nLa energía del fotón es $E_{\\text{fot}}' = E_c + W = 2{,}0 + 3{,}67 = 5{,}67\\ \\text{eV} = 9{,}07\\cdot10^{-19}\\ \\text{J}$, y su frecuencia:\n$$f' = \\dfrac{E_{\\text{fot}}'}{h} = \\dfrac{9{,}07\\cdot10^{-19}}{6{,}63\\cdot10^{-34}} \\approx 1{,}37\\cdot10^{15}\\ \\text{Hz}.$$",
+  "answer": "**(a)** $E_{c,\\max} = 0{,}47\\ \\text{eV}$. **(b)** $v = 8{,}37\\cdot10^{5}\\ \\text{m/s}$, $E_c \\approx 2{,}0\\ \\text{eV}$, $f' \\approx 1{,}37\\cdot10^{15}\\ \\text{Hz}$.",
+  "common_errors": [
+   "Olvidar sumar el trabajo de extracción a la energía cinética para hallar la energía del fotón en (b).",
+   "Confundir la longitud de onda umbral con la de De Broglie.",
+   "No convertir julios a eV o viceversa de forma coherente."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-028",
+  "source": "Madrid · Modelo 2024",
+  "title": "Efecto fotoeléctrico en el cobre: constante de Planck y energía relativista · Madrid · Modelo 2024",
+  "statement": "La gráfica del potencial de frenado del cobre frente a la longitud de onda da $V_f(100\\ \\text{nm})=7{,}75\\ \\text{V}$ y $V_f(200\\ \\text{nm})=1{,}5\\ \\text{V}$.\n\n**(a)** Determine la constante de Planck y el trabajo de extracción del cobre.\n\n**(b)** Un electrón emitido con energía cinética máxima al iluminar con $\\lambda=100\\ \\text{nm}$ se acelera hasta $0{,}8c$. ¿Qué incremento de energía cinética experimenta?",
+  "knowns": [
+   "$V_f(\\lambda_1=100\\ \\text{nm})=7{,}75\\ \\text{V}$",
+   "$V_f(\\lambda_2=200\\ \\text{nm})=1{,}5\\ \\text{V}$",
+   "$c=3\\cdot10^{8}\\ \\text{m·s}^{-1}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$, $m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** El potencial de frenado cumple $eV_f = \\dfrac{hc}{\\lambda}-W_{ext}$. Restando para dos longitudes de onda:\n$$h = \\dfrac{e}{c}\\dfrac{\\lambda_1\\lambda_2}{\\lambda_2-\\lambda_1}\\,(V_{f1}-V_{f2}) = \\dfrac{1{,}6\\cdot10^{-19}}{3\\cdot10^{8}}\\dfrac{(10^{-7})(2\\cdot10^{-7})}{10^{-7}}(7{,}75-1{,}5)$$\n$$h = 6{,}67\\cdot10^{-34}\\ \\text{J·s}$$\nCon $\\lambda_2=200$ nm:\n$$W_{ext} = \\dfrac{hc}{\\lambda_2}-eV_{f2} = \\dfrac{6{,}67\\cdot10^{-34}\\cdot 3\\cdot10^{8}}{2\\cdot10^{-7}}-1{,}6\\cdot10^{-19}\\cdot1{,}5 = 7{,}6\\cdot10^{-19}\\ \\text{J} = 4{,}75\\ \\text{eV}$$\n\n**(b)** Energía cinética de emisión a $100$ nm: $E_{c1}=eV_{f1}=7{,}75\\ \\text{eV}=1{,}24\\cdot10^{-18}\\ \\text{J}$. Tras acelerar a $0{,}8c$, con $\\gamma=\\dfrac{1}{\\sqrt{1-0{,}8^2}}=1{,}667$:\n$$E_{c2} = (\\gamma-1)m_e c^2 = (1{,}667-1)\\cdot 9{,}1\\cdot10^{-31}\\cdot(3\\cdot10^{8})^2 = 5{,}46\\cdot10^{-14}\\ \\text{J} = 0{,}34\\ \\text{MeV}$$\n$$\\Delta E_c = E_{c2}-E_{c1} \\approx 5{,}46\\cdot10^{-14}\\ \\text{J} \\approx 0{,}34\\ \\text{MeV}$$\n(la energía cinética inicial es cuatro órdenes de magnitud menor).",
+  "answer": "**(a)** $h = 6{,}67\\cdot10^{-34}\\ \\text{J·s}$, $W_{ext}=7{,}6\\cdot10^{-19}\\ \\text{J}=4{,}75\\ \\text{eV}$. **(b)** $\\Delta E_c \\approx 5{,}46\\cdot10^{-14}\\ \\text{J}\\approx 0{,}34\\ \\text{MeV}$.",
+  "common_errors": [
+   "Usar la energía cinética clásica $\\tfrac12 m v^2$ a $0{,}8c$; a esa velocidad hay que emplear la expresión relativista.",
+   "No pasar las longitudes de onda a metros.",
+   "Confundir trabajo de extracción con energía del fotón."
+  ],
+  "fig_caption": [
+   "Potencial de frenado del cobre frente a la frecuencia: recta de pendiente $h/e$ por los puntos de $100\\ \\text{nm}$ y $200\\ \\text{nm}$; corta el eje en la frecuencia umbral $f_0$ y su prolongación da $-W_{ext}/e$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-029",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Efecto fotoeléctrico en el cerio (frecuencia para potencial de frenado dado) · Madrid · Ordinaria 2024",
+  "statement": "El trabajo de extracción del cerio es $2{,}90\\ \\text{eV}$.\n\n**(a)** Calcule la energía de los fotoelectrones (en eV) si se ilumina con luz de $330\\ \\text{nm}$.\n\n**(b)** Obtenga la frecuencia umbral y la frecuencia de los fotones necesaria para que el potencial de frenado de los fotoelectrones sea de $1\\ \\text{V}$.",
+  "knowns": [
+   "$W=2{,}90\\ \\text{eV}$",
+   "$\\lambda=330\\ \\text{nm}$",
+   "$V_f=1\\ \\text{V}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a) Energía cinética de los fotoelectrones**\n\n$$E=\\dfrac{hc}{\\lambda}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{330\\cdot10^{-9}}=3{,}77\\ \\text{eV}\\ \\Rightarrow\\ E_c=3{,}77-2{,}90=0{,}87\\ \\text{eV}$$\n\n**(b) Frecuencia umbral y frecuencia para $V_f=1\\ \\text{V}$**\n\n$$f_0=\\dfrac{W}{h}=\\dfrac{2{,}90\\cdot1{,}6\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=7{,}0\\cdot10^{14}\\ \\text{Hz}$$\nEl potencial de frenado cumple $eV_f=hf-W$, de donde:\n$$f=\\dfrac{eV_f+W}{h}=\\dfrac{1{,}6\\cdot10^{-19}\\cdot1+2{,}90\\cdot1{,}6\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=9{,}4\\cdot10^{14}\\ \\text{Hz}$$",
+  "answer": "**(a)** $E_c\\approx0{,}87\\ \\text{eV}$.  **(b)** $f_0\\approx7{,}0\\cdot10^{14}\\ \\text{Hz}$; para $V_f=1\\ \\text{V}$, $f\\approx9{,}4\\cdot10^{14}\\ \\text{Hz}$.",
+  "common_errors": [
+   "No sumar el trabajo de extracción: $hf=eV_f+W$.",
+   "Mezclar unidades eV y J sin convertir.",
+   "Confundir frecuencia umbral con la frecuencia que da $V_f=1\\ \\text{V}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-030",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Efecto fotoeléctrico en el cerio (gráfica del potencial de frenado) · Madrid · Ordinaria 2024",
+  "statement": "El trabajo de extracción del cerio es $2{,}90\\ \\text{eV}$.\n\n**(a)** Calcule la energía de los fotoelectrones (en eV) si se ilumina con luz de $330\\ \\text{nm}$.\n\n**(b)** Obtenga la frecuencia umbral y represente gráficamente el potencial de frenado del cerio en función de la frecuencia (rango $0$–$10\\cdot10^{14}\\ \\text{Hz}$).",
+  "knowns": [
+   "$W=2{,}90\\ \\text{eV}$",
+   "$\\lambda=330\\ \\text{nm}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a) Energía cinética de los fotoelectrones**\n\nEnergía del fotón:\n$$E=\\dfrac{hc}{\\lambda}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{330\\cdot10^{-9}}=6{,}03\\cdot10^{-19}\\ \\text{J}=3{,}77\\ \\text{eV}$$\n$$E_c=E-W=3{,}77-2{,}90=0{,}87\\ \\text{eV}$$\n\n**(b) Frecuencia umbral y gráfica**\n\n$$f_0=\\dfrac{W}{h}=\\dfrac{2{,}90\\cdot1{,}6\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=7{,}0\\cdot10^{14}\\ \\text{Hz}$$\nEl potencial de frenado cumple $eV_f=hf-W$, luego:\n$$V_f=\\dfrac{h}{e}\\,f-\\dfrac{W}{e}$$\nEs una recta de pendiente $h/e=4{,}14\\cdot10^{-15}\\ \\text{V·s}$, que corta el eje de frecuencias en $f_0=7{,}0\\cdot10^{14}\\ \\text{Hz}$ (para $f<f_0$ no hay emisión, $V_f=0$).",
+  "answer": "**(a)** $E_c\\approx0{,}87\\ \\text{eV}$.  **(b)** $f_0\\approx7{,}0\\cdot10^{14}\\ \\text{Hz}$; recta $V_f=(h/e)f-W/e$ de pendiente $4{,}14\\cdot10^{-15}\\ \\text{V·s}$, corte en $f_0$.",
+  "common_errors": [
+   "No convertir $W$ de eV a julios al calcular $f_0$.",
+   "Dibujar la recta pasando por el origen (corta el eje en $f_0$, no en $0$).",
+   "Confundir energía del fotón con energía cinética (hay que restar $W$)."
+  ],
+  "fig_caption": [
+   "Potencial de frenado del cerio frente a la frecuencia: nulo hasta la frecuencia umbral $f_0=7{,}0\\cdot10^{14}\\ \\text{Hz}$ y recta de pendiente $h/e=4{,}14\\cdot10^{-15}\\ \\text{V·s}$ a partir de ella."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-031",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Absorción UV por el ozono: energía, potencia y dosis · Madrid · Ordinaria 2025",
+  "statement": "Las moléculas de ozono absorben luz ultravioleta (UV) de alta energía.\n\n**(a)** Halle la diferencia de energía, en electrón-voltios, entre los niveles electrónicos de la molécula de ozono que inducen la absorción de radiación de $260\\ \\text{nm}$.\n\n**(b)** Si el flujo de fotones de $260\\ \\text{nm}$ que llega a una persona es de $2{,}6\\cdot10^{14}\\ \\text{fotones/s}$, calcule la potencia que le incide debida a esos fotones UV y la energía recibida en $30\\ \\text{minutos}$.\n\n*Datos:* $e = 1{,}6\\cdot10^{-19}\\ \\text{C}$; $h = 6{,}63\\cdot10^{-34}\\ \\text{J s}$; $c = 3\\cdot10^{8}\\ \\text{m/s}$.",
+  "knowns": [
+   "$\\lambda = 260\\ \\text{nm} = 260\\cdot10^{-9}\\ \\text{m}$",
+   "$\\Phi = 2{,}6\\cdot10^{14}\\ \\text{fotones/s}$",
+   "$t = 30\\ \\text{min} = 1800\\ \\text{s}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J s}$; $c = 3\\cdot10^{8}\\ \\text{m/s}$; $e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** La energía de un fotón de $260\\ \\text{nm}$ es igual a la diferencia de energía entre niveles:\n$$E = \\dfrac{hc}{\\lambda} = \\dfrac{6{,}63\\cdot10^{-34}\\cdot 3\\cdot10^{8}}{260\\cdot10^{-9}} = 7{,}65\\cdot10^{-19}\\ \\text{J}.$$\nEn electrón-voltios:\n$$E = \\dfrac{7{,}65\\cdot10^{-19}}{1{,}6\\cdot10^{-19}} = 4{,}78\\ \\text{eV}.$$\n\n**(b)** La potencia es el flujo de fotones por la energía de cada fotón:\n$$P = \\Phi\\,E = 2{,}6\\cdot10^{14}\\cdot 7{,}65\\cdot10^{-19} = 1{,}99\\cdot10^{-4}\\ \\text{W}.$$\nLa energía recibida en $30\\ \\text{min} = 1800\\ \\text{s}$:\n$$E_{\\text{recibida}} = P\\,t = 1{,}99\\cdot10^{-4}\\cdot 1800 = 0{,}358\\ \\text{J}.$$",
+  "answer": "**(a)** $\\Delta E = 4{,}78\\ \\text{eV}$ ($7{,}65\\cdot10^{-19}\\ \\text{J}$). **(b)** $P = 1{,}99\\cdot10^{-4}\\ \\text{W}$ y $E_{\\text{recibida}} = 0{,}358\\ \\text{J}$ en 30 min.",
+  "common_errors": [
+   "No convertir la energía de julios a eV (dividir entre $e$).",
+   "Confundir flujo de fotones (fotones/s) con potencia (J/s).",
+   "Olvidar pasar los 30 minutos a segundos."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-032",
+  "source": "Madrid · Ordinaria 2026",
+  "title": "Efecto fotoeléctrico: longitudes de onda umbral y corriente de fotoelectrones · Madrid · Ordinaria 2026",
+  "statement": "Dos materiales se iluminan con radiación de energía variable y se mide la energía cinética máxima de los fotoelectrones. De la gráfica $E_{c,máx}$ frente a energía del fotón se leen los trabajos de extracción: material 1, $W_1=2\\ \\text{eV}$; material 2, $W_2=3\\ \\text{eV}$.\n\n**(a)** La longitud de onda umbral de ambos materiales.\n**(b)** La energía cinética máxima de los fotoelectrones de cada material si $f=5\\cdot10^{14}\\ \\text{Hz}$.\n**(c)** La corriente de fotoelectrones del material 2 si los fotones tienen $4\\ \\text{eV}$ y el flujo es $2\\cdot10^{15}\\ \\text{fotones}\\cdot\\text{s}^{-1}$ (cada fotón arranca un electrón).",
+  "knowns": [
+   "$W_1 = 2\\ \\text{eV}$, $W_2 = 3\\ \\text{eV}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J}\\cdot\\text{s}$, $e = 1{,}6\\cdot10^{-19}\\ \\text{C}$, $c = 3\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$",
+   "$f = 5\\cdot10^{14}\\ \\text{Hz}$; flujo $\\Phi = 2\\cdot10^{15}\\ \\text{s}^{-1}$"
+  ],
+  "full_solution": "**(a) Longitudes de onda umbral.**\n$W = hc/\\lambda_0 \\Rightarrow \\lambda_0 = hc/W$:\n$$\\lambda_{0,1} = \\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{2\\cdot1{,}6\\cdot10^{-19}} = 6{,}22\\cdot10^{-7}\\ \\text{m}\\ (622\\ \\text{nm})$$\n$$\\lambda_{0,2} = \\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{3\\cdot1{,}6\\cdot10^{-19}} = 4{,}14\\cdot10^{-7}\\ \\text{m}\\ (414\\ \\text{nm})$$\n\n**(b) Energía cinética con $f=5\\cdot10^{14}\\ \\text{Hz}$.**\nLas frecuencias umbral son $f_{0,1}=c/\\lambda_{0,1}=4{,}83\\cdot10^{14}\\ \\text{Hz}$ y $f_{0,2}=c/\\lambda_{0,2}=7{,}24\\cdot10^{14}\\ \\text{Hz}$. Sólo $f>f_{0,1}$, de modo que **sólo el material 1 emite**:\n$$E_{c,máx} = hf - W_1 = 6{,}63\\cdot10^{-34}\\cdot5\\cdot10^{14} - 2\\cdot1{,}6\\cdot10^{-19} = 1{,}2\\cdot10^{-20}\\ \\text{J} \\approx 0{,}07\\ \\text{eV}$$\nEl material 2 no emite ($f<f_{0,2}$).\n\n**(c) Corriente de fotoelectrones (material 2, fotones de $4\\ \\text{eV}$).**\nCon $4\\ \\text{eV}>W_2=3\\ \\text{eV}$ sí hay emisión; cada fotón arranca un electrón:\n$$I = \\Phi\\,e = 2\\cdot10^{15}\\cdot1{,}6\\cdot10^{-19} = 3{,}2\\cdot10^{-4}\\ \\text{A}$$",
+  "answer": "$\\lambda_{0,1}=622\\ \\text{nm}$, $\\lambda_{0,2}=414\\ \\text{nm}$.\nCon $f=5\\cdot10^{14}\\ \\text{Hz}$: sólo emite el material 1, con $E_{c,máx}\\approx1{,}2\\cdot10^{-20}\\ \\text{J}\\approx0{,}07\\ \\text{eV}$; el material 2 no emite.\n$I = 3{,}2\\cdot10^{-4}\\ \\text{A}$.",
+  "common_errors": [
+   "No comprobar si $f$ supera la frecuencia umbral de cada material antes de calcular $E_c$.",
+   "Arrastrar la errata del documento oficial ($0{,}93\\ \\text{eV}$): el valor correcto es $E_{c,máx}=hf-W_1\\approx0{,}07\\ \\text{eV}$.",
+   "Dar corriente en el material 2 con fotones de $f=5\\cdot10^{14}\\ \\text{Hz}$ (ahí no emite); sí lo hace con fotones de $4\\ \\text{eV}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-033",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Serie de Balmer y efecto fotoeléctrico en cesio · Murcia · Extraordinaria 2024",
+  "statement": "**Problema P4.** En una lámpara de hidrógeno se observan dos transiciones de la serie de Balmer: la A ($\\Delta E=3{,}02\\cdot10^{-19}\\ \\text{J}$) y la B ($\\Delta E=7{,}78\\cdot10^{-19}\\ \\text{J}$). La luz incide sobre cesio, cuyo trabajo de extracción es $2{,}1\\ \\text{eV}$.\n\n**(a)** Frecuencias de los fotones de ambas transiciones.\n\n**(b)** ¿Con cuál, A o B, se produce efecto fotoeléctrico en el cesio?\n\n**(c)** Velocidad de los electrones emitidos en ese caso.",
+  "knowns": [
+   "$\\Delta E_A = 3{,}02\\cdot10^{-19}\\ \\text{J}$",
+   "$\\Delta E_B = 7{,}78\\cdot10^{-19}\\ \\text{J}$",
+   "$W = 2{,}1\\ \\text{eV} = 3{,}36\\cdot10^{-19}\\ \\text{J}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** De $\\Delta E=h f$:\n\n$$f_A=\\dfrac{\\Delta E_A}{h}=\\dfrac{3{,}02\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=4{,}56\\cdot10^{14}\\ \\text{Hz}$$\n\n$$f_B=\\dfrac{\\Delta E_B}{h}=\\dfrac{7{,}78\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=1{,}17\\cdot10^{15}\\ \\text{Hz}$$\n\n**(b)** Hay efecto fotoeléctrico si la energía del fotón supera el trabajo de extracción $W=2{,}1\\ \\text{eV}=3{,}36\\cdot10^{-19}\\ \\text{J}$:\n- Transición A: $3{,}02\\cdot10^{-19}\\ \\text{J}<3{,}36\\cdot10^{-19}\\ \\text{J}$ → **no** hay efecto.\n- Transición B: $7{,}78\\cdot10^{-19}\\ \\text{J}>3{,}36\\cdot10^{-19}\\ \\text{J}$ → **sí** hay efecto.\n\n**(c)** Para la transición B, la energía cinética máxima es $E_c=\\Delta E_B-W$:\n\n$$E_c=7{,}78\\cdot10^{-19}-3{,}36\\cdot10^{-19}=4{,}42\\cdot10^{-19}\\ \\text{J}$$\n\n$$v=\\sqrt{\\dfrac{2E_c}{m_e}}=\\sqrt{\\dfrac{2\\cdot4{,}42\\cdot10^{-19}}{9{,}1\\cdot10^{-31}}}=9{,}86\\cdot10^{5}\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $f_A\\approx4{,}56\\cdot10^{14}\\ \\text{Hz}$, $f_B\\approx1{,}17\\cdot10^{15}\\ \\text{Hz}$. **(b)** Solo con la transición B. **(c)** $v\\approx9{,}86\\cdot10^{5}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "No convertir el trabajo de extracción de eV a J antes de comparar.",
+   "Comparar con la longitud de onda en vez de la energía del fotón.",
+   "Olvidar restar $W$ a la energía del fotón para hallar la energía cinética."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-034",
+  "source": "Murcia · Ordinaria 2020",
+  "title": "Efecto fotoeléctrico sobre una medalla de oro y plata · Murcia · Ordinaria 2020",
+  "statement": "Sobre una medalla se hace incidir luz de longitud de onda $\\lambda=250\\ \\text{nm}$ con una intensidad de $10\\ \\text{W}\\cdot\\text{m}^{-2}$ sobre una superficie de $10\\ \\text{cm}^{2}$.\n\n**(a)** Calcule la frecuencia y la energía de cada fotón.\n**(b)** Calcule el número de fotones que inciden por segundo sobre la medalla.\n**(c)** Sabiendo que el trabajo de extracción del oro es $W_{Au}=5{,}1\\ \\text{eV}$ y el de la plata $W_{Ag}=4{,}73\\ \\text{eV}$, razone en cuál se produce efecto fotoeléctrico y calcule la velocidad máxima de los electrones emitidos. ¿Cambia la conclusión al duplicar la intensidad?",
+  "knowns": [
+   "$\\lambda=250\\ \\text{nm}=2{,}5\\cdot10^{-7}\\ \\text{m}$",
+   "intensidad $=10\\ \\text{W}\\cdot\\text{m}^{-2}$ sobre $S=10\\ \\text{cm}^{2}=10^{-3}\\ \\text{m}^{2}$",
+   "$W_{Au}=5{,}1\\ \\text{eV}$, $W_{Ag}=4{,}73\\ \\text{eV}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J}\\cdot\\text{s}$, $c=3\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$, $m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** Frecuencia y energía del fotón:\n$$f=\\dfrac{c}{\\lambda}=\\dfrac{3\\cdot10^{8}}{2{,}5\\cdot10^{-7}}=1{,}2\\cdot10^{15}\\ \\text{Hz}$$\n$$E_\\gamma=h f=6{,}63\\cdot10^{-34}\\cdot1{,}2\\cdot10^{15}=7{,}96\\cdot10^{-19}\\ \\text{J}$$\n\n**(b)** Potencia que incide: $P=10\\ \\text{W}\\cdot\\text{m}^{-2}\\cdot10^{-3}\\ \\text{m}^{2}=0{,}01\\ \\text{W}$. Número de fotones por segundo:\n$$\\dfrac{N}{t}=\\dfrac{P}{E_\\gamma}=\\dfrac{0{,}01}{7{,}96\\cdot10^{-19}}=1{,}26\\cdot10^{16}\\ \\text{fotones/s}$$\n\n**(c)** En eV, $E_\\gamma=\\dfrac{7{,}96\\cdot10^{-19}}{1{,}6\\cdot10^{-19}}=4{,}97\\ \\text{eV}$. Como $4{,}97\\ \\text{eV}<W_{Au}=5{,}1\\ \\text{eV}$ pero $>W_{Ag}=4{,}73\\ \\text{eV}$, sólo hay efecto fotoeléctrico en la plata. La energía cinética máxima:\n$$E_c=E_\\gamma-W_{Ag}=4{,}97-4{,}73=0{,}24\\ \\text{eV}=3{,}9\\cdot10^{-20}\\ \\text{J}$$\n$$v=\\sqrt{\\dfrac{2E_c}{m_e}}=\\sqrt{\\dfrac{2\\cdot3{,}9\\cdot10^{-20}}{9{,}1\\cdot10^{-31}}}\\approx 2{,}9\\cdot10^{5}\\ \\text{m/s}=290\\ \\text{km/s}$$\nAl duplicar la intensidad no cambia nada: aumenta el número de fotones (y la corriente), pero ni la energía de cada fotón ni la velocidad de los electrones dependen de la intensidad, y el oro sigue sin emitir.",
+  "answer": "**(a)** $f=1{,}2\\cdot10^{15}\\ \\text{Hz}$, $E_\\gamma=7{,}96\\cdot10^{-19}\\ \\text{J}=4{,}97\\ \\text{eV}$. **(b)** $1{,}26\\cdot10^{16}\\ \\text{fotones/s}$. **(c)** Sólo en la plata; $v\\approx 2{,}9\\cdot10^{5}\\ \\text{m/s}$. Duplicar la intensidad no altera la conclusión.",
+  "common_errors": [
+   "Creer que al aumentar la intensidad se podría arrancar electrones del oro: el efecto depende de la frecuencia, no de la intensidad.",
+   "Mezclar julios y eV sin convertir al comparar con el trabajo de extracción.",
+   "Calcular el área en $\\text{m}^2$ mal ($10\\ \\text{cm}^2=10^{-3}\\ \\text{m}^2$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-035",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Longitud de onda de De Broglie y cociente de velocidades · Murcia · Ordinaria 2024",
+  "statement": "**Cuestión C4.** Dos partículas, $A$ de masa $m$ y $B$ de masa $3m$, tienen la misma longitud de onda de De Broglie. Determine el cociente $v_B/v_A$.",
+  "knowns": [
+   "$m_A = m$",
+   "$m_B = 3m$",
+   "$\\lambda_A = \\lambda_B$"
+  ],
+  "full_solution": "La longitud de onda de De Broglie de una partícula es $\\lambda=\\dfrac{h}{p}=\\dfrac{h}{mv}$. Igualando las longitudes de onda:\n\n$$\\dfrac{h}{m_A v_A}=\\dfrac{h}{m_B v_B}\\ \\Rightarrow\\ m_A v_A=m_B v_B$$\n\nEs decir, tienen el mismo momento lineal. Despejando el cociente:\n\n$$\\dfrac{v_B}{v_A}=\\dfrac{m_A}{m_B}=\\dfrac{m}{3m}=\\dfrac{1}{3}$$",
+  "answer": "$\\dfrac{v_B}{v_A}=\\dfrac{1}{3}$ (igual longitud de onda implica igual momento lineal).",
+  "common_errors": [
+   "Escribir $\\lambda=h\\,mv$ en vez de $\\lambda=h/(mv)$.",
+   "Obtener $v_B/v_A=3$ por invertir el cociente de masas.",
+   "Pensar que igual $\\lambda$ implica igual velocidad o energía."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-036",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Principio de indeterminación y desintegración radiactiva · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Enuncie el principio de indeterminación de Heisenberg y estime la energía cinética mínima de un protón confinado en una región de tamaño $\\Delta x \\sim 10^{-14}\\ \\text{m}$ (tamaño nuclear). ($m_p = 1{,}7\\cdot10^{-27}\\ \\text{kg}$, $\\hbar = 1{,}05\\cdot10^{-34}\\ \\text{J·s}$).\n\n**(b)** Una muestra radiactiva de periodo de semidesintegración $T = 8\\ \\text{días}$ tiene una actividad inicial $A_0 = 3{,}44\\cdot10^{6}\\ \\text{Bq}$. Calcule cuántos núcleos se han desintegrado al cabo de $24\\ \\text{días}$.",
+  "knowns": [
+   "$\\Delta x \\sim 10^{-14}\\ \\text{m}$, $m_p = 1{,}7\\cdot10^{-27}\\ \\text{kg}$, $\\hbar = 1{,}05\\cdot10^{-34}\\ \\text{J·s}$",
+   "$T = 8\\ \\text{días}$, $A_0 = 3{,}44\\cdot10^{6}\\ \\text{Bq}$, $t = 24\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** El principio de indeterminación establece $\\Delta x\\,\\Delta p \\geq \\dfrac{\\hbar}{2}$. Para un protón confinado en $\\Delta x\\sim10^{-14}\\ \\text{m}$, $\\Delta p\\sim\\dfrac{\\hbar}{2\\,\\Delta x}$, y la energía cinética mínima es\n$$E_c \\sim \\dfrac{(\\Delta p)^2}{2 m_p} = \\dfrac{\\hbar^2}{8\\,m_p\\,(\\Delta x)^2} = \\dfrac{(1{,}05\\cdot10^{-34})^2}{8\\cdot1{,}7\\cdot10^{-27}\\cdot(10^{-14})^2} \\approx 8\\cdot10^{-15}\\ \\text{J} \\approx 5\\cdot10^{4}\\ \\text{eV}$$\n(El valor depende de la definición de incertidumbre usada; basta con el orden de magnitud.)\n\n**(b)** La constante de desintegración es $\\lambda = \\dfrac{\\ln 2}{T} = \\dfrac{\\ln 2}{8\\cdot86400} = 1{,}00\\cdot10^{-6}\\ \\text{s}^{-1}$. Como $A_0 = \\lambda N_0$, el número de núcleos desintegrados en el tiempo $t$ es\n$$\\Delta N = N_0\\left(1 - e^{-\\lambda t}\\right) = \\dfrac{A_0}{\\lambda}\\left(1 - e^{-\\lambda t}\\right)$$\nCon $t = 24\\ \\text{días} = 3\\,T$, $e^{-\\lambda t} = 2^{-3} = 0{,}125$:\n$$\\Delta N = \\dfrac{3{,}44\\cdot10^{6}}{1{,}00\\cdot10^{-6}}\\,(1 - 0{,}125) \\approx 3{,}0\\cdot10^{12}\\ \\text{núcleos}$$",
+  "answer": "**(a)** $E_c \\sim 8\\cdot10^{-15}\\ \\text{J} \\approx 5\\cdot10^{4}\\ \\text{eV}$. **(b)** $\\Delta N \\approx 3{,}0\\cdot10^{12}\\ \\text{núcleos}$.",
+  "common_errors": [
+   "Calcular los núcleos que quedan en vez de los desintegrados $\\Delta N = N_0(1-e^{-\\lambda t})$.",
+   "No pasar $T$ a segundos al hallar $\\lambda$ y $N_0=A_0/\\lambda$.",
+   "Olvidar la relación $A_0=\\lambda N_0$ para obtener $N_0$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-CUAN-037",
+  "source": "Madrid · Modelo 2007",
+  "title": "Fotón emitido en una transición y su longitud de onda en el agua · Madrid · Modelo 2007",
+  "statement": "Un electrón de un átomo salta desde un nivel de energía de $5\\ \\text{eV}$ a otro inferior de $3\\ \\text{eV}$, emitiéndose un fotón. Calcula la frecuencia y la longitud de onda de la radiación emitida si esta se propaga en el agua.",
+  "knowns": [
+   "$\\Delta E=5-3=2\\ \\text{eV}$",
+   "$n_{\\text{agua}}=1{,}33$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**Energía del fotón:** $\\Delta E=2\\ \\text{eV}=2\\cdot1{,}6\\cdot10^{-19}=3{,}2\\cdot10^{-19}\\ \\text{J}.$\n\n**Frecuencia** (es la misma en cualquier medio, porque la fija la fuente):\n$$f=\\dfrac{\\Delta E}{h}=\\dfrac{3{,}2\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=4{,}83\\cdot10^{14}\\ \\text{Hz}.$$\n\n**Longitud de onda en el agua:** la velocidad en el agua es $v=\\dfrac{c}{n}=\\dfrac{3\\cdot10^{8}}{1{,}33}=2{,}26\\cdot10^{8}\\ \\text{m/s}$, luego\n$$\\lambda_{\\text{agua}}=\\dfrac{v}{f}=\\dfrac{2{,}26\\cdot10^{8}}{4{,}83\\cdot10^{14}}=4{,}67\\cdot10^{-7}\\ \\text{m}=467\\ \\text{nm}.$$\n(En el vacío sería $\\lambda_0=c/f\\approx622\\ \\text{nm}$; en el agua se acorta en el factor $n$.)",
+  "answer": "$f=4{,}83\\cdot10^{14}\\ \\text{Hz}$ (igual en todo medio) y $\\lambda_{\\text{agua}}\\approx4{,}67\\cdot10^{-7}\\ \\text{m}=467\\ \\text{nm}$.",
+  "common_errors": [
+   "Cambiar la frecuencia al pasar al agua: la frecuencia no cambia, cambia $\\lambda$.",
+   "Usar $c$ en vez de $v=c/n$ para la longitud de onda en el agua.",
+   "No convertir los eV a julios antes de dividir por $h$."
+  ]
+ }
+]

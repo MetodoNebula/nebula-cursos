@@ -1,0 +1,1077 @@
+[
+ {
+  "block": "campo_gravitatorio",
+  "source": "Madrid · Junio 2022",
+  "title": "Órbita circular de Tianwen-1 en Marte · Madrid · Junio 2022",
+  "statement": "Tianwen-1 es una misión espacial china para aterrizar en Marte. La nave entró en órbita marciana suponiendo órbita circular con periodo de revolución de $12\\ \\text{h}$.\n\n**(a)** Determine la altura sobre la superficie del planeta a la que orbita la nave.\n\n**(b)** Si el módulo de aterrizaje reduce su velocidad orbital a cero y cae en caída libre, ¿a qué velocidad impactaría contra la superficie?",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_M = 6{,}39\\cdot10^{23}\\ \\text{kg}$",
+   "$R_M = 3390\\ \\text{km}$",
+   "$T = 12\\ \\text{h} = 43200\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** En una órbita circular la fuerza gravitatoria es la centrípeta. Combinando $v=\\dfrac{2\\pi r}{T}$ con $\\dfrac{GM_M}{r^2}=\\dfrac{v^2}{r}$ se obtiene la tercera ley de Kepler:\n\n$$r=\\left(\\dfrac{GM_M\\,T^2}{4\\pi^2}\\right)^{1/3}$$\n\nSustituyendo:\n\n$$r=\\left(\\dfrac{6{,}67\\cdot10^{-11}\\cdot 6{,}39\\cdot10^{23}\\cdot(43200)^2}{4\\pi^2}\\right)^{1/3}=1{,}263\\cdot10^{7}\\ \\text{m}=12630\\ \\text{km}$$\n\nLa altura sobre la superficie es:\n\n$$h=r-R_M=12630-3390=9240\\ \\text{km}$$\n\n**(b)** Con velocidad orbital nula, el módulo cae partiendo del reposo desde $r$. Por conservación de la energía mecánica $\\Delta E_p+\\Delta E_c=0$:\n\n$$\\tfrac{1}{2}mv^2=GM_M m\\left(\\dfrac{1}{R_M}-\\dfrac{1}{r}\\right)\\ \\Rightarrow\\ v=\\sqrt{2GM_M\\left(\\dfrac{1}{R_M}-\\dfrac{1}{r}\\right)}$$\n\n$$v=\\sqrt{2\\cdot6{,}67\\cdot10^{-11}\\cdot6{,}39\\cdot10^{23}\\left(\\dfrac{1}{3{,}39\\cdot10^{6}}-\\dfrac{1}{1{,}263\\cdot10^{7}}\\right)}\\approx 4289\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $h\\approx 9240\\ \\text{km}$ (radio orbital $r\\approx 12630\\ \\text{km}$). **(b)** $v\\approx 4{,}29\\cdot10^{3}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Confundir el radio de la órbita $r$ con la altura $h$ sobre la superficie (olvidar restar $R_M$).",
+   "Usar $g$ constante en la caída en vez de la conservación de la energía con potencial $-GMm/r$.",
+   "No pasar el periodo a segundos antes de aplicar la tercera ley de Kepler."
+  ],
+  "figure_suggestion": "Órbita circular de radio r=12630 km alrededor de Marte (R=3390 km); señalar la altura h=9240 km entre superficie y órbita, y la caída radial del módulo hacia la superficie.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Junio 2022",
+  "title": "Nivel de intensidad sonora de un diapasón y decaimiento de potencia · Madrid · Junio 2022",
+  "statement": "Un diapasón emite al golpearlo una onda sonora esférica. El oído del afinador está a $30\\ \\text{cm}$. La potencia sonora inicial es $10^{-4}\\ \\text{W}$ y disminuye con el tiempo.\n\n**(a)** Nivel de intensidad sonora inicial que percibe el afinador.\n\n**(b)** Tiempo que transcurre hasta que deja de oír el diapasón, si $P=P_0\\,e^{-t/\\tau}$ con $\\tau=2\\ \\text{s}$.",
+  "knowns": [
+   "$P_0 = 10^{-4}\\ \\text{W}$",
+   "$d = 0{,}30\\ \\text{m}$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$",
+   "$\\tau = 2\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** La intensidad de una onda esférica reparte la potencia sobre una esfera de radio $d$:\n\n$$I=\\dfrac{P_0}{4\\pi d^2}=\\dfrac{10^{-4}}{4\\pi (0{,}30)^2}=8{,}84\\cdot10^{-5}\\ \\text{W·m}^{-2}$$\n\nEl nivel de intensidad sonora es:\n\n$$\\beta=10\\log_{10}\\!\\left(\\dfrac{I}{I_0}\\right)=10\\log_{10}\\!\\left(\\dfrac{8{,}84\\cdot10^{-5}}{10^{-12}}\\right)=79{,}5\\ \\text{dB}$$\n\n**(b)** El afinador deja de oír cuando la intensidad cae al umbral $I_0$, es decir, cuando la potencia es:\n\n$$P_{\\text{umbral}}=I_0\\,4\\pi d^2=10^{-12}\\cdot4\\pi(0{,}30)^2=1{,}13\\cdot10^{-12}\\ \\text{W}$$\n\nDe la ley de decaimiento $P_{\\text{umbral}}=P_0\\,e^{-t/\\tau}$:\n\n$$t=\\tau\\ln\\!\\left(\\dfrac{P_0}{P_{\\text{umbral}}}\\right)=2\\cdot\\ln\\!\\left(\\dfrac{10^{-4}}{1{,}13\\cdot10^{-12}}\\right)=36{,}6\\ \\text{s}$$",
+  "answer": "**(a)** $I=8{,}84\\cdot10^{-5}\\ \\text{W·m}^{-2}$, $\\beta\\approx 79{,}5\\ \\text{dB}$. **(b)** $t\\approx 36{,}6\\ \\text{s}$.",
+  "common_errors": [
+   "Olvidar el factor $4\\pi d^2$ de la onda esférica y dividir solo por $d^2$.",
+   "Confundir intensidad $I$ con potencia $P$ en la ley exponencial.",
+   "Usar logaritmo neperiano en vez de decimal en la definición de decibelios."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Junio 2022",
+  "title": "Campo y fuerza entre dos hilos paralelos · Madrid · Junio 2022",
+  "statement": "Dos hilos conductores rectilíneos $A$ y $B$ paralelos al eje $x$ pasan por $(0,-4,0)\\ \\text{m}$ y $(0,4,0)\\ \\text{m}$ y transportan $I_A=2\\ \\text{A}$ e $I_B=5\\ \\text{A}$ en sentido $+x$.\n\n**(a)** Vector campo magnético que crea $A$ en la posición de $B$.\n\n**(b)** Fuerza por unidad de longitud que $A$ ejerce sobre $B$, con dirección y sentido.",
+  "knowns": [
+   "$I_A = 2\\ \\text{A}$",
+   "$I_B = 5\\ \\text{A}$",
+   "$d = 8\\ \\text{m}$",
+   "$\\mu_0 = 4\\pi\\cdot10^{-7}\\ \\text{T·m·A}^{-1}$"
+  ],
+  "full_solution": "**(a)** El módulo del campo creado por un hilo recto indefinido a distancia $d=8\\ \\text{m}$ es:\n\n$$B=\\dfrac{\\mu_0 I_A}{2\\pi d}=\\dfrac{4\\pi\\cdot10^{-7}\\cdot2}{2\\pi\\cdot8}=5\\cdot10^{-8}\\ \\text{T}$$\n\nPor la regla de la mano derecha, con $I_A$ en $+x$ y el punto $B$ en $+y$ respecto de $A$, el campo apunta en $+z$:\n\n$$\\vec{B}=5\\cdot10^{-8}\\,\\vec{k}\\ \\text{T}$$\n\n**(b)** La fuerza por unidad de longitud entre dos corrientes paralelas es:\n\n$$\\dfrac{F}{l}=\\dfrac{\\mu_0 I_A I_B}{2\\pi d}=\\dfrac{4\\pi\\cdot10^{-7}\\cdot2\\cdot5}{2\\pi\\cdot8}=2{,}5\\cdot10^{-7}\\ \\text{N·m}^{-1}$$\n\nComo $\\vec{F}=I_B\\,\\vec{l}\\times\\vec{B}$, con $\\vec{l}$ en $+x$ y $\\vec{B}$ en $+z$, la fuerza sobre $B$ va en $-y$ (hacia $A$): corrientes paralelas del mismo sentido se atraen.\n\n$$\\dfrac{\\vec{F}}{l}=-2{,}5\\cdot10^{-7}\\,\\vec{j}\\ \\text{N·m}^{-1}$$",
+  "answer": "**(a)** $\\vec{B}=5\\cdot10^{-8}\\,\\vec{k}\\ \\text{T}$. **(b)** $\\dfrac{\\vec{F}}{l}=-2{,}5\\cdot10^{-7}\\,\\vec{j}\\ \\text{N·m}^{-1}$ (atractiva).",
+  "common_errors": [
+   "Equivocar el sentido del campo o de la fuerza por mal uso de la regla de la mano derecha.",
+   "Creer que corrientes paralelas del mismo sentido se repelen (en realidad se atraen).",
+   "Usar la distancia incorrecta: entre los hilos es $d=8\\ \text{m}$, no $4\\ \text{m}$."
+  ],
+  "figure_suggestion": "Dos hilos paralelos al eje x, A en (0,-4,0) con I_A=2 A y B en (0,4,0) con I_B=5 A, ambas en +x; dibujar B de A en la posición de B (hacia +z) y la fuerza atractiva sobre B (hacia -y).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Madrid · Junio 2022",
+  "title": "Sistema de dos lentes convergentes · Madrid · Junio 2022",
+  "statement": "Para obtener una imagen aumentada de un objeto de $1\\ \\text{mm}$ se usan dos lentes convergentes $A$ y $B$ de focales $2\\ \\text{cm}$ y $2{,}5\\ \\text{cm}$. El objeto está $3\\ \\text{cm}$ a la izquierda de $A$; $B$ está a la derecha de $A$.\n\n**(a)** Tamaño de la imagen que forma $A$ y separación entre lentes para que el sistema dé una imagen final virtual e invertida de $5\\ \\text{mm}$.\n\n**(b)** Trazado de rayos del sistema.",
+  "knowns": [
+   "$f'_A = 2\\ \\text{cm}$",
+   "$f'_B = 2{,}5\\ \\text{cm}$",
+   "$s_A = -3\\ \\text{cm}$",
+   "$y_A = 1\\ \\text{mm}$",
+   "$y'_B = -5\\ \\text{mm}$"
+  ],
+  "full_solution": "**(a)** Con el criterio de signos $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$, para la lente $A$:\n\n$$s'_A=\\left(\\dfrac{1}{f'_A}+\\dfrac{1}{s_A}\\right)^{-1}=\\left(\\dfrac{1}{2}+\\dfrac{1}{-3}\\right)^{-1}=6\\ \\text{cm}$$\n\nEl aumento lateral da el tamaño de la imagen intermedia:\n\n$$y'_A=y_A\\,\\dfrac{s'_A}{s_A}=1\\cdot\\dfrac{6}{-3}=-2\\ \\text{mm}$$\n\nEsa imagen es el objeto de $B$: $y_B=-2\\ \\text{mm}$, y se pide $y'_B=-5\\ \\text{mm}$. De las relaciones de $B$:\n\n$$s_B=f'_B\\left(\\dfrac{y_B}{y'_B}-1\\right)=2{,}5\\left(\\dfrac{-2}{-5}-1\\right)=-1{,}5\\ \\text{cm}$$\n\n$$s'_B=s_B\\,\\dfrac{y'_B}{y_B}=-1{,}5\\cdot\\dfrac{-5}{-2}=-3{,}75\\ \\text{cm}$$\n\nEl signo $s'_B<0$ confirma imagen virtual. La separación entre lentes es:\n\n$$d=s'_A-s_B=6-(-1{,}5)=7{,}5\\ \\text{cm}$$\n\n**(b)** Trazado: desde el objeto, un rayo paralelo al eje por $A$ pasa por $F'_A$; otro por el centro de $A$ sin desviarse; forman $y'_A=-2\\ \\text{mm}$. Esa imagen actúa como objeto de $B$, que al estar dentro de su foco genera una imagen virtual e invertida de $5\\ \\text{mm}$.",
+  "answer": "**(a)** $y'_A=-2\\ \\text{mm}$; separación $d=7{,}5\\ \\text{cm}$ (con $s_B=-1{,}5\\ \\text{cm}$, $s'_B=-3{,}75\\ \\text{cm}$, imagen virtual e invertida de $5\\ \\text{mm}$).",
+  "common_errors": [
+   "Mezclar criterios de signos entre las dos lentes.",
+   "Olvidar que la imagen de $A$ es el objeto de $B$ y que su posición depende de la separación $d$.",
+   "Interpretar mal el signo de $s'_B$: negativo indica imagen virtual, no un error."
+  ],
+  "figure_suggestion": "Diagrama de rayos de dos lentes convergentes A (f'=2 cm) y B (f'=2,5 cm) separadas 7,5 cm; objeto 1 mm a 3 cm de A; imagen intermedia invertida de 2 mm; imagen final virtual e invertida de 5 mm.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Madrid · Junio 2022",
+  "title": "Niveles energéticos del láser de rubí · Madrid · Junio 2022",
+  "statement": "El láser de rubí presenta un sistema de tres niveles. Tras absorber luz de $550\\ \\text{nm}$ (transición $(0)\\to(2)$) emite rojo a $694\\ \\text{nm}$ (transición $(1)\\to(0)$).\n\n**(a)** Frecuencia de los fotones absorbidos y de los emitidos.\n\n**(b)** Diferencia de energía entre los niveles $(2)$ y $(1)$ en electrón-voltios.",
+  "knowns": [
+   "$\\lambda_{02} = 550\\ \\text{nm}$",
+   "$\\lambda_{10} = 694\\ \\text{nm}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$"
+  ],
+  "full_solution": "**(a)** Con $f=\\dfrac{c}{\\lambda}$:\n\n$$f_{02}=\\dfrac{3\\cdot10^{8}}{550\\cdot10^{-9}}=5{,}45\\cdot10^{14}\\ \\text{Hz}$$\n\n$$f_{10}=\\dfrac{3\\cdot10^{8}}{694\\cdot10^{-9}}=4{,}32\\cdot10^{14}\\ \\text{Hz}$$\n\n**(b)** Las energías de los niveles respecto al fundamental son $E=h f$:\n\n$$E_{02}=h f_{02}=6{,}63\\cdot10^{-34}\\cdot5{,}45\\cdot10^{14}=3{,}62\\cdot10^{-19}\\ \\text{J}=2{,}26\\ \\text{eV}$$\n\n$$E_{10}=h f_{10}=2{,}87\\cdot10^{-19}\\ \\text{J}=1{,}79\\ \\text{eV}$$\n\nLa diferencia entre los niveles $(2)$ y $(1)$ es:\n\n$$E_{21}=E_{02}-E_{10}=2{,}26-1{,}79=0{,}47\\ \\text{eV}$$",
+  "answer": "**(a)** $f_{02}=5{,}45\\cdot10^{14}\\ \\text{Hz}$, $f_{10}=4{,}32\\cdot10^{14}\\ \\text{Hz}$. **(b)** $E_{21}=0{,}47\\ \\text{eV}$.",
+  "common_errors": [
+   "No convertir julios a electrón-voltios dividiendo por $e=1{,}6\\cdot10^{-19}$.",
+   "Confundir qué transición corresponde a absorción (550 nm) y cuál a emisión (694 nm).",
+   "Restar longitudes de onda en vez de energías para hallar $E_{21}$."
+  ],
+  "figure_suggestion": "Diagrama de tres niveles (0),(1),(2): flecha de absorción 550 nm de (0) a (2), decaimiento no radiativo (2)->(1), y emisión 694 nm de (1) a (0).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Madrid · Junio 2022",
+  "title": "Campo gravitatorio y caída de una masa puntual · Madrid · Junio 2022",
+  "statement": "Una masa puntual de $5\\ \\text{kg}$ está fija en $P(0,20)\\ \\text{m}$. Otra masa $m$, inicialmente en reposo, está en $Q(100,0)\\ \\text{m}$.\n\n**(a)** Campo gravitatorio creado por la masa de $5\\ \\text{kg}$ en $Q$.\n\n**(b)** Vector velocidad de $m$ cuando pasa por el punto $(50,10)\\ \\text{m}$.",
+  "knowns": [
+   "$M = 5\\ \\text{kg}$",
+   "$P(0,20)\\ \\text{m}$",
+   "$Q(100,0)\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** Distancia $P\\!\\to\\!Q$: $d=\\sqrt{100^2+20^2}=102\\ \\text{m}$. Módulo del campo:\n\n$$g=\\dfrac{GM}{d^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot5}{102^2}=3{,}21\\cdot10^{-14}\\ \\text{m·s}^{-2}$$\n\nEl campo en $Q$ apunta hacia $P$, en dirección $(-100,+20)/102$:\n\n$$g_x=-g\\,\\dfrac{100}{102}=-3{,}14\\cdot10^{-14}\\ \\text{m·s}^{-2},\\qquad g_y=g\\,\\dfrac{20}{102}=6{,}29\\cdot10^{-15}\\ \\text{m·s}^{-2}$$\n\n**(b)** Por conservación de la energía mecánica (parte del reposo). Con $r_1=102\\ \\text{m}$ y $r_2=\\sqrt{50^2+10^2}=51\\ \\text{m}$:\n\n$$v=\\sqrt{2GM\\left(\\dfrac{1}{r_2}-\\dfrac{1}{r_1}\\right)}=2{,}56\\cdot10^{-6}\\ \\text{m·s}^{-1}$$\n\nLa velocidad va dirigida hacia $P$ (misma dirección que el campo en $Q$):\n\n$$v_x=-v\\,\\dfrac{100}{102}=-2{,}51\\cdot10^{-6}\\ \\text{m·s}^{-1},\\qquad v_y=v\\,\\dfrac{20}{102}=5{,}02\\cdot10^{-7}\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $g=3{,}21\\cdot10^{-14}\\ \\text{m·s}^{-2}$, $\\vec{g}=(-3{,}14\\cdot10^{-14}\\,\\vec{i}+6{,}29\\cdot10^{-15}\\,\\vec{j})\\ \\text{m·s}^{-2}$. **(b)** $v\\approx2{,}56\\cdot10^{-6}\\ \\text{m·s}^{-1}$, $\\vec{v}=(-2{,}51\\cdot10^{-6}\\,\\vec{i}+5{,}02\\cdot10^{-7}\\,\\vec{j})\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Calcular mal la distancia entre dos puntos no alineados con los ejes.",
+   "Proyectar la velocidad con los cosenos equivocados (usar la dirección de $Q\to P$).",
+   "Usar $\\Delta E_p=mg\\Delta h$ en lugar del potencial $-GMm/r$."
+  ],
+  "figure_suggestion": "Plano xy con masa de 5 kg en P(0,20); masa m en Q(100,0); vector campo g en Q hacia P y sus componentes; trayectoria de m hacia P pasando por (50,10).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Junio 2022",
+  "title": "Onda sísmica: ecuación y velocidades de oscilación · Madrid · Junio 2022",
+  "statement": "Una onda sísmica se aproxima por $y=y_0\\,\\operatorname{sen}(\\omega t-kx)$. El sismógrafo detecta $f=0{,}73\\ \\text{Hz}$, amplitud $5{,}5\\ \\text{cm}$ y velocidad de propagación $12\\ \\text{km·s}^{-1}$.\n\n**(a)** Longitud de onda y expresión matemática de la onda.\n\n**(b)** Velocidad y aceleración máximas de oscilación de los puntos del medio.",
+  "knowns": [
+   "$f = 0{,}73\\ \\text{Hz}$",
+   "$y_0 = 5{,}5\\ \\text{cm} = 0{,}055\\ \\text{m}$",
+   "$v = 12\\ \\text{km·s}^{-1} = 12000\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Longitud de onda, número de onda y frecuencia angular:\n\n$$\\lambda=\\dfrac{v}{f}=\\dfrac{12000}{0{,}73}=1{,}64\\cdot10^{4}\\ \\text{m}$$\n\n$$k=\\dfrac{2\\pi}{\\lambda}=3{,}82\\cdot10^{-4}\\ \\text{rad·m}^{-1},\\qquad \\omega=2\\pi f=4{,}59\\ \\text{rad·s}^{-1}$$\n\nLa expresión de la onda (SI):\n\n$$y=0{,}055\\,\\operatorname{sen}\\!\\left(4{,}59\\,t-3{,}82\\cdot10^{-4}\\,x\\right)\\ \\text{m}$$\n\n**(b)** Derivando respecto al tiempo, los valores máximos son:\n\n$$v_{\\text{osc,máx}}=y_0\\,\\omega=0{,}055\\cdot4{,}59=0{,}25\\ \\text{m·s}^{-1}$$\n\n$$a_{\\text{osc,máx}}=y_0\\,\\omega^2=0{,}055\\cdot4{,}59^2=1{,}16\\ \\text{m·s}^{-2}$$",
+  "answer": "**(a)** $\\lambda\\approx1{,}64\\cdot10^{4}\\ \\text{m}$; $y=0{,}055\\,\\operatorname{sen}(4{,}59\\,t-3{,}82\\cdot10^{-4}x)\\ \\text{m}$. **(b)** $v_{\\max}\\approx0{,}25\\ \\text{m·s}^{-1}$, $a_{\\max}\\approx1{,}16\\ \\text{m·s}^{-2}$.",
+  "common_errors": [
+   "Confundir la velocidad de propagación de la onda con la velocidad de oscilación de los puntos.",
+   "Olvidar que $v_{\\max}=y_0\\omega$ y $a_{\\max}=y_0\\omega^2$ (no $y_0 k$).",
+   "No pasar la amplitud a metros."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Junio 2022",
+  "title": "Aceleración de iones Ag+ y radio en campo magnético · Madrid · Junio 2022",
+  "statement": "Un haz de iones $\\text{Ag}^+$ se acelera desde el reposo con una diferencia de potencial de $3\\ \\text{kV}$ y entra después en un campo magnético de $200\\ \\text{mT}$ perpendicular a su velocidad.\n\n**(a)** Velocidad que adquieren los iones tras la aceleración.\n\n**(b)** Radio de la trayectoria al penetrar en el campo magnético.",
+  "knowns": [
+   "$V = 3\\ \\text{kV} = 3000\\ \\text{V}$",
+   "$B = 200\\ \\text{mT} = 0{,}2\\ \\text{T}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$M_{Ag} = 107{,}9\\ \\text{u}$",
+   "$1\\ \\text{u} = 1{,}66\\cdot10^{-27}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** La masa del ion es $m=107{,}9\\cdot1{,}66\\cdot10^{-27}=1{,}79\\cdot10^{-25}\\ \\text{kg}$. Por conservación de la energía, $qV=\\tfrac12 mv^2$:\n\n$$v=\\sqrt{\\dfrac{2qV}{m}}=\\sqrt{\\dfrac{2\\cdot1{,}6\\cdot10^{-19}\\cdot3000}{1{,}79\\cdot10^{-25}}}=7{,}32\\cdot10^{4}\\ \\text{m·s}^{-1}$$\n\n**(b)** En el campo magnético la fuerza de Lorentz es centrípeta, $qvB=\\dfrac{mv^2}{R}$:\n\n$$R=\\dfrac{mv}{qB}=\\dfrac{1{,}79\\cdot10^{-25}\\cdot7{,}32\\cdot10^{4}}{1{,}6\\cdot10^{-19}\\cdot0{,}2}=0{,}41\\ \\text{m}$$",
+  "answer": "**(a)** $v\\approx7{,}32\\cdot10^{4}\\ \\text{m·s}^{-1}$. **(b)** $R\\approx0{,}41\\ \\text{m}$.",
+  "common_errors": [
+   "No convertir la masa atómica de unidades $u$ a kg.",
+   "Confundir energía cinética ganada $qV$ con el trabajo del campo magnético (que es nulo).",
+   "Olvidar que el campo magnético no cambia el módulo de la velocidad, solo curva la trayectoria."
+  ],
+  "figure_suggestion": "Selector/espectrómetro: región de aceleración por diferencia de potencial 3 kV seguida de región con B perpendicular; trayectoria circular de radio R=0,41 m del ion Ag+.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Madrid · Junio 2022",
+  "title": "Reflexión total en una fibra óptica · Madrid · Junio 2022",
+  "statement": "Una fibra óptica tiene núcleo de índice $n_N=1{,}46$ y diámetro $D=100\\ \\mu\\text{m}$, con recubrimiento $n_R=1{,}43$. El rayo (1) viaja por el eje; el rayo (2) con el máximo ángulo $\\varphi$ para reflejarse totalmente en la frontera núcleo-recubrimiento.\n\n**(a)** Ángulo $\\varphi$ que forma el rayo (2) con el eje.\n\n**(b)** Longitud $L$ para que (2) vuelva al eje y diferencia de tiempos de llegada entre (1) y (2).",
+  "knowns": [
+   "$n_N = 1{,}46$",
+   "$n_R = 1{,}43$",
+   "$D = 100\\ \\mu\\text{m} = 10^{-4}\\ \\text{m}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** El ángulo crítico en la frontera cumple $n_N\\operatorname{sen}\\theta_C=n_R\\operatorname{sen}90^\\circ$:\n\n$$\\theta_C=\\arcsin\\!\\left(\\dfrac{n_R}{n_N}\\right)=\\arcsin\\!\\left(\\dfrac{1{,}43}{1{,}46}\\right)=78{,}36^\\circ$$\n\nEl ángulo con el eje es el complementario:\n\n$$\\varphi=90^\\circ-\\theta_C=11{,}64^\\circ$$\n\n**(b)** Geométricamente, el rayo sube $D/2$ y baja $D/2$; la longitud axial recorrida hasta volver al eje es:\n\n$$L=\\dfrac{D}{\\tan\\varphi}=\\dfrac{10^{-4}}{\\tan 11{,}64^\\circ}=4{,}86\\cdot10^{-4}\\ \\text{m}$$\n\nLa velocidad en el núcleo es $v=\\dfrac{c}{n_N}=2{,}05\\cdot10^{8}\\ \\text{m·s}^{-1}$. Los tiempos son:\n\n$$t_{(1)}=\\dfrac{L}{v}=2{,}36\\cdot10^{-12}\\ \\text{s},\\qquad t_{(2)}=\\dfrac{L}{v\\cos\\varphi}=2{,}41\\cdot10^{-12}\\ \\text{s}$$\n\n$$\\Delta t=t_{(2)}-t_{(1)}=4{,}96\\cdot10^{-14}\\ \\text{s}$$",
+  "answer": "**(a)** $\\varphi\\approx11{,}64^\\circ$ ($\\theta_C=78{,}36^\\circ$). **(b)** $L\\approx4{,}86\\cdot10^{-4}\\ \\text{m}$, $\\Delta t\\approx4{,}96\\cdot10^{-14}\\ \\text{s}$.",
+  "common_errors": [
+   "Confundir el ángulo con el eje $\u000barphi$ con el ángulo con la normal $\theta_C$ (son complementarios).",
+   "Olvidar que el recorrido real del rayo (2) es $L/\\cos\u000barphi$, no $L$.",
+   "Usar la velocidad de la luz en el vacío $c$ en vez de $c/n_N$ dentro del núcleo."
+  ],
+  "figure_suggestion": "Corte longitudinal de la fibra: núcleo de diámetro D=100 um, rayo (1) axial y rayo (2) a ángulo phi=11,6 grados que rebota por reflexión total en la pared y vuelve al eje tras una longitud L.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Madrid · Junio 2022",
+  "title": "Desintegración del Talio-201 en medicina nuclear · Madrid · Junio 2022",
+  "statement": "El $^{201}\\text{Tl}$ (imagen del músculo cardiaco) tiene periodo de semidesintegración de $73\\ \\text{h}$. La solución intravenosa contiene una actividad inicial de $37\\ \\text{MBq}$ por mililitro.\n\n**(a)** Vida media y constante de desintegración.\n\n**(b)** Número de isótopos y actividad en el paciente un día después de administrarle $5\\ \\text{mL}$.",
+  "knowns": [
+   "$T_{1/2} = 73\\ \\text{h}$",
+   "$A_0 = 37\\ \\text{MBq·mL}^{-1}$",
+   "$V = 5\\ \\text{mL}$",
+   "$t = 24\\ \\text{h}$"
+  ],
+  "full_solution": "**(a)** La vida media es $\\tau=\\dfrac{T_{1/2}}{\\ln 2}$:\n\n$$\\tau=\\dfrac{73}{\\ln 2}=105{,}3\\ \\text{h}=3{,}79\\cdot10^{5}\\ \\text{s}$$\n\nLa constante de desintegración es su inversa:\n\n$$\\lambda=\\dfrac{1}{\\tau}=2{,}64\\cdot10^{-6}\\ \\text{s}^{-1}=9{,}49\\cdot10^{-3}\\ \\text{h}^{-1}$$\n\n**(b)** Actividad inicial administrada:\n\n$$A_0=37\\ \\text{MBq·mL}^{-1}\\cdot5\\ \\text{mL}=1{,}85\\cdot10^{8}\\ \\text{Bq}$$\n\nA las $24\\ \\text{h}$:\n\n$$A=A_0\\,e^{-t/\\tau}=1{,}85\\cdot10^{8}\\,e^{-24/105{,}3}=1{,}47\\cdot10^{8}\\ \\text{Bq}$$\n\nY como $A=\\lambda N$, el número de núcleos sin desintegrar es:\n\n$$N=\\dfrac{A}{\\lambda}=\\dfrac{1{,}47\\cdot10^{8}}{2{,}64\\cdot10^{-6}}=5{,}58\\cdot10^{13}\\ \\text{núcleos}$$",
+  "answer": "**(a)** $\\tau\\approx105{,}3\\ \\text{h}$, $\\lambda\\approx2{,}64\\cdot10^{-6}\\ \\text{s}^{-1}$. **(b)** $A\\approx1{,}47\\cdot10^{8}\\ \\text{Bq}$, $N\\approx5{,}58\\cdot10^{13}$ núcleos.",
+  "common_errors": [
+   "Confundir vida media $\tau=1/\\lambda$ con el periodo de semidesintegración $T_{1/2}$.",
+   "Usar $\\lambda$ y $t$ en unidades de tiempo distintas en la exponencial.",
+   "Olvidar multiplicar la actividad por mililitro por el volumen administrado."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Madrid · Junio 2021",
+  "title": "Potencial, campo y trabajo gravitatorios · Madrid · Junio 2021",
+  "statement": "Una masa puntual de $50\\ \\text{g}$ está en $(8,0)\\ \\text{m}$.\n\n**(a)** Potencial y campo gravitatorios en el punto $(0,6)\\ \\text{m}$ debidos a dicha masa.\n\n**(b)** Trabajo realizado por el campo al trasladar un objeto de $20\\ \\text{g}$ desde $(0,6)\\ \\text{m}$ hasta el origen.",
+  "knowns": [
+   "$M = 50\\ \\text{g} = 0{,}05\\ \\text{kg}$",
+   "$m = 20\\ \\text{g} = 0{,}02\\ \\text{kg}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** Distancia de la masa $(8,0)$ al punto $(0,6)$: $d=\\sqrt{8^2+6^2}=10\\ \\text{m}$. Potencial:\n\n$$V=-\\dfrac{GM}{d}=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot0{,}05}{10}=-3{,}33\\cdot10^{-13}\\ \\text{J·kg}^{-1}$$\n\nMódulo del campo:\n\n$$g=\\dfrac{GM}{d^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot0{,}05}{10^2}=3{,}33\\cdot10^{-14}\\ \\text{N·kg}^{-1}$$\n\nEl campo apunta de $(0,6)$ hacia $(8,0)$, dirección $(8,-6)/10$, con $\\theta=36{,}87^\\circ$:\n\n$$\\vec{g}=(2{,}67\\cdot10^{-14}\\,\\vec{i}-2{,}00\\cdot10^{-14}\\,\\vec{j})\\ \\text{N·kg}^{-1}$$\n\n**(b)** Potencial en el origen ($d'=8\\ \\text{m}$ a la masa): $V(0,0)=-\\dfrac{GM}{8}=-4{,}17\\cdot10^{-13}\\ \\text{J·kg}^{-1}$. El trabajo del campo es $W=-m\\,\\Delta V=-m\\,[V(0,0)-V(0,6)]$:\n\n$$W=-0{,}02\\,[(-4{,}17\\cdot10^{-13})-(-3{,}33\\cdot10^{-13})]=1{,}67\\cdot10^{-15}\\ \\text{J}$$",
+  "answer": "**(a)** $V=-3{,}33\\cdot10^{-13}\\ \\text{J·kg}^{-1}$, $g=3{,}33\\cdot10^{-14}\\ \\text{N·kg}^{-1}$, $\\vec{g}=(2{,}67\\cdot10^{-14}\\,\\vec{i}-2{,}00\\cdot10^{-14}\\,\\vec{j})$. **(b)** $W=1{,}67\\cdot10^{-15}\\ \\text{J}>0$.",
+  "common_errors": [
+   "Confundir potencial (escalar) con campo (vector).",
+   "Error de signo en $W=-m\\Delta V$ para el trabajo del campo gravitatorio.",
+   "Equivocar la dirección del campo (siempre hacia la masa que lo crea)."
+  ],
+  "figure_suggestion": "Plano xy: masa 50 g en (8,0); punto (0,6); vector g con componentes gx=+2,67e-14 y gy=-2,00e-14; ángulo 36,87 grados; desplazamiento de (0,6) al origen.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Junio 2021",
+  "title": "Distancia e intensidad sonora de un cohete · Madrid · Junio 2021",
+  "statement": "Un cohete de fuegos artificiales genera al explotar una onda sonora esférica de potencia $20\\ \\text{mW}$. Un espectador oye la explosión $1{,}5\\ \\text{s}$ después de verla.\n\n**(a)** Distancia al cohete e intensidad del sonido en la posición del espectador.\n\n**(b)** Nivel de intensidad sonora si explotan $10$ cohetes simultáneamente.",
+  "knowns": [
+   "$P = 20\\ \\text{mW} = 0{,}02\\ \\text{W}$",
+   "$t = 1{,}5\\ \\text{s}$",
+   "$v_s = 340\\ \\text{m·s}^{-1}$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "**(a)** La luz es casi instantánea, luego el retardo es el del sonido:\n\n$$d=v_s\\,t=340\\cdot1{,}5=510\\ \\text{m}$$\n\nIntensidad de la onda esférica:\n\n$$I=\\dfrac{P}{4\\pi d^2}=\\dfrac{0{,}02}{4\\pi(510)^2}=6{,}12\\cdot10^{-9}\\ \\text{W·m}^{-2}$$\n\n**(b)** Con $10$ cohetes, $P_{\\text{total}}=0{,}2\\ \\text{W}$ e $I_{\\text{total}}=6{,}12\\cdot10^{-8}\\ \\text{W·m}^{-2}$. El nivel es:\n\n$$\\beta=10\\log_{10}\\!\\left(\\dfrac{I_{\\text{total}}}{I_0}\\right)=10\\log_{10}\\!\\left(\\dfrac{6{,}12\\cdot10^{-8}}{10^{-12}}\\right)=47{,}9\\ \\text{dB}$$",
+  "answer": "**(a)** $d=510\\ \\text{m}$, $I=6{,}12\\cdot10^{-9}\\ \\text{W·m}^{-2}$. **(b)** $\\beta\\approx47{,}9\\ \\text{dB}$.",
+  "common_errors": [
+   "No darse cuenta de que el retardo visto-oído lo marca la velocidad del sonido.",
+   "Sumar niveles en dB en vez de sumar intensidades (o potencias) de los 10 cohetes.",
+   "Olvidar el $4\\pi d^2$ de la onda esférica."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Junio 2021",
+  "title": "Teorema de Gauss para una carga puntual · Madrid · Junio 2021",
+  "statement": "Una carga puntual de $2\\ \\mu\\text{C}$ está en el origen.\n\n**(a)** Mediante el teorema de Gauss, flujo del campo eléctrico a través de una superficie esférica de $10\\ \\text{mm}$ de diámetro centrada en el origen.\n\n**(b)** Con ese flujo, módulo del campo eléctrico a $5\\ \\text{mm}$ de la carga.",
+  "knowns": [
+   "$q = 2\\ \\mu\\text{C} = 2\\cdot10^{-6}\\ \\text{C}$",
+   "$r = 5\\ \\text{mm} = 5\\cdot10^{-3}\\ \\text{m}$",
+   "$\\varepsilon_0 = 8{,}85\\cdot10^{-12}\\ \\text{C}^2\\text{·N}^{-1}\\text{·m}^{-2}$"
+  ],
+  "full_solution": "**(a)** El teorema de Gauss da el flujo según la carga encerrada, independiente del tamaño de la superficie:\n\n$$\\Phi=\\dfrac{q_{\\text{enc}}}{\\varepsilon_0}=\\dfrac{2\\cdot10^{-6}}{8{,}85\\cdot10^{-12}}=2{,}26\\cdot10^{5}\\ \\text{N·m}^2\\text{·C}^{-1}$$\n\n**(b)** Para la esfera centrada en la carga, $\\vec{E}$ es radial y uniforme sobre ella, luego $\\Phi=E\\cdot4\\pi r^2$:\n\n$$E=\\dfrac{\\Phi}{4\\pi r^2}=\\dfrac{2{,}26\\cdot10^{5}}{4\\pi(5\\cdot10^{-3})^2}=7{,}20\\cdot10^{8}\\ \\text{N·C}^{-1}$$",
+  "answer": "**(a)** $\\Phi=2{,}26\\cdot10^{5}\\ \\text{N·m}^2\\text{·C}^{-1}$. **(b)** $E=7{,}20\\cdot10^{8}\\ \\text{N·C}^{-1}$.",
+  "common_errors": [
+   "Usar el diámetro ($10\\ \text{mm}$) como radio al calcular el campo.",
+   "Creer que el flujo depende del radio de la superficie gaussiana.",
+   "Confundir $\u000barepsilon_0$ con $1/(4\\pi\u000barepsilon_0)=k$."
+  ],
+  "figure_suggestion": "Carga puntual +2 uC en el origen con una superficie gaussiana esférica de 10 mm de diámetro; líneas de campo radiales salientes y cálculo de E a r=5 mm.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Madrid · Junio 2021",
+  "title": "Lente de 40 dioptrías e imagen en el infinito · Madrid · Junio 2021",
+  "statement": "Un objeto vertical de $2\\ \\text{mm}$ está $15\\ \\text{cm}$ a la izquierda de una lente convergente de $40\\ \\text{dioptrías}$.\n\n**(a)** Posición y tamaño de la imagen que forma la lente.\n\n**(b)** Posición de una segunda lente convergente de $6\\ \\text{cm}$ de focal, a la derecha de la primera, para que el sistema genere una imagen en el infinito.",
+  "knowns": [
+   "$y = 2\\ \\text{mm}$",
+   "$s = -15\\ \\text{cm}$",
+   "$P = 40\\ \\text{D} \\Rightarrow f'_1 = 2{,}5\\ \\text{cm}$",
+   "$f'_2 = 6\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** La focal de la primera lente es $f'_1=\\dfrac{1}{P}=\\dfrac{1}{40}=0{,}025\\ \\text{m}=2{,}5\\ \\text{cm}$. Con $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$:\n\n$$s'=\\left(\\dfrac{1}{f'_1}+\\dfrac{1}{s}\\right)^{-1}=\\left(\\dfrac{1}{2{,}5}+\\dfrac{1}{-15}\\right)^{-1}=3\\ \\text{cm}$$\n\nEl aumento es $M=\\dfrac{s'}{s}=\\dfrac{3}{-15}=-0{,}2$, luego:\n\n$$y'=M\\,y=-0{,}2\\cdot2=-0{,}4\\ \\text{mm}$$\n\n**(b)** Para que la imagen final esté en el infinito, la imagen dada por la primera lente debe situarse en el foco objeto de la segunda. Por tanto, la separación entre lentes es:\n\n$$d=s'+f'_2=3+6=9\\ \\text{cm}$$",
+  "answer": "**(a)** $s'=3\\ \\text{cm}$, $y'=-0{,}4\\ \\text{mm}$ (imagen real, invertida y menor). **(b)** $d=9\\ \\text{cm}$.",
+  "common_errors": [
+   "No invertir la potencia para obtener la focal ($f'=1/P$) o mezclar unidades.",
+   "No ver que imagen en el infinito exige que la imagen intermedia caiga en el foco de la segunda lente.",
+   "Error de signos en la ecuación de las lentes delgadas."
+  ],
+  "figure_suggestion": "Dos lentes convergentes separadas 9 cm: la primera (f'=2,5 cm) forma imagen real a 3 cm; esa imagen está en el foco de la segunda (f'=6 cm), que emite rayos paralelos (imagen en el infinito).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Madrid · Junio 2021",
+  "title": "Transiciones en un sistema de tres niveles · Madrid · Junio 2021",
+  "statement": "Un material de tres niveles absorbe $450\\ \\text{nm}$ para pasar del fundamental al segundo nivel, y emite $600\\ \\text{nm}$ al decaer el primer nivel al fundamental.\n\n**(a)** Diferencias de energía entre el primer nivel y el fundamental, y entre el segundo y el fundamental, en eV.\n\n**(b)** Energía por unidad de tiempo emitida si el material emite $4\\cdot10^{15}$ fotones por segundo.",
+  "knowns": [
+   "$\\lambda_{02} = 450\\ \\text{nm}$",
+   "$\\lambda_{10} = 600\\ \\text{nm}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Con $\\Delta E=h\\dfrac{c}{\\lambda}$. Para la absorción $(0)\\to(2)$ a $450\\ \\text{nm}$:\n\n$$E_2-E_0=\\dfrac{hc}{\\lambda_{02}}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{450\\cdot10^{-9}}=4{,}42\\cdot10^{-19}\\ \\text{J}=2{,}76\\ \\text{eV}$$\n\nPara la emisión $(1)\\to(0)$ a $600\\ \\text{nm}$:\n\n$$E_1-E_0=\\dfrac{hc}{\\lambda_{10}}=3{,}31\\cdot10^{-19}\\ \\text{J}=2{,}07\\ \\text{eV}$$\n\n**(b)** La potencia emitida es el flujo de fotones por la energía de cada fotón ($600\\ \\text{nm}$):\n\n$$P=N\\cdot E_{\\text{fotón}}=4\\cdot10^{15}\\cdot3{,}31\\cdot10^{-19}=1{,}33\\cdot10^{-3}\\ \\text{W}$$",
+  "answer": "**(a)** $E_1-E_0=2{,}07\\ \\text{eV}$, $E_2-E_0=2{,}76\\ \\text{eV}$. **(b)** $P\\approx1{,}33\\cdot10^{-3}\\ \\text{W}$.",
+  "common_errors": [
+   "Asociar los $450\\ \text{nm}$ a la emisión en lugar de a la absorción.",
+   "No convertir julios a eV.",
+   "Usar la longitud de onda equivocada ($450$ vs $600\\ \text{nm}$) en la potencia emitida."
+  ],
+  "figure_suggestion": "Diagrama de tres niveles (0),(1),(2): absorción 450 nm de (0) a (2) y emisión 600 nm de (1) a (0).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Madrid · Junio 2021",
+  "title": "Sonda en órbita de Saturno y energía de escape · Madrid · Junio 2021",
+  "statement": "Una sonda de $3500\\ \\text{kg}$ orbita Saturno en círculo, con una revolución cada $36\\ \\text{h}$.\n\n**(a)** Velocidad orbital y energía mecánica de la sonda.\n\n**(b)** Energía mínima necesaria para que abandone el campo gravitatorio del planeta.",
+  "knowns": [
+   "$m = 3500\\ \\text{kg}$",
+   "$T = 36\\ \\text{h} = 129600\\ \\text{s}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_S = 5{,}68\\cdot10^{26}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** De la tercera ley de Kepler, $r=\\left(\\dfrac{GM_S T^2}{4\\pi^2}\\right)^{1/3}=2{,}53\\cdot10^{8}\\ \\text{m}$. La velocidad orbital:\n\n$$v=\\dfrac{2\\pi r}{T}=\\dfrac{2\\pi\\cdot2{,}53\\cdot10^{8}}{129600}=1{,}22\\cdot10^{4}\\ \\text{m·s}^{-1}$$\n\nLa energía mecánica de una órbita circular es:\n\n$$E_m=-\\dfrac{GM_S m}{2r}=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot5{,}68\\cdot10^{26}\\cdot3500}{2\\cdot2{,}53\\cdot10^{8}}=-2{,}62\\cdot10^{11}\\ \\text{J}$$\n\n**(b)** Para escapar, la energía mecánica final debe ser nula, luego hay que aportar:\n\n$$E_{\\text{sum}}=0-E_m=2{,}62\\cdot10^{11}\\ \\text{J}$$",
+  "answer": "**(a)** $v\\approx1{,}22\\cdot10^{4}\\ \\text{m·s}^{-1}$, $E_m\\approx-2{,}62\\cdot10^{11}\\ \\text{J}$. **(b)** $E_{\\text{sum}}\\approx2{,}62\\cdot10^{11}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar $E_m=-GMm/r$ en vez de $-GMm/(2r)$ para la órbita.",
+   "Olvidar pasar el periodo a segundos.",
+   "Confundir la energía de escape desde la órbita con la velocidad de escape desde la superficie."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Junio 2021",
+  "title": "Onda electromagnética en un medio material · Madrid · Junio 2021",
+  "statement": "El campo eléctrico de una onda EM que se propaga en $+x$ es $E(x,t)=4\\cos(3{,}43\\cdot10^{15}\\,t-1{,}52\\cdot10^{7}\\,x)\\ \\text{N·C}^{-1}$ (SI).\n\n**(a)** Frecuencia y longitud de onda.\n\n**(b)** Velocidad de propagación e índice de refracción del medio.",
+  "knowns": [
+   "$\\omega = 3{,}43\\cdot10^{15}\\ \\text{rad·s}^{-1}$",
+   "$k = 1{,}52\\cdot10^{7}\\ \\text{rad·m}^{-1}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** De la onda se leen $\\omega$ y $k$. La frecuencia y la longitud de onda:\n\n$$f=\\dfrac{\\omega}{2\\pi}=\\dfrac{3{,}43\\cdot10^{15}}{2\\pi}=5{,}46\\cdot10^{14}\\ \\text{Hz}$$\n\n$$\\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{1{,}52\\cdot10^{7}}=4{,}13\\cdot10^{-7}\\ \\text{m}$$\n\n**(b)** Velocidad de fase e índice de refracción:\n\n$$v=\\dfrac{\\omega}{k}=\\dfrac{3{,}43\\cdot10^{15}}{1{,}52\\cdot10^{7}}=2{,}26\\cdot10^{8}\\ \\text{m·s}^{-1},\\qquad n=\\dfrac{c}{v}=\\dfrac{3\\cdot10^{8}}{2{,}26\\cdot10^{8}}=1{,}33$$",
+  "answer": "**(a)** $f=5{,}46\\cdot10^{14}\\ \\text{Hz}$, $\\lambda=4{,}13\\cdot10^{-7}\\ \\text{m}$. **(b)** $v=2{,}26\\cdot10^{8}\\ \\text{m·s}^{-1}$, $n=1{,}33$.",
+  "common_errors": [
+   "Confundir $\\omega$ con $f$ y $k$ con $\\lambda$ (olvidar el factor $2\\pi$).",
+   "Calcular $n=v/c$ en lugar de $c/v$.",
+   "Olvidar que en un medio material $v<c$, luego $n>1$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Junio 2021",
+  "title": "Campo de un hilo y fuerza de Lorentz sobre un electrón · Madrid · Junio 2021",
+  "statement": "Un hilo rectilíneo indefinido a lo largo del eje $x$ transporta $25\\ \\text{A}$ en sentido $+x$.\n\n**(a)** Campo magnético creado por el hilo en $(0,5,0)\\ \\text{cm}$.\n\n**(b)** Fuerza magnética sobre un electrón en ese punto con velocidad $1000\\ \\text{m·s}^{-1}$ en sentido $+y$.",
+  "knowns": [
+   "$I = 25\\ \\text{A}$",
+   "$r = 5\\ \\text{cm} = 0{,}05\\ \\text{m}$",
+   "$v = 1000\\ \\text{m·s}^{-1}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$\\mu_0 = 4\\pi\\cdot10^{-7}\\ \\text{T·m·A}^{-1}$"
+  ],
+  "full_solution": "**(a)** Módulo del campo del hilo recto:\n\n$$B=\\dfrac{\\mu_0 I}{2\\pi r}=\\dfrac{4\\pi\\cdot10^{-7}\\cdot25}{2\\pi\\cdot0{,}05}=10^{-4}\\ \\text{T}$$\n\nCon $I$ en $+x$ y el punto en $+y$, por la regla de la mano derecha el campo va en $+z$:\n\n$$\\vec{B}=10^{-4}\\,\\vec{k}\\ \\text{T}$$\n\n**(b)** La fuerza de Lorentz sobre el electrón ($q=-e$), con $\\vec{v}=1000\\,\\vec{j}$:\n\n$$\\vec{F}=q\\,\\vec{v}\\times\\vec{B}=(-1{,}6\\cdot10^{-19})(1000\\,\\vec{j})\\times(10^{-4}\\,\\vec{k})=-1{,}6\\cdot10^{-20}\\,\\vec{i}\\ \\text{N}$$\n\n(se ha usado $\\vec{j}\\times\\vec{k}=\\vec{i}$).",
+  "answer": "**(a)** $\\vec{B}=10^{-4}\\,\\vec{k}\\ \\text{T}$. **(b)** $\\vec{F}=-1{,}6\\cdot10^{-20}\\,\\vec{i}\\ \\text{N}$.",
+  "common_errors": [
+   "No incluir el signo negativo de la carga del electrón en $\u000bec{F}=q\u000bec{v}\times\u000bec{B}$.",
+   "Equivocar el producto vectorial $\u000bec{j}\times\u000bec{k}=\u000bec{i}$.",
+   "Usar $r$ en cm sin pasar a metros."
+  ],
+  "figure_suggestion": "Hilo sobre el eje x con I=25 A en +x; punto (0,5,0) cm donde B apunta en +z; electrón con v en +y y fuerza resultante en -x.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Madrid · Junio 2021",
+  "title": "Refracción de un láser y posibilidad de reflexión total · Madrid · Junio 2021",
+  "statement": "Un láser de $488\\ \\text{nm}$ en el vacío incide desde el aire sobre un material de índice $1{,}55$. El rayo incidente y el reflejado forman $60^\\circ$ entre sí.\n\n**(a)** Frecuencia y longitud de onda del rayo en el aire y dentro del material.\n\n**(b)** Ángulo entre el rayo refractado y el reflejado. ¿Existe ángulo de incidencia con reflexión total?",
+  "knowns": [
+   "$\\lambda_0 = 488\\ \\text{nm}$",
+   "$n = 1{,}55$",
+   "$n_{\\text{aire}} = 1$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** La frecuencia no cambia con el medio:\n\n$$f=\\dfrac{c}{\\lambda_0}=\\dfrac{3\\cdot10^{8}}{488\\cdot10^{-9}}=6{,}15\\cdot10^{14}\\ \\text{Hz}$$\n\nEn el aire $\\lambda_0=488\\ \\text{nm}$; dentro del material:\n\n$$\\lambda=\\dfrac{\\lambda_0}{n}=\\dfrac{488}{1{,}55}=315\\ \\text{nm}=3{,}15\\cdot10^{-7}\\ \\text{m}$$\n\n**(b)** Como incidente y reflejado forman $60^\\circ$ y son simétricos respecto a la normal, $\\theta_i=30^\\circ$. Por la ley de Snell:\n\n$$\\operatorname{sen}\\theta_t=\\dfrac{n_{\\text{aire}}\\operatorname{sen}\\theta_i}{n}=\\dfrac{\\operatorname{sen}30^\\circ}{1{,}55}\\ \\Rightarrow\\ \\theta_t=18{,}82^\\circ$$\n\nEl ángulo entre el rayo reflejado y el refractado es $180^\\circ-(\\theta_r+\\theta_t)=180^\\circ-(30^\\circ+18{,}82^\\circ)=131{,}18^\\circ$.\n\nNo existe reflexión total: al pasar del aire ($n=1$) al material más denso ($n=1{,}55$) no hay ángulo crítico, pues $\\operatorname{sen}\\theta_c=n/n_{\\text{aire}}=1{,}55>1$, imposible.",
+  "answer": "**(a)** $f=6{,}15\\cdot10^{14}\\ \\text{Hz}$; $\\lambda_{\\text{aire}}=488\\ \\text{nm}$, $\\lambda_{\\text{medio}}=315\\ \\text{nm}$. **(b)** ángulo $\\approx131{,}2^\\circ$; no hay reflexión total (del aire al medio más denso).",
+  "common_errors": [
+   "Tomar $60^\\circ$ como ángulo de incidencia en vez de la mitad.",
+   "Buscar reflexión total en el sentido aire→medio denso (solo puede haberla del denso al menos denso).",
+   "Cambiar la frecuencia al cambiar de medio (es $\\lambda$ la que cambia, no $f$)."
+  ],
+  "figure_suggestion": "Interfaz aire-material (n=1,55): rayo incidente a 30 grados, reflejado a 30 grados (60 grados entre ambos) y refractado a 18,82 grados; marcar el ángulo de 131,18 grados entre reflejado y refractado.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Madrid · Junio 2021",
+  "title": "Vida media, actividad y ley de desintegración · Madrid · Junio 2021",
+  "statement": "Un isótopo radiactivo tiene periodo de semidesintegración de $5730\\ \\text{años}$.\n\n**(a)** Vida media y constante radiactiva.\n\n**(b)** Si una muestra tiene $5\\cdot10^{20}$ átomos radiactivos, actividad inicial y tiempo para que la actividad se reduzca a la décima parte.",
+  "knowns": [
+   "$T_{1/2} = 5730\\ \\text{años}$",
+   "$N_0 = 5\\cdot10^{20}\\ \\text{átomos}$"
+  ],
+  "full_solution": "**(a)** Vida media:\n\n$$\\tau=\\dfrac{T_{1/2}}{\\ln 2}=\\dfrac{5730}{\\ln 2}=8267\\ \\text{años}\\approx2{,}61\\cdot10^{11}\\ \\text{s}$$\n\nConstante radiactiva (inversa de la vida media):\n\n$$\\lambda=\\dfrac{1}{\\tau}=1{,}21\\cdot10^{-4}\\ \\text{años}^{-1}=3{,}84\\cdot10^{-12}\\ \\text{s}^{-1}$$\n\n**(b)** Actividad inicial $A_0=\\lambda N_0$:\n\n$$A_0=3{,}84\\cdot10^{-12}\\cdot5\\cdot10^{20}=1{,}92\\cdot10^{9}\\ \\text{Bq}$$\n\nPara $A=A_0/10$, de $A=A_0 e^{-t/\\tau}$:\n\n$$t=\\tau\\ln 10=8267\\cdot\\ln 10\\approx1{,}9\\cdot10^{4}\\ \\text{años}=6{,}00\\cdot10^{11}\\ \\text{s}$$",
+  "answer": "**(a)** $\\tau\\approx8267\\ \\text{años}$, $\\lambda\\approx3{,}84\\cdot10^{-12}\\ \\text{s}^{-1}$. **(b)** $A_0\\approx1{,}92\\cdot10^{9}\\ \\text{Bq}$, $t\\approx1{,}9\\cdot10^{4}\\ \\text{años}$.",
+  "common_errors": [
+   "Confundir vida media $\tau$ con periodo de semidesintegración.",
+   "Usar $\\lambda$ en años pero $N_0$ sin tener en cuenta las unidades de la actividad (Bq en $\text{s}^{-1}$).",
+   "Para reducir a $1/10$ usar $\\ln 2$ en vez de $\\ln 10$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Energía potencial gravitatoria (teoría) · Murcia · Ordinaria 2024",
+  "statement": "**Teoría T1.** Explique el concepto de energía potencial gravitatoria.",
+  "knowns": [],
+  "full_solution": "La fuerza gravitatoria es **conservativa**, por lo que puede asociarse a ella una energía potencial $E_p$ tal que el trabajo que realiza el campo entre dos puntos es $W=-\\Delta E_p=E_{p,i}-E_{p,f}$.\n\nPara dos masas puntuales $M$ y $m$ separadas una distancia $r$, tomando el origen de energías en el infinito ($E_p(\\infty)=0$), la energía potencial es:\n\n$$E_p=-\\dfrac{GMm}{r}$$\n\nEs **negativa** porque se ha de aportar energía para separar las masas hasta el infinito; mide el trabajo (cambiado de signo) necesario para traer $m$ desde el infinito hasta $r$. Se relaciona con el potencial gravitatorio $V=-\\dfrac{GM}{r}$ mediante $E_p=mV$.\n\nPropiedades: solo depende de las posiciones (no del camino); disminuye al acercarse las masas (el campo hace trabajo positivo) y aumenta (se hace menos negativa) al alejarlas. Para alturas pequeñas cerca de la superficie terrestre se recupera la aproximación $E_p\\approx mgh$.",
+  "answer": "$E_p=-\\dfrac{GMm}{r}$, negativa, con origen en el infinito; fuerza conservativa, $W_{\\text{campo}}=-\\Delta E_p$.",
+  "common_errors": [
+   "Escribir $E_p=+GMm/r$ (olvidar el signo negativo).",
+   "Confundir energía potencial $E_p=mV$ con el potencial $V$.",
+   "Usar $mgh$ lejos de la superficie, donde $g$ ya no es constante."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Inducción electromagnética: leyes de Faraday y Lenz (teoría) · Murcia · Ordinaria 2024",
+  "statement": "**Teoría T2.** Enuncie las leyes de Faraday y de Lenz de la inducción electromagnética.",
+  "knowns": [],
+  "full_solution": "**Ley de Faraday.** Toda variación del flujo magnético $\\Phi=\\displaystyle\\int \\vec{B}\\cdot d\\vec{S}$ a través de un circuito induce en él una fuerza electromotriz (fem) proporcional a la rapidez con que cambia dicho flujo:\n\n$$\\varepsilon=-\\dfrac{d\\Phi}{dt}$$\n\nPara una bobina de $N$ espiras, $\\varepsilon=-N\\dfrac{d\\Phi}{dt}$. El flujo puede variar por cambio de $B$, del área $S$ o del ángulo entre $\\vec{B}$ y $\\vec{S}$.\n\n**Ley de Lenz.** El signo negativo indica el sentido de la corriente inducida: esta se opone a la variación de flujo que la genera. La corriente inducida crea un campo magnético que tiende a mantener el flujo (si el flujo aumenta, se opone; si disminuye, lo refuerza). Es una consecuencia de la conservación de la energía: el sistema reacciona oponiéndose al cambio, de modo que hay que realizar trabajo para producir la corriente.",
+  "answer": "Faraday: $\\varepsilon=-\\dfrac{d\\Phi}{dt}$ (fem proporcional a la variación de flujo). Lenz: la corriente inducida se opone a la variación de flujo (signo negativo), por conservación de la energía.",
+  "common_errors": [
+   "Olvidar el signo negativo (ley de Lenz) o no justificar el sentido de la corriente.",
+   "No distinguir las tres causas de variación de flujo ($B$, $S$, ángulo).",
+   "Confundir fem inducida con intensidad inducida."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Clases de ondas (teoría) · Murcia · Ordinaria 2024",
+  "statement": "**Teoría T3.** Clasifique los distintos tipos de ondas.",
+  "knowns": [],
+  "full_solution": "Una onda es la propagación de una perturbación que transporta energía y cantidad de movimiento sin transporte neto de materia. Se clasifican según varios criterios:\n\n**Según el medio de propagación:**\n- *Mecánicas*: necesitan un medio material (sonido, ondas en cuerdas, sísmicas, en el agua).\n- *Electromagnéticas*: se propagan también en el vacío (luz, ondas de radio, rayos X); son campos $\\vec{E}$ y $\\vec{B}$ oscilantes.\n\n**Según la dirección de vibración respecto a la de propagación:**\n- *Transversales*: la perturbación es perpendicular a la propagación (luz, onda en una cuerda).\n- *Longitudinales*: la perturbación es paralela a la propagación (sonido).\n\n**Según las dimensiones de propagación:** unidimensionales (cuerda), bidimensionales (superficie del agua) y tridimensionales (sonido, luz).\n\n**Según su frente de onda:** planas, cilíndricas o esféricas.\n\nAdemás pueden distinguirse ondas *armónicas* (perturbación sinusoidal) y, por su duración, *pulsos* frente a *trenes de onda*.",
+  "answer": "Por el medio: mecánicas y electromagnéticas. Por la vibración: transversales y longitudinales. Por las dimensiones: 1D, 2D y 3D. Por el frente: planas, cilíndricas, esféricas.",
+  "common_errors": [
+   "Decir que todas las ondas necesitan medio material (las EM no).",
+   "Clasificar el sonido como transversal (es longitudinal).",
+   "Confundir onda transversal/longitudinal con mecánica/electromagnética."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "relatividad",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Relatividad especial: postulados y repercusiones (teoría) · Murcia · Ordinaria 2024",
+  "statement": "**Teoría T4.** Enuncie los postulados de la relatividad especial y sus principales repercusiones.",
+  "knowns": [],
+  "full_solution": "**Postulados de Einstein (1905):**\n1. *Principio de relatividad*: las leyes de la física son las mismas en todos los sistemas de referencia inerciales.\n2. *Constancia de la velocidad de la luz*: la velocidad de la luz en el vacío $c$ es la misma para todos los observadores inerciales, independientemente del movimiento de la fuente o del observador.\n\n**Repercusiones principales** (con $\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}$):\n\n- *Dilatación del tiempo*: un intervalo propio $\\Delta t_0$ se mide dilatado por otro observador, $\\Delta t=\\gamma\\,\\Delta t_0$.\n- *Contracción de la longitud*: una longitud propia $L_0$ se mide contraída en la dirección del movimiento, $L=\\dfrac{L_0}{\\gamma}$.\n- *Relatividad de la simultaneidad*: sucesos simultáneos en un sistema no lo son en otro.\n- *Equivalencia masa-energía*: $E=mc^2$; la energía total es $E=\\gamma m c^2$ y el momento $p=\\gamma m v$.\n- Ningún cuerpo con masa puede alcanzar la velocidad $c$.",
+  "answer": "Postulados: relatividad de las leyes físicas y constancia de $c$. Repercusiones: dilatación del tiempo ($\\Delta t=\\gamma\\Delta t_0$), contracción de longitudes ($L=L_0/\\gamma$), relatividad de la simultaneidad y $E=mc^2$.",
+  "common_errors": [
+   "Invertir la dilatación/contracción ($t$ se dilata, $L$ se contrae).",
+   "Creer que la masa cambia la velocidad de la luz.",
+   "Olvidar que $c$ es un límite inalcanzable para cuerpos con masa."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Periodo y velocidad orbital de la Luna · Murcia · Ordinaria 2024",
+  "statement": "**Cuestión C1.** Calcule el periodo (en días) y la velocidad orbital de la Luna en su trayectoria alrededor de la Tierra.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 6{,}0\\cdot10^{24}\\ \\text{kg}$",
+   "$M_L = 7{,}3\\cdot10^{22}\\ \\text{kg}$",
+   "$r = 384000\\ \\text{km} = 3{,}84\\cdot10^{8}\\ \\text{m}$"
+  ],
+  "full_solution": "La atracción gravitatoria de la Tierra actúa como fuerza centrípeta de la órbita circular de la Luna:\n\n$$\\dfrac{GM_T M_L}{r^2}=M_L\\dfrac{v^2}{r}\\ \\Rightarrow\\ v=\\sqrt{\\dfrac{GM_T}{r}}=\\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot6{,}0\\cdot10^{24}}{3{,}84\\cdot10^{8}}}=1{,}02\\cdot10^{3}\\ \\text{m·s}^{-1}$$\n\nEl periodo se obtiene de $v=\\dfrac{2\\pi r}{T}$:\n\n$$T=\\dfrac{2\\pi r}{v}=\\dfrac{2\\pi\\cdot3{,}84\\cdot10^{8}}{1{,}02\\cdot10^{3}}=2{,}36\\cdot10^{6}\\ \\text{s}$$\n\nPasando a días:\n\n$$T=\\dfrac{2{,}36\\cdot10^{6}}{86400}\\approx27{,}4\\ \\text{días}$$",
+  "answer": "$v\\approx1{,}02\\cdot10^{3}\\ \\text{m·s}^{-1}$ y $T\\approx2{,}36\\cdot10^{6}\\ \\text{s}\\approx27{,}4\\ \\text{días}$.",
+  "common_errors": [
+   "Incluir la masa de la Luna en $v=\\sqrt{GM_T/r}$ (solo interviene la masa central).",
+   "No pasar el periodo de segundos a días.",
+   "Usar la distancia en km sin convertir a metros."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Distancia mínima para no superar el umbral de dolor · Murcia · Ordinaria 2024",
+  "statement": "**Cuestión C2.** Un altavoz emite ondas sonoras con potencia $450\\ \\text{W}$. Calcule la distancia mínima a la que debemos colocarnos para no superar el umbral de dolor ($120\\ \\text{dB}$).",
+  "knowns": [
+   "$P = 450\\ \\text{W}$",
+   "$\\beta_{\\max} = 120\\ \\text{dB}$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "El umbral de dolor corresponde a una intensidad obtenida de $\\beta=10\\log_{10}(I/I_0)$:\n\n$$I=I_0\\cdot10^{\\beta/10}=10^{-12}\\cdot10^{120/10}=10^{-12}\\cdot10^{12}=1\\ \\text{W·m}^{-2}$$\n\nPara una fuente puntual (onda esférica) $I=\\dfrac{P}{4\\pi d^2}$, de donde la distancia mínima:\n\n$$d=\\sqrt{\\dfrac{P}{4\\pi I}}=\\sqrt{\\dfrac{450}{4\\pi\\cdot1}}=5{,}98\\ \\text{m}\\approx6{,}0\\ \\text{m}$$",
+  "answer": "$I=1\\ \\text{W·m}^{-2}$ y $d\\approx6{,}0\\ \\text{m}$.",
+  "common_errors": [
+   "No invertir correctamente la fórmula de decibelios ($I=I_0\\,10^{\beta/10}$).",
+   "Olvidar el $4\\pi$ de la onda esférica.",
+   "Despejar $d$ sin la raíz cuadrada."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Campo magnético en el centro de un cuadrado de corrientes · Murcia · Ordinaria 2024",
+  "statement": "**Cuestión C3.** Cuatro conductores rectilíneos perpendiculares al plano, con la misma intensidad, están en los vértices de un cuadrado. Dibuje cualitativamente el campo magnético que cada corriente crea en el centro y el campo total en los dos supuestos A y B de la figura (indique con palabras si el campo es nulo).",
+  "knowns": [],
+  "full_solution": "Cada hilo crea en el centro un campo de módulo $B=\\dfrac{\\mu_0 I}{2\\pi d}$, siendo $d$ la distancia del vértice al centro (la misma para los cuatro). La **dirección** es perpendicular a la recta vértice-centro y el **sentido** lo da la regla de la mano derecha según entre o salga la corriente del plano.\n\n**Supuesto A** (por ejemplo, corrientes con sentidos alternados o dispuestas de forma simétrica): los campos de hilos diametralmente opuestos tienen la misma recta soporte. Cuando dos hilos opuestos llevan corrientes en el mismo sentido, sus campos en el centro son **opuestos y se cancelan**; si las cuatro contribuciones se anulan dos a dos, el **campo total es nulo**.\n\n**Supuesto B** (corrientes dispuestas de modo que las contribuciones se suman): los vectores no se cancelan y el campo total es la suma vectorial, resultando un campo **no nulo** dirigido según la simetría del conjunto (por ejemplo, a lo largo de una diagonal o de una mediana del cuadrado).\n\nLa clave es: (1) dibujar cada $\\vec{B}_i$ perpendicular al radio vértice-centro con el sentido de la mano derecha, y (2) sumarlos vectorialmente. Donde la simetría empareja vectores iguales y opuestos, el resultado es cero.",
+  "answer": "Cada hilo: $B=\\mu_0 I/(2\\pi d)$ perpendicular al radio vértice-centro. El total es la suma vectorial: en la configuración simétrica (A) las contribuciones opuestas se cancelan y el campo es nulo; en la otra (B) se suman y el campo total es no nulo.",
+  "common_errors": [
+   "Sumar los módulos escalarmente en vez de vectorialmente.",
+   "Equivocar el sentido de cada $\u000bec{B}$ con la regla de la mano derecha.",
+   "No reconocer por simetría cuándo las contribuciones se cancelan."
+  ],
+  "figure_suggestion": "Cuadrado con un conductor en cada vértice (corrientes entrando/saliendo del plano según A y B); en el centro, los cuatro vectores B_i perpendiculares a cada radio y el vector suma (nulo en A, no nulo en B).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Longitud de onda de De Broglie y cociente de velocidades · Murcia · Ordinaria 2024",
+  "statement": "**Cuestión C4.** Dos partículas, $A$ de masa $m$ y $B$ de masa $3m$, tienen la misma longitud de onda de De Broglie. Determine el cociente $v_B/v_A$.",
+  "knowns": [
+   "$m_A = m$",
+   "$m_B = 3m$",
+   "$\\lambda_A = \\lambda_B$"
+  ],
+  "full_solution": "La longitud de onda de De Broglie de una partícula es $\\lambda=\\dfrac{h}{p}=\\dfrac{h}{mv}$. Igualando las longitudes de onda:\n\n$$\\dfrac{h}{m_A v_A}=\\dfrac{h}{m_B v_B}\\ \\Rightarrow\\ m_A v_A=m_B v_B$$\n\nEs decir, tienen el mismo momento lineal. Despejando el cociente:\n\n$$\\dfrac{v_B}{v_A}=\\dfrac{m_A}{m_B}=\\dfrac{m}{3m}=\\dfrac{1}{3}$$",
+  "answer": "$\\dfrac{v_B}{v_A}=\\dfrac{1}{3}$ (igual longitud de onda implica igual momento lineal).",
+  "common_errors": [
+   "Escribir $\\lambda=h\\,mv$ en vez de $\\lambda=h/(mv)$.",
+   "Obtener $v_B/v_A=3$ por invertir el cociente de masas.",
+   "Pensar que igual $\\lambda$ implica igual velocidad o energía."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Positrón: energía de separación, aceleración y radio magnético · Murcia · Ordinaria 2024",
+  "statement": "**Problema P1.** El positrón ($e^+$) es idéntico al electrón salvo el signo de su carga (positiva).\n\n**(a)** Con un $e^-$ y un $e^+$ en reposo separados $7\\ \\text{nm}$, calcule la energía que hay que aportar para separarlos una distancia infinita.\n\n**(b)** Se acelera un positrón desde el reposo con un campo eléctrico constante de $2840\\ \\text{V·m}^{-1}$. ¿Qué distancia recorre para alcanzar $1000\\ \\text{m·s}^{-1}$?\n\n**(c)** Anulado el campo eléctrico, el positrón se mueve a $1000\\ \\text{m·s}^{-1}$ perpendicular al campo magnético terrestre de $50\\ \\mu\\text{T}$. Determine el radio de su trayectoria.",
+  "knowns": [
+   "$k = 9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$",
+   "$d_0 = 7\\ \\text{nm}$",
+   "$E = 2840\\ \\text{V·m}^{-1}$",
+   "$B = 50\\ \\mu\\text{T}$"
+  ],
+  "full_solution": "**(a)** La energía potencial eléctrica del par ($+e$ y $-e$) a distancia $d_0$ es:\n\n$$U=\\dfrac{k\\,(+e)(-e)}{d_0}=\\dfrac{9\\cdot10^{9}\\cdot(1{,}6\\cdot10^{-19})(-1{,}6\\cdot10^{-19})}{7\\cdot10^{-9}}=-3{,}29\\cdot10^{-20}\\ \\text{J}$$\n\nPara separarlos hasta el infinito ($U_\\infty=0$) hay que aportar:\n\n$$W=U_\\infty-U=0-(-3{,}29\\cdot10^{-20})=3{,}29\\cdot10^{-20}\\ \\text{J}$$\n\n**(b)** La aceleración por la fuerza eléctrica es $a=\\dfrac{eE}{m_e}=\\dfrac{1{,}6\\cdot10^{-19}\\cdot2840}{9{,}1\\cdot10^{-31}}=4{,}99\\cdot10^{14}\\ \\text{m·s}^{-2}$. Con $v^2=2ad$:\n\n$$d=\\dfrac{v^2}{2a}=\\dfrac{(1000)^2}{2\\cdot4{,}99\\cdot10^{14}}=1{,}0\\cdot10^{-9}\\ \\text{m}=1{,}0\\ \\text{nm}$$\n\n**(c)** En el campo magnético la fuerza de Lorentz es centrípeta, $R=\\dfrac{m_e v}{eB}$:\n\n$$R=\\dfrac{9{,}1\\cdot10^{-31}\\cdot1000}{1{,}6\\cdot10^{-19}\\cdot50\\cdot10^{-6}}=1{,}14\\cdot10^{-4}\\ \\text{m}$$",
+  "answer": "**(a)** $W\\approx3{,}29\\cdot10^{-20}\\ \\text{J}$. **(b)** $d\\approx1{,}0\\cdot10^{-9}\\ \\text{m}$. **(c)** $R\\approx1{,}14\\cdot10^{-4}\\ \\text{m}$.",
+  "common_errors": [
+   "Dar energía positiva a la $U$ de cargas de signo opuesto (debe ser negativa).",
+   "Confundir la energía de separación con el módulo de $U$ sin el cambio de signo.",
+   "Usar la masa o la carga con exponentes equivocados en $a=eE/m$."
+  ],
+  "figure_suggestion": "Par electrón-positrón separados 7 nm; luego positrón acelerado por E uniforme (recta); finalmente trayectoria circular de radio 1,14e-4 m en B perpendicular.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Onda armónica en una cuerda a partir de sus gráficas · Murcia · Ordinaria 2024",
+  "statement": "**Problema P2.** Por una cuerda se propaga una onda armónica en sentido $+x$. La Figura 1 representa la elongación $y(x)$ en $t=0$ y la Figura 2 la elongación $y(t)$ en la posición $x=2\\ \\text{cm}$. De las gráficas se leen: amplitud $A=2\\ \\text{cm}$, longitud de onda $\\lambda=8\\ \\text{cm}$ y periodo $T=4\\ \\text{s}$.\n\n**(a)** Determine la longitud de onda, la frecuencia y la velocidad de propagación.\n\n**(b)** Escriba la ecuación de la onda $y(x,t)$.\n\n**(c)** Calcule la velocidad de vibración máxima y la aceleración máxima de un punto de la cuerda.",
+  "knowns": [
+   "$A = 2\\ \\text{cm} = 0{,}02\\ \\text{m}$ (de la Figura 1)",
+   "$\\lambda = 8\\ \\text{cm} = 0{,}08\\ \\text{m}$ (de la Figura 1)",
+   "$T = 4\\ \\text{s}$ (de la Figura 2)"
+  ],
+  "full_solution": "**(a)** Lectura de las gráficas: de la Figura 1, $\\lambda=8\\ \\text{cm}=0{,}08\\ \\text{m}$; de la Figura 2, $T=4\\ \\text{s}$. Entonces:\n\n$$f=\\dfrac{1}{T}=\\dfrac{1}{4}=0{,}25\\ \\text{Hz},\\qquad v=\\lambda f=\\dfrac{\\lambda}{T}=\\dfrac{0{,}08}{4}=0{,}02\\ \\text{m·s}^{-1}$$\n\n**(b)** Con $\\omega=2\\pi f=\\dfrac{2\\pi}{4}=1{,}57\\ \\text{rad·s}^{-1}$ y $k=\\dfrac{2\\pi}{\\lambda}=\\dfrac{2\\pi}{0{,}08}=78{,}5\\ \\text{rad·m}^{-1}$. Para una onda que avanza en $+x$:\n\n$$y(x,t)=0{,}02\\,\\operatorname{sen}\\!\\left(1{,}57\\,t-78{,}5\\,x\\right)\\ \\text{m}$$\n\n**(c)** Las magnitudes máximas de oscilación de un punto:\n\n$$v_{\\max}=A\\,\\omega=0{,}02\\cdot1{,}57=3{,}1\\cdot10^{-2}\\ \\text{m·s}^{-1}$$\n\n$$a_{\\max}=A\\,\\omega^2=0{,}02\\cdot(1{,}57)^2=4{,}9\\cdot10^{-2}\\ \\text{m·s}^{-2}$$",
+  "answer": "**(a)** $\\lambda=0{,}08\\ \\text{m}$, $f=0{,}25\\ \\text{Hz}$, $v=0{,}02\\ \\text{m·s}^{-1}$. **(b)** $y(x,t)=0{,}02\\,\\operatorname{sen}(1{,}57\\,t-78{,}5\\,x)\\ \\text{m}$. **(c)** $v_{\\max}\\approx3{,}1\\cdot10^{-2}\\ \\text{m·s}^{-1}$, $a_{\\max}\\approx4{,}9\\cdot10^{-2}\\ \\text{m·s}^{-2}$.",
+  "common_errors": [
+   "Leer mal las escalas de los ejes (confundir $\\lambda$ de la Figura 1 con una distancia en la de $t$).",
+   "Usar signo $+kx$ para una onda que avanza en $+x$ (debe ser $-kx$).",
+   "Confundir velocidad de propagación $v=\\lambda/T$ con la velocidad de vibración $A\\omega$."
+  ],
+  "figure_suggestion": "Figura 1: y(x) sinusoidal en t=0 con amplitud 2 cm y longitud de onda 8 cm. Figura 2: y(t) en x=2 cm, sinusoidal de periodo 4 s y amplitud 2 cm.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Lente planoconvexa de una cámara fotográfica · Murcia · Ordinaria 2024",
+  "statement": "**Problema P3.** Una lente de cámara tiene focal $50\\ \\text{mm}$, índice $1{,}6$ y es planoconvexa.\n\n**(a)** Determine el radio de curvatura de la cara curva.\n\n**(b)** ¿A qué distancia de la lente hay que poner un objeto para que su imagen tenga la mitad de tamaño (en valor absoluto)?\n\n**(c)** Si un rayo incide desde el aire sobre la cara plana con $45^\\circ$ respecto a la normal, ¿qué ángulo forma dentro de la lente con la normal?",
+  "knowns": [
+   "$f' = 50\\ \\text{mm} = 0{,}05\\ \\text{m}$",
+   "$n = 1{,}6$",
+   "lente planoconvexa",
+   "$|M| = 1/2$",
+   "$\\theta_i = 45^\\circ$"
+  ],
+  "full_solution": "**(a)** Ecuación del constructor de lentes. Planoconvexa: una cara plana ($R_1\\to\\infty$) y una curva de radio $R$:\n\n$$\\dfrac{1}{f'}=(n-1)\\left(\\dfrac{1}{R_1}-\\dfrac{1}{R_2}\\right)\\ \\Rightarrow\\ \\dfrac{1}{f'}=\\dfrac{n-1}{R}\\ \\Rightarrow\\ R=(n-1)\\,f'=(1{,}6-1)\\cdot50=30\\ \\text{mm}$$\n\n**(b)** Imagen reducida y real (lente convergente): $M=\\dfrac{s'}{s}=-\\dfrac12$, luego $s'=-\\dfrac{s}{2}$. Sustituyendo en $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$:\n\n$$-\\dfrac{2}{s}-\\dfrac{1}{s}=\\dfrac{1}{f'}\\ \\Rightarrow\\ -\\dfrac{3}{s}=\\dfrac{1}{f'}\\ \\Rightarrow\\ s=-3f'=-150\\ \\text{mm}$$\n\nEl objeto debe colocarse a $150\\ \\text{mm}=15\\ \\text{cm}$ delante de la lente (la imagen se forma a $s'=75\\ \\text{mm}$).\n\n**(c)** Ley de Snell en la cara plana, aire→vidrio:\n\n$$\\operatorname{sen}45^\\circ=n\\operatorname{sen}\\theta\\ \\Rightarrow\\ \\operatorname{sen}\\theta=\\dfrac{\\operatorname{sen}45^\\circ}{1{,}6}=0{,}442\\ \\Rightarrow\\ \\theta=26{,}2^\\circ$$",
+  "answer": "**(a)** $R=30\\ \\text{mm}$. **(b)** objeto a $150\\ \\text{mm}=15\\ \\text{cm}$ (imagen real reducida a $75\\ \\text{mm}$). **(c)** $\\theta\\approx26{,}2^\\circ$.",
+  "common_errors": [
+   "No anular un término ($1/R\to0$) para la cara plana en la ecuación del constructor.",
+   "Tomar $M=+1/2$ (imagen derecha) cuando una lente convergente da imagen real invertida reducida.",
+   "Aplicar Snell como $n\\operatorname{sen}45^\\circ=\\operatorname{sen}\theta$ (sentido invertido)."
+  ],
+  "figure_suggestion": "Lente planoconvexa f'=50 mm; diagrama de rayos con objeto a 150 mm e imagen real invertida reducida a 75 mm; rayo entrando por la cara plana a 45 grados refractándose a 26,2 grados.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Desintegraciones del Yodo-131 y del Radio-223 · Murcia · Ordinaria 2024",
+  "statement": "**Problema P4.** El $^{131}_{53}\\text{I}$ y el $^{223}_{88}\\text{Ra}$ se usan contra el cáncer y experimentan desintegración $\\beta^-$ y $\\alpha$ respectivamente.\n\n**(a)** Escriba ambas reacciones indicando $A$, $Z$ y $N$ de los núcleos resultantes.\n\n**(b)** Si de $1\\ \\text{mg}$ de $^{131}\\text{I}$ quedan $0{,}66\\ \\text{mg}$ tras $5\\ \\text{días}$, determine la vida media del $^{131}\\text{I}$.\n\n**(c)** Calcule, en julios, la energía liberada en la desintegración $\\alpha$ de un núcleo de $^{223}\\text{Ra}$.",
+  "knowns": [
+   "$M(^{223}\\text{Ra}) = 223{,}0185\\ \\text{u}$",
+   "$M(^{4}\\text{He}) = 4{,}0026\\ \\text{u}$",
+   "$M(^{219}\\text{Rn}) = 219{,}0095\\ \\text{u}$",
+   "$1\\ \\text{u} = 1{,}66\\cdot10^{-27}\\ \\text{kg}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** En la $\\beta^-$ el núcleo emite un electrón (un neutrón se convierte en protón): $Z$ aumenta en 1, $A$ no cambia.\n\n$$^{131}_{53}\\text{I}\\ \\longrightarrow\\ ^{131}_{54}\\text{Xe}+{}^{\\ 0}_{-1}e+\\bar{\\nu}_e$$\n\nEl núcleo resultante tiene $A=131$, $Z=54$, $N=77$.\n\nEn la $\\alpha$ se emite un núcleo de helio ($^4_2\\text{He}$): $A$ disminuye en 4 y $Z$ en 2.\n\n$$^{223}_{88}\\text{Ra}\\ \\longrightarrow\\ ^{219}_{86}\\text{Rn}+{}^{4}_{2}\\text{He}$$\n\nEl $^{219}_{86}\\text{Rn}$ tiene $A=219$, $Z=86$, $N=133$.\n\n**(b)** De $N=N_0 e^{-\\lambda t}$ con $N/N_0=0{,}66$ y $t=5\\ \\text{días}$:\n\n$$\\lambda=-\\dfrac{\\ln(0{,}66)}{5}=0{,}0831\\ \\text{días}^{-1}$$\n\nLa vida media es $\\tau=\\dfrac{1}{\\lambda}=\\dfrac{1}{0{,}0831}=12{,}0\\ \\text{días}$. (El periodo de semidesintegración sería $T_{1/2}=\\tau\\ln 2\\approx8{,}3\\ \\text{días}$.)\n\n**(c)** Defecto de masa de la $\\alpha$:\n\n$$\\Delta m=M(\\text{Ra})-M(\\text{Rn})-M(\\text{He})=223{,}0185-219{,}0095-4{,}0026=6{,}4\\cdot10^{-3}\\ \\text{u}$$\n\nEnergía liberada $Q=\\Delta m\\,c^2$:\n\n$$Q=6{,}4\\cdot10^{-3}\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2=9{,}56\\cdot10^{-13}\\ \\text{J}$$",
+  "answer": "**(a)** $^{131}_{53}\\text{I}\\to{}^{131}_{54}\\text{Xe}+\\beta^-+\\bar\\nu$ ($A=131,Z=54,N=77$); $^{223}_{88}\\text{Ra}\\to{}^{219}_{86}\\text{Rn}+\\alpha$ ($A=219,Z=86,N=133$). **(b)** $\\tau=1/\\lambda\\approx12{,}0\\ \\text{días}$. **(c)** $Q\\approx9{,}56\\cdot10^{-13}\\ \\text{J}$.",
+  "common_errors": [
+   "Equivocar el cambio de $Z$: en $\beta^-$ aumenta, en $\u0007lpha$ disminuye en 2.",
+   "Confundir vida media $\tau=1/\\lambda$ con periodo de semidesintegración.",
+   "Olvidar pasar $\\Delta m$ de unidades $u$ a kg antes de aplicar $E=\\Delta m c^2$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Onda armónica transversal en una cuerda · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 1.** Una onda armónica transversal en una cuerda es $y(x,t)=0{,}2\\,\\operatorname{sen}[2\\pi(t+2x)]$ (unidades SI).\n\n**(a)** Amplitud, longitud de onda y frecuencia.\n\n**(b)** Velocidad de propagación (módulo, dirección y sentido).\n\n**(c)** Velocidad y aceleración máximas de vibración de los puntos de la cuerda.",
+  "knowns": [
+   "$y(x,t)=0{,}2\\,\\operatorname{sen}[2\\pi(t+2x)]$ (SI)"
+  ],
+  "full_solution": "Desarrollando el argumento: $y=0{,}2\\,\\operatorname{sen}(2\\pi t+4\\pi x)$, de donde $\\omega=2\\pi\\ \\text{rad·s}^{-1}$ y $k=4\\pi\\ \\text{rad·m}^{-1}$.\n\n**(a)** Amplitud $A=0{,}2\\ \\text{m}$. Frecuencia y longitud de onda:\n\n$$f=\\dfrac{\\omega}{2\\pi}=1\\ \\text{Hz},\\qquad \\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{4\\pi}=0{,}5\\ \\text{m}$$\n\n**(b)** Módulo de la velocidad de propagación:\n\n$$v=\\dfrac{\\omega}{k}=\\dfrac{2\\pi}{4\\pi}=0{,}5\\ \\text{m·s}^{-1}$$\n\nComo los términos de $t$ y de $x$ tienen el **mismo signo** ($+$), la onda se propaga en el sentido **negativo** del eje $x$.\n\n**(c)** Valores máximos de oscilación transversal:\n\n$$v_{\\max}=A\\,\\omega=0{,}2\\cdot2\\pi=1{,}26\\ \\text{m·s}^{-1}$$\n\n$$a_{\\max}=A\\,\\omega^2=0{,}2\\cdot(2\\pi)^2=7{,}90\\ \\text{m·s}^{-2}$$",
+  "answer": "**(a)** $A=0{,}2\\ \\text{m}$, $\\lambda=0{,}5\\ \\text{m}$, $f=1\\ \\text{Hz}$. **(b)** $v=0{,}5\\ \\text{m·s}^{-1}$ hacia $-x$. **(c)** $v_{\\max}\\approx1{,}26\\ \\text{m·s}^{-1}$, $a_{\\max}\\approx7{,}90\\ \\text{m·s}^{-2}$.",
+  "common_errors": [
+   "No desarrollar el $2\\pi$ y confundir $k$ con $\\lambda$.",
+   "Decir que la onda va en $+x$ (signo $+$ en ambos términos implica sentido $-x$).",
+   "Usar $v_{\\max}=A k$ en vez de $A\\omega$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Nivel de intensidad sonora de 80 dB y energía en el tímpano · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 2.** Una persona está expuesta a un nivel de intensidad sonora constante de $80\\ \\text{dB}$.\n\n**(a)** ¿A qué intensidad corresponde ese nivel?\n\n**(b)** Si la fuente es puntual y está a $15\\ \\text{m}$, ¿qué potencia emite?\n\n**(c)** Si el tímpano tiene $10\\ \\text{mm}^2$, ¿cuánta energía le llega en una hora?",
+  "knowns": [
+   "$\\beta = 80\\ \\text{dB}$",
+   "$d = 15\\ \\text{m}$",
+   "$S = 10\\ \\text{mm}^2 = 10^{-5}\\ \\text{m}^2$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$",
+   "$t = 1\\ \\text{h} = 3600\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** De $\\beta=10\\log_{10}(I/I_0)$:\n\n$$I=I_0\\cdot10^{\\beta/10}=10^{-12}\\cdot10^{8}=10^{-4}\\ \\text{W·m}^{-2}$$\n\n**(b)** Para una fuente puntual (onda esférica), $I=\\dfrac{P}{4\\pi d^2}$:\n\n$$P=I\\cdot4\\pi d^2=10^{-4}\\cdot4\\pi(15)^2=0{,}283\\ \\text{W}$$\n\n**(c)** La potencia que llega al tímpano es $P_t=I\\cdot S=10^{-4}\\cdot10^{-5}=10^{-9}\\ \\text{W}$. En una hora:\n\n$$E=P_t\\cdot t=10^{-9}\\cdot3600=3{,}6\\cdot10^{-6}\\ \\text{J}$$",
+  "answer": "**(a)** $I=10^{-4}\\ \\text{W·m}^{-2}$. **(b)** $P\\approx0{,}283\\ \\text{W}$. **(c)** $E=3{,}6\\cdot10^{-6}\\ \\text{J}$.",
+  "common_errors": [
+   "No invertir bien la fórmula de decibelios.",
+   "Usar el área del tímpano en $\text{mm}^2$ sin pasar a $\text{m}^2$.",
+   "Confundir intensidad (W/m²) con potencia (W)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Refracción en una lámina de vidrio y tiempo de tránsito · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 3.** Un haz incide desde el aire sobre un vidrio con $45^\\circ$ respecto a la normal. El vidrio tiene $5\\ \\text{cm}$ de espesor (horizontal) y el rayo interior forma $62^\\circ$ con la horizontal.\n\n**(a)** Índice de refracción del vidrio.\n\n**(b)** Si la frecuencia es $3\\cdot10^{14}\\ \\text{Hz}$, longitud de onda dentro del vidrio.\n\n**(c)** Tiempo que emplea el rayo en atravesar el vidrio.",
+  "knowns": [
+   "$\\theta_i = 45^\\circ$",
+   "$\\theta_r = 90^\\circ-62^\\circ = 28^\\circ$ (respecto a la normal)",
+   "espesor $= 5\\ \\text{cm} = 0{,}05\\ \\text{m}$",
+   "$f = 3\\cdot10^{14}\\ \\text{Hz}$",
+   "$n_{\\text{aire}} = 1$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "El rayo interior forma $62^\\circ$ con la horizontal, luego con la normal (vertical) forma $\\theta_r=90^\\circ-62^\\circ=28^\\circ$.\n\n**(a)** Ley de Snell $n_{\\text{aire}}\\operatorname{sen}45^\\circ=n\\operatorname{sen}28^\\circ$:\n\n$$n=\\dfrac{\\operatorname{sen}45^\\circ}{\\operatorname{sen}28^\\circ}=\\dfrac{0{,}707}{0{,}469}=1{,}51$$\n\n**(b)** La frecuencia no cambia. La velocidad en el vidrio es $v=\\dfrac{c}{n}$ y la longitud de onda:\n\n$$\\lambda=\\dfrac{v}{f}=\\dfrac{c}{n f}=\\dfrac{3\\cdot10^{8}}{1{,}51\\cdot3\\cdot10^{14}}=6{,}64\\cdot10^{-7}\\ \\text{m}=664\\ \\text{nm}$$\n\n**(c)** El rayo recorre dentro del vidrio un camino $L=\\dfrac{\\text{espesor}}{\\cos\\theta_r}=\\dfrac{0{,}05}{\\cos 28^\\circ}=5{,}66\\cdot10^{-2}\\ \\text{m}$. Con $v=\\dfrac{c}{n}=1{,}99\\cdot10^{8}\\ \\text{m·s}^{-1}$:\n\n$$t=\\dfrac{L}{v}=\\dfrac{5{,}66\\cdot10^{-2}}{1{,}99\\cdot10^{8}}=2{,}84\\cdot10^{-10}\\ \\text{s}$$",
+  "answer": "**(a)** $n\\approx1{,}51$. **(b)** $\\lambda\\approx664\\ \\text{nm}$. **(c)** $t\\approx2{,}84\\cdot10^{-10}\\ \\text{s}$.",
+  "common_errors": [
+   "Usar $62^\\circ$ como ángulo de refracción respecto a la normal (es respecto a la horizontal; el correcto es $28^\\circ$).",
+   "Calcular el tiempo con el espesor directo en vez del camino inclinado $e/\\cos\theta_r$.",
+   "Cambiar la frecuencia al cambiar de medio."
+  ],
+  "figure_suggestion": "Lámina de vidrio horizontal de 5 cm; rayo incidente a 45 grados respecto a la normal, refractado a 28 grados respecto a la normal (62 grados con la horizontal); recorrido inclinado dentro del vidrio.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Imagen formada por una lente divergente · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 4.** Un objeto de $8\\ \\text{cm}$ está $15\\ \\text{cm}$ delante de una lente divergente de focal $|f|=5\\ \\text{cm}$. Con un trazado de rayos cualitativo, determine:\n\n**(a)** Posición de la imagen.\n\n**(b)** Altura de la imagen.\n\n**(c)** Naturaleza de la imagen (real/virtual, derecha/invertida, mayor/menor).",
+  "knowns": [
+   "$y = 8\\ \\text{cm}$",
+   "$s = -15\\ \\text{cm}$",
+   "$f' = -5\\ \\text{cm}$ (divergente)"
+  ],
+  "full_solution": "**(a)** Con $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$ y $f'=-5\\ \\text{cm}$, $s=-15\\ \\text{cm}$:\n\n$$\\dfrac{1}{s'}=\\dfrac{1}{f'}+\\dfrac{1}{s}=\\dfrac{1}{-5}+\\dfrac{1}{-15}=-\\dfrac{4}{15}\\ \\Rightarrow\\ s'=-3{,}75\\ \\text{cm}$$\n\n**(b)** Aumento lateral $M=\\dfrac{s'}{s}=\\dfrac{-3{,}75}{-15}=0{,}25$. Altura de la imagen:\n\n$$y'=M\\,y=0{,}25\\cdot8=2\\ \\text{cm}$$\n\n**(c)** Como $s'<0$ la imagen es **virtual** (del mismo lado que el objeto); $M>0$ indica **derecha** y $|M|<1$ que es **menor** que el objeto. Es el comportamiento típico de una lente divergente con un objeto real: siempre forma imagen virtual, derecha y reducida.",
+  "answer": "**(a)** $s'=-3{,}75\\ \\text{cm}$. **(b)** $y'=2\\ \\text{cm}$. **(c)** virtual, derecha y menor.",
+  "common_errors": [
+   "Tomar $f'=+5\\ \text{cm}$ para la lente divergente (su focal es negativa).",
+   "Interpretar $s'<0$ como imagen real.",
+   "Esperar una imagen invertida (la divergente da siempre imagen derecha con objeto real)."
+  ],
+  "figure_suggestion": "Lente divergente f'=-5 cm; objeto de 8 cm a 15 cm; trazado de rayos (paralelo que diverge como si viniera de F', y rayo por el centro) formando imagen virtual, derecha y reducida a 3,75 cm.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Fuerza y trabajo gravitatorios de dos masas · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 5.** Dos masas $m_1=5\\ \\text{kg}$ y $m_2=10\\ \\text{kg}$ están en $(0,0)\\ \\text{m}$ y $(0,-2)\\ \\text{m}$.\n\n**(a)** Vector fuerza gravitatoria que experimenta $m_3=100\\ \\text{g}$ situada en $(1,-2)\\ \\text{m}$.\n\n**(b)** Trabajo del campo gravitatorio al desplazar $m_3$ de $(1,-2)\\ \\text{m}$ a $(1,0)\\ \\text{m}$.\n\n**(c)** Significado físico del signo del trabajo.",
+  "knowns": [
+   "$m_1 = 5\\ \\text{kg}$ en $(0,0)$",
+   "$m_2 = 10\\ \\text{kg}$ en $(0,-2)$",
+   "$m_3 = 0{,}1\\ \\text{kg}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** Fuerza de $m_1$ sobre $m_3$: vector $m_3\\!\\to\\!m_1=(-1,2)$, módulo $d_1=\\sqrt{5}=2{,}24\\ \\text{m}$:\n\n$$F_1=\\dfrac{Gm_1 m_3}{d_1^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot5\\cdot0{,}1}{5}=6{,}67\\cdot10^{-12}\\ \\text{N}$$\n\nComponentes: $\\vec{F}_1=(-2{,}98\\cdot10^{-12},\\,5{,}97\\cdot10^{-12})\\ \\text{N}$.\n\nFuerza de $m_2$ sobre $m_3$: vector $m_3\\!\\to\\!m_2=(-1,0)$, $d_2=1\\ \\text{m}$:\n\n$$F_2=\\dfrac{Gm_2 m_3}{d_2^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot10\\cdot0{,}1}{1}=6{,}67\\cdot10^{-11}\\ \\text{N}\\ \\Rightarrow\\ \\vec{F}_2=(-6{,}67\\cdot10^{-11},\\,0)\\ \\text{N}$$\n\nFuerza total:\n\n$$\\vec{F}=(-6{,}97\\cdot10^{-11},\\,5{,}97\\cdot10^{-12})\\ \\text{N},\\qquad |\\vec{F}|=6{,}99\\cdot10^{-11}\\ \\text{N}$$\n\n**(b)** El trabajo del campo es $W=m_3\\,[V_i-V_f]$ con $V=-G\\sum m_i/r_i$. En $(1,-2)$: $r_1=\\sqrt5$, $r_2=1$, $V_i=-8{,}16\\cdot10^{-10}\\ \\text{J·kg}^{-1}$. En $(1,0)$: $r_1=1$, $r_2=\\sqrt5$, $V_f=-6{,}32\\cdot10^{-10}\\ \\text{J·kg}^{-1}$.\n\n$$W=0{,}1\\,[(-8{,}16\\cdot10^{-10})-(-6{,}32\\cdot10^{-10})]=-1{,}84\\cdot10^{-11}\\ \\text{J}$$\n\n**(c)** El trabajo del campo es **negativo** porque $m_3$ se aleja de las masas (va hacia una región de mayor potencial, menos negativo): el campo gravitatorio se opone al desplazamiento, por lo que un agente externo debe aportar energía.",
+  "answer": "**(a)** $\\vec{F}\\approx(-6{,}97\\cdot10^{-11}\\,\\vec{i}+5{,}97\\cdot10^{-12}\\,\\vec{j})\\ \\text{N}$, $|\\vec{F}|\\approx6{,}99\\cdot10^{-11}\\ \\text{N}$. **(b)** $W\\approx-1{,}84\\cdot10^{-11}\\ \\text{J}$. **(c)** negativo: el campo se opone al alejamiento de las masas.",
+  "common_errors": [
+   "Sumar las fuerzas como escalares en vez de vectorialmente.",
+   "Error de signo en $W=m_3(V_i-V_f)$.",
+   "Confundir la dirección de cada fuerza (siempre atractiva, hacia la masa que la crea)."
+  ],
+  "figure_suggestion": "Plano xy: m1=5 kg en (0,0), m2=10 kg en (0,-2), m3 en (1,-2); vectores F1 y F2 sobre m3 y su resultante; desplazamiento de (1,-2) a (1,0).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Satélite terrestre: órbita, puesta en órbita y escape · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 6.** Un satélite de $1000\\ \\text{kg}$ orbita la Tierra en círculo a $10000\\ \\text{km}$ de altura.\n\n**(a)** Periodo y velocidad orbital.\n\n**(b)** Energía que hubo que transmitirle para ponerlo en órbita desde la superficie.\n\n**(c)** Energía mínima para que escape de la atracción terrestre desde su órbita.",
+  "knowns": [
+   "$m = 1000\\ \\text{kg}$",
+   "$h = 10000\\ \\text{km} \\Rightarrow r = 1{,}637\\cdot10^{7}\\ \\text{m}$",
+   "$R_T = 6370\\ \\text{km}$",
+   "$M_T = 6\\cdot10^{24}\\ \\text{kg}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "El radio orbital es $r=R_T+h=6370+10000=16370\\ \\text{km}=1{,}637\\cdot10^{7}\\ \\text{m}$.\n\n**(a)** Velocidad orbital $v=\\sqrt{\\dfrac{GM_T}{r}}$:\n\n$$v=\\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot6\\cdot10^{24}}{1{,}637\\cdot10^{7}}}=4944\\ \\text{m·s}^{-1}$$\n\nPeriodo $T=\\dfrac{2\\pi r}{v}=\\dfrac{2\\pi\\cdot1{,}637\\cdot10^{7}}{4944}=2{,}08\\cdot10^{4}\\ \\text{s}\\approx5{,}78\\ \\text{h}$.\n\n**(b)** Energía para ponerlo en órbita $=E_{\\text{órbita}}-E_{\\text{superficie}}$, con $E_{\\text{órbita}}=-\\dfrac{GM_T m}{2r}$ y $E_{\\text{superficie}}=-\\dfrac{GM_T m}{R_T}$ (reposo en la superficie):\n\n$$\\Delta E=GM_T m\\left(\\dfrac{1}{R_T}-\\dfrac{1}{2r}\\right)=5{,}06\\cdot10^{10}\\ \\text{J}$$\n\n**(c)** Energía mínima para escapar desde la órbita $=0-E_{\\text{órbita}}=\\dfrac{GM_T m}{2r}$:\n\n$$E_{\\text{escape}}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot6\\cdot10^{24}\\cdot1000}{2\\cdot1{,}637\\cdot10^{7}}=1{,}22\\cdot10^{10}\\ \\text{J}$$",
+  "answer": "**(a)** $v\\approx4944\\ \\text{m·s}^{-1}$, $T\\approx2{,}08\\cdot10^{4}\\ \\text{s}\\,(\\approx5{,}78\\ \\text{h})$. **(b)** $\\Delta E\\approx5{,}06\\cdot10^{10}\\ \\text{J}$. **(c)** $E_{\\text{escape}}\\approx1{,}22\\cdot10^{10}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la altura $h$ como radio de la órbita (hay que sumar $R_T$).",
+   "Olvidar la energía en la superficie al calcular la energía de puesta en órbita.",
+   "Confundir $-GMm/(2r)$ (energía orbital) con $-GMm/r$ (potencial)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Punto de potencial nulo y aceleración de un protón · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 7.** **(a)** Represente las líneas de campo de una carga puntual para $q>0$ y $q<0$. Dos cargas, $-2\\ \\text{nC}$ y $3\\ \\text{nC}$, están en $(0,0)\\ \\text{cm}$ y $(4,0)\\ \\text{cm}$.\n\n**(b)** Punto $P$ del segmento que las une donde el potencial se anula.\n\n**(c)** Se coloca un protón en reposo en $P$: velocidad con que llega a $(1,0)\\ \\text{cm}$.",
+  "knowns": [
+   "$q_1 = -2\\ \\text{nC}$ en $(0,0)\\ \\text{cm}$",
+   "$q_2 = 3\\ \\text{nC}$ en $(4,0)\\ \\text{cm}$",
+   "$k = 9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$",
+   "$m_p = 1{,}67\\cdot10^{-27}\\ \\text{kg}$",
+   "$q_p = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** Para $q>0$ las líneas de campo salen radialmente de la carga; para $q<0$ entran radialmente hacia ella.\n\n**(b)** En un punto $(x,0)$ del segmento ($0<x<4\\ \\text{cm}$), el potencial total se anula:\n\n$$k\\!\\left(\\dfrac{-2\\cdot10^{-9}}{x}+\\dfrac{3\\cdot10^{-9}}{4-x}\\right)=0\\ \\Rightarrow\\ \\dfrac{3}{4-x}=\\dfrac{2}{x}\\ \\Rightarrow\\ 3x=2(4-x)$$\n\n$$5x=8\\ \\Rightarrow\\ x=1{,}6\\ \\text{cm}\\ \\Rightarrow\\ P=(1{,}6,\\,0)\\ \\text{cm}$$\n\n**(c)** El potencial en $(1,0)\\ \\text{cm}$ ($r_1=1\\ \\text{cm}$, $r_2=3\\ \\text{cm}$):\n\n$$V=k\\!\\left(\\dfrac{-2\\cdot10^{-9}}{0{,}01}+\\dfrac{3\\cdot10^{-9}}{0{,}03}\\right)=9\\cdot10^{9}\\cdot(-1\\cdot10^{-7})=-900\\ \\text{V}$$\n\nPor conservación de la energía, el trabajo eléctrico sobre el protón es $W=q_p(V_P-V)=1{,}6\\cdot10^{-19}\\,[0-(-900)]=1{,}44\\cdot10^{-16}\\ \\text{J}=\\tfrac12 m_p v^2$:\n\n$$v=\\sqrt{\\dfrac{2W}{m_p}}=\\sqrt{\\dfrac{2\\cdot1{,}44\\cdot10^{-16}}{1{,}67\\cdot10^{-27}}}=4{,}15\\cdot10^{5}\\ \\text{m·s}^{-1}$$",
+  "answer": "**(b)** $P=(1{,}6,\\,0)\\ \\text{cm}$. **(c)** $v\\approx4{,}15\\cdot10^{5}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Omitir el signo de las cargas al igualar el potencial a cero.",
+   "Usar distancias en cm sin pasar a metros en el cálculo de $V$.",
+   "Equivocar el signo del trabajo: el protón (positivo) gana energía al ir hacia menor potencial."
+  ],
+  "figure_suggestion": "Eje x en cm: carga -2 nC en (0,0) y +3 nC en (4,0); marcar el punto P(1,6) de potencial nulo y el punto (1,0); líneas de campo entrantes (negativa) y salientes (positiva).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Electrón en campo magnético uniforme · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 8.** Un electrón entra con $\\vec{v}=10^{8}\\,\\vec{i}\\ \\text{m·s}^{-1}$ en una región con $\\vec{B}=0{,}2\\,\\vec{j}\\ \\text{T}$ y describe una trayectoria circular.\n\n**(a)** Vector fuerza que el campo ejerce sobre el electrón.\n\n**(b)** Radio de la trayectoria y periodo del movimiento.\n\n**(c)** Trayectoria con los vectores fuerza, campo y velocidad.",
+  "knowns": [
+   "$\\vec{v}=10^{8}\\,\\vec{i}\\ \\text{m·s}^{-1}$",
+   "$\\vec{B}=0{,}2\\,\\vec{j}\\ \\text{T}$",
+   "$m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$",
+   "$q_e = -1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** Fuerza de Lorentz $\\vec{F}=q\\,\\vec{v}\\times\\vec{B}$ con $q=-e$:\n\n$$\\vec{F}=(-1{,}6\\cdot10^{-19})(10^{8}\\,\\vec{i})\\times(0{,}2\\,\\vec{j})=(-1{,}6\\cdot10^{-19})(2\\cdot10^{7})\\,\\vec{k}=-3{,}2\\cdot10^{-12}\\,\\vec{k}\\ \\text{N}$$\n\n(se usó $\\vec{i}\\times\\vec{j}=\\vec{k}$).\n\n**(b)** La fuerza magnética es centrípeta, $evB=\\dfrac{m_e v^2}{R}$:\n\n$$R=\\dfrac{m_e v}{eB}=\\dfrac{9{,}1\\cdot10^{-31}\\cdot10^{8}}{1{,}6\\cdot10^{-19}\\cdot0{,}2}=2{,}84\\cdot10^{-3}\\ \\text{m}$$\n\n$$T=\\dfrac{2\\pi m_e}{eB}=\\dfrac{2\\pi\\cdot9{,}1\\cdot10^{-31}}{1{,}6\\cdot10^{-19}\\cdot0{,}2}=1{,}79\\cdot10^{-10}\\ \\text{s}$$\n\n**(c)** El electrón describe una circunferencia en el plano $xz$ (perpendicular a $\\vec{B}$); la fuerza apunta en cada instante hacia el centro, $\\vec{v}$ es tangente y $\\vec{B}$ es constante en $+y$.",
+  "answer": "**(a)** $\\vec{F}=-3{,}2\\cdot10^{-12}\\,\\vec{k}\\ \\text{N}$. **(b)** $R\\approx2{,}84\\cdot10^{-3}\\ \\text{m}$, $T\\approx1{,}79\\cdot10^{-10}\\ \\text{s}$.",
+  "common_errors": [
+   "Olvidar el signo negativo de la carga del electrón en el producto vectorial.",
+   "Confundir $\u000bec{i}\times\u000bec{j}=\u000bec{k}$ con otro orden.",
+   "Creer que el campo magnético realiza trabajo o cambia el módulo de $v$."
+  ],
+  "figure_suggestion": "Electrón con v en +x entra en B uniforme en +y; trayectoria circular en el plano xz de radio 2,84 mm; vectores v (tangente), F (hacia el centro, -z inicial) y B (+y).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Efecto fotoeléctrico: trabajo de extracción y energía cinética · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 9.** Al incidir luz de $\\lambda=550\\ \\text{nm}$ sobre un material se liberan electrones con potencial de frenado $0{,}4\\ \\text{V}$.\n\n**(a)** Trabajo de extracción del metal.\n\n**(b)** Rango de longitudes de onda en que se produce efecto fotoeléctrico.\n\n**(c)** Energía cinética máxima de los electrones al incidir con $\\lambda=214\\ \\text{nm}$.",
+  "knowns": [
+   "$\\lambda = 550\\ \\text{nm}$",
+   "$V_f = 0{,}4\\ \\text{V}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$1\\ \\text{eV} = 1{,}6\\cdot10^{-19}\\ \\text{J}$"
+  ],
+  "full_solution": "**(a)** Ecuación de Einstein $\\dfrac{hc}{\\lambda}=W+eV_f$, de donde:\n\n$$W=\\dfrac{hc}{\\lambda}-eV_f=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{550\\cdot10^{-9}}-1{,}6\\cdot10^{-19}\\cdot0{,}4$$\n\n$$W=3{,}62\\cdot10^{-19}-0{,}64\\cdot10^{-19}=2{,}98\\cdot10^{-19}\\ \\text{J}=1{,}86\\ \\text{eV}$$\n\n**(b)** El efecto se produce si $\\dfrac{hc}{\\lambda}\\ge W$, es decir $\\lambda\\le\\lambda_0$:\n\n$$\\lambda_0=\\dfrac{hc}{W}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{2{,}98\\cdot10^{-19}}=6{,}68\\cdot10^{-7}\\ \\text{m}=668\\ \\text{nm}$$\n\nLuego hay efecto fotoeléctrico para $\\lambda\\le668\\ \\text{nm}$.\n\n**(c)** Con $\\lambda=214\\ \\text{nm}$:\n\n$$E_{c,\\max}=\\dfrac{hc}{\\lambda}-W=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{214\\cdot10^{-9}}-2{,}98\\cdot10^{-19}=6{,}32\\cdot10^{-19}\\ \\text{J}=3{,}95\\ \\text{eV}$$",
+  "answer": "**(a)** $W\\approx2{,}98\\cdot10^{-19}\\ \\text{J}\\approx1{,}86\\ \\text{eV}$. **(b)** $\\lambda\\le668\\ \\text{nm}$. **(c)** $E_{c,\\max}\\approx6{,}32\\cdot10^{-19}\\ \\text{J}\\approx3{,}95\\ \\text{eV}$.",
+  "common_errors": [
+   "Sumar $eV_f$ en vez de restarlo al calcular $W$.",
+   "Dar el rango como $\\lambda\\ge\\lambda_0$ (es al revés: $\\lambda\\le\\lambda_0$).",
+   "Olvidar convertir el potencial de frenado a energía ($eV_f$)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Desintegración alfa del Polonio-210 · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 10.** El $^{210}_{84}\\text{Po}$ se desintegra por emisión $\\alpha$ dando plomo estable, con periodo de semidesintegración $138{,}4\\ \\text{días}$.\n\n**(a)** Reacción de desintegración.\n\n**(b)** Constante de desintegración.\n\nDe una muestra de $10^{16}$ átomos de $^{210}\\text{Po}$:\n\n**(c)** Actividad y número de átomos de Po-210 al cabo de un año.",
+  "knowns": [
+   "$T_{1/2} = 138{,}4\\ \\text{días}$",
+   "$N_0 = 10^{16}\\ \\text{átomos}$",
+   "$t = 1\\ \\text{año} = 365\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** La emisión $\\alpha$ resta 4 al número másico y 2 al atómico ($Z=82$ es el plomo):\n\n$$^{210}_{84}\\text{Po}\\ \\longrightarrow\\ ^{206}_{82}\\text{Pb}+{}^{4}_{2}\\text{He}$$\n\n**(b)** Constante de desintegración:\n\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{\\ln 2}{138{,}4}=5{,}01\\cdot10^{-3}\\ \\text{días}^{-1}=5{,}80\\cdot10^{-8}\\ \\text{s}^{-1}$$\n\n**(c)** Al cabo de un año ($t=365\\ \\text{días}$), $N=N_0 e^{-\\lambda t}$:\n\n$$N=10^{16}\\,e^{-5{,}01\\cdot10^{-3}\\cdot365}=10^{16}\\,e^{-1{,}83}=1{,}61\\cdot10^{15}\\ \\text{átomos}$$\n\nLa actividad es $A=\\lambda N$ (con $\\lambda$ en $\\text{s}^{-1}$):\n\n$$A=5{,}80\\cdot10^{-8}\\cdot1{,}61\\cdot10^{15}=9{,}3\\cdot10^{7}\\ \\text{Bq}$$",
+  "answer": "**(a)** $^{210}_{84}\\text{Po}\\to{}^{206}_{82}\\text{Pb}+\\alpha$. **(b)** $\\lambda\\approx5{,}01\\cdot10^{-3}\\ \\text{días}^{-1}=5{,}80\\cdot10^{-8}\\ \\text{s}^{-1}$. **(c)** $N\\approx1{,}61\\cdot10^{15}$ átomos, $A\\approx9{,}3\\cdot10^{7}\\ \\text{Bq}$.",
+  "common_errors": [
+   "Dar mal el plomo resultante (debe ser $^{206}_{82}\text{Pb}$).",
+   "Usar $\\lambda$ en días para la actividad en Bq (hay que pasar a $\text{s}^{-1}$).",
+   "Confundir $\\lambda=\\ln 2/T_{1/2}$ con $1/T_{1/2}$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Ley de la gravitación universal (teoría) · Murcia · Extraordinaria 2024",
+  "statement": "**Teoría T1.** Enuncie la ley de la gravitación universal de Newton.",
+  "knowns": [],
+  "full_solution": "La ley de la gravitación universal (Newton) establece que dos cuerpos puntuales de masas $M$ y $m$ separados una distancia $r$ se atraen con una fuerza:\n\n$$\\vec{F}=-\\dfrac{GMm}{r^2}\\,\\vec{u}_r$$\n\ncuyas características son:\n- **Dirección**: la recta que une ambas masas.\n- **Sentido**: atractivo (de ahí el signo negativo respecto al vector unitario $\\vec{u}_r$ que va de la masa que crea el campo a la otra).\n- **Módulo**: proporcional al producto de las masas e inversamente proporcional al cuadrado de la distancia.\n\nLa constante $G=6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$ es universal. Es una fuerza **central** y **conservativa**. De ella derivan el campo gravitatorio $\\vec{g}=-\\dfrac{GM}{r^2}\\vec{u}_r$ y el potencial $V=-\\dfrac{GM}{r}$, y permite deducir las leyes de Kepler del movimiento planetario.",
+  "answer": "$\\vec{F}=-\\dfrac{GMm}{r^2}\\vec{u}_r$: atractiva, central, dirigida según la recta que une las masas, proporcional al producto de masas e inversa al cuadrado de la distancia.",
+  "common_errors": [
+   "Olvidar el carácter atractivo (signo) o vectorial de la fuerza.",
+   "Escribir $r$ sin elevar al cuadrado.",
+   "Confundir $G$ (constante universal) con $g$ (intensidad del campo terrestre)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Inducción electromagnética: leyes de Faraday y Lenz (teoría) · Murcia · Extraordinaria 2024",
+  "statement": "**Teoría T2.** Enuncie las leyes de Faraday y de Lenz de la inducción electromagnética.",
+  "knowns": [],
+  "full_solution": "**Ley de Faraday.** La fuerza electromotriz inducida en un circuito es igual a la variación temporal del flujo magnético que lo atraviesa, cambiada de signo:\n\n$$\\varepsilon=-\\dfrac{d\\Phi}{dt},\\qquad \\Phi=\\int\\vec{B}\\cdot d\\vec{S}$$\n\nPara $N$ espiras, $\\varepsilon=-N\\dfrac{d\\Phi}{dt}$. El flujo puede variar por cambio de la intensidad del campo, del área del circuito o de la orientación entre $\\vec{B}$ y $\\vec{S}$ (base del alternador).\n\n**Ley de Lenz.** La corriente inducida tiene el sentido tal que se opone a la causa que la produce (a la variación de flujo). El signo menos de la ley de Faraday expresa esta oposición y es consecuencia del principio de conservación de la energía: la corriente inducida crea un campo que tiende a mantener el flujo original.",
+  "answer": "Faraday: $\\varepsilon=-N\\dfrac{d\\Phi}{dt}$. Lenz: la corriente inducida se opone a la variación de flujo (signo menos), por conservación de la energía.",
+  "common_errors": [
+   "Olvidar el número de espiras $N$ o el signo negativo.",
+   "No explicar las causas de variación del flujo.",
+   "Confundir flujo magnético con campo magnético."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Defectos de la visión: ametropías (teoría) · Murcia · Extraordinaria 2024",
+  "statement": "**Teoría T3.** Describa los principales defectos de la visión (ametropías) y su corrección.",
+  "knowns": [],
+  "full_solution": "En el ojo emétrope (normal) la imagen de los objetos se forma nítidamente sobre la retina. Las **ametropías** son defectos en que esto no ocurre:\n\n- **Miopía**: el ojo es demasiado convergente o el globo ocular muy largo; la imagen de objetos lejanos se forma *antes* de la retina. El punto remoto está a distancia finita. Se corrige con **lentes divergentes** (potencia negativa).\n\n- **Hipermetropía**: el ojo es poco convergente o el globo muy corto; la imagen se formaría *detrás* de la retina. Dificulta la visión cercana. Se corrige con **lentes convergentes** (potencia positiva).\n\n- **Presbicia (vista cansada)**: pérdida de capacidad de acomodación del cristalino con la edad; el punto próximo se aleja. Se corrige con lentes convergentes para la visión cercana.\n\n- **Astigmatismo**: la córnea no es esférica (distintas curvaturas), dando imágenes deformadas. Se corrige con **lentes cilíndricas**.",
+  "answer": "Miopía (imagen antes de la retina, lente divergente), hipermetropía (imagen tras la retina, lente convergente), presbicia (pérdida de acomodación, lente convergente de cerca) y astigmatismo (córnea no esférica, lente cilíndrica).",
+  "common_errors": [
+   "Intercambiar la corrección de miopía (divergente) e hipermetropía (convergente).",
+   "Confundir presbicia con hipermetropía.",
+   "No mencionar que el astigmatismo se corrige con lentes cilíndricas."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Interacciones fundamentales (teoría) · Murcia · Extraordinaria 2024",
+  "statement": "**Teoría T4.** Describa las interacciones fundamentales de la naturaleza.",
+  "knowns": [],
+  "full_solution": "Existen cuatro interacciones fundamentales, que explican todas las fuerzas conocidas:\n\n- **Gravitatoria**: atractiva, de alcance infinito, la más débil pero dominante a gran escala (planetas, estrellas, galaxias). Actúa sobre la masa-energía. Partícula mediadora hipotética: el gravitón.\n\n- **Electromagnética**: de alcance infinito, atractiva o repulsiva, actúa sobre cargas eléctricas. Responsable de la estructura de átomos y moléculas, la luz y la química. Mediada por el **fotón**.\n\n- **Nuclear fuerte**: de muy corto alcance ($\\sim10^{-15}\\ \\text{m}$), la más intensa; mantiene unidos protones y neutrones en el núcleo (y los quarks dentro de ellos). Mediada por **gluones**.\n\n- **Nuclear débil**: de cortísimo alcance, responsable de la desintegración $\\beta$ y de procesos como la fusión estelar. Mediada por los **bosones $W^\\pm$ y $Z^0$**.\n\nOrdenadas por intensidad relativa: fuerte $>$ electromagnética $>$ débil $>$ gravitatoria.",
+  "answer": "Gravitatoria (masa, alcance infinito, la más débil), electromagnética (carga, fotón), nuclear fuerte (corto alcance, la más intensa, gluones) y nuclear débil (desintegración $\\beta$, bosones $W$ y $Z$).",
+  "common_errors": [
+   "Olvidar alguna de las cuatro interacciones.",
+   "Decir que la gravitatoria es la más intensa (es la más débil).",
+   "Confundir el corto alcance de las nucleares con el alcance infinito de gravedad y electromagnetismo."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Electrón sin desviarse: ¿es nulo el campo magnético? · Murcia · Extraordinaria 2024",
+  "statement": "**Cuestión C1.** Un electrón con velocidad no nula penetra sin desviarse en una región sin campo eléctrico. ¿Se puede asegurar que el campo magnético también es nulo? Razone.",
+  "knowns": [],
+  "full_solution": "No se puede asegurar. La fuerza magnética sobre una carga es $\\vec{F}=q\\,\\vec{v}\\times\\vec{B}$. Que el electrón no se desvíe significa que la fuerza neta es nula; como no hay campo eléctrico, la fuerza magnética debe ser cero:\n\n$$\\vec{v}\\times\\vec{B}=\\vec{0}$$\n\nEsto ocurre en dos casos: (1) que $\\vec{B}=\\vec{0}$, o (2) que $\\vec{B}\\neq\\vec{0}$ **pero sea paralelo (o antiparalelo) a $\\vec{v}$**, pues entonces el producto vectorial se anula ($\\operatorname{sen}0^\\circ=0$).\n\nPor tanto, de la ausencia de desviación **no** se deduce que $\\vec{B}=\\vec{0}$: podría existir un campo magnético en la misma dirección que la velocidad del electrón.",
+  "answer": "No. Si $\\vec{B}$ es paralelo a $\\vec{v}$, la fuerza $\\vec{F}=q\\vec{v}\\times\\vec{B}=\\vec{0}$ aunque $\\vec{B}\\neq\\vec{0}$; el electrón no se desvía. Solo puede afirmarse que $\\vec{v}\\times\\vec{B}=\\vec{0}$.",
+  "common_errors": [
+   "Concluir que el campo es nulo necesariamente.",
+   "Olvidar el caso $\u000bec{v}\\parallel\u000bec{B}$ en el producto vectorial.",
+   "Confundir fuerza magnética con eléctrica."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Lámina entre dos medios: condición para que el rayo se acerque a la normal · Murcia · Extraordinaria 2024",
+  "statement": "**Cuestión C2.** Una lámina de índice $n_2$ está rodeada por medios de índices $n_1$ y $n_3$. Un rayo incide con ángulo $\\theta_1$ y sale con $\\theta_3$. Justifique qué condición debe cumplirse para que $\\theta_3<\\theta_1$: a) $n_1>n_3$; b) $n_3>n_1$; c) $n_1>n_2$.",
+  "knowns": [],
+  "full_solution": "Aplicando la ley de Snell en las dos caras paralelas de la lámina:\n\n$$n_1\\operatorname{sen}\\theta_1=n_2\\operatorname{sen}\\theta_2=n_3\\operatorname{sen}\\theta_3$$\n\nDe los extremos se obtiene directamente, sin que importe $n_2$:\n\n$$n_1\\operatorname{sen}\\theta_1=n_3\\operatorname{sen}\\theta_3\\ \\Rightarrow\\ \\operatorname{sen}\\theta_3=\\dfrac{n_1}{n_3}\\operatorname{sen}\\theta_1$$\n\nPara que $\\theta_3<\\theta_1$ se necesita $\\operatorname{sen}\\theta_3<\\operatorname{sen}\\theta_1$, es decir $\\dfrac{n_1}{n_3}<1$, o sea:\n\n$$n_3>n_1$$\n\nLa respuesta correcta es la **b)**. El índice intermedio $n_2$ no influye en la relación entre $\\theta_1$ y $\\theta_3$.",
+  "answer": "Opción **b)** $n_3>n_1$. De $n_1\\operatorname{sen}\\theta_1=n_3\\operatorname{sen}\\theta_3$, si $n_3>n_1$ entonces $\\theta_3<\\theta_1$; el índice $n_2$ es irrelevante.",
+  "common_errors": [
+   "Pensar que el índice de la lámina $n_2$ influye en los ángulos de entrada y salida.",
+   "Invertir la relación: $\theta_3<\theta_1$ exige $n_3>n_1$, no $n_1>n_3$.",
+   "Confundir el acercamiento a la normal con el índice del medio incidente."
+  ],
+  "figure_suggestion": "Lámina de índice n2 entre medios n1 (arriba) y n3 (abajo); rayo entrando con ángulo theta1 y saliendo con theta3<theta1; marcar las dos refracciones sucesivas.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Objeto en el foco imagen de una lente divergente · Murcia · Extraordinaria 2024",
+  "statement": "**Cuestión C3.** Se coloca un objeto en el punto focal imagen de una lente divergente. Mediante un diagrama de rayos, indique las características de la imagen (mayor/menor/igual, derecha/invertida, real/virtual).",
+  "knowns": [],
+  "full_solution": "El foco imagen de una lente divergente está en el lado del objeto (es virtual), a distancia $|f|$. Colocar el objeto allí significa $s=-|f|$. Con $f'=-|f|$ y la ecuación $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$:\n\n$$\\dfrac{1}{s'}=\\dfrac{1}{f'}+\\dfrac{1}{s}=\\dfrac{1}{-|f|}+\\dfrac{1}{-|f|}=-\\dfrac{2}{|f|}\\ \\Rightarrow\\ s'=-\\dfrac{|f|}{2}$$\n\nEl aumento lateral es:\n\n$$M=\\dfrac{s'}{s}=\\dfrac{-|f|/2}{-|f|}=\\dfrac{1}{2}$$\n\nPor tanto la imagen es **virtual** ($s'<0$), **derecha** ($M>0$) y **menor** (la mitad del tamaño, $|M|=1/2$). Toda lente divergente con objeto real da siempre imagen virtual, derecha y reducida.\n\n**Trazado de rayos**: un rayo paralelo al eje emerge divergiendo como si procediese del foco imagen; un rayo que pasa por el centro óptico no se desvía; sus prolongaciones hacia atrás se cortan formando la imagen virtual reducida.",
+  "answer": "Imagen virtual, derecha y menor (tamaño mitad, $M=1/2$), situada a $|f|/2$ del mismo lado que el objeto.",
+  "common_errors": [
+   "Usar focal positiva para la lente divergente.",
+   "Interpretar $s'<0$ como imagen real.",
+   "Esperar imagen invertida (la divergente da siempre imagen derecha con objeto real)."
+  ],
+  "figure_suggestion": "Lente divergente; objeto situado en el foco imagen (a |f| en el lado del objeto); trazado con rayo paralelo y rayo por el centro; imagen virtual, derecha y de tamaño mitad a |f|/2.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Datación por carbono-14 de una estatua inca · Murcia · Extraordinaria 2024",
+  "statement": "**Cuestión C4.** En una estatua de madera inca la proporción de carbono-14 es el $91\\%$ de la original. Si el periodo de semidesintegración del $^{14}\\text{C}$ es $5730\\ \\text{años}$, determine la edad de la estatua.",
+  "knowns": [
+   "$N/N_0 = 0{,}91$",
+   "$T_{1/2} = 5730\\ \\text{años}$"
+  ],
+  "full_solution": "La constante de desintegración es:\n\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{\\ln 2}{5730}=1{,}21\\cdot10^{-4}\\ \\text{años}^{-1}$$\n\nDe la ley de desintegración $N=N_0 e^{-\\lambda t}$, con $\\dfrac{N}{N_0}=0{,}91$:\n\n$$t=\\dfrac{1}{\\lambda}\\ln\\!\\left(\\dfrac{N_0}{N}\\right)=\\dfrac{\\ln(1/0{,}91)}{1{,}21\\cdot10^{-4}}=\\dfrac{0{,}0943}{1{,}21\\cdot10^{-4}}\\approx780\\ \\text{años}$$",
+  "answer": "$t\\approx780\\ \\text{años}$.",
+  "common_errors": [
+   "Usar $\\lambda=1/T_{1/2}$ en lugar de $\\ln 2/T_{1/2}$.",
+   "Tomar $N/N_0=0{,}09$ en vez de $0{,}91$.",
+   "Equivocar el signo dentro del logaritmo ($\\ln(N_0/N)=\\ln(1/0{,}91)>0$)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Exoplaneta de Kepler-22: órbita, escape y satélite · Murcia · Extraordinaria 2024",
+  "statement": "**Problema P1.** Un planeta orbita la estrella Kepler-22 (masa $0{,}97\\,M_\\odot$). El planeta tiene masa $36\\,M_T$, radio $2{,}4\\,R_T$ y periodo orbital $289$ días.\n\n**(a)** Radio orbital y velocidad orbital del planeta.\n\n**(b)** Velocidad de escape desde la superficie del planeta.\n\n**(c)** Energía para poner un satélite de $300\\ \\text{kg}$ en órbita a $5000\\ \\text{km}$ de la superficie.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_\\odot = 2{,}0\\cdot10^{30}\\ \\text{kg}$",
+   "$M_T = 6{,}0\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6370\\ \\text{km}$",
+   "$T = 289\\ \\text{días} = 2{,}497\\cdot10^{7}\\ \\text{s}$"
+  ],
+  "full_solution": "Datos derivados: $M_{\\text{estrella}}=0{,}97\\cdot2{,}0\\cdot10^{30}=1{,}94\\cdot10^{30}\\ \\text{kg}$; $M_{\\text{planeta}}=36\\cdot6{,}0\\cdot10^{24}=2{,}16\\cdot10^{26}\\ \\text{kg}$; $R_{\\text{planeta}}=2{,}4\\cdot6370=15288\\ \\text{km}=1{,}529\\cdot10^{7}\\ \\text{m}$.\n\n**(a)** Tercera ley de Kepler respecto a la estrella:\n\n$$r=\\left(\\dfrac{GM_{\\text{estrella}}T^2}{4\\pi^2}\\right)^{1/3}=\\left(\\dfrac{6{,}67\\cdot10^{-11}\\cdot1{,}94\\cdot10^{30}\\cdot(2{,}497\\cdot10^{7})^2}{4\\pi^2}\\right)^{1/3}=1{,}27\\cdot10^{11}\\ \\text{m}$$\n\n$$v=\\dfrac{2\\pi r}{T}=\\sqrt{\\dfrac{GM_{\\text{estrella}}}{r}}=3{,}19\\cdot10^{4}\\ \\text{m·s}^{-1}$$\n\n**(b)** Velocidad de escape desde la superficie del planeta:\n\n$$v_e=\\sqrt{\\dfrac{2GM_{\\text{planeta}}}{R_{\\text{planeta}}}}=\\sqrt{\\dfrac{2\\cdot6{,}67\\cdot10^{-11}\\cdot2{,}16\\cdot10^{26}}{1{,}529\\cdot10^{7}}}=4{,}34\\cdot10^{4}\\ \\text{m·s}^{-1}$$\n\n**(c)** Órbita del satélite: $r_s=R_{\\text{planeta}}+5000\\ \\text{km}=20288\\ \\text{km}=2{,}029\\cdot10^{7}\\ \\text{m}$. La energía para ponerlo en órbita desde la superficie es $\\Delta E=E_{\\text{órbita}}-E_{\\text{superficie}}=GM_{\\text{planeta}}\\,m\\left(\\dfrac{1}{R_{\\text{planeta}}}-\\dfrac{1}{2r_s}\\right)$:\n\n$$\\Delta E=6{,}67\\cdot10^{-11}\\cdot2{,}16\\cdot10^{26}\\cdot300\\left(\\dfrac{1}{1{,}529\\cdot10^{7}}-\\dfrac{1}{2\\cdot2{,}029\\cdot10^{7}}\\right)=1{,}76\\cdot10^{11}\\ \\text{J}$$",
+  "answer": "**(a)** $r\\approx1{,}27\\cdot10^{11}\\ \\text{m}$, $v\\approx3{,}19\\cdot10^{4}\\ \\text{m·s}^{-1}$. **(b)** $v_e\\approx4{,}34\\cdot10^{4}\\ \\text{m·s}^{-1}$. **(c)** $\\Delta E\\approx1{,}76\\cdot10^{11}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la masa de la Tierra o del Sol sin aplicar los factores $36$ y $0{,}97$.",
+   "Confundir la masa central (estrella, para la órbita) con la del planeta (para escape y satélite).",
+   "No sumar el radio del planeta a los $5000\\ \text{km}$ de altura del satélite."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Antena 5G: periodo, alcance y número de fotones · Murcia · Extraordinaria 2024",
+  "statement": "**Problema P2.** Una antena 5G emite ondas EM de $3500\\ \\text{MHz}$ con potencia $1300\\ \\text{W}$.\n\n**(a)** Periodo y longitud de onda de la radiación.\n\n**(b)** Distancia a la que la intensidad es $100$ veces menor que a $5\\ \\text{m}$.\n\n**(c)** Número de fotones que atraviesan en un segundo una ventana de $2\\ \\text{m}^2$ situada a $20\\ \\text{m}$.",
+  "knowns": [
+   "$f = 3500\\ \\text{MHz} = 3{,}5\\cdot10^{9}\\ \\text{Hz}$",
+   "$P = 1300\\ \\text{W}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$S = 2\\ \\text{m}^2$"
+  ],
+  "full_solution": "**(a)** Periodo y longitud de onda:\n\n$$T=\\dfrac{1}{f}=\\dfrac{1}{3{,}5\\cdot10^{9}}=2{,}86\\cdot10^{-10}\\ \\text{s},\\qquad \\lambda=\\dfrac{c}{f}=\\dfrac{3\\cdot10^{8}}{3{,}5\\cdot10^{9}}=0{,}0857\\ \\text{m}=8{,}57\\ \\text{cm}$$\n\n**(b)** La intensidad de una onda esférica va como $I\\propto1/r^2$. Si $I(r)=\\dfrac{I(5)}{100}$:\n\n$$\\dfrac{I(5)}{I(r)}=\\dfrac{r^2}{5^2}=100\\ \\Rightarrow\\ r=5\\cdot\\sqrt{100}=50\\ \\text{m}$$\n\n**(c)** Intensidad a $20\\ \\text{m}$: $I=\\dfrac{P}{4\\pi r^2}=\\dfrac{1300}{4\\pi(20)^2}=0{,}259\\ \\text{W·m}^{-2}$. Potencia que atraviesa la ventana: $P_v=I\\cdot S=0{,}259\\cdot2=0{,}517\\ \\text{W}$. Energía de cada fotón $E=hf=6{,}63\\cdot10^{-34}\\cdot3{,}5\\cdot10^{9}=2{,}32\\cdot10^{-24}\\ \\text{J}$. Número de fotones por segundo:\n\n$$N=\\dfrac{P_v}{E}=\\dfrac{0{,}517}{2{,}32\\cdot10^{-24}}=2{,}23\\cdot10^{23}\\ \\text{fotones·s}^{-1}$$",
+  "answer": "**(a)** $T\\approx2{,}86\\cdot10^{-10}\\ \\text{s}$, $\\lambda\\approx8{,}57\\ \\text{cm}$. **(b)** $r=50\\ \\text{m}$. **(c)** $N\\approx2{,}23\\cdot10^{23}\\ \\text{fotones·s}^{-1}$.",
+  "common_errors": [
+   "Usar $I\\propto1/r$ en vez de $1/r^2$ en el apartado (b).",
+   "Olvidar multiplicar la intensidad por el área de la ventana.",
+   "Confundir energía de un fotón $hf$ con la potencia total emitida."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Energía, fuerza y trabajo entre dos cargas puntuales · Murcia · Extraordinaria 2024",
+  "statement": "**Problema P3.** $q_1=+2\\ \\mu\\text{C}$ está en $(3,0)\\ \\text{cm}$ y $q_2=-1\\ \\mu\\text{C}$ en $(0,1)\\ \\text{cm}$.\n\n**(a)** Energía potencial eléctrica total del sistema.\n\n**(b)** Fuerza eléctrica (vectorial) que $q_2$ ejerce sobre $q_1$.\n\n**(c)** Trabajo externo para llevar una carga de $+3\\ \\mu\\text{C}$ desde el origen hasta el infinito.",
+  "knowns": [
+   "$q_1 = +2\\ \\mu\\text{C}$ en $(3,0)\\ \\text{cm}$",
+   "$q_2 = -1\\ \\mu\\text{C}$ en $(0,1)\\ \\text{cm}$",
+   "$k = 9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$"
+  ],
+  "full_solution": "Distancia entre $q_1$ y $q_2$: $r=\\sqrt{3^2+1^2}\\ \\text{cm}=\\sqrt{10}\\ \\text{cm}=0{,}0316\\ \\text{m}$.\n\n**(a)** Energía potencial del par:\n\n$$U=\\dfrac{k\\,q_1 q_2}{r}=\\dfrac{9\\cdot10^{9}\\cdot(2\\cdot10^{-6})(-1\\cdot10^{-6})}{0{,}0316}=-0{,}569\\ \\text{J}$$\n\n**(b)** Módulo de la fuerza ($r^2=10\\cdot10^{-4}=10^{-3}\\ \\text{m}^2$):\n\n$$F=\\dfrac{k\\,|q_1 q_2|}{r^2}=\\dfrac{9\\cdot10^{9}\\cdot2\\cdot10^{-12}}{10^{-3}}=18\\ \\text{N}$$\n\nEs atractiva (cargas de signo opuesto): sobre $q_1$ apunta hacia $q_2$, en la dirección $(0-3,\\,1-0)/\\sqrt{10}=(-0{,}949,\\,0{,}316)$:\n\n$$\\vec{F}=(-17{,}1\\,\\vec{i}+5{,}69\\,\\vec{j})\\ \\text{N}$$\n\n**(c)** El trabajo externo para llevar $+3\\ \\mu\\text{C}$ desde el origen hasta el infinito es $W_{\\text{ext}}=q(V_\\infty-V_O)=-q\\,V_O$. Potencial en el origen (distancias: a $q_1$, $3\\ \\text{cm}$; a $q_2$, $1\\ \\text{cm}$):\n\n$$V_O=k\\!\\left(\\dfrac{2\\cdot10^{-6}}{0{,}03}+\\dfrac{-1\\cdot10^{-6}}{0{,}01}\\right)=9\\cdot10^{9}\\cdot(-3{,}33\\cdot10^{-5})=-3{,}0\\cdot10^{5}\\ \\text{V}$$\n\n$$W_{\\text{ext}}=-q\\,V_O=-(3\\cdot10^{-6})(-3{,}0\\cdot10^{5})=0{,}9\\ \\text{J}$$",
+  "answer": "**(a)** $U\\approx-0{,}569\\ \\text{J}$. **(b)** $\\vec{F}\\approx(-17{,}1\\,\\vec{i}+5{,}69\\,\\vec{j})\\ \\text{N}$, $|\\vec{F}|=18\\ \\text{N}$. **(c)** $W_{\\text{ext}}=0{,}9\\ \\text{J}$.",
+  "common_errors": [
+   "No pasar las distancias de cm a m (afecta mucho por el cuadrado).",
+   "Olvidar el carácter vectorial de la fuerza o su sentido atractivo.",
+   "Equivocar el signo del trabajo externo $W_{\text{ext}}=-qV_O$."
+  ],
+  "figure_suggestion": "Plano xy (cm): q1=+2 uC en (3,0), q2=-1 uC en (0,1); vector fuerza atractiva sobre q1 hacia q2; carga +3 uC en el origen que se lleva al infinito.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Serie de Balmer y efecto fotoeléctrico en cesio · Murcia · Extraordinaria 2024",
+  "statement": "**Problema P4.** En una lámpara de hidrógeno se observan dos transiciones de la serie de Balmer: la A ($\\Delta E=3{,}02\\cdot10^{-19}\\ \\text{J}$) y la B ($\\Delta E=7{,}78\\cdot10^{-19}\\ \\text{J}$). La luz incide sobre cesio, cuyo trabajo de extracción es $2{,}1\\ \\text{eV}$.\n\n**(a)** Frecuencias de los fotones de ambas transiciones.\n\n**(b)** ¿Con cuál, A o B, se produce efecto fotoeléctrico en el cesio?\n\n**(c)** Velocidad de los electrones emitidos en ese caso.",
+  "knowns": [
+   "$\\Delta E_A = 3{,}02\\cdot10^{-19}\\ \\text{J}$",
+   "$\\Delta E_B = 7{,}78\\cdot10^{-19}\\ \\text{J}$",
+   "$W = 2{,}1\\ \\text{eV} = 3{,}36\\cdot10^{-19}\\ \\text{J}$",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** De $\\Delta E=h f$:\n\n$$f_A=\\dfrac{\\Delta E_A}{h}=\\dfrac{3{,}02\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=4{,}56\\cdot10^{14}\\ \\text{Hz}$$\n\n$$f_B=\\dfrac{\\Delta E_B}{h}=\\dfrac{7{,}78\\cdot10^{-19}}{6{,}63\\cdot10^{-34}}=1{,}17\\cdot10^{15}\\ \\text{Hz}$$\n\n**(b)** Hay efecto fotoeléctrico si la energía del fotón supera el trabajo de extracción $W=2{,}1\\ \\text{eV}=3{,}36\\cdot10^{-19}\\ \\text{J}$:\n- Transición A: $3{,}02\\cdot10^{-19}\\ \\text{J}<3{,}36\\cdot10^{-19}\\ \\text{J}$ → **no** hay efecto.\n- Transición B: $7{,}78\\cdot10^{-19}\\ \\text{J}>3{,}36\\cdot10^{-19}\\ \\text{J}$ → **sí** hay efecto.\n\n**(c)** Para la transición B, la energía cinética máxima es $E_c=\\Delta E_B-W$:\n\n$$E_c=7{,}78\\cdot10^{-19}-3{,}36\\cdot10^{-19}=4{,}42\\cdot10^{-19}\\ \\text{J}$$\n\n$$v=\\sqrt{\\dfrac{2E_c}{m_e}}=\\sqrt{\\dfrac{2\\cdot4{,}42\\cdot10^{-19}}{9{,}1\\cdot10^{-31}}}=9{,}86\\cdot10^{5}\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $f_A\\approx4{,}56\\cdot10^{14}\\ \\text{Hz}$, $f_B\\approx1{,}17\\cdot10^{15}\\ \\text{Hz}$. **(b)** Solo con la transición B. **(c)** $v\\approx9{,}86\\cdot10^{5}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "No convertir el trabajo de extracción de eV a J antes de comparar.",
+   "Comparar con la longitud de onda en vez de la energía del fotón.",
+   "Olvidar restar $W$ a la energía del fotón para hallar la energía cinética."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ }
+]

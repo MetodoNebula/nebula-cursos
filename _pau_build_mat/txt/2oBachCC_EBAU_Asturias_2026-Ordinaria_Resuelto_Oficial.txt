@@ -1,0 +1,386 @@
+                                                                                                                                                                                               Prueba de acceso a la Universidad (PAU)
+                                                                                                                                                                                                         CURSO 2024-2025
+
+
+
+                                                                                                       MATEMÁTICAS II
+
+   ➢ Responda en el pliego en blanco a cuatro de las cinco preguntas que se proponen. De cada una de las seleccionadas conteste una única opción, A o B. Todas las preguntas se calificarán con un máximo de 2.5 puntos.
+
+   ➢ Agrupaciones de preguntas que sumen más de 10 puntos o que no coincidan con las indicadas conllevarán la anulación de la(s) última(s) pregunta(s) seleccionada(s) y/o respondida(s)
+
+
+
+
+                                                                                                                       Para discutir el sistema, vamos a aplicar Gauss a la matriz ampliada del sistema:
+                                                                                                                                                                                                   
+Pregunta 1. Opción A Un cliente de una cafeterı́a compra 1 café, 2 tés y 2 zumos y paga 11 euros. Al dı́a                                        1 2 2 11                      1 2       2      11
+                                                                                                                                                                                                   
+                                                                                                                                                                  F →F −F1 
+                                                                                                                                             A =  1 3 3 16  −−2−−−2−−→
+                                                                                                                                                 
+                                                                                                                                                                                0 1        1       5 
+                                                                                                                                                                                                      
+     siguiente compra 1 café, 3 tés y 3 zumos y paga 16 euros. El tercer dı́a compra 3 cafés, 3 tés y los                                                    F3 →F3 −3F1                       
+     zumos que pueda pagar con 21 euros exactos (no deben darle vuelta). Se pide:                                                                   3 3 p 21                      0 −3 p − 6 −12
+                                                                                                                                                                                                  
+     (a) (1.5 puntos) Encuentra un sistema de ecuaciones lineales que modelice el problema de calcular el                                                                   1 2       2       11
+                                                                                                                                                                                               
+                                                                                                                                                             F3 →F3 +3F2 
+     precio de cada producto en función del número p de zumos que le den el tercer dı́a. Discute el sistema                                               −− −−−−−→  0 1     1             5 
+                                                                                                                                                                                                
+                                                                                                                                                                                               
+     obtenido en función del número de zumos pagados el último dı́a.                                                                                                    0 0 p−3            3
+
+     (b) (0.5 puntos) El camarero del tercer dı́a le dice “Por ese dinero te daré dos zumos”, el cliente dice         Por lo tanto el sistema tiene solución única si p ̸= 3 y para p = 3 el sistema no tiene solución.
+     “Eso es imposible, el precio está mal calculado” ¿quién tiene razón? Justifica la respuesta.                   (b) Si p = 2, con la matriz escalonada calculada en el apartado anterior se ve que z = −3 < 0 y esto no
+     (c) (0.5 puntos) El camarero le responde, en efecto, tiene usted razón, en realidad le tengo que dar 4           es posible dado que los precios no pueden ser negativos.
+     zumos y el cliente queda satisfecho. ¿A qué precio le ha cobrado cada bebida?                                  (c) En efecto, para p = 4 el sistema tendrı́a solución única, y esta serı́a: x = 1, y = 2, z = 3.
+                                                                                                                                                                                                          
+     Solución:                                                                                                                                                                             −1 2 −2
+                                                                                                                                                                                                          
+                                                                                                                 Pregunta 1. Opción B Para cada a ∈ R se considera la matriz A =  0 3 −4 . Se pide:
+                                                                                                                                                                                                          
+     Llamaremos x al precio de cada café, y al de cada té y z al de cada zumo.                                                                                                                          
+                                                                                                                                                                                             a 2 −3
+     (a) Cada ecuación relaciona lo que se ha pagado en total con lo que se ha pagado por cada producto.
+                                                                                                                       (a) (1 punto) Calcular todos los valores de a ∈ R que hacen que A2 = I, donde I es la matriz identidad
+     El primer dı́a:
+                                                                                                                       de orden 3.
+                                                  x + 2y + 2z = 11
+                                                                                                                       (b) (0.5 puntos) Si una matriz B de tamaño 3×3 verifica que B2 = 2I ¿Qué valores puede tomar det(B)?
+     El segundo dı́a:
+                                                  x + 3y + 3z = 16                                                     (c) (1 punto) Calcula el rango y el determinante de la matriz A para cada valor de a ∈ R.
+
+     y el tercer dı́a debemos poner el número de zumos como un parámetro, desconocido pero fijo, al que              Solución:
+     llamaremos p.
+                                                                                                                       (a) Como
+                                                 3x + 3y + pz = 21                                                                                                                                
+                                                                                                                                                                      1 − 2a      0       0
+                                                                                                                                                                                                  
+     Por lo tanto, un sistema de ecuaciones lineales que modeliza el problema es:                                                                            A2 =  −4 a
+                                                                                                                                                                  
+                                                                                                                                                                                  1       0
+                                                                                                                                                                                                   
+                                                                                                                                                                                                   
+                                                                                                                                                                                                 
+                                              x +2y +2z = 11                                                                                                      −4 a       2a 1 − 2a
+                                                                  
+                                                                  
+                                              x +3y +3z = 16                                                           la única solución es a = 0
+                                                                                                                                                                                       √
+                                                                  
+                                                                  
+                                                                                                                       (b) Como det(I) = 1 entonces det(B2 ) = det 2I = 8 y det(B) = ±2 2.
+                                                                  
+                                             3x +3y +pz = 21 
+                                                                                                                                                                                                Prueba de acceso a la Universidad (PAU)
+                                                                                                                                                                                                          CURSO 2024-2025
+
+
+                                                                                                                                                                          
+               −1 2 −2                                                                                                                                                       x2 − Ax + 11 si x < 2
+                                                                                                                     Pregunta 2. Opción B Se considera la función: f(x) =                         Se pide
+                                             1                                                                                                                               √5x − 1
+                       
+     (c) det  0 3 −4  = 1 − 2a. Si a ̸= el rango es 3, en caso contrario el rango es menor que 3.                                                                                        si x ≥ 2
+                       
+                                           2
+               a 2 −3
+                                                                                                                        (a) (0.75 puntos) Calcular el valor de A para el que f es una función continua.
+                                                            −1 2
+     Como tiene un menor de orden 2 distinto de cero, det        = −1 entonces el rango es 2.
+                                                                                                                          (b) (1.25 puntos) Si A = 6, estudiar los intervalos de crecimiento y decrecimiento de la función.
+                                                            0 3
+                                                                                                                          (c) (0.5 puntos) Para A = 6 ¿es x = 2 un extremo relativo de la función? ¿de qué tipo?.
+Pregunta 2. Opción A Una empresa inicia su cotización en bolsa, con un precio de 5 euros la acción. A
+     partir de ahı́, el precio de cada acción se modelizó en función del tiempo pasado en bolsa desde ese              Solución:
+                                                                                      5t2 + 2t + 5
+     momento inicial y durante el primer mes. Se obtuvo la siguiente función f(t) =               , t ∈ [0, 30].
+                                                                                         t2 + 1                           (a) La función es continua en (−∞, 2) por ser una función polinómica. También lo es en el intervalo
+     (a) (1 punto) Si la empresa necesita que el valor de cada acción llegue a 6.5 euros para que se alcan-              (2, +∞) por ser raı́z de un polinomio, que no toma valores negativos en dicho intervalo. Sólo resta ver
+     cen los objetivos previstos ¿se alcanzan en el intervalo estudiado?                                                  qué ocurre en el punto x = 2. Para ello calcularemos los lı́mites laterales y los compararemos con f(2):
+     (b) (0.75 punto) Estudia los intervalos en los que el precio de cada acción sube y los intervalos donde
+                                                                                                                                                           lı́m f(x) = lı́m x2 − Ax + 11 = 15 − 2A
+     baja.                                                                                                                                                x→2−        x→2−
+                                                                                                                                                                                          √
+                                                                                                                                                                        lı́m+ f(x) = lı́m+ 5x − 1 = 3
+     (c) (0.75 puntos) ¿Cuál serı́a el valor de la acción si esta función modelizase el valor de las acciones a                                                     x→2          x→2
+                                                                                                                                                                                 √            √
+     lo largo de toda la vida de la empresa?                                                                                                                              f(2) = 5 ∗ 2 − 1 = 9 = 3
+
+     Solución:                                                                                                           Por lo tanto, para que f sea continua debe Verificarse que 15 − 2A = 3 es decir, A = 6.
+
+     (a) (1 punto) Calculemos el máximo de la función.                                                                  (b) Si x < 2, f′ (x) = 2x − 6 sólo se anula en x = 3 que no está en el intervalo estudiado. Como f′ (x) < 0
+
+                                                               −2(t 2 − 1)                                                para todo x ∈ (−∞, 2) la función es decreciente en este intervalo.
+                                                   f ′ (t) =                                                                                            5
+                                                                (t 2 + 1)2                                                Si x > 2 entonces f′ (x) = √         que es mayor que 0 para todo x por lo que la función es creciente
+                                                                                                                                                    2 5x − 1
+     Calculemos los puntos crı́ticos:                                                                                     en todo el intervalo.
+                                             f ′ (t) = 0 → t 2 = 1 → t = ±1
+                                                                                                                          (c) Dado que la función decrece hasta el punto x = 2 y luego crece, el punto x = 2 es un extremo
+     Como t = −1 no pertenece en el dominio estudiado, se tendrá en cuenta sólo el valor de t = 1.                      relativo, en concreto, se trata de un mı́nimo.
+                                            4 t t2 − 3
+                                                       
+                                     ′′                    ′′
+                                    f (t) =         3 → f (1) = −1 < 0
+                                                2
+                                               t +1
+                                                                                                                                                                               1     π 
+                                                                                                                     Pregunta 3. Opción A Se sabe que la función F(x) =        sen    x2 es una primitiva de f. Se pide:
+     por lo tanto se trata de un máximo. f(1) = 6 < 6.5 por lo que el máximo no alcanza dicho valor.                                                                         2      2
+     En los extremos del intervalo f(0) = 5 < 6.5 y f(30) = 5.0666 < 6.5 por lo tanto nunca se alcanzan los               (a) (1 punto) Calcular la función f
+     objetivos previstos.
+                                                                                                                          (b) (0.75 puntos) Calcula una función que sea una primitiva de f y tal que en x = 0 tome el valor 6.
+     (b) La derivada de f es positiva en el intervalo [0, 1) y negativa en el resto, por lo tanto la cotización
+                                                                                                                          (c) (0.75 puntos) Calcula el área del recinto encerrado por la gráfica de f, el eje x y las rectas x = 0 y
+     aumentará el primer dı́a y decrecerá los dı́as restantes, alcanzando el máximo valor en t = 1.
+                                                                                                                          x = 1.
+     (c) Se deberı́a calcular el lı́mite cuando t tiende a ∞ de la función:
+                                                     5t 2 + 2t + 5                                                        Solución:
+                                                  lı́m             =5
+                                                 t→∞     t2 + 1
+                                                                                                                                                                                    π       π 
+     5 serı́a el valor a lo que se acerca la cotización a largo plazo.                                                   (a) Si F es un primitiva de f, entonces f(x) = F′ (x) =     x cos    x2
+                                                                                                                                                                                    2        2
+                                                                                                                                                                                                 Prueba de acceso a la Universidad (PAU)
+                                                                                                                                                                                                           CURSO 2024-2025
+
+
+                                                                                1     π 
+                                                                                                                         (b) Calculamos la recta que pasa por P y perpendicular a π. El punto que interseca esta recta con el
+     (b) Cualquier otra primitiva de f se puede escribir como G(x) = F(x) + k = sen       x2 + k. Como en 0
+                                                                                2       2
+                              1                                                                                          plano π es el buscado.
+     debe valer 6, entonces sen (0) + k = 6 y k = 6.Por lo tanto la primitiva pedida es
+                              2
+                                                                                                                         El vector normal a π es ũ = (1, 2, 3) luego la recta buscada es
+                                                    1              π     
+                                                  G(x) =
+                                                      sen      x2 + 6                                                                                             s ≡ (0, −1, −2) + λ(1, 2, 3)
+                                                    2        2
+                                      π      π                π       π                                                El punto intersección con π debe pertenecer a ambos, luego debe ser de la forma (λ, −1 + 2λ, −2 + 3λ)
+     (c) Si 0 ≤ x ≤ 1 se tiene que 0 ≤ x2 ≤ , por lo tanto x cos         x2 ≥ 0. El área pedida serı́a:
+                                      2      2                 2       2
+                                                                                                                         y además, debe cumplir la ecuación del plano:
+                                         Z 1
+                                                                       1
+                                             f (x)dx = F (1) − F (0) =                                                                                    λ + 2(−1 + 2λ) + 3(−2 + 3λ)) = 6 → λ = 1
+                                          0                            2
+                                                                                                                         Por lo tanto el punto buscado es Q = (1, 1, 1)
+                                                                                                                                            p                              √
+                                                    x−2                                                                  Además d(P, Q) = (1 − 0)2 + (1 + 1)2 + (1 + 2)2 = 14 ≈ 3.7417
+Pregunta 3. Opción B Dada la función f(x) =              , se pide:
+                                                    x2 + 1
+                                                                                                                    Pregunta 4. Opción B Un móvil se desplaza en lı́nea recta desde el punto P(2, 1, 3) hacia el punto
+     (a) (1.25 puntos) Calcular una primitiva de la función f.
+                                                                                                                         Q(0, −1, 1). Cuando llega a la mitad de la distancia de P a Q da un giro y se desplaza por la recta
+     (b) (1.25 puntos) Calcular el área del recinto acotado encerrado por la gráfica de f el eje X y las rectas
+                                                                                                                         que pasa por H(1, 1, 1).
+     x = 0 y x = 1.
+                                                                                                                         (a) (0.5 puntos) Calcula las coordenadas del punto en el que se realiza el giro.
+     Solución:                                                                                                          (b) (0.75 puntos) Calcula la recta por la que se desplaza el móvil tras realizar el giro.
+
+     (a) (1.25 puntos)                                                                                                   (c) (0.75 puntos) Calcula el ángulo de giro del movil.
+
+                         Z
+                             x −2
+                                           Z
+                                                  x
+                                                           Z
+                                                                −2             1                                         Solución:
+                                    dx =            dx +                dx =     ln(x 2 + 1) − 2 arctan(x)
+                             x2 + 1             2
+                                               x +1            x2 + 1          2
+                                                                                                                         (a) El giro se realiza en el punto medio es decir en el punto
+     (b) (1.25 puntos) La función f es negativa en x ∈ [0, 1]. El área pedida serı́a                                                                         1
+                                                                                                                                                                 ((2, 1, 3) + (0, −1, 1)) = (1, 0, 2)
+                                                                                                                                                             2
+                                     1                        1
+                             −         ln(2) − 2 arctan(1) − ( ln(1) − 2 arctan(0)) ≈ 1.2242                             (b) Tras realizar el giro se desplaza por la recta que pasa por (1, 0, 2) y por (1, 1, 1) es decir, por la recta
+                                     2                        2
+                                                                                                                         que pasa por (1, 1, 1) y su vector director es w̃ = (0, 1, −1). La recta, por lo tanto, es
+
+                                                                                                                                                                   r ≡ (1, 1, 1) + λ(0, 1, −1)
+Pregunta 4. Opción A Se considera el plano π ≡ x + 2y + 3z = 6 y el punto P(0, −1, −2). Se pide:
+                                                                                                                         (c) El ángulo es el mismo que forman los vectores directores de ambas, es decir, el vector w̃ y el vector
+     (a) (1.25 puntos) Encontrar la ecuación de una recta paralela a π y que contenga al punto P. ¿Es única
+                                                                                                                         que une P con Q, que es ũ = (2, 2, 2). Para calcularlo, recordemos que
+     esa recta?
+                                                                                                                                                                    ⃗u · w
+                                                                                                                                                                         ⃗ = ∥⃗u ∥ ∥w
+                                                                                                                                                                                    ⃗ ∥ cos(α)
+     (b) (1.25 puntos) Calcular el punto Q ∈ π que menos dista de P. ¿Qué distancia hay entre P y Q?
+                                                                                                                                                                                                  π
+                                                                                                                                                               ⃗u · w
+                                                                                                                                                                    ⃗ = 0 → cos(α) = 0 → α =
+                                                                                                                                                                                                  2
+     Solución:
+                                                                                                                    Pregunta 5. Opción A En una industria textil se fabrican pantalones vaqueros. Se observan que se pueden
+     (a) Tomamos dos puntos del plano y construimos el vector que los une, dicho vector es director de una               producir dos tipos de defectos en la producción, en la longitud y en las costuras. Se hace un estudio y
+                                                                                             →
+                                                                                             −
+     recta paralela a π: A = (1, 1, 1) ∈ π y B = (−1, −1, 3) ∈ π. El vector que une B y A es v = (2, 2, −2).             se detecta que el 10 % de los pantalones suspenden el test de longitud, mientras que no pasan el test
+     Una recta como la pedida puede ser: r ≡ (0, −1, −2) + λ(2, 2, −2).                                                  de las costuras el 5 %. Además, un 0.8 % de las prendas suspenden ambos test. Se pide:
+                                                                                                                                                                                         Prueba de acceso a la Universidad (PAU)
+                                                                                                                                                                                                   CURSO 2024-2025
+
+
+
+  (a) (1.25 puntos) Calcular la probabilidad de que una prenda seleccionada al azar suspenda al menos                 Solución:
+     uno de los test.
+                                                                                                                      (a) Si la variable aleatoria es X= número de kilos de la caja, para que el sistema de seguridad se active
+  (b) (1.25 puntos) Si una prenda seleccionada al azar ha suspendido el test de longitud ¿qué probabilidad
+                                                                                                                      se deberı́a cumplir que X ≥ 40.
+     hay de que también suspenda el test de costuras?
+                                                                                                                                                               
+                                                                                                                                             X − 38   40 − 38
+                                                                                                                         P(X ≥ 40) = P              ≥               = P(Z ≥ 1.6667) = 1 − P(Z ≤ 1.6667) = 1 − 0.952 = 0.048
+     Solución:                                                                                                                                1.2      1.2
+
+     Llamaremos L al suceso ‘la prenda tiene un defecto en la longitud’ y C al suceso ‘la prenda tiene un
+                                                                                                                      (b) La probabilidad de que salte es 0.048 y la de que no salte serı́a 1−0.048 = 0.952. Se trata de un pro-
+     defecto en las costuras’. Los datos del enunciado se traducen en:
+                                                                                                                      blema de éxito-fracaso, por lo que lo podemos modelizar como una distribución binomial B(10, 0.048).
+
+                                    P(L) = 0.1, P(C) = 0.05, P(L ∩ C) = 0.008                                         Para calcular lo pedido obtendremos la probabilidad de que no salte en ninguna ocasión, que es el
+                                                                                                                      suceso complementario del pedido.
+  (a) Se pide P(L ∪ C) = P(L) + P(C) − P(L ∩ C) = 0.1 + 0.05 − 0.008 = 0.142
+                                                                                                                                                                  
+                        P(L ∩ C) 0.008                                                                                                                            10
+  (b) Se pide P(C/L) =           =       = 0.08                                                                                                       P(X = 0) =     0.0480 0.95210 = 0.6115
+                          P(L)       0.1                                                                                                                           0
+
+Pregunta 5. Opción B Una grúa debe levantar una serie de cajas. Cuando el brazo de la grúa intenta levan-          Por lo que la probabilidad pedida es
+     tar más de 40kgs el sistema de seguridad se activa y la grúa no puede continuar. Supongamos que el
+                                                                                                                                                   P(X ≥ 1) = 1 − P(X = 0) = 1 − 0.6115 = 0.3885
+     peso de las cajas sigue una distribución N(38, 1.2).
+
+     (a) (1.25 puntos) ¿Cuál es la probabilidad de que el sistema de seguridad se active al intentar levantar   ∗ Algunos valores de la función de distribución N(0, 1) son: F(x) = P(Z ≤ x), F(0) = 0.5, F(1.6667) = 0.9520,
+     una caja?
+                                                                                                                 F(0.9520) = 0.83, F(0.83) = 0.7975, F(0.79) = 0.7852.
+     (b) (1.25 puntos) Se realiza el levantamiento de 10 cajas, una detrás de otra ¿cuál es la probabilidad
+                                                                                                                 Si tus valores no están entre los expuestos, toma el más cercano.
+     de que el sistema salte al menos una vez?
+                        Criterios de corrección
+
+
+Pregunta 1. Opción A Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque A: Sentido numérico.
+
+       ➢ Bloque D: Sentido algebraico.
+
+     Calificación máxima otorgada: 1.5 punto el apartado (a) y 0.5 puntos los apartados (b) y (c).
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 1. Opción B Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque A: Sentido numérico.
+
+       ➢ Bloque D: Sentido algebraico.
+
+     Calificación máxima otorgada: 1 punto los apartados (a) y (c) y 0.5 puntos el apartado (b).
+
+     PORCENTAJE: asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 2. Opción A Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque D: Sentido algebraico.
+
+     Calificación máxima otorgada: 1 punto el apartado (a) 0.75 puntos los apartados (b) y (c).
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 2. Opción B Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque D: Sentido algebraico.
+
+     Calificación máxima otorgada: 0.75 puntos el apartado (a), 1.25 puntos el apartado (b) y 0.3 puntoe el apar
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+Pregunta 3. Opción A Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque D: Sentido algebráico.
+
+     Calificación máxima otorgada: 1 punto el apartado (a) y 0.75 puntos los apartados (b) y (c)
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 3. Opción B Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque D: Sentido algebráico.
+
+     Calificación máxima otorgada: 1.25 puntos cada apartado.
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 4. Opción A Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque C: Sentido espacial.
+
+     Calificación máxima otorgada: 1.25 puntos cada apartado.
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 4. Opción B Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque C: Sentido espacial.
+
+     Calificación máxima otorgada: 0.5 puntos el apartado (a) y 0.75 puntos los apartados (b) y (c).
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 5. Opción A Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque E: Sentido estocástico.
+
+     Calificación máxima otorgada: 1.25 puntos cada apartado.
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+
+Pregunta 5. Opción B Criterios especı́ficos de corrección
+
+     SABERES BÁSICOS a los que corresponde la pregunta:
+
+       ➢ Bloque B: Sentido de la medida.
+
+       ➢ Bloque E: Sentido estocástico.
+
+     Calificación máxima otorgada: 1.25 puntos cada apartado.
+
+     PORCENTAJE asignado a la pregunta con respecto al total de la prueba: 25 %.
+

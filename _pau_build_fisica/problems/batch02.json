@@ -1,0 +1,1154 @@
+[
+ {
+  "block": "campo_gravitatorio",
+  "source": "Madrid · Junio 2023",
+  "title": "Energías de un satélite OneWeb en órbita · Madrid · Junio 2023",
+  "statement": "Un satélite de la constelación OneWeb, de masa $m_S = 150\\ \\text{kg}$, se encuentra en una órbita circular alrededor de la Tierra a una altura $h = 1200\\ \\text{km}$ sobre el nivel del mar. Determine:\n\n**(a)** Las energías potencial gravitatoria y cinética que tiene el satélite en su órbita.\n\n**(b)** La energía que fue necesario comunicar al satélite para ponerlo en órbita desde la superficie de la Tierra.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 5{,}97\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6{,}37\\cdot10^{6}\\ \\text{m}$",
+   "$m_S = 150\\ \\text{kg}$",
+   "$h = 1200\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** El radio de la órbita es $r = R_T + h = 6{,}37\\cdot10^{6} + 1{,}2\\cdot10^{6} = 7{,}57\\cdot10^{6}\\ \\text{m}$.\n\nEnergía potencial gravitatoria:\n$$E_P = -\\dfrac{G\\,M_T\\,m_S}{r} = -\\dfrac{6{,}67\\cdot10^{-11}\\cdot 5{,}97\\cdot10^{24}\\cdot 150}{7{,}57\\cdot10^{6}} = -7{,}89\\cdot10^{9}\\ \\text{J}$$\n\nEn una órbita circular la fuerza gravitatoria actúa como centrípeta, $\\dfrac{G\\,M_T\\,m_S}{r^2} = \\dfrac{m_S\\,v^2}{r}$, luego $v^2 = \\dfrac{G\\,M_T}{r}$. La energía cinética es:\n$$E_C = \\tfrac{1}{2}\\,m_S\\,v^2 = \\dfrac{G\\,M_T\\,m_S}{2\\,r} = 3{,}95\\cdot10^{9}\\ \\text{J}$$\n\n**(b)** La energía de satelización es la variación de energía mecánica entre la superficie (en reposo) y la órbita:\n$$E = E_{M,\\text{órbita}} - E_{M,\\text{sup}} = \\left(E_C + E_P\\right) - \\left(0 - \\dfrac{G\\,M_T\\,m_S}{R_T}\\right)$$\n$$E = -3{,}95\\cdot10^{9} + 6{,}67\\cdot10^{-11}\\,\\dfrac{5{,}97\\cdot10^{24}\\cdot 150}{6{,}37\\cdot10^{6}} = 5{,}43\\cdot10^{9}\\ \\text{J}$$",
+  "answer": "**(a)** $E_P = -7{,}89\\cdot10^{9}\\ \\text{J}$ y $E_C = 3{,}95\\cdot10^{9}\\ \\text{J}$ (energía mecánica $E_M = -3{,}95\\cdot10^{9}\\ \\text{J}$). **(b)** $E \\approx 5{,}43\\cdot10^{9}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar $r=R_T$ en vez de $r=R_T+h$.",
+   "Olvidar que en órbita circular $E_C=-E_P/2$ y $E_M=E_P/2$.",
+   "En (b) tomar la energía potencial en la superficie como nula."
+  ],
+  "figure_suggestion": "Esquema de la órbita circular de radio $r=R_T+h$ alrededor de la Tierra, señalando $R_T$, $h$ y el satélite de masa $m_S$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Junio 2023",
+  "title": "Ecuación de una onda transversal en una cuerda · Madrid · Junio 2023",
+  "statement": "A lo largo de una cuerda se propaga en el sentido $+x$ una onda transversal. El periodo de oscilación y la elongación máxima de un punto cualquiera son, respectivamente, $T = 4\\cdot10^{-3}\\ \\text{s}$ y $A = 3\\ \\text{mm}$. La distancia mínima entre dos puntos que oscilan en fase es de $0{,}25\\ \\text{m}$. En el instante $t = 2\\cdot10^{-3}\\ \\text{s}$ la elongación de un punto situado en $x = +0{,}5\\ \\text{m}$ es $-1{,}5\\ \\text{mm}$ y su velocidad de oscilación en ese instante es positiva.\n\n**(a)** Halle la frecuencia angular y la velocidad de propagación de la onda.\n\n**(b)** Obtenga la expresión matemática que describe la onda.",
+  "knowns": [
+   "$T = 4\\cdot10^{-3}\\ \\text{s}$",
+   "$A = 3\\ \\text{mm} = 3\\cdot10^{-3}\\ \\text{m}$",
+   "$\\lambda = 0{,}25\\ \\text{m}$",
+   "$y(0{,}5;\\,2\\cdot10^{-3}) = -1{,}5\\ \\text{mm}$ con $v_y>0$"
+  ],
+  "full_solution": "**(a)** La distancia mínima entre puntos en fase es la longitud de onda, $\\lambda = 0{,}25\\ \\text{m}$.\n$$\\omega = \\dfrac{2\\pi}{T} = \\dfrac{2\\pi}{4\\cdot10^{-3}} = 500\\pi\\ \\text{rad·s}^{-1} \\approx 1{,}57\\cdot10^{3}\\ \\text{rad·s}^{-1}$$\n$$v = \\lambda\\,f = \\dfrac{\\lambda}{T} = \\dfrac{0{,}25}{4\\cdot10^{-3}} = 62{,}5\\ \\text{m·s}^{-1}$$\n\n**(b)** Escribimos $y(x,t) = A\\,\\operatorname{sen}(\\omega t - k x + \\varphi)$, con $A = 3\\cdot10^{-3}\\ \\text{m}$ y\n$$k = \\dfrac{2\\pi}{\\lambda} = \\dfrac{2\\pi}{0{,}25} = 8\\pi\\ \\text{m}^{-1}$$\n\nImponemos la condición en $x=0{,}5\\ \\text{m}$, $t=2\\cdot10^{-3}\\ \\text{s}$:\n$$3\\cdot10^{-3}\\operatorname{sen}(500\\pi\\cdot2\\cdot10^{-3} - 8\\pi\\cdot0{,}5 + \\varphi) = -1{,}5\\cdot10^{-3}$$\n$$\\operatorname{sen}(\\pi - 4\\pi + \\varphi) = -0{,}5 \\;\\Rightarrow\\; \\operatorname{sen}(-3\\pi+\\varphi) = -0{,}5$$\n\nHay dos soluciones, $\\varphi = \\tfrac{17\\pi}{6}$ y $\\varphi = \\tfrac{25\\pi}{6}$. La condición $v_y>0$ exige $\\cos(-3\\pi+\\varphi)>0$, que se cumple para $\\varphi = \\tfrac{17\\pi}{6} \\equiv \\tfrac{5\\pi}{6}$. Por tanto:\n$$y(x,t) = 3\\cdot10^{-3}\\,\\operatorname{sen}\\!\\left(500\\pi\\,t - 8\\pi\\,x + \\tfrac{5\\pi}{6}\\right)\\ \\text{m}$$\ncon $x$ en metros y $t$ en segundos.",
+  "answer": "**(a)** $\\omega = 500\\pi \\approx 1{,}57\\cdot10^{3}\\ \\text{rad·s}^{-1}$ y $v = 62{,}5\\ \\text{m·s}^{-1}$. **(b)** $y(x,t) = 3\\cdot10^{-3}\\,\\operatorname{sen}\\!\\left(500\\pi\\,t - 8\\pi\\,x + \\tfrac{5\\pi}{6}\\right)\\ \\text{m}$.",
+  "common_errors": [
+   "Confundir la distancia entre puntos en fase con media longitud de onda.",
+   "No usar la condición de velocidad ($v_y>0$) para elegir la fase correcta entre las dos posibles.",
+   "Olvidar expresar la amplitud en metros ($3\\cdot10^{-3}\\ \\text{m}$)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Junio 2023",
+  "title": "Fuerza sobre una carga y flujo (ley de Gauss) · Madrid · Junio 2023",
+  "statement": "Tres cargas $-q$, $-q$ y $+2q$ se encuentran situadas en los puntos del plano $(-a,a)$, $(a,a)$ y $(0,0)$, respectivamente. En función de la constante de Coulomb $K$, de la carga $q$ y de la distancia $a$, determine:\n\n**(a)** La expresión de la fuerza electrostática que se ejerce sobre la carga situada en $(a,a)$ y la expresión del trabajo que habrá realizado esa fuerza electrostática para traer la carga $-q$ desde el infinito hasta $(a,a)$.\n\n**(b)** El flujo del campo eléctrico a través de las superficies cerradas $S_1$ (que encierra a $+2q$ y a la carga $-q$ situada en $(a,a)$) y $S_2$ (que encierra a las tres cargas).",
+  "knowns": [
+   "Cargas $-q$ en $(-a,a)$, $-q$ en $(a,a)$, $+2q$ en $(0,0)$",
+   "$\\varepsilon_0 = \\dfrac{1}{4\\pi K}$"
+  ],
+  "full_solution": "**(a)** Sobre la carga $-q$ situada en $(a,a)$ actúan:\n\nFuerza de la otra $-q$ (en $(-a,a)$, a distancia $2a$), repulsiva, dirigida según $+\\vec{\\imath}$:\n$$\\vec{F}_{1} = K\\dfrac{q^2}{(2a)^2}\\,\\vec{\\imath} = K\\dfrac{q^2}{4a^2}\\,\\vec{\\imath}$$\n\nFuerza de la carga $+2q$ (en el origen, a distancia $a\\sqrt{2}$), atractiva, dirigida de $(a,a)$ hacia el origen, es decir según $(-\\vec{\\imath}-\\vec{\\jmath})/\\sqrt2$:\n$$\\vec{F}_{2} = K\\dfrac{2q^2}{2a^2}\\cdot\\dfrac{-\\vec{\\imath}-\\vec{\\jmath}}{\\sqrt2} = K\\dfrac{q^2}{a^2}\\left(-\\tfrac{1}{\\sqrt2}\\vec{\\imath}-\\tfrac{1}{\\sqrt2}\\vec{\\jmath}\\right)$$\n\nSumando:\n$$\\vec{F} = K\\dfrac{q^2}{a^2}\\left[\\left(\\tfrac14-\\tfrac{1}{\\sqrt2}\\right)\\vec{\\imath} - \\tfrac{1}{\\sqrt2}\\vec{\\jmath}\\right] = K\\dfrac{q^2}{a^2}\\left(-0{,}46\\,\\vec{\\imath} - 0{,}71\\,\\vec{\\jmath}\\right)$$\n\nEl trabajo de la fuerza electrostática al traer $-q$ desde el infinito es $W = -\\Delta E_p = -E_p(a,a)$, siendo\n$$E_p = K\\dfrac{(-q)(-q)}{2a} + K\\dfrac{(2q)(-q)}{a\\sqrt2} = K\\dfrac{q^2}{a}\\left(\\tfrac12 - \\tfrac{2}{\\sqrt2}\\right) = -0{,}91\\,K\\dfrac{q^2}{a}$$\n$$W = -E_p = +0{,}91\\,K\\dfrac{q^2}{a}$$\n\n**(b)** Por la ley de Gauss, $\\Phi = \\dfrac{q_{\\text{enc}}}{\\varepsilon_0} = 4\\pi K\\,q_{\\text{enc}}$.\n$$\\Phi_{S_1} = \\dfrac{+2q - q}{\\varepsilon_0} = \\dfrac{q}{\\varepsilon_0} = 4\\pi K\\,q$$\n$$\\Phi_{S_2} = \\dfrac{+2q - q - q}{\\varepsilon_0} = 0$$",
+  "answer": "**(a)** $\\vec{F} = K\\dfrac{q^2}{a^2}\\left(-0{,}46\\,\\vec{\\imath} - 0{,}71\\,\\vec{\\jmath}\\right)$ y $W = +0{,}91\\,K\\dfrac{q^2}{a}$. **(b)** $\\Phi_{S_1} = 4\\pi K q$ y $\\Phi_{S_2} = 0$.",
+  "common_errors": [
+   "Equivocar la distancia a la carga central: es $a\\sqrt2$, no $a$.",
+   "Confundir el trabajo de la fuerza del campo ($W=-\\Delta E_p$) con la energía potencial.",
+   "En la ley de Gauss contar cargas exteriores a la superficie: solo cuenta la carga encerrada."
+  ],
+  "figure_suggestion": "Plano XY con $-q$ en $(-a,a)$, $-q$ en $(a,a)$ y $+2q$ en $(0,0)$; dibujar los vectores fuerza sobre la carga de $(a,a)$ y las superficies gaussianas $S_1$ (rodea el origen y $(a,a)$) y $S_2$ (rodea las tres).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Madrid · Junio 2023",
+  "title": "Lente convergente, imagen en pantalla y sistema de dos lentes · Madrid · Junio 2023",
+  "statement": "Un objeto de $2\\ \\text{cm}$ de altura se sitúa a $18\\ \\text{cm}$ a la izquierda de una pantalla. Entre la pantalla y el objeto, a $14{,}2\\ \\text{cm}$ de este, se sitúa una lente convergente.\n\n**(a)** Determine la distancia focal que debe tener la lente para que se enfoque la imagen del objeto sobre la pantalla y el tamaño de la imagen.\n\n**(b)** A continuación se retira la pantalla y se sitúa, a $5\\ \\text{cm}$ a la derecha de la primera lente, otra lente convergente de distancia focal $1{,}2\\ \\text{cm}$. ¿Dónde se formará la nueva imagen?",
+  "knowns": [
+   "$y = 2\\ \\text{cm}$",
+   "distancia objeto-pantalla $= 18\\ \\text{cm}$",
+   "$s_1 = -14{,}2\\ \\text{cm}$ (objeto a la izquierda de la lente)",
+   "$f'_2 = 1{,}2\\ \\text{cm}$, segunda lente a $5\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** La pantalla está a $18\\ \\text{cm}$ del objeto y la lente a $14{,}2\\ \\text{cm}$ del objeto, luego la imagen se forma a $s' = 18 - 14{,}2 = 3{,}8\\ \\text{cm}$ a la derecha de la lente. Con el objeto en $s = -14{,}2\\ \\text{cm}$ y la ecuación de las lentes delgadas:\n$$\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{3{,}8} - \\dfrac{1}{-14{,}2} = \\dfrac{1}{f'} \\;\\Rightarrow\\; f' = 3{,}0\\ \\text{cm}$$\n\nEl aumento lateral:\n$$m = \\dfrac{s'}{s} = \\dfrac{3{,}8}{-14{,}2} = -0{,}27 \\;\\Rightarrow\\; y' = m\\,y = -0{,}27\\cdot2 = -0{,}54\\ \\text{cm}$$\nImagen real, invertida y reducida.\n\n**(b)** La imagen anterior (a $3{,}8\\ \\text{cm}$ de la primera lente) actúa como objeto para la segunda lente, situada a $5\\ \\text{cm}$: $s_2 = 3{,}8 - 5 = -1{,}2\\ \\text{cm}$. Como $|s_2| = f'_2 = 1{,}2\\ \\text{cm}$, el objeto está en el foco objeto de la segunda lente:\n$$\\dfrac{1}{s'_2} = \\dfrac{1}{f'_2} + \\dfrac{1}{s_2} = \\dfrac{1}{1{,}2} + \\dfrac{1}{-1{,}2} = 0 \\;\\Rightarrow\\; s'_2 = \\infty$$\nLa imagen final se forma en el infinito (rayos emergentes paralelos).",
+  "answer": "**(a)** $f' = 3{,}0\\ \\text{cm}$ y $y' = -0{,}54\\ \\text{cm}$ (imagen real invertida). **(b)** La imagen final se forma en el infinito.",
+  "common_errors": [
+   "Equivocar el signo de la distancia objeto (objeto a la izquierda: $s<0$).",
+   "No advertir que la imagen de la primera lente es el objeto de la segunda.",
+   "No reconocer que un objeto en el foco objeto da imagen en el infinito."
+  ],
+  "figure_suggestion": "Trazado de rayos de dos lentes convergentes alineadas (primera con $f'=3\\ \\text{cm}$, segunda con $f'_2=1{,}2\\ \\text{cm}$ a $5\\ \\text{cm}$): objeto de $2\\ \\text{cm}$, imagen intermedia real a $3{,}8\\ \\text{cm}$ situada en el foco de la segunda lente, rayos finales paralelos (imagen en el infinito).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Madrid · Junio 2023",
+  "title": "Actividad del radón-222 en un acuífero · Madrid · Junio 2023",
+  "statement": "Se sospecha que un acuífero recibe aportes intermitentes de radón ($^{222}\\text{Rn}$). Se miden semanalmente actividades de muestras de un litro de agua; una medida da $14\\ \\text{Bq}$. Determine el valor de la medida de la semana siguiente (otra muestra de un litro):\n\n**(a)** Si no hubiese ningún aporte de $^{222}\\text{Rn}$ durante esa semana.\n\n**(b)** Si el cuarto día de esa semana la concentración de $^{222}\\text{Rn}$ experimentase un aumento súbito de $2\\cdot10^{-16}\\ \\text{g}$ por cada litro de agua.",
+  "knowns": [
+   "$A_0 = 14\\ \\text{Bq}$ (por litro)",
+   "$T_{1/2} = 3{,}8\\ \\text{días}$",
+   "$M(^{222}\\text{Rn}) = 222\\ \\text{u}$",
+   "$N_A = 6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a)** Sin aporte, la actividad decae exponencialmente durante $t = 7\\ \\text{días}$:\n$$A = A_0\\,2^{-t/T_{1/2}} = 14\\cdot 2^{-7/3{,}8} = 3{,}9\\ \\text{Bq}$$\n\n**(b)** El aumento de $\\Delta C = 2\\cdot10^{-16}\\ \\text{g/L}$ añade núcleos cuya actividad, al final de la semana, ha decaído durante $t' = 7-4 = 3\\ \\text{días}$. La constante de desintegración es $\\lambda = \\dfrac{\\ln 2}{T_{1/2}} = \\dfrac{\\ln 2}{3{,}8\\cdot 86400} = 2{,}11\\cdot10^{-6}\\ \\text{s}^{-1}$ y el número de átomos añadidos $N = \\dfrac{\\Delta C}{M}\\,N_A = \\dfrac{2\\cdot10^{-16}}{222}\\cdot6{,}02\\cdot10^{23} = 5{,}42\\cdot10^{5}$.\n$$\\Delta A = \\lambda\\,N\\,2^{-t'/T_{1/2}} = 2{,}11\\cdot10^{-6}\\cdot5{,}42\\cdot10^{5}\\cdot 2^{-3/3{,}8} = 0{,}66\\ \\text{Bq}$$\n\nLa actividad medida será:\n$$A' = A + \\Delta A = 3{,}9 + 0{,}66 = 4{,}6\\ \\text{Bq}$$",
+  "answer": "**(a)** $A \\approx 3{,}9\\ \\text{Bq}$. **(b)** $A' = A + \\Delta A \\approx 3{,}9 + 0{,}66 = 4{,}6\\ \\text{Bq}$.",
+  "common_errors": [
+   "Usar $t=7$ días para los núcleos añadidos: solo decaen $t'=3$ días.",
+   "Olvidar convertir $T_{1/2}$ a segundos al calcular $\\lambda$ en Bq (s$^{-1}$).",
+   "No sumar la actividad decaída de base con el aporte nuevo."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Madrid · Junio 2023",
+  "title": "Satélite militar y punto neutro Tierra-Luna · Madrid · Junio 2023",
+  "statement": "Un satélite orbita la Tierra en órbita circular a una altura $h = 1600\\ \\text{km}$ sobre la superficie.\n\n**(a)** Calcule la velocidad orbital del satélite y el tiempo que tarda en dar una vuelta completa. Desprecie la interacción gravitatoria de la Luna.\n\n**(b)** Para evitar que caiga, se decide impulsarlo hacia la Luna. Determine la distancia $x$ al centro de la Tierra a la que deberá llegar para que el efecto del campo gravitatorio lunar supere al del campo terrestre.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 5{,}97\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6{,}37\\cdot10^{3}\\ \\text{km}$",
+   "$M_L = 7{,}35\\cdot10^{22}\\ \\text{kg}$",
+   "$d = 3{,}84\\cdot10^{5}\\ \\text{km}$",
+   "$h = 1600\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** La fuerza gravitatoria es la centrípeta, luego $v = \\sqrt{\\dfrac{G\\,M_T}{R_T+h}}$. Con $r = R_T + h = 6{,}37\\cdot10^{6} + 1{,}6\\cdot10^{6} = 7{,}97\\cdot10^{6}\\ \\text{m}$:\n$$v = \\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot5{,}97\\cdot10^{24}}{7{,}97\\cdot10^{6}}} = 7{,}07\\cdot10^{3}\\ \\text{m·s}^{-1} \\approx 7{,}07\\ \\text{km·s}^{-1}$$\n$$T = \\dfrac{2\\pi r}{v} = \\dfrac{2\\pi\\cdot7{,}97\\cdot10^{6}}{7{,}07\\cdot10^{3}} \\approx 7{,}08\\cdot10^{3}\\ \\text{s} \\approx 1{,}97\\ \\text{h}$$\n\n**(b)** El punto neutro cumple que los módulos de los campos terrestre y lunar se igualan, estando el satélite a distancia $x$ de la Tierra y $d-x$ de la Luna:\n$$\\dfrac{G\\,M_T}{x^2} = \\dfrac{G\\,M_L}{(d-x)^2} \\;\\Rightarrow\\; \\dfrac{x}{d-x} = \\sqrt{\\dfrac{M_T}{M_L}}$$\n$$\\dfrac{x}{3{,}84\\cdot10^{5}-x} = \\sqrt{\\dfrac{5{,}97\\cdot10^{24}}{7{,}35\\cdot10^{22}}} = 9{,}01 \\;\\Rightarrow\\; x \\approx 3{,}46\\cdot10^{5}\\ \\text{km}$$\nMás allá de esa distancia predomina el campo lunar.",
+  "answer": "**(a)** $v \\approx 7{,}07\\ \\text{km·s}^{-1}$ y $T \\approx 1{,}97\\ \\text{h}$. **(b)** $x \\approx 3{,}46\\cdot10^{5}\\ \\text{km}$ del centro de la Tierra.",
+  "common_errors": [
+   "No convertir $R_T$ a metros (dato en km) antes de operar.",
+   "Igualar fuerzas en vez de campos sin notar que la masa del satélite se cancela.",
+   "Tomar la raíz con signo negativo y obtener un punto fuera del segmento Tierra-Luna."
+  ],
+  "figure_suggestion": "Línea Tierra-Luna separadas $d=3{,}84\\cdot10^{5}\\ \\text{km}$; marcar el satélite a distancia $x$ de la Tierra y $d-x$ de la Luna, con vectores de campo gravitatorio opuestos.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Madrid · Junio 2023",
+  "title": "Nivel de intensidad sonora de una fuente puntual · Madrid · Junio 2023",
+  "statement": "Un observador situado a $3\\ \\text{m}$ de una fuente puntual sonora que emite en todas direcciones mide un nivel de intensidad sonora de $53\\ \\text{dB}$. Halle:\n\n**(a)** La intensidad sonora recibida por el observador y la potencia con la que emite la fuente.\n\n**(b)** La distancia a la que debe situarse el observador para que el nivel de intensidad sonora percibido se reduzca a una cuarta parte.",
+  "knowns": [
+   "$r_1 = 3\\ \\text{m}$",
+   "$\\beta_1 = 53\\ \\text{dB}$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "**(a)** A partir del nivel de intensidad $\\beta = 10\\log(I/I_0)$:\n$$I_1 = I_0\\,10^{\\beta_1/10} = 10^{-12}\\cdot10^{5{,}3} = 1{,}99\\cdot10^{-7}\\ \\text{W·m}^{-2}$$\nPara una fuente puntual, $I = \\dfrac{P}{4\\pi r^2}$, luego\n$$P = I_1\\,4\\pi r_1^2 = 1{,}99\\cdot10^{-7}\\cdot4\\pi\\cdot3^2 = 2{,}25\\cdot10^{-5}\\ \\text{W}$$\n\n**(b)** Un nivel igual a la cuarta parte, $\\beta_2 = 53/4 = 13{,}25\\ \\text{dB}$, corresponde a\n$$I_2 = I_0\\,10^{\\beta_2/10} = 10^{-12}\\cdot10^{1{,}325} = 2{,}11\\cdot10^{-11}\\ \\text{W·m}^{-2}$$\nComo $\\dfrac{I_1}{I_2} = \\dfrac{r_2^2}{r_1^2}$:\n$$r_2 = r_1\\sqrt{\\dfrac{I_1}{I_2}} = 3\\sqrt{\\dfrac{1{,}99\\cdot10^{-7}}{2{,}11\\cdot10^{-11}}} \\approx 291\\ \\text{m}$$",
+  "answer": "**(a)** $I_1 = 1{,}99\\cdot10^{-7}\\ \\text{W·m}^{-2}$ y $P = 2{,}25\\cdot10^{-5}\\ \\text{W}$. **(b)** $r_2 \\approx 291\\ \\text{m}$.",
+  "common_errors": [
+   "Interpretar 'la cuarta parte' como la intensidad entre 4 en vez del nivel en dB entre 4.",
+   "Olvidar el factor $4\\pi r^2$ (área de la esfera) al relacionar $I$ y $P$.",
+   "Confundir nivel (dB, escala logarítmica) con intensidad (W·m$^{-2}$)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Madrid · Junio 2023",
+  "title": "Ion de He+ en campo eléctrico y magnético · Madrid · Junio 2023",
+  "statement": "Un ion de $\\text{He}^+$ se sitúa inicialmente en reposo en una región donde existe un campo eléctrico homogéneo de $10^{3}\\ \\text{V·m}^{-1}$ dirigido según $+x$.\n\n**(a)** Calcule la aceleración que experimenta el ion en el instante inicial.\n\n**(b)** Determine la fuerza total sobre el ion si a los $20\\ \\mu\\text{s}$ de ser depositado se aplica un campo magnético homogéneo de $0{,}6\\ \\text{T}$ según $+y$.",
+  "knowns": [
+   "$E = 10^{3}\\ \\text{V·m}^{-1}$ (según $+x$)",
+   "$M(\\text{He}^+) = 4\\ \\text{u}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$B = 0{,}6\\ \\text{T}$ (según $+y$), $t = 20\\ \\mu\\text{s}$"
+  ],
+  "full_solution": "**(a)** La masa del ion es $m = 4\\,\\text{u} = 4\\cdot1{,}66\\cdot10^{-27} = 6{,}64\\cdot10^{-27}\\ \\text{kg}$. La fuerza eléctrica es $\\vec{F} = q\\vec{E} = 1{,}6\\cdot10^{-19}\\cdot10^{3}\\,\\vec{\\imath} = 1{,}6\\cdot10^{-16}\\,\\vec{\\imath}\\ \\text{N}$, y\n$$\\vec{a} = \\dfrac{\\vec{F}}{m} = \\dfrac{1{,}6\\cdot10^{-16}}{6{,}64\\cdot10^{-27}}\\,\\vec{\\imath} = 2{,}41\\cdot10^{10}\\,\\vec{\\imath}\\ \\text{m·s}^{-2}$$\n\n**(b)** A los $20\\ \\mu\\text{s}$ la velocidad (movimiento uniformemente acelerado) es\n$$\\vec{v} = \\vec{a}\\,t = 2{,}41\\cdot10^{10}\\cdot20\\cdot10^{-6}\\,\\vec{\\imath} = 4{,}82\\cdot10^{5}\\,\\vec{\\imath}\\ \\text{m·s}^{-1}$$\nLa fuerza magnética es\n$$\\vec{F}_B = q\\,(\\vec{v}\\times\\vec{B}) = 1{,}6\\cdot10^{-19}\\,(4{,}82\\cdot10^{5}\\,\\vec{\\imath}\\times0{,}6\\,\\vec{\\jmath}) = 4{,}63\\cdot10^{-14}\\,\\vec{k}\\ \\text{N}$$\nLa fuerza total (sumando la eléctrica, que persiste):\n$$\\vec{F}_{\\text{total}} = 1{,}6\\cdot10^{-16}\\,\\vec{\\imath} + 4{,}63\\cdot10^{-14}\\,\\vec{k}\\ \\text{N}$$",
+  "answer": "**(a)** $\\vec{a} = 2{,}41\\cdot10^{10}\\,\\vec{\\imath}\\ \\text{m·s}^{-2}$. **(b)** $\\vec{F}_{\\text{total}} = 1{,}6\\cdot10^{-16}\\,\\vec{\\imath} + 4{,}63\\cdot10^{-14}\\,\\vec{k}\\ \\text{N}$.",
+  "common_errors": [
+   "Usar la masa de 1 u en vez de 4 u para el $\\text{He}^+$.",
+   "Olvidar que la fuerza eléctrica sigue actuando al añadir el campo magnético.",
+   "Errar el producto vectorial: $\\vec{\\imath}\\times\\vec{\\jmath}=\\vec{k}$."
+  ],
+  "figure_suggestion": "Ejes XYZ: $\\vec{E}$ y $\\vec{v}$ según $+x$, $\\vec{B}$ según $+y$ y la fuerza magnética resultante $\\vec{F}_B$ según $+z$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Madrid · Junio 2023",
+  "title": "Refracción en un prisma y ángulo límite · Madrid · Junio 2023",
+  "statement": "Un rayo de luz incide sobre la cara izquierda de un prisma equilátero (ángulos de $60^\\circ$) de índice de refracción $1{,}66$.\n\n**(a)** Determine los ángulos $\\alpha$ (refracción en la cara de entrada) y $\\beta$ (refracción en la cara de salida) para un rayo que entra desde el aire con un ángulo de incidencia de $50^\\circ$.\n\n**(b)** Calcule el ángulo de incidencia desde el aire para que el rayo no llegue a emerger por la segunda cara (sufra reflexión total).",
+  "knowns": [
+   "$n = 1{,}66$ (prisma)",
+   "$n_0 = 1$ (aire)",
+   "ángulo del prisma $= 60^\\circ$",
+   "ángulo de incidencia inicial $= 50^\\circ$"
+  ],
+  "full_solution": "**(a)** Ley de Snell en la cara de entrada:\n$$n_0\\operatorname{sen}50^\\circ = n\\operatorname{sen}\\alpha \\;\\Rightarrow\\; \\operatorname{sen}\\alpha = \\dfrac{\\operatorname{sen}50^\\circ}{1{,}66} = 0{,}461 \\;\\Rightarrow\\; \\alpha = 27{,}5^\\circ$$\nPor la geometría del prisma, el ángulo de incidencia interno en la segunda cara es $\\gamma = 60^\\circ - \\alpha = 32{,}5^\\circ$. En la cara de salida:\n$$n\\operatorname{sen}\\gamma = n_0\\operatorname{sen}\\beta \\;\\Rightarrow\\; \\operatorname{sen}\\beta = 1{,}66\\cdot\\operatorname{sen}32{,}5^\\circ = 0{,}892 \\;\\Rightarrow\\; \\beta = 63{,}2^\\circ$$\n\n**(b)** El rayo no emerge cuando en la segunda cara se alcanza el ángulo límite, es decir $\\beta = 90^\\circ$:\n$$1{,}66\\operatorname{sen}\\gamma' = n_0\\operatorname{sen}90^\\circ \\;\\Rightarrow\\; \\operatorname{sen}\\gamma' = \\dfrac{1}{1{,}66} = 0{,}602 \\;\\Rightarrow\\; \\gamma' = 37{,}0^\\circ$$\nEntonces el ángulo de refracción en la primera cara es $\\alpha' = 60^\\circ - \\gamma' = 23{,}0^\\circ$, y por Snell en la entrada:\n$$\\operatorname{sen}\\theta_i = 1{,}66\\operatorname{sen}23{,}0^\\circ = 0{,}648 \\;\\Rightarrow\\; \\theta_i \\approx 40{,}4^\\circ$$\nPara ángulos de incidencia menores que $\\approx 40{,}4^\\circ$ el rayo sufre reflexión total en la segunda cara.",
+  "answer": "**(a)** $\\alpha \\approx 27{,}5^\\circ$ y $\\beta \\approx 63{,}2^\\circ$. **(b)** $\\theta_i \\approx 40{,}4^\\circ$.",
+  "common_errors": [
+   "Olvidar la relación geométrica $\\gamma = 60^\\circ-\\alpha$ entre las dos caras.",
+   "Aplicar Snell con los índices invertidos en la cara de salida.",
+   "Confundir el ángulo límite (interno) con el ángulo de incidencia externo pedido."
+  ],
+  "figure_suggestion": "Prisma equilátero (ángulo $60^\\circ$) con un rayo incidente a $50^\\circ$ en la cara izquierda, refracción $\\alpha$, recorrido interno, ángulo $\\gamma$ en la segunda cara y salida $\\beta$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Madrid · Junio 2023",
+  "title": "Efecto fotoeléctrico y constante de Planck · Madrid · Junio 2023",
+  "statement": "Para estudiar el efecto fotoeléctrico se ilumina un metal con luz de $379\\ \\text{nm}$ y de $544\\ \\text{nm}$, observándose potenciales de frenado de $2{,}5\\ \\text{V}$ y $1{,}5\\ \\text{V}$, respectivamente.\n\n**(a)** A partir de los potenciales de frenado, obtenga el valor de la constante de Planck.\n\n**(b)** Indique los valores del potencial de frenado y de la intensidad de corriente máxima para la luz de $379\\ \\text{nm}$ si se disminuye a la mitad la intensidad del haz (la corriente máxima con el haz completo era $10\\ \\text{pA}$).",
+  "knowns": [
+   "$\\lambda_1 = 379\\ \\text{nm}$, $V_1 = 2{,}5\\ \\text{V}$",
+   "$\\lambda_2 = 544\\ \\text{nm}$, $V_2 = 1{,}5\\ \\text{V}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** La ecuación del efecto fotoeléctrico, con $E_{c,\\max} = e\\,V$ (potencial de frenado), es $\\dfrac{hc}{\\lambda} = \\phi + e\\,V$. Escribiéndola para ambas longitudes de onda y restando se elimina el trabajo de extracción $\\phi$:\n$$\\dfrac{hc}{\\lambda_1} - \\dfrac{hc}{\\lambda_2} = e(V_1 - V_2)$$\n$$h = \\dfrac{e(V_1 - V_2)}{c\\left(\\dfrac{1}{\\lambda_1} - \\dfrac{1}{\\lambda_2}\\right)} = \\dfrac{1{,}6\\cdot10^{-19}(2{,}5-1{,}5)}{3\\cdot10^{8}\\left(\\dfrac{1}{379\\cdot10^{-9}}-\\dfrac{1}{544\\cdot10^{-9}}\\right)} = 6{,}66\\cdot10^{-34}\\ \\text{J·s}$$\n\n**(b)** El potencial de frenado depende solo de la frecuencia de la luz y del trabajo de extracción, no de la intensidad del haz; por tanto sigue siendo $V = 2{,}5\\ \\text{V}$. En cambio, el número de fotoelectrones (y la corriente máxima) es proporcional a la intensidad: al reducirla a la mitad, la corriente máxima pasa a $5\\ \\text{pA}$.",
+  "answer": "**(a)** $h \\approx 6{,}66\\cdot10^{-34}\\ \\text{J·s}$. **(b)** El potencial de frenado no cambia ($2{,}5\\ \\text{V}$); la intensidad de corriente máxima se reduce a la mitad, $5\\ \\text{pA}$.",
+  "common_errors": [
+   "Creer que al bajar la intensidad del haz disminuye el potencial de frenado (depende solo de la frecuencia).",
+   "No convertir las longitudes de onda a metros.",
+   "Confundir energía del fotón con energía cinética del electrón (falta restar $\\phi$)."
+  ],
+  "figure_suggestion": "Gráfica de la intensidad de corriente frente al potencial aplicado para $379\\ \\text{nm}$ y $544\\ \\text{nm}$, mostrando los potenciales de frenado $-2{,}5\\ \\text{V}$ y $-1{,}5\\ \\text{V}$ y la corriente de saturación.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Relación de velocidades y energías de dos satélites · Murcia · Ordinaria 2026",
+  "statement": "Dos satélites describen órbitas circulares alrededor de la Tierra ($R_T = 6400\\ \\text{km}$) a alturas $h_1 = 700\\ \\text{km}$ y $h_2 = 22000\\ \\text{km}$.\n\n**(a)** Calcule la relación entre sus velocidades orbitales $v_1/v_2$.\n\n**(b)** (i) Deduzca la expresión de la energía mecánica total de un satélite en órbita circular. (ii) Calcule la relación entre sus energías mecánicas $E_1/E_2$ (suponga igual masa).",
+  "knowns": [
+   "$R_T = 6400\\ \\text{km}$",
+   "$h_1 = 700\\ \\text{km}\\;\\Rightarrow\\; r_1 = 7100\\ \\text{km}$",
+   "$h_2 = 22000\\ \\text{km}\\;\\Rightarrow\\; r_2 = 28400\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** De $\\dfrac{G M_T m}{r^2} = \\dfrac{m v^2}{r}$ se obtiene $v = \\sqrt{\\dfrac{G M_T}{r}}$, luego\n$$\\dfrac{v_1}{v_2} = \\sqrt{\\dfrac{r_2}{r_1}} = \\sqrt{\\dfrac{28400}{7100}} = \\sqrt{4} = 2{,}0$$\nEl satélite más interior (órbita más baja) orbita el doble de rápido.\n\n**(b)** (i) La energía mecánica es $E = E_C + E_P = \\tfrac12 m v^2 - \\dfrac{G M_T m}{r}$. Sustituyendo $v^2 = \\dfrac{G M_T}{r}$:\n$$E = \\dfrac{1}{2}\\dfrac{G M_T m}{r} - \\dfrac{G M_T m}{r} = -\\dfrac{G M_T m}{2\\,r}$$\n\n(ii) Con la misma masa, la relación de energías es\n$$\\dfrac{E_1}{E_2} = \\dfrac{-G M_T m/(2 r_1)}{-G M_T m/(2 r_2)} = \\dfrac{r_2}{r_1} = \\dfrac{28400}{7100} = 4{,}0$$",
+  "answer": "**(a)** $v_1/v_2 = 2{,}0$. **(b)** (i) $E = -\\dfrac{G M_T m}{2r}$; (ii) $E_1/E_2 = 4{,}0$.",
+  "common_errors": [
+   "Invertir la relación: la velocidad orbital decrece con el radio ($v_1/v_2=\\sqrt{r_2/r_1}$).",
+   "Olvidar el factor $1/2$ en la energía mecánica de la órbita.",
+   "No sumar la altura al radio terrestre."
+  ],
+  "figure_suggestion": "Dos órbitas circulares concéntricas alrededor de la Tierra, de radios $r_1=7100\\ \\text{km}$ y $r_2=28400\\ \\text{km}$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Carga acelerada entre placas y trabajo nulo del campo magnético · Murcia · Ordinaria 2026",
+  "statement": "Entre dos placas separadas $d = 2\\ \\text{cm}$ existe una diferencia de potencial $\\Delta V = 3000\\ \\text{V}$. Una partícula de carga $q = -1{,}5\\cdot10^{-12}\\ \\text{C}$ y masa $m = 2{,}0\\cdot10^{-9}\\ \\text{kg}$ parte del reposo en el punto medio entre las placas.\n\n**(a)** Calcule la velocidad con la que la partícula llega a la placa.\n\n**(b)** Si en esa región se aplica además un campo magnético uniforme, razone si la fuerza magnética modifica la energía cinética de la partícula.",
+  "knowns": [
+   "$d = 2\\ \\text{cm}$",
+   "$\\Delta V = 3000\\ \\text{V}$",
+   "$q = 1{,}5\\cdot10^{-12}\\ \\text{C}$ (en módulo)",
+   "$m = 2{,}0\\cdot10^{-9}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** El campo entre placas es $E = \\Delta V/d$. La partícula recorre media separación, $d/2$, desde el punto medio hasta la placa. Por el teorema trabajo-energía cinética:\n$$W = q\\,E\\,\\dfrac{d}{2} = q\\,\\dfrac{\\Delta V}{d}\\,\\dfrac{d}{2} = \\dfrac{q\\,\\Delta V}{2} = \\dfrac{1}{2}m v^2$$\n$$v = \\sqrt{\\dfrac{q\\,\\Delta V}{m}} = \\sqrt{\\dfrac{1{,}5\\cdot10^{-12}\\cdot3000}{2{,}0\\cdot10^{-9}}} \\approx 1{,}5\\ \\text{m·s}^{-1}$$\n\n**(b)** La fuerza magnética $\\vec{F}_B = q\\,\\vec{v}\\times\\vec{B}$ es siempre perpendicular a la velocidad. El trabajo elemental $\\mathrm{d}W = \\vec{F}_B\\cdot\\mathrm{d}\\vec{l}$, con $\\mathrm{d}\\vec{l}\\parallel\\vec{v}$, es nulo porque $\\vec{F}_B\\perp\\vec{v}$. Por tanto la fuerza magnética no realiza trabajo y no modifica la energía cinética (solo curva la trayectoria).",
+  "answer": "**(a)** $v \\approx 1{,}5\\ \\text{m·s}^{-1}$. **(b)** No: la fuerza magnética es perpendicular a $\\vec{v}$, su trabajo es nulo y la energía cinética no cambia.",
+  "common_errors": [
+   "Usar la separación completa $d$ en vez de $d/2$ (parte del punto medio).",
+   "Creer que la fuerza magnética acelera (aumenta la rapidez de) la partícula.",
+   "No reconocer que $q\\,\\Delta V = \\tfrac12 m v^2$ independiente de $d$."
+  ],
+  "figure_suggestion": "Dos placas paralelas separadas $d=2\\ \\text{cm}$ con $\\Delta V=3000\\ \\text{V}$; la carga negativa en el punto medio y el campo $\\vec{E}$ entre ellas.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Energía electrostática de un sistema de cargas y flujo en una espira · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Dos cargas iguales $Q = 4\\cdot10^{-6}\\ \\text{C}$ están separadas una distancia $d = 0{,}03\\ \\text{m}$. Una tercera carga $q = -2\\cdot10^{-6}\\ \\text{C}$ se sitúa en el punto medio entre ellas. Calcule el trabajo que debe realizar un agente externo para llevar la carga $q$ desde el punto medio hasta el infinito.\n\n**(b)** Una espira circular de radio $R = 1{,}63\\ \\text{cm}$ se encuentra en un campo magnético uniforme $B = 0{,}6\\ \\text{T}$. Calcule el flujo magnético cuando la normal a la espira forma $0^\\circ$ y $45^\\circ$ con el campo, y razone si se induce fuerza electromotriz mientras la espira gira.",
+  "knowns": [
+   "$Q = 4\\cdot10^{-6}\\ \\text{C}$, $d = 0{,}03\\ \\text{m}$",
+   "$q = -2\\cdot10^{-6}\\ \\text{C}$",
+   "$K = 9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$",
+   "$R = 1{,}63\\ \\text{cm}$, $B = 0{,}6\\ \\text{T}$"
+  ],
+  "full_solution": "**(a)** La energía potencial de $q$ en el punto medio (a $d/2$ de cada carga $Q$) es\n$$U_{\\text{pm}} = 2\\cdot K\\dfrac{Q\\,q}{d/2} = 4K\\dfrac{Q\\,q}{d} = 4\\cdot9\\cdot10^{9}\\cdot\\dfrac{(4\\cdot10^{-6})(-2\\cdot10^{-6})}{0{,}03} = -9{,}6\\ \\text{J}$$\nEl trabajo del agente externo es la variación de energía potencial, $W_{\\text{ext}} = U_\\infty - U_{\\text{pm}} = 0 - (-9{,}6) = +9{,}6\\ \\text{J}$.\n\n**(b)** El área de la espira es $S = \\pi R^2 = \\pi(0{,}0163)^2 = 8{,}35\\cdot10^{-4}\\ \\text{m}^2$.\n$$\\Phi_1 = B\\,S\\cos 0^\\circ = 0{,}6\\cdot8{,}35\\cdot10^{-4} = 5{,}01\\cdot10^{-4}\\ \\text{Wb}$$\n$$\\Phi_2 = B\\,S\\cos 45^\\circ = 0{,}6\\cdot8{,}35\\cdot10^{-4}\\cdot0{,}707 = 3{,}54\\cdot10^{-4}\\ \\text{Wb}$$\nDurante el giro el flujo varía con el tiempo; por la ley de Faraday, $\\varepsilon = -\\dfrac{\\mathrm{d}\\Phi}{\\mathrm{d}t}\\neq0$, de modo que sí se induce fuerza electromotriz.",
+  "answer": "**(a)** $W_{\\text{ext}} = +9{,}6\\ \\text{J}$. **(b)** $\\Phi_1 = 5{,}01\\cdot10^{-4}\\ \\text{Wb}$, $\\Phi_2 = 3{,}54\\cdot10^{-4}\\ \\text{Wb}$; sí se induce f.e.m. porque el flujo cambia al girar.",
+  "common_errors": [
+   "Usar $d$ en lugar de $d/2$ como distancia de $q$ a cada carga $Q$.",
+   "Confundir el trabajo del campo con el del agente externo (signos opuestos).",
+   "Olvidar el $\\cos\\theta$ en el flujo $\\Phi=BS\\cos\\theta$."
+  ],
+  "figure_suggestion": "Dos cargas $+Q$ separadas $d=0{,}03\\ \\text{m}$ con una carga $-q$ en el punto medio; aparte, espira circular de radio $R$ cuya normal forma $45^\\circ$ con $\\vec{B}$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Nivel sonoro de una fuente puntual y efecto Doppler · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Un foco puntual emite sonido en todas direcciones. A $r = 10\\ \\text{m}$ el nivel de intensidad sonora es $\\beta = 103\\ \\text{dB}$. Calcule la intensidad a esa distancia y la potencia del foco. ($I_0 = 10^{-12}\\ \\text{W·m}^{-2}$).\n\n**(b)** Un sonar en el agua ($v_s = 1500\\ \\text{m·s}^{-1}$) emite una frecuencia $f = 85\\ \\text{kHz}$ y un receptor detecta $f' = 85{,}5\\ \\text{kHz}$. Determine la velocidad con la que la fuente se acerca al observador.",
+  "knowns": [
+   "$r = 10\\ \\text{m}$, $\\beta = 103\\ \\text{dB}$, $I_0 = 10^{-12}\\ \\text{W·m}^{-2}$",
+   "$v_s = 1500\\ \\text{m·s}^{-1}$",
+   "$f = 85\\ \\text{kHz}$, $f' = 85{,}5\\ \\text{kHz}$"
+  ],
+  "full_solution": "**(a)** De $\\beta = 10\\log(I/I_0)$:\n$$I = I_0\\,10^{\\beta/10} = 10^{-12}\\cdot10^{10{,}3} = 2{,}0\\cdot10^{-2}\\ \\text{W·m}^{-2}$$\nPara un foco puntual, $P = I\\,4\\pi r^2 = 2{,}0\\cdot10^{-2}\\cdot4\\pi\\cdot10^2 \\approx 25\\ \\text{W}$.\n\n**(b)** Como $f' > f$, la fuente se acerca. Con observador en reposo y fuente que se aproxima a velocidad $v_f$:\n$$f' = f\\,\\dfrac{v_s}{v_s - v_f} \\;\\Rightarrow\\; v_f = v_s\\left(1 - \\dfrac{f}{f'}\\right) = 1500\\left(1 - \\dfrac{85}{85{,}5}\\right) \\approx 8{,}8\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $I = 2{,}0\\cdot10^{-2}\\ \\text{W·m}^{-2}$ y $P \\approx 25\\ \\text{W}$. **(b)** $v_f \\approx 8{,}8\\ \\text{m·s}^{-1}$ (fuente acercándose).",
+  "common_errors": [
+   "Equivocar el signo en el denominador del Doppler (acercarse: $v_s-v_f$).",
+   "Olvidar $4\\pi r^2$ en la potencia del foco puntual.",
+   "Confundir nivel en dB con intensidad."
+  ],
+  "figure_suggestion": "Foco-observador en el efecto Doppler: fuente acercándose al receptor con frentes de onda comprimidos por delante.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "mas",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Energía de un oscilador y reflexión total en una lámina · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Un bloque de masa $m = 2\\ \\text{kg}$ unido a un muelle de constante $k = 400\\ \\text{N·m}^{-1}$ realiza un movimiento armónico simple de amplitud $A = 0{,}05\\ \\text{m}$. Calcule la energía mecánica del oscilador y la rapidez del bloque cuando $x = 0{,}03\\ \\text{m}$.\n\n**(b)** Un rayo de luz penetra por la cara superior de un medio de índice $n_v = 1{,}5$ rodeado de agua ($n_a = 1{,}33$) y, tras refractarse, alcanza la cara lateral justo en el ángulo límite, saliendo paralelo a ella. Calcule el ángulo de incidencia máximo $\\alpha$ en la cara superior.",
+  "knowns": [
+   "$m = 2\\ \\text{kg}$, $k = 400\\ \\text{N·m}^{-1}$, $A = 0{,}05\\ \\text{m}$, $x = 0{,}03\\ \\text{m}$",
+   "$n_v = 1{,}5$, $n_a = 1{,}33$"
+  ],
+  "full_solution": "**(a)** La energía mecánica del oscilador es toda la energía potencial elástica en la amplitud:\n$$E = \\tfrac12 k A^2 = \\tfrac12\\cdot400\\cdot0{,}05^2 = 0{,}5\\ \\text{J}$$\nEn una posición $x$, $E = \\tfrac12 m v^2 + \\tfrac12 k x^2 = \\tfrac12 k A^2$, de donde\n$$v = \\sqrt{\\dfrac{k}{m}\\left(A^2 - x^2\\right)} = \\sqrt{\\dfrac{400}{2}\\left(0{,}05^2 - 0{,}03^2\\right)} = 0{,}56\\ \\text{m·s}^{-1}$$\n\n**(b)** Snell en la cara superior (incidencia $\\alpha$, refracción $\\beta$ desde la normal): $\\operatorname{sen}\\alpha = n_v\\operatorname{sen}\\left(\\tfrac{\\pi}{2}-\\beta\\right) = n_v\\cos\\beta$, luego $\\cos\\beta = \\dfrac{\\operatorname{sen}\\alpha}{n_v}$. En la cara lateral, reflexión total con salida paralela (refracción a $90^\\circ$): $n_v\\operatorname{sen}\\beta = n_a\\operatorname{sen}90^\\circ$, luego $\\operatorname{sen}\\beta = \\dfrac{n_a}{n_v}$. Sumando los cuadrados:\n$$\\operatorname{sen}^2\\alpha + n_a^2 = n_v^2 \\;\\Rightarrow\\; \\operatorname{sen}\\alpha = \\sqrt{n_v^2 - n_a^2} = \\sqrt{1{,}5^2 - 1{,}33^2} = 0{,}69$$\n$$\\alpha \\approx 43{,}9^\\circ$$",
+  "answer": "**(a)** $E = 0{,}5\\ \\text{J}$ y $v = 0{,}56\\ \\text{m·s}^{-1}$. **(b)** $\\alpha \\approx 43{,}9^\\circ$.",
+  "common_errors": [
+   "Confundir la constante elástica con la masa en $v=\\sqrt{(k/m)(A^2-x^2)}$.",
+   "En la lámina, no relacionar el ángulo refractado con el ángulo límite de la cara lateral.",
+   "Olvidar que la energía mecánica del MAS es $\\tfrac12 kA^2$, constante."
+  ],
+  "figure_suggestion": "Bloque-muelle horizontal (MAS) con $A=0{,}05\\ \\text{m}$; aparte, lámina con un rayo que entra por la cara superior con ángulo $\\alpha$, se refracta y alcanza la cara lateral en el ángulo límite (salida rasante).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "relatividad",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Longitud de onda de De Broglie y viaje relativista · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Enuncie la hipótesis de De Broglie y calcule la longitud de onda asociada a un electrón con energía cinética $E_c = 100\\ \\text{eV}$.\n\n**(b)** Un astronauta de masa $m_0 = 70\\ \\text{kg}$ viaja a una estrella situada a $4$ años-luz a velocidad $v = 0{,}8\\,c$. Calcule el tiempo de viaje medido en la Tierra, el tiempo propio del astronauta y su energía cinética relativista.",
+  "knowns": [
+   "$E_c = 100\\ \\text{eV}$, $m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$, $h = 6{,}6\\cdot10^{-34}\\ \\text{J·s}$",
+   "$L = 4\\ \\text{a.l.}$, $v = 0{,}8\\,c$, $m_0 = 70\\ \\text{kg}$, $c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Según De Broglie, toda partícula material lleva asociada una onda de longitud $\\lambda = \\dfrac{h}{p}$. Como $E_c = \\tfrac12 m_e v^2$, el momento es $p = \\sqrt{2 m_e E_c}$. Con $E_c = 100\\cdot1{,}6\\cdot10^{-19}\\ \\text{J}$:\n$$\\lambda = \\dfrac{h}{\\sqrt{2 m_e E_c}} = \\dfrac{6{,}6\\cdot10^{-34}}{\\sqrt{2\\cdot9{,}1\\cdot10^{-31}\\cdot100\\cdot1{,}6\\cdot10^{-19}}} \\approx 1{,}2\\cdot10^{-10}\\ \\text{m}$$\n\n**(b)** Tiempo medido en la Tierra:\n$$\\Delta t = \\dfrac{L}{v} = \\dfrac{4\\ \\text{a.l.}}{0{,}8\\,c} = 5\\ \\text{años}$$\nFactor de Lorentz $\\gamma = \\dfrac{1}{\\sqrt{1-0{,}8^2}} = 1{,}667$. Tiempo propio del astronauta:\n$$\\Delta t' = \\Delta t\\sqrt{1-v^2/c^2} = 5\\cdot0{,}6 = 3\\ \\text{años}$$\nEnergía cinética relativista:\n$$E_c = (\\gamma-1)\\,m_0\\,c^2 = (1{,}667-1)\\cdot70\\cdot(3\\cdot10^{8})^2 \\approx 4{,}2\\cdot10^{18}\\ \\text{J}$$",
+  "answer": "**(a)** $\\lambda \\approx 1{,}2\\cdot10^{-10}\\ \\text{m}$. **(b)** $\\Delta t = 5\\ \\text{años}$, $\\Delta t' = 3\\ \\text{años}$, $E_c \\approx 4{,}2\\cdot10^{18}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la energía cinética clásica $\\tfrac12 mv^2$ para el astronauta relativista.",
+   "Olvidar convertir los 100 eV a julios.",
+   "Confundir tiempo propio ($\\Delta t'$, el menor) con el tiempo terrestre."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Principio de indeterminación y desintegración radiactiva · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Enuncie el principio de indeterminación de Heisenberg y estime la energía cinética mínima de un protón confinado en una región de tamaño $\\Delta x \\sim 10^{-14}\\ \\text{m}$ (tamaño nuclear). ($m_p = 1{,}7\\cdot10^{-27}\\ \\text{kg}$, $\\hbar = 1{,}05\\cdot10^{-34}\\ \\text{J·s}$).\n\n**(b)** Una muestra radiactiva de periodo de semidesintegración $T = 8\\ \\text{días}$ tiene una actividad inicial $A_0 = 3{,}44\\cdot10^{6}\\ \\text{Bq}$. Calcule cuántos núcleos se han desintegrado al cabo de $24\\ \\text{días}$.",
+  "knowns": [
+   "$\\Delta x \\sim 10^{-14}\\ \\text{m}$, $m_p = 1{,}7\\cdot10^{-27}\\ \\text{kg}$, $\\hbar = 1{,}05\\cdot10^{-34}\\ \\text{J·s}$",
+   "$T = 8\\ \\text{días}$, $A_0 = 3{,}44\\cdot10^{6}\\ \\text{Bq}$, $t = 24\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** El principio de indeterminación establece $\\Delta x\\,\\Delta p \\geq \\dfrac{\\hbar}{2}$. Para un protón confinado en $\\Delta x\\sim10^{-14}\\ \\text{m}$, $\\Delta p\\sim\\dfrac{\\hbar}{2\\,\\Delta x}$, y la energía cinética mínima es\n$$E_c \\sim \\dfrac{(\\Delta p)^2}{2 m_p} = \\dfrac{\\hbar^2}{8\\,m_p\\,(\\Delta x)^2} = \\dfrac{(1{,}05\\cdot10^{-34})^2}{8\\cdot1{,}7\\cdot10^{-27}\\cdot(10^{-14})^2} \\approx 8\\cdot10^{-15}\\ \\text{J} \\approx 5\\cdot10^{4}\\ \\text{eV}$$\n(El valor depende de la definición de incertidumbre usada; basta con el orden de magnitud.)\n\n**(b)** La constante de desintegración es $\\lambda = \\dfrac{\\ln 2}{T} = \\dfrac{\\ln 2}{8\\cdot86400} = 1{,}00\\cdot10^{-6}\\ \\text{s}^{-1}$. Como $A_0 = \\lambda N_0$, el número de núcleos desintegrados en el tiempo $t$ es\n$$\\Delta N = N_0\\left(1 - e^{-\\lambda t}\\right) = \\dfrac{A_0}{\\lambda}\\left(1 - e^{-\\lambda t}\\right)$$\nCon $t = 24\\ \\text{días} = 3\\,T$, $e^{-\\lambda t} = 2^{-3} = 0{,}125$:\n$$\\Delta N = \\dfrac{3{,}44\\cdot10^{6}}{1{,}00\\cdot10^{-6}}\\,(1 - 0{,}125) \\approx 3{,}0\\cdot10^{12}\\ \\text{núcleos}$$",
+  "answer": "**(a)** $E_c \\sim 8\\cdot10^{-15}\\ \\text{J} \\approx 5\\cdot10^{4}\\ \\text{eV}$. **(b)** $\\Delta N \\approx 3{,}0\\cdot10^{12}\\ \\text{núcleos}$.",
+  "common_errors": [
+   "Calcular los núcleos que quedan en vez de los desintegrados $\\Delta N = N_0(1-e^{-\\lambda t})$.",
+   "No pasar $T$ a segundos al hallar $\\lambda$ y $N_0=A_0/\\lambda$.",
+   "Olvidar la relación $A_0=\\lambda N_0$ para obtener $N_0$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Tercera ley de Newton en la interacción gravitatoria · Comunidad Valenciana · Julio 2020",
+  "statement": "Entre un cuerpo de masa $m$ y otro de masa $M>m$ (ambos puntuales) existe solo la interacción gravitatoria. Razone: ¿es la fuerza que ejerce $M$ sobre $m$ mayor que la que ejerce $m$ sobre $M$? ¿Es la aceleración de ambos cuerpos igual en módulo? ¿Y en dirección y sentido?",
+  "knowns": [
+   "$M>m$",
+   "$G$ constante de gravitación universal"
+  ],
+  "full_solution": "**Fuerzas.** Por la ley de gravitación universal y la tercera ley de Newton, las fuerzas forman un par acción-reacción:\n$$F_{M\\to m} = F_{m\\to M} = G\\dfrac{M\\,m}{r^2}$$\nSon iguales en módulo (y opuestas en sentido), aunque $M>m$. Luego la fuerza de $M$ sobre $m$ NO es mayor.\n\n**Aceleraciones.** Por la segunda ley de Newton, $a = F/\\text{masa}$:\n$$a_m = \\dfrac{F}{m} = \\dfrac{G M}{r^2}, \\qquad a_M = \\dfrac{F}{M} = \\dfrac{G m}{r^2}$$\nComo $M>m$, resulta $a_m > a_M$: NO son iguales en módulo (acelera más el cuerpo ligero).\n\n**Dirección y sentido.** Ambas aceleraciones tienen la dirección de la recta que une los cuerpos (atractiva), pero sentidos opuestos (cada cuerpo acelera hacia el otro).",
+  "answer": "Las fuerzas son iguales en módulo (par acción-reacción). Las aceleraciones NO son iguales: $a_m=GM/r^2 > a_M=Gm/r^2$. Tienen la misma dirección (la recta que los une) pero sentidos opuestos.",
+  "common_errors": [
+   "Creer que la masa mayor ejerce más fuerza (son iguales por la 3ª ley).",
+   "Suponer que ambas aceleraciones son iguales (dependen de cada masa).",
+   "Confundir fuerza con aceleración."
+  ],
+  "figure_suggestion": "Dos masas $M$ y $m$ unidas por su recta, con los vectores fuerza iguales y opuestos y los vectores aceleración de distinto módulo apuntando cada uno hacia la otra masa.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Campo eléctrico de dos cargas en un cuadrado · Comunidad Valenciana · Julio 2020",
+  "statement": "Se colocan dos cargas puntuales, $q$ y $-2q$, en dos vértices de un cuadrado de $1\\ \\text{m}$ de lado. Tomando $q$ en el vértice $(0,0)$, $-2q$ en $(1,0)$ y el punto $P$ en el vértice $(0,1)$, con $q = 2\\sqrt{2}\\ \\text{nC}$, calcule el vector campo eléctrico en $P$ debido a cada carga y el campo resultante.",
+  "knowns": [
+   "$q = 2\\sqrt{2}\\ \\text{nC} = 2{,}83\\cdot10^{-9}\\ \\text{C}$",
+   "lado del cuadrado $= 1\\ \\text{m}$",
+   "$k = 9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$",
+   "$q$ en $(0,0)$, $-2q$ en $(1,0)$, $P$ en $(0,1)$"
+  ],
+  "full_solution": "Factor común $k\\,q = 9\\cdot10^{9}\\cdot2\\sqrt2\\cdot10^{-9} = 25{,}5\\ \\text{N·m}^2\\text{·C}^{-1}$.\n\n**Campo de $q$ en $P$.** Distancia $q\\!-\\!P$ (de $(0,0)$ a $(0,1)$) $= 1\\ \\text{m}$. Al ser $q>0$ el campo se aleja de la carga, según $+\\vec{\\jmath}$:\n$$\\vec{E}_q = \\dfrac{k q}{1^2}\\,\\vec{\\jmath} = 25{,}5\\,\\vec{\\jmath}\\ \\text{N·C}^{-1}$$\n\n**Campo de $-2q$ en $P$.** Distancia $(1,0)\\!-\\!(0,1) = \\sqrt2\\ \\text{m}$; por ser negativa, el campo apunta hacia la carga, es decir según $(\\vec{\\imath}-\\vec{\\jmath})/\\sqrt2$. Su módulo es $\\dfrac{k\\,2q}{(\\sqrt2)^2} = k q = 25{,}5\\ \\text{N·C}^{-1}$:\n$$\\vec{E}_{-2q} = 25{,}5\\left(\\tfrac{1}{\\sqrt2}\\vec{\\imath}-\\tfrac{1}{\\sqrt2}\\vec{\\jmath}\\right) = 18\\,\\vec{\\imath} - 18\\,\\vec{\\jmath}\\ \\text{N·C}^{-1}$$\n\n**Campo resultante:**\n$$\\vec{E}_P = \\vec{E}_q + \\vec{E}_{-2q} = 18\\,\\vec{\\imath} + (25{,}5-18)\\,\\vec{\\jmath} = 18\\,\\vec{\\imath} + 7{,}5\\,\\vec{\\jmath}\\ \\text{N·C}^{-1}$$\n$$|\\vec{E}_P| = \\sqrt{18^2 + 7{,}5^2} \\approx 19{,}5\\ \\text{N·C}^{-1}$$\nformando $\\approx 22{,}5^\\circ$ con el eje $X$.",
+  "answer": "$\\vec{E}_q = 25{,}5\\,\\vec{\\jmath}\\ \\text{N·C}^{-1}$, $\\vec{E}_{-2q} = 18\\,\\vec{\\imath}-18\\,\\vec{\\jmath}\\ \\text{N·C}^{-1}$; resultante $\\vec{E}_P = 18\\,\\vec{\\imath}+7{,}5\\,\\vec{\\jmath}\\ \\text{N·C}^{-1}$, de módulo $\\approx 19{,}5\\ \\text{N·C}^{-1}$.",
+  "common_errors": [
+   "Equivocar la distancia a la carga del vértice opuesto: es la diagonal $\\sqrt2\\ \\text{m}$.",
+   "Dirigir el campo de la carga negativa alejándose en vez de hacia la carga.",
+   "Sumar módulos en vez de componentes vectoriales."
+  ],
+  "figure_suggestion": "Cuadrado de lado $1\\ \\text{m}$ con $q$ en $(0,0)$, $-2q$ en $(1,0)$ y $P$ en $(0,1)$; dibujar $\\vec{E}_q$ (hacia $+y$), $\\vec{E}_{-2q}$ (hacia la carga, diagonal) y la resultante.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Campo magnético creado por un conductor rectilíneo · Comunidad Valenciana · Julio 2020",
+  "statement": "Por un conductor rectilíneo indefinido circula una corriente de intensidad $I$. Escriba y represente el vector campo magnético $\\vec{B}$ en puntos situados a una distancia $r$ del hilo. Explique cómo cambia dicho vector si los puntos se encuentran a una distancia $2r$.",
+  "knowns": [
+   "corriente $I$",
+   "$\\mu_0$ permeabilidad del vacío"
+  ],
+  "full_solution": "El campo magnético creado por un hilo rectilíneo indefinido tiene módulo\n$$B = \\dfrac{\\mu_0\\,I}{2\\pi\\,r}$$\nSu dirección es tangente a circunferencias centradas en el hilo y contenidas en planos perpendiculares a él; el sentido lo da la regla de la mano derecha (el pulgar según $I$, los dedos indican el giro de $\\vec{B}$). Las líneas de campo son circunferencias concéntricas alrededor del conductor.\n\nA una distancia $2r$:\n$$B(2r) = \\dfrac{\\mu_0 I}{2\\pi(2r)} = \\dfrac{1}{2}\\,\\dfrac{\\mu_0 I}{2\\pi r} = \\dfrac{B(r)}{2}$$\nEl campo mantiene su carácter circular (misma dirección y sentido de giro) pero su módulo se reduce a la mitad, pues es inversamente proporcional a la distancia.",
+  "answer": "$B = \\dfrac{\\mu_0 I}{2\\pi r}$, con líneas circulares alrededor del hilo (regla de la mano derecha). A distancia $2r$ el módulo se reduce a la mitad: $B(2r) = B(r)/2$.",
+  "common_errors": [
+   "Escribir $B\\propto 1/r^2$ en vez de $1/r$ (eso es para cargas puntuales).",
+   "Olvidar la dirección tangencial (circular) del campo.",
+   "No aplicar la regla de la mano derecha para el sentido."
+  ],
+  "figure_suggestion": "Hilo vertical con corriente $I$ y circunferencias concéntricas de campo $\\vec{B}$ a distancias $r$ y $2r$, indicando el sentido con la regla de la mano derecha.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Inducción en una espira al cambiar su área y su forma · Comunidad Valenciana · Julio 2020",
+  "statement": "Una espira circular está en el interior de un campo magnético uniforme y constante, perpendicular a su plano. Si el área de la espira disminuye hasta la mitad, ¿se induce corriente? ¿En qué sentido? Si la espira pasa a ser ovalada manteniendo su área (sin variar el área), ¿se induce corriente? Enuncie la ley en que se basa.",
+  "knowns": [
+   "$B$ uniforme y constante, perpendicular al plano de la espira"
+  ],
+  "full_solution": "Por la ley de Faraday-Lenz, la f.e.m. inducida es $\\varepsilon = -\\dfrac{\\mathrm{d}\\Phi}{\\mathrm{d}t}$, con $\\Phi = B\\,S\\cos\\theta$. Aquí $B$ es constante y $\\theta=0$ (perpendicular), de modo que el flujo depende solo del área: $\\Phi = B\\,S$.\n\n**Reducción del área a la mitad.** El flujo disminuye ($\\Phi$ pasa de $B S$ a $B S/2$), luego $\\dfrac{\\mathrm{d}\\Phi}{\\mathrm{d}t}\\neq0$ y SÍ se induce corriente mientras cambia el área. Por la ley de Lenz, la corriente inducida se opone a la disminución del flujo, circulando en el sentido que refuerza el campo (mismo sentido que $\\vec{B}$ según la regla de la mano derecha).\n\n**Deformación a óvalo sin cambiar el área.** Si el área permanece constante, $\\Phi = B\\,S$ no varía, $\\dfrac{\\mathrm{d}\\Phi}{\\mathrm{d}t}=0$ y NO se induce corriente.",
+  "answer": "Al reducir el área a la mitad SÍ se induce corriente (el flujo disminuye); por Lenz circula en el sentido que tiende a mantener el flujo (refuerza $\\vec{B}$). Al deformar a óvalo sin cambiar el área, el flujo no varía y NO se induce corriente. Ley de Faraday-Lenz.",
+  "common_errors": [
+   "Creer que la deformación induce corriente aunque el área (y el flujo) no cambie.",
+   "No aplicar la ley de Lenz para el sentido de la corriente.",
+   "Olvidar que lo relevante es la variación del flujo, no su valor."
+  ],
+  "figure_suggestion": "Espira circular con $\\vec{B}$ saliente perpendicular; (a) la misma espira con área reducida a la mitad y la corriente inducida; (b) espira ovalada de igual área sin corriente.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Nivel de intensidad sonora de la explosión de un petardo · Comunidad Valenciana · Julio 2020",
+  "statement": "Escriba la expresión del nivel sonoro (en dB) en función de la intensidad. A cierta distancia de la explosión de un petardo se mide una intensidad de $1\\ \\text{W·m}^{-2}$. ¿Qué nivel de intensidad (dB) hay en ese punto? Calcule la intensidad que se medirá al duplicar la distancia (onda esférica).",
+  "knowns": [
+   "$I_1 = 1\\ \\text{W·m}^{-2}$",
+   "$I_0 = 10^{-12}\\ \\text{W·m}^{-2}$"
+  ],
+  "full_solution": "El nivel de intensidad sonora es\n$$\\beta = 10\\log\\dfrac{I}{I_0}\\ \\ (\\text{dB})$$\nEn el punto donde $I_1 = 1\\ \\text{W·m}^{-2}$:\n$$\\beta_1 = 10\\log\\dfrac{1}{10^{-12}} = 10\\log 10^{12} = 120\\ \\text{dB}$$\n\nPara una onda esférica la intensidad es inversamente proporcional al cuadrado de la distancia, $I\\propto 1/r^2$. Al duplicar la distancia ($r_2 = 2r_1$):\n$$\\dfrac{I_2}{I_1} = \\left(\\dfrac{r_1}{r_2}\\right)^2 = \\dfrac14 \\;\\Rightarrow\\; I_2 = \\dfrac{1}{4} = 0{,}25\\ \\text{W·m}^{-2}$$",
+  "answer": "$\\beta = 10\\log(I/I_0)$; $\\beta_1 = 120\\ \\text{dB}$. Al duplicar la distancia, $I_2 = I_1/4 = 0{,}25\\ \\text{W·m}^{-2}$.",
+  "common_errors": [
+   "Pensar que al duplicar la distancia la intensidad se reduce a la mitad (es a la cuarta parte).",
+   "Confundir nivel (dB) con intensidad.",
+   "Errar la base del logaritmo (es decimal, base 10)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Lente convergente con imagen invertida y triple de tamaño · Comunidad Valenciana · Julio 2020",
+  "statement": "Deduzca la relación entre la distancia objeto $s$ y la distancia focal $f'$ de una lente convergente para que la imagen sea invertida y de tamaño triple del objeto.",
+  "knowns": [
+   "lente convergente, $f'>0$",
+   "imagen invertida y de tamaño triple ($m=-3$)"
+  ],
+  "full_solution": "Una imagen invertida de tamaño triple corresponde a un aumento lateral $m = -3$. Como $m = \\dfrac{s'}{s}$, se tiene $s' = -3\\,s$ (con el objeto real, $s<0$, resulta $s'>0$: imagen real).\n\nSustituyendo en la ecuación de las lentes delgadas $\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'}$:\n$$\\dfrac{1}{-3s} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{-1-3}{3s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{-4}{3s} = \\dfrac{1}{f'}$$\n$$\\boxed{\\,s = -\\dfrac{4}{3}\\,f'\\,}$$\nEs decir, el objeto debe situarse a una distancia $\\dfrac{4}{3}f'$ delante de la lente (entre $f'$ y $2f'$), lo que da una imagen real, invertida y tres veces mayor.",
+  "answer": "Con $m=-3$ se obtiene $s = -\\dfrac{4}{3}\\,f'$: el objeto se coloca a $\\dfrac{4}{3}f'$ delante de la lente (entre el foco y el doble del foco).",
+  "common_errors": [
+   "Tomar $m=+3$ (imagen derecha) en vez de $-3$ (invertida).",
+   "Confundir el criterio de signos de $s$ y $s'$.",
+   "Olvidar que para imagen real con lente convergente $s'>0$."
+  ],
+  "figure_suggestion": "Trazado de rayos de una lente convergente con el objeto entre $f'$ y $2f'$ (a $\\tfrac{4}{3}f'$) y la imagen real, invertida y de triple tamaño al otro lado.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Corrección de un defecto visual con lente de 1,5 dioptrías · Comunidad Valenciana · Julio 2020",
+  "statement": "En una revisión optométrica se indica a una persona que, para ver bien objetos lejanos, debe usar lentes de $+1{,}5\\ \\text{dioptrías}$. Razone si tiene miopía o hipermetropía y por qué se corrige con ese tipo de lente. Explique el fenómeno y su corrección con ayuda de un trazado de rayos.",
+  "knowns": [
+   "potencia de la lente $= +1{,}5\\ \\text{dioptrías}$ (convergente)"
+  ],
+  "full_solution": "La potencia $P = +1{,}5\\ \\text{D}$ es positiva, luego la lente es CONVERGENTE ($P = 1/f'$, con $f' = 1/1{,}5 \\approx 0{,}67\\ \\text{m} > 0$).\n\nUn ojo que necesita una lente convergente para ver de lejos es un ojo HIPERMÉTROPE: su potencia es insuficiente (o el globo ocular demasiado corto), de modo que los rayos procedentes del infinito formarían la imagen por detrás de la retina. La lente convergente añade potencia y adelanta la imagen hasta la retina.\n\n(La miopía, por el contrario, enfoca por delante de la retina y se corrige con lentes divergentes, de potencia negativa.)\n\n**Trazado de rayos:** los rayos paralelos de un objeto lejano, al atravesar la lente convergente, convergen de modo que, junto con el cristalino, forman la imagen justo sobre la retina.",
+  "answer": "Potencia positiva $\\Rightarrow$ lente convergente $\\Rightarrow$ HIPERMETROPÍA. El ojo hipermétrope enfocaría detrás de la retina; la lente convergente aporta la potencia que falta y lleva la imagen a la retina.",
+  "common_errors": [
+   "Asociar lente convergente (D positivas) con miopía (se corrige con divergentes).",
+   "Confundir dioptrías con distancia focal sin invertir ($f'=1/P$).",
+   "No relacionar el signo de la potencia con el tipo de defecto."
+  ],
+  "figure_suggestion": "Ojo hipermétrope: rayos de un objeto lejano que sin corrección enfocan detrás de la retina, y con lente convergente de $+1{,}5\\ \\text{D}$ enfocan sobre la retina.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "relatividad",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Energía relativista y velocidad de una partícula · Comunidad Valenciana · Julio 2020",
+  "statement": "La energía relativista (total) de una partícula es $\\dfrac{3}{\\sqrt{8}}$ veces su energía en reposo. Calcule su velocidad en función de $c$. Si se duplica dicha velocidad, ¿se duplica su energía? Responda razonadamente.",
+  "knowns": [
+   "$E = \\dfrac{3}{\\sqrt{8}}\\,E_0$, con $E_0 = m c^2$"
+  ],
+  "full_solution": "La energía total es $E = \\gamma\\,m c^2 = \\gamma\\,E_0$, con $\\gamma = \\dfrac{1}{\\sqrt{1-v^2/c^2}}$. Por tanto $\\gamma = \\dfrac{3}{\\sqrt8} = 1{,}0607$.\n$$\\gamma = \\dfrac{1}{\\sqrt{1-v^2/c^2}} \\;\\Rightarrow\\; 1-\\dfrac{v^2}{c^2} = \\dfrac{1}{\\gamma^2} = \\dfrac{8}{9} \\;\\Rightarrow\\; \\dfrac{v^2}{c^2} = \\dfrac19$$\n$$v = \\dfrac{c}{3} \\approx 0{,}33\\,c$$\n\nSi se duplica la velocidad, $v' = \\dfrac{2c}{3}$, el nuevo factor de Lorentz es\n$$\\gamma' = \\dfrac{1}{\\sqrt{1-(2/3)^2}} = \\dfrac{1}{\\sqrt{5/9}} = \\dfrac{3}{\\sqrt5} = 1{,}342$$\nLa energía NO se duplica: $\\dfrac{E'}{E} = \\dfrac{\\gamma'}{\\gamma} = \\dfrac{1{,}342}{1{,}061} \\approx 1{,}26$. La energía relativista no es proporcional a la velocidad (crece más deprisa a medida que $v\\to c$).",
+  "answer": "$v = c/3 \\approx 0{,}33\\,c$. Al duplicar la velocidad la energía NO se duplica: pasa a $\\gamma'=3/\\sqrt5=1{,}34$ veces $E_0$, solo un $\\approx 1{,}26$ veces la energía anterior.",
+  "common_errors": [
+   "Suponer que $E\\propto v$ (relación clásica), no válida en relatividad.",
+   "Confundir energía total ($\\gamma m c^2$) con energía cinética ($(\\gamma-1)mc^2$).",
+   "Errores algebraicos al despejar $v$ de $\\gamma$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Satélite Syncom 3: velocidad, periodo y energía de órbita · Comunidad Valenciana · Julio 2020",
+  "statement": "El Syncom 3 fue un satélite de telecomunicaciones de masa $40\\ \\text{kg}$ que describía órbitas circulares a una altura de $35\\,800\\ \\text{km}$ sobre la superficie terrestre.\n\n**(a)** Deduzca la expresión de la velocidad orbital y calcule su valor, así como el periodo de la órbita (en horas).\n\n**(b)** Calcule las energías potencial y cinética del satélite. Calcule la energía que se debe aportar para situarlo en una órbita cuya energía mecánica sea $E = -9{,}5\\cdot10^{7}\\ \\text{J}$.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 6\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6{,}4\\cdot10^{6}\\ \\text{m}$",
+   "$m = 40\\ \\text{kg}$, $h = 35\\,800\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** La fuerza gravitatoria es la centrípeta, $\\dfrac{G M_T m}{r^2} = \\dfrac{m v^2}{r}$, de donde $v = \\sqrt{\\dfrac{G M_T}{r}}$. Con $r = R_T + h = 6{,}4\\cdot10^{6} + 3{,}58\\cdot10^{7} = 4{,}22\\cdot10^{7}\\ \\text{m}$:\n$$v = \\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot6\\cdot10^{24}}{4{,}22\\cdot10^{7}}} = 3{,}08\\cdot10^{3}\\ \\text{m·s}^{-1}$$\n$$T = \\dfrac{2\\pi r}{v} = \\dfrac{2\\pi\\cdot4{,}22\\cdot10^{7}}{3{,}08\\cdot10^{3}} = 8{,}61\\cdot10^{4}\\ \\text{s} \\approx 23{,}9\\ \\text{h}$$\n(Es prácticamente una órbita geoestacionaria.)\n\n**(b)** Energías en la órbita:\n$$E_P = -\\dfrac{G M_T m}{r} = -3{,}79\\cdot10^{8}\\ \\text{J}, \\qquad E_C = \\dfrac{G M_T m}{2r} = 1{,}90\\cdot10^{8}\\ \\text{J}$$\nLa energía mecánica actual es $E_M = E_P + E_C = -1{,}90\\cdot10^{8}\\ \\text{J}$. La energía a aportar para alcanzar $E = -9{,}5\\cdot10^{7}\\ \\text{J}$ es\n$$\\Delta E = E - E_M = -9{,}5\\cdot10^{7} - (-1{,}90\\cdot10^{8}) = 9{,}5\\cdot10^{7}\\ \\text{J}$$",
+  "answer": "**(a)** $v \\approx 3{,}08\\cdot10^{3}\\ \\text{m·s}^{-1}$ y $T \\approx 23{,}9\\ \\text{h}$. **(b)** $E_P = -3{,}79\\cdot10^{8}\\ \\text{J}$, $E_C = 1{,}90\\cdot10^{8}\\ \\text{J}$; energía a aportar $\\Delta E \\approx 9{,}5\\cdot10^{7}\\ \\text{J}$.",
+  "common_errors": [
+   "No sumar la altura al radio terrestre.",
+   "Confundir energía mecánica ($-GMm/2r$) con potencial ($-GMm/r$).",
+   "Olvidar que $\\Delta E = E_{\\text{final}} - E_{\\text{inicial}}$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Selector de velocidades: ion en campos E y B cruzados · Comunidad Valenciana · Julio 2020",
+  "statement": "Un ion de carga $q = 3{,}2\\cdot10^{-19}\\ \\text{C}$ entra con velocidad constante $\\vec{v} = 20\\,\\vec{\\jmath}\\ \\text{m·s}^{-1}$ en una región donde existen un campo magnético $\\vec{B} = -20\\,\\vec{\\imath}\\ \\text{T}$ y un campo eléctrico $\\vec{E}$. Desprecie la gravedad.\n\n**(a)** Calcule el vector $\\vec{E}$ necesario para que el movimiento del ion sea rectilíneo y uniforme.\n\n**(b)** Calcule y represente los vectores fuerza que actúan sobre el ion en esa región.",
+  "knowns": [
+   "$q = 3{,}2\\cdot10^{-19}\\ \\text{C}$",
+   "$\\vec{v} = 20\\,\\vec{\\jmath}\\ \\text{m·s}^{-1}$",
+   "$\\vec{B} = -20\\,\\vec{\\imath}\\ \\text{T}$"
+  ],
+  "full_solution": "**(a)** Para movimiento rectilíneo y uniforme la fuerza total (de Lorentz) debe ser nula:\n$$\\vec{F} = q(\\vec{E} + \\vec{v}\\times\\vec{B}) = 0 \\;\\Rightarrow\\; \\vec{E} = -\\,\\vec{v}\\times\\vec{B}$$\nCalculamos $\\vec{v}\\times\\vec{B} = (20\\,\\vec{\\jmath})\\times(-20\\,\\vec{\\imath}) = -400\\,(\\vec{\\jmath}\\times\\vec{\\imath}) = -400\\,(-\\vec{k}) = 400\\,\\vec{k}$.\n$$\\vec{E} = -400\\,\\vec{k}\\ \\text{N·C}^{-1}\\ (\\text{o V·m}^{-1})$$\n\n**(b)** Las dos fuerzas son iguales y opuestas (se anulan):\n$$\\vec{F}_B = q(\\vec{v}\\times\\vec{B}) = 3{,}2\\cdot10^{-19}\\cdot400\\,\\vec{k} = 1{,}28\\cdot10^{-16}\\,\\vec{k}\\ \\text{N}$$\n$$\\vec{F}_E = q\\vec{E} = 3{,}2\\cdot10^{-19}\\cdot(-400\\,\\vec{k}) = -1{,}28\\cdot10^{-16}\\,\\vec{k}\\ \\text{N}$$\nLa fuerza magnética apunta según $+z$ y la eléctrica según $-z$; su suma es cero, por lo que el ion sigue recto a velocidad constante.",
+  "answer": "**(a)** $\\vec{E} = -400\\,\\vec{k}\\ \\text{V·m}^{-1}$. **(b)** $\\vec{F}_B = +1{,}28\\cdot10^{-16}\\,\\vec{k}\\ \\text{N}$ y $\\vec{F}_E = -1{,}28\\cdot10^{-16}\\,\\vec{k}\\ \\text{N}$; se anulan.",
+  "common_errors": [
+   "Errar el producto vectorial $\\vec{\\jmath}\\times\\vec{\\imath}=-\\vec{k}$.",
+   "Olvidar el signo: $\\vec{E}=-\\vec{v}\\times\\vec{B}$ para equilibrio.",
+   "No comprobar que las dos fuerzas se cancelan."
+  ],
+  "figure_suggestion": "Ejes XYZ: $\\vec{v}$ según $+y$, $\\vec{B}$ según $-x$, $\\vec{F}_B$ según $+z$ y $\\vec{F}_E$ según $-z$ (iguales y opuestas).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Dispersión de la luz blanca en una lámina y reflexión total · Comunidad Valenciana · Julio 2020",
+  "statement": "Un haz de luz blanca incide sobre una lámina plano-paralela cuyo índice de refracción es $n_r = 1{,}19$ para el rojo y $n_v = 1{,}23$ para el violeta.\n\n**(a)** Explique qué sucede al entrar el haz e identifique cuál de los rayos refractados (1 y 2) es el rojo y cuál el violeta, razonando con la ley física que lo rige.\n\n**(b)** El rayo violeta (rayo 2), tras refractarse en la cara superior, alcanza la cara inferior justo en el ángulo límite y sale paralelo a ella. Determine el ángulo de incidencia $i$ en la cara superior y el ángulo de refracción (ángulo de entrada) $\\varepsilon$.",
+  "knowns": [
+   "$n_r = 1{,}19$ (rojo)",
+   "$n_v = 1{,}23$ (violeta)",
+   "$n_{\\text{aire}} = 1$"
+  ],
+  "full_solution": "**(a)** Al pasar del aire a la lámina la luz blanca se dispersa: cada color se refracta un ángulo distinto porque el índice depende del color (ley de Snell, $\\operatorname{sen} i = n\\operatorname{sen}\\varepsilon$). Como $n_v > n_r$, el violeta se desvía MÁS (su ángulo de refracción es menor, se acerca más a la normal). Por tanto, el rayo más próximo a la normal es el violeta y el más alejado el rojo: el rayo 2 (más desviado) es el VIOLETA y el rayo 1 el ROJO.\n\n**(b)** Para que el rayo violeta salga paralelo a la cara inferior, debe refractarse en ella a $90^\\circ$, es decir, incidir en esa cara en el ángulo límite $\\theta_L$:\n$$\\operatorname{sen}\\theta_L = \\dfrac{n_{\\text{aire}}}{n_v} = \\dfrac{1}{1{,}23} = 0{,}813 \\;\\Rightarrow\\; \\theta_L = 54{,}3^\\circ$$\nEn una lámina de caras paralelas, el ángulo de refracción en la cara superior es igual al ángulo de incidencia en la inferior: $\\varepsilon = \\theta_L = 54{,}3^\\circ$. Aplicando Snell en la cara superior:\n$$\\operatorname{sen} i = n_v\\operatorname{sen}\\varepsilon = 1{,}23\\cdot\\operatorname{sen}54{,}3^\\circ = 1 \\;\\Rightarrow\\; i = 90^\\circ$$\nEs decir, la luz debe incidir de forma rasante ($i\\to90^\\circ$) para que el rayo violeta alcance la cara inferior en el ángulo límite y emerja paralelo a ella.",
+  "answer": "**(a)** El violeta se refracta más (acercándose a la normal) por tener mayor índice: rayo 2 = violeta, rayo 1 = rojo. **(b)** $\\varepsilon = \\theta_L = 54{,}3^\\circ$ e incidencia rasante $i \\approx 90^\\circ$.",
+  "common_errors": [
+   "Creer que el rojo se desvía más (es al revés: mayor $n$ del violeta, mayor desviación).",
+   "No reconocer que 'salir paralelo a la cara' equivale a refracción a $90^\\circ$ (ángulo límite).",
+   "Olvidar que en caras paralelas el ángulo refractado arriba iguala al de incidencia abajo."
+  ],
+  "figure_suggestion": "Lámina plano-paralela con un rayo blanco incidente rasante que se dispersa en rojo (rayo 1) y violeta (rayo 2); el violeta alcanza la cara inferior en el ángulo límite $54{,}3^\\circ$ y emerge paralelo a ella.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Actividad y masa de radón-222 en el aire · Comunidad Valenciana · Julio 2020",
+  "statement": "El $^{222}\\text{Rn}$ es un gas radiactivo presente en el aire de espacios cerrados.\n\n**(a)** Determine la actividad (en becquerel) de un volumen de aire si la masa de $^{222}\\text{Rn}$ medida es de $0{,}02\\ \\text{pg}$.\n\n**(b)** La actividad en otro volumen es de $228\\ \\text{Bq}$. Si se aísla y se mide de nuevo al cabo de $11{,}4\\ \\text{días}$, ¿qué actividad tendrá y cuánta masa de $^{222}\\text{Rn}$ le corresponderá?",
+  "knowns": [
+   "masa de un átomo de $^{222}\\text{Rn}$: $m_a = 3{,}7\\cdot10^{-25}\\ \\text{kg}$",
+   "$T_{1/2} = 3{,}8\\ \\text{días}$",
+   "$A_0 = 228\\ \\text{Bq}$, $t = 11{,}4\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** La constante de desintegración es $\\lambda = \\dfrac{\\ln 2}{T_{1/2}} = \\dfrac{\\ln 2}{3{,}8\\cdot86400} = 2{,}11\\cdot10^{-6}\\ \\text{s}^{-1}$. El número de átomos en $m = 0{,}02\\ \\text{pg} = 2\\cdot10^{-17}\\ \\text{kg}$ es $N = \\dfrac{m}{m_a} = \\dfrac{2\\cdot10^{-17}}{3{,}7\\cdot10^{-25}} = 5{,}4\\cdot10^{7}$. La actividad:\n$$A = \\lambda N = 2{,}11\\cdot10^{-6}\\cdot5{,}4\\cdot10^{7} \\approx 114\\ \\text{Bq}$$\n\n**(b)** En $t = 11{,}4\\ \\text{días} = 3\\,T_{1/2}$, la actividad se reduce a $1/2^3 = 1/8$:\n$$A = A_0\\,2^{-t/T_{1/2}} = 228\\cdot2^{-3} = 28{,}5\\ \\text{Bq}$$\nLa masa inicial ($228\\ \\text{Bq}$) es $m_0 = \\dfrac{A_0}{\\lambda}\\,m_a = \\dfrac{228}{2{,}11\\cdot10^{-6}}\\cdot3{,}7\\cdot10^{-25} = 4{,}0\\cdot10^{-17}\\ \\text{kg}$; al cabo de $3$ periodos queda $m_0/8$:\n$$m = \\dfrac{4{,}0\\cdot10^{-17}}{8} \\approx 5{,}0\\cdot10^{-18}\\ \\text{kg} = 5{,}0\\cdot10^{-6}\\ \\text{pg}$$",
+  "answer": "**(a)** $A \\approx 114\\ \\text{Bq}$. **(b)** $A = 28{,}5\\ \\text{Bq}$ y masa $\\approx 5{,}0\\cdot10^{-18}\\ \\text{kg}$.",
+  "common_errors": [
+   "No convertir la masa (pg $\\to$ kg) ni $T_{1/2}$ a segundos.",
+   "Olvidar que $11{,}4$ días son exactamente $3$ periodos de semidesintegración.",
+   "Confundir masa con número de átomos ($N=m/m_a$)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Velocidad de escape en función de g y del radio del planeta · Comunidad Valenciana · Julio 2019",
+  "statement": "Explique brevemente el concepto de velocidad de escape de un planeta y deduzca su expresión en función del radio $R$ del planeta y de la aceleración de la gravedad $g$ en su superficie.",
+  "knowns": [
+   "$g = \\dfrac{G M}{R^2}$ (gravedad en la superficie)"
+  ],
+  "full_solution": "La velocidad de escape es la velocidad mínima con la que hay que lanzar un cuerpo desde la superficie para que se aleje indefinidamente (llegue al infinito con velocidad nula), venciendo la atracción gravitatoria.\n\nPor conservación de la energía mecánica entre la superficie y el infinito ($E_\\infty = 0$):\n$$\\tfrac12 m v_e^2 - \\dfrac{G M m}{R} = 0 \\;\\Rightarrow\\; v_e = \\sqrt{\\dfrac{2 G M}{R}}$$\n\nComo la gravedad en la superficie es $g = \\dfrac{G M}{R^2}$, se tiene $G M = g R^2$, y sustituyendo:\n$$\\boxed{\\,v_e = \\sqrt{2\\,g\\,R}\\,}$$",
+  "answer": "$v_e = \\sqrt{\\dfrac{2GM}{R}} = \\sqrt{2\\,g\\,R}$, velocidad mínima para escapar de la atracción del planeta.",
+  "common_errors": [
+   "Olvidar el factor 2 (confundir con la velocidad orbital $\\sqrt{gR}$).",
+   "No anular la energía en el infinito (tanto cinética como potencial).",
+   "No usar $GM=gR^2$ para expresar en función de $g$ y $R$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Carga en el origen en equilibrio de fuerzas de dos cargas · Comunidad Valenciana · Julio 2019",
+  "statement": "Dos cargas $q_1 = 4\\ \\mu\\text{C}$ y $q_2 = 6\\ \\mu\\text{C}$ se sitúan sobre el eje $X$ en $x = +3\\ \\text{m}$ y $x = -3\\ \\text{m}$, respectivamente. Calcule el valor de una carga $q$ situada en el origen si la fuerza eléctrica total que actúa sobre ella tiene módulo $F = 2\\cdot10^{-3}\\ \\text{N}$. (Nota: valores reconstruidos a partir de un enunciado degradado en la digitalización.)",
+  "knowns": [
+   "$q_1 = 4\\ \\mu\\text{C}$ en $(3,0)\\ \\text{m}$",
+   "$q_2 = 6\\ \\mu\\text{C}$ en $(-3,0)\\ \\text{m}$",
+   "$k = 9\\cdot10^{9}\\ \\text{N·m}^2\\text{·C}^{-2}$",
+   "$F = 2\\cdot10^{-3}\\ \\text{N}$"
+  ],
+  "full_solution": "La carga $q$ en el origen dista $d = 3\\ \\text{m}$ de cada una. Las fuerzas que ejercen $q_1$ y $q_2$ sobre $q$ están dirigidas a lo largo del eje $X$ y, por ser las dos cargas del mismo signo (positivas), tienen sentidos opuestos sobre $q$. La fuerza neta (en módulo) es la diferencia:\n$$F = \\dfrac{k\\,q}{d^2}\\,|q_2 - q_1| = \\dfrac{k\\,q\\,(q_2 - q_1)}{d^2}$$\nDespejando $q$:\n$$q = \\dfrac{F\\,d^2}{k\\,(q_2 - q_1)} = \\dfrac{2\\cdot10^{-3}\\cdot3^2}{9\\cdot10^{9}\\,(6\\cdot10^{-6}-4\\cdot10^{-6})} = 1\\cdot10^{-6}\\ \\text{C} = 1\\ \\mu\\text{C}$$",
+  "answer": "$q = 1\\ \\mu\\text{C}$ (el sentido neto de la fuerza es el de la carga mayor, $q_2$).",
+  "common_errors": [
+   "Sumar las fuerzas en vez de restarlas (ambas positivas empujan en sentidos opuestos a $q$).",
+   "No convertir $\\mu$C a C.",
+   "Equivocar la distancia (es $3\\ \\text{m}$ a cada carga)."
+  ],
+  "figure_suggestion": "Eje X con $q_2=6\\ \\mu\\text{C}$ en $x=-3\\ \\text{m}$, $q$ en el origen y $q_1=4\\ \\mu\\text{C}$ en $x=+3\\ \\text{m}$; dibujar las dos fuerzas sobre $q$ en sentidos opuestos.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Campo magnético entre dos hilos paralelos · Comunidad Valenciana · Julio 2019",
+  "statement": "Dos hilos rectilíneos indefinidos, paralelos y separados $2\\ \\text{cm}$, conducen corrientes $I_1$ e $I_2$ (con $I_2 > I_1$). En el punto $P$, equidistante de ambos hilos ($1\\ \\text{cm}$ de cada uno), el módulo del campo magnético creado solo por $I_2$ es $0{,}06\\ \\text{mT}$ y el del campo total es $0{,}04\\ \\text{mT}$; ambos campos tienen la misma dirección y sentido.\n\n**(a)** Calcule el campo magnético generado por $I_1$ y represente los vectores campo.\n\n**(b)** Calcule las corrientes $I_1$ e $I_2$.",
+  "knowns": [
+   "separación $= 2\\ \\text{cm}$, distancia de $P$ a cada hilo $a = 1\\ \\text{cm}$",
+   "$B_{2} = 0{,}06\\ \\text{mT}$ (solo $I_2$)",
+   "$B_{\\text{total}} = 0{,}04\\ \\text{mT}$",
+   "$\\mu_0 = 4\\pi\\cdot10^{-7}\\ \\text{T·m·A}^{-1}$"
+  ],
+  "full_solution": "**(a)** El campo total y el de $I_2$ tienen la misma dirección y sentido, pero el total ($0{,}04\\ \\text{mT}$) es menor que $B_2$ ($0{,}06\\ \\text{mT}$). Por tanto, el campo de $I_1$ ha de tener sentido OPUESTO y restar:\n$$B_{\\text{total}} = B_2 - B_1 \\;\\Rightarrow\\; B_1 = B_2 - B_{\\text{total}} = 0{,}06 - 0{,}04 = 0{,}02\\ \\text{mT}$$\n\n**(b)** Para un hilo, $B = \\dfrac{\\mu_0 I}{2\\pi a}$, con $a = 0{,}01\\ \\text{m}$:\n$$I_2 = \\dfrac{B_2\\,2\\pi a}{\\mu_0} = \\dfrac{0{,}06\\cdot10^{-3}\\cdot2\\pi\\cdot0{,}01}{4\\pi\\cdot10^{-7}} = 3\\ \\text{A}$$\n$$I_1 = \\dfrac{B_1\\,2\\pi a}{\\mu_0} = \\dfrac{0{,}02\\cdot10^{-3}\\cdot2\\pi\\cdot0{,}01}{4\\pi\\cdot10^{-7}} = 1\\ \\text{A}$$",
+  "answer": "**(a)** $B_1 = 0{,}02\\ \\text{mT}$, de sentido opuesto a $B_2$. **(b)** $I_1 = 1\\ \\text{A}$ e $I_2 = 3\\ \\text{A}$.",
+  "common_errors": [
+   "Sumar los campos cuando el total es menor que $B_2$ (deben restarse: sentidos opuestos).",
+   "No pasar las distancias a metros ni los campos a teslas.",
+   "Confundir $B\\propto 1/r$ del hilo con $1/r^2$."
+  ],
+  "figure_suggestion": "Dos hilos paralelos separados $2\\ \\text{cm}$ con $P$ en el punto medio; vectores $\\vec{B}_2$ (mayor) y $\\vec{B}_1$ (menor, opuesto) y el campo total resultante.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Amplitud, frecuencia y diferencia de fase de una onda armónica · Comunidad Valenciana · Julio 2019",
+  "statement": "El gráfico representa una onda armónica, en un instante dado, que se propaga hacia la derecha del eje $X$ con velocidad $v = 2\\ \\text{m·s}^{-1}$. Del gráfico se leen una amplitud $A = 0{,}2\\ \\text{m}$ y una longitud de onda $\\lambda = 4\\ \\text{m}$. Determine razonadamente la amplitud y la frecuencia de la onda y la diferencia de fase entre dos puntos situados en $x_1 = 5\\ \\text{m}$ y $x_2 = 4\\ \\text{m}$. (Nota: amplitud y longitud de onda reconstruidas de la gráfica, no extraída en la digitalización.)",
+  "knowns": [
+   "$v = 2\\ \\text{m·s}^{-1}$",
+   "$A = 0{,}2\\ \\text{m}$ (de la gráfica)",
+   "$\\lambda = 4\\ \\text{m}$ (de la gráfica)",
+   "$x_1 = 5\\ \\text{m}$, $x_2 = 4\\ \\text{m}$"
+  ],
+  "full_solution": "La amplitud se lee directamente de la gráfica como el valor máximo de la elongación: $A = 0{,}2\\ \\text{m}$. La longitud de onda (periodo espacial) es $\\lambda = 4\\ \\text{m}$.\n\nLa frecuencia se obtiene de $v = \\lambda f$:\n$$f = \\dfrac{v}{\\lambda} = \\dfrac{2}{4} = 0{,}5\\ \\text{Hz}$$\n\nLa diferencia de fase entre dos puntos separados $\\Delta x = x_1 - x_2 = 1\\ \\text{m}$ (en el mismo instante) es\n$$\\Delta\\varphi = k\\,\\Delta x = \\dfrac{2\\pi}{\\lambda}\\,\\Delta x = \\dfrac{2\\pi}{4}\\cdot1 = \\dfrac{\\pi}{2}\\ \\text{rad}$$",
+  "answer": "$A = 0{,}2\\ \\text{m}$, $f = v/\\lambda = 0{,}5\\ \\text{Hz}$ y $\\Delta\\varphi = \\dfrac{2\\pi}{\\lambda}\\Delta x = \\dfrac{\\pi}{2}\\ \\text{rad}$.",
+  "common_errors": [
+   "Confundir amplitud (máximo) con la distancia pico a pico (el doble).",
+   "Usar $\\Delta\\varphi=\\omega\\Delta x$ en vez de $k\\,\\Delta x$ para puntos en el mismo instante.",
+   "Leer mal la longitud de onda en la gráfica (es el periodo espacial completo)."
+  ],
+  "figure_suggestion": "Instantánea $y(x)$ de una onda senoidal con amplitud $0{,}2\\ \\text{m}$ y longitud de onda $4\\ \\text{m}$, propagándose hacia $+x$; señalar los puntos $x=4\\ \\text{m}$ y $x=5\\ \\text{m}$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Observación de una hormiga con una lupa · Comunidad Valenciana · Julio 2019",
+  "statement": "Para observar una hormiga de $3\\ \\text{mm}$ de longitud se usa una lupa (lente convergente) de distancia focal $f' = 12\\ \\text{cm}$, situada a $6\\ \\text{cm}$ de la hormiga.\n\n**(a)** Calcule la posición de la imagen respecto a la lupa y el tamaño con que se ve la hormiga.\n\n**(b)** Represente el diagrama de rayos indicando posición y tamaño de objeto e imagen. ¿La imagen es real o virtual? ¿Derecha o invertida?",
+  "knowns": [
+   "$y = 3\\ \\text{mm}$",
+   "$f' = 12\\ \\text{cm}$",
+   "$s = -6\\ \\text{cm}$ (objeto delante de la lente)"
+  ],
+  "full_solution": "**(a)** El objeto está dentro de la distancia focal ($|s| = 6\\ \\text{cm} < f' = 12\\ \\text{cm}$), que es como se usa una lupa. Ecuación de las lentes delgadas:\n$$\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{s'} = \\dfrac{1}{12} + \\dfrac{1}{-6} = -\\dfrac{1}{12} \\;\\Rightarrow\\; s' = -12\\ \\text{cm}$$\nLa imagen está $12\\ \\text{cm}$ delante de la lente (mismo lado que el objeto). El aumento:\n$$m = \\dfrac{s'}{s} = \\dfrac{-12}{-6} = +2 \\;\\Rightarrow\\; y' = m\\,y = 2\\cdot3 = 6\\ \\text{mm}$$\n\n**(b)** Al ser $s'<0$ la imagen es VIRTUAL; al ser $m>0$ es DERECHA; y al ser $|m|>1$ está AUMENTADA (se ve del doble de tamaño, $6\\ \\text{mm}$). Esto es exactamente el funcionamiento de una lupa.",
+  "answer": "**(a)** $s' = -12\\ \\text{cm}$ (imagen a $12\\ \\text{cm}$ delante de la lupa), $m=+2$, $y' = 6\\ \\text{mm}$. **(b)** Imagen virtual, derecha y aumentada.",
+  "common_errors": [
+   "Colocar el objeto fuera del foco (una lupa trabaja con el objeto entre la lente y el foco).",
+   "Interpretar $s'<0$ como imagen real detrás de la lente.",
+   "Confundir el signo del aumento (positivo: derecha)."
+  ],
+  "figure_suggestion": "Trazado de rayos de lupa convergente ($f'=12\\ \\text{cm}$) con la hormiga de $3\\ \\text{mm}$ a $6\\ \\text{cm}$ (dentro del foco); imagen virtual, derecha y doble a $12\\ \\text{cm}$ del mismo lado.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Longitud de onda de De Broglie de una bacteria · Comunidad Valenciana · Julio 2019",
+  "statement": "Escriba la expresión de la longitud de onda de De Broglie y explique su significado. Calcule la longitud de onda de De Broglie de una bacteria que se mueve a $v = 66\\ \\mu\\text{m·s}^{-1}$, sabiendo que la masa de un millón de bacterias es $1\\ \\text{g}$.",
+  "knowns": [
+   "$v = 66\\ \\mu\\text{m·s}^{-1} = 6{,}6\\cdot10^{-5}\\ \\text{m·s}^{-1}$",
+   "$10^{6}$ bacterias $= 1\\ \\text{g}$",
+   "$h = 6{,}6\\cdot10^{-34}\\ \\text{J·s}$"
+  ],
+  "full_solution": "La hipótesis de De Broglie asocia a toda partícula material una onda de longitud\n$$\\lambda = \\dfrac{h}{p} = \\dfrac{h}{m\\,v}$$\nque expresa la dualidad onda-corpúsculo: cuanto mayor es el momento lineal, menor es la longitud de onda asociada.\n\nLa masa de una bacteria es $m = \\dfrac{1\\ \\text{g}}{10^{6}} = \\dfrac{10^{-3}\\ \\text{kg}}{10^{6}} = 10^{-9}\\ \\text{kg}$. Entonces\n$$\\lambda = \\dfrac{h}{m\\,v} = \\dfrac{6{,}6\\cdot10^{-34}}{10^{-9}\\cdot6{,}6\\cdot10^{-5}} = 1{,}0\\cdot10^{-20}\\ \\text{m}$$\n\nEs una longitud de onda inimaginablemente pequeña (mucho menor que un núcleo atómico), lo que explica que el comportamiento ondulatorio sea totalmente inapreciable en objetos macroscópicos.",
+  "answer": "$\\lambda = \\dfrac{h}{mv} \\approx 1{,}0\\cdot10^{-20}\\ \\text{m}$, longitud de onda despreciable (dualidad onda-corpúsculo sin efecto observable a escala macroscópica).",
+  "common_errors": [
+   "No obtener la masa de una sola bacteria ($1\\ \\text{g}/10^6$).",
+   "No convertir $\\mu$m/s a m/s ni g a kg.",
+   "Confundir $\\lambda=h/(mv)$ con $\\lambda=h/E$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Campo y potencial gravitatorio de dos masas · Comunidad Valenciana · Julio 2019",
+  "statement": "Se sitúan dos masas puntuales de $1\\ \\text{kg}$ en los puntos $(-3,0)\\ \\text{m}$ y $(3,0)\\ \\text{m}$. Para el punto $(0,4)\\ \\text{m}$ calcule:\n\n**(a)** Los vectores campo gravitatorio de cada masa y el campo total. Razone si existe algún punto de esta configuración donde se anule el campo.\n\n**(b)** El potencial gravitatorio de cada masa y el total. Razone si existe algún punto donde el potencial se anule.",
+  "knowns": [
+   "$m_1 = m_2 = 1\\ \\text{kg}$ en $(-3,0)$ y $(3,0)\\ \\text{m}$",
+   "punto $(0,4)\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "La distancia de cada masa al punto $(0,4)$ es $r = \\sqrt{3^2+4^2} = 5\\ \\text{m}$. El módulo del campo de cada masa:\n$$g = \\dfrac{G m}{r^2} = \\dfrac{6{,}67\\cdot10^{-11}\\cdot1}{25} = 2{,}67\\cdot10^{-12}\\ \\text{N·kg}^{-1}$$\n\n**(a)** Cada campo apunta del punto hacia su masa. Por simetría, las componentes horizontales se cancelan y solo quedan las verticales (hacia $-y$). La componente vertical de cada uno es $g\\cdot\\dfrac{4}{5}$:\n$$\\vec{g}_{\\text{total}} = -2\\,g\\,\\dfrac{4}{5}\\,\\vec{\\jmath} = -4{,}27\\cdot10^{-12}\\,\\vec{\\jmath}\\ \\text{N·kg}^{-1}$$\nde módulo $4{,}27\\cdot10^{-12}\\ \\text{N·kg}^{-1}$ dirigido hacia abajo. El campo SÍ se anula en el punto medio, el origen $(0,0)$, donde por simetría los dos campos (iguales y opuestos) se cancelan.\n\n**(b)** El potencial es escalar:\n$$V_1 = V_2 = -\\dfrac{G m}{r} = -\\dfrac{6{,}67\\cdot10^{-11}}{5} = -1{,}33\\cdot10^{-11}\\ \\text{J·kg}^{-1}$$\n$$V_{\\text{total}} = V_1 + V_2 = -2{,}67\\cdot10^{-11}\\ \\text{J·kg}^{-1}$$\nEl potencial gravitatorio es siempre negativo y solo tiende a cero en el infinito; NO existe ningún punto a distancia finita donde se anule.",
+  "answer": "**(a)** $\\vec{g}_{\\text{total}} = -4{,}27\\cdot10^{-12}\\,\\vec{\\jmath}\\ \\text{N·kg}^{-1}$; el campo se anula en el origen $(0,0)$. **(b)** $V_{\\text{total}} = -2{,}67\\cdot10^{-11}\\ \\text{J·kg}^{-1}$; el potencial no se anula en ningún punto finito (solo en el infinito).",
+  "common_errors": [
+   "No proyectar los campos (olvidar el factor $4/5$ de la componente vertical).",
+   "Buscar un punto de potencial nulo entre masas del mismo signo (imposible, siempre negativo).",
+   "Sumar los potenciales como vectores (el potencial es escalar)."
+  ],
+  "figure_suggestion": "Dos masas de $1\\ \\text{kg}$ en $(\\pm3,0)$ y el punto $(0,4)$; dibujar los dos vectores campo hacia las masas, su resultante vertical y marcar el origen como punto de campo nulo.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Trabajo en un campo conservativo y comparación de potenciales · Comunidad Valenciana · Julio 2019",
+  "statement": "Explique brevemente qué es un campo de fuerzas conservativo. Una carga positiva se encuentra en un campo electrostático. El trabajo que realiza el campo para desplazarla entre los puntos $A$ y $B$ es $0{,}01\\ \\text{J}$ siguiendo el camino (1). ¿Cuál es el trabajo si se sigue el camino (2)? ¿En qué punto, $A$ o $B$, es mayor el potencial eléctrico?",
+  "knowns": [
+   "carga positiva $q>0$",
+   "$W_{A\\to B}^{(1)} = 0{,}01\\ \\text{J}$ (trabajo del campo)"
+  ],
+  "full_solution": "Un campo de fuerzas es conservativo cuando el trabajo que realiza para desplazar un cuerpo entre dos puntos no depende del camino seguido, sino solo de las posiciones inicial y final (equivalentemente, el trabajo en un camino cerrado es nulo y la fuerza deriva de una energía potencial). El campo electrostático es conservativo.\n\n**Trabajo por el camino (2).** Al ser conservativo, el trabajo depende solo de $A$ y $B$, no del camino:\n$$W_{A\\to B}^{(2)} = W_{A\\to B}^{(1)} = 0{,}01\\ \\text{J}$$\n\n**Comparación de potenciales.** El trabajo del campo es $W_{A\\to B} = q\\,(V_A - V_B)$. Como $W>0$ y $q>0$, se cumple $V_A - V_B > 0$, es decir $V_A > V_B$: el potencial es mayor en $A$. (La carga positiva se mueve espontáneamente hacia potenciales decrecientes.)",
+  "answer": "El trabajo por el camino (2) es el mismo, $0{,}01\\ \\text{J}$ (campo conservativo). Como $W=q(V_A-V_B)>0$ con $q>0$, resulta $V_A>V_B$: el potencial es mayor en $A$.",
+  "common_errors": [
+   "Pensar que el trabajo depende del camino en un campo conservativo.",
+   "Equivocar el signo en $W=q(V_A-V_B)$.",
+   "Confundir potencial (escalar) con campo (vector)."
+  ],
+  "figure_suggestion": "Dos puntos $A$ y $B$ unidos por dos caminos distintos (1) y (2) dentro de un campo electrostático, indicando que $W$ es igual por ambos.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Flujo magnético en una espira que gira 45° · Comunidad Valenciana · Julio 2019",
+  "statement": "Una espira plana de superficie $S$ está en un campo magnético uniforme $B = 1\\ \\text{T}$ perpendicular al plano de la espira. Calcule el flujo magnético en esta situación y cuando la espira ha girado un ángulo $\\alpha = 45^\\circ$. Razone si se genera una fuerza electromotriz en la espira mientras gira.",
+  "knowns": [
+   "$B = 1\\ \\text{T}$",
+   "superficie de la espira $S$",
+   "ángulo girado $\\alpha = 45^\\circ$"
+  ],
+  "full_solution": "El flujo magnético es $\\Phi = \\vec{B}\\cdot\\vec{S} = B\\,S\\cos\\theta$, siendo $\\theta$ el ángulo entre $\\vec{B}$ y la normal a la espira.\n\n**Posición inicial** (campo perpendicular al plano, $\\theta = 0$):\n$$\\Phi_1 = B\\,S\\cos 0^\\circ = 1\\cdot S = S\\ \\ (\\text{Wb})$$\n\n**Tras girar $45^\\circ$** ($\\theta = 45^\\circ$):\n$$\\Phi_2 = B\\,S\\cos 45^\\circ = 1\\cdot S\\cdot\\dfrac{\\sqrt2}{2} = 0{,}707\\,S\\ \\ (\\text{Wb})$$\n\n**F.e.m.** Mientras la espira gira, el ángulo $\\theta$ (y por tanto el flujo) cambia con el tiempo; por la ley de Faraday $\\varepsilon = -\\dfrac{\\mathrm{d}\\Phi}{\\mathrm{d}t}\\neq0$, de modo que SÍ se genera fuerza electromotriz inducida durante el giro (principio del alternador).",
+  "answer": "$\\Phi_1 = B\\,S = S\\ \\text{Wb}$ y $\\Phi_2 = B\\,S\\cos45^\\circ = 0{,}707\\,S\\ \\text{Wb}$. Sí se induce f.e.m. mientras gira, porque el flujo varía con el tiempo.",
+  "common_errors": [
+   "Olvidar el $\\cos\\theta$ y tomar $\\Phi$ constante al girar.",
+   "Medir el ángulo desde el plano en vez de desde la normal.",
+   "Creer que no hay f.e.m. porque $B$ es constante (lo que varía es el ángulo)."
+  ],
+  "figure_suggestion": "Espira en campo uniforme $\\vec{B}$: posición inicial con la normal paralela a $\\vec{B}$ y posición girada $45^\\circ$, mostrando el ángulo entre la normal y $\\vec{B}$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Función de onda transversal en una cuerda · Comunidad Valenciana · Julio 2019",
+  "statement": "Una onda transversal sinusoidal en una cuerda se propaga en el sentido positivo del eje $X$ con velocidad $v = 1\\ \\text{m·s}^{-1}$ y periodo $T = 0{,}2\\ \\text{s}$. En el instante inicial, el punto situado en el origen tiene elongación positiva igual a su amplitud.\n\n**(a)** Calcule la frecuencia angular, el número de onda y la fase inicial.\n\n**(b)** Si la amplitud es $A = 0{,}1\\ \\text{m}$, escriba la función de onda $y(x,t)$. ¿Qué elongación tiene el punto $x = 0{,}2\\ \\text{m}$ en el instante $t = 0{,}4\\ \\text{s}$?",
+  "knowns": [
+   "$v = 1\\ \\text{m·s}^{-1}$",
+   "$T = 0{,}2\\ \\text{s}$",
+   "$A = 0{,}1\\ \\text{m}$",
+   "en $t=0$, $x=0$: $y=A$ (máximo)"
+  ],
+  "full_solution": "**(a)** Frecuencia angular, longitud de onda y número de onda:\n$$\\omega = \\dfrac{2\\pi}{T} = \\dfrac{2\\pi}{0{,}2} = 10\\pi\\ \\text{rad·s}^{-1}, \\quad \\lambda = v\\,T = 1\\cdot0{,}2 = 0{,}2\\ \\text{m}, \\quad k = \\dfrac{2\\pi}{\\lambda} = 10\\pi\\ \\text{m}^{-1}$$\nUsando $y = A\\cos(\\omega t - k x + \\varphi)$, la condición $y(0,0)=A$ da $\\cos\\varphi = 1 \\Rightarrow \\varphi = 0$.\n\n**(b)** La función de onda es\n$$y(x,t) = 0{,}1\\cos(10\\pi\\,t - 10\\pi\\,x)\\ \\text{m}$$\nEn $x = 0{,}2\\ \\text{m}$, $t = 0{,}4\\ \\text{s}$:\n$$y = 0{,}1\\cos(10\\pi\\cdot0{,}4 - 10\\pi\\cdot0{,}2) = 0{,}1\\cos(4\\pi - 2\\pi) = 0{,}1\\cos(2\\pi) = 0{,}1\\ \\text{m}$$\nEl punto está en su elongación máxima.",
+  "answer": "**(a)** $\\omega = 10\\pi\\ \\text{rad·s}^{-1}$, $k = 10\\pi\\ \\text{m}^{-1}$, $\\varphi = 0$ (con coseno). **(b)** $y(x,t) = 0{,}1\\cos(10\\pi t - 10\\pi x)\\ \\text{m}$; en $x=0{,}2\\ \\text{m}$, $t=0{,}4\\ \\text{s}$, $y = 0{,}1\\ \\text{m}$.",
+  "common_errors": [
+   "Usar función seno con $\\varphi=0$ (no cumple $y=A$ en el origen); con seno sería $\\varphi=\\pi/2$.",
+   "Confundir $k$ con $\\omega$.",
+   "Errar el signo del término $kx$ para propagación en $+x$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Características de la imagen de una lente por trazado de rayos · Comunidad Valenciana · Julio 2019",
+  "statement": "El esquema representa una lente, un objeto y dos rayos (1 y 2) que, procedentes del extremo del objeto, salen de la lente. A partir del trazado de rayos, determine la posición y el tamaño de la imagen, el aumento, la posición de los focos y la potencia de la lente, e indique si la imagen es real o virtual. (Enunciado dependiente de un esquema no digitalizado; se resuelve el caso representativo de una lente convergente con el objeto a $30\\ \\text{cm}$ y $f' = 10\\ \\text{cm}$.)",
+  "knowns": [
+   "lente convergente (ejemplo representativo)",
+   "$s = -30\\ \\text{cm}$",
+   "$f' = 10\\ \\text{cm}$"
+  ],
+  "full_solution": "Procedimiento general con el trazado de rayos: el rayo paralelo al eje emerge pasando por el foco imagen $F'$, y el rayo que pasa por el centro óptico no se desvía; su intersección localiza la imagen. La escala del dibujo da las distancias focales y la posición del objeto.\n\nResolvemos el caso representativo (lente convergente, objeto a $s=-30\\ \\text{cm}$, $f'=+10\\ \\text{cm}$):\n$$\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{s'} = \\dfrac{1}{10} + \\dfrac{1}{-30} = \\dfrac{2}{30} \\;\\Rightarrow\\; s' = 15\\ \\text{cm}$$\nAumento y carácter:\n$$m = \\dfrac{s'}{s} = \\dfrac{15}{-30} = -0{,}5$$\nImagen REAL (al otro lado de la lente, $s'>0$), invertida ($m<0$) y reducida a la mitad.\n\nFocos y potencia: $F$ y $F'$ están a $\\pm f' = \\pm10\\ \\text{cm} = \\pm0{,}10\\ \\text{m}$ del centro; la potencia es\n$$P = \\dfrac{1}{f'} = \\dfrac{1}{0{,}10} = +10\\ \\text{dioptrías}$$",
+  "answer": "Para el caso representativo: imagen real, invertida y reducida, a $s'=15\\ \\text{cm}$, con $m=-0{,}5$; focos a $\\pm10\\ \\text{cm}$ y potencia $P=+10\\ \\text{D}$. (Los valores exactos se leen del esquema del examen.)",
+  "common_errors": [
+   "No situar la imagen en la intersección de los rayos refractados.",
+   "Confundir potencia con distancia focal (es su inverso, en m).",
+   "Equivocar el signo de $s$ (objeto real a la izquierda: $s<0$)."
+  ],
+  "figure_suggestion": "Trazado de rayos de lente convergente ($f'=10\\ \\text{cm}$), objeto a $30\\ \\text{cm}$: rayo paralelo que pasa por $F'$ y rayo por el centro óptico; imagen real invertida a $15\\ \\text{cm}$, de la mitad de tamaño.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Desintegración del neón en la nucleosíntesis estelar · Comunidad Valenciana · Julio 2019",
+  "statement": "En la nucleosíntesis de estrellas masivas, el núcleo, al contraerse, provoca una desintegración del tipo $^{20}_{10}\\text{Ne} \\rightarrow\\ ^{20}_{9}\\text{F} + X$ que consume energía. Determine razonadamente qué partícula es $X$. Si la reacción consume $4{,}7\\ \\text{MeV}$ por núcleo, calcule la energía consumida al desintegrarse un mol de núcleos de neón. (Nota: identificación del nucleido reconstruida de un enunciado degradado.)",
+  "knowns": [
+   "energía consumida por núcleo $= 4{,}7\\ \\text{MeV}$",
+   "$N_A = 6\\cdot10^{23}\\ \\text{mol}^{-1}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**Identificación de $X$.** Aplicamos la conservación del número másico $A$ y del número atómico $Z$ (cargas). De $^{20}_{10}\\text{Ne}$ a $^{20}_{9}\\text{F}$: el número másico se conserva ($A=20$) y el número atómico disminuye en una unidad ($Z: 10\\to9$). Esto corresponde a una captura electrónica (proceso favorecido por la contracción del núcleo estelar), en la que un protón capta un electrón y se transforma en neutrón, emitiéndose un neutrino:\n$$^{20}_{10}\\text{Ne} + e^- \\rightarrow\\ ^{20}_{9}\\text{F} + \\nu_e$$\nPor tanto la partícula $X$ es un NEUTRINO ($\\nu_e$), de carga nula y número másico cero (conserva $A$ y $Z$).\n\n**Energía por mol.** La energía consumida por un mol de núcleos es\n$$E = 4{,}7\\ \\text{MeV}\\cdot N_A = 4{,}7\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}\\cdot6\\cdot10^{23} \\approx 4{,}5\\cdot10^{11}\\ \\text{J}$$",
+  "answer": "$X$ es un neutrino ($\\nu_e$), que conserva $A$ y $Z$. La energía consumida por mol es $E \\approx 4{,}5\\cdot10^{11}\\ \\text{J}$.",
+  "common_errors": [
+   "No conservar simultáneamente $A$ y $Z$ al identificar la partícula.",
+   "No convertir los MeV a julios ($1\\ \\text{MeV}=1{,}6\\cdot10^{-13}\\ \\text{J}$).",
+   "Olvidar multiplicar por el número de Avogadro para pasar a un mol."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Andalucía · Junio 2024",
+  "title": "Campo nulo entre galaxias y campo/potencial de dos masas · Andalucía · Junio 2024",
+  "statement": "**(a)** La galaxia Andrómeda tiene una masa $1{,}5$ veces la de la Vía Láctea; a escala galáctica se tratan como masas puntuales. (i) Justifique si existe un punto entre ambas donde se anule el campo gravitatorio y, en su caso, la relación entre las distancias de ese punto a cada galaxia. (ii) ¿Se anula el potencial gravitatorio en algún punto entre ambas?\n\n**(b)** Se sitúa una masa de $3\\ \\text{kg}$ en $A(0,-2)\\ \\text{m}$ y otra de $2\\ \\text{kg}$ en $B(3,0)\\ \\text{m}$. Calcule en el origen: (i) el campo gravitatorio; (ii) el potencial gravitatorio.",
+  "knowns": [
+   "$M_{\\text{And}} = 1{,}5\\,M_{\\text{VL}}$",
+   "$m_A = 3\\ \\text{kg}$ en $(0,-2)\\ \\text{m}$",
+   "$m_B = 2\\ \\text{kg}$ en $(3,0)\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)(i)** El campo se anula donde los módulos se igualan. Si $d_1$ es la distancia a la Vía Láctea (masa $M$) y $d_2$ a Andrómeda (masa $1{,}5M$):\n$$\\dfrac{G M}{d_1^2} = \\dfrac{G\\,(1{,}5M)}{d_2^2} \\;\\Rightarrow\\; \\dfrac{d_1}{d_2} = \\sqrt{\\dfrac{1}{1{,}5}} = 0{,}816$$\nSí existe, más cerca de la galaxia menos masiva (la Vía Láctea).\n\n**(a)(ii)** El potencial gravitatorio es siempre negativo (suma de términos $-GM/d$); entre las dos masas nunca se anula (solo en el infinito).\n\n**(b)** Distancias al origen: $r_A = 2\\ \\text{m}$ (según $-y$ desde $A$) y $r_B = 3\\ \\text{m}$ (según $+x$ desde $B$). Cada campo apunta hacia su masa.\n$$\\vec{g}_A = \\dfrac{G\\,3}{2^2}\\,(0,-1) = (0,\\,-5{,}00\\cdot10^{-11})\\ \\text{N·kg}^{-1}$$\n$$\\vec{g}_B = \\dfrac{G\\,2}{3^2}\\,(1,0) = (1{,}48\\cdot10^{-11},\\,0)\\ \\text{N·kg}^{-1}$$\n$$\\vec{g} = (1{,}48\\cdot10^{-11},\\,-5{,}00\\cdot10^{-11})\\ \\text{N·kg}^{-1}, \\quad |\\vec{g}| = 5{,}22\\cdot10^{-11}\\ \\text{N·kg}^{-1}$$\nPotencial (escalar):\n$$V = -G\\left(\\dfrac{3}{2} + \\dfrac{2}{3}\\right) = -6{,}67\\cdot10^{-11}\\cdot2{,}167 = -1{,}45\\cdot10^{-10}\\ \\text{J·kg}^{-1}$$",
+  "answer": "**(a)** (i) Sí, con $d_1/d_2 = \\sqrt{1/1{,}5} = 0{,}816$ (más cerca de la Vía Láctea). (ii) No se anula el potencial. **(b)** $\\vec{g} = (1{,}48\\cdot10^{-11},\\,-5{,}00\\cdot10^{-11})\\ \\text{N·kg}^{-1}$, $|\\vec{g}| = 5{,}22\\cdot10^{-11}\\ \\text{N·kg}^{-1}$; $V = -1{,}45\\cdot10^{-10}\\ \\text{J·kg}^{-1}$.",
+  "common_errors": [
+   "Situar el punto neutro más cerca de la masa mayor (es al revés).",
+   "Buscar un cero del potencial entre masas del mismo signo (imposible).",
+   "Sumar los potenciales como vectores (es escalar)."
+  ],
+  "figure_suggestion": "Masa de $3\\ \\text{kg}$ en $(0,-2)$ y de $2\\ \\text{kg}$ en $(3,0)$; vectores campo en el origen (uno hacia $-y$, otro hacia $+x$) y su resultante.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Andalucía · Junio 2024",
+  "title": "Energía mecánica en un plano inclinado con rozamiento · Andalucía · Junio 2024",
+  "statement": "**(a)** Razone si son verdaderos: (i) Si sobre una partícula solo actúan fuerzas conservativas, su energía mecánica aumenta. (ii) Si solo actúa el rozamiento (opuesto al desplazamiento), la energía mecánica aumenta.\n\n**(b)** Una masa de $5\\ \\text{kg}$ se lanza hacia abajo por un plano inclinado sin rozamiento de $15^\\circ$ con velocidad inicial $3\\ \\text{m·s}^{-1}$. Tras recorrer $2\\ \\text{m}$ por el plano llega a una superficie horizontal con rozamiento; tras recorrer $2\\ \\text{m}$ sobre ella su velocidad es $1\\ \\text{m·s}^{-1}$. (i) Dibuje las fuerzas en cada tramo. (ii) Calcule el trabajo del rozamiento en el tramo horizontal. (iii) Calcule el coeficiente de rozamiento en el tramo horizontal.",
+  "knowns": [
+   "$m = 5\\ \\text{kg}$, $v_0 = 3\\ \\text{m·s}^{-1}$",
+   "plano $15^\\circ$ sin rozamiento, recorrido $2\\ \\text{m}$",
+   "tramo horizontal con rozamiento, $2\\ \\text{m}$, $v_f = 1\\ \\text{m·s}^{-1}$",
+   "$g = 9{,}8\\ \\text{m·s}^{-2}$"
+  ],
+  "full_solution": "**(a)** (i) FALSO: con solo fuerzas conservativas la energía mecánica se CONSERVA (constante), no aumenta. (ii) FALSO: el rozamiento opuesto al movimiento realiza trabajo negativo, por lo que la energía mecánica DISMINUYE.\n\n**(b)(i)** En el plano: peso $m\\vec{g}$ (descompuesto), normal $\\vec{N}$ (no hay rozamiento). En la horizontal: peso, normal y fuerza de rozamiento $\\vec{F}_r$ opuesta al movimiento.\n\n**(b)(ii)** En el plano (sin rozamiento) la velocidad al final, por conservación de energía (desciende $h = 2\\operatorname{sen}15^\\circ$):\n$$v_1^2 = v_0^2 + 2g\\,(2\\operatorname{sen}15^\\circ) = 3^2 + 2\\cdot9{,}8\\cdot2\\cdot0{,}259 = 19{,}1 \\;\\Rightarrow\\; v_1 = 4{,}38\\ \\text{m·s}^{-1}$$\nEn la horizontal, el trabajo del rozamiento es la variación de energía cinética:\n$$W_r = \\tfrac12 m v_f^2 - \\tfrac12 m v_1^2 = \\tfrac12\\cdot5\\,(1^2 - 19{,}1) = -45{,}4\\ \\text{J}$$\n\n**(b)(iii)** El rozamiento vale $F_r = \\mu\\,m g$ y $W_r = -F_r\\,d$:\n$$\\mu = \\dfrac{|W_r|}{m g\\,d} = \\dfrac{45{,}4}{5\\cdot9{,}8\\cdot2} = 0{,}46$$",
+  "answer": "**(a)** Ambas falsas. **(b)** (ii) $W_r \\approx -45{,}4\\ \\text{J}$. (iii) $\\mu \\approx 0{,}46$.",
+  "common_errors": [
+   "No sumar la energía ganada en la bajada del plano antes del tramo con rozamiento.",
+   "Tomar $W_r$ positivo (el rozamiento siempre resta energía).",
+   "Usar la longitud del plano para la normal horizontal (en la horizontal $N=mg$)."
+  ],
+  "figure_suggestion": "Diagrama de cuerpo libre en dos tramos: en el plano inclinado $15^\\circ$ (peso y normal) y en la horizontal (peso, normal y rozamiento opuesto a $v$).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Andalucía · Junio 2024",
+  "title": "F.e.m. inducida por un campo magnético variable en una espira · Andalucía · Junio 2024",
+  "statement": "**(a)** Razone la veracidad: (i) En una espira de radio $R$ con su plano perpendicular a un campo $B(t) = a t + b$ se induce una f.e.m. constante. (ii) Al situar una espira en reposo en un campo magnético variable con el tiempo siempre se induce f.e.m.\n\n**(b)** Una espira circular de $20\\ \\text{cm}$ de radio está en el plano $XY$ con un campo $B(t) = 3t^2 - 2t$ (S.I.) en sentido $-OZ$. (i) Obtenga el flujo magnético $\\Phi(t)$. (ii) Calcule la f.e.m. inducida en $t = 2\\ \\text{s}$. (iii) Razone el sentido de la corriente.",
+  "knowns": [
+   "$R = 0{,}20\\ \\text{m}$",
+   "$B(t) = 3t^2 - 2t$ (T, S.I.)",
+   "campo en sentido $-OZ$"
+  ],
+  "full_solution": "**(a)(i)** VERDADERO: con $B(t)=at+b$, $\\Phi=B\\,S=(at+b)S$ y $\\varepsilon=-\\dfrac{\\mathrm{d}\\Phi}{\\mathrm{d}t}=-a\\,S$, que es constante.\n\n**(a)(ii)** VERDADERO en general, siempre que la espira abarque flujo del campo (plano no paralelo al campo): un $B$ variable produce flujo variable y, por Faraday, f.e.m. inducida.\n\n**(b)(i)** Área $S = \\pi R^2 = \\pi(0{,}20)^2 = 0{,}1257\\ \\text{m}^2$. El flujo (en módulo):\n$$\\Phi(t) = B(t)\\,S = (3t^2 - 2t)\\cdot0{,}1257\\ \\text{Wb}$$\n\n**(b)(ii)** F.e.m. inducida:\n$$\\varepsilon = -\\dfrac{\\mathrm{d}\\Phi}{\\mathrm{d}t} = -S\\,(6t - 2)$$\nEn $t = 2\\ \\text{s}$:\n$$\\varepsilon = -0{,}1257\\,(6\\cdot2 - 2) = -0{,}1257\\cdot10 = -1{,}26\\ \\text{V} \\;\\Rightarrow\\; |\\varepsilon| = 1{,}26\\ \\text{V}$$\n\n**(b)(iii)** En $t=2\\ \\text{s}$ el campo (en $-OZ$) crece en módulo ($\\mathrm{d}B/\\mathrm{d}t=6t-2=10>0$), luego el flujo entrante aumenta; por la ley de Lenz la corriente inducida circula de modo que se opone a ese aumento, creando un campo en $+OZ$ dentro de la espira (sentido antihorario visto desde $+Z$).",
+  "answer": "**(a)** (i) verdadera; (ii) verdadera. **(b)** (i) $\\Phi(t) = 0{,}1257\\,(3t^2-2t)\\ \\text{Wb}$; (ii) $|\\varepsilon(2)| = 1{,}26\\ \\text{V}$; (iii) corriente antihoraria vista desde $+Z$ (se opone al aumento del flujo).",
+  "common_errors": [
+   "No derivar el flujo respecto al tiempo para la f.e.m.",
+   "Olvidar el área $\\pi R^2$.",
+   "Aplicar mal la ley de Lenz (sentido de la corriente)."
+  ],
+  "figure_suggestion": "Espira en el plano XY con el campo $\\vec{B}(t)$ entrante ($-Z$) y la corriente inducida antihoraria (vista desde $+Z$) en $t=2\\ \\text{s}$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Andalucía · Junio 2024",
+  "title": "Selector de velocidades y punto de campo nulo entre dos hilos · Andalucía · Junio 2024",
+  "statement": "**(a)** Un electrón se mueve en línea recta y penetra en una región con un campo eléctrico y otro magnético perpendiculares entre sí. Explique la relación entre los campos y la velocidad para que la trayectoria siga siendo rectilínea.\n\n**(b)** Por dos conductores rectilíneos muy largos, paralelos y separados $2\\ \\text{m}$, circulan corrientes de $1\\ \\text{A}$ y $3\\ \\text{A}$. Determine a qué distancia del primer hilo se anula el campo magnético: (i) si las corrientes van en el mismo sentido; (ii) si van en sentidos opuestos.",
+  "knowns": [
+   "$d = 2\\ \\text{m}$ entre hilos",
+   "$I_1 = 1\\ \\text{A}$, $I_2 = 3\\ \\text{A}$",
+   "$\\mu_0 = 4\\pi\\cdot10^{-7}\\ \\text{T·m·A}^{-1}$"
+  ],
+  "full_solution": "**(a)** Para que el electrón siga recto, la fuerza de Lorentz total debe anularse: la fuerza eléctrica $q\\vec{E}$ y la magnética $q\\vec{v}\\times\\vec{B}$ han de ser iguales y opuestas. En módulo:\n$$|q|E = |q|\\,v\\,B \\;\\Rightarrow\\; v = \\dfrac{E}{B}$$\n(con $\\vec{E}\\perp\\vec{B}$ y $\\vec{v}\\perp$ a ambos). Es el fundamento del selector de velocidades.\n\n**(b)** El campo de cada hilo es $B = \\dfrac{\\mu_0 I}{2\\pi r}$. Se anula donde $\\dfrac{I_1}{r_1} = \\dfrac{I_2}{r_2}$, con $r_1+r_2=2$ (entre los hilos) o $r_2 = r_1 + 2$ (fuera).\n\n(i) **Mismo sentido:** los campos se oponen ENTRE los hilos. Sea $x$ la distancia al hilo de $1\\ \\text{A}$:\n$$\\dfrac{1}{x} = \\dfrac{3}{2-x} \\;\\Rightarrow\\; 2 - x = 3x \\;\\Rightarrow\\; x = 0{,}5\\ \\text{m}$$\n\n(ii) **Sentidos opuestos:** los campos se oponen FUERA, en el lado del hilo de menor corriente. Con $r_2 = x+2$:\n$$\\dfrac{1}{x} = \\dfrac{3}{x+2} \\;\\Rightarrow\\; x + 2 = 3x \\;\\Rightarrow\\; x = 1\\ \\text{m}$$\n(a $1\\ \\text{m}$ del hilo de $1\\ \\text{A}$, en el lado opuesto al otro hilo).",
+  "answer": "**(a)** $v = E/B$ (fuerzas eléctrica y magnética iguales y opuestas). **(b)** (i) a $0{,}5\\ \\text{m}$ del hilo de $1\\ \\text{A}$ (entre ellos); (ii) a $1\\ \\text{m}$ del hilo de $1\\ \\text{A}$ (en el exterior).",
+  "common_errors": [
+   "En (i) buscar el punto nulo fuera de los hilos (con mismo sentido es entre ellos).",
+   "En (ii) colocarlo cerca del hilo de mayor corriente (es junto al de menor).",
+   "Confundir el punto de campo nulo (campos opuestos de igual módulo)."
+  ],
+  "figure_suggestion": "Dos hilos paralelos separados $2\\ \\text{m}$ con corrientes $1\\ \\text{A}$ y $3\\ \\text{A}$; marcar el punto de campo nulo entre ellos (mismo sentido) y fuera, junto al de $1\\ \\text{A}$ (sentidos opuestos).",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Andalucía · Junio 2024",
+  "title": "Espejo cóncavo y lente convergente · Andalucía · Junio 2024",
+  "statement": "**(a)** Construya la imagen formada en un espejo cóncavo para un objeto situado a una distancia mayor que su radio de curvatura, explicando el trazado de rayos, e indique las características de la imagen.\n\n**(b)** Un objeto de $4\\ \\text{cm}$ se sitúa a $36\\ \\text{cm}$ de una lente delgada convergente de distancia focal $12\\ \\text{cm}$. (i) Calcule la posición y el tamaño de la imagen, indicando el criterio de signos. (ii) Realice el trazado de rayos e indique las características de la imagen.",
+  "knowns": [
+   "espejo cóncavo, objeto a distancia $>R$",
+   "$y = 4\\ \\text{cm}$",
+   "$s = -36\\ \\text{cm}$",
+   "$f' = 12\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** Para un objeto más allá del centro de curvatura $C$ ($|s|>R=2f$): el rayo paralelo al eje se refleja pasando por el foco $F$; el rayo que pasa por $C$ vuelve sobre sí mismo. Su intersección da una imagen REAL, INVERTIDA y REDUCIDA, situada entre el foco $F$ y el centro $C$.\n\n**(b)(i)** Criterio de signos: la luz viaja de izquierda a derecha; distancias positivas a la derecha de la lente. Objeto real: $s=-36\\ \\text{cm}$; lente convergente: $f'=+12\\ \\text{cm}$.\n$$\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{s'} = \\dfrac{1}{12} + \\dfrac{1}{-36} = \\dfrac{2}{36} \\;\\Rightarrow\\; s' = 18\\ \\text{cm}$$\nAumento y tamaño:\n$$m = \\dfrac{s'}{s} = \\dfrac{18}{-36} = -0{,}5 \\;\\Rightarrow\\; y' = m\\,y = -0{,}5\\cdot4 = -2\\ \\text{cm}$$\n\n**(b)(ii)** La imagen es REAL ($s'>0$), INVERTIDA ($m<0$) y REDUCIDA ($|m|<1$), a $18\\ \\text{cm}$ a la derecha de la lente.",
+  "answer": "**(a)** Imagen real, invertida y reducida, entre $F$ y $C$. **(b)** $s' = 18\\ \\text{cm}$, $y' = -2\\ \\text{cm}$; imagen real, invertida y reducida.",
+  "common_errors": [
+   "Equivocar el signo de $s$ (objeto real: $s<0$).",
+   "Confundir el radio de curvatura ($R=2f$) con la distancia focal.",
+   "Dar la imagen como virtual cuando $s'>0$ (es real)."
+  ],
+  "figure_suggestion": "Trazado de rayos de lente convergente ($f'=12\\ \\text{cm}$) con objeto de $4\\ \\text{cm}$ a $36\\ \\text{cm}$; imagen real invertida de $2\\ \\text{cm}$ a $18\\ \\text{cm}$ al otro lado.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Andalucía · Junio 2024",
+  "title": "Oleaje y oscilación de una boya · Andalucía · Junio 2024",
+  "statement": "**(a)** Explique las diferencias entre ondas longitudinales y transversales, con un ejemplo de cada tipo.\n\n**(b)** Un oleaje se propaga en el sentido $+OX$. Una boya en $x = 10\\ \\text{m}$ oscila verticalmente con amplitud $0{,}4\\ \\text{m}$ y periodo $2\\ \\text{s}$; la velocidad de propagación es $0{,}5\\ \\text{m·s}^{-1}$. Determine: (i) la longitud de onda; (ii) la ecuación de onda suponiendo que en $t=0$ la boya está en su altura máxima; (iii) la velocidad máxima de oscilación de la boya.",
+  "knowns": [
+   "$A = 0{,}4\\ \\text{m}$",
+   "$T = 2\\ \\text{s}$",
+   "$v = 0{,}5\\ \\text{m·s}^{-1}$",
+   "boya en $x = 10\\ \\text{m}$, máximo en $t=0$"
+  ],
+  "full_solution": "**(a)** En una onda LONGITUDINAL la vibración del medio es paralela a la dirección de propagación (ejemplo: sonido en el aire). En una onda TRANSVERSAL la vibración es perpendicular a la propagación (ejemplo: ondas en una cuerda o el oleaje).\n\n**(b)(i)** Longitud de onda:\n$$\\lambda = v\\,T = 0{,}5\\cdot2 = 1\\ \\text{m}$$\n\n**(b)(ii)** Con $\\omega = \\dfrac{2\\pi}{T} = \\pi\\ \\text{rad·s}^{-1}$ y $k = \\dfrac{2\\pi}{\\lambda} = 2\\pi\\ \\text{m}^{-1}$, y máximo en la boya ($x=10\\ \\text{m}$) en $t=0$, se usa coseno con la fase ajustada:\n$$y(x,t) = 0{,}4\\cos\\!\\big[\\pi\\,t - 2\\pi\\,(x - 10)\\big]\\ \\text{m}$$\n(en $x=10$, $t=0$: $y = 0{,}4\\cos 0 = 0{,}4\\ \\text{m}$, máximo).\n\n**(b)(iii)** La velocidad de oscilación es $v_y = \\dfrac{\\partial y}{\\partial t}$, de módulo máximo\n$$v_{y,\\max} = A\\,\\omega = 0{,}4\\cdot\\pi \\approx 1{,}26\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** Longitudinal: vibración paralela (sonido); transversal: vibración perpendicular (oleaje, cuerda). **(b)** (i) $\\lambda = 1\\ \\text{m}$; (ii) $y(x,t) = 0{,}4\\cos[\\pi t - 2\\pi(x-10)]\\ \\text{m}$; (iii) $v_{y,\\max} = 0{,}4\\pi \\approx 1{,}26\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Confundir velocidad de propagación ($v=\\lambda/T$) con velocidad de oscilación ($A\\omega$).",
+   "No ajustar la fase para el máximo en $x=10\\ \\text{m}$.",
+   "Errar el signo del término espacial para propagación en $+x$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Andalucía · Junio 2024",
+  "title": "Efecto fotoeléctrico: constante de Planck y trabajo de extracción · Andalucía · Junio 2024",
+  "statement": "**(a)** Razone: (i) La energía de los fotoelectrones es la misma que la de los fotones absorbidos. (ii) Al irradiar un metal con luz blanca (con efecto fotoeléctrico en todo el rango), la mayor energía cinética corresponde a los fotoelectrones de la región del rojo.\n\n**(b)** Al iluminar un metal con luz de frecuencia $2{,}5\\cdot10^{15}\\ \\text{Hz}$ el potencial de frenado es $7{,}20\\ \\text{V}$; con luz de longitud de onda $1{,}8\\cdot10^{-7}\\ \\text{m}$ el potencial baja a $3{,}75\\ \\text{V}$. Determine: (i) la constante de Planck; (ii) el trabajo de extracción del metal.",
+  "knowns": [
+   "$f_1 = 2{,}5\\cdot10^{15}\\ \\text{Hz}$, $V_1 = 7{,}20\\ \\text{V}$",
+   "$\\lambda_2 = 1{,}8\\cdot10^{-7}\\ \\text{m}$, $V_2 = 3{,}75\\ \\text{V}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$, $e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)(i)** FALSO: parte de la energía del fotón se invierte en extraer el electrón (trabajo de extracción $\\phi$); la energía cinética máxima es $E_{c,\\max} = h f - \\phi < h f$.\n\n**(a)(ii)** FALSO: la energía cinética máxima crece con la frecuencia. En la luz blanca la mayor frecuencia (y mayor $E_c$) corresponde al VIOLETA, no al rojo.\n\n**(b)(i)** Con $E_{c,\\max}=eV$: $h f = \\phi + eV$. Para las dos luces ($f_2 = c/\\lambda_2 = 1{,}667\\cdot10^{15}\\ \\text{Hz}$) y restando:\n$$h(f_1 - f_2) = e(V_1 - V_2) \\;\\Rightarrow\\; h = \\dfrac{e(V_1 - V_2)}{f_1 - f_2} = \\dfrac{1{,}6\\cdot10^{-19}(7{,}20-3{,}75)}{2{,}5\\cdot10^{15}-1{,}667\\cdot10^{15}}$$\n$$h = 6{,}62\\cdot10^{-34}\\ \\text{J·s}$$\n\n**(b)(ii)** Trabajo de extracción:\n$$\\phi = h f_1 - e V_1 = 6{,}62\\cdot10^{-34}\\cdot2{,}5\\cdot10^{15} - 1{,}6\\cdot10^{-19}\\cdot7{,}20 = 5{,}04\\cdot10^{-19}\\ \\text{J} \\approx 3{,}15\\ \\text{eV}$$",
+  "answer": "**(a)** Ambas falsas. **(b)** (i) $h \\approx 6{,}62\\cdot10^{-34}\\ \\text{J·s}$; (ii) $\\phi \\approx 5{,}04\\cdot10^{-19}\\ \\text{J} = 3{,}15\\ \\text{eV}$.",
+  "common_errors": [
+   "Olvidar pasar la longitud de onda a frecuencia ($f_2=c/\\lambda_2$).",
+   "Igualar energía del fotón con energía cinética (falta $\\phi$).",
+   "Asociar mayor energía cinética al rojo (es al violeta)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Andalucía · Junio 2024",
+  "title": "Defecto de masa y energía de enlace por nucleón de H-3 y He-3 · Andalucía · Junio 2024",
+  "statement": "**(a)** Explique el concepto de defecto de masa, su expresión matemática y su relación con la estabilidad nuclear.\n\n**(b)** (i) Calcule la energía de enlace por nucleón de los nucleidos $^{3}_{1}\\text{H}$ y $^{3}_{2}\\text{He}$. (ii) Indique razonadamente cuál es más estable.",
+  "knowns": [
+   "$m(^{3}_{1}\\text{H}) = 3{,}016049\\ \\text{u}$",
+   "$m(^{3}_{2}\\text{He}) = 3{,}016029\\ \\text{u}$",
+   "$m_n = 1{,}008665\\ \\text{u}$, $m_p = 1{,}007276\\ \\text{u}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$, $1\\ \\text{u} = 1{,}66\\cdot10^{-27}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** El defecto de masa $\\Delta m$ es la diferencia entre la masa de los nucleones por separado y la masa del núcleo: $\\Delta m = (Z\\,m_p + N\\,m_n) - M_{\\text{núcleo}}$. Esa masa \"desaparecida\" se transforma en la energía de enlace $E_e = \\Delta m\\,c^2$, que mantiene unido el núcleo. Cuanto mayor es la energía de enlace POR NUCLEÓN, más estable es el núcleo.\n\n**(b)(i)** Para $^{3}_{1}\\text{H}$ ($Z=1$, $N=2$):\n$$\\Delta m = 1\\cdot1{,}007276 + 2\\cdot1{,}008665 - 3{,}016049 = 0{,}008557\\ \\text{u}$$\n$$E_e = \\Delta m\\,c^2 = 0{,}008557\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2 = 1{,}28\\cdot10^{-12}\\ \\text{J}$$\nPor nucleón: $\\dfrac{E_e}{3} = 4{,}26\\cdot10^{-13}\\ \\text{J} \\approx 2{,}66\\ \\text{MeV/nucleón}$.\n\nPara $^{3}_{2}\\text{He}$ ($Z=2$, $N=1$):\n$$\\Delta m = 2\\cdot1{,}007276 + 1\\cdot1{,}008665 - 3{,}016029 = 0{,}007188\\ \\text{u}$$\n$$E_e = 0{,}007188\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2 = 1{,}07\\cdot10^{-12}\\ \\text{J}$$\nPor nucleón: $\\dfrac{E_e}{3} = 3{,}58\\cdot10^{-13}\\ \\text{J} \\approx 2{,}23\\ \\text{MeV/nucleón}$.\n\n**(b)(ii)** Con los datos del enunciado, $^{3}_{1}\\text{H}$ tiene mayor energía de enlace por nucleón ($2{,}66$ frente a $2{,}23\\ \\text{MeV}$), luego resulta el más estable según este cálculo.",
+  "answer": "**(a)** $\\Delta m = Z m_p + N m_n - M$, con $E_e = \\Delta m\\,c^2$; mayor $E_e$/nucleón $\\Rightarrow$ más estable. **(b)** $E_e/A(^{3}\\text{H}) \\approx 2{,}66\\ \\text{MeV}$ y $E_e/A(^{3}\\text{He}) \\approx 2{,}23\\ \\text{MeV}$; más estable el $^{3}_{1}\\text{H}$ (según los datos dados).",
+  "common_errors": [
+   "Contar mal protones y neutrones de cada nucleido ($^{3}\\text{H}$: 1p, 2n; $^{3}\\text{He}$: 2p, 1n).",
+   "No dividir la energía de enlace entre el número de nucleones.",
+   "Olvidar convertir u a kg y aplicar $c^2$."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Andalucía · Junio 2019",
+  "title": "Campo y potencial gravitatorio en un triángulo equilátero · Andalucía · Junio 2019",
+  "statement": "**(a)** Razone si es verdadera o falsa: \"Si en un punto el campo gravitatorio creado por varias masas es nulo, también lo será el potencial gravitatorio\".\n\n**(b)** Dos cuerpos de $10\\ \\text{kg}$ están en dos vértices de un triángulo equilátero de $0{,}5\\ \\text{m}$ de lado. (i) Calcule el campo gravitatorio que crean en el tercer vértice. (ii) Calcule el trabajo que realiza la fuerza gravitatoria de las dos masas para traer otro cuerpo de $10\\ \\text{kg}$ desde el infinito hasta el tercer vértice.",
+  "knowns": [
+   "$m = 10\\ \\text{kg}$ (cada masa)",
+   "lado $L = 0{,}5\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** FALSA. El campo es un vector y puede anularse por cancelación de vectores opuestos, mientras que el potencial es escalar, suma de términos negativos ($-Gm/r$) que no se cancelan. Por ejemplo, en el punto medio entre dos masas iguales el campo es nulo pero el potencial no.\n\n**(b)(i)** Cada masa crea en el tercer vértice (a $L=0{,}5\\ \\text{m}$) un campo\n$$g = \\dfrac{G m}{L^2} = \\dfrac{6{,}67\\cdot10^{-11}\\cdot10}{0{,}5^2} = 2{,}67\\cdot10^{-9}\\ \\text{N·kg}^{-1}$$\nLos dos vectores apuntan hacia cada masa y forman $60^\\circ$ entre sí. El resultante (bisectriz) tiene módulo\n$$g_T = 2\\,g\\cos 30^\\circ = 2\\cdot2{,}67\\cdot10^{-9}\\cdot0{,}866 = 4{,}62\\cdot10^{-9}\\ \\text{N·kg}^{-1}$$\n\n**(b)(ii)** El potencial en el vértice es $V = -2\\,\\dfrac{G m}{L} = -2\\cdot\\dfrac{6{,}67\\cdot10^{-11}\\cdot10}{0{,}5} = -2{,}67\\cdot10^{-9}\\ \\text{J·kg}^{-1}$. El trabajo de la fuerza gravitatoria al traer $m'=10\\ \\text{kg}$ desde el infinito es\n$$W = -\\Delta E_p = -(m'V - 0) = -10\\cdot(-2{,}67\\cdot10^{-9}) = 2{,}67\\cdot10^{-8}\\ \\text{J}$$",
+  "answer": "**(a)** Falsa (campo vectorial se anula; potencial escalar negativo, no). **(b)** (i) $g_T \\approx 4{,}62\\cdot10^{-9}\\ \\text{N·kg}^{-1}$ hacia el centro del lado; (ii) $W \\approx 2{,}67\\cdot10^{-8}\\ \\text{J}$.",
+  "common_errors": [
+   "No componer vectorialmente los dos campos (ángulo de $60^\\circ$).",
+   "Confundir el signo del trabajo gravitatorio ($W=-\\Delta E_p>0$ al acercar).",
+   "Sumar los potenciales como vectores."
+  ],
+  "figure_suggestion": "Triángulo equilátero de lado $0{,}5\\ \\text{m}$ con dos masas de $10\\ \\text{kg}$ en la base; en el vértice superior, los dos vectores campo a $60^\\circ$ y su resultante hacia el punto medio del lado inferior.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Andalucía · Junio 2019",
+  "title": "Corriente inducida y varilla móvil en un campo magnético · Andalucía · Junio 2019",
+  "statement": "**(a)** Razone el sentido de la corriente inducida en una espira cuando: (i) se acerca perpendicularmente el polo norte de un imán; (ii) se aleja el plano de la espira del polo norte. Haga esquemas.\n\n**(b)** Una espira rectangular tiene un lado móvil, de longitud $L$, que se desplaza con velocidad constante $v = 0{,}12\\ \\text{m·s}^{-1}$ dentro de un campo magnético uniforme de $0{,}8\\ \\text{T}$ perpendicular al plano. (i) Calcule la f.e.m. inducida. (ii) Calcule la intensidad y el sentido de la corriente si la resistencia es $0{,}2\\ \\Omega$. (Tómese $L = 0{,}2\\ \\text{m}$ de la figura.)",
+  "knowns": [
+   "$B = 0{,}8\\ \\text{T}$",
+   "$v = 0{,}12\\ \\text{m·s}^{-1}$",
+   "$R = 0{,}2\\ \\Omega$",
+   "$L = 0{,}2\\ \\text{m}$ (longitud del lado móvil, de la figura)"
+  ],
+  "full_solution": "**(a)(i)** Al acercar el polo norte, el flujo entrante en la espira aumenta; por la ley de Lenz la corriente inducida se opone creando un polo norte enfrentado (campo saliente hacia el imán): la corriente circula en sentido antihorario visto desde el imán.\n\n**(a)(ii)** Al alejarse, el flujo disminuye; la corriente inducida intenta mantenerlo, generando un polo sur hacia el imán (campo entrante): sentido horario visto desde el imán. En ambos casos la corriente se opone a la variación del flujo.\n\n**(b)(i)** El lado móvil barre área; la f.e.m. de movimiento es (constante mientras $v$ y $B$ lo sean):\n$$\\varepsilon = B\\,L\\,v = 0{,}8\\cdot0{,}2\\cdot0{,}12 = 1{,}92\\cdot10^{-2}\\ \\text{V}$$\n\n**(b)(ii)** La intensidad:\n$$I = \\dfrac{\\varepsilon}{R} = \\dfrac{1{,}92\\cdot10^{-2}}{0{,}2} = 9{,}6\\cdot10^{-2}\\ \\text{A}$$\nEl sentido es el que, por la ley de Lenz, se opone a la variación de flujo (crea una fuerza magnética sobre el lado móvil que frena su movimiento).",
+  "answer": "**(a)** Al acercar el imán, corriente que se opone (crea polo N hacia el imán); al alejar, la contraria. **(b)** $\\varepsilon = B L v = 1{,}92\\cdot10^{-2}\\ \\text{V}$ e $I = 9{,}6\\cdot10^{-2}\\ \\text{A}$ (sentido que se opone a la variación del flujo).",
+  "common_errors": [
+   "Aplicar mal la ley de Lenz al asignar el sentido.",
+   "Olvidar que $\\varepsilon=BLv$ es constante si $v$ y $B$ lo son.",
+   "No leer la longitud $L$ del lado móvil en la figura."
+  ],
+  "figure_suggestion": "Espira rectangular con un lado móvil de longitud $L=0{,}2\\ \\text{m}$ que se desplaza a $v=0{,}12\\ \\text{m·s}^{-1}$ en un campo $\\vec{B}=0{,}8\\ \\text{T}$ entrante; indicar el sentido de la corriente inducida.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "optica",
+  "source": "Andalucía · Junio 2019",
+  "title": "Lente convergente y lente divergente · Andalucía · Junio 2019",
+  "statement": "**(a)** Construya razonadamente la imagen de un objeto situado delante de una lente convergente a una distancia mayor que el doble de la focal, e indique sus características (real/virtual, derecha/invertida, tamaño).\n\n**(b)** A $4\\ \\text{m}$ delante de una lente divergente se sitúa un objeto de $1\\ \\text{m}$ de tamaño. Si la imagen se forma delante de la lente a $1\\ \\text{m}$, calcule: (i) la distancia focal justificando el signo; (ii) el tamaño de la imagen indicando si está derecha o invertida.",
+  "knowns": [
+   "lente convergente, objeto a $>2f$",
+   "$s = -4\\ \\text{m}$",
+   "$s' = -1\\ \\text{m}$ (imagen delante, virtual)",
+   "$y = 1\\ \\text{m}$"
+  ],
+  "full_solution": "**(a)** Con el objeto más allá de $2f$: el rayo paralelo al eje emerge por el foco imagen $F'$, el rayo por el centro óptico no se desvía; la imagen se forma entre $F'$ y $2F'$, y es REAL, INVERTIDA y REDUCIDA.\n\n**(b)(i)** Objeto real $s=-4\\ \\text{m}$; la imagen de una lente divergente es virtual y está en el mismo lado que el objeto, $s'=-1\\ \\text{m}$. Ecuación de las lentes:\n$$\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{-1} - \\dfrac{1}{-4} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{f'} = -0{,}75 \\;\\Rightarrow\\; f' = -1{,}33\\ \\text{m}$$\nEl signo negativo de $f'$ confirma que la lente es DIVERGENTE.\n\n**(b)(ii)** Aumento y tamaño:\n$$m = \\dfrac{s'}{s} = \\dfrac{-1}{-4} = +0{,}25 \\;\\Rightarrow\\; y' = m\\,y = 0{,}25\\cdot1 = 0{,}25\\ \\text{m}$$\nLa imagen es DERECHA ($m>0$) y REDUCIDA (y virtual), como es propio de una lente divergente.",
+  "answer": "**(a)** Imagen real, invertida y reducida (entre $F'$ y $2F'$). **(b)** (i) $f' = -1{,}33\\ \\text{m}$ (negativa: divergente); (ii) $y' = 0{,}25\\ \\text{m}$, derecha (y virtual, reducida).",
+  "common_errors": [
+   "Tomar la imagen virtual con $s'>0$ (en divergente la imagen virtual tiene $s'<0$).",
+   "No justificar el signo negativo de la focal.",
+   "Confundir el signo del aumento (derecha: positivo)."
+  ],
+  "figure_suggestion": "Trazado de rayos de una lente divergente: objeto de $1\\ \\text{m}$ a $4\\ \\text{m}$; imagen virtual, derecha y reducida ($0{,}25\\ \\text{m}$) a $1\\ \\text{m}$ del mismo lado.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "nuclear",
+  "source": "Andalucía · Junio 2019",
+  "title": "Desintegraciones beta y alfa; masa remanente de Bi-210 y Rn-222 · Andalucía · Junio 2019",
+  "statement": "**(a)** El $^{210}_{83}\\text{Bi}$ se desintegra por emisión beta y el $^{222}_{86}\\text{Rn}$ por radiación alfa. Escriba y explique cada proceso, determinando el número atómico y másico del nucleido resultante.\n\n**(b)** Los periodos de semidesintegración del $^{210}_{83}\\text{Bi}$ y del $^{222}_{86}\\text{Rn}$ son $5$ y $3{,}8\\ \\text{días}$. Se dispone de $3\\ \\text{mg}$ de $^{210}\\text{Bi}$ y de $10\\ \\text{mg}$ de $^{222}\\text{Rn}$. Determine en cuál de ellos quedará más masa sin desintegrar transcurridos $15{,}2\\ \\text{días}$.",
+  "knowns": [
+   "$T_{1/2}(\\text{Bi}) = 5\\ \\text{días}$, $m_0 = 3\\ \\text{mg}$",
+   "$T_{1/2}(\\text{Rn}) = 3{,}8\\ \\text{días}$, $m_0 = 10\\ \\text{mg}$",
+   "$t = 15{,}2\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** Emisión beta ($\\beta^-$): un neutrón se convierte en protón, emitiendo un electrón (y un antineutrino). El número másico no cambia y el atómico aumenta en 1:\n$$^{210}_{83}\\text{Bi} \\rightarrow\\ ^{210}_{84}\\text{Po} + \\ ^{0}_{-1}e + \\bar{\\nu}_e$$\nEmisión alfa: el núcleo emite una partícula $\\alpha$ ($^{4}_{2}\\text{He}$); el número másico disminuye en 4 y el atómico en 2:\n$$^{222}_{86}\\text{Rn} \\rightarrow\\ ^{218}_{84}\\text{Po} + \\ ^{4}_{2}\\text{He}$$\n\n**(b)** La masa remanente es $m = m_0\\,2^{-t/T_{1/2}}$.\n$$\\text{Bi:}\\quad m = 3\\cdot2^{-15{,}2/5} = 3\\cdot2^{-3{,}04} = 0{,}365\\ \\text{mg}$$\n$$\\text{Rn:}\\quad m = 10\\cdot2^{-15{,}2/3{,}8} = 10\\cdot2^{-4} = 0{,}625\\ \\text{mg}$$\nTranscurridos $15{,}2\\ \\text{días}$ queda más masa sin desintegrar en la muestra de $^{222}\\text{Rn}$ ($0{,}625\\ \\text{mg}$ frente a $0{,}365\\ \\text{mg}$ del $^{210}\\text{Bi}$).",
+  "answer": "**(a)** $^{210}_{83}\\text{Bi} \\to\\ ^{210}_{84}\\text{Po} + \\beta^- + \\bar{\\nu}_e$; $^{222}_{86}\\text{Rn} \\to\\ ^{218}_{84}\\text{Po} + \\alpha$. **(b)** Queda más masa de $^{222}\\text{Rn}$: $0{,}625\\ \\text{mg}$ frente a $0{,}365\\ \\text{mg}$ de $^{210}\\text{Bi}$.",
+  "common_errors": [
+   "Errar las leyes de Soddy (beta: $Z+1$; alfa: $A-4$, $Z-2$).",
+   "Comparar actividades en vez de masa remanente.",
+   "No advertir que $15{,}2$ días son exactamente $4$ periodos del Rn."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "campo_gravitatorio",
+  "source": "Andalucía · Junio 2019",
+  "title": "Trabajo para subir un objeto por una rampa con y sin rozamiento · Andalucía · Junio 2019",
+  "statement": "**(a)** Una partícula en reposo empieza a moverse por la acción de una fuerza conservativa. (i) ¿Cómo se modifica su energía mecánica? (ii) ¿Y su energía potencial? Justifique.\n\n**(b)** Se quiere subir un objeto de $100\\ \\text{kg}$ una altura de $20\\ \\text{m}$ por una rampa de $30^\\circ$. Determine: (i) el trabajo necesario sin rozamiento; (ii) el trabajo necesario si el coeficiente de rozamiento es $0{,}2$.",
+  "knowns": [
+   "$M = 100\\ \\text{kg}$",
+   "$h = 20\\ \\text{m}$, rampa $30^\\circ$",
+   "$\\mu = 0{,}2$",
+   "$g = 9{,}8\\ \\text{m·s}^{-2}$"
+  ],
+  "full_solution": "**(a)(i)** Si solo actúa una fuerza conservativa, la energía mecánica se CONSERVA (permanece constante). (ii) Como el cuerpo acelera (gana energía cinética), su energía potencial DISMINUYE en la misma cantidad.\n\n**(b)(i)** Sin rozamiento, el trabajo necesario es solo el de elevar el peso la altura $h$:\n$$W_{\\text{sin roz}} = M g h = 100\\cdot9{,}8\\cdot20 = 1{,}96\\cdot10^{4}\\ \\text{J}$$\n\n**(b)(ii)** La longitud de la rampa es $L = \\dfrac{h}{\\operatorname{sen}30^\\circ} = \\dfrac{20}{0{,}5} = 40\\ \\text{m}$. La fuerza de rozamiento es $F_r = \\mu M g\\cos30^\\circ$, y su trabajo (que hay que vencer) se suma:\n$$W_{\\text{con roz}} = M g h + \\mu M g\\cos30^\\circ\\cdot L = 1{,}96\\cdot10^{4} + 0{,}2\\cdot100\\cdot9{,}8\\cdot0{,}866\\cdot40$$\n$$W_{\\text{con roz}} = 1{,}96\\cdot10^{4} + 6{,}79\\cdot10^{3} = 2{,}64\\cdot10^{4}\\ \\text{J}$$",
+  "answer": "**(a)** (i) la energía mecánica se conserva; (ii) la potencial disminuye (aumenta la cinética). **(b)** (i) $W = 1{,}96\\cdot10^{4}\\ \\text{J}$; (ii) $W = 2{,}64\\cdot10^{4}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar $\\operatorname{sen}$ en vez de $\\cos$ para la normal (rozamiento $\\propto\\cos\\theta$).",
+   "Calcular la longitud de la rampa con un ángulo equivocado.",
+   "Olvidar sumar el trabajo del rozamiento al de elevación."
+  ],
+  "figure_suggestion": "Rampa de $30^\\circ$ con el objeto de $100\\ \\text{kg}$; diagrama de fuerzas: peso, normal, rozamiento (hacia abajo del plano) y fuerza aplicada, con $h=20\\ \\text{m}$ y $L=40\\ \\text{m}$.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "electromagnetismo",
+  "source": "Andalucía · Junio 2019",
+  "title": "Fuerza entre hilos y conductor suspendido por el campo terrestre · Andalucía · Junio 2019",
+  "statement": "**(a)** Justifique: (i) Si se duplican las corrientes de dos conductores rectilíneos paralelos separados $d$, se duplica la fuerza por unidad de longitud. (ii) Si se duplica la distancia, la fuerza por unidad de longitud se reduce a la mitad.\n\n**(b)** Un hilo paralelo al ecuador queda suspendido por el magnetismo terrestre. Sabiendo que el campo es paralelo a la superficie y vale $5\\cdot10^{-5}\\ \\text{T}$, y que el hilo tiene una densidad lineal de masa de $4\\cdot10^{-3}\\ \\text{g/m}$, calcule la intensidad de corriente necesaria.",
+  "knowns": [
+   "$B = 5\\cdot10^{-5}\\ \\text{T}$",
+   "densidad lineal $\\lambda_m = 4\\cdot10^{-3}\\ \\text{g/m} = 4\\cdot10^{-6}\\ \\text{kg/m}$",
+   "$g = 9{,}8\\ \\text{m·s}^{-2}$",
+   "$\\mu_0 = 4\\pi\\cdot10^{-7}\\ \\text{T·m·A}^{-1}$"
+  ],
+  "full_solution": "**(a)** La fuerza por unidad de longitud entre dos hilos es $\\dfrac{F}{\\ell} = \\dfrac{\\mu_0 I_1 I_2}{2\\pi d}$.\n\n(i) FALSO: al duplicar AMBAS corrientes, $I_1 I_2$ se multiplica por $4$, de modo que la fuerza por unidad de longitud se CUADRUPLICA, no se duplica.\n\n(ii) VERDADERO: como $F/\\ell\\propto 1/d$, al duplicar $d$ la fuerza por unidad de longitud se reduce a la mitad.\n\n**(b)** Para que el hilo quede suspendido, la fuerza magnética por unidad de longitud debe igualar el peso por unidad de longitud:\n$$B\\,I = \\lambda_m\\,g \\;\\Rightarrow\\; I = \\dfrac{\\lambda_m\\,g}{B} = \\dfrac{4\\cdot10^{-6}\\cdot9{,}8}{5\\cdot10^{-5}} = 0{,}78\\ \\text{A}$$",
+  "answer": "**(a)** (i) falsa (se cuadruplica); (ii) verdadera. **(b)** $I = \\dfrac{\\lambda_m g}{B} \\approx 0{,}78\\ \\text{A}$.",
+  "common_errors": [
+   "Creer que la fuerza entre hilos es lineal con cada corriente (es con el producto).",
+   "No convertir la densidad lineal de g/m a kg/m.",
+   "Olvidar igualar la fuerza magnética con el peso por unidad de longitud."
+  ],
+  "figure_suggestion": "Hilo horizontal en el campo terrestre $\\vec{B}$ (paralelo a la superficie); fuerza magnética $BI$ hacia arriba equilibrando el peso $\\lambda_m g$ por unidad de longitud.",
+  "provenance": "PAU"
+ },
+ {
+  "block": "ondas",
+  "source": "Andalucía · Junio 2019",
+  "title": "Ecuación de una onda transversal que viaja en sentido negativo · Andalucía · Junio 2019",
+  "statement": "**(a)** Explique las diferencias entre ondas armónicas y ondas estacionarias, con un ejemplo de cada tipo.\n\n**(b)** Una onda transversal que se propaga en sentido negativo del eje $OX$ tiene amplitud $2\\ \\text{m}$, longitud de onda $12\\ \\text{m}$ y velocidad de propagación $3\\ \\text{m·s}^{-1}$. Escriba su ecuación sabiendo que la perturbación $y(x,t)$ es máxima en $x=0$ en el instante $t=0$.",
+  "knowns": [
+   "$A = 2\\ \\text{m}$",
+   "$\\lambda = 12\\ \\text{m}$",
+   "$v = 3\\ \\text{m·s}^{-1}$",
+   "propagación en $-OX$; máximo en $x=0$, $t=0$"
+  ],
+  "full_solution": "**(a)** Una onda ARMÓNICA viajera transporta energía y se propaga, con perfil senoidal que avanza (ejemplo: onda en una cuerda tensa larga). Una onda ESTACIONARIA resulta de la superposición de dos ondas iguales que viajan en sentidos opuestos; no transporta energía neta y presenta nodos y vientres fijos (ejemplo: cuerda de guitarra sujeta por ambos extremos).\n\n**(b)** Datos: $T = \\dfrac{\\lambda}{v} = \\dfrac{12}{3} = 4\\ \\text{s}$, $\\omega = \\dfrac{2\\pi}{T} = \\dfrac{\\pi}{2}\\ \\text{rad·s}^{-1}$, $k = \\dfrac{2\\pi}{\\lambda} = \\dfrac{\\pi}{6}\\ \\text{m}^{-1}$. Para propagación en $-x$ se usa $y = A\\cos(\\omega t + k x + \\varphi)$; la condición de máximo en $x=0$, $t=0$ da $\\varphi = 0$:\n$$y(x,t) = 2\\cos\\!\\left(\\dfrac{\\pi}{2}\\,t + \\dfrac{\\pi}{6}\\,x\\right)\\ \\text{m}$$\n(La velocidad máxima de un punto sería $v_{\\max}=A\\omega = 2\\cdot\\tfrac{\\pi}{2} = \\pi \\approx 3{,}14\\ \\text{m·s}^{-1}$.)",
+  "answer": "**(a)** Armónica: viajera, transporta energía; estacionaria: superposición con nodos y vientres fijos, sin transporte neto. **(b)** $y(x,t) = 2\\cos\\!\\left(\\dfrac{\\pi}{2}\\,t + \\dfrac{\\pi}{6}\\,x\\right)\\ \\text{m}$.",
+  "common_errors": [
+   "Usar signo $-kx$ para propagación en sentido negativo (debe ser $+kx$).",
+   "Confundir $\\omega$ con $k$.",
+   "Tomar seno (no cumple el máximo en $x=0,\\,t=0$)."
+  ],
+  "figure_suggestion": "",
+  "provenance": "PAU"
+ },
+ {
+  "block": "cuantica",
+  "source": "Andalucía · Junio 2019",
+  "title": "Efecto fotoeléctrico en el silicio: frecuencia umbral y energía cinética · Andalucía · Junio 2019",
+  "statement": "**(a)** Sobre un metal incide radiación y se emiten electrones. (i) Explique el balance energético. Justifique qué cambia si: (ii) se aumenta la frecuencia de la radiación; (iii) se aumenta la intensidad.\n\n**(b)** Al iluminar una lámina de silicio con luz de longitud de onda superior a $1{,}09\\cdot10^{-6}\\ \\text{m}$ deja de producirse el efecto fotoeléctrico. Calcule la frecuencia umbral, el trabajo de extracción y la energía cinética máxima de los electrones emitidos al iluminar con luz ultravioleta de $2{,}5\\cdot10^{-7}\\ \\text{m}$.",
+  "knowns": [
+   "$\\lambda_0 = 1{,}09\\cdot10^{-6}\\ \\text{m}$ (umbral)",
+   "$\\lambda = 2{,}5\\cdot10^{-7}\\ \\text{m}$ (UV)",
+   "$h = 6{,}63\\cdot10^{-34}\\ \\text{J·s}$, $c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)(i)** La energía del fotón se reparte en el trabajo de extracción $\\phi$ (energía mínima para arrancar el electrón) y la energía cinética del fotoelectrón: $h f = \\phi + E_{c,\\max}$.\n\n(ii) Al aumentar la frecuencia, aumenta la energía del fotón y, por tanto, la energía cinética máxima (el número de electrones no cambia).\n\n(iii) Al aumentar la intensidad (misma frecuencia), aumenta el número de fotones y de electrones emitidos (más corriente), pero NO su energía cinética máxima.\n\n**(b)** Frecuencia umbral:\n$$f_0 = \\dfrac{c}{\\lambda_0} = \\dfrac{3\\cdot10^{8}}{1{,}09\\cdot10^{-6}} = 2{,}75\\cdot10^{14}\\ \\text{Hz}$$\nTrabajo de extracción:\n$$\\phi = h f_0 = 6{,}63\\cdot10^{-34}\\cdot2{,}75\\cdot10^{14} = 1{,}82\\cdot10^{-19}\\ \\text{J} \\approx 1{,}14\\ \\text{eV}$$\nCon luz UV de $\\lambda = 2{,}5\\cdot10^{-7}\\ \\text{m}$, la energía del fotón es $E = \\dfrac{hc}{\\lambda} = 7{,}96\\cdot10^{-19}\\ \\text{J}$, y\n$$E_{c,\\max} = E - \\phi = 7{,}96\\cdot10^{-19} - 1{,}82\\cdot10^{-19} = 6{,}13\\cdot10^{-19}\\ \\text{J} \\approx 3{,}83\\ \\text{eV}$$",
+  "answer": "**(b)** $f_0 = 2{,}75\\cdot10^{14}\\ \\text{Hz}$; $\\phi = 1{,}82\\cdot10^{-19}\\ \\text{J} \\approx 1{,}14\\ \\text{eV}$; $E_{c,\\max} = 6{,}13\\cdot10^{-19}\\ \\text{J} \\approx 3{,}83\\ \\text{eV}$.",
+  "common_errors": [
+   "Confundir la longitud de onda umbral con la de la luz incidente.",
+   "Creer que aumentar la intensidad aumenta la energía cinética (solo aumenta el número de electrones).",
+   "No restar el trabajo de extracción a la energía del fotón."
+  ],
+  "figure_suggestion": "Gráfica de la energía cinética máxima frente a la frecuencia: recta de pendiente $h$ que corta el eje en la frecuencia umbral $f_0$.",
+  "provenance": "PAU"
+ }
+]

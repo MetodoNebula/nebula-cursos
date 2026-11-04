@@ -1,0 +1,14 @@
+\documentclass[border=6pt]{standalone}
+\input{/sessions/rcw-01ravfz1vrmcqqxfft5zd5bd/mnt/Nebula_GPT_Cowork/Nebula_Cursos_Web/_mat_enrich_20261104_002419/valid_preamble.tex}
+\begin{document}
+\begin{tikzpicture}\begin{axis}[nbaxisbase,width=9cm,height=6cm,axis lines=middle,grid=none,xtick=\empty,ytick=\empty,xmin=-0.3,xmax=7,ymin=-0.3,ymax=4]
+\fill[NebulaGreen,fill opacity=0.08] (axis cs:1,0) rectangle (axis cs:3,3.7);
+\fill[NebulaAmber,fill opacity=0.08] (axis cs:3,0) rectangle (axis cs:5,3.7);
+\addplot[nbcurve,smooth,samples=80,domain=0.2:6.6]{2+0.9*sin(deg(1.05*(x-1.4)))};
+\node[nbdotV] at (axis cs:3.0,2.9){};\node[nbdotV] at (axis cs:5.0,1.1){};
+\node[text=NebulaViolet,anchor=south] at (axis cs:3.0,2.95){Máx};
+\node[text=NebulaViolet,anchor=north] at (axis cs:5.0,1.05){Mín};
+\node[text=NebulaGreen,anchor=north,font=\footnotesize] at (axis cs:2,-0.05){$\uparrow$ Crec.};
+\node[text=NebulaAmber,anchor=north,font=\footnotesize] at (axis cs:4,-0.05){$\downarrow$ Decr.};
+\end{axis}\end{tikzpicture}
+\end{document}

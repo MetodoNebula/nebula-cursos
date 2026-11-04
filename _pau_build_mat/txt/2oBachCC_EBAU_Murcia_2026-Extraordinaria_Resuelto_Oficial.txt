@@ -1,0 +1,269 @@
+            RESOLUCIÓN DEL EXAMEN PAU JULIO 2026
+                                  Matemáticas II
+
+    Por la propia naturaleza de la disciplina, una misma pregunta puede admitir diferentes so-
+luciones correctas. Por supuesto, cualquier solución de cualquiera de las preguntas del examen
+que sea correcta y esté bien argumentada deberá ser considerada como válida en el proceso
+de corrección, aunque no esté incluida en este documento.
+    El examen consta de un total de cinco preguntas. Las tres primeras preguntas sin opciones.
+Las dos últimas preguntas con dos opciones cada una, para hacer solo una de esas opciones.
+La elección de la primera o la segunda opción puede cambiar de una pregunta a otra. Si se
+responden las 2 opciones de una pregunta, solo se corregirá la primera opción contestada. Las
+preguntas se pueden hacer en cualquier orden. La puntuación máxima de cada pregunta es
+de 2 puntos. Las cinco preguntas son:
+
+Pregunta 1: Sentido numérico y algebraico (2 puntos).
+
+Pregunta 2: Sentido de la medida (2 puntos).
+
+Pregunta 3: Sentido espacial (2 puntos).
+
+Pregunta 4 (opciones 4.1 y 4.2): Sentido de la medida (2 puntos).
+
+Pregunta 5 (opciones 5.1 y 5.2): Sentido estocástico (2 puntos).
+
+Solo se pueden usar las tablas estadı́sticas que se proporcionan con el examen y, según la
+normativa vigente, no se puden usar calculadoras gráficas ni programables.
+
+
+                              En Murcia, a 6 de julio de 2026.
+
+                                Pedro Nicolás Zaragoza
+                              Coordinador Matemáticas II
+               Departamento de Didáctica de las CC. Matemáticas y Sociales
+                                Universidad de Murcia
+                                                2
+
+
+Pregunta 1: Sentido numérico y algebraico (2 puntos)
+Una empresa produce pequeñas cajas con piezas de fruta. Hay tres tipos de cajas, A, B y C.
+En las cajas de tipo A hay 1 manzana, 1 pera y 1 naranja. En las cajas de tipo de B hay 2
+manzanas, 1 pera y 1 naranja. En las cajas de tipo C hay 1 manzana, 2 peras y 1 naranja. Un
+dı́a prepararon x cajas de tipo A, y cajas de tipo B y z cajas de tipo C, y en total se usaron
+400 manzanas, 500 peras y k naranjas.
+
+  a) (1 pto.) Plantee un sistema de ecuaciones para averiguar cuántas cajas de cada tipo se
+     prepararon.
+
+  b) (1 pto.) Discuta y resuelva, si se puede, el sistema, dando la solución en términos del
+     parámetro k.
+
+Solución:
+a) En las x cajas de tipo A habrá x manzanas, x peras y x naranjas. En las y cajas de tipo
+B habrá 2y manzanas, y peras e y naranjas. En las z cajas de tipo C habrá z manzanas, 2z
+peras y z naranjas. En total, habrá x + 2y + z manzanas, x + y + 2z peras, y x + y + z naranjas,
+ası́ es que el sistema de ecuaciones es
+                                     
+                                     x + 2y + z = 400
+                                     
+                                        x + y + 2z = 500
+                                     
+                                        x+y+z =k
+                                     
+
+b) El determinante de la matriz de coeficientes es
+
+                                          1 2 1
+                                          1 1 2 = 1,
+                                          1 1 1
+
+ası́ es que el rango es 3 y, por el teorema de Roché – Frobenius, el sistema es compatible
+determinado. Para calcular la única solución podemos usar la regla de Cramer:
+
+        400 2 1                 1 400 1                1 2 400
+    x = 500 1 2 = 3k − 900, y = 1 500 2 = 400 − k, z = 1 1 500 = 500 − k.
+         k 1 1                  1 k 1                  1 1 k
+
+Pregunta 2: sentido de la medida (2 puntos)
+                                                                                            √
+Sea P (x, y) un punto del primer cuadrante que está en la gráfica de la función g(x) =       x + 1.
+
+  a) (0,5 ptos.) Demuestre
+                     √     que la distancia de P (x, y) al punto A(2, 0) viene dada por la
+                       2
+     función f (x) = x − 3x + 5.
+
+  b) (1 pto.) Determine el valor de x para que la distancia a A sea mı́nima.
+
+  c) (0,5 ptos.) Calcule esa distancia mı́nima.
+
+
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                 3
+
+                                                     √
+Solución: a) El punto P se puede escribir como P (x, x + 1). La distancia entre A(2, 0) y
+P es
+               q            √           √                      √
+     d(P, A) = (x − 2)2 + ( x + 1)2 = x2 − 4x + 4 + x + 1 = x2 − 3x + 5 = f (x).
+
+b) La derivada de f (x) es
+                                                 2x − 3
+                                     f ′ (x) = √            ,
+                                              2 x2 − 3x + 5
+                        si, x = 32 . Como f ′ (x) < 0 en 0, 32 (tómese, por ejemplo, f ′ (1)) y
+                                                                
+que se anula si, y solo
+f ′ (x) > 0 en 23 , +∞ (tómese, por ejemplo, f ′ (2)), entonces x = 32 minimiza la distancia.
+                      
+
+c) La distancia es                                               √
+                                r                     r
+                                3       9 9                11      11
+                            f        =    − +5=               =       .
+                                2       4 2                4      2
+
+
+Pregunta 3: sentido espacial (2 puntos)
+Determine la ecuación del plano que contiene al punto P (−2, 2, −2) y a la recta r dada como
+intersección de dos planos:
+                                  
+                                     2x + y − z = 4
+                               r:
+                                      x + y − 2z = 3
+
+Solución: El vector director de r se puede calcular mediante el producto vectorial de los
+vectores normales a los planos:
+
+                                i j k
+                          ⃗vr = 2 1 −1 = −i + 3j + k = (−1, 3, 1).
+                                1 1 −2
+
+Es fácil ver que R(1, 2, 0) satisface la ecuación de los dos planos, de modo que R ∈ r. Podemos
+                                                                       −→
+usar el punto R(1, 2, 0), el vector vector ⃗vr = (−1, 3, 1) y el vector P R = (3, 0, 2) para calcular
+la ecuación del plano pedido:
+
+                           x−1 y−2 z
+                            −1  3  1 = 6x + 5y − 9z − 16 = 0.
+                            3   0  2
+
+Pregunta 4: sentido de la medida (a elegir entre 4.1 y 4.2, de 2
+puntos cada una)
+Opción4.1(2 ptos.): Justifique que la derivada la función f (x) = x ln(x2 + 1) alcanza el
+         25
+valor ln     en algún punto del intervalo (1, 2).
+         2
+
+
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                               4
+
+
+Solución: f (x) es continua en [1, 2] y derivable en (1, 2) de modo que, por el teorema de
+Lagrange, existe un punto c ∈ (1, 2) tal que
+                                                                             
+               ′                                                             25
+              f (c) = f (2) − f (1) = 2 ln(5) − ln(2) = ln(25) − ln(2) = ln     .
+                                                                              2
+
+
+                                                     1
+Opción 4.2 (2 ptos.): Considere la función f (x) = + cos(x), donde la variable x está
+                                                     2
+expresada en radianes.
+                                               Z
+  a) (0,5 ptos.) Calcule la integral indefinida f (x)dx.
+
+  b) (1,5 ptos.) Determine el área del recinto del plano limitado por la gráfica de la función
+     f (x) con el eje X y las rectas x = 0 y x = π.
+
+Solución:
+a) La integral es inmediata:
+                          Z              
+                                1              1
+                                  + cos(x) dx = x + sen(x) + C.
+                                2              2
+
+b) Observemos que f (0) = 32 > 0 y f (π) = − 21 < 0, y que x = 2π
+                                                                3
+                                                                  es solución de f (x) = 0, de
+modo que el área pedida es:
+                      Z 2π            Z π               2π3             π
+                         3                    1                    1
+                     f (x)dx −     f (x)dx = x + sen(x)       − x + sen(x)     =
+                 0             2π
+                                3
+                                              2          0         2        2π
+                                                                             3
+                                                                     √
+                                                                         π √
+                                              
+    π       2π     π π            2π        π       2π        π       3
+   = + sen     −     − − sen             = + 2 sen          = +2        = + 3.
+    3        3     2     3         3        6        3         6     2   6
+
+
+Pregunta 5: sentido estocástico (a elegir entre 5.1 y 5.2, de 2 pun-
+tos cada una)
+Opción 5.1 (2 ptos.): En la urna U1 hay 5 bolas negras y 3 bolas blancas. En la urna U2
+hay 6 bolas negras y 2 bolas blancas. Se escoge una urna al azar y se extrae una bola.
+
+  a) (1 pto.) Calcule la probabilidad de que la bola sea blanca.
+
+  b) (1 pto.) Sabiendo que la bola ha salido blanca, calcule la probabilidad de que se haya
+     extraı́do de la urna U1 .
+
+Solución:
+Llamamos:
+
+  a) U1 al suceso correspondiente a extraer la bola de U1 ,
+
+  b) U2 al suceso correspondiente a extraer la bola de U2 ,
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                5
+
+
+  c) N al suceso correspondiente a extraer una bola negra,
+
+  d) B al suceso correspondiente a extraer una bola blanca.
+
+Tenemos entonces que P (U1 ) = P (U2 ) = 21 , P (N |U1 ) = 58 , P (B|U1 ) = 38 , P (N |U2 ) = 68 y
+P (B|U2 ) = 82 .
+a) Usando el Teorema de la Probabilidad Total, se tiene que
+                                                           3 1 2 1  3+2  5
+           P (B) = P (B|U1 )P (U1 ) + P (B|U2 )P (U2 ) =    · + · =     = .
+                                                           8 2 8 2   16  16
+b) Usando el Teorema de Bayes, se tiene que
+                                                          3 1
+                                       P (B|U1 )P (U1 )     ·  3
+                           P (U1 |B) =                  = 852 = .
+                                           P (B)           16
+                                                               5
+
+Opción 5.2 (2 ptos.): La distribución de edades de un cierto conjunto de personas sigue
+una distribución normal N (µ, σ). Sabiendo que el 94,52 % tiene menos de 32 años, y un 21,19
+% tiene menos de 20 años, calcule su media y su desviación tı́pica.
+
+Solución: Llamamos X a la variable aleatoria correspondiente a la edad. Llamamos Z a una
+variable aleatoria que sigue una distribución normal N (0, 1). Entonces, tenemos que
+                                                                  
+                                                            32 − µ
+                          0, 9452 = P (X < 32) = P Z <               ,
+                                                               σ
+
+y la tabla nos dice que 32−µ
+                           σ
+                              = 1, 6, es decir, µ + 1, 6 · σ = 32. Por otro lado, como P (X <
+20) = 0, 2119, tenemos que
+                                                                                  
+                                                          20 − µ              µ − 20
+        0, 7881 = 1 − 0, 2119 = P (X ≥ 20) = P Z ≥                 =P Z≤               ,
+                                                             σ                  σ
+
+y la tabla nos dice que µ−20
+                         σ
+                             = 0, 8, es decir, µ − 0, 8 · σ = 20. Resolviendo el sistema de
+ecuaciones                         (
+                                     µ + 1, 6 · σ = 32
+                                     µ − 0, 8 · σ = 20
+tenemos µ = 24 y σ = 5.
+
+
+
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+

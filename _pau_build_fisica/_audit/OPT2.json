@@ -1,0 +1,682 @@
+[
+ {
+  "id": "PAU-FIS-OPT-040",
+  "source": "Comunidad Valenciana · Modelo 2021",
+  "title": "Refracción en un bloque de policarbonato y reflexión total · Comunidad Valenciana · Modelo 2021",
+  "statement": "Un rayo de luz monocromática incide (punto $A$) sobre un bloque de policarbonato rodeado de aire, según la figura.\n\n**(a)** Calcule el ángulo de refracción $\\alpha$ dentro del bloque y el índice de refracción $n_p$ del policarbonato.\n**(b)** Calcule la velocidad del rayo dentro del policarbonato. Al llegar a la cara $B$, ¿se refracta o se refleja totalmente? Razónelo con cálculos.\n\n*(Nota: los ángulos de incidencia y refracción en $A$ los da la figura; aquí se desarrolla el método y las relaciones.)*",
+  "knowns": [
+   "aire: $n_{aire}=1$",
+   "ángulos de incidencia $\\hat{\\imath}$ y refracción $\\alpha$ en $A$ (de la figura)",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** En la cara de entrada $A$, por la ley de Snell:\n$$n_{aire}\\,\\mathrm{sen}\\,\\hat{\\imath}=n_p\\,\\mathrm{sen}\\,\\alpha\\ \\Rightarrow\\ n_p=\\dfrac{\\mathrm{sen}\\,\\hat{\\imath}}{\\mathrm{sen}\\,\\alpha}$$\nCon los ángulos $\\hat{\\imath}$ y $\\alpha$ de la figura se obtiene $n_p$ (para el policarbonato, $n_p\\approx 1{,}5$).\n\n**(b)** Velocidad en el medio:\n$$v=\\dfrac{c}{n_p}=\\dfrac{3\\cdot10^{8}}{n_p}$$\nEn la cara $B$ (policarbonato$\\to$aire) hay reflexión total si el ángulo de incidencia supera el ángulo límite:\n$$\\mathrm{sen}\\,\\theta_L=\\dfrac{n_{aire}}{n_p}=\\dfrac{1}{n_p}$$\nSe compara el ángulo con que el rayo llega a $B$ (de la geometría del bloque) con $\\theta_L$: si es mayor, reflexión total; si es menor, se refracta y sale.",
+  "answer": "**(a)** $n_p=\\dfrac{\\mathrm{sen}\\,\\hat{\\imath}}{\\mathrm{sen}\\,\\alpha}$ (con los ángulos de la figura; $n_p\\approx 1{,}5$). **(b)** $v=c/n_p$; en $B$ hay reflexión total si el ángulo supera $\\theta_L=\\arcsin(1/n_p)$.",
+  "common_errors": [
+   "Medir los ángulos respecto a la superficie en lugar de la normal.",
+   "Invertir el cociente de índices en la ley de Snell o en el ángulo límite.",
+   "Olvidar que la reflexión total ocurre de medio más denso a menos denso cuando $\\theta>\\theta_L$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-041",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "Imagen en una lente divergente: virtual, derecha y menor · Comunidad Valenciana · Septiembre 2020",
+  "statement": "La imagen de un objeto real dada por una lente delgada divergente es siempre virtual, derecha y más pequeña que el objeto. Justifícalo mediante trazado de rayos y explica el porqué del trazado. ¿Qué significa imagen virtual?",
+  "full_solution": "Una lente **divergente** tiene distancia focal negativa ($f<0$). Para un objeto real colocado a la izquierda se trazan dos rayos:\n\n1. Un rayo **paralelo** al eje: al atravesar la lente diverge como si procediera del foco imagen $F'$ (situado a la izquierda). Su prolongación hacia atrás pasa por $F'$.\n2. Un rayo que se dirige **al centro óptico**: no se desvía.\n\nLas prolongaciones de los rayos emergentes se cortan en el mismo lado que el objeto, formando una imagen **virtual** (no se puede recoger en una pantalla), **derecha** y de **menor tamaño**.\n\nAnalíticamente, con $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f}$ y $f<0$, $s<0$, resulta siempre $s'$ negativo y $|s'|<|s|$, con aumento $0<m=\\dfrac{s'}{s}<1$ positivo: imagen virtual, derecha y reducida, para cualquier posición del objeto.\n\n**Imagen virtual:** aquella formada por las prolongaciones de los rayos, no por los rayos reales; no puede proyectarse sobre una pantalla, pero sí verse a través de la lente.",
+  "answer": "Con una lente divergente ($f<0$) y objeto real, los rayos emergentes divergen y sus prolongaciones dan siempre una imagen virtual, derecha y menor ($0<m<1$). Virtual significa formada por prolongaciones, no proyectable en pantalla.",
+  "common_errors": [
+   "Trazar el rayo paralelo pasando por $F'$ en el lado equivocado (en divergente diverge desde el foco del mismo lado del objeto).",
+   "Decir que la imagen es real o invertida.",
+   "Confundir imagen virtual (no proyectable) con imagen pequeña."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-042",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "La miopía y su corrección · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Explica en qué consiste la miopía usando los conceptos de la óptica geométrica. ¿Qué tipo de lente hay que usar para corregirla? Si una persona miope acerca un objeto al ojo, hay una posición en la que ve bien, ¿por qué?",
+  "full_solution": "En un ojo **miope** el globo ocular es demasiado largo (o el cristalino converge en exceso), de modo que los rayos procedentes de objetos lejanos forman la imagen **delante de la retina** y se ven borrosos. El miope tiene su **punto remoto** a una distancia finita (no en el infinito): más allá de él no enfoca.\n\n**Corrección:** se usa una lente **divergente** (potencia negativa), que separa los rayos antes de entrar en el ojo, de forma que la imagen se desplace hacia atrás y se forme justo sobre la retina.\n\nAl **acercar** un objeto, los rayos que llegan al ojo son más divergentes y la imagen que forma el ojo se retrasa hacia la retina. Existe una distancia (dentro del intervalo entre el punto próximo y el punto remoto del miope) para la cual la imagen cae exactamente sobre la retina y el objeto se ve nítido, aunque esté cerca.",
+  "answer": "La miopía forma la imagen de objetos lejanos delante de la retina (punto remoto finito); se corrige con lente divergente. Al acercar el objeto, los rayos llegan más divergentes y existe una posición en la que la imagen cae sobre la retina y se ve nítido.",
+  "common_errors": [
+   "Confundir miopía (imagen delante de la retina, lente divergente) con hipermetropía (detrás, lente convergente).",
+   "Decir que el punto remoto del miope está en el infinito.",
+   "Atribuir la corrección a una lente convergente."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-043",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "Rayo emergente paralelo en una lámina de caras plano-paralelas · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Un rayo incide sobre una lámina de caras plano-paralelas de índice $n_2$ situada en un medio de índice $n_1$. Demuestra que el rayo que emerge de la lámina es paralelo al rayo incidente.",
+  "full_solution": "Sea $\\theta_1$ el ángulo de incidencia en la primera cara. Las dos caras son paralelas, por lo que sus normales son paralelas.\n\n**Primera cara** ($n_1\\to n_2$), ley de Snell:\n$$n_1\\,\\text{sen}\\,\\theta_1 = n_2\\,\\text{sen}\\,\\theta_2$$\nEl rayo se refracta con ángulo $\\theta_2$ dentro de la lámina.\n\n**Segunda cara** ($n_2\\to n_1$): como las caras son paralelas, el ángulo de incidencia interno sobre la segunda cara es el mismo $\\theta_2$. Aplicando Snell:\n$$n_2\\,\\text{sen}\\,\\theta_2 = n_1\\,\\text{sen}\\,\\theta_3$$\n\nCombinando ambas:\n$$n_1\\,\\text{sen}\\,\\theta_1 = n_2\\,\\text{sen}\\,\\theta_2 = n_1\\,\\text{sen}\\,\\theta_3 \\;\\Rightarrow\\; \\text{sen}\\,\\theta_1 = \\text{sen}\\,\\theta_3 \\;\\Rightarrow\\; \\theta_3 = \\theta_1$$\n\nEl rayo emergente forma con la normal el mismo ángulo que el incidente y, por tanto, es **paralelo** al rayo incidente (aunque desplazado lateralmente una distancia que depende del espesor y del índice).",
+  "answer": "Aplicando Snell en las dos caras paralelas se obtiene $\\theta_3=\\theta_1$: el rayo emergente es paralelo al incidente, con un desplazamiento lateral.",
+  "common_errors": [
+   "No usar que las normales de ambas caras son paralelas (ángulo interno igual en las dos).",
+   "Olvidar que la lámina sólo desplaza el rayo, sin desviarlo en dirección.",
+   "Confundir con un prisma, donde las caras no son paralelas y sí hay desviación."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-044",
+  "source": "Madrid · Julio 2021",
+  "title": "Sistema de dos lentes convergentes · Madrid · Julio 2021",
+  "statement": "Un sistema óptico está formado por dos lentes convergentes: una lente $A$ de distancia focal $f'_A$ y otra $B$, situada $80\\ \\text{cm}$ a la derecha de $A$, de focal $f'_B=30\\ \\text{cm}$. Un objeto de $5\\ \\text{cm}$ de altura está $15\\ \\text{cm}$ a la izquierda de $A$.\n\n**(a)** Si la imagen final aparece $75\\ \\text{cm}$ a la derecha de $B$, ¿cuánto vale $f'_A$ y el tamaño de la imagen final?\n\n**(b)** ¿Dónde hay que situar el objeto a la izquierda de $A$ para que el sistema forme la imagen en el infinito?",
+  "knowns": [
+   "$f'_B = 30\\ \\text{cm}$",
+   "distancia entre lentes $= 80\\ \\text{cm}$",
+   "$s_A = -15\\ \\text{cm}$",
+   "$y_A = 5\\ \\text{cm}$",
+   "imagen final a $s'_B = 75\\ \\text{cm}$"
+  ],
+  "full_solution": "Usamos la ecuación de las lentes delgadas $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$ (criterio de signos: distancias a la derecha positivas).\n\n**(a)** Para la lente $B$, con $s'_B=75\\ \\text{cm}$ y $f'_B=30\\ \\text{cm}$, hallamos el objeto de $B$:\n$$\\dfrac{1}{75}-\\dfrac{1}{s_B}=\\dfrac{1}{30}\\ \\Rightarrow\\ s_B=-50\\ \\text{cm}$$\nLa imagen de $A$ está $50\\ \\text{cm}$ a la izquierda de $B$; como las lentes distan $80\\ \\text{cm}$:\n$$s'_A=80-50=30\\ \\text{cm}$$\nPara la lente $A$ con $s_A=-15\\ \\text{cm}$:\n$$\\dfrac{1}{30}-\\dfrac{1}{-15}=\\dfrac{1}{f'_A}\\ \\Rightarrow\\ \\dfrac{1}{f'_A}=\\dfrac{1}{30}+\\dfrac{1}{15}=\\dfrac{3}{30}\\ \\Rightarrow\\ f'_A=10\\ \\text{cm}$$\n\nTamaño: $M_A=\\dfrac{s'_A}{s_A}=\\dfrac{30}{-15}=-2\\Rightarrow y'_A=-2\\cdot5=-10\\ \\text{cm}$.\n$M_B=\\dfrac{s'_B}{s_B}=\\dfrac{75}{-50}=-1{,}5\\Rightarrow y'_B=-1{,}5\\cdot(-10)=15\\ \\text{cm}$.\n\n**(b) Imagen final en el infinito**\n\nLa imagen final está en el infinito si la imagen de $A$ cae en el foco objeto de $B$, es decir a $30\\ \\text{cm}$ a la izquierda de $B$:\n$$s'_A=80-30=50\\ \\text{cm}$$\nPara la lente $A$ con $f'_A=10\\ \\text{cm}$:\n$$\\dfrac{1}{50}-\\dfrac{1}{s_A}=\\dfrac{1}{10}\\ \\Rightarrow\\ s_A=-12{,}5\\ \\text{cm}$$",
+  "answer": "**(a)** $f'_A=10\\ \\text{cm}$; imagen final $y'_B=+15\\ \\text{cm}$ (derecha respecto al objeto, mayor).  **(b)** El objeto debe estar a $12{,}5\\ \\text{cm}$ a la izquierda de $A$.",
+  "common_errors": [
+   "No propagar: la imagen de $A$ es el objeto de $B$ (con $s_B=s'_A-80$).",
+   "Errores de signo en la ecuación de las lentes.",
+   "Olvidar multiplicar los aumentos $M=M_A\\cdot M_B$ para el tamaño final."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-045",
+  "source": "Madrid · Julio 2021",
+  "title": "Ángulo límite y longitudes de onda en dos medios · Madrid · Julio 2021",
+  "statement": "Un rayo de luz de frecuencia $6{,}04\\cdot10^{14}\\ \\text{Hz}$ incide desde un medio $A$ hacia un medio $B$. El ángulo límite para la reflexión total es $45{,}58^\\circ$ y $n_A-n_B=0{,}6$.\n\n**(a)** Determine los índices $n_A$ y $n_B$.\n\n**(b)** Determine las longitudes de onda del rayo en los medios $A$ y $B$.",
+  "knowns": [
+   "$f=6{,}04\\cdot10^{14}\\ \\text{Hz}$",
+   "$\\theta_L=45{,}58^\\circ$",
+   "$n_A-n_B=0{,}6$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a) Índices de refracción**\n\nEl ángulo límite (de $A$ a $B$, con $n_A>n_B$) cumple $n_A\\sin\\theta_L=n_B\\sin90^\\circ$, es decir $n_B=n_A\\sin\\theta_L$. Con $n_A-n_B=0{,}6$:\n$$n_A-n_A\\sin45{,}58^\\circ=0{,}6\\ \\Rightarrow\\ n_A=\\dfrac{0{,}6}{1-\\sin45{,}58^\\circ}=2{,}10$$\n$$n_B=n_A-0{,}6=1{,}50$$\n\n**(b) Longitudes de onda**\n\nLa frecuencia no cambia con el medio; $\\lambda_i=\\dfrac{c}{n_i f}$:\n$$\\lambda_A=\\dfrac{3\\cdot10^{8}}{2{,}10\\cdot6{,}04\\cdot10^{14}}=2{,}37\\cdot10^{-7}\\ \\text{m}=237\\ \\text{nm}$$\n$$\\lambda_B=\\dfrac{3\\cdot10^{8}}{1{,}50\\cdot6{,}04\\cdot10^{14}}=3{,}31\\cdot10^{-7}\\ \\text{m}=331\\ \\text{nm}$$",
+  "answer": "**(a)** $n_A\\approx2{,}10$, $n_B\\approx1{,}50$.  **(b)** $\\lambda_A\\approx237\\ \\text{nm}$, $\\lambda_B\\approx331\\ \\text{nm}$.",
+  "common_errors": [
+   "Plantear el ángulo límite al revés ($n_B\\sin\\theta_L=n_A$).",
+   "Olvidar que la frecuencia es la misma en ambos medios y variar $f$.",
+   "Usar $\\lambda=c/f$ sin dividir por el índice $n$ del medio."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-046",
+  "source": "Madrid · Junio 2013",
+  "title": "Espejo cóncavo: imagen de un objeto cercano · Madrid · Junio 2013",
+  "statement": "A $10\\ \\text{cm}$ de distancia del vértice de un espejo cóncavo de $30\\ \\text{cm}$ de radio se sitúa un objeto de $5\\ \\text{cm}$ de altura.\n\n**(a)** Determine la altura y posición de la imagen.\n\n**(b)** Construya la imagen gráficamente indicando su naturaleza.",
+  "knowns": [
+   "$R = 30\\ \\text{cm}$ (espejo cóncavo)",
+   "$s = -10\\ \\text{cm}$ (objeto real, a la izquierda)",
+   "$y = 5\\ \\text{cm}$"
+  ],
+  "full_solution": "Usamos el criterio de signos habitual (la luz incide desde la izquierda; distancias a la izquierda del vértice negativas). Para un espejo cóncavo el centro y el foco quedan delante: $R = -30\\ \\text{cm}$ y $f = R/2 = -15\\ \\text{cm}$.\n\n**(a)** Ecuación del espejo:\n$$\\dfrac{1}{s'} + \\dfrac{1}{s} = \\dfrac{2}{R} = \\dfrac{1}{f}.$$\n$$\\dfrac{1}{s'} = \\dfrac{1}{-15} - \\dfrac{1}{-10} = -\\dfrac{1}{15} + \\dfrac{1}{10} = \\dfrac{1}{30}\\ \\Rightarrow\\ s' = +30\\ \\text{cm}.$$\nComo $s'>0$, la imagen se forma detrás del espejo: es **virtual**. El aumento lateral:\n$$M = -\\dfrac{s'}{s} = -\\dfrac{30}{-10} = +3\\ \\Rightarrow\\ y' = M\\,y = 3\\cdot 5 = 15\\ \\text{cm}.$$\nLa imagen es virtual, derecha y aumentada (el objeto está dentro de la distancia focal).\n\n**(b)** En el trazado de rayos: un rayo paralelo al eje se refleja pasando por el foco; un rayo que se dirige al centro de curvatura vuelve sobre sí mismo. Sus prolongaciones se cortan detrás del espejo, dando una imagen virtual, derecha y de $15\\ \\text{cm}$.",
+  "answer": "Imagen **virtual, derecha y aumentada**: $s' = +30\\ \\text{cm}$ (detrás del espejo), $y' = 15\\ \\text{cm}$, $M=+3$.",
+  "common_errors": [
+   "Equivocar el signo de $f$ y $R$ para espejo cóncavo.",
+   "No notar que al estar el objeto dentro del foco ($10<15\\ \\text{cm}$) la imagen es virtual.",
+   "Dar la altura sin signo o calcular mal el aumento $M=-s'/s$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-047",
+  "source": "Madrid · Junio 2013",
+  "title": "Imagen en un espejo plano: posición y aumento · Madrid · Junio 2013",
+  "statement": "Un objeto está delante de un espejo plano a $70\\ \\text{cm}$ del mismo.\n\n**(a)** La distancia a la que se forma la imagen y el aumento lateral.\n**(b)** El diagrama de rayos; explique si la imagen es real o virtual.",
+  "knowns": [
+   "distancia objeto-espejo $= 70\\ \\text{cm}$",
+   "espejo plano ($R\\to\\infty$, $f\\to\\infty$)"
+  ],
+  "full_solution": "**(a) Posición y aumento.**\nUn espejo plano forma la imagen simétrica respecto al plano del espejo: a la misma distancia, pero **detrás** del espejo.\n$$s' = +70\\ \\text{cm}\\ \\text{(detrás del espejo, imagen virtual)}$$\nEl aumento lateral es:\n$$M = -\\dfrac{s'}{s} = +1$$\nLa imagen tiene el mismo tamaño que el objeto y es derecha.\n\n**(b) Naturaleza de la imagen.**\nLos rayos reflejados divergen como si procedieran de un punto situado detrás del espejo; sus prolongaciones (no los rayos reales) se cortan ahí. Por tanto la imagen es **virtual**, derecha y del mismo tamaño, a $70\\ \\text{cm}$ detrás del espejo.",
+  "answer": "Imagen virtual a $70\\ \\text{cm}$ detrás del espejo; aumento lateral $M=+1$ (mismo tamaño, derecha).",
+  "common_errors": [
+   "Decir que la imagen es real: en un espejo plano siempre es virtual (detrás del espejo).",
+   "Dar un aumento distinto de $1$: el espejo plano no cambia el tamaño.",
+   "Situar la imagen delante del espejo."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-048",
+  "source": "Madrid · Junio 2013",
+  "title": "Lente de proyector: posición de pantalla y tamaño de imagen · Madrid · Junio 2013",
+  "statement": "La lente de un proyector tiene una distancia focal de $0{,}5\\ \\text{cm}$. Se sitúa a una distancia de $0{,}51\\ \\text{cm}$ de la lente un objeto de $5\\ \\text{cm}$ de altura. Calcule:\n\n**(a)** La distancia a la que hay que situar la pantalla para observar nítida la imagen del objeto.\n\n**(b)** El tamaño mínimo de la pantalla para que se proyecte entera la imagen del objeto.",
+  "knowns": [
+   "$f' = +0{,}5\\ \\text{cm}$ (lente convergente)",
+   "$s = -0{,}51\\ \\text{cm}$",
+   "$y = 5\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** Con la ecuación de las lentes delgadas $\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'}$:\n$$\\dfrac{1}{s'} = \\dfrac{1}{f'} + \\dfrac{1}{s} = \\dfrac{1}{0{,}5} + \\dfrac{1}{-0{,}51} = 2 - 1{,}9608 = 0{,}03922\\ \\text{cm}^{-1},$$\n$$s' = 25{,}5\\ \\text{cm}.$$\nLa pantalla debe colocarse a $25{,}5\\ \\text{cm}$ de la lente (imagen real).\n\n**(b)** El aumento lateral:\n$$M = \\dfrac{s'}{s} = \\dfrac{25{,}5}{-0{,}51} = -50.$$\nEl tamaño de la imagen (en valor absoluto):\n$$|y'| = |M|\\,y = 50\\cdot 5 = 250\\ \\text{cm} = 2{,}5\\ \\text{m}.$$\nLa pantalla debe medir al menos $2{,}5\\ \\text{m}$; el signo negativo de $M$ indica que la imagen es invertida.",
+  "answer": "**(a)** Pantalla a $s' = 25{,}5\\ \\text{cm}$. **(b)** Imagen invertida de $|y'| = 250\\ \\text{cm} = 2{,}5\\ \\text{m}$ (tamaño mínimo de pantalla).",
+  "common_errors": [
+   "Usar mal los signos en $1/s'-1/s=1/f'$.",
+   "Olvidar que la imagen de proyector es real e invertida ($M<0$).",
+   "Confundir cm y m en el tamaño de la pantalla."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-049",
+  "source": "Madrid · Junio 2013",
+  "title": "Índice de refracción y leyes de la reflexión y la refracción · Madrid · Junio 2013",
+  "statement": "**(a)** Defina el índice de refracción de un medio, indicando qué valores puede tomar y su unidad.\n**(b)** Enuncie las leyes de la reflexión y de la refracción y realice un dibujo explicativo.",
+  "knowns": [
+   "$n = c/v$ (velocidad de la luz en el vacío / velocidad en el medio)"
+  ],
+  "full_solution": "**(a) Índice de refracción.**\nEs el cociente entre la velocidad de la luz en el vacío $c$ y su velocidad $v$ en el medio:\n$$n = \\dfrac{c}{v}$$\nEs una magnitud **adimensional** (sin unidades). Como en cualquier medio material $v<c$, se cumple $n\\ge1$ (en el vacío $n=1$).\n\n**(b) Leyes de la reflexión y la refracción.**\n*Reflexión:* (1) el rayo incidente, el reflejado y la normal están en el mismo plano; (2) el ángulo de incidencia es igual al de reflexión, $\\hat\\theta_i=\\hat\\theta_r$.\n*Refracción (ley de Snell):* (1) el rayo incidente, el refractado y la normal están en el mismo plano; (2) se cumple:\n$$n_1\\sin\\theta_1 = n_2\\sin\\theta_2$$\nAl pasar a un medio más refringente ($n_2>n_1$) el rayo se acerca a la normal.",
+  "answer": "$n=c/v$, adimensional, con $n\\ge1$.\nReflexión: $\\theta_i=\\theta_r$ (mismo plano). Refracción (Snell): $n_1\\sin\\theta_1=n_2\\sin\\theta_2$ (mismo plano).",
+  "common_errors": [
+   "Asignar unidades al índice de refracción (es adimensional).",
+   "Decir que $n$ puede ser menor que $1$ en un medio material.",
+   "Confundir la ley de Snell con la igualdad de ángulos (propia de la reflexión)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-050",
+  "source": "Madrid · Junio 2021",
+  "title": "Lente de 40 dioptrías e imagen en el infinito · Madrid · Junio 2021",
+  "statement": "Un objeto vertical de $2\\ \\text{mm}$ está $15\\ \\text{cm}$ a la izquierda de una lente convergente de $40\\ \\text{dioptrías}$.\n\n**(a)** Posición y tamaño de la imagen que forma la lente.\n\n**(b)** Posición de una segunda lente convergente de $6\\ \\text{cm}$ de focal, a la derecha de la primera, para que el sistema genere una imagen en el infinito.",
+  "knowns": [
+   "$y = 2\\ \\text{mm}$",
+   "$s = -15\\ \\text{cm}$",
+   "$P = 40\\ \\text{D} \\Rightarrow f'_1 = 2{,}5\\ \\text{cm}$",
+   "$f'_2 = 6\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** La focal de la primera lente es $f'_1=\\dfrac{1}{P}=\\dfrac{1}{40}=0{,}025\\ \\text{m}=2{,}5\\ \\text{cm}$. Con $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$:\n\n$$s'=\\left(\\dfrac{1}{f'_1}+\\dfrac{1}{s}\\right)^{-1}=\\left(\\dfrac{1}{2{,}5}+\\dfrac{1}{-15}\\right)^{-1}=3\\ \\text{cm}$$\n\nEl aumento es $M=\\dfrac{s'}{s}=\\dfrac{3}{-15}=-0{,}2$, luego:\n\n$$y'=M\\,y=-0{,}2\\cdot2=-0{,}4\\ \\text{mm}$$\n\n**(b)** Para que la imagen final esté en el infinito, la imagen dada por la primera lente debe situarse en el foco objeto de la segunda. Por tanto, la separación entre lentes es:\n\n$$d=s'+f'_2=3+6=9\\ \\text{cm}$$",
+  "answer": "**(a)** $s'=3\\ \\text{cm}$, $y'=-0{,}4\\ \\text{mm}$ (imagen real, invertida y menor). **(b)** $d=9\\ \\text{cm}$.",
+  "common_errors": [
+   "No invertir la potencia para obtener la focal ($f'=1/P$) o mezclar unidades.",
+   "No ver que imagen en el infinito exige que la imagen intermedia caiga en el foco de la segunda lente.",
+   "Error de signos en la ecuación de las lentes delgadas."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-051",
+  "source": "Madrid · Junio 2021",
+  "title": "Refracción de un láser y posibilidad de reflexión total · Madrid · Junio 2021",
+  "statement": "Un láser de $488\\ \\text{nm}$ en el vacío incide desde el aire sobre un material de índice $1{,}55$. El rayo incidente y el reflejado forman $60^\\circ$ entre sí.\n\n**(a)** Frecuencia y longitud de onda del rayo en el aire y dentro del material.\n\n**(b)** Ángulo entre el rayo refractado y el reflejado. ¿Existe ángulo de incidencia con reflexión total?",
+  "knowns": [
+   "$\\lambda_0 = 488\\ \\text{nm}$",
+   "$n = 1{,}55$",
+   "$n_{\\text{aire}} = 1$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** La frecuencia no cambia con el medio:\n\n$$f=\\dfrac{c}{\\lambda_0}=\\dfrac{3\\cdot10^{8}}{488\\cdot10^{-9}}=6{,}15\\cdot10^{14}\\ \\text{Hz}$$\n\nEn el aire $\\lambda_0=488\\ \\text{nm}$; dentro del material:\n\n$$\\lambda=\\dfrac{\\lambda_0}{n}=\\dfrac{488}{1{,}55}=315\\ \\text{nm}=3{,}15\\cdot10^{-7}\\ \\text{m}$$\n\n**(b)** Como incidente y reflejado forman $60^\\circ$ y son simétricos respecto a la normal, $\\theta_i=30^\\circ$. Por la ley de Snell:\n\n$$\\operatorname{sen}\\theta_t=\\dfrac{n_{\\text{aire}}\\operatorname{sen}\\theta_i}{n}=\\dfrac{\\operatorname{sen}30^\\circ}{1{,}55}\\ \\Rightarrow\\ \\theta_t=18{,}82^\\circ$$\n\nEl ángulo entre el rayo reflejado y el refractado es $180^\\circ-(\\theta_r+\\theta_t)=180^\\circ-(30^\\circ+18{,}82^\\circ)=131{,}18^\\circ$.\n\nNo existe reflexión total: al pasar del aire ($n=1$) al material más denso ($n=1{,}55$) no hay ángulo crítico, pues $\\operatorname{sen}\\theta_c=n/n_{\\text{aire}}=1{,}55>1$, imposible.",
+  "answer": "**(a)** $f=6{,}15\\cdot10^{14}\\ \\text{Hz}$; $\\lambda_{\\text{aire}}=488\\ \\text{nm}$, $\\lambda_{\\text{medio}}=315\\ \\text{nm}$. **(b)** ángulo $\\approx131{,}2^\\circ$; no hay reflexión total (del aire al medio más denso).",
+  "common_errors": [
+   "Tomar $60^\\circ$ como ángulo de incidencia en vez de la mitad.",
+   "Buscar reflexión total en el sentido aire→medio denso (solo puede haberla del denso al menos denso).",
+   "Cambiar la frecuencia al cambiar de medio (es $\\lambda$ la que cambia, no $f$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-052",
+  "source": "Madrid · Junio 2022",
+  "title": "Lámina de vidrio sobre líquido: índices y reflexión total · Madrid · Junio 2022",
+  "statement": "Una lámina de vidrio se halla sobre un líquido de índice desconocido. La longitud de onda de la luz en el vidrio se reduce al $70\\%$ de su valor en el aire. Si se emite luz desde el líquido, los rayos con ángulos de incidencia superiores a $30^\\circ$ en la cara inferior de la lámina no se refractan al aire por la cara superior. Calcule:\n\n**(a)** El índice de refracción del vidrio.\n\n**(b)** El índice de refracción del líquido.",
+  "knowns": [
+   "$\\lambda_{vidrio}=0{,}70\\,\\lambda_{aire}$",
+   "Ángulo crítico efectivo $=30^\\circ$ (desde el líquido)",
+   "$n_{aire}=1$"
+  ],
+  "full_solution": "**(a)** La longitud de onda en un medio es $\\lambda=\\dfrac{\\lambda_{aire}\\,n_{aire}}{n}$, de modo que $\\lambda_{vidrio}=\\dfrac{\\lambda_{aire}}{n_{vidrio}}$. Con $\\lambda_{vidrio}=0{,}70\\,\\lambda_{aire}$:\n\n$$n_{vidrio}=\\dfrac{1}{0{,}70}=1{,}43$$\n\n**(b)** Si para incidencias $>30^\\circ$ desde el líquido ya no hay refracción al aire por la cara superior, a $30^\\circ$ el rayo emerge rasante ($90^\\circ$) al aire. Aplicando la ley de Snell en cadena líquido $\\to$ vidrio $\\to$ aire, los términos del vidrio se cancelan:\n\n$$n_{liq}\\,\\text{sen}\\,30^\\circ=n_{aire}\\,\\text{sen}\\,90^\\circ\\Rightarrow n_{liq}=\\dfrac{1}{\\text{sen}\\,30^\\circ}=2$$",
+  "answer": "**(a)** $n_{vidrio}=1/0{,}70\\approx1{,}43$. **(b)** $n_{liq}=1/\\text{sen}\\,30^\\circ=2$.",
+  "common_errors": [
+   "Escribir $n_{vidrio}=0{,}70$ en vez de $1/0{,}70$ (a menor $\\lambda$, mayor índice).",
+   "Aplicar la condición crítica en la cara vidrio–líquido en lugar de la cadena hasta el aire.",
+   "Usar $\\cos$ en lugar de $\\text{sen}$ en la ley de Snell."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-053",
+  "source": "Madrid · Junio 2022",
+  "title": "Reflexión total en una fibra óptica · Madrid · Junio 2022",
+  "statement": "Una fibra óptica tiene núcleo de índice $n_N=1{,}46$ y diámetro $D=100\\ \\mu\\text{m}$, con recubrimiento $n_R=1{,}43$. El rayo (1) viaja por el eje; el rayo (2) con el máximo ángulo $\\varphi$ para reflejarse totalmente en la frontera núcleo-recubrimiento.\n\n**(a)** Ángulo $\\varphi$ que forma el rayo (2) con el eje.\n\n**(b)** Longitud $L$ para que (2) vuelva al eje y diferencia de tiempos de llegada entre (1) y (2).",
+  "knowns": [
+   "$n_N = 1{,}46$",
+   "$n_R = 1{,}43$",
+   "$D = 100\\ \\mu\\text{m} = 10^{-4}\\ \\text{m}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** El ángulo crítico en la frontera cumple $n_N\\operatorname{sen}\\theta_C=n_R\\operatorname{sen}90^\\circ$:\n\n$$\\theta_C=\\arcsin\\!\\left(\\dfrac{n_R}{n_N}\\right)=\\arcsin\\!\\left(\\dfrac{1{,}43}{1{,}46}\\right)=78{,}36^\\circ$$\n\nEl ángulo con el eje es el complementario:\n\n$$\\varphi=90^\\circ-\\theta_C=11{,}64^\\circ$$\n\n**(b)** Geométricamente, el rayo sube $D/2$ y baja $D/2$; la longitud axial recorrida hasta volver al eje es:\n\n$$L=\\dfrac{D}{\\tan\\varphi}=\\dfrac{10^{-4}}{\\tan 11{,}64^\\circ}=4{,}86\\cdot10^{-4}\\ \\text{m}$$\n\nLa velocidad en el núcleo es $v=\\dfrac{c}{n_N}=2{,}05\\cdot10^{8}\\ \\text{m·s}^{-1}$. Los tiempos son:\n\n$$t_{(1)}=\\dfrac{L}{v}=2{,}36\\cdot10^{-12}\\ \\text{s},\\qquad t_{(2)}=\\dfrac{L}{v\\cos\\varphi}=2{,}41\\cdot10^{-12}\\ \\text{s}$$\n\n$$\\Delta t=t_{(2)}-t_{(1)}=4{,}96\\cdot10^{-14}\\ \\text{s}$$",
+  "answer": "**(a)** $\\varphi\\approx11{,}64^\\circ$ ($\\theta_C=78{,}36^\\circ$). **(b)** $L\\approx4{,}86\\cdot10^{-4}\\ \\text{m}$, $\\Delta t\\approx4{,}96\\cdot10^{-14}\\ \\text{s}$.",
+  "common_errors": [
+   "Confundir el ángulo con el eje $\u000barphi$ con el ángulo con la normal $\theta_C$ (son complementarios).",
+   "Olvidar que el recorrido real del rayo (2) es $L/\\cos\u000barphi$, no $L$.",
+   "Usar la velocidad de la luz en el vacío $c$ en vez de $c/n_N$ dentro del núcleo."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-054",
+  "source": "Madrid · Junio 2022",
+  "title": "Sistema de dos lentes convergentes (aumento −1) · Madrid · Junio 2022",
+  "statement": "Dos lentes convergentes idénticas están separadas $16\\ \\text{cm}$. Cuando un objeto se sitúa a cierta distancia a la izquierda de la primera lente, cada una de ellas opera con aumento igual a $-1$.\n\n**(a)** Determine la potencia de las lentes.\n\n**(b)** ¿Cuánto y hacia dónde debe desplazarse la segunda lente para que la imagen del sistema se forme en el infinito?",
+  "knowns": [
+   "Separación $=16\\ \\text{cm}$",
+   "Aumento de cada lente $m=-1$"
+  ],
+  "full_solution": "**(a)** Con la ecuación de la lente delgada $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$ y $m=\\dfrac{s'}{s}=-1\\Rightarrow s'=-s$.\n\nSustituyendo: $\\dfrac{1}{-s}-\\dfrac{1}{s}=\\dfrac{1}{f'}\\Rightarrow s=-2f'$ y $s'=2f'$. Es decir, objeto e imagen están a $2f'$ (configuración $2F$–$2F$).\n\nLa imagen de la primera lente es el objeto de la segunda; la distancia entre lentes es la suma $2f'+2f'=4f'$:\n\n$$4f'=16\\ \\text{cm}\\Rightarrow f'=4\\ \\text{cm}=0{,}04\\ \\text{m}\\Rightarrow P=\\dfrac{1}{f'}=25\\ \\text{dioptrías}$$\n\n**(b)** La imagen de la primera lente se forma a $2f'=8\\ \\text{cm}$ de ella. Para que el sistema dé imagen en el infinito, esa imagen debe caer en el foco objeto de la segunda lente, es decir, la segunda lente debe estar a $f'=4\\ \\text{cm}$ de dicha imagen. Como ahora está a $8\\ \\text{cm}$, debe acercarse $4\\ \\text{cm}$: hay que desplazarla $4\\ \\text{cm}$ hacia la izquierda.",
+  "answer": "**(a)** $f'=4\\ \\text{cm}$, $P=25\\ \\text{dioptrías}$. **(b)** Desplazar la segunda lente $4\\ \\text{cm}$ hacia la izquierda.",
+  "common_errors": [
+   "Interpretar la separación como $2f'$ en vez de $4f'$.",
+   "Confundir potencia en dioptrías usando $f'$ en cm en lugar de metros.",
+   "No situar la imagen de la primera lente en el foco de la segunda para obtener imagen en el infinito."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-055",
+  "source": "Madrid · Junio 2022",
+  "title": "Sistema de dos lentes convergentes · Madrid · Junio 2022",
+  "statement": "Para obtener una imagen aumentada de un objeto de $1\\ \\text{mm}$ se usan dos lentes convergentes $A$ y $B$ de focales $2\\ \\text{cm}$ y $2{,}5\\ \\text{cm}$. El objeto está $3\\ \\text{cm}$ a la izquierda de $A$; $B$ está a la derecha de $A$.\n\n**(a)** Tamaño de la imagen que forma $A$ y separación entre lentes para que el sistema dé una imagen final virtual e invertida de $5\\ \\text{mm}$.\n\n**(b)** Trazado de rayos del sistema.",
+  "knowns": [
+   "$f'_A = 2\\ \\text{cm}$",
+   "$f'_B = 2{,}5\\ \\text{cm}$",
+   "$s_A = -3\\ \\text{cm}$",
+   "$y_A = 1\\ \\text{mm}$",
+   "$y'_B = -5\\ \\text{mm}$"
+  ],
+  "full_solution": "**(a)** Con el criterio de signos $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$, para la lente $A$:\n\n$$s'_A=\\left(\\dfrac{1}{f'_A}+\\dfrac{1}{s_A}\\right)^{-1}=\\left(\\dfrac{1}{2}+\\dfrac{1}{-3}\\right)^{-1}=6\\ \\text{cm}$$\n\nEl aumento lateral da el tamaño de la imagen intermedia:\n\n$$y'_A=y_A\\,\\dfrac{s'_A}{s_A}=1\\cdot\\dfrac{6}{-3}=-2\\ \\text{mm}$$\n\nEsa imagen es el objeto de $B$: $y_B=-2\\ \\text{mm}$, y se pide $y'_B=-5\\ \\text{mm}$. De las relaciones de $B$:\n\n$$s_B=f'_B\\left(\\dfrac{y_B}{y'_B}-1\\right)=2{,}5\\left(\\dfrac{-2}{-5}-1\\right)=-1{,}5\\ \\text{cm}$$\n\n$$s'_B=s_B\\,\\dfrac{y'_B}{y_B}=-1{,}5\\cdot\\dfrac{-5}{-2}=-3{,}75\\ \\text{cm}$$\n\nEl signo $s'_B<0$ confirma imagen virtual. La separación entre lentes es:\n\n$$d=s'_A-s_B=6-(-1{,}5)=7{,}5\\ \\text{cm}$$\n\n**(b)** Trazado: desde el objeto, un rayo paralelo al eje por $A$ pasa por $F'_A$; otro por el centro de $A$ sin desviarse; forman $y'_A=-2\\ \\text{mm}$. Esa imagen actúa como objeto de $B$, que al estar dentro de su foco genera una imagen virtual e invertida de $5\\ \\text{mm}$.",
+  "answer": "**(a)** $y'_A=-2\\ \\text{mm}$; separación $d=7{,}5\\ \\text{cm}$ (con $s_B=-1{,}5\\ \\text{cm}$, $s'_B=-3{,}75\\ \\text{cm}$, imagen virtual e invertida de $5\\ \\text{mm}$).",
+  "common_errors": [
+   "Mezclar criterios de signos entre las dos lentes.",
+   "Olvidar que la imagen de $A$ es el objeto de $B$ y que su posición depende de la separación $d$.",
+   "Interpretar mal el signo de $s'_B$: negativo indica imagen virtual, no un error."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-056",
+  "source": "Madrid · Junio 2023",
+  "title": "Lente convergente, imagen en pantalla y sistema de dos lentes · Madrid · Junio 2023",
+  "statement": "Un objeto de $2\\ \\text{cm}$ de altura se sitúa a $18\\ \\text{cm}$ a la izquierda de una pantalla. Entre la pantalla y el objeto, a $14{,}2\\ \\text{cm}$ de este, se sitúa una lente convergente.\n\n**(a)** Determine la distancia focal que debe tener la lente para que se enfoque la imagen del objeto sobre la pantalla y el tamaño de la imagen.\n\n**(b)** A continuación se retira la pantalla y se sitúa, a $5\\ \\text{cm}$ a la derecha de la primera lente, otra lente convergente de distancia focal $1{,}2\\ \\text{cm}$. ¿Dónde se formará la nueva imagen?",
+  "knowns": [
+   "$y = 2\\ \\text{cm}$",
+   "distancia objeto-pantalla $= 18\\ \\text{cm}$",
+   "$s_1 = -14{,}2\\ \\text{cm}$ (objeto a la izquierda de la lente)",
+   "$f'_2 = 1{,}2\\ \\text{cm}$, segunda lente a $5\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** La pantalla está a $18\\ \\text{cm}$ del objeto y la lente a $14{,}2\\ \\text{cm}$ del objeto, luego la imagen se forma a $s' = 18 - 14{,}2 = 3{,}8\\ \\text{cm}$ a la derecha de la lente. Con el objeto en $s = -14{,}2\\ \\text{cm}$ y la ecuación de las lentes delgadas:\n$$\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'} \\;\\Rightarrow\\; \\dfrac{1}{3{,}8} - \\dfrac{1}{-14{,}2} = \\dfrac{1}{f'} \\;\\Rightarrow\\; f' = 3{,}0\\ \\text{cm}$$\n\nEl aumento lateral:\n$$m = \\dfrac{s'}{s} = \\dfrac{3{,}8}{-14{,}2} = -0{,}27 \\;\\Rightarrow\\; y' = m\\,y = -0{,}27\\cdot2 = -0{,}54\\ \\text{cm}$$\nImagen real, invertida y reducida.\n\n**(b)** La imagen anterior (a $3{,}8\\ \\text{cm}$ de la primera lente) actúa como objeto para la segunda lente, situada a $5\\ \\text{cm}$: $s_2 = 3{,}8 - 5 = -1{,}2\\ \\text{cm}$. Como $|s_2| = f'_2 = 1{,}2\\ \\text{cm}$, el objeto está en el foco objeto de la segunda lente:\n$$\\dfrac{1}{s'_2} = \\dfrac{1}{f'_2} + \\dfrac{1}{s_2} = \\dfrac{1}{1{,}2} + \\dfrac{1}{-1{,}2} = 0 \\;\\Rightarrow\\; s'_2 = \\infty$$\nLa imagen final se forma en el infinito (rayos emergentes paralelos).",
+  "answer": "**(a)** $f' = 3{,}0\\ \\text{cm}$ y $y' = -0{,}54\\ \\text{cm}$ (imagen real invertida). **(b)** La imagen final se forma en el infinito.",
+  "common_errors": [
+   "Equivocar el signo de la distancia objeto (objeto a la izquierda: $s<0$).",
+   "No advertir que la imagen de la primera lente es el objeto de la segunda.",
+   "No reconocer que un objeto en el foco objeto da imagen en el infinito."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-057",
+  "source": "Madrid · Junio 2023",
+  "title": "Refracción en un prisma y ángulo límite · Madrid · Junio 2023",
+  "statement": "Un rayo de luz incide sobre la cara izquierda de un prisma equilátero (ángulos de $60^\\circ$) de índice de refracción $1{,}66$.\n\n**(a)** Determine los ángulos $\\alpha$ (refracción en la cara de entrada) y $\\beta$ (refracción en la cara de salida) para un rayo que entra desde el aire con un ángulo de incidencia de $50^\\circ$.\n\n**(b)** Calcule el ángulo de incidencia desde el aire para que el rayo no llegue a emerger por la segunda cara (sufra reflexión total).",
+  "knowns": [
+   "$n = 1{,}66$ (prisma)",
+   "$n_0 = 1$ (aire)",
+   "ángulo del prisma $= 60^\\circ$",
+   "ángulo de incidencia inicial $= 50^\\circ$"
+  ],
+  "full_solution": "**(a)** Ley de Snell en la cara de entrada:\n$$n_0\\operatorname{sen}50^\\circ = n\\operatorname{sen}\\alpha \\;\\Rightarrow\\; \\operatorname{sen}\\alpha = \\dfrac{\\operatorname{sen}50^\\circ}{1{,}66} = 0{,}461 \\;\\Rightarrow\\; \\alpha = 27{,}5^\\circ$$\nPor la geometría del prisma, el ángulo de incidencia interno en la segunda cara es $\\gamma = 60^\\circ - \\alpha = 32{,}5^\\circ$. En la cara de salida:\n$$n\\operatorname{sen}\\gamma = n_0\\operatorname{sen}\\beta \\;\\Rightarrow\\; \\operatorname{sen}\\beta = 1{,}66\\cdot\\operatorname{sen}32{,}5^\\circ = 0{,}892 \\;\\Rightarrow\\; \\beta = 63{,}2^\\circ$$\n\n**(b)** El rayo no emerge cuando en la segunda cara se alcanza el ángulo límite, es decir $\\beta = 90^\\circ$:\n$$1{,}66\\operatorname{sen}\\gamma' = n_0\\operatorname{sen}90^\\circ \\;\\Rightarrow\\; \\operatorname{sen}\\gamma' = \\dfrac{1}{1{,}66} = 0{,}602 \\;\\Rightarrow\\; \\gamma' = 37{,}0^\\circ$$\nEntonces el ángulo de refracción en la primera cara es $\\alpha' = 60^\\circ - \\gamma' = 23{,}0^\\circ$, y por Snell en la entrada:\n$$\\operatorname{sen}\\theta_i = 1{,}66\\operatorname{sen}23{,}0^\\circ = 0{,}648 \\;\\Rightarrow\\; \\theta_i \\approx 40{,}4^\\circ$$\nPara ángulos de incidencia menores que $\\approx 40{,}4^\\circ$ el rayo sufre reflexión total en la segunda cara.",
+  "answer": "**(a)** $\\alpha \\approx 27{,}5^\\circ$ y $\\beta \\approx 63{,}2^\\circ$. **(b)** $\\theta_i \\approx 40{,}4^\\circ$.",
+  "common_errors": [
+   "Olvidar la relación geométrica $\\gamma = 60^\\circ-\\alpha$ entre las dos caras.",
+   "Aplicar Snell con los índices invertidos en la cara de salida.",
+   "Confundir el ángulo límite (interno) con el ángulo de incidencia externo pedido."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-058",
+  "source": "Madrid · Junio 2023 (Coincidentes)",
+  "title": "Lente: distancia focal a partir de dos situaciones · Madrid · Junio 2023 (Coincidentes)",
+  "statement": "A una distancia de $3\\ \\text{cm}$ a la izquierda de una lente se sitúa un objeto de $2\\ \\text{cm}$ de altura. La imagen es virtual, derecha y tiene una altura de $3\\ \\text{cm}$ (situación A). A continuación, se aleja el objeto hasta $18\\ \\text{cm}$ a la izquierda de la lente, formando una imagen invertida (situación B).\n\n**(a)** Calcule la distancia focal de la lente y dibuje el esquema de rayos en la situación A.\n\n**(b)** Halle el aumento lateral de la imagen en la situación B y dibuje el esquema de rayos.",
+  "knowns": [
+   "Situación A: $s_A = -3\\ \\text{cm}$, $y_A = 2\\ \\text{cm}$, $y_A' = +3\\ \\text{cm}$ (virtual, derecha)",
+   "Situación B: $s_B = -18\\ \\text{cm}$ (imagen invertida)"
+  ],
+  "full_solution": "**(a)** El aumento lateral en A: $M_A = \\dfrac{y_A'}{y_A} = \\dfrac{3}{2} = 1{,}5$. Como $M_A = \\dfrac{s_A'}{s_A}$:\n$$s_A' = M_A\\,s_A = 1{,}5\\cdot(-3) = -4{,}5\\ \\text{cm}\\ (\\text{imagen virtual}).$$\nCon la ecuación de la lente $\\dfrac{1}{s_A'} - \\dfrac{1}{s_A} = \\dfrac{1}{f'}$:\n$$f' = \\dfrac{s_A\\,s_A'}{s_A - s_A'} = \\dfrac{(-3)(-4{,}5)}{-3-(-4{,}5)} = \\dfrac{13{,}5}{1{,}5} = 9\\ \\text{cm}.$$\nLente convergente, $f' = +9\\ \\text{cm}$ (el objeto en A está dentro del foco → imagen virtual, derecha y mayor).\n\n**(b)** Con $s_B = -18\\ \\text{cm}$:\n$$\\dfrac{1}{s_B'} = \\dfrac{1}{f'} + \\dfrac{1}{s_B} = \\dfrac{1}{9} + \\dfrac{1}{-18} = \\dfrac{1}{18}\\ \\Rightarrow\\ s_B' = 18\\ \\text{cm}.$$\n$$M_B = \\dfrac{s_B'}{s_B} = \\dfrac{18}{-18} = -1.$$\nLa imagen es real, invertida y del mismo tamaño que el objeto (el objeto está en $2f$).",
+  "answer": "**(a)** $f' = +9\\ \\text{cm}$ (situación A: imagen virtual, derecha, $s_A'=-4{,}5\\ \\text{cm}$). **(b)** $M_B = -1$ (imagen real, invertida, igual tamaño, $s_B'=18\\ \\text{cm}$).",
+  "common_errors": [
+   "Asignar signo positivo a $s_A'$ siendo imagen virtual (debe ser negativo).",
+   "Equivocar la fórmula $f'=s s'/(s-s')$ con los signos.",
+   "No reconocer que $s_B=-18=-2f'$ da $M=-1$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-059",
+  "source": "Madrid · Junio 2023 (Coincidentes)",
+  "title": "Prisma triangular: refracción en ambas caras · Madrid · Junio 2023 (Coincidentes)",
+  "statement": "Un rayo de luz incide horizontalmente desde el aire sobre la cara de un prisma de vidrio de índice de refracción $1{,}33$. El prisma tiene forma de triángulo rectángulo, con ángulos de $30^\\circ$ y $60^\\circ$ (ver figura). Determine:\n\n**(a)** El ángulo de refracción del rayo del aire al vidrio.\n\n**(b)** El ángulo de refracción del vidrio al aire en la cara posterior del prisma.\n\n*Dato:* $n_{\\text{aire}} = 1$.",
+  "knowns": [
+   "$n_{\\text{vidrio}} = 1{,}33$",
+   "Ángulos del prisma: $30^\\circ$ y $60^\\circ$",
+   "Ángulo de incidencia en la primera cara: $30^\\circ$",
+   "$n_{\\text{aire}} = 1$"
+  ],
+  "full_solution": "**(a)** En la primera cara, con ángulo de incidencia $30^\\circ$, ley de Snell:\n$$n_{\\text{aire}}\\,\\mathrm{sen}\\,30^\\circ = n_{\\text{vidrio}}\\,\\mathrm{sen}\\,\\theta_t\\ \\Rightarrow\\ \\mathrm{sen}\\,\\theta_t = \\dfrac{\\mathrm{sen}\\,30^\\circ}{1{,}33} = 0{,}376,$$\n$$\\theta_t = 22{,}1^\\circ.$$\n\n**(b)** Por geometría del triángulo, el ángulo de incidencia sobre la cara posterior (vidrio→aire) resulta $\\theta_i' = 7{,}92^\\circ$ (el ángulo refractado y el ángulo del prisma se combinan: los ángulos interiores del triángulo formado por los rayos y las caras suman $180^\\circ$). Aplicando Snell en la cara posterior:\n$$n_{\\text{vidrio}}\\,\\mathrm{sen}\\,7{,}92^\\circ = n_{\\text{aire}}\\,\\mathrm{sen}\\,\\theta_t'\\ \\Rightarrow\\ \\mathrm{sen}\\,\\theta_t' = 1{,}33\\cdot\\mathrm{sen}\\,7{,}92^\\circ,$$\n$$\\theta_t' = 10{,}6^\\circ.$$",
+  "answer": "**(a)** $\\theta_t = 22{,}1^\\circ$ (aire→vidrio). **(b)** $\\theta_t' = 10{,}6^\\circ$ (vidrio→aire, con incidencia interna $7{,}92^\\circ$).",
+  "common_errors": [
+   "No deducir correctamente por geometría el ángulo de incidencia en la segunda cara.",
+   "Aplicar Snell con los índices intercambiados en la cara de salida.",
+   "Olvidar que la suma de ángulos del triángulo es $180^\\circ$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-060",
+  "source": "Madrid · Modelo 2024",
+  "title": "Imagen en un espejo cóncavo · Madrid · Modelo 2024",
+  "statement": "Un espejo esférico cóncavo de radio de curvatura $60\\ \\text{cm}$ tiene un objeto de $5\\ \\text{cm}$ de altura situado a $80\\ \\text{cm}$ frente a él sobre su eje óptico.\n\n**(a)** Describa y dibuje las trayectorias del rayo que sale paralelo al eje y del que pasa por el centro de curvatura.\n\n**(b)** Calcule la posición y el tamaño de la imagen.",
+  "knowns": [
+   "$R = 60\\ \\text{cm}$ (cóncavo $\\Rightarrow R=-60\\ \\text{cm}$)",
+   "$s = -80\\ \\text{cm}$",
+   "$y = 5\\ \\text{cm}$",
+   "$f = R/2 = -30\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** El rayo que incide paralelo al eje se refleja pasando por el foco $F$ (a $R/2$ del vértice). El rayo que pasa por el centro de curvatura $C$ incide perpendicular al espejo y se refleja sobre sí mismo. Su intersección da el extremo de la imagen.\n\n**(b)** Criterio de signos (positivo a la derecha del vértice y hacia arriba); objeto real $s=-80\\ \\text{cm}$, $f=-30\\ \\text{cm}$. Ecuación del espejo:\n$$\\dfrac{1}{s}+\\dfrac{1}{s'}=\\dfrac{1}{f} \\;\\Rightarrow\\; s' = \\dfrac{1}{\\dfrac{1}{f}-\\dfrac{1}{s}} = \\dfrac{1}{\\dfrac{1}{-30}-\\dfrac{1}{-80}} = -48\\ \\text{cm}$$\nLa imagen es real (delante del espejo). El aumento lateral:\n$$m = -\\dfrac{s'}{s} = -\\dfrac{-48}{-80} = -0{,}6 \\;\\Rightarrow\\; y' = m\\,y = -3\\ \\text{cm}$$\nImagen real, invertida y menor que el objeto.",
+  "answer": "$s' = -48\\ \\text{cm}$ (imagen real a $48$ cm del espejo), $y' = -3\\ \\text{cm}$ (invertida y de menor tamaño).",
+  "common_errors": [
+   "No aplicar el criterio de signos del espejo (todas las distancias de objeto real e imagen real son negativas).",
+   "Olvidar que $f=R/2$.",
+   "Dar el tamaño sin signo, perdiendo la información de que la imagen está invertida."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-061",
+  "source": "Madrid · Modelo 2024",
+  "title": "Refracción en un paralelepípedo y reflexión total · Madrid · Modelo 2024",
+  "statement": "Un rayo incide desde el aire sobre la cara lateral de un paralelepípedo (a mitad de altura). La altura es $H=4\\ \\text{cm}$ y el índice de refracción $n_2=1{,}34$.\n\n**(a)** Si el ángulo de incidencia es $60^\\circ$, obtenga el tiempo que tarda el rayo dentro del paralelepípedo desde que entra hasta que alcanza su cara superior.\n\n**(b)** ¿Qué condición debe cumplir el ángulo de incidencia $\\theta$ para que haya reflexión total en la cara superior?",
+  "knowns": [
+   "$H = 4\\ \\text{cm} = 0{,}04\\ \\text{m}$",
+   "$n_2 = 1{,}34$, $n_{aire}=1$",
+   "$\\theta_1 = 60^\\circ$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Ley de Snell en la cara de entrada:\n$$\\text{sen}\\,\\theta_2 = \\dfrac{n_1\\,\\text{sen}\\,\\theta_1}{n_2} = \\dfrac{\\text{sen}\\,60^\\circ}{1{,}34} \\;\\Rightarrow\\; \\theta_2 = 40{,}3^\\circ$$\nEl rayo entra a mitad de altura y sube hasta la cara superior recorriendo (geometría):\n$$L = \\dfrac{H/2}{\\text{sen}\\,\\theta_2} = \\dfrac{0{,}02}{\\text{sen}\\,40{,}3^\\circ} = 3{,}09\\ \\text{cm}$$\nLa velocidad en el medio es $v=c/n_2$, luego:\n$$t = \\dfrac{L}{c/n_2} = \\dfrac{L\\,n_2}{c} = \\dfrac{0{,}0309\\cdot 1{,}34}{3\\cdot10^{8}} = 1{,}38\\cdot10^{-10}\\ \\text{s}$$\n\n**(b)** El ángulo crítico en la frontera vidrio$\\to$aire cumple $\\text{sen}\\,\\varphi_c = 1/n_2$, $\\varphi_c = 48{,}3^\\circ$. En la cara superior el ángulo de incidencia es $90^\\circ-\\theta_2$; para reflexión total $90^\\circ-\\theta_2 \\ge \\varphi_c$, es decir $\\theta_2 \\le 41{,}7^\\circ$. Pasando a la cara de entrada con Snell, el ángulo límite de incidencia desde el aire es\n$$\\theta_1 = \\operatorname{arcsen}\\!\\big(n_2\\,\\text{sen}(90^\\circ-\\varphi_c)\\big) = 63{,}1^\\circ$$\nHay reflexión total en la cara superior si $\\theta < 63{,}1^\\circ$.",
+  "answer": "**(a)** $\\theta_2 = 40{,}3^\\circ$, $L = 3{,}09\\ \\text{cm}$, $t = 1{,}38\\cdot10^{-10}\\ \\text{s}$. **(b)** Reflexión total si el ángulo de incidencia es $\\theta < 63{,}1^\\circ$.",
+  "common_errors": [
+   "Confundir el ángulo sobre la cara superior ($90^\\circ-\\theta_2$) con $\\theta_2$.",
+   "Usar $v=c$ en el interior en lugar de $v=c/n_2$.",
+   "Invertir la desigualdad: a menor ángulo de incidencia exterior, mayor es el ángulo en la cara superior y antes se alcanza la reflexión total."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-062",
+  "source": "Madrid · Modelo 2025",
+  "title": "Espejo convexo que reduce la imagen a la cuarta parte · Madrid · Modelo 2025",
+  "statement": "Se desea fabricar un espejo convexo tal que, al situar un objeto a la izquierda a $12\\ \\text{cm}$ del espejo, la imagen tenga un tamaño igual a la cuarta parte del objeto.\n\n**(a)** Determine la posición de la imagen y el radio de curvatura del espejo.\n**(b)** Realice el diagrama de rayos correspondiente.",
+  "knowns": [
+   "$s=-12\\ \\text{cm}$ (objeto a la izquierda)",
+   "aumento lateral $y'/y = +\\tfrac{1}{4}$ (imagen derecha y menor en espejo convexo)"
+  ],
+  "full_solution": "**(a)** Usamos el criterio de signos con $\\dfrac{1}{s}+\\dfrac{1}{s'}=\\dfrac{1}{f}$ y el aumento $m=\\dfrac{y'}{y}=-\\dfrac{s'}{s}$.\n\nEn un espejo convexo la imagen es siempre virtual, derecha y menor, por lo que $m=+\\tfrac14$:\n$$\\dfrac14=-\\dfrac{s'}{s}\\ \\Rightarrow\\ s'=-\\dfrac{s}{4}=-\\dfrac{-12}{4}=3\\ \\text{cm}$$\n(imagen virtual, $3\\ \\text{cm}$ detrás del espejo). Con la ecuación del espejo:\n$$\\dfrac{1}{-12}+\\dfrac{1}{3}=\\dfrac{1}{f}\\ \\Rightarrow\\ \\dfrac{-1+4}{12}=\\dfrac{3}{12}=\\dfrac{1}{4}=\\dfrac{1}{f}\\ \\Rightarrow\\ f=4\\ \\text{cm}$$\nY como $f=R/2$:\n$$R=2f=8\\ \\text{cm}$$\n\n**(b)** Se trazan dos rayos: uno paralelo al eje que, tras reflejarse, se aleja como si saliera del foco virtual $F$ (detrás del espejo); otro dirigido hacia el centro de curvatura $C$ que vuelve sobre sí mismo. Sus prolongaciones detrás del espejo se cortan formando una imagen virtual, derecha y reducida a $3\\ \\text{cm}$ del vértice.",
+  "answer": "**(a)** Imagen virtual a $s'=3\\ \\text{cm}$ detrás del espejo; $f=4\\ \\text{cm}$ y $R=8\\ \\text{cm}$. **(b)** Diagrama con imagen virtual, derecha y menor.",
+  "common_errors": [
+   "Tomar el aumento negativo ($-1/4$): en un espejo convexo la imagen es derecha, $m>0$.",
+   "Confundir el signo de $f$ y $R$ (en convexo son positivos con este criterio).",
+   "Situar la imagen delante del espejo (real) en lugar de detrás (virtual)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-063",
+  "source": "Madrid · Modelo 2026",
+  "title": "Aumento lateral frente a distancia imagen en una lente · Madrid · Modelo 2026",
+  "statement": "Un sistema óptico está formado por un foco, un objeto, una lente y una pantalla. Se varía la distancia objeto–lente $s$ y se busca la posición de pantalla donde la imagen enfoca. Una gráfica muestra el aumento lateral $M$ frente a la distancia lente–pantalla $s'$.\n\n**(a)** Demuestre que $M=1-\\dfrac{s'}{f'}$.\n\n**(b)** Con los datos de la gráfica (que pasa por $M=-4$ para $s'=40\\ \\text{cm}$), determine la distancia focal y razone si la lente es convergente o divergente.\n\n**(c)** Determine la distancia objeto cuando $s'=40\\ \\text{cm}$ y $M=-4$. Realice el trazado de rayos.",
+  "knowns": [
+   "Punto de la gráfica: $M=-4$ cuando $s'=40\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a)** El aumento lateral es $M=\\dfrac{s'}{s}\\Rightarrow\\dfrac{1}{s}=\\dfrac{M}{s'}$. De la ecuación de la lente delgada $\\dfrac{1}{f'}=\\dfrac{1}{s'}-\\dfrac{1}{s}$:\n\n$$\\dfrac{1}{f'}=\\dfrac{1}{s'}-\\dfrac{M}{s'}=\\dfrac{1-M}{s'}\\Rightarrow 1-M=\\dfrac{s'}{f'}\\Rightarrow \\boxed{M=1-\\dfrac{s'}{f'}}$$\n\n**(b)** Con el punto $M=-4$, $s'=40\\ \\text{cm}$:\n\n$$f'=\\dfrac{s'}{1-M}=\\dfrac{40}{1-(-4)}=\\dfrac{40}{5}=8\\ \\text{cm}$$\n\nComo $f'>0$, la lente es **convergente**.\n\n**(c)** De $M=\\dfrac{s'}{s}$:\n\n$$s=\\dfrac{s'}{M}=\\dfrac{40}{-4}=-10\\ \\text{cm}$$\n\nEl objeto está a $10\\ \\text{cm}$ a la izquierda de la lente (más allá del foco, $f'=8\\ \\text{cm}$), formando imagen real invertida y mayor a $40\\ \\text{cm}$.",
+  "answer": "**(a)** $M=1-\\dfrac{s'}{f'}$. **(b)** $f'=8\\ \\text{cm}$, lente convergente. **(c)** $s=-10\\ \\text{cm}$ (objeto a 10 cm; imagen real invertida a 40 cm).",
+  "common_errors": [
+   "Confundir el signo del aumento o de $s$ (criterio DIN: objeto a la izquierda $s<0$).",
+   "Deducir que la lente es divergente por salir $M$ negativo; el signo de $M$ indica inversión, no el tipo de lente.",
+   "Despejar mal $s$ en $M=s'/s$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-064",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Espejo esférico cóncavo: imagen tres veces mayor · Madrid · Ordinaria 2024",
+  "statement": "La imagen de un objeto frente a un espejo cóncavo de $60\\ \\text{cm}$ de radio de curvatura es tres veces mayor que el objeto. Determine la posición del objeto y de la imagen si:\n\n**(a)** La imagen es invertida.\n\n**(b)** La imagen es derecha.",
+  "knowns": [
+   "$R=60\\ \\text{cm}\\Rightarrow f=R/2=30\\ \\text{cm}$ (cóncavo, $f=-30\\ \\text{cm}$)",
+   "$|M|=3$"
+  ],
+  "full_solution": "Criterio de signos para espejos: $\\dfrac{1}{s'}+\\dfrac{1}{s}=\\dfrac{1}{f}$ con $f=-30\\ \\text{cm}$ (cóncavo) y aumento $M=-\\dfrac{s'}{s}$.\n\n**(a) Imagen invertida (real):** $M=-3\\Rightarrow s'=3s$.\n$$\\dfrac{1}{3s}+\\dfrac{1}{s}=\\dfrac{1}{f}\\ \\Rightarrow\\ \\dfrac{4}{3s}=\\dfrac{1}{-30}\\ \\Rightarrow\\ s=-40\\ \\text{cm},\\quad s'=-120\\ \\text{cm}$$\nObjeto a $40\\ \\text{cm}$ del espejo; imagen real, invertida y triple a $120\\ \\text{cm}$ (mismo lado que el objeto).\n\n**(b) Imagen derecha (virtual):** $M=+3\\Rightarrow s'=-3s$.\n$$\\dfrac{1}{-3s}+\\dfrac{1}{s}=\\dfrac{1}{f}\\ \\Rightarrow\\ \\dfrac{2}{3s}=\\dfrac{1}{-30}\\ \\Rightarrow\\ s=-20\\ \\text{cm},\\quad s'=60\\ \\text{cm}$$\nObjeto a $20\\ \\text{cm}$; imagen virtual, derecha y triple a $60\\ \\text{cm}$ detrás del espejo.",
+  "answer": "**(a)** $s=-40\\ \\text{cm}$, $s'=-120\\ \\text{cm}$ (real, invertida).  **(b)** $s=-20\\ \\text{cm}$, $s'=+60\\ \\text{cm}$ (virtual, derecha).",
+  "common_errors": [
+   "Usar $f=+30\\ \\text{cm}$ para el espejo cóncavo (en este criterio es negativo).",
+   "No distinguir $M=-3$ (invertida/real) de $M=+3$ (derecha/virtual).",
+   "Confundir el radio $R=60\\ \\text{cm}$ con la focal (es $f=R/2=30\\ \\text{cm}$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-065",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Refracción de luz magenta (violeta y roja) en vidrio · Madrid · Ordinaria 2024",
+  "statement": "Un rayo de luz magenta (violeta $f_V=7{,}8\\cdot10^{14}\\ \\text{Hz}$ y roja $f_R=4{,}2\\cdot10^{14}\\ \\text{Hz}$) incide desde el aire sobre vidrio con ángulo de $30^\\circ$. Los índices del vidrio son $n_V=1{,}53$ y $n_R=1{,}38$.\n\n**(a)** Obtenga las longitudes de onda de los rayos reflejados y transmitidos para la luz violeta y la roja.\n\n**(b)** Calcule el ángulo entre los rayos violeta y rojo reflejados, y entre los transmitidos.",
+  "knowns": [
+   "$f_V=7{,}8\\cdot10^{14}\\ \\text{Hz}$",
+   "$f_R=4{,}2\\cdot10^{14}\\ \\text{Hz}$",
+   "$\\theta_i=30^\\circ$",
+   "$n_V=1{,}53$, $n_R=1{,}38$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a) Longitudes de onda**\n\nLos rayos reflejados viajan en el aire, con $\\lambda=c/f$:\n$$\\lambda_V^{\\text{aire}}=\\dfrac{3\\cdot10^{8}}{7{,}8\\cdot10^{14}}=385\\ \\text{nm};\\qquad \\lambda_R^{\\text{aire}}=\\dfrac{3\\cdot10^{8}}{4{,}2\\cdot10^{14}}=714\\ \\text{nm}$$\nLos transmitidos van en el vidrio: $\\lambda=\\lambda^{\\text{aire}}/n$:\n$$\\lambda_V^{\\text{vidrio}}=\\dfrac{385}{1{,}53}=251\\ \\text{nm};\\qquad \\lambda_R^{\\text{vidrio}}=\\dfrac{714}{1{,}38}=518\\ \\text{nm}$$\n\n**(b) Ángulos**\n\nReflejados: el ángulo de reflexión es igual al de incidencia ($30^\\circ$) para ambos colores, independiente de la frecuencia, así que forman $0^\\circ$ (son paralelos).\n\nTransmitidos (Snell $\\sin\\theta_r=\\sin30^\\circ/n$):\n$$\\theta_V=\\arcsin\\dfrac{0{,}5}{1{,}53}=19{,}1^\\circ;\\qquad \\theta_R=\\arcsin\\dfrac{0{,}5}{1{,}38}=21{,}2^\\circ$$\nÁngulo entre transmitidos: $\\theta_R-\\theta_V=2{,}2^\\circ$.",
+  "answer": "**(a)** Reflejados $385\\ \\text{nm}$ (violeta) y $714\\ \\text{nm}$ (roja); transmitidos $251\\ \\text{nm}$ (violeta) y $518\\ \\text{nm}$ (roja).  **(b)** Reflejados: $0^\\circ$ (paralelos); transmitidos: $\\approx2{,}2^\\circ$.",
+  "common_errors": [
+   "Aplicar el índice $n$ a la onda reflejada (que sigue en el aire).",
+   "Creer que el ángulo de reflexión depende del color.",
+   "Olvidar que la frecuencia no cambia de medio; cambia $\\lambda$ y $v$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-066",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Aumento lateral de una lente delgada: demostración y lente divergente · Madrid · Ordinaria 2025",
+  "statement": "Considere la imagen formada por una lente delgada de distancia focal $f'$ de un objeto situado a una distancia $s$ a la izquierda de la lente.\n\n**(a)** Demuestre que el aumento lateral $M$ tiene la expresión $M = \\dfrac{f'}{f' + s}$.\n\n**(b)** Razone si una lente divergente puede formar una imagen invertida.\n\n**(c)** Dibuje el trazado de rayos de la imagen formada por una lente divergente si el objeto se sitúa a una distancia doble de su distancia focal.",
+  "knowns": [
+   "Lente delgada, distancia focal $f'$",
+   "Objeto real a la izquierda, posición $s$ (con $s<0$)"
+  ],
+  "full_solution": "**(a)** Partimos de la ecuación gaussiana $\\dfrac{1}{s'} - \\dfrac{1}{s} = \\dfrac{1}{f'}$. Despejando $s'$:\n$$s' = \\dfrac{1}{\\tfrac{1}{f'} + \\tfrac{1}{s}} = \\dfrac{f'\\,s}{f' + s}.$$\nEl aumento lateral es $M = \\dfrac{s'}{s}$, luego:\n$$M = \\dfrac{1}{s}\\cdot\\dfrac{f'\\,s}{f' + s} = \\dfrac{f'}{f' + s}.$$\n\n**(b)** Para un objeto real a la izquierda, $s < 0$. En una lente **divergente**, $f' < 0$. Entonces el numerador $f'$ es negativo y el denominador $f' + s$ también es negativo (suma de dos negativos), de modo que su cociente $M$ es **positivo**. Un aumento positivo significa imagen **derecha**: por tanto una lente divergente **nunca** forma una imagen invertida (con objeto real).\n\n**(c)** Con el objeto a $2f$ de una lente divergente: un rayo paralelo al eje emerge como si procediera del foco imagen $F'$ (situado del lado del objeto); un rayo que pasa por el centro óptico no se desvía. Las prolongaciones hacia atrás de los rayos emergentes se cortan entre la lente y el foco, dando una imagen **virtual, derecha y menor** que el objeto.",
+  "answer": "**(a)** $M = \\dfrac{f'}{f' + s}$. **(b)** No: con objeto real y $f'<0$, $M>0$ (imagen siempre derecha). **(c)** Imagen virtual, derecha y menor, entre la lente y el foco.",
+  "common_errors": [
+   "Errores de signo al despejar $s'$ en la ecuación de la lente.",
+   "Olvidar que para la lente divergente $f'<0$ al razonar el signo de $M$.",
+   "Dibujar una imagen real para una lente divergente (siempre da imagen virtual con objeto real)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-067",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Lámina de vidrio sobre agua: refracción, espesor y reflexión total · Madrid · Ordinaria 2025",
+  "statement": "Una lámina de vidrio ($n_{vidrio}=1{,}55$) de espesor $d$ flota sobre agua ($n_{agua}=1{,}33$); encima hay aire. Un rayo de luz monocromática de $f=7\\cdot10^{14}\\ \\text{Hz}$ incide desde el agua hacia el vidrio con $\\alpha=40^\\circ$; entre la entrada $(A)$ y la salida $(B)$ por la lámina hay $2\\ \\text{cm}$ de desplazamiento horizontal.\n\n**(a)** Las longitudes de onda del rayo en el agua y en el vidrio.\n**(b)** El espesor $d$ del vidrio y el tiempo que tarda el rayo en atravesarlo.\n**(c)** El ángulo de incidencia mínimo en la interfase agua-vidrio para que la luz no salga al aire.",
+  "knowns": [
+   "$n_{vidrio}=1{,}55$, $n_{agua}=1{,}33$, $n_{aire}=1$",
+   "$f = 7\\cdot10^{14}\\ \\text{Hz}$, $\\alpha = 40^\\circ$",
+   "desplazamiento horizontal en la lámina $= 2\\ \\text{cm}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$"
+  ],
+  "full_solution": "**(a) Longitudes de onda.**\n$\\lambda = v/f = c/(n f)$:\n$$\\lambda_{agua} = \\dfrac{3\\cdot10^{8}}{1{,}33\\cdot7\\cdot10^{14}} = 3{,}22\\cdot10^{-7}\\ \\text{m} = 322\\ \\text{nm}$$\n$$\\lambda_{vidrio} = \\dfrac{3\\cdot10^{8}}{1{,}55\\cdot7\\cdot10^{14}} = 2{,}76\\cdot10^{-7}\\ \\text{m} = 276\\ \\text{nm}$$\n\n**(b) Espesor $d$ y tiempo.**\nLey de Snell en agua-vidrio:\n$$n_{agua}\\sin40^\\circ = n_{vidrio}\\sin\\beta\\ \\Rightarrow\\ \\sin\\beta = \\dfrac{1{,}33\\sin40^\\circ}{1{,}55}\\ \\Rightarrow\\ \\beta = 33{,}5^\\circ$$\nEl rayo cruza con ángulo $\\beta$ respecto a la normal (vertical). El desplazamiento horizontal se relaciona con $d$:\n$$\\tan\\beta = \\dfrac{2\\ \\text{cm}}{d}\\ \\Rightarrow\\ d = \\dfrac{2}{\\tan33{,}5^\\circ} = 3{,}02\\ \\text{cm}$$\nRecorrido dentro del vidrio: $d_{AB}=\\sqrt{d^2+2^2} = \\sqrt{3{,}02^2+2^2} = 3{,}63\\ \\text{cm}$.\n$$t = \\dfrac{d_{AB}}{v_{vidrio}} = \\dfrac{3{,}63\\cdot10^{-2}}{\\,c/1{,}55\\,} = 1{,}88\\cdot10^{-10}\\ \\text{s}$$\n\n**(c) Ángulo mínimo para reflexión total hacia el aire.**\nEn vidrio-aire el ángulo límite cumple $n_{vidrio}\\sin\\beta_L = 1$. Para que el rayo llegue al vidrio con ese $\\beta_L$, por Snell en agua-vidrio $n_{agua}\\sin\\beta_{min}=n_{vidrio}\\sin\\beta_L = 1$:\n$$\\sin\\beta_{min} = \\dfrac{1}{n_{agua}} = \\dfrac{1}{1{,}33}\\ \\Rightarrow\\ \\beta_{min} = 48{,}8^\\circ$$",
+  "answer": "$\\lambda_{agua} = 322\\ \\text{nm}$, $\\lambda_{vidrio} = 276\\ \\text{nm}$.\n$d = 3{,}02\\ \\text{cm}$, $t = 1{,}88\\cdot10^{-10}\\ \\text{s}$.\n$\\beta_{min} = 48{,}8^\\circ$ en la interfase agua-vidrio.",
+  "common_errors": [
+   "Calcular $\\lambda$ con la velocidad en el vacío: dentro del medio $\\lambda=c/(nf)$.",
+   "Relacionar mal el desplazamiento horizontal con $d$: $\\tan\\beta = (\\text{horizontal})/d$.",
+   "En (c) aplicar la reflexión total sólo a una interfase; hay que encadenar agua-vidrio y vidrio-aire."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-068",
+  "source": "Madrid · Ordinaria 2026",
+  "title": "Espejo esférico cóncavo: posición, tamaño de imagen y aumento −1 · Madrid · Ordinaria 2026",
+  "statement": "Un espejo esférico cóncavo tiene radio de curvatura $30\\ \\text{cm}$; un objeto de $5\\ \\text{cm}$ de altura se sitúa a $40\\ \\text{cm}$ del espejo.\n\n**(a)** La posición y el tamaño de la imagen.\n**(b)** El diagrama de rayos.\n**(c)** La posición del objeto para que la imagen sea invertida y del mismo tamaño.",
+  "knowns": [
+   "$R = -30\\ \\text{cm}$ (cóncavo), $f = R/2 = -15\\ \\text{cm}$",
+   "$s = -40\\ \\text{cm}$ (objeto a la izquierda)",
+   "$y = 5\\ \\text{cm}$"
+  ],
+  "full_solution": "**(a) Posición y tamaño (convenio de signos: luz incidente hacia $-$).**\nEcuación del espejo $\\dfrac{1}{s'}+\\dfrac{1}{s}=\\dfrac{2}{R}$:\n$$\\dfrac{1}{s'} = \\dfrac{2}{R}-\\dfrac{1}{s} = \\dfrac{2}{-30}-\\dfrac{1}{-40} = -\\dfrac{1}{24}\\ \\Rightarrow\\ s' = -24\\ \\text{cm}$$\nImagen a $24\\ \\text{cm}$ delante del espejo (real). Aumento lateral:\n$$M = -\\dfrac{s'}{s} = -\\dfrac{-24}{-40} = -0{,}6\\ \\Rightarrow\\ y' = M\\,y = -3\\ \\text{cm}$$\nEl signo negativo indica imagen **invertida** (y real, por estar $s'<0$, del lado del objeto).\n\n**(b) Diagrama de rayos.**\nCon el objeto más allá del centro de curvatura $C$ (a $30\\ \\text{cm}$), la imagen es real, invertida y menor, situada entre $C$ y el foco $F$. Se trazan: rayo paralelo al eje que se refleja pasando por $F$; rayo que pasa por $C$ y vuelve sobre sí mismo; su corte da la imagen.\n\n**(c) Imagen invertida y del mismo tamaño.**\nExigimos $M=-1$, es decir $s'=s$. En la ecuación del espejo:\n$$\\dfrac{1}{s}+\\dfrac{1}{s}=\\dfrac{2}{R}\\ \\Rightarrow\\ s = R = -30\\ \\text{cm}$$\nEl objeto debe situarse en el centro de curvatura, a $30\\ \\text{cm}$ del espejo.",
+  "answer": "$s'=-24\\ \\text{cm}$ (imagen real a $24\\ \\text{cm}$), $y'=-3\\ \\text{cm}$ (invertida, menor), $M=-0{,}6$.\nPara imagen invertida e igual: objeto en el centro de curvatura, a $30\\ \\text{cm}$.",
+  "common_errors": [
+   "Mezclar convenios de signos: mantener coherente $s<0$ para objeto real y $f=R/2<0$ en espejo cóncavo.",
+   "Dar la imagen como virtual: $s'<0$ aquí significa imagen real, delante del espejo.",
+   "Para $M=-1$ olvidar que implica $s=s'=R$ (objeto en $C$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-069",
+  "source": "Murcia · Extraordinaria 2020",
+  "title": "Cambio de medio de un rayo de luz (n = 1 a n' = 2) · Murcia · Extraordinaria 2020",
+  "statement": "Un rayo de luz pasa de un medio de índice de refracción $n=1$ a otro de índice $n'=2$. Analice razonadamente cómo cambian la velocidad de propagación, la frecuencia y la longitud de onda del rayo al cambiar de medio.",
+  "knowns": [
+   "$n=1$",
+   "$n'=2$"
+  ],
+  "full_solution": "El índice de refracción es $n=\\dfrac{c}{v}$. Como $n'=2n$:\n$$\\dfrac{n'}{n}=\\dfrac{v}{v'}=2\\ \\Rightarrow\\ v'=\\dfrac{v}{2}$$\nLa velocidad se reduce a la mitad.\n\nLa **frecuencia no cambia**: la impone el foco emisor y está ligada a la energía del fotón, que no varía al cambiar de medio.\n\nComo $v=\\lambda f$ y $f$ es constante:\n$$\\dfrac{\\lambda'}{\\lambda}=\\dfrac{v'}{v}=\\dfrac12\\ \\Rightarrow\\ \\lambda'=\\dfrac{\\lambda}{2}$$\nLa longitud de onda también se reduce a la mitad.",
+  "answer": "La velocidad y la longitud de onda se reducen a la mitad ($v'=v/2$, $\\lambda'=\\lambda/2$); la frecuencia no cambia.",
+  "common_errors": [
+   "Pensar que la frecuencia cambia al pasar a otro medio.",
+   "Confundir la relación $n=c/v$ (a mayor $n$, menor $v$).",
+   "Creer que $\\lambda$ no cambia."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-070",
+  "source": "Murcia · Extraordinaria 2020",
+  "title": "Lente delgada: velocidad, radio y posición de la imagen · Murcia · Extraordinaria 2020",
+  "statement": "Una lente delgada de índice $n=1{,}5$ y potencia $P=2{,}5\\ \\text{D}$ tiene su primera cara de radio $r_1=0{,}3\\ \\text{m}$.\n\n**(a)** Calcule la velocidad de la luz en el material de la lente.\n\n**(b)** Calcule el radio de la segunda cara $r_2$.\n\n**(c)** Un objeto se coloca a $0{,}6\\ \\text{m}$ delante de la lente ($s=-0{,}6\\ \\text{m}$). Calcule la posición de la imagen e indique si es real o virtual.",
+  "knowns": [
+   "$n=1{,}5$",
+   "$P=2{,}5\\ \\text{D}$",
+   "$r_1=0{,}3\\ \\text{m}$",
+   "$s=-0{,}6\\ \\text{m}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** Velocidad de la luz en el vidrio:\n$$v=\\dfrac{c}{n}=\\dfrac{3\\cdot10^{8}}{1{,}5}=2\\cdot10^{8}\\ \\text{m·s}^{-1}$$\n\n**(b)** Ecuación del constructor de lentes $P=(n-1)\\!\\left(\\dfrac{1}{r_1}-\\dfrac{1}{r_2}\\right)$. Despejando $r_2$:\n$$\\dfrac{1}{r_2}=\\dfrac{1}{r_1}-\\dfrac{P}{n-1}=\\dfrac{1}{0{,}3}-\\dfrac{2{,}5}{0{,}5}=3{,}33-5=-1{,}67\\ \\Rightarrow\\ r_2=-0{,}6\\ \\text{m}=-60\\ \\text{cm}$$\n\n**(c)** Ecuación de la lente $\\dfrac{1}{s'}-\\dfrac{1}{s}=P$:\n$$\\dfrac{1}{s'}=P+\\dfrac{1}{s}=2{,}5+\\dfrac{1}{-0{,}6}=2{,}5-1{,}67=0{,}833\\ \\Rightarrow\\ s'=1{,}2\\ \\text{m}$$\nComo $s'>0$, la imagen está al otro lado de la lente: es **real**.",
+  "answer": "**(a)** $v=2\\cdot10^{8}\\ \\text{m·s}^{-1}$.  **(b)** $r_2=-0{,}6\\ \\text{m}$.  **(c)** $s'=1{,}2\\ \\text{m}$, imagen real.",
+  "common_errors": [
+   "Confundir potencia y focal, o no usar $P=1/f'$.",
+   "Errores de signo en el constructor de lentes (radios).",
+   "Interpretar mal el signo de $s'$ (positivo = imagen real al otro lado)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-071",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Defectos de la visión: ametropías (teoría) · Murcia · Extraordinaria 2024",
+  "statement": "**Teoría T3.** Describa los principales defectos de la visión (ametropías) y su corrección.",
+  "full_solution": "En el ojo emétrope (normal) la imagen de los objetos se forma nítidamente sobre la retina. Las **ametropías** son defectos en que esto no ocurre:\n\n- **Miopía**: el ojo es demasiado convergente o el globo ocular muy largo; la imagen de objetos lejanos se forma *antes* de la retina. El punto remoto está a distancia finita. Se corrige con **lentes divergentes** (potencia negativa).\n\n- **Hipermetropía**: el ojo es poco convergente o el globo muy corto; la imagen se formaría *detrás* de la retina. Dificulta la visión cercana. Se corrige con **lentes convergentes** (potencia positiva).\n\n- **Presbicia (vista cansada)**: pérdida de capacidad de acomodación del cristalino con la edad; el punto próximo se aleja. Se corrige con lentes convergentes para la visión cercana.\n\n- **Astigmatismo**: la córnea no es esférica (distintas curvaturas), dando imágenes deformadas. Se corrige con **lentes cilíndricas**.",
+  "answer": "Miopía (imagen antes de la retina, lente divergente), hipermetropía (imagen tras la retina, lente convergente), presbicia (pérdida de acomodación, lente convergente de cerca) y astigmatismo (córnea no esférica, lente cilíndrica).",
+  "common_errors": [
+   "Intercambiar la corrección de miopía (divergente) e hipermetropía (convergente).",
+   "Confundir presbicia con hipermetropía.",
+   "No mencionar que el astigmatismo se corrige con lentes cilíndricas."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-072",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Lámina entre dos medios: condición para que el rayo se acerque a la normal · Murcia · Extraordinaria 2024",
+  "statement": "**Cuestión C2.** Una lámina de índice $n_2$ está rodeada por medios de índices $n_1$ y $n_3$. Un rayo incide con ángulo $\\theta_1$ y sale con $\\theta_3$. Justifique qué condición debe cumplirse para que $\\theta_3<\\theta_1$: a) $n_1>n_3$; b) $n_3>n_1$; c) $n_1>n_2$.",
+  "full_solution": "Aplicando la ley de Snell en las dos caras paralelas de la lámina:\n\n$$n_1\\operatorname{sen}\\theta_1=n_2\\operatorname{sen}\\theta_2=n_3\\operatorname{sen}\\theta_3$$\n\nDe los extremos se obtiene directamente, sin que importe $n_2$:\n\n$$n_1\\operatorname{sen}\\theta_1=n_3\\operatorname{sen}\\theta_3\\ \\Rightarrow\\ \\operatorname{sen}\\theta_3=\\dfrac{n_1}{n_3}\\operatorname{sen}\\theta_1$$\n\nPara que $\\theta_3<\\theta_1$ se necesita $\\operatorname{sen}\\theta_3<\\operatorname{sen}\\theta_1$, es decir $\\dfrac{n_1}{n_3}<1$, o sea:\n\n$$n_3>n_1$$\n\nLa respuesta correcta es la **b)**. El índice intermedio $n_2$ no influye en la relación entre $\\theta_1$ y $\\theta_3$.",
+  "answer": "Opción **b)** $n_3>n_1$. De $n_1\\operatorname{sen}\\theta_1=n_3\\operatorname{sen}\\theta_3$, si $n_3>n_1$ entonces $\\theta_3<\\theta_1$; el índice $n_2$ es irrelevante.",
+  "common_errors": [
+   "Pensar que el índice de la lámina $n_2$ influye en los ángulos de entrada y salida.",
+   "Invertir la relación: $\theta_3<\theta_1$ exige $n_3>n_1$, no $n_1>n_3$.",
+   "Confundir el acercamiento a la normal con el índice del medio incidente."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-073",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Objeto en el foco imagen de una lente divergente · Murcia · Extraordinaria 2024",
+  "statement": "**Cuestión C3.** Se coloca un objeto en el punto focal imagen de una lente divergente. Mediante un diagrama de rayos, indique las características de la imagen (mayor/menor/igual, derecha/invertida, real/virtual).",
+  "full_solution": "El foco imagen de una lente divergente está en el lado del objeto (es virtual), a distancia $|f|$. Colocar el objeto allí significa $s=-|f|$. Con $f'=-|f|$ y la ecuación $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$:\n\n$$\\dfrac{1}{s'}=\\dfrac{1}{f'}+\\dfrac{1}{s}=\\dfrac{1}{-|f|}+\\dfrac{1}{-|f|}=-\\dfrac{2}{|f|}\\ \\Rightarrow\\ s'=-\\dfrac{|f|}{2}$$\n\nEl aumento lateral es:\n\n$$M=\\dfrac{s'}{s}=\\dfrac{-|f|/2}{-|f|}=\\dfrac{1}{2}$$\n\nPor tanto la imagen es **virtual** ($s'<0$), **derecha** ($M>0$) y **menor** (la mitad del tamaño, $|M|=1/2$). Toda lente divergente con objeto real da siempre imagen virtual, derecha y reducida.\n\n**Trazado de rayos**: un rayo paralelo al eje emerge divergiendo como si procediese del foco imagen; un rayo que pasa por el centro óptico no se desvía; sus prolongaciones hacia atrás se cortan formando la imagen virtual reducida.",
+  "answer": "Imagen virtual, derecha y menor (tamaño mitad, $M=1/2$), situada a $|f|/2$ del mismo lado que el objeto.",
+  "common_errors": [
+   "Usar focal positiva para la lente divergente.",
+   "Interpretar $s'<0$ como imagen real.",
+   "Esperar imagen invertida (la divergente da siempre imagen derecha con objeto real)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-074",
+  "source": "Murcia · Modelo 2026",
+  "title": "Ángulo límite en el diamante y agudeza visual del ojo · Murcia · Modelo 2026",
+  "statement": "**(a)** (i) Explique el ángulo límite y deduzca su expresión para la refracción entre medios $n_1$ y $n_2$ ($n_1>n_2$). (ii) Si el ángulo límite diamante-aire es $25^\\circ$, calcule la velocidad de la luz en el diamante.\n\n**(b)** Una persona distingue objetos que forman imagen de al menos $4\\ \\mu\\text{m}$ en la retina, situada a $24\\ \\text{mm}$ de la lente del ojo (modelo de lente delgada en aire). ¿A qué distancia máxima puede leer letras de $1\\ \\text{mm}$? ¿Cuál es la potencia de la lente?",
+  "knowns": [
+   "$\\theta_L=25^\\circ$ (diamante-aire), $n_{aire}=1$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "Tamaño mínimo en retina $y'=4\\ \\mu\\text{m}$",
+   "Distancia lente-retina $s'=24\\ \\text{mm}$",
+   "Tamaño de la letra $y=1\\ \\text{mm}$"
+  ],
+  "full_solution": "**(a) (i)** El ángulo límite $\\theta_L$ es el ángulo de incidencia (en el medio más denso $n_1$) para el que el rayo refractado emerge rasante ($90^\\circ$) en el medio menos denso $n_2$. Por Snell $n_1\\,\\text{sen}\\,\\theta_L=n_2\\,\\text{sen}\\,90^\\circ$:\n\n$$\\text{sen}\\,\\theta_L=\\dfrac{n_2}{n_1}$$\n\nPara incidencias mayores hay reflexión total.\n\n**(ii)** Diamante-aire: $\\text{sen}\\,25^\\circ=\\dfrac{1}{n_{diam}}\\Rightarrow n_{diam}=\\dfrac{1}{\\text{sen}\\,25^\\circ}=2{,}37$.\n\n$$v_{diam}=\\dfrac{c}{n_{diam}}=\\dfrac{3\\cdot10^{8}}{2{,}37}=1{,}27\\cdot10^{8}\\ \\text{m/s}$$\n\n**(b)** El aumento lateral es $\\left|\\dfrac{y'}{y}\\right|=\\dfrac{s'}{s}$ (tamaños y distancias):\n\n$$s=s'\\,\\dfrac{y}{y'}=0{,}024\\cdot\\dfrac{1\\cdot10^{-3}}{4\\cdot10^{-6}}=6\\ \\text{m}$$\n\nDistancia máxima de lectura $\\approx6\\ \\text{m}$. La potencia de la lente (objeto a $6\\ \\text{m}$, imagen en la retina a $24\\ \\text{mm}$):\n\n$$P=\\dfrac{1}{s'}+\\dfrac{1}{s}=\\dfrac{1}{0{,}024}+\\dfrac{1}{6}=41{,}8\\ \\text{dioptrías}$$",
+  "answer": "**(a)** $\\text{sen}\\,\\theta_L=n_2/n_1$; $n_{diam}=1/\\text{sen}\\,25^\\circ\\approx2{,}37$, $v=c/n\\approx1{,}27\\cdot10^{8}\\ \\text{m/s}$. **(b)** Distancia máxima $s=s'\\,y/y'=6\\ \\text{m}$; $P\\approx41{,}8\\ \\text{dioptrías}$.",
+  "common_errors": [
+   "Invertir el cociente en $\\text{sen}\\,\\theta_L=n_2/n_1$.",
+   "No relacionar tamaños y distancias por el mismo aumento $y'/y=s'/s$.",
+   "Mezclar unidades (mm, $\\mu$m, m) al calcular la potencia."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-075",
+  "source": "Murcia · Ordinaria 2020",
+  "title": "Lente convergente como lupa: imagen de un objeto próximo · Murcia · Ordinaria 2020",
+  "statement": "Una lente delgada de potencia $P=50\\ \\text{dioptrías}$ tiene delante, a $1\\ \\text{cm}$, un objeto de altura $7\\ \\text{mm}$. Determine la posición de la imagen y su tamaño.",
+  "knowns": [
+   "$P=50\\ \\text{D}$ (es decir $f'=1/P=2\\ \\text{cm}$)",
+   "$s=-1\\ \\text{cm}=-0{,}01\\ \\text{m}$",
+   "$y=7\\ \\text{mm}$"
+  ],
+  "full_solution": "Ecuación de la lente delgada (criterio de signos, con $P=1/f'$):\n$$\\dfrac{1}{s'}-\\dfrac{1}{s}=P\\ \\Rightarrow\\ \\dfrac{1}{s'}=P+\\dfrac{1}{s}=50+\\dfrac{1}{-0{,}01}=50-100=-50\\ \\text{m}^{-1}$$\n$$s'=-0{,}02\\ \\text{m}=-2\\ \\text{cm}$$\nEl signo negativo indica una imagen virtual, al mismo lado que el objeto. El aumento lateral:\n$$A=\\dfrac{y'}{y}=\\dfrac{s'}{s}=\\dfrac{-0{,}02}{-0{,}01}=2$$\n$$y'=2\\cdot7\\ \\text{mm}=14\\ \\text{mm}$$\nLa lente actúa como una lupa: imagen virtual, derecha y de doble tamaño.",
+  "answer": "$s'=-2\\ \\text{cm}$ (imagen virtual, al mismo lado que el objeto); $A=2$, por lo que $y'=14\\ \\text{mm}$ (derecha y aumentada).",
+  "common_errors": [
+   "Confundir la potencia con la distancia focal (usar $50\\ \\text{m}$ en vez de $f'=0{,}02\\ \\text{m}$).",
+   "Equivocar el criterio de signos: $\\tfrac{1}{s'}-\\tfrac{1}{s}=P$ con $s<0$.",
+   "Dar la imagen como real (al otro lado) cuando el objeto está dentro de la distancia focal."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-076",
+  "source": "Murcia · Ordinaria 2020",
+  "title": "Ángulo de refracción máximo en el paso aire-agua · Murcia · Ordinaria 2020",
+  "statement": "Un rayo de luz pasa del aire ($n_1=1$) al agua ($n_2=1{,}33$). Determine el mayor ángulo de refracción posible dentro del agua y razone en qué situación se produce.",
+  "knowns": [
+   "$n_1=1$ (aire)",
+   "$n_2=1{,}33$ (agua)"
+  ],
+  "full_solution": "Por la ley de Snell, $n_1\\,\\mathrm{sen}\\,\\hat{\\imath}=n_2\\,\\mathrm{sen}\\,\\hat{r}$. El ángulo de refracción crece con el de incidencia, de modo que el mayor $\\hat{r}$ se obtiene con la incidencia máxima posible, $\\hat{\\imath}=90^\\circ$ (rasante):\n$$\\mathrm{sen}\\,\\hat{r}_{\\max}=\\dfrac{n_1}{n_2}\\,\\mathrm{sen}\\,90^\\circ=\\dfrac{1}{1{,}33}=0{,}752$$\n$$\\hat{r}_{\\max}=\\arcsin(0{,}752)=48{,}8^\\circ$$\nNingún rayo que entre en el agua desde el aire puede refractarse con un ángulo mayor que este (es el ángulo límite del par aire-agua).",
+  "answer": "$\\hat{r}_{\\max}=\\arcsin\\!\\left(\\dfrac{1}{1{,}33}\\right)\\approx 48{,}8^\\circ$, cuando la incidencia es rasante ($\\hat{\\imath}=90^\\circ$).",
+  "common_errors": [
+   "Invertir el cociente de índices ($n_2/n_1$) en la ley de Snell.",
+   "Confundir este ángulo (refracción máxima aire$\\to$agua) con el ángulo límite de reflexión total (agua$\\to$aire).",
+   "Trabajar con la calculadora en radianes al hacer el arcoseno."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-077",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Lente planoconvexa de una cámara fotográfica · Murcia · Ordinaria 2024",
+  "statement": "**Problema P3.** Una lente de cámara tiene focal $50\\ \\text{mm}$, índice $1{,}6$ y es planoconvexa.\n\n**(a)** Determine el radio de curvatura de la cara curva.\n\n**(b)** ¿A qué distancia de la lente hay que poner un objeto para que su imagen tenga la mitad de tamaño (en valor absoluto)?\n\n**(c)** Si un rayo incide desde el aire sobre la cara plana con $45^\\circ$ respecto a la normal, ¿qué ángulo forma dentro de la lente con la normal?",
+  "knowns": [
+   "$f' = 50\\ \\text{mm} = 0{,}05\\ \\text{m}$",
+   "$n = 1{,}6$",
+   "lente planoconvexa",
+   "$|M| = 1/2$",
+   "$\\theta_i = 45^\\circ$"
+  ],
+  "full_solution": "**(a)** Ecuación del constructor de lentes. Planoconvexa: una cara plana ($R_1\\to\\infty$) y una curva de radio $R$:\n\n$$\\dfrac{1}{f'}=(n-1)\\left(\\dfrac{1}{R_1}-\\dfrac{1}{R_2}\\right)\\ \\Rightarrow\\ \\dfrac{1}{f'}=\\dfrac{n-1}{R}\\ \\Rightarrow\\ R=(n-1)\\,f'=(1{,}6-1)\\cdot50=30\\ \\text{mm}$$\n\n**(b)** Imagen reducida y real (lente convergente): $M=\\dfrac{s'}{s}=-\\dfrac12$, luego $s'=-\\dfrac{s}{2}$. Sustituyendo en $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$:\n\n$$-\\dfrac{2}{s}-\\dfrac{1}{s}=\\dfrac{1}{f'}\\ \\Rightarrow\\ -\\dfrac{3}{s}=\\dfrac{1}{f'}\\ \\Rightarrow\\ s=-3f'=-150\\ \\text{mm}$$\n\nEl objeto debe colocarse a $150\\ \\text{mm}=15\\ \\text{cm}$ delante de la lente (la imagen se forma a $s'=75\\ \\text{mm}$).\n\n**(c)** Ley de Snell en la cara plana, aire→vidrio:\n\n$$\\operatorname{sen}45^\\circ=n\\operatorname{sen}\\theta\\ \\Rightarrow\\ \\operatorname{sen}\\theta=\\dfrac{\\operatorname{sen}45^\\circ}{1{,}6}=0{,}442\\ \\Rightarrow\\ \\theta=26{,}2^\\circ$$",
+  "answer": "**(a)** $R=30\\ \\text{mm}$. **(b)** objeto a $150\\ \\text{mm}=15\\ \\text{cm}$ (imagen real reducida a $75\\ \\text{mm}$). **(c)** $\\theta\\approx26{,}2^\\circ$.",
+  "common_errors": [
+   "No anular un término ($1/R\to0$) para la cara plana en la ecuación del constructor.",
+   "Tomar $M=+1/2$ (imagen derecha) cuando una lente convergente da imagen real invertida reducida.",
+   "Aplicar Snell como $n\\operatorname{sen}45^\\circ=\\operatorname{sen}\theta$ (sentido invertido)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-OPT-078",
+  "source": "Madrid · Modelo 2007",
+  "title": "Imagen y aumento de una lente divergente · Madrid · Modelo 2007",
+  "statement": "Determina el tipo de imagen y el aumento lateral que produce una **lente divergente** de distancia focal $|f|$ al situar un objeto:\n\n**a)** a una distancia igual al doble de la distancia focal.\n\n**b)** a una distancia igual a la mitad de la distancia focal.\n\nEfectúa además la construcción geométrica en ambos casos.",
+  "knowns": [
+   "Lente divergente: $f'=-|f|$ (potencia negativa)"
+  ],
+  "full_solution": "Convenio de signos (origen en la lente, luz de izquierda a derecha; objeto real $s<0$). Lente divergente: $f'=-|f|$. Ecuación: $\\dfrac{1}{s'}-\\dfrac{1}{s}=\\dfrac{1}{f'}$ y aumento $\\beta=\\dfrac{s'}{s}$.\n\n**(a)** Objeto a $2|f|$: $s=-2|f|$.\n$$\\dfrac{1}{s'}=\\dfrac{1}{f'}+\\dfrac{1}{s}=\\dfrac{1}{-|f|}+\\dfrac{1}{-2|f|}=-\\dfrac{3}{2|f|}\\ \\Rightarrow\\ s'=-\\dfrac{2|f|}{3}.$$\n$$\\beta=\\dfrac{s'}{s}=\\dfrac{-2|f|/3}{-2|f|}=+\\dfrac{1}{3}.$$\nImagen **virtual, derecha y menor** ($\\beta=+1/3$).\n\n**(b)** Objeto a $|f|/2$: $s=-|f|/2$.\n$$\\dfrac{1}{s'}=\\dfrac{1}{-|f|}+\\dfrac{1}{-|f|/2}=-\\dfrac{3}{|f|}\\ \\Rightarrow\\ s'=-\\dfrac{|f|}{3}.$$\n$$\\beta=\\dfrac{s'}{s}=\\dfrac{-|f|/3}{-|f|/2}=+\\dfrac{2}{3}.$$\nImagen **virtual, derecha y menor** ($\\beta=+2/3$).\n\nEn ambos casos la lente divergente da una imagen virtual, derecha y de menor tamaño, situada entre el objeto y la lente, del mismo lado que el objeto.",
+  "answer": "**a)** virtual, derecha, menor, $\\beta=+1/3$. **b)** virtual, derecha, menor, $\\beta=+2/3$. La lente divergente siempre da imagen virtual, derecha y reducida.",
+  "common_errors": [
+   "Esperar imagen real con una lente divergente: siempre es virtual y derecha.",
+   "Equivocar el signo de $f'$ (negativo para divergentes).",
+   "Interpretar $\\beta>0$ como invertida: $\\beta>0$ indica imagen derecha."
+  ]
+ }
+]

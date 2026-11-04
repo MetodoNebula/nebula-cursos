@@ -1,0 +1,25 @@
+\documentclass[border=6pt]{standalone}
+\input{/sessions/rcw-01ravfz1vrmcqqxfft5zd5bd/mnt/Nebula_GPT_Cowork/Nebula_Cursos_Web/_mat_enrich_20261104_002419/valid_preamble.tex}
+\begin{document}
+\begin{tikzpicture}[scale=0.95,every node/.style={font=\footnotesize,text=NebulaNavy}]
+\begin{scope}
+\draw[nbaxis] (-0.2,0)--(2.4,0);\draw[nbaxis] (0,-0.3)--(0,2.3);
+\draw[nbcurve] (0.2,0.5)--(1.1,1.2);\draw[nbcurve] (1.1,1.55)--(2.1,2.1);
+\node[nbopendot,minimum size=3.6pt] at (1.1,1.2){};\node[circle,fill=NebulaGreen,inner sep=0pt,minimum size=3.4pt] at (1.1,1.55){};
+\node[text=NebulaGreen,font=\footnotesize] at (1.1,2.7){Evitable};
+\end{scope}
+\begin{scope}[xshift=3.3cm]
+\draw[nbaxis] (-0.2,0)--(2.4,0);\draw[nbaxis] (0,-0.3)--(0,2.3);
+\draw[nbcurve] (0.2,0.4)--(1.1,1.0);\node[nbopendot,minimum size=3.6pt] at (1.1,1.0){};
+\draw[nbtangent] (1.1,1.7)--(2.1,2.15);\node[circle,fill=NebulaAmber,inner sep=0pt,minimum size=3.4pt] at (1.1,1.7){};
+\node[text=NebulaAmber,font=\footnotesize] at (1.15,2.7){Salto};
+\end{scope}
+\begin{scope}[xshift=6.6cm]
+\draw[nbaxis] (-0.2,0)--(2.4,0);\draw[nbaxis] (0,-0.3)--(0,2.3);
+\draw[nbaux] (1.1,-0.3)--(1.1,2.3);
+\draw[nbcurve,smooth,samples=25,domain=0.2:0.95] plot(\x,{0.25/(1.1-\x)});
+\draw[NebulaViolet,very thick,smooth,samples=25,domain=1.25:2.1] plot(\x,{1.9-0.3/(\x-1.1)});
+\node[text=NebulaViolet,font=\footnotesize] at (1.2,2.7){Esencial};
+\end{scope}
+\end{tikzpicture}
+\end{document}

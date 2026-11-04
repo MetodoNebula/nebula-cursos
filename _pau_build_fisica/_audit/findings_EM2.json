@@ -1,0 +1,16 @@
+[
+ {
+  "id": "PAU-FIS-EM-103",
+  "severity": "ERROR",
+  "field": "full_solution",
+  "issue": "Para dos hilos paralelos con corrientes iguales y del mismo sentido, el campo magnetico total se anula SOLO en un punto (el punto medio del segmento que une los hilos), no a lo largo de una recta. En la mediatriz, los dos campos tienen igual modulo pero su suma vectorial es no nula salvo en el punto medio (verificado numericamente: en (0,1),(0,2),(2,2),(-3,-3) B_total != 0). La solucion afirma erroneamente que el campo se anula en toda la recta y=x en el 1er y 3er cuadrantes.",
+  "correct_value": "El campo se anula unicamente en el punto medio del segmento que une ambos hilos (un solo punto, no una recta)."
+ },
+ {
+  "id": "PAU-FIS-EM-111",
+  "severity": "WARNING",
+  "field": "full_solution",
+  "issue": "Incoherencia de signo en el apartado (d): se escribe Delta p = m_p(-v_A) - m_p(v_A) = -2 m_p v_A pero luego se indica sentido +x. El proton va hacia el origen (-x) y regresa en +x, de modo que Delta p = +2 m_p v_A i (sentido +x). El modulo 3,34e-24 kg m/s y el sentido final (+x) son correctos; solo el paso intermedio tiene el signo mal etiquetado.",
+  "correct_value": "Delta p = +2 m_p v_A = 3,34e-24 kg m/s en sentido +x."
+ }
+]

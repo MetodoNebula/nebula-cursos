@@ -1,0 +1,158 @@
+[
+ {
+  "id": "PAU-FIS-OND-007",
+  "flagged": true,
+  "source": "Andalucía · Reserva B 2019",
+  "block": "ondas",
+  "title": "Onda estacionaria: longitud de onda, frecuencia, velocidad y aceleración de un punto · Andalucía · Reserva B 2019",
+  "statement": "**(a)** Explique la doble periodicidad de una onda, indicando las magnitudes que la describen, con esquemas.\n**(b)** Una onda viene dada por $y(x,t)=0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cos(2\\pi t)$ (SI). Indique de qué tipo de onda se trata y calcule su longitud de onda, su frecuencia y la velocidad y la aceleración de oscilación de un punto situado en $x=2\\ \\text{m}$ para $t=0{,}25\\ \\text{s}$.",
+  "knowns": [
+   "$y(x,t)=0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cos(2\\pi t)$ (SI)",
+   "punto $x=2\\ \\text{m}$, instante $t=0{,}25\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** Una onda armónica presenta **doble periodicidad**: es periódica en el espacio, con periodo espacial la longitud de onda $\\lambda$ (número de onda $k=2\\pi/\\lambda$), y periódica en el tiempo, con periodo temporal $T$ (frecuencia $f=1/T$, pulsación $\\omega=2\\pi/T$). Ambas se relacionan por $v=\\lambda f$.\n\n**(b)** El producto de una función sólo de $x$ por otra sólo de $t$ indica que es una **onda estacionaria**. Comparando con $y=2A\\cos(kx)\\cos(\\omega t)$:\n$$k=\\dfrac{\\pi}{2}\\ \\Rightarrow\\ \\lambda=\\dfrac{2\\pi}{k}=4\\ \\text{m}\\qquad \\omega=2\\pi\\ \\Rightarrow\\ f=\\dfrac{\\omega}{2\\pi}=1\\ \\text{Hz}$$\nVelocidad de oscilación, $v_y=\\dfrac{\\partial y}{\\partial t}=-0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cdot2\\pi\\,\\mathrm{sen}(2\\pi t)$. En $x=2$, $\\cos(\\pi)=-1$; en $t=0{,}25$, $\\mathrm{sen}(\\pi/2)=1$:\n$$v_y=-0{,}4\\cdot(-1)\\cdot2\\pi\\cdot1=0{,}8\\pi\\approx 2{,}51\\ \\text{m/s}$$\nAceleración, $a_y=\\dfrac{\\partial^{2} y}{\\partial t^{2}}=-0{,}4\\cos\\!\\left(\\dfrac{\\pi}{2}x\\right)\\cdot(2\\pi)^{2}\\cos(2\\pi t)$. En $t=0{,}25$, $\\cos(\\pi/2)=0$:\n$$a_y=0\\ \\text{m/s}^{2}$$",
+  "answer": "**(b)** Es una onda estacionaria: $\\lambda=4\\ \\text{m}$, $f=1\\ \\text{Hz}$. En $x=2\\ \\text{m}$, $t=0{,}25\\ \\text{s}$: $v_y=0{,}8\\pi\\approx 2{,}51\\ \\text{m/s}$ y $a_y=0\\ \\text{m/s}^{2}$.",
+  "figure_suggestion": "Onda estacionaria con nodos y vientres sobre el eje $x$ (longitud de onda 4 m); señalar el punto $x=2$ m (un nodo del factor espacial $\\cos(\\pi x/2)$)."
+ },
+ {
+  "id": "PAU-FIS-OND-009",
+  "flagged": true,
+  "source": "Cantabria · Extraordinaria 2023",
+  "block": "ondas",
+  "title": "Significado físico de los parámetros de una onda armónica · Cantabria · Extraordinaria 2023",
+  "statement": "En una cuerda se propaga una onda armónica descrita por la función $y(x,t) = a\\cos\\big[b\\,(x - c\\,t)\\big]$.\n\n**(a)** ¿Qué magnitudes físicas representan $a$, $b$ y $c$ y cuáles son sus unidades en el Sistema Internacional?\n\n**(b)** Suponiendo que los parámetros $a$, $b$ y $c$ son números positivos, ¿qué información aporta sobre la onda el signo negativo de la expresión?\n\n**(c)** ¿Qué magnitud física representa el cociente $\\dfrac{bc}{2\\pi}$?\n\n*(La forma exacta de la función presentaba símbolos dañados; se reconstruye de modo consistente con el apartado (c).)*",
+  "knowns": [
+   "$y(x,t) = a\\cos[b(x - c\\,t)]$",
+   "$a$, $b$, $c$ positivos"
+  ],
+  "full_solution": "Desarrollando el argumento, $y(x,t) = a\\cos(b\\,x - b\\,c\\,t)$, que comparamos con la forma general $y = a\\cos(kx - \\omega t)$.\n\n**(a)**\n- $a$ es la **amplitud** de la onda; unidad: metro ($\\text{m}$).\n- $b$ es el **número de onda** $k = \\dfrac{2\\pi}{\\lambda}$; unidad: $\\text{rad/m}$ (o $\\text{m}^{-1}$).\n- $c$ es la **velocidad de propagación** de la onda (velocidad de fase $v = \\omega/k$); unidad: $\\text{m/s}$.\n\n**(b)** El argumento es de la forma $(x - c\\,t)$. Un término $x - vt$ corresponde a una onda que se propaga en el **sentido positivo del eje $x$** (a medida que $t$ aumenta, un punto de fase constante se mueve hacia $x$ crecientes). El signo negativo indica, por tanto, propagación hacia $+x$.\n\n**(c)** Como $\\omega = b\\,c = k\\,v$, se tiene:\n$$\\dfrac{bc}{2\\pi} = \\dfrac{\\omega}{2\\pi} = f,$$\nes decir, el cociente $\\dfrac{bc}{2\\pi}$ es la **frecuencia** de la onda (en $\\text{Hz}$).",
+  "answer": "**(a)** $a$ = amplitud [m], $b$ = número de onda $k$ [rad/m], $c$ = velocidad de propagación [m/s]. **(b)** Propagación en sentido $+x$. **(c)** $\\dfrac{bc}{2\\pi} = f$ (frecuencia, Hz).",
+  "figure_suggestion": ""
+ },
+ {
+  "id": "PAU-FIS-OND-016",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Julio 2018",
+  "block": "ondas",
+  "title": "Onda transversal en una cuerda: elongación y velocidad transversal · Comunidad Valenciana · Julio 2018",
+  "statement": "Una onda transversal se propaga por una cuerda según la ecuación $y(x,t) = 0{,}5\\cos(22\\pi t - \\pi x)$, en unidades del SI. Calcula:\n\n**(a)** La elongación, $y$, del punto de la cuerda situado en $x = 0{,}40\\ \\text{m}$ en el instante $t = 1\\ \\text{s}$. ¿Qué distancia mínima hay entre dos puntos de la cuerda con la misma elongación y velocidad en un mismo instante?\n\n**(b)** La velocidad transversal del punto situado en $x = 0{,}40\\ \\text{m}$ en el instante $t = 1\\ \\text{s}$.\n\n*(La ecuación original tenía símbolos dañados en la digitalización; se reconstruye con sentido físico.)*",
+  "knowns": [
+   "$y(x,t) = 0{,}5\\cos(22\\pi t - \\pi x)\\ \\text{(SI)}$",
+   "$x = 0{,}40\\ \\text{m}$",
+   "$t = 1\\ \\text{s}$"
+  ],
+  "full_solution": "De la ecuación $y(x,t) = A\\cos(\\omega t - kx)$ identificamos: $A = 0{,}5\\ \\text{m}$, $\\omega = 22\\pi\\ \\text{rad/s}$ (luego $f = \\omega/2\\pi = 11\\ \\text{Hz}$) y $k = \\pi\\ \\text{rad/m}$ (luego $\\lambda = 2\\pi/k = 2\\ \\text{m}$ y $v = \\omega/k = 22\\ \\text{m/s}$).\n\n**(a)** Elongación en $x = 0{,}40\\ \\text{m}$, $t = 1\\ \\text{s}$:\n$$y = 0{,}5\\cos(22\\pi\\cdot 1 - \\pi\\cdot 0{,}40) = 0{,}5\\cos(21{,}6\\pi) = 0{,}5\\cos(1{,}6\\pi) = 0{,}15\\ \\text{m}.$$\nLa distancia mínima entre dos puntos con la **misma elongación y la misma velocidad** en un mismo instante es una longitud de onda completa:\n$$\\Delta x_{\\min} = \\lambda = 2\\ \\text{m}.$$\n\n**(b)** La velocidad transversal es la derivada temporal:\n$$v_y = \\dfrac{\\partial y}{\\partial t} = -A\\,\\omega\\,\\mathrm{sen}(\\omega t - kx) = -0{,}5\\cdot 22\\pi\\,\\mathrm{sen}(21{,}6\\pi).$$\n$$v_y = -11\\pi\\,\\mathrm{sen}(1{,}6\\pi) = -11\\pi\\cdot(-0{,}951) \\approx 32{,}9\\ \\text{m/s}.$$",
+  "answer": "**(a)** $y \\approx 0{,}15\\ \\text{m}$; distancia mínima $\\Delta x = \\lambda = 2\\ \\text{m}$. **(b)** $v_y \\approx 32{,}9\\ \\text{m/s}$.",
+  "figure_suggestion": ""
+ },
+ {
+  "id": "PAU-FIS-OND-017",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Julio 2019",
+  "block": "ondas",
+  "title": "Amplitud, frecuencia y diferencia de fase de una onda armónica · Comunidad Valenciana · Julio 2019",
+  "statement": "El gráfico representa una onda armónica, en un instante dado, que se propaga hacia la derecha del eje $X$ con velocidad $v = 2\\ \\text{m·s}^{-1}$. Del gráfico se leen una amplitud $A = 0{,}2\\ \\text{m}$ y una longitud de onda $\\lambda = 4\\ \\text{m}$. Determine razonadamente la amplitud y la frecuencia de la onda y la diferencia de fase entre dos puntos situados en $x_1 = 5\\ \\text{m}$ y $x_2 = 4\\ \\text{m}$. (Nota: amplitud y longitud de onda reconstruidas de la gráfica, no extraída en la digitalización.)",
+  "knowns": [
+   "$v = 2\\ \\text{m·s}^{-1}$",
+   "$A = 0{,}2\\ \\text{m}$ (de la gráfica)",
+   "$\\lambda = 4\\ \\text{m}$ (de la gráfica)",
+   "$x_1 = 5\\ \\text{m}$, $x_2 = 4\\ \\text{m}$"
+  ],
+  "full_solution": "La amplitud se lee directamente de la gráfica como el valor máximo de la elongación: $A = 0{,}2\\ \\text{m}$. La longitud de onda (periodo espacial) es $\\lambda = 4\\ \\text{m}$.\n\nLa frecuencia se obtiene de $v = \\lambda f$:\n$$f = \\dfrac{v}{\\lambda} = \\dfrac{2}{4} = 0{,}5\\ \\text{Hz}$$\n\nLa diferencia de fase entre dos puntos separados $\\Delta x = x_1 - x_2 = 1\\ \\text{m}$ (en el mismo instante) es\n$$\\Delta\\varphi = k\\,\\Delta x = \\dfrac{2\\pi}{\\lambda}\\,\\Delta x = \\dfrac{2\\pi}{4}\\cdot1 = \\dfrac{\\pi}{2}\\ \\text{rad}$$",
+  "answer": "$A = 0{,}2\\ \\text{m}$, $f = v/\\lambda = 0{,}5\\ \\text{Hz}$ y $\\Delta\\varphi = \\dfrac{2\\pi}{\\lambda}\\Delta x = \\dfrac{\\pi}{2}\\ \\text{rad}$.",
+  "figure_suggestion": "Instantánea $y(x)$ de una onda senoidal con amplitud $0{,}2\\ \\text{m}$ y longitud de onda $4\\ \\text{m}$, propagándose hacia $+x$; señalar los puntos $x=4\\ \\text{m}$ y $x=5\\ \\text{m}$."
+ },
+ {
+  "id": "PAU-FIS-OND-022",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2018",
+  "block": "ondas",
+  "title": "Parámetros de una onda sísmica · C. Valenciana · Junio 2018",
+  "statement": "La función de una onda sísmica es $y(x,t)=3\\cos\\!\\left(\\pi t-\\dfrac{\\pi}{4}x\\right)$ (SI). Calcula:\n\n**(a)** La amplitud, el periodo, la frecuencia y la longitud de onda.\n\n**(b)** La velocidad de propagación y la velocidad de vibración de un punto situado a $1\\ \\text{m}$ del foco emisor para $t=8\\ \\text{s}$.",
+  "knowns": [
+   "$y(x,t)=3\\cos\\!\\left(\\pi t-\\frac{\\pi}{4}x\\right)$ (SI)",
+   "$x=1\\ \\text{m}$",
+   "$t=8\\ \\text{s}$"
+  ],
+  "full_solution": "Comparando con $y=A\\cos(\\omega t-kx)$: $A=3\\ \\text{m}$, $\\omega=\\pi\\ \\text{rad·s}^{-1}$, $k=\\dfrac{\\pi}{4}\\ \\text{rad·m}^{-1}$.\n\n**(a) Parámetros**\n$$T=\\dfrac{2\\pi}{\\omega}=\\dfrac{2\\pi}{\\pi}=2\\ \\text{s};\\qquad f=\\dfrac1T=0{,}5\\ \\text{Hz}$$\n$$\\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{\\pi/4}=8\\ \\text{m}$$\n\n**(b) Velocidades**\n$$v_{\\text{prop}}=\\dfrac{\\omega}{k}=\\dfrac{\\pi}{\\pi/4}=4\\ \\text{m·s}^{-1}$$\nLa velocidad de vibración es $v_{osc}=\\dfrac{\\partial y}{\\partial t}=-A\\omega\\sin(\\omega t-kx)$. En $x=1\\ \\text{m}$, $t=8\\ \\text{s}$:\n$$v_{osc}=-3\\pi\\sin\\!\\left(8\\pi-\\dfrac{\\pi}{4}\\right)=-3\\pi\\sin\\!\\left(-\\dfrac{\\pi}{4}\\right)=+6{,}66\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $A=3\\ \\text{m}$, $T=2\\ \\text{s}$, $f=0{,}5\\ \\text{Hz}$, $\\lambda=8\\ \\text{m}$.  **(b)** $v_{\\text{prop}}=4\\ \\text{m·s}^{-1}$; $v_{osc}(1;8)\\approx+6{,}66\\ \\text{m·s}^{-1}$.",
+  "figure_suggestion": ""
+ },
+ {
+  "id": "PAU-FIS-OND-023",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2019",
+  "block": "ondas",
+  "title": "Instantánea de una onda armónica en una cuerda · Comunidad Valenciana · Junio 2019",
+  "statement": "La figura representa un instante de una onda armónica en una cuerda que se mueve hacia la derecha sobre el eje $x$. Su periodo es $T=4\\ \\text{s}$ y la distancia entre los puntos $A$ y $B$ marcados en la figura es $45\\ \\text{cm}$. Determine razonadamente la longitud de onda, la frecuencia angular y la velocidad de propagación.\n\n*(Nota del corrector: la figura, que fija la fracción de longitud de onda entre $A$ y $B$, no se conservó; se reconstruye tomando $A$ y $B$ separados $\\tfrac34\\lambda$, de modo que $45\\ \\text{cm}=\\tfrac34\\lambda$.)*",
+  "knowns": [
+   "$T=4\\ \\text{s}$",
+   "$d_{AB}=45\\ \\text{cm}=0{,}45\\ \\text{m}=\\tfrac34\\lambda$ (reconstruido)"
+  ],
+  "full_solution": "La frecuencia angular depende solo del periodo:\n\n$$\\omega=\\dfrac{2\\pi}{T}=\\dfrac{2\\pi}{4}=\\dfrac{\\pi}{2}=1{,}57\\ \\text{rad/s}$$\n\nSegún la figura, $A$ y $B$ distan $\\tfrac34$ de longitud de onda:\n\n$$\\dfrac34\\lambda=0{,}45\\ \\text{m}\\Rightarrow\\lambda=0{,}60\\ \\text{m}$$\n\nVelocidad de propagación:\n\n$$v=\\dfrac{\\lambda}{T}=\\dfrac{0{,}60}{4}=0{,}15\\ \\text{m/s}$$",
+  "answer": "$\\omega=\\dfrac{2\\pi}{T}=\\dfrac{\\pi}{2}\\approx1{,}57\\ \\text{rad/s}$; $\\lambda=0{,}60\\ \\text{m}$; $v=\\lambda/T=0{,}15\\ \\text{m/s}$.",
+  "figure_suggestion": "Instantánea $y(x)$ de una onda senoidal que avanza hacia $+x$; marcar los puntos $A$ y $B$ separados $\\tfrac34\\lambda$ (45 cm), por ejemplo una cresta y el siguiente nodo descendente."
+ },
+ {
+  "id": "PAU-FIS-OND-027",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2022",
+  "block": "ondas",
+  "title": "Onda armónica: parámetros y velocidad de vibración · Comunidad Valenciana · Junio 2022",
+  "statement": "Una onda viene dada por $y(x,t)=2\\,\\mathrm{sen}(\\pi t-8\\pi x)$, con $x$ e $y$ en metros y $t$ en segundos.\n\n**(a)** Calcule la amplitud, el periodo, la frecuencia y la longitud de onda.\n**(b)** Calcule la velocidad de propagación y la velocidad de vibración de un punto situado a $1\\ \\text{m}$ del foco emisor en $t=8\\ \\text{s}$.",
+  "knowns": [
+   "$y(x,t)=2\\,\\mathrm{sen}(\\pi t-8\\pi x)$ (SI)",
+   "$\\omega=\\pi\\ \\text{rad/s}$, $k=8\\pi\\ \\text{rad/m}$"
+  ],
+  "full_solution": "**(a)** Comparando con $y=A\\,\\mathrm{sen}(\\omega t-k x)$:\n$$A=2\\ \\text{m}\\qquad \\omega=\\pi\\ \\text{rad/s}\\ \\Rightarrow\\ T=\\dfrac{2\\pi}{\\omega}=2\\ \\text{s}\\qquad f=\\dfrac{1}{T}=0{,}5\\ \\text{Hz}$$\n$$k=8\\pi\\ \\text{rad/m}\\ \\Rightarrow\\ \\lambda=\\dfrac{2\\pi}{k}=\\dfrac{2\\pi}{8\\pi}=0{,}25\\ \\text{m}$$\n\n**(b)** Velocidad de propagación:\n$$v=\\dfrac{\\omega}{k}=\\dfrac{\\pi}{8\\pi}=0{,}125\\ \\text{m/s}$$\nVelocidad de vibración (transversal), $v_y=\\dfrac{\\partial y}{\\partial t}=2\\pi\\cos(\\pi t-8\\pi x)$. En $x=1\\ \\text{m}$, $t=8\\ \\text{s}$ el argumento es $8\\pi-8\\pi=0$:\n$$v_y=2\\pi\\cos(0)=2\\pi\\approx 6{,}28\\ \\text{m/s}$$",
+  "answer": "**(a)** $A=2\\ \\text{m}$, $T=2\\ \\text{s}$, $f=0{,}5\\ \\text{Hz}$, $\\lambda=0{,}25\\ \\text{m}$. **(b)** $v=0{,}125\\ \\text{m/s}$ y $v_y=2\\pi\\approx 6{,}28\\ \\text{m/s}$.",
+  "figure_suggestion": ""
+ },
+ {
+  "id": "PAU-FIS-OND-030",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "block": "ondas",
+  "title": "Onda armónica transversal a partir de su gráfica · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Una onda armónica transversal se propaga con velocidad $v=5\\ \\text{cm/s}$ en el sentido negativo del eje $x$. A partir de la gráfica (instantánea $y$ frente a $x$):\n\n**(a)** Determina la amplitud, la longitud de onda, el periodo y la diferencia de fase entre dos puntos separados $15\\ \\text{cm}$ y entre dos instantes separados $3\\ \\text{s}$.\n\n**(b)** Escribe la función de onda (con seno y fase inicial nula) y calcula la velocidad de un punto en $x=0$ para $t=0$.",
+  "knowns": [
+   "$v = 5\\ \\text{cm/s}$ en sentido $-x$",
+   "Amplitud $A$ y longitud de onda $\\lambda$ leídas de la gráfica",
+   "$\\Delta x = 15\\ \\text{cm}$, $\\Delta t = 3\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** De la gráfica se leen directamente la **amplitud** $A$ (altura máxima) y la **longitud de onda** $\\lambda$ (distancia entre dos crestas consecutivas). Con la velocidad dada, el **periodo** es:\n$$T = \\dfrac{\\lambda}{v}$$\nLa **diferencia de fase** entre dos puntos separados $\\Delta x$ en un mismo instante:\n$$\\Delta\\varphi_x = \\dfrac{2\\pi}{\\lambda}\\,\\Delta x = \\dfrac{2\\pi}{\\lambda}\\,(15\\ \\text{cm})$$\nLa diferencia de fase para un mismo punto entre dos instantes separados $\\Delta t$:\n$$\\Delta\\varphi_t = \\dfrac{2\\pi}{T}\\,\\Delta t = \\omega\\,(3\\ \\text{s})$$\n\n**(b)** Para una onda que avanza en sentido $-x$ con fase inicial nula:\n$$y(x,t) = A\\,\\text{sen}(\\omega t + kx), \\qquad \\omega = \\dfrac{2\\pi}{T},\\quad k = \\dfrac{2\\pi}{\\lambda} = \\dfrac{\\omega}{v}$$\nLa velocidad transversal de un punto es $v_y=\\dfrac{\\partial y}{\\partial t}=A\\omega\\cos(\\omega t + kx)$; en $x=0$, $t=0$:\n$$v_y(0,0) = A\\omega\\cos 0 = A\\,\\omega$$\n(sustituyendo los valores de $A$ y $\\omega$ leídos de la gráfica).",
+  "answer": "$A$ y $\\lambda$ se leen de la gráfica; $T=\\lambda/v$; $\\Delta\\varphi_x = \\tfrac{2\\pi}{\\lambda}\\cdot15\\ \\text{cm}$; $\\Delta\\varphi_t=\\tfrac{2\\pi}{T}\\cdot3\\ \\text{s}$. Función: $y=A\\,\\text{sen}(\\omega t + kx)$ (signo $+kx$ por avanzar en $-x$); $v_y(0,0)=A\\omega$.",
+  "figure_suggestion": "Instantánea $y(x)$ de la onda con la amplitud $A$ y la longitud de onda $\\lambda$ acotadas; indicar la velocidad $v=5$ cm/s hacia $-x$."
+ },
+ {
+  "id": "PAU-FIS-MAS-004",
+  "flagged": true,
+  "source": "Murcia · Modelo 2026",
+  "block": "mas",
+  "title": "Energía de oscilación de un puente y onda en una cuerda · Murcia · Modelo 2026",
+  "statement": "**(a)** La oscilación de un puente colgante se modeliza como un muelle de constante $k=10^{8}\\ \\text{N/m}$. Calcule la energía necesaria para hacerlo oscilar con amplitud $10\\ \\text{cm}$.\n\n**(b)** (i) Explique la diferencia entre velocidad de propagación de una onda y velocidad de oscilación de un punto. (ii) Para la onda $y(x,t)=2\\,\\text{sen}(3x-6t)$ (unidades SI), determine la velocidad de propagación y la velocidad máxima de oscilación.\n\n*(Nota del corrector: el exponente de $k$ se reconstruye como $10^{8}\\ \\text{N/m}$, coherente con un puente.)*",
+  "knowns": [
+   "$k=10^{8}\\ \\text{N/m}$",
+   "$A=10\\ \\text{cm}=0{,}1\\ \\text{m}$",
+   "Onda: $y(x,t)=2\\,\\text{sen}(3x-6t)$, es decir $A=2\\ \\text{m}$, $k_{onda}=3\\ \\text{rad/m}$, $\\omega=6\\ \\text{rad/s}$"
+  ],
+  "full_solution": "**(a)** La energía mecánica de un oscilador armónico es $E=\\dfrac12 k A^2$:\n\n$$E=\\dfrac12\\cdot10^{8}\\cdot(0{,}1)^2=5\\cdot10^{5}\\ \\text{J}$$\n\n**(b) (i)** La **velocidad de propagación** $v=\\omega/k_{onda}$ es la rapidez con que el perfil (energía/fase) avanza por el medio; es constante y dirigida según $x$. La **velocidad de oscilación** $v_y=\\partial y/\\partial t$ es la de cada punto del medio en su vaivén transversal; varía con el tiempo (es nula en los extremos y máxima al pasar por la posición de equilibrio).\n\n**(ii)** Velocidad de propagación:\n\n$$v=\\dfrac{\\omega}{k_{onda}}=\\dfrac{6}{3}=2\\ \\text{m/s}$$\n\nVelocidad máxima de oscilación:\n\n$$v_{y,\\max}=A\\,\\omega=2\\cdot6=12\\ \\text{m/s}$$",
+  "answer": "**(a)** $E=\\dfrac12 k A^2=5\\cdot10^{5}\\ \\text{J}$. **(b)** $v=\\omega/k=2\\ \\text{m/s}$; $v_{y,\\max}=A\\omega=12\\ \\text{m/s}$.",
+  "figure_suggestion": ""
+ },
+ {
+  "id": "PAU-FIS-MAS-005",
+  "flagged": false,
+  "source": "Murcia · Ordinaria 2026",
+  "block": "mas",
+  "title": "Energía de un oscilador y reflexión total en una lámina · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Un bloque de masa $m = 2\\ \\text{kg}$ unido a un muelle de constante $k = 400\\ \\text{N·m}^{-1}$ realiza un movimiento armónico simple de amplitud $A = 0{,}05\\ \\text{m}$. Calcule la energía mecánica del oscilador y la rapidez del bloque cuando $x = 0{,}03\\ \\text{m}$.\n\n**(b)** Un rayo de luz penetra por la cara superior de un medio de índice $n_v = 1{,}5$ rodeado de agua ($n_a = 1{,}33$) y, tras refractarse, alcanza la cara lateral justo en el ángulo límite, saliendo paralelo a ella. Calcule el ángulo de incidencia máximo $\\alpha$ en la cara superior.",
+  "knowns": [
+   "$m = 2\\ \\text{kg}$, $k = 400\\ \\text{N·m}^{-1}$, $A = 0{,}05\\ \\text{m}$, $x = 0{,}03\\ \\text{m}$",
+   "$n_v = 1{,}5$, $n_a = 1{,}33$"
+  ],
+  "full_solution": "**(a)** La energía mecánica del oscilador es toda la energía potencial elástica en la amplitud:\n$$E = \\tfrac12 k A^2 = \\tfrac12\\cdot400\\cdot0{,}05^2 = 0{,}5\\ \\text{J}$$\nEn una posición $x$, $E = \\tfrac12 m v^2 + \\tfrac12 k x^2 = \\tfrac12 k A^2$, de donde\n$$v = \\sqrt{\\dfrac{k}{m}\\left(A^2 - x^2\\right)} = \\sqrt{\\dfrac{400}{2}\\left(0{,}05^2 - 0{,}03^2\\right)} = 0{,}56\\ \\text{m·s}^{-1}$$\n\n**(b)** Snell en la cara superior (incidencia $\\alpha$, refracción $\\beta$ desde la normal): $\\operatorname{sen}\\alpha = n_v\\operatorname{sen}\\left(\\tfrac{\\pi}{2}-\\beta\\right) = n_v\\cos\\beta$, luego $\\cos\\beta = \\dfrac{\\operatorname{sen}\\alpha}{n_v}$. En la cara lateral, reflexión total con salida paralela (refracción a $90^\\circ$): $n_v\\operatorname{sen}\\beta = n_a\\operatorname{sen}90^\\circ$, luego $\\operatorname{sen}\\beta = \\dfrac{n_a}{n_v}$. Sumando los cuadrados:\n$$\\operatorname{sen}^2\\alpha + n_a^2 = n_v^2 \\;\\Rightarrow\\; \\operatorname{sen}\\alpha = \\sqrt{n_v^2 - n_a^2} = \\sqrt{1{,}5^2 - 1{,}33^2} = 0{,}69$$\n$$\\alpha \\approx 43{,}9^\\circ$$",
+  "answer": "**(a)** $E = 0{,}5\\ \\text{J}$ y $v = 0{,}56\\ \\text{m·s}^{-1}$. **(b)** $\\alpha \\approx 43{,}9^\\circ$.",
+  "figure_suggestion": "Bloque-muelle horizontal (MAS) con $A=0{,}05\\ \\text{m}$; aparte, lámina con un rayo que entra por la cara superior con ángulo $\\alpha$, se refracta y alcanza la cara lateral en el ángulo límite (salida rasante)."
+ }
+]

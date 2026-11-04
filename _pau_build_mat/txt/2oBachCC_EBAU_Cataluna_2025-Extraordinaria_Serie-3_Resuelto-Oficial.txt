@@ -1,0 +1,290 @@
+                                                                                          Pàgina 1 de 6
+                                                                                         Matemàtiques
+     Proves d’accés a la Universitat 2025, convocatòria extraordinària. Criteri específic d'avaluació
+
+
+
+SÈRIE 3
+
+1. a) Tenint en compte que la recta 𝑟 ha de passar pel punt 𝑃 = (1,1) i que 𝑚 és el seu
+pendent, la recta 𝑟 té per equació 𝑦 − 1 = 𝑚(𝑥 − 1). La mida de la base del triangle és
+l’abscissa del punt d’intersecció de la recta 𝑟 amb l’eix 𝑂𝑋
+
+                    𝑦 − 1 = 𝑚(𝑥 − 1)                          𝑚−1
+                   {                 → 0 − 1 = 𝑚(𝑥 − 1) → 𝑥 =    .
+                          𝑦=0                                  𝑚
+
+I l’alçada del triangle és l’ordenada del punt d’intersecció de la recta 𝑟 amb 𝑦 = 3𝑥:
+
+          𝑦 − 1 = 𝑚(𝑥 − 1)                           𝑚−1        𝑚−1
+      {                    → 3𝑥 − 1 = 𝑚(𝑥 − 1) → 𝑥 =     , 𝑦=3·     .
+               𝑦 = 3𝑥                                𝑚−3        𝑚−3
+
+La funció a minimitzar és la que calcula l’àrea del triangle:
+
+                                     1   𝑚−1         𝑚−1       3    𝑚2 −2𝑚+1
+                            𝐴(𝑚) = 2 · 𝑚 · 3 · 𝑚−3 = 2 · 𝑚2 −3𝑚 ·
+
+                                                           3       𝑚2 −2𝑚+1
+Parlant estrictament el valor de l’àrea és 𝐴(𝑚) = | 2 · 𝑚2 −3𝑚 | perquè hi ha valors de 𝑚
+per als quals aquesta expressió és negativa. No tingueu en compte si ignoren aquest detall.
+
+
+b) Derivem la funció àrea i igualem a zero per trobar els possibles extrems relatius:
+
+                    3     (2𝑚−2)(𝑚2 −3𝑚)−(𝑚2 −2𝑚+1)(2𝑚−3)   3 −𝑚2 −2𝑚+3
+           𝐴′ (𝑚) = 2 ·                 2     2
+                                                          =  ·          = 0,
+                                      (𝑚 −3𝑚)               2 (𝑚2 −3𝑚)2
+
+
+                                                                   2±√4−4(−1)3     2±4
+                           −𝑚2 − 2𝑚 + 3 = 0 → 𝑚 =                                = −2 = 1, −3.
+                                                                       −2
+
+Per comprovar si són màxims o mínims fem la segona derivada:
+
+               3 (−2𝑚 − 2)(𝑚2 − 3𝑚)2 − (−𝑚2 − 2𝑚 + 3)2(𝑚2 − 3𝑚)(2𝑚 − 3)
+  𝐴′′ (𝑚) =      ·                                                      ,
+               2                       (𝑚2 − 3𝑚)4
+                            1                    3
+i, com que 𝐴′′ (−3) = 54 > 0 i 𝐴′′ (1) = − 2 ˂0, el mínim correspon a 𝑚 = −3 (segons
+l’esbós, el pendent ja ha de ser negatiu).
+
+Alternativament, podem estudiar el creixement i decreixement de la funció 𝐴(𝑚).
+Aquests venen donats pel signe de la primera derivada, però com que aquesta té un
+quadrat al denominador, dependrà només del signe del numerador −𝑚2 − 2𝑚 + 3. Això
+és una paràbola oberta cap avall i que talla l’eix OX en els punts (-3,0) i (1,0); així doncs,
+per a 𝑚 < −3, la derivada és negativa i la funció decreix, i per −3 < 𝑚 < 1, la derivada
+                                                                                      Pàgina 2 de 6
+                                                                                     Matemàtiques
+     Proves d’accés a la Universitat 2025, convocatòria extraordinària. Criteri específic d'avaluació
+
+
+és positiva i la funció creix, per la qual cosa en 𝑚 = −3, l´àrea és mínima. El valor
+d’aquesta àrea és:
+
+                                3 (−3)2 − 2(−3) + 1 3 16 4 2
+                         𝐴(−3) = ·                 = ·  = 𝑢 .
+                                2   (−3)2 − 3(−3)   2 18 3
+
+Criteris de correcció: (a) Compteu 0,25 per l’equació del feix de rectes; 0,25 per la mida
+de la base del triangle; 0,25 per l’alçada, i 0,25 pel càlcul de l’àrea (tot en funció de 𝑚).
+(b) Compteu 0,5 per la derivada; 0,25 per calcular els punts crítics; 0,5 per justificar el
+mínim, i 0,25 per calcular el valor de l’àrea.
+
+
+2. a) Calculem el determinant de la matriu de coeficients:
+
+              1      3    1
+       |𝐴| = |𝑚      0    2 | = 𝑚2 − (2𝑚 − 3𝑚) = 𝑚2 + 𝑚 = 𝑚(𝑚 + 1)
+              0      𝑚    −1
+
+i observem que s’anul·la quan 𝑚 = 0 i 𝑚 = −1. Per tant,
+
+•   Si 𝑚 ≠ 0 i 𝑚 ≠ −1, el rang de la matriu de coeficients és 𝑟𝑎𝑛𝑔(𝐴) = 3, el rang de
+    la matriu ampliada també i, com que també coincideix amb el nombre d’incògnites, 3,
+    el sistema és compatible determinat; té, per tant, solució única.
+•   Si 𝑚 = 0, la matriu de coeficients té determinant zero i rang 2 (per exemple, gràcies
+                                                                 1 3 1 5
+               3 1
+    al menor |       | = 6 ≠ 0). Com que la matriu ampliada (0 0 2 0) també té
+               0 2
+                                                                 0 0 −1 0
+    rang 2, el sistema és compatible indeterminat i té infinites solucions que dependran
+    d’un paràmetre.
+•   Si 𝑚 = −1, la matriu de coeficients també té rang 2, mentre que el rang de l’ampliada
+            1      3    1     5
+    és 3: (−1 0         2     0 ) (desenvolupant, per exemple, el determinant de les tres
+            0 −1 −1 −1
+    darreres columnes per la segona fila). Per tant, el sistema és incompatible i no té
+    solució.
+
+b) Si 𝑚 = 1, el sistema queda
+
+                                        𝑥 + 3𝑦 + 𝑧 = 5
+                                          𝑥 + 2𝑧 = 0 }
+                                           𝑦−𝑧 =1
+                                                                                      Pàgina 3 de 6
+                                                                                     Matemàtiques
+     Proves d’accés a la Universitat 2025, convocatòria extraordinària. Criteri específic d'avaluació
+
+
+i sabem que és compatible determinat. Substituint 𝑥 = −2𝑧 i 𝑦 = 1 + 𝑧 a la primera
+equació obtenim
+
+                                   −2𝑧 + 3(1 + 𝑧) + 𝑧 = 5,
+
+d’on resulta 2𝑧 = 2 i 𝑧 = 1. Per tant, la solució és (𝑥, 𝑦, 𝑧) = (−2, 2, 1).
+
+c) El sistema té infinites solucions quan és compatible indeterminat, és a dir, quan 𝑚 =
+0. En aquest cas, de les dues últimes equacions en resulta 𝑧 = 0, i la primera ens diu 𝑥 +
+3𝑦 = 5. Per tant, les solucions del sistema són les de la forma:
+
+                                               𝑥 = 5 − 3𝑘
+                                               𝑦=𝑘∈𝑅}
+                                                 𝑧=0
+
+Criteris de correcció: (a) Compteu 0,25 pel càlcul del determinant; 0,25 per la
+determinació dels valors crítics de 𝑚, i 0,25 per l’anàlisi de cadascun dels tres casos. (b)
+Compteu 0,5 punts per la resolució del sistema. (c) Compteu 0,25 punts per reconèixer el
+valor de 𝑚 a què es refereix l’enunciat, i 0,5 pel càlcul de l’expressió paramètrica de la
+solució.
+
+
+3. a) Considerem els esdeveniments aleatoris
+
+                          𝐼 = ``𝑝𝑟𝑎𝑐𝑡𝑖𝑐𝑎𝑟 𝑢𝑛 𝑒𝑠𝑝𝑜𝑟𝑡 𝑑 ′ 𝑖𝑚𝑝𝑎𝑐𝑡𝑒 ′′ ,
+                                 𝑆 = ``𝑝𝑎𝑡𝑖𝑟 𝑠𝑒𝑠𝑎𝑚𝑜ï𝑑𝑖𝑡𝑖𝑠 ′′ .
+
+De les dades de l’enunciat sabem que 𝑃(𝐼) = 0,45, 𝑃(𝐼 )̅ = 1 − 0,45 =
+0,55, 𝑃( 𝑆 ∣ 𝐼 ) = 0,1, i 𝑃( 𝑆 ∣ 𝐼 ̅ ) = 0,03. Per la llei de les probabilitats totals, tenim:
+
+        𝑃(𝑆) = 𝑃(𝑆|𝐼)𝑃(𝐼) + 𝑃(𝑆| 𝐼 )̅ 𝑃(𝐼 )̅ = 0,1 · 0,45 + 0,03 · 0,55 = 0,0615.
+
+b) Per la fórmula de Bayes:
+
+                                        𝑃(𝑆|𝐼)𝑃(𝐼) 0,1 · 0,45
+                             𝑃(𝐼|𝑆) =             =           ≈ 0,7317 …
+                                          𝑃(𝑆)      0,0615
+
+c) El primer any s’obtenen el màxim de beneficis, per tant 𝑥 = 1 és un màxim de
+la funció i 𝑓′(1) = 0; i aquests beneficis obtinguts són de 8.000 €, per tant, 𝑓(1) =
+8. També ens diuen que el segon any hi va haver un punt d’inflexió en els
+beneficis, per tant, 𝑓 ′′ (2) = 0. Calculem la primera i segona derivades de 𝑓(𝑥) =
+𝑎𝑥 3 + 𝑏𝑥 2 + 𝑐𝑥 i imposem aquestes tres condicions:
+
+                                   𝑓 ′ (𝑥) = 3𝑎𝑥 2 + 2𝑏𝑥 + 𝑐,
+                                        𝑓 ′′ (𝑥) = 6𝑎𝑥 + 2𝑏,
+                                                                                     Pàgina 4 de 6
+                                                                                    Matemàtiques
+    Proves d’accés a la Universitat 2025, convocatòria extraordinària. Criteri específic d'avaluació
+
+
+
+                              𝑓 ′ (1) = 0 ⇒ 3𝑎 + 2𝑏 + 𝑐 = 0
+                               𝑓(1) = 8 ⟹ 𝑎 + 𝑏 + 𝑐 = 8 }
+                              𝑓 ′′ (2) = 0 ⟹ 12𝑎 + 2𝑏 = 0
+
+Restant les dues primeres equacions, obtenim 2𝑎 + 𝑏 = −8 i, combinant amb la
+tercera:
+
+                 12𝑎 + 2𝑏 = 0      12𝑎 + 2𝑏 = 0
+                              } ⟹                   } 16
+                 2𝑎 + 𝑏 = −8      −4𝑎 − 2𝑏 = 16 ⟹ 𝑎 =    = 2.
+                                  __________________   8
+                                       8𝑎 = 16
+
+Per tant, 2 · 2 + 𝑏 = −8, d’on 𝑏 = −12. Finalment,
+
+                 𝑎 + 𝑏 + 𝑐 = 8 ⟹ 𝑐 = 8 − 𝑎 − 𝑏 = 8 − 2 + 12 = 18.
+
+La funció que compta els beneficis d’aquesta empresa és, doncs, 𝑓(𝑥) = 2𝑥 3 −
+12𝑥 2 + 18𝑥.
+
+Criteris de correcció: (a) Compteu 0,25 per plantejar la llei de la probabilitat
+total (o fer un arbre de decisió o similar); 0,25 per identificar correctament les
+dades del problema, i 0,25 pel càlcul. (b) Compteu 0,25 per plantejar
+correctament la fórmula de Bayes (o la fórmula de la probabilitat condicionada) i
+0,5 pel càlcul. (c) Compteu 0,25 per imposar 𝑓 ′ (1) = 0, 0,25 per imposar 𝑓(1) =
+8, 0,25 per imposar 𝑓’’(2) = 0 i 0,25 pel càlcul final.
+
+
+                                       0                 0
+4. OPCIÓ A. a) Com que 3sin(4) = 0 i 3 cos(4) = 3, la gràfica inferior (la que
+passa pels punts 𝐴 i 𝐶) és la del sinus, i la superior (la que passa per 𝐵 i 𝐶) és la
+                                                     0
+del cosinus. El punt 𝐵 correspon al valor de 3cos(4) = 3, per tant és el punt 𝐵 =
+(0,3). Finalment, el punt 𝐶 és el punt de tall entre el sinus i el cosinus,
+      𝑥          𝑥
+3 sin(4) = 3 cos(4),
+
+                      𝑥
+               3 sin (4)             𝑥         𝑥 𝜋
+                      𝑥  = 1 ⟶ tan (   ) = 1 ⟶  = ⟶ 𝑥 = 𝜋.
+               3 cos (4)             4         4 4
+
+                  𝜋             𝜋     3√2                                  3√2
+Com que 3 sin (4 ) = 3cos ( 4 ) =           , el punt de tall és 𝐶 = (𝜋, 2 ).
+                                        2
+
+
+b) Per a calcular el preu del vitrall necessitem trobar la seva àrea:
+                                                                                      Pàgina 5 de 6
+                                                                                     Matemàtiques
+     Proves d’accés a la Universitat 2025, convocatòria extraordinària. Criteri específic d'avaluació
+
+                         𝜋
+                               𝑥         𝑥               𝑥          𝑥 𝜋
+               𝐴 = ∫ (3cos ( ) − 3sin ( )) 𝑑𝑥 = [12 sin( ) + 12 cos( )]
+                     0         4         4               4          4 0
+                   𝜋         𝜋                           √2 √2
+        = 12 (sin ( ) + cos ( ) − sin(0) − cos(0)) = 12 ( +     − 0 − 1)
+                   4         4                            2  2
+                      = 12(√2 − 1) ≃ 4,97 𝑚2 .
+                                                             €
+Per tant, el preu del vitrall serà de 4,97 𝑚2 · 750 𝑚2 = 3.725,5 €.
+
+Criteris de correcció: (a) Compteu 0,5 per raonar quina gràfica és cadascuna;
+0,25 per les coordenades del punt 𝐵, i 0,25 per les de 𝐶. (b) Compteu 0,25 per
+plantejar la integral correctament; 0,5 per la primitiva; 0,5 per trobar l’àrea, i 0,25
+pel preu final. Compteu 0 de la part de la primitiva si no tracten adequadament el
+coeficient del sinus i del cosinus.
+
+4. OPCIÓ B. a) Només cal aplicar la fórmula de la distància punt-pla per comprovar
+que
+
+                                     |2 · 0 − 1 + 3 − 5|         3        3√6 √6
+                         𝑑(𝑃, 𝜋) =                          =         =      = .
+                                     √22 + (−1)2 + 12            √6        6   2
+
+b) Tot pla paral·lel a 𝜋 és de la forma 2𝑥 − 𝑦 + 𝑧 = 𝐷 per algun 𝐷 real. Com que volem
+que passi pel punt 𝑃 tenim
+                                       2·0−1+3= 𝐷
+
+
+i, per tant, 𝐷 = 2. El pla buscat és 𝜋1 : 2𝑥 − 𝑦 + 𝑧 = 2. Clarament la distància entre 𝜋1 i
+                               √6
+𝜋 és 𝑑(𝜋1 , 𝜋) = 𝑑(𝑃, 𝜋) = 2 .
+                                                                                           √6
+c) Per trobar un segon pla 𝜋2 també paral·lel a 𝜋 i que també estigui a distància 2 de 𝜋,
+buscarem el punt simètric, 𝑃′, de 𝑃 respecte al pla 𝜋. Busquem la recta perpendicular a 𝜋
+que passa pel punt 𝑃. L’equació paramètrica d’aquesta recta és
+
+                    𝑟: (𝑥, 𝑦, 𝑧) = (0,1,3) + 𝜆 · (2, −1, 1) = (2𝜆, 1 − 𝜆, 3 + 𝜆).
+
+Busquem el punt d’intersecció 𝑀 de la recta 𝑟 amb el pla 𝜋:
+
+                                    2 · (2𝜆) − (1 − 𝜆) + 3 + 𝜆 = 5
+                                                6𝜆 = 3
+                                                     1
+                                                 𝜆= .
+                                                     2
+                                                                                      Pàgina 6 de 6
+                                                                                     Matemàtiques
+     Proves d’accés a la Universitat 2025, convocatòria extraordinària. Criteri específic d'avaluació
+
+                   1 7
+Per tant, 𝑀 = (1, 2 , 2). Ara ens cal trobar el punt simètric 𝑃′ de 𝑃 respecte de 𝜋, fent per
+                                                     1   1
+                  ⃗⃗⃗⃗⃗⃗ = (0,1,3) + 2 · (1, − , ) = (2, 0, 4).
+exemple 𝑃′ = 𝑃 + 2𝑃𝑀                          2 2
+
+
+Finalment el pla buscat és de la forma 2𝑥 − 𝑦 + 𝑧 = 𝐸 per algun 𝐸 real i passa per 𝑃′,
+així doncs,
+
+                                           2 · 2 − 0 + 4 = 𝐸,
+
+i 𝐸 = 8. Tenim doncs que 𝜋2 és el pla d’equació 2𝑥 − 𝑦 + 𝑧 = 8.
+
+Alternativament, també poden plantejar l’equació de la distància d’un pla paral·lel
+genèric, a un punt qualsevol de 𝜋 i demanar que sigui √6/2. Una solució serà el 𝜋1 i l’altra
+el pla buscat 𝜋2 . Compteu bé aquesta manera alternativa si està ben justificada i calculada.
+
+Criteris de correcció: (a) Compteu 0,5 per la comprovació que la distància és la que diu
+l’enunciat (inclosa la simplificació de la fracció amb arrels). (b) Compteu 0,5 per
+l’equació del pla paral·lel i 0,25 per argumentar que la distància és la mateixa. (c)
+Compteu 0,5 pel càlcul de la projecció, 0,5 pel càlcul del punt simètric, i 0,25 per
+l’equació final del pla.
+

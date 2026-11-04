@@ -1,0 +1,102 @@
+[
+ {
+  "id": "PAU-FIS-GRAV-001",
+  "flagged": true,
+  "source": "Andalucía · Extraordinaria 2025",
+  "block": "campo_gravitatorio",
+  "title": "Campo y fuerza gravitatoria de dos masas simétricas · Andalucía · Extraordinaria 2025",
+  "statement": "Dos masas puntuales de $200\\ \\text{kg}$ están en $A(0,-3)\\ \\text{m}$ y $B(0,3)\\ \\text{m}$.\n\n**(i)** El campo gravitatorio en $C(4,0)\\ \\text{m}$ (apoyándose en un esquema).\n**(ii)** La fuerza sobre una masa de $3\\ \\text{kg}$ situada en el origen.",
+  "knowns": [
+   "$m_A=m_B=200\\ \\text{kg}$ en $(0,-3)$ y $(0,3)\\ \\text{m}$",
+   "$G=6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$",
+   "masa de prueba $m=3\\ \\text{kg}$ en el origen"
+  ],
+  "full_solution": "**(i) Campo en $C(4,0)$.**\nCada masa dista de $C$: $r=\\sqrt{4^2+3^2}=5\\ \\text{m}$. Módulo de cada campo:\n$$g_A=g_B=\\dfrac{G\\,m}{r^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot200}{25}=5{,}34\\cdot10^{-10}\\ \\text{N}\\cdot\\text{kg}^{-1}$$\nLos campos apuntan de $C$ hacia cada masa. Por simetría las componentes $y$ se cancelan y sólo queda componente $x$ (hacia el origen, es decir $-x$). El coseno del ángulo con el eje $x$ es $4/5$:\n$$\\vec g = -2\\,g_A\\dfrac{4}{5}\\,\\vec i = -2\\cdot5{,}34\\cdot10^{-10}\\cdot0{,}8\\,\\vec i = -8{,}54\\cdot10^{-10}\\,\\vec i\\ \\text{N}\\cdot\\text{kg}^{-1}$$\n\n**(ii) Fuerza sobre $3\\ \\text{kg}$ en el origen.**\nEl origen equidista de ambas masas ($3\\ \\text{m}$), situadas simétricamente sobre el eje $y$. Los dos campos son iguales y opuestos, de modo que el campo resultante es nulo:\n$$\\vec g(0,0)=\\vec 0\\ \\Rightarrow\\ \\vec F = m\\,\\vec g = \\vec 0\\ \\text{N}$$",
+  "answer": "$\\vec g(C) = -8{,}54\\cdot10^{-10}\\,\\vec i\\ \\text{N}\\cdot\\text{kg}^{-1}$ (hacia el origen).\nEn el origen el campo es nulo por simetría, luego $\\vec F = \\vec 0$.",
+  "figure_suggestion": "Plano xy: masas de 200 kg en (0,-3) y (0,3); punto C(4,0) con los dos vectores de campo apuntando hacia cada masa y su resultante hacia -x; mostrar también el origen con campos opuestos que se anulan."
+ },
+ {
+  "id": "PAU-FIS-GRAV-008",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2024",
+  "block": "campo_gravitatorio",
+  "title": "Fuerzas no conservativas y energía de un bloque con rozamiento · Andalucía · Ordinaria 2024",
+  "statement": "**(a)** Razone si son verdaderas: i) El trabajo total de las fuerzas no conservativas es igual a la variación de la energía mecánica. ii) Siempre que actúen fuerzas no conservativas la energía mecánica varía.\n\n**(b)** Un bloque de $150\\ \\text{kg}$ desliza por una superficie horizontal con rozamiento, con velocidad inicial $3\\ \\text{m·s}^{-1}$ hacia la derecha. Sobre él actúa una fuerza de $20\\ \\text{N}$ dirigida hacia la izquierda y formando $30^\\circ$ sobre la horizontal; recorre $25\\ \\text{m}$ hasta detenerse. i) Esquema de fuerzas. ii) Variaciones de energía cinética, potencial y mecánica. iii) Trabajo de cada fuerza.",
+  "knowns": [
+   "$m=150\\ \\text{kg}$",
+   "$v_0=3\\ \\text{m·s}^{-1}$",
+   "$F=20\\ \\text{N}$ a $30^\\circ$ (hacia la izquierda)",
+   "$\\Delta x=25\\ \\text{m}$",
+   "$g=9{,}8\\ \\text{m·s}^{-2}$"
+  ],
+  "full_solution": "**(a)** i) **Verdadera**: $W_{\\text{no cons}}=\\Delta E_m$ (el trabajo de las fuerzas no conservativas iguala la variación de energía mecánica). ii) **Falsa**: una fuerza no conservativa perpendicular al desplazamiento (p. ej. la normal) no realiza trabajo y no cambia $E_m$.\n\n**(b)** El movimiento es horizontal, luego $\\Delta E_p=0$.\n\nii) Variación de energía cinética (parte de $3\\ \\text{m·s}^{-1}$ y se detiene):\n$$\\Delta E_c=0-\\dfrac12(150)(3)^2=-675\\ \\text{J};\\qquad \\Delta E_p=0;\\qquad \\Delta E_m=\\Delta E_c=-675\\ \\text{J}$$\n\niii) Trabajos:\n- Peso y normal: perpendiculares al desplazamiento $\\Rightarrow W=0$.\n- Fuerza aplicada de $20\\ \\text{N}$ (componente horizontal $20\\cos30^\\circ$ opuesta al movimiento):\n$$W_F=-20\\cos30^\\circ\\cdot25=-433\\ \\text{J}$$\n- Rozamiento: por el teorema de la energía cinética $W_{\\text{total}}=\\Delta E_c$:\n$$W_{roz}=\\Delta E_c-W_F=-675-(-433)=-242\\ \\text{J}$$",
+  "answer": "**(a)** i) Verdadera; ii) Falsa.  **(b)** $\\Delta E_c=\\Delta E_m=-675\\ \\text{J}$, $\\Delta E_p=0$; $W_{\\text{peso}}=W_{\\text{normal}}=0$, $W_F\\approx-433\\ \\text{J}$, $W_{roz}\\approx-242\\ \\text{J}$.",
+  "figure_suggestion": "Diagrama de cuerpo libre del bloque: peso (abajo), normal (arriba), fuerza de 20 N a 30° hacia la izquierda y arriba, rozamiento hacia la izquierda; movimiento hacia la derecha."
+ },
+ {
+  "id": "PAU-FIS-GRAV-009",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2024",
+  "block": "campo_gravitatorio",
+  "title": "Velocidad de escape y satélite estacionario de Júpiter · Andalucía · Ordinaria 2024",
+  "statement": "**(a)** i) Deduzca la velocidad de escape desde la superficie de un planeta. ii) La masa y el radio de la Tierra son $81$ y $3{,}67$ veces los de la Luna. ¿Qué relación hay entre las velocidades de escape de la Tierra y de la Luna?\n\n**(b)** Se quiere un satélite estacionario alrededor de Júpiter (mismo periodo que el planeta). Un día en Júpiter es $0{,}41$ días terrestres y $M_J=318\\,M_T$. Determine: i) el radio orbital alrededor de Júpiter; ii) la relación entre los radios orbitales de satélites estacionarios de la Tierra y de Júpiter.",
+  "knowns": [
+   "$M_T=81\\,M_L$, $R_T=3{,}67\\,R_L$",
+   "$T_J=0{,}41\\,T_T$",
+   "$M_J=1{,}9\\cdot10^{27}\\ \\text{kg}=318\\,M_T$",
+   "$T_T=24\\ \\text{h}$",
+   "$G=6{,}67\\cdot10^{-11}$"
+  ],
+  "full_solution": "**(a)** i) Por conservación de energía, escapar significa llegar al infinito con velocidad nula: $\\dfrac12 m v_e^2-\\dfrac{GMm}{R}=0$, de donde\n$$v_e=\\sqrt{\\dfrac{2GM}{R}}$$\nii) Como $v_e\\propto\\sqrt{M/R}$:\n$$\\dfrac{v_{e,T}}{v_{e,L}}=\\sqrt{\\dfrac{M_T/R_T}{M_L/R_L}}=\\sqrt{\\dfrac{81}{3{,}67}}=4{,}70$$\n\n**(b)** i) Satélite estacionario: $T=T_J=0{,}41\\cdot24\\cdot3600=35\\,424\\ \\text{s}$. De la 3ª ley de Kepler $T^2=\\dfrac{4\\pi^2}{GM_J}r^3$:\n$$r=\\left(\\dfrac{GM_J T^2}{4\\pi^2}\\right)^{1/3}=\\left(\\dfrac{6{,}67\\cdot10^{-11}\\cdot1{,}9\\cdot10^{27}\\cdot(35\\,424)^2}{4\\pi^2}\\right)^{1/3}=1{,}59\\cdot10^{8}\\ \\text{m}$$\nii) Como $r\\propto(M T^2)^{1/3}$:\n$$\\dfrac{r_J}{r_T}=\\left(\\dfrac{M_J T_J^2}{M_T T_T^2}\\right)^{1/3}=\\left(318\\cdot0{,}41^2\\right)^{1/3}=3{,}77$$",
+  "answer": "**(a)** $v_e=\\sqrt{2GM/R}$; $v_{e,T}/v_{e,L}=\\sqrt{81/3{,}67}\\approx4{,}70$.  **(b)** $r_J\\approx1{,}59\\cdot10^{8}\\ \\text{m}$; $r_J/r_T=(318\\cdot0{,}41^2)^{1/3}\\approx3{,}77$.",
+  "figure_suggestion": "Esquema: satélite en órbita circular estacionaria alrededor de Júpiter (radio r, periodo T_J); comparar con órbita geoestacionaria terrestre."
+ },
+ {
+  "id": "PAU-FIS-GRAV-010",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2025",
+  "block": "campo_gravitatorio",
+  "title": "Campo de dos masas, maleta arrastrada y satélite de los años 60 · Andalucía · Ordinaria 2025",
+  "statement": "**(a)** Considere dos masas puntuales iguales. Razone: i) el campo gravitatorio es nulo solo en el punto medio entre ellas; ii) el potencial gravitatorio solo se anula a distancia infinita.\n\n**(b1)** Un asistente arrastra a velocidad constante una maleta de $7\\ \\text{kg}$ por el suelo tirando con una correa a $63^\\circ$ sobre la horizontal; $\\mu=0{,}25$. i) Esquema de fuerzas. ii) Trabajo de cada fuerza en $3{,}5\\ \\text{m}$.\n\n**(b2)** Un satélite orbitaba a $1{,}6\\cdot10^{4}\\ \\text{km}$ sobre la superficie terrestre, con masa $1000\\ \\text{kg}$. Calcule: i) su energía potencial; ii) su velocidad orbital; iii) su energía mecánica.",
+  "knowns": [
+   "$m_{\\text{maleta}}=7\\ \\text{kg}$, $\\theta=63^\\circ$, $\\mu=0{,}25$, $d=3{,}5\\ \\text{m}$, $g=9{,}8$",
+   "$h=1{,}6\\cdot10^{4}\\ \\text{km}$, $m_{\\text{sat}}=1000\\ \\text{kg}$",
+   "$G=6{,}67\\cdot10^{-11}$, $M_T=5{,}98\\cdot10^{24}\\ \\text{kg}$, $R_T=6370\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** i) **Verdadera**: para dos masas iguales, los campos solo se cancelan (igual módulo, sentidos opuestos) en el punto medio del segmento que las une. ii) **Verdadera**: el potencial gravitatorio $V=-GM/r$ es siempre negativo y solo tiende a cero cuando $r\\to\\infty$ (la suma de dos términos negativos no se anula a distancia finita).\n\n**(b1)** A velocidad constante hay equilibrio. Descomponiendo la tensión $T$ (horizontal $T\\cos63^\\circ$, vertical $T\\sin63^\\circ$):\n- Vertical: $N=mg-T\\sin63^\\circ$. Horizontal: $T\\cos63^\\circ=\\mu N$.\n$$T=\\dfrac{\\mu mg}{\\cos63^\\circ+\\mu\\sin63^\\circ}=\\dfrac{0{,}25\\cdot7\\cdot9{,}8}{\\cos63^\\circ+0{,}25\\sin63^\\circ}=25{,}3\\ \\text{N}$$\nTrabajos en $d=3{,}5\\ \\text{m}$:\n$$W_T=T\\cos63^\\circ\\cdot d=25{,}3\\cdot0{,}454\\cdot3{,}5=40{,}3\\ \\text{J}$$\nEl rozamiento ($F_{roz}=T\\cos63^\\circ=11{,}5\\ \\text{N}$, opuesto al avance): $W_{roz}=-40{,}3\\ \\text{J}$.\nPeso y normal (perpendiculares al desplazamiento horizontal): $W=0$. Suma $=0$ (velocidad constante).\n\n**(b2)** Radio orbital $r=R_T+h=6370+16\\,000=22\\,370\\ \\text{km}=2{,}237\\cdot10^{7}\\ \\text{m}$.\n$$E_p=-\\dfrac{GM_T m}{r}=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot5{,}98\\cdot10^{24}\\cdot1000}{2{,}237\\cdot10^{7}}=-1{,}78\\cdot10^{10}\\ \\text{J}$$\n$$v=\\sqrt{\\dfrac{GM_T}{r}}=\\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot5{,}98\\cdot10^{24}}{2{,}237\\cdot10^{7}}}=4{,}22\\cdot10^{3}\\ \\text{m·s}^{-1}$$\n$$E=E_p+\\dfrac12 m v^2=-\\dfrac{GM_T m}{2r}=-8{,}92\\cdot10^{9}\\ \\text{J}$$",
+  "answer": "**(a)** i) Verdadera; ii) Verdadera.  **(b1)** $T\\approx25{,}3\\ \\text{N}$; $W_T\\approx+40{,}3\\ \\text{J}$, $W_{roz}\\approx-40{,}3\\ \\text{J}$, $W_{\\text{peso}}=W_{\\text{normal}}=0$.  **(b2)** $E_p\\approx-1{,}78\\cdot10^{10}\\ \\text{J}$; $v\\approx4{,}22\\cdot10^{3}\\ \\text{m·s}^{-1}$; $E\\approx-8{,}92\\cdot10^{9}\\ \\text{J}$.",
+  "figure_suggestion": "Diagrama de cuerpo libre de la maleta: peso, normal, tensión de la correa a 63° y rozamiento; y esquema de la órbita circular del satélite a r=R_T+h."
+ },
+ {
+  "id": "PAU-FIS-GRAV-011",
+  "flagged": true,
+  "source": "Andalucía · Ordinaria 2026",
+  "block": "campo_gravitatorio",
+  "title": "Conservación de la energía mecánica y tobogán con rozamiento · Andalucía · Ordinaria 2026",
+  "statement": "**(a)** Razone la veracidad de: i) para que la energía mecánica se conserve es necesario que la resultante de todas las fuerzas sobre un cuerpo sea nula; ii) la energía mecánica se conserva cuando sobre un cuerpo actúan solo fuerzas conservativas.\n\n**(b)** Un niño de $15\\ \\text{kg}$ resbala desde el reposo por un tobogán de $2\\ \\text{m}$ de altura inclinado $30^\\circ$. Con coeficiente de rozamiento dinámico $0{,}25$: i) haga un esquema de fuerzas y determine el trabajo de la fuerza de rozamiento; ii) calcule la energía cinética al final y la velocidad de llegada.",
+  "knowns": [
+   "$m=15\\ \\text{kg}$, $h=2\\ \\text{m}$, $\\theta=30^\\circ$",
+   "$\\mu=0{,}25$",
+   "$g=9{,}8\\ \\text{m·s}^{-2}$"
+  ],
+  "full_solution": "**(a)** i) **Falsa.** La energía mecánica se conserva si no actúan fuerzas no conservativas (como el rozamiento), aunque la resultante no sea nula; por ejemplo, en caída libre la resultante (el peso) no es nula y la energía mecánica se conserva. ii) **Verdadera.** Si solo actúan fuerzas conservativas, el trabajo total es $-\\Delta E_p$ y la energía mecánica $E_m=E_c+E_p$ permanece constante.\n\n**(b)** Sobre el niño actúan: peso $mg$, normal $N$ y rozamiento $F_r$ (opuesto al movimiento). La longitud del plano es $L=\\dfrac{h}{\\text{sen}\\,30^\\circ}=\\dfrac{2}{0{,}5}=4\\ \\text{m}$. La normal:\n$$N=mg\\cos30^\\circ=15\\cdot9{,}8\\cdot\\cos30^\\circ=127{,}3\\ \\text{N}$$\ni) Trabajo del rozamiento ($F_r=\\mu N$, opuesto al desplazamiento):\n$$W_{roz}=-\\mu N\\,L=-0{,}25\\cdot127{,}3\\cdot4=-127{,}3\\ \\text{J}$$\nii) Por el teorema de la energía (parte del reposo), $E_c=mgh+W_{roz}$:\n$$E_c=15\\cdot9{,}8\\cdot2-127{,}3=294-127{,}3=166{,}7\\ \\text{J}$$\n$$v=\\sqrt{\\dfrac{2E_c}{m}}=\\sqrt{\\dfrac{2\\cdot166{,}7}{15}}=4{,}71\\ \\text{m/s}$$",
+  "answer": "**(a)** i) Falsa; ii) Verdadera. **(b)** $W_{roz}=-127{,}3\\ \\text{J}$; $E_c=166{,}7\\ \\text{J}$; $v=4{,}71\\ \\text{m/s}$.",
+  "figure_suggestion": "Plano inclinado $30^\\circ$, altura $2$ m; diagrama de cuerpo libre del niño con peso $mg$, normal $N=mg\\cos30^\\circ$ y rozamiento $F_r$ hacia arriba del plano."
+ },
+ {
+  "id": "PAU-FIS-GRAV-033",
+  "flagged": true,
+  "source": "Comunidad Valenciana · Junio 2018",
+  "block": "campo_gravitatorio",
+  "title": "Punto de campo gravitatorio nulo entre dos sistemas estelares · C. Valenciana · Junio 2018",
+  "statement": "Tau Ceti tiene un sistema planetario cuya masa es $0{,}7$ veces la del nuestro. Considerando ambos sistemas como masas puntuales separadas una distancia $d$, calcula el punto donde se anula el campo gravitatorio creado exclusivamente por ambas masas. Expresa primero la posición en función de $d$ y después en km, sabiendo que $d=12$ años luz.",
+  "knowns": [
+   "$M_{\\text{Tau Ceti}}=0{,}7\\,M$",
+   "$d=12$ años luz",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "El campo se anula en un punto $P$ entre ambas masas, a distancia $x$ de nuestro sistema (masa $M$) y $d-x$ de Tau Ceti (masa $0{,}7M$):\n$$\\dfrac{GM}{x^2}=\\dfrac{G(0{,}7M)}{(d-x)^2}\\ \\Rightarrow\\ \\dfrac{d-x}{x}=\\sqrt{0{,}7}$$\n$$d-x=x\\sqrt{0{,}7}\\ \\Rightarrow\\ x=\\dfrac{d}{1+\\sqrt{0{,}7}}=0{,}544\\,d$$\n\nEl punto está más cerca del sistema menos masivo (Tau Ceti). En km, con $1$ año luz $=9{,}461\\cdot10^{12}\\ \\text{km}$:\n$$d=12\\cdot9{,}461\\cdot10^{12}=1{,}135\\cdot10^{14}\\ \\text{km}$$\n$$x=0{,}544\\cdot1{,}135\\cdot10^{14}=6{,}18\\cdot10^{13}\\ \\text{km}$$",
+  "answer": "$x=\\dfrac{d}{1+\\sqrt{0{,}7}}\\approx0{,}544\\,d$; con $d=12$ a.l. $\\approx1{,}135\\cdot10^{14}\\ \\text{km}$, resulta $x\\approx6{,}18\\cdot10^{13}\\ \\text{km}$ desde nuestro sistema.",
+  "figure_suggestion": "Esquema: dos masas puntuales M (nuestro sistema) y 0,7M (Tau Ceti) separadas d=12 a.l.; punto de campo nulo P a 0,544 d de M, más cerca de la masa menor."
+ }
+]

@@ -1,0 +1,2 @@
+{"prefix":"mat-test-001","title":"Área bajo y=ln(x) entre x=1 y x=e",
+"tikz":"\\nbfuncplotlab{-0.4}{3.2}{-2.2}{1.6}{1}{1}{$x$}{$y$}{\n\\addplot[draw=none,fill=NebulaAmber!30,domain=1:2.71828,samples=80]{ln(x)} \\closedcycle;\n\\addplot[nbline,very thick,domain=0.12:3.1,samples=120]{ln(x)};\n\\node[NebulaNavy,font=\\footnotesize] at (axis cs:1.9,0.35) {$A$};\n\\draw[NebulaError,thick,dashed] (axis cs:2.71828,0) -- (axis cs:2.71828,1);\n\\node[NebulaError,font=\\footnotesize,anchor=north] at (axis cs:2.71828,-0.05) {$e$};\n}"}

@@ -1,0 +1,1129 @@
+[
+ {
+  "id": "PAU-FIS-NUC-001",
+  "source": "Andalucía · Extraordinaria 2025",
+  "title": "Energía de enlace del helio-3 y comparación de estabilidad con el helio-4 · Andalucía · Extraordinaria 2025",
+  "statement": "**(i)** Determine la energía de enlace del isótopo $^{3}_{2}\\text{He}$.\n**(ii)** Sabiendo que la energía de enlace por nucleón del $^{4}_{2}\\text{He}$ es $6{,}83\\ \\text{MeV/nucleón}$, razone cuál es más estable.",
+  "knowns": [
+   "$m(^{3}_{2}\\text{He})=3{,}016029\\ \\text{u}$",
+   "$m_p=1{,}007276\\ \\text{u}$, $m_n=1{,}008665\\ \\text{u}$",
+   "$1\\ \\text{u}=1{,}66\\cdot10^{-27}\\ \\text{kg}$, $c=3\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$, $e=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(i) Energía de enlace del $^{3}_{2}\\text{He}$.**\nEl $^{3}_{2}\\text{He}$ tiene $2$ protones y $1$ neutrón. Defecto de masa:\n$$\\Delta m = (2m_p+m_n)-m(^{3}\\text{He}) = (2\\cdot1{,}007276+1{,}008665)-3{,}016029 = 7{,}188\\cdot10^{-3}\\ \\text{u}$$\n$$\\Delta m = 7{,}188\\cdot10^{-3}\\cdot1{,}66\\cdot10^{-27} = 1{,}193\\cdot10^{-29}\\ \\text{kg}$$\n$$E_{enlace}=\\Delta m\\,c^2 = 1{,}193\\cdot10^{-29}\\cdot(3\\cdot10^{8})^2 = 1{,}07\\cdot10^{-12}\\ \\text{J} = 6{,}71\\ \\text{MeV}$$\n\n**(ii) Comparación de estabilidad.**\nLa energía de enlace **por nucleón** del $^{3}_{2}\\text{He}$ es:\n$$\\dfrac{E_{enlace}}{A}=\\dfrac{6{,}71}{3}=2{,}24\\ \\text{MeV/nucleón}$$\nComo $2{,}24\\ \\text{MeV/nucleón} < 6{,}83\\ \\text{MeV/nucleón}$, el $^{4}_{2}\\text{He}$ está **más fuertemente ligado** y es **más estable** que el $^{3}_{2}\\text{He}$.",
+  "answer": "$E_{enlace}(^{3}\\text{He}) = 1{,}07\\cdot10^{-12}\\ \\text{J} \\approx 6{,}71\\ \\text{MeV}$ ($2{,}24\\ \\text{MeV/nucleón}$).\nEl $^{4}_{2}\\text{He}$ ($6{,}83\\ \\text{MeV/nucleón}$) es más estable que el $^{3}_{2}\\text{He}$.",
+  "common_errors": [
+   "Equivocar el número de nucleones: $^{3}\\text{He}$ tiene $2p$ y $1n$.",
+   "Comparar energías de enlace totales en lugar de por nucleón.",
+   "No convertir el defecto de masa de u a kg antes de aplicar $E=\\Delta m\\,c^2$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-002",
+  "source": "Andalucía · Extraordinaria 2025",
+  "title": "Plutonio-239: constante de desintegración, actividad y tiempo al 25% · Andalucía · Extraordinaria 2025",
+  "statement": "Un núcleo de plutonio-239 tiene masa $239{,}05\\ \\text{u}$ y periodo de semidesintegración $24200\\ \\text{años}$.\n\n**(i)** La constante de desintegración.\n**(ii)** La actividad de una muestra de $1\\ \\text{mg}$.\n**(iii)** El tiempo para que quede el $25\\%$ de los núcleos.",
+  "knowns": [
+   "$T_{1/2}=24200\\ \\text{años}=7{,}63\\cdot10^{11}\\ \\text{s}$",
+   "masa molar $M=239{,}05\\ \\text{g/mol}$; muestra $m=1\\ \\text{mg}=10^{-3}\\ \\text{g}$",
+   "$N_A=6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(i) Constante de desintegración.**\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{0{,}693}{24200\\cdot365\\cdot24\\cdot3600}=9{,}08\\cdot10^{-13}\\ \\text{s}^{-1}$$\n\n**(ii) Actividad de $1\\ \\text{mg}$.**\nNúmero de núcleos:\n$$N=\\dfrac{m}{M}N_A=\\dfrac{10^{-3}}{239{,}05}\\cdot6{,}02\\cdot10^{23}=2{,}52\\cdot10^{18}\\ \\text{núcleos}$$\n$$A=\\lambda N=9{,}08\\cdot10^{-13}\\cdot2{,}52\\cdot10^{18}=2{,}29\\cdot10^{6}\\ \\text{Bq}$$\n\n**(iii) Tiempo para el $25\\%$.**\n$N=0{,}25\\,N_0=\\left(\\tfrac12\\right)^2 N_0$ corresponde a **dos periodos**:\n$$t=2\\,T_{1/2}=2\\cdot24200=48400\\ \\text{años}$$",
+  "answer": "$\\lambda = 9{,}08\\cdot10^{-13}\\ \\text{s}^{-1}$.\n$A = 2{,}29\\cdot10^{6}\\ \\text{Bq}$.\n$t = 2\\,T_{1/2} = 48400\\ \\text{años}$.",
+  "common_errors": [
+   "No convertir el periodo de años a segundos para $\\lambda$ y la actividad.",
+   "Calcular mal el número de núcleos (usar la masa de un núcleo en u sin pasar por $N_A$).",
+   "Resolver numéricamente el $25\\%$ en vez de reconocer que son dos semividas."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-003",
+  "source": "Andalucía · Junio 2019",
+  "title": "Desintegraciones beta y alfa; masa remanente de Bi-210 y Rn-222 · Andalucía · Junio 2019",
+  "statement": "**(a)** El $^{210}_{83}\\text{Bi}$ se desintegra por emisión beta y el $^{222}_{86}\\text{Rn}$ por radiación alfa. Escriba y explique cada proceso, determinando el número atómico y másico del nucleido resultante.\n\n**(b)** Los periodos de semidesintegración del $^{210}_{83}\\text{Bi}$ y del $^{222}_{86}\\text{Rn}$ son $5$ y $3{,}8\\ \\text{días}$. Se dispone de $3\\ \\text{mg}$ de $^{210}\\text{Bi}$ y de $10\\ \\text{mg}$ de $^{222}\\text{Rn}$. Determine en cuál de ellos quedará más masa sin desintegrar transcurridos $15{,}2\\ \\text{días}$.",
+  "knowns": [
+   "$T_{1/2}(\\text{Bi}) = 5\\ \\text{días}$, $m_0 = 3\\ \\text{mg}$",
+   "$T_{1/2}(\\text{Rn}) = 3{,}8\\ \\text{días}$, $m_0 = 10\\ \\text{mg}$",
+   "$t = 15{,}2\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** Emisión beta ($\\beta^-$): un neutrón se convierte en protón, emitiendo un electrón (y un antineutrino). El número másico no cambia y el atómico aumenta en 1:\n$$^{210}_{83}\\text{Bi} \\rightarrow\\ ^{210}_{84}\\text{Po} + \\ ^{0}_{-1}e + \\bar{\\nu}_e$$\nEmisión alfa: el núcleo emite una partícula $\\alpha$ ($^{4}_{2}\\text{He}$); el número másico disminuye en 4 y el atómico en 2:\n$$^{222}_{86}\\text{Rn} \\rightarrow\\ ^{218}_{84}\\text{Po} + \\ ^{4}_{2}\\text{He}$$\n\n**(b)** La masa remanente es $m = m_0\\,2^{-t/T_{1/2}}$.\n$$\\text{Bi:}\\quad m = 3\\cdot2^{-15{,}2/5} = 3\\cdot2^{-3{,}04} = 0{,}365\\ \\text{mg}$$\n$$\\text{Rn:}\\quad m = 10\\cdot2^{-15{,}2/3{,}8} = 10\\cdot2^{-4} = 0{,}625\\ \\text{mg}$$\nTranscurridos $15{,}2\\ \\text{días}$ queda más masa sin desintegrar en la muestra de $^{222}\\text{Rn}$ ($0{,}625\\ \\text{mg}$ frente a $0{,}365\\ \\text{mg}$ del $^{210}\\text{Bi}$).",
+  "answer": "**(a)** $^{210}_{83}\\text{Bi} \\to\\ ^{210}_{84}\\text{Po} + \\beta^- + \\bar{\\nu}_e$; $^{222}_{86}\\text{Rn} \\to\\ ^{218}_{84}\\text{Po} + \\alpha$. **(b)** Queda más masa de $^{222}\\text{Rn}$: $0{,}625\\ \\text{mg}$ frente a $0{,}365\\ \\text{mg}$ de $^{210}\\text{Bi}$.",
+  "common_errors": [
+   "Errar las leyes de Soddy (beta: $Z+1$; alfa: $A-4$, $Z-2$).",
+   "Comparar actividades en vez de masa remanente.",
+   "No advertir que $15{,}2$ días son exactamente $4$ periodos del Rn."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-004",
+  "source": "Andalucía · Junio 2024",
+  "title": "Defecto de masa y energía de enlace por nucleón de H-3 y He-3 · Andalucía · Junio 2024",
+  "statement": "**(a)** Explique el concepto de defecto de masa, su expresión matemática y su relación con la estabilidad nuclear.\n\n**(b)** (i) Calcule la energía de enlace por nucleón de los nucleidos $^{3}_{1}\\text{H}$ y $^{3}_{2}\\text{He}$. (ii) Indique razonadamente cuál es más estable.",
+  "knowns": [
+   "$m(^{3}_{1}\\text{H}) = 3{,}016049\\ \\text{u}$",
+   "$m(^{3}_{2}\\text{He}) = 3{,}016029\\ \\text{u}$",
+   "$m_n = 1{,}008665\\ \\text{u}$, $m_p = 1{,}007276\\ \\text{u}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$, $1\\ \\text{u} = 1{,}66\\cdot10^{-27}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** El defecto de masa $\\Delta m$ es la diferencia entre la masa de los nucleones por separado y la masa del núcleo: $\\Delta m = (Z\\,m_p + N\\,m_n) - M_{\\text{núcleo}}$. Esa masa \"desaparecida\" se transforma en la energía de enlace $E_e = \\Delta m\\,c^2$, que mantiene unido el núcleo. Cuanto mayor es la energía de enlace POR NUCLEÓN, más estable es el núcleo.\n\n**(b)(i)** Para $^{3}_{1}\\text{H}$ ($Z=1$, $N=2$):\n$$\\Delta m = 1\\cdot1{,}007276 + 2\\cdot1{,}008665 - 3{,}016049 = 0{,}008557\\ \\text{u}$$\n$$E_e = \\Delta m\\,c^2 = 0{,}008557\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2 = 1{,}28\\cdot10^{-12}\\ \\text{J}$$\nPor nucleón: $\\dfrac{E_e}{3} = 4{,}26\\cdot10^{-13}\\ \\text{J} \\approx 2{,}66\\ \\text{MeV/nucleón}$.\n\nPara $^{3}_{2}\\text{He}$ ($Z=2$, $N=1$):\n$$\\Delta m = 2\\cdot1{,}007276 + 1\\cdot1{,}008665 - 3{,}016029 = 0{,}007188\\ \\text{u}$$\n$$E_e = 0{,}007188\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2 = 1{,}07\\cdot10^{-12}\\ \\text{J}$$\nPor nucleón: $\\dfrac{E_e}{3} = 3{,}58\\cdot10^{-13}\\ \\text{J} \\approx 2{,}23\\ \\text{MeV/nucleón}$.\n\n**(b)(ii)** Con los datos del enunciado, $^{3}_{1}\\text{H}$ tiene mayor energía de enlace por nucleón ($2{,}66$ frente a $2{,}23\\ \\text{MeV}$), luego resulta el más estable según este cálculo.",
+  "answer": "**(a)** $\\Delta m = Z m_p + N m_n - M$, con $E_e = \\Delta m\\,c^2$; mayor $E_e$/nucleón $\\Rightarrow$ más estable. **(b)** $E_e/A(^{3}\\text{H}) \\approx 2{,}66\\ \\text{MeV}$ y $E_e/A(^{3}\\text{He}) \\approx 2{,}23\\ \\text{MeV}$; más estable el $^{3}_{1}\\text{H}$ (según los datos dados).",
+  "common_errors": [
+   "Contar mal protones y neutrones de cada nucleido ($^{3}\\text{H}$: 1p, 2n; $^{3}\\text{He}$: 2p, 1n).",
+   "No dividir la energía de enlace entre el número de nucleones.",
+   "Olvidar convertir u a kg y aplicar $c^2$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-005",
+  "source": "Andalucía · Ordinaria 2024",
+  "title": "Conservación en reacciones nucleares y energía de fisión del uranio-235 · Andalucía · Ordinaria 2024",
+  "statement": "**(a)** Justifique cuál de estas reacciones NO produce los productos indicados: i) $^{14}_{7}\\text{N}+n\\rightarrow\\,^{14}_{6}\\text{C}+p$; ii) $^{28}_{14}\\text{Si}+\\alpha\\rightarrow\\,^{29}_{15}\\text{P}+n$.\n\n**(b)** i) Determine $c$ y $Z$ en: $^{235}_{92}\\text{U}+^{1}_{0}n\\rightarrow\\,^{145}_{Z}\\text{La}+^{88}_{35}\\text{Br}+c\\,^{1}_{0}n$. ii) Calcule la energía liberada al fisionarse un millón de núcleos.",
+  "knowns": [
+   "$m(^{235}\\text{U})=235{,}043930\\ \\text{u}$",
+   "$m(^{145}\\text{La})=144{,}921651\\ \\text{u}$",
+   "$m(^{88}\\text{Br})=87{,}924074\\ \\text{u}$",
+   "$m_n=1{,}008665\\ \\text{u}$",
+   "$1\\ \\text{u}=1{,}66\\cdot10^{-27}\\ \\text{kg}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** Deben conservarse el número másico $A$ y el atómico $Z$.\n- i) $A$: $14+1=15=14+1$ ✓; $Z$: $7+0=7=6+1$ ✓. **Posible.**\n- ii) $A$: $28+4=32$, pero productos $29+1=30$; no se conserva ($Z$ tampoco: $16\\neq15$). **No produce** esos productos.\n\n**(b)** i) Conservación de $A$: $235+1=145+88+c\\Rightarrow c=3$. Conservación de $Z$: $92=Z+35\\Rightarrow Z=57$ ($^{145}_{57}\\text{La}$).\n\nii) Defecto de masa por fisión (con $c=3$, hay $2$ neutrones netos de más en los productos):\n$$\\Delta m=m(^{235}\\text{U})+m_n-m(^{145}\\text{La})-m(^{88}\\text{Br})-3m_n$$\n$$\\Delta m=235{,}043930-144{,}921651-87{,}924074-2\\cdot1{,}008665=0{,}18088\\ \\text{u}$$\nEnergía por fisión: $E_1=\\Delta m\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2=2{,}70\\cdot10^{-11}\\ \\text{J}$.\nPara un millón ($10^{6}$) de núcleos:\n$$E=10^{6}\\cdot2{,}70\\cdot10^{-11}=2{,}70\\cdot10^{-5}\\ \\text{J}$$",
+  "answer": "**(a)** La reacción ii) no conserva $A$ ni $Z$.  **(b)** $c=3$, $Z=57$ ($^{145}_{57}\\text{La}$); $\\Delta m\\approx0{,}18088\\ \\text{u}$, $E\\approx2{,}70\\cdot10^{-5}\\ \\text{J}$ para $10^{6}$ fisiones.",
+  "common_errors": [
+   "No restar los neutrones producidos ($3m_n$) al calcular el defecto de masa.",
+   "Olvidar multiplicar por $10^{6}$ núcleos.",
+   "Errores al aplicar la conservación de $A$ y $Z$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-006",
+  "source": "Andalucía · Reserva A 2019",
+  "title": "Desintegraciones alfa y beta y datación con carbono-14 · Andalucía · Reserva A 2019",
+  "statement": "**(a)** Un isótopo de radón ($\\text{Rn}$) se desintegra por emisión $\\alpha$ y un isótopo de plomo ($\\text{Pb}$) por emisión $\\beta$. Describa ambos procesos razonando los números atómico y másico de los nucleidos resultantes.\n\n**(b)** En una herramienta de madera la actividad del $^{14}\\text{C}$ es el $15\\%$ de la de una muestra actual. Si $T_{1/2}=5730\\ \\text{años}$, determine la constante de desintegración y la antigüedad.",
+  "knowns": [
+   "Emisión $\\alpha$ del Rn; emisión $\\beta^-$ del Pb",
+   "$A/A_0=0{,}15$",
+   "$T_{1/2}=5730\\ \\text{años}$"
+  ],
+  "full_solution": "**(a)** **Leyes de Soddy:**\n- Emisión $\\alpha$ (núcleo de He, $^4_2\\alpha$): el nucleido resultante tiene número másico $A-4$ y número atómico $Z-2$:\n$$^{A}_{Z}\\text{Rn}\\;\\rightarrow\\;^{A-4}_{Z-2}\\text{X}+\\,^{4}_{2}\\alpha$$\n(el radón tiene $Z=86$, luego resulta un elemento con $Z=84$, el polonio).\n- Emisión $\\beta^-$ (un neutrón se transforma en protón emitiendo un electrón y un antineutrino): $A$ no cambia, $Z$ aumenta en $1$:\n$$^{A}_{Z}\\text{Pb}\\;\\rightarrow\\;^{A}_{Z+1}\\text{Y}+\\,^{0}_{-1}\\beta+\\bar{\\nu}$$\n(el plomo tiene $Z=82$, luego resulta un elemento con $Z=83$, el bismuto).\n\n**(b)** Constante de desintegración:\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{\\ln 2}{5730}=1{,}21\\cdot10^{-4}\\ \\text{años}^{-1}$$\nDe $A=A_0 e^{-\\lambda t}$ con $A/A_0=0{,}15$:\n$$t=\\dfrac{\\ln(1/0{,}15)}{\\lambda}=\\dfrac{\\ln(6{,}67)}{1{,}21\\cdot10^{-4}}=1{,}57\\cdot10^{4}\\ \\text{años}\\approx 15700\\ \\text{años}$$",
+  "answer": "**(a)** $\\alpha$: $A\\to A-4$, $Z\\to Z-2$ (Rn$\\to$Po); $\\beta^-$: $A$ igual, $Z\\to Z+1$ (Pb$\\to$Bi). **(b)** $\\lambda=1{,}21\\cdot10^{-4}\\ \\text{años}^{-1}$; antigüedad $\\approx 1{,}57\\cdot10^{4}$ años.",
+  "common_errors": [
+   "Intercambiar los efectos de $\\alpha$ y $\\beta$ sobre $A$ y $Z$.",
+   "En $\\beta^-$ disminuir $Z$ en lugar de aumentarlo.",
+   "Usar $A/A_0$ invertido en el logaritmo al calcular la antigüedad."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-007",
+  "source": "Andalucía · Reserva B 2019",
+  "title": "Energía liberada en la fisión de 1 kg de uranio-235 · Andalucía · Reserva B 2019",
+  "statement": "**(a)** Explique los procesos de fisión y fusión nuclear y el origen de la energía desprendida.\n**(b)** Calcule la energía liberada en la fisión de $1\\ \\text{kg}$ de $^{235}_{92}\\text{U}$ según:\n$$^{235}_{92}\\text{U}+{}^{1}_{0}\\text{n}\\to{}^{141}_{56}\\text{Ba}+{}^{92}_{36}\\text{Kr}+3\\,{}^{1}_{0}\\text{n}$$",
+  "knowns": [
+   "$m(^{235}\\text{U})=235{,}043930\\ \\text{u}$",
+   "$m(^{141}\\text{Ba})=140{,}914403\\ \\text{u}$, $m(^{92}\\text{Kr})=91{,}926173\\ \\text{u}$",
+   "$m_n=1{,}008665\\ \\text{u}$; $1\\ \\text{u}=1{,}66\\cdot10^{-27}\\ \\text{kg}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** En la **fisión**, un núcleo pesado (como el $^{235}\\text{U}$) se rompe en núcleos más ligeros al absorber un neutrón. En la **fusión**, núcleos muy ligeros se unen para formar uno mayor. En ambos casos la masa de los productos es menor que la de los reactivos; ese **defecto de masa** $\\Delta m$ se transforma en energía según $E=\\Delta m\\,c^{2}$. La energía se libera porque los productos tienen mayor energía de enlace por nucleón (son más estables).\n\n**(b)** Defecto de masa por fisión (el neutrón incidente y uno de los tres emitidos se cancelan):\n$$\\Delta m=\\big(m_U+m_n\\big)-\\big(m_{Ba}+m_{Kr}+3m_n\\big)=235{,}043930+1{,}008665-(140{,}914403+91{,}926173+3\\cdot1{,}008665)$$\n$$\\Delta m=0{,}18602\\ \\text{u}=0{,}18602\\cdot1{,}66\\cdot10^{-27}=3{,}09\\cdot10^{-28}\\ \\text{kg}$$\nEnergía por fisión:\n$$E_1=\\Delta m\\,c^{2}=3{,}09\\cdot10^{-28}\\cdot(3\\cdot10^{8})^{2}=2{,}78\\cdot10^{-11}\\ \\text{J}\\ (\\approx 174\\ \\text{MeV})$$\nNúmero de núcleos en $1\\ \\text{kg}$: $N=\\dfrac{1000}{235}\\cdot6{,}022\\cdot10^{23}=2{,}56\\cdot10^{24}$. Energía total:\n$$E=E_1\\,N=2{,}78\\cdot10^{-11}\\cdot2{,}56\\cdot10^{24}=7{,}1\\cdot10^{13}\\ \\text{J}$$",
+  "answer": "**(b)** $\\Delta m=0{,}18602\\ \\text{u}$; $E_1\\approx 2{,}78\\cdot10^{-11}\\ \\text{J}$ ($\\approx 174\\ \\text{MeV}$) por fisión; para $1\\ \\text{kg}$, $E\\approx 7{,}1\\cdot10^{13}\\ \\text{J}$.",
+  "common_errors": [
+   "No restar los $3$ neutrones producidos (sólo cancela uno con el incidente): el balance de neutrones es $1$ frente a $3$.",
+   "Olvidar multiplicar la energía por fisión por el número de núcleos en $1\\ \\text{kg}$.",
+   "Convertir mal las unidades de masa atómica a kg antes de aplicar $E=\\Delta m c^2$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-008",
+  "source": "Cantabria · Extraordinaria 2023",
+  "title": "Muestra radiactiva: constante, semivida y núcleos · Cantabria · Extraordinaria 2023",
+  "statement": "Una muestra radiactiva tiene una actividad de $5000\\ \\text{Bq}$ en el momento de su obtención. Al cabo de $2\\ \\text{horas}$ su actividad es de $1000\\ \\text{Bq}$. Calcular:\n\n**(a)** La constante de desintegración y el periodo de semidesintegración.\n\n**(b)** El número inicial de núcleos.\n\n**(c)** Los núcleos que quedan al cabo de $3\\ \\text{horas}$.",
+  "knowns": [
+   "$A_0 = 5000\\ \\text{Bq}$",
+   "$A(2\\ \\text{h}) = 1000\\ \\text{Bq}$",
+   "$t = 2\\ \\text{h} = 7200\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** De $A = A_0 e^{-\\lambda t}$ con $A/A_0 = 1000/5000 = 0{,}2$:\n$$\\lambda = \\dfrac{\\ln(A_0/A)}{t} = \\dfrac{\\ln 5}{7200} = 2{,}24\\cdot10^{-4}\\ \\text{s}^{-1}.$$\nPeriodo de semidesintegración:\n$$T_{1/2} = \\dfrac{\\ln 2}{\\lambda} = \\dfrac{0{,}693}{2{,}24\\cdot10^{-4}} = 3{,}10\\cdot10^{3}\\ \\text{s}\\ (\\approx 51{,}7\\ \\text{min}).$$\n\n**(b)** La actividad inicial es $A_0 = \\lambda N_0$:\n$$N_0 = \\dfrac{A_0}{\\lambda} = \\dfrac{5000}{2{,}24\\cdot10^{-4}} = 2{,}24\\cdot10^{7}\\ \\text{núcleos}.$$\n\n**(c)** Al cabo de $3\\ \\text{h} = 10800\\ \\text{s}$:\n$$N(3\\ \\text{h}) = N_0\\,e^{-\\lambda t} = 2{,}24\\cdot10^{7}\\cdot e^{-2{,}24\\cdot10^{-4}\\cdot 10800} = 2{,}0\\cdot10^{6}\\ \\text{núcleos}.$$",
+  "answer": "**(a)** $\\lambda = 2{,}24\\cdot10^{-4}\\ \\text{s}^{-1}$, $T_{1/2} \\approx 3{,}10\\cdot10^{3}\\ \\text{s}$. **(b)** $N_0 = 2{,}24\\cdot10^{7}\\ \\text{núcleos}$. **(c)** $N(3\\ \\text{h}) \\approx 2{,}0\\cdot10^{6}\\ \\text{núcleos}$.",
+  "common_errors": [
+   "No convertir las horas a segundos al calcular $\\lambda$.",
+   "Confundir $\\lambda$ (constante) con $T_{1/2}$ (semivida).",
+   "Usar la actividad en lugar del número de núcleos (relacionados por $A=\\lambda N$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-009",
+  "source": "Cantabria · Ordinaria 2023",
+  "title": "Desintegración alfa del Polonio-210 · Cantabria · Ordinaria 2023",
+  "statement": "**Ejercicio 10.** El $^{210}_{84}\\text{Po}$ se desintegra por emisión $\\alpha$ dando plomo estable, con periodo de semidesintegración $138{,}4\\ \\text{días}$.\n\n**(a)** Reacción de desintegración.\n\n**(b)** Constante de desintegración.\n\nDe una muestra de $10^{16}$ átomos de $^{210}\\text{Po}$:\n\n**(c)** Actividad y número de átomos de Po-210 al cabo de un año.",
+  "knowns": [
+   "$T_{1/2} = 138{,}4\\ \\text{días}$",
+   "$N_0 = 10^{16}\\ \\text{átomos}$",
+   "$t = 1\\ \\text{año} = 365\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** La emisión $\\alpha$ resta 4 al número másico y 2 al atómico ($Z=82$ es el plomo):\n\n$$^{210}_{84}\\text{Po}\\ \\longrightarrow\\ ^{206}_{82}\\text{Pb}+{}^{4}_{2}\\text{He}$$\n\n**(b)** Constante de desintegración:\n\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{\\ln 2}{138{,}4}=5{,}01\\cdot10^{-3}\\ \\text{días}^{-1}=5{,}80\\cdot10^{-8}\\ \\text{s}^{-1}$$\n\n**(c)** Al cabo de un año ($t=365\\ \\text{días}$), $N=N_0 e^{-\\lambda t}$:\n\n$$N=10^{16}\\,e^{-5{,}01\\cdot10^{-3}\\cdot365}=10^{16}\\,e^{-1{,}83}=1{,}61\\cdot10^{15}\\ \\text{átomos}$$\n\nLa actividad es $A=\\lambda N$ (con $\\lambda$ en $\\text{s}^{-1}$):\n\n$$A=5{,}80\\cdot10^{-8}\\cdot1{,}61\\cdot10^{15}=9{,}3\\cdot10^{7}\\ \\text{Bq}$$",
+  "answer": "**(a)** $^{210}_{84}\\text{Po}\\to{}^{206}_{82}\\text{Pb}+\\alpha$. **(b)** $\\lambda\\approx5{,}01\\cdot10^{-3}\\ \\text{días}^{-1}=5{,}80\\cdot10^{-8}\\ \\text{s}^{-1}$. **(c)** $N\\approx1{,}61\\cdot10^{15}$ átomos, $A\\approx9{,}3\\cdot10^{7}\\ \\text{Bq}$.",
+  "common_errors": [
+   "Dar mal el plomo resultante (debe ser $^{206}_{82}\text{Pb}$).",
+   "Usar $\\lambda$ en días para la actividad en Bq (hay que pasar a $\text{s}^{-1}$).",
+   "Confundir $\\lambda=\\ln 2/T_{1/2}$ con $1/T_{1/2}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-010",
+  "source": "Cantabria · Ordinaria 2024",
+  "title": "Muestra radiactiva: constante, periodo y actividad · Cantabria · Ordinaria 2024",
+  "statement": "Al cabo de $150\\ \\text{días}$, la actividad de una muestra de $10^{20}$ átomos de cierto elemento ha descendido un $40\\%$.\n\n**(a)** ¿Cuál es la constante de desintegración?\n\n**(b)** ¿Cuál es el periodo de semidesintegración?\n\n**(c)** ¿Cuál será la actividad y cuántos átomos quedarán al cabo de esos $150\\ \\text{días}$?",
+  "knowns": [
+   "$N_0=10^{20}$ átomos",
+   "Tras $t=150\\ \\text{días}$, la actividad ha bajado un $40\\%$ ($A/A_0=0{,}6$)"
+  ],
+  "full_solution": "Como $A=\\lambda N$, el cociente $A/A_0=N/N_0=e^{-\\lambda t}=0{,}6$.\n\n**(a)** $$\\lambda=-\\dfrac{\\ln(0{,}6)}{t}=\\dfrac{0{,}511}{150}=3{,}41\\cdot10^{-3}\\ \\text{día}^{-1}=3{,}94\\cdot10^{-8}\\ \\text{s}^{-1}$$\n\n**(b)** $$T_{1/2}=\\dfrac{\\ln2}{\\lambda}=\\dfrac{0{,}693}{3{,}41\\cdot10^{-3}}=204\\ \\text{días}$$\n\n**(c)** Átomos restantes: $N=0{,}6\\,N_0=6\\cdot10^{19}$. Actividad:\n\n$$A=\\lambda N=3{,}94\\cdot10^{-8}\\ \\text{s}^{-1}\\cdot6\\cdot10^{19}=2{,}36\\cdot10^{12}\\ \\text{Bq}$$",
+  "answer": "**(a)** $\\lambda\\approx3{,}41\\cdot10^{-3}\\ \\text{día}^{-1}=3{,}94\\cdot10^{-8}\\ \\text{s}^{-1}$. **(b)** $T_{1/2}\\approx204\\ \\text{días}$. **(c)** $N=6\\cdot10^{19}$ átomos; $A\\approx2{,}36\\cdot10^{12}\\ \\text{Bq}$.",
+  "common_errors": [
+   "Tomar el $40\\%$ como fracción restante en vez de la desintegrada ($N/N_0=0{,}6$).",
+   "Calcular la actividad con $\\lambda$ en $\\text{día}^{-1}$ en vez de en $\\text{s}^{-1}$ (el becquerel es por segundo).",
+   "Confundir $\\lambda$ con $T_{1/2}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-011",
+  "source": "Cantabria · Ordinaria 2026",
+  "title": "Desintegración radiactiva: constante, semivida y tiempo hasta una actividad dada · Cantabria · Ordinaria 2026",
+  "statement": "La actividad de una muestra de $10^{21}$ átomos desciende al $40\\%$ al cabo de $265\\ \\text{días}$. Calcule:\n\n**(a)** La constante de desintegración.\n**(b)** El periodo de semidesintegración.\n**(c)** El tiempo que debe transcurrir hasta que la actividad de la muestra sea de $10^{6}\\ \\text{Bq}$.",
+  "knowns": [
+   "$N_0=10^{21}$ átomos",
+   "$N/N_0=0{,}40$ a $t=265\\ \\text{días}=2{,}29\\cdot10^{7}\\ \\text{s}$",
+   "actividad final buscada $A=10^{6}\\ \\text{Bq}$"
+  ],
+  "full_solution": "**(a)** De $N=N_0 e^{-\\lambda t}$ con $N/N_0=0{,}40$ a $t=265\\ \\text{días}$ ($=2{,}29\\cdot10^{7}\\ \\text{s}$):\n$$\\lambda=\\dfrac{-\\ln(0{,}40)}{t}=\\dfrac{0{,}916}{2{,}29\\cdot10^{7}}=4{,}0\\cdot10^{-8}\\ \\text{s}^{-1}$$\n\n**(b)** Periodo de semidesintegración:\n$$T_{1/2}=\\dfrac{\\ln 2}{\\lambda}=\\dfrac{0{,}693}{4{,}0\\cdot10^{-8}}=1{,}73\\cdot10^{7}\\ \\text{s}\\approx 200\\ \\text{días}$$\n\n**(c)** La actividad inicial es $A_0=\\lambda N_0=4{,}0\\cdot10^{-8}\\cdot10^{21}=4{,}0\\cdot10^{13}\\ \\text{Bq}$. Como $A=A_0 e^{-\\lambda t}$:\n$$t=\\dfrac{1}{\\lambda}\\ln\\dfrac{A_0}{A}=\\dfrac{1}{4{,}0\\cdot10^{-8}}\\ln\\dfrac{4{,}0\\cdot10^{13}}{10^{6}}=4{,}4\\cdot10^{8}\\ \\text{s}\\approx 13{,}9\\ \\text{años}$$",
+  "answer": "**(a)** $\\lambda\\approx 4{,}0\\cdot10^{-8}\\ \\text{s}^{-1}$. **(b)** $T_{1/2}\\approx 1{,}73\\cdot10^{7}\\ \\text{s}\\approx 200\\ \\text{días}$. **(c)** $t\\approx 4{,}4\\cdot10^{8}\\ \\text{s}\\approx 13{,}9\\ \\text{años}$.",
+  "common_errors": [
+   "Usar $N/N_0=0{,}60$ (lo que ha desaparecido) en lugar de $0{,}40$ (lo que queda).",
+   "No pasar los días a segundos para obtener $\\lambda$ en $\\text{s}^{-1}$.",
+   "Olvidar calcular primero $A_0=\\lambda N_0$ antes de aplicar la ley de decaimiento a la actividad."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-012",
+  "source": "Comunidad Valenciana · Julio 2018",
+  "title": "Datación por carbono-14 de una silla egipcia · Comunidad Valenciana · Julio 2018",
+  "statement": "Se ha descubierto una antigua silla egipcia de madera que se desea datar. Se mide la actividad de una muestra debida al $^{14}\\text{C}$ presente en la silla y se obtiene que es de $260\\ \\text{desintegraciones/(hora}\\cdot\\text{gramo)}$, frente a las $18\\ \\text{desintegraciones/(minuto}\\cdot\\text{gramo)}$ que produce una muestra similar de madera recién talada.\n\n**(a)** Calcula las actividades de las muestras en becquerelios (desintegraciones por segundo). Determina la edad de la silla y establece si pudo pertenecer a la reina Hetepheres I, que vivió en la cuarta dinastía entre los años $2575$ a.C. y $2551$ a.C.\n\n**(b)** Calcula la actividad de la muestra de la silla dentro de $2000\\ \\text{años}$ y el porcentaje de núcleos de $^{14}\\text{C}$ que se han desintegrado desde que se fabricó la silla.\n\n*Dato:* periodo de semidesintegración del $^{14}\\text{C}$, $T_{1/2} = 5730\\ \\text{años}$.",
+  "knowns": [
+   "$A_{\\text{silla}} = 260\\ \\text{des/(h}\\cdot\\text{g)}$",
+   "$A_0 = 18\\ \\text{des/(min}\\cdot\\text{g)}$",
+   "$T_{1/2} = 5730\\ \\text{años}$"
+  ],
+  "full_solution": "Nota: unificamos unidades. $A_{\\text{silla}} = 260\\ \\text{des/(h}\\cdot\\text{g)} = \\dfrac{260}{60} = 4{,}33\\ \\text{des/(min}\\cdot\\text{g)}$.\n\n**(a)** En becquerelios (por gramo):\n$$A_{\\text{silla}} = \\dfrac{260}{3600} = 7{,}2\\cdot10^{-2}\\ \\text{Bq/g},\\qquad A_0 = \\dfrac{18}{60} = 0{,}30\\ \\text{Bq/g}.$$\nConstante de desintegración y vida media:\n$$\\lambda = \\dfrac{\\ln 2}{T_{1/2}},\\qquad \\tau = \\dfrac{T_{1/2}}{\\ln 2} = \\dfrac{5730}{0{,}693} = 8267\\ \\text{años}.$$\nDe $A = A_0 e^{-\\lambda t}$, la edad es:\n$$t = \\tau\\,\\ln\\!\\dfrac{A_0}{A} = 8267\\cdot\\ln\\!\\dfrac{18}{4{,}33} = 8267\\cdot 1{,}424 \\approx 1{,}18\\cdot10^{4}\\ \\text{años}.$$\nLa silla tendría unos $11\\,800\\ \\text{años}$. Como Hetepheres I vivió hace unos $4\\,500\\ \\text{años}$, la madera es mucho más antigua: **no pudo pertenecer** a la reina (la datación no es compatible con la cuarta dinastía).\n\n**(b)** Dentro de $2000\\ \\text{años}$:\n$$A = A_{\\text{silla}}\\,e^{-\\lambda\\cdot 2000} = 4{,}33\\cdot e^{-(\\ln2/5730)\\cdot2000} = 3{,}4\\ \\text{des/(min}\\cdot\\text{g)}.$$\nFracción de núcleos que quedan desde su fabricación: $\\dfrac{A_{\\text{silla}}}{A_0} = \\dfrac{4{,}33}{18} = 0{,}241$. Luego se han desintegrado:\n$$1 - 0{,}241 = 0{,}759 \\Rightarrow 75{,}9\\%.$$",
+  "answer": "**(a)** $A_{\\text{silla}} = 7{,}2\\cdot10^{-2}\\ \\text{Bq/g}$, $A_0 = 0{,}30\\ \\text{Bq/g}$; edad $t\\approx 1{,}18\\cdot10^{4}\\ \\text{años}$: **no** compatible con Hetepheres I. **(b)** $A\\approx 3{,}4\\ \\text{des/(min}\\cdot\\text{g)}$ dentro de 2000 años; se ha desintegrado el $\\approx 75{,}9\\%$.",
+  "common_errors": [
+   "No unificar unidades de actividad (una muestra viene por hora y otra por minuto) antes de hacer el cociente.",
+   "Confundir periodo de semidesintegración $T_{1/2}$ con la vida media $\\tau=T_{1/2}/\\ln2$.",
+   "Olvidar que la actividad de una muestra antigua debe ser menor que la de la madera recién talada."
+  ],
+  "fig_caption": [
+   "Curva de actividad del $^{14}\\text{C}$, $A=A_0e^{-\\lambda t}$ con $T_{1/2}=5730\\ \\text{a}$: se señalan $A_0$ (madera fresca), la semivida y la actividad medida en la silla ($A=4{,}33\\ \\text{des}/\\text{min·g}$), que corresponde a una edad $t\\approx11{,}8\\cdot10^{3}\\ \\text{años}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-013",
+  "source": "Comunidad Valenciana · Julio 2018",
+  "title": "Identificación de una desintegración por su desviación en campo eléctrico · Comunidad Valenciana · Julio 2018",
+  "statement": "Completa la reacción de desintegración (determinando $Z$ y el elemento $X$) sabiendo que la partícula emitida sigue la trayectoria representada en la gráfica cuando pasa por un campo eléctrico uniforme. ¿De qué tipo de desintegración y partícula se trata?",
+  "knowns": [
+   "Reacción de desintegración del tipo $^{A}_{Z}X \\to {}^{A'}_{Z'}Y + \\text{partícula}$",
+   "Trayectoria de la partícula emitida en un campo eléctrico uniforme (figura)"
+  ],
+  "full_solution": "**Identificación por la trayectoria.** En un campo eléctrico uniforme, una partícula cargada se desvía hacia la placa de signo opuesto al suyo. La forma y el sentido de la curva en la gráfica indican el signo de la carga:\n- Si se desvía hacia la placa **positiva** → carga **negativa** → partícula $\\beta^-$ (electrón). Es el caso habitual de este enunciado.\n- Si se desvía hacia la placa negativa → carga positiva → partícula $\\alpha$ o $\\beta^+$.\n- Si no se desvía → partícula neutra → radiación $\\gamma$.\n\n**Desintegración $\\beta^-$** (la más probable segun la trayectoria descrita): un neutrón se transforma en protón emitiendo un electrón y un antineutrino. Aplicando las leyes de Soddy (conservación del número másico $A$ y del número atómico $Z$):\n$$^{A}_{Z}X \\to\\ ^{A}_{Z+1}Y +\\ ^{\\;0}_{-1}e + \\bar{\\nu}_e.$$\nEl número másico no cambia ($A$ igual) y el atómico aumenta en una unidad ($Z \\to Z+1$). Conocido el nucleido de partida en la figura, se determinan $Z$ y el símbolo $X$ del elemento resultante con estas reglas.",
+  "answer": "Desintegración $\\beta^-$ (partícula = electrón, carga negativa, por desviarse hacia la placa positiva): $^{A}_{Z}X \\to\\ ^{A}_{Z+1}Y + {}^{0}_{-1}e + \\bar{\\nu}_e$ ($A$ constante, $Z$ aumenta en 1).",
+  "common_errors": [
+   "Deducir mal el signo de la carga a partir del sentido de la desviación en el campo.",
+   "No aplicar la conservación de $A$ y $Z$ (leyes de Soddy).",
+   "Confundir $\\beta^-$ (aumenta $Z$) con $\\beta^+$ (disminuye $Z$) o con desintegración $\\alpha$."
+  ],
+  "fig_caption": [
+   "Partícula $\\beta^-$ (carga negativa) que penetra horizontalmente en un campo eléctrico uniforme entre dos placas: se desvía hacia la placa positiva, lo que identifica el signo negativo de su carga."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-014",
+  "source": "Comunidad Valenciana · Julio 2019",
+  "title": "Desintegración del neón en la nucleosíntesis estelar · Comunidad Valenciana · Julio 2019",
+  "statement": "En la nucleosíntesis de estrellas masivas, el núcleo de la estrella, al contraerse, provoca la desintegración $^{20}_{10}\\text{Ne} \\rightarrow\\ ^{16}_{8}\\text{O} + X$, que consume energía. Determine razonadamente qué partícula es $X$. En esta reacción se consume una energía de $4{,}7\\ \\text{MeV}$ por núcleo; calcule la energía consumida, en julios, al desintegrarse un mol de núcleos de neón.",
+  "knowns": [
+   "energía consumida por núcleo $= 4{,}7\\ \\text{MeV}$",
+   "$N_A = 6\\cdot10^{23}\\ \\text{mol}^{-1}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**Identificación de $X$.** Aplicamos la conservación del número másico $A$ y del número atómico $Z$. De $^{20}_{10}\\text{Ne}$ a $^{16}_{8}\\text{O}$: el número másico disminuye en $4$ ($A:20\\to16$) y el número atómico en $2$ ($Z:10\\to8$). La partícula emitida tiene, por tanto, $A=4$ y $Z=2$: es una partícula $\\alpha$ (núcleo de helio). La reacción completa es\n$$^{20}_{10}\\text{Ne} \\rightarrow\\ ^{16}_{8}\\text{O} +\\ ^{4}_{2}\\text{He}$$\nSe trata de una desintegración $\\alpha$ que en este contexto es endoérgica (consume energía), favorecida por la contracción del núcleo estelar.\n\n**Energía por mol.** La energía consumida por un mol de núcleos es\n$$E = 4{,}7\\ \\text{MeV}\\cdot N_A = 4{,}7\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}\\cdot6\\cdot10^{23} \\approx 4{,}5\\cdot10^{11}\\ \\text{J}$$",
+  "answer": "$X$ es una partícula $\\alpha$ ($^{4}_{2}\\text{He}$), que conserva $A$ y $Z$ en la reacción $^{20}_{10}\\text{Ne}\\rightarrow\\ ^{16}_{8}\\text{O}+\\ ^{4}_{2}\\text{He}$. La energía consumida por mol es $E\\approx4{,}5\\cdot10^{11}\\ \\text{J}$.",
+  "common_errors": [
+   "No conservar simultáneamente $A$ y $Z$ al identificar la partícula.",
+   "No convertir los MeV a julios ($1\\ \\text{MeV}=1{,}6\\cdot10^{-13}\\ \\text{J}$).",
+   "Olvidar multiplicar por el número de Avogadro para pasar a un mol."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-015",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Actividad y masa de radón-222 en el aire · Comunidad Valenciana · Julio 2020",
+  "statement": "El $^{222}\\text{Rn}$ es un gas radiactivo presente en el aire de espacios cerrados.\n\n**(a)** Determine la actividad (en becquerel) de un volumen de aire si la masa de $^{222}\\text{Rn}$ medida es de $0{,}02\\ \\text{pg}$.\n\n**(b)** La actividad en otro volumen es de $228\\ \\text{Bq}$. Si se aísla y se mide de nuevo al cabo de $11{,}4\\ \\text{días}$, ¿qué actividad tendrá y cuánta masa de $^{222}\\text{Rn}$ le corresponderá?",
+  "knowns": [
+   "masa de un átomo de $^{222}\\text{Rn}$: $m_a = 3{,}7\\cdot10^{-25}\\ \\text{kg}$",
+   "$T_{1/2} = 3{,}8\\ \\text{días}$",
+   "$A_0 = 228\\ \\text{Bq}$, $t = 11{,}4\\ \\text{días}$"
+  ],
+  "full_solution": "**(a)** La constante de desintegración es $\\lambda = \\dfrac{\\ln 2}{T_{1/2}} = \\dfrac{\\ln 2}{3{,}8\\cdot86400} = 2{,}11\\cdot10^{-6}\\ \\text{s}^{-1}$. El número de átomos en $m = 0{,}02\\ \\text{pg} = 2\\cdot10^{-17}\\ \\text{kg}$ es $N = \\dfrac{m}{m_a} = \\dfrac{2\\cdot10^{-17}}{3{,}7\\cdot10^{-25}} = 5{,}4\\cdot10^{7}$. La actividad:\n$$A = \\lambda N = 2{,}11\\cdot10^{-6}\\cdot5{,}4\\cdot10^{7} \\approx 114\\ \\text{Bq}$$\n\n**(b)** En $t = 11{,}4\\ \\text{días} = 3\\,T_{1/2}$, la actividad se reduce a $1/2^3 = 1/8$:\n$$A = A_0\\,2^{-t/T_{1/2}} = 228\\cdot2^{-3} = 28{,}5\\ \\text{Bq}$$\nLa masa inicial ($228\\ \\text{Bq}$) es $m_0 = \\dfrac{A_0}{\\lambda}\\,m_a = \\dfrac{228}{2{,}11\\cdot10^{-6}}\\cdot3{,}7\\cdot10^{-25} = 4{,}0\\cdot10^{-17}\\ \\text{kg}$; al cabo de $3$ periodos queda $m_0/8$:\n$$m = \\dfrac{4{,}0\\cdot10^{-17}}{8} \\approx 5{,}0\\cdot10^{-18}\\ \\text{kg} = 5{,}0\\cdot10^{-6}\\ \\text{pg}$$",
+  "answer": "**(a)** $A \\approx 114\\ \\text{Bq}$. **(b)** $A = 28{,}5\\ \\text{Bq}$ y masa $\\approx 5{,}0\\cdot10^{-18}\\ \\text{kg}$.",
+  "common_errors": [
+   "No convertir la masa (pg $\\to$ kg) ni $T_{1/2}$ a segundos.",
+   "Olvidar que $11{,}4$ días son exactamente $3$ periodos de semidesintegración.",
+   "Confundir masa con número de átomos ($N=m/m_a$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-016",
+  "source": "Comunidad Valenciana · Junio 2018",
+  "title": "Actividad de un radiofármaco en fabricación y en la prueba · C. Valenciana · Junio 2018",
+  "statement": "A un paciente se le inyecta un radiofármaco con isótopo radiactivo de semivida $T_{1/2}=17{,}8\\ \\text{días}$. En el momento de la prueba la actividad debe ser $2\\cdot10^{5}\\ \\text{Bq}$. Entre la fabricación y la prueba pasan $20\\ \\text{h}$. Calcula:\n\n**(a)** La actividad que debe tener en el momento de fabricación.\n\n**(b)** El número inicial de núcleos y la masa que se necesita fabricar.",
+  "knowns": [
+   "$T_{1/2}=17{,}8\\ \\text{días}$",
+   "$A_{\\text{prueba}}=2\\cdot10^{5}\\ \\text{Bq}$",
+   "$t=20\\ \\text{h}$",
+   "$N_A=6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$",
+   "$M=74\\ \\text{g·mol}^{-1}$"
+  ],
+  "full_solution": "$\\lambda=\\dfrac{\\ln2}{T_{1/2}}=\\dfrac{0{,}693}{17{,}8\\cdot24\\cdot3600}=4{,}51\\cdot10^{-7}\\ \\text{s}^{-1}$.\n\n**(a) Actividad en fabricación**\n\nComo $A=A_0 e^{-\\lambda t}$, la actividad inicial (con $t=20\\ \\text{h}=72\\,000\\ \\text{s}$) es:\n$$A_0=A\\,e^{\\lambda t}=2\\cdot10^{5}\\cdot e^{4{,}51\\cdot10^{-7}\\cdot72000}=2\\cdot10^{5}\\cdot e^{0{,}0325}=2{,}07\\cdot10^{5}\\ \\text{Bq}$$\n\n**(b) Número de núcleos y masa iniciales**\n\n$$N_0=\\dfrac{A_0}{\\lambda}=\\dfrac{2{,}07\\cdot10^{5}}{4{,}51\\cdot10^{-7}}=4{,}58\\cdot10^{11}\\ \\text{núcleos}$$\n$$m=\\dfrac{N_0}{N_A}\\,M=\\dfrac{4{,}58\\cdot10^{11}}{6{,}02\\cdot10^{23}}\\cdot74=5{,}6\\cdot10^{-11}\\ \\text{g}$$",
+  "answer": "**(a)** $A_0\\approx2{,}07\\cdot10^{5}\\ \\text{Bq}$.  **(b)** $N_0\\approx4{,}6\\cdot10^{11}$ núcleos; $m\\approx5{,}6\\cdot10^{-11}\\ \\text{g}$.",
+  "common_errors": [
+   "Error de extracción: el enunciado original perdió unidades; se toma $T_{1/2}=17{,}8$ días (coherente con $M=74$ g/mol, As-74) y $t=20$ h.",
+   "Usar $A_0=A e^{-\\lambda t}$ con el signo cambiado (la actividad inicial es mayor).",
+   "No usar coherentemente las unidades de tiempo de $\\lambda$ y $t$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-017",
+  "source": "Comunidad Valenciana · Junio 2018",
+  "title": "Radiación alfa y beta: número atómico y másico del producto · C. Valenciana · Junio 2018",
+  "statement": "Explica brevemente en qué consisten la radiación alfa y la radiación beta. Halla razonadamente el número atómico y el número másico del elemento producido por un núcleo $^{A}_{Z}X$ tras emitir una partícula $\\alpha$ y una partícula $\\beta^-$.",
+  "knowns": [
+   "emisión de una partícula $\\alpha$ ($^4_2\\text{He}$)",
+   "emisión de una partícula $\\beta^-$ (electrón)"
+  ],
+  "full_solution": "**Radiación alfa:** emisión de un núcleo de helio $^{4}_{2}\\text{He}$ (2 protones y 2 neutrones). El núcleo pierde $4$ unidades de masa y $2$ de carga: $Z\\to Z-2$, $A\\to A-4$.\n\n**Radiación beta ($\\beta^-$):** un neutrón se transforma en un protón emitiendo un electrón (y un antineutrino). La masa no cambia y la carga aumenta en uno: $Z\\to Z+1$, $A\\to A$.\n\n**Resultado conjunto** (una $\\alpha$ y una $\\beta^-$) sobre $^{A}_{Z}X$:\n$$^{A}_{Z}X\\ \\xrightarrow{\\alpha}\\ ^{A-4}_{Z-2}Y\\ \\xrightarrow{\\beta^-}\\ ^{A-4}_{Z-1}W$$\nEl número másico final es $A-4$ y el número atómico final es $Z-1$.",
+  "answer": "Tras una $\\alpha$ y una $\\beta^-$: número másico $A-4$ y número atómico $Z-1$ (la $\\alpha$ resta $4$ a $A$ y $2$ a $Z$; la $\\beta^-$ suma $1$ a $Z$).",
+  "common_errors": [
+   "Error de extracción: el núcleo padre concreto del enunciado se perdió en el OCR; se da el resultado general en función de $(A,Z)$.",
+   "Creer que la $\\beta^-$ cambia el número másico (no cambia).",
+   "Confundir $\\beta^-$ (sube $Z$) con $\\beta^+$ (baja $Z$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-018",
+  "source": "Comunidad Valenciana · Junio 2019",
+  "title": "Co-60 como fuente de rayos gamma: constante, actividad y vida útil · Comunidad Valenciana · Junio 2019",
+  "statement": "El $^{60}\\text{Co}$ se usaba como fuente de rayos gamma en radioterapia. Su periodo de semidesintegración es $1925\\ \\text{días}$. Se dispone de una muestra de $100\\ \\text{g}$ de $^{60}\\text{Co}$.\n\n**(a)** Calcule la constante de desintegración y la actividad inicial.\n\n**(b)** Si hay que reemplazar la muestra cuando la actividad baja a un tercio de la inicial, ¿cuál es la vida útil en años?",
+  "knowns": [
+   "$T_{1/2}=1925\\ \\text{días}$",
+   "$m_0=100\\ \\text{g}$",
+   "$M=60\\ \\text{g/mol}$",
+   "$N_A=6\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a)** $\\lambda=\\dfrac{\\ln2}{T_{1/2}}=\\dfrac{0{,}693}{1925\\cdot86400}=4{,}17\\cdot10^{-9}\\ \\text{s}^{-1}$ (equivale a $3{,}60\\cdot10^{-4}\\ \\text{día}^{-1}$).\n\nNúmero inicial de núcleos:\n$$N_0=\\dfrac{m_0}{M}\\,N_A=\\dfrac{100}{60}\\cdot6\\cdot10^{23}=1{,}0\\cdot10^{24}\\ \\text{núcleos}$$\n$$A_0=\\lambda N_0=4{,}17\\cdot10^{-9}\\cdot1{,}0\\cdot10^{24}=4{,}17\\cdot10^{15}\\ \\text{Bq}$$\n\n**(b)** La actividad decae como $A=A_0 e^{-\\lambda t}$; se reemplaza cuando $A=A_0/3$:\n$$t=\\dfrac{\\ln3}{\\lambda}=\\dfrac{1{,}099}{4{,}17\\cdot10^{-9}}=2{,}64\\cdot10^{8}\\ \\text{s}\\approx8{,}4\\ \\text{años}$$",
+  "answer": "**(a)** $\\lambda\\approx4{,}17\\cdot10^{-9}\\ \\text{s}^{-1}$; $A_0\\approx4{,}17\\cdot10^{15}\\ \\text{Bq}$. **(b)** Vida útil $t=\\ln3/\\lambda\\approx2{,}64\\cdot10^{8}\\ \\text{s}\\approx8{,}4\\ \\text{años}$.",
+  "common_errors": [
+   "No pasar $T_{1/2}$ a segundos para expresar $\\lambda$ en $\\text{s}^{-1}$.",
+   "Usar $\\ln(1/3)$ con signo erróneo; $t=\\ln 3/\\lambda$.",
+   "Creer que la vida útil depende de la masa inicial (solo depende de $\\lambda$)."
+  ],
+  "fig_caption": [
+   "Decaimiento de la actividad del $^{60}\\text{Co}$, $A=A_0e^{-\\lambda t}$ con $T_{1/2}=1925\\ \\text{días}\\approx5{,}3\\ \\text{años}$: la muestra se reemplaza cuando la actividad baja a $A_0/3$, hacia los $8{,}4\\ \\text{años}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-019",
+  "source": "Comunidad Valenciana · Junio 2021",
+  "title": "Periodo de semidesintegración de 56Ni y 131Cs a partir de la gráfica · Comunidad Valenciana · Junio 2021",
+  "statement": "**(a)** Defina periodo de semidesintegración. A partir de la gráfica de la actividad $A(t)$, calcule el periodo del $^{56}\\text{Ni}$ y razone si es mayor o menor que el del $^{131}\\text{Cs}$. ¿Qué tiempo debe pasar para que el número de núcleos de $^{131}\\text{Cs}$ disminuya un $75\\%$?\n**(b)** Si la masa inicial de $^{56}\\text{Ni}$ es $10^{-3}\\ \\text{pg}$, determine el número de núcleos sin desintegrar a los $15$ días.\n\n*(Lectura de la gráfica del examen: $T_{1/2}(^{56}\\text{Ni})=6\\ \\text{días}$ y $T_{1/2}(^{131}\\text{Cs})=10\\ \\text{días}$.)*",
+  "knowns": [
+   "$T_{1/2}(^{56}\\text{Ni}) = 6\\ \\text{días}$ (de la gráfica)",
+   "$T_{1/2}(^{131}\\text{Cs}) = 10\\ \\text{días}$ (de la gráfica)",
+   "masa inicial $^{56}\\text{Ni}$: $10^{-3}\\ \\text{pg} = 10^{-15}\\ \\text{g}$",
+   "masa de un núcleo de $^{56}\\text{Ni}$: $93\\cdot10^{-24}\\ \\text{g}$"
+  ],
+  "full_solution": "**(a) Definición y comparación.**\nEl periodo de semidesintegración $T_{1/2}$ es el tiempo que tarda en reducirse a la mitad el número de núcleos radiactivos (y, por tanto, la actividad) de una muestra.\nDe la gráfica, la actividad del $^{56}\\text{Ni}$ pasa de $40$ a $20\\ \\text{Bq}$ en $6$ días, mientras que la del $^{131}\\text{Cs}$ pasa de $60$ a $30\\ \\text{Bq}$ en $10$ días. Por tanto $T_{1/2}(^{56}\\text{Ni})=6$ días es **menor** que $T_{1/2}(^{131}\\text{Cs})=10$ días (el níquel decae más deprisa).\nDisminuir un $75\\%$ significa que queda el $25\\%=\\left(\\tfrac12\\right)^2$, es decir **dos periodos**:\n$$t = 2\\,T_{1/2}(^{131}\\text{Cs}) = 2\\cdot10 = 20\\ \\text{días}$$\n\n**(b) Núcleos de $^{56}\\text{Ni}$ sin desintegrar a los $15$ días.**\nNúmero inicial:\n$$N_0 = \\dfrac{m_0}{m_{núcleo}} = \\dfrac{10^{-15}}{93\\cdot10^{-24}} = 1{,}08\\cdot10^{7}\\ \\text{núcleos}$$\nA $t=15\\ \\text{días}$ con $T_{1/2}=6\\ \\text{días}$:\n$$N = N_0\\left(\\tfrac12\\right)^{t/T_{1/2}} = 1{,}08\\cdot10^{7}\\cdot2^{-15/6} = 1{,}9\\cdot10^{6}\\ \\text{núcleos}$$",
+  "answer": "$T_{1/2}(^{56}\\text{Ni})=6\\ \\text{días}$, menor que el del $^{131}\\text{Cs}$ ($10\\ \\text{días}$). Para que el $^{131}\\text{Cs}$ disminuya un $75\\%$: $t=2\\,T_{1/2}=20\\ \\text{días}$. $N(15\\ \\text{días})\\approx1{,}9\\cdot10^{6}\\ \\text{núcleos}$ de $^{56}\\text{Ni}$.",
+  "common_errors": [
+   "Interpretar '$75\\%$ de disminución' como un periodo: queda el $25\\%$, son dos periodos.",
+   "Olvidar convertir $10^{-3}\\ \\text{pg}=10^{-15}\\ \\text{g}$.",
+   "Usar la ley exponencial con base $e$ sin el signo correcto; equivale a $N=N_0\\,2^{-t/T_{1/2}}$."
+  ],
+  "fig_caption": [
+   "Actividad frente al tiempo del $^{56}\\text{Ni}$ (línea discontinua, $A_0=40\\ \\text{Bq}$, $T_{1/2}=6\\ \\text{días}$) y del $^{131}\\text{Cs}$ (línea continua, $A_0=60\\ \\text{Bq}$, $T_{1/2}=10\\ \\text{días}$); se señalan las semividas sobre cada curva."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-020",
+  "source": "Comunidad Valenciana · Junio 2021",
+  "title": "Serie radiactiva: completar núcleos X y Ac e identificar desintegraciones · Comunidad Valenciana · Junio 2021",
+  "statement": "En la serie radiactiva mostrada (rama del $^{235}\\text{U}$), complete los números atómico y másico del núcleo $X$ y del núcleo $\\text{Ac}$, identifique $X$, y diga qué tipo de desintegración da lugar a ese núcleo y cuál da lugar a la partícula $^{0}_{-1}e$.",
+  "knowns": [
+   "Serie del $^{235}_{92}\\text{U}$ (serie del actinio)",
+   "Conservación de $A$ (másico) y $Z$ (atómico) en cada desintegración",
+   "$\\alpha$: $\\Delta A=-4,\\ \\Delta Z=-2$; $\\beta^-$: $\\Delta A=0,\\ \\Delta Z=+1$"
+  ],
+  "full_solution": "**Reconstrucción de la serie (nota: depende del diagrama impreso).**\nEn la serie del actinio, a partir del $^{235}_{92}\\text{U}$:\n$$^{235}_{92}\\text{U}\\ \\xrightarrow{\\ \\alpha\\ }\\ ^{231}_{90}\\text{Th}\\ \\xrightarrow{\\ \\beta^-\\ }\\ ^{231}_{91}\\text{Pa}\\ \\xrightarrow{\\ \\alpha\\ }\\ ^{227}_{89}\\text{Ac}$$\n**Núcleo $X$.** Producido por desintegración $\\alpha$ del $^{235}_{92}\\text{U}$ (se pierden $2$ protones y $4$ nucleones):\n$$Z = 92-2 = 90,\\qquad A = 235-4 = 231\\ \\Rightarrow\\ X = {}^{231}_{90}\\text{Th}\\ \\text{(torio)}$$\n**Núcleo Ac.** El actinio tiene $Z=89$; en esta rama $A=227$:\n$$\\text{Ac} = {}^{227}_{89}\\text{Ac}$$\n**Tipos de desintegración.** El $^{227}_{89}\\text{Ac}$ procede de una desintegración **alfa ($\\alpha$)** del $^{231}_{91}\\text{Pa}$. La partícula $^{0}_{-1}e$ (electrón) se emite en una desintegración **beta-menos ($\\beta^-$)**, en la que un neutrón se transforma en protón.\n\n*(Los valores de $A$ y $Z$ concretos deben leerse del diagrama del examen; aquí se reconstruye la rama estándar del actinio que conduce al $^{227}_{89}\\text{Ac}$.)*",
+  "answer": "$X = {}^{231}_{90}\\text{Th}$ (torio), formado por desintegración $\\alpha$.\n$\\text{Ac} = {}^{227}_{89}\\text{Ac}$.\nLa partícula $^{0}_{-1}e$ se emite en una desintegración $\\beta^-$.",
+  "common_errors": [
+   "En $\\alpha$ restar mal: $\\Delta Z=-2$ y $\\Delta A=-4$.",
+   "En $\\beta^-$ cambiar $A$: sólo varía $Z$ ($+1$), el másico no cambia.",
+   "Confundir la emisión del electrón ($\\beta^-$) con captura electrónica o $\\beta^+$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-021",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Desintegración del cobalto-60 y potencia de la emisión gamma · Comunidad Valenciana · Junio 2022",
+  "statement": "Un núcleo de $^{60}_{27}\\text{Co}$ se desintegra según $^{60}_{27}\\text{Co}\\rightarrow\\,^{60}_{28}\\text{Ni}^{*}+\\,^{a}_{b}\\text{X}$. Razona qué partícula es $X$. El núcleo de níquel excitado emite después dos fotones de $1{,}17$ y $1{,}33\\ \\text{MeV}$; si cada segundo se emiten $10^{10}$ fotones de cada tipo, calcula la energía por unidad de tiempo (en vatios) de la emisión.",
+  "knowns": [
+   "$^{60}_{27}\\text{Co}\\rightarrow\\,^{60}_{28}\\text{Ni}^{*}+\\,^{a}_{b}\\text{X}$",
+   "Fotones de $1{,}17\\ \\text{MeV}$ y $1{,}33\\ \\text{MeV}$, $10^{10}$ de cada por segundo",
+   "$q=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**Partícula $X$:** conservación del número másico y de la carga:\n$$A: 60=60+a \\;\\Rightarrow\\; a=0, \\qquad Z: 27=28+b \\;\\Rightarrow\\; b=-1$$\nLa partícula es un **electrón emitido por el núcleo**, es decir una **partícula $\\beta^-$** ($^{0}_{-1}\\beta$, acompañada de un antineutrino). Es una desintegración beta.\n\n**Potencia de la emisión gamma:** energía de cada fotón en julios:\n$$E_1=1{,}17\\ \\text{MeV}=1{,}17\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}=1{,}872\\cdot10^{-13}\\ \\text{J}$$\n$$E_2=1{,}33\\ \\text{MeV}=2{,}128\\cdot10^{-13}\\ \\text{J}$$\nEnergía emitida por segundo ($10^{10}$ fotones de cada tipo):\n$$P=10^{10}(E_1+E_2)=10^{10}(1{,}17+1{,}33)\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}=4{,}0\\cdot10^{-3}\\ \\text{W}$$",
+  "answer": "$X$ es una partícula $\\beta^-$ ($^{0}_{-1}\\beta$, con antineutrino). La potencia de la emisión gamma es $P=4{,}0\\cdot10^{-3}\\ \\text{W}=4\\ \\text{mW}$.",
+  "common_errors": [
+   "Identificar $X$ como partícula $\\alpha$ o positrón; al aumentar $Z$ en una unidad es $\\beta^-$.",
+   "No convertir los MeV a julios antes de calcular la potencia.",
+   "Olvidar que se emiten $10^{10}$ fotones de cada tipo (sumar ambas energías)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-022",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Desintegración del cobalto-60 y potencia de la emisión gamma · Comunidad Valenciana · Junio 2022",
+  "statement": "Un núcleo de $^{60}\\text{Co}$ se desintegra según $^{60}_{27}\\text{Co}\\to{}^{60}_{28}\\text{Ni}^{*}+{}^{a}_{b}X$. Razone qué partícula es $X$. El núcleo de níquel excitado $^{60}_{28}\\text{Ni}^{*}$ emite después dos fotones de $1{,}17$ y $1{,}33\\ \\text{MeV}$. Si cada segundo se emiten $10^{10}$ fotones de cada tipo, calcule la energía por unidad de tiempo (en watios) de la emisión.",
+  "knowns": [
+   "reacción $^{60}_{27}\\text{Co}\\to{}^{60}_{28}\\text{Ni}^{*}+{}^{a}_{b}X$",
+   "fotones de $1{,}17\\ \\text{MeV}$ y $1{,}33\\ \\text{MeV}$",
+   "$10^{10}$ fotones/s de cada tipo",
+   "$q=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**Identificación de $X$.** Conservación del número másico y del número atómico:\n$$A:\\ 60=60+a\\ \\Rightarrow\\ a=0;\\qquad Z:\\ 27=28+b\\ \\Rightarrow\\ b=-1$$\nLa partícula $X$ tiene $A=0$ y $Z=-1$: es un **electrón** ($^{0}_{-1}e$), es decir una partícula $\\beta^{-}$ (desintegración beta menos, acompañada de un antineutrino).\n\n**Potencia de la emisión gamma.** Energía de cada fotón en julios: $1\\ \\text{MeV}=1{,}6\\cdot10^{-13}\\ \\text{J}$. Por segundo:\n$$\\dfrac{E}{t}=10^{10}\\cdot(1{,}17+1{,}33)\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}\\ \\text{J}$$\n$$=10^{10}\\cdot2{,}5\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}=4{,}0\\cdot10^{-3}\\ \\text{W}$$",
+  "answer": "$X={}^{0}_{-1}e$ (partícula $\\beta^{-}$, con un antineutrino). Potencia $=4{,}0\\cdot10^{-3}\\ \\text{W}$.",
+  "common_errors": [
+   "Identificar $X$ como partícula $\\alpha$ o positrón; aquí $Z$ aumenta en 1 ($\\beta^{-}$).",
+   "No sumar las energías de los dos fotones (1,17 + 1,33 MeV) por cada desintegración.",
+   "Errores al convertir MeV a julios ($1\\ \\text{MeV}=1{,}6\\cdot10^{-13}\\ \\text{J}$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-023",
+  "source": "Comunidad Valenciana · Modelo 2021",
+  "title": "Cobalto-60 en radioterapia: actividad y vida útil de la fuente · Comunidad Valenciana · Modelo 2021",
+  "statement": "El $^{60}\\text{Co}$ se usa como fuente de rayos gamma en radioterapia. Su periodo de semidesintegración es $1925\\ \\text{días}$. Se dispone de una muestra de $100\\ \\text{g}$.\n\n**(a)** Calcule la constante de desintegración y la actividad inicial de la muestra.\n**(b)** Si debe reemplazarse cuando la actividad baja a un tercio de la inicial, ¿cuál es la vida útil de la fuente en años?",
+  "knowns": [
+   "$T_{1/2}=1925\\ \\text{días}$",
+   "masa $=100\\ \\text{g}$",
+   "$N_A=6\\cdot10^{23}\\ \\text{mol}^{-1}$",
+   "$M=60\\ \\text{g/mol}$"
+  ],
+  "full_solution": "**(a)** Constante de desintegración ($T_{1/2}=1925\\cdot86400=1{,}663\\cdot10^{8}\\ \\text{s}$):\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{0{,}693}{1{,}663\\cdot10^{8}}=4{,}17\\cdot10^{-9}\\ \\text{s}^{-1}$$\nNúmero de núcleos iniciales:\n$$N_0=\\dfrac{m}{M}N_A=\\dfrac{100}{60}\\cdot6\\cdot10^{23}=1{,}0\\cdot10^{24}$$\nActividad inicial:\n$$A_0=\\lambda N_0=4{,}17\\cdot10^{-9}\\cdot1{,}0\\cdot10^{24}=4{,}17\\cdot10^{15}\\ \\text{Bq}$$\n\n**(b)** Como $A=A_0 e^{-\\lambda t}$, para $A=A_0/3$:\n$$t=\\dfrac{\\ln 3}{\\lambda}=\\dfrac{1{,}0986}{4{,}17\\cdot10^{-9}}=2{,}64\\cdot10^{8}\\ \\text{s}\\approx 8{,}4\\ \\text{años}$$",
+  "answer": "**(a)** $\\lambda=4{,}17\\cdot10^{-9}\\ \\text{s}^{-1}$ y $A_0\\approx 4{,}17\\cdot10^{15}\\ \\text{Bq}$. **(b)** Vida útil $\\approx 8{,}4\\ \\text{años}$.",
+  "common_errors": [
+   "No pasar el periodo a segundos (la actividad en Bq es $\\text{s}^{-1}$).",
+   "Equivocar el número de moles ($100\\ \\text{g}/60\\ \\text{g·mol}^{-1}$).",
+   "Confundir $\\ln 3$ con $\\log 3$ o perder el signo al despejar $t$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-024",
+  "source": "Madrid · Julio 2021",
+  "title": "Actividad del isótopo radiactivo 190Pt del patrón del kilogramo · Madrid · Julio 2021",
+  "statement": "El patrón del kilogramo es un cilindro de aleación platino-iridio ($90\\%$ en masa de Pt). El $^{190}\\text{Pt}$ es radiactivo, con semivida $6{,}5\\cdot10^{11}$ años, y supone el $0{,}012\\%$ en masa del platino.\n\n**(a)** Calcule la actividad inicial del patrón del kilogramo.\n\n**(b)** ¿Cuál será la masa de $^{190}\\text{Pt}$ que queda transcurridos mil millones de años?",
+  "knowns": [
+   "$90\\%$ de Pt en $1\\ \\text{kg}$ $\\Rightarrow 0{,}9\\ \\text{kg}$ Pt",
+   "$^{190}\\text{Pt}$: $0{,}012\\%$ en masa",
+   "$T_{1/2}=6{,}5\\cdot10^{11}\\ \\text{años}$",
+   "$M=189{,}96\\ \\text{u}$",
+   "$N_A=6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a) Actividad inicial**\n\nMasa de $^{190}\\text{Pt}$: $m_0=0{,}9\\cdot0{,}012\\cdot10^{-2}=1{,}08\\cdot10^{-4}\\ \\text{kg}=0{,}108\\ \\text{g}$.\nNúmero de átomos:\n$$N=\\dfrac{m_0}{M}N_A=\\dfrac{0{,}108}{189{,}96}\\cdot6{,}02\\cdot10^{23}=3{,}42\\cdot10^{20}$$\nConstante de desintegración ($T_{1/2}$ en segundos):\n$$\\lambda=\\dfrac{\\ln2}{T_{1/2}}=\\dfrac{0{,}693}{6{,}5\\cdot10^{11}\\cdot365\\cdot24\\cdot3600}=3{,}38\\cdot10^{-23}\\ \\text{s}^{-1}$$\n$$A=\\lambda N=3{,}38\\cdot10^{-23}\\cdot3{,}42\\cdot10^{20}=11{,}6\\ \\text{Bq}$$\n\n**(b) Masa tras $10^{9}$ años**\n\n$$m=m_0\\,e^{-\\lambda t}=m_0\\,e^{-\\frac{\\ln2}{6{,}5\\cdot10^{11}}\\cdot10^{9}}=1{,}08\\cdot10^{-4}\\cdot e^{-1{,}066\\cdot10^{-3}}=1{,}08\\cdot10^{-4}\\ \\text{kg}$$\nPrácticamente no varía (el tiempo es minúsculo frente a la semivida).",
+  "answer": "**(a)** $A\\approx11{,}6\\ \\text{Bq}$.  **(b)** $m\\approx1{,}08\\cdot10^{-4}\\ \\text{kg}$ (apenas disminuye respecto a la inicial).",
+  "common_errors": [
+   "Olvidar el doble porcentaje: $90\\%$ de Pt y $0{,}012\\%$ de $^{190}\\text{Pt}$.",
+   "No pasar la semivida a segundos antes de calcular $\\lambda$ para obtener Bq.",
+   "Confundir actividad $A=\\lambda N$ con número de desintegraciones."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-025",
+  "source": "Madrid · Junio 2013",
+  "title": "Vida media radiactiva: reducción de actividad y desintegraciones · Madrid · Junio 2013",
+  "statement": "La vida media de un elemento radiactivo es de $25\\ \\text{años}$. Calcule:\n\n**(a)** El tiempo que tiene que transcurrir para que una muestra del elemento radiactivo reduzca su actividad al $70\\%$.\n\n**(b)** Los procesos de desintegración que se producen cada minuto en una muestra que contiene $10^{9}$ núcleos radiactivos.",
+  "knowns": [
+   "Vida media $\\tau = 25\\ \\text{años}$",
+   "$A/A_0 = 0{,}70$",
+   "$N = 10^{9}\\ \\text{núcleos}$"
+  ],
+  "full_solution": "La vida media es el inverso de la constante de desintegración: $\\tau = 1/\\lambda$, luego $\\lambda = \\dfrac{1}{25} = 0{,}04\\ \\text{año}^{-1}$.\n\n**(a)** De la ley de desintegración $A = A_0 e^{-\\lambda t}$ con $A/A_0 = 0{,}70$:\n$$t = -\\dfrac{\\ln(0{,}70)}{\\lambda} = -\\tau\\ln(0{,}70) = 25\\cdot 0{,}3567 = 8{,}9\\ \\text{años}.$$\n\n**(b)** La actividad es $A = \\lambda N$. Expresamos $\\lambda$ por minuto ($1\\ \\text{año} = 525600\\ \\text{min}$):\n$$\\lambda = \\dfrac{0{,}04}{525600}\\ \\text{min}^{-1} = 7{,}61\\cdot10^{-8}\\ \\text{min}^{-1}.$$\n$$A = \\lambda N = 7{,}61\\cdot10^{-8}\\cdot 10^{9} \\approx 76\\ \\text{desintegraciones/min}.$$",
+  "answer": "**(a)** $t \\approx 8{,}9\\ \\text{años}$. **(b)** $A \\approx 76\\ \\text{desintegraciones por minuto}$.",
+  "common_errors": [
+   "Confundir vida media $\\tau=1/\\lambda$ con el periodo de semidesintegración $T_{1/2}=\\tau\\ln 2$.",
+   "No convertir $\\lambda$ a $\\text{min}^{-1}$ al pedir desintegraciones por minuto.",
+   "Usar $A/A_0=0{,}70$ con signo equivocado en el logaritmo."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-026",
+  "source": "Madrid · Junio 2021",
+  "title": "Vida media, actividad y ley de desintegración · Madrid · Junio 2021",
+  "statement": "Un isótopo radiactivo tiene periodo de semidesintegración de $5730\\ \\text{años}$.\n\n**(a)** Vida media y constante radiactiva.\n\n**(b)** Si una muestra tiene $5\\cdot10^{20}$ átomos radiactivos, actividad inicial y tiempo para que la actividad se reduzca a la décima parte.",
+  "knowns": [
+   "$T_{1/2} = 5730\\ \\text{años}$",
+   "$N_0 = 5\\cdot10^{20}\\ \\text{átomos}$"
+  ],
+  "full_solution": "**(a)** Vida media:\n\n$$\\tau=\\dfrac{T_{1/2}}{\\ln 2}=\\dfrac{5730}{\\ln 2}=8267\\ \\text{años}\\approx2{,}61\\cdot10^{11}\\ \\text{s}$$\n\nConstante radiactiva (inversa de la vida media):\n\n$$\\lambda=\\dfrac{1}{\\tau}=1{,}21\\cdot10^{-4}\\ \\text{años}^{-1}=3{,}84\\cdot10^{-12}\\ \\text{s}^{-1}$$\n\n**(b)** Actividad inicial $A_0=\\lambda N_0$:\n\n$$A_0=3{,}84\\cdot10^{-12}\\cdot5\\cdot10^{20}=1{,}92\\cdot10^{9}\\ \\text{Bq}$$\n\nPara $A=A_0/10$, de $A=A_0 e^{-t/\\tau}$:\n\n$$t=\\tau\\ln 10=8267\\cdot\\ln 10\\approx1{,}9\\cdot10^{4}\\ \\text{años}=6{,}00\\cdot10^{11}\\ \\text{s}$$",
+  "answer": "**(a)** $\\tau\\approx8267\\ \\text{años}$, $\\lambda\\approx3{,}84\\cdot10^{-12}\\ \\text{s}^{-1}$. **(b)** $A_0\\approx1{,}92\\cdot10^{9}\\ \\text{Bq}$, $t\\approx1{,}9\\cdot10^{4}\\ \\text{años}$.",
+  "common_errors": [
+   "Confundir vida media $\tau$ con periodo de semidesintegración.",
+   "Usar $\\lambda$ en años pero $N_0$ sin tener en cuenta las unidades de la actividad (Bq en $\text{s}^{-1}$).",
+   "Para reducir a $1/10$ usar $\\ln 2$ en vez de $\\ln 10$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-027",
+  "source": "Madrid · Junio 2022",
+  "title": "Desintegración del Po-210: vida media y actividad · Madrid · Junio 2022",
+  "statement": "Una muestra contiene inicialmente $30\\ \\text{mg}$ de $^{210}\\text{Po}$, cuyo periodo de semidesintegración es $138{,}38\\ \\text{días}$. Determine:\n\n**(a)** La vida media del isótopo y la actividad inicial de la muestra.\n\n**(b)** El tiempo que debe transcurrir para que el contenido de $^{210}\\text{Po}$ se reduzca a $5\\ \\text{mg}$.",
+  "knowns": [
+   "$m_0=30\\ \\text{mg}$",
+   "$T_{1/2}=138{,}38\\ \\text{días}$",
+   "$M_{Po}=210\\ \\text{u}$",
+   "$N_A=6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a)** Vida media:\n\n$$\\tau=\\dfrac{T_{1/2}}{\\ln 2}=\\dfrac{138{,}38}{0{,}693}=199{,}6\\ \\text{días}=1{,}72\\cdot10^{7}\\ \\text{s}$$\n\nNúmero inicial de núcleos:\n\n$$N_0=\\dfrac{m_0}{M}\\,N_A=\\dfrac{30\\cdot10^{-3}}{210}\\cdot6{,}02\\cdot10^{23}=8{,}6\\cdot10^{19}\\ \\text{núcleos}$$\n\nActividad inicial ($\\lambda=1/\\tau$):\n\n$$A_0=\\lambda N_0=\\dfrac{N_0}{\\tau}=\\dfrac{8{,}6\\cdot10^{19}}{1{,}72\\cdot10^{7}}=4{,}99\\cdot10^{12}\\ \\text{Bq}$$\n\n**(b)** La masa sigue $m(t)=m_0 e^{-\\lambda t}$:\n\n$$t=\\dfrac{1}{\\lambda}\\ln\\!\\dfrac{m_0}{m}=\\tau\\,\\ln\\!\\dfrac{30}{5}=1{,}72\\cdot10^{7}\\cdot\\ln 6=3{,}09\\cdot10^{7}\\ \\text{s}\\approx357\\ \\text{días}$$",
+  "answer": "**(a)** $\\tau\\approx199{,}6\\ \\text{días}=1{,}72\\cdot10^{7}\\ \\text{s}$; $A_0\\approx4{,}99\\cdot10^{12}\\ \\text{Bq}$. **(b)** $t=\\tau\\ln 6\\approx3{,}09\\cdot10^{7}\\ \\text{s}\\approx357\\ \\text{días}$.",
+  "common_errors": [
+   "Confundir vida media $\\tau=T_{1/2}/\\ln 2$ con el periodo de semidesintegración.",
+   "No pasar la masa a número de núcleos con $N_A$ antes de calcular la actividad.",
+   "Usar $t=\\tau\\,\\ln(5/30)$ (signo) en vez de $\\tau\\,\\ln(30/5)$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-028",
+  "source": "Madrid · Junio 2022",
+  "title": "Desintegración del Talio-201 en medicina nuclear · Madrid · Junio 2022",
+  "statement": "El $^{201}\\text{Tl}$ (imagen del músculo cardiaco) tiene periodo de semidesintegración de $73\\ \\text{h}$. La solución intravenosa contiene una actividad inicial de $37\\ \\text{MBq}$ por mililitro.\n\n**(a)** Vida media y constante de desintegración.\n\n**(b)** Número de isótopos y actividad en el paciente un día después de administrarle $5\\ \\text{mL}$.",
+  "knowns": [
+   "$T_{1/2} = 73\\ \\text{h}$",
+   "$A_0 = 37\\ \\text{MBq·mL}^{-1}$",
+   "$V = 5\\ \\text{mL}$",
+   "$t = 24\\ \\text{h}$"
+  ],
+  "full_solution": "**(a)** La vida media es $\\tau=\\dfrac{T_{1/2}}{\\ln 2}$:\n\n$$\\tau=\\dfrac{73}{\\ln 2}=105{,}3\\ \\text{h}=3{,}79\\cdot10^{5}\\ \\text{s}$$\n\nLa constante de desintegración es su inversa:\n\n$$\\lambda=\\dfrac{1}{\\tau}=2{,}64\\cdot10^{-6}\\ \\text{s}^{-1}=9{,}49\\cdot10^{-3}\\ \\text{h}^{-1}$$\n\n**(b)** Actividad inicial administrada:\n\n$$A_0=37\\ \\text{MBq·mL}^{-1}\\cdot5\\ \\text{mL}=1{,}85\\cdot10^{8}\\ \\text{Bq}$$\n\nA las $24\\ \\text{h}$:\n\n$$A=A_0\\,e^{-t/\\tau}=1{,}85\\cdot10^{8}\\,e^{-24/105{,}3}=1{,}47\\cdot10^{8}\\ \\text{Bq}$$\n\nY como $A=\\lambda N$, el número de núcleos sin desintegrar es:\n\n$$N=\\dfrac{A}{\\lambda}=\\dfrac{1{,}47\\cdot10^{8}}{2{,}64\\cdot10^{-6}}=5{,}58\\cdot10^{13}\\ \\text{núcleos}$$",
+  "answer": "**(a)** $\\tau\\approx105{,}3\\ \\text{h}$, $\\lambda\\approx2{,}64\\cdot10^{-6}\\ \\text{s}^{-1}$. **(b)** $A\\approx1{,}47\\cdot10^{8}\\ \\text{Bq}$, $N\\approx5{,}58\\cdot10^{13}$ núcleos.",
+  "common_errors": [
+   "Confundir vida media $\tau=1/\\lambda$ con el periodo de semidesintegración $T_{1/2}$.",
+   "Usar $\\lambda$ y $t$ en unidades de tiempo distintas en la exponencial.",
+   "Olvidar multiplicar la actividad por mililitro por el volumen administrado."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-029",
+  "source": "Madrid · Junio 2023",
+  "title": "Actividad del radón-222 en un acuífero · Madrid · Junio 2023",
+  "statement": "Se sospecha que un acuífero recibe aportes intermitentes de radón ($^{222}\\text{Rn}$). Se miden semanalmente actividades de muestras de un litro de agua; una medida da $14\\ \\text{Bq}$. Determine el valor de la medida de la semana siguiente (otra muestra de un litro):\n\n**(a)** Si no hubiese ningún aporte de $^{222}\\text{Rn}$ durante esa semana.\n\n**(b)** Si el cuarto día de esa semana la concentración de $^{222}\\text{Rn}$ experimentase un aumento súbito de $2\\cdot10^{-16}\\ \\text{g}$ por cada litro de agua.",
+  "knowns": [
+   "$A_0 = 14\\ \\text{Bq}$ (por litro)",
+   "$T_{1/2} = 3{,}8\\ \\text{días}$",
+   "$M(^{222}\\text{Rn}) = 222\\ \\text{u}$",
+   "$N_A = 6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a)** Sin aporte, la actividad decae exponencialmente durante $t = 7\\ \\text{días}$:\n$$A = A_0\\,2^{-t/T_{1/2}} = 14\\cdot 2^{-7/3{,}8} = 3{,}9\\ \\text{Bq}$$\n\n**(b)** El aumento de $\\Delta C = 2\\cdot10^{-16}\\ \\text{g/L}$ añade núcleos cuya actividad, al final de la semana, ha decaído durante $t' = 7-4 = 3\\ \\text{días}$. La constante de desintegración es $\\lambda = \\dfrac{\\ln 2}{T_{1/2}} = \\dfrac{\\ln 2}{3{,}8\\cdot 86400} = 2{,}11\\cdot10^{-6}\\ \\text{s}^{-1}$ y el número de átomos añadidos $N = \\dfrac{\\Delta C}{M}\\,N_A = \\dfrac{2\\cdot10^{-16}}{222}\\cdot6{,}02\\cdot10^{23} = 5{,}42\\cdot10^{5}$.\n$$\\Delta A = \\lambda\\,N\\,2^{-t'/T_{1/2}} = 2{,}11\\cdot10^{-6}\\cdot5{,}42\\cdot10^{5}\\cdot 2^{-3/3{,}8} = 0{,}66\\ \\text{Bq}$$\n\nLa actividad medida será:\n$$A' = A + \\Delta A = 3{,}9 + 0{,}66 = 4{,}6\\ \\text{Bq}$$",
+  "answer": "**(a)** $A \\approx 3{,}9\\ \\text{Bq}$. **(b)** $A' = A + \\Delta A \\approx 3{,}9 + 0{,}66 = 4{,}6\\ \\text{Bq}$.",
+  "common_errors": [
+   "Usar $t=7$ días para los núcleos añadidos: solo decaen $t'=3$ días.",
+   "Olvidar convertir $T_{1/2}$ a segundos al calcular $\\lambda$ en Bq (s$^{-1}$).",
+   "No sumar la actividad decaída de base con el aporte nuevo."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-030",
+  "source": "Madrid · Junio 2023 (Coincidentes)",
+  "title": "Radón-222: constante de desintegración y límite legal · Madrid · Junio 2023 (Coincidentes)",
+  "statement": "El isótopo $^{222}\\text{Rn}$ es radiactivo y tiene un período de semidesintegración de $3{,}82\\ \\text{días}$. La legislación ambiental limita la radiactividad causada por el $^{222}\\text{Rn}$ a $300\\ \\text{Bq}$ por metro cúbico.\n\n**(a)** Calcule la constante de desintegración del $^{222}\\text{Rn}$ y la actividad inicial de $1\\ \\text{mg}$ de $^{222}\\text{Rn}$.\n\n**(b)** Determine la masa máxima de $^{222}\\text{Rn}$ que puede haber en una habitación de $20\\ \\text{m}^3$ para no superar el límite legal.\n\n*Datos:* $M_{\\text{Rn}} = 222\\ \\text{u}$; $N_A = 6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$.",
+  "knowns": [
+   "$T_{1/2} = 3{,}82\\ \\text{días} = 3{,}30\\cdot10^{5}\\ \\text{s}$",
+   "Límite $300\\ \\text{Bq/m}^3$",
+   "$V = 20\\ \\text{m}^3$",
+   "$M_{\\text{Rn}} = 222\\ \\text{u}$",
+   "$N_A = 6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a)** Constante de desintegración ($T_{1/2} = 3{,}82\\ \\text{días} = 3{,}30\\cdot10^{5}\\ \\text{s}$):\n$$\\lambda = \\dfrac{\\ln 2}{T_{1/2}} = \\dfrac{0{,}693}{3{,}30\\cdot10^{5}} = 2{,}1\\cdot10^{-6}\\ \\text{s}^{-1}\\ (= 0{,}181\\ \\text{días}^{-1}).$$\nNúmero de núcleos en $1\\ \\text{mg}$:\n$$N = \\dfrac{1\\cdot10^{-3}}{222}\\cdot 6{,}02\\cdot10^{23} = 2{,}71\\cdot10^{18}\\ \\text{núcleos}.$$\nActividad inicial:\n$$A_0 = \\lambda N = 2{,}1\\cdot10^{-6}\\cdot 2{,}71\\cdot10^{18} = 5{,}69\\cdot10^{12}\\ \\text{Bq}.$$\n\n**(b)** Actividad límite en la habitación:\n$$A_{\\text{lim}} = 300\\cdot 20 = 6000\\ \\text{Bq}.$$\nNúmero máximo de núcleos:\n$$N_{\\text{lim}} = \\dfrac{A_{\\text{lim}}}{\\lambda} = \\dfrac{6000}{2{,}1\\cdot10^{-6}} = 2{,}86\\cdot10^{9}\\ \\text{núcleos}.$$\nMasa máxima:\n$$m_{\\text{lim}} = \\dfrac{M_{\\text{Rn}}\\,N_{\\text{lim}}}{N_A} = \\dfrac{222\\cdot 2{,}86\\cdot10^{9}}{6{,}02\\cdot10^{23}} \\approx 1{,}05\\cdot10^{-12}\\ \\text{g}.$$",
+  "answer": "**(a)** $\\lambda = 2{,}1\\cdot10^{-6}\\ \\text{s}^{-1}$, $A_0 = 5{,}69\\cdot10^{12}\\ \\text{Bq}$. **(b)** $m_{\\text{lim}} \\approx 1{,}05\\cdot10^{-12}\\ \\text{g}$.",
+  "common_errors": [
+   "No pasar el periodo de días a segundos para $\\lambda$ en s$^{-1}$.",
+   "Olvidar multiplicar el límite por el volumen de la habitación.",
+   "Errores al pasar de número de núcleos a masa con $N_A$ y la masa molar."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-031",
+  "source": "Madrid · Modelo 2024",
+  "title": "Desintegración del oro-198: constante, semivida y actividad · Madrid · Modelo 2024",
+  "statement": "El isótopo $^{198}\\text{Au}$ reduce su actividad a la sexta parte en una semana.\n\n**(a)** Determine la constante de desintegración y el periodo de semidesintegración del $^{198}\\text{Au}$.\n\n**(b)** Una muestra de $^{198}\\text{Au}$ presenta al cabo de un día una actividad de $10\\ \\text{kBq}$. Calcule la actividad y el número de núcleos iniciales.",
+  "knowns": [
+   "$A(7\\,\\text{días}) = A_0/6$",
+   "$A(1\\,\\text{día}) = 10\\ \\text{kBq} = 10^{4}\\ \\text{Bq}$"
+  ],
+  "full_solution": "**(a)** De la ley de desintegración $A=A_0 e^{-\\lambda t}$, con $A=A_0/6$ a los $7$ días:\n$$\\dfrac{1}{6}=e^{-\\lambda\\cdot 7} \\;\\Rightarrow\\; \\lambda = \\dfrac{\\ln 6}{7} = 0{,}26\\ \\text{día}^{-1} = 3{,}0\\cdot10^{-6}\\ \\text{s}^{-1}$$\nPeriodo de semidesintegración:\n$$T_{1/2} = \\dfrac{\\ln 2}{\\lambda} = 2{,}7\\ \\text{días}$$\n\n**(b)** La actividad inicial (en $t=0$, un día antes de la medida):\n$$A_0 = A\\,e^{\\lambda t} = 10^{4}\\cdot e^{0{,}26\\cdot 1} = 1{,}3\\cdot10^{4}\\ \\text{Bq} \\approx 13\\ \\text{kBq}$$\nComo $A_0=\\lambda N_0$:\n$$N_0 = \\dfrac{A_0}{\\lambda} = \\dfrac{1{,}3\\cdot10^{4}}{3{,}0\\cdot10^{-6}} = 4{,}3\\cdot10^{9}\\ \\text{núcleos}$$",
+  "answer": "**(a)** $\\lambda = 0{,}26\\ \\text{día}^{-1} = 3{,}0\\cdot10^{-6}\\ \\text{s}^{-1}$; $T_{1/2}=2{,}7\\ \\text{días}$. **(b)** $A_0 \\approx 13\\ \\text{kBq}$ y $N_0 \\approx 4{,}3\\cdot10^{9}$ núcleos.",
+  "common_errors": [
+   "Mezclar unidades de $\\lambda$ (días frente a segundos) al calcular $N_0=A_0/\\lambda$.",
+   "Tomar el dato de $10$ kBq como actividad inicial en lugar de a un día.",
+   "Confundir $\\lambda$ con $T_{1/2}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-032",
+  "source": "Madrid · Modelo 2025",
+  "title": "Actividad del torio-231 y número de uvas ingeridas · Madrid · Modelo 2025",
+  "statement": "Una parra crece en una zona contaminada con $^{231}\\text{Th}$. Cada uva contiene, al cogerla, $1{,}50\\cdot10^{-12}\\ \\text{g}$ de $^{231}\\text{Th}$. Una persona se come $n$ uvas; ocho horas más tarde su actividad radiactiva es $1{,}19\\cdot10^{6}\\ \\text{Bq}$.\n\n**(a)** Calcule el tiempo de vida media del $^{231}\\text{Th}$ y la actividad inicial de cada uva.\n**(b)** Determine el número total de uvas ingeridas.",
+  "knowns": [
+   "$T_{1/2}=25{,}5\\ \\text{h}$",
+   "masa de $^{231}\\text{Th}$ por uva $=1{,}50\\cdot10^{-12}\\ \\text{g}$",
+   "$M=231\\ \\text{u}$ (masa atómica)",
+   "actividad a las $8\\ \\text{h}$: $A=1{,}19\\cdot10^{6}\\ \\text{Bq}$",
+   "$N_A=6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a)** Constante de desintegración ($T_{1/2}=25{,}5\\cdot3600=91800\\ \\text{s}$):\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{0{,}693}{91800}=7{,}55\\cdot10^{-6}\\ \\text{s}^{-1}$$\nVida media:\n$$\\tau=\\dfrac{1}{\\lambda}=1{,}33\\cdot10^{5}\\ \\text{s}=36{,}8\\ \\text{h}$$\nNúmero de núcleos por uva: $N=\\dfrac{m}{M}N_A=\\dfrac{1{,}50\\cdot10^{-12}}{231}\\cdot6{,}02\\cdot10^{23}=3{,}91\\cdot10^{9}$.\nActividad inicial de una uva:\n$$A_0=\\lambda N=7{,}55\\cdot10^{-6}\\cdot3{,}91\\cdot10^{9}=2{,}95\\cdot10^{4}\\ \\text{Bq}$$\n\n**(b)** Tras $t=8\\ \\text{h}$, la actividad de las $n$ uvas es $A=n\\,A_0\\,e^{-\\lambda t}$:\n$$e^{-\\lambda t}=e^{-7{,}55\\cdot10^{-6}\\cdot28800}=0{,}805$$\n$$n=\\dfrac{A}{A_0\\,e^{-\\lambda t}}=\\dfrac{1{,}19\\cdot10^{6}}{2{,}95\\cdot10^{4}\\cdot0{,}805}=50{,}1\\approx 50\\ \\text{uvas}$$",
+  "answer": "**(a)** $\\tau=1{,}33\\cdot10^{5}\\ \\text{s}\\approx 36{,}8\\ \\text{h}$; $A_0\\approx 2{,}95\\cdot10^{4}\\ \\text{Bq}$ por uva. **(b)** $n\\approx 50$ uvas.",
+  "common_errors": [
+   "Confundir vida media $\\tau=1/\\lambda$ con el periodo de semidesintegración $T_{1/2}=\\ln2/\\lambda$.",
+   "No convertir las horas a segundos al calcular $\\lambda$ (Bq es $\\text{s}^{-1}$).",
+   "Olvidar el factor de decaimiento $e^{-\\lambda t}$ a las 8 horas al despejar $n$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-033",
+  "source": "Madrid · Modelo 2026",
+  "title": "Cobalto-60: constante, masa y actividad al cabo de un año · Madrid · Modelo 2026",
+  "statement": "El $^{60}\\text{Co}$ tiene periodo de semidesintegración $1925{,}2\\ \\text{días}$ y masa atómica $59{,}94\\ \\text{u}$. Una muestra tiene actividad inicial $2{,}64\\cdot10^{9}\\ \\text{Bq}$. Calcule:\n\n**(a)** La constante de desintegración.\n\n**(b)** La masa de $^{60}\\text{Co}$ de la muestra.\n\n**(c)** La actividad al cabo de $1$ año.",
+  "knowns": [
+   "$T_{1/2}=1925{,}2\\ \\text{días}$",
+   "$M=59{,}94\\ \\text{u}$",
+   "$A_0=2{,}64\\cdot10^{9}\\ \\text{Bq}$",
+   "$N_A=6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a)** $\\lambda=\\dfrac{\\ln2}{T_{1/2}}=\\dfrac{0{,}693}{1925{,}2\\cdot86400}=4{,}17\\cdot10^{-9}\\ \\text{s}^{-1}$ (equivale a $3{,}60\\cdot10^{-4}\\ \\text{día}^{-1}$).\n\n**(b)** De $A_0=\\lambda N_0$:\n\n$$N_0=\\dfrac{A_0}{\\lambda}=\\dfrac{2{,}64\\cdot10^{9}}{4{,}17\\cdot10^{-9}}=6{,}33\\cdot10^{17}\\ \\text{núcleos}$$\n\n$$m_0=M\\,\\dfrac{N_0}{N_A}=59{,}94\\cdot\\dfrac{6{,}33\\cdot10^{17}}{6{,}02\\cdot10^{23}}=6{,}3\\cdot10^{-5}\\ \\text{g}=63\\ \\mu\\text{g}$$\n\n**(c)** Con $t=365\\cdot24\\cdot3600=3{,}15\\cdot10^{7}\\ \\text{s}$:\n\n$$A(t)=A_0 e^{-\\lambda t}=2{,}64\\cdot10^{9}\\,e^{-4{,}17\\cdot10^{-9}\\cdot3{,}15\\cdot10^{7}}=2{,}31\\cdot10^{9}\\ \\text{Bq}$$",
+  "answer": "**(a)** $\\lambda\\approx4{,}17\\cdot10^{-9}\\ \\text{s}^{-1}$. **(b)** $m_0\\approx63\\ \\mu\\text{g}$. **(c)** $A(1\\ \\text{año})\\approx2{,}31\\cdot10^{9}\\ \\text{Bq}$.",
+  "common_errors": [
+   "No pasar $T_{1/2}$ a segundos antes de calcular $\\lambda$ en $\\text{s}^{-1}$.",
+   "Tomar $A_0=N_0$ en vez de $A_0=\\lambda N_0$.",
+   "Usar $M$ en gramos sin dividir entre $N_A$ para obtener la masa."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-034",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Desintegración del polonio-212 y partícula alfa relativista · Madrid · Ordinaria 2024",
+  "statement": "El $^{212}\\text{Po}$ (semivida $300\\ \\text{ns}$) se desintegra en $^{208}\\text{Pb}$ emitiendo una partícula $\\alpha$ de energía cinética $9\\ \\text{MeV}$.\n\n**(a)** Obtenga la actividad de una muestra de $^{212}\\text{Po}$ al cabo de $1\\ \\mu\\text{s}$, si inicialmente contiene $3\\ \\mu\\text{g}$.\n\n**(b)** Considerando la partícula $\\alpha$ relativista, ¿con qué velocidad sale emitida?",
+  "knowns": [
+   "$T_{1/2}=300\\ \\text{ns}$",
+   "$m_0=3\\ \\mu\\text{g}$",
+   "$E_c(\\alpha)=9\\ \\text{MeV}$",
+   "$M_{^{212}\\text{Po}}=212\\ \\text{u}$",
+   "$m_\\alpha=6{,}64\\cdot10^{-27}\\ \\text{kg}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$N_A=6{,}02\\cdot10^{23}$"
+  ],
+  "full_solution": "**(a) Actividad a $t=1\\ \\mu\\text{s}$**\n\nNúmero inicial de núcleos:\n$$N_0=\\dfrac{3\\cdot10^{-6}}{212}\\cdot6{,}02\\cdot10^{23}=8{,}52\\cdot10^{15}$$\n$$\\lambda=\\dfrac{\\ln2}{T_{1/2}}=\\dfrac{0{,}693}{300\\cdot10^{-9}}=2{,}31\\cdot10^{6}\\ \\text{s}^{-1}$$\nComo $t=1\\ \\mu\\text{s}=3{,}33\\,T_{1/2}$:\n$$A=\\lambda N_0 e^{-\\lambda t}=2{,}31\\cdot10^{6}\\cdot8{,}52\\cdot10^{15}\\cdot e^{-2{,}31}=1{,}95\\cdot10^{21}\\ \\text{Bq}$$\n\n**(b) Velocidad relativista de la $\\alpha$**\n\nEnergía en reposo: $m_\\alpha c^2=6{,}64\\cdot10^{-27}(3\\cdot10^{8})^2=5{,}98\\cdot10^{-10}\\ \\text{J}=3735\\ \\text{MeV}$.\nDe $E_c=(\\gamma-1)m_\\alpha c^2$:\n$$\\gamma=1+\\dfrac{9}{3735}=1{,}00241\\ \\Rightarrow\\ \\beta=\\sqrt{1-\\dfrac{1}{\\gamma^2}}=0{,}0693$$\n$$v=0{,}0693\\,c=2{,}08\\cdot10^{7}\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $A\\approx1{,}95\\cdot10^{21}\\ \\text{Bq}$.  **(b)** $v\\approx2{,}08\\cdot10^{7}\\ \\text{m·s}^{-1}\\approx0{,}069\\,c$.",
+  "common_errors": [
+   "Calcular la actividad con $N_0$ en vez de $N(t)=N_0e^{-\\lambda t}$.",
+   "No pasar $3\\ \\mu\\text{g}$ y $212\\ \\text{u}$ coherentemente al hallar $N_0$.",
+   "Usar $E_c=\\tfrac12 mv^2$ pese a pedir tratamiento relativista."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-035",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Datación con aluminio-26 en cuarzo: actividad y edad · Madrid · Ordinaria 2025",
+  "statement": "El mineral de cuarzo ($\\text{SiO}_2$) en superficie contiene impurezas de $^{26}\\text{Al}$, con $0{,}1\\%$ de átomos de $^{26}\\text{Al}$ respecto a los átomos de silicio. Al enterrarse el mineral, el $^{26}\\text{Al}$ se desintegra con un periodo de semidesintegración de $0{,}72$ millones de años.\n\n**(a)** Calcule la actividad de una muestra de cuarzo en superficie debida al $^{26}\\text{Al}$ si contiene $8{,}3\\cdot10^{22}$ átomos de silicio.\n\n**(b)** Se recoge una muestra de unos sedimentos con una relación de $0{,}08\\%$ de $^{26}\\text{Al}$ respecto al silicio. Obtenga la edad de formación de dichos sedimentos.",
+  "knowns": [
+   "Relación inicial $^{26}\\text{Al}/\\text{Si} = 0{,}1\\% = 10^{-3}$",
+   "$T_{1/2} = 0{,}72\\ \\text{Ma} = 2{,}27\\cdot10^{13}\\ \\text{s}$",
+   "$N_{\\text{Si}} = 8{,}3\\cdot10^{22}$ átomos",
+   "Relación en sedimentos $= 0{,}08\\%$"
+  ],
+  "full_solution": "**(a)** Periodo en segundos: $T_{1/2} = 0{,}72\\cdot10^{6}\\ \\text{años} = 2{,}27\\cdot10^{13}\\ \\text{s}$. Vida media y constante:\n$$\\tau = \\dfrac{T_{1/2}}{\\ln 2} = 3{,}27\\cdot10^{13}\\ \\text{s},\\qquad \\lambda = \\dfrac{1}{\\tau} = 3{,}05\\cdot10^{-14}\\ \\text{s}^{-1}.$$\nNúmero de núcleos de $^{26}\\text{Al}$ en superficie:\n$$N_{\\text{Al}} = N_{\\text{Si}}\\cdot 10^{-3} = 8{,}3\\cdot10^{22}\\cdot 10^{-3} = 8{,}3\\cdot10^{19}\\ \\text{núcleos}.$$\nActividad:\n$$A = \\lambda N_{\\text{Al}} = 3{,}05\\cdot10^{-14}\\cdot 8{,}3\\cdot10^{19} = 2{,}53\\cdot10^{6}\\ \\text{Bq}.$$\n\n**(b)** La relación inicial es $0{,}1\\%$ y la actual $0{,}08\\%$ (el silicio no se desintegra, sirve de referencia):\n$$\\dfrac{N_0}{N(t)} = \\dfrac{0{,}1\\%}{0{,}08\\%} = 1{,}25.$$\nDe $N(t) = N_0\\,e^{-t/\\tau}$:\n$$t = \\tau\\,\\ln\\!\\dfrac{N_0}{N(t)} = 3{,}27\\cdot10^{13}\\cdot\\ln(1{,}25) = 7{,}31\\cdot10^{12}\\ \\text{s} \\approx 0{,}232\\ \\text{millones de años}.$$",
+  "answer": "**(a)** $A = 2{,}53\\cdot10^{6}\\ \\text{Bq}$. **(b)** $t \\approx 7{,}31\\cdot10^{12}\\ \\text{s} \\approx 0{,}232\\ \\text{Ma}$.",
+  "common_errors": [
+   "No usar el silicio como referencia estable (la relación Al/Si marca la desintegración).",
+   "Confundir periodo de semidesintegración con vida media ($\\tau=T_{1/2}/\\ln2$).",
+   "No convertir millones de años a segundos para la actividad."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-036",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Tecnecio-99 en medicina nuclear: periodo de semidesintegración y masa · Madrid · Ordinaria 2025",
+  "statement": "En medicina nuclear se emplea el tecnecio-99, $^{99}\\text{Tc}$. Para controlar una dosis se mide su actividad a dos tiempos desde la preparación de la muestra:\n\n| Tiempo desde la creación (h) | 4 | 16 |\n|---|---|---|\n| Actividad (Bq) | $3{,}62\\cdot10^{13}$ | $4{,}90\\cdot10^{12}$ |\n\n**(a)** Determine el periodo de semidesintegración del $^{99}\\text{Tc}$ y la actividad inicial de la muestra.\n**(b)** Calcule la masa de isótopo presente en el instante en que se preparó.",
+  "knowns": [
+   "$t_1 = 4\\ \\text{h}$, $A_1 = 3{,}62\\cdot10^{13}\\ \\text{Bq}$",
+   "$t_2 = 16\\ \\text{h}$, $A_2 = 4{,}90\\cdot10^{12}\\ \\text{Bq}$",
+   "$M(^{99}\\text{Tc}) = 98{,}9\\ \\text{u}$",
+   "$N_A = 6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$"
+  ],
+  "full_solution": "**(a) Periodo de semidesintegración y actividad inicial.**\n\nLa actividad decae exponencialmente, $A = A_0\\,e^{-t/\\tau}$, con $\\tau$ la vida media. Entre las dos lecturas, separadas $\\Delta t = 12\\ \\text{h} = 43200\\ \\text{s}$:\n$$A_2 = A_1\\,e^{-\\Delta t/\\tau}\\ \\Rightarrow\\ \\tau = \\dfrac{-\\Delta t}{\\ln\\!\\left(\\dfrac{A_2}{A_1}\\right)} = \\dfrac{-43200}{\\ln\\!\\left(\\dfrac{4{,}90\\cdot10^{12}}{3{,}62\\cdot10^{13}}\\right)} = 2{,}16\\cdot10^{4}\\ \\text{s}$$\nEl periodo de semidesintegración:\n$$T_{1/2} = \\tau\\,\\ln 2 = 2{,}16\\cdot10^{4}\\cdot 0{,}693 = 1{,}50\\cdot10^{4}\\ \\text{s}\\ (\\approx 4{,}2\\ \\text{h})$$\nLa actividad inicial (en $t=0$) a partir de la lectura de $t=4\\ \\text{h}$:\n$$A_0 = A_1\\,e^{+t_1/\\tau} = 3{,}62\\cdot10^{13}\\,e^{(4\\cdot3600)/2{,}16\\cdot10^{4}} = 7{,}05\\cdot10^{13}\\ \\text{Bq}$$\n\n**(b) Masa inicial.**\n\nComo $A = \\lambda N = N/\\tau$, el número de núcleos iniciales es:\n$$N_0 = A_0\\,\\tau = 7{,}05\\cdot10^{13}\\cdot 2{,}16\\cdot10^{4} = 1{,}52\\cdot10^{18}\\ \\text{núcleos}$$\nY la masa correspondiente:\n$$m = \\dfrac{N_0\\,M}{N_A} = \\dfrac{1{,}52\\cdot10^{18}\\cdot 98{,}9}{6{,}02\\cdot10^{23}} = 2{,}50\\cdot10^{-4}\\ \\text{g}$$",
+  "answer": "$\\tau = 2{,}16\\cdot10^{4}\\ \\text{s}$, $T_{1/2} = 1{,}50\\cdot10^{4}\\ \\text{s}\\approx 4{,}2\\ \\text{h}$, $A_0 = 7{,}05\\cdot10^{13}\\ \\text{Bq}$.\nMasa inicial $m = 2{,}50\\cdot10^{-4}\\ \\text{g}$.",
+  "common_errors": [
+   "Usar $\\Delta t = 12\\ \\text{h}$ sin convertir a segundos (la actividad está en Bq $=\\text{s}^{-1}$).",
+   "Confundir la vida media $\\tau$ con el periodo de semidesintegración $T_{1/2}=\\tau\\ln 2$.",
+   "Calcular $N_0$ con $A=\\lambda N$ olvidando que $\\lambda = 1/\\tau = \\ln 2 / T_{1/2}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-037",
+  "source": "Madrid · Ordinaria 2026",
+  "title": "Yodo-131 en terapia de tiroides: constante de desintegración, masa y tiempo · Madrid · Ordinaria 2026",
+  "statement": "El yodo-131 ($T_{1/2}=8{,}02\\ \\text{días}$) se usa en terapia de tiroides. La actividad inicial máxima admisible es $7000\\ \\text{MBq}$.\n\n**(a)** La constante de desintegración del yodo-131.\n**(b)** La máxima cantidad (masa) de yodo-131 para no superar $7000\\ \\text{MBq}$.\n**(c)** El tiempo para que la actividad se reduzca al $20\\%$ de la inicial.",
+  "knowns": [
+   "$T_{1/2} = 8{,}02\\ \\text{días} = 6{,}93\\cdot10^{5}\\ \\text{s}$",
+   "$A_0 = 7000\\ \\text{MBq} = 7\\cdot10^{9}\\ \\text{Bq}$",
+   "$N_A = 6{,}02\\cdot10^{23}\\ \\text{mol}^{-1}$, $M = 130{,}9\\ \\text{u}$"
+  ],
+  "full_solution": "**(a) Constante de desintegración.**\n$$\\lambda = \\dfrac{\\ln 2}{T_{1/2}} = \\dfrac{0{,}693}{8{,}02\\cdot24\\cdot3600} = 1{,}00\\cdot10^{-6}\\ \\text{s}^{-1}$$\n\n**(b) Masa máxima.**\n$A_0=\\lambda N_0$, luego $N_0 = A_0/\\lambda = 7\\cdot10^{9}/1{,}00\\cdot10^{-6} = 7{,}00\\cdot10^{15}\\ \\text{núcleos}$.\n$$m_0 = \\dfrac{N_0\\,M}{N_A} = \\dfrac{7{,}00\\cdot10^{15}\\cdot130{,}9}{6{,}02\\cdot10^{23}} = 1{,}52\\cdot10^{-6}\\ \\text{g} = 1{,}52\\ \\mu\\text{g}$$\n\n**(c) Tiempo para el $20\\%$.**\n$A = A_0 e^{-\\lambda t}$ con $A=0{,}2\\,A_0$:\n$$t = -\\dfrac{\\ln 0{,}2}{\\lambda} = \\dfrac{1{,}609}{1{,}00\\cdot10^{-6}} = 1{,}61\\cdot10^{6}\\ \\text{s} = 18{,}6\\ \\text{días}$$",
+  "answer": "$\\lambda = 1{,}00\\cdot10^{-6}\\ \\text{s}^{-1}$.\n$m_0 = 1{,}52\\ \\mu\\text{g}$.\n$t = 1{,}61\\cdot10^{6}\\ \\text{s} \\approx 18{,}6\\ \\text{días}$.",
+  "common_errors": [
+   "No convertir el periodo a segundos (la actividad está en Bq).",
+   "Confundir actividad $A=\\lambda N$ con número de núcleos; $N_0=A_0/\\lambda$.",
+   "Usar $20\\%$ como factor en vez de resolver $0{,}2=e^{-\\lambda t}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-038",
+  "source": "Murcia · Extraordinaria 2020",
+  "title": "Tiempo para que la actividad decaiga al 10 % · Murcia · Extraordinaria 2020",
+  "statement": "Una muestra radiactiva tiene un periodo de semidesintegración $T_{1/2}=30$ años. Determine el tiempo que debe transcurrir para que su actividad se reduzca al $10\\%$ de la inicial.",
+  "knowns": [
+   "$T_{1/2}=30\\ \\text{años}$",
+   "$A/A_0=0{,}1$"
+  ],
+  "full_solution": "La actividad decae como $A=A_0 e^{-\\lambda t}$, con $\\lambda=\\dfrac{\\ln2}{T_{1/2}}$. Imponiendo $\\dfrac{A}{A_0}=0{,}1$:\n$$0{,}1=e^{-\\lambda t}\\ \\Rightarrow\\ t=\\dfrac{1}{\\lambda}\\ln\\dfrac{A_0}{A}=\\dfrac{T_{1/2}}{\\ln2}\\ln10$$\n$$t=\\dfrac{30}{\\ln2}\\ln10=\\dfrac{30}{0{,}693}\\cdot2{,}303=99{,}7\\ \\text{años}$$",
+  "answer": "$t=\\dfrac{T_{1/2}}{\\ln2}\\ln10\\approx99{,}7$ años.",
+  "common_errors": [
+   "Confundir que al $10\\%$ corresponden exactamente unas pocas semividas sin calcular.",
+   "Usar $\\lambda=1/T_{1/2}$ en vez de $\\ln2/T_{1/2}$.",
+   "Equivocar $\\ln(A_0/A)=\\ln10$ con $\\ln(0{,}1)$ (signo)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-039",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Datación por carbono-14 de una estatua inca · Murcia · Extraordinaria 2024",
+  "statement": "**Cuestión C4.** En una estatua de madera inca la proporción de carbono-14 es el $91\\%$ de la original. Si el periodo de semidesintegración del $^{14}\\text{C}$ es $5730\\ \\text{años}$, determine la edad de la estatua.",
+  "knowns": [
+   "$N/N_0 = 0{,}91$",
+   "$T_{1/2} = 5730\\ \\text{años}$"
+  ],
+  "full_solution": "La constante de desintegración es:\n\n$$\\lambda=\\dfrac{\\ln 2}{T_{1/2}}=\\dfrac{\\ln 2}{5730}=1{,}21\\cdot10^{-4}\\ \\text{años}^{-1}$$\n\nDe la ley de desintegración $N=N_0 e^{-\\lambda t}$, con $\\dfrac{N}{N_0}=0{,}91$:\n\n$$t=\\dfrac{1}{\\lambda}\\ln\\!\\left(\\dfrac{N_0}{N}\\right)=\\dfrac{\\ln(1/0{,}91)}{1{,}21\\cdot10^{-4}}=\\dfrac{0{,}0943}{1{,}21\\cdot10^{-4}}\\approx780\\ \\text{años}$$",
+  "answer": "$t\\approx780\\ \\text{años}$.",
+  "common_errors": [
+   "Usar $\\lambda=1/T_{1/2}$ en lugar de $\\ln 2/T_{1/2}$.",
+   "Tomar $N/N_0=0{,}09$ en vez de $0{,}91$.",
+   "Equivocar el signo dentro del logaritmo ($\\ln(N_0/N)=\\ln(1/0{,}91)>0$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-040",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Interacciones fundamentales (teoría) · Murcia · Extraordinaria 2024",
+  "statement": "**Teoría T4.** Describa las interacciones fundamentales de la naturaleza.",
+  "full_solution": "Existen cuatro interacciones fundamentales, que explican todas las fuerzas conocidas:\n\n- **Gravitatoria**: atractiva, de alcance infinito, la más débil pero dominante a gran escala (planetas, estrellas, galaxias). Actúa sobre la masa-energía. Partícula mediadora hipotética: el gravitón.\n\n- **Electromagnética**: de alcance infinito, atractiva o repulsiva, actúa sobre cargas eléctricas. Responsable de la estructura de átomos y moléculas, la luz y la química. Mediada por el **fotón**.\n\n- **Nuclear fuerte**: de muy corto alcance ($\\sim10^{-15}\\ \\text{m}$), la más intensa; mantiene unidos protones y neutrones en el núcleo (y los quarks dentro de ellos). Mediada por **gluones**.\n\n- **Nuclear débil**: de cortísimo alcance, responsable de la desintegración $\\beta$ y de procesos como la fusión estelar. Mediada por los **bosones $W^\\pm$ y $Z^0$**.\n\nOrdenadas por intensidad relativa: fuerte $>$ electromagnética $>$ débil $>$ gravitatoria.",
+  "answer": "Gravitatoria (masa, alcance infinito, la más débil), electromagnética (carga, fotón), nuclear fuerte (corto alcance, la más intensa, gluones) y nuclear débil (desintegración $\\beta$, bosones $W$ y $Z$).",
+  "common_errors": [
+   "Olvidar alguna de las cuatro interacciones.",
+   "Decir que la gravitatoria es la más intensa (es la más débil).",
+   "Confundir el corto alcance de las nucleares con el alcance infinito de gravedad y electromagnetismo."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-041",
+  "source": "Murcia · Modelo 2026",
+  "title": "Fusión deuterio-tritio: nucleones del He y energía liberada · Murcia · Modelo 2026",
+  "statement": "**(a)** Razone verdadero o falso: (1) protones y neutrones son partículas elementales sin estructura interna conocida; (2) la masa de un núcleo es menor que la suma de las masas de sus protones y neutrones.\n\n**(b)** Indique razonadamente el número de protones y neutrones del isótopo de He de la reacción $^{2}_{1}\\text{H}+{}^{3}_{1}\\text{H}\\rightarrow\\text{He}+n$, y calcule la energía liberada por cada fusión.",
+  "knowns": [
+   "$M(^{2}\\text{H})=3{,}344\\cdot10^{-27}\\ \\text{kg}$",
+   "$M(^{3}\\text{H})=5{,}012\\cdot10^{-27}\\ \\text{kg}$",
+   "$M(\\text{He})=6{,}645\\cdot10^{-27}\\ \\text{kg}$",
+   "$M(n)=1{,}675\\cdot10^{-27}\\ \\text{kg}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a)** (1) **Falso:** protones y neutrones no son elementales; están formados por quarks (tres quarks cada uno), luego tienen estructura interna conocida. (2) **Verdadero:** la masa del núcleo es menor que la suma de las masas de sus nucleones; esa diferencia (defecto de masa) corresponde a la energía de enlace, $E=\\Delta m\\,c^2$.\n\n**(b)** Conservación del número de nucleones ($Z$ y $A$): en $^{2}_{1}\\text{H}+{}^{3}_{1}\\text{H}$ hay $Z=2$ protones y $A=5$ nucleones; al formarse un neutrón libre, el helio tiene $Z=2$ y $A=4$, es decir $^{4}_{2}\\text{He}$: **2 protones y 2 neutrones**.\n\nDefecto de masa:\n\n$$\\Delta m=\\big[M(^{2}\\text{H})+M(^{3}\\text{H})\\big]-\\big[M(\\text{He})+M(n)\\big]$$\n\n$$\\Delta m=(3{,}344+5{,}012-6{,}645-1{,}675)\\cdot10^{-27}=3{,}6\\cdot10^{-29}\\ \\text{kg}$$\n\nEnergía liberada por fusión:\n\n$$E=\\Delta m\\,c^2=3{,}6\\cdot10^{-29}\\cdot(3\\cdot10^{8})^2=3{,}24\\cdot10^{-12}\\ \\text{J}\\approx20{,}3\\ \\text{MeV}$$",
+  "answer": "**(a)** (1) Falso (formados por quarks); (2) Verdadero (defecto de masa = energía de enlace). **(b)** $^{4}_{2}\\text{He}$: 2 protones y 2 neutrones; $E=\\Delta m\\,c^2\\approx3{,}24\\cdot10^{-12}\\ \\text{J}\\approx20{,}3\\ \\text{MeV}$.",
+  "common_errors": [
+   "Creer que protones y neutrones son elementales (lo son el electrón o los quarks, no los nucleones).",
+   "Calcular $\\Delta m$ como productos menos reactivos (signo invertido).",
+   "No ajustar $Z$ y $A$ y asignar mal el isótopo de He."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-042",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Desintegraciones del Yodo-131 y del Radio-223 · Murcia · Ordinaria 2024",
+  "statement": "**Problema P4.** El $^{131}_{53}\\text{I}$ y el $^{223}_{88}\\text{Ra}$ se usan contra el cáncer y experimentan desintegración $\\beta^-$ y $\\alpha$ respectivamente.\n\n**(a)** Escriba ambas reacciones indicando $A$, $Z$ y $N$ de los núcleos resultantes.\n\n**(b)** Si de $1\\ \\text{mg}$ de $^{131}\\text{I}$ quedan $0{,}66\\ \\text{mg}$ tras $5\\ \\text{días}$, determine la vida media del $^{131}\\text{I}$.\n\n**(c)** Calcule, en julios, la energía liberada en la desintegración $\\alpha$ de un núcleo de $^{223}\\text{Ra}$.",
+  "knowns": [
+   "$M(^{223}\\text{Ra}) = 223{,}0185\\ \\text{u}$",
+   "$M(^{4}\\text{He}) = 4{,}0026\\ \\text{u}$",
+   "$M(^{219}\\text{Rn}) = 219{,}0095\\ \\text{u}$",
+   "$1\\ \\text{u} = 1{,}66\\cdot10^{-27}\\ \\text{kg}$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** En la $\\beta^-$ el núcleo emite un electrón (un neutrón se convierte en protón): $Z$ aumenta en 1, $A$ no cambia.\n\n$$^{131}_{53}\\text{I}\\ \\longrightarrow\\ ^{131}_{54}\\text{Xe}+{}^{\\ 0}_{-1}e+\\bar{\\nu}_e$$\n\nEl núcleo resultante tiene $A=131$, $Z=54$, $N=77$.\n\nEn la $\\alpha$ se emite un núcleo de helio ($^4_2\\text{He}$): $A$ disminuye en 4 y $Z$ en 2.\n\n$$^{223}_{88}\\text{Ra}\\ \\longrightarrow\\ ^{219}_{86}\\text{Rn}+{}^{4}_{2}\\text{He}$$\n\nEl $^{219}_{86}\\text{Rn}$ tiene $A=219$, $Z=86$, $N=133$.\n\n**(b)** De $N=N_0 e^{-\\lambda t}$ con $N/N_0=0{,}66$ y $t=5\\ \\text{días}$:\n\n$$\\lambda=-\\dfrac{\\ln(0{,}66)}{5}=0{,}0831\\ \\text{días}^{-1}$$\n\nLa vida media es $\\tau=\\dfrac{1}{\\lambda}=\\dfrac{1}{0{,}0831}=12{,}0\\ \\text{días}$. (El periodo de semidesintegración sería $T_{1/2}=\\tau\\ln 2\\approx8{,}3\\ \\text{días}$.)\n\n**(c)** Defecto de masa de la $\\alpha$:\n\n$$\\Delta m=M(\\text{Ra})-M(\\text{Rn})-M(\\text{He})=223{,}0185-219{,}0095-4{,}0026=6{,}4\\cdot10^{-3}\\ \\text{u}$$\n\nEnergía liberada $Q=\\Delta m\\,c^2$:\n\n$$Q=6{,}4\\cdot10^{-3}\\cdot1{,}66\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2=9{,}56\\cdot10^{-13}\\ \\text{J}$$",
+  "answer": "**(a)** $^{131}_{53}\\text{I}\\to{}^{131}_{54}\\text{Xe}+\\beta^-+\\bar\\nu$ ($A=131,Z=54,N=77$); $^{223}_{88}\\text{Ra}\\to{}^{219}_{86}\\text{Rn}+\\alpha$ ($A=219,Z=86,N=133$). **(b)** $\\tau=1/\\lambda\\approx12{,}0\\ \\text{días}$. **(c)** $Q\\approx9{,}56\\cdot10^{-13}\\ \\text{J}$.",
+  "common_errors": [
+   "Equivocar el cambio de $Z$: en $\beta^-$ aumenta, en $\u0007lpha$ disminuye en 2.",
+   "Confundir vida media $\tau=1/\\lambda$ con periodo de semidesintegración.",
+   "Olvidar pasar $\\Delta m$ de unidades $u$ a kg antes de aplicar $E=\\Delta m c^2$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-NUC-043",
+  "source": "Madrid · Modelo 2007",
+  "title": "Desintegración radiactiva: constante, actividad y evolución a 50 años · Madrid · Modelo 2007",
+  "statement": "Una muestra contiene inicialmente $10^{24}$ átomos, de los cuales el $20\\%$ son de un material radiactivo con período de semidesintegración de $13$ años. Calcula:\n\n**a)** La constante de desintegración.\n\n**b)** El número de átomos radiactivos iniciales y la actividad inicial.\n\n**c)** El número de átomos radiactivos al cabo de $50$ años.\n\n**d)** La actividad de la muestra al cabo de $50$ años.",
+  "knowns": [
+   "$N_{\\text{total}}=10^{24}$ átomos",
+   "radiactivos: $20\\%$",
+   "$T_{1/2}=13\\ \\text{años}$"
+  ],
+  "full_solution": "**(a)** $\\lambda=\\dfrac{\\ln 2}{T_{1/2}}$. En segundos, $T_{1/2}=13\\cdot3{,}156\\cdot10^{7}=4{,}10\\cdot10^{8}\\ \\text{s}$:\n$$\\lambda=\\dfrac{0{,}693}{4{,}10\\cdot10^{8}}=1{,}69\\cdot10^{-9}\\ \\text{s}^{-1}\\quad(=5{,}33\\cdot10^{-2}\\ \\text{año}^{-1}).$$\n\n**(b)** $N_0=0{,}20\\cdot10^{24}=2\\cdot10^{23}$ átomos.\n$$A_0=\\lambda N_0=1{,}69\\cdot10^{-9}\\cdot2\\cdot10^{23}=3{,}38\\cdot10^{14}\\ \\text{Bq}.$$\n\n**(c)** $N(t)=N_0 e^{-\\lambda t}$ con $\\lambda t=5{,}33\\cdot10^{-2}\\cdot50=2{,}67$:\n$$N(50)=2\\cdot10^{23}\\,e^{-2{,}67}=1{,}39\\cdot10^{22}\\ \\text{átomos}.$$\n\n**(d)** $A(50)=\\lambda N(50)=1{,}69\\cdot10^{-9}\\cdot1{,}39\\cdot10^{22}=2{,}35\\cdot10^{13}\\ \\text{Bq}.$",
+  "answer": "**a)** $\\lambda=1{,}69\\cdot10^{-9}\\ \\text{s}^{-1}$. **b)** $N_0=2\\cdot10^{23}$, $A_0=3{,}38\\cdot10^{14}\\ \\text{Bq}$. **c)** $N(50)=1{,}39\\cdot10^{22}$. **d)** $A(50)=2{,}35\\cdot10^{13}\\ \\text{Bq}$.",
+  "common_errors": [
+   "Tomar $N_0=10^{24}$ sin aplicar el $20\\%$.",
+   "Mezclar unidades: $\\lambda$ en $\\text{s}^{-1}$ exige $T_{1/2}$ en segundos para la actividad en Bq.",
+   "Usar $N=N_0/2^{t/T}$ y $N=N_0e^{-\\lambda t}$ incoherentemente (son equivalentes)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-001",
+  "source": "Comunidad Valenciana · Julio 2018",
+  "title": "Electrón relativista: energía total y velocidad · Comunidad Valenciana · Julio 2018",
+  "statement": "La energía cinética relativista de un electrón es el doble de su energía en reposo. Calcula su energía total y su velocidad en unidades del SI.\n\n*Datos:* velocidad de la luz en el vacío, $c = 3\\cdot10^{8}\\ \\text{m/s}$; masa del electrón, $m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$.",
+  "knowns": [
+   "$E_c = 2\\,E_0$ (energía en reposo $E_0 = m_e c^2$)",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "La energía en reposo es $E_0 = m_e c^2$ y la energía total $E = E_0 + E_c$. Con $E_c = 2E_0$:\n$$E = E_0 + 2E_0 = 3E_0 = 3 m_e c^2.$$\n$$E = 3\\cdot 9{,}1\\cdot10^{-31}\\cdot(3\\cdot10^{8})^2 = 2{,}46\\cdot10^{-13}\\ \\text{J}\\ (\\approx 1{,}54\\ \\text{MeV}).$$\n\nLa velocidad se obtiene del factor de Lorentz. Como $E = \\gamma\\,m_e c^2 = 3 m_e c^2$, resulta $\\gamma = 3$:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-\\beta^2}} = 3\\ \\Rightarrow\\ \\beta = \\sqrt{1-\\dfrac{1}{9}} = \\sqrt{\\dfrac{8}{9}} = 0{,}943.$$\n$$v = 0{,}943\\,c = 2{,}83\\cdot10^{8}\\ \\text{m/s}.$$",
+  "answer": "$E = 3m_ec^2 = 2{,}46\\cdot10^{-13}\\ \\text{J}$ y $v = 0{,}943\\,c = 2{,}83\\cdot10^{8}\\ \\text{m/s}$.",
+  "common_errors": [
+   "Confundir energía total ($E=\\gamma mc^2$) con energía cinética ($E_c=(\\gamma-1)mc^2$).",
+   "Usar la expresión clásica $E_c=\\tfrac12 mv^2$ en un problema relativista.",
+   "Olvidar que $E_c=2E_0$ implica $\\gamma=3$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-002",
+  "source": "Comunidad Valenciana · Julio 2020",
+  "title": "Energía relativista y velocidad de una partícula · Comunidad Valenciana · Julio 2020",
+  "statement": "La energía relativista (total) de una partícula es $\\dfrac{3}{\\sqrt{8}}$ veces su energía en reposo. Calcule su velocidad en función de $c$. Si se duplica dicha velocidad, ¿se duplica su energía? Responda razonadamente.",
+  "knowns": [
+   "$E = \\dfrac{3}{\\sqrt{8}}\\,E_0$, con $E_0 = m c^2$"
+  ],
+  "full_solution": "La energía total es $E = \\gamma\\,m c^2 = \\gamma\\,E_0$, con $\\gamma = \\dfrac{1}{\\sqrt{1-v^2/c^2}}$. Por tanto $\\gamma = \\dfrac{3}{\\sqrt8} = 1{,}0607$.\n$$\\gamma = \\dfrac{1}{\\sqrt{1-v^2/c^2}} \\;\\Rightarrow\\; 1-\\dfrac{v^2}{c^2} = \\dfrac{1}{\\gamma^2} = \\dfrac{8}{9} \\;\\Rightarrow\\; \\dfrac{v^2}{c^2} = \\dfrac19$$\n$$v = \\dfrac{c}{3} \\approx 0{,}33\\,c$$\n\nSi se duplica la velocidad, $v' = \\dfrac{2c}{3}$, el nuevo factor de Lorentz es\n$$\\gamma' = \\dfrac{1}{\\sqrt{1-(2/3)^2}} = \\dfrac{1}{\\sqrt{5/9}} = \\dfrac{3}{\\sqrt5} = 1{,}342$$\nLa energía NO se duplica: $\\dfrac{E'}{E} = \\dfrac{\\gamma'}{\\gamma} = \\dfrac{1{,}342}{1{,}061} \\approx 1{,}26$. La energía relativista no es proporcional a la velocidad (crece más deprisa a medida que $v\\to c$).",
+  "answer": "$v = c/3 \\approx 0{,}33\\,c$. Al duplicar la velocidad la energía NO se duplica: pasa a $\\gamma'=3/\\sqrt5=1{,}34$ veces $E_0$, solo un $\\approx 1{,}26$ veces la energía anterior.",
+  "common_errors": [
+   "Suponer que $E\\propto v$ (relación clásica), no válida en relatividad.",
+   "Confundir energía total ($\\gamma m c^2$) con energía cinética ($(\\gamma-1)mc^2$).",
+   "Errores algebraicos al despejar $v$ de $\\gamma$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-003",
+  "source": "Comunidad Valenciana · Julio 2022",
+  "title": "Velocidad para que la energía relativista duplique la de reposo · Comunidad Valenciana · Julio 2022",
+  "statement": "Calcula la velocidad que debe tener una partícula para que su energía relativista sea el doble de su energía en reposo. ¿Sería posible que su velocidad fuera el doble de la calculada? Razónalo.",
+  "knowns": [
+   "$E = 2E_0$",
+   "$c = 3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La energía total relativista es $E=\\gamma m_0 c^2$ y la de reposo $E_0=m_0 c^2$. La condición $E=2E_0$ implica $\\gamma=2$:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-\\dfrac{v^2}{c^2}}} = 2 \\;\\Rightarrow\\; 1-\\dfrac{v^2}{c^2}=\\dfrac{1}{4} \\;\\Rightarrow\\; v = c\\sqrt{1-\\dfrac{1}{4}} = \\dfrac{\\sqrt{3}}{2}c$$\n$$v = 0{,}866\\,c = 2{,}60\\cdot10^{8}\\ \\text{m/s}$$\n\nEl doble de esa velocidad sería $2v=\\sqrt{3}\\,c \\approx 1{,}73\\,c > c$, lo cual **es imposible**: ninguna partícula con masa puede alcanzar o superar la velocidad de la luz en el vacío.",
+  "answer": "$v = \\dfrac{\\sqrt3}{2}c \\approx 0{,}866c = 2{,}60\\cdot10^{8}\\ \\text{m/s}$. No es posible el doble ($\\sqrt3\\,c>c$), pues ninguna partícula con masa puede alcanzar $c$.",
+  "common_errors": [
+   "Igualar la energía cinética (no la total) al doble de la de reposo.",
+   "Usar la energía cinética clásica en lugar de $\\gamma m_0 c^2$.",
+   "No advertir que $2v$ superaría $c$ y es imposible."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-004",
+  "source": "Comunidad Valenciana · Junio 2018",
+  "title": "Energía total y velocidad de una partícula relativista · C. Valenciana · Junio 2018",
+  "statement": "La energía cinética de una partícula es el $50\\%$ de su energía en reposo. Calcula su energía relativista total en función de su energía en reposo y la velocidad de la partícula.",
+  "knowns": [
+   "$E_c=0{,}5\\,E_0$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La energía total es la suma de la energía en reposo y la cinética:\n$$E=E_0+E_c=E_0+0{,}5\\,E_0=1{,}5\\,E_0$$\n\nComo $E=\\gamma E_0$, se tiene $\\gamma=1{,}5$. De $\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}$:\n$$1-\\dfrac{v^2}{c^2}=\\dfrac{1}{\\gamma^2}=\\dfrac{1}{2{,}25}=0{,}444\\ \\Rightarrow\\ \\dfrac{v}{c}=\\sqrt{0{,}556}=0{,}745$$\n$$v=0{,}745\\,c=2{,}24\\cdot10^{8}\\ \\text{m·s}^{-1}$$",
+  "answer": "$E=1{,}5\\,E_0$ (con $\\gamma=1{,}5$); $v=0{,}745\\,c\\approx2{,}24\\cdot10^{8}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Confundir energía total con energía cinética.",
+   "Usar $E_c=\\tfrac12 mv^2$ en vez de $E_c=(\\gamma-1)E_0$.",
+   "Despejar mal $\\gamma$ de la relación energética."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-005",
+  "source": "Comunidad Valenciana · Junio 2019",
+  "title": "Fusión de dos partículas relativistas (conservación de energía) · Comunidad Valenciana · Junio 2019",
+  "statement": "Una partícula de masa en reposo $m$ y energía igual a tres veces su energía en reposo se une a otra idéntica (igual masa y energía) para formar una única partícula en reposo, con energía en reposo $M c^2$. Si se conserva la energía, calcule el valor de $M$ en función de $m$ y la velocidad de las partículas iniciales en función de $c$.",
+  "knowns": [
+   "Energía de cada partícula: $E=3\\,m c^2$",
+   "Partícula final en reposo, energía $M c^2$",
+   "Se conserva la energía"
+  ],
+  "full_solution": "**Masa de la partícula final.** La energía total inicial es la suma de las dos partículas; por conservación de energía se iguala a la energía en reposo de la final:\n\n$$E_{total}=3mc^2+3mc^2=6mc^2=Mc^2\\Rightarrow M=6m$$\n\n**Velocidad de las partículas iniciales.** La energía relativista es $E=\\gamma\\,mc^2=3mc^2\\Rightarrow\\gamma=3$:\n\n$$\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}=3\\Rightarrow v=c\\sqrt{1-\\dfrac{1}{\\gamma^2}}=c\\sqrt{1-\\dfrac19}=\\dfrac{2\\sqrt2}{3}\\,c\\approx0{,}943\\,c$$\n\n(El resultado $M=6m>2m$ es coherente: la energía cinética de las partículas se transforma en masa en reposo de la partícula final.)",
+  "answer": "$M=6m$ (de $6mc^2=Mc^2$). Velocidad inicial: $\\gamma=3\\Rightarrow v=\\dfrac{2\\sqrt2}{3}\\,c\\approx0{,}943\\,c$.",
+  "common_errors": [
+   "Tomar $M=2m$ sumando solo las masas en reposo e ignorando la energía cinética.",
+   "Usar $E=\\tfrac12 mv^2$ en lugar de $E=\\gamma mc^2$.",
+   "Despejar mal $v$ de $\\gamma=3$ (olvidar la raíz $v=c\\sqrt{1-1/\\gamma^2}$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-006",
+  "source": "Comunidad Valenciana · Junio 2021",
+  "title": "Dilatación del tiempo: sueño de una astronauta a 0,5c · Comunidad Valenciana · Junio 2021",
+  "statement": "Una astronauta viaja a $v=0{,}5\\,c$ respecto a la Tierra. Comunica que dormirá de las $13$ h a las $19$ h según los relojes de la nave (todos sincronizados a las $13$ h). ¿A qué hora se despertará según los relojes de la Tierra?",
+  "knowns": [
+   "$v = 0{,}5\\,c$",
+   "Intervalo propio (en la nave) $\\Delta t_0 = 6\\ \\text{h}$",
+   "relojes sincronizados a las $13$ h"
+  ],
+  "full_solution": "**Dilatación del tiempo.**\nEl intervalo de sueño es un tiempo **propio** $\\Delta t_0=6\\ \\text{h}$ (ocurre en el mismo lugar de la nave). Desde la Tierra el intervalo se dilata con $\\gamma$:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-(v/c)^2}} = \\dfrac{1}{\\sqrt{1-0{,}25}} = 1{,}155$$\n$$\\Delta t = \\gamma\\,\\Delta t_0 = 1{,}155\\cdot6 = 6{,}93\\ \\text{h} \\approx 6\\ \\text{h}\\ 56\\ \\text{min}$$\n\n**Hora de despertar en la Tierra.**\n$$t = 13\\ \\text{h} + 6{,}93\\ \\text{h} = 19{,}93\\ \\text{h} \\approx 19{:}56$$",
+  "answer": "$\\Delta t=\\gamma\\,\\Delta t_0=6{,}93\\ \\text{h}$; se despertará hacia las $19{:}56$ según los relojes de la Tierra.",
+  "common_errors": [
+   "Identificar mal el tiempo propio: lo mide el reloj de la nave ($6\\ \\text{h}$).",
+   "Dividir por $\\gamma$ en vez de multiplicar: en la Tierra el intervalo es mayor.",
+   "Convertir mal $0{,}93\\ \\text{h}$ a minutos ($\\approx56\\ \\text{min}$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-007",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Mesón J/psi: velocidad relativista y energías en dos sistemas · Comunidad Valenciana · Junio 2022",
+  "statement": "El mesón $J/\\psi$ tiene una vida media de $7{,}2\\cdot10^{-21}\\ \\text{s}$ en su sistema de referencia propio y de $1{,}1\\cdot10^{-20}\\ \\text{s}$ medida en el laboratorio, respecto al cual se mueve a velocidad relativista.\n\n**(a)** Calcule la velocidad del mesón respecto al laboratorio.\n**(b)** Calcule la energía cinética y la energía total, en MeV, en ambos sistemas de referencia.",
+  "knowns": [
+   "$\\tau_0=7{,}2\\cdot10^{-21}\\ \\text{s}$ (propio), $\\tau=1{,}1\\cdot10^{-20}\\ \\text{s}$ (laboratorio)",
+   "$m_0=5{,}52\\cdot10^{-27}\\ \\text{kg}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$, $q=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** Dilatación temporal: $\\tau=\\gamma\\,\\tau_0$, luego\n$$\\gamma=\\dfrac{\\tau}{\\tau_0}=\\dfrac{1{,}1\\cdot10^{-20}}{7{,}2\\cdot10^{-21}}=1{,}528$$\n$$v=c\\sqrt{1-\\dfrac{1}{\\gamma^{2}}}=3\\cdot10^{8}\\sqrt{1-\\dfrac{1}{1{,}528^{2}}}=2{,}27\\cdot10^{8}\\ \\text{m/s}\\approx 0{,}756\\,c$$\n\n**(b)** Energía en reposo:\n$$E_0=m_0c^{2}=5{,}52\\cdot10^{-27}\\cdot(3\\cdot10^{8})^{2}=4{,}97\\cdot10^{-10}\\ \\text{J}=3105\\ \\text{MeV}$$\n**Sistema del laboratorio** (en movimiento, $\\gamma=1{,}528$):\n$$E=\\gamma E_0=1{,}528\\cdot3105=4744\\ \\text{MeV}\\qquad E_c=(\\gamma-1)E_0=1639\\ \\text{MeV}$$\n**Sistema propio** (en reposo, $\\gamma=1$): $E_c=0$ y $E=E_0=3105\\ \\text{MeV}$.",
+  "answer": "**(a)** $\\gamma=1{,}528$, $v\\approx 2{,}27\\cdot10^{8}\\ \\text{m/s}\\approx 0{,}756\\,c$. **(b)** Laboratorio: $E\\approx 4744\\ \\text{MeV}$, $E_c\\approx 1639\\ \\text{MeV}$; sistema propio: $E=E_0\\approx 3105\\ \\text{MeV}$, $E_c=0$.",
+  "common_errors": [
+   "Invertir la relación de dilatación ($\\tau_0=\\gamma\\tau$) y obtener $\\gamma<1$.",
+   "Calcular $E_c$ como $\\tfrac12 m v^2$ en lugar de $(\\gamma-1)m_0c^2$.",
+   "No convertir julios a MeV ($1\\ \\text{MeV}=1{,}6\\cdot10^{-13}\\ \\text{J}$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-008",
+  "source": "Comunidad Valenciana · Junio 2022",
+  "title": "Vida media relativista del mesón J/psi y sus energías · Comunidad Valenciana · Junio 2022",
+  "statement": "El mesón $J/\\psi$ tiene vida media $7{,}2\\cdot10^{-21}\\ \\text{s}$ en su sistema de referencia y $1{,}1\\cdot10^{-20}\\ \\text{s}$ en el laboratorio.\n\n**(a)** Calcula su velocidad respecto al laboratorio.\n\n**(b)** Calcula la energía cinética y la energía total (en MeV) en ambos sistemas de referencia.",
+  "knowns": [
+   "$\\tau_0=7{,}2\\cdot10^{-21}\\ \\text{s}$ (propia), $\\tau=1{,}1\\cdot10^{-20}\\ \\text{s}$ (laboratorio)",
+   "$m_0=5{,}52\\cdot10^{-27}\\ \\text{kg}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$, $q=1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** La vida media en el laboratorio es el tiempo dilatado $\\tau=\\gamma\\tau_0$:\n$$\\gamma=\\dfrac{\\tau}{\\tau_0}=\\dfrac{1{,}1\\cdot10^{-20}}{7{,}2\\cdot10^{-21}}=1{,}53$$\nDe $\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}$:\n$$v=c\\sqrt{1-\\dfrac{1}{\\gamma^2}}=c\\sqrt{1-\\dfrac{1}{1{,}53^2}}=0{,}756\\,c=2{,}27\\cdot10^{8}\\ \\text{m/s}$$\n\n**(b)** Energía en reposo:\n$$E_0=m_0c^2=5{,}52\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2=4{,}97\\cdot10^{-10}\\ \\text{J}=3105\\ \\text{MeV}$$\n**En el sistema propio del mesón** (en reposo): energía cinética $E_c=0$ y energía total $E=E_0=3105\\ \\text{MeV}$.\n**En el laboratorio** (se mueve con $\\gamma=1{,}53$):\n$$E=\\gamma E_0=1{,}53\\cdot3105=4744\\ \\text{MeV}$$\n$$E_c=(\\gamma-1)E_0=0{,}53\\cdot3105=1639\\ \\text{MeV}$$",
+  "answer": "**(a)** $\\gamma=1{,}53$, $v=0{,}756\\,c=2{,}27\\cdot10^{8}\\ \\text{m/s}$. **(b)** Sistema propio: $E_c=0$, $E=E_0=3105\\ \\text{MeV}$. Laboratorio: $E=4744\\ \\text{MeV}$, $E_c=1639\\ \\text{MeV}$.",
+  "common_errors": [
+   "Invertir la dilatación: la vida propia $\\tau_0$ es la menor; $\\tau=\\gamma\\tau_0$.",
+   "Olvidar que en su sistema de reposo la energía cinética del mesón es nula.",
+   "No convertir la energía de julios a MeV."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-009",
+  "source": "Comunidad Valenciana · Modelo 2021",
+  "title": "Fusión de dos partículas relativistas en una sola en reposo · Comunidad Valenciana · Modelo 2021",
+  "statement": "Una partícula de masa en reposo $m$ tiene una energía igual a tres veces su energía en reposo. Se une a otra idéntica (misma masa y energía) y forman una única partícula en reposo (velocidad nula) de energía en reposo $Mc^{2}$. Si en el proceso se conserva la energía, calcule $M$ en función de $m$ y la velocidad de las partículas iniciales en función de $c$.",
+  "knowns": [
+   "energía de cada partícula inicial $E=3\\,m c^{2}$",
+   "partícula final en reposo, energía $Mc^{2}$",
+   "se conserva la energía total"
+  ],
+  "full_solution": "**Masa final.** Conservación de la energía: la energía total antes (dos partículas) iguala a la energía en reposo de la partícula final:\n$$E_{total}=2\\cdot(3\\,m c^{2})=6\\,m c^{2}=M c^{2}\\ \\Rightarrow\\ M=6\\,m$$\n\n**Velocidad inicial.** La energía total relativista de cada partícula es $E=\\gamma\\,m c^{2}=3\\,m c^{2}$, luego $\\gamma=3$:\n$$\\gamma=\\dfrac{1}{\\sqrt{1-(v/c)^{2}}}=3\\ \\Rightarrow\\ 1-\\dfrac{v^{2}}{c^{2}}=\\dfrac{1}{9}\\ \\Rightarrow\\ \\dfrac{v}{c}=\\sqrt{\\dfrac{8}{9}}=\\dfrac{2\\sqrt2}{3}\\approx 0{,}943$$\n$$v\\approx 0{,}943\\,c$$\nLa masa final $6m$ supera a $2m$ porque la energía cinética inicial se transforma en masa en reposo.",
+  "answer": "$M=6\\,m$ y $v=\\dfrac{2\\sqrt2}{3}\\,c\\approx 0{,}943\\,c$.",
+  "common_errors": [
+   "Aplicar conservación de la masa en reposo ($2m=M$) en vez de conservación de la energía.",
+   "Confundir energía total $\\gamma mc^2$ con energía cinética $(\\gamma-1)mc^2$.",
+   "Errores al despejar $v/c$ de $\\gamma=3$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-010",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "Dilatación temporal y contracción de longitudes de un muon · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Un muon generado a $10\\ \\text{km}$ de altura viaja hacia el suelo con velocidad constante $v=0{,}98c$. Calcula la duración del vuelo según una observadora en el suelo y según otra que viaja con el muon. Determina la altura (distancia recorrida) según la observadora que viaja con el muon.",
+  "knowns": [
+   "$d = 10\\ \\text{km} = 10^{4}\\ \\text{m}$ (marco del suelo)",
+   "$v = 0{,}98c$",
+   "$c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "Factor de Lorentz:\n$$\\gamma = \\dfrac{1}{\\sqrt{1-0{,}98^2}} = 5{,}03$$\n\n**Tiempo según el suelo** (recorre $10^4\\ \\text{m}$ a $0{,}98c$):\n$$t = \\dfrac{d}{v} = \\dfrac{10^{4}}{0{,}98\\cdot 3\\cdot10^{8}} = 3{,}40\\cdot10^{-5}\\ \\text{s}$$\nEs un tiempo **impropio** (los dos sucesos —creación y llegada— ocurren en lugares distintos para el suelo).\n\n**Tiempo según el muon** (tiempo propio, los dos sucesos ocurren en su misma posición):\n$$t_0 = \\dfrac{t}{\\gamma} = \\dfrac{3{,}40\\cdot10^{-5}}{5{,}03} = 6{,}77\\cdot10^{-6}\\ \\text{s}$$\n\n**Altura según el muon** (longitud contraída):\n$$d_0 = \\dfrac{d}{\\gamma} = \\dfrac{10^{4}}{5{,}03} = 1{,}99\\cdot10^{3}\\ \\text{m} \\approx 2{,}0\\ \\text{km}$$\n(Comprobación: $d_0 = v\\,t_0 = 0{,}98\\cdot3\\cdot10^{8}\\cdot 6{,}77\\cdot10^{-6} \\approx 1{,}99\\cdot10^{3}\\ \\text{m}$.)",
+  "answer": "$t_{suelo} = 3{,}40\\cdot10^{-5}\\ \\text{s}$; $t_{muon} = 6{,}77\\cdot10^{-6}\\ \\text{s}$; altura según el muon $d_0 \\approx 1{,}99\\cdot10^{3}\\ \\text{m} \\approx 2{,}0\\ \\text{km}$.",
+  "common_errors": [
+   "Intercambiar tiempo propio e impropio: el propio lo mide quien viaja con el muon.",
+   "Aplicar la dilatación al revés (dividir en vez de multiplicar por $\\gamma$).",
+   "Olvidar que la longitud se contrae en el marco del muon."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-011",
+  "source": "Madrid · Julio 2021",
+  "title": "Electrón relativista a 0,75c y fotón de 15 MeV · Madrid · Julio 2021",
+  "statement": "En un acelerador se originan un electrón relativista de velocidad $0{,}75c$ y un fotón de $15\\ \\text{MeV}$ de energía.\n\n**(a)** Calcule la masa relativista y la energía cinética del electrón.\n\n**(b)** Determine la longitud de onda del fotón y la longitud de onda de de Broglie del electrón.",
+  "knowns": [
+   "$v=0{,}75c$",
+   "$E_{\\text{fotón}}=15\\ \\text{MeV}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "**(a) Masa relativista y energía cinética**\n\n$$m=\\dfrac{m_0}{\\sqrt{1-v^2/c^2}}=\\dfrac{9{,}1\\cdot10^{-31}}{\\sqrt{1-0{,}75^2}}=1{,}38\\cdot10^{-30}\\ \\text{kg}$$\n\n$$E_c=mc^2-m_0c^2=(1{,}38\\cdot10^{-30}-9{,}1\\cdot10^{-31})(3\\cdot10^{8})^2=4{,}19\\cdot10^{-14}\\ \\text{J}$$\n\n**(b) Longitudes de onda**\n\nFotón: de $E=\\dfrac{hc}{\\lambda}$,\n$$\\lambda_f=\\dfrac{hc}{E}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{15\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}}=8{,}29\\cdot10^{-14}\\ \\text{m}$$\n\nElectrón (de Broglie, con la masa relativista):\n$$\\lambda_e=\\dfrac{h}{mv}=\\dfrac{6{,}63\\cdot10^{-34}}{1{,}38\\cdot10^{-30}\\cdot0{,}75\\cdot3\\cdot10^{8}}=2{,}14\\cdot10^{-12}\\ \\text{m}$$",
+  "answer": "**(a)** $m\\approx1{,}38\\cdot10^{-30}\\ \\text{kg}$; $E_c\\approx4{,}19\\cdot10^{-14}\\ \\text{J}$.  **(b)** $\\lambda_f\\approx8{,}29\\cdot10^{-14}\\ \\text{m}$; $\\lambda_e\\approx2{,}14\\cdot10^{-12}\\ \\text{m}$.",
+  "common_errors": [
+   "Usar $E_c=\\tfrac12 mv^2$ (no es válido a velocidades relativistas).",
+   "Olvidar convertir $15\\ \\text{MeV}$ a julios ($\\times1{,}6\\cdot10^{-13}$).",
+   "Usar la masa en reposo en vez de la relativista en $\\lambda_e=h/(mv)$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-012",
+  "source": "Madrid · Junio 2013",
+  "title": "Masa y energía relativistas de un electrón rápido · Madrid · Junio 2013",
+  "statement": "**(a)** Determine la masa de un electrón que se mueve a $2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$.\n**(b)** Calcule la energía de un electrón que se mueve a $0{,}8\\,c$.",
+  "knowns": [
+   "$m_e = 9{,}11\\cdot10^{-31}\\ \\text{kg}$ (masa en reposo)",
+   "$c = 3{,}00\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$",
+   "(a) $v=2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$; (b) $v=0{,}8\\,c$"
+  ],
+  "full_solution": "**(a) Masa relativista a $v=2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$.**\n$$\\gamma = \\dfrac{1}{\\sqrt{1-(v/c)^2}} = \\dfrac{1}{\\sqrt{1-(2/3)^2}} = \\dfrac{1}{\\sqrt{5/9}} = 1{,}34$$\n$$m = \\gamma\\,m_e = 1{,}34\\cdot9{,}11\\cdot10^{-31} = 1{,}22\\cdot10^{-30}\\ \\text{kg}$$\n\n**(b) Energía (total) a $v=0{,}8\\,c$.**\n$$\\gamma = \\dfrac{1}{\\sqrt{1-0{,}8^2}} = \\dfrac{1}{\\sqrt{0{,}36}} = 1{,}67$$\n$$E = \\gamma\\,m_e c^2 = 1{,}67\\cdot9{,}11\\cdot10^{-31}\\cdot(3\\cdot10^{8})^2 = 1{,}37\\cdot10^{-13}\\ \\text{J}\\ (\\approx 0{,}85\\ \\text{MeV})$$",
+  "answer": "$m = 1{,}22\\cdot10^{-30}\\ \\text{kg}$ (a $2\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$).\n$E = \\gamma m_e c^2 = 1{,}37\\cdot10^{-13}\\ \\text{J}\\approx0{,}85\\ \\text{MeV}$ (a $0{,}8\\,c$).",
+  "common_errors": [
+   "Usar la masa en reposo sin el factor $\\gamma$ a velocidades relativistas.",
+   "Confundir energía total $\\gamma m c^2$ con energía cinética $(\\gamma-1)m c^2$.",
+   "Evaluar mal $\\gamma$: $(v/c)^2$, no $v/c$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-013",
+  "source": "Madrid · Junio 2022",
+  "title": "Electrón relativista con energía de un fotón · Madrid · Junio 2022",
+  "statement": "Un electrón relativista adquiere una energía cinética igual a la energía de un fotón de $5\\cdot10^{-12}\\ \\text{m}$ de longitud de onda en el vacío. Calcule:\n\n**(a)** La energía cinética del electrón, en eV.\n\n**(b)** La velocidad del electrón.",
+  "knowns": [
+   "$\\lambda=5\\cdot10^{-12}\\ \\text{m}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_e=9{,}1\\cdot10^{-31}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** La energía cinética del electrón iguala la del fotón:\n\n$$E_c=\\dfrac{hc}{\\lambda}=\\dfrac{6{,}63\\cdot10^{-34}\\cdot3\\cdot10^{8}}{5\\cdot10^{-12}}=3{,}98\\cdot10^{-14}\\ \\text{J}$$\n\n$$E_c=\\dfrac{3{,}98\\cdot10^{-14}}{1{,}6\\cdot10^{-19}}=2{,}49\\cdot10^{5}\\ \\text{eV}$$\n\n**(b)** De la energía cinética relativista $E_c=(\\gamma-1)m_e c^2$, con $m_e c^2=8{,}19\\cdot10^{-14}\\ \\text{J}$, se obtiene $\\gamma=1+\\dfrac{E_c}{m_e c^2}=1{,}486$:\n\n$$v=c\\sqrt{1-\\dfrac{1}{\\gamma^2}}=c\\sqrt{1-\\dfrac{1}{1{,}486^2}}=0{,}740\\,c=2{,}22\\cdot10^{8}\\ \\text{m/s}$$",
+  "answer": "**(a)** $E_c=\\dfrac{hc}{\\lambda}\\approx2{,}49\\cdot10^{5}\\ \\text{eV}$. **(b)** $v\\approx2{,}22\\cdot10^{8}\\ \\text{m/s}\\ (\\approx0{,}74\\,c)$.",
+  "common_errors": [
+   "Usar la energía cinética clásica $\\tfrac12 m v^2$: a esta energía el electrón es muy relativista.",
+   "Olvidar restar el $1$ en $(\\gamma-1)$ al relacionar $E_c$ con $\\gamma$.",
+   "No convertir julios a eV dividiendo entre $e$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-014",
+  "source": "Madrid · Modelo 2025",
+  "title": "Protón relativista al 75% de la velocidad de la luz · Madrid · Modelo 2025",
+  "statement": "Un protón tiene una masa en reposo equivalente a una energía de $938{,}2\\ \\text{MeV}$. Se acelera hasta alcanzar una velocidad igual al $75\\%$ de la de la luz.\n\n**(a)** Determine la masa en reposo del protón.\n**(b)** Determine su energía cinética.",
+  "knowns": [
+   "$E_0 = 938{,}2\\ \\text{MeV}$",
+   "$v = 0{,}75\\,c$",
+   "$c = 3\\cdot10^{8}\\ \\text{m}\\cdot\\text{s}^{-1}$",
+   "$e = 1{,}6\\cdot10^{-19}\\ \\text{C}$"
+  ],
+  "full_solution": "**(a)** De $E_0=m_0c^{2}$, pasando la energía a julios ($1\\ \\text{MeV}=10^{6}\\cdot1{,}6\\cdot10^{-19}\\ \\text{J}$):\n$$m_0=\\dfrac{E_0}{c^{2}}=\\dfrac{938{,}2\\cdot10^{6}\\cdot1{,}6\\cdot10^{-19}}{(3\\cdot10^{8})^{2}}=1{,}67\\cdot10^{-27}\\ \\text{kg}$$\n\n**(b)** La energía cinética relativista es $E_c=(\\gamma-1)\\,m_0c^{2}$, con\n$$\\gamma=\\dfrac{1}{\\sqrt{1-(v/c)^{2}}}=\\dfrac{1}{\\sqrt{1-0{,}75^{2}}}=\\dfrac{1}{\\sqrt{0{,}4375}}=1{,}512$$\n$$E_c=(1{,}512-1)\\cdot938{,}2\\ \\text{MeV}=480\\ \\text{MeV}=7{,}68\\cdot10^{-11}\\ \\text{J}$$",
+  "answer": "**(a)** $m_0=1{,}67\\cdot10^{-27}\\ \\text{kg}$. **(b)** $E_c\\approx 4{,}8\\cdot10^{2}\\ \\text{MeV}\\approx 7{,}7\\cdot10^{-11}\\ \\text{J}$.",
+  "common_errors": [
+   "Calcular la energía cinética como $\\tfrac12 m_0 v^2$ (clásica) en lugar de $(\\gamma-1)m_0c^2$.",
+   "Olvidar el \"$-1$\" y dar la energía total $\\gamma m_0c^2$ como cinética.",
+   "No convertir los MeV a julios (o viceversa) de forma coherente."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-015",
+  "source": "Madrid · Modelo 2026",
+  "title": "Protones de 1,4 GeV en el PS Booster del LHC · Madrid · Modelo 2026",
+  "statement": "En el PS Booster del complejo del LHC se aceleran protones hasta una energía cinética de $1{,}4\\ \\text{GeV}$. Determine:\n\n**(a)** La masa relativista de los protones con esa energía cinética.\n\n**(b)** La velocidad de dichos protones.",
+  "knowns": [
+   "$E_c=1{,}4\\ \\text{GeV}$",
+   "$e=1{,}6\\cdot10^{-19}\\ \\text{C}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_p=1{,}67\\cdot10^{-27}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** En julios: $E_c=1{,}4\\cdot10^{9}\\cdot1{,}6\\cdot10^{-19}=2{,}24\\cdot10^{-10}\\ \\text{J}$.\n\nDe $m c^2=m_0 c^2+E_c$:\n\n$$m=m_0+\\dfrac{E_c}{c^2}=1{,}67\\cdot10^{-27}+\\dfrac{2{,}24\\cdot10^{-10}}{(3\\cdot10^{8})^2}=4{,}16\\cdot10^{-27}\\ \\text{kg}$$\n\n**(b)** De $m=\\dfrac{m_0}{\\sqrt{1-v^2/c^2}}$:\n\n$$v=c\\sqrt{1-\\left(\\dfrac{m_0}{m}\\right)^2}=c\\sqrt{1-\\left(\\dfrac{1{,}67}{4{,}16}\\right)^2}=0{,}916\\,c=2{,}75\\cdot10^{8}\\ \\text{m/s}$$",
+  "answer": "**(a)** $m=m_0+E_c/c^2\\approx4{,}16\\cdot10^{-27}\\ \\text{kg}$. **(b)** $v\\approx0{,}916\\,c\\approx2{,}75\\cdot10^{8}\\ \\text{m/s}$.",
+  "common_errors": [
+   "No convertir GeV a julios ($1\\ \\text{eV}=1{,}6\\cdot10^{-19}\\ \\text{J}$).",
+   "Calcular la velocidad con cinemática clásica $E_c=\\tfrac12 m v^2$.",
+   "Confundir masa relativista $m$ con masa en reposo $m_0$ en la fórmula de $v$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-016",
+  "source": "Murcia · Modelo 2026",
+  "title": "Protón relativista: De Broglie, energía cinética y tiempo propio · Murcia · Modelo 2026",
+  "statement": "Un protón tarda $4{,}2\\cdot10^{-9}\\ \\text{s}$ en recorrer un tubo de vacío de $1\\ \\text{m}$ (sistema del laboratorio).\n\n**(a)** Calcule la longitud de onda de De Broglie asociada al protón.\n\n**(b)** Determine su energía cinética relativista en el laboratorio y el tiempo que tarda en recorrer el tubo en el sistema de referencia del protón.",
+  "knowns": [
+   "$L=1\\ \\text{m}$, $\\Delta t=4{,}2\\cdot10^{-9}\\ \\text{s}\\Rightarrow v=2{,}38\\cdot10^{8}\\ \\text{m/s}$",
+   "$m_p=1{,}67\\cdot10^{-27}\\ \\text{kg}$",
+   "$h=6{,}63\\cdot10^{-34}\\ \\text{J·s}$",
+   "$c=3\\cdot10^{8}\\ \\text{m/s}$"
+  ],
+  "full_solution": "La velocidad del protón es $v=\\dfrac{L}{\\Delta t}=\\dfrac{1}{4{,}2\\cdot10^{-9}}=2{,}38\\cdot10^{8}\\ \\text{m/s}$, es decir $\\beta=0{,}794$, con factor:\n\n$$\\gamma=\\dfrac{1}{\\sqrt{1-\\beta^2}}=\\dfrac{1}{\\sqrt{1-0{,}794^2}}=1{,}64$$\n\n**(a)** Con el momento lineal relativista $p=\\gamma m_p v$:\n\n$$\\lambda=\\dfrac{h}{\\gamma m_p v}=\\dfrac{6{,}63\\cdot10^{-34}}{1{,}64\\cdot1{,}67\\cdot10^{-27}\\cdot2{,}38\\cdot10^{8}}=1{,}0\\cdot10^{-15}\\ \\text{m}$$\n\n(Con momento clásico $p=m_p v$ saldría $1{,}7\\cdot10^{-15}\\ \\text{m}$; a $0{,}79c$ debe usarse el relativista.)\n\n**(b)** Energía cinética relativista:\n\n$$E_c=(\\gamma-1)m_p c^2=0{,}64\\cdot1{,}67\\cdot10^{-27}\\cdot(3\\cdot10^{8})^2=9{,}7\\cdot10^{-11}\\ \\text{J}\\approx605\\ \\text{MeV}$$\n\nEl tiempo propio (en el sistema del protón) se dilata menos; $\\Delta t'=\\dfrac{\\Delta t}{\\gamma}$:\n\n$$\\Delta t'=\\dfrac{4{,}2\\cdot10^{-9}}{1{,}64}=2{,}6\\cdot10^{-9}\\ \\text{s}$$",
+  "answer": "**(a)** $\\lambda=\\dfrac{h}{\\gamma m_p v}\\approx1{,}0\\cdot10^{-15}\\ \\text{m}$ (momento relativista). **(b)** $E_c=(\\gamma-1)m_pc^2\\approx9{,}7\\cdot10^{-11}\\ \\text{J}\\approx605\\ \\text{MeV}$; $\\Delta t'=\\Delta t/\\gamma\\approx2{,}6\\cdot10^{-9}\\ \\text{s}$.",
+  "common_errors": [
+   "Usar momento clásico $p=m_p v$ pese a que $v\\approx0{,}79c$.",
+   "Calcular $E_c=\\tfrac12 m v^2$ en vez de $(\\gamma-1)m c^2$.",
+   "Dilatar el tiempo multiplicando por $\\gamma$ en lugar de dividir (el tiempo propio es el menor)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-017",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Relatividad especial: postulados y repercusiones (teoría) · Murcia · Ordinaria 2024",
+  "statement": "**Teoría T4.** Enuncie los postulados de la relatividad especial y sus principales repercusiones.",
+  "full_solution": "**Postulados de Einstein (1905):**\n1. *Principio de relatividad*: las leyes de la física son las mismas en todos los sistemas de referencia inerciales.\n2. *Constancia de la velocidad de la luz*: la velocidad de la luz en el vacío $c$ es la misma para todos los observadores inerciales, independientemente del movimiento de la fuente o del observador.\n\n**Repercusiones principales** (con $\\gamma=\\dfrac{1}{\\sqrt{1-v^2/c^2}}$):\n\n- *Dilatación del tiempo*: un intervalo propio $\\Delta t_0$ se mide dilatado por otro observador, $\\Delta t=\\gamma\\,\\Delta t_0$.\n- *Contracción de la longitud*: una longitud propia $L_0$ se mide contraída en la dirección del movimiento, $L=\\dfrac{L_0}{\\gamma}$.\n- *Relatividad de la simultaneidad*: sucesos simultáneos en un sistema no lo son en otro.\n- *Equivalencia masa-energía*: $E=mc^2$; la energía total es $E=\\gamma m c^2$ y el momento $p=\\gamma m v$.\n- Ningún cuerpo con masa puede alcanzar la velocidad $c$.",
+  "answer": "Postulados: relatividad de las leyes físicas y constancia de $c$. Repercusiones: dilatación del tiempo ($\\Delta t=\\gamma\\Delta t_0$), contracción de longitudes ($L=L_0/\\gamma$), relatividad de la simultaneidad y $E=mc^2$.",
+  "common_errors": [
+   "Invertir la dilatación/contracción ($t$ se dilata, $L$ se contrae).",
+   "Creer que la masa cambia la velocidad de la luz.",
+   "Olvidar que $c$ es un límite inalcanzable para cuerpos con masa."
+  ]
+ },
+ {
+  "id": "PAU-FIS-REL-018",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Longitud de onda de De Broglie y viaje relativista · Murcia · Ordinaria 2026",
+  "statement": "**(a)** Enuncie la hipótesis de De Broglie y calcule la longitud de onda asociada a un electrón con energía cinética $E_c = 100\\ \\text{eV}$.\n\n**(b)** Un astronauta de masa $m_0 = 70\\ \\text{kg}$ viaja a una estrella situada a $4$ años-luz a velocidad $v = 0{,}8\\,c$. Calcule el tiempo de viaje medido en la Tierra, el tiempo propio del astronauta y su energía cinética relativista.",
+  "knowns": [
+   "$E_c = 100\\ \\text{eV}$, $m_e = 9{,}1\\cdot10^{-31}\\ \\text{kg}$, $h = 6{,}6\\cdot10^{-34}\\ \\text{J·s}$",
+   "$L = 4\\ \\text{a.l.}$, $v = 0{,}8\\,c$, $m_0 = 70\\ \\text{kg}$, $c = 3\\cdot10^{8}\\ \\text{m·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Según De Broglie, toda partícula material lleva asociada una onda de longitud $\\lambda = \\dfrac{h}{p}$. Como $E_c = \\tfrac12 m_e v^2$, el momento es $p = \\sqrt{2 m_e E_c}$. Con $E_c = 100\\cdot1{,}6\\cdot10^{-19}\\ \\text{J}$:\n$$\\lambda = \\dfrac{h}{\\sqrt{2 m_e E_c}} = \\dfrac{6{,}6\\cdot10^{-34}}{\\sqrt{2\\cdot9{,}1\\cdot10^{-31}\\cdot100\\cdot1{,}6\\cdot10^{-19}}} \\approx 1{,}2\\cdot10^{-10}\\ \\text{m}$$\n\n**(b)** Tiempo medido en la Tierra:\n$$\\Delta t = \\dfrac{L}{v} = \\dfrac{4\\ \\text{a.l.}}{0{,}8\\,c} = 5\\ \\text{años}$$\nFactor de Lorentz $\\gamma = \\dfrac{1}{\\sqrt{1-0{,}8^2}} = 1{,}667$. Tiempo propio del astronauta:\n$$\\Delta t' = \\Delta t\\sqrt{1-v^2/c^2} = 5\\cdot0{,}6 = 3\\ \\text{años}$$\nEnergía cinética relativista:\n$$E_c = (\\gamma-1)\\,m_0\\,c^2 = (1{,}667-1)\\cdot70\\cdot(3\\cdot10^{8})^2 \\approx 4{,}2\\cdot10^{18}\\ \\text{J}$$",
+  "answer": "**(a)** $\\lambda \\approx 1{,}2\\cdot10^{-10}\\ \\text{m}$. **(b)** $\\Delta t = 5\\ \\text{años}$, $\\Delta t' = 3\\ \\text{años}$, $E_c \\approx 4{,}2\\cdot10^{18}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la energía cinética clásica $\\tfrac12 mv^2$ para el astronauta relativista.",
+   "Olvidar convertir los 100 eV a julios.",
+   "Confundir tiempo propio ($\\Delta t'$, el menor) con el tiempo terrestre."
+  ]
+ }
+]

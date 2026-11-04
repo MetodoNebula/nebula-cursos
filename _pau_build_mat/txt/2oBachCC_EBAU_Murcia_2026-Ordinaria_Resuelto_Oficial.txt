@@ -1,0 +1,284 @@
+            RESOLUCIÓN DEL EXAMEN PAU JUNIO 2026
+                                  Matemáticas II
+
+    Por la propia naturaleza de la disciplina, una misma pregunta puede admitir diferentes so-
+luciones correctas. Por supuesto, cualquier solución de cualquiera de las preguntas del examen
+que sea correcta y esté bien argumentada deberá ser considerada como válida en el proceso
+de corrección, aunque no esté incluida en este documento.
+    El examen consta de un total de cinco preguntas. Las tres primeras preguntas sin opciones.
+Las dos últimas preguntas con dos opciones cada una, para hacer solo una de esas opciones.
+La elección de la primera o la segunda opción puede cambiar de una pregunta a otra. Si se
+responden las 2 opciones de una pregunta, solo se corregirá la primera opción contestada. Las
+preguntas se pueden hacer en cualquier orden. La puntuación máxima de cada pregunta es
+de 2 puntos. Las cinco preguntas son:
+
+Pregunta 1: Sentido numérico y algebraico (2 puntos).
+
+Pregunta 2: Sentido de la medida (2 puntos).
+
+Pregunta 3: Sentido espacial (2 puntos).
+
+Pregunta 4 (opciones 4.1 y 4.2): Sentido de la medida (2 puntos).
+
+Pregunta 5 (opciones 5.1 y 5.2): Sentido estocástico (2 puntos).
+
+Solo se pueden usar las tablas estadı́sticas que se proporcionan con el examen y, según la
+normativa vigente, no se puden usar calculadoras gráficas ni programables.
+
+
+                              En Murcia, a 10 de junio de 2026.
+
+                                Pedro Nicolás Zaragoza
+                              Coordinador Matemáticas II
+               Departamento de Didáctica de las CC. Matemáticas y Sociales
+                                Universidad de Murcia
+                                                 2
+
+
+Pregunta 1: Sentido numérico y algebraico (2 puntos)
+Darı́o y Cayetana están organizando un pequeño negocio y deciden invertir dinero en tres
+cosas: x miles de euros en publicidad, y miles de euros en materiales, z miles de euros en
+logı́stica. El reparto depende de un parámetro positivo, k, que representa una estrategia de
+ajuste económico según la situación del mercado. Se sabe que la suma de todo lo invertido es
+en total 12 mil euros. Darı́o propone que la inversión en publicidad más el doble de la inversión
+en materiales sea igual a la inversión en logı́stica más k. Cayetana quiere que el doble de la
+inversión en publicidad menos la inversión en materiales más la inversión en logı́stica sea igual
+a 4 mil euros.
+  a) (0,75 ptos.) Plantee un sistema de 3 ecuaciones con 3 incógnitas que refleje los datos
+     del problema.
+  b) (1,25 ptos.) Discuta el correspondiente sistema. En caso de existir solución única,
+     encuéntrela y exprésela en función de k si es necesario.
+Solución:
+a) El sistema de ecuaciones es         
+                                       x + y + z = 12
+                                       
+                                        x + 2y − z = k
+                                       
+                                        2x − y + z = 4
+                                       
+
+b) El determinante de la matriz de coeficientes es
+                                        1 1  1
+                                        1 2 −1 = −7.
+                                        2 −1 1
+Como es no nulo, el rango de la matriz de coeficientes es 3, ası́ es que, por el teorema de
+Rouché-Frobenius, el sistema es compatible determinado, es decir, tiene una única solución.
+Podemos calcularla siguiendo la regla de Cramer.
+        12 1  1           1 12 1               1 1 12
+        k 2 −1            1 k −1               1 2 k
+        4 −1 1    2k      2 4 1    k + 28      2 −1 4   56 − 3k
+     x=         =    , y=        =        , z=        =         .
+           −7      7         −7      7           −7        7
+
+Pregunta 2: sentido de la medida (2 puntos)
+Considere un punto P de coordenadas (a, b) que está en el primer cuadrante, sobre una
+circunferencia de radio 10 centrada en el origen O(0, 0). Sea x el ángulo que forma el radio
+OP con el eje horizontal (o eje X), medido en radianes.
+  a) (0,75 ptos.) Demuestre que el área del rectángulo de vértices O(0, 0), A(a, 0), B(0, b)
+     y P (a, b) viene dada por la función f (x) = 100 · sen(x) · cos(x).
+  b) (1,25 ptos.) Calcule el ángulo x (en radianes) para que el área de dicho rectángulo sea
+     máxima.
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                        3
+
+
+Solución: a) La situación es la siguiente:
+
+
+
+
+                                             B (0, b)         a         P (a, b)
+
+                                                               10
+                                                    b                   b
+                                                            x rad
+                                             O (0, 0)        a A (a, 0)
+
+
+
+
+                     b            a
+Usando que sen(x) = 10 y cos(x) = 10 tenemos que el área del rectángulo es
+
+                   a · b = 10 · cos(x) · 10 · sen(x) = 100 · sen(x) · cos(x) = f (x).
+
+b) Tenemos que
+
+                      f ′ (x) = 100 cos2 (x) − 100 sen2 (x) = 100(2 cos2 (x) − 1),
+
+que se anula si, y solo si, cos2 (x) = 12 . Como P está en el primer cuadrante, cos(x) es no
+                                                                    q              √
+                                                                                     2
+negativo, de modo que cos2 (x) = 12 implica cos(x) =                   1
+                                                                       2
+                                                                         =  √1 =
+                                                                              2     2
+                                                                                       que, a su vez, es
+                             π                        π                  ′
+equivalente a que x = 4 . En el intervalo (0, 4 ) tenemos que f (x) > 0 (tómese, por ejemplo,
+f ′ ( π6 )), y en el intervalo ( π4 , π2 ) tenemos que f ′ (x) < 0 (tómese, por ejemplo, f ′ ( π3 )). Ası́ es
+que en el intervalo (0, π4 ) la función f (x) es creciente y en el intervalo ( π4 , π2 ) la función es
+decreciente, siendo entonces x = π4 el valor que maximiza el área del rectángulo.
+
+
+Pregunta 3: sentido espacial (2 puntos)
+Considere el plano π : 2x − y + 3z − 5 = 0 y la recta
+                                            x−1   y+1   z−2
+                                       r:       =     =     .
+                                             2     1     −1
+   a) (0,75 ptos.) Estudie la posición relativa de r y π.
+
+        Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                4
+
+
+  b) (1,25 ptos.) Si r corta a π en un solo punto, calcule dicho punto y el ángulo que forma
+     r con π. Si r es paralela a π, calcule la distancia de r a π.
+ Solución: a) Un vector normal al plano es ⃗n = (2, −1, 3), y un vector director de la recta es
+⃗vr = (2, 1, −1), y se tiene que el correspondiente producto escalar es
+                        ⃗n · ⃗vr = (2, −1, 3) · (2, 1, −1) = 4 − 1 − 3 = 0.
+Entonces r es paralela a π, de modo que o bien r está contenida en π, o bien r no tiene en
+común ningún punto con π. Pero el punto P (1, −1, 2) de r no está en π, porque
+                               2 · 1 − (−1) + 3 · 2 − 5 = 4 ̸= 0.
+Entonces r es paralela a π, sin ningún punto en común con π.
+b) Se puede usar la fórmula:
+                                                                √      √
+                               |2 · 1 − (−1) + 3 · 2 − 5|   4  4 14   2 14
+           d(r, π) = d(P, π) =        √                   =√ =      =      .
+                                        22 + 12 + 32        14  14     7
+Alternativamente, también se puede calcular el punto, Q, de intersección con π de la recta
+que pasa por P y tiene vector director ⃗n, y luego calcular la distancia d(P, Q).
+
+
+Pregunta 4: sentido de la medida (a elegir entre 4.1 y 4.2, de 2
+puntos cada una)
+Opción 4.1 (2 ptos.): Justifique que la derivada de la función f (x) = ex (x − 1) + 1 − x se
+anula en algún punto del intervalo (0, 1).
+Solución: La función es continua en [0, 1], derivable en (0, 1) y cumple que f (0) = f (1):
+                   f (0) = e0 (0 − 1) + 1 − 0 = 0 = e(1 − 1) + 1 − 1 = f (1).
+Entonces, por el teorema de Rolle o de Lagrange, sabemos que existe un punto en el intervalo
+(0, 1) en el que f ′ (x) se anula.
+
+Opción 4.2 (2 ptos.):
+                                                    Z
+                                                           1
+  a) (1,5 ptos.) Calcule la integral indefinida                  dx.
+                                                        x(ln x)2
+                                                                          1
+  b) (0,5 ptos.) Determine la primitiva de la función f (x) =                  cuya gráfica pasa por
+                                                                       x(ln x)2
+      el punto de coordenadas (e, 1).
+Solución:
+a) Haciendo el cambio de variable t = ln x, dt = dxx
+                                                     , tenemos que
+                                                               −1
+                     Z                Z
+                           1              1
+                               2
+                                 dx =      2
+                                             dt = −t−1 + C =        +C
+                        x(ln x)           t                    ln x
+b) Si queremos que F (x) = ln−1x +C pase por el punto (e, 1) es necesario que 1 = F (e) = −1
+                                                                                           1
+                                                                                             +C,
+de modo que C = 2. La primitiva pedida es, por tanto, F (x) = ln−1x + 2.
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                              5
+
+
+Pregunta 5: sentido estocástico (a elegir entre 5.1 y 5.2, de 2 pun-
+tos cada una)
+Opción 5.1 (2 ptos.):
+   En una fábrica hay tres máquinas, A, B y C, que producen el mismo tipo de pieza. La
+máquina A fabrica el 50 % de las piezas, y el 3 % de ellas son defectuosas. La máquina B
+fabrica el 30 % de las piezas, y el 4 % de ellas son defectuosas. La máquina C fabrica el 20 %
+de las piezas, y el 5 % de ellas son defectuosas. Se elige una pieza al azar de la producción
+total.
+
+  a) (0,75 ptos.) Calcule la probabilidad de que la pieza sea defectuosa.
+
+  b) (0,75 ptos.) Sabiendo que la pieza elegida es defectuosa, calcule la probabilidad de que
+     haya sido fabricada por la máquina B.
+
+  c) (0,5 ptos.) Calcule la probabilidad de que la pieza no sea defectuosa sabiendo que
+     procede de la máquina C.
+
+Solución: Llamamos A (respectivamente, B, C) al evento consistente en que la pieza haya
+sido producida por la máquina A (respectivamente, B, C). Llamamos D al evento consistente
+en que la pieza sea defectuosa. El enunciado nos dice que:
+                                                                 15
+     P (A) = 0, 5 y P (D|A) = 0, 03, de modo que P (D|A)P (A) = 1000
+                                                                 12
+     P (B) = 0, 3 y P (D|B) = 0, 04, de modo que P (D|B)P (B) = 1000
+                                                                10
+     P (C) = 0, 2 y P (D|C) = 0, 05 de modo que P (D|C)P (C) = 1000
+
+a) Por el teorema de la probabilidad total,
+                                                             15 + 12 + 10    37
+  P (D) = P (D|A)P (A) + P (D|B)P (B) + P (D|C)P (C) =                    =      = 0, 037.
+                                                                 1000       1000
+b) Utilizando la fórmula de Bayes
+
+                                P (D|B) · P (B)   12/1000   12
+                    P (B|D) =                   =         =    ≈ 0, 324.
+                                    P (D)         37/1000   37
+
+c) Usando que P (C) = P (C ∩ D) + P (C ∩ D), tenemos que
+                                                  2     10    190
+                  P (C ∩ D)   P (C) − P (C ∩ D)   10
+                                                     − 1000   1000  19
+        P (D|C) =           =                   =     2     = 200 =    = 0, 95.
+                     P (C)          P (C)            10       1000
+                                                                    20
+
+También se puede usar directamente que P (D|C) + P (D|C) = 1, de modo que
+
+                         P (D|C) = 1 − P (D|C) = 1 − 0, 05 = 0, 95.
+
+
+
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                              6
+
+
+Opción 5.2 (2 ptos.): Una fábrica produce bombillas y se sabe que el 5 % son defectuosas.
+
+  a) (0,75 ptos.) Calcule la probabilidad de que en 9 bombillas escogidas al azar haya
+     exactamente 3 bombillas defectuosas.
+
+  b) (1,25 ptos.) Calcule la probabilidad de que en 200 bombillas escogidas al azar haya al
+     menos 10 bombillas defectuosas.
+
+Solución:
+a) Se trata de una variable aleatoria, X, que sigue una distribución de probabilidad binomial
+con p = 0, 05 y n = 9. Usando la tabla, se ve que
+
+                                    P (X = 3) = 0, 0077.
+
+También se puede hacer directamente con la fórmula:
+                                       
+                                       9
+                         P (X = 3) =      0, 053 · 0, 956 = 0, 0077.
+                                       3
+
+b) Ahora se trata de una variable aleatoria, X, que sigue una distribución de probabilidad
+binomial con p = 0, 05 y n = 200. Como n = 200, np = 10 y n(1−p) = 190 son suficientemente
+grandes, para calcular P (X ≥ 10) podemos aproximar X mediante una variable aleatoria Y
+que
+p siga una distribución
+               √           de probabilidad normal con µ = np = 200 · 0, 05 = 10 y σ =
+   np(1 − p) = 9, 5 = 3, 082. Llamando Z a una variable aleatoria que siga una distribución
+de probabilidad normal N (0, 1), y usando el criterio de corrección de Yates, tenemos que:
+                                               
+                                      9, 5 − 10
+P (X ≥ 10) = P (Y ≥ 9, 5) = P Z ≥                 = P (Z ≥ −0, 16) = P (Z ≤ 0, 16) = 0, 5636.
+                                       3, 082
+
+
+
+
+       Resolución PAU Junio 2026. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+

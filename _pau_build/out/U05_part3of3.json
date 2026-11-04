@@ -1,0 +1,700 @@
+[
+ {
+  "id": "PAU-U05-081",
+  "title": "Equilibrio CH₄/H₂O y principio de Le Châtelier · Valencia · Julio/Reserva 2021",
+  "statement": "En un reactor químico tiene lugar, a 800 °C, la reacción:\n\n$$\\text{CH}_4(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}(g) + 3\\,\\text{H}_2(g) \\qquad \\Delta H = 206\\text{ kJ}$$\n\nResponde razonadamente:\n\n**a)** Inicialmente se introducen 1 mol de CO y 1 mol de H$_2$, manteniendo el volumen y la temperatura constantes. Una vez alcanzado el equilibrio, ¿la presión total será mayor, igual o menor que la inicial?\n\nUna vez alcanzado el equilibrio:\n\n**b)** Si se quiere que aumente la cantidad de H$_2$, ¿habrá que aumentar o disminuir la temperatura?\n\n**c)** Si se quiere que disminuya la cantidad de CO, ¿habrá que disminuir o aumentar el volumen?\n\n**d)** Si inyectamos 1 mol de CO, manteniendo constantes el volumen y la temperatura, la cantidad de CH$_4$ aumentará y la de H$_2$O disminuirá. ¿Verdadero o falso?",
+  "knowns": [
+   "$\\Delta H = 206\\text{ kJ}$ (reacción endotérmica)",
+   "Inicialmente: 1 mol de CO y 1 mol de H$_2$ (solo productos)"
+  ],
+  "full_solution": "**(a)** Como se parte solo de productos, la reacción evoluciona hacia la izquierda. Si $x$ son los moles de CO (y de H$_2$O) que se forman:\n\n$$\\begin{array}{c|ccc}\n & \\text{CH}_4 & \\text{H}_2\\text{O} & \\text{CO} & \\text{H}_2 \\\\ \\hline\n\\text{iniciales} & 0 & 0 & 1 & 1 \\\\\n\\text{equilibrio} & x & x & 1-x & 1-3x\n\\end{array}$$\n\nLos moles totales en el equilibrio son:\n\n$$n_t = 2x + (1-x) + (1-3x) = 2 - 2x = 2(1-x)$$\n\nComo $2(1-x) < 2$, hay menos moles gaseosos que al principio. A $V$ y $T$ constantes la presión es proporcional al número de moles, por lo que la presión final es menor que la inicial.\n\n**(b)** Al aumentar la temperatura se aporta calor; el equilibrio se desplaza en sentido endotérmico (hacia la derecha, pues $\\Delta H > 0$), aumentando la cantidad de H$_2$. Por tanto, hay que **aumentar** la temperatura.\n\n**(c)** Para que disminuya el CO el equilibrio debe desplazarse hacia la izquierda (donde hay menos moles gaseosos: 2 frente a 4). Eso se logra **disminuyendo el volumen** (aumentando la presión).\n\n**(d)** Al inyectar CO aumenta su concentración; el sistema reacciona desplazándose hacia la izquierda, consumiendo CO e H$_2$ y formando CH$_4$ y H$_2$O. Luego el CH$_4$ aumenta, pero el H$_2$O también **aumenta** (no disminuye). La afirmación es **falsa**.",
+  "answer": "**a)** $P_{\\text{final}} < P_{\\text{inicial}}$. **b)** Aumentar la temperatura. **c)** Disminuir el volumen. **d)** Falso (el H$_2$O aumenta, no disminuye).",
+  "common_errors": [
+   "Confundir el sentido endotérmico: con $\\Delta H>0$ el calor desplaza el equilibrio hacia los productos.",
+   "Olvidar que reducir el volumen desplaza hacia el lado con menos moles gaseosos.",
+   "Creer que añadir CO hace disminuir el H$_2$O cuando ambos reactivos (CH$_4$ y H$_2$O) aumentan."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Julio/Reserva 2021"
+ },
+ {
+  "id": "PAU-U05-082",
+  "title": "Equilibrio N₂/O₂/NO: Kc, Kp y presiones parciales · Valencia · Julio/Reserva 2021",
+  "statement": "En un matraz de 10 L se introduce una mezcla de 2 moles de nitrógeno y 1 mol de oxígeno, y se calienta hasta 2300 K, estableciéndose el equilibrio:\n\n$$\\text{N}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g)$$\n\nSi en estas condiciones ha reaccionado el 3 % del nitrógeno inicial, calcula:\n\n**a)** Los valores de $K_c$ y $K_p$.\n\n**b)** Las presiones parciales de todos los gases en el equilibrio y la presión total en el interior del matraz.",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 10$ L; $T = 2300$ K",
+   "Iniciales: 2 mol N$_2$, 1 mol O$_2$; reacciona el 3 % del N$_2$"
+  ],
+  "full_solution": "**(a)** El 3 % de los 2 moles de N$_2$ son $0{,}03 \\cdot 2 = 0{,}06$ moles de N$_2$ que reaccionan. Por la estequiometría 1:1:2, reaccionan también 0,06 moles de O$_2$ y se forman $2 \\cdot 0{,}06 = 0{,}12$ moles de NO:\n\n$$\\begin{array}{c|ccc}\n & \\text{N}_2 & \\text{O}_2 & \\text{NO} \\\\ \\hline\n\\text{iniciales} & 2 & 1 & 0 \\\\\n\\text{equilibrio} & 1{,}94 & 0{,}94 & 0{,}12\n\\end{array}$$\n\nConcentraciones (dividiendo entre $V = 10$ L):\n\n$$[\\text{N}_2] = 0{,}194\\ \\text{M};\\quad [\\text{O}_2] = 0{,}094\\ \\text{M};\\quad [\\text{NO}] = 0{,}012\\ \\text{M}$$\n\n$$K_c = \\dfrac{[\\text{NO}]^2}{[\\text{N}_2]\\cdot[\\text{O}_2]} = \\dfrac{(0{,}012)^2}{0{,}194 \\cdot 0{,}094} = 7{,}9\\cdot 10^{-3}$$\n\nComo $\\Delta n = 2 - 2 = 0$, se cumple $K_p = K_c\\,(R\\,T)^{\\Delta n} = K_c$, de modo que:\n\n$$K_p = K_c = 7{,}9\\cdot 10^{-3}$$\n\n**(b)** Aplicando $P = \\dfrac{n\\,R\\,T}{V}$ con $\\dfrac{R\\,T}{V} = \\dfrac{0{,}082 \\cdot 2300}{10} = 18{,}86$:\n\n$$P(\\text{N}_2) = 1{,}94 \\cdot 18{,}86 = 36{,}59\\text{ atm}$$\n\n$$P(\\text{O}_2) = 0{,}94 \\cdot 18{,}86 = 17{,}73\\text{ atm}$$\n\n$$P(\\text{NO}) = 0{,}12 \\cdot 18{,}86 = 2{,}26\\text{ atm}$$\n\nLa presión total (con $n_t = 1{,}94 + 0{,}94 + 0{,}12 = 3{,}00$ moles):\n\n$$P_t = 3{,}00 \\cdot 18{,}86 = 56{,}58\\text{ atm}$$",
+  "answer": "**a)** $K_c = K_p = 7{,}9\\cdot 10^{-3}$. **b)** $P(\\text{N}_2) = 36{,}59$ atm; $P(\\text{O}_2) = 17{,}73$ atm; $P(\\text{NO}) = 2{,}26$ atm; $P_t = 56{,}58$ atm.",
+  "common_errors": [
+   "Olvidar que en $\\text{N}_2+\\text{O}_2\\rightleftharpoons 2\\text{NO}$ reaccionan los mismos moles de N$_2$ que de O$_2$ (relación 1:1); el O$_2$ en el equilibrio es 0,94 mol, no 0,97.",
+   "Creer que $K_p \\neq K_c$ cuando $\\Delta n = 0$.",
+   "Equivocar el número de moles de NO formados ($2x$)."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Julio/Reserva 2021"
+ },
+ {
+  "id": "PAU-U05-083",
+  "title": "Descomposición del amoniaco: Le Châtelier · Valencia · Junio 2021",
+  "statement": "Dado el equilibrio:\n\n$$2\\,\\text{NH}_3(g) \\rightleftharpoons \\text{N}_2(g) + 3\\,\\text{H}_2(g) \\qquad \\Delta H = 185\\text{ kJ}$$\n\nJustifica si son ciertas o falsas las siguientes afirmaciones:\n\n**a)** Al aumentar la temperatura, manteniendo constante el volumen, se favorece la formación de NH$_3$.\n\n**b)** Al disminuir el volumen del reactor, manteniendo constante la temperatura, se favorece la formación de N$_2$.\n\n**c)** Si se elimina cierta cantidad de H$_2$, el equilibrio se desplaza hacia la derecha.\n\n**d)** Si las concentraciones de las tres especies se duplican, el equilibrio no se desplaza en ningún sentido.",
+  "knowns": [
+   "$\\Delta H = 185\\text{ kJ}$ (reacción endotérmica)"
+  ],
+  "full_solution": "**(a) Falsa.** Al aumentar la temperatura se aporta calor; como la reacción directa es endotérmica ($\\Delta H > 0$), el equilibrio se desplaza hacia la derecha, favoreciendo la **descomposición** del NH$_3$ (no su formación).\n\n**(b) Falsa.** Al disminuir el volumen aumenta la presión; el equilibrio se desplaza hacia el lado con menos moles gaseosos. En reactivos hay 2 moles y en productos $1+3 = 4$ moles, por lo que se desplaza hacia la **izquierda**, favoreciendo la formación de NH$_3$ y no la de N$_2$.\n\n**(c) Verdadera.** Al retirar H$_2$ disminuye su concentración; el sistema responde descomponiendo NH$_3$ para reponer el H$_2$ eliminado, es decir, el equilibrio se desplaza hacia la **derecha**.\n\n**(d) Falsa.** Al duplicar las tres concentraciones, el cociente de reacción pasa a valer\n\n$$Q = \\dfrac{(2[\\text{N}_2])\\,(2[\\text{H}_2])^3}{(2[\\text{NH}_3])^2} = \\dfrac{2\\cdot 8}{4}\\,K_c = 4\\,K_c > K_c$$\n\nComo $Q > K_c$, el equilibrio se desplaza hacia la izquierda (equivale a aumentar la presión). Por tanto, **sí** se desplaza.",
+  "answer": "**a)** Falsa. **b)** Falsa. **c)** Verdadera. **d)** Falsa.",
+  "common_errors": [
+   "Confundir sentido endotérmico/exotérmico al variar $T$.",
+   "No contar correctamente los moles gaseosos de cada lado (2 frente a 4).",
+   "Pensar que duplicar todas las concentraciones mantiene $Q=K_c$: aquí $Q=4K_c$."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Junio 2021"
+ },
+ {
+  "id": "PAU-U05-084",
+  "title": "Cinética de 2 NO₂ → N₂O₄: ley de velocidad y Arrhenius · Valencia · Junio 2021",
+  "statement": "A una temperatura determinada se estudia la transformación $2\\,\\text{NO}_2(g) \\rightarrow \\text{N}_2\\text{O}_4(g)$ midiendo velocidades iniciales. Cuando $[\\text{NO}_2]_0 = 0{,}1$ M, la velocidad inicial es $1{,}45\\cdot 10^{-4}\\ \\text{M·s}^{-1}$; cuando $[\\text{NO}_2]_0 = 0{,}2$ M, la velocidad inicial es $5{,}80\\cdot 10^{-4}\\ \\text{M·s}^{-1}$.\n\n**a)** Deduce la ley de velocidad de la reacción.\n\n**b)** Calcula la constante de velocidad en estas condiciones.\n\n**c)** Obtén la velocidad de desaparición de NO$_2$ cuando su concentración es 0,15 M.\n\n**d)** Discute si la velocidad aumentará o disminuirá al reducir la temperatura.",
+  "knowns": [
+   "$[\\text{NO}_2]_0 = 0{,}1$ M $\\rightarrow v = 1{,}45\\cdot 10^{-4}\\ \\text{M·s}^{-1}$",
+   "$[\\text{NO}_2]_0 = 0{,}2$ M $\\rightarrow v = 5{,}80\\cdot 10^{-4}\\ \\text{M·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Suponiendo $v = k\\,[\\text{NO}_2]^{\\alpha}$, dividimos las dos experiencias:\n\n$$\\dfrac{v_2}{v_1} = \\left(\\dfrac{[\\text{NO}_2]_2}{[\\text{NO}_2]_1}\\right)^{\\alpha} \\Rightarrow \\dfrac{5{,}80\\cdot 10^{-4}}{1{,}45\\cdot 10^{-4}} = \\left(\\dfrac{0{,}2}{0{,}1}\\right)^{\\alpha}$$\n\n$$4 = 2^{\\alpha} \\Rightarrow \\alpha = 2$$\n\nLa ley de velocidad es $\\;v = k\\,[\\text{NO}_2]^2$ (orden 2).\n\n**(b)** Despejando $k$ de una de las experiencias:\n\n$$k = \\dfrac{v}{[\\text{NO}_2]^2} = \\dfrac{5{,}80\\cdot 10^{-4}}{(0{,}2)^2} = 1{,}45\\cdot 10^{-2}\\ \\text{mol}^{-1}\\text{·L·s}^{-1}$$\n\n**(c)** Con $[\\text{NO}_2] = 0{,}15$ M:\n\n$$v = k\\,[\\text{NO}_2]^2 = 1{,}45\\cdot 10^{-2} \\cdot (0{,}15)^2 = 3{,}26\\cdot 10^{-4}\\ \\text{mol·L}^{-1}\\text{·s}^{-1}$$\n\n**(d)** Según la ecuación de Arrhenius $k = A\\,e^{-E_a/(R\\,T)}$, al **reducir** la temperatura disminuye el factor exponencial y, por tanto, disminuye $k$ y la velocidad de reacción.",
+  "answer": "**a)** $v = k\\,[\\text{NO}_2]^2$ (orden 2). **b)** $k = 1{,}45\\cdot 10^{-2}\\ \\text{mol}^{-1}\\text{·L·s}^{-1}$. **c)** $v = 3{,}26\\cdot 10^{-4}\\ \\text{M·s}^{-1}$. **d)** Disminuye.",
+  "common_errors": [
+   "Asignar el orden a partir de los coeficientes estequiométricos en lugar de deducirlo de los datos.",
+   "Equivocar las unidades de $k$ para un orden global 2.",
+   "Creer que la temperatura cambia la velocidad sin afectar a $k$."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Junio 2021"
+ },
+ {
+  "id": "PAU-U05-085",
+  "title": "Equilibrio CO₂/H₂S: concentraciones, Kc y Kp · Valencia · Junio 2021",
+  "statement": "El dióxido de carbono reacciona con el sulfuro de hidrógeno según:\n\n$$\\text{CO}_2(g) + \\text{H}_2\\text{S}(g) \\rightleftharpoons \\text{COS}(g) + \\text{H}_2\\text{O}(g)$$\n\nEn un reactor de 2,5 L, previamente al vacío y a 337 °C constante, se colocan 0,1 moles de CO$_2$ y la cantidad suficiente de H$_2$S para que la presión total en el equilibrio sea de 10 atm. En la mezcla final en el equilibrio hay 0,01 moles de H$_2$O. Calcula:\n\n**a)** La concentración (mol·L$^{-1}$) de CO$_2$ y H$_2$O en el equilibrio.\n\n**b)** El valor de las constantes $K_c$ y $K_p$.",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 2{,}5$ L; $T = 337\\ ^\\circ\\text{C} = 610$ K",
+   "Iniciales: 0,1 mol CO$_2$; $P_t$(eq) = 10 atm; $n$(H$_2$O)$_{eq}$ = 0,01 mol"
+  ],
+  "full_solution": "**(a)** Sea $n_0$ los moles iniciales de H$_2$S y $x$ los moles de CO$_2$ que reaccionan. Como se forman 0,01 moles de H$_2$O, $x = 0{,}01$:\n\n$$\\begin{array}{c|cccc}\n & \\text{CO}_2 & \\text{H}_2\\text{S} & \\text{COS} & \\text{H}_2\\text{O} \\\\ \\hline\n\\text{iniciales} & 0{,}1 & n_0 & 0 & 0 \\\\\n\\text{equilibrio} & 0{,}1-x & n_0-x & x & x\n\\end{array}$$\n\nMoles de CO$_2$ en el equilibrio: $0{,}1 - 0{,}01 = 0{,}09$ mol. Moles totales: $n_t = 0{,}09 + (n_0-0{,}01) + 0{,}01 + 0{,}01 = 0{,}1 + n_0$.\n\nCon la ecuación de los gases, $n_t = \\dfrac{P\\,V}{R\\,T}$:\n\n$$n_0 = \\dfrac{P\\,V}{R\\,T} - 0{,}1 = \\dfrac{10 \\cdot 2{,}5}{0{,}082 \\cdot 610} - 0{,}1 = 0{,}5 - 0{,}1 = 0{,}4\\text{ mol de H}_2\\text{S}$$\n\nConcentraciones:\n\n$$[\\text{CO}_2] = \\dfrac{0{,}09}{2{,}5} = 0{,}036\\ \\text{M};\\qquad [\\text{H}_2\\text{O}] = \\dfrac{0{,}01}{2{,}5} = 0{,}004\\ \\text{M}$$\n\n(También $[\\text{H}_2\\text{S}] = \\tfrac{0{,}39}{2{,}5} = 0{,}156$ M y $[\\text{COS}] = 0{,}004$ M.)\n\n**(b)** Llevando las concentraciones a la expresión de $K_c$:\n\n$$K_c = \\dfrac{[\\text{COS}]\\cdot[\\text{H}_2\\text{O}]}{[\\text{CO}_2]\\cdot[\\text{H}_2\\text{S}]} = \\dfrac{0{,}004 \\cdot 0{,}004}{0{,}036 \\cdot 0{,}156} = 2{,}8\\cdot 10^{-3}$$\n\nComo $\\Delta n = 2 - 2 = 0$, $K_p = K_c\\,(R\\,T)^0 = K_c = 2{,}8\\cdot 10^{-3}$.",
+  "answer": "**a)** $[\\text{CO}_2] = 0{,}036$ M; $[\\text{H}_2\\text{O}] = 0{,}004$ M. **b)** $K_c = K_p = 2{,}8\\cdot 10^{-3}$.",
+  "common_errors": [
+   "No ver que los moles de H$_2$O en el equilibrio dan directamente el avance $x$.",
+   "Olvidar sumar bien los moles totales para despejar $n_0$ con la ecuación de los gases.",
+   "Pensar que $K_p \\neq K_c$ pese a $\\Delta n = 0$."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Junio 2021"
+ },
+ {
+  "id": "PAU-U05-086",
+  "title": "Cinética de la descomposición del H₂O₂ con I⁻ · Valencia · Julio/Reserva 2022",
+  "statement": "La cinética de la descomposición del peróxido de hidrógeno, H$_2$O$_2$, al reaccionar con el ion yoduro, I$^-$, es de primer orden tanto respecto del H$_2$O$_2$ como del I$^-$. Discute razonadamente si son verdaderas o falsas:\n\n**a)** Un aumento en la concentración de H$_2$O$_2$ no tiene ningún efecto sobre la velocidad de reacción.\n\n**b)** Al aumentar la temperatura a la que se produce la descomposición del peróxido de hidrógeno, aumenta la velocidad de la reacción.\n\n**c)** La variación en la concentración del ion yoduro afecta más al valor de la velocidad de reacción que la variación de la concentración de H$_2$O$_2$.\n\n**d)** La velocidad de la reacción se duplica al duplicar el volumen del reactor, manteniendo constante la temperatura.",
+  "knowns": [
+   "Ley de velocidad: $v = k\\,[\\text{H}_2\\text{O}_2]\\cdot[\\text{I}^-]$ (orden 1 en cada reactivo)"
+  ],
+  "full_solution": "La ley de velocidad es $v = k\\,[\\text{H}_2\\text{O}_2]\\cdot[\\text{I}^-]$.\n\n**(a) Falsa.** La velocidad es proporcional a $[\\text{H}_2\\text{O}_2]$; si aumenta su concentración, también aumenta la velocidad.\n\n**(b) Verdadera.** Según la ecuación de Arrhenius $k = A\\,e^{-E_a/(R\\,T)}$, al aumentar la temperatura crece el factor exponencial y, por tanto, $k$ y la velocidad de reacción. (El razonamiento habitual confirma que la afirmación es cierta.)\n\n**(c) Falsa.** La reacción es de primer orden tanto respecto al I$^-$ como al H$_2$O$_2$; una variación en la concentración del I$^-$ afecta a la velocidad **igual** que la misma variación en la del H$_2$O$_2$, no más.\n\n**(d) Falsa.** Al duplicar el volumen, cada concentración se reduce a la mitad:\n\n$$v' = k\\cdot\\dfrac{[\\text{H}_2\\text{O}_2]}{2}\\cdot\\dfrac{[\\text{I}^-]}{2} = \\dfrac{k\\,[\\text{H}_2\\text{O}_2]\\,[\\text{I}^-]}{4} = \\dfrac{v}{4}$$\n\nLa velocidad se reduce a la cuarta parte, no se duplica.",
+  "answer": "**a)** Falsa. **b)** Verdadera. **c)** Falsa. **d)** Falsa ($v' = v/4$).",
+  "common_errors": [
+   "En (b), la afirmación es verdadera: subir $T$ sube $k$ y la velocidad (ojo con las erratas de las plantillas).",
+   "Creer que un reactivo de mayor coeficiente o mencionado antes influye más; con igual orden influyen igual.",
+   "Olvidar que duplicar el volumen divide por 2 cada concentración, y por 4 el producto en una reacción de orden global 2."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Julio/Reserva 2022"
+ },
+ {
+  "id": "PAU-U05-087",
+  "title": "Disociación del PCl₅: presión, Kp, Kc y grado de disociación · Valencia · Julio/Reserva 2022",
+  "statement": "En un reactor de 1 litro se introducen 0,1 moles de PCl$_5$ y se calienta a 250 °C, produciéndose la disociación:\n\n$$\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$$\n\nEn el equilibrio el porcentaje de disociación del PCl$_5$ es del 48 %. Calcula:\n\n**a)** La presión total en el interior del reactor en el equilibrio.\n\n**b)** El valor de las constantes $K_p$ y $K_c$ a la temperatura de trabajo.\n\n**c)** Indica razonadamente si, al disminuir el volumen del reactor a la mitad (a $T$ constante), el porcentaje de disociación aumentará o disminuirá.",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 1$ L; $T = 250\\ ^\\circ\\text{C} = 523$ K",
+   "Iniciales: 0,1 mol PCl$_5$; grado de disociación $\\alpha = 48\\,\\%$"
+  ],
+  "full_solution": "**(a)** De los 0,1 moles de PCl$_5$ se disocia el 48 %, luego reaccionan $0{,}48\\cdot 0{,}1 = 0{,}048$ mol:\n\n$$\\begin{array}{c|ccc}\n & \\text{PCl}_5 & \\text{PCl}_3 & \\text{Cl}_2 \\\\ \\hline\n\\text{iniciales} & 0{,}1 & 0 & 0 \\\\\n\\text{equilibrio} & 0{,}052 & 0{,}048 & 0{,}048\n\\end{array}$$\n\nMoles totales: $n_t = 0{,}052 + 0{,}048 + 0{,}048 = 0{,}148$ mol.\n\n$$P_t = \\dfrac{n_t\\,R\\,T}{V} = \\dfrac{0{,}148 \\cdot 0{,}082 \\cdot 523}{1} = 6{,}35\\text{ atm}$$\n\n**(b)** Como $V = 1$ L, las concentraciones coinciden con los moles: $[\\text{PCl}_5] = 0{,}052$ M; $[\\text{PCl}_3] = [\\text{Cl}_2] = 0{,}048$ M.\n\n$$K_c = \\dfrac{[\\text{PCl}_3]\\cdot[\\text{Cl}_2]}{[\\text{PCl}_5]} = \\dfrac{(0{,}048)^2}{0{,}052} = 0{,}044\\ \\text{M}$$\n\nCon $\\Delta n = 2 - 1 = 1$:\n\n$$K_p = K_c\\,(R\\,T)^{\\Delta n} = 0{,}044 \\cdot (0{,}082 \\cdot 523)^1 = 1{,}887\\text{ atm}$$\n\n**(c)** Al disminuir el volumen aumenta la presión; el equilibrio se desplaza hacia el lado con menos moles gaseosos (la izquierda, 1 mol frente a 2). Por tanto, el grado de disociación del PCl$_5$ **disminuye**.",
+  "answer": "**a)** $P_t = 6{,}35$ atm. **b)** $K_c = 0{,}044$ M; $K_p = 1{,}887$ atm. **c)** Disminuye (equilibrio hacia la izquierda).",
+  "common_errors": [
+   "Usar $0{,}48$ como moles disociados en vez de $0{,}48\\cdot 0{,}1$.",
+   "Olvidar el factor $(R\\,T)^{\\Delta n}$ al pasar de $K_c$ a $K_p$ con $\\Delta n = 1$.",
+   "Confundir el sentido del desplazamiento al reducir el volumen."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Julio/Reserva 2022"
+ },
+ {
+  "id": "PAU-U05-088",
+  "title": "Equilibrio del NOCl: Le Châtelier y carácter térmico · Valencia · Junio 2022",
+  "statement": "Para el sistema en equilibrio en fase gaseosa:\n\n$$2\\,\\text{NOCl}(g) \\rightleftharpoons 2\\,\\text{NO}(g) + \\text{Cl}_2(g)$$\n\nresponde razonadamente:\n\n**a)** Si se extrae del reactor parte del Cl$_2$(g), ¿la relación $[\\text{NOCl}]/[\\text{NO}]$ aumenta, disminuye o permanece constante?\n\n**b)** Se observa que al aumentar la temperatura se forma más NOCl. ¿La reacción es exotérmica o endotérmica?\n\n**c)** Si se desea aumentar la cantidad de NOCl, manteniendo $T$ constante, ¿se ha de aumentar o disminuir el volumen del reactor?\n\n**d)** En un reactor a $V$ y $T$ constantes se introducen inicialmente NOCl y Cl$_2$. Razona si la presión total en el equilibrio será mayor, menor o igual que la inicial.",
+  "knowns": [],
+  "full_solution": "**(a)** Al extraer Cl$_2$ el equilibrio se desplaza hacia la derecha para reponerlo: se descompone NOCl (su concentración baja) y se forma NO (su concentración sube). Por tanto, la relación $[\\text{NOCl}]/[\\text{NO}]$ **disminuye**.\n\n**(b)** Al aumentar la temperatura el equilibrio se desplaza en sentido endotérmico. Como se forma más NOCl, es la reacción **inversa** (formación de NOCl) la endotérmica; en consecuencia la reacción directa es **exotérmica**.\n\n**(c)** Para aumentar el NOCl el equilibrio debe desplazarse hacia la izquierda, donde hay menos moles gaseosos (2 frente a 3). Eso se consigue aumentando la presión, es decir, **disminuyendo el volumen** del reactor.\n\n**(d)** Al partir de NOCl y de solo uno de los productos (Cl$_2$), la reacción avanza hacia la derecha; el número total de moles gaseosos aumenta (de 2 mol de NOCl se obtienen 2 de NO y 1 de Cl$_2$). A $V$ y $T$ constantes, la presión final será **mayor** que la inicial.",
+  "answer": "**a)** Disminuye. **b)** Exotérmica. **c)** Disminuir el volumen. **d)** Mayor que la inicial.",
+  "common_errors": [
+   "En (c), confundir el sentido: para formar NOCl (lado con menos moles) hay que reducir el volumen, no aumentarlo.",
+   "Invertir exotérmica/endotérmica al analizar hacia qué lado desplaza el calor.",
+   "No darse cuenta de que al avanzar la reacción crece el número de moles gaseosos y por eso sube la presión."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Junio 2022"
+ },
+ {
+  "id": "PAU-U05-089",
+  "title": "Cinética de 3 A + 2 B → 2 C: ley de velocidad y constante · Valencia · Junio 2022",
+  "statement": "Considera la reacción $3\\,\\text{A}(g) + 2\\,\\text{B}(g) \\rightarrow 2\\,\\text{C}(g)$. Se observa que, al duplicar la concentración de A, la velocidad aumenta cuatro veces; y al disminuir la concentración de B a la mitad, la velocidad disminuye en esa misma proporción.\n\n**a)** Obtén razonadamente la ley de velocidad.\n\n**b)** Cuando $[\\text{A}]_0 = 0{,}1$ M y $[\\text{B}]_0 = 0{,}05$ M, la velocidad inicial resultó $2{,}82\\cdot 10^{-4}\\ \\text{M·s}^{-1}$. Calcula la constante de velocidad.\n\n**c)** En las condiciones del apartado b), calcula la velocidad de desaparición de A y la de aparición de C.\n\n**d)** Justifica por qué la velocidad de la reacción aumenta con la temperatura.",
+  "knowns": [
+   "Al duplicar $[\\text{A}]$: $v \\times 4$",
+   "Al reducir $[\\text{B}]$ a la mitad: $v$ a la mitad",
+   "$[\\text{A}]_0 = 0{,}1$ M, $[\\text{B}]_0 = 0{,}05$ M $\\rightarrow v = 2{,}82\\cdot 10^{-4}\\ \\text{M·s}^{-1}$"
+  ],
+  "full_solution": "**(a)** Sea $v = k\\,[\\text{A}]^x\\,[\\text{B}]^y$.\n\nAl duplicar A: $4 = 2^x \\Rightarrow x = 2$. Al reducir B a la mitad: $\\tfrac12 = \\left(\\tfrac12\\right)^y \\Rightarrow y = 1$.\n\nLuego la ley de velocidad es $\\;v = k\\,[\\text{A}]^2\\,[\\text{B}]$ (orden global 3).\n\n**(b)** Despejando $k$:\n\n$$k = \\dfrac{v}{[\\text{A}]^2\\,[\\text{B}]} = \\dfrac{2{,}82\\cdot 10^{-4}}{(0{,}1)^2 \\cdot 0{,}05} = \\dfrac{2{,}82\\cdot 10^{-4}}{5\\cdot 10^{-4}} = 0{,}564\\ \\text{mol}^{-2}\\text{·L}^2\\text{·s}^{-1}$$\n\n**(c)** La velocidad de reacción vale $v = 2{,}82\\cdot 10^{-4}\\ \\text{M·s}^{-1}$. Según los coeficientes,\n\n$$v = -\\dfrac{1}{3}\\dfrac{d[\\text{A}]}{dt} = \\dfrac{1}{2}\\dfrac{d[\\text{C}]}{dt}$$\n\n$$v_{\\text{desap}}(\\text{A}) = 3v = 3 \\cdot 2{,}82\\cdot 10^{-4} = 8{,}46\\cdot 10^{-4}\\ \\text{M·s}^{-1}$$\n\n$$v_{\\text{apar}}(\\text{C}) = 2v = 2 \\cdot 2{,}82\\cdot 10^{-4} = 5{,}64\\cdot 10^{-4}\\ \\text{M·s}^{-1}$$\n\n**(d)** Según la ecuación de Arrhenius $k = A\\,e^{-E_a/(R\\,T)}$, al aumentar la temperatura un mayor número de moléculas supera la energía de activación: los choques son más eficaces, aumenta $k$ y, por tanto, la velocidad de reacción.",
+  "answer": "**a)** $v = k\\,[\\text{A}]^2\\,[\\text{B}]$. **b)** $k = 0{,}564\\ \\text{mol}^{-2}\\text{·L}^2\\text{·s}^{-1}$. **c)** $v_{\\text{desap}}(\\text{A}) = 8{,}46\\cdot 10^{-4}\\ \\text{M·s}^{-1}$; $v_{\\text{apar}}(\\text{C}) = 5{,}64\\cdot 10^{-4}\\ \\text{M·s}^{-1}$. **d)** Arrhenius: mayor $T \\Rightarrow$ mayor $k$ y mayor velocidad.",
+  "common_errors": [
+   "Confundir la velocidad de reacción con la de desaparición/aparición de cada especie (faltan los coeficientes $1/\\nu_i$).",
+   "Errar las unidades de $k$ para orden global 3.",
+   "Deducir los órdenes de los coeficientes estequiométricos en lugar de los datos."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Junio 2022"
+ },
+ {
+  "id": "PAU-U05-090",
+  "title": "Equilibrio CO₂/H₂/CO/H₂O: Kc, Kp y nuevo equilibrio · Valencia · Junio 2022",
+  "statement": "Un reactor de 10 litros a 1000 °C contiene una mezcla en equilibrio de 6,3 mol de CO$_2$, 2,1 mol de H$_2$, 8,4 mol de CO y un número indeterminado de moles de H$_2$O. La presión total es 209 atm.\n\n**a)** Calcula $K_c$ y $K_p$ para el equilibrio $\\text{CO}_2(g) + \\text{H}_2(g) \\rightleftharpoons \\text{CO}(g) + \\text{H}_2\\text{O}(g)$ a 1000 °C.\n\n**b)** Si se extraen del reactor los gases CO y H$_2$O en su totalidad, calcula la cantidad (en moles) de las cuatro sustancias una vez alcanzado el nuevo equilibrio.",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 10$ L; $T = 1000\\ ^\\circ\\text{C} = 1273$ K",
+   "Eq.: 6,3 mol CO$_2$; 2,1 mol H$_2$; 8,4 mol CO; $P_t = 209$ atm"
+  ],
+  "full_solution": "**(a)** Moles totales en el equilibrio:\n\n$$n_t = \\dfrac{P\\,V}{R\\,T} = \\dfrac{209 \\cdot 10}{0{,}082 \\cdot 1273} = 20{,}02\\text{ mol}$$\n\nConocidos $6{,}3 + 2{,}1 + 8{,}4 = 16{,}8$ mol, los moles de H$_2$O son $20{,}02 - 16{,}8 = 3{,}22$ mol.\n\nConcentraciones (÷10 L): $[\\text{CO}_2] = 0{,}63$; $[\\text{H}_2] = 0{,}21$; $[\\text{CO}] = 0{,}84$; $[\\text{H}_2\\text{O}] = 0{,}322$ M.\n\n$$K_c = \\dfrac{[\\text{CO}]\\cdot[\\text{H}_2\\text{O}]}{[\\text{CO}_2]\\cdot[\\text{H}_2]} = \\dfrac{0{,}84 \\cdot 0{,}322}{0{,}63 \\cdot 0{,}21} = 2{,}044$$\n\nComo $\\Delta n = 0$, $K_p = K_c = 2{,}044$.\n\n**(b)** Al extraer todo el CO y el H$_2$O, el equilibrio se desplaza hacia la derecha. Partiendo de $[\\text{CO}_2] = 0{,}63$ y $[\\text{H}_2] = 0{,}21$, sea $x$ la concentración que reacciona:\n\n$$\\begin{array}{c|cccc}\n & \\text{CO}_2 & \\text{H}_2 & \\text{CO} & \\text{H}_2\\text{O} \\\\ \\hline\n\\text{equilibrio} & 0{,}63-x & 0{,}21-x & x & x\n\\end{array}$$\n\n$$K_c = \\dfrac{x^2}{(0{,}63-x)(0{,}21-x)} = 2{,}044 \\;\\Rightarrow\\; 1{,}044\\,x^2 - 1{,}717\\,x + 0{,}270 = 0$$\n\nResolviendo, la raíz válida es $x = 0{,}176$ M. Las concentraciones del nuevo equilibrio:\n\n$$[\\text{CO}_2] = 0{,}454;\\quad [\\text{H}_2] = 0{,}034;\\quad [\\text{CO}] = [\\text{H}_2\\text{O}] = 0{,}176\\ \\text{M}$$\n\nMultiplicando por $V = 10$ L:\n\n$$n(\\text{CO}_2) = 4{,}54;\\quad n(\\text{H}_2) = 0{,}34;\\quad n(\\text{CO}) = n(\\text{H}_2\\text{O}) = 1{,}76\\text{ mol}$$",
+  "answer": "**a)** $K_c = K_p = 2{,}044$. **b)** $n(\\text{CO}_2) = 4{,}54$ mol; $n(\\text{H}_2) = 0{,}34$ mol; $n(\\text{CO}) = n(\\text{H}_2\\text{O}) = 1{,}76$ mol.",
+  "common_errors": [
+   "Olvidar restar los moles conocidos del total para hallar el H$_2$O.",
+   "Elegir la raíz de la ecuación de 2.º grado que da concentraciones negativas.",
+   "Error aritmético al pasar $[\\text{H}_2\\text{O}] = 0{,}176$ M a moles: $0{,}176 \\cdot 10 = 1{,}76$ mol (no 1,64)."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Junio 2022"
+ },
+ {
+  "id": "PAU-U05-091",
+  "title": "Equilibrio C/CO₂/CO: Kp, Kc y masas en nuevo equilibrio · Valencia · Julio/Reserva 2023",
+  "statement": "El dióxido de carbono reacciona con carbono para dar monóxido de carbono:\n\n$$\\text{C}(s) + \\text{CO}_2(g) \\rightleftharpoons 2\\,\\text{CO}(g)$$\n\nEn un reactor de 50 L a 700 °C, previamente al vacío, se introduce CO$_2$ hasta una presión de 0,52 atm y después se añade un exceso de carbono. En el equilibrio la presión es de 0,95 atm.\n\n**a)** Calcula las constantes $K_p$ y $K_c$.\n\n**b)** Si tras vaciar el reactor se introduce únicamente CO hasta una presión de 0,5 atm, calcula la masa (en gramos) de cada uno de los tres componentes de la mezcla una vez alcanzado el equilibrio.",
+  "knowns": [
+   "$A_r(\\text{C}) = 12$; $A_r(\\text{O}) = 16$",
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 50$ L; $T = 700\\ ^\\circ\\text{C} = 973$ K"
+  ],
+  "full_solution": "**(a)** Moles iniciales de CO$_2$:\n\n$$n = \\dfrac{P\\,V}{R\\,T} = \\dfrac{0{,}52 \\cdot 50}{0{,}082 \\cdot 973} = 0{,}326\\text{ mol}$$\n\nEl carbono es sólido (no aparece en $K$). Sea $x$ los moles de CO$_2$ que reaccionan:\n\n$$\\begin{array}{c|cc}\n & \\text{CO}_2 & \\text{CO} \\\\ \\hline\n\\text{iniciales} & 0{,}326 & 0 \\\\\n\\text{equilibrio} & 0{,}326-x & 2x\n\\end{array}$$\n\nMoles gaseosos totales: $0{,}326 + x$. Con $P_t = 0{,}95$ atm:\n\n$$0{,}326 + x = \\dfrac{0{,}95 \\cdot 50}{0{,}082 \\cdot 973} = 0{,}595 \\;\\Rightarrow\\; x = 0{,}269\\text{ mol}$$\n\nLuego $n(\\text{CO}_2) = 0{,}057$ mol y $n(\\text{CO}) = 0{,}538$ mol; concentraciones $[\\text{CO}_2] = 0{,}00114$ M, $[\\text{CO}] = 0{,}011$ M.\n\n$$K_c = \\dfrac{[\\text{CO}]^2}{[\\text{CO}_2]} = \\dfrac{(0{,}011)^2}{0{,}00114} = 0{,}106$$\n\nCon $\\Delta n = 2 - 1 = 1$:\n\n$$K_p = K_c\\,(R\\,T)^{1} = 0{,}106 \\cdot (0{,}082 \\cdot 973) = 8{,}46$$\n\n**(b)** Ahora se parte solo de CO a 0,5 atm; la reacción va hacia la izquierda ($2\\,\\text{CO} \\rightarrow \\text{CO}_2 + \\text{C}$). Sea $x$ la presión de CO$_2$ formada:\n\n$$\\begin{array}{c|cc}\n & \\text{CO}_2 & \\text{CO} \\\\ \\hline\n\\text{iniciales} & 0 & 0{,}5 \\\\\n\\text{equilibrio} & x & 0{,}5-2x\n\\end{array}$$\n\n$$K_p = \\dfrac{P_{\\text{CO}}^2}{P_{\\text{CO}_2}} = \\dfrac{(0{,}5-2x)^2}{x} = 8{,}46 \\;\\Rightarrow\\; 4x^2 - 10{,}46\\,x + 0{,}25 = 0$$\n\nLa raíz válida es $x = 0{,}0247$ atm, de modo que $P_{\\text{CO}_2} = 0{,}0247$ atm y $P_{\\text{CO}} = 0{,}45$ atm.\n\nMoles de cada gas:\n\n$$n(\\text{CO}_2) = \\dfrac{0{,}0247 \\cdot 50}{0{,}082 \\cdot 973} = 0{,}015\\text{ mol}\\;\\Rightarrow\\; 0{,}015 \\cdot 44 = 0{,}66\\text{ g}$$\n\n$$n(\\text{CO}) = \\dfrac{0{,}45 \\cdot 50}{0{,}082 \\cdot 973} = 0{,}28\\text{ mol}\\;\\Rightarrow\\; 0{,}28 \\cdot 28 = 7{,}84\\text{ g}$$\n\nEn la reacción inversa, por cada mol de CO$_2$ formado se forma 1 mol de C(s), luego $n(\\text{C}) = n(\\text{CO}_2) = 0{,}015$ mol:\n\n$$m(\\text{C}) = 0{,}015 \\cdot 12 = 0{,}18\\text{ g}$$",
+  "answer": "**a)** $K_c = 0{,}106$; $K_p = 8{,}46$. **b)** $m(\\text{CO}_2) = 0{,}66$ g; $m(\\text{CO}) = 7{,}84$ g; $m(\\text{C}) = 0{,}18$ g.",
+  "common_errors": [
+   "Incluir el carbono sólido en la expresión de $K_c$ o $K_p$.",
+   "En el apartado b), calcular la masa de C formado como la mitad de los moles de CO totales; en realidad $n(\\text{C}) = n(\\text{CO}_2)$ formado $= 0{,}015$ mol ($0{,}18$ g).",
+   "Elegir la raíz de la ecuación de 2.º grado que da presiones negativas."
+  ],
+  "provenance": "PAU",
+  "source": "Valencia · Julio/Reserva 2023"
+ },
+ {
+  "id": "PAU-U05-092",
+  "title": "Solubilidad comparada (CaCO₃/CaF₂) y carácter anfótero del HCO₃⁻ · Zaragoza · Julio/Reserva 2018",
+  "statement": "Responde de forma justificada:\n\n**a)** ¿Qué sal, CaCO$_3$ o CaF$_2$, será más soluble en agua, sabiendo que sus productos de solubilidad $K_{ps}$ son $8{,}7\\cdot 10^{-9}$ y $4\\cdot 10^{-11}$ respectivamente? Escribe los correspondientes equilibrios de solubilidad.\n\n**b)** ¿Tiene carácter anfótero el ion HCO$_3^-$?",
+  "knowns": [
+   "$K_{ps}(\\text{CaCO}_3) = 8{,}7\\cdot 10^{-9}$",
+   "$K_{ps}(\\text{CaF}_2) = 4\\cdot 10^{-11}$",
+   "$\\text{H}_2\\text{CO}_3$: $K_{a1} = 4{,}4\\cdot 10^{-7}$; $K_{a2} = 4{,}6\\cdot 10^{-11}$"
+  ],
+  "full_solution": "**(a)** Equilibrio del CaCO$_3$ (sal de tipo 1:1):\n\n$$\\text{CaCO}_3(s) \\rightleftharpoons \\text{Ca}^{2+} + \\text{CO}_3^{2-}$$\n\n$$K_{ps} = [\\text{Ca}^{2+}][\\text{CO}_3^{2-}] = S^2 \\;\\Rightarrow\\; S = \\sqrt{K_{ps}} = \\sqrt{8{,}7\\cdot 10^{-9}} = 9{,}33\\cdot 10^{-5}\\ \\text{mol·L}^{-1}$$\n\nEquilibrio del CaF$_2$ (sal de tipo 1:2):\n\n$$\\text{CaF}_2(s) \\rightleftharpoons \\text{Ca}^{2+} + 2\\,\\text{F}^-$$\n\n$$K_{ps} = [\\text{Ca}^{2+}][\\text{F}^-]^2 = S\\,(2S)^2 = 4S^3 \\;\\Rightarrow\\; S = \\sqrt[3]{\\dfrac{4\\cdot 10^{-11}}{4}} = \\sqrt[3]{10^{-11}} = 2{,}15\\cdot 10^{-4}\\ \\text{mol·L}^{-1}$$\n\nComparando solubilidades: $S(\\text{CaF}_2) = 2{,}15\\cdot 10^{-4} > S(\\text{CaCO}_3) = 9{,}33\\cdot 10^{-5}$. Por tanto, el **CaF$_2$ es más soluble** (no basta comparar los $K_{ps}$ porque tienen distinta estequiometría).\n\n**(b)** El ion HCO$_3^-$ es anfótero: puede actuar como base o como ácido.\n\n$$\\text{HCO}_3^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{H}_2\\text{CO}_3 + \\text{OH}^- \\quad(\\text{comportamiento básico})$$\n\n$$\\text{HCO}_3^- + \\text{H}_2\\text{O} \\rightleftharpoons \\text{CO}_3^{2-} + \\text{H}_3\\text{O}^+ \\quad(\\text{comportamiento ácido})$$\n\nAl poder ceder y captar protones, el HCO$_3^-$ **sí tiene carácter anfótero**.",
+  "answer": "**a)** $S(\\text{CaCO}_3) = 9{,}33\\cdot 10^{-5}$ M; $S(\\text{CaF}_2) = 2{,}15\\cdot 10^{-4}$ M $\\Rightarrow$ más soluble el CaF$_2$. **b)** Sí, el HCO$_3^-$ es anfótero.",
+  "common_errors": [
+   "Comparar directamente los $K_{ps}$ de sales con distinta estequiometría; hay que calcular las solubilidades.",
+   "Usar un valor equivocado de $K_{ps}$ para el CaCO$_3$: $S = \\sqrt{8{,}7\\cdot 10^{-9}} = 9{,}3\\cdot 10^{-5}$ M.",
+   "Escribir CO$_3^-$ en lugar de CO$_3^{2-}$ en la hidrólisis ácida del bicarbonato."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2018"
+ },
+ {
+  "id": "PAU-U05-093",
+  "title": "Reformado del metano: presiones parciales, Kp y Kc · Zaragoza · Julio/Reserva 2018",
+  "statement": "Se introducen 4 moles de metano, 1 mol de agua y 2,6 moles de hidrógeno gaseosos en un reactor de 2 L y se eleva la temperatura a 800 °C. En el equilibrio\n\n$$\\text{CH}_4(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}(g) + 3\\,\\text{H}_2(g)$$\n\nse detectan 0,8 moles de monóxido de carbono. Determina:\n\n**a)** Las presiones parciales de todos los gases en el equilibrio.\n\n**b)** Los valores de $K_c$ y $K_p$.",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 2$ L; $T = 800\\ ^\\circ\\text{C} = 1073$ K",
+   "Iniciales: 4 mol CH$_4$, 1 mol H$_2$O, 2,6 mol H$_2$; eq.: 0,8 mol CO"
+  ],
+  "full_solution": "**(a)** Si se forman 0,8 mol de CO, han reaccionado 0,8 mol de CH$_4$ y 0,8 mol de H$_2$O, y se forman $3\\cdot 0{,}8 = 2{,}4$ mol de H$_2$ adicionales:\n\n$$\\begin{array}{c|cccc}\n & \\text{CH}_4 & \\text{H}_2\\text{O} & \\text{CO} & \\text{H}_2 \\\\ \\hline\n\\text{iniciales} & 4 & 1 & 0 & 2{,}6 \\\\\n\\text{equilibrio} & 3{,}2 & 0{,}2 & 0{,}8 & 5{,}0\n\\end{array}$$\n\nAplicando $P = \\dfrac{n\\,R\\,T}{V}$ con $\\dfrac{R\\,T}{V} = \\dfrac{0{,}082 \\cdot 1073}{2} = 43{,}99$:\n\n$$P(\\text{CH}_4) = 3{,}2 \\cdot 43{,}99 = 140{,}78\\text{ atm};\\quad P(\\text{H}_2\\text{O}) = 0{,}2 \\cdot 43{,}99 = 8{,}8\\text{ atm}$$\n\n$$P(\\text{CO}) = 0{,}8 \\cdot 43{,}99 = 35{,}2\\text{ atm};\\quad P(\\text{H}_2) = 5{,}0 \\cdot 43{,}99 = 219{,}96\\text{ atm}$$\n\n**(b)**\n\n$$K_p = \\dfrac{P(\\text{CO})\\cdot P(\\text{H}_2)^3}{P(\\text{CH}_4)\\cdot P(\\text{H}_2\\text{O})} = \\dfrac{35{,}2 \\cdot (219{,}96)^3}{140{,}78 \\cdot 8{,}8} = 3{,}024\\cdot 10^{5}$$\n\nCon $\\Delta n = (1+3) - (1+1) = 2$:\n\n$$K_c = \\dfrac{K_p}{(R\\,T)^{\\Delta n}} = \\dfrac{3{,}024\\cdot 10^{5}}{(0{,}082 \\cdot 1073)^2} = 39{,}06$$",
+  "answer": "**a)** $P(\\text{CH}_4) = 140{,}78$ atm; $P(\\text{H}_2\\text{O}) = 8{,}8$ atm; $P(\\text{CO}) = 35{,}2$ atm; $P(\\text{H}_2) = 219{,}96$ atm. **b)** $K_p = 3{,}024\\cdot 10^{5}$; $K_c = 39{,}06$.",
+  "common_errors": [
+   "Olvidar sumar los 2,6 mol de H$_2$ iniciales a los formados en la reacción.",
+   "Equivocar $\\Delta n = 2$ al relacionar $K_p$ y $K_c$.",
+   "No elevar $P(\\text{H}_2)$ al cubo en la expresión de $K_p$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2018"
+ },
+ {
+  "id": "PAU-U05-094",
+  "title": "Equilibrio 2 NO + O₂ ⇌ 2 NO₂: efectos de Le Châtelier · Zaragoza · Julio/Reserva 2019",
+  "statement": "¿Qué efecto tendrá en el equilibrio de la reacción\n\n$$2\\,\\text{NO}(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$$\n\ncada una de las siguientes acciones?\n\n**a)** Un aumento de la temperatura si $\\Delta H < 0$.\n\n**b)** Una disminución del volumen.\n\n**c)** La eliminación de parte del NO$_2$ producido.",
+  "knowns": [
+   "$\\Delta H < 0$ (reacción directa exotérmica)"
+  ],
+  "full_solution": "**(a)** Como $\\Delta H < 0$, la reacción directa es exotérmica. Al aumentar la temperatura se aporta calor y el equilibrio se desplaza en sentido endotérmico, es decir, hacia la **izquierda** (formación de NO y O$_2$), disminuyendo la cantidad de NO$_2$.\n\n**(b)** Una disminución del volumen provoca un aumento de la presión; el sistema compensa desplazándose hacia el lado con menos moles gaseosos. En reactivos hay $2+1 = 3$ moles y en productos 2 moles, por lo que el equilibrio se desplaza hacia la **derecha** (más NO$_2$).\n\n**(c)** Al retirar NO$_2$ disminuye su concentración; el sistema reacciona formando más NO$_2$ a partir de NO y O$_2$, es decir, el equilibrio se desplaza hacia la **derecha**.",
+  "answer": "**a)** Hacia la izquierda. **b)** Hacia la derecha. **c)** Hacia la derecha.",
+  "common_errors": [
+   "Con $\\Delta H < 0$ la reacción es exotérmica: subir $T$ la desplaza hacia los reactivos.",
+   "Contar mal los moles gaseosos (3 frente a 2) al analizar el efecto del volumen.",
+   "Olvidar que retirar un producto desplaza el equilibrio hacia su formación."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2019"
+ },
+ {
+  "id": "PAU-U05-095",
+  "title": "Solubilidad del PbCl₂ y predicción de precipitado · Zaragoza · Julio/Reserva 2019",
+  "statement": "El cloruro de plomo(II) es una sal poco soluble.\n\n**a)** Escribe el equilibrio de solubilidad y la expresión de la $K_{ps}$ del cloruro de plomo(II).\n\n**b)** Calcula la solubilidad molar del cloruro de plomo(II).\n\n**c)** 100 mL de una disolución 0,8 M de nitrato de plomo(II) se mezclan con 100 mL de una disolución 0,2 M de cloruro de sodio. Si los volúmenes son aditivos, ¿precipitará cloruro de plomo(II)?",
+  "knowns": [
+   "$K_{ps}(\\text{PbCl}_2) = 1{,}6\\cdot 10^{-5}$"
+  ],
+  "full_solution": "**(a)**\n\n$$\\text{PbCl}_2(s) \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{Cl}^- \\qquad K_{ps} = [\\text{Pb}^{2+}][\\text{Cl}^-]^2$$\n\n**(b)** Si $S$ es la solubilidad, $[\\text{Pb}^{2+}] = S$ y $[\\text{Cl}^-] = 2S$:\n\n$$K_{ps} = S\\,(2S)^2 = 4S^3 \\;\\Rightarrow\\; S = \\sqrt[3]{\\dfrac{1{,}6\\cdot 10^{-5}}{4}} = \\sqrt[3]{4\\cdot 10^{-6}} = 1{,}58\\cdot 10^{-2}\\ \\text{mol·L}^{-1}$$\n\n**(c)** Ambas sales están totalmente ionizadas. En el volumen total ($0{,}2$ L):\n\n$$n(\\text{Pb}^{2+}) = 0{,}8 \\cdot 0{,}100 = 0{,}08\\text{ mol} \\Rightarrow [\\text{Pb}^{2+}] = \\dfrac{0{,}08}{0{,}2} = 0{,}4\\ \\text{M}$$\n\n$$n(\\text{Cl}^-) = 0{,}2 \\cdot 0{,}100 = 0{,}02\\text{ mol} \\Rightarrow [\\text{Cl}^-] = \\dfrac{0{,}02}{0{,}2} = 0{,}1\\ \\text{M}$$\n\nEl producto iónico es:\n\n$$Q = [\\text{Pb}^{2+}][\\text{Cl}^-]^2 = 0{,}4 \\cdot (0{,}1)^2 = 4\\cdot 10^{-3}$$\n\nComo $Q = 4\\cdot 10^{-3} > K_{ps} = 1{,}6\\cdot 10^{-5}$, **sí precipita** PbCl$_2$.",
+  "answer": "**a)** $\\text{PbCl}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\text{Cl}^-$, $K_{ps} = [\\text{Pb}^{2+}][\\text{Cl}^-]^2$. **b)** $S = 1{,}58\\cdot 10^{-2}$ M. **c)** Sí, hay precipitación ($Q > K_{ps}$).",
+  "common_errors": [
+   "Olvidar el factor $(2S)^2$ al relacionar $K_{ps}$ con la solubilidad.",
+   "No diluir las concentraciones al volumen total de la mezcla (0,2 L).",
+   "Comparar $Q$ con $K_{ps}$ al revés."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2019"
+ },
+ {
+  "id": "PAU-U05-096",
+  "title": "Disociación del NOF: grado de disociación, presiones parciales y Kp · Zaragoza · Julio/Reserva 2019",
+  "statement": "La ecuación $\\text{NOF}(g) \\rightleftharpoons \\text{NO}(g) + \\tfrac{1}{2}\\,\\text{F}_2(g)$ muestra el proceso de disociación del NOF. En un recipiente de 1 L se introducen 2,45 g de NOF y se eleva la temperatura a 573 K, de modo que en el equilibrio la presión total es de 2,57 atm.\n\n**a)** Calcula el grado de disociación del NOF y la presión parcial de cada especie en el equilibrio.\n\n**b)** Calcula el valor de $K_p$.\n\n**c)** ¿Aumentará el grado de disociación del NOF al aumentar la presión?",
+  "knowns": [
+   "$A_r(\\text{F}) = 19$; $A_r(\\text{O}) = 16$; $A_r(\\text{N}) = 14$",
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 1$ L; $T = 573$ K; $m_0(\\text{NOF}) = 2{,}45$ g; $P_t = 2{,}57$ atm"
+  ],
+  "full_solution": "**(a)** Masa molar del NOF: $M = 14 + 16 + 19 = 49$ g·mol$^{-1}$. Moles iniciales:\n\n$$n_0 = \\dfrac{2{,}45}{49} = 0{,}05\\text{ mol}$$\n\nSea $x$ los moles de NOF que se disocian:\n\n$$\\begin{array}{c|ccc}\n & \\text{NOF} & \\text{NO} & \\text{F}_2 \\\\ \\hline\n\\text{iniciales} & 0{,}05 & 0 & 0 \\\\\n\\text{equilibrio} & 0{,}05-x & x & 0{,}5x\n\\end{array}$$\n\nMoles totales: $n_t = 0{,}05 + 0{,}5x$. Con la ecuación de los gases:\n\n$$0{,}05 + 0{,}5x = \\dfrac{P\\,V}{R\\,T} = \\dfrac{2{,}57 \\cdot 1}{0{,}082 \\cdot 573} = 0{,}0547 \\;\\Rightarrow\\; 0{,}5x = 0{,}0047 \\;\\Rightarrow\\; x = 0{,}0094\\text{ mol}$$\n\nMoles en el equilibrio: NOF $= 0{,}041$; NO $= 0{,}0094$; F$_2 = 0{,}0047$.\n\n$$\\alpha = \\dfrac{0{,}0094}{0{,}05}\\cdot 100 = 18{,}8\\,\\%$$\n\nPresiones parciales ($\\dfrac{R\\,T}{V} = 0{,}082 \\cdot 573 = 46{,}99$):\n\n$$P(\\text{NOF}) = 0{,}041 \\cdot 46{,}99 = 1{,}93\\text{ atm};\\;\\; P(\\text{NO}) = 0{,}44\\text{ atm};\\;\\; P(\\text{F}_2) = 0{,}22\\text{ atm}$$\n\n**(b)** Como $V = 1$ L, los moles coinciden con las concentraciones:\n\n$$K_c = \\dfrac{[\\text{NO}]\\cdot[\\text{F}_2]^{1/2}}{[\\text{NOF}]} = \\dfrac{0{,}0094 \\cdot (0{,}0047)^{1/2}}{0{,}041} = 0{,}016$$\n\nCon $\\Delta n = 1{,}5 - 1 = 0{,}5$:\n\n$$K_p = K_c\\,(R\\,T)^{0{,}5} = 0{,}016 \\cdot (0{,}082 \\cdot 573)^{0{,}5} = 0{,}11$$\n\n**(c)** Un aumento de la presión disminuye el volumen; el equilibrio se desplaza hacia el lado con menos moles gaseosos (la izquierda, 1 mol frente a 1,5 mol). Por tanto, el grado de disociación **disminuye**.",
+  "answer": "**a)** $\\alpha = 18{,}8\\,\\%$; $P(\\text{NOF}) = 1{,}93$ atm; $P(\\text{NO}) = 0{,}44$ atm; $P(\\text{F}_2) = 0{,}22$ atm. **b)** $K_p = 0{,}11$. **c)** No, disminuye $\\alpha$.",
+  "common_errors": [
+   "Tomar los moles de F$_2$ como $x$ en lugar de $0{,}5x$ (coeficiente $\\tfrac12$).",
+   "Olvidar la raíz cuadrada de $[\\text{F}_2]$ en $K_c$ por el coeficiente fraccionario.",
+   "Usar $\\Delta n = 1$ en vez de $0{,}5$ al calcular $K_p$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2019"
+ },
+ {
+  "id": "PAU-U05-097",
+  "title": "Síntesis del HI: espontaneidad, catálisis y relación Kp/Kc · Zaragoza · Junio 2019",
+  "statement": "Justifica si son verdaderas o falsas las siguientes afirmaciones referidas a la reacción\n\n$$\\text{H}_2(g) + \\text{I}_2(s) \\rightleftharpoons 2\\,\\text{HI}(g) \\qquad \\Delta H^\\circ = +25{,}9\\text{ kJ}$$\n\n**a)** La reacción será espontánea a cualquier temperatura.\n\n**b)** La adición de un catalizador aumenta el rendimiento en HI.\n\n**c)** El valor de $K_p$ de la reacción es mayor que el de $K_c$.",
+  "knowns": [
+   "$\\Delta H^\\circ = +25{,}9\\text{ kJ}$ (endotérmica)"
+  ],
+  "full_solution": "**(a) Falsa.** La espontaneidad exige $\\Delta G = \\Delta H - T\\,\\Delta S < 0$. Como hay más moles gaseosos en productos (2) que en reactivos (1 gas), $\\Delta S > 0$; y al ser endotérmica, $\\Delta H > 0$. Por tanto:\n\n$$\\Delta G = \\Delta H - T\\,\\Delta S$$\n\nA bajas temperaturas domina $\\Delta H > 0$ y $\\Delta G > 0$ (no espontánea); solo a **altas temperaturas** ($T\\,\\Delta S > \\Delta H$) se hace $\\Delta G < 0$ y la reacción es espontánea. No lo es a cualquier temperatura.\n\n**(b) Falsa.** Un catalizador disminuye la energía de activación y acelera la reacción, pero **no modifica la posición del equilibrio** ni, por tanto, el rendimiento en HI.\n\n**(c) Verdadera.** $K_p = K_c\\,(R\\,T)^{\\Delta n}$ con $\\Delta n = 2 - 1 = 1$. Como $R\\,T > 1$ a las temperaturas de trabajo, resulta $K_p = K_c\\,(R\\,T) > K_c$.",
+  "answer": "**a)** Falsa (solo espontánea a altas $T$). **b)** Falsa (el catalizador no altera el equilibrio). **c)** Verdadera ($K_p = K_c\\,RT > K_c$, pues $\\Delta n = 1$).",
+  "common_errors": [
+   "Pensar que toda reacción endotérmica es no espontánea a cualquier $T$; depende del término $T\\,\\Delta S$.",
+   "Creer que el catalizador aumenta el rendimiento del equilibrio.",
+   "Contar el I$_2$ sólido como mol gaseoso al calcular $\\Delta n$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2019"
+ },
+ {
+  "id": "PAU-U05-098",
+  "title": "Síntesis del amoniaco: moles, Kc, presión total y rendimiento · Zaragoza · Junio 2019",
+  "statement": "Para obtener amoniaco, según\n\n$$\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$$\n\nse introducen 15 moles de nitrógeno y 15 moles de hidrógeno en un reactor de 10 L y la mezcla se calienta hasta 450 °C. Al alcanzar el equilibrio, el 20 % de los moles iniciales de nitrógeno se ha transformado en amoniaco.\n\n**a)** Calcula los moles de cada especie en el equilibrio y el valor de $K_c$ a 450 °C.\n\n**b)** Calcula la presión total en el equilibrio.\n\n**c)** Si aumenta la presión en el interior del reactor, ¿aumentará el rendimiento?",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 10$ L; $T = 450\\ ^\\circ\\text{C} = 723$ K",
+   "Iniciales: 15 mol N$_2$, 15 mol H$_2$; reacciona el 20 % del N$_2$"
+  ],
+  "full_solution": "**(a)** Reacciona el 20 % de 15 mol de N$_2$ $= 3$ mol; se consumen $3\\cdot 3 = 9$ mol de H$_2$ y se forman $2\\cdot 3 = 6$ mol de NH$_3$:\n\n$$\\begin{array}{c|ccc}\n & \\text{N}_2 & \\text{H}_2 & \\text{NH}_3 \\\\ \\hline\n\\text{iniciales} & 15 & 15 & 0 \\\\\n\\text{equilibrio} & 12 & 6 & 6\n\\end{array}$$\n\nConcentraciones (÷10 L): $[\\text{N}_2] = 1{,}2$; $[\\text{H}_2] = 0{,}6$; $[\\text{NH}_3] = 0{,}6$ M.\n\n$$K_c = \\dfrac{[\\text{NH}_3]^2}{[\\text{N}_2]\\cdot[\\text{H}_2]^3} = \\dfrac{(0{,}6)^2}{1{,}2 \\cdot (0{,}6)^3} = 1{,}39$$\n\n**(b)** Moles totales: $12 + 6 + 6 = 24$ mol.\n\n$$P_t = \\dfrac{n\\,R\\,T}{V} = \\dfrac{24 \\cdot 0{,}082 \\cdot 723}{10} = 142{,}3\\text{ atm}$$\n\n**(c)** Un aumento de la presión desplaza el equilibrio hacia el lado con menos moles gaseosos: reactivos $1+3 = 4$ moles, productos 2 moles, luego hacia la **derecha**. Aumenta la producción de NH$_3$ y, por tanto, el rendimiento **crece**.",
+  "answer": "**a)** $n(\\text{N}_2) = 12$ mol; $n(\\text{H}_2) = n(\\text{NH}_3) = 6$ mol; $K_c = 1{,}39$. **b)** $P_t = 142{,}3$ atm. **c)** Sí, crece el rendimiento.",
+  "common_errors": [
+   "Olvidar que por cada mol de N$_2$ se consumen 3 de H$_2$ y se forman 2 de NH$_3$.",
+   "No elevar $[\\text{H}_2]$ al cubo en $K_c$.",
+   "Equivocar el sentido del desplazamiento al subir la presión."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2019"
+ },
+ {
+  "id": "PAU-U05-099",
+  "title": "Tostación del ZnS: Kp, entropía y Le Châtelier · Zaragoza · Julio/Reserva 2020",
+  "statement": "Considera el proceso:\n\n$$\\text{ZnS}(s) + \\tfrac{3}{2}\\,\\text{O}_2(g) \\rightleftharpoons \\text{ZnO}(s) + \\text{SO}_2(g)$$\n\n**a)** Escribe la expresión de su $K_p$.\n\n**b)** Determina si $\\Delta S$ de la reacción directa es positiva o negativa e interpreta el signo.\n\n**c)** Al aumentar la temperatura se observa que disminuye la cantidad de SO$_2$. Explica si la reacción es endotérmica o exotérmica.\n\n**d)** Se quiere aumentar la cantidad de ZnO modificando la presión del sistema. Justifica si es posible conseguirlo.",
+  "knowns": [],
+  "full_solution": "**(a)** Los sólidos (ZnS, ZnO) no aparecen en $K_p$. Solo intervienen los gases:\n\n$$K_p = \\dfrac{P(\\text{SO}_2)}{P(\\text{O}_2)^{3/2}}$$\n\n**(b)** En reactivos hay 1,5 moles gaseosos y en productos 1 mol gaseoso; disminuye el número de moléculas de gas, por lo que disminuye el desorden. Luego $\\Delta S < 0$: la reacción directa transcurre con **disminución de entropía**.\n\n**(c)** Al aumentar la temperatura disminuye el SO$_2$, es decir, el equilibrio se desplaza hacia la izquierda (sentido endotérmico). Por tanto, la reacción directa es **exotérmica**.\n\n**(d)** Sí es posible. Un aumento de la presión reduce el volumen; el equilibrio se desplaza hacia el lado con menos moles gaseosos (la derecha, 1 mol frente a 1,5 mol), aumentando la cantidad de ZnO. Por tanto, **aumentando la presión** se consigue más ZnO.",
+  "answer": "**a)** $K_p = \\dfrac{P(\\text{SO}_2)}{P(\\text{O}_2)^{3/2}}$. **b)** $\\Delta S < 0$ (disminuye el desorden). **c)** Exotérmica. **d)** Sí, aumentando la presión.",
+  "common_errors": [
+   "Incluir los sólidos ZnS y ZnO en la expresión de $K_p$.",
+   "Equivocar el signo de $\\Delta S$ al contar solo los moles gaseosos.",
+   "Confundir exotérmica con endotérmica al razonar el efecto de $T$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2020"
+ },
+ {
+  "id": "PAU-U05-100",
+  "title": "Equilibrio N₂O₄ ⇌ 2 NO₂: moles, Kc y grado de disociación · Zaragoza · Julio/Reserva 2020",
+  "statement": "En un reactor de 50 L se introducen 5 moles de tetraóxido de dinitrógeno y se eleva la temperatura hasta 330 K. En el equilibrio\n\n$$\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$$\n\nla presión total es de 3,5 atm.\n\n**a)** Calcula el número de moles de cada especie en el equilibrio y el valor de $K_c$.\n\n**b)** Calcula el grado de disociación del N$_2$O$_4$.\n\n**c)** Si el volumen del reactor se reduce a la mitad, ¿aumentará la cantidad de NO$_2$?",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 50$ L; $T = 330$ K; iniciales: 5 mol N$_2$O$_4$; $P_t = 3{,}5$ atm"
+  ],
+  "full_solution": "**(a)** Sea $x$ los moles de N$_2$O$_4$ que se disocian:\n\n$$\\begin{array}{c|cc}\n & \\text{N}_2\\text{O}_4 & \\text{NO}_2 \\\\ \\hline\n\\text{iniciales} & 5 & 0 \\\\\n\\text{equilibrio} & 5-x & 2x\n\\end{array}$$\n\nMoles totales: $n_t = 5 + x$. Con la ecuación de los gases:\n\n$$5 + x = \\dfrac{P\\,V}{R\\,T} = \\dfrac{3{,}5 \\cdot 50}{0{,}082 \\cdot 330} = 6{,}47 \\;\\Rightarrow\\; x = 1{,}47\\text{ mol}$$\n\nMoles en el equilibrio: $n(\\text{N}_2\\text{O}_4) = 3{,}53$ mol; $n(\\text{NO}_2) = 2{,}94$ mol.\n\nConcentraciones (÷50 L): $[\\text{N}_2\\text{O}_4] = 0{,}0706$ M; $[\\text{NO}_2] = 0{,}0588$ M.\n\n$$K_c = \\dfrac{[\\text{NO}_2]^2}{[\\text{N}_2\\text{O}_4]} = \\dfrac{(0{,}0588)^2}{0{,}0706} = 0{,}049\\ \\text{M}$$\n\n**(b)**\n\n$$\\alpha = \\dfrac{1{,}47}{5}\\cdot 100 = 29{,}4\\,\\%$$\n\n**(c)** Al reducir el volumen a la mitad aumenta la presión; el equilibrio se desplaza hacia el lado con menos moles gaseosos (la izquierda, 1 mol frente a 2). Por tanto, la cantidad de NO$_2$ **disminuye**.",
+  "answer": "**a)** $n(\\text{N}_2\\text{O}_4) = 3{,}53$ mol; $n(\\text{NO}_2) = 2{,}94$ mol; $K_c \\approx 0{,}049$ M. **b)** $\\alpha = 29{,}4\\,\\%$. **c)** No, el NO$_2$ disminuye.",
+  "common_errors": [
+   "Tomar $n_t = 5 - x$ en vez de $5 + x$ al despejar con los gases.",
+   "Calcular el grado de disociación sobre los moles del equilibrio en lugar de los iniciales.",
+   "Equivocar el sentido del desplazamiento al reducir el volumen."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2020"
+ },
+ {
+  "id": "PAU-U05-101",
+  "title": "Termodinámica y cinética: espontaneidad, presión y energía de activación · Zaragoza · Junio 2020",
+  "statement": "Justifica si son verdaderas o falsas:\n\n**a)** Una reacción espontánea no puede ser endotérmica.\n\n**b)** En la reacción $\\text{A}(g) + 2\\,\\text{B}(g) \\rightleftharpoons \\text{C}(g) + 2\\,\\text{D}(g)$ un aumento de presión a temperatura constante aumenta la cantidad de productos obtenidos.\n\n**c)** Las reacciones cuyo $\\Delta G < 0$ son más rápidas que aquellas cuyo $\\Delta G > 0$.\n\n**d)** Cuanto menor es la energía de activación de una reacción, mayor es su velocidad.",
+  "knowns": [],
+  "full_solution": "**(a) Falsa.** La espontaneidad depende de $\\Delta G = \\Delta H - T\\,\\Delta S < 0$. Si $\\Delta H > 0$ (endotérmica) pero $T\\,\\Delta S > \\Delta H$ (con $\\Delta S > 0$), entonces $\\Delta G < 0$ y la reacción **sí puede ser espontánea** siendo endotérmica.\n\n**(b) Falsa.** En reactivos hay $1+2 = 3$ moles gaseosos y en productos $1+2 = 3$ moles. Como el número de moles gaseosos es el mismo en ambos lados, una variación de presión **no desplaza** el equilibrio.\n\n**(c) Falsa.** $\\Delta G$ es una magnitud termodinámica que indica espontaneidad, no rapidez. La velocidad depende de la cinética (energía de activación), no del signo de $\\Delta G$.\n\n**(d) Verdadera.** Según Arrhenius $k = A\\,e^{-E_a/(R\\,T)}$: al disminuir $E_a$ aumenta el factor exponencial, crece $k$ y, por tanto, la velocidad de reacción.",
+  "answer": "**a)** Falsa. **b)** Falsa (igual número de moles gaseosos). **c)** Falsa. **d)** Verdadera.",
+  "common_errors": [
+   "Confundir espontaneidad (termodinámica) con rapidez (cinética).",
+   "Olvidar comparar los moles gaseosos de cada lado antes de aplicar el efecto de la presión.",
+   "Creer que una reacción endotérmica nunca es espontánea."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2020"
+ },
+ {
+  "id": "PAU-U05-102",
+  "title": "Equilibrio Se + H₂ ⇌ H₂Se: moles, efecto del volumen y de la temperatura · Zaragoza · Junio 2020",
+  "statement": "En un recipiente de 5 L se introducen 1 mol de selenio y 1 mol de hidrógeno y se calienta a 1000 K, alcanzándose el equilibrio\n\n$$\\text{Se}(g) + \\text{H}_2(g) \\rightleftharpoons \\text{H}_2\\text{Se}(g) \\qquad K_c = 2{,}2$$\n\n**a)** Calcula el número de moles de cada especie en el equilibrio.\n\n**b)** Manteniendo la temperatura constante, se duplica el volumen del recipiente. Una vez alcanzado el nuevo equilibrio, ¿habrá aumentado la cantidad de H$_2$Se?\n\n**c)** Si la reacción es exotérmica, explica cómo afecta al equilibrio un aumento de la temperatura.",
+  "knowns": [
+   "$K_c = 2{,}2$",
+   "$V = 5$ L; $T = 1000$ K; iniciales: 1 mol Se, 1 mol H$_2$"
+  ],
+  "full_solution": "**(a)** Sea $x$ los moles de Se (y de H$_2$) que reaccionan:\n\n$$\\begin{array}{c|ccc}\n & \\text{Se} & \\text{H}_2 & \\text{H}_2\\text{Se} \\\\ \\hline\n\\text{iniciales} & 1 & 1 & 0 \\\\\n\\text{equilibrio} & 1-x & 1-x & x\n\\end{array}$$\n\nConcentraciones: $[\\text{Se}] = [\\text{H}_2] = \\tfrac{1-x}{5}$; $[\\text{H}_2\\text{Se}] = \\tfrac{x}{5}$.\n\n$$K_c = \\dfrac{[\\text{H}_2\\text{Se}]}{[\\text{Se}]\\cdot[\\text{H}_2]} = \\dfrac{x/5}{\\left(\\tfrac{1-x}{5}\\right)^2} = \\dfrac{5x}{(1-x)^2} = 2{,}2$$\n\n$$2{,}2\\,x^2 - 9{,}4\\,x + 2{,}2 = 0 \\;\\Rightarrow\\; x_1 = 4{,}02\\ (\\text{imposible}),\\quad x_2 = 0{,}25\\text{ mol}$$\n\nLa solución válida es $x = 0{,}25$:\n\n$$n(\\text{Se}) = n(\\text{H}_2) = 0{,}75\\text{ mol};\\qquad n(\\text{H}_2\\text{Se}) = 0{,}25\\text{ mol}$$\n\n**(b)** Al duplicar el volumen disminuye la presión; el equilibrio se desplaza hacia el lado con más moles gaseosos (la izquierda, 2 moles frente a 1). Por tanto, la cantidad de H$_2$Se **no aumenta, disminuye**.\n\n**(c)** Al aumentar la temperatura el equilibrio se desplaza en sentido endotérmico. Como la reacción directa es exotérmica, el desplazamiento es hacia la **izquierda**, disminuyendo la producción de H$_2$Se.",
+  "answer": "**a)** $n(\\text{Se}) = n(\\text{H}_2) = 0{,}75$ mol; $n(\\text{H}_2\\text{Se}) = 0{,}25$ mol. **b)** No, disminuye (equilibrio hacia la izquierda). **c)** Hacia la izquierda (menos H$_2$Se).",
+  "common_errors": [
+   "Plantear mal el cociente de $K_c$ al simplificar las concentraciones con el volumen.",
+   "Tomar la raíz $x = 4{,}02$, imposible por superar los moles iniciales.",
+   "Equivocar el sentido del desplazamiento al duplicar el volumen (hacia más moles gaseosos)."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2020"
+ },
+ {
+  "id": "PAU-U05-103",
+  "title": "Solubilidad del BaF₂ y predicción de precipitado · Zaragoza · Junio 2020",
+  "statement": "**a)** Escribe la expresión de la constante de solubilidad y calcula la solubilidad molar de BaF$_2$.\n\n**b)** Se mezclan 50 mL de una disolución de NaF 0,1 M con 50 mL de otra de Ba(NO$_3$)$_2$ 0,05 M. Determina si precipitará BaF$_2$.",
+  "knowns": [
+   "$K_{ps}(\\text{BaF}_2) = 2\\cdot 10^{-6}$"
+  ],
+  "full_solution": "**(a)** Equilibrio de solubilidad:\n\n$$\\text{BaF}_2(s) \\rightleftharpoons \\text{Ba}^{2+} + 2\\,\\text{F}^- \\qquad K_{ps} = [\\text{Ba}^{2+}][\\text{F}^-]^2$$\n\nSi $S$ es la solubilidad, $[\\text{Ba}^{2+}] = S$ y $[\\text{F}^-] = 2S$:\n\n$$K_{ps} = S\\,(2S)^2 = 4S^3 \\;\\Rightarrow\\; S = \\sqrt[3]{\\dfrac{2\\cdot 10^{-6}}{4}} = \\sqrt[3]{0{,}5\\cdot 10^{-6}} = 7{,}9\\cdot 10^{-3}\\ \\text{mol·L}^{-1}$$\n\n**(b)** Las sales están totalmente ionizadas. En el volumen total ($0{,}1$ L):\n\n$$n(\\text{F}^-) = 0{,}1 \\cdot 0{,}050 = 0{,}005\\text{ mol} \\Rightarrow [\\text{F}^-] = \\dfrac{0{,}005}{0{,}1} = 0{,}05\\ \\text{M}$$\n\n$$n(\\text{Ba}^{2+}) = 0{,}05 \\cdot 0{,}050 = 0{,}0025\\text{ mol} \\Rightarrow [\\text{Ba}^{2+}] = \\dfrac{0{,}0025}{0{,}1} = 0{,}025\\ \\text{M}$$\n\nProducto iónico:\n\n$$Q = [\\text{Ba}^{2+}][\\text{F}^-]^2 = 0{,}025 \\cdot (0{,}05)^2 = 6{,}25\\cdot 10^{-5}$$\n\nComo $Q = 6{,}25\\cdot 10^{-5} > K_{ps} = 2\\cdot 10^{-6}$, **sí precipita** BaF$_2$.",
+  "answer": "**a)** $S = 7{,}9\\cdot 10^{-3}$ M (≈ 0,0079 M). **b)** Sí, hay precipitación ($Q > K_{ps}$).",
+  "common_errors": [
+   "Olvidar el factor $(2S)^2$ en la relación $K_{ps} = 4S^3$.",
+   "No diluir las concentraciones al volumen total de la mezcla.",
+   "Comparar $Q$ con $K_{ps}$ de forma invertida."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2020"
+ },
+ {
+  "id": "PAU-U05-104",
+  "title": "Producto de solubilidad del Ag₂CrO₄ a partir de su solubilidad · Zaragoza · Julio/Reserva 2021",
+  "statement": "La solubilidad del cromato de plata (Ag$_2$CrO$_4$) es de $4{,}35\\cdot 10^{-3}$ g por cada 100 mL.\n\n**a)** Escribe el equilibrio de solubilidad del cromato de plata y calcula el valor del producto de solubilidad.\n\n**b)** ¿Precipitará el cromato de plata cuando se mezclen 200 mL de una disolución 0,9 M de cromato de sodio y 300 mL de una disolución 0,4 M de nitrato de plata?",
+  "knowns": [
+   "$A_r(\\text{Cr}) = 52$; $A_r(\\text{Ag}) = 108$; $A_r(\\text{O}) = 16$",
+   "Solubilidad: $4{,}35\\cdot 10^{-3}$ g/100 mL"
+  ],
+  "full_solution": "**(a)** Equilibrio de solubilidad:\n\n$$\\text{Ag}_2\\text{CrO}_4(s) \\rightleftharpoons 2\\,\\text{Ag}^+ + \\text{CrO}_4^{2-}$$\n\nMasa molar: $M = 2\\cdot 108 + 52 + 4\\cdot 16 = 332$ g·mol$^{-1}$. Solubilidad molar:\n\n$$S = \\dfrac{4{,}35\\cdot 10^{-3}\\text{ g}}{0{,}1\\text{ L}}\\cdot\\dfrac{1\\text{ mol}}{332\\text{ g}} = 1{,}31\\cdot 10^{-4}\\ \\text{mol·L}^{-1}$$\n\nCon $[\\text{Ag}^+] = 2S$ y $[\\text{CrO}_4^{2-}] = S$:\n\n$$K_{ps} = [\\text{Ag}^+]^2[\\text{CrO}_4^{2-}] = (2S)^2\\,S = 4S^3 = 4\\cdot (1{,}31\\cdot 10^{-4})^3 = 9\\cdot 10^{-12}$$\n\n**(b)** Moles en las disoluciones de partida:\n\n$$n(\\text{CrO}_4^{2-}) = 0{,}9 \\cdot 0{,}2 = 0{,}18\\text{ mol};\\qquad n(\\text{Ag}^+) = 0{,}4 \\cdot 0{,}3 = 0{,}12\\text{ mol}$$\n\nEn el volumen total ($0{,}5$ L):\n\n$$[\\text{CrO}_4^{2-}] = \\dfrac{0{,}18}{0{,}5} = 0{,}36\\ \\text{M};\\qquad [\\text{Ag}^+] = \\dfrac{0{,}12}{0{,}5} = 0{,}24\\ \\text{M}$$\n\nProducto iónico:\n\n$$Q = [\\text{Ag}^+]^2[\\text{CrO}_4^{2-}] = (0{,}24)^2 \\cdot 0{,}36 = 0{,}021 \\ggg K_{ps}$$\n\nComo $Q \\gg K_{ps}$, **sí precipita** Ag$_2$CrO$_4$.",
+  "answer": "**a)** $K_{ps} = 9\\cdot 10^{-12}$. **b)** Sí, hay precipitación ($Q = 0{,}021 \\gg K_{ps}$).",
+  "common_errors": [
+   "Olvidar el factor 2 en $[\\text{Ag}^+] = 2S$ y escribir $K_{ps} = S^3$ en vez de $4S^3$.",
+   "No convertir la solubilidad de g/100 mL a mol/L.",
+   "No diluir al volumen total (0,5 L) al calcular $Q$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2021"
+ },
+ {
+  "id": "PAU-U05-105",
+  "title": "Disociación del SbCl₅: moles, Kc y efecto de la presión · Zaragoza · Julio/Reserva 2021",
+  "statement": "El pentacloruro de antimonio es un líquido de densidad 2,3 g·mL$^{-1}$ que al calentar se descompone:\n\n$$\\text{SbCl}_5(g) \\rightleftharpoons \\text{SbCl}_3(g) + \\text{Cl}_2(g)$$\n\nEn un recipiente de 5 L se introducen 350 mL de pentacloruro de antimonio y se calienta a 200 °C; al alcanzar el equilibrio la presión del sistema es de 25 atm. Calcula:\n\n**a)** Los moles de cada especie en el equilibrio.\n\n**b)** El valor de $K_c$.\n\n**c)** ¿Cómo evolucionará el equilibrio si la presión total se reduce a la mitad?",
+  "knowns": [
+   "$A_r(\\text{Sb}) = 122$; $A_r(\\text{Cl}) = 35{,}5$",
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 5$ L; $T = 200\\ ^\\circ\\text{C} = 473$ K; $d = 2{,}3$ g·mL$^{-1}$; 350 mL de SbCl$_5$; $P_t = 25$ atm"
+  ],
+  "full_solution": "**(a)** Masa de SbCl$_5$: $350\\text{ mL} \\cdot 2{,}3\\text{ g·mL}^{-1} = 805$ g. Masa molar: $M = 122 + 5\\cdot 35{,}5 = 299{,}5$ g·mol$^{-1}$. Moles iniciales:\n\n$$n_0 = \\dfrac{805}{299{,}5} = 2{,}7\\text{ mol}$$\n\nSea $x$ los moles de SbCl$_5$ que se descomponen:\n\n$$\\begin{array}{c|ccc}\n & \\text{SbCl}_5 & \\text{SbCl}_3 & \\text{Cl}_2 \\\\ \\hline\n\\text{iniciales} & 2{,}7 & 0 & 0 \\\\\n\\text{equilibrio} & 2{,}7-x & x & x\n\\end{array}$$\n\nMoles totales: $n_t = 2{,}7 + x$. Con la ecuación de los gases:\n\n$$n_t = \\dfrac{P\\,V}{R\\,T} = \\dfrac{25 \\cdot 5}{0{,}082 \\cdot 473} = 3{,}22 \\;\\Rightarrow\\; x = 3{,}22 - 2{,}7 = 0{,}52\\text{ mol}$$\n\n$$n(\\text{SbCl}_5) = 2{,}18\\text{ mol};\\qquad n(\\text{SbCl}_3) = n(\\text{Cl}_2) = 0{,}52\\text{ mol}$$\n\n**(b)** Concentraciones (÷5 L): $[\\text{SbCl}_5] = 0{,}436$ M; $[\\text{SbCl}_3] = [\\text{Cl}_2] = 0{,}104$ M.\n\n$$K_c = \\dfrac{[\\text{SbCl}_3]\\cdot[\\text{Cl}_2]}{[\\text{SbCl}_5]} = \\dfrac{(0{,}104)^2}{0{,}436} = 0{,}025$$\n\n**(c)** Al disminuir la presión el equilibrio se desplaza hacia el lado con más moles gaseosos (la derecha, 2 moles frente a 1). Se favorece la descomposición del SbCl$_5$.",
+  "answer": "**a)** $n(\\text{SbCl}_5) = 2{,}18$ mol; $n(\\text{SbCl}_3) = n(\\text{Cl}_2) = 0{,}52$ mol. **b)** $K_c = 0{,}025$. **c)** Hacia la derecha.",
+  "common_errors": [
+   "Olvidar calcular la masa a partir de la densidad y el volumen del líquido antes de hallar los moles.",
+   "Tomar $n_t = 2{,}7 - x$ en vez de $2{,}7 + x$.",
+   "Equivocar el sentido del desplazamiento al bajar la presión."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2021"
+ },
+ {
+  "id": "PAU-U05-106",
+  "title": "Descomposición del NOCl: efectos sobre el equilibrio · Zaragoza · Junio 2021",
+  "statement": "Considera la descomposición del NOCl:\n\n$$2\\,\\text{NOCl}(g) \\rightleftharpoons 2\\,\\text{NO}(g) + \\text{Cl}_2(g) \\qquad \\Delta H = +76\\text{ kJ}$$\n\n¿Qué efecto tendrán sobre el equilibrio las siguientes acciones? Justifícalo.\n\n**a)** Añadir más Cl$_2$ al recipiente.\n\n**b)** Un aumento de la temperatura.\n\n**c)** Un aumento de la presión total.\n\n**d)** Añadir un catalizador.",
+  "knowns": [
+   "$\\Delta H = +76\\text{ kJ}$ (reacción directa endotérmica)"
+  ],
+  "full_solution": "**(a)** Al añadir Cl$_2$ (un producto) el equilibrio se desplaza para consumirlo, es decir, hacia la **izquierda** (formación de NOCl).\n\n**(b)** La reacción directa es endotérmica ($\\Delta H > 0$). Al aumentar la temperatura el equilibrio se desplaza en sentido endotérmico, hacia la **derecha** (formación de NO y Cl$_2$).\n\n**(c)** Un aumento de la presión desplaza el equilibrio hacia el lado con menos moles gaseosos. En productos hay 3 moles ($2+1$) y en reactivos 2 moles, por lo que se desplaza hacia la **izquierda** (formación de NOCl).\n\n**(d)** Un catalizador no modifica la posición del equilibrio; solo acelera la rapidez con que se alcanza. **Ningún efecto** sobre el equilibrio.",
+  "answer": "**a)** Hacia la izquierda. **b)** Hacia la derecha. **c)** Hacia la izquierda. **d)** Sin efecto sobre el equilibrio.",
+  "common_errors": [
+   "Confundir el sentido endotérmico al subir $T$ con $\\Delta H > 0$.",
+   "Contar mal los moles gaseosos (2 frente a 3) al analizar la presión.",
+   "Creer que un catalizador desplaza el equilibrio."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2021"
+ },
+ {
+  "id": "PAU-U05-107",
+  "title": "Solubilidad del CaF₂: concentraciones, volumen de saturación y efecto del ion común · Zaragoza · Junio 2021",
+  "statement": "El producto de solubilidad del fluoruro de calcio es $K_{ps} = 3{,}4\\cdot 10^{-11}$.\n\n**a)** Escribe el equilibrio de solubilidad del fluoruro de calcio y calcula la concentración (mol/L) de los iones calcio y fluoruro en una disolución saturada. (1 punto)\n\n**b)** ¿Qué volumen de agua se necesitaría para conseguir una disolución saturada al disolver 1 g de fluoruro de calcio? (0,5 puntos)\n\n**c)** Determina la solubilidad del fluoruro de calcio en una disolución 0,5 M de fluoruro de potasio (totalmente disociado).",
+  "marks": 3,
+  "knowns": [
+   "$A_r(\\text{Ca}) = 40$; $A_r(\\text{F}) = 19$",
+   "$K_{ps}(\\text{CaF}_2) = 3{,}4\\cdot 10^{-11}$"
+  ],
+  "full_solution": "**(a)** Equilibrio de solubilidad:\n\n$$\\text{CaF}_2(s) \\rightleftharpoons \\text{Ca}^{2+} + 2\\,\\text{F}^- \\qquad K_{ps} = [\\text{Ca}^{2+}][\\text{F}^-]^2$$\n\nCon $[\\text{Ca}^{2+}] = S$ y $[\\text{F}^-] = 2S$:\n\n$$K_{ps} = 4S^3 = 3{,}4\\cdot 10^{-11} \\;\\Rightarrow\\; S = \\sqrt[3]{\\dfrac{3{,}4\\cdot 10^{-11}}{4}} = 2{,}04\\cdot 10^{-4}\\ \\text{M}$$\n\n$$[\\text{Ca}^{2+}] = 2{,}04\\cdot 10^{-4}\\ \\text{M};\\qquad [\\text{F}^-] = 2S = 4{,}08\\cdot 10^{-4}\\ \\text{M}$$\n\n**(b)** Masa molar del CaF$_2$: $M = 40 + 2\\cdot 19 = 78$ g·mol$^{-1}$. Moles en 1 g:\n\n$$n = \\dfrac{1}{78} = 0{,}0128\\text{ mol}$$\n\nPara estar saturada, la concentración debe ser $S = 2{,}04\\cdot 10^{-4}$ M, luego:\n\n$$V = \\dfrac{n}{S} = \\dfrac{0{,}0128}{2{,}04\\cdot 10^{-4}} = 62{,}84\\text{ L}$$\n\n**(c)** En KF 0,5 M, $[\\text{F}^-] \\approx 0{,}5$ M (ion común). Siendo $S'$ la nueva solubilidad ($= [\\text{Ca}^{2+}]$):\n\n$$K_{ps} = [\\text{Ca}^{2+}][\\text{F}^-]^2 = S'\\,(0{,}5)^2 = 3{,}4\\cdot 10^{-11} \\;\\Rightarrow\\; S' = \\dfrac{3{,}4\\cdot 10^{-11}}{0{,}25} = 1{,}36\\cdot 10^{-10}\\ \\text{M}$$\n\nLa solubilidad disminuye drásticamente por el efecto del ion común.",
+  "answer": "**a)** $[\\text{Ca}^{2+}] = 2{,}04\\cdot 10^{-4}$ M; $[\\text{F}^-] = 4{,}08\\cdot 10^{-4}$ M. **b)** $V = 62{,}84$ L. **c)** $S' = 1{,}36\\cdot 10^{-10}$ M.",
+  "common_errors": [
+   "Olvidar el factor $4S^3$ en el $K_{ps}$ del CaF$_2$.",
+   "En (c), no usar $[\\text{F}^-] = 0{,}5$ M del KF (efecto del ion común) y plantear $4S^3$ de nuevo.",
+   "Confundir solubilidad molar con concentración del anión ($[\\text{F}^-] = 2S$)."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2021"
+ },
+ {
+  "id": "PAU-U05-108",
+  "title": "Síntesis del SO₃: masa de producto, Kc y Kp · Zaragoza · Junio 2021",
+  "statement": "Se introducen 2 moles de dióxido de azufre y 2 moles de oxígeno molecular en un recipiente de 8 L y la mezcla se calienta a 730 °C, produciéndose trióxido de azufre:\n\n$$2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$$\n\nSi cuando se alcanza el equilibrio quedan 0,25 moles de dióxido de azufre, calcula:\n\n**a)** Los gramos de trióxido de azufre en el equilibrio. (0,75 puntos)\n\n**b)** Las constantes $K_c$ y $K_p$ para este equilibrio. (1,25 puntos)",
+  "marks": 2,
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$; $A_r(\\text{S}) = 32$; $A_r(\\text{O}) = 16$",
+   "$V = 8$ L; $T = 730\\ ^\\circ\\text{C} = 1003$ K; iniciales: 2 mol SO$_2$, 2 mol O$_2$; eq.: 0,25 mol SO$_2$"
+  ],
+  "full_solution": "**(a)** Sea $x$ el avance (moles de O$_2$ que reaccionan):\n\n$$\\begin{array}{c|ccc}\n & \\text{SO}_2 & \\text{O}_2 & \\text{SO}_3 \\\\ \\hline\n\\text{iniciales} & 2 & 2 & 0 \\\\\n\\text{equilibrio} & 2-2x & 2-x & 2x\n\\end{array}$$\n\nComo en el equilibrio quedan 0,25 mol de SO$_2$: $2 - 2x = 0{,}25 \\Rightarrow x = 0{,}875$.\n\n$$n(\\text{O}_2) = 2 - 0{,}875 = 1{,}125\\text{ mol};\\qquad n(\\text{SO}_3) = 2\\cdot 0{,}875 = 1{,}75\\text{ mol}$$\n\nMasa de SO$_3$ ($M = 80$ g·mol$^{-1}$): $1{,}75 \\cdot 80 = 140$ g.\n\n**(b)** Concentraciones (÷8 L): $[\\text{SO}_2] = 0{,}03$ M; $[\\text{O}_2] = 0{,}14$ M; $[\\text{SO}_3] = 0{,}22$ M.\n\n$$K_c = \\dfrac{[\\text{SO}_3]^2}{[\\text{SO}_2]^2\\cdot[\\text{O}_2]} = \\dfrac{(0{,}22)^2}{(0{,}03)^2 \\cdot 0{,}14} = 384{,}12$$\n\nCon $\\Delta n = 2 - 3 = -1$:\n\n$$K_p = K_c\\,(R\\,T)^{\\Delta n} = 384{,}12 \\cdot (0{,}082 \\cdot 1003)^{-1} = 4{,}67$$",
+  "answer": "**a)** $m(\\text{SO}_3) = 140$ g. **b)** $K_c = 384{,}12$; $K_p = 4{,}67$.",
+  "common_errors": [
+   "Usar $2-x$ en lugar de $2-2x$ para el SO$_2$ (coeficiente 2).",
+   "Equivocar $\\Delta n = -1$ al pasar de $K_c$ a $K_p$.",
+   "No elevar al cuadrado $[\\text{SO}_2]$ y $[\\text{SO}_3]$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2021"
+ },
+ {
+  "id": "PAU-U05-109",
+  "title": "Cinética de la síntesis del SO₃: orden, velocidad y catalizadores · Zaragoza · Julio/Reserva 2022",
+  "statement": "La reacción de obtención de trióxido de azufre\n\n$$2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightarrow 2\\,\\text{SO}_3(g)$$\n\nes de tercer orden respecto al SO$_2$ y de primer orden respecto al O$_2$. Responde razonadamente:\n\n**a)** Escribe la ecuación de velocidad e indica el orden global.\n\n**b)** ¿Cómo se conseguiría aumentar más la velocidad, duplicando $[\\text{SO}_2]$ o $[\\text{O}_2]$?\n\n**c)** ¿La velocidad permanecerá constante durante la reacción?\n\n**d)** Con distintos catalizadores se obtiene: A → $E_a = 35$ kJ·mol$^{-1}$; B → $E_a = 52$ kJ·mol$^{-1}$; C → $E_a = 27$ kJ·mol$^{-1}$. ¿Cuál habría que usar para que la reacción vaya más rápida?",
+  "knowns": [
+   "Orden 3 en SO$_2$, orden 1 en O$_2$",
+   "Catalizadores: A $E_a = 35$; B $E_a = 52$; C $E_a = 27$ kJ·mol$^{-1}$"
+  ],
+  "full_solution": "**(a)** La ecuación de velocidad es $\\;v = k\\,[\\text{SO}_2]^3\\,[\\text{O}_2]$, con orden global $3 + 1 = 4$.\n\n**(b)** Al duplicar cada reactivo:\n\n$$v'(\\text{SO}_2) = k\\,[2\\,\\text{SO}_2]^3\\,[\\text{O}_2] = 2^3\\,v = 8v$$\n\n$$v'(\\text{O}_2) = k\\,[\\text{SO}_2]^3\\,[2\\,\\text{O}_2] = 2\\,v = 2v$$\n\nDuplicar $[\\text{SO}_2]$ multiplica la velocidad por 8, mientras que duplicar $[\\text{O}_2]$ solo la duplica. Es más eficaz **duplicar $[\\text{SO}_2]$**.\n\n**(c)** No. La velocidad **disminuye** a medida que avanza la reacción, porque las concentraciones de los reactivos van descendiendo y la velocidad depende de ellas.\n\n**(d)** La reacción es más rápida cuanto menor es la energía de activación (Arrhenius: $k = A\\,e^{-E_a/(R\\,T)}$). El menor $E_a$ corresponde al catalizador **C** ($27$ kJ·mol$^{-1}$), que es el que da mayor velocidad.",
+  "answer": "**a)** $v = k\\,[\\text{SO}_2]^3\\,[\\text{O}_2]$; orden global 4. **b)** Duplicar $[\\text{SO}_2]$ ($\\times 8$). **c)** No, disminuye. **d)** El catalizador C ($E_a = 27$ kJ·mol$^{-1}$).",
+  "common_errors": [
+   "Calcular el efecto de duplicar la concentración sin elevar al orden parcial correcto.",
+   "Pensar que la velocidad se mantiene constante durante la reacción.",
+   "Elegir el catalizador de mayor $E_a$ en lugar del de menor."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2022"
+ },
+ {
+  "id": "PAU-U05-110",
+  "title": "Equilibrios heterogéneos: temperatura, adición de reactivo y efecto del volumen · Zaragoza · Julio/Reserva 2022",
+  "statement": "**a)** Considera la reacción $\\;3\\,\\text{Fe}(s) + 4\\,\\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{Fe}_3\\text{O}_4(s) + 4\\,\\text{H}_2(g)$, con $\\Delta H^\\circ < 0$, y responde:\n\n  **i)** ¿Qué efecto tendría un aumento de la temperatura?\n\n  **ii)** Si se añade más H$_2$O, ¿se verá afectado el rendimiento? ¿En qué sentido?\n\n**b)** ¿Cómo afectará al equilibrio de las siguientes reacciones un aumento de volumen del recipiente a $T$ constante? ¿Modificará la $K_c$? Justifícalo.\n\n  **i)** $\\text{N}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g)$\n\n  **ii)** $\\text{H}_2(g) + \\text{I}_2(s) \\rightleftharpoons 2\\,\\text{HI}(g)$",
+  "knowns": [
+   "$\\Delta H^\\circ < 0$ para $3\\,\\text{Fe}(s) + 4\\,\\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{Fe}_3\\text{O}_4(s) + 4\\,\\text{H}_2(g)$"
+  ],
+  "full_solution": "**(a.i)** La reacción directa es exotérmica ($\\Delta H^\\circ < 0$). Al aumentar la temperatura se aporta calor y el equilibrio se desplaza en sentido endotérmico, hacia la **izquierda** (formación de reactivos).\n\n**(a.ii)** Al añadir H$_2$O (reactivo) el equilibrio se desplaza para consumirla, hacia la **derecha** (formación de productos), por lo que el rendimiento **aumenta**.\n\n**(b)** Un aumento de volumen (a $T$ constante) desplaza el equilibrio hacia el lado con más moles gaseosos.\n\n**(b.i)** $\\text{N}_2 + \\text{O}_2 \\rightleftharpoons 2\\,\\text{NO}$: hay el mismo número de moles gaseosos a ambos lados (2 y 2), por lo que el aumento de volumen **no afecta** al equilibrio.\n\n**(b.ii)** $\\text{H}_2 + \\text{I}_2(s) \\rightleftharpoons 2\\,\\text{HI}$: los moles gaseosos son 1 (reactivos) y 2 (productos); el aumento de volumen desplaza el equilibrio hacia la **derecha** (formación de HI).\n\nEn ambos casos, la $K_c$ **no cambia**, pues solo depende de la temperatura.",
+  "answer": "**a.i)** Hacia la izquierda. **a.ii)** Hacia la derecha (aumenta el rendimiento). **b.i)** No afecta (igual número de moles gaseosos). **b.ii)** Hacia la derecha. En ambos, $K_c$ no cambia.",
+  "common_errors": [
+   "Confundir exotérmica/endotérmica al variar $T$ con $\\Delta H^\\circ < 0$.",
+   "Contar los sólidos (Fe, Fe$_3$O$_4$, I$_2$) como gases al evaluar el efecto del volumen.",
+   "Creer que variar el volumen cambia el valor de $K_c$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2022"
+ },
+ {
+  "id": "PAU-U05-111",
+  "title": "Equilibrio CO₂/H₂S: masa de reactivo, Kc y Kp · Zaragoza · Julio/Reserva 2022",
+  "statement": "En un recipiente de 3 L se introducen 15,4 g de CO$_2$ y una cantidad desconocida de H$_2$S, y se calienta a 425 °C, estableciéndose el equilibrio:\n\n$$\\text{CO}_2(g) + \\text{H}_2\\text{S}(g) \\rightleftharpoons \\text{COS}(g) + \\text{H}_2\\text{O}(g)$$\n\nEn el equilibrio la presión total es de 11,5 atm y hay 12 g de COS. Calcula:\n\n**a)** Los gramos de H$_2$S que se introdujeron inicialmente.\n\n**b)** El valor de $K_c$ y $K_p$ a esa temperatura.",
+  "knowns": [
+   "$A_r(\\text{C}) = 12$; $A_r(\\text{O}) = 16$; $A_r(\\text{S}) = 32$; $A_r(\\text{H}) = 1$",
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 3$ L; $T = 425\\ ^\\circ\\text{C} = 698$ K; 15,4 g CO$_2$; $P_t = 11{,}5$ atm; 12 g COS en eq."
+  ],
+  "full_solution": "**(a)** Moles iniciales de CO$_2$: $\\dfrac{15{,}4}{44} = 0{,}35$ mol. Moles de COS en el equilibrio: $\\dfrac{12}{60} = 0{,}2$ mol, luego el avance es $x = 0{,}2$. Sea $z$ los moles iniciales de H$_2$S:\n\n$$\\begin{array}{c|cccc}\n & \\text{CO}_2 & \\text{H}_2\\text{S} & \\text{COS} & \\text{H}_2\\text{O} \\\\ \\hline\n\\text{iniciales} & 0{,}35 & z & 0 & 0 \\\\\n\\text{equilibrio} & 0{,}15 & z-0{,}2 & 0{,}2 & 0{,}2\n\\end{array}$$\n\nMoles totales: $n_t = 0{,}15 + (z-0{,}2) + 0{,}2 + 0{,}2 = 0{,}35 + z$. Con la ecuación de los gases:\n\n$$0{,}35 + z = \\dfrac{P\\,V}{R\\,T} = \\dfrac{11{,}5 \\cdot 3}{0{,}082 \\cdot 698} = 0{,}6 \\;\\Rightarrow\\; z = 0{,}25\\text{ mol}$$\n\nMasa de H$_2$S: $0{,}25 \\cdot 34 = 8{,}5$ g.\n\n**(b)** Moles en el equilibrio: CO$_2 = 0{,}15$; H$_2$S $= z - 0{,}2 = 0{,}05$; COS $=$ H$_2$O $= 0{,}2$. Concentraciones (÷3 L):\n\n$$[\\text{CO}_2] = 0{,}05;\\;\\; [\\text{H}_2\\text{S}] = 0{,}0167;\\;\\; [\\text{COS}] = [\\text{H}_2\\text{O}] = 0{,}0667\\ \\text{M}$$\n\n$$K_c = \\dfrac{[\\text{COS}]\\cdot[\\text{H}_2\\text{O}]}{[\\text{CO}_2]\\cdot[\\text{H}_2\\text{S}]} = \\dfrac{(0{,}0667)^2}{0{,}05 \\cdot 0{,}0167} = 5{,}3$$\n\nComo $\\Delta n = 2 - 2 = 0$, $K_p = K_c = 5{,}3$.",
+  "answer": "**a)** Masa de H$_2$S $= 8{,}5$ g. **b)** $K_c = K_p \\approx 5{,}3$.",
+  "common_errors": [
+   "Usar los moles iniciales de H$_2$S ($0{,}25$) en lugar de los del equilibrio ($z - 0{,}2 = 0{,}05$) al calcular $K_c$.",
+   "Confundir el avance $x$ con los moles iniciales desconocidos $z$.",
+   "Olvidar que con $\\Delta n = 0$ se cumple $K_p = K_c$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2022"
+ },
+ {
+  "id": "PAU-U05-112",
+  "title": "Equilibrio 2 A + B ⇌ 2 C: Kc y aumento del rendimiento · Zaragoza · Junio 2022",
+  "statement": "En un recipiente de 5 L se introducen 3 moles de A y 2 moles de B, y se calienta a 200 °C. La reacción es:\n\n$$2\\,\\text{A}(g) + \\text{B}(g) \\rightleftharpoons 2\\,\\text{C}(g) \\qquad \\Delta H > 0$$\n\n**a)** Si ha reaccionado un 75 % del reactivo A, calcula la $K_c$ de la reacción.\n\n**b)** Propón dos formas distintas de aumentar el rendimiento de esta reacción sin añadir más reactivos.",
+  "knowns": [
+   "$V = 5$ L; $T = 200\\ ^\\circ\\text{C}$; iniciales: 3 mol A, 2 mol B",
+   "$\\Delta H > 0$ (reacción directa endotérmica); reacciona el 75 % de A"
+  ],
+  "full_solution": "**(a)** Reacciona el 75 % de 3 mol de A $= 2{,}25$ mol. Sea $x$ el avance (moles de B que reaccionan):\n\n$$\\begin{array}{c|ccc}\n & \\text{A} & \\text{B} & \\text{C} \\\\ \\hline\n\\text{iniciales} & 3 & 2 & 0 \\\\\n\\text{equilibrio} & 3-2x & 2-x & 2x\n\\end{array}$$\n\nComo se consumen $2x = 2{,}25$ mol de A, $x = 1{,}125$:\n\n$$n(\\text{A}) = 0{,}75;\\quad n(\\text{B}) = 0{,}875;\\quad n(\\text{C}) = 2{,}25\\text{ mol}$$\n\nConcentraciones (÷5 L): $[\\text{A}] = 0{,}15$; $[\\text{B}] = 0{,}175$; $[\\text{C}] = 0{,}45$ M.\n\n$$K_c = \\dfrac{[\\text{C}]^2}{[\\text{A}]^2\\cdot[\\text{B}]} = \\dfrac{(0{,}45)^2}{(0{,}15)^2 \\cdot 0{,}175} = 51{,}4$$\n\n**(b)** Dos formas de aumentar el rendimiento sin añadir reactivos:\n\n1) **Aumentar la temperatura**: como $\\Delta H > 0$ (endotérmica), el equilibrio se desplaza hacia la derecha, formando más C.\n\n2) **Disminuir el volumen del reactor** (aumentar la presión): el equilibrio se desplaza hacia el lado con menos moles gaseosos (la derecha, 2 moles frente a 3), formando más C.",
+  "answer": "**a)** $K_c = 51{,}4$. **b)** Aumentar la temperatura; disminuir el volumen (aumentar la presión).",
+  "common_errors": [
+   "Tomar el 75 % sobre los moles de B en vez de los de A.",
+   "Usar $3 - x$ en lugar de $3 - 2x$ para la A (coeficiente 2).",
+   "Proponer formas que impliquen añadir reactivos, que el enunciado excluye."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2022"
+ },
+ {
+  "id": "PAU-U05-113",
+  "title": "Cociente de reacción y presiones parciales (CO₂/H₂/CO/H₂O) · Zaragoza · Junio 2022",
+  "statement": "El CO$_2$ y el H$_2$ reaccionan a altas temperaturas según:\n\n$$\\text{CO}_2(g) + \\text{H}_2(g) \\rightleftharpoons \\text{CO}(g) + \\text{H}_2\\text{O}(g)$$\n\nEn un reactor de 25 L se introducen 3 moles de CO$_2$, 3 de H$_2$, 5 de CO y 2 de agua, y se calienta hasta 1000 K. La constante $K_c$ a esa temperatura vale 1,3.\n\n**a)** Justifica por qué esa mezcla no está en equilibrio y razona cómo evolucionará.\n\n**b)** Calcula las presiones parciales de cada compuesto en el equilibrio, sabiendo que la suma de moles de CO y H$_2$O en el mismo es 7,24.",
+  "knowns": [
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 25$ L; $T = 1000$ K; iniciales: 3 CO$_2$, 3 H$_2$, 5 CO, 2 H$_2$O; $K_c = 1{,}3$"
+  ],
+  "full_solution": "**(a)** Concentraciones iniciales (÷25 L): $[\\text{CO}_2] = [\\text{H}_2] = 0{,}12$; $[\\text{CO}] = 0{,}2$; $[\\text{H}_2\\text{O}] = 0{,}08$ M.\n\n$$Q_c = \\dfrac{[\\text{CO}]\\cdot[\\text{H}_2\\text{O}]}{[\\text{CO}_2]\\cdot[\\text{H}_2]} = \\dfrac{0{,}2 \\cdot 0{,}08}{0{,}12 \\cdot 0{,}12} = 1{,}11$$\n\nComo $Q_c = 1{,}11 < K_c = 1{,}3$, el sistema **no está en equilibrio**. Para igualar $Q_c$ a $K_c$ debe aumentar el numerador, es decir, formarse más CO y H$_2$O: el equilibrio se desplaza hacia la **derecha**.\n\n**(b)** Sea $x$ los moles de reactivos que reaccionan:\n\n$$\\begin{array}{c|cccc}\n & \\text{CO}_2 & \\text{H}_2 & \\text{CO} & \\text{H}_2\\text{O} \\\\ \\hline\n\\text{iniciales} & 3 & 3 & 5 & 2 \\\\\n\\text{equilibrio} & 3-x & 3-x & 5+x & 2+x\n\\end{array}$$\n\nLa suma de moles de CO y H$_2$O es $7 + 2x = 7{,}24 \\Rightarrow x = 0{,}12$. Moles en el equilibrio:\n\n$$n(\\text{CO}_2) = n(\\text{H}_2) = 2{,}88;\\quad n(\\text{CO}) = 5{,}12;\\quad n(\\text{H}_2\\text{O}) = 2{,}12\\text{ mol}$$\n\nPresiones parciales ($\\dfrac{R\\,T}{V} = \\dfrac{0{,}082 \\cdot 1000}{25} = 3{,}28$):\n\n$$P(\\text{CO}_2) = P(\\text{H}_2) = 2{,}88 \\cdot 3{,}28 = 9{,}45\\text{ atm}$$\n\n$$P(\\text{CO}) = 5{,}12 \\cdot 3{,}28 = 16{,}8\\text{ atm};\\qquad P(\\text{H}_2\\text{O}) = 2{,}12 \\cdot 3{,}28 = 7\\text{ atm}$$",
+  "answer": "**a)** $Q_c = 1{,}11 < K_c$, no está en equilibrio; evoluciona hacia la derecha. **b)** $P(\\text{CO}_2) = P(\\text{H}_2) = 9{,}45$ atm; $P(\\text{CO}) = 16{,}8$ atm; $P(\\text{H}_2\\text{O}) = 7$ atm.",
+  "common_errors": [
+   "Comparar $Q_c$ con $K_c$ al revés y deducir el sentido equivocado.",
+   "Plantear mal la ICE: CO y H$_2$O aumentan ($+x$), CO$_2$ y H$_2$ disminuyen ($-x$).",
+   "Olvidar que la suma $5+x+2+x = 7+2x$ permite despejar $x$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2022"
+ },
+ {
+  "id": "PAU-U05-114",
+  "title": "Solubilidad: comparación de Kps, ion común y evaporación · Zaragoza · Julio/Reserva 2023",
+  "statement": "Indica, justificando la respuesta, si son verdaderas o falsas:\n\n**a)** Como los productos de solubilidad a 18 °C del Fe(OH)$_2$ ($K_{ps} = 1{,}64\\cdot 10^{-14}$) y del PbCrO$_4$ ($K_{ps} = 1{,}7\\cdot 10^{-14}$) son casi iguales, sus solubilidades molares en agua también lo serán.\n\n**b)** La solubilidad en agua del MgF$_2$ ($K_{ps} = 6{,}4\\cdot 10^{-9}$) aumenta al añadir a la disolución la sal soluble NaF.\n\n**c)** Si se preparan 150 mL de una disolución saturada de CuBr ($K_{ps} = 4{,}15\\cdot 10^{-8}$) y después se evaporan 50 mL de agua manteniendo constante la temperatura, la concentración de los iones no variará.",
+  "knowns": [
+   "$K_{ps}[\\text{Fe(OH)}_2] = 1{,}64\\cdot 10^{-14}$; $K_{ps}(\\text{PbCrO}_4) = 1{,}7\\cdot 10^{-14}$",
+   "$K_{ps}(\\text{MgF}_2) = 6{,}4\\cdot 10^{-9}$; $K_{ps}(\\text{CuBr}) = 4{,}15\\cdot 10^{-8}$"
+  ],
+  "full_solution": "**(a) Falsa.** Aunque los $K_{ps}$ son casi iguales, las sales tienen distinta estequiometría:\n\n$$\\text{Fe(OH)}_2 \\rightleftharpoons \\text{Fe}^{2+} + 2\\,\\text{OH}^- \\;\\Rightarrow\\; K_{ps} = 4S^3 \\;\\Rightarrow\\; S = \\sqrt[3]{\\dfrac{1{,}64\\cdot 10^{-14}}{4}} = 1{,}6\\cdot 10^{-5}\\ \\text{M}$$\n\n$$\\text{PbCrO}_4 \\rightleftharpoons \\text{Pb}^{2+} + \\text{CrO}_4^{2-} \\;\\Rightarrow\\; K_{ps} = S^2 \\;\\Rightarrow\\; S = \\sqrt{1{,}7\\cdot 10^{-14}} = 1{,}3\\cdot 10^{-7}\\ \\text{M}$$\n\nLas solubilidades difieren en dos órdenes de magnitud: **no son iguales**.\n\n**(b) Falsa.** El equilibrio es $\\text{MgF}_2(s) \\rightleftharpoons \\text{Mg}^{2+} + 2\\,\\text{F}^-$. Al añadir NaF aumenta $[\\text{F}^-]$ (ion común); por Le Châtelier el equilibrio se desplaza hacia la izquierda y la solubilidad del MgF$_2$ **disminuye** (no aumenta).\n\n**(c) Verdadera.** Si la temperatura se mantiene constante, el $K_{ps}$ no varía; al seguir siendo la disolución saturada, las concentraciones de los iones permanecen constantes (el exceso simplemente precipita).",
+  "answer": "**a)** Falsa. **b)** Falsa (el ion común reduce la solubilidad). **c)** Verdadera.",
+  "common_errors": [
+   "Comparar solubilidades directamente por el $K_{ps}$ sin tener en cuenta la estequiometría.",
+   "Pensar que el ion común aumenta la solubilidad en vez de reducirla.",
+   "Creer que al evaporar agua de una disolución saturada cambian las concentraciones iónicas (a $T$ constante no cambian)."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2023"
+ },
+ {
+  "id": "PAU-U05-115",
+  "title": "Cinética: órdenes de reacción, etapas y efecto del volumen · Zaragoza · Julio/Reserva 2023",
+  "statement": "Para la reacción $\\text{A}(g) + 2\\,\\text{B}(g) + \\text{C}(g) \\rightarrow 2\\,\\text{D}(g) + \\text{E}(g)$ la ecuación de velocidad es $v = k\\,[\\text{A}]^2\\,[\\text{B}]$. Responde razonadamente:\n\n**a)** Indica el orden parcial de los reactivos y el orden global.\n\n**b)** ¿Cómo variará la velocidad si se duplica $[\\text{A}]$ manteniendo constante $[\\text{B}]$?\n\n**c)** El reactivo C no aparece en la ecuación de velocidad; ¿se puede afirmar que no se consume durante la reacción?\n\n**d)** ¿Cómo afectará a la velocidad un aumento de volumen a temperatura constante?",
+  "knowns": [
+   "$v = k\\,[\\text{A}]^2\\,[\\text{B}]$"
+  ],
+  "full_solution": "**(a)** El orden parcial es el exponente de cada concentración: orden en A $= 2$, en B $= 1$, en C $= 0$. El orden global es la suma: $2 + 1 + 0 = 3$.\n\n**(b)** Al duplicar $[\\text{A}]$:\n\n$$v' = k\\,[2\\,\\text{A}]^2\\,[\\text{B}] = 4\\,k\\,[\\text{A}]^2\\,[\\text{B}] = 4v$$\n\nLa velocidad se **multiplica por 4**.\n\n**(c)** No. Que la concentración de C no aparezca en la ley de velocidad (orden 0) significa que no influye en la rapidez, pero **sí se consume**, ya que es un reactivo. Puede ocurrir que la reacción transcurra en varias etapas y que C intervenga en una etapa rápida posterior a la etapa lenta (determinante de la velocidad), en la que no aparece.\n\n**(d)** Un aumento de volumen a $T$ constante disminuye las concentraciones de los reactivos; como la velocidad depende de ellas, la velocidad de reacción **disminuye**.",
+  "answer": "**a)** Órdenes: A = 2, B = 1, C = 0; orden global 3. **b)** Se multiplica por 4. **c)** No: C se consume aunque sea de orden 0. **d)** Disminuye.",
+  "common_errors": [
+   "Confundir orden 0 con que el reactivo no participa ni se consume.",
+   "Deducir los órdenes de los coeficientes estequiométricos en lugar de la ley de velocidad.",
+   "Olvidar que aumentar el volumen baja las concentraciones y, por tanto, la velocidad."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2023"
+ },
+ {
+  "id": "PAU-U05-116",
+  "title": "Descomposición del fosgeno: masa en equilibrio, presiones y Le Châtelier · Zaragoza · Julio/Reserva 2023",
+  "statement": "El fosgeno se descompone según:\n\n$$\\text{COCl}_2(g) \\rightleftharpoons \\text{CO}(g) + \\text{Cl}_2(g) \\qquad \\Delta H > 0$$\n\nEn un recipiente de 50 L se introducen 150 g de fosgeno a 1000 K, y en el equilibrio se han formado 100 g de Cl$_2$. Determina:\n\n**a)** Los gramos de fosgeno sin descomponer y las presiones parciales de CO y Cl$_2$ en el equilibrio.\n\n**b)** Si se quiere reducir la descomposición del fosgeno, ¿qué se debe hacer con la temperatura y la presión de trabajo?",
+  "knowns": [
+   "$A_r(\\text{C}) = 12$; $A_r(\\text{Cl}) = 35{,}5$; $A_r(\\text{O}) = 16$",
+   "$R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$ (implícito)",
+   "$V = 50$ L; $T = 1000$ K; 150 g COCl$_2$; 100 g Cl$_2$ en eq.; $\\Delta H > 0$"
+  ],
+  "full_solution": "**(a)** Masas molares: $M(\\text{COCl}_2) = 12 + 16 + 71 = 99$; $M(\\text{Cl}_2) = 71$ g·mol$^{-1}$.\n\n$$n_0(\\text{COCl}_2) = \\dfrac{150}{99} = 1{,}52\\text{ mol};\\qquad n(\\text{Cl}_2) = \\dfrac{100}{71} = 1{,}4\\text{ mol}$$\n\nLa estequiometría es 1:1:1, luego el fosgeno descompuesto $=$ Cl$_2$ formado $= 1{,}4$ mol, y queda sin descomponer:\n\n$$n(\\text{COCl}_2) = 1{,}52 - 1{,}4 = 0{,}12\\text{ mol} \\;\\Rightarrow\\; m = 0{,}12 \\cdot 99 = 11{,}88\\text{ g}$$\n\nEn el equilibrio $n(\\text{CO}) = n(\\text{Cl}_2) = 1{,}4$ mol. Sus presiones parciales:\n\n$$P(\\text{CO}) = P(\\text{Cl}_2) = \\dfrac{n\\,R\\,T}{V} = \\dfrac{1{,}4 \\cdot 0{,}082 \\cdot 1000}{50} = 2{,}3\\text{ atm}$$\n\n**(b)** Para reducir la descomposición hay que desplazar el equilibrio hacia la izquierda (fosgeno):\n\n- **Disminuir la temperatura**: la reacción directa es endotérmica ($\\Delta H > 0$); al enfriar, el equilibrio se desplaza hacia el sentido exotérmico (izquierda), formando más fosgeno.\n\n- **Aumentar la presión** (o disminuir el volumen): el equilibrio se desplaza hacia el lado con menos moles gaseosos (la izquierda, 1 mol frente a 2).",
+  "answer": "**a)** $m(\\text{COCl}_2)$ sin descomponer $= 11{,}88$ g; $P(\\text{CO}) = P(\\text{Cl}_2) = 2{,}3$ atm. **b)** Disminuir la temperatura y aumentar la presión.",
+  "common_errors": [
+   "Olvidar que la relación estequiométrica 1:1 iguala el Cl$_2$ formado con el fosgeno descompuesto.",
+   "Confundir el sentido endotérmico al bajar la temperatura.",
+   "Contar mal los moles gaseosos (1 frente a 2) al razonar el efecto de la presión."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Julio/Reserva 2023"
+ },
+ {
+  "id": "PAU-U05-117",
+  "title": "Equilibrio C/CO₂/CO: masas, grado de disociación, Kc y Kp · Zaragoza · Junio 2023",
+  "statement": "El carbono reacciona con el dióxido de carbono a 1200 K:\n\n$$\\text{C}(s) + \\text{CO}_2(g) \\rightleftharpoons 2\\,\\text{CO}(g)$$\n\nEn un matraz de 2 L se introducen 11 g de C y 20 g de CO$_2$ y se calientan a 1200 K. En el equilibrio el número total de moles gaseosos es 0,7.\n\n**a)** Calcula los gramos de CO producidos y los de carbono sin reaccionar.\n\n**b)** ¿Cuál es el grado de disociación del carbono?\n\n**c)** Calcula $K_c$ y $K_p$ para este equilibrio.",
+  "knowns": [
+   "$A_r(\\text{C}) = 12$; $A_r(\\text{O}) = 16$; $R = 0{,}082\\ \\text{atm·L·mol}^{-1}\\text{·K}^{-1}$",
+   "$V = 2$ L; $T = 1200$ K; 11 g C; 20 g CO$_2$; $n_{gas}$(eq) = 0,7 mol"
+  ],
+  "full_solution": "**(a)** Moles iniciales: $n(\\text{C}) = \\dfrac{11}{12} = 0{,}92$ mol; $n(\\text{CO}_2) = \\dfrac{20}{44} = 0{,}455$ mol. Sea $x$ los moles de CO$_2$ que reaccionan:\n\n$$\\begin{array}{c|cc}\n & \\text{CO}_2 & \\text{CO} \\\\ \\hline\n\\text{iniciales} & 0{,}455 & 0 \\\\\n\\text{equilibrio} & 0{,}455-x & 2x\n\\end{array}$$\n\nMoles gaseosos totales: $n_t = 0{,}455 + x = 0{,}7 \\Rightarrow x = 0{,}245$ mol.\n\nGramos de CO: $n(\\text{CO}) = 2\\cdot 0{,}245 = 0{,}49$ mol $\\Rightarrow 0{,}49 \\cdot 28 = 13{,}72$ g.\n\nCarbono sin reaccionar: $0{,}92 - 0{,}245 = 0{,}675$ mol $\\Rightarrow 0{,}675 \\cdot 12 = 8{,}1$ g.\n\n**(b)**\n\n$$\\alpha = \\dfrac{\\text{moles de C que reaccionan}}{\\text{moles iniciales}}\\cdot 100 = \\dfrac{0{,}245}{0{,}92}\\cdot 100 = 26{,}6\\,\\%$$\n\n**(c)** CO$_2$ en el equilibrio: $0{,}455 - 0{,}245 = 0{,}21$ mol. Concentraciones (÷2 L): $[\\text{CO}_2] = 0{,}105$ M; $[\\text{CO}] = 0{,}245$ M.\n\n$$K_c = \\dfrac{[\\text{CO}]^2}{[\\text{CO}_2]} = \\dfrac{(0{,}245)^2}{0{,}105} = 0{,}57$$\n\nCon $\\Delta n = 2 - 1 = 1$:\n\n$$K_p = K_c\\,(R\\,T)^{1} = 0{,}57 \\cdot (0{,}082 \\cdot 1200) = 56{,}25$$",
+  "answer": "**a)** $m(\\text{CO}) = 13{,}72$ g; $m(\\text{C})$ sin reaccionar $= 8{,}1$ g. **b)** $\\alpha = 26{,}6\\,\\%$. **c)** $K_c = 0{,}57$; $K_p = 56{,}25$.",
+  "common_errors": [
+   "Incluir el carbono sólido en la expresión de $K_c$.",
+   "Usar el total de moles (gas + sólido) en lugar de solo los gaseosos para $n_t = 0{,}7$.",
+   "Olvidar el factor $(R\\,T)^{\\Delta n}$ con $\\Delta n = 1$ al calcular $K_p$."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2023"
+ },
+ {
+  "id": "PAU-U05-118",
+  "title": "Solubilidad del PbI₂: Kps, solubilidad en g/mL y precipitación · Zaragoza · Junio 2023",
+  "statement": "A 25 °C el producto de solubilidad del PbI$_2$ es $7{,}1\\cdot 10^{-9}$.\n\n**a)** Escribe el equilibrio de solubilidad del PbI$_2$ y la expresión de su producto de solubilidad.\n\n**b)** Calcula la solubilidad de la sal en g/mL y las concentraciones molares de los iones yoduro y plomo en una disolución saturada.\n\n**c)** Si se mezclan 60 mL de una disolución $2\\cdot 10^{-4}$ M de NaI con 40 mL de una disolución $3\\cdot 10^{-3}$ M de Pb(NO$_3$)$_2$ (volúmenes aditivos), ¿se formará precipitado?",
+  "knowns": [
+   "$A_r(\\text{Pb}) = 207$; $A_r(\\text{I}) = 127$",
+   "$K_{ps}(\\text{PbI}_2) = 7{,}1\\cdot 10^{-9}$"
+  ],
+  "full_solution": "**(a)**\n\n$$\\text{PbI}_2(s) \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{I}^- \\qquad K_{ps} = [\\text{Pb}^{2+}][\\text{I}^-]^2$$\n\n**(b)** Con $[\\text{Pb}^{2+}] = S$ y $[\\text{I}^-] = 2S$:\n\n$$K_{ps} = S\\,(2S)^2 = 4S^3 \\;\\Rightarrow\\; S = \\sqrt[3]{\\dfrac{7{,}1\\cdot 10^{-9}}{4}} = 1{,}21\\cdot 10^{-3}\\ \\text{mol·L}^{-1}$$\n\nMasa molar del PbI$_2$: $M = 207 + 2\\cdot 127 = 461$ g·mol$^{-1}$. En g/mL:\n\n$$S = 1{,}21\\cdot 10^{-3}\\,\\dfrac{\\text{mol}}{\\text{L}}\\cdot\\dfrac{461\\text{ g}}{1\\text{ mol}}\\cdot\\dfrac{1\\text{ L}}{1000\\text{ mL}} = 5{,}6\\cdot 10^{-4}\\ \\text{g/mL}$$\n\nConcentraciones: $[\\text{Pb}^{2+}] = S = 1{,}21\\cdot 10^{-3}$ M; $[\\text{I}^-] = 2S = 2{,}42\\cdot 10^{-3}$ M.\n\n**(c)** En el volumen total ($0{,}1$ L):\n\n$$[\\text{I}^-] = \\dfrac{2\\cdot 10^{-4} \\cdot 0{,}06}{0{,}1} = 1{,}2\\cdot 10^{-4}\\ \\text{M};\\qquad [\\text{Pb}^{2+}] = \\dfrac{3\\cdot 10^{-3} \\cdot 0{,}04}{0{,}1} = 1{,}2\\cdot 10^{-3}\\ \\text{M}$$\n\nProducto iónico:\n\n$$Q = [\\text{Pb}^{2+}][\\text{I}^-]^2 = 1{,}2\\cdot 10^{-3} \\cdot (1{,}2\\cdot 10^{-4})^2 = 1{,}73\\cdot 10^{-11}$$\n\nComo $Q = 1{,}73\\cdot 10^{-11} < K_{ps} = 7{,}1\\cdot 10^{-9}$, **no se forma precipitado**.",
+  "answer": "**a)** $\\text{PbI}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\text{I}^-$, $K_{ps} = [\\text{Pb}^{2+}][\\text{I}^-]^2 = 4S^3$. **b)** $S = 5{,}6\\cdot 10^{-4}$ g/mL; $[\\text{Pb}^{2+}] = 1{,}21\\cdot 10^{-3}$ M; $[\\text{I}^-] = 2{,}42\\cdot 10^{-3}$ M. **c)** No precipita ($Q < K_{ps}$).",
+  "common_errors": [
+   "Olvidar el factor $(2S)^2$ en el $K_{ps}$ del PbI$_2$.",
+   "No diluir las concentraciones al volumen total (0,1 L) en el apartado c).",
+   "Equivocar la conversión de la solubilidad de mol/L a g/mL."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2023"
+ },
+ {
+  "id": "PAU-U05-119",
+  "title": "Síntesis del cloruro de nitrosilo: formas de aumentar el rendimiento · Zaragoza · Junio 2023",
+  "statement": "El cloruro de nitrosilo, NOCl, se obtiene por reacción del tetraóxido de dinitrógeno con dicloro en fase gas:\n\n$$\\text{N}_2\\text{O}_4(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{NOCl}(g) + \\text{O}_2(g) \\qquad \\Delta H^\\circ = 95{,}5\\text{ kJ}$$\n\nIndica razonadamente 4 formas de aumentar el rendimiento de cloruro de nitrosilo sin añadir más cantidad de reactivos.",
+  "knowns": [
+   "$\\Delta H^\\circ = 95{,}5\\text{ kJ}$ (reacción directa endotérmica)"
+  ],
+  "full_solution": "La reacción tiene 2 moles gaseosos en los reactivos y 3 en los productos, y es endotérmica ($\\Delta H^\\circ > 0$). Para desplazar el equilibrio hacia la derecha (más NOCl) sin añadir reactivos:\n\n**1) Retirar O$_2$** (uno de los productos): el equilibrio se desplaza hacia la derecha para reponerlo, aumentando la producción de NOCl.\n\n**2) Retirar NOCl** a medida que se forma: por el mismo motivo, el equilibrio se desplaza hacia la derecha para recuperarlo.\n\n**3) Aumentar la temperatura**: al ser la reacción directa endotérmica, el equilibrio se desplaza en sentido endotérmico, hacia la derecha.\n\n**4) Aumentar el volumen del reactor** (o disminuir la presión, a $T$ constante): el equilibrio se desplaza hacia el lado con más moles gaseosos (3 frente a 2), hacia la derecha, favoreciendo la formación de NOCl.",
+  "answer": "Retirar O$_2$; retirar NOCl; aumentar la temperatura; aumentar el volumen (o disminuir la presión). Todas desplazan el equilibrio hacia la derecha (más NOCl).",
+  "common_errors": [
+   "Confundir el sentido endotérmico al variar la temperatura ($\\Delta H^\\circ > 0$).",
+   "Contar mal los moles gaseosos (2 frente a 3) al analizar el efecto del volumen o la presión.",
+   "Proponer añadir reactivos, lo que el enunciado prohíbe."
+  ],
+  "provenance": "PAU",
+  "source": "Zaragoza · Junio 2023"
+ }
+]

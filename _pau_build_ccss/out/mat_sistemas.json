@@ -1,0 +1,1075 @@
+[
+ {
+  "block": "mat_sistemas",
+  "source": "La Rioja · Ordinaria 2024",
+  "title": "Precios de corderos, puercos y terneros (sistema) · La Rioja · Ordinaria 2024",
+  "statement": "En el mercado de Olmedo, por cinco corderos y un puerco dan $26$ ducados; por tres corderos, tres puercos y un ternero dan $38$ ducados; y por dos de cada clase dan $36$ ducados. ¿Cuántos ducados dan por cada cordero, puerco y ternero?",
+  "knowns": [
+   "$x=$ ducados por cordero, $y=$ por puerco, $z=$ por ternero",
+   "$5x+y=26$",
+   "$3x+3y+z=38$",
+   "$2x+2y+2z=36$"
+  ],
+  "full_solution": "Planteamos el sistema:\n$$\\begin{cases} 5x+y=26 \\\\ 3x+3y+z=38 \\\\ 2x+2y+2z=36 \\end{cases}$$\nDe la tercera, $x+y+z=18\\Rightarrow z=18-x-y$. Sustituyendo en la segunda:\n$$3x+3y+(18-x-y)=38\\ \\Rightarrow\\ 2x+2y=20\\ \\Rightarrow\\ x+y=10.$$\nCon la primera $5x+y=26$ y $y=10-x$: $5x+10-x=26\\Rightarrow 4x=16\\Rightarrow x=4$. Entonces $y=6$ y $z=18-4-6=8$.",
+  "answer": "Dan $4$ ducados por cada cordero, $6$ por cada puerco y $8$ por cada ternero.",
+  "common_errors": [
+   "Simplificar mal la tercera ecuación (no dividir entre $2$).",
+   "Errores de sustitución al despejar $z$.",
+   "No verificar la solución en las tres ecuaciones."
+  ],
+  "mark_scheme": [
+   "Planteamiento del sistema y resolución correcta: 2,5 p."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_La-Rioja_2024-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-001"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Cataluña · Extraordinaria 2026",
+  "title": "Alumnos en viajes de estudios (sistema por Gauss) · Cataluña · Extraordinaria 2026",
+  "statement": "En un grupo de $84$ alumnos, $x$ fueron a Roma, $y$ a Londres y $z$ no fueron a ningún sitio. Se sabe que el número de los que no viajaron ($z$) es el triple del número de los que fueron a Londres ($y$), es decir $z=3y$. Las ecuaciones son $x+y+z=84$ y $3y-z=0$.\n\n**(a)** Plantea el sistema y discútelo. ¿Se puede saber cuántos fueron a cada viaje?\n**(b)** Resuélvelo tomando $y$ como parámetro y justifica que $z$ es múltiplo de $3$ y $x$ múltiplo de $4$.\n**(c)** Añadiendo la condición $x+4=2(y+z-4)$, resuelve el sistema completo.",
+  "knowns": [
+   "$x+y+z=84$",
+   "$3y-z=0$",
+   "Condición extra: $x+4=2(y+z-4)$"
+  ],
+  "full_solution": "**(a)** Sistema $\\begin{cases} x+y+z=84 \\\\ 3y-z=0 \\end{cases}$. Matriz escalonada $\\begin{pmatrix} 1 & 1 & 1 & \\mid & 84 \\\\ 0 & 3 & -1 & \\mid & 0 \\end{pmatrix}$: dos ecuaciones y tres incógnitas, $\\operatorname{rg}=2<3$, **sistema compatible indeterminado**. No se puede determinar de forma única el reparto.\n\n**(b)** Con parámetro $y$: de $3y-z=0$, $z=3y$ (múltiplo de $3$); y $x=84-y-z=84-4y=4(21-y)$ (múltiplo de $4$).\n\n**(c)** Añadimos $x+4=2(y+z-4)\\Leftrightarrow x-2y-2z=-12$. Por Gauss:\n$$\\begin{pmatrix} 1 & 1 & 1 & \\mid & 84 \\\\ 0 & 3 & -1 & \\mid & 0 \\\\ 1 & -2 & -2 & \\mid & -12 \\end{pmatrix}\\to\\begin{pmatrix} 1 & 1 & 1 & \\mid & 84 \\\\ 0 & 3 & -1 & \\mid & 0 \\\\ 0 & 0 & -4 & \\mid & -96 \\end{pmatrix}.$$\nSistema compatible determinado: $z=24$, $y=8$, $x=52$.",
+  "answer": "**(a)** Compatible indeterminado: no se puede determinar el reparto.\n**(b)** $z=3y$ y $x=4(21-y)$.\n**(c)** $x=52$ (Roma), $y=8$ (Londres), $z=24$ (ninguno).",
+  "common_errors": [
+   "No reconocer el sistema como compatible indeterminado ($\\operatorname{rg}=2$).",
+   "Traducir mal la condición $x+4=2(y+z-4)$.",
+   "Errores en la eliminación de Gauss al introducir la tercera ecuación."
+  ],
+  "mark_scheme": [
+   "(a) Sistema y discusión: 0,75 p.",
+   "(b) Resolución en función de $y$ y justificaciones: 0,75 p.",
+   "(c) Ecuación adicional y resolución: 1 p."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Cataluna_2026-Extraordinaria_Serie-2_Resuelto_Generalitat.txt",
+  "id": "PAU-MCS-SIS-002"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Comunidad Valenciana · Junio 2024",
+  "title": "Venta de televisores ULED, QLED y LD (sistema) · Comunidad Valenciana · Junio 2024",
+  "statement": "Una tienda vendió $220$ televisores de tres modelos: ULED ($x$), QLED ($y$) y LD ($z$), con precios $1250$ €, $1125$ € y $1000$ €, respectivamente, recaudando $247250$ €. Además, el número de televisores ULED vendidos es la tercera parte del total vendido de los otros dos modelos (es decir, $y+z=3x$). Determina cuántos televisores de cada modelo se vendieron.",
+  "knowns": [
+   "$x+y+z=220$",
+   "$1250x+1125y+1000z=247250$",
+   "$3x-y-z=0$ (equivale a $y+z=3x$)"
+  ],
+  "full_solution": "Con $x$ (ULED), $y$ (QLED), $z$ (LD) el sistema es:\n$$\\begin{cases} x+y+z=220 \\\\ 1250x+1125y+1000z=247250 \\\\ 3x-y-z=0 \\end{cases}$$\nSumando la $1.ª$ y la $3.ª$: $4x=220\\Rightarrow x=55$. Entonces $y+z=165$.\nSustituyendo en la $2.ª$: $1250\\cdot55+1125y+1000z=247250\\Rightarrow1125y+1000z=178500$, y con $z=165-y$:\n$$1125y+1000(165-y)=178500\\Rightarrow125y=13500\\Rightarrow y=108,\\ z=57.$$\nComprobación: $55+108+57=220$ y $1250\\cdot55+1125\\cdot108+1000\\cdot57=247250$.",
+  "answer": "Se vendieron $x=55$ ULED, $y=108$ QLED y $z=57$ LD.",
+  "common_errors": [
+   "Traducir mal la relación entre los modelos ($3x=y+z$).",
+   "Errores aritméticos con los precios en la ecuación de recaudación.",
+   "No comprobar que la solución es coherente (valores naturales)."
+  ],
+  "mark_scheme": [
+   "Planteamiento: hasta 5 p (3 ecuaciones correctas, 5 p; 2, 3 p; 1, 1 p).",
+   "Resolución del sistema: hasta 5 p (solución $x=55,\\ y=108,\\ z=57$)."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2024-Ordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-SIS-003"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Castilla y León · Ordinaria 2026",
+  "title": "Sistema de tres ecuaciones: tipos de viajeros del autobús · Castilla y León · Ordinaria 2026",
+  "statement": "Un autobús transporta a $90$ viajeros de tres tipos: los que pagan billete ordinario ($1{,}2$ €), los que tienen bono de descuento ($0{,}75$ €) y los que pagan con bono de descuento especial para estudiantes ($0{,}65$ €). La recaudación del viaje fue de $70{,}5$ €. Calcula el número de viajeros de cada tipo, sabiendo que el número de los que pagan con el bono de estudiantes era el doble que el total de viajeros de los otros dos tipos juntos.",
+  "knowns": [
+   "Total viajeros $=90$",
+   "Recaudación $=70{,}5$ €",
+   "Precios: $1{,}2$, $0{,}75$, $0{,}65$ €",
+   "$z=2(x+y)$"
+  ],
+  "full_solution": "Sean $x$ (billete ordinario), $y$ (bono de descuento), $z$ (bono de estudiante). El enunciado da:\n$$\\begin{cases} x+y+z=90 \\\\ 1{,}2x+0{,}75y+0{,}65z=70{,}5 \\\\ z=2(x+y) \\end{cases}$$\n\nSustituyendo $z=2(x+y)$ en la primera: $x+y+2(x+y)=90\\Rightarrow 3(x+y)=90\\Rightarrow x+y=30$, luego $z=60$.\n\nEn la segunda, con $z=60$: $1{,}2x+0{,}75y+0{,}65\\cdot60=70{,}5\\Rightarrow 1{,}2x+0{,}75y=31{,}5$. Con $x=30-y$:\n$$1{,}2(30-y)+0{,}75y=31{,}5\\Rightarrow 36-0{,}45y=31{,}5\\Rightarrow y=\\frac{4{,}5}{0{,}45}=10.$$\nEntonces $x=30-10=20$ y $z=60$.\n\nComprobación: $20+10+60=90$; $1{,}2\\cdot20+0{,}75\\cdot10+0{,}65\\cdot60=24+7{,}5+39=70{,}5$. ✔",
+  "answer": "$x=20$ (billete ordinario), $y=10$ (bono de descuento), $z=60$ (bono de estudiante).",
+  "common_errors": [
+   "Traducir mal «el doble que el total de los otros dos juntos»: debe ser $z=2(x+y)$.",
+   "Olvidar una de las tres ecuaciones (número total, recaudación o relación).",
+   "Errores aritméticos con los decimales de los precios."
+  ],
+  "mark_scheme": [
+   "Planteamiento del sistema y resolución: 3 puntos."
+  ],
+  "marks": 3.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-Leon_2026-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-004"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "País Vasco · Ordinaria 2022",
+  "title": "Test de selección de personal (sistema por Cramer) · País Vasco · Ordinaria 2022",
+  "statement": "Una determinada empresa de selección de personal realiza un test de 90 preguntas. Por cada acierto da 6 puntos; por cada fallo quita 2,5 puntos, y por cada pregunta no contestada quita 1,5 puntos. Para aprobar hay que obtener por lo menos 210 puntos.\n\n¿Cuántas preguntas hay que contestar correctamente para obtener los 210 puntos, y que el número de preguntas no contestadas más el número de aciertos sea igual al doble del número de fallos?",
+  "knowns": [
+   "Total de preguntas: $90$",
+   "Acierto: $+6$ puntos; fallo: $-2{,}5$ puntos; no contestada: $-1{,}5$ puntos",
+   "Puntuación objetivo: $210$ puntos",
+   "Condición: $x+z=2y$"
+  ],
+  "full_solution": "Definimos las variables: $x$ = nº de aciertos, $y$ = nº de fallos, $z$ = nº de preguntas no contestadas.\n\nCon la información del enunciado planteamos el sistema:\n$$\\begin{cases} x+y+z=90 \\\\ 6x-2{,}5y-1{,}5z=210 \\\\ x+z=2y \\end{cases}$$\n\nEscribimos la tercera ecuación como $x-2y+z=0$. Comprobamos que puede usarse la regla de Cramer, es decir, que el determinante de la matriz de coeficientes no es nulo:\n$$\\begin{vmatrix} 1 & 1 & 1 \\\\ 6 & -2{,}5 & -1{,}5 \\\\ 1 & -2 & 1 \\end{vmatrix} = -22{,}5 \\neq 0$$\n\nPor tanto el sistema es compatible determinado y lo resolvemos por Cramer:\n$$x=\\dfrac{\\begin{vmatrix} 90 & 1 & 1 \\\\ 210 & -2{,}5 & -1{,}5 \\\\ 0 & -2 & 1 \\end{vmatrix}}{-22{,}5}=50,\\quad y=\\dfrac{\\begin{vmatrix} 1 & 90 & 1 \\\\ 6 & 210 & -1{,}5 \\\\ 1 & 0 & 1 \\end{vmatrix}}{-22{,}5}=30,\\quad z=\\dfrac{\\begin{vmatrix} 1 & 1 & 90 \\\\ 6 & -2{,}5 & 210 \\\\ 1 & -2 & 0 \\end{vmatrix}}{-22{,}5}=10$$",
+  "answer": "Hay que contestar correctamente $x=50$ preguntas (además $y=30$ fallos y $z=10$ no contestadas).",
+  "common_errors": [
+   "Olvidar reescribir la condición $x+z=2y$ como $x-2y+z=0$ al montar la matriz",
+   "Equivocar los signos de las penalizaciones ($-2{,}5$ y $-1{,}5$) en la ecuación de la puntuación",
+   "No comprobar que $\\det(A)\\neq0$ antes de aplicar Cramer"
+  ],
+  "mark_scheme": [
+   "Planteamiento del problema: 1 punto",
+   "Comprobar que se puede usar Cramer: 0,3 puntos",
+   "Cálculo de las tres variables: 0,4 puntos cada una (1,2 puntos)"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Pais-vasco_2022-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-005"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Navarra · Ordinaria 2024",
+  "title": "Deportes de montaña: sesiones de senderismo, rápel y ciclismo · Navarra · Ordinaria 2024",
+  "statement": "Una empresa de deportes de montaña vende sesiones individuales de senderismo, rápel y ciclismo de montaña. Un día concreto vende un total de 45 sesiones. Los precios por sesión y persona son 40 €, 20 € y 60 € respectivamente, recaudando 1700 € ese día. Si por cada persona que elige rápel hay tres que eligen senderismo, ¿cuántas personas han realizado cada actividad?\n\n**(i)** Plantee el sistema de ecuaciones lineales.\n**(ii)** Resuelva el sistema e interprete la solución.",
+  "knowns": [
+   "Total de sesiones: $s+r+c=45$",
+   "Recaudación: $40s+20r+60c=1700$",
+   "Relación: $s=3r$"
+  ],
+  "full_solution": "**(i)** Sean $s$ las sesiones de senderismo, $r$ las de rápel y $c$ las de ciclismo.\n$$\\begin{cases} s+r+c=45 \\\\ 40s+20r+60c=1700 \\\\ s=3r \\end{cases}\\ \\Longrightarrow\\ \\begin{cases} s+r+c=45 \\\\ 2s+r+3c=85 \\\\ s=3r \\end{cases}$$\n(la segunda ecuación se simplifica dividiendo entre 20).\n\n**(ii)** Sustituyendo $s=3r$ en las dos primeras:\n$$4r+c=45,\\qquad 7r+3c=85$$\nDe la primera $c=45-4r$; sustituyendo en la segunda: $7r+3(45-4r)=85\\Rightarrow -5r=-50\\Rightarrow r=10$. Entonces $s=30$ y $c=45-40=5$.\n\nInterpretación: **30 personas hicieron senderismo, 10 rápel y 5 ciclismo de montaña**.",
+  "answer": "$s=30$ (senderismo), $r=10$ (rápel), $c=5$ (ciclismo).",
+  "common_errors": [
+   "Interpretar \"por cada persona de rápel hay tres de senderismo\" como $r=3s$ en lugar de $s=3r$",
+   "No simplificar la ecuación de la recaudación",
+   "Olvidar comprobar que la solución suma 45 sesiones"
+  ],
+  "mark_scheme": [
+   "(i) Plantear el sistema: 3 puntos",
+   "(ii) Resolver e interpretar: 7 puntos"
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Navarra_2024-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-006"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Castilla-La Mancha · Ordinaria 2022",
+  "title": "Precios de una caja de bombones (sistema $3\\times3$) · Castilla-La Mancha · Ordinaria 2022",
+  "statement": "Una caja de bombones cuesta 51 € y contiene 12 bombones de chocolate negro, 6 de chocolate con leche y 6 de chocolate blanco. Cada bombón de chocolate negro cuesta 1 € más que los de chocolate con leche, y estos últimos cuestan 50 céntimos menos que los de chocolate blanco.\n\n**(a)** Plantee el sistema de ecuaciones.\n**(b)** Resuelva razonadamente el sistema.",
+  "knowns": [
+   "$12x+6y+6z=51$",
+   "$x=y+1$",
+   "$y=z-0{,}5$"
+  ],
+  "full_solution": "**(a)** Sean $x,y,z$ los precios (en €) de los bombones negro, con leche y blanco respectivamente.\n$$\\begin{cases} 12x+6y+6z=51 \\\\ x=y+1 \\\\ y=z-0{,}5 \\end{cases}$$\n\n**(b)** De la tercera, $z=y+0{,}5$; de la segunda, $x=y+1$. Sustituyendo en la primera:\n$$12(y+1)+6y+6(y+0{,}5)=51\\Rightarrow 24y+15=51\\Rightarrow y=1{,}5$$\nEntonces $x=2{,}5$ y $z=2$. El bombón de chocolate negro cuesta $2{,}5$ €, el de chocolate con leche $1{,}5$ € y el blanco $2$ €.",
+  "answer": "$(x,y,z)=(2{,}5,\\ 1{,}5,\\ 2)$ €: negro $2{,}5$ €, con leche $1{,}5$ €, blanco $2$ €.",
+  "common_errors": [
+   "Plantear $y=z+0{,}5$ en vez de $y=z-0{,}5$",
+   "No simplificar la primera ecuación entre 3",
+   "Confundir qué bombón es más caro"
+  ],
+  "mark_scheme": [
+   "(a) 0,75 puntos (0,25 por ecuación)",
+   "(b) 0,75 puntos (desarrollo 0,5 + solución 0,25)"
+  ],
+  "marks": 1.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-la-Mancha_2022-Ordinaria_Resuelto_Universidad.txt",
+  "id": "PAU-MCS-SIS-007"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Castilla-La Mancha · Ordinaria 2022",
+  "title": "Secciones de un programa de televisión (sistema $3\\times3$) · Castilla-La Mancha · Ordinaria 2022",
+  "statement": "Un programa de televisión tiene tres secciones: magia, humor y noticias. La sección de humor dura cinco minutos más que la de magia. El tiempo de magia y humor juntos es la cuarta parte del de noticias. La duración total es 1 hora y 55 minutos.\n\n**(a)** Plantee el sistema de ecuaciones.\n**(b)** Resuelva razonadamente el sistema.",
+  "knowns": [
+   "$x$ = magia, $y$ = humor, $z$ = noticias (minutos)",
+   "$x+5=y$",
+   "$x+y=\\tfrac14 z$",
+   "$x+y+z=115$"
+  ],
+  "full_solution": "**(a)** Sean $x,y,z$ los minutos de magia, humor y noticias. $1$ h $55$ min $=115$ min.\n$$\\begin{cases} x+5=y \\\\ x+y=\\dfrac14 z \\\\ x+y+z=115 \\end{cases}$$\n\n**(b)** De la segunda, $z=4(x+y)$. Sustituyendo en la tercera: $x+y+4(x+y)=115\\Rightarrow 5(x+y)=115\\Rightarrow x+y=23$, luego $z=92$. Con $y=x+5$: $x+(x+5)=23\\Rightarrow2x=18\\Rightarrow x=9$, $y=14$. Así magia $9$ min, humor $14$ min y noticias $92$ min.",
+  "answer": "$(x,y,z)=(9,\\ 14,\\ 92)$ minutos: magia $9$, humor $14$, noticias $92$.",
+  "common_errors": [
+   "Traducir mal \"la cuarta parte de noticias\" ($x+y=\\tfrac14 z$)",
+   "No convertir 1 h 55 min a 115 min",
+   "Confundir qué sección dura 5 minutos más"
+  ],
+  "mark_scheme": [
+   "(a) 0,75 puntos (0,25 por ecuación)",
+   "(b) 0,75 puntos (desarrollo 0,5 + solución 0,25)"
+  ],
+  "marks": 1.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-la-Mancha_2022-Ordinaria_Resuelto_Universidad.txt",
+  "id": "PAU-MCS-SIS-008"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Murcia · Extraordinaria 2023",
+  "title": "Discusión de un sistema con parámetro $a$ · Murcia · Extraordinaria 2023",
+  "statement": "Discuta el siguiente sistema en función del parámetro $a$ y resuélvalo para $a=3$:\n$$\\begin{cases} x+ay+z=1 \\\\ 2y+az=2 \\\\ x+y+z=1 \\end{cases}$$",
+  "knowns": [
+   "Matriz de coeficientes $A=\\begin{pmatrix} 1 & a & 1 \\\\ 0 & 2 & a \\\\ 1 & 1 & 1 \\end{pmatrix}$",
+   "Términos independientes $(1,2,1)$"
+  ],
+  "full_solution": "El determinante de la matriz de coeficientes es\n$$\\det(A)=\\begin{vmatrix} 1 & a & 1 \\\\ 0 & 2 & a \\\\ 1 & 1 & 1 \\end{vmatrix}=a^2-a=a(a-1)$$\nque se anula para $a=0$ y $a=1$.\n\n- **Si $a\\neq0$ y $a\\neq1$:** $\\operatorname{rg}(A)=\\operatorname{rg}(A|b)=3$ = nº de incógnitas $\\Rightarrow$ **sistema compatible determinado**.\n- **Si $a=0$:** $\\operatorname{rg}(A)=2$ y $\\operatorname{rg}(A|b)=3\\Rightarrow$ **sistema incompatible**.\n- **Si $a=1$:** $\\operatorname{rg}(A)=\\operatorname{rg}(A|b)=2<3\\Rightarrow$ **sistema compatible indeterminado**.\n\n**Para $a=3$** (compatible determinado):\n$$\\begin{cases} x+3y+z=1 \\\\ 2y+3z=2 \\\\ x+y+z=1 \\end{cases}$$\nRestando la tercera de la primera: $2y=0\\Rightarrow y=0$. De la segunda, $3z=2\\Rightarrow z=\\tfrac23$. De la tercera, $x=1-y-z=\\tfrac13$.",
+  "answer": "Discusión: SCD si $a\\neq0,1$; incompatible si $a=0$; compatible indeterminado si $a=1$. Para $a=3$: $x=\\tfrac13$, $y=0$, $z=\\tfrac23$.",
+  "common_errors": [
+   "Calcular mal el determinante $a(a-1)$",
+   "No estudiar el rango de la matriz ampliada en los casos $a=0$ y $a=1$",
+   "Errores al resolver el sistema para $a=3$"
+  ],
+  "mark_scheme": [
+   "Discusión del sistema: 2 puntos",
+   "Resolución para $a=3$: 0,5 puntos"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Murcia_2023-Extraordinaria_Resuelto_UM.txt",
+  "id": "PAU-MCS-SIS-009"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "País Vasco · Ordinaria 2024",
+  "title": "Puntuación de tres problemas con la regla de Cramer · País Vasco · Ordinaria 2024",
+  "statement": "En un examen de matemáticas que constaba de tres problemas, Aitor obtuvo una calificación total de $7{,}2$ puntos. La puntuación obtenida en el primer problema fue un $40\\,\\%$ más que la obtenida en el segundo, y la del tercero fue el doble de la suma de las puntuaciones obtenidas en el primero y en el segundo.\n\n¿Cuál fue la puntuación obtenida por Aitor en cada problema?",
+  "knowns": [
+   "$x+y+z=7{,}2$ (nota total)",
+   "$x=y+0{,}4\\,y=1{,}4\\,y$ (el 1.º un $40\\,\\%$ más que el 2.º)",
+   "$z=2(x+y)$ (el 3.º es el doble de la suma de los dos primeros)"
+  ],
+  "full_solution": "Sean $x$, $y$, $z$ las puntuaciones del primer, segundo y tercer problema.\n\nDe las condiciones del enunciado se obtiene el sistema\n$$\\begin{cases} x+y+z=7{,}2 \\\\ x=1{,}4\\,y \\\\ z=2x+2y \\end{cases}\\Longrightarrow \\begin{cases} 5x+5y+5z=36 \\\\ 5x-7y=0 \\\\ 2x+2y-z=0 \\end{cases}$$\n\n**Comprobamos que se puede aplicar Cramer** (determinante de coeficientes no nulo):\n$$\\begin{vmatrix} 5 & 5 & 5 \\\\ 5 & -7 & 0 \\\\ 2 & 2 & -1 \\end{vmatrix}=180\\neq 0.$$\n\n**Regla de Cramer:**\n$$x=\\dfrac{\\begin{vmatrix} 36 & 5 & 5 \\\\ 0 & -7 & 0 \\\\ 0 & 2 & -1 \\end{vmatrix}}{180}=\\dfrac{252}{180}=1{,}4,\\quad y=\\dfrac{\\begin{vmatrix} 5 & 36 & 5 \\\\ 5 & 0 & 0 \\\\ 2 & 0 & -1 \\end{vmatrix}}{180}=\\dfrac{180}{180}=1,$$\n$$z=\\dfrac{\\begin{vmatrix} 5 & 5 & 36 \\\\ 5 & -7 & 0 \\\\ 2 & 2 & 0 \\end{vmatrix}}{180}=\\dfrac{864}{180}=4{,}8.$$\n\nLas tres puntuaciones suman $1{,}4+1+4{,}8=7{,}2$, como exige el enunciado.",
+  "answer": "Primer problema: $x=1{,}4$ puntos; segundo problema: $y=1$ punto; tercer problema: $z=4{,}8$ puntos.",
+  "common_errors": [
+   "Traducir mal la condición \"un $40\\,\\%$ más\" y escribir $x=0{,}4y$ en vez de $x=1{,}4y$.",
+   "Olvidar comprobar que $\\det(A)\\neq 0$ antes de aplicar Cramer.",
+   "Errores de signo al desarrollar los determinantes de los numeradores."
+  ],
+  "mark_scheme": [
+   "Planteamiento del problema: $1$ punto.",
+   "Comprobar que se puede usar Cramer: $0{,}3$ puntos.",
+   "Cálculo de las tres variables: $0{,}4$ puntos cada una ($1{,}2$ puntos)."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Pais-vasco_2024-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-010"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Cataluña · Ordinaria 2026",
+  "title": "Precios de cajas de fruta: sistema compatible indeterminado · Cataluña · Ordinaria 2026",
+  "statement": "Un campesino vende cajas de fresas ($f$), albaricoques ($a$) y cerezas ($c$). Un pedido de $5$ cajas de fresas, $3$ de albaricoques y $4$ de cerezas cuesta $120$ €; otro de $2$ cajas de fresas, $1$ de albaricoques y $3$ de cerezas cuesta $56$ €.\n\n**(2.1)** Calcula el precio de una caja de fresas y de una de albaricoques en función del precio de una caja de cerezas. Con ello, calcula el precio de un pedido de $6$ cajas de fresas, $4$ de albaricoques y $2$ de cerezas.\n\n**(2.2)** Si una caja de albaricoques cuesta $12{,}50$ €, calcula el precio de las otras dos.",
+  "knowns": [
+   "$5f+3a+4c=120$",
+   "$2f+a+3c=56$",
+   "$f,a,c$ = precios (€) de las cajas de fresas, albaricoques y cerezas"
+  ],
+  "full_solution": "**(2.1)** El sistema tiene $2$ ecuaciones y $3$ incógnitas, luego es compatible indeterminado: expresamos $f$ y $a$ en función de $c$.\n\nDe $2f+a+3c=56$ se despeja $a=56-2f-3c$. Sustituyendo en $5f+3a+4c=120$:\n$$5f+3(56-2f-3c)+4c=120\\Rightarrow 168-f-5c=120\\Rightarrow f=48-5c.$$\nY entonces $a=56-2(48-5c)-3c=7c-40$.\n\nEl pedido de $6$ cajas de fresas, $4$ de albaricoques y $2$ de cerezas cuesta\n$$6f+4a+2c=6(48-5c)+4(7c-40)+2c=288-30c+28c-160+2c=128\\ \\text{€}.$$\n(El resultado no depende de $c$.)\n\n**(2.2)** Si $a=12{,}50$, de $a=7c-40$: $12{,}5=7c-40\\Rightarrow c=\\dfrac{52{,}5}{7}=7{,}5$ €. Entonces $f=48-5\\cdot 7{,}5=10{,}5$ €.",
+  "answer": "**(2.1)** $f=48-5c$ y $a=7c-40$; el pedido de $6$ fresas, $4$ albaricoques y $2$ cerezas cuesta $128$ €. **(2.2)** Caja de cerezas $c=7{,}5$ € y caja de fresas $f=10{,}5$ €.",
+  "common_errors": [
+   "No reconocer que el sistema es compatible indeterminado (dos ecuaciones, tres incógnitas).",
+   "Despejar mal una variable al sustituir y arrastrar signos erróneos.",
+   "Pensar que falta información para el precio del pedido de (2.1), cuando sí queda determinado ($128$ €)."
+  ],
+  "mark_scheme": [
+   "(2.1) precios en función de $c$ y precio del pedido: $1{,}5$ puntos.",
+   "(2.2) precios de fresas y cerezas con $a=12{,}5$: $1$ punto."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Cataluna_2026-Ordinaria_Resuelto_JuanAntonioMG_1.txt",
+  "id": "PAU-MCS-SIS-011"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Cataluña · Ordinaria 2026",
+  "title": "Matrícula universitaria (Opción B): probabilidad y sistema de becas · Cataluña · Ordinaria 2026",
+  "statement": "Con la misma tabla de estudiantes de grado (G), máster (M) y doctorado (D) en Ciencias (C), Ingeniería (I) y Letras (L) (totales G$=1333$, M$=533$, D$=134$; total $2000$):\n\n**(4.1)** Si se escoge un estudiante al azar, ¿probabilidad de que sea de máster de Ciencias? Si se escoge al azar un estudiante de Ingeniería, ¿probabilidad de que curse un máster?\n\n**(4.2)** Hay $1036$ estudiantes con beca. Considerando conjuntamente grado y máster, la mitad están becados, y hay el mismo número de becados de máster que de doctorado. Determina cuántos becados hay de cada nivel (grado, máster y doctorado).",
+  "knowns": [
+   "Total estudiantes: $2000$",
+   "Máster de Ciencias: $172$",
+   "Ingeniería total: $668$; máster de Ingeniería: $178$",
+   "Becados: $g+m+d=1036$; $g+m=\\tfrac{1333+533}{2}$; $m=d$"
+  ],
+  "full_solution": "**(4.1)** Por la regla de Laplace:\n$$P(M\\cap C)=\\dfrac{172}{2000}=0{,}086,\\qquad P(M\\mid I)=\\dfrac{178}{668}\\approx 0{,}2665.$$\n\n**(4.2)** Sean $g$, $m$, $d$ los becados de grado, máster y doctorado.\n- Total becados: $g+m+d=1036$.\n- La mitad de los estudiantes de grado y máster están becados: $g+m=\\dfrac{1333+533}{2}=933$.\n- Igual número de becados de máster y doctorado: $m=d$.\n\nSustituyendo $g+m=933$ y $m=d$ en la primera ecuación: $933+d=1036\\Rightarrow d=103$, luego $m=103$ y $g=933-103=830$.",
+  "answer": "**(4.1)** $P(M\\cap C)=0{,}086$ y $P(M\\mid I)=\\dfrac{178}{668}\\approx 0{,}2665$. **(4.2)** Becados: $830$ de grado, $103$ de máster y $103$ de doctorado.",
+  "common_errors": [
+   "Para $P(M\\mid I)$ dividir entre $2000$ en vez de entre los $668$ de Ingeniería.",
+   "Plantear mal la condición \"la mitad de grado y máster\" ($g+m=933$).",
+   "No usar $m=d$ y dejar el sistema sin resolver."
+  ],
+  "mark_scheme": [
+   "(4.1) las dos probabilidades: $1{,}25$ puntos.",
+   "(4.2) planteamiento y resolución del sistema de becas: $1{,}25$ puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Cataluna_2026-Ordinaria_Resuelto_JuanAntonioMG_1.txt",
+  "id": "PAU-MCS-SIS-012"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Murcia · Ordinaria 2023",
+  "title": "Discusión de un sistema con parámetro · Murcia · Ordinaria 2023",
+  "statement": "Discute el sistema lineal en función del parámetro $a$ y resuélvelo para $a=0$:\n$$\\begin{cases} ax+y+z=1 \\\\ 2x+y+z=1 \\\\ x+ay+z=2 \\end{cases}$$",
+  "knowns": [
+   "Matriz de coeficientes $A=\\begin{pmatrix} a & 1 & 1 \\\\ 2 & 1 & 1 \\\\ 1 & a & 1 \\end{pmatrix}$",
+   "Términos independientes $(1,1,2)$"
+  ],
+  "full_solution": "La matriz ampliada es $(A\\mid b)=\\begin{pmatrix} a & 1 & 1 & \\big| & 1 \\\\ 2 & 1 & 1 & \\big| & 1 \\\\ 1 & a & 1 & \\big| & 2 \\end{pmatrix}$.\n\nEl determinante de $A$ es\n$$\\det A=-a^2+3a-2=-(a-1)(a-2),$$\nque se anula en $a=1$ y $a=2$.\n\n- **Si $a\\neq 1$ y $a\\neq 2$:** $\\det A\\neq 0\\Rightarrow \\operatorname{rg}(A)=\\operatorname{rg}(A\\mid b)=3=$ n.º de incógnitas $\\Rightarrow$ **sistema compatible determinado**.\n- **Si $a=1$:** $\\operatorname{rg}(A)=2$ y $\\operatorname{rg}(A\\mid b)=3\\Rightarrow$ **sistema incompatible**.\n- **Si $a=2$:** $\\operatorname{rg}(A)=\\operatorname{rg}(A\\mid b)=2<3\\Rightarrow$ **sistema compatible indeterminado**.\n\n**Resolución para $a=0$:**\n$$\\begin{cases} y+z=1 \\\\ 2x+y+z=1 \\\\ x+z=2 \\end{cases}$$\nDe la 1.ª y la 2.ª: $2x+1=1\\Rightarrow x=0$. De la 3.ª: $z=2$. De la 1.ª: $y=1-z=-1$.",
+  "answer": "SCD si $a\\neq 1$ y $a\\neq 2$; incompatible si $a=1$; compatible indeterminado si $a=2$. Para $a=0$: $x=0$, $y=-1$, $z=2$.",
+  "common_errors": [
+   "Errar el desarrollo del determinante $-a^2+3a-2$ y sus raíces.",
+   "No comparar $\\operatorname{rg}(A)$ con $\\operatorname{rg}(A\\mid b)$ en los casos $a=1$ y $a=2$.",
+   "Confundir los casos incompatible ($a=1$) y compatible indeterminado ($a=2$)."
+  ],
+  "mark_scheme": [
+   "Discusión del sistema: $2$ puntos.",
+   "Resolución para $a=0$: $0{,}5$ puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Murcia_2023-Ordinaria_Resuelto_UM.txt",
+  "id": "PAU-MCS-SIS-013"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Asturias · Extraordinaria 2026",
+  "title": "Discusión de un sistema con parámetro $k$ · Asturias · Extraordinaria 2026",
+  "statement": "Un ayuntamiento modela un reparto de fondos con un sistema lineal cuya matriz de coeficientes es\n$$A=\\begin{pmatrix}3 & 4\\\\ 5 & -k\\end{pmatrix}.$$\n\n**(a)** ¿Para qué valor de $k$ el sistema sería incompatible (sin solución)?\n\n**(b)** Si $k=-3$, resuelva el sistema $\\begin{cases}3x+4y=24\\\\ 5x+3y=12\\end{cases}$ e interprete si la solución tiene sentido cuando $x,y$ representan fondos.",
+  "knowns": [
+   "$A=\\begin{pmatrix}3&4\\\\5&-k\\end{pmatrix}$",
+   "$|A|=-3k-20$"
+  ],
+  "full_solution": "**(a)** El determinante es\n$$|A|=3\\cdot(-k)-4\\cdot5=-3k-20.$$\nEl sistema (homogéneo/con término independiente que fuerza incompatibilidad) deja de tener solución única cuando $|A|=0$:\n$$-3k-20=0\\iff k=-\\tfrac{20}{3}.$$\n\n**(b)** Si $k=-3$, $|A|=-3(-3)-20=-11\\neq0$, luego el sistema es compatible determinado. Por **Cramer**:\n$$x=\\frac{\\begin{vmatrix}24&4\\\\12&3\\end{vmatrix}}{-11}=\\frac{72-48}{-11}=-\\frac{24}{11},\\qquad y=\\frac{\\begin{vmatrix}3&24\\\\5&12\\end{vmatrix}}{-11}=\\frac{36-120}{-11}=\\frac{84}{11}.$$\nEs decir, $(x,y)=\\left(-\\tfrac{24}{11},\\tfrac{84}{11}\\right)$.\n\n**Interpretación:** como $x$ e $y$ son fondos destinados, el valor $x=-\\tfrac{24}{11}<0$ no tiene sentido en el contexto del problema.",
+  "answer": "**(a)** $k=-\\tfrac{20}{3}$. **(b)** $(x,y)=\\left(-\\tfrac{24}{11},\\tfrac{84}{11}\\right)$; carece de sentido porque $x$ sería negativo.",
+  "common_errors": [
+   "Equivocar el signo al calcular $|A|=-3k-20$.",
+   "No reconocer que $|A|\\neq0$ implica solución única (compatible determinado).",
+   "No interpretar en el contexto que un fondo negativo es inadmisible."
+  ],
+  "mark_scheme": [
+   "(a) Existencia del valor $k$ y hallarlo: 1 punto.",
+   "(b) Número de soluciones: 0,5 puntos. Calcular las soluciones: 0,5 puntos. Explicar su sentido: 0,5 puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Asturias_2026-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-014"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Asturias · Extraordinaria 2026",
+  "title": "Ecuación matricial y discusión según el parámetro $m$ · Asturias · Extraordinaria 2026",
+  "statement": "Se considera el sistema de ecuaciones lineales, dependiente del parámetro $m\\in\\mathbb{R}$, dado por\n$$\\begin{cases}2mx-3y=-1\\\\ 4x+(1-m)y=1.\\end{cases}$$\n\n**(a)** Plantee el sistema de dos ecuaciones.\n\n**(b)** Discuta, según los valores de $m$, para qué valores el sistema tiene solución única y resuélvalo para un valor válido de $m$.",
+  "knowns": [
+   "Sistema: $\\begin{cases}2mx-3y=-1\\\\ 4x+(1-m)y=1\\end{cases}$"
+  ],
+  "full_solution": "**(a)** Operando $(A\\cdot B-C)\\cdot D=E$ se obtiene el sistema\n$$\\begin{cases}2mx-3y=-1\\\\ 4x+(1-m)y=1.\\end{cases}$$\n\n**(b) Discusión (Rouché).** El determinante de coeficientes es\n$$|M|=2m(1-m)-(-3)(4)=-2m^{2}+2m+12.$$\nSe anula si $m^{2}-m-6=0\\iff (m-3)(m+2)=0\\iff m=3\\ \\text{o}\\ m=-2$.\n\n- Si $m\\neq 3$ y $m\\neq -2$: $\\operatorname{ran}(M)=\\operatorname{ran}(M\\,|\\,b)=2$ = nº de incógnitas $\\Rightarrow$ **sistema compatible determinado** (solución única).\n- Si $m=3$: $M'=\\begin{pmatrix}6&-3&-1\\\\4&-2&1\\end{pmatrix}$; los coeficientes son proporcionales ($6/4=-3/-2=1{,}5$) pero no los términos independientes $\\Rightarrow$ **incompatible**.\n- Si $m=-2$: la segunda fila es $-1$ por la primera $\\Rightarrow \\operatorname{ran}=1<2$, **compatible indeterminado** (infinitas soluciones).\n\n**Resolución para $m=0$:** la matriz ampliada es $\\begin{pmatrix}0&-3&-1\\\\4&1&1\\end{pmatrix}$, de donde $y=\\tfrac13$ y $x=\\dfrac{1-\\tfrac13}{4}=\\tfrac16$. Solución: $\\left(\\tfrac16,\\tfrac13\\right)$.",
+  "answer": "Solución única para todo $m\\neq3$ y $m\\neq-2$; incompatible si $m=3$; compatible indeterminado si $m=-2$. Para $m=0$: $(x,y)=\\left(\\tfrac16,\\tfrac13\\right)$.",
+  "common_errors": [
+   "Errores al realizar el producto matricial que origina el sistema.",
+   "Factorizar mal $-2m^2+2m+12$ y obtener valores críticos erróneos.",
+   "No distinguir incompatible ($m=3$) de compatible indeterminado ($m=-2$)."
+  ],
+  "mark_scheme": [
+   "(a) Plantear correctamente el sistema: 1 punto.",
+   "(b) Valores de $m$ con solución única, justificados: 1 punto. Resolver para un $m$ válido: 0,5 puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Asturias_2026-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-015"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "La Rioja · Extraordinaria 2022",
+  "title": "Pesos de piezas con una balanza · La Rioja · Extraordinaria 2022",
+  "statement": "Con una balanza muy sensible se pesan tres tipos de piezas (A, B y C) frente a una barrita de $13$ gramos. Todas las piezas de un mismo tipo pesan igual. Se descubre que: (i) la barrita pesa lo mismo que una pieza C y dos piezas B; (ii) tres piezas A pesan lo mismo que dos piezas B; (iii) una pieza C pesa lo mismo que dos piezas A y una pieza B.\n\n**(a)** ¿Cuánto pesa cada tipo de pieza?\n\n**(b)** Si la relación (iii) hubiera sido «una pieza B pesa como dos piezas A y una pieza C», al resolver se vería que alguna relación debe ser falsa. ¿Por qué?",
+  "knowns": [
+   "$13=z+2y$",
+   "$3x=2y$",
+   "$z=2x+y$ (apartado a)"
+  ],
+  "full_solution": "Sean $x,y,z$ los pesos (g) de las piezas A, B, C.\n\n**(a)** El sistema es\n$$\\begin{cases}13=z+2y\\\\ 3x=2y\\\\ z=2x+y.\\end{cases}$$\nSustituyendo $z=2x+y$ en la primera: $13=2x+3y$. Con $3x=2y\\Rightarrow x=\\tfrac{2y}{3}$:\n$$13=2\\cdot\\tfrac{2y}{3}+3y=\\tfrac{4y+9y}{3}=\\tfrac{13y}{3}\\Rightarrow y=3.$$\nEntonces $x=\\tfrac{2\\cdot3}{3}=2$ y $z=2\\cdot2+3=7$. **Cada pieza A pesa $2$ g, cada B $3$ g y cada C $7$ g.**\n\n**(b)** Con la nueva relación $y=2x+z$ el sistema queda\n$$\\begin{cases}13=z+2y\\\\ 3x=2y\\\\ y=2x+z,\\end{cases}$$\nque conduce a $13=-5z\\Rightarrow z=-\\tfrac{13}{5}<0$. Un peso negativo es imposible, luego alguna de las afirmaciones debe ser **falsa** (el sistema lleva a una solución sin sentido físico).",
+  "answer": "**(a)** A $=2$ g, B $=3$ g, C $=7$ g. **(b)** Da $z=-\\tfrac{13}{5}$ g, un peso negativo imposible; por tanto alguna relación es falsa.",
+  "common_errors": [
+   "Plantear mal alguna igualdad de la balanza (invertir los miembros).",
+   "Errores de sustitución al reducir el sistema.",
+   "No interpretar que un peso negativo invalida los datos en (b)."
+  ],
+  "mark_scheme": [
+   "(a) Resolver el sistema: 1,75 puntos.",
+   "(b) Justificar la incoherencia: 0,75 puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_La-Rioja_2022-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-016"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Asturias · Ordinaria 2026",
+  "title": "Sistema con parámetro para horas de fisioterapia y asistencia domiciliaria · Asturias · Ordinaria 2026",
+  "statement": "Un servicio asistencial reparte horas de fisioterapia ($x$) y de asistencia doméstica ($y$) según el sistema\n$$\\begin{cases} x+2y=5\\\\ ax+6y=15\\end{cases}$$\n\n**(a)** Determine el valor de $a$ para que el sistema tenga infinitas soluciones y proponga una de ellas con sentido en el contexto.\n\n**(b)** Para $a=1$, discuta y resuelva el sistema, comprobando que la solución tiene sentido (horas no negativas).",
+  "knowns": [
+   "$x$: horas de fisioterapia",
+   "$y$: horas de asistencia doméstica",
+   "Sistema $\\begin{cases}x+2y=5\\\\ax+6y=15\\end{cases}$"
+  ],
+  "full_solution": "**(a)** El sistema es compatible indeterminado (infinitas soluciones) si las dos ecuaciones son proporcionales:\n$$\\frac{1}{a}=\\frac{2}{6}=\\frac{5}{15}=\\frac13\\ \\Rightarrow\\ a=3.$$\nEntonces ambas ecuaciones equivalen a $x+2y=5$. Tomando $x=1$: $1+2y=5\\Rightarrow y=2$. La solución $(x,y)=(1,2)$ —$1$ hora de fisioterapia y $2$ de asistencia— verifica también $3x+6y=15$: $3+12=15$. ✓\n\n**(b)** Para $a=1$:\n$$\\begin{cases} x+2y=5\\\\ x+6y=15\\end{cases},\\qquad |A|=\\begin{vmatrix}1&2\\\\1&6\\end{vmatrix}=6-2=4\\neq0,$$\nluego es **compatible determinado** (solución única). Por Cramer:\n$$x=\\frac{\\begin{vmatrix}5&2\\\\15&6\\end{vmatrix}}{4}=\\frac{0}{4}=0,\\qquad y=\\frac{\\begin{vmatrix}1&5\\\\1&15\\end{vmatrix}}{4}=\\frac{10}{4}=2{,}5.$$\nLa solución $(0,\\ 2{,}5)$ tiene coordenadas no negativas: $0$ horas de fisioterapia y $2{,}5$ horas de asistencia.",
+  "answer": "$a=3$ da infinitas soluciones (p. ej. $(1,2)$). Para $a=1$ el sistema es compatible determinado con solución $(x,y)=(0,\\ 2{,}5)$.",
+  "common_errors": [
+   "Imponer sólo la proporción de los coeficientes y olvidar el término independiente (podría ser incompatible).",
+   "Al usar Cramer, confundir las columnas al formar $|A_x|$ y $|A_y|$.",
+   "Dar una solución con horas negativas sin advertir que carece de sentido."
+  ],
+  "mark_scheme": [
+   "(a) Encontrar $a$: $0{,}5$ puntos; obtener una solución: $0{,}5$ puntos.",
+   "(b) Encontrar la solución: $1$ punto; analizar su sentido en el contexto: $0{,}5$ puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "origin_file": "2oBachCCSS_EBAU_Asturias_2026-Ordinaria_Resuelto_Oficial.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-SIS-017"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Asturias · Ordinaria 2026",
+  "title": "Ecuación matricial que origina un sistema con parámetro $m$ · Asturias · Ordinaria 2026",
+  "statement": "Se consideran $A=\\begin{pmatrix}1&m\\\\ m&2\\end{pmatrix}$, $B=\\begin{pmatrix}m&1\\\\ 1&0\\end{pmatrix}$, $C=\\begin{pmatrix}x\\\\ y\\end{pmatrix}$, $D=\\begin{pmatrix}m\\\\ 1\\end{pmatrix}$ y $E=\\begin{pmatrix}1-m\\\\ 1\\end{pmatrix}$, y la ecuación $A\\cdot B\\cdot C=2(D+E)$.\n\n**(a)** Calcule $A\\cdot B$ y escriba el sistema que resulta de $A\\cdot B\\cdot C=2(D+E)$.\n\n**(b)** Determine los valores de $m$ para los que el sistema NO tiene solución.\n\n**(c)** Para el resto de valores, resuelva el sistema (dando, por ejemplo, la solución para $m=0$).",
+  "knowns": [
+   "$A=\\begin{pmatrix}1&m\\\\ m&2\\end{pmatrix}$",
+   "$B=\\begin{pmatrix}m&1\\\\ 1&0\\end{pmatrix}$",
+   "$2(D+E)=\\begin{pmatrix}2\\\\ 4\\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** \n$$A\\cdot B=\\begin{pmatrix}1&m\\\\ m&2\\end{pmatrix}\\begin{pmatrix}m&1\\\\ 1&0\\end{pmatrix}=\\begin{pmatrix}2m&1\\\\ m^2+2&m\\end{pmatrix}.$$\nComo $D+E=\\begin{pmatrix}1\\\\2\\end{pmatrix}$, se tiene $2(D+E)=\\begin{pmatrix}2\\\\4\\end{pmatrix}$, y la ecuación $A\\cdot B\\cdot C=2(D+E)$ da el sistema\n$$\\begin{cases} 2mx+y=2\\\\ (m^2+2)x+my=4.\\end{cases}$$\n\n**(b)** El determinante de la matriz de coeficientes es\n$$|F|=\\begin{vmatrix}2m&1\\\\ m^2+2&m\\end{vmatrix}=2m^2-(m^2+2)=m^2-2.$$\n$|F|=0\\iff m=\\pm\\sqrt2$. Para esos valores la matriz ampliada tiene rango $2>$ rango de $F$, de modo que el sistema es **incompatible**: no tiene solución para $m=\\pm\\sqrt2$.\n\n**(c)** Si $m\\neq\\pm\\sqrt2$, es compatible determinado. Por Cramer,\n$$|F_x|=\\begin{vmatrix}2&1\\\\4&m\\end{vmatrix}=2m-4,\\qquad |F_y|=\\begin{vmatrix}2m&2\\\\ m^2+2&4\\end{vmatrix}=-2(m^2-4m+2),$$\n$$x=\\frac{2m-4}{m^2-2},\\qquad y=\\frac{-2(m^2-4m+2)}{m^2-2}.$$\nPor ejemplo, para $m=0$: $(x,y)=(2,2)$.",
+  "answer": "$A\\cdot B=\\begin{pmatrix}2m&1\\\\ m^2+2&m\\end{pmatrix}$. Sin solución si $m=\\pm\\sqrt2$. En otro caso $x=\\dfrac{2m-4}{m^2-2}$, $y=\\dfrac{-2(m^2-4m+2)}{m^2-2}$ (para $m=0$, $(2,2)$).",
+  "common_errors": [
+   "Multiplicar las matrices en orden incorrecto al calcular $A\\cdot B$.",
+   "Hallar sólo $|F|=0$ sin comprobar el rango de la ampliada (confundir incompatible con indeterminado).",
+   "Simplificar mal las raíces $m=\\pm\\sqrt2$."
+  ],
+  "mark_scheme": [
+   "(a) Plantear correctamente el sistema: $1$ punto.",
+   "(b) Explicar si existe ese valor de $m$ e identificarlo: $0{,}5$ puntos.",
+   "(c) Resolver el sistema compatible determinado: $1$ punto."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "origin_file": "2oBachCCSS_EBAU_Asturias_2026-Ordinaria_Resuelto_Oficial.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-SIS-018"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Extraordinaria 2024",
+  "title": "Instrumentos en una tienda de música: sistema $3\times3$ · Madrid · Extraordinaria 2024",
+  "statement": "Una tienda tiene $70$ instrumentos entre guitarras, pianos y violines. La cantidad de pianos más la de violines es igual a la de guitarras. Si hubiera el mismo número de violines, pero el doble de pianos y cuatro veces las guitarras, el total sería $180$. Plantee un sistema y determine el número de instrumentos de cada tipo.",
+  "knowns": [
+   "$x$ pianos, $y$ guitarras, $z$ violines",
+   "$x+y+z=70$",
+   "$x+z=y$",
+   "$2x+4y+z=180$"
+  ],
+  "full_solution": "Sean $x=$ pianos, $y=$ guitarras, $z=$ violines. Las condiciones son\n$$\\begin{cases} x+y+z=70\\\\ x-y+z=0\\\\ 2x+4y+z=180.\\end{cases}$$\nRestando la segunda de la primera: $2y=70\\Rightarrow y=35$. De la segunda, $x+z=y=35$; de la tercera, $2x+4\\cdot35+z=180\\Rightarrow 2x+z=40$. Restando $x+z=35$: $x=5$, y $z=30$.\n\nComprobación: $2\\cdot5+4\\cdot35+30=10+140+30=180$. ✓",
+  "answer": "$x=5$ pianos, $y=35$ guitarras y $z=30$ violines.",
+  "common_errors": [
+   "Traducir mal \\\"pianos más violines igual a guitarras\\\" ($x+z=y$).",
+   "Plantear la segunda condición como $2x+4y+z=70$ en lugar de $=180$.",
+   "Errores al reducir por Gauss el sistema $3\\times3$."
+  ],
+  "mark_scheme": [
+   "Descripción de las incógnitas: $0{,}25$ puntos; planteamiento del sistema: $0{,}75$ puntos.",
+   "Resolución del sistema: $0{,}75$ puntos; solución contextualizada: $0{,}25$ puntos."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2024-Extraordinaria_Resuelto_UCM.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-SIS-019"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Extraordinaria 2024",
+  "title": "Discusión y resolución de un sistema con parámetro $a$ · Madrid · Extraordinaria 2024",
+  "statement": "Se considera el sistema dependiente de $a\\in\\mathbb{R}$:\n$$\\begin{cases} 2x+y+3z=2\\\\ 3x+y+z=0\\\\ 8x+ay+5z=2.\\end{cases}$$\n\n**(a)** Discuta el sistema según los valores de $a$.\n\n**(b)** Resuélvalo para $a=3$.",
+  "knowns": [
+   "Sistema $3\\times3$ con parámetro $a$"
+  ],
+  "full_solution": "**(a)** El determinante de la matriz de coeficientes es\n$$|A|=\\begin{vmatrix}2&1&3\\\\ 3&1&1\\\\ 8&a&5\\end{vmatrix}=7a-21,$$\nque se anula en $a=3$.\n- Si $a\\neq3$: $\\operatorname{rg}(A)=\\operatorname{rg}(A|B)=3=$ n.º de incógnitas $\\Rightarrow$ **compatible determinado**.\n- Si $a=3$: se comprueba que $\\operatorname{rg}(A)=\\operatorname{rg}(A|B)=2<3\\Rightarrow$ **compatible indeterminado**.\n\n**(b)** Para $a=3$, la tercera ecuación es combinación de las otras ($F_3=F_1+2F_2$). Tomando $z=\\lambda$ en $2x+y+3z=2$ y $3x+y+z=0$:\n$$x=2(\\lambda-1),\\qquad y=6-7\\lambda,\\qquad z=\\lambda,\\quad \\lambda\\in\\mathbb{R}.$$",
+  "answer": "Si $a\\neq3$, sistema compatible determinado; si $a=3$, compatible indeterminado con $x=2(\\lambda-1)$, $y=6-7\\lambda$, $z=\\lambda$.",
+  "common_errors": [
+   "Equivocar el cálculo de $|A|=7a-21$ y, con ello, el valor crítico $a=3$.",
+   "No comprobar el rango de la matriz ampliada en $a=3$.",
+   "Al parametrizar, despejar mal $x$ e $y$ en función de $\\lambda$."
+  ],
+  "mark_scheme": [
+   "(a) Valor crítico y discusión: $0{,}5+0{,}5$ puntos.",
+   "(b) Solución para $a=3$: $1$ punto."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2024-Extraordinaria_Resuelto_UCM.txt",
+  "provenance": "PAU",
+  "id": "PAU-MCS-SIS-020"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Andalucía · Ordinaria 2026",
+  "title": "Precios de entradas de un festival: sistema 3x3 · Andalucía · Ordinaria 2026",
+  "statement": "En un festival de cine se venden entradas Estándar, Premium y VIP. En la sesión inaugural se vendieron $5$ Premium, $20$ Estándar y $20$ VIP, con recaudación $1800$€. En la sesión nocturna, $10$ VIP, $10$ Estándar y $5$ Premium, con $1000$€. En la clausura el número de entradas Premium superó en $4$ al resto ($12$ VIP y $4$ Estándar), con recaudación $1560$€.\n\n**(a)** $(2{,}25$ puntos$)$ Calcule el precio de cada tipo de entrada y la recaudación total.\n\n**(b)** $(0{,}75$ puntos$)$ Determine el tipo de entrada con mayor recaudación y su valor.",
+  "knowns": [
+   "$20x+5y+20z=1800$",
+   "$10x+5y+10z=1000$",
+   "Premium en clausura $=12+4+4=20$: $4x+20y+12z=1560$"
+  ],
+  "full_solution": "Sean $x$, $y$, $z$ los precios de Estándar, Premium y VIP.\n**(a)** El sistema es\n$$\\begin{cases} 20x+5y+20z=1800 \\\\ 10x+5y+10z=1000 \\\\ 4x+20y+12z=1560 \\end{cases}$$\n(en la clausura las Premium fueron $12+4+4=20$). Resolviéndolo se obtiene\n$$x=25,\\quad y=40,\\quad z=55.$$\nCada entrada Estándar cuesta $25$€, la Premium $40$€ y la VIP $55$€. La recaudación total es $1800+1000+1560=4360$€.\n\n**(b)** Estándar: $34\\cdot 25=850$€; Premium: $30\\cdot 40=1200$€; VIP: $42\\cdot 55=2310$€. La mayor recaudación se obtuvo con las entradas **VIP**, con $2310$€.",
+  "answer": "**(a)** Estándar $25$€, Premium $40$€, VIP $55$€; recaudación total $4360$€. **(b)** VIP, con $2310$€.",
+  "common_errors": [
+   "No interpretar que \"Premium superó en 4 al resto\" da $20$ entradas Premium en clausura.",
+   "Errores de eliminación/sustitución al resolver el sistema.",
+   "Contar mal las entradas totales de cada tipo en el apartado (b)."
+  ],
+  "mark_scheme": [
+   "(a) 2,25 puntos",
+   "(b) 0,75 puntos"
+  ],
+  "marks": 3.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Andalucia_2026-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-021"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Aragón · Ordinaria 2026",
+  "title": "Precios con descuento del 10%: sistema 3x3 · Aragón · Ordinaria 2026",
+  "statement": "$(5$ puntos$)$ Con un descuento del $10\\%$ sobre el precio original, un cliente compró una novela, un cuaderno y una mochila y pagó $117$€ en total. Antes del descuento, el precio del cuaderno era la cuarta parte del de la novela y el de la mochila el doble del de la novela. Determine el precio original de cada artículo.",
+  "knowns": [
+   "$0{,}9n+0{,}9c+0{,}9m=117$",
+   "$c=\\dfrac{n}{4}$",
+   "$m=2n$"
+  ],
+  "full_solution": "Sean $n$, $c$, $m$ los precios originales de novela, cuaderno y mochila.\n$$\\begin{cases} 0{,}9n+0{,}9c+0{,}9m=117 \\\\ c=\\dfrac{n}{4} \\\\ m=2n \\end{cases}$$\nDe la primera, $n+c+m=\\dfrac{117}{0{,}9}=130$. Sustituyendo:\n$$n+\\dfrac{n}{4}+2n=130\\Rightarrow \\dfrac{13n}{4}=130\\Rightarrow n=40.$$\nEntonces $c=\\dfrac{40}{4}=10$ y $m=2\\cdot 40=80$.",
+  "answer": "Novela $40$€, cuaderno $10$€ y mochila $80$€.",
+  "common_errors": [
+   "Aplicar el descuento solo a un artículo en vez de a los tres.",
+   "No simplificar la ecuación dividiendo entre $0{,}9$ (o $0{,}9$ mal despejado).",
+   "Confundir \"cuarta parte\" con \"cuatro veces\"."
+  ],
+  "mark_scheme": [
+   "Planteamiento y resolución: 5 puntos"
+  ],
+  "marks": 5.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Aragon_2026-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-022"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Ordinaria 2022",
+  "title": "Discusión y resolución de un sistema con parámetro · Madrid · Ordinaria 2022",
+  "statement": "Se considera el sistema dependiente del parámetro $a\\in\\mathbb{R}$:\n$$\\begin{cases} x+ay+z=a \\\\ ax-y-az=0 \\\\ x+y+z=1 \\end{cases}$$\n**a)** Discuta la compatibilidad del sistema según los valores de $a$.\n**b)** Resuelva el sistema para $a=2$.",
+  "knowns": [
+   "Sistema $3\\times 3$ con parámetro $a$"
+  ],
+  "full_solution": "**(a) Discusión.** La matriz de coeficientes es $A=\\begin{pmatrix} 1 & a & 1 \\\\ a & -1 & -a \\\\ 1 & 1 & 1 \\end{pmatrix}$, con\n$$\\det(A)=2a-2a^2=-2a(a-1).$$\n$\\det(A)=0\\iff a=0$ o $a=1$.\n- **$a\\neq 0$ y $a\\neq 1$:** $\\text{rg}(A)=\\text{rg}(A\\mid b)=3=$ n.º incógnitas $\\Rightarrow$ **compatible determinado**.\n- **$a=1$:** $\\text{rg}(A)=\\text{rg}(A\\mid b)=2<3\\Rightarrow$ **compatible indeterminado**.\n- **$a=0$:** $\\text{rg}(A)=2$, $\\text{rg}(A\\mid b)=3\\Rightarrow$ **incompatible**.\n\n**(b) Para $a=2$** (compatible determinado), $AX=b$ con $b=(2,0,1)^{t}$:\n$$X=A^{-1}b=\\dfrac{1}{4}\\begin{pmatrix} -1 & 1 & 3 \\\\ 0 & -4 & 0 \\\\ -3 & -1 & 5 \\end{pmatrix}\\begin{pmatrix} 2 \\\\ 0 \\\\ 1 \\end{pmatrix}=\\begin{pmatrix} 1/4 \\\\ 1 \\\\ -1/4 \\end{pmatrix}.$$\nLa solución es $x=\\dfrac{1}{4},\\ y=1,\\ z=-\\dfrac{1}{4}$.",
+  "answer": "**(a)** Compatible determinado si $a\\neq 0,1$; compatible indeterminado si $a=1$; incompatible si $a=0$. **(b)** $x=\\dfrac{1}{4},\\ y=1,\\ z=-\\dfrac{1}{4}$.",
+  "common_errors": [
+   "Equivocar el cálculo de $\\det(A)=-2a(a-1)$.",
+   "No comparar el rango de $A$ con el de la ampliada en los casos $a=0$ y $a=1$.",
+   "Errores aritméticos al resolver el sistema para $a=2$."
+  ],
+  "mark_scheme": [
+   "Determinante de la matriz de coeficientes: 0,25 p.",
+   "Valores críticos: 0,25 p.",
+   "Discusión correcta: 0,50 p.",
+   "Solución del sistema: 0,50 p.",
+   "Planteamiento: 0,50 p."
+  ],
+  "marks": 2.0,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2022-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-023"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Comunidad Valenciana · Extraordinaria 2026",
+  "title": "Posiciones de tres casas: sistema de ecuaciones · Comunidad Valenciana · Extraordinaria 2026",
+  "statement": "Tres amigos (Alberto, Braulio y Carlos) viven en casas situadas sobre una misma recta, tomando el ayuntamiento como origen ($0$). Sus posiciones $A$, $B$ y $C$ cumplen que $A<0<B<C$ y:\n- La suma de las tres posiciones es $A+B+C=3000$.\n- La distancia entre las casas de Alberto y Braulio es el doble de la distancia del ayuntamiento a la casa de Carlos: $B-A=2C$.\n- La distancia entre las casas de Alberto y Carlos es el triple de la distancia del ayuntamiento a la casa de Braulio: $C-A=3B$.\n\nDetermine las posiciones $A$, $B$ y $C$.",
+  "knowns": [
+   "$A+B+C=3000$",
+   "$B-A=2C$",
+   "$C-A=3B$",
+   "$A<0<B<C$"
+  ],
+  "full_solution": "Planteamos el sistema (usando que, por los signos conocidos, $|B-A|=B-A$ y $|C-A|=C-A$):\n$$\\begin{cases} A+B+C=3000 \\\\ B-A=2C \\\\ C-A=3B \\end{cases}$$\n\nDe la tercera ecuación, $C=A+3B$. Sustituyendo en la segunda:\n$$B-A=2(A+3B)=2A+6B\\Rightarrow -3A-5B=0\\Rightarrow A=-\\dfrac{5B}{3}.$$\nSustituyendo $C=A+3B$ en la primera: $2A+4B=3000\\Rightarrow A+2B=1500$. Con $A=-\\dfrac{5B}{3}$:\n$$-\\dfrac{5B}{3}+2B=1500\\Rightarrow \\dfrac{B}{3}=1500\\Rightarrow B=4500.$$\nEntonces $A=-7500$ y $C=A+3B=-7500+13500=6000$.\n\nSe verifica: $-7500+4500+6000=3000$; $B-A=12000=2C$; $C-A=13500=3B$. Además $A=-7500<0<B=4500<C=6000$.",
+  "answer": "$A=-7500$, $B=4500$, $C=6000$ (metros respecto al ayuntamiento).",
+  "common_errors": [
+   "Plantear mal las distancias omitiendo el valor absoluto o el signo de $A<0$.",
+   "Equivocar la sustitución $C=A+3B$ en las demás ecuaciones.",
+   "Descartar la solución por ser $A<0$, cuando el enunciado permite posiciones negativas."
+  ],
+  "mark_scheme": [
+   "Planteamiento: 3 ecuaciones correctas y justificadas, 1,5 p.",
+   "Resolución correcta del sistema: 2 p."
+  ],
+  "marks": 3.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2026-Extraordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-SIS-024"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Sistema de ecuaciones: venta de entradas · Madrid · Ordinaria 2024",
+  "statement": "($2$ puntos) Un equipo de baloncesto vendió entradas generales a $10$ €, de estudiante a $8$ € e infantiles a $5$ €. Vendió $600$ entradas y recaudó $4900$ €. Además, vendió el doble de entradas generales que de infantiles. Plantee el sistema de ecuaciones y resuélvalo para calcular el número de entradas de cada tipo.",
+  "knowns": [
+   "Precios: general $10$ €, estudiante $8$ €, infantil $5$ €",
+   "Total: $600$ entradas, $4900$ €",
+   "Generales = doble de infantiles"
+  ],
+  "full_solution": "Sean $x$ = generales, $y$ = estudiante, $z$ = infantiles. El sistema es:\n$$\\begin{cases} x+y+z=600 \\\\ 10x+8y+5z=4900 \\\\ x-2z=0 \\end{cases}$$\nDe la tercera, $x=2z$. Sustituyendo en las dos primeras:\n$$\\begin{cases} 2z+y+z=600\\ \\Rightarrow\\ y+3z=600 \\\\ 20z+8y+5z=4900\\ \\Rightarrow\\ 8y+25z=4900 \\end{cases}$$\nDe la primera $y=600-3z$; sustituyendo: $8(600-3z)+25z=4900\\Rightarrow 4800+z=4900\\Rightarrow z=100$. Luego $x=200$, $y=600-300=300$.",
+  "answer": "Se vendieron $200$ entradas generales, $300$ de estudiante y $100$ infantiles.",
+  "common_errors": [
+   "Plantear la condición como $z=2x$ en lugar de $x=2z$.",
+   "Errar los coeficientes de la ecuación de recaudación ($10,8,5$).",
+   "Resolver el sistema con aritmética descuidada y obtener valores no enteros."
+  ],
+  "mark_scheme": [
+   "Descripción de las incógnitas: $0{,}25$ puntos.",
+   "Planteamiento del sistema: $0{,}75$ puntos.",
+   "Resolución (método matricial): $0{,}75$ puntos.",
+   "Solución contextualizada: $0{,}25$ puntos."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2024-Ordinaria_Resuelto_UCM.txt",
+  "id": "PAU-MCS-SIS-025"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Discusión de un sistema con parámetro y resolución · Madrid · Ordinaria 2024",
+  "statement": "($2$ puntos) Se considera el sistema dependiente del parámetro $a\\in\\mathbb{R}$:\n$$\\begin{cases} 2x+y+z=a \\\\ x+ay+z=a+1 \\\\ x+y+az=2 \\end{cases}$$\n\n**(a)** Discuta el sistema según los valores de $a$.\n\n**(b)** Resuelva el sistema para $a=1$.",
+  "knowns": [
+   "Matriz de coeficientes $\\begin{pmatrix} 2 & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & a \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $\\det(A)=2a^2-2a=2a(a-1)$. $\\det(A)=0\\Leftrightarrow a=0$ ó $a=1$.\n- Si $a\\neq0,1$: $\\text{rg}(A)=\\text{rg}(A\\mid B)=3=$ nº incógnitas $\\Rightarrow$ **compatible determinado**.\n- Si $a=0$: $\\text{rg}(A)=2$, $\\text{rg}(A\\mid B)=3\\Rightarrow$ **incompatible**.\n- Si $a=1$: $\\text{rg}(A)=\\text{rg}(A\\mid B)=2<3\\Rightarrow$ **compatible indeterminado**.\n\n**(b)** Para $a=1$:\n$$\\begin{cases} 2x+y+z=1 \\\\ x+y+z=2 \\\\ x+y+z=2 \\end{cases}$$\nRestando la segunda de la primera: $x=-1$. Tomando $z=\\lambda$: de $x+y+z=2$ se obtiene $y=3-\\lambda$.\n$$x=-1,\\quad y=3-\\lambda,\\quad z=\\lambda,\\quad \\lambda\\in\\mathbb{R}$$",
+  "answer": "**(a)** Compatible determinado si $a\\neq0,1$; incompatible si $a=0$; compatible indeterminado si $a=1$.  **(b)** $x=-1,\\ y=3-\\lambda,\\ z=\\lambda$.",
+  "common_errors": [
+   "Equivocar el determinante $2a^2-2a$ y, por tanto, los valores críticos.",
+   "No analizar el rango de la ampliada en los casos $a=0$ y $a=1$.",
+   "Dar una única solución en $a=1$ sin parametrizar el conjunto infinito de soluciones."
+  ],
+  "mark_scheme": [
+   "Apartado (a): $1$ punto (valores críticos $0{,}25$; discusión $0{,}75$).",
+   "Apartado (b): $1$ punto."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2024-Ordinaria_Resuelto_UCM.txt",
+  "id": "PAU-MCS-SIS-026"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Extraordinaria 2023",
+  "title": "Discusión de un sistema con parámetro y resolución para a=0 · Madrid · Extraordinaria 2023",
+  "statement": "($2$ puntos) Se considera el sistema dependiente del parámetro $a\\in\\mathbb{R}$:\n$$\\begin{cases} ax+y+2z=1 \\\\ x+ay+2z=a \\\\ x+2y+az=1 \\end{cases}$$\n\n**(a)** Discuta el sistema según los valores de $a$.\n\n**(b)** Resuelva el sistema para $a=0$.",
+  "knowns": [
+   "Matriz de coeficientes $\\begin{pmatrix} a & 1 & 2 \\\\ 1 & a & 2 \\\\ 1 & 2 & a \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a)** $\\det(A)=a^3-7a+6=(a-1)(a-2)(a+3)$. Se anula en $a=1$, $a=2$, $a=-3$.\n- Si $a\\neq1,2,-3$: $\\text{rg}(A)=\\text{rg}(A\\mid B)=3\\Rightarrow$ **compatible determinado**.\n- Si $a=1$: $\\text{rg}(A)=\\text{rg}(A\\mid B)=2\\Rightarrow$ **compatible indeterminado**.\n- Si $a=2$: $\\text{rg}(A)=2\\neq\\text{rg}(A\\mid B)=3\\Rightarrow$ **incompatible**.\n- Si $a=-3$: $\\text{rg}(A)=2\\neq\\text{rg}(A\\mid B)=3\\Rightarrow$ **incompatible**.\n\n**(b)** Para $a=0$ el sistema es\n$$\\begin{cases} y+2z=1 \\\\ x+2z=0 \\\\ x+2y=1 \\end{cases}$$\nDe la segunda $x=-2z$; de la primera $y=1-2z$; sustituyendo en la tercera: $-2z+2(1-2z)=1\\Rightarrow -6z=-1\\Rightarrow z=\\tfrac16$. Entonces $y=\\tfrac23$, $x=-\\tfrac13$.\n$$x=-\\dfrac{1}{3},\\quad y=\\dfrac{2}{3},\\quad z=\\dfrac{1}{6}$$",
+  "answer": "**(a)** Compatible determinado si $a\\neq1,2,-3$; compatible indeterminado si $a=1$; incompatible si $a=2$ o $a=-3$.  **(b)** $x=-\\tfrac13,\\ y=\\tfrac23,\\ z=\\tfrac16$.",
+  "common_errors": [
+   "Equivocar la factorización de $a^3-7a+6$ y, por tanto, los valores críticos.",
+   "No distinguir entre $a=1$ (indeterminado) y $a=2,-3$ (incompatibles) analizando la ampliada.",
+   "Errar los signos al resolver el sistema para $a=0$."
+  ],
+  "mark_scheme": [
+   "Apartado (a): $1$ punto (valores críticos $0{,}5$; discusión $0{,}5$).",
+   "Apartado (b): $1$ punto."
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2023-Extraordinaria_Resuelto_UAH.txt",
+  "id": "PAU-MCS-SIS-027"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "La Rioja · Ordinaria 2022",
+  "title": "Discusión y resolución de un sistema con parámetro · La Rioja · Ordinaria 2022",
+  "statement": "Se considera el sistema dependiente del parámetro $a$:\n$$\\begin{cases} x+y+2z=12 \\\\ 2x-y-z=12 \\\\ 2x+2y+az=12 \\end{cases}$$\n**(a)** ¿Para qué valores de $a$ tiene soluciones el sistema?\n**(b)** Resuelve el sistema en el caso $a=0$.\n**(c)** Si para un valor de $a$ el sistema es incompatible y sustituimos los términos independientes $(12,12,12)$ por $(12,12,24)$, ¿cómo clasificaríamos el sistema resultante?",
+  "knowns": [
+   "$x+y+2z=12$",
+   "$2x-y-z=12$",
+   "$2x+2y+az=12$"
+  ],
+  "full_solution": "**(a)** Discutimos por el determinante de la matriz de coeficientes.\n$$A=\\begin{pmatrix} 1&1&2\\\\ 2&-1&-1\\\\ 2&2&a\\end{pmatrix},\\qquad |A|=-3a+12.$$\n$|A|=0 \\iff -3a+12=0 \\iff a=4$.\n\n- Si $a\\neq 4$: $\\operatorname{rg}(A)=\\operatorname{rg}(A|B)=3=$ n.º de incógnitas $\\Rightarrow$ sistema compatible determinado (solución única).\n- Si $a=4$: por Gauss la tercera fila queda $(0\\ 0\\ 0\\ |-12)$, luego $\\operatorname{rg}(A)=2\\neq\\operatorname{rg}(A|B)=3 \\Rightarrow$ sistema incompatible.\n\nPor tanto, el sistema tiene solución para todo $a\\neq 4$.\n\n**(b)** Para $a=0$ (caso compatible determinado) aplicamos Gauss a la matriz ampliada:\n$$\\left(\\begin{array}{ccc|c}1&1&2&12\\\\2&-1&-1&12\\\\2&2&0&12\\end{array}\\right)\\rightarrow\\left(\\begin{array}{ccc|c}1&1&2&12\\\\0&-3&-5&-12\\\\0&0&-4&-12\\end{array}\\right)$$\nDe aquí $z=\\dfrac{-12}{-4}=3$; $-3y-15=-12\\Rightarrow y=-1$; $x+(-1)+6=12\\Rightarrow x=7$.\n$$\\boxed{x=7,\\ y=-1,\\ z=3}$$\n\n**(c)** El valor incompatible es $a=4$. Cambiando los términos independientes a $(12,12,24)$ y aplicando Gauss, la tercera fila queda $(0\\ 0\\ 0\\ |\\ 0)$, de modo que $\\operatorname{rg}(A)=\\operatorname{rg}(A|B)=2 <$ n.º de incógnitas $=3$. El sistema es **compatible indeterminado** (infinitas soluciones).",
+  "answer": "**(a)** Tiene solución (única) para todo $a\\neq 4$; en $a=4$ es incompatible. **(b)** $x=7,\\ y=-1,\\ z=3$. **(c)** Con $(12,12,24)$ pasa a ser compatible indeterminado (infinitas soluciones).",
+  "common_errors": [
+   "Olvidar estudiar también el rango de la matriz ampliada al discutir el caso $a=4$.",
+   "Confundir compatible indeterminado con incompatible al obtener la fila nula.",
+   "Errores de signo en el cálculo del determinante $|A|=-3a+12$."
+  ],
+  "mark_scheme": [
+   "Discusión del sistema: 0,75 puntos",
+   "Resolución para $a=0$: 1,25 puntos",
+   "Clasificación del sistema modificado: 0,5 puntos"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_La-Rioja_2022-Ordinaria_Resuelto_JuanAntonioMG-1.txt",
+  "id": "PAU-MCS-SIS-028"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Venta de sandías (sistema de ecuaciones) · Madrid · Ordinaria 2025",
+  "statement": "Un frutero alquila una cámara con capacidad para $2700$ kg de sandía, que es lo que vende cada semana, de tres variedades: rayada (a $1{,}25$ €/kg), negra sin pepitas (a $2{,}75$ €/kg) y negra con pepitas (a $2{,}25$ €/kg). Quiere que, en cualquier caso, los kilos de sandía negra con pepitas sean un tercio del total de kilos de sandía sin pepitas y rayada.\n**(a)** Para recaudar exactamente $5400$ € vendiendo las $2700$ kg, ¿cuántos kilos de cada variedad debe vender?\n**(b)** ¿Es posible poner el mismo precio a todas las variedades y seguir recaudando $5400$ € con los $2700$ kg? Si es así, ¿cuál sería el precio y las cantidades? Justifica si son únicas.",
+  "knowns": [
+   "Total: $x+y+z=2700$ kg",
+   "Con pepitas = un tercio de (sin pepitas + rayada): $y=\\tfrac13(x+z)$",
+   "Recaudación: $1{,}25x+2{,}25y+2{,}75z=5400$ €"
+  ],
+  "full_solution": "Sean $x=$ kg de rayada, $y=$ kg de negra con pepitas, $z=$ kg de negra sin pepitas.\n\n**(a)** El sistema es\n$$\\begin{cases} x+y+z=2700\\\\ x-3y+z=0\\\\ 1{,}25x+2{,}25y+2{,}75z=5400\\end{cases}$$\n(la segunda ecuación viene de $y=\\tfrac13(x+z)$). Resolviendo por Gauss se obtiene $z=900$, $y=675$, $x=1125$. Comprobación: $1125+675+900=2700$ y $1{,}25\\cdot1125+2{,}25\\cdot675+2{,}75\\cdot900=5400$.\n$$\\boxed{1125\\text{ kg rayada},\\ 675\\text{ kg negra con pepitas},\\ 900\\text{ kg negra sin pepitas}.}$$\n\n**(b)** Si el precio común es $p$ €/kg, la tercera ecuación pasa a $p(x+y+z)=5400$, es decir $2700p=5400\\Rightarrow p=2$ €/kg. Con el sistema\n$$\\begin{cases} x+y+z=2700\\\\ x-3y+z=0\\end{cases}$$\nse obtiene $y=675$ y $x+z=2025$. Como hay dos ecuaciones y tres incógnitas, el sistema es **compatible indeterminado**: la solución **no es única**. Se venderían $675$ kg de negra con pepitas y, entre rayada y negra sin pepitas, $2025$ kg repartidos de cualquier forma válida.",
+  "answer": "**(a)** $1125$ kg de rayada, $675$ kg de negra con pepitas y $900$ kg de negra sin pepitas. **(b)** Sí, a $2$ €/kg; $y=675$ kg y $x+z=2025$ kg, pero el reparto no es único (sistema compatible indeterminado).",
+  "common_errors": [
+   "Plantear mal la condición \"un tercio\": debe ser $y=\\tfrac13(x+z)$, es decir $x-3y+z=0$.",
+   "En (b), no darse cuenta de que con precio común la recaudación solo depende del total de kilos.",
+   "Afirmar que la solución de (b) es única cuando el sistema es indeterminado."
+  ],
+  "mark_scheme": [
+   "Apartado (a): descripción de incógnitas, planteamiento/resolución y solución contextualizada: 1,25 puntos",
+   "Apartado (b): planteamiento, precio, no unicidad y solución: 1,25 puntos"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2025-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-029"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Ordinaria 2023",
+  "title": "Buñuelos de tres sabores (sistema de ecuaciones) · Madrid · Ordinaria 2023",
+  "statement": "Una pastelería prepara una bandeja de $220$ buñuelos de tres sabores: chocolate, nata y crema. Se sabe que el número de buñuelos de nata es el doble que el de crema y que se cumple la relación $3x-2y+2z=0$, siendo $x$, $y$, $z$ el número de buñuelos de chocolate, nata y crema, respectivamente. Determina cuántos buñuelos hay de cada sabor.",
+  "knowns": [
+   "Total: $x+y+z=220$",
+   "Nata doble que crema: $y=2z$, es decir $y-2z=0$",
+   "$3x-2y+2z=0$"
+  ],
+  "full_solution": "Sean $x=$ buñuelos de chocolate, $y=$ de nata, $z=$ de crema. El sistema es\n$$\\begin{cases} x+y+z=220\\\\ y-2z=0\\\\ 3x-2y+2z=0\\end{cases}$$\nResolviendo por Gauss (p. ej. $f_3\\to f_3-3f_1$ y luego $f_3-5f_2$) se obtiene la fila $-11z=-660\\Rightarrow z=60$. Entonces $y=2z=120$ y $x=220-y-z=220-120-60=40$.\nComprobación: $40+120+60=220$ y $3\\cdot40-2\\cdot120+2\\cdot60=120-240+120=0$.\n$$\\boxed{x=40\\ \\text{(chocolate)},\\ y=120\\ \\text{(nata)},\\ z=60\\ \\text{(crema)}.}$$",
+  "answer": "$40$ buñuelos de chocolate, $120$ de nata y $60$ de crema.",
+  "common_errors": [
+   "Plantear mal la condición \"nata es el doble de crema\" ($y=2z$).",
+   "Errores de combinación de filas en el método de Gauss.",
+   "No comprobar la solución en las tres ecuaciones."
+  ],
+  "mark_scheme": [
+   "Planteamiento correcto de las ecuaciones: 1 punto",
+   "Resolución correcta del sistema: 1 punto"
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2023-Ordinaria_Resuelto_UAH.txt",
+  "id": "PAU-MCS-SIS-030"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Murcia · Extraordinaria 2025",
+  "title": "Determinante nulo y discusión de un sistema con parámetro · Murcia · Extraordinaria 2025",
+  "statement": "**[0,5 puntos]** Calcula el valor de $a$ para que $|A|=0$, siendo\n$$A=\\begin{pmatrix} a & 1 \\\\ 2a-1 & a \\end{pmatrix}.$$\n\n**[2 puntos]** Considera el siguiente sistema de ecuaciones, donde $a$ es un número real desconocido:\n$$\\begin{cases} x-y+z=1 \\\\ 2x-y+z=a \\\\ 3x+2y-az=4 \\end{cases}$$\n\n**(a)** Discute el sistema según los valores de $a$. **[1 punto]**\n**(b)** Resuelve el sistema para $a=1$. **[1 punto]**",
+  "knowns": [
+   "$A=\\begin{pmatrix} a & 1 \\\\ 2a-1 & a \\end{pmatrix}$",
+   "Sistema $\\begin{cases} x-y+z=1 \\\\ 2x-y+z=a \\\\ 3x+2y-az=4\\end{cases}$"
+  ],
+  "full_solution": "**Determinante nulo.**\n$$|A|=a\\cdot a-(2a-1)\\cdot 1=a^{2}-2a+1=(a-1)^{2}=0\\ \\Rightarrow\\ a=1.$$\nEl determinante se anula únicamente para $a=1$.\n\n**(a) Discusión del sistema (método de Gauss).**\nRestando a la 2.ª ecuación la 1.ª y a la 3.ª tres veces la 1.ª, y después operando, se llega al sistema triangular equivalente:\n$$\\begin{cases} x-y+z=1 \\\\ y-z=a-2 \\\\ (-a+2)\\,z=-5a+11 \\end{cases}$$\nEl coeficiente de $z$ en la última ecuación es $-a+2$.\n\n- Si $-a+2\\neq 0$, es decir $a\\neq 2$, el sistema es triangular con pivotes no nulos: **compatible determinado** (solución única).\n- Si $a=2$, la última ecuación queda $0\\cdot z=-5\\cdot 2+11=1$, esto es $0=1$, imposible: el sistema es **incompatible**.\n\n**Resumen:** para $a\\neq 2$ es compatible determinado y para $a=2$ es incompatible.\n\n**(b) Resolución para $a=1$.**\nComo $a=1\\neq 2$, es compatible determinado. El sistema triangular queda\n$$\\begin{cases} x-y+z=1 \\\\ y-z=-1 \\\\ (-1+2)z=-5+11=6\\ \\Rightarrow\\ z=6 \\end{cases}$$\nDe $y-z=-1$: $y=z-1=6-1=5$. De $x-y+z=1$: $x=1+y-z=1+5-6=0$.\n$$x=0,\\quad y=5,\\quad z=6.$$",
+  "answer": "$|A|=0\\Leftrightarrow a=1$. El sistema es compatible determinado para $a\\neq 2$ e incompatible para $a=2$. Para $a=1$: $x=0$, $y=5$, $z=6$.",
+  "common_errors": [
+   "Olvidar que $a^{2}-2a+1=(a-1)^{2}$ tiene raíz doble $a=1$ (no dos valores).",
+   "Confundir el valor que anula $|A|$ (parte del $2\\times2$) con el valor crítico del sistema $3\\times3$ ($a=2$).",
+   "No comprobar el caso $a=2$ y declararlo compatible indeterminado en lugar de incompatible."
+  ],
+  "mark_scheme": [
+   "Determinante: $0{,}5$ puntos.",
+   "(a) Discusión: $1$ punto.",
+   "(b) Resolución para $a=1$: $1$ punto."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Murcia_2025-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-031"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Murcia · Ordinaria 2022",
+  "title": "Discusión y resolución de un sistema con parámetro · Murcia · Ordinaria 2022",
+  "statement": "Discutir el sistema lineal según los valores del parámetro $a$ y resolverlo para $a=1$:\n$$\\begin{cases} 4x+ay-2z=1 \\\\ ax-2y+2z=-1 \\\\ ax+y=0 \\end{cases}$$",
+  "knowns": [
+   "$\\begin{cases} 4x+ay-2z=1 \\\\ ax-2y+2z=-1 \\\\ ax+y=0\\end{cases}$"
+  ],
+  "full_solution": "Matriz de coeficientes $A$ y ampliada $A^{*}$:\n$$A=\\begin{pmatrix} 4 & a & -2 \\\\ a & -2 & 2 \\\\ a & 1 & 0 \\end{pmatrix},\\qquad A^{*}=\\left(\\begin{array}{ccc|c} 4 & a & -2 & 1 \\\\ a & -2 & 2 & -1 \\\\ a & 1 & 0 & 0 \\end{array}\\right).$$\n$$|A|=2a^{2}-6a-8=2(a-4)(a+1).$$\n$|A|=0\\Rightarrow a=4$ o $a=-1$.\n\n**Caso $a\\neq 4$ y $a\\neq -1$:** $|A|\\neq 0$, $\\operatorname{rg}(A)=\\operatorname{rg}(A^{*})=3=$ nº incógnitas $\\Rightarrow$ **compatible determinado**.\n\n**Caso $a=4$:** por Gauss, $\\operatorname{rg}(A)=\\operatorname{rg}(A^{*})=2<3\\Rightarrow$ **compatible indeterminado** (infinitas soluciones).\n\n**Caso $a=-1$:** análogamente, $\\operatorname{rg}(A)=\\operatorname{rg}(A^{*})=2<3\\Rightarrow$ **compatible indeterminado**.\n\n**Resolución para $a=1$** (compatible determinado):\n$$\\begin{cases} 4x+y-2z=1 \\\\ x-2y+2z=-1 \\\\ x+y=0\\ \\Rightarrow\\ y=-x \\end{cases}$$\nSustituyendo $y=-x$: de la 1.ª, $4x-x-2z=1\\Rightarrow 3x-2z=1$; de la 2.ª, $x+2x+2z=-1\\Rightarrow 3x+2z=-1$. Sumando: $6x=0\\Rightarrow x=0$, luego $y=0$ y $-2z=1\\Rightarrow z=-\\tfrac12$.\n$$x=0,\\quad y=0,\\quad z=-\\tfrac12.$$",
+  "answer": "Compatible determinado si $a\\neq 4$ y $a\\neq -1$; compatible indeterminado si $a=4$ o $a=-1$. Para $a=1$: $x=0$, $y=0$, $z=-\\tfrac12$.",
+  "common_errors": [
+   "Errores de signo al desarrollar el determinante $|A|=2a^2-6a-8$.",
+   "Declarar incompatible el caso $a=4$ o $a=-1$ sin comprobar el rango de la ampliada (aquí coinciden: indeterminado).",
+   "No simplificar $a^2-3a-4=0$ correctamente ($a=4$, $a=-1$)."
+  ],
+  "mark_scheme": [
+   "Discusión: $2$ puntos.",
+   "Resolución para $a=1$: $0{,}5$ puntos."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Murcia_2022-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-032"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Extraordinaria 2026",
+  "title": "Discusión y resolución de un sistema con parámetro $a$ · Madrid · Extraordinaria 2026",
+  "statement": "Se considera el sistema dependiente del parámetro real $a$:\n$$\\begin{cases} 3x+ay=1 \\\\ 2x-y+az=1 \\\\ x-3y+2z=1 \\end{cases}$$\n\n**(a)** Discute la solución según los valores de $a$. **(b)** Resuelve el sistema para $a=3$.",
+  "knowns": [
+   "$\\begin{cases} 3x+ay=1 \\\\ 2x-y+az=1 \\\\ x-3y+2z=1\\end{cases}$"
+  ],
+  "full_solution": "**(a) Discusión.** Matrices de coeficientes y ampliada:\n$$A=\\begin{pmatrix} 3 & a & 0 \\\\ 2 & -1 & a \\\\ 1 & -3 & 2 \\end{pmatrix},\\qquad \\det(A)=(a-1)(a+6).$$\n$\\det(A)=0\\Rightarrow a=1$ o $a=-6$. Además, el menor $\\begin{vmatrix} 2 & -1 \\\\ 1 & -3 \\end{vmatrix}=-5\\neq 0$, por lo que siempre $\\operatorname{rg}(A)\\geq 2$.\n\n- Si $a\\neq 1$ y $a\\neq -6$: $\\det(A)\\neq 0\\Rightarrow\\operatorname{rg}(A)=\\operatorname{rg}(A^{*})=3\\Rightarrow$ **S.C.D.**\n- Si $a=1$: $\\operatorname{rg}(A)=\\operatorname{rg}(A^{*})=2\\Rightarrow$ **S.C.I.** (infinitas soluciones).\n- Si $a=-6$: $\\operatorname{rg}(A)=2$ y $\\operatorname{rg}(A^{*})=3\\Rightarrow$ **S.I.** (incompatible).\n\n**(b) Resolución para $a=3$** (S.C.D.):\n$$\\begin{cases} 3x+3y=1 \\\\ 2x-y+3z=1 \\\\ x-3y+2z=1 \\end{cases}$$\nResolviendo (Gauss/Cramer) se obtiene\n$$x=\\frac{5}{9},\\qquad y=-\\frac{2}{9},\\qquad z=-\\frac{1}{9}.$$",
+  "answer": "(a) S.C.D. si $a\\neq1$ y $a\\neq-6$; S.C.I. si $a=1$; S.I. si $a=-6$. (b) Para $a=3$: $x=\\tfrac59$, $y=-\\tfrac29$, $z=-\\tfrac19$.",
+  "common_errors": [
+   "Errores de signo al desarrollar $\\det(A)$; debe factorizarse como $(a-1)(a+6)$.",
+   "No distinguir los casos $a=1$ (compatible indeterminado) y $a=-6$ (incompatible) por el rango de la ampliada.",
+   "Equivocar la coordenada nula: en la 1.ª ecuación falta $z$ (coeficiente $0$)."
+  ],
+  "mark_scheme": [
+   "(2.2.a) Valor de $a$: $0{,}3$; discusión: $1{,}2$.",
+   "(2.2.b) Solución: $1$ punto."
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2026-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-033"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Comunidad Valenciana · Julio 2023",
+  "title": "Reparto de una herencia mediante un sistema de ecuaciones · Comunidad Valenciana · Julio 2023",
+  "statement": "Un millonario reparte su fortuna entre sus tres hijas. La hija mayor recibe $9$ millones de euros más la mitad de lo que reciben entre las otras dos; la mediana recibe la mitad de lo que reciben entre las otras dos; y la pequeña recibe el $35\\%$ de lo que reciben entre las otras dos. Determina cuánto hereda cada hija.",
+  "knowns": [
+   "Mayor: $x=9+\\tfrac12(y+z)$",
+   "Mediana: $y=\\tfrac12(x+z)$",
+   "Pequeña: $z=0{,}35(x+y)=\\tfrac{7}{20}(x+y)$"
+  ],
+  "full_solution": "Sean $x$, $y$, $z$ los millones que heredan, respectivamente, la hija mayor, la mediana y la pequeña. Traducimos las condiciones:\n\n- Mayor: $x=9+\\dfrac{y+z}{2}\\ \\Rightarrow\\ 2x-y-z=18$.\n- Mediana: $y=\\dfrac{x+z}{2}\\ \\Rightarrow\\ x-2y+z=0$.\n- Pequeña: $z=\\dfrac{7}{20}(x+y)\\ \\Rightarrow\\ \\dfrac{7}{20}x+\\dfrac{7}{20}y-z=0$.\n\nEl sistema es\n$$\\begin{cases} 2x-y-z=18 \\\\ x-2y+z=0 \\\\ \\tfrac{7}{20}x+\\tfrac{7}{20}y-z=0 \\end{cases}$$\nResolviéndolo (por reducción o Cramer) se obtiene\n$$x=33,\\qquad y=27,\\qquad z=21.$$\n\n**Comprobación:** $9+\\tfrac{27+21}{2}=9+24=33$ ✓; $\\tfrac{33+21}{2}=27$ ✓; $0{,}35\\cdot(33+27)=0{,}35\\cdot 60=21$ ✓. Todos los valores son positivos, coherentes con el enunciado.",
+  "answer": "La hija mayor hereda $33$ millones, la mediana $27$ millones y la pequeña $21$ millones de euros.",
+  "common_errors": [
+   "Plantear mal la mitad de \\\"lo que reciben entre las otras dos\\\" (es $\\tfrac12(y+z)$, no $\\tfrac12 y$).",
+   "Expresar el $35\\%$ como $35$ o $3{,}5$ en vez de $0{,}35=\\tfrac{7}{20}$.",
+   "Dar una solución con valores negativos, incoherente con un reparto de herencia."
+  ],
+  "mark_scheme": [
+   "Planteamiento ($3$ ecuaciones correctas): $0$ a $5$ puntos ($5$ con las $3$; $3$ con $2$; $1$ con $1$).",
+   "Obtención de la solución coherente: $0$ a $5$ puntos."
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Valencia_2023-Extraordinaria_Resuelto_SUV.txt",
+  "id": "PAU-MCS-SIS-034"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Aragón · Extraordinaria 2022",
+  "title": "Discusión de un sistema con parámetro y cálculo matricial · Aragón · Extraordinaria 2022",
+  "statement": "Dado el sistema lineal $\\begin{cases}(m+1)x=m-2\\\\ 2x+y=-3\\\\ 3x-2y+mz=-8\\end{cases}$ se pide:\n\n**(a)** Exprese el sistema en forma matricial $AX=B$ y determine el valor o valores del parámetro $m$ para que el sistema sea compatible determinado.\n\n**(b)** ¿Existe algún valor de $m$ para que el sistema sea compatible indeterminado? En caso afirmativo, resuelva el sistema.\n\n**(c)** Para $m=1$, calcule $X=A^{-1}B$, siendo $A,B$ las matrices del apartado (a).",
+  "knowns": [
+   "Sistema de 3 ecuaciones con incógnitas $x,y,z$ y parámetro $m$",
+   "Términos independientes: $m-2,\\ -3,\\ -8$"
+  ],
+  "full_solution": "**(a)** En forma matricial $AX=B$:\n$$A=\\begin{pmatrix} m+1 & 0 & 0\\\\ 2 & 1 & 0\\\\ 3 & -2 & m\\end{pmatrix},\\quad X=\\begin{pmatrix}x\\\\ y\\\\ z\\end{pmatrix},\\quad B=\\begin{pmatrix}m-2\\\\ -3\\\\ -8\\end{pmatrix}$$\nEl determinante, desarrollando por la primera fila, es\n$$|A|=(m+1)\\,(1\\cdot m-0)=m(m+1).$$\n$|A|=0\\iff m=0$ o $m=-1$. Para $m\\neq 0$ y $m\\neq -1$ se tiene $|A|\\neq 0$, luego $\\operatorname{rg}(A)=\\operatorname{rg}(A|B)=3=$ número de incógnitas: el sistema es **compatible determinado**.\n\n**(b)** Analizamos los casos singulares.\n\n*Caso $m=0$:* la primera ecuación queda $x=-2$; de $2x+y=-3$ sale $y=1$; la tercera $3x-2y=-8$ da $-6-2=-8$, que se cumple. El sistema es **compatible indeterminado**:\n$$x=-2,\\quad y=1,\\quad z=t,\\quad t\\in\\mathbb{R}.$$\n\n*Caso $m=-1$:* la primera ecuación queda $0=-3$, imposible; el sistema es **incompatible**.\n\nPor tanto, solo es compatible indeterminado para $m=0$.\n\n**(c)** Para $m=1$:\n$$A=\\begin{pmatrix}2&0&0\\\\ 2&1&0\\\\ 3&-2&1\\end{pmatrix},\\quad B=\\begin{pmatrix}-1\\\\ -3\\\\ -8\\end{pmatrix},\\quad |A|=2\\neq 0.$$\n$$A^{-1}=\\begin{pmatrix}1/2&0&0\\\\ -1&1&0\\\\ -7/2&2&1\\end{pmatrix}.$$\nEntonces\n$$X=A^{-1}B=\\begin{pmatrix}1/2&0&0\\\\ -1&1&0\\\\ -7/2&2&1\\end{pmatrix}\\begin{pmatrix}-1\\\\ -3\\\\ -8\\end{pmatrix}=\\begin{pmatrix}-1/2\\\\ -2\\\\ -21/2\\end{pmatrix}.$$",
+  "answer": "**(a)** Compatible determinado si $m\\neq 0$ y $m\\neq -1$.\n**(b)** Compatible indeterminado solo si $m=0$: $x=-2,\\ y=1,\\ z=t$.\n**(c)** $X=\\left(-\\tfrac12,\\,-2,\\,-\\tfrac{21}{2}\\right)^{t}$.",
+  "common_errors": [
+   "Calcular mal el determinante de la matriz triangular inferior: $|A|=(m+1)\\cdot 1\\cdot m$",
+   "Olvidar comprobar la compatibilidad de la tercera ecuación en el caso $m=0$",
+   "Equivocar el orden en el producto $A^{-1}B$ (debe ser la inversa por la izquierda)"
+  ],
+  "mark_scheme": [
+   "Apartado (a): 3 puntos",
+   "Apartado (b): 3 puntos",
+   "Apartado (c): 4 puntos"
+  ],
+  "marks": 10,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Aragon_2022-Extraordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-035"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Extraordinaria 2022",
+  "title": "Discusión y resolución de un sistema con parámetro · Madrid · Extraordinaria 2022",
+  "statement": "Considere el sistema $\\begin{cases}x+ay+z=2\\\\ x-az=0\\\\ x+y+z=2\\end{cases}$ con $a\\in\\mathbb{R}$.\n\n**(a)** Discuta la compatibilidad del sistema según los valores de $a$.\n\n**(b)** Resuelva el sistema para $a=0$.",
+  "knowns": [
+   "Matriz de coeficientes $A=\\begin{pmatrix}1&a&1\\\\ 1&0&-a\\\\ 1&1&1\\end{pmatrix}$",
+   "Términos independientes $(2,0,2)$"
+  ],
+  "full_solution": "**(a)** El determinante de la matriz de coeficientes es\n$$|A|=\\begin{vmatrix}1&a&1\\\\ 1&0&-a\\\\ 1&1&1\\end{vmatrix}=1-a^2.$$\n$|A|=0\\iff a=1$ o $a=-1$.\n- Si $a\\neq 1$ y $a\\neq -1$: $\\operatorname{rg}(A)=\\operatorname{rg}(A|B)=3$, **sistema compatible determinado**.\n- Si $a=1$: $\\operatorname{rg}(A)=2=\\operatorname{rg}(A|B)$, **compatible indeterminado**.\n- Si $a=-1$: $\\operatorname{rg}(A)=2\\neq 3=\\operatorname{rg}(A|B)$, **incompatible**.\n\n**(b)** Para $a=0$, el sistema es $\\{x+z=2,\\ x=0,\\ x+y+z=2\\}$. De la segunda, $x=0$; de la primera, $z=2$; de la tercera, $y=0$. Solución única:\n$$x=0,\\quad y=0,\\quad z=2.$$",
+  "answer": "**(a)** $a\\neq\\pm1$: compatible determinado; $a=1$: compatible indeterminado; $a=-1$: incompatible.\n**(b)** $x=0,\\ y=0,\\ z=2$.",
+  "common_errors": [
+   "Calcular mal el determinante $1-a^2$",
+   "No estudiar el rango de la ampliada en los casos singulares $a=\\pm1$",
+   "Errores aritméticos al sustituir $a=0$ y resolver"
+  ],
+  "mark_scheme": [
+   "Apartado (a): 1 punto",
+   "Apartado (b): 1 punto"
+  ],
+  "marks": 2,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2022-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-036"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Castilla-La Mancha · Extraordinaria 2026",
+  "title": "Sistema de ecuaciones: votación de campus · Castilla-La Mancha · Extraordinaria 2026",
+  "statement": "$30$ alumnos votan entre tres campus: Ciudad Real, Cuenca y Toledo. El número de los que prefieren Ciudad Real triplica al de los que prefieren Toledo. El $40\\%$ de los que prefieren Cuenca coincide con la quinta parte de la suma de los que prefieren los otros dos lugares. Halle el número de votos de cada campus.",
+  "knowns": [
+   "$x=$ votos Ciudad Real, $y=$ votos Cuenca, $z=$ votos Toledo",
+   "Total: $x+y+z=30$"
+  ],
+  "full_solution": "Sean $x$ (Ciudad Real), $y$ (Cuenca), $z$ (Toledo). Traducimos las condiciones:\n- Total: $x+y+z=30$.\n- \"Ciudad Real triplica a Toledo\": $x=3z\\Rightarrow x-3z=0$.\n- \"El $40\\%$ de Cuenca $=$ la quinta parte de la suma de los otros dos\": $0{,}4y=\\dfrac{x+z}{5}\\Rightarrow 2y=x+z\\Rightarrow -x+2y-z=0$.\n\nEl sistema es\n$$\\begin{cases}x+y+z=30\\\\ x-3z=0\\\\ -x+2y-z=0\\end{cases}$$\ncuya solución es $(x,y,z)=(15,10,5)$.\n\nPor tanto, **$15$ votos a Ciudad Real, $10$ a Cuenca y $5$ a Toledo**.",
+  "answer": "Ciudad Real $15$, Cuenca $10$, Toledo $5$ votos.",
+  "common_errors": [
+   "Plantear mal la condición del $40\\%$ ($0{,}4y=\\tfrac{x+z}{5}$, equivalente a $2y=x+z$)",
+   "Confundir \"triplica\" ($x=3z$) con $z=3x$",
+   "Errores al resolver el sistema $3\\times3$"
+  ],
+  "mark_scheme": [
+   "Planteamiento: 1,5 puntos",
+   "Resolución: 1 punto"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-La-Mancha_2026-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-037"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Castilla y León · Ordinaria 2022",
+  "title": "Parcela de tres cereales: sistema de ecuaciones lineales · Castilla y León · Ordinaria 2022",
+  "statement": "Una parcela produce maíz, trigo y centeno. Trabajan $3$ agricultores $8$ horas diarias cada uno y el riego funciona $60$ minutos diarios. Cuidar el maíz emplea $2$ h de mano de obra y $6$ min de riego; el trigo, $4$ h y $4$ min; el centeno, $1$ h y $4$ min. Si se producen exactamente $12$ kg de cereal al día, calcular los kilogramos de cada tipo.",
+  "knowns": [
+   "$x=$ kg de maíz, $y=$ kg de trigo, $z=$ kg de centeno",
+   "Total: $x+y+z=12$",
+   "Mano de obra: $2x+4y+z=3\\cdot8=24$",
+   "Riego: $6x+4y+4z=60$"
+  ],
+  "full_solution": "Sean $x,y,z$ los kilos de maíz, trigo y centeno. Planteamos el sistema:\n$$\\begin{cases} x+y+z=12 \\\\ 2x+4y+z=24 \\\\ 6x+4y+4z=60 \\end{cases}$$\n(El total de mano de obra es $3\\cdot8=24$ h; el riego, $60$ min.)\n\nRestando $2\\cdot$(1ª) a la 2ª: $2y-z=0$. Simplificando la 3ª a $3x+2y+2z=30$ y restando $3\\cdot$(1ª): $-y-z=-6$. Combinando, $-3z=-12\\Rightarrow z=4$. Entonces $2y-4=0\\Rightarrow y=2$ y $x+2+4=12\\Rightarrow x=6$.\n\nComprobación: $6+2+4=12$; $2\\cdot6+4\\cdot2+4=24$; $6\\cdot6+4\\cdot2+4\\cdot4=60$.",
+  "answer": "Se producen $\\mathbf{6}$ kg de maíz, $\\mathbf{2}$ kg de trigo y $\\mathbf{4}$ kg de centeno.",
+  "common_errors": [
+   "No multiplicar las $8$ horas por los $3$ agricultores ($3\\cdot8=24$) en la segunda ecuación.",
+   "Errores de signo al realizar las combinaciones de Gauss.",
+   "No comprobar la solución en las tres ecuaciones."
+  ],
+  "mark_scheme": [
+   "Problema valorado sobre 3 puntos; apartados equipuntuables"
+  ],
+  "marks": 3,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-Leon_2022-Ordinaria_Resuelto_JuanAntonioMG.txt",
+  "id": "PAU-MCS-SIS-038"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Madrid · Extraordinaria 2025",
+  "title": "Discusión de un sistema con parámetro a y resolución para a=2 · Madrid · Extraordinaria 2025",
+  "statement": "Dado el sistema dependiente del parámetro real $a$:\n$$\\begin{cases} x+y+z=2 \\\\ 2x-y+z=3 \\\\ (a+1)x+az=5 \\end{cases}$$\n\n**(a)** Discutir el sistema según los valores de $a$.\n**(b)** Resolver el sistema para $a=2$.",
+  "knowns": [
+   "Matriz de coeficientes $A=\\begin{pmatrix} 1 & 1 & 1 \\\\ 2 & -1 & 1 \\\\ a+1 & 0 & a \\end{pmatrix}$"
+  ],
+  "full_solution": "**(a) Discusión.** El determinante de la matriz de coeficientes es\n$$|A|=\\begin{vmatrix} 1 & 1 & 1 \\\\ 2 & -1 & 1 \\\\ a+1 & 0 & a \\end{vmatrix}=2-a.$$\n- Si $a\\neq2$: $|A|\\neq0\\Rightarrow\\operatorname{rg}(A)=\\operatorname{rg}(A^{*})=3\\Rightarrow$ **Sistema Compatible Determinado** (solución única).\n- Si $a=2$: $|A|=0$. La tercera ecuación resulta combinación de las dos primeras, de modo que $\\operatorname{rg}(A)=\\operatorname{rg}(A^{*})=2<3\\Rightarrow$ **Sistema Compatible Indeterminado**.\n\n**(b) Para $a=2$** el sistema se reduce a las dos primeras ecuaciones. Tomando $y=\\lambda$, al restarlas se obtiene $x-2y=1$, y despejando:\n$$(x,y,z)=(1+2\\lambda,\\ \\lambda,\\ 1-3\\lambda),\\quad \\lambda\\in\\mathbb{R}.$$",
+  "answer": "**(a)** Si $a\\neq2$, SCD (solución única); si $a=2$, SCI (infinitas soluciones). **(b)** Para $a=2$: $(x,y,z)=(1+2\\lambda,\\ \\lambda,\\ 1-3\\lambda)$, $\\lambda\\in\\mathbb{R}$.",
+  "common_errors": [
+   "Equivocar el cálculo del determinante y por tanto el valor crítico $a=2$.",
+   "No estudiar el rango de la matriz ampliada para confirmar la compatibilidad del SCI.",
+   "Dar una única solución para $a=2$ en lugar de una familia uniparamétrica."
+  ],
+  "mark_scheme": [
+   "(2.1.a) Valor de $a$ (0,50) y discusión (0,75): 1,25 puntos",
+   "(2.1.b) Solución para $a=2$: 1,25 puntos"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Madrid_2025-Extraordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-039"
+ },
+ {
+  "block": "mat_sistemas",
+  "source": "Castilla-La Mancha · Ordinaria 2026",
+  "title": "Reparto de una inversión en tres fondos: sistema de ecuaciones · Castilla-La Mancha · Ordinaria 2026",
+  "statement": "Una empresa invierte $20000$ € entre tres fondos A, B y C. El beneficio por euro es $0{,}05$ € en A, $0{,}1$ € en B y $0{,}02$ € en C, y el beneficio total es de $994$ €. Además, la inversión en A es el triple de la suma de las inversiones en B y C.\n\n**(a)** Plantear el sistema de ecuaciones lineales.\n**(b)** Hallar cuánto se invirtió en cada fondo.",
+  "knowns": [
+   "$a+b+c=20000$",
+   "$0{,}05a+0{,}1b+0{,}02c=994$",
+   "$a=3(b+c)\\Rightarrow a-3b-3c=0$"
+  ],
+  "full_solution": "Sean $a,b,c$ los euros invertidos en A, B y C.\n\n**(a)** El sistema es\n$$\\begin{cases} a+b+c=20000 \\\\ 0{,}05a+0{,}1b+0{,}02c=994 \\\\ a-3b-3c=0 \\end{cases}$$\n(La última ecuación traduce «A es el triple de B más C»: $a=3(b+c)$.)\n\n**(b) Resolución.** De la tercera, $a=3(b+c)$; sustituyendo en la primera: $4(b+c)=20000\\Rightarrow b+c=5000$ y $a=15000$. Con la segunda, $0{,}1b+0{,}02c=994-750=244$. Junto a $b+c=5000$ se obtiene $b=1800$, $c=3200$.\n\nComprobación: $15000+1800+3200=20000$; $750+180+64=994$; $15000-3\\cdot1800-3\\cdot3200=0$.",
+  "answer": "Se invierten $\\mathbf{15\\,000}$ € en A, $\\mathbf{1\\,800}$ € en B y $\\mathbf{3\\,200}$ € en C.",
+  "common_errors": [
+   "Plantear mal la condición «el triple de la suma»: es $a=3(b+c)$.",
+   "Trabajar los beneficios de forma inconsistente (euros/céntimos).",
+   "No comprobar la solución en las tres ecuaciones."
+  ],
+  "mark_scheme": [
+   "(a) Planteamiento del sistema: 1,5 puntos (0,5 por ecuación)",
+   "(b) Resolución (0,5) y solución correcta (0,5): 1 punto"
+  ],
+  "marks": 2.5,
+  "figure_suggestion": "",
+  "provenance": "PAU",
+  "origin_file": "2oBachCCSS_EBAU_Castilla-La-Mancha_2026-Ordinaria_Resuelto_Oficial.txt",
+  "id": "PAU-MCS-SIS-040"
+ }
+]

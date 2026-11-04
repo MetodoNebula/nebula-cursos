@@ -1,0 +1,760 @@
+[
+ {
+  "id": "PAU-FIS-GRAV-043",
+  "source": "Comunidad Valenciana · Modelo 2021",
+  "title": "Trabajo gravitatorio y energía potencial entre dos puntos · Comunidad Valenciana · Modelo 2021",
+  "statement": "Sobre un cuerpo sólo actúan fuerzas gravitatorias. Al trasladarse entre dos puntos $A$ y $B$, su energía potencial gravitatoria aumenta en $2000\\ \\text{J}$. ¿Cuál es el trabajo que realizan las fuerzas conservativas sobre el cuerpo? ¿En cuál de los dos puntos es mayor su velocidad?",
+  "knowns": [
+   "$\\Delta E_p = E_{p,B}-E_{p,A}=+2000\\ \\text{J}$"
+  ],
+  "full_solution": "El trabajo de una fuerza conservativa es igual a menos la variación de su energía potencial:\n$$W_{A\\to B}=-\\Delta E_p=-(E_{p,B}-E_{p,A})=-2000\\ \\text{J}$$\nEl trabajo es negativo: el campo frena al cuerpo al ir de $A$ a $B$.\n\nComo sólo actúan fuerzas gravitatorias, la energía mecánica se conserva: $E_{c,A}+E_{p,A}=E_{c,B}+E_{p,B}$. Al aumentar $E_p$ de $A$ a $B$, la energía cinética disminuye:\n$$E_{c,B}=E_{c,A}-2000\\ \\text{J}<E_{c,A}$$\nPor tanto la velocidad es mayor en el punto $A$.",
+  "answer": "$W_{A\\to B}=-2000\\ \\text{J}$; la velocidad es mayor en $A$ (donde la energía potencial es menor y la cinética mayor).",
+  "common_errors": [
+   "Olvidar el signo menos en $W=-\\Delta E_p$ y dar $+2000\\ \\text{J}$.",
+   "Confundir energía potencial con energía cinética al razonar dónde va más rápido.",
+   "Pensar que un trabajo negativo significa que el cuerpo gana velocidad."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-044",
+  "source": "Comunidad Valenciana · Modelo 2021",
+  "title": "Órbita de un satélite terrestre y velocidad de lanzamiento · Comunidad Valenciana · Modelo 2021",
+  "statement": "Un satélite artificial describe una órbita circular alrededor de la Tierra con velocidad $4{,}2\\ \\text{km/s}$.\n\n**(a)** Deduzca las expresiones del radio de la órbita y del periodo, y calcule sus valores.\n**(b)** Calcule la velocidad con la que debe lanzarse el satélite desde la superficie terrestre para situarlo en dicha órbita.",
+  "knowns": [
+   "$v_{orb}=4{,}2\\ \\text{km/s}=4200\\ \\text{m/s}$",
+   "$G=6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$",
+   "$M_T=6\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T=6400\\ \\text{km}=6{,}4\\cdot10^{6}\\ \\text{m}$"
+  ],
+  "full_solution": "**(a)** En órbita circular, la gravedad aporta la fuerza centrípeta:\n$$\\dfrac{G M_T m}{r^{2}}=\\dfrac{m v^{2}}{r}\\ \\Rightarrow\\ r=\\dfrac{G M_T}{v^{2}}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot6\\cdot10^{24}}{4200^{2}}=2{,}27\\cdot10^{7}\\ \\text{m}$$\nPeriodo:\n$$T=\\dfrac{2\\pi r}{v}=\\dfrac{2\\pi\\cdot2{,}27\\cdot10^{7}}{4200}=3{,}39\\cdot10^{4}\\ \\text{s}\\approx 9{,}4\\ \\text{h}$$\n\n**(b)** Por conservación de la energía entre la superficie (velocidad de lanzamiento $v_L$) y la órbita:\n$$\\tfrac12 m v_L^{2}-\\dfrac{G M_T m}{R_T}=-\\dfrac{G M_T m}{2r}$$\n$$v_L=\\sqrt{G M_T\\left(\\dfrac{2}{R_T}-\\dfrac{1}{r}\\right)}=\\sqrt{6{,}67\\cdot10^{-11}\\cdot6\\cdot10^{24}\\left(\\dfrac{2}{6{,}4\\cdot10^{6}}-\\dfrac{1}{2{,}27\\cdot10^{7}}\\right)}\\approx 1{,}04\\cdot10^{4}\\ \\text{m/s}$$",
+  "answer": "**(a)** $r\\approx 2{,}27\\cdot10^{7}\\ \\text{m}$ y $T\\approx 3{,}39\\cdot10^{4}\\ \\text{s}$ ($\\approx 9{,}4\\ \\text{h}$). **(b)** $v_L\\approx 10{,}4\\ \\text{km/s}$.",
+  "common_errors": [
+   "Olvidar que la energía en órbita es $E=-\\dfrac{GM_Tm}{2r}$ (factor $1/2$).",
+   "No convertir la velocidad y el radio a unidades del SI.",
+   "Confundir la velocidad orbital con la de lanzamiento desde la superficie."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-045",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "Altura y número de órbitas diarias de un satélite Starlink · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Un satélite Starlink describe una órbita circular alrededor de la Tierra con velocidad $7{,}6\\ \\text{km/s}$.\n\n**(a)** Calcula la altura $h$ sobre la superficie terrestre (en km).\n\n**(b)** ¿Cuántas órbitas completas describe en un día?",
+  "knowns": [
+   "$v = 7{,}6\\ \\text{km/s} = 7600\\ \\text{m/s}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 6\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6400\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** Para una órbita circular la fuerza gravitatoria es la centrípeta: $\\dfrac{GM_T m}{r^2}=\\dfrac{mv^2}{r}$, luego $v=\\sqrt{\\dfrac{GM_T}{r}}$ y:\n$$r = \\dfrac{GM_T}{v^2} = \\dfrac{6{,}67\\cdot10^{-11}\\cdot 6\\cdot10^{24}}{7600^2} = 6{,}93\\cdot10^{6}\\ \\text{m} = 6929\\ \\text{km}$$\n$$h = r - R_T = 6929 - 6400 = 529\\ \\text{km}$$\n\n**(b)** El periodo orbital:\n$$T = \\dfrac{2\\pi r}{v} = \\dfrac{2\\pi\\cdot 6{,}93\\cdot10^{6}}{7600} = 5{,}73\\cdot10^{3}\\ \\text{s} \\approx 1{,}59\\ \\text{h}$$\nNúmero de órbitas en un día ($86400\\ \\text{s}$):\n$$N = \\dfrac{86400}{5730} \\approx 15{,}1 \\;\\Rightarrow\\; 15\\ \\text{órbitas completas}$$",
+  "answer": "**(a)** $r \\approx 6929\\ \\text{km}$, $h \\approx 529\\ \\text{km}$. **(b)** $T\\approx 5{,}73\\cdot10^{3}\\ \\text{s}$; unas $15$ órbitas completas al día.",
+  "common_errors": [
+   "Dar $r$ como altura sin restar el radio terrestre.",
+   "No pasar la velocidad a m/s.",
+   "Redondear $15{,}1$ a $16$: el número de órbitas completas es $15$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-046",
+  "source": "Comunidad Valenciana · Septiembre 2020",
+  "title": "Trabajo de la fuerza gravitatoria en una órbita circular · Comunidad Valenciana · Septiembre 2020",
+  "statement": "Escribe la expresión del trabajo de una fuerza y su relación con la energía potencial cuando la fuerza es conservativa. Un satélite describe una órbita circular alrededor de la Tierra. Razona qué trabajo realiza la fuerza gravitatoria cuando el satélite recorre un cuarto de órbita. ¿Y en una órbita completa?",
+  "full_solution": "El trabajo de una fuerza entre dos puntos es $W = \\int \\vec{F}\\cdot d\\vec{r}$. Si la fuerza es conservativa, ese trabajo es igual a la disminución de energía potencial:\n$$W_{A\\to B} = -\\Delta E_p = E_p(A)-E_p(B)$$\n\nEn una órbita **circular** la distancia al centro $r$ es constante, por lo que la energía potencial gravitatoria $E_p=-\\dfrac{GMm}{r}$ **no cambia** en ningún tramo del recorrido. Por tanto:\n\n- En un cuarto de órbita: $E_p$ inicial $=E_p$ final $\\Rightarrow W = -\\Delta E_p = 0$.\n- En una órbita completa: también $\\Delta E_p = 0 \\Rightarrow W = 0$.\n\nEsto es coherente con que la fuerza gravitatoria (centrípeta) es en todo instante perpendicular a la velocidad (tangente a la órbita), de modo que $\\vec{F}\\cdot d\\vec{r}=0$ y no realiza trabajo.",
+  "answer": "El trabajo de la fuerza gravitatoria es **nulo** tanto en un cuarto de órbita como en la órbita completa, porque en una órbita circular $r$ (y por tanto $E_p$) no varía y la fuerza es siempre perpendicular al desplazamiento.",
+  "common_errors": [
+   "Pensar que al recorrer distancia hay trabajo; lo que cuenta es la variación de $E_p$, nula en órbita circular.",
+   "Confundir trabajo con la fuerza aplicada (la fuerza no es cero, pero sí su trabajo).",
+   "Olvidar el signo en $W=-\\Delta E_p$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-047",
+  "source": "Madrid · Julio 2021",
+  "title": "Campo y trabajo gravitatorio de una partícula puntual · Madrid · Julio 2021",
+  "statement": "Una partícula de masa $m$ está en el origen de un sistema $(x,y)$. La componente $x$ del campo gravitatorio que crea en el punto $(2,2)\\ \\text{m}$ es $-1{,}18\\cdot10^{-11}\\ \\text{N·kg}^{-1}$.\n\n**(a)** Calcule el valor de la masa $m$.\n\n**(b)** ¿Cuál es el trabajo que realiza el campo para llevar una masa $M=5\\ \\text{kg}$ desde el punto $(4,0)\\ \\text{m}$ al punto $(2,2)\\ \\text{m}$?",
+  "knowns": [
+   "$g_x(2,2)=-1{,}18\\cdot10^{-11}\\ \\text{N·kg}^{-1}$",
+   "$M=5\\ \\text{kg}$",
+   "$G=6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a) Masa $m$**\n\nEl punto $(2,2)$ está a $r=\\sqrt{2^2+2^2}=\\sqrt{8}\\ \\text{m}$ del origen, y el vector unitario forma $45^\\circ$. La componente $x$ del campo es:\n$$g_x=-\\dfrac{Gm}{r^2}\\cos45^\\circ$$\n$$m=-\\dfrac{g_x\\,r^2}{G\\cos45^\\circ}=-\\dfrac{(-1{,}18\\cdot10^{-11})\\cdot 8}{6{,}67\\cdot10^{-11}\\cdot\\frac{\\sqrt2}{2}}=2{,}0\\ \\text{kg}$$\n\n**(b) Trabajo del campo de $A(4,0)$ a $B(2,2)$**\n\nEl potencial es $V=-\\dfrac{Gm}{r}$, con $r_A=4\\ \\text{m}$ y $r_B=\\sqrt8\\ \\text{m}$:\n$$V(A)=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot2}{4},\\qquad V(B)=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot2}{\\sqrt8}$$\nEl trabajo del campo es $W=-M\\,[V(B)-V(A)]$:\n$$W=-5\\left[-\\dfrac{6{,}67\\cdot10^{-11}\\cdot2}{\\sqrt8}+\\dfrac{6{,}67\\cdot10^{-11}\\cdot2}{4}\\right]=6{,}91\\cdot10^{-11}\\ \\text{J}$$",
+  "answer": "**(a)** $m=2{,}0\\ \\text{kg}$.  **(b)** $W\\approx6{,}91\\cdot10^{-11}\\ \\text{J}$ (positivo: el campo atrae la masa hacia el origen).",
+  "common_errors": [
+   "No incluir $\\cos45^\\circ$ al relacionar $g_x$ con el módulo del campo.",
+   "Confundir $r^2=8$ con $r=8$.",
+   "Equivocar el signo: $W_{\\text{campo}}=-\\Delta E_p=-M[V(B)-V(A)]$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-048",
+  "source": "Madrid · Julio 2021",
+  "title": "Órbita circular de una nave alrededor de un planeta desconocido · Madrid · Julio 2021",
+  "statement": "Una nave espacial ha quedado atrapada en una órbita circular en torno a un planeta esférico desconocido. Los sistemas de navegación indican que su velocidad orbital es de $25\\,000\\ \\text{km/h}$ y que tarda $5$ horas en dar una vuelta completa alrededor del planeta.\n\n**(a)** Determine el radio de la órbita circular de la nave y la masa del planeta.\n\n**(b)** Si la densidad del planeta es de $16\\,150\\ \\text{kg·m}^{-3}$, calcule el radio del planeta y el valor de la aceleración de la gravedad en su superficie.",
+  "knowns": [
+   "$v = 25\\,000\\ \\text{km/h} = 6944{,}4\\ \\text{m/s}$",
+   "$T = 5\\ \\text{h} = 18\\,000\\ \\text{s}$",
+   "$\\rho = 16\\,150\\ \\text{kg·m}^{-3}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a) Radio de la órbita y masa del planeta**\n\nComo la órbita es circular y recorre una circunferencia $2\\pi r$ en un periodo $T$:\n$$v=\\dfrac{2\\pi r}{T}\\ \\Rightarrow\\ r=\\dfrac{Tv}{2\\pi}=\\dfrac{18\\,000\\cdot 6944{,}4}{2\\pi}=1{,}99\\cdot10^{7}\\ \\text{m}$$\n\nPara una órbita circular, la gravedad aporta la fuerza centrípeta:\n$$\\dfrac{GMm}{r^{2}}=\\dfrac{mv^{2}}{r}\\ \\Rightarrow\\ M=\\dfrac{rv^{2}}{G}=\\dfrac{1{,}99\\cdot10^{7}\\cdot(6944{,}4)^{2}}{6{,}67\\cdot10^{-11}}=1{,}44\\cdot10^{25}\\ \\text{kg}$$\n\n**(b) Radio del planeta y gravedad superficial**\n\nComo el planeta es esférico, $\\rho=\\dfrac{M}{\\frac{4}{3}\\pi R^{3}}$, de donde:\n$$R=\\left(\\dfrac{3M}{4\\pi\\rho}\\right)^{1/3}=\\left(\\dfrac{3\\cdot 1{,}44\\cdot10^{25}}{4\\pi\\cdot 16\\,150}\\right)^{1/3}=5{,}97\\cdot10^{6}\\ \\text{m}$$\n\nEn la superficie $g=\\dfrac{GM}{R^{2}}$:\n$$g=\\dfrac{6{,}67\\cdot10^{-11}\\cdot 1{,}44\\cdot10^{25}}{(5{,}97\\cdot10^{6})^{2}}=26{,}9\\ \\text{m·s}^{-2}$$",
+  "answer": "$r \\approx 1{,}99\\cdot10^{7}\\ \\text{m}$; $M \\approx 1{,}44\\cdot10^{25}\\ \\text{kg}$; $R \\approx 5{,}97\\cdot10^{6}\\ \\text{m}$; $g \\approx 26{,}9\\ \\text{m·s}^{-2}$.",
+  "common_errors": [
+   "Olvidar pasar $v$ a m/s y $T$ a segundos antes de aplicar $v=2\\pi r/T$.",
+   "Confundir el radio de la órbita $r$ con el radio del planeta $R$.",
+   "Usar $v=2\\pi R/T$ con el radio del planeta en vez del radio orbital."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-049",
+  "source": "Madrid · Junio 2013",
+  "title": "Densidad de Mercurio y energía para orbitar · Madrid · Junio 2013",
+  "statement": "Calcule:\n\n**(a)** La densidad media del planeta Mercurio, sabiendo que posee un radio de $2440\\ \\text{km}$ y una intensidad de campo gravitatorio en su superficie de $3{,}7\\ \\text{N/kg}$.\n\n**(b)** La energía necesaria para enviar una nave espacial de $5000\\ \\text{kg}$ de masa desde la superficie del planeta a una órbita en la que el valor de la intensidad de campo gravitatorio sea la cuarta parte de su valor en la superficie.",
+  "knowns": [
+   "$R = 2440\\ \\text{km} = 2{,}44\\cdot10^{6}\\ \\text{m}$",
+   "$g_s = 3{,}7\\ \\text{N/kg}$",
+   "$m = 5000\\ \\text{kg}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N m}^2\\text{kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** De $g_s = \\dfrac{GM}{R^2}$ obtenemos la masa:\n$$M = \\dfrac{g_s R^2}{G} = \\dfrac{3{,}7\\cdot(2{,}44\\cdot10^{6})^2}{6{,}67\\cdot10^{-11}} = 3{,}30\\cdot10^{23}\\ \\text{kg}.$$\nLa densidad media es la masa entre el volumen de la esfera:\n$$\\rho = \\dfrac{M}{\\tfrac{4}{3}\\pi R^3} = \\dfrac{3{,}30\\cdot10^{23}}{\\tfrac{4}{3}\\pi(2{,}44\\cdot10^{6})^3} = 5{,}43\\cdot10^{3}\\ \\text{kg/m}^3.$$\n\n**(b)** Donde $g' = \\tfrac{1}{4}g_s$ se cumple $\\dfrac{GM}{r'^2} = \\dfrac{1}{4}\\dfrac{GM}{R^2}$, de donde $r' = 2R$. La energía necesaria es la diferencia entre la energía mecánica en la órbita (circular) y en la superficie (en reposo):\n$$E_{\\text{orb}} = -\\dfrac{GMm}{2r'} = -\\dfrac{GMm}{4R},\\qquad E_{\\text{sup}} = -\\dfrac{GMm}{R}.$$\n$$\\Delta E = E_{\\text{orb}} - E_{\\text{sup}} = \\dfrac{3}{4}\\dfrac{GMm}{R} = \\dfrac{3}{4}\\dfrac{g_s R^2 m}{R} = \\dfrac{3}{4}g_s R\\,m.$$\n$$\\Delta E = \\dfrac{3}{4}\\cdot 3{,}7\\cdot 2{,}44\\cdot10^{6}\\cdot 5000 = 3{,}39\\cdot10^{10}\\ \\text{J}.$$",
+  "answer": "**(a)** $\\rho \\approx 5{,}43\\cdot10^{3}\\ \\text{kg/m}^3$. **(b)** $\\Delta E \\approx 3{,}39\\cdot10^{10}\\ \\text{J}$ (órbita a $r'=2R$, altura $R$).",
+  "common_errors": [
+   "No deducir $r'=2R$ de la condición $g'=g_s/4$ (depende de $1/r^2$).",
+   "Usar sólo la energía potencial y olvidar la energía cinética orbital ($E_{orb}=-GMm/2r'$).",
+   "Confundir densidad con masa o usar mal el volumen de la esfera."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-050",
+  "source": "Madrid · Junio 2013",
+  "title": "Péndulo simple: cálculo de G, periodo y gravedad en una montaña · Madrid · Junio 2013",
+  "statement": "A nivel del mar, un péndulo simple de longitud $L=2\\ \\text{m}$ da $g_0=9{,}81\\ \\text{m}\\cdot\\text{s}^{-2}$ (pequeñas oscilaciones).\n\n**(a)** La constante de Gravitación Universal $G$ y el periodo del péndulo a nivel del mar.\n**(b)** En una montaña de $8\\ \\text{km}$: la gravedad local y la longitud del péndulo para que su periodo sea el mismo que a nivel del mar.",
+  "knowns": [
+   "$L = 2\\ \\text{m}$, $g_0 = 9{,}81\\ \\text{m}\\cdot\\text{s}^{-2}$",
+   "$M_T = 5{,}97\\cdot10^{24}\\ \\text{kg}$, $R_T = 6{,}37\\cdot10^{6}\\ \\text{m}$",
+   "altura $h = 8\\ \\text{km} = 8000\\ \\text{m}$"
+  ],
+  "full_solution": "**(a) Constante $G$ y periodo.**\nDe $g_0=\\dfrac{G M_T}{R_T^2}$:\n$$G = \\dfrac{g_0 R_T^2}{M_T} = \\dfrac{9{,}81\\,(6{,}37\\cdot10^{6})^2}{5{,}97\\cdot10^{24}} = 6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$$\n$$T = 2\\pi\\sqrt{\\dfrac{L}{g_0}} = 2\\pi\\sqrt{\\dfrac{2}{9{,}81}} = 2{,}84\\ \\text{s}$$\n\n**(b) En la montaña ($h=8\\ \\text{km}$).**\n$$g = \\dfrac{G M_T}{(R_T+h)^2} = g_0\\left(\\dfrac{R_T}{R_T+h}\\right)^2 = 9{,}81\\left(\\dfrac{6{,}37\\cdot10^{6}}{6{,}378\\cdot10^{6}}\\right)^2 = 9{,}785\\ \\text{m}\\cdot\\text{s}^{-2}$$\nPara igual periodo, $T=2\\pi\\sqrt{L'/g}$ con $T$ el de (a):\n$$L' = g\\left(\\dfrac{T}{2\\pi}\\right)^2 = L\\,\\dfrac{g}{g_0} = 2\\cdot\\dfrac{9{,}785}{9{,}81} = 1{,}995\\ \\text{m}$$",
+  "answer": "$G = 6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$; $T = 2{,}84\\ \\text{s}$.\nEn la montaña $g = 9{,}785\\ \\text{m}\\cdot\\text{s}^{-2}$ y $L' = 1{,}995\\ \\text{m}$ (algo más corto).",
+  "common_errors": [
+   "No elevar al cuadrado $R_T$ al despejar $G$ de $g_0=GM/R^2$.",
+   "Sumar mal la altura: $(R_T+h)$ con ambos en metros.",
+   "Olvidar que, a menor $g$, para mantener $T$ hay que acortar $L$ ($L'\\propto g$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-051",
+  "source": "Madrid · Junio 2013",
+  "title": "Satélite orbitando la Luna: altura, periodo y energía · Madrid · Junio 2013",
+  "statement": "Un satélite de masa $800\\ \\text{kg}$ orbita la Luna con velocidad angular $\\omega=4{,}33\\cdot10^{-4}\\ \\text{rad}\\cdot\\text{s}^{-1}$ (sin rozamiento).\n\n**(a)** La altura sobre la superficie lunar y el periodo de revolución.\n**(b)** La energía mecánica del satélite a esa altura.",
+  "knowns": [
+   "$m = 800\\ \\text{kg}$, $\\omega = 4{,}33\\cdot10^{-4}\\ \\text{rad}\\cdot\\text{s}^{-1}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$",
+   "$R_L = 1740\\ \\text{km} = 1{,}74\\cdot10^{6}\\ \\text{m}$, $M_L = 7{,}35\\cdot10^{22}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a) Radio de la órbita, altura y periodo.**\nEn órbita circular la gravedad es la fuerza centrípeta: $G\\dfrac{M_L m}{r^2}=m\\omega^2 r$, de donde:\n$$r = \\sqrt[3]{\\dfrac{G M_L}{\\omega^2}} = \\sqrt[3]{\\dfrac{6{,}67\\cdot10^{-11}\\cdot7{,}35\\cdot10^{22}}{(4{,}33\\cdot10^{-4})^2}} = 2{,}97\\cdot10^{6}\\ \\text{m}$$\n$$h = r - R_L = 2{,}97\\cdot10^{6} - 1{,}74\\cdot10^{6} = 1{,}23\\cdot10^{6}\\ \\text{m}\\ (\\approx 1228\\ \\text{km})$$\n$$T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{4{,}33\\cdot10^{-4}} = 1{,}45\\cdot10^{4}\\ \\text{s}\\ (\\approx 4{,}0\\ \\text{h})$$\n\n**(b) Energía mecánica.**\nPara órbita circular $E_m=-\\dfrac{G M_L m}{2r}$:\n$$E_m = -\\dfrac{6{,}67\\cdot10^{-11}\\cdot7{,}35\\cdot10^{22}\\cdot800}{2\\cdot2{,}97\\cdot10^{6}} = -6{,}61\\cdot10^{8}\\ \\text{J}$$",
+  "answer": "$r = 2{,}97\\cdot10^{6}\\ \\text{m}$, altura $h \\approx 1{,}23\\cdot10^{6}\\ \\text{m}$ ($1228\\ \\text{km}$), $T \\approx 1{,}45\\cdot10^{4}\\ \\text{s}$ ($4{,}0\\ \\text{h}$).\n$E_m = -6{,}61\\cdot10^{8}\\ \\text{J}$.",
+  "common_errors": [
+   "Confundir $r$ (radio de la órbita) con la altura $h=r-R_L$.",
+   "Usar $v=\\omega$ (en vez de $v=\\omega r$) o un periodo mal relacionado con $\\omega$.",
+   "Olvidar el factor $1/2$ y el signo en $E_m=-GM_Lm/2r$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-052",
+  "source": "Madrid · Junio 2013",
+  "title": "Urano en órbita elíptica: momento angular y energía (V/F) · Madrid · Junio 2013",
+  "statement": "Urano es un planeta que describe una órbita elíptica alrededor del Sol. Razone la veracidad o falsedad de las siguientes afirmaciones:\n\n**(a)** El módulo del momento angular, respecto a la posición del Sol, en el afelio es mayor que en el perihelio y lo mismo ocurre con el módulo del momento lineal.\n\n**(b)** La energía mecánica es menor en el afelio que en el perihelio y lo mismo ocurre con la energía potencial.",
+  "full_solution": "**(a) FALSA.** La fuerza gravitatoria es central, por lo que el momento angular respecto al Sol **se conserva**: su módulo es el mismo en el afelio y en el perihelio (2.ª ley de Kepler). Por tanto no es “mayor en el afelio”. Además, de $L = m\\,v\\,r$ constante, al ser $r_{\\text{afelio}} > r_{\\text{perihelio}}$, la velocidad (y el momento lineal $p=mv$) es **menor** en el afelio, no mayor. La afirmación es falsa en ambas partes.\n\n**(b) FALSA.** La energía mecánica también **se conserva**: es la misma en el afelio y en el perihelio, no “menor en el afelio”. La energía potencial $E_p = -\\dfrac{GMm}{r}$ depende de $r$: en el afelio $r$ es mayor, luego $E_p$ es **menos negativa**, es decir **mayor** en el afelio (no menor). La afirmación es falsa.",
+  "answer": "**(a)** Falsa: $L$ se conserva (igual en ambos puntos) y $p$ es menor en el afelio. **(b)** Falsa: la energía mecánica se conserva (igual) y la energía potencial es mayor (menos negativa) en el afelio.",
+  "common_errors": [
+   "Creer que el momento angular o la energía mecánica varían a lo largo de la órbita (ambos se conservan).",
+   "Pensar que mayor $r$ implica menor $E_p$ (es al contrario: $E_p=-GMm/r$ es menos negativa).",
+   "Confundir velocidad en afelio/perihelio (máxima en perihelio)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-053",
+  "source": "Madrid · Junio 2021",
+  "title": "Potencial, campo y trabajo gravitatorios · Madrid · Junio 2021",
+  "statement": "Una masa puntual de $50\\ \\text{g}$ está en $(8,0)\\ \\text{m}$.\n\n**(a)** Potencial y campo gravitatorios en el punto $(0,6)\\ \\text{m}$ debidos a dicha masa.\n\n**(b)** Trabajo realizado por el campo al trasladar un objeto de $20\\ \\text{g}$ desde $(0,6)\\ \\text{m}$ hasta el origen.",
+  "knowns": [
+   "$M = 50\\ \\text{g} = 0{,}05\\ \\text{kg}$",
+   "$m = 20\\ \\text{g} = 0{,}02\\ \\text{kg}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** Distancia de la masa $(8,0)$ al punto $(0,6)$: $d=\\sqrt{8^2+6^2}=10\\ \\text{m}$. Potencial:\n\n$$V=-\\dfrac{GM}{d}=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot0{,}05}{10}=-3{,}33\\cdot10^{-13}\\ \\text{J·kg}^{-1}$$\n\nMódulo del campo:\n\n$$g=\\dfrac{GM}{d^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot0{,}05}{10^2}=3{,}33\\cdot10^{-14}\\ \\text{N·kg}^{-1}$$\n\nEl campo apunta de $(0,6)$ hacia $(8,0)$, dirección $(8,-6)/10$, con $\\theta=36{,}87^\\circ$:\n\n$$\\vec{g}=(2{,}67\\cdot10^{-14}\\,\\vec{i}-2{,}00\\cdot10^{-14}\\,\\vec{j})\\ \\text{N·kg}^{-1}$$\n\n**(b)** Potencial en el origen ($d'=8\\ \\text{m}$ a la masa): $V(0,0)=-\\dfrac{GM}{8}=-4{,}17\\cdot10^{-13}\\ \\text{J·kg}^{-1}$. El trabajo del campo es $W=-m\\,\\Delta V=-m\\,[V(0,0)-V(0,6)]$:\n\n$$W=-0{,}02\\,[(-4{,}17\\cdot10^{-13})-(-3{,}33\\cdot10^{-13})]=1{,}67\\cdot10^{-15}\\ \\text{J}$$",
+  "answer": "**(a)** $V=-3{,}33\\cdot10^{-13}\\ \\text{J·kg}^{-1}$, $g=3{,}33\\cdot10^{-14}\\ \\text{N·kg}^{-1}$, $\\vec{g}=(2{,}67\\cdot10^{-14}\\,\\vec{i}-2{,}00\\cdot10^{-14}\\,\\vec{j})$. **(b)** $W=1{,}67\\cdot10^{-15}\\ \\text{J}>0$.",
+  "common_errors": [
+   "Confundir potencial (escalar) con campo (vector).",
+   "Error de signo en $W=-m\\Delta V$ para el trabajo del campo gravitatorio.",
+   "Equivocar la dirección del campo (siempre hacia la masa que lo crea)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-054",
+  "source": "Madrid · Junio 2021",
+  "title": "Sonda en órbita de Saturno y energía de escape · Madrid · Junio 2021",
+  "statement": "Una sonda de $3500\\ \\text{kg}$ orbita Saturno en círculo, con una revolución cada $36\\ \\text{h}$.\n\n**(a)** Velocidad orbital y energía mecánica de la sonda.\n\n**(b)** Energía mínima necesaria para que abandone el campo gravitatorio del planeta.",
+  "knowns": [
+   "$m = 3500\\ \\text{kg}$",
+   "$T = 36\\ \\text{h} = 129600\\ \\text{s}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_S = 5{,}68\\cdot10^{26}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** De la tercera ley de Kepler, $r=\\left(\\dfrac{GM_S T^2}{4\\pi^2}\\right)^{1/3}=2{,}53\\cdot10^{8}\\ \\text{m}$. La velocidad orbital:\n\n$$v=\\dfrac{2\\pi r}{T}=\\dfrac{2\\pi\\cdot2{,}53\\cdot10^{8}}{129600}=1{,}22\\cdot10^{4}\\ \\text{m·s}^{-1}$$\n\nLa energía mecánica de una órbita circular es:\n\n$$E_m=-\\dfrac{GM_S m}{2r}=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot5{,}68\\cdot10^{26}\\cdot3500}{2\\cdot2{,}53\\cdot10^{8}}=-2{,}62\\cdot10^{11}\\ \\text{J}$$\n\n**(b)** Para escapar, la energía mecánica final debe ser nula, luego hay que aportar:\n\n$$E_{\\text{sum}}=0-E_m=2{,}62\\cdot10^{11}\\ \\text{J}$$",
+  "answer": "**(a)** $v\\approx1{,}22\\cdot10^{4}\\ \\text{m·s}^{-1}$, $E_m\\approx-2{,}62\\cdot10^{11}\\ \\text{J}$. **(b)** $E_{\\text{sum}}\\approx2{,}62\\cdot10^{11}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar $E_m=-GMm/r$ en vez de $-GMm/(2r)$ para la órbita.",
+   "Olvidar pasar el periodo a segundos.",
+   "Confundir la energía de escape desde la órbita con la velocidad de escape desde la superficie."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-055",
+  "source": "Madrid · Junio 2022",
+  "title": "Campo gravitatorio y caída de una masa puntual · Madrid · Junio 2022",
+  "statement": "Una masa puntual de $5\\ \\text{kg}$ está fija en $P(0,20)\\ \\text{m}$. Otra masa $m$, inicialmente en reposo, está en $Q(100,0)\\ \\text{m}$.\n\n**(a)** Campo gravitatorio creado por la masa de $5\\ \\text{kg}$ en $Q$.\n\n**(b)** Vector velocidad de $m$ cuando pasa por el punto $(50,10)\\ \\text{m}$.",
+  "knowns": [
+   "$M = 5\\ \\text{kg}$",
+   "$P(0,20)\\ \\text{m}$",
+   "$Q(100,0)\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** Distancia $P\\!\\to\\!Q$: $d=\\sqrt{100^2+20^2}=102\\ \\text{m}$. Módulo del campo:\n\n$$g=\\dfrac{GM}{d^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot5}{102^2}=3{,}21\\cdot10^{-14}\\ \\text{m·s}^{-2}$$\n\nEl campo en $Q$ apunta hacia $P$, en dirección $(-100,+20)/102$:\n\n$$g_x=-g\\,\\dfrac{100}{102}=-3{,}14\\cdot10^{-14}\\ \\text{m·s}^{-2},\\qquad g_y=g\\,\\dfrac{20}{102}=6{,}29\\cdot10^{-15}\\ \\text{m·s}^{-2}$$\n\n**(b)** Por conservación de la energía mecánica (parte del reposo). Con $r_1=102\\ \\text{m}$ y $r_2=\\sqrt{50^2+10^2}=51\\ \\text{m}$:\n\n$$v=\\sqrt{2GM\\left(\\dfrac{1}{r_2}-\\dfrac{1}{r_1}\\right)}=2{,}56\\cdot10^{-6}\\ \\text{m·s}^{-1}$$\n\nLa velocidad va dirigida hacia $P$ (misma dirección que el campo en $Q$):\n\n$$v_x=-v\\,\\dfrac{100}{102}=-2{,}51\\cdot10^{-6}\\ \\text{m·s}^{-1},\\qquad v_y=v\\,\\dfrac{20}{102}=5{,}02\\cdot10^{-7}\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $g=3{,}21\\cdot10^{-14}\\ \\text{m·s}^{-2}$, $\\vec{g}=(-3{,}14\\cdot10^{-14}\\,\\vec{i}+6{,}29\\cdot10^{-15}\\,\\vec{j})\\ \\text{m·s}^{-2}$. **(b)** $v\\approx2{,}56\\cdot10^{-6}\\ \\text{m·s}^{-1}$, $\\vec{v}=(-2{,}51\\cdot10^{-6}\\,\\vec{i}+5{,}02\\cdot10^{-7}\\,\\vec{j})\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Calcular mal la distancia entre dos puntos no alineados con los ejes.",
+   "Proyectar la velocidad con los cosenos equivocados (usar la dirección de $Q\to P$).",
+   "Usar $\\Delta E_p=mg\\Delta h$ en lugar del potencial $-GMm/r$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-056",
+  "source": "Madrid · Junio 2022",
+  "title": "Campo y fuerza gravitatorios; distancia máxima · Madrid · Junio 2022",
+  "statement": "Una partícula de masa $20\\ \\text{kg}$ permanece fija en el origen de coordenadas.\n\n**(a)** Calcule el campo gravitatorio generado por la masa en el punto $(8,6)\\ \\text{m}$ y la fuerza que experimentará una segunda partícula de masa $3\\ \\text{kg}$ situada en dicho punto.\n\n**(b)** Con el objetivo de alejar la segunda partícula, se le transmite una velocidad de $1{,}2\\cdot10^{-5}\\ \\text{m/s}$ en la dirección de la recta que une ambas partículas. Halle el punto más alejado del origen que alcanzará dicha partícula.",
+  "knowns": [
+   "$M = 20\\ \\text{kg}$ (en el origen)",
+   "$m = 3\\ \\text{kg}$ en $(8,6)\\ \\text{m}$",
+   "$v = 1{,}2\\cdot10^{-5}\\ \\text{m/s}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** La distancia del origen al punto $(8,6)$ es $d=\\sqrt{8^2+6^2}=10\\ \\text{m}$, con vector unitario $\\vec{u}_r=(0{,}8;\\,0{,}6)$.\n\n$$\\vec{g}=-\\dfrac{GM}{d^2}\\,\\vec{u}_r=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot 20}{10^2}\\,(0{,}8;\\,0{,}6)$$\n\n$$\\vec{g}=\\left(-1{,}07\\cdot10^{-11}\\,\\vec{i}-8{,}0\\cdot10^{-12}\\,\\vec{j}\\right)\\ \\text{N/kg}$$\n\nLa fuerza sobre la masa $m=3\\ \\text{kg}$ es $\\vec{F}=m\\,\\vec{g}$:\n\n$$\\vec{F}=\\left(-3{,}21\\cdot10^{-11}\\,\\vec{i}-2{,}40\\cdot10^{-11}\\,\\vec{j}\\right)\\ \\text{N}$$\n\n**(b)** Por conservación de la energía mecánica, con la partícula partiendo de $r_0=10\\ \\text{m}$:\n\n$$E=-\\dfrac{GMm}{r_0}+\\dfrac12 m v^2=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot20\\cdot3}{10}+\\dfrac12\\cdot3\\cdot(1{,}2\\cdot10^{-5})^2=-1{,}84\\cdot10^{-10}\\ \\text{J}$$\n\nEn el punto más alejado la velocidad se anula y $E=-\\dfrac{GMm}{r_{\\max}}$:\n\n$$r_{\\max}=-\\dfrac{GMm}{E}=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot20\\cdot3}{-1{,}84\\cdot10^{-10}}=21{,}7\\ \\text{m}$$\n\nComo la partícula se mueve a lo largo de la recta origen–punto (dirección $\\vec{u}_r$):\n\n$$(x_{\\max},y_{\\max})=21{,}7\\,(0{,}8;\\,0{,}6)=(17{,}4;\\,13{,}0)\\ \\text{m}$$",
+  "answer": "**(a)** $\\vec{g}=(-1{,}07\\cdot10^{-11}\\vec{i}-8{,}0\\cdot10^{-12}\\vec{j})\\ \\text{N/kg}$; $\\vec{F}=(-3{,}21\\cdot10^{-11}\\vec{i}-2{,}40\\cdot10^{-11}\\vec{j})\\ \\text{N}$. **(b)** $r_{\\max}\\approx21{,}7\\ \\text{m}$, en el punto $(17{,}4;\\,13{,}0)\\ \\text{m}$.",
+  "common_errors": [
+   "Olvidar que $\\vec{g}$ y $\\vec{F}$ son vectores y no descomponerlos según $\\vec{u}_r=(0{,}8;0{,}6)$.",
+   "Usar signo positivo en la energía potencial; la energía potencial gravitatoria es siempre negativa, $E_p=-GMm/r$.",
+   "Confundir $r_{\\max}$ (distancia al origen) con la altura recorrida."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-057",
+  "source": "Madrid · Junio 2022",
+  "title": "Velocidades de escape de Marte y la Tierra · Madrid · Junio 2022",
+  "statement": "Marte posee la décima parte de la masa de la Tierra y la mitad de su diámetro.\n\n**(a)** Encuentre la relación entre las velocidades de escape de Marte y de la Tierra desde sus superficies.\n\n**(b)** Un objeto se lanza verticalmente desde la superficie terrestre con velocidad igual a la de escape de Marte. Despreciando el rozamiento, ¿qué altura máxima alcanzaría?",
+  "knowns": [
+   "$M_M=\\tfrac{1}{10}M_T$",
+   "$R_M=\\tfrac12 R_T$ (mitad de diámetro)",
+   "$R_T=6{,}37\\cdot10^{6}\\ \\text{m}$"
+  ],
+  "full_solution": "**(a)** La velocidad de escape es $v_e=\\sqrt{\\dfrac{2GM}{R}}$. Por tanto:\n\n$$\\dfrac{v_{eM}}{v_{eT}}=\\sqrt{\\dfrac{M_M}{M_T}\\cdot\\dfrac{R_T}{R_M}}=\\sqrt{\\dfrac{1}{10}\\cdot 2}=\\dfrac{1}{\\sqrt5}\\approx0{,}447$$\n\n**(b)** La velocidad de lanzamiento es $v=v_{eM}$, con $v_{eM}^2=\\dfrac{2GM_M}{R_M}=\\dfrac{1}{5}\\cdot\\dfrac{2GM_T}{R_T}$. Conservando la energía desde la superficie terrestre hasta la altura máxima (donde $v=0$):\n\n$$\\dfrac12 v_{eM}^2-\\dfrac{GM_T}{R_T}=-\\dfrac{GM_T}{r_{\\max}}$$\n\n$$\\dfrac{1}{5}\\dfrac{GM_T}{R_T}-\\dfrac{GM_T}{R_T}=-\\dfrac{4}{5}\\dfrac{GM_T}{R_T}=-\\dfrac{GM_T}{r_{\\max}}\\Rightarrow r_{\\max}=\\dfrac{5}{4}R_T$$\n\n$$h_{\\max}=r_{\\max}-R_T=\\dfrac{R_T}{4}=\\dfrac{6{,}37\\cdot10^{6}}{4}=1{,}59\\cdot10^{6}\\ \\text{m}=1592{,}5\\ \\text{km}$$",
+  "answer": "**(a)** $\\dfrac{v_{eM}}{v_{eT}}=\\dfrac{1}{\\sqrt5}\\approx0{,}447$. **(b)** $h_{\\max}=\\dfrac{R_T}{4}\\approx1592{,}5\\ \\text{km}$.",
+  "common_errors": [
+   "Tomar $R_M=R_T/10$ confundiendo masa con radio, o no reparar en que la mitad del diámetro es la mitad del radio.",
+   "Olvidar la energía potencial inicial $-GM_T/R_T$ al conservar la energía.",
+   "Dar $r_{\\max}$ como altura en lugar de restar $R_T$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-058",
+  "source": "Madrid · Junio 2022",
+  "title": "Órbita circular de Tianwen-1 en Marte · Madrid · Junio 2022",
+  "statement": "Tianwen-1 es una misión espacial china para aterrizar en Marte. La nave entró en órbita marciana suponiendo órbita circular con periodo de revolución de $12\\ \\text{h}$.\n\n**(a)** Determine la altura sobre la superficie del planeta a la que orbita la nave.\n\n**(b)** Si el módulo de aterrizaje reduce su velocidad orbital a cero y cae en caída libre, ¿a qué velocidad impactaría contra la superficie?",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_M = 6{,}39\\cdot10^{23}\\ \\text{kg}$",
+   "$R_M = 3390\\ \\text{km}$",
+   "$T = 12\\ \\text{h} = 43200\\ \\text{s}$"
+  ],
+  "full_solution": "**(a)** En una órbita circular la fuerza gravitatoria es la centrípeta. Combinando $v=\\dfrac{2\\pi r}{T}$ con $\\dfrac{GM_M}{r^2}=\\dfrac{v^2}{r}$ se obtiene la tercera ley de Kepler:\n\n$$r=\\left(\\dfrac{GM_M\\,T^2}{4\\pi^2}\\right)^{1/3}$$\n\nSustituyendo:\n\n$$r=\\left(\\dfrac{6{,}67\\cdot10^{-11}\\cdot 6{,}39\\cdot10^{23}\\cdot(43200)^2}{4\\pi^2}\\right)^{1/3}=1{,}263\\cdot10^{7}\\ \\text{m}=12630\\ \\text{km}$$\n\nLa altura sobre la superficie es:\n\n$$h=r-R_M=12630-3390=9240\\ \\text{km}$$\n\n**(b)** Con velocidad orbital nula, el módulo cae partiendo del reposo desde $r$. Por conservación de la energía mecánica $\\Delta E_p+\\Delta E_c=0$:\n\n$$\\tfrac{1}{2}mv^2=GM_M m\\left(\\dfrac{1}{R_M}-\\dfrac{1}{r}\\right)\\ \\Rightarrow\\ v=\\sqrt{2GM_M\\left(\\dfrac{1}{R_M}-\\dfrac{1}{r}\\right)}$$\n\n$$v=\\sqrt{2\\cdot6{,}67\\cdot10^{-11}\\cdot6{,}39\\cdot10^{23}\\left(\\dfrac{1}{3{,}39\\cdot10^{6}}-\\dfrac{1}{1{,}263\\cdot10^{7}}\\right)}\\approx 4289\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $h\\approx 9240\\ \\text{km}$ (radio orbital $r\\approx 12630\\ \\text{km}$). **(b)** $v\\approx 4{,}29\\cdot10^{3}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Confundir el radio de la órbita $r$ con la altura $h$ sobre la superficie (olvidar restar $R_M$).",
+   "Usar $g$ constante en la caída en vez de la conservación de la energía con potencial $-GMm/r$.",
+   "No pasar el periodo a segundos antes de aplicar la tercera ley de Kepler."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-059",
+  "source": "Madrid · Junio 2023",
+  "title": "Energías de un satélite OneWeb en órbita · Madrid · Junio 2023",
+  "statement": "Un satélite de la constelación OneWeb, de masa $m_S = 150\\ \\text{kg}$, se encuentra en una órbita circular alrededor de la Tierra a una altura $h = 1200\\ \\text{km}$ sobre el nivel del mar. Determine:\n\n**(a)** Las energías potencial gravitatoria y cinética que tiene el satélite en su órbita.\n\n**(b)** La energía que fue necesario comunicar al satélite para ponerlo en órbita desde la superficie de la Tierra.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 5{,}97\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6{,}37\\cdot10^{6}\\ \\text{m}$",
+   "$m_S = 150\\ \\text{kg}$",
+   "$h = 1200\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** El radio de la órbita es $r = R_T + h = 6{,}37\\cdot10^{6} + 1{,}2\\cdot10^{6} = 7{,}57\\cdot10^{6}\\ \\text{m}$.\n\nEnergía potencial gravitatoria:\n$$E_P = -\\dfrac{G\\,M_T\\,m_S}{r} = -\\dfrac{6{,}67\\cdot10^{-11}\\cdot 5{,}97\\cdot10^{24}\\cdot 150}{7{,}57\\cdot10^{6}} = -7{,}89\\cdot10^{9}\\ \\text{J}$$\n\nEn una órbita circular la fuerza gravitatoria actúa como centrípeta, $\\dfrac{G\\,M_T\\,m_S}{r^2} = \\dfrac{m_S\\,v^2}{r}$, luego $v^2 = \\dfrac{G\\,M_T}{r}$. La energía cinética es:\n$$E_C = \\tfrac{1}{2}\\,m_S\\,v^2 = \\dfrac{G\\,M_T\\,m_S}{2\\,r} = 3{,}95\\cdot10^{9}\\ \\text{J}$$\n\n**(b)** La energía de satelización es la variación de energía mecánica entre la superficie (en reposo) y la órbita:\n$$E = E_{M,\\text{órbita}} - E_{M,\\text{sup}} = \\left(E_C + E_P\\right) - \\left(0 - \\dfrac{G\\,M_T\\,m_S}{R_T}\\right)$$\n$$E = -3{,}95\\cdot10^{9} + 6{,}67\\cdot10^{-11}\\,\\dfrac{5{,}97\\cdot10^{24}\\cdot 150}{6{,}37\\cdot10^{6}} = 5{,}43\\cdot10^{9}\\ \\text{J}$$",
+  "answer": "**(a)** $E_P = -7{,}89\\cdot10^{9}\\ \\text{J}$ y $E_C = 3{,}95\\cdot10^{9}\\ \\text{J}$ (energía mecánica $E_M = -3{,}95\\cdot10^{9}\\ \\text{J}$). **(b)** $E \\approx 5{,}43\\cdot10^{9}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar $r=R_T$ en vez de $r=R_T+h$.",
+   "Olvidar que en órbita circular $E_C=-E_P/2$ y $E_M=E_P/2$.",
+   "En (b) tomar la energía potencial en la superficie como nula."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-060",
+  "source": "Madrid · Junio 2023",
+  "title": "Satélite militar y punto neutro Tierra-Luna · Madrid · Junio 2023",
+  "statement": "Un satélite orbita la Tierra en órbita circular a una altura $h = 1600\\ \\text{km}$ sobre la superficie.\n\n**(a)** Calcule la velocidad orbital del satélite y el tiempo que tarda en dar una vuelta completa. Desprecie la interacción gravitatoria de la Luna.\n\n**(b)** Para evitar que caiga, se decide impulsarlo hacia la Luna. Determine la distancia $x$ al centro de la Tierra a la que deberá llegar para que el efecto del campo gravitatorio lunar supere al del campo terrestre.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 5{,}97\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6{,}37\\cdot10^{3}\\ \\text{km}$",
+   "$M_L = 7{,}35\\cdot10^{22}\\ \\text{kg}$",
+   "$d = 3{,}84\\cdot10^{5}\\ \\text{km}$",
+   "$h = 1600\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** La fuerza gravitatoria es la centrípeta, luego $v = \\sqrt{\\dfrac{G\\,M_T}{R_T+h}}$. Con $r = R_T + h = 6{,}37\\cdot10^{6} + 1{,}6\\cdot10^{6} = 7{,}97\\cdot10^{6}\\ \\text{m}$:\n$$v = \\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot5{,}97\\cdot10^{24}}{7{,}97\\cdot10^{6}}} = 7{,}07\\cdot10^{3}\\ \\text{m·s}^{-1} \\approx 7{,}07\\ \\text{km·s}^{-1}$$\n$$T = \\dfrac{2\\pi r}{v} = \\dfrac{2\\pi\\cdot7{,}97\\cdot10^{6}}{7{,}07\\cdot10^{3}} \\approx 7{,}08\\cdot10^{3}\\ \\text{s} \\approx 1{,}97\\ \\text{h}$$\n\n**(b)** El punto neutro cumple que los módulos de los campos terrestre y lunar se igualan, estando el satélite a distancia $x$ de la Tierra y $d-x$ de la Luna:\n$$\\dfrac{G\\,M_T}{x^2} = \\dfrac{G\\,M_L}{(d-x)^2} \\;\\Rightarrow\\; \\dfrac{x}{d-x} = \\sqrt{\\dfrac{M_T}{M_L}}$$\n$$\\dfrac{x}{3{,}84\\cdot10^{5}-x} = \\sqrt{\\dfrac{5{,}97\\cdot10^{24}}{7{,}35\\cdot10^{22}}} = 9{,}01 \\;\\Rightarrow\\; x \\approx 3{,}46\\cdot10^{5}\\ \\text{km}$$\nMás allá de esa distancia predomina el campo lunar.",
+  "answer": "**(a)** $v \\approx 7{,}07\\ \\text{km·s}^{-1}$ y $T \\approx 1{,}97\\ \\text{h}$. **(b)** $x \\approx 3{,}46\\cdot10^{5}\\ \\text{km}$ del centro de la Tierra.",
+  "common_errors": [
+   "No convertir $R_T$ a metros (dato en km) antes de operar.",
+   "Igualar fuerzas en vez de campos sin notar que la masa del satélite se cancela.",
+   "Tomar la raíz con signo negativo y obtener un punto fuera del segmento Tierra-Luna."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-061",
+  "source": "Madrid · Junio 2023 (Coincidentes)",
+  "title": "Campo gravitatorio de una partícula y máximo alejamiento · Madrid · Junio 2023 (Coincidentes)",
+  "statement": "Una partícula de masa $5\\cdot10^{4}\\ \\text{kg}$ se encuentra fija en el punto $(6, 8)\\ \\text{cm}$ del plano $xy$.\n\n**(a)** Calcule el campo gravitatorio que dicha partícula genera en el origen de coordenadas.\n\nDesde el origen lanzamos una segunda partícula de masa $25\\ \\text{mg}$ con una velocidad de $5\\ \\text{mm/s}$ según la dirección que une ambas partículas, alejándola de la primera.\n\n**(b)** Obtenga la distancia máxima a la que llegará la segunda partícula respecto a la primera.",
+  "knowns": [
+   "$M = 5\\cdot10^{4}\\ \\text{kg}$ en $(6,8)\\ \\text{cm}$",
+   "$d_0 = \\sqrt{0{,}06^2+0{,}08^2} = 0{,}10\\ \\text{m}$",
+   "$m = 25\\ \\text{mg} = 25\\cdot10^{-6}\\ \\text{kg}$",
+   "$v_0 = 5\\ \\text{mm/s} = 5\\cdot10^{-3}\\ \\text{m/s}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N m}^2\\text{kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** La partícula está a $d_0 = \\sqrt{0{,}06^2 + 0{,}08^2} = 0{,}10\\ \\text{m}$ del origen. El campo en el origen apunta hacia la masa (en la dirección $(6,8)$), es decir con unitario $(0{,}6;\\,0{,}8)$:\n$$g = \\dfrac{GM}{d_0^2} = \\dfrac{6{,}67\\cdot10^{-11}\\cdot 5\\cdot10^{4}}{0{,}10^2} = 3{,}34\\cdot10^{-4}\\ \\text{m/s}^2.$$\n$$\\vec{g} = (2{,}00\\,\\vec{i} + 2{,}67\\,\\vec{j})\\cdot10^{-4}\\ \\text{m/s}^2.$$\n\n**(b)** Por conservación de la energía mecánica. Energía inicial (a $d_0=0{,}10\\ \\text{m}$):\n$$E_0 = -\\dfrac{GMm}{d_0} + \\tfrac{1}{2}mv_0^2 = -6{,}67\\cdot10^{-11}\\dfrac{5\\cdot10^{4}\\cdot 25\\cdot10^{-6}}{0{,}10} + \\tfrac{1}{2}\\cdot 25\\cdot10^{-6}\\cdot(5\\cdot10^{-3})^2 = -5{,}21\\cdot10^{-10}\\ \\text{J}.$$\nEn el punto de máximo alejamiento la velocidad es nula, luego $E_0 = -\\dfrac{GMm}{d}$:\n$$d = -\\dfrac{GMm}{E_0} = -\\dfrac{6{,}67\\cdot10^{-11}\\cdot 5\\cdot10^{4}\\cdot 25\\cdot10^{-6}}{-5{,}21\\cdot10^{-10}} \\approx 0{,}16\\ \\text{m}.$$",
+  "answer": "**(a)** $\\vec{g} = (2{,}00\\,\\vec{i} + 2{,}67\\,\\vec{j})\\cdot10^{-4}\\ \\text{m/s}^2$ ($|\\vec g| = 3{,}34\\cdot10^{-4}\\ \\text{m/s}^2$). **(b)** $d_{\\max} \\approx 0{,}16\\ \\text{m}$.",
+  "common_errors": [
+   "Olvidar la energía cinética inicial en el balance energético.",
+   "Tomar mal el vector unitario del campo (debe apuntar hacia la masa).",
+   "No usar $d_0=0{,}10\\ \\text{m}$ (hipotenusa de 6 y 8 cm)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-062",
+  "source": "Madrid · Junio 2023 (Coincidentes)",
+  "title": "Órbita alrededor de Fomalhaut II: altura y energía de escape · Madrid · Junio 2023 (Coincidentes)",
+  "statement": "El astronauta Rocannon se ha situado en una órbita circular de $4{,}36\\ \\text{h}$ de período alrededor de Fomalhaut II, un planeta de $4\\cdot10^{23}\\ \\text{kg}$ de masa y $5000\\ \\text{km}$ de radio.\n\n**(a)** Obtenga la altura de la órbita sobre la superficie de Fomalhaut II.\n\n**(b)** Rocannon dispone de $1{,}5\\cdot10^{10}\\ \\text{J}$ para escapar de Fomalhaut II desde la órbita en que se halla. Determine el valor máximo que puede tener la masa conjunta de Rocannon y su nave para lograr escapar con esa energía.",
+  "knowns": [
+   "$T = 4{,}36\\ \\text{h} = 1{,}57\\cdot10^{4}\\ \\text{s}$",
+   "$M = 4\\cdot10^{23}\\ \\text{kg}$",
+   "$R = 5000\\ \\text{km} = 5\\cdot10^{6}\\ \\text{m}$",
+   "$\\Delta E = 1{,}5\\cdot10^{10}\\ \\text{J}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N m}^2\\text{kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** En órbita circular, de $v = \\dfrac{2\\pi r}{T}$ y de la 2.ª ley de Newton $\\dfrac{GM}{r^2} = \\dfrac{v^2}{r}$ se obtiene $v = \\sqrt{\\dfrac{GM}{r}}$. Combinando ambas (3.ª ley de Kepler):\n$$r = \\sqrt[3]{\\dfrac{GM\\,T^2}{4\\pi^2}} = \\sqrt[3]{\\dfrac{6{,}67\\cdot10^{-11}\\cdot 4\\cdot10^{23}\\cdot(4{,}36\\cdot3600)^2}{4\\pi^2}} = 5{,}50\\cdot10^{6}\\ \\text{m}.$$\nLa altura sobre la superficie:\n$$H = r - R = 5{,}50\\cdot10^{6} - 5\\cdot10^{6} \\approx 501\\ \\text{km}.$$\n\n**(b)** La energía mecánica en la órbita circular es\n$$E_{\\text{órbita}} = -\\dfrac{GMm}{r} + \\tfrac{1}{2}mv^2 = -\\dfrac{1}{2}\\dfrac{GMm}{r}.$$\nPara escapar, la energía final debe ser al menos cero: $E_{\\text{órbita}} + \\Delta E = 0$, de donde\n$$\\dfrac{1}{2}\\dfrac{GMm}{r} = \\Delta E\\ \\Rightarrow\\ m = \\dfrac{2 r\\,\\Delta E}{GM} = \\dfrac{2\\cdot 5{,}50\\cdot10^{6}\\cdot 1{,}5\\cdot10^{10}}{6{,}67\\cdot10^{-11}\\cdot 4\\cdot10^{23}} \\approx 6{,}19\\cdot10^{3}\\ \\text{kg}.$$",
+  "answer": "**(a)** $H \\approx 501\\ \\text{km}$ ($r \\approx 5{,}50\\cdot10^{6}\\ \\text{m}$). **(b)** $m_{\\max} \\approx 6{,}19\\cdot10^{3}\\ \\text{kg}$.",
+  "common_errors": [
+   "No pasar el periodo de horas a segundos antes de aplicar Kepler.",
+   "Olvidar que la energía orbital es $-GMm/2r$ (con la cinética incluida).",
+   "Confundir radio de órbita $r$ con altura $H=r-R$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-063",
+  "source": "Madrid · Modelo 2024",
+  "title": "Gravedad superficial y velocidad de escape en un planeta · Madrid · Modelo 2024",
+  "statement": "Un astronauta aterriza en un planeta esférico de radio $1800\\ \\text{km}$. Deja caer un objeto desde $2\\ \\text{m}$ y tarda $1{,}5\\ \\text{s}$ en llegar al suelo.\n\n**(a)** Determine la gravedad en la superficie y la masa del planeta.\n\n**(b)** El astronauta despega con velocidad $3\\ \\text{km·s}^{-1}$. Compruebe si escapa y, en su caso, calcule su velocidad muy lejos del planeta.",
+  "knowns": [
+   "$R = 1800\\ \\text{km} = 1{,}8\\cdot10^{6}\\ \\text{m}$",
+   "$h = 2\\ \\text{m}$, $t = 1{,}5\\ \\text{s}$",
+   "$v_0 = 3\\ \\text{km·s}^{-1} = 3\\cdot10^{3}\\ \\text{m·s}^{-1}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** De la caída libre $h=\\tfrac12 g t^2$:\n$$g = \\dfrac{2h}{t^2} = \\dfrac{2\\cdot 2}{1{,}5^2} = 1{,}78\\ \\text{m·s}^{-2}$$\nDe $g = \\dfrac{GM}{R^2}$:\n$$M = \\dfrac{g R^2}{G} = \\dfrac{1{,}78\\cdot(1{,}8\\cdot10^{6})^2}{6{,}67\\cdot10^{-11}} = 8{,}64\\cdot10^{22}\\ \\text{kg}$$\n\n**(b)** La velocidad de escape:\n$$v_{esc} = \\sqrt{\\dfrac{2GM}{R}} = \\sqrt{\\dfrac{2\\cdot 6{,}67\\cdot10^{-11}\\cdot 8{,}64\\cdot10^{22}}{1{,}8\\cdot10^{6}}} = 2{,}53\\cdot10^{3}\\ \\text{m·s}^{-1} = 2{,}53\\ \\text{km·s}^{-1}$$\nComo $v_0=3\\ \\text{km·s}^{-1} > v_{esc}$, el astronauta escapa. Por conservación de la energía, lejos del planeta:\n$$v_\\infty^2 = v_0^2 - \\dfrac{2GM}{R} = (3\\cdot10^{3})^2 - (2{,}53\\cdot10^{3})^2 = 2{,}6\\cdot10^{6}\\ \\text{m}^2\\text{·s}^{-2}$$\n$$v_\\infty = 1{,}61\\cdot10^{3}\\ \\text{m·s}^{-1} = 1{,}61\\ \\text{km·s}^{-1}$$",
+  "answer": "**(a)** $g = 1{,}78\\ \\text{m·s}^{-2}$, $M = 8{,}64\\cdot10^{22}\\ \\text{kg}$. **(b)** $v_{esc}=2{,}53\\ \\text{km·s}^{-1}<3\\ \\text{km·s}^{-1}$: escapa, con $v_\\infty = 1{,}61\\ \\text{km·s}^{-1}$.",
+  "common_errors": [
+   "Usar $g=9{,}8$ en lugar de la gravedad propia del planeta.",
+   "No pasar el radio a metros.",
+   "Olvidar restar la energía potencial al aplicar la conservación para hallar $v_\\infty$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-064",
+  "source": "Madrid · Modelo 2024",
+  "title": "Órbita elíptica de la sonda Parker alrededor del Sol · Madrid · Modelo 2024",
+  "statement": "La sonda Parker de la NASA describe una órbita elíptica alrededor del Sol con un afelio $r_a = 1{,}1\\cdot10^{8}\\ \\text{km}$ y un perihelio $r_p = 7{,}6\\cdot10^{6}\\ \\text{km}$.\n\n**(a)** Determine el semieje mayor de la elipse y el tiempo que tarda la sonda en dar una vuelta completa al Sol.\n\n**(b)** Determine la velocidad de la sonda en el afelio y en el perihelio.",
+  "knowns": [
+   "$r_a = 1{,}1\\cdot10^{8}\\ \\text{km} = 1{,}1\\cdot10^{11}\\ \\text{m}$",
+   "$r_p = 7{,}6\\cdot10^{6}\\ \\text{km} = 7{,}6\\cdot10^{9}\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_S = 1{,}99\\cdot10^{30}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** El semieje mayor es la semisuma de las distancias extremas:\n$$a = \\dfrac{r_a + r_p}{2} = \\dfrac{1{,}1\\cdot10^{8} + 7{,}6\\cdot10^{6}}{2} = 5{,}88\\cdot10^{7}\\ \\text{km} = 5{,}88\\cdot10^{10}\\ \\text{m}$$\n\nEl periodo se obtiene con la tercera ley de Kepler ($M_S \\gg m$):\n$$T^2 = \\dfrac{4\\pi^2}{G M_S}\\,a^3 = \\dfrac{4\\pi^2}{6{,}67\\cdot10^{-11}\\cdot 1{,}99\\cdot10^{30}}\\,(5{,}88\\cdot10^{10})^3$$\n$$T = 7{,}78\\cdot10^{6}\\ \\text{s} \\approx 90\\ \\text{días}$$\n\n**(b)** Se conservan el momento angular y la energía mecánica. En afelio y perihelio $\\vec{r}\\perp\\vec{v}$, luego:\n$$r_a v_a = r_p v_p \\;\\Rightarrow\\; v_a = v_p\\,\\dfrac{r_p}{r_a}$$\nCon la conservación de la energía $\\tfrac{1}{2}v_p^2 - \\dfrac{GM_S}{r_p} = \\tfrac{1}{2}v_a^2 - \\dfrac{GM_S}{r_a}$ se despeja:\n$$v_p^2 = \\dfrac{2GM_S\\left(\\dfrac{1}{r_p}-\\dfrac{1}{r_a}\\right)}{1-\\dfrac{r_p^2}{r_a^2}} \\;\\Rightarrow\\; v_p = 1{,}81\\cdot10^{5}\\ \\text{m/s}$$\n$$v_a = v_p\\,\\dfrac{r_p}{r_a} = 1{,}25\\cdot10^{4}\\ \\text{m/s}$$",
+  "answer": "**(a)** $a = 5{,}88\\cdot10^{7}\\ \\text{km}$; $T \\approx 7{,}78\\cdot10^{6}\\ \\text{s} \\approx 90\\ \\text{días}$. **(b)** $v_p \\approx 1{,}81\\cdot10^{5}\\ \\text{m/s}$ (perihelio) y $v_a \\approx 1{,}25\\cdot10^{4}\\ \\text{m/s}$ (afelio).",
+  "common_errors": [
+   "Usar unidades mixtas: hay que pasar $a$ a metros antes de aplicar Kepler.",
+   "Olvidar que la rapidez es máxima en el perihelio (más cerca) y mínima en el afelio.",
+   "Confundir semieje mayor con la suma $r_a+r_p$ (es la semisuma)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-065",
+  "source": "Madrid · Modelo 2025",
+  "title": "Muelle calibrado y gravedad de un planeta desconocido · Madrid · Modelo 2025",
+  "statement": "Un equipo de astronautas calibra un muelle en la Tierra colgando distintas masas y midiendo su elongación (figura 1). Después viaja a un planeta de masa desconocida, de radio $R_P = 3{,}5\\cdot10^{3}\\ \\text{km}$, y repite las medidas con las mismas masas (figura 2).\n\n**(a)** Halle la constante del muelle usando la gráfica de la figura 1, tomando $g_T = 10\\ \\text{m}\\cdot\\text{s}^{-2}$.\n**(b)** Determine la aceleración de la gravedad en la superficie del planeta a partir de la figura 2.\n**(c)** Calcule la masa del planeta.",
+  "knowns": [
+   "Gráfica Tierra (fig. 1): recta que pasa por $m=2\\ \\text{kg}$, $x=20\\ \\text{cm}$",
+   "Gráfica planeta (fig. 2): recta que pasa por $m=2\\ \\text{kg}$, $x=6\\ \\text{cm}$",
+   "$g_T = 10\\ \\text{m}\\cdot\\text{s}^{-2}$",
+   "$R_P = 3{,}5\\cdot10^{3}\\ \\text{km} = 3{,}5\\cdot10^{6}\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** En el equilibrio, la fuerza del muelle iguala al peso:\n$$K\\,x = m\\,g_T \\ \\Rightarrow\\ x = \\dfrac{g_T}{K}\\,m$$\nLa elongación es proporcional a la masa; la pendiente de la recta vale $g_T/K$. De la figura 1, para $m=2\\ \\text{kg}$ es $x=0{,}20\\ \\text{m}$:\n$$\\text{pendiente}=\\dfrac{0{,}20}{2}=0{,}10\\ \\text{m}\\cdot\\text{kg}^{-1}=\\dfrac{g_T}{K}$$\n$$K = \\dfrac{g_T}{\\text{pendiente}} = \\dfrac{10}{0{,}10} = 100\\ \\text{N}\\cdot\\text{m}^{-1}$$\n\n**(b)** Con el mismo muelle en el planeta, $K\\,x = m\\,g_P$, de donde $g_P = K\\,(x/m)$. De la figura 2, para $m=2\\ \\text{kg}$ es $x=0{,}06\\ \\text{m}$:\n$$\\text{pendiente}=\\dfrac{0{,}06}{2}=0{,}03\\ \\text{m}\\cdot\\text{kg}^{-1}$$\n$$g_P = K\\cdot\\text{pendiente} = 100\\cdot0{,}03 = 3\\ \\text{m}\\cdot\\text{s}^{-2}$$\n\n**(c)** De la ley de gravitación, $g_P = G\\,M_P/R_P^{2}$:\n$$M_P = \\dfrac{g_P\\,R_P^{2}}{G} = \\dfrac{3\\cdot(3{,}5\\cdot10^{6})^{2}}{6{,}67\\cdot10^{-11}} = 5{,}5\\cdot10^{23}\\ \\text{kg}$$",
+  "answer": "**(a)** $K = 100\\ \\text{N}\\cdot\\text{m}^{-1}$. **(b)** $g_P = 3\\ \\text{m}\\cdot\\text{s}^{-2}$. **(c)** $M_P \\approx 5{,}5\\cdot10^{23}\\ \\text{kg}$.",
+  "common_errors": [
+   "Confundir la pendiente $g/K$ con su inversa, o leer mal un punto de la gráfica.",
+   "Olvidar pasar la elongación de cm a m o el radio de km a m antes de sustituir.",
+   "Usar $g_T$ en lugar de $g_P$ al calcular la masa del planeta."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-066",
+  "source": "Madrid · Modelo 2026",
+  "title": "Planeta extrasolar G-876d: gravedad, órbita y energía · Madrid · Modelo 2026",
+  "statement": "El planeta extrasolar G-876d tiene masa $6$ veces la de la Tierra y radio $1{,}73$ veces el terrestre. Describe una órbita circular de radio $3{,}14\\cdot10^{6}\\ \\text{km}$ en torno a la estrella Gliese, de masa $6{,}37\\cdot10^{29}\\ \\text{kg}$. Determine:\n\n**(a)** La aceleración de la gravedad en su superficie.\n\n**(b)** La velocidad orbital y el periodo de revolución.\n\n**(c)** La energía del planeta en la órbita.",
+  "knowns": [
+   "$M_{p}=6M_T$, $R_p=1{,}73\\,R_T$",
+   "$r_{orb}=3{,}14\\cdot10^{6}\\ \\text{km}=3{,}14\\cdot10^{9}\\ \\text{m}$",
+   "$M_{estrella}=6{,}37\\cdot10^{29}\\ \\text{kg}$",
+   "$G=6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T=5{,}97\\cdot10^{24}\\ \\text{kg}$, $R_T=6{,}37\\cdot10^{6}\\ \\text{m}$"
+  ],
+  "full_solution": "**(a)** $R_p=1{,}73\\cdot6{,}37\\cdot10^{6}=1{,}10\\cdot10^{7}\\ \\text{m}$; $M_p=6\\cdot5{,}97\\cdot10^{24}=3{,}58\\cdot10^{25}\\ \\text{kg}$.\n\n$$g_p=\\dfrac{GM_p}{R_p^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot3{,}58\\cdot10^{25}}{(1{,}10\\cdot10^{7})^2}=19{,}7\\ \\text{m/s}^2$$\n\n**(b)** Igualando atracción y fuerza centrípeta, $v_{orb}=\\sqrt{\\dfrac{GM_{estrella}}{r_{orb}}}$:\n\n$$v_{orb}=\\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot6{,}37\\cdot10^{29}}{3{,}14\\cdot10^{9}}}=1{,}16\\cdot10^{5}\\ \\text{m/s}$$\n\n$$T=\\dfrac{2\\pi r_{orb}}{v_{orb}}=\\dfrac{2\\pi\\cdot3{,}14\\cdot10^{9}}{1{,}16\\cdot10^{5}}=1{,}70\\cdot10^{5}\\ \\text{s}\\approx1{,}96\\ \\text{días}$$\n\n**(c)** Energía mecánica orbital:\n\n$$E=\\dfrac12 M_p v_{orb}^2-\\dfrac{G M_{estrella} M_p}{r_{orb}}=-2{,}42\\cdot10^{35}\\ \\text{J}$$",
+  "answer": "**(a)** $g_p\\approx19{,}7\\ \\text{m/s}^2$. **(b)** $v_{orb}\\approx1{,}16\\cdot10^{5}\\ \\text{m/s}$, $T\\approx1{,}70\\cdot10^{5}\\ \\text{s}\\approx1{,}96\\ \\text{días}$. **(c)** $E\\approx-2{,}42\\cdot10^{35}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la masa de la estrella en vez de la del planeta para $g$ (o viceversa en la órbita).",
+   "No aplicar los factores $6$ y $1{,}73$ a $M_T$ y $R_T$.",
+   "Olvidar el factor $\\tfrac12$ (o el signo) en $E=\\tfrac12 M v^2 - GMm/r$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-067",
+  "source": "Madrid · Modelo 2026",
+  "title": "Órbita elíptica de Plutón: afelio, perihelio y velocidades · Madrid · Modelo 2026",
+  "statement": "Plutón describe una órbita elíptica con periodo $248$ años terrestres y excentricidad $e=c/a=0{,}244$ (siendo $c$ la distancia del Sol al centro de la elipse y $a$ el semieje mayor). Determine:\n\n**(a)** Las distancias en el afelio y en el perihelio.\n\n**(b)** Las velocidades orbitales en afelio y perihelio.",
+  "knowns": [
+   "$T=248\\ \\text{años}=7{,}82\\cdot10^{9}\\ \\text{s}$",
+   "$e=0{,}244$",
+   "$G=6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_{Sol}=1{,}99\\cdot10^{30}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** Por la tercera ley de Kepler $\\dfrac{a^3}{T^2}=\\dfrac{GM_{Sol}}{4\\pi^2}$:\n\n$$a=\\left(\\dfrac{GM_{Sol}\\,T^2}{4\\pi^2}\\right)^{1/3}=5{,}90\\cdot10^{12}\\ \\text{m}$$\n\n$$c=e\\,a=0{,}244\\cdot5{,}90\\cdot10^{12}=1{,}44\\cdot10^{12}\\ \\text{m}$$\n\n$$r_{perihelio}=a-c=4{,}46\\cdot10^{12}\\ \\text{m},\\qquad r_{afelio}=a+c=7{,}34\\cdot10^{12}\\ \\text{m}$$\n\n**(b)** Conservación del momento angular y de la energía:\n\n$$v_p\\,r_p=v_a\\,r_a\\qquad;\\qquad \\dfrac12 v_p^2-\\dfrac{GM_{Sol}}{r_p}=\\dfrac12 v_a^2-\\dfrac{GM_{Sol}}{r_a}$$\n\nCombinando:\n\n$$v_a=\\sqrt{\\dfrac{2GM_{Sol}\\,(1/r_p-1/r_a)}{(r_a/r_p)^2-1}}=3{,}69\\cdot10^{3}\\ \\text{m/s}$$\n\n$$v_p=v_a\\,\\dfrac{r_a}{r_p}=6{,}08\\cdot10^{3}\\ \\text{m/s}$$",
+  "answer": "**(a)** $r_{perihelio}\\approx4{,}46\\cdot10^{12}\\ \\text{m}$, $r_{afelio}\\approx7{,}34\\cdot10^{12}\\ \\text{m}$. **(b)** $v_{afelio}\\approx3{,}69\\cdot10^{3}\\ \\text{m/s}$, $v_{perihelio}\\approx6{,}08\\cdot10^{3}\\ \\text{m/s}$.",
+  "common_errors": [
+   "Tomar el semieje $a$ como el radio de una órbita circular y usar $v=\\sqrt{GM/a}$ en los extremos.",
+   "No pasar el periodo a segundos antes de aplicar Kepler.",
+   "Confundir afelio (máxima distancia, mínima velocidad) con perihelio."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-068",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Energía, momento angular y órbita del cometa Halley · Madrid · Ordinaria 2024",
+  "statement": "El cometa Halley ($m=2{,}2\\cdot10^{14}\\ \\text{kg}$) describe una órbita elíptica alrededor del Sol con periodo $75{,}571$ años. En su afelio, a $5{,}26\\cdot10^{12}\\ \\text{m}$ del Sol, su velocidad orbital es $900\\ \\text{m·s}^{-1}$.\n\n**(a)** Obtenga la energía mecánica del cometa y el módulo de su momento angular.\n\n**(b)** Halle el semieje mayor de la elipse y la velocidad orbital en el perihelio.",
+  "knowns": [
+   "$m=2{,}2\\cdot10^{14}\\ \\text{kg}$",
+   "$T=75{,}571\\ \\text{años}$",
+   "$r_a=5{,}26\\cdot10^{12}\\ \\text{m}$",
+   "$v_a=900\\ \\text{m·s}^{-1}$",
+   "$G=6{,}67\\cdot10^{-11}$",
+   "$M_S=1{,}99\\cdot10^{30}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a) Energía mecánica y momento angular**\n\n$$E=\\dfrac12 m v_a^2-\\dfrac{GM_S m}{r_a}=\\dfrac12(2{,}2\\cdot10^{14})(900)^2-\\dfrac{6{,}67\\cdot10^{-11}\\cdot1{,}99\\cdot10^{30}\\cdot2{,}2\\cdot10^{14}}{5{,}26\\cdot10^{12}}$$\n$$E=8{,}91\\cdot10^{19}-5{,}55\\cdot10^{21}=-5{,}46\\cdot10^{21}\\ \\text{J}$$\n\nEn el afelio $\\vec{v}\\perp\\vec{r}$, de modo que:\n$$L=m\\,v_a\\,r_a=2{,}2\\cdot10^{14}\\cdot900\\cdot5{,}26\\cdot10^{12}=1{,}04\\cdot10^{30}\\ \\text{kg·m}^2\\text{·s}^{-1}$$\n\n**(b) Semieje mayor y velocidad en el perihelio**\n\nDe $E=-\\dfrac{GM_S m}{2a}$:\n$$a=-\\dfrac{GM_S m}{2E}=-\\dfrac{6{,}67\\cdot10^{-11}\\cdot1{,}99\\cdot10^{30}\\cdot2{,}2\\cdot10^{14}}{2(-5{,}46\\cdot10^{21})}=2{,}67\\cdot10^{12}\\ \\text{m}$$\n\nEl perihelio es $r_p=2a-r_a=2(2{,}67\\cdot10^{12})-5{,}26\\cdot10^{12}=8{,}58\\cdot10^{10}\\ \\text{m}$. Por conservación del momento angular $m v_a r_a=m v_p r_p$:\n$$v_p=\\dfrac{v_a r_a}{r_p}=\\dfrac{900\\cdot5{,}26\\cdot10^{12}}{8{,}58\\cdot10^{10}}=5{,}52\\cdot10^{4}\\ \\text{m·s}^{-1}$$",
+  "answer": "**(a)** $E\\approx-5{,}46\\cdot10^{21}\\ \\text{J}$; $L\\approx1{,}04\\cdot10^{30}\\ \\text{kg·m}^2\\text{·s}^{-1}$.  **(b)** $a\\approx2{,}67\\cdot10^{12}\\ \\text{m}$; $v_p\\approx5{,}5\\cdot10^{4}\\ \\text{m·s}^{-1}$.",
+  "common_errors": [
+   "Olvidar el signo negativo de la energía potencial gravitatoria.",
+   "Usar $L=mv r$ en un punto donde $\\vec v$ no es perpendicular a $\\vec r$ (solo vale en afelio y perihelio).",
+   "Confundir el semieje mayor $a$ con el radio del afelio."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-069",
+  "source": "Madrid · Ordinaria 2024",
+  "title": "Satélite en órbita circular alrededor de Urano · Madrid · Ordinaria 2024",
+  "statement": "El planeta Urano tiene densidad $1{,}27\\ \\text{g·cm}^{-3}$ y radio $2{,}54\\cdot10^{7}\\ \\text{m}$. Una sonda de $250\\ \\text{kg}$ gira en órbita circular con velocidad orbital $9{,}5\\ \\text{km·s}^{-1}$.\n\n**(a)** Calcule la masa de Urano y la aceleración centrípeta de la sonda.\n\n**(b)** Si la sonda aumenta su velocidad en $2\\ \\text{km·s}^{-1}$ (dirección tangencial), obtenga su nueva energía mecánica y razone si escapará del campo gravitatorio del planeta.",
+  "knowns": [
+   "$\\rho=1{,}27\\ \\text{g·cm}^{-3}=1270\\ \\text{kg·m}^{-3}$",
+   "$R=2{,}54\\cdot10^{7}\\ \\text{m}$",
+   "$m=250\\ \\text{kg}$",
+   "$v=9{,}5\\cdot10^{3}\\ \\text{m·s}^{-1}$",
+   "$G=6{,}67\\cdot10^{-11}$"
+  ],
+  "full_solution": "**(a) Masa y aceleración centrípeta**\n\n$$M=\\rho\\,\\dfrac{4}{3}\\pi R^3=1270\\cdot\\dfrac{4}{3}\\pi(2{,}54\\cdot10^{7})^3=8{,}72\\cdot10^{25}\\ \\text{kg}$$\nDe $v=\\sqrt{GM/r}$, el radio orbital es $r=\\dfrac{GM}{v^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot8{,}72\\cdot10^{25}}{(9{,}5\\cdot10^{3})^2}=6{,}44\\cdot10^{7}\\ \\text{m}$.\n$$a_c=\\dfrac{v^2}{r}=\\dfrac{(9{,}5\\cdot10^{3})^2}{6{,}44\\cdot10^{7}}=1{,}40\\ \\text{m·s}^{-2}$$\n\n**(b) Nueva energía mecánica y escape**\n\nNueva velocidad $v'=11{,}5\\ \\text{km·s}^{-1}$ al mismo radio $r$:\n$$E=\\dfrac12 m v'^2-\\dfrac{GMm}{r}=\\dfrac12(250)(1{,}15\\cdot10^{4})^2-\\dfrac{6{,}67\\cdot10^{-11}\\cdot8{,}72\\cdot10^{25}\\cdot250}{6{,}44\\cdot10^{7}}$$\n$$E=1{,}65\\cdot10^{10}-2{,}26\\cdot10^{10}=-6{,}0\\cdot10^{9}\\ \\text{J}$$\nComo $E<0$, la sonda **no escapa**. La velocidad de escape a ese radio es $v_{esc}=\\sqrt{2GM/r}=13{,}4\\ \\text{km·s}^{-1}>11{,}5\\ \\text{km·s}^{-1}$.",
+  "answer": "**(a)** $M\\approx8{,}72\\cdot10^{25}\\ \\text{kg}$; $a_c\\approx1{,}40\\ \\text{m·s}^{-2}$.  **(b)** $E\\approx-6{,}0\\cdot10^{9}\\ \\text{J}<0$: no escapa ($v_{esc}\\approx13{,}4\\ \\text{km·s}^{-1}$).",
+  "common_errors": [
+   "No convertir la densidad a $\\text{kg·m}^{-3}$.",
+   "Confundir el radio del planeta con el radio de la órbita (se obtiene de $v=\\sqrt{GM/r}$).",
+   "Creer que basta aumentar la velocidad para escapar sin comparar $E$ con $0$ o $v'$ con $v_{esc}$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-070",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Campo gravitatorio de dos masas, punto de equilibrio y trabajo · Madrid · Ordinaria 2025",
+  "statement": "Dos partículas puntuales $A$ y $B$ con masas $m_A = 5\\ \\text{kg}$ y $m_B = 20\\ \\text{kg}$ están en el origen y en el punto $(6,0)\\ \\text{m}$, respectivamente, en reposo.\n\n**(a)** El campo gravitatorio en el punto $(1,0)\\ \\text{m}$.\n**(b)** El punto de equilibrio entre $A$ y $B$.\n**(c)** El trabajo de la fuerza gravitatoria al desplazar una masa de $100\\ \\text{g}$ desde $(1,0)\\ \\text{m}$ hasta $(2,0)\\ \\text{m}$.",
+  "knowns": [
+   "$m_A = 5\\ \\text{kg}$ en $(0,0)\\ \\text{m}$",
+   "$m_B = 20\\ \\text{kg}$ en $(6,0)\\ \\text{m}$",
+   "$m_C = 100\\ \\text{g} = 0{,}1\\ \\text{kg}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$"
+  ],
+  "full_solution": "**(a) Campo en $(1,0)\\ \\text{m}$.**\nEl campo de cada masa apunta hacia ella. En $(1,0)$: $A$ está a $1\\ \\text{m}$ (campo hacia $-x$) y $B$ a $5\\ \\text{m}$ (campo hacia $+x$):\n$$\\vec{g} = -G\\dfrac{m_A}{1^2}\\,\\vec{i} + G\\dfrac{m_B}{5^2}\\,\\vec{i} = \\left(-6{,}67\\cdot10^{-11}\\cdot5 + 6{,}67\\cdot10^{-11}\\dfrac{20}{25}\\right)\\vec{i}$$\n$$\\vec{g} = -2{,}80\\cdot10^{-10}\\,\\vec{i}\\ \\text{N}\\cdot\\text{kg}^{-1}$$\n\n**(b) Punto de equilibrio.**\nEntre ambas los campos tienen sentidos opuestos; se igualan módulos ($x$ desde $A$):\n$$G\\dfrac{5}{x^2} = G\\dfrac{20}{(6-x)^2}\\ \\Rightarrow\\ \\dfrac{(6-x)^2}{x^2} = 4\\ \\Rightarrow\\ 6-x = 2x\\ \\Rightarrow\\ x = 2\\ \\text{m}$$\nEl punto de equilibrio es $(2,0)\\ \\text{m}$ (la otra raíz, $x=-6$, carece de sentido físico).\n\n**(c) Trabajo al mover $m_C$ de $(1,0)$ a $(2,0)$.**\n$W = -\\Delta E_p$ con $E_p = -G m_C\\!\\left(\\dfrac{m_A}{r_A}+\\dfrac{m_B}{r_B}\\right)$:\n$$E_{p,i} = -G\\,0{,}1\\left(\\dfrac{5}{1}+\\dfrac{20}{5}\\right) = -6{,}00\\cdot10^{-11}\\ \\text{J}$$\n$$E_{p,f} = -G\\,0{,}1\\left(\\dfrac{5}{2}+\\dfrac{20}{4}\\right) = -5{,}00\\cdot10^{-11}\\ \\text{J}$$\n$$W = -\\big(E_{p,f}-E_{p,i}\\big) = -1{,}00\\cdot10^{-11}\\ \\text{J}$$",
+  "answer": "$\\vec{g}(1,0) = -2{,}80\\cdot10^{-10}\\,\\vec{i}\\ \\text{N}\\cdot\\text{kg}^{-1}$.\nPunto de equilibrio en $(2,0)\\ \\text{m}$.\n$W = -1{,}00\\cdot10^{-11}\\ \\text{J}$ (la fuerza se opone al desplazamiento hacia $B$).",
+  "common_errors": [
+   "Equivocar la distancia a $B$: en $(1,0)$ dista $5\\ \\text{m}$, no $6\\ \\text{m}$.",
+   "Tomar las dos raíces de la cuadrática; sólo $x=2\\ \\text{m}$ está entre las masas.",
+   "Olvidar la masa $m_C=0{,}1\\ \\text{kg}$ al evaluar $E_p$ (confundir campo con potencial)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-071",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Planeta enano Eris: masa, gravedad y velocidad en el perihelio · Madrid · Ordinaria 2025",
+  "statement": "Eris es un planeta enano del sistema solar. Tiene un diámetro de $2330\\ \\text{km}$ y su densidad es de $2{,}5\\ \\text{g/cm}^3$. Su órbita es muy excéntrica: su afelio está a $1{,}45\\cdot10^{13}\\ \\text{m}$ del Sol y su perihelio a $5{,}24\\cdot10^{12}\\ \\text{m}$.\n\n**(a)** Calcule la masa del planeta y el valor de la aceleración de la gravedad en su superficie.\n\n**(b)** Sabiendo que la energía mecánica de un objeto de masa $m_1$ que orbita a otro de masa $m_2$ en órbita elíptica de semieje mayor $a$ es $E_{\\text{mec}} = -\\dfrac{G m_1 m_2}{2a}$, halle la energía mecánica de Eris y su velocidad orbital en el perihelio.\n\n*Datos:* $G = 6{,}67\\cdot10^{-11}\\ \\text{N m}^2\\text{kg}^{-2}$; $M_{\\text{Sol}} = 1{,}99\\cdot10^{30}\\ \\text{kg}$.",
+  "knowns": [
+   "$D = 2330\\ \\text{km}\\Rightarrow R = 1165\\ \\text{km} = 1{,}165\\cdot10^{6}\\ \\text{m}$",
+   "$\\rho = 2{,}5\\ \\text{g/cm}^3 = 2500\\ \\text{kg/m}^3$",
+   "$r_a = 1{,}45\\cdot10^{13}\\ \\text{m}$, $r_p = 5{,}24\\cdot10^{12}\\ \\text{m}$",
+   "$G = 6{,}67\\cdot10^{-11}$; $M_{\\text{Sol}} = 1{,}99\\cdot10^{30}\\ \\text{kg}$"
+  ],
+  "full_solution": "**(a)** Radio $R = D/2 = 1{,}165\\cdot10^{6}\\ \\text{m}$. Volumen y masa:\n$$V = \\tfrac{4}{3}\\pi R^3 = 6{,}62\\cdot10^{18}\\ \\text{m}^3,\\qquad M = \\rho\\,V = 2500\\cdot 6{,}62\\cdot10^{18} = 1{,}66\\cdot10^{22}\\ \\text{kg}.$$\nGravedad superficial:\n$$g = \\dfrac{GM}{R^2} = \\dfrac{6{,}67\\cdot10^{-11}\\cdot 1{,}66\\cdot10^{22}}{(1{,}165\\cdot10^{6})^2} \\approx 0{,}82\\ \\text{m/s}^2.$$\n\n**(b)** Semieje mayor:\n$$a = \\dfrac{r_a + r_p}{2} = \\dfrac{1{,}45\\cdot10^{13} + 5{,}24\\cdot10^{12}}{2} = 9{,}87\\cdot10^{12}\\ \\text{m}.$$\nEnergía mecánica:\n$$E_{\\text{mec}} = -\\dfrac{GM_{\\text{Sol}}M}{2a} = -\\dfrac{6{,}67\\cdot10^{-11}\\cdot 1{,}99\\cdot10^{30}\\cdot 1{,}66\\cdot10^{22}}{2\\cdot 9{,}87\\cdot10^{12}} \\approx -1{,}11\\cdot10^{29}\\ \\text{J}.$$\nVelocidad en el perihelio (conservación de la energía, $E_{\\text{mec}} = \\tfrac12 M v_p^2 - \\dfrac{GM_{\\text{Sol}}M}{r_p}$):\n$$v_p = \\sqrt{2GM_{\\text{Sol}}\\left(\\dfrac{1}{r_p} - \\dfrac{1}{2a}\\right)} \\approx 6{,}1\\cdot10^{3}\\ \\text{m/s}.$$",
+  "answer": "**(a)** $M \\approx 1{,}66\\cdot10^{22}\\ \\text{kg}$, $g \\approx 0{,}82\\ \\text{m/s}^2$. **(b)** $E_{\\text{mec}} \\approx -1{,}11\\cdot10^{29}\\ \\text{J}$, $v_p \\approx 6{,}1\\cdot10^{3}\\ \\text{m/s}$.",
+  "common_errors": [
+   "Usar el diámetro en lugar del radio, o no convertir la densidad a $\\text{kg/m}^3$.",
+   "Olvidar que el semieje mayor es la semisuma de afelio y perihelio.",
+   "No aplicar correctamente la conservación de la energía para $v_p$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-072",
+  "source": "Madrid · Ordinaria 2025",
+  "title": "Satélite en órbita elíptica: energía, momento angular y apogeo · Madrid · Ordinaria 2025",
+  "statement": "Un satélite de masa $300\\ \\text{kg}$ describe una órbita elíptica alrededor de la Tierra. En el perigeo dista $7000\\ \\text{km}$ de la superficie terrestre y lleva una velocidad de $6000\\ \\text{m}\\cdot\\text{s}^{-1}$; su periodo es de $6{,}08\\ \\text{horas}$.\n\n**(a)** La energía del satélite y su momento angular.\n**(b)** La máxima distancia satélite-Tierra y su velocidad en ese punto.\n**(c)** El trabajo de la fuerza gravitatoria al pasar del apogeo al perigeo.",
+  "knowns": [
+   "$m = 300\\ \\text{kg}$",
+   "$h_{per} = 7000\\ \\text{km}\\Rightarrow r_{per}=R_T+h = 1{,}337\\cdot10^{7}\\ \\text{m}$",
+   "$v_{per} = 6000\\ \\text{m}\\cdot\\text{s}^{-1}$",
+   "$T = 6{,}08\\ \\text{h} = 21888\\ \\text{s}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$",
+   "$M_T = 5{,}97\\cdot10^{24}\\ \\text{kg}$, $R_T = 6{,}37\\cdot10^{6}\\ \\text{m}$"
+  ],
+  "full_solution": "**(a) Energía mecánica y momento angular (datos del perigeo).**\n$$E_m = -\\,G\\dfrac{M_T m}{r_{per}} + \\tfrac12 m v_{per}^2 = -\\,6{,}67\\cdot10^{-11}\\dfrac{5{,}97\\cdot10^{24}\\cdot300}{1{,}337\\cdot10^{7}} + \\tfrac12\\cdot300\\cdot6000^2 = -3{,}53\\cdot10^{9}\\ \\text{J}$$\nEn el perigeo $\\vec{r}\\perp\\vec{v}$, luego:\n$$L = r_{per}\\,m\\,v_{per} = 1{,}337\\cdot10^{7}\\cdot300\\cdot6000 = 2{,}41\\cdot10^{13}\\ \\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-1}$$\n\n**(b) Distancia máxima (apogeo) y velocidad.**\nPor la 3.ª ley de Kepler se obtiene el semieje mayor:\n$$T^2 = \\dfrac{4\\pi^2 a^3}{G M_T}\\ \\Rightarrow\\ a = \\sqrt[3]{\\dfrac{T^2 G M_T}{4\\pi^2}} = 1{,}69\\cdot10^{7}\\ \\text{m}$$\n$$r_{apo} = 2a - r_{per} = 2\\cdot1{,}69\\cdot10^{7} - 1{,}337\\cdot10^{7} = 2{,}04\\cdot10^{7}\\ \\text{m}$$\nConservación del momento angular entre apogeo y perigeo:\n$$v_{apo} = \\dfrac{L}{m\\,r_{apo}} = \\dfrac{2{,}41\\cdot10^{13}}{300\\cdot2{,}04\\cdot10^{7}} = 3{,}92\\cdot10^{3}\\ \\text{m}\\cdot\\text{s}^{-1}$$\n\n**(c) Trabajo del apogeo al perigeo.**\nLa fuerza gravitatoria es conservativa, $W = -\\Delta E_p = \\Delta E_c$:\n$$W = \\tfrac12 m\\,(v_{per}^2 - v_{apo}^2) = \\tfrac12\\cdot300\\,(6000^2 - 3920^2) = 3{,}09\\cdot10^{9}\\ \\text{J}$$",
+  "answer": "$E_m = -3{,}53\\cdot10^{9}\\ \\text{J}$; $L = 2{,}41\\cdot10^{13}\\ \\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-1}$.\n$r_{apo} = 2{,}04\\cdot10^{7}\\ \\text{m}$ (altura $\\approx 1{,}40\\cdot10^{7}\\ \\text{m}$), $v_{apo} = 3{,}92\\cdot10^{3}\\ \\text{m}\\cdot\\text{s}^{-1}$.\n$W_{apo\\to per} = +3{,}09\\cdot10^{9}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la altura $h$ en vez de $r_{per}=R_T+h$ en la energía y el momento angular.",
+   "Olvidar que $r_{apo}=2a-r_{per}$ tras hallar el semieje mayor $a$.",
+   "Tomar el trabajo negativo: al acercarse (apogeo$\\to$perigeo) $E_c$ aumenta, $W>0$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-073",
+  "source": "Madrid · Ordinaria 2026",
+  "title": "Satélite Hope en órbita elíptica de Marte: masa, velocidades y energía · Madrid · Ordinaria 2026",
+  "statement": "El satélite Hope orbita Marte en una elipse. Periodo $T=53\\ \\text{h}$; distancia mínima (periastro) al centro de Marte $r_{peri}=23000\\ \\text{km}$ y máxima (apoastro) $r_{apo}=45000\\ \\text{km}$. Masa del satélite $m=1350\\ \\text{kg}$ y momento angular $L=4{,}86\\cdot10^{13}\\ \\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-1}$.\n\n**(a)** La masa de Marte.\n**(b)** La velocidad en el apoastro y en el periastro.\n**(c)** La energía del satélite en la órbita.",
+  "knowns": [
+   "$T = 53\\ \\text{h} = 1{,}908\\cdot10^{5}\\ \\text{s}$",
+   "$r_{peri} = 2{,}3\\cdot10^{7}\\ \\text{m}$, $r_{apo} = 4{,}5\\cdot10^{7}\\ \\text{m}$",
+   "$m = 1350\\ \\text{kg}$, $L = 4{,}86\\cdot10^{13}\\ \\text{kg}\\cdot\\text{m}^2\\cdot\\text{s}^{-1}$",
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$"
+  ],
+  "full_solution": "**(a) Masa de Marte (3.ª ley de Kepler).**\nSemieje mayor: $a = \\dfrac{r_{peri}+r_{apo}}{2} = \\dfrac{2{,}3\\cdot10^{7}+4{,}5\\cdot10^{7}}{2} = 3{,}40\\cdot10^{7}\\ \\text{m}$.\n$$T^2 = \\dfrac{4\\pi^2 a^3}{G M}\\ \\Rightarrow\\ M = \\dfrac{4\\pi^2 a^3}{G T^2} = \\dfrac{4\\pi^2 (3{,}40\\cdot10^{7})^3}{6{,}67\\cdot10^{-11}(1{,}908\\cdot10^{5})^2} = 6{,}39\\cdot10^{23}\\ \\text{kg}$$\n\n**(b) Velocidades (conservación de $L$).**\nEn apoastro y periastro $\\vec{r}\\perp\\vec{v}$, luego $L = m\\,r\\,v$:\n$$v_{apo} = \\dfrac{L}{m\\,r_{apo}} = \\dfrac{4{,}86\\cdot10^{13}}{1350\\cdot4{,}5\\cdot10^{7}} = 800\\ \\text{m}\\cdot\\text{s}^{-1}$$\n$$v_{peri} = \\dfrac{L}{m\\,r_{peri}} = \\dfrac{4{,}86\\cdot10^{13}}{1350\\cdot2{,}3\\cdot10^{7}} = 1{,}57\\cdot10^{3}\\ \\text{m}\\cdot\\text{s}^{-1}$$\n\n**(c) Energía mecánica.**\n$$E_m = -\\dfrac{G M m}{2a} = -\\dfrac{6{,}67\\cdot10^{-11}\\cdot6{,}39\\cdot10^{23}\\cdot1350}{2\\cdot3{,}40\\cdot10^{7}} = -8{,}46\\cdot10^{8}\\ \\text{J}$$",
+  "answer": "$M_{Marte} = 6{,}39\\cdot10^{23}\\ \\text{kg}$.\n$v_{apo} = 800\\ \\text{m}\\cdot\\text{s}^{-1}$, $v_{peri} = 1{,}57\\cdot10^{3}\\ \\text{m}\\cdot\\text{s}^{-1}$.\n$E_m = -8{,}46\\cdot10^{8}\\ \\text{J}$.",
+  "common_errors": [
+   "No convertir el periodo a segundos antes de aplicar Kepler.",
+   "Usar $v=L/(mr)$ fuera de apoastro/periastro, donde $\\vec r$ y $\\vec v$ no son perpendiculares.",
+   "Olvidar el signo negativo de $E_m=-GMm/2a$ (órbita ligada)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-074",
+  "source": "Murcia · Extraordinaria 2020",
+  "title": "Gravedad superficial a partir de la gráfica de energía potencial · Murcia · Extraordinaria 2020",
+  "statement": "Cerca de la superficie de un planeta, la energía potencial gravitatoria de un cuerpo de masa $2\\ \\text{kg}$ varía linealmente con la altura $h$ según una gráfica recta que pasa por el origen y alcanza $750\\ \\text{J}$ a una altura de $100\\ \\text{m}$. Determine el valor de la aceleración de la gravedad en la superficie de ese planeta.",
+  "knowns": [
+   "$m=2\\ \\text{kg}$",
+   "$E_p=750\\ \\text{J}$ a $h=100\\ \\text{m}$"
+  ],
+  "full_solution": "Cerca de la superficie, $E_p=mgh$, de modo que la pendiente de la recta $E_p(h)$ es $mg$:\n$$mg=\\dfrac{E_p}{h}=\\dfrac{750}{100}=7{,}5\\ \\text{N}$$\nDespejando $g$ con $m=2\\ \\text{kg}$:\n$$g=\\dfrac{7{,}5}{2}=3{,}75\\ \\text{m·s}^{-2}$$",
+  "answer": "$g=\\dfrac{E_p/h}{m}=\\dfrac{7{,}5}{2}=3{,}75\\ \\text{m·s}^{-2}$.",
+  "common_errors": [
+   "Confundir la pendiente $mg$ con $g$ directamente (falta dividir por la masa).",
+   "Usar $g=9{,}8\\ \\text{m·s}^{-2}$ (es otro planeta).",
+   "No leer bien los valores de la gráfica ($750\\ \\text{J}$ a $100\\ \\text{m}$)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-075",
+  "source": "Murcia · Extraordinaria 2020",
+  "title": "Órbita del telescopio Hubble: periodo, gravedad y energía · Murcia · Extraordinaria 2020",
+  "statement": "El telescopio Hubble ($m=12\\,000\\ \\text{kg}$) orbita la Tierra en una órbita circular a $612\\ \\text{km}$ de altura ($R_T=6371\\ \\text{km}$, $M_T=5{,}97\\cdot10^{24}\\ \\text{kg}$).\n\n**(a)** Calcule el periodo de la órbita y el número de vueltas que da en $30$ años.\n\n**(b)** Calcule el valor de la gravedad a esa altura.\n\n**(c)** Calcule la variación de energía mecánica al pasar de una órbita de $580\\ \\text{km}$ a otra de $612\\ \\text{km}$ de altura.",
+  "knowns": [
+   "$m=12\\,000\\ \\text{kg}$",
+   "altura $=612\\ \\text{km}$ (y $580\\ \\text{km}$)",
+   "$R_T=6371\\ \\text{km}$",
+   "$M_T=5{,}97\\cdot10^{24}\\ \\text{kg}$",
+   "$G=6{,}67\\cdot10^{-11}$"
+  ],
+  "full_solution": "Radio orbital: $r=R_T+h=6371+612=6983\\ \\text{km}=6{,}983\\cdot10^{6}\\ \\text{m}$.\n\n**(a)** De la 3ª ley de Kepler $T=2\\pi\\sqrt{\\dfrac{r^3}{GM_T}}$:\n$$T=2\\pi\\sqrt{\\dfrac{(6{,}983\\cdot10^{6})^3}{6{,}67\\cdot10^{-11}\\cdot5{,}97\\cdot10^{24}}}=5810\\ \\text{s}=1{,}61\\ \\text{h}$$\nNúmero de vueltas en $30$ años:\n$$n=\\dfrac{30\\cdot365\\cdot24\\cdot3600}{5810}\\approx1{,}63\\cdot10^{5}\\ \\text{vueltas}$$\n\n**(b)** Gravedad a esa altura:\n$$g=\\dfrac{GM_T}{r^2}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot5{,}97\\cdot10^{24}}{(6{,}983\\cdot10^{6})^2}=8{,}17\\ \\text{m·s}^{-2}$$\n\n**(c)** Energía de una órbita circular: $E=-\\dfrac{GM_T m}{2r}$. Con $r_1=580+6371=6951\\ \\text{km}$ y $r_2=612+6371=6983\\ \\text{km}$:\n$$\\Delta E=E_2-E_1=-\\dfrac{GM_T m}{2}\\!\\left(\\dfrac{1}{r_2}-\\dfrac{1}{r_1}\\right)=1{,}58\\cdot10^{9}\\ \\text{J}$$\nAl subir a una órbita más alta la energía mecánica aumenta ($\\Delta E>0$).",
+  "answer": "**(a)** $T\\approx5810\\ \\text{s}\\approx1{,}61\\ \\text{h}$; $\\approx1{,}63\\cdot10^{5}$ vueltas en $30$ años.  **(b)** $g\\approx8{,}17\\ \\text{m·s}^{-2}$.  **(c)** $\\Delta E\\approx1{,}58\\cdot10^{9}\\ \\text{J}$ (aumenta).",
+  "common_errors": [
+   "Usar el radio de la Tierra sin sumar la altura de la órbita.",
+   "Confundir energía mecánica $E=-GMm/2r$ con la potencial $-GMm/r$.",
+   "No pasar los $30$ años a segundos para contar las vueltas."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-076",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Exoplaneta de Kepler-22: órbita, escape y satélite · Murcia · Extraordinaria 2024",
+  "statement": "**Problema P1.** Un planeta orbita la estrella Kepler-22 (masa $0{,}97\\,M_\\odot$). El planeta tiene masa $36\\,M_T$, radio $2{,}4\\,R_T$ y periodo orbital $289$ días.\n\n**(a)** Radio orbital y velocidad orbital del planeta.\n\n**(b)** Velocidad de escape desde la superficie del planeta.\n\n**(c)** Energía para poner un satélite de $300\\ \\text{kg}$ en órbita a $5000\\ \\text{km}$ de la superficie.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_\\odot = 2{,}0\\cdot10^{30}\\ \\text{kg}$",
+   "$M_T = 6{,}0\\cdot10^{24}\\ \\text{kg}$",
+   "$R_T = 6370\\ \\text{km}$",
+   "$T = 289\\ \\text{días} = 2{,}497\\cdot10^{7}\\ \\text{s}$"
+  ],
+  "full_solution": "Datos derivados: $M_{\\text{estrella}}=0{,}97\\cdot2{,}0\\cdot10^{30}=1{,}94\\cdot10^{30}\\ \\text{kg}$; $M_{\\text{planeta}}=36\\cdot6{,}0\\cdot10^{24}=2{,}16\\cdot10^{26}\\ \\text{kg}$; $R_{\\text{planeta}}=2{,}4\\cdot6370=15288\\ \\text{km}=1{,}529\\cdot10^{7}\\ \\text{m}$.\n\n**(a)** Tercera ley de Kepler respecto a la estrella:\n\n$$r=\\left(\\dfrac{GM_{\\text{estrella}}T^2}{4\\pi^2}\\right)^{1/3}=\\left(\\dfrac{6{,}67\\cdot10^{-11}\\cdot1{,}94\\cdot10^{30}\\cdot(2{,}497\\cdot10^{7})^2}{4\\pi^2}\\right)^{1/3}=1{,}27\\cdot10^{11}\\ \\text{m}$$\n\n$$v=\\dfrac{2\\pi r}{T}=\\sqrt{\\dfrac{GM_{\\text{estrella}}}{r}}=3{,}19\\cdot10^{4}\\ \\text{m·s}^{-1}$$\n\n**(b)** Velocidad de escape desde la superficie del planeta:\n\n$$v_e=\\sqrt{\\dfrac{2GM_{\\text{planeta}}}{R_{\\text{planeta}}}}=\\sqrt{\\dfrac{2\\cdot6{,}67\\cdot10^{-11}\\cdot2{,}16\\cdot10^{26}}{1{,}529\\cdot10^{7}}}=4{,}34\\cdot10^{4}\\ \\text{m·s}^{-1}$$\n\n**(c)** Órbita del satélite: $r_s=R_{\\text{planeta}}+5000\\ \\text{km}=20288\\ \\text{km}=2{,}029\\cdot10^{7}\\ \\text{m}$. La energía para ponerlo en órbita desde la superficie es $\\Delta E=E_{\\text{órbita}}-E_{\\text{superficie}}=GM_{\\text{planeta}}\\,m\\left(\\dfrac{1}{R_{\\text{planeta}}}-\\dfrac{1}{2r_s}\\right)$:\n\n$$\\Delta E=6{,}67\\cdot10^{-11}\\cdot2{,}16\\cdot10^{26}\\cdot300\\left(\\dfrac{1}{1{,}529\\cdot10^{7}}-\\dfrac{1}{2\\cdot2{,}029\\cdot10^{7}}\\right)=1{,}76\\cdot10^{11}\\ \\text{J}$$",
+  "answer": "**(a)** $r\\approx1{,}27\\cdot10^{11}\\ \\text{m}$, $v\\approx3{,}19\\cdot10^{4}\\ \\text{m·s}^{-1}$. **(b)** $v_e\\approx4{,}34\\cdot10^{4}\\ \\text{m·s}^{-1}$. **(c)** $\\Delta E\\approx1{,}76\\cdot10^{11}\\ \\text{J}$.",
+  "common_errors": [
+   "Usar la masa de la Tierra o del Sol sin aplicar los factores $36$ y $0{,}97$.",
+   "Confundir la masa central (estrella, para la órbita) con la del planeta (para escape y satélite).",
+   "No sumar el radio del planeta a los $5000\\ \text{km}$ de altura del satélite."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-077",
+  "source": "Murcia · Extraordinaria 2024",
+  "title": "Ley de la gravitación universal (teoría) · Murcia · Extraordinaria 2024",
+  "statement": "**Teoría T1.** Enuncie la ley de la gravitación universal de Newton.",
+  "full_solution": "La ley de la gravitación universal (Newton) establece que dos cuerpos puntuales de masas $M$ y $m$ separados una distancia $r$ se atraen con una fuerza:\n\n$$\\vec{F}=-\\dfrac{GMm}{r^2}\\,\\vec{u}_r$$\n\ncuyas características son:\n- **Dirección**: la recta que une ambas masas.\n- **Sentido**: atractivo (de ahí el signo negativo respecto al vector unitario $\\vec{u}_r$ que va de la masa que crea el campo a la otra).\n- **Módulo**: proporcional al producto de las masas e inversamente proporcional al cuadrado de la distancia.\n\nLa constante $G=6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$ es universal. Es una fuerza **central** y **conservativa**. De ella derivan el campo gravitatorio $\\vec{g}=-\\dfrac{GM}{r^2}\\vec{u}_r$ y el potencial $V=-\\dfrac{GM}{r}$, y permite deducir las leyes de Kepler del movimiento planetario.",
+  "answer": "$\\vec{F}=-\\dfrac{GMm}{r^2}\\vec{u}_r$: atractiva, central, dirigida según la recta que une las masas, proporcional al producto de masas e inversa al cuadrado de la distancia.",
+  "common_errors": [
+   "Olvidar el carácter atractivo (signo) o vectorial de la fuerza.",
+   "Escribir $r$ sin elevar al cuadrado.",
+   "Confundir $G$ (constante universal) con $g$ (intensidad del campo terrestre)."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-078",
+  "source": "Murcia · Modelo 2026",
+  "title": "Telescopio Webb en L2: energías potenciales y punto de campo nulo · Murcia · Modelo 2026",
+  "statement": "El telescopio espacial Webb está en el punto $L2$, en la línea Tierra-Sol a una distancia $d=1{,}5\\cdot10^{6}\\ \\text{km}$ de la Tierra, en dirección opuesta al Sol.\n\n**(a)** Calcule el cociente entre la energía potencial del telescopio debida al Sol y la debida a la Tierra.\n\n**(b)** Determine la distancia desde la Tierra al punto $A$ en el que el campo gravitatorio neto (Tierra + Sol) se anula.",
+  "knowns": [
+   "$d_{T\\text{-}Webb}=1{,}5\\cdot10^{6}\\ \\text{km}=1{,}5\\cdot10^{9}\\ \\text{m}$",
+   "$M_T=6\\cdot10^{24}\\ \\text{kg}$",
+   "$M_{Sol}=2\\cdot10^{30}\\ \\text{kg}$",
+   "$d_{Sol\\text{-}T}=150\\cdot10^{6}\\ \\text{km}=1{,}5\\cdot10^{11}\\ \\text{m}$"
+  ],
+  "full_solution": "**(a)** La energía potencial es $E_p=-\\dfrac{GMm}{r}$. El telescopio dista de la Tierra $1{,}5\\cdot10^{9}\\ \\text{m}$ y del Sol $1{,}5\\cdot10^{11}+1{,}5\\cdot10^{9}=1{,}515\\cdot10^{11}\\ \\text{m}$ (está al otro lado de la Tierra respecto al Sol):\n\n$$\\dfrac{E_{p,Sol}}{E_{p,Tierra}}=\\dfrac{M_{Sol}/r_{Sol}}{M_T/r_T}=\\dfrac{2\\cdot10^{30}/1{,}515\\cdot10^{11}}{6\\cdot10^{24}/1{,}5\\cdot10^{9}}\\approx3{,}3\\cdot10^{3}$$\n\n**(b)** El punto $A$ donde el campo neto se anula está entre la Tierra y el Sol, a distancia $x$ de la Tierra. Igualando módulos de campo:\n\n$$\\dfrac{GM_T}{x^2}=\\dfrac{GM_{Sol}}{(D-x)^2}\\Rightarrow \\dfrac{D-x}{x}=\\sqrt{\\dfrac{M_{Sol}}{M_T}}$$\n\n$$x=\\dfrac{D}{1+\\sqrt{M_{Sol}/M_T}}=\\dfrac{1{,}5\\cdot10^{11}}{1+\\sqrt{2\\cdot10^{30}/6\\cdot10^{24}}}=2{,}6\\cdot10^{8}\\ \\text{m}$$\n\n(unos $2{,}6\\cdot10^{5}\\ \\text{km}$ de la Tierra, hacia el Sol).",
+  "answer": "**(a)** $\\dfrac{E_{p,Sol}}{E_{p,Tierra}}\\approx3{,}3\\cdot10^{3}$. **(b)** $x=\\dfrac{D}{1+\\sqrt{M_{Sol}/M_T}}\\approx2{,}6\\cdot10^{8}\\ \\text{m}$ de la Tierra, hacia el Sol.",
+  "common_errors": [
+   "Usar la misma distancia al Sol que a la Tierra para el telescopio.",
+   "Buscar el punto de campo nulo del lado opuesto al Sol: debe estar entre ambos cuerpos.",
+   "No pasar los km a metros de forma coherente."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-079",
+  "source": "Murcia · Ordinaria 2020",
+  "title": "Escape de la sonda Voyager del Sistema Solar · Murcia · Ordinaria 2020",
+  "statement": "La sonda Voyager se encuentra a una distancia $r=1{,}8\\cdot10^{10}\\ \\text{km}$ del Sol, moviéndose a $15\\ \\text{km/s}$.\n\n**(a)** Calcule la aceleración de la gravedad (campo gravitatorio) debida al Sol a esa distancia.\n**(b)** Determine la velocidad de escape del Sistema Solar en ese punto y razone si la Voyager escapará.\n**(c)** Calcule el punto de la recta Sol-Júpiter donde el potencial gravitatorio creado por el Sol iguala al creado por Júpiter.",
+  "knowns": [
+   "$M_S=2\\cdot10^{30}\\ \\text{kg}$",
+   "$M_J=2\\cdot10^{27}\\ \\text{kg}$",
+   "distancia Sol-Júpiter $r_J=7{,}78\\cdot10^{8}\\ \\text{km}$",
+   "$r=1{,}8\\cdot10^{10}\\ \\text{km}=1{,}8\\cdot10^{13}\\ \\text{m}$",
+   "$v_{Voyager}=15\\ \\text{km/s}$",
+   "$G=6{,}67\\cdot10^{-11}\\ \\text{N}\\cdot\\text{m}^2\\cdot\\text{kg}^{-2}$"
+  ],
+  "full_solution": "**(a)** Campo gravitatorio del Sol:\n$$g=\\dfrac{G M_S}{r^{2}}=\\dfrac{6{,}67\\cdot10^{-11}\\cdot2\\cdot10^{30}}{(1{,}8\\cdot10^{13})^{2}}=4{,}1\\cdot10^{-7}\\ \\text{m}\\cdot\\text{s}^{-2}$$\n\n**(b)** La velocidad de escape se obtiene de energía mecánica nula ($\\tfrac12 m v^{2}=\\dfrac{G M_S m}{r}$):\n$$v_{esc}=\\sqrt{\\dfrac{2G M_S}{r}}=\\sqrt{\\dfrac{2\\cdot6{,}67\\cdot10^{-11}\\cdot2\\cdot10^{30}}{1{,}8\\cdot10^{13}}}=3{,}85\\cdot10^{3}\\ \\text{m}\\cdot\\text{s}^{-1}=3{,}85\\ \\text{km/s}$$\nComo la Voyager se mueve a $15\\ \\text{km/s}>3{,}85\\ \\text{km/s}$, su energía es positiva y escapará del Sistema Solar sin necesidad de más impulso.\n\n**(c)** Igualando potenciales (punto a distancia $d$ de Júpiter, medido hacia afuera del Sol):\n$$\\dfrac{G M_S}{r_J+d}=\\dfrac{G M_J}{d}\\ \\Rightarrow\\ d=\\dfrac{r_J}{\\dfrac{M_S}{M_J}-1}=\\dfrac{7{,}78\\cdot10^{8}}{1000-1}\\approx 7{,}8\\cdot10^{5}\\ \\text{km}$$\nEs decir, a unos $778000\\ \\text{km}$ de Júpiter (del lado opuesto al Sol).",
+  "answer": "**(a)** $g\\approx 4{,}1\\cdot10^{-7}\\ \\text{m}\\cdot\\text{s}^{-2}$. **(b)** $v_{esc}\\approx 3{,}85\\ \\text{km/s}$; como $15>3{,}85\\ \\text{km/s}$, la Voyager escapa. **(c)** A $d\\approx 7{,}8\\cdot10^{5}\\ \\text{km}$ de Júpiter.",
+  "common_errors": [
+   "Usar $v_{esc}=\\sqrt{GM/r}$ (velocidad orbital) en lugar de $\\sqrt{2GM/r}$.",
+   "No pasar la distancia de km a m antes de elevar al cuadrado.",
+   "En el apartado (c), olvidar que el potencial gravitatorio es negativo y manejar mal la relación de masas $M_S/M_J\\approx 1000$."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-080",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Energía potencial gravitatoria (teoría) · Murcia · Ordinaria 2024",
+  "statement": "**Teoría T1.** Explique el concepto de energía potencial gravitatoria.",
+  "full_solution": "La fuerza gravitatoria es **conservativa**, por lo que puede asociarse a ella una energía potencial $E_p$ tal que el trabajo que realiza el campo entre dos puntos es $W=-\\Delta E_p=E_{p,i}-E_{p,f}$.\n\nPara dos masas puntuales $M$ y $m$ separadas una distancia $r$, tomando el origen de energías en el infinito ($E_p(\\infty)=0$), la energía potencial es:\n\n$$E_p=-\\dfrac{GMm}{r}$$\n\nEs **negativa** porque se ha de aportar energía para separar las masas hasta el infinito; mide el trabajo (cambiado de signo) necesario para traer $m$ desde el infinito hasta $r$. Se relaciona con el potencial gravitatorio $V=-\\dfrac{GM}{r}$ mediante $E_p=mV$.\n\nPropiedades: solo depende de las posiciones (no del camino); disminuye al acercarse las masas (el campo hace trabajo positivo) y aumenta (se hace menos negativa) al alejarlas. Para alturas pequeñas cerca de la superficie terrestre se recupera la aproximación $E_p\\approx mgh$.",
+  "answer": "$E_p=-\\dfrac{GMm}{r}$, negativa, con origen en el infinito; fuerza conservativa, $W_{\\text{campo}}=-\\Delta E_p$.",
+  "common_errors": [
+   "Escribir $E_p=+GMm/r$ (olvidar el signo negativo).",
+   "Confundir energía potencial $E_p=mV$ con el potencial $V$.",
+   "Usar $mgh$ lejos de la superficie, donde $g$ ya no es constante."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-081",
+  "source": "Murcia · Ordinaria 2024",
+  "title": "Periodo y velocidad orbital de la Luna · Murcia · Ordinaria 2024",
+  "statement": "**Cuestión C1.** Calcule el periodo (en días) y la velocidad orbital de la Luna en su trayectoria alrededor de la Tierra.",
+  "knowns": [
+   "$G = 6{,}67\\cdot10^{-11}\\ \\text{N·m}^2\\text{·kg}^{-2}$",
+   "$M_T = 6{,}0\\cdot10^{24}\\ \\text{kg}$",
+   "$M_L = 7{,}3\\cdot10^{22}\\ \\text{kg}$",
+   "$r = 384000\\ \\text{km} = 3{,}84\\cdot10^{8}\\ \\text{m}$"
+  ],
+  "full_solution": "La atracción gravitatoria de la Tierra actúa como fuerza centrípeta de la órbita circular de la Luna:\n\n$$\\dfrac{GM_T M_L}{r^2}=M_L\\dfrac{v^2}{r}\\ \\Rightarrow\\ v=\\sqrt{\\dfrac{GM_T}{r}}=\\sqrt{\\dfrac{6{,}67\\cdot10^{-11}\\cdot6{,}0\\cdot10^{24}}{3{,}84\\cdot10^{8}}}=1{,}02\\cdot10^{3}\\ \\text{m·s}^{-1}$$\n\nEl periodo se obtiene de $v=\\dfrac{2\\pi r}{T}$:\n\n$$T=\\dfrac{2\\pi r}{v}=\\dfrac{2\\pi\\cdot3{,}84\\cdot10^{8}}{1{,}02\\cdot10^{3}}=2{,}36\\cdot10^{6}\\ \\text{s}$$\n\nPasando a días:\n\n$$T=\\dfrac{2{,}36\\cdot10^{6}}{86400}\\approx27{,}4\\ \\text{días}$$",
+  "answer": "$v\\approx1{,}02\\cdot10^{3}\\ \\text{m·s}^{-1}$ y $T\\approx2{,}36\\cdot10^{6}\\ \\text{s}\\approx27{,}4\\ \\text{días}$.",
+  "common_errors": [
+   "Incluir la masa de la Luna en $v=\\sqrt{GM_T/r}$ (solo interviene la masa central).",
+   "No pasar el periodo de segundos a días.",
+   "Usar la distancia en km sin convertir a metros."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-082",
+  "source": "Murcia · Ordinaria 2026",
+  "title": "Relación de velocidades y energías de dos satélites · Murcia · Ordinaria 2026",
+  "statement": "Dos satélites describen órbitas circulares alrededor de la Tierra ($R_T = 6400\\ \\text{km}$) a alturas $h_1 = 700\\ \\text{km}$ y $h_2 = 22000\\ \\text{km}$.\n\n**(a)** Calcule la relación entre sus velocidades orbitales $v_1/v_2$.\n\n**(b)** (i) Deduzca la expresión de la energía mecánica total de un satélite en órbita circular. (ii) Calcule la relación entre sus energías mecánicas $E_1/E_2$ (suponga igual masa).",
+  "knowns": [
+   "$R_T = 6400\\ \\text{km}$",
+   "$h_1 = 700\\ \\text{km}\\;\\Rightarrow\\; r_1 = 7100\\ \\text{km}$",
+   "$h_2 = 22000\\ \\text{km}\\;\\Rightarrow\\; r_2 = 28400\\ \\text{km}$"
+  ],
+  "full_solution": "**(a)** De $\\dfrac{G M_T m}{r^2} = \\dfrac{m v^2}{r}$ se obtiene $v = \\sqrt{\\dfrac{G M_T}{r}}$, luego\n$$\\dfrac{v_1}{v_2} = \\sqrt{\\dfrac{r_2}{r_1}} = \\sqrt{\\dfrac{28400}{7100}} = \\sqrt{4} = 2{,}0$$\nEl satélite más interior (órbita más baja) orbita el doble de rápido.\n\n**(b)** (i) La energía mecánica es $E = E_C + E_P = \\tfrac12 m v^2 - \\dfrac{G M_T m}{r}$. Sustituyendo $v^2 = \\dfrac{G M_T}{r}$:\n$$E = \\dfrac{1}{2}\\dfrac{G M_T m}{r} - \\dfrac{G M_T m}{r} = -\\dfrac{G M_T m}{2\\,r}$$\n\n(ii) Con la misma masa, la relación de energías es\n$$\\dfrac{E_1}{E_2} = \\dfrac{-G M_T m/(2 r_1)}{-G M_T m/(2 r_2)} = \\dfrac{r_2}{r_1} = \\dfrac{28400}{7100} = 4{,}0$$",
+  "answer": "**(a)** $v_1/v_2 = 2{,}0$. **(b)** (i) $E = -\\dfrac{G M_T m}{2r}$; (ii) $E_1/E_2 = 4{,}0$.",
+  "common_errors": [
+   "Invertir la relación: la velocidad orbital decrece con el radio ($v_1/v_2=\\sqrt{r_2/r_1}$).",
+   "Olvidar el factor $1/2$ en la energía mecánica de la órbita.",
+   "No sumar la altura al radio terrestre."
+  ]
+ },
+ {
+  "id": "PAU-FIS-GRAV-083",
+  "source": "Madrid · Modelo 2007",
+  "title": "Órbita circular y energía mecánica a partir de $E_p$ · Madrid · Modelo 2007",
+  "statement": "Un objeto de $5\\ \\text{kg}$ de masa posee una energía potencial gravitatoria $E_p=-2\\cdot10^{8}\\ \\text{J}$ cuando se encuentra a cierta distancia de la Tierra.\n\n**a)** Si a esa distancia describiera una órbita circular, ¿cuál sería su velocidad?\n\n**b)** Si su velocidad a esa distancia fuese de $9\\ \\text{km/s}$, ¿cuál sería su energía mecánica? ¿Podría describir una órbita elíptica?",
+  "knowns": [
+   "$m=5\\ \\text{kg}$",
+   "$E_p=-2\\cdot10^{8}\\ \\text{J}$"
+  ],
+  "full_solution": "**(a)** En una órbita circular la energía cinética cumple $E_c=-\\dfrac{E_p}{2}$ (teorema del virial), porque $E_c=\\dfrac{GMm}{2r}$ y $E_p=-\\dfrac{GMm}{r}$.\n$$E_c=-\\dfrac{-2\\cdot10^{8}}{2}=1\\cdot10^{8}\\ \\text{J}.$$\nComo $E_c=\\tfrac12 m v^2$:\n$$v=\\sqrt{\\dfrac{2E_c}{m}}=\\sqrt{\\dfrac{2\\cdot10^{8}}{5}}=6{,}32\\cdot10^{3}\\ \\text{m/s}\\approx6{,}3\\ \\text{km/s}.$$\n\n**(b)** Con $v=9\\ \\text{km/s}=9\\cdot10^{3}\\ \\text{m/s}$:\n$$E_c=\\tfrac12 m v^2=\\tfrac12\\cdot5\\cdot(9\\cdot10^{3})^2=2{,}025\\cdot10^{8}\\ \\text{J}.$$\n$$E_m=E_c+E_p=2{,}025\\cdot10^{8}-2\\cdot10^{8}=2{,}5\\cdot10^{6}\\ \\text{J}.$$\nComo $E_m>0$, el objeto NO está ligado: su trayectoria es abierta (hiperbólica), así que **no** puede describir una órbita elíptica (que exige $E_m<0$).",
+  "answer": "**a)** $v\\approx6{,}3\\ \\text{km/s}$. **b)** $E_m=2{,}5\\cdot10^{6}\\ \\text{J}>0$; al ser positiva, la órbita no puede ser elíptica (trayectoria no ligada).",
+  "common_errors": [
+   "Usar $E_c=-E_p$ en vez de $E_c=-E_p/2$ para la órbita circular.",
+   "Creer que con cualquier velocidad la órbita es elíptica: solo lo es si $E_m<0$.",
+   "Olvidar que $E_p$ ya es negativa al sumar $E_m=E_c+E_p$."
+  ]
+ }
+]

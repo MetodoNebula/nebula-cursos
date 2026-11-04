@@ -1,0 +1,344 @@
+% =====================================================================
+%  nebula_figures.tex  ·  BIBLIOTECA DE FIGURAS PARAMETRIZADAS
+%  B-02 del informe de cuellos de botella: «convertir dibujar en
+%  rellenar parametros». Cada macro ya trae ejes, rejilla, rotulos,
+%  grosores y colores Nebula resueltos y COMPILADOS. El agente de
+%  leccion solo pasa datos.
+%
+%  REGLA: si una figura de la leccion encaja en una de estas macros,
+%  SE USA LA MACRO. Dibujar a mano lo que ya existe aqui es gasto puro
+%  (cada figura a mano costo 3-6 ciclos de compilar-mirar-corregir).
+%
+%  Todas las macros devuelven un tikzpicture completo, listo para el
+%  campo "tikz" del JSON. El motor las envuelve en \nbtikz (centra y
+%  encoge), asi que NO hay que preocuparse por el ancho.
+% =====================================================================
+
+% ERR-0136 - EL SEPARADOR DECIMAL DE LAS FIGURAS LO FIJA EL IDIOMA.
+%   `pgfplots` genera las etiquetas de los ejes en tiempo de compilacion
+%   y `\nbnumline` imprime sus marcas con `\pgfmathprintnumber`: ninguno
+%   de los dos pasa por el normalizador de Python, asi que una leccion en
+%   castellano salia con los ejes rotulados "0.5, 1.0, 1.5". Un agente
+%   tuvo que dibujar una recta numerica entera a mano por esto.
+% Las opciones locales de `\pgfmathprintnumber` pisaban el ajuste global,
+% asi que el separador va tambien como macro que cada llamada incluye.
+\ifdefstring{\nebulalang}{en}
+  {\newcommand{\nbnumsep}{/pgf/number format/use period}}
+  {\newcommand{\nbnumsep}{/pgf/number format/use comma}%
+   \pgfkeys{/pgf/number format/.cd, use comma, 1000 sep={}}}
+
+\pgfplotsset{
+  nbcurve/.style={smooth},          % para funciones continuas
+  nbplot/.style={
+    width=11cm, height=7.2cm,
+    axis lines=middle,
+    axis line style={gray!70,thick,-{Stealth[length=2.2mm]}},
+    xlabel style={at={(ticklabel* cs:1.0)},anchor=west,font=\small,xshift=4pt},
+    ylabel style={at={(ticklabel* cs:1.0)},anchor=south,font=\small},
+    label style={font=\small},
+    % ERR-0182: los fondos blancos de cada marca tapaban la rejilla y parecian cuadros.
+    tick label style={font=\small,fill=none,inner sep=0pt},
+    grid=both,
+    major grid style={line width=.3pt,draw=gray!35},
+    minor grid style={line width=.2pt,draw=gray!18},
+    % ERR-0118: 'smooth' por defecto redondeaba cuadrados y triangulos y
+    % hundia el tramo de parada de una grafica distancia-tiempo. El trazo
+    % recto es el default; las curvas piden 'nbcurve' explicitamente.
+    every axis plot/.append style={NebulaNavy,very thick,sharp plot},
+    legend style={font=\footnotesize,draw=gray!50,fill=white,
+                  at={(0.5,-0.14)},anchor=north,legend columns=-1,
+                  /tikz/every even column/.append style={column sep=6pt}},
+    clip mode=individual,
+  },
+}
+
+% ---------------------------------------------------------------------
+% \nbfuncplot{xmin}{xmax}{ymin}{ymax}{xtick}{ytick}{cuerpo}
+%   Ejes cartesianos con rejilla. El cuerpo son \addplot normales.
+%   Ej: \nbfuncplot{-4}{4}{-2}{10}{1}{2}{\addplot[domain=-4:4]{x^2};}
+% ---------------------------------------------------------------------
+\newcommand{\nbfuncplot}[7]{%
+\begin{tikzpicture}
+\begin{axis}[nbplot,xlabel={$x$},ylabel={$y$},
+  xmin=#1,xmax=#2,ymin=#3,ymax=#4,xtick distance=#5,ytick distance=#6,
+  samples=201]
+#7
+\end{axis}
+\end{tikzpicture}}
+
+% \nbfuncplotlab{xmin}{xmax}{ymin}{ymax}{xtick}{ytick}{xlab}{ylab}{cuerpo}
+%   Igual, con ejes rotulados a mano (tiempo, distancia, coste...).
+\newcommand{\nbfuncplotlab}[9]{%
+\begin{tikzpicture}
+\begin{axis}[nbplot,xlabel={#7},ylabel={#8},
+  xmin=#1,xmax=#2,ymin=#3,ymax=#4,xtick distance=#5,ytick distance=#6,
+  samples=201]
+#9
+\end{axis}
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbnumline{xmin}{xmax}{paso}{cuerpo}
+%   Recta numerica de 12 cm con ticks y etiquetas automaticas.
+%   Dentro del cuerpo, la coordenada x del dato ES el valor numerico:
+%     \nbdot{2.5}{$2{,}5$}            punto relleno con etiqueta arriba
+%     \nbopendot{3}{$3$}              punto hueco (extremo excluido)
+%     \nbseg{1}{4}                    segmento grueso entre dos valores
+%     \nbray{2}{right}                semirrecta hacia la derecha
+% ---------------------------------------------------------------------
+\newcommand{\nbnlxscale}{1}
+\newcommand{\nbdot}[2]{\fill[NebulaNavy] (#1,0) circle (2.6pt);
+  \node[above=5pt,font=\small] at (#1,0) {#2};}
+\newcommand{\nbdotb}[2]{\fill[NebulaError] (#1,0) circle (2.6pt);
+  \node[below=5pt,font=\small] at (#1,0) {#2};}
+\newcommand{\nbopendot}[2]{\draw[NebulaNavy,very thick,fill=white] (#1,0) circle (2.6pt);
+  \node[above=5pt,font=\small] at (#1,0) {#2};}
+\newcommand{\nbseg}[2]{\draw[NebulaGold,line width=3pt,opacity=0.55] (#1,0) -- (#2,0);}
+% semirrectas: el 2.o argumento es el extremo del dibujo (xmin o xmax)
+\newcommand{\nbray}[2]{\draw[NebulaGold,line width=3pt,opacity=0.55,-{Stealth[length=3mm]}]
+  (#1,0) -- ({#2},0);}
+\newcommand{\nbnlmin}{0}\newcommand{\nbnlmax}{1}
+% ERR-0119: la escala era \dimexpr 12cm/(#2-#1), y \dimexpr no divide por
+%   decimales: \nbnumline{4.4}{4.6} no compilaba. Y las marcas se generaban
+%   iterando en coma flotante, que con paso 0,1 imprimia 0.8001 y se saltaba
+%   el extremo. Ahora la escala se calcula con pgfmath y las marcas se
+%   generan por INDICE ENTERO, que no acumula error.
+\newcommand{\nbnumline}[4]{%
+\renewcommand{\nbnlmin}{#1}\renewcommand{\nbnlmax}{#2}%
+\pgfmathsetmacro{\nbnlu}{12/((#2)-(#1))}%
+\pgfmathtruncatemacro{\nbnln}{round((((#2)-(#1))/(#3)))}%
+\begin{tikzpicture}[x=\nbnlu cm,y=1cm]
+  \draw[gray!70,thick,{Stealth[length=2.2mm]}-{Stealth[length=2.2mm]}]
+    ({#1-0.05*((#2)-(#1))},0) -- ({#2+0.05*((#2)-(#1))},0);
+  \foreach \k in {0,...,\nbnln}{%
+    \pgfmathsetmacro{\xv}{(#1)+\k*(#3)}
+    \draw[gray!70] (\xv,-0.1) -- (\xv,0.1);
+    \node[below=3pt,font=\footnotesize] at (\xv,-0.12)
+      {$\pgfmathprintnumber[precision=4,/pgf/number format/fixed,
+        /pgf/number format/fixed zerofill=false,\nbnumsep]{\xv}$};}
+  #4
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbinterval{lo}{hi}{etiq-lo}{etiq-hi}{etiq-centro}
+%   Intervalo de cotas (bounds, error, redondeo). Muy usado en Number.
+% ---------------------------------------------------------------------
+% \nbintervalw{ancho-cm}{...}: misma figura con ancho de banda elegido,
+%   para comparar intervalos que se estrechan. \nbinterval usa 10 cm.
+\newcommand{\nbintervalwidth}{10}
+\newcommand{\nbintervalw}[6]{\renewcommand{\nbintervalwidth}{#1}%
+  \nbinterval{#2}{#3}{#4}{#5}{#6}\renewcommand{\nbintervalwidth}{10}}
+\newcommand{\nbinterval}[5]{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[NebulaGold!22] (0,-0.35) rectangle (\nbintervalwidth,0.35);
+  \draw[gray!70,thick,{Stealth[length=2.2mm]}-{Stealth[length=2.2mm]}] (-0.8,0) -- ({\nbintervalwidth+0.8},0);
+  \draw[NebulaNavy,very thick] (0,-0.5) -- (0,0.5);
+  \draw[NebulaNavy,very thick] (\nbintervalwidth,-0.5) -- (\nbintervalwidth,0.5);
+  \node[below=6pt,font=\small,align=center] at (0,-0.5) {#3};
+  \node[below=6pt,font=\small,align=center] at (\nbintervalwidth,-0.5) {#4};
+  \node[above=22pt,font=\small] at ({\nbintervalwidth/2},0.5) {#5};
+  \node[above=4pt,font=\footnotesize,NebulaNavy] at ({\nbintervalwidth/2},0.5) {$#1 \le x < #2$};
+\end{tikzpicture}}
+
+% El rotulo del conjunto universal se elige con \renewcommand{\nbuniv}{\mathcal{E}}
+\newcommand{\nbuniv}{U}
+
+% ---------------------------------------------------------------------
+% \nbvenntwo{A}{B}{solo-A}{A y B}{solo-B}{fuera}
+% \nbvennthree{A}{B}{C}  (regiones vacias, para rellenar a mano)
+% ---------------------------------------------------------------------
+\newcommand{\nbvenntwo}[6]{%
+\begin{tikzpicture}[scale=1.0]
+  \draw[gray!60,thick] (-2.9,-2.1) rectangle (2.9,2.1);
+  \node[font=\footnotesize,gray!70,above right] at (-2.9,-2.1) {$\nbuniv$};
+  \node[font=\footnotesize] at (2.45,-1.75) {#6};
+  \begin{scope}
+    \clip (-0.75,0) circle (1.55);
+    \fill[NebulaGold!30] (0.75,0) circle (1.55);
+  \end{scope}
+  \draw[NebulaNavy,thick] (-0.75,0) circle (1.55);
+  \draw[NebulaNavy,thick] ( 0.75,0) circle (1.55);
+  \node[font=\small,NebulaNavy] at (-1.55,1.55) {#1};
+  \node[font=\small,NebulaNavy] at ( 1.55,1.55) {#2};
+  \node[font=\small] at (-1.45,0) {#3};
+  \node[font=\small] at ( 0.00,0) {#4};
+  \node[font=\small] at ( 1.45,0) {#5};
+\end{tikzpicture}}
+
+\newcommand{\nbvennthree}[4]{%
+\begin{tikzpicture}[scale=1.0]
+  \draw[gray!60,thick] (-3.2,-3.0) rectangle (3.2,2.6);
+  \node[font=\footnotesize,gray!70,above right] at (-3.2,-3.0) {$\nbuniv$};
+  \draw[NebulaNavy,thick] (-0.8, 0.5) circle (1.6);
+  \draw[NebulaNavy,thick] ( 0.8, 0.5) circle (1.6);
+  \draw[NebulaNavy,thick] ( 0.0,-0.9) circle (1.6);
+  \node[font=\small,NebulaNavy] at (-2.0, 1.8) {#1};
+  \node[font=\small,NebulaNavy] at ( 2.0, 1.8) {#2};
+  \node[font=\small,NebulaNavy] at ( 0.0,-2.75) {#3};
+  #4
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbbars{maxy}{paso}{datos}
+%   datos = lista "etiqueta/valor" separada por comas.
+%   Ej: \nbbars{20}{5}{Lun/12, Mar/17, Mie/9, Jue/14}
+% ---------------------------------------------------------------------
+\newcounter{nbbar}\newcounter{nbbartot}
+% ERR-0144 - LAS ETIQUETAS LARGAS SE IMPRIMIAN UNAS SOBRE OTRAS.
+%   Las barras van a 1,25 cm de separacion y la etiqueta se centraba
+%   debajo sin limite de ancho: con rotulos como "Sold in hour 1" salia
+%   "Sold in hSold in hoStill unsold", ilegible, en material ya
+%   entregado. No lo veia ninguna puerta; lo encontro `check_overlap.py`.
+%   Ahora la etiqueta se acota al ancho de su barra y parte en varias
+%   lineas, que es lo que hace cualquier grafico de barras decente.
+%   Argumento opcional: \nbbars[2.0cm]{...} ensancha la separacion.
+\newcommand{\nbbars}[4][1.55cm]{%
+\setcounter{nbbartot}{0}%
+\foreach \lab/\val in {#4}{\stepcounter{nbbartot}}%
+\setcounter{nbbar}{0}%
+\begin{tikzpicture}[x=#1,y=\dimexpr 5.4cm/#2\relax]
+  \foreach \y in {0,#3,...,#2}{%
+    \draw[gray!25] (0.3,\y) -- (\the\numexpr\value{nbbartot}+1\relax,\y);
+    \node[left=3pt,font=\footnotesize] at (0.3,\y) {\y};}
+  \draw[gray!70,thick,-{Stealth[length=2.2mm]}] (0.3,0) -- (\the\numexpr\value{nbbartot}+1\relax,0);
+  \draw[gray!70,thick,-{Stealth[length=2.2mm]}] (0.3,0) -- (0.3,#2*1.10);
+  \foreach \lab/\val in {#4}{%
+    \stepcounter{nbbar}%
+    \fill[NebulaNavy!75] (\value{nbbar}-0.28,0) rectangle (\value{nbbar}+0.28,\val);
+    % acotada al ancho de la barra y centrada: si no cabe, parte de linea
+    % hyphenpenalty bajo: una palabra larga como "Deductions" tiene que
+    % poder partirse, o desborda su caja y roza la etiqueta vecina.
+    \node[below=3pt,font=\scriptsize,align=center,
+      text width=\dimexpr #1-3pt\relax,
+      execute at begin node={\hyphenpenalty=0\relax}] at (\value{nbbar},0) {\lab};
+    \node[above=2pt,font=\footnotesize,NebulaNavy] at (\value{nbbar},\val) {\val};}
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbgradtri{x1}{y1}{x2}{y2}{xmin}{xmax}{ymin}{ymax}
+%   Recta por dos puntos con el triangulo de pendiente rotulado.
+%   El nucleo de Coordinate geometry; evita recalcular a mano.
+% ---------------------------------------------------------------------
+\newcommand{\nbgradtri}[8]{%
+\begin{tikzpicture}
+\begin{axis}[nbplot,xlabel={$x$},ylabel={$y$},
+  xmin=#5,xmax=#6,ymin=#7,ymax=#8,xtick distance=1,ytick distance=1]
+  \addplot[NebulaNavy,very thick,domain=#5:#6]
+    {(#4-#2)/(#3-#1)*(x-#1)+#2};
+  \draw[NebulaError,thick,dashed] (axis cs:#1,#2) -- (axis cs:#3,#2)
+    node[midway,below=2pt,font=\footnotesize,NebulaError,fill=white,inner sep=1.5pt]
+      {$\Delta x=\pgfmathprintnumber{#3}-(\pgfmathprintnumber{#1})$};
+  \draw[NebulaError,thick,dashed] (axis cs:#3,#2) -- (axis cs:#3,#4)
+    node[midway,right=2pt,font=\footnotesize,NebulaError,fill=white,inner sep=1.5pt]
+      {$\Delta y=\pgfmathprintnumber{#4}-(\pgfmathprintnumber{#2})$};
+  % ERR-0120: con pendiente negativa la etiqueta 'above left' caia SOBRE la
+  % recta. Se coloca al lado contrario del avance segun el signo de la pendiente.
+  \pgfmathsetmacro{\nbgtpos}{(#4)>(#2) ? 1 : 0}
+  \fill[NebulaNavy] (axis cs:#1,#2) circle (2.4pt)
+    node[\ifdim\nbgtpos pt>0.5pt above left\else below left\fi,
+         font=\footnotesize,fill=white,inner sep=1.5pt]{$(#1,#2)$};
+  \fill[NebulaNavy] (axis cs:#3,#4) circle (2.4pt)
+    node[\ifdim\nbgtpos pt>0.5pt above left\else below right\fi,
+         font=\footnotesize,fill=white,inner sep=1.5pt]{$(#3,#4)$};
+\end{axis}
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbdotpattern{filas}  ·  patrones de puntos para sucesiones
+%   filas = lista "n/k" : termino n con k puntos en linea.
+%   Ej: \nbdotpattern{1/1, 2/3, 3/5, 4/7}
+% ---------------------------------------------------------------------
+\newcommand{\nbdotpattern}[1]{%
+\begin{tikzpicture}[x=0.45cm,y=0.45cm]
+  \foreach \n/\k in {#1}{%
+    \begin{scope}[yshift=-\n*1.25cm]
+      \foreach \i in {1,...,\k}{\fill[NebulaNavy!80] (\i*0.9,0) circle (3.2pt);}
+      \node[left=14pt,font=\footnotesize] at (0.9,0) {$n=\n$};
+      \node[right=14pt,font=\footnotesize,NebulaNavy] at (\k*0.9,0) {\k};
+    \end{scope}}
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbinequality{xmin}{xmax}{ymin}{ymax}{cuerpo}
+%   Region de inecuaciones: ejes + rejilla; en el cuerpo
+%   \addplot[nbregion,domain=..]{...} \closedcycle  o \fill.
+% ---------------------------------------------------------------------
+\pgfplotsset{nbregion/.style={NebulaNavy,very thick,
+  fill=NebulaGold!25,fill opacity=0.7}}
+% RULE-040: admite opciones, igual que \nbgrid, para problemas de escala
+% grande (coordenadas de decenas) donde xtick distance=1 amontona las
+% marcas: \nbinequality[xtick distance=20]{xmin}{xmax}{ymin}{ymax}{cuerpo}.
+% Una llamada con 5 llaves y sin corchete sigue funcionando exactamente
+% igual que antes (el argumento opcional queda vacio).
+\newcommand{\nbinequality}[6][]{%
+\begin{tikzpicture}
+\begin{axis}[nbplot,xlabel={$x$},ylabel={$y$},
+  xmin=#2,xmax=#3,ymin=#4,ymax=#5,xtick distance=1,ytick distance=1,samples=201,#1]
+#6
+\end{axis}
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbareamodel{filas}{cols}{sombreadas}  ·  modelo de area para
+%   fracciones, porcentajes y producto de binomios.
+%   sombreadas = lista "r/c".
+% ---------------------------------------------------------------------
+% \nbareamodelw{ancho-total-cm}{alto-cm}{filas}{cols}{sombreadas}
+%   Mismo modelo con ANCHO TOTAL fijo: asi 2, 4 y 8 partes salen de igual
+%   anchura y la equivalencia de fracciones es visualmente cierta (RULE-017).
+\newcommand{\nbareamodelw}[5]{%
+\begin{tikzpicture}[x=\dimexpr #1cm/#4\relax,y=\dimexpr #2cm/#3\relax]
+  \foreach \r/\c in {#5}{\fill[NebulaGold!45] (\c-1,#3-\r) rectangle (\c,#3-\r+1);}
+  \draw[NebulaNavy,thick] (0,0) rectangle (#4,#3);
+  \foreach \i in {1,...,\the\numexpr#4-1\relax}{\draw[NebulaNavy!55] (\i,0) -- (\i,#3);}
+  \foreach \j in {1,...,\the\numexpr#3-1\relax}{\draw[NebulaNavy!55] (0,\j) -- (#4,\j);}
+\end{tikzpicture}}
+\newcommand{\nbareamodel}[3]{%
+\begin{tikzpicture}[x=0.72cm,y=0.72cm]
+  \foreach \r/\c in {#3}{\fill[NebulaGold!45] (\c-1,#1-\r) rectangle (\c,#1-\r+1);}
+  \draw[NebulaNavy,thick] (0,0) rectangle (#2,#1);
+  \foreach \i in {1,...,\the\numexpr#2-1\relax}{\draw[NebulaNavy!55] (\i,0) -- (\i,#1);}
+  \foreach \j in {1,...,\the\numexpr#1-1\relax}{\draw[NebulaNavy!55] (0,\j) -- (#2,\j);}
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbgridbox{cabeceras-col}{cabeceras-fila}{celdas}
+%   Rejilla de multiplicacion (metodo de la caja: expandir y factorizar).
+%   cabeceras-col = lista "c/texto"  (c desde 1, de izquierda a derecha)
+%   cabeceras-fila= lista "r/texto"  (r desde 1, de arriba a abajo)
+%   celdas        = lista "r/c/texto"
+%   Ej: \nbgridbox{1/$x$, 2/$+3$}{1/$x$, 2/$+2$}
+%                 {1/1/$x^2$, 1/2/$3x$, 2/1/$2x$, 2/2/$6$}
+% ---------------------------------------------------------------------
+\newcommand{\nbgridbox}[3]{%
+\begin{tikzpicture}[x=1.75cm,y=1.05cm]
+  \foreach \r/\c/\t in {#3}{%
+    \fill[NebulaGold!12] (\c,-\r) rectangle ({\c+1},{-\r-1});
+    \draw[NebulaNavy!60] (\c,-\r) rectangle ({\c+1},{-\r-1});
+    \node[font=\small] at ({\c+0.5},{-\r-0.5}) {\t};}
+  \foreach \c/\t in {#1}{\node[font=\small,NebulaNavy] at ({\c+0.5},-0.5) {\t};}
+  \foreach \r/\t in {#2}{\node[font=\small,NebulaNavy] at (0.5,{-\r-0.5}) {\t};}
+  \draw[NebulaNavy!35,thick] (1,0) -- (1,-0.98);
+  \draw[NebulaNavy!35,thick] (0,-1) -- (0.98,-1);
+\end{tikzpicture}}
+
+% ---------------------------------------------------------------------
+% \nbgrid{xmin}{xmax}{ymin}{ymax}{cuerpo}
+%   Como \nbfuncplot pero con 1 unidad en x = 1 unidad en y (axis equal).
+%   OBLIGATORIO para toda figura donde un angulo recto, un cuadrado o una
+%   circunferencia deban VERSE como tales (RULE-017). \nbfuncplot fija
+%   11x7,2 cm, asi que un cuadrado sale romboidal.
+% ---------------------------------------------------------------------
+% ERR-0137: antes fijaba `xtick distance=1` y los rotulos `$x$`/`$y$`
+%   DENTRO de las opciones del eje, asi que no habia forma de cambiarlos
+%   desde fuera: en la carta de Segre salian 135 marcas en el eje N y los
+%   ejes rotulados "x" e "y". Tres agentes la descartaron y dibujaron a
+%   mano justo lo que la macro venia a evitar. Ahora admite opciones.
+\newcommand{\nbgrid}[6][]{%
+\begin{tikzpicture}
+\begin{axis}[nbplot,axis equal image,width=11cm,height=11cm,
+  xlabel={$x$},ylabel={$y$},xtick distance=1,ytick distance=1,samples=201,
+  xmin=#2,xmax=#3,ymin=#4,ymax=#5,#1]
+#6
+\end{axis}
+\end{tikzpicture}}

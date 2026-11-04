@@ -1,0 +1,583 @@
+            RESOLUCIÓN DEL EXAMEN PAU JULIO 2025
+                                   Matemáticas II
+
+    Por la propia naturaleza de la disciplina, una misma cuestión admite múltiples soluciones
+correctas. Por supuesto, cualquier solución de cualquiera de las cuestiones del examen que
+sea correcta y esté bien argumentada deberá ser considerada como válida en el proceso de
+corrección, aunque no esté incluida en este documento.
+    El examen consta de un total de cuatro cuestiones con dos opciones (A y B) cada una. En
+cada cuestión se debe hacer solo la opción A o la opción B. Las cuestiones se pueden hacer en
+cualquier orden. La elección de A o B puede cambiar de una cuestión a otra. Si se responden
+las 2 opciones de una cuestión, solo se corregirá la primera opción contestada. La puntuación
+máxima de cada cuestión es 2,5 puntos. Las cuatro cuestiones son:
+
+Cuestión 1 (opciones 1A y 1B): Sentido numérico y algebraico (2,5 puntos cada una).
+
+Cuestión 2 (opciones 2A y 2B): Sentido de la medida (2,5 puntos cada una).
+
+Cuestión 3 (opciones 3A y 3B): Sentido espacial (2,5 puntos cada una).
+
+Cuestión 4 (opciones 4A y 4B): Sentido estocástico (2,5 puntos una).
+
+Solo se pueden usar las tablas estadı́sticas que se proporcionan con el examen y, según la
+normativa vigente, no se puden usar calculadoras gráficas ni programables.
+
+
+                               En Murcia, a 8 de julio de 2025.
+
+                                Pedro Nicolás Zaragoza
+                              Coordinador Matemáticas II
+               Departamento de Didáctica de las CC. Matemáticas y Sociales
+                                Universidad de Murcia
+                                              2
+
+
+Cuestión 1: Sentido numérico y algebraico (2,5 puntos cada una)
+Opción 1A (2,5 p.):
+Considere el siguiente sistema de ecuaciones:
+                                    
+                                     x+y+z =1
+                                       2x + 2y + kz = 2
+                                        x + ky + 3z = 0
+                                    
+
+  a) (1 p.) Discuta el sistema en función del parámetro k.
+
+  b) (0,5 p.) Calcule su solución en el caso en el que sea compatible indeterminado.
+
+  c) (1 p.) Calcule su solución (expresada en función de k) para cualquier valor de k para
+     el que el sistema sea compatible determinado.
+Solución:
+a) La matriz de coeficientes del sistema es
+                                                
+                                           1 1 1
+                                     A =  2 2 k ,
+                                           1 k 3
+
+que tiene por determinante
+
+                              −k 2 + 3k − 2 = −(k − 1)(k − 2).
+
+Ası́ es que el sistema es compatible determinado para k 6= 1 y k 6= 2, porque en ese caso
+no se anula el determinante de A.
+
+Para k = 1 tenemos que el rango de A es 2, porque
+
+                                          2 1
+                                                  6= 0.
+                                          1 3
+
+Por otro lado, el rango de la matriz ampliada
+                                                   
+                                            1 1 1 1
+                                    A∗ =  2 2 k 2 
+                                            1 k 3 0
+es 3, porque
+                                        1 1 1
+                                        2 2 1      6= 0.
+                                        1 0 3
+Entonces, para k = 1 el sistema es incompatible.
+
+Para k = 2 tenemos que el rango de A es 2, porque
+
+                                          2 2
+                                                  6= 0.
+                                          2 3
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                3
+
+
+Por otro lado, el rango de la matriz ampliada
+                                                   
+                                            1 1 1 1
+                                    A∗ =  2 2 2 2 
+                                            1 2 3 0
+no es 3, porque tiene las dos primeras filas son iguales, pero sı́ es 2, porque
+                                            2 2
+                                                    6= 0.
+                                            0 2
+Entonces, para k = 2 el sistema es compatible indeterminado.
+b) Para k = 2, el sistema de ecuaciones es equivalente a
+                                    
+                                        x+y+z =1
+                                      x + 2y + 3z = 0
+Si a la segunda ecuación le restamos la primera, tenemos
+
+                                y + 2z = −1 ⇐⇒ y = −1 − 2z.
+
+Sustituyendo en la primera tenemos
+
+                              x − 1 − 2z + z = 1 ⇐⇒ x = 2 + z.
+
+Entonces la solución podrı́a ser      
+                                         x=2+λ
+                                         y = −2λ − 1
+                                            z = λ.
+                                       
+
+Mediante argumentos parecidos se podrı́a llegar a las siguientes soluciones alternativas
+                                   
+                                           x=λ
+                                         y = 3 − 2λ
+                                        z = −2 + λ,
+                                   
+
+y                                       
+                                         x = 32 − λ2
+                                             y=λ
+                                          z = − 12 − λ2 .
+                                        
+
+c) Para k 6= 1 y k 6= 2 podemos usar el método de Cramer para encontrar la solución:
+
+                  1 1 1
+                  2 2 k
+                  0 k 3             −k 2 + 2k        −k(k − 2)        k
+            x=                 =                 =                 =     .
+               −(k − 1)(k − 2)   −(k − 1)(k − 2)   −(k − 1)(k − 2)   k−1
+
+                         1 1 1
+                         2 2 k
+                         1 0 3             k−2            −1    1
+                  y=                 =                 =     =     .
+                     −(k − 1)(k − 2)   −(k − 1)(k − 2)   k−1   1−k
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                              4
+
+
+                               1 1 1
+                               2 2 2
+                               0 k 0               0
+                        x=                 =                 = 0.
+                           −(k − 1)(k − 2)   −(k − 1)(k − 2)
+Ası́, en el caso k 6= 2 y k 6= 1 tenemos que
+                                                  k
+                                          
+                                           x = k−1
+                                                  1
+                                             y = 1−k
+                                              z = 0.
+                                          
+
+
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                5
+
+
+Opción 1B (2,5 p.):
+Sea A una matriz cuadrada de orden 3 que cumple que A2 = O, donde O es la matriz nula
+de orden 3 (todos sus elementos son cero).
+
+    a) (0,75 p.) Compruebe que (A + I)2 = 2A + I, y que (A + I)3 = 3A + I, donde I es la
+       matriz identidad de orden 3.
+
+    b) (0,75 p.) Compruebe que las matrices I − A e I + A son mutuamente inversas.
+
+    c) (1 p.) Resuelva la ecuación matricial X + AX = A expresando X en función de A.
+
+Solución: a) Tenemos que
+
+                       (A + I)2 = A2 + 2A + I = O + 2A + I = 2A + I,
+
+y
+                 (A + I)3 = A3 + 3A2 + 3A + I = O + 3O + 3A + I = 3A + I,
+porque
+                                   A3 = A2 · A = O · A = O.
+b) Tenemos que
+                           (I + A) · (I − A) = I 2 − A2 = I − O = I.
+Lo mismo puede hacerse con (I − A) · (I + A).
+c) Tenemos que, usando (b),
+
+                            X + AX = A ⇐⇒ (I + A) · X = A ⇐⇒
+                            (I − A) · (I + A) · X = (I − A) · A ⇐⇒
+                           X = (I − A) · A = A − A2 = A − O = A.
+
+Es decir, X = A.
+
+
+
+
+         Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                          6
+
+
+Cuestión 2: sentido de la medida (2,5 puntos cada una)
+Opción 2A (2,5 p.):
+Calcule los siguientes lı́mites:
+                              
+  a) (1 p.) lim+ x1 − sen(x)1
+                x→0
+                        √
+                         2x2 +1
+  b) (0,5 p.) lim       9x2 +5
+                 x→+∞
+
+                        1
+  c) (1 p.) lim x(e x − 1)
+                x→+∞
+
+Solución: a) El lı́mite                                                  
+                                                         1    1
+                                          lim              −
+                                         x→0+            x sen(x)
+da lugar a una indeterminación del tipo ∞ − ∞. Hacemos entonces lo siguiente:
+                                           
+                                  1      1           sen(x) − x
+                           lim+     −         = lim+            ,
+                          x→0     x sen(x)      x→0   x sen(x)
+
+dando ası́ lugar a una indeterminación del tipo 00 . Aplicamos dos veces la regla de L’Hôpital:
+
+        sen(x) − x         cos(x) − 1                   − sen(x)             0
+ lim+              = lim+                 = lim+                          =     = 0.
+ x→0     x sen(x)   x→0 sen(x) + x cos(x)  x→0 cos(x) + cos(x) − x sen(x)   2+0
+
+b) El lı́mite                                             √
+                                              2x2 + 1
+                                                lim
+                                       x→+∞ 9x2 + 5
+
+da lugar a la indeterminación ∞
+                               ∞
+                                 . Hacemos entonces lo siguiente
+
+                √                  √
+                                                                  q                            q
+                                                                    2x2 +1                       2
+                  2x2 + 1              2x2 +1
+                                                                      x4                         x2
+                                                                                                    + x14       0
+                                        x2
+         lim              = lim                 = lim                          = lim                        =     = 0.
+        x→+∞     9x2 + 5   x→+∞    9x2 +5
+                                     x2
+                                                     x→+∞         9 + x52               x→+∞    9 + x52         9
+
+c) El lı́mite
+                                                              1
+                                                lim x(e x − 1)
+                                            x→+∞
+
+da lugar a la indeterminación ∞ · 0. Considerando el cociente
+                                                                   1
+                                                1                 ex − 1
+                                         x(e − 1) =
+                                                x
+                                                                       1
+                                                                       x
+
+la transformamos en una indeterminación del tipo 00 y aplicamos la regla de L’Hôpital:
+                                                 1                             1
+                            1                   ex − 1                     e x · −1
+                                                                                 x2                   1
+                 lim x(e − 1) = lim
+                            x
+                                                     1     = lim                   −1     = lim e x = 1.
+                x→+∞               x→+∞                       x→+∞                             x→+∞
+                                                     x                             x2
+
+
+
+
+        Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                7
+
+
+Opción 2B (2,5 p.):
+Considere la función f (x) = tg3 (x).
+                                               Z
+  a) (1,5 p.) Calcule la integral indefinida        f (x)dx.
+
+  b) (0,75 p.) Calcule el área de la región delimitada por la gráfica de la función f (x) y el
+     eje OX entre los valores x = 0 y x = π4 .
+
+  c) (0,25 p.) Compruebe, sin calcular su valor con números decimales, que el área pedida
+     en el apartado anterior es 12 ln( 2e ).
+                                                                             1
+Solución: a) Hacemos el cambio de variable t = tg(x), que nos lleva a dx = 1+t2 dt. Entonces
+
+
+
+                                                       t3            (1 + t2 )t − t
+                 Z              Z                 Z              Z
+                      3              3  1
+                    tg (x)dx = t ·           dt =           dt =                    dt =
+                                     1 + t2          1 + t2              1 + t2
+          Z                     Z       Z                 Z            Z
+                       t                        t         1            1       2t
+                t−       2
+                             dt = tdt −           2
+                                                    dt =       2tdt −               dt =
+                    1+t                       1+t         2            2    1 + t2
+                           1 2 1                     1           1
+                             t − ln |1 + t2 | + C = tg2 (x) − ln |1 + tg2 (x)| + C
+                           2     2                   2           2
+                                                     π
+b) La función tg(x) es no negativa en el intervalo 0, 4 , y lo mismo pasa con f (x) = tg3 (x).
+Entonces, el área pedida viene dada por la integral
+                              Z π                                         π4
+                                 4
+                                     3          1 2       1          2
+                                 tg (x)dx =       tg (x) − ln |1 + tg (x)| =
+                              0                 2         2                0
+                1 2 π     1             π      1         1
+                  tg       − ln |1 + tg2       | − tg2 (0) − ln |1 + tg2 (0)| =
+                2      4    2              4       2         2
+                                              1 2 π  1               π 
+                                                tg       − ln |1 + tg2        |=
+                                              2       4    2            4
+                                                             1 1
+                                                               − ln(1 + 1) =
+                                                             2 2
+                                                                   1 1
+                                                                     − ln(2).
+                                                                   2 2
+c) Podemos hacer lo siguiente:
+                  1 e 1                   1             1 1
+                    ln   = (ln(e) − ln(2)) = (1 − ln(2)) = − ln(2).
+                  2    2  2                 2             2 2
+
+
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                 8
+
+
+Cuestión 3: sentido espacial (2,5 puntos cada una)
+Opción 3A (2,5 p.):
+
+  a) (1,25 p.) Determine el valor de a y b para que el plano π : 2x + y + az = b contenga a
+     la recta                          
+                                           x+y+z =1
+                                    r:
+                                          −x − 2y + z = 0
+
+  b) (1,25 p.) ¿Para qué valores de a y b corta r a π? Halle el punto de corte en el caso
+     a = 0 y b = 7.
+
+Solución: a) Para que el plano contenga a la recta, el vector director de la recta y el vector
+                                                                      →
+normal del plano deben ser ortogonales. El vector normal del plano es n = (2, 1, a), y el vector
+director de la recta es el producto vectorial de los productos normales de los planos que la
+definen, es decir
+                            →
+                             d = (1, 1, 1) ∧ (−1, −2, 1) = (3, −2, −1).
+Ahora, el producto escalar
+                       →   →
+                       n · d = (2, 1, a) · (3, −2, −1) = 6 − 2 − a = 4 − a
+
+es 0 si, y solo si, a = 4. Ası́ es que para a = 4 la recta es paralela al plano o incluso puede
+estar contenida en él. Para que esté contenida en él basta con saber que algún punto de r
+pertenece a π. Sumando las ecuaciones de los planos que definen r, es fácil ver que un punto
+genérico de la recta puede ser de la forma
+
+                                      Pλ (2 − 3λ, 2λ − 1, λ).
+
+En particular, P0 (2, −1, 0) ∈ r, y este punto pertenecerá a π si, y solo si
+
+                                b = 2x + y + az = 4 − 1 + 0 = 3.
+
+Ası́ pues, r está contenida en π precisamente cuando a = 4 y b = 3.
+
+b) Ya hemos visto en (a) que para cualquier valor de b la recta corta al plano siempre y
+cuando a 6= 4. Ahora, si a = 0 y b = 7, tenemos
+
+                                          π : 2x + y = 7.
+
+Un punto, Pλ (2 − 3λ, 2λ − 1, λ), de r pertenecerá a π si se cumple
+
+                7 = 2x + y = 2(2 − 3λ) + 2λ − 1 = 4 − 6λ + 2λ − 1 = 3 − 4λ,
+
+que, a su vez, se cumple si, y solo si, 4λ = −4, es decir, λ = −1. De modo que el punto de
+corte es
+                            P−1 (2 + 3, −2 − 1, −1) = (5, −3, −1).
+
+
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                 9
+
+
+Opción 3B (2,5 p.):
+Un helicóptero situado en el punto P (1, 2, 1) quiere aterrizar en el plano π : x + y + 3z = 0.
+
+  a) (1 p.) Calcule la ecuación en forma continua de la recta, r, de la trayectoria que le lleve
+     al punto más cercano de π.
+
+  b) (0,75 p.) Halle dicho punto.
+
+  c) (0,75 p.) Calcule la distancia que debe recorrer.
+
+Solución: a) El punto más cercano es la proyección ortogonal de P en π, que es la intersección
+con π de la recta que pasa por P y tiene como vector director el vector normal a π:
+
+                  r : (x, y, z) = (1, 2, 1) + λ(1, 1, 3) = (1 + λ, 2 + λ, 1 + 3λ).
+
+Su ecuación en forma continua es
+                                    x−1   y−2   z−1
+                                        =     =     .
+                                     1     1     3
+b) Para calcular la proyección ortogonal de P en π sustituimos
+
+              0 = 1 + λ + 2 + λ + 3(1 + 3λ) = 1 + λ + 2 + λ + 3 + 9λ = 6 + 11λ,
+
+de modo que
+                                                      6
+                                            λ=−         ,
+                                                     11
+y el punto es                                                               
+                           6    6          6                         5 16  7
+                      Q 1 − ,2 − ,1 − 3 ·                   =         , ,−         .
+                           11   11        11                        11 11 11
+c) Tenemos que                                   
+                                   −→   6   6  18
+                                  PQ = − ,− ,−      ,
+                                        11 11 11
+de modo que la distancia a recorrer es
+                   r                     r       r                    √
+           −→         62     62    182     396     22 · 32 · 11   6  6 11
+          |P Q| =        +      +      =       =                =√ =      .
+                     112 112 112           112         112        11  11
+
+
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                                  10
+
+
+Opción 4: sentido estocástico (2,5 puntos cada una)
+Opción 4A (2,5 p.): En un cine hay tres salas. En la sala S1 hay 240 espectadores, en la
+sala S2 hay 180 y en la sala S3 hay 80. Se sabe que la pelı́cula de la sala S1 gusta al 40 % de
+los espectadores, la de la sala S2 al 50 % y la de la sala S3 al 90 %. Cuando acaban las tres
+pelı́culas se elige a un espectador al azar.
+
+  a) (1 p.) Calcule la probabilidad de que le haya gustado la pelı́cula.
+
+  b) (0,5 p.) Calcule la probabilidad de que le haya gustado si ha estado en la sala S3 .
+
+  c) (1 p.) Calcule la probabilidad de que haya estado en la sala S3 si le ha gustado.
+
+Solución:
+    Llamamos G al suceso “le ha gustado la pelı́cula”, y llamamos Si al suceso “ha estado en
+la sala Si ”. En total hay 240+180+80=500 espectadores. Ası́ es que la probabilidad de haber
+estado en cada una de las salas es:
+                    240  12                     180   9                              80  4
+        P (S1 ) =       = ,         P (S2 ) =       =            y      P (S3 ) =       = .
+                    500  25                     500   25                            500  25
+Además, sabemos por el enunciado que
+                    40   2                         50   1                                90   9
+    P (G | S1 ) =       = ,       P (G | S2 ) =       =          y       P (G | S3 ) =       = .
+                    100  5                        100   2                                100  10
+a) Usando el Teorema de la Probabilidad Total, hacemos:
+
+            P (G) = P (G | S1 ) · P (S1 ) + P (G | S2 ) · P (S2 ) + P (G | S3 ) · P (S3 ) =
+                 2 12 1 9             9 4       4 · 12 + 5 · 9 + 9 · 4     129
+                  ·    + ·        +      ·    =                         =        = 0, 516.
+                 5 25 2 25 10 25                         10 · 25           250
+
+
+                                                 9
+b) Por el enunciado ya sabemos que P (G | S3 ) = 10 = 0, 9.
+
+c) Usando la fórmula de Bayes para la probabilidad a posteriori hacemos:
+                                                          9
+                     P (S3 ∩ G)   P (G | S3 ) · P (S3 )      · 4
+                                                         10 25
+                                                                 36
+                                                                 250  36
+        P (S3 | G) =            =                       = 129 = 129 =     ' 0, 279.
+                        P (G)           P (G)               250  250
+                                                                      129
+
+
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                              11
+
+
+Opción 4B (2,5 p.): Un avión tiene capacidad para 260 pasajeros. Sin embargo, la compañı́a
+aérea ha vendido para un dı́a 280 billetes. La compañı́a sabe que el 95 % de los que compran
+un billete se presenta en el aeropuerto el dı́a correspondiente. Consideramos el número de
+pasajeros que se presentan el dı́a en el que se vendieron los 280 billetes.
+
+  a) (0,5 p.) Diga qué tipo de distribución de probabilidad es, indicando la media y la
+     desviación tı́pica.
+
+  b) (0,75 p.) Calcule la probabilidad de que falten plazas en el avión.
+
+  c) (0,5 p.) Calcule la probabilidad de que no falten plazas en el avión.
+
+  d) (0,75 p.) Calcule la probabilidad de que ni sobren ni falten plazas en el avión.
+
+Solución:
+a) Es una distribución binomial con n = 280 y p = 0, 95, que denotamosp     por B(280; 0,95).
+La
+√  media    es µ =
+                 √ n · p = 280 · 0, 95 = 266 y la desviación tı́pica es σ =  n · p · (1 − p) =
+  266 · 0, 05 = 13, 3 ' 3, 65. Llamemos X a la variable aleatoria B(280; 0,95) que estamos
+considerando.
+
+    Como n es grande y n·p = 266 > 5 y n·(1−p) = 14 > 5, podemos utilizar la aproximación
+de De Moivre para aproximar X por una variable aleatoria normal N (266; 3, 65) a la que
+llamaremos Y . En nuestros cálculos también usaremos una variable aleatoria normal N (0; 1)
+a la que llamaremos Z.
+
+b) Para calcular P (X > 260) hacemos:
+                                                                    
+                                                    260, 5 − 266
+                 P (260 < X) ' P (260, 5 ≤ Y ) = P               ≤Z '
+                                                       3, 65
+                                 P (−1, 51 ≤ Z) = P (Z ≤ 1, 51) = 0,9345.
+
+Hemos pasado de P (260 < X) a P (260, 5 ≤ Y ) utilizando la corrección de Yates, y hemos
+usado que P (−1, 51 ≤ Z) = P (Z ≤ 1, 51) por simetrı́a de la distribución N (0; 1).
+
+c) Como se pregunta por la probabilidad del suceso opuesto al del apartado (b), basta hacer:
+
+                   P (X ≤ 260) = 1 − P (260 < X) = 1 − 0,9345 = 0, 0655.
+
+   También se puede calcular como sigue:
+                                                                                         
+                                                                             260, 5 − 266
+                                    P (X ≤ 260) ' P (Y ≤ 260, 5) = P Z ≤                    '
+                                                                                 3, 65
+P (Z ≤ −1, 51) = P (Z ≥ 1, 51) = 1 − P (Z < 1, 51) = 1 − P (Z ≤ 1, 51) = 1 − 0,9345 = 0, 0655.
+
+
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+                                             12
+
+
+d) Para calcular P (X = 260) hacemos:
+
+             P (X = 260) ' P (260 − 0, 5 ≤ Y ≤ 260 + 0, 5) = P (259, 5 ≤ Y ≤ 260, 5) =
+                                                                                   
+                                              260, 5 − 266               259, 5 − 266
+   P (Y ≤ 260, 5) − P (Y ≤ 259, 5) = P Z ≤                   −P Z ≤                     =
+                                                  3, 65                      3, 65
+                      P (Z ≤ −1, 51) − P (Z ≤ −1, 78) = P (Z ≥ 1, 51) − P (Z ≥ 1, 78) =
+                1 − P (Z ≤ 1, 51) − [1 − P (Z < 1, 78)] = P (Z < 1, 78) − P (Z ≤ 1, 51) =
+                                                          P (Z ≤ 1, 78) − P (Z ≤ 1, 51) =
+                                                               0, 9625 − 0, 9345 = 0, 028.
+
+Hemos pasado de P (X = 260) a P (260 − 0, 5 ≤ Y ≤ 260 + 0, 5) usando la corrección de Yates,
+y hemos utilizado que P (−1, 51 ≤ Z) = P (Z ≤ 1, 51) y P (Z ≤ −1, 78) = P (Z ≥ 1, 78) por
+simetrı́a de la distribución N (0; 1).
+
+
+
+
+       Resolución PAU Julio 2025. Pedro Nicolás Zaragoza, Coordinador Matemáticas II
+
