@@ -89,8 +89,11 @@
 \newcommand{\nbnlxscale}{1}
 \newcommand{\nbdot}[2]{\fill[NebulaNavy] (#1,0) circle (2.6pt);
   \node[above=5pt,font=\small] at (#1,0) {#2};}
+% FIX 2026-11-12: la etiqueta caia a la misma altura que los numeros de las
+%   marcas (\nbnumline las pone en below=3pt) y se solapaba con ellos.
+%   Se baja a below=16pt para que quede por debajo de la fila de marcas.
 \newcommand{\nbdotb}[2]{\fill[NebulaError] (#1,0) circle (2.6pt);
-  \node[below=5pt,font=\small] at (#1,0) {#2};}
+  \node[below=16pt,font=\small] at (#1,0) {#2};}
 \newcommand{\nbopendot}[2]{\draw[NebulaNavy,very thick,fill=white] (#1,0) circle (2.6pt);
   \node[above=5pt,font=\small] at (#1,0) {#2};}
 \newcommand{\nbseg}[2]{\draw[NebulaGold,line width=3pt,opacity=0.55] (#1,0) -- (#2,0);}
